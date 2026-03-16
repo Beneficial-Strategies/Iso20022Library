@@ -44,8 +44,7 @@ public record Transaction103
     [IsoId("_Mn31-1aOEeeFltjJxERUxw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MessageReason { get; init; }
+    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Alternate message reason to send the message.
@@ -63,7 +62,8 @@ public record Transaction103
     [IsoId("_Mn32AVaOEeeFltjJxERUxw")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -88,7 +88,7 @@ public record Transaction103
     [IsoId("_BfQJ4Rb4Eeit0dtP9bTmEg")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts1? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts1> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -96,7 +96,7 @@ public record Transaction103
     [IsoId("_v8QyQRcNEeit0dtP9bTmEg")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -104,5 +104,5 @@ public record Transaction103
     [IsoId("_IU-bYRqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

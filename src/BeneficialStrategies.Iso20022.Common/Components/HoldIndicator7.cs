@@ -31,5 +31,5 @@ public record HoldIndicator7
     [IsoId("_6GWV6ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public RegistrationReason6? Reason { get; init; }
+    public ValueList<RegistrationReason6> Reason { get; init; } = [];
 }

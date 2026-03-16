@@ -68,9 +68,7 @@ public record TMSProtocolParameters4
     [IsoId("__5HFidX0Eeia9rtBTv_9KA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the terminal manager host.
@@ -127,5 +125,5 @@ public record TMSProtocolParameters4
     [IsoId("__5HFldX0Eeia9rtBTv_9KA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition1? MessageItem { get; init; }
+    public ValueList<MessageItemCondition1> MessageItem { get; init; } = [];
 }

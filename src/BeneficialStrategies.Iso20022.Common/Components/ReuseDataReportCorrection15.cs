@@ -40,7 +40,7 @@ public record ReuseDataReportCorrection15
     [IsoId("_S2WclcK9EeuCIrYISEfoUg")]
     [DisplayName("Collateral Component")]
     [IsoXmlTag("CollCmpnt")]
-    public CollateralType19? CollateralComponent { get; init; }
+    public ValueList<CollateralType19> CollateralComponent { get; init; } = [];
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -66,7 +66,7 @@ public record ReuseDataReportCorrection15
     [IsoId("_S2Wcm8K9EeuCIrYISEfoUg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
-    public FundingSource3? FundingSource { get; init; }
+    public ValueList<FundingSource3> FundingSource { get; init; } = [];
 
     /// <summary>
     /// List of possible values for TRs reconciliation purposes.
@@ -90,5 +90,5 @@ public record ReuseDataReportCorrection15
     [IsoId("_S2WcocK9EeuCIrYISEfoUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

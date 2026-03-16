@@ -40,9 +40,7 @@ public record InvoiceHeader1
     [IsoId("_SuAjMwEcEeCQm6a_G2yO_w_1331699708")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public SimpleValueList<IsoMax35Text> Name { get; init; } = [];
 
     /// <summary>
     /// Issue date of the document.
@@ -92,5 +90,5 @@ public record InvoiceHeader1
     [IsoId("_SuAjOQEcEeCQm6a_G2yO_w_-726724604")]
     [DisplayName("Included Note")]
     [IsoXmlTag("InclNote")]
-    public AdditionalInformation6? IncludedNote { get; init; }
+    public ValueList<AdditionalInformation6> IncludedNote { get; init; } = [];
 }

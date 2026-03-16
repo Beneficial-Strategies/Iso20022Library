@@ -30,7 +30,7 @@ public record ReversalRequest5
     [IsoId("_XC8GY3GtEe2TbaNWBpRZpQ")]
     [DisplayName("Loyalty Data")]
     [IsoXmlTag("LltyData")]
-    public LoyaltyRequestData3? LoyaltyData { get; init; }
+    public ValueList<LoyaltyRequestData3> LoyaltyData { get; init; } = [];
 
     /// <summary>
     /// Reason for this reversal.

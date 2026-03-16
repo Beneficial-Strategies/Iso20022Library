@@ -30,7 +30,7 @@ public record StoredValueResponse2
     [IsoId("_FhPZw4YMEemxIqbaFEE8-w")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public StoredValueData2? Result { get; init; }
+    public ValueList<StoredValueData2> Result { get; init; } = [];
 
     /// <summary>
     /// Customer or Merchant payment receipt.
@@ -38,5 +38,5 @@ public record StoredValueResponse2
     [IsoId("_FhPZxYYMEemxIqbaFEE8-w")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
-    public PaymentReceipt1? Receipt { get; init; }
+    public ValueList<PaymentReceipt1> Receipt { get; init; } = [];
 }

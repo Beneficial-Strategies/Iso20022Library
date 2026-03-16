@@ -38,7 +38,7 @@ public record ReservationSearchCriteria5
     [IsoId("_1RgxIwzAEe2Wmf2RrXviyA")]
     [DisplayName("Default Reservation Type")]
     [IsoXmlTag("DfltRsvatnTp")]
-    public ReservationType2Choice_? DefaultReservationType { get; init; }
+    public ValueList<ReservationType2Choice_> DefaultReservationType { get; init; } = [];
 
     /// <summary>
     /// Type of reservation applied by the system at the present time.
@@ -46,7 +46,7 @@ public record ReservationSearchCriteria5
     [IsoId("_1RgxJQzAEe2Wmf2RrXviyA")]
     [DisplayName("Current Reservation Type")]
     [IsoXmlTag("CurRsvatnTp")]
-    public ReservationType2Choice_? CurrentReservationType { get; init; }
+    public ValueList<ReservationType2Choice_> CurrentReservationType { get; init; } = [];
 
     /// <summary>
     /// Owner of the account which is being queried.

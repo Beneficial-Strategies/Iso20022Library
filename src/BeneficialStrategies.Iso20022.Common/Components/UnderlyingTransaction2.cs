@@ -30,5 +30,5 @@ public record UnderlyingTransaction2
     [IsoId("_PmstRNp-Ed-ak6NoX_4Aeg_-1329438698")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransactionInformation31? TransactionInformation { get; init; }
+    public ValueList<PaymentTransactionInformation31> TransactionInformation { get; init; } = [];
 }

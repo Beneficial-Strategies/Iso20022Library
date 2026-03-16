@@ -57,7 +57,7 @@ public record EventDescription1
     [IsoId("_OTgzMjYz-AOSNFX-8224495")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
-    public QualifiedPartyIdentification1? OtherParty { get; init; }
+    public ValueList<QualifiedPartyIdentification1> OtherParty { get; init; } = [];
 
     /// <summary>
     /// Identifier for a language used for the description.
@@ -83,7 +83,7 @@ public record EventDescription1
     [IsoId("_OTgzMjY2-AOSNFX-8224495")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
-    public QualifiedDocumentInformation1? RelatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedDocument { get; init; } = [];
 
     /// <summary>
     /// Identifier of related letter.
@@ -91,7 +91,7 @@ public record EventDescription1
     [IsoId("_OTgzMjY3-AOSNFX-8224495")]
     [DisplayName("Related Letter")]
     [IsoXmlTag("RltdLttr")]
-    public QualifiedDocumentInformation1? RelatedLetter { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedLetter { get; init; } = [];
 
     /// <summary>
     /// Identifier of related message.
@@ -99,7 +99,7 @@ public record EventDescription1
     [IsoId("_OTgzMjY4-AOSNFX-8224495")]
     [DisplayName("Related Message")]
     [IsoXmlTag("RltdMsg")]
-    public QualifiedDocumentInformation1? RelatedMessage { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedMessage { get; init; } = [];
 
     /// <summary>
     /// Associated free form document.
@@ -107,7 +107,7 @@ public record EventDescription1
     [IsoId("_OTgzMjY5-AOSNFX-8224495")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Reference to the contractual context.
@@ -115,7 +115,7 @@ public record EventDescription1
     [IsoId("_OTgzMjcw-AOSNFX-8224495")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
-    public QualifiedDocumentInformation1? GoverningContract { get; init; }
+    public ValueList<QualifiedDocumentInformation1> GoverningContract { get; init; } = [];
 
     /// <summary>
     /// Rules and laws governing the event.

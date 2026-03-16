@@ -54,5 +54,5 @@ public record SettlementService3
     [IsoId("_DnSG0CbVEeyhZIgCcGlTyA")]
     [DisplayName("Additional Settlement Information")]
     [IsoXmlTag("AddtlSttlmInf")]
-    public AdditionalData1? AdditionalSettlementInformation { get; init; }
+    public ValueList<AdditionalData1> AdditionalSettlementInformation { get; init; } = [];
 }

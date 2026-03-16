@@ -30,5 +30,5 @@ public record PendingBalance5
     [IsoId("_UzRxGbQYEeeKRKrD60ELBQ")]
     [DisplayName("Pending Transactions")]
     [IsoXmlTag("PdgTxs")]
-    public SettlementTypeAndIdentification25? PendingTransactions { get; init; }
+    public ValueList<SettlementTypeAndIdentification25> PendingTransactions { get; init; } = [];
 }

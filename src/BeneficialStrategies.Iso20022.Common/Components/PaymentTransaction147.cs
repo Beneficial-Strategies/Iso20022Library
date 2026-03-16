@@ -108,7 +108,8 @@ public record PaymentTransaction147
     [IsoId("_L1vYMxlbEe2Do_UtrNmb2g")]
     [DisplayName("Modification Status Reason Information")]
     [IsoXmlTag("ModStsRsnInf")]
-    public ModificationStatusReason2? ModificationStatusReasonInformation { get; init; }
+    public ValueList<ModificationStatusReason2> ModificationStatusReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Reference of a return or a reversal transaction that is initiated to fix the case under investigation as part of the resolution.

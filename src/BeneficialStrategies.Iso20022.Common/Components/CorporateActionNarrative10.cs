@@ -22,9 +22,7 @@ public record CorporateActionNarrative10
     [IsoId("_ULXLNdp-Ed-ak6NoX_4Aeg_-2065680675")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; }
+    public SimpleValueList<IsoMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -32,7 +30,5 @@ public record CorporateActionNarrative10
     [IsoId("_ULXLNtp-Ed-ak6NoX_4Aeg_-761930438")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoMax350Text> PartyContactNarrative { get; init; } = [];
 }

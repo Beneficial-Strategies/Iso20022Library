@@ -78,7 +78,7 @@ public record SecuritiesOption49
     [IsoId("_wUaTKWOLEeW4z96Yfj3Wng")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification30? ExemptionType { get; init; }
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities based on the terms of the corporate action event and balance of underlying securities entitled to the account owner. (This quantity can be positive or negative).

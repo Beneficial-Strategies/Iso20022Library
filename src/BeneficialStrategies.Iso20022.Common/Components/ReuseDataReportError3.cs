@@ -49,5 +49,5 @@ public record ReuseDataReportError3
     [IsoId("_4Uz9Z64bEemB_csI4yyKLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

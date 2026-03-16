@@ -41,5 +41,5 @@ public record TemporaryServicesLabor1
     [IsoId("_4TwEB_fdEei89sMSHxl1ew")]
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
-    public Amount12? Charge { get; init; }
+    public ValueList<Amount12> Charge { get; init; } = [];
 }

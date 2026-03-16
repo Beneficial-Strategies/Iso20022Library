@@ -157,7 +157,7 @@ public record PartyIdentification203
     [IsoId("_P5LGUOkGEemeDPHh-U9b6w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Sponsored merchant is a merchant that uses the payment services of another entity that acts as the card acceptor.
@@ -165,5 +165,5 @@ public record PartyIdentification203
     [IsoId("_bzZ6sf8JEeic54G0fOJNMg")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
-    public SponsoredMerchant1? SponsoredMerchant { get; init; }
+    public ValueList<SponsoredMerchant1> SponsoredMerchant { get; init; } = [];
 }

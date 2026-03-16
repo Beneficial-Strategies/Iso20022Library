@@ -101,7 +101,7 @@ public record CardAccount6
     [IsoId("_kPxHAIq6EeSHjtO_wHA7PQ")]
     [DisplayName("Allowed Services")]
     [IsoXmlTag("AllwdSvcs")]
-    public ATMServiceType4Code? AllowedServices { get; init; }
+    public SimpleValueList<ATMServiceType4Code> AllowedServices { get; init; } = [];
 
     /// <summary>
     /// Withdrawal limits for the account.

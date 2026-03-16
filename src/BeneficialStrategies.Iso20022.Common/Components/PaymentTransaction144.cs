@@ -69,7 +69,7 @@ public record PaymentTransaction144
     [IsoId("_OJv0axlWEe2Do_UtrNmb2g")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation12? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation12> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Provides information on the charges related to the processing of the rejection of the instruction.|Usage: This is passed on for information purposes only. Settlement of the charges will be done separately.
@@ -77,7 +77,7 @@ public record PaymentTransaction144
     [IsoId("_OJv0bRlWEe2Do_UtrNmb2g")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public Charges12? ChargesInformation { get; init; }
+    public ValueList<Charges12> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Provides information on the tracking of the interbank transaction related to the payment.
@@ -130,5 +130,5 @@ public record PaymentTransaction144
     [IsoId("_OJv0eRlWEe2Do_UtrNmb2g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

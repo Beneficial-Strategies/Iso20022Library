@@ -74,7 +74,7 @@ public record LineItemDetails10
     [IsoId("_TPud3efIEeKNfc-Rw_dPYg")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
-    public ProductIdentifier2Choice_? ProductIdentifier { get; init; }
+    public ValueList<ProductIdentifier2Choice_> ProductIdentifier { get; init; } = [];
 
     /// <summary>
     /// Identifies the characteristics of a product.
@@ -82,7 +82,7 @@ public record LineItemDetails10
     [IsoId("_TPud3-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
-    public ProductCharacteristics1Choice_? ProductCharacteristics { get; init; }
+    public ValueList<ProductCharacteristics1Choice_> ProductCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Identifies the category of product.
@@ -90,7 +90,7 @@ public record LineItemDetails10
     [IsoId("_TPud4efIEeKNfc-Rw_dPYg")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public ProductCategory1Choice_? ProductCategory { get; init; }
+    public ValueList<ProductCategory1Choice_> ProductCategory { get; init; } = [];
 
     /// <summary>
     /// Country from which the product originates.
@@ -98,7 +98,7 @@ public record LineItemDetails10
     [IsoId("_TPud4-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Product Origin")]
     [IsoXmlTag("PdctOrgn")]
-    public CountryCode? ProductOrigin { get; init; }
+    public SimpleValueList<CountryCode> ProductOrigin { get; init; } = [];
 
     /// <summary>
     /// Specifies the shipment schedule for the goods.
@@ -122,7 +122,7 @@ public record LineItemDetails10
     [IsoId("_TPvE4-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment7? Adjustment { get; init; }
+    public ValueList<Adjustment7> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Maximum charges related to the conveyance of goods.
@@ -138,7 +138,7 @@ public record LineItemDetails10
     [IsoId("_TPvE5-fIEeKNfc-Rw_dPYg")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax23? Tax { get; init; }
+    public ValueList<Tax23> Tax { get; init; } = [];
 
     /// <summary>
     /// Total amount of the line item after adjustments have been applied.

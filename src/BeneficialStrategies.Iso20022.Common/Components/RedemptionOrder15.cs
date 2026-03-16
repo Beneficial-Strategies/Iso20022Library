@@ -60,7 +60,7 @@ public record RedemptionOrder15
     [IsoId("_63pHcTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson32? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Amount of money or the number of units or percentage to be redeemed for the redemption order.

@@ -30,7 +30,7 @@ public record PriceData1
     [IsoId("_olN5AXizEeqKjIYaFgh_2g")]
     [DisplayName("Price Schedule")]
     [IsoXmlTag("PricSchdl")]
-    public Schedule1? PriceSchedule { get; init; }
+    public ValueList<Schedule1> PriceSchedule { get; init; } = [];
 
     /// <summary>
     /// Specifies the unit of measure in which the price is expressed.

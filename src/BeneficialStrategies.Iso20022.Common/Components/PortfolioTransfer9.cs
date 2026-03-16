@@ -69,7 +69,7 @@ public record PortfolioTransfer9
     [IsoId("_ZpT6belaEeu9cf4XM82AQQ")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
-    public ResidualCash1? ResidualCash { get; init; }
+    public ValueList<ResidualCash1> ResidualCash { get; init; } = [];
 
     /// <summary>
     /// Tax date applicable to all the assets.
@@ -86,7 +86,7 @@ public record PortfolioTransfer9
     [IsoId("_ZpT6celaEeu9cf4XM82AQQ")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument99? FinancialInstrumentAssetForTransfer { get; init; }
+    public ValueList<FinancialInstrument99> FinancialInstrumentAssetForTransfer { get; init; } = [];
 
     /// <summary>
     /// Additional information about the product transfer.
@@ -94,5 +94,5 @@ public record PortfolioTransfer9
     [IsoId("_ZpT6c-laEeu9cf4XM82AQQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

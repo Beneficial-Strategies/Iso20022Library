@@ -107,5 +107,5 @@ public record Terminal4
     [IsoId("_pjNqQaH8EeuiuNcvKhXmNQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent13? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent13> POIComponent { get; init; } = [];
 }

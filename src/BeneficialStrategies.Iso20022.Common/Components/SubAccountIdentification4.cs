@@ -39,5 +39,5 @@ public record SubAccountIdentification4
     [IsoId("_VBKKwdp-Ed-ak6NoX_4Aeg_-1106685568")]
     [DisplayName("Transaction On Sub Account")]
     [IsoXmlTag("TxOnSubAcct")]
-    public InvestmentFundTransactionsByFund1? TransactionOnSubAccount { get; init; }
+    public ValueList<InvestmentFundTransactionsByFund1> TransactionOnSubAccount { get; init; } = [];
 }

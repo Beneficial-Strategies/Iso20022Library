@@ -40,7 +40,7 @@ public record AdditionalInformation29
     [IsoId("_6iEStUJHEeycgPMNjuGITQ")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
-    public UserInterface6Code? Target { get; init; }
+    public SimpleValueList<UserInterface6Code> Target { get; init; } = [];
 
     /// <summary>
     /// Other type of target for action data.

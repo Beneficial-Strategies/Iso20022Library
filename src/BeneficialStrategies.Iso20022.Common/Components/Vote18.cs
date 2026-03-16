@@ -32,7 +32,7 @@ public record Vote18
     [IsoId("_27EMkjUHEe2tRf29bleifQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ItemDescription1? Description { get; init; }
+    public ValueList<ItemDescription1> Description { get; init; } = [];
 
     /// <summary>
     /// Acceptance status of the resolution.

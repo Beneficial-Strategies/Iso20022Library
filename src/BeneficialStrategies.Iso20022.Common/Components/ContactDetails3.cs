@@ -77,7 +77,7 @@ public record ContactDetails3
     [IsoId("_6SyVR5qlEeGSON8vddiWzQ_1486175877")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherContact1? Other { get; init; }
+    public ValueList<OtherContact1> Other { get; init; } = [];
 
     /// <summary>
     /// Preferred method used to reach the technical contact.

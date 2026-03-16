@@ -104,6 +104,5 @@ public record Organisation30
     [IsoId("_JPkAcUzsEea8fovz_9xSTQ")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlaceOfListing { get; init; }
+    public SimpleValueList<IsoMICIdentifier> PlaceOfListing { get; init; } = [];
 }

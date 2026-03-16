@@ -56,7 +56,7 @@ public record TotalFeesAndTaxes41
     [IsoId("_XzIXnW1bEeiqaPNRWUnGNA")]
     [DisplayName("Individual Fee")]
     [IsoXmlTag("IndvFee")]
-    public Fee5? IndividualFee { get; init; }
+    public ValueList<Fee5> IndividualFee { get; init; } = [];
 
     /// <summary>
     /// Individual tax.
@@ -64,5 +64,5 @@ public record TotalFeesAndTaxes41
     [IsoId("_XzIXn21bEeiqaPNRWUnGNA")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax35? IndividualTax { get; init; }
+    public ValueList<Tax35> IndividualTax { get; init; } = [];
 }

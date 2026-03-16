@@ -46,7 +46,8 @@ public record CorporateActionUnallocatedDetailsSD6
     [IsoId("_QvgRjb-8Eeeb2ZBoAlSG1Q")]
     [DisplayName("Unallocated Securities Transaction Details")]
     [IsoXmlTag("UallctdSctiesTxDtls")]
-    public CorporateActionUnallocatedSecuritiesTransactionDetailsSD7? UnallocatedSecuritiesTransactionDetails { get; init; }
+    public ValueList<CorporateActionUnallocatedSecuritiesTransactionDetailsSD7> UnallocatedSecuritiesTransactionDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Details of the cash transactions concerned in unallocated payment.
@@ -54,5 +55,6 @@ public record CorporateActionUnallocatedDetailsSD6
     [IsoId("_QvgRlb-8Eeeb2ZBoAlSG1Q")]
     [DisplayName("Unallocated Cash Transaction Details")]
     [IsoXmlTag("UallctdCshTxDtls")]
-    public CorporateActionUnallocatedCashTransactionDetailsSD6? UnallocatedCashTransactionDetails { get; init; }
+    public ValueList<CorporateActionUnallocatedCashTransactionDetailsSD6> UnallocatedCashTransactionDetails { get; init; } =
+        [];
 }

@@ -105,7 +105,5 @@ public record CardPaymentTransaction56
     [IsoId("_Zsjs_41CEeWsypzzYao74A")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

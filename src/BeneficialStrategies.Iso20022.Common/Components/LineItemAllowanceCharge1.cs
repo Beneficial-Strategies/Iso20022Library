@@ -31,7 +31,7 @@ public record LineItemAllowanceCharge1
     [IsoId("_S0Q8UAEcEeCQm6a_G2yO_w_1865072585")]
     [DisplayName("Actual Amount")]
     [IsoXmlTag("ActlAmt")]
-    public CurrencyAndAmount? ActualAmount { get; init; }
+    public ValueList<CurrencyAndAmount> ActualAmount { get; init; } = [];
 
     /// <summary>
     /// Quantity on which this allowance charge is based.

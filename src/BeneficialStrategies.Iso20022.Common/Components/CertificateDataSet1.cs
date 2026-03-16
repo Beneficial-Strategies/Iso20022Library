@@ -38,7 +38,7 @@ public record CertificateDataSet1
     [IsoId("_TnTb5dp-Ed-ak6NoX_4Aeg_1492322947")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public LineItemAndPOIdentification1? LineItem { get; init; }
+    public ValueList<LineItemAndPOIdentification1> LineItem { get; init; } = [];
 
     /// <summary>
     /// Characteristics of the goods that are certified, in the context of a commercial trade transaction.
@@ -148,7 +148,5 @@ public record CertificateDataSet1
     [IsoId("_Tncl2Np-Ed-ak6NoX_4Aeg_-729563179")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax350Text> AdditionalInformation { get; init; } = [];
 }

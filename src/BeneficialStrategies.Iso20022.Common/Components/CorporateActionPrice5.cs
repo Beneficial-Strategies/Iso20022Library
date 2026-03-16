@@ -30,7 +30,7 @@ public record CorporateActionPrice5
     [IsoId("_TWKol9p-Ed-ak6NoX_4Aeg_678070564")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    public PriceFormat7Choice_? GenericCashPriceReceivedPerProduct { get; init; }
+    public ValueList<PriceFormat7Choice_> GenericCashPriceReceivedPerProduct { get; init; } = [];
 
     /// <summary>
     /// Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, reinvestment price.

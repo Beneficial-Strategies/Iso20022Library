@@ -100,7 +100,7 @@ public record SaleContext7
     [IsoId("_OZUfB_5rEeiLerArw36g0w")]
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
-    public ReceiptType1Code? ReceiptType { get; init; }
+    public SimpleValueList<ReceiptType1Code> ReceiptType { get; init; } = [];
 
     /// <summary>
     /// Destination of the receipt (for example, e-mail address, SMS number, etc.).

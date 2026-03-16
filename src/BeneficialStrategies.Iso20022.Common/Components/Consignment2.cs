@@ -38,5 +38,5 @@ public record Consignment2
     [IsoId("_S-_lgAEcEeCQm6a_G2yO_w_-1584428859")]
     [DisplayName("Transport Means")]
     [IsoXmlTag("TrnsprtMeans")]
-    public TransportMeans3? TransportMeans { get; init; }
+    public ValueList<TransportMeans3> TransportMeans { get; init; } = [];
 }

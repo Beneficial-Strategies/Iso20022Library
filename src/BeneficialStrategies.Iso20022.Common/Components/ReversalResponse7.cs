@@ -84,5 +84,5 @@ public record ReversalResponse7
     [IsoId("_rsS__3HBEe2TbaNWBpRZpQ")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
-    public PaymentReceipt5? Receipt { get; init; }
+    public ValueList<PaymentReceipt5> Receipt { get; init; } = [];
 }

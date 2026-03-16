@@ -80,7 +80,7 @@ public record SwitchRedemptionLegOrder2
     [IsoId("_VXzwN9p-Ed-ak6NoX_4Aeg_943054699")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge8? ChargeDetails { get; init; }
+    public ValueList<Charge8> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission linked to the execution of an investment fund order.
@@ -88,7 +88,7 @@ public record SwitchRedemptionLegOrder2
     [IsoId("_VX86INp-Ed-ak6NoX_4Aeg_943054734")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission6? CommissionDetails { get; init; }
+    public ValueList<Commission6> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to an investment fund order.
@@ -96,7 +96,7 @@ public record SwitchRedemptionLegOrder2
     [IsoId("_VX86Idp-Ed-ak6NoX_4Aeg_943054681")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax6? TaxDetails { get; init; }
+    public ValueList<Tax6> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.

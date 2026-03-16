@@ -38,7 +38,7 @@ public record PEPISATransfer7
     [IsoId("_RQ8ohdp-Ed-ak6NoX_4Aeg_-352635019")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, eg, name and address.
@@ -62,7 +62,7 @@ public record PEPISATransfer7
     [IsoId("_RQ8oiNp-Ed-ak6NoX_4Aeg_160843477")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation4? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation4> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -112,5 +112,5 @@ public record PEPISATransfer7
     [IsoId("_RRGZg9p-Ed-ak6NoX_4Aeg_-756215153")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

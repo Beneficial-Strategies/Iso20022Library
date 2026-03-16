@@ -32,5 +32,5 @@ public record RemittanceLocation4
     [IsoId("_qah9ZCFBEeSko9Nh5NKf8Q")]
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
-    public RemittanceLocationDetails1? RemittanceLocationDetails { get; init; }
+    public ValueList<RemittanceLocationDetails1> RemittanceLocationDetails { get; init; } = [];
 }

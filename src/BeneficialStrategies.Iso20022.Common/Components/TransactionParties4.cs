@@ -86,5 +86,5 @@ public record TransactionParties4
     [IsoId("_76i0w4arEeeUws0ZryHQ2w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public ProprietaryParty4? Proprietary { get; init; }
+    public ValueList<ProprietaryParty4> Proprietary { get; init; } = [];
 }

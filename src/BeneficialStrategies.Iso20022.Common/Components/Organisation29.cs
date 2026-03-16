@@ -86,7 +86,7 @@ public record Organisation29
     [IsoId("_BFL0T0zREea8fovz_9xSTQ")]
     [DisplayName("Modified Postal Address")]
     [IsoXmlTag("ModfdPstlAdr")]
-    public ModificationScope34? ModifiedPostalAddress { get; init; }
+    public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
 
     /// <summary>
     /// Type of organisation.
@@ -102,6 +102,5 @@ public record Organisation29
     [IsoId("_Up6j4UzsEea8fovz_9xSTQ")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlaceOfListing { get; init; }
+    public SimpleValueList<IsoMICIdentifier> PlaceOfListing { get; init; } = [];
 }

@@ -32,7 +32,7 @@ public record Resolution6
     [IsoId("_4FvPBRuLEeyhRdHRjakS2w")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ItemDescription1? Description { get; init; }
+    public ValueList<ItemDescription1> Description { get; init; } = [];
 
     /// <summary>
     /// Identifies under the same label a group of agenda resolutions for which a vote in favour can be assigned to only one resolution of that group.
@@ -101,7 +101,7 @@ public record Resolution6
     [IsoId("_4FvPFRuLEeyhRdHRjakS2w")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
-    public VoteInstructionType1? VoteInstructionType { get; init; }
+    public ValueList<VoteInstructionType1> VoteInstructionType { get; init; } = [];
 
     /// <summary>
     /// Specifies how the management of the issuing company wishes the security holders to vote.
@@ -133,7 +133,7 @@ public record Resolution6
     [IsoId("_4FvPHRuLEeyhRdHRjakS2w")]
     [DisplayName("Voting Rights Threshold For Approval")]
     [IsoXmlTag("VtngRghtsThrshldForApprvl")]
-    public VotingRightsThreshold1? VotingRightsThresholdForApproval { get; init; }
+    public ValueList<VotingRightsThreshold1> VotingRightsThresholdForApproval { get; init; } = [];
 
     /// <summary>
     /// Address to use over the www (HTTP) service where specific additional information on meeting resolutions may be found.

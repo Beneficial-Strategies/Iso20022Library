@@ -40,5 +40,5 @@ public record RetailerReversalResult4
     [IsoId("_hbf7hU37Eey_VecAUE-C9Q")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; }
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 }

@@ -117,7 +117,7 @@ public record SecuritiesTradeDetails114
     [IsoId("_IPijbgn-Eeqvb4kQR8No8g")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting8Choice_? Reporting { get; init; }
+    public ValueList<Reporting8Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Details about the financial instrument quantity involved in the transfer.
@@ -181,5 +181,5 @@ public record SecuritiesTradeDetails114
     [IsoId("_IPijrgn-Eeqvb4kQR8No8g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

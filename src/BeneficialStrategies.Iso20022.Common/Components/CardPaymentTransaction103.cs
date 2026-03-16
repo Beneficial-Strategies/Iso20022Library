@@ -39,7 +39,7 @@ public record CardPaymentTransaction103
     [IsoId("_l0MKtS5AEeunNvJlR_vCbg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -74,8 +74,7 @@ public record CardPaymentTransaction103
     [IsoId("_l0MKvS5AEeunNvJlR_vCbg")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public SimpleValueList<IsoTrueFalseIndicator> CustomerConsent { get; init; } = [];
 
     /// <summary>
     /// The card program proposed by a retailer to a cardholder among a series of payment programmes offered by the retailer.
@@ -83,9 +82,7 @@ public record CardPaymentTransaction103
     [IsoId("_l0MKvy5AEeunNvJlR_vCbg")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeProposed { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// The card program actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.
@@ -156,7 +153,7 @@ public record CardPaymentTransaction103
     [IsoId("_l0MKzy5AEeunNvJlR_vCbg")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -220,7 +217,8 @@ public record CardPaymentTransaction103
     [IsoId("_l0MK3S5AEeunNvJlR_vCbg")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Merchant information that must be returned unchanged in the response.
@@ -254,7 +252,5 @@ public record CardPaymentTransaction103
     [IsoId("_l0MK5S5AEeunNvJlR_vCbg")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

@@ -40,7 +40,7 @@ public record InvoiceTaxReportTransactionStatus1
     [IsoId("_8xqYaU53Eeaine-lsNAGsA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -48,5 +48,5 @@ public record InvoiceTaxReportTransactionStatus1
     [IsoId("_8xqYa053Eeaine-lsNAGsA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

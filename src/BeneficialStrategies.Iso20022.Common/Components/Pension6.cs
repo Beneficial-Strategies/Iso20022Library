@@ -46,7 +46,7 @@ public record Pension6
     [IsoId("_YsEbx-lqEeuvhrZwLF0fDg")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
-    public TaxReference1? TaxReference { get; init; }
+    public ValueList<TaxReference1> TaxReference { get; init; } = [];
 
     /// <summary>
     /// Reference of the drawdown.
@@ -73,5 +73,5 @@ public record Pension6
     [IsoId("_YsEby-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

@@ -104,7 +104,8 @@ public record PaymentTransactionInformation3
     [IsoId("_PsXQUdp-Ed-ak6NoX_4Aeg_-613481166")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
-    public CancellationReasonInformation1? CancellationReasonInformation { get; init; }
+    public ValueList<CancellationReasonInformation1> CancellationReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Set of key elements of the original transaction being referred to.

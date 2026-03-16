@@ -39,7 +39,7 @@ public record PartyIdentification233
     [IsoId("_FWLin-XuEemEj48jhmlA0Q")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
+    public ValueList<AlternatePartyIdentification7> AlternateIdentification { get; init; } = [];
 
     /// <summary>
     /// Country in which a person is permanently domiciled (the place of a person&apos;s permanent home).
@@ -55,7 +55,7 @@ public record PartyIdentification233
     [IsoId("_FWLir-XuEemEj48jhmlA0Q")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
-    public CountryCode? NonDomicileCountry { get; init; }
+    public SimpleValueList<CountryCode> NonDomicileCountry { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities belonging to the beneficial owner specified.
@@ -71,7 +71,7 @@ public record PartyIdentification233
     [IsoId("_FWLiv-XuEemEj48jhmlA0Q")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public BeneficiaryCertificationType10Choice_? CertificationType { get; init; }
+    public ValueList<BeneficiaryCertificationType10Choice_> CertificationType { get; init; } = [];
 
     /// <summary>
     /// Requested percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
@@ -87,7 +87,5 @@ public record PartyIdentification233
     [IsoId("_FWLix-XuEemEj48jhmlA0Q")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CertificationBreakdown { get; init; }
+    public SimpleValueList<IsoMax350Text> CertificationBreakdown { get; init; } = [];
 }

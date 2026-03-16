@@ -60,7 +60,7 @@ public record Transaction81
     [IsoId("_2sc0ga0qEeiBP5PZ97xcEA")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -68,7 +68,7 @@ public record Transaction81
     [IsoId("_RndeUP-9Eei7rYq35FFO4A")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -76,5 +76,5 @@ public record Transaction81
     [IsoId("_-8-KMRqlEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

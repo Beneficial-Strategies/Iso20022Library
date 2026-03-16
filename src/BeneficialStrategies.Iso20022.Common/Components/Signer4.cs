@@ -47,7 +47,7 @@ public record Signer4
     [IsoId("_T-zv0N9dEeeNt9bWIs54cw")]
     [DisplayName("Signed Attributes")]
     [IsoXmlTag("SgndAttrbts")]
-    public GenericInformation1? SignedAttributes { get; init; }
+    public ValueList<GenericInformation1> SignedAttributes { get; init; } = [];
 
     /// <summary>
     /// Cryptographic digital signature algorithm.

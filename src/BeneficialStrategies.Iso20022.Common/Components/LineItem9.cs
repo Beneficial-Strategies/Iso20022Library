@@ -65,7 +65,7 @@ public record LineItem9
     [IsoId("_Sr15MNp-Ed-ak6NoX_4Aeg_-1149973824")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment4? Adjustment { get; init; }
+    public ValueList<Adjustment4> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Charges related to the conveyance of goods.
@@ -81,7 +81,7 @@ public record LineItem9
     [IsoId("_Sr15Mtp-Ed-ak6NoX_4Aeg_-1149974185")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax12? Tax { get; init; }
+    public ValueList<Tax12> Tax { get; init; } = [];
 
     /// <summary>
     /// Total net amount of a trade transaction. Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.
@@ -97,7 +97,7 @@ public record LineItem9
     [IsoId("_Sr15NNp-Ed-ak6NoX_4Aeg_-1149973362")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
-    public UserDefinedInformation1? BuyerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> BuyerDefinedInformation { get; init; } = [];
 
     /// <summary>
     /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
@@ -105,5 +105,5 @@ public record LineItem9
     [IsoId("_Sr15Ndp-Ed-ak6NoX_4Aeg_-1149973393")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
-    public UserDefinedInformation1? SellerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> SellerDefinedInformation { get; init; } = [];
 }

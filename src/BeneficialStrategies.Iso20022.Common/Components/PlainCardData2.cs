@@ -67,5 +67,5 @@ public record PlainCardData2
     [IsoId("_Sqk0vAEcEeCQm6a_G2yO_w_1397723830")]
     [DisplayName("Track Data")]
     [IsoXmlTag("TrckData")]
-    public TrackData1? TrackData { get; init; }
+    public ValueList<TrackData1> TrackData { get; init; } = [];
 }

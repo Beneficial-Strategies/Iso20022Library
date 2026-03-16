@@ -71,5 +71,5 @@ public record SecurityCSDLink7
     [IsoId("_yJ6UrWc-EemvNLufWGIVOQ")]
     [DisplayName("Issuance Account")]
     [IsoXmlTag("IssncAcct")]
-    public IssuanceAccount2? IssuanceAccount { get; init; }
+    public ValueList<IssuanceAccount2> IssuanceAccount { get; init; } = [];
 }

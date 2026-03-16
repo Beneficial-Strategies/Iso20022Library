@@ -46,5 +46,5 @@ public record AggregatedIndependentAmount1
     [IsoId("_UlI9J9p-Ed-ak6NoX_4Aeg_-928458678")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
-    public IndependentAmount2? OtherAmount { get; init; }
+    public ValueList<IndependentAmount2> OtherAmount { get; init; } = [];
 }

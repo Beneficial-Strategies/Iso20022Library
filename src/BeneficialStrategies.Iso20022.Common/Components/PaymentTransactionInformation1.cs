@@ -80,7 +80,7 @@ public record PaymentTransactionInformation1
     [IsoId("_Psz8RNp-Ed-ak6NoX_4Aeg_-759927206")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation1? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation1> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Information on charges related to the processing of the rejection of the instruction.||Usage: ChargesInformation is past on for information purposes only. Settlement of the charges will be done separately.
@@ -88,7 +88,7 @@ public record PaymentTransactionInformation1
     [IsoId("_Psz8Rdp-Ed-ak6NoX_4Aeg_-1746247473")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public ChargesInformation1? ChargesInformation { get; init; }
+    public ValueList<ChargesInformation1> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent (debtor&apos;s agent in case of a credit transfer, creditor&apos;s agent in case of a direct debit). This means - amongst others - that the account servicing agent has received the payment order and has applied checks as eg, authorisation, availability of funds.

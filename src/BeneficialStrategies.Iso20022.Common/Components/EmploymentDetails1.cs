@@ -80,5 +80,5 @@ public record EmploymentDetails1
     [IsoId("_9IAbwHzqEeuEHsEB8Johfw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

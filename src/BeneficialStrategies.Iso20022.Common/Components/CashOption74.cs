@@ -62,7 +62,7 @@ public record CashOption74
     [IsoId("_bZ_hgwVTEeqjd8n6wD9JVw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification47? ExemptionType { get; init; }
+    public ValueList<GenericIdentification47> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the country from which the income originates.

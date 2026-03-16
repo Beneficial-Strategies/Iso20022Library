@@ -140,5 +140,5 @@ public record CustomerAccount1
     [IsoId("_SOMT5Np-Ed-ak6NoX_4Aeg_-693438831")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public Restriction1? Restriction { get; init; }
+    public ValueList<Restriction1> Restriction { get; init; } = [];
 }

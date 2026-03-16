@@ -30,5 +30,5 @@ public record StatusAndReason40
     [IsoId("_X1HaNemrEemUgrefIx730g")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public Transaction108? Transaction { get; init; }
+    public ValueList<Transaction108> Transaction { get; init; } = [];
 }

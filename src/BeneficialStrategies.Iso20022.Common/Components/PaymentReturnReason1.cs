@@ -38,7 +38,5 @@ public record PaymentReturnReason1
     [IsoId("_t32wEVkyEeGeoaLUQk__nA_1844100220")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 }

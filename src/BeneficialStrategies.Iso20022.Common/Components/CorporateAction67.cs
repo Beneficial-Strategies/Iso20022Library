@@ -71,7 +71,7 @@ public record CorporateAction67
     [IsoId("_p4QGizi7Eeydid5dcNPKvg")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    public IdentificationFormat4Choice_? CouponNumber { get; init; }
+    public ValueList<IdentificationFormat4Choice_> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Indicates whether certification/breakdown is required.
@@ -159,7 +159,7 @@ public record CorporateAction67
     [IsoId("_p4QGyTi7Eeydid5dcNPKvg")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferTypeFormat13Choice_? OfferType { get; init; }
+    public ValueList<OfferTypeFormat13Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -175,7 +175,7 @@ public record CorporateAction67
     [IsoId("_p4QG2Ti7Eeydid5dcNPKvg")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat20Choice_? EventStage { get; init; }
+    public ValueList<CorporateActionEventStageFormat20Choice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of the additional business process linked to the corporate action event such as a claim compensation or tax refund.
@@ -183,7 +183,8 @@ public record CorporateAction67
     [IsoId("_p4QG4Ti7Eeydid5dcNPKvg")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public AdditionalBusinessProcessFormat22Choice_? AdditionalBusinessProcessIndicator { get; init; }
+    public ValueList<AdditionalBusinessProcessFormat22Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of change announced.
@@ -191,7 +192,7 @@ public record CorporateAction67
     [IsoId("_p4QG6Ti7Eeydid5dcNPKvg")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeTypeFormat8Choice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeTypeFormat8Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Type of intermediates securities distribution.
@@ -263,7 +264,8 @@ public record CorporateAction67
     [IsoId("_p4QHJTi7Eeydid5dcNPKvg")]
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
-    public GenericIdentification47? TaxOnNonDistributedProceedsIndicator { get; init; }
+    public ValueList<GenericIdentification47> TaxOnNonDistributedProceedsIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// New company&apos;s place of incorporation.

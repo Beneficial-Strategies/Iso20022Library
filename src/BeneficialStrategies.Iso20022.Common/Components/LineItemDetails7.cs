@@ -74,7 +74,7 @@ public record LineItemDetails7
     [IsoId("_SqDwiNp-Ed-ak6NoX_4Aeg_-732903900")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
-    public ProductIdentifier2Choice_? ProductIdentifier { get; init; }
+    public ValueList<ProductIdentifier2Choice_> ProductIdentifier { get; init; } = [];
 
     /// <summary>
     /// Identifies the characteristics of a product.
@@ -82,7 +82,7 @@ public record LineItemDetails7
     [IsoId("_SqDwidp-Ed-ak6NoX_4Aeg_-732902953")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
-    public ProductCharacteristics1Choice_? ProductCharacteristics { get; init; }
+    public ValueList<ProductCharacteristics1Choice_> ProductCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Identifies the category of product.
@@ -90,7 +90,7 @@ public record LineItemDetails7
     [IsoId("_SqM6cNp-Ed-ak6NoX_4Aeg_-732902516")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public ProductCategory1Choice_? ProductCategory { get; init; }
+    public ValueList<ProductCategory1Choice_> ProductCategory { get; init; } = [];
 
     /// <summary>
     /// Country from which the product originates.
@@ -98,7 +98,7 @@ public record LineItemDetails7
     [IsoId("_SqM6cdp-Ed-ak6NoX_4Aeg_-733824521")]
     [DisplayName("Product Origin")]
     [IsoXmlTag("PdctOrgn")]
-    public CountryCode? ProductOrigin { get; init; }
+    public SimpleValueList<CountryCode> ProductOrigin { get; init; } = [];
 
     /// <summary>
     /// Specifies the shipment schedule for the goods.
@@ -122,7 +122,7 @@ public record LineItemDetails7
     [IsoId("_SqM6dNp-Ed-ak6NoX_4Aeg_-732902858")]
     [DisplayName("Incoterms")]
     [IsoXmlTag("Incotrms")]
-    public Incoterms1? Incoterms { get; init; }
+    public ValueList<Incoterms1> Incoterms { get; init; } = [];
 
     /// <summary>
     /// Variance on price for the goods.
@@ -130,7 +130,7 @@ public record LineItemDetails7
     [IsoId("_SqM6ddp-Ed-ak6NoX_4Aeg_-732903385")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment3? Adjustment { get; init; }
+    public ValueList<Adjustment3> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Maximum charges related to the conveyance of goods.
@@ -146,7 +146,7 @@ public record LineItemDetails7
     [IsoId("_SqM6d9p-Ed-ak6NoX_4Aeg_-732903480")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax13? Tax { get; init; }
+    public ValueList<Tax13> Tax { get; init; } = [];
 
     /// <summary>
     /// Total amount of the line item after adjustments have been applied.

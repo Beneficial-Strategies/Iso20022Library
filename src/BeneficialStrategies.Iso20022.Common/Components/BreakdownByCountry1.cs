@@ -30,7 +30,7 @@ public record BreakdownByCountry1
     [IsoId("_RQDQqNp-Ed-ak6NoX_4Aeg_1416516677")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
-    public CashInForecast3? CashInForecast { get; init; }
+    public ValueList<CashInForecast3> CashInForecast { get; init; } = [];
 
     /// <summary>
     /// Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.
@@ -38,7 +38,7 @@ public record BreakdownByCountry1
     [IsoId("_RQNBoNp-Ed-ak6NoX_4Aeg_1416517020")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
-    public CashOutForecast3? CashOutForecast { get; init; }
+    public ValueList<CashOutForecast3> CashOutForecast { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows specified for the country.
@@ -46,5 +46,5 @@ public record BreakdownByCountry1
     [IsoId("_RQNBodp-Ed-ak6NoX_4Aeg_1416516582")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
-    public NetCashForecast2? NetCashForecast { get; init; }
+    public ValueList<NetCashForecast2> NetCashForecast { get; init; } = [];
 }

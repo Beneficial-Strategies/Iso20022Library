@@ -116,7 +116,7 @@ public record Transfer34
     [IsoId("_9DljK4ftEeevKP8c-ilVhA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit8? UnitsDetails { get; init; }
+    public ValueList<Unit8> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Rounding direction applied to nearest unit.

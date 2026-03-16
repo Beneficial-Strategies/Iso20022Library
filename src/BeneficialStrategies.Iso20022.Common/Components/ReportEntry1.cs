@@ -81,7 +81,7 @@ public record ReportEntry1
     [IsoId("_T7Q5tdp-Ed-ak6NoX_4Aeg_379981934")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability1? Availability { get; init; }
+    public ValueList<CashBalanceAvailability1> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements to fully identify the type of underlying transaction resulting in the entry.
@@ -114,7 +114,7 @@ public record ReportEntry1
     [IsoId("_T7aqsNp-Ed-ak6NoX_4Aeg_525195553")]
     [DisplayName("Batch")]
     [IsoXmlTag("Btch")]
-    public BatchInformation1? Batch { get; init; }
+    public ValueList<BatchInformation1> Batch { get; init; } = [];
 
     /// <summary>
     /// Set of elements providing information on the original amount.||Usage: This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level).
@@ -130,7 +130,7 @@ public record ReportEntry1
     [IsoId("_T7aqstp-Ed-ak6NoX_4Aeg_1767172786")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public ChargesInformation3? Charges { get; init; }
+    public ValueList<ChargesInformation3> Charges { get; init; } = [];
 
     /// <summary>
     /// Set of elements providing details on the interest amount included in the entry amount.||Usage: This component is used on entry level in case of batch or aggregate bookings.
@@ -138,7 +138,7 @@ public record ReportEntry1
     [IsoId("_T7aqs9p-Ed-ak6NoX_4Aeg_163285492")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public TransactionInterest1? Interest { get; init; }
+    public ValueList<TransactionInterest1> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements providing information on the underlying transaction (s).
@@ -146,7 +146,7 @@ public record ReportEntry1
     [IsoId("_T7aqtNp-Ed-ak6NoX_4Aeg_-2093094349")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public EntryTransaction1? TransactionDetails { get; init; }
+    public ValueList<EntryTransaction1> TransactionDetails { get; init; } = [];
 
     /// <summary>
     /// Further details on the entry details.

@@ -31,7 +31,7 @@ public record SecurityIdentification20
     [IsoId("_cdRCSZKQEeWHWpTQn1FFVg")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public OtherIdentification2? OtherIdentification { get; init; }
+    public ValueList<OtherIdentification2> OtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Textual description of a security instrument.

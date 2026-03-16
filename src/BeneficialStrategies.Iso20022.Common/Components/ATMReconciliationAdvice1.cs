@@ -30,7 +30,7 @@ public record ATMReconciliationAdvice1
     [IsoId("_c9-5MItvEeSLQutgI1Ulfw")]
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
-    public ATMCommand5? CommandResult { get; init; }
+    public ValueList<ATMCommand5> CommandResult { get; init; } = [];
 
     /// <summary>
     /// Party which has requested the reconciliation.

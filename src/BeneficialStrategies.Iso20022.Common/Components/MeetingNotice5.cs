@@ -67,7 +67,7 @@ public record MeetingNotice5
     [IsoId("_RfIUwK3wEemG7MmivSuE5g")]
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
-    public ParticipationMethod1? Participation { get; init; }
+    public ValueList<ParticipationMethod1> Participation { get; init; } = [];
 
     /// <summary>
     /// Information and conditions for physical attendance at the general meeting.
@@ -83,9 +83,7 @@ public record MeetingNotice5
     [IsoId("_j6411609EemDtrWpq90Ckg")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? AdditionalDocumentationURLAddress { get; init; }
+    public SimpleValueList<IsoMax2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
     /// Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, this may indicate where such information may be obtained.

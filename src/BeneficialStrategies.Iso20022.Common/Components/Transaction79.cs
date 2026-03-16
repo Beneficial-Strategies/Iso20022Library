@@ -64,7 +64,7 @@ public record Transaction79
     [IsoId("_1zLZQvF9EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Additional information relevant for the settlement report.
@@ -72,7 +72,7 @@ public record Transaction79
     [IsoId("_WnE0LXbGEeef9c2nwgY9Xw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation22? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation22> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -80,5 +80,5 @@ public record Transaction79
     [IsoId("_YzY5IRqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

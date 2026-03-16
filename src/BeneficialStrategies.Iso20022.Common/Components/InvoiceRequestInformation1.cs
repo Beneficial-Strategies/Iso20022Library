@@ -46,7 +46,7 @@ public record InvoiceRequestInformation1
     [IsoId("_RYQKYNp-Ed-ak6NoX_4Aeg_-1603772146")]
     [DisplayName("Instalment Information")]
     [IsoXmlTag("InstlmtInf")]
-    public Instalment1? InstalmentInformation { get; init; }
+    public ValueList<Instalment1> InstalmentInformation { get; init; } = [];
 
     /// <summary>
     /// Amount requested by the requestor party, related to a single invoice to be financed.
@@ -86,5 +86,5 @@ public record InvoiceRequestInformation1
     [IsoId("_RYQKZdp-Ed-ak6NoX_4Aeg_497864820")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
-    public ReferredDocumentInformation2? ReferredDocument { get; init; }
+    public ValueList<ReferredDocumentInformation2> ReferredDocument { get; init; } = [];
 }

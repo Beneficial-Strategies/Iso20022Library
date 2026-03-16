@@ -22,7 +22,7 @@ public record CorporateActionNarrative44
     [IsoId("_4roXI-6MEeqc-LCjwLsUVg")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public UpdatedAdditionalInformation3? Offeror { get; init; }
+    public ValueList<UpdatedAdditionalInformation3> Offeror { get; init; } = [];
 
     /// <summary>
     /// Provides the new name of a company following a name change.
@@ -38,5 +38,5 @@ public record CorporateActionNarrative44
     [IsoId("_4roXM-6MEeqc-LCjwLsUVg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public UpdatedURLlnformation4? URLAddress { get; init; }
+    public ValueList<UpdatedURLlnformation4> URLAddress { get; init; } = [];
 }

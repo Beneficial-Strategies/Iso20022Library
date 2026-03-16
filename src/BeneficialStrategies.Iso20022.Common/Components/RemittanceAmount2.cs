@@ -30,7 +30,7 @@ public record RemittanceAmount2
     [IsoId("_tc4rUFkyEeGeoaLUQk__nA_1468630199")]
     [DisplayName("Discount Applied Amount")]
     [IsoXmlTag("DscntApldAmt")]
-    public DiscountAmountAndType1? DiscountAppliedAmount { get; init; }
+    public ValueList<DiscountAmountAndType1> DiscountAppliedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount specified for the referred document is the amount of a credit note.
@@ -46,7 +46,7 @@ public record RemittanceAmount2
     [IsoId("_tc4rUlkyEeGeoaLUQk__nA_-1935934653")]
     [DisplayName("Tax Amount")]
     [IsoXmlTag("TaxAmt")]
-    public TaxAmountAndType1? TaxAmount { get; init; }
+    public ValueList<TaxAmountAndType1> TaxAmount { get; init; } = [];
 
     /// <summary>
     /// Specifies detailed information on the amount and reason of the document adjustment.
@@ -54,7 +54,7 @@ public record RemittanceAmount2
     [IsoId("_tc4rU1kyEeGeoaLUQk__nA_41136424")]
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
-    public DocumentAdjustment1? AdjustmentAmountAndReason { get; init; }
+    public ValueList<DocumentAdjustment1> AdjustmentAmountAndReason { get; init; } = [];
 
     /// <summary>
     /// Amount of money remitted for the referred document.

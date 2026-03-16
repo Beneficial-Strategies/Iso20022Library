@@ -30,5 +30,5 @@ public record VariationMarginDispute1
     [IsoId("_UllpE9p-Ed-ak6NoX_4Aeg_2088365475")]
     [DisplayName("Resolution Type Details")]
     [IsoXmlTag("RsltnTpDtls")]
-    public DisputeResolutionType2Choice_? ResolutionTypeDetails { get; init; }
+    public ValueList<DisputeResolutionType2Choice_> ResolutionTypeDetails { get; init; } = [];
 }

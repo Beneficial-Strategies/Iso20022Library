@@ -70,7 +70,7 @@ public record SecuritiesOption87
     [IsoId("_plW_sTi7Eeydid5dcNPKvg")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
-    public GenericIdentification47? OtherIncomeType { get; init; }
+    public ValueList<GenericIdentification47> OtherIncomeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the basis for the reduced rate of withholding.
@@ -78,7 +78,7 @@ public record SecuritiesOption87
     [IsoId("_plW_szi7Eeydid5dcNPKvg")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification47? ExemptionType { get; init; }
+    public ValueList<GenericIdentification47> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the country from which the income originates.

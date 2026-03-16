@@ -48,5 +48,5 @@ public record Reference22
     [IsoId("_SQnacK9bEeyk7opzt6Qlaw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

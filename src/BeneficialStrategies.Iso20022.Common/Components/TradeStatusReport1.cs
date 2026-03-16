@@ -38,7 +38,7 @@ public record TradeStatusReport1
     [IsoId("_-DCA8XltEeG7BsjMvd1mEw_-415310632")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation8? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation8> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the report.

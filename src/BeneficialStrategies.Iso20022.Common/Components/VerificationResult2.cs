@@ -69,5 +69,5 @@ public record VerificationResult2
     [IsoId("_8uxp6yYDEeym0KcvJF9aDQ")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
-    public AdditionalData1? ResultDetails { get; init; }
+    public ValueList<AdditionalData1> ResultDetails { get; init; } = [];
 }

@@ -60,5 +60,5 @@ public record InvestmentAccountModification3
     [IsoId("_v8P3OWB1EeaHEJD5P6-ccw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
-    public Account23? ExistingAccountIdentification { get; init; }
+    public ValueList<Account23> ExistingAccountIdentification { get; init; } = [];
 }

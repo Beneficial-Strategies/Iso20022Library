@@ -120,7 +120,7 @@ public record CardPaymentTransactionDetails21
     [IsoId("_jmLmaWlvEeSGkpGpjm7tzg")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
-    public Product1? Product { get; init; }
+    public ValueList<Product1> Product { get; init; } = [];
 
     /// <summary>
     /// Detailed invoice data.

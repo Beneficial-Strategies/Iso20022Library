@@ -22,5 +22,5 @@ public record CardTransactionContext4
     [IsoId("_lXgKlYO8EeSWSLYdc10LRg")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public CardTransactionCondition1? SpecialConditions { get; init; }
+    public ValueList<CardTransactionCondition1> SpecialConditions { get; init; } = [];
 }

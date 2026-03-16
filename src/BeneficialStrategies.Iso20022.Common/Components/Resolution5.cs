@@ -32,7 +32,7 @@ public record Resolution5
     [IsoId("_xdeaFfM8EeqRfth943bvEA")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ItemDescription1? Description { get; init; }
+    public ValueList<ItemDescription1> Description { get; init; } = [];
 
     /// <summary>
     /// Identifies under the same label a group of agenda resolutions for which a vote in favour can be assigned to only one resolution of that group.
@@ -101,7 +101,7 @@ public record Resolution5
     [IsoId("_xdeaI_M8EeqRfth943bvEA")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
-    public VoteInstructionType1? VoteInstructionType { get; init; }
+    public ValueList<VoteInstructionType1> VoteInstructionType { get; init; } = [];
 
     /// <summary>
     /// Specifies how the management of the issuing company wishes the security holders to vote.

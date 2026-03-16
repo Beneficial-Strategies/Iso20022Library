@@ -72,7 +72,7 @@ public record AuthorisationResponse1
     [IsoId("_f582EdXvEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; }
+    public ValueList<ProtectedData1> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
@@ -80,5 +80,5 @@ public record AuthorisationResponse1
     [IsoId("_UA74UaK4EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -49,5 +49,6 @@ public record DetailedReportStatistics5
     [IsoId("_2UBhRcrVEeii_5g6VX90qQ")]
     [DisplayName("Number Of Reports Rejected Per Error")]
     [IsoXmlTag("NbOfRptsRjctdPerErr")]
-    public NumberOfTransactionsPerValidationRule5? NumberOfReportsRejectedPerError { get; init; }
+    public ValueList<NumberOfTransactionsPerValidationRule5> NumberOfReportsRejectedPerError { get; init; } =
+        [];
 }

@@ -63,7 +63,7 @@ public record FundCashInBreakdown3
     [IsoId("_KigjtQatEeS3lpTattq7hg")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge26? ChargeDetails { get; init; }
+    public ValueList<Charge26> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the commission applied to an order, for example, back-end or front-end commission.
@@ -71,7 +71,7 @@ public record FundCashInBreakdown3
     [IsoId("_KigjtwatEeS3lpTattq7hg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission21? CommissionDetails { get; init; }
+    public ValueList<Commission21> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Settlement currency for the transaction.

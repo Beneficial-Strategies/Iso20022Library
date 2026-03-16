@@ -62,7 +62,7 @@ public record SummaryAmounts2
     [IsoId("_5F0TgALqEeutW5-TpeYJhA")]
     [DisplayName("Return Excess Cash And Collateral Currency")]
     [IsoXmlTag("RtrXcssCshAndCollCcy")]
-    public ReturnExcessCash1? ReturnExcessCashAndCollateralCurrency { get; init; }
+    public ValueList<ReturnExcessCash1> ReturnExcessCashAndCollateralCurrency { get; init; } = [];
 
     /// <summary>
     /// Minimum amount to pay/receive as specified in the agreement in the base currency (to avoid the need to transfer an inconveniently small amount of collateral).

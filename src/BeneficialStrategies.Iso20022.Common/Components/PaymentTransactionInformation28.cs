@@ -76,7 +76,7 @@ public record PaymentTransactionInformation28
     [IsoId("_P2Mhw9p-Ed-ak6NoX_4Aeg_890765705")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public ReversalReasonInformation6? ReversalReasonInformation { get; init; }
+    public ValueList<ReversalReasonInformation6> ReversalReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Set of key elements used to identify the original transaction that is being referred to.

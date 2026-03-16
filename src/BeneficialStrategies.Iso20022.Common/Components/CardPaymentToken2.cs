@@ -22,9 +22,7 @@ public record CardPaymentToken2
     [IsoId("_8o4ssGtaEeSKOvNNYJQdoQ")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TokenCharacteristic { get; init; }
+    public SimpleValueList<IsoMax35Text> TokenCharacteristic { get; init; } = [];
 
     /// <summary>
     /// Level of confidence resulting of the identification and authentication of the cardholder performed and the entity that performed it.

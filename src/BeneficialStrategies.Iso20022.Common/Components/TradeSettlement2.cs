@@ -100,7 +100,7 @@ public record TradeSettlement2
     [IsoId("_OSxAbVm5EeOQYsoJizpkVw")]
     [DisplayName("Sub Total Calculated Tax")]
     [IsoXmlTag("SubTtlClctdTax")]
-    public SettlementSubTotalCalculatedTax2? SubTotalCalculatedTax { get; init; }
+    public ValueList<SettlementSubTotalCalculatedTax2> SubTotalCalculatedTax { get; init; } = [];
 
     /// <summary>
     /// Details of each early payment discount.
@@ -108,5 +108,5 @@ public record TradeSettlement2
     [IsoId("_osa_kEWmEeWZBsWfSGYWYg")]
     [DisplayName("Early Payments")]
     [IsoXmlTag("EarlyPmts")]
-    public EarlyPayment1? EarlyPayments { get; init; }
+    public ValueList<EarlyPayment1> EarlyPayments { get; init; } = [];
 }

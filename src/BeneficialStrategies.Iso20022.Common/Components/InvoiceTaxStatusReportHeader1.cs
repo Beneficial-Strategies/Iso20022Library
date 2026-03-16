@@ -54,5 +54,5 @@ public record InvoiceTaxStatusReportHeader1
     [IsoId("_JIHCl052Eeaine-lsNAGsA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 }

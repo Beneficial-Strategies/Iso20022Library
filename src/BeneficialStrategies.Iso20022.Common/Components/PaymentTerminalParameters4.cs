@@ -58,9 +58,7 @@ public record PaymentTerminalParameters4
     [IsoId("_L6B5-bAFEeah1_v59tW6Rg")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TimeZoneLine { get; init; }
+    public SimpleValueList<IsoMax70Text> TimeZoneLine { get; init; } = [];
 
     /// <summary>
     /// Local time offset to UTC (Coordinated Universal Time).
@@ -68,7 +66,7 @@ public record PaymentTerminalParameters4
     [IsoId("_L6B5-7AFEeah1_v59tW6Rg")]
     [DisplayName("Local Date Time")]
     [IsoXmlTag("LclDtTm")]
-    public LocalDateTime1? LocalDateTime { get; init; }
+    public ValueList<LocalDateTime1> LocalDateTime { get; init; } = [];
 
     /// <summary>
     /// Others manufacturer configuration parameters of the point of interaction.

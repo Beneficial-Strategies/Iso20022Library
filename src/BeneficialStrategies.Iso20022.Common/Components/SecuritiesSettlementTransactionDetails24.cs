@@ -30,7 +30,7 @@ public record SecuritiesSettlementTransactionDetails24
     [IsoId("_61vynZNLEeWGlc8L7oPDIg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages49? Linkages { get; init; }
+    public ValueList<Linkages49> Linkages { get; init; } = [];
 
     /// <summary>
     /// Details of the trade.
@@ -134,5 +134,5 @@ public record SecuritiesSettlementTransactionDetails24
     [IsoId("_61vyt5NLEeWGlc8L7oPDIg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

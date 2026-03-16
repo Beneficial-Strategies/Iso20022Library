@@ -86,7 +86,7 @@ public record Security17
     [IsoId("_FLf229R6EemZdYGWu384Zw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CompareSecuritiesLendingType2? Type { get; init; }
+    public ValueList<CompareSecuritiesLendingType2> Type { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the the unit prices are matching or not.

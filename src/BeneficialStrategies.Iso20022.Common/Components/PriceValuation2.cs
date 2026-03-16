@@ -56,7 +56,7 @@ public record PriceValuation2
     [IsoId("_Vb0tg9p-Ed-ak6NoX_4Aeg_-213723102")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? TotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; init; } = [];
 
     /// <summary>
     /// Total number of investment fund class units that have been issued.
@@ -105,7 +105,7 @@ public record PriceValuation2
     [IsoId("_Vb0tidp-Ed-ak6NoX_4Aeg_-213722690")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public UnitPrice6? PriceDetails { get; init; }
+    public ValueList<UnitPrice6> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the price variations of an investment fund class.
@@ -113,5 +113,5 @@ public record PriceValuation2
     [IsoId("_Vb-egNp-Ed-ak6NoX_4Aeg_1507402268")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
-    public ValuationStatistics2? ValuationStatistics { get; init; }
+    public ValueList<ValuationStatistics2> ValuationStatistics { get; init; } = [];
 }

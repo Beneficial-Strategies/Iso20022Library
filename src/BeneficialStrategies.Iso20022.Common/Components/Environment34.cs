@@ -145,5 +145,5 @@ public record Environment34
     [IsoId("_7hLZMDNHEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData2? AdditionalData { get; init; }
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 }

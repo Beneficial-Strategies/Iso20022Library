@@ -62,9 +62,7 @@ public record Transaction40
     [IsoId("_Shwm4032EeSGA7fXFuKIIQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.

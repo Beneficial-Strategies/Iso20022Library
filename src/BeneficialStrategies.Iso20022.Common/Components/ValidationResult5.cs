@@ -51,5 +51,5 @@ public record ValidationResult5
     [IsoId("_Ra7q9dp-Ed-ak6NoX_4Aeg_-1034400306")]
     [DisplayName("Mis Matched Element")]
     [IsoXmlTag("MisMtchdElmt")]
-    public ElementIdentification1? MisMatchedElement { get; init; }
+    public ValueList<ElementIdentification1> MisMatchedElement { get; init; } = [];
 }

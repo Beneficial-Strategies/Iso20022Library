@@ -51,5 +51,5 @@ public record OriginalGroupHeader11
     [IsoId("_RlOHWbThEeef0oKPLRNatg")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public PaymentReversalReason8? ReversalReasonInformation { get; init; }
+    public ValueList<PaymentReversalReason8> ReversalReasonInformation { get; init; } = [];
 }

@@ -55,5 +55,6 @@ public record SettlementInformation17
     [IsoId("_dzhED-LxEeWOD7aAy2fAcA")]
     [DisplayName("Deviating Settlement Unit")]
     [IsoXmlTag("DevtgSttlmUnit")]
-    public FinancialInstrumentQuantity1Choice_? DeviatingSettlementUnit { get; init; }
+    public ValueList<FinancialInstrumentQuantity1Choice_> DeviatingSettlementUnit { get; init; } =
+        [];
 }

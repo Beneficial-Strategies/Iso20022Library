@@ -22,7 +22,7 @@ public record OtherParties32
     [IsoId("_IpGdRZBfEeakHoV5BVecAQ")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentificationAndAccount150? Investor { get; init; }
+    public ValueList<PartyIdentificationAndAccount150> Investor { get; init; } = [];
 
     /// <summary>
     /// Party that identifies the stock exchange.

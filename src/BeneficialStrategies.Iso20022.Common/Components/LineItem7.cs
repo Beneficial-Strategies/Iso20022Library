@@ -84,7 +84,7 @@ public record LineItem7
     [IsoId("_Sri-Qtp-Ed-ak6NoX_4Aeg_956812257")]
     [DisplayName("Incoterms")]
     [IsoXmlTag("Incotrms")]
-    public Incoterms1? Incoterms { get; init; }
+    public ValueList<Incoterms1> Incoterms { get; init; } = [];
 
     /// <summary>
     /// Variance on price for the goods.
@@ -92,7 +92,7 @@ public record LineItem7
     [IsoId("_Sri-Q9p-Ed-ak6NoX_4Aeg_956812997")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment3? Adjustment { get; init; }
+    public ValueList<Adjustment3> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Maximum charges related to the conveyance of goods.
@@ -108,7 +108,7 @@ public record LineItem7
     [IsoId("_Sri-Rdp-Ed-ak6NoX_4Aeg_956812577")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax13? Tax { get; init; }
+    public ValueList<Tax13> Tax { get; init; } = [];
 
     /// <summary>
     /// Total net amount of a trade transaction. Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.
@@ -124,7 +124,7 @@ public record LineItem7
     [IsoId("_Sri-R9p-Ed-ak6NoX_4Aeg_956813507")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
-    public UserDefinedInformation1? BuyerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> BuyerDefinedInformation { get; init; } = [];
 
     /// <summary>
     /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
@@ -132,5 +132,5 @@ public record LineItem7
     [IsoId("_Sri-SNp-Ed-ak6NoX_4Aeg_956813092")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
-    public UserDefinedInformation1? SellerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> SellerDefinedInformation { get; init; } = [];
 }

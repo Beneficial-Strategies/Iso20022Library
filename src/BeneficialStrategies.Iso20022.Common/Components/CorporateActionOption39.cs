@@ -38,7 +38,7 @@ public record CorporateActionOption39
     [IsoId("_gsrpW_o9EeCdeaSQAR2tKw")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOption27? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOption27> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash movement related to a corporate action option.
@@ -46,5 +46,5 @@ public record CorporateActionOption39
     [IsoId("_gsrpZfo9EeCdeaSQAR2tKw")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOption19? CashMovementDetails { get; init; }
+    public ValueList<CashOption19> CashMovementDetails { get; init; } = [];
 }

@@ -38,7 +38,5 @@ public record ReturnReasonInformation1
     [IsoId("_TPKBqNp-Ed-ak6NoX_4Aeg_84246003")]
     [DisplayName("Additional Return Reason Information")]
     [IsoXmlTag("AddtlRtrRsnInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalReturnReasonInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalReturnReasonInformation { get; init; } = [];
 }

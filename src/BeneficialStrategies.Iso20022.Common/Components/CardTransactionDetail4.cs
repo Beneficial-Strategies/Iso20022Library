@@ -30,7 +30,7 @@ public record CardTransactionDetail4
     [IsoId("_D5rsUINuEeSXtJ8rlirVJw")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
-    public DetailedAmount11? TransactionFees { get; init; }
+    public ValueList<DetailedAmount11> TransactionFees { get; init; } = [];
 
     /// <summary>
     /// Additional amounts from the processor or the issuer without financial impacts on the transaction amount.
@@ -38,7 +38,7 @@ public record CardTransactionDetail4
     [IsoId("_nhgV04NtEeSXtJ8rlirVJw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public DetailedAmount10? AdditionalAmounts { get; init; }
+    public ValueList<DetailedAmount10> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Account involved in the card transaction.
@@ -46,7 +46,7 @@ public record CardTransactionDetail4
     [IsoId("_nhgV1YNtEeSXtJ8rlirVJw")]
     [DisplayName("Account And Balance")]
     [IsoXmlTag("AcctAndBal")]
-    public CardAccount2? AccountAndBalance { get; init; }
+    public ValueList<CardAccount2> AccountAndBalance { get; init; } = [];
 
     /// <summary>
     /// Results of the verifications performed by the various agents during the processing of the transaction.
@@ -54,7 +54,8 @@ public record CardTransactionDetail4
     [IsoId("_nhgV14NtEeSXtJ8rlirVJw")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Transaction authorisation deadline to complete the related payment.

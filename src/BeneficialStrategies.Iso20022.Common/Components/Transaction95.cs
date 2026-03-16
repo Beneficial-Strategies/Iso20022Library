@@ -50,7 +50,7 @@ public record Transaction95
     [IsoId("_95zpg_F6EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Identification of a collection.
@@ -171,9 +171,7 @@ public record Transaction95
     [IsoId("_ARN0sFAfEeedyPuM0kK2EQ")]
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BatchIdentificationList { get; init; }
+    public SimpleValueList<IsoMax70Text> BatchIdentificationList { get; init; } = [];
 
     /// <summary>
     /// Identification of a specific checkpoint.
@@ -231,5 +229,5 @@ public record Transaction95
     [IsoId("_gFmX8RqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

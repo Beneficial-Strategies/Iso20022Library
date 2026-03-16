@@ -46,5 +46,5 @@ public record LocalData7
     [IsoId("_bY9818rfEeuQjLd-KKZrCg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

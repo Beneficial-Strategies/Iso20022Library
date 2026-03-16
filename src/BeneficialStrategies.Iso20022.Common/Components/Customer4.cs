@@ -40,9 +40,7 @@ public record Customer4
     [IsoId("_oDA8jfJjEeiJn9rM2Znz2w")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TaxRegistrationIdentification { get; init; }
+    public SimpleValueList<IsoMax70Text> TaxRegistrationIdentification { get; init; } = [];
 
     /// <summary>
     /// Contact at the company.

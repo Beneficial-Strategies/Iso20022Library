@@ -62,7 +62,7 @@ public record CashOption77
     [IsoId("_PSCkkhe9EeyroI8qKgB7Mg")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
-    public GenericIdentification30? OtherIncomeType { get; init; }
+    public ValueList<GenericIdentification30> OtherIncomeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the basis for the reduced rate of withholding.
@@ -70,7 +70,7 @@ public record CashOption77
     [IsoId("_McsINxe9EeyroI8qKgB7Mg")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification30? ExemptionType { get; init; }
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the country from which the income originates.

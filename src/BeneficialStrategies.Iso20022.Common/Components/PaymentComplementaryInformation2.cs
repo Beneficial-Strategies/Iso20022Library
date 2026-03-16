@@ -281,7 +281,7 @@ public record PaymentComplementaryInformation2
     [IsoId("_P73E4dp-Ed-ak6NoX_4Aeg_-1460291175")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
-    public InstructionForNextAgent1? InstructionForNextAgent { get; init; }
+    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
 
     /// <summary>
     /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
@@ -289,7 +289,7 @@ public record PaymentComplementaryInformation2
     [IsoId("_P73E4tp-Ed-ak6NoX_4Aeg_-1461212697")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent1? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent1> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Structured information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.

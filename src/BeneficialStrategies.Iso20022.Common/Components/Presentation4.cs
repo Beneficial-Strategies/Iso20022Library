@@ -30,7 +30,7 @@ public record Presentation4
     [IsoId("_vsXgh31qEeGlwNeVP9egyg")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
-    public Document11? Document { get; init; }
+    public ValueList<Document11> Document { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the presentation.

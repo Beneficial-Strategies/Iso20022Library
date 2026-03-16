@@ -32,7 +32,7 @@ public record DisplayCapabilities4
     [IsoId("_Dqzt040SEeWRYffwL7E13A")]
     [DisplayName("Available Format")]
     [IsoXmlTag("AvlblFrmt")]
-    public OutputFormat1Code? AvailableFormat { get; init; }
+    public SimpleValueList<OutputFormat1Code> AvailableFormat { get; init; } = [];
 
     /// <summary>
     /// Number of lines of the display.
@@ -58,5 +58,5 @@ public record DisplayCapabilities4
     [IsoId("_Dqzt2Y0SEeWRYffwL7E13A")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
-    public LanguageCode? AvailableLanguage { get; init; }
+    public SimpleValueList<LanguageCode> AvailableLanguage { get; init; } = [];
 }

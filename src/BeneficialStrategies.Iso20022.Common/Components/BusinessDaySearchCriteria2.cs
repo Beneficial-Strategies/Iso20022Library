@@ -31,7 +31,7 @@ public record BusinessDaySearchCriteria2
     [IsoId("_yVMlxZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
-    public SystemIdentification2Choice_? SystemIdentification { get; init; }
+    public ValueList<SystemIdentification2Choice_> SystemIdentification { get; init; } = [];
 
     /// <summary>
     /// Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.
@@ -39,7 +39,7 @@ public record BusinessDaySearchCriteria2
     [IsoId("_yVMlx5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Currency")]
     [IsoXmlTag("SysCcy")]
-    public ActiveCurrencyCode? SystemCurrency { get; init; }
+    public SimpleValueList<ActiveCurrencyCode> SystemCurrency { get; init; } = [];
 
     /// <summary>
     /// Nature of the event that has occurred.

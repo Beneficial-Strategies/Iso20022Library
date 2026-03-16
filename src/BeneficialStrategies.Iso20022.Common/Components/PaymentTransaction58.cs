@@ -87,7 +87,7 @@ public record PaymentTransaction58
     [IsoId("_rreLvx72EeSxevWRRWxNAg")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
-    public PaymentCancellationReason2? CancellationReasonInformation { get; init; }
+    public ValueList<PaymentCancellationReason2> CancellationReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
@@ -103,5 +103,5 @@ public record PaymentTransaction58
     [IsoId("_rreLwx72EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

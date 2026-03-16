@@ -48,5 +48,5 @@ public record RedemptionBulkOrderInstruction1
     [IsoId("_U2ucY9p-Ed-ak6NoX_4Aeg_-256538472")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

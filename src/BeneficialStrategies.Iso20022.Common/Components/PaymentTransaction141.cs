@@ -48,7 +48,7 @@ public record PaymentTransaction141
     [IsoId("_RMU-VyCBEey8XKHwKquEQw")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
-    public Tax39? TaxTotal { get; init; }
+    public ValueList<Tax39> TaxTotal { get; init; } = [];
 
     /// <summary>
     /// Total amount of the transaction, inclusive of all applicable taxes and fees.

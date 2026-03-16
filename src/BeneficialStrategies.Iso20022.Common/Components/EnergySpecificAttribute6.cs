@@ -22,7 +22,7 @@ public record EnergySpecificAttribute6
     [IsoId("_b-3noZjgEeqkLZLH6DK3UQ")]
     [DisplayName("Delivery Point Or Zone")]
     [IsoXmlTag("DlvryPtOrZone")]
-    public DeliveryInterconnectionPoint1Choice_? DeliveryPointOrZone { get; init; }
+    public ValueList<DeliveryInterconnectionPoint1Choice_> DeliveryPointOrZone { get; init; } = [];
 
     /// <summary>
     /// Identification of the border(s) or border point(s) of a transportation contract.
@@ -46,5 +46,5 @@ public record EnergySpecificAttribute6
     [IsoId("_b-3np5jgEeqkLZLH6DK3UQ")]
     [DisplayName("Delivery Attribute")]
     [IsoXmlTag("DlvryAttr")]
-    public EnergyDeliveryAttribute5? DeliveryAttribute { get; init; }
+    public ValueList<EnergyDeliveryAttribute5> DeliveryAttribute { get; init; } = [];
 }

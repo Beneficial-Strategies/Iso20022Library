@@ -22,9 +22,7 @@ public record CorporateActionNarrative35
     [IsoId("_ckQaxZKQEeWHWpTQn1FFVg")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? AdditionalText { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative35
     [IsoId("_ckQazZKQEeWHWpTQn1FFVg")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? NarrativeVersion { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -42,9 +38,7 @@ public record CorporateActionNarrative35
     [IsoId("_ckQa1ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
@@ -52,7 +46,5 @@ public record CorporateActionNarrative35
     [IsoId("_ckQa3ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? TaxationConditions { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> TaxationConditions { get; init; } = [];
 }

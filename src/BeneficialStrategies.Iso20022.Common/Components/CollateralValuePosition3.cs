@@ -47,5 +47,5 @@ public record CollateralValuePosition3
     [IsoId("_EbS41zpyEemk2e6qGBk8IQ")]
     [DisplayName("Securities")]
     [IsoXmlTag("Scties")]
-    public SecurityCharacteristics3? Securities { get; init; }
+    public ValueList<SecurityCharacteristics3> Securities { get; init; } = [];
 }

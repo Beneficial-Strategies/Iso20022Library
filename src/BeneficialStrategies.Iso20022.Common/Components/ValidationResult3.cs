@@ -51,5 +51,5 @@ public record ValidationResult3
     [IsoId("_RFLdZdp-Ed-ak6NoX_4Aeg_-1930823205")]
     [DisplayName("Element")]
     [IsoXmlTag("Elmt")]
-    public ElementIdentification3? Element { get; init; }
+    public ValueList<ElementIdentification3> Element { get; init; } = [];
 }

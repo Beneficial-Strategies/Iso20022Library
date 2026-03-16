@@ -38,7 +38,8 @@ public record CorporateAction62
     [IsoId("_Z5Hj5RewEeyroI8qKgB7Mg")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public AdditionalBusinessProcessFormat19Choice_? AdditionalBusinessProcessIndicator { get; init; }
+    public ValueList<AdditionalBusinessProcessFormat19Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Type of intermediates securities distribution.

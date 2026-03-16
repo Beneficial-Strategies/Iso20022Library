@@ -63,7 +63,7 @@ public record FloatingInterestRate19
     [IsoId("_wWAosctEEemlLfTG-WCXxw")]
     [DisplayName("Rate Adjustment")]
     [IsoXmlTag("RateAdjstmnt")]
-    public RateAdjustment1? RateAdjustment { get; init; }
+    public ValueList<RateAdjustment1> RateAdjustment { get; init; } = [];
 
     /// <summary>
     /// Method for calculating the accrued interest on the principal amount for a fixed rate.

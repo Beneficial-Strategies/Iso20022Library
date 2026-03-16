@@ -58,7 +58,7 @@ public record RegisteredContract14
     [IsoId("_PZZTxbGJEeuSTr8k0UEM8A")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
-    public ContractBalance1? ContractBalance { get; init; }
+    public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
     /// Type of the payment schedule provided in the contract.
@@ -84,7 +84,7 @@ public record RegisteredContract14
     [IsoId("_PZZTy7GJEeuSTr8k0UEM8A")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation5? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -92,5 +92,5 @@ public record RegisteredContract14
     [IsoId("_PZZTzbGJEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

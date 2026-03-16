@@ -46,7 +46,7 @@ public record SecurityRestriction3
     [IsoId("_cVBeN2f9Eembv_9KtOEw8g")]
     [DisplayName("Investor Restriction Type")]
     [IsoXmlTag("InvstrRstrctnTp")]
-    public InvestorRestrictionType3Choice_? InvestorRestrictionType { get; init; }
+    public ValueList<InvestorRestrictionType3Choice_> InvestorRestrictionType { get; init; } = [];
 
     /// <summary>
     /// Type of investor that is allowed to hold the security.
@@ -54,5 +54,5 @@ public record SecurityRestriction3
     [IsoId("_cVBeOWf9Eembv_9KtOEw8g")]
     [DisplayName("Investor Type")]
     [IsoXmlTag("InvstrTp")]
-    public InvestorType3Choice_? InvestorType { get; init; }
+    public ValueList<InvestorType3Choice_> InvestorType { get; init; } = [];
 }

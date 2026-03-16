@@ -75,5 +75,5 @@ public record PEPISATransfer6
     [IsoId("_Sg0U9tp-Ed-ak6NoX_4Aeg_-2081601481")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument12? FinancialInstrumentAssetForTransfer { get; init; }
+    public ValueList<FinancialInstrument12> FinancialInstrumentAssetForTransfer { get; init; } = [];
 }

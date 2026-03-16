@@ -74,5 +74,5 @@ public record CorporateActionGeneralInformationSD46
     [IsoId("_tk03Jw-rEeuE0Pnt-OcNOA")]
     [DisplayName("Unallocated Details")]
     [IsoXmlTag("UallctdDtls")]
-    public CorporateActionUnallocatedDetailsSD7? UnallocatedDetails { get; init; }
+    public ValueList<CorporateActionUnallocatedDetailsSD7> UnallocatedDetails { get; init; } = [];
 }

@@ -22,7 +22,8 @@ public record CashAccountEntrySearch5
     [IsoId("_QApXd5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentificationSearchCriteria2Choice_? AccountIdentification { get; init; }
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> AccountIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the entry amount(s) on which the query is performed.
@@ -30,7 +31,7 @@ public record CashAccountEntrySearch5
     [IsoId("_QApXeZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Amount")]
     [IsoXmlTag("NtryAmt")]
-    public ActiveOrHistoricAmountRange2Choice_? EntryAmount { get; init; }
+    public ValueList<ActiveOrHistoricAmountRange2Choice_> EntryAmount { get; init; } = [];
 
     /// <summary>
     /// Currency of the entry amount.
@@ -38,7 +39,7 @@ public record CashAccountEntrySearch5
     [IsoId("_QApXe5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Amount Currency")]
     [IsoXmlTag("NtryAmtCcy")]
-    public ActiveOrHistoricCurrencyCode? EntryAmountCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> EntryAmountCurrency { get; init; } = [];
 
     /// <summary>
     /// Indicates whether an entry is a credit or a debit.
@@ -54,7 +55,7 @@ public record CashAccountEntrySearch5
     [IsoId("_QApXf5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Status")]
     [IsoXmlTag("NtrySts")]
-    public EntryStatus1Code? EntryStatus { get; init; }
+    public SimpleValueList<EntryStatus1Code> EntryStatus { get; init; } = [];
 
     /// <summary>
     /// Date and time at which an entry is posted to an account on the account servicer&apos;s books.
@@ -62,7 +63,7 @@ public record CashAccountEntrySearch5
     [IsoId("_QApXgZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Entry Date")]
     [IsoXmlTag("NtryDt")]
-    public DateAndDateTimeSearch3Choice_? EntryDate { get; init; }
+    public ValueList<DateAndDateTimeSearch3Choice_> EntryDate { get; init; } = [];
 
     /// <summary>
     /// Party that legally owns the account.

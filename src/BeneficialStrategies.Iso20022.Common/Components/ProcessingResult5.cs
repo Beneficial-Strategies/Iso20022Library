@@ -49,7 +49,7 @@ public record ProcessingResult5
     [IsoId("_vbjFh98gEeeNTcLLmuYy-w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action9? Action { get; init; }
+    public ValueList<Action9> Action { get; init; } = [];
 
     /// <summary>
     /// Additional action to perform.
@@ -57,7 +57,7 @@ public record ProcessingResult5
     [IsoId("_vbjFid8gEeeNTcLLmuYy-w")]
     [DisplayName("Additional Action")]
     [IsoXmlTag("AddtlActn")]
-    public AdditionalAction1? AdditionalAction { get; init; }
+    public ValueList<AdditionalAction1> AdditionalAction { get; init; } = [];
 
     /// <summary>
     /// Additional information relevant for the destination.
@@ -66,5 +66,5 @@ public record ProcessingResult5
     [IsoId("_vbjFi98gEeeNTcLLmuYy-w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation20? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation20> AdditionalInformation { get; init; } = [];
 }

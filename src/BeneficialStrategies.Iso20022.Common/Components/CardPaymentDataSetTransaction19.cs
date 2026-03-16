@@ -31,7 +31,7 @@ public record CardPaymentDataSetTransaction19
     [IsoId("_jfzaA6p2EeanIZ10Ka8PnA")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability5? Traceability { get; init; }
+    public ValueList<Traceability5> Traceability { get; init; } = [];
 
     /// <summary>
     /// Data related to the environment of the cancelled transaction captured in batch.

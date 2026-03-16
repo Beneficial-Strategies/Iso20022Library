@@ -84,5 +84,5 @@ public record CollateralMarginMarginUpdate5
     [IsoId("_h5Ac38g2EeuGrNSsxk3B0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -38,7 +38,7 @@ public record ATMSecurityConfiguration1
     [IsoId("_gRAscIr8EeSvuOJS0mmL0g")]
     [DisplayName("MAC Algorithm")]
     [IsoXmlTag("MACAlgo")]
-    public Algorithm12Code? MACAlgorithm { get; init; }
+    public SimpleValueList<Algorithm12Code> MACAlgorithm { get; init; } = [];
 
     /// <summary>
     /// Digest algorithm the security module is able to manage.
@@ -46,7 +46,7 @@ public record ATMSecurityConfiguration1
     [IsoId("_kEKN8Ir8EeSvuOJS0mmL0g")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public Algorithm11Code? DigestAlgorithm { get; init; }
+    public SimpleValueList<Algorithm11Code> DigestAlgorithm { get; init; } = [];
 
     /// <summary>
     /// Configuration of the digital signatures if the security module is able to perform digital signatures with an asymmetric key.
@@ -70,5 +70,5 @@ public record ATMSecurityConfiguration1
     [IsoId("_KGeSAIr-EeSvuOJS0mmL0g")]
     [DisplayName("Message Protection")]
     [IsoXmlTag("MsgPrtcn")]
-    public MessageProtection1Code? MessageProtection { get; init; }
+    public SimpleValueList<MessageProtection1Code> MessageProtection { get; init; } = [];
 }

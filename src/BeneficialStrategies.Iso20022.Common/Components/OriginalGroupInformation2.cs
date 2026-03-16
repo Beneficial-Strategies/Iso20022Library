@@ -51,5 +51,5 @@ public record OriginalGroupInformation2
     [IsoId("_PhL7Hdp-Ed-ak6NoX_4Aeg_885861269")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
-    public ReturnReasonInformation1? ReturnReasonInformation { get; init; }
+    public ValueList<ReturnReasonInformation1> ReturnReasonInformation { get; init; } = [];
 }

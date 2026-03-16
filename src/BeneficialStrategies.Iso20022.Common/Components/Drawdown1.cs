@@ -141,5 +141,5 @@ public record Drawdown1
     [IsoId("_1Q6vkFNiEeijdq8ilaxyOA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

@@ -23,7 +23,7 @@ public record Capabilities1
     [IsoId("_f4hfoEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Reading Capability")]
     [IsoXmlTag("CardRdngCpblty")]
-    public CardDataReading7Code? CardReadingCapability { get; init; }
+    public SimpleValueList<CardDataReading7Code> CardReadingCapability { get; init; } = [];
 
     /// <summary>
     /// Other types of card reading capabilities.
@@ -31,9 +31,7 @@ public record Capabilities1
     [IsoId("_oEHoEEYZEeegp_DADCe7HQ")]
     [DisplayName("Other Card Reading Capabilities")]
     [IsoXmlTag("OthrCardRdngCpblties")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherCardReadingCapabilities { get; init; }
+    public SimpleValueList<IsoMax35Text> OtherCardReadingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Card writing or output capabilities of the terminal performing the transaction.
@@ -42,7 +40,7 @@ public record Capabilities1
     [IsoId("_5zlTcEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Writing Capabilities")]
     [IsoXmlTag("CardWrtgCpblties")]
-    public CardDataWriting1Code? CardWritingCapabilities { get; init; }
+    public SimpleValueList<CardDataWriting1Code> CardWritingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Other card writing or output capabilities of the terminal performing the transaction.
@@ -50,9 +48,7 @@ public record Capabilities1
     [IsoId("_FKeTMEYaEeegp_DADCe7HQ")]
     [DisplayName("Other Card Writing Capabilities")]
     [IsoXmlTag("OthrCardWrtgCpblties")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherCardWritingCapabilities { get; init; }
+    public SimpleValueList<IsoMax35Text> OtherCardWritingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Maximum number of digits that the Point of Interaction is able to accept when the cardholder enters its PIN.
@@ -122,7 +118,7 @@ public record Capabilities1
     [IsoId("_Im3aMEYdEeegp_DADCe7HQ")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
-    public DisplayCapabilities6? MessageCapabilities { get; init; }
+    public ValueList<DisplayCapabilities6> MessageCapabilities { get; init; } = [];
 
     /// <summary>
     /// Cardholder verification capabilities performing the transaction at the point of service.
@@ -131,5 +127,6 @@ public record Capabilities1
     [IsoId("_25q4kRqZEeqH1IQNpbVpEw")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
-    public CardholderVerificationCapabilities1? CardholderVerificationCapability { get; init; }
+    public ValueList<CardholderVerificationCapabilities1> CardholderVerificationCapability { get; init; } =
+        [];
 }

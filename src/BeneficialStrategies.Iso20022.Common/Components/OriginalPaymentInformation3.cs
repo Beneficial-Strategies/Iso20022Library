@@ -84,7 +84,8 @@ public record OriginalPaymentInformation3
     [IsoId("_PmQoV9p-Ed-ak6NoX_4Aeg_-1323465127")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
-    public CancellationStatusReasonInformation1? CancellationStatusReasonInformation { get; init; }
+    public ValueList<CancellationStatusReasonInformation1> CancellationStatusReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Detailed information on the number of transactions for each identical cancellation status.
@@ -92,7 +93,8 @@ public record OriginalPaymentInformation3
     [IsoId("_PmZyQNp-Ed-ak6NoX_4Aeg_-1323465073")]
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
-    public NumberOfCancellationsPerStatus1? NumberOfTransactionsPerCancellationStatus { get; init; }
+    public ValueList<NumberOfCancellationsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; init; } =
+        [];
 
     /// <summary>
     /// Set of elements used to provide information on the original transactions to which the cancellation request message refers.
@@ -100,5 +102,6 @@ public record OriginalPaymentInformation3
     [IsoId("_PmZyQdp-Ed-ak6NoX_4Aeg_-1414030818")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransactionInformation32? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransactionInformation32> TransactionInformationAndStatus { get; init; } =
+        [];
 }

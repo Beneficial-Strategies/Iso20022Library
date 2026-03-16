@@ -30,5 +30,5 @@ public record OtherParties38
     [IsoId("_h8RAcMIuEei34K_Q744LyA")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentification149? Investor { get; init; }
+    public ValueList<PartyIdentification149> Investor { get; init; } = [];
 }

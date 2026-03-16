@@ -22,9 +22,7 @@ public record CorporateActionNarrative30
     [IsoId("_rvHmUWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public SimpleValueList<IsoMax350Text> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative30
     [IsoId("_rvHmWWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the certification/breakdown.
@@ -42,7 +38,5 @@ public record CorporateActionNarrative30
     [IsoId("_rvHmcWLLEeWR9ZSfjmHwUA")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CertificationBreakdown { get; init; }
+    public SimpleValueList<IsoMax350Text> CertificationBreakdown { get; init; } = [];
 }

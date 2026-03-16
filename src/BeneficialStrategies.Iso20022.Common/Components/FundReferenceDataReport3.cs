@@ -164,7 +164,7 @@ public record FundReferenceDataReport3
     [IsoId("_peCRj59BEeqxTNfi5y7ywQ")]
     [DisplayName("Plan Characteristics")]
     [IsoXmlTag("PlanChrtcs")]
-    public InvestmentPlanCharacteristics1? PlanCharacteristics { get; init; }
+    public ValueList<InvestmentPlanCharacteristics1> PlanCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Specifies, for a specific type of transaction, how amounts are to be paid in or paid out.
@@ -172,7 +172,7 @@ public record FundReferenceDataReport3
     [IsoId("_peCRkZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
-    public PaymentInstrument16? PaymentInstrument { get; init; }
+    public ValueList<PaymentInstrument16> PaymentInstrument { get; init; } = [];
 
     /// <summary>
     /// Account to be used for cash settlement.
@@ -180,7 +180,7 @@ public record FundReferenceDataReport3
     [IsoId("_peCRk59BEeqxTNfi5y7ywQ")]
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
-    public CashAccount202? CashSettlementDetails { get; init; }
+    public ValueList<CashAccount202> CashSettlementDetails { get; init; } = [];
 
     /// <summary>
     /// Processing characteristics specific to a local fund order desk.
@@ -188,7 +188,7 @@ public record FundReferenceDataReport3
     [IsoId("_peCRlZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Local Market Annex")]
     [IsoXmlTag("LclMktAnx")]
-    public LocalMarketAnnex4? LocalMarketAnnex { get; init; }
+    public ValueList<LocalMarketAnnex4> LocalMarketAnnex { get; init; } = [];
 
     /// <summary>
     /// Target market criteria.
@@ -222,5 +222,5 @@ public record FundReferenceDataReport3
     [IsoId("_peCRnZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -22,9 +22,7 @@ public record UPIQueryCriteria1
     [IsoId("_Ab3SAJNlEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Identifier { get; init; }
+    public SimpleValueList<IsoMax52Text> Identifier { get; init; } = [];
 
     /// <summary>
     /// Field can be queried for not reported value.

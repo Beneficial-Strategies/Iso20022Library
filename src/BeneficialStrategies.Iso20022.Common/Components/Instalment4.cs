@@ -31,5 +31,5 @@ public record Instalment4
     [IsoId("_AsZ9k5JKEeuuktRxxQZoNQ")]
     [DisplayName("Plan")]
     [IsoXmlTag("Plan")]
-    public Plan2? Plan { get; init; }
+    public ValueList<Plan2> Plan { get; init; } = [];
 }

@@ -39,7 +39,8 @@ public record Terminal3
     [IsoId("_e4Ixb-wNEeiMkKo2clXHdQ")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
-    public CardholderVerificationCapabilities1? CardholderVerificationCapability { get; init; }
+    public ValueList<CardholderVerificationCapabilities1> CardholderVerificationCapability { get; init; } =
+        [];
 
     /// <summary>
     /// Type of terminal integration at a point of service location.
@@ -89,5 +90,5 @@ public record Terminal3
     [IsoId("_e4IxauwNEeiMkKo2clXHdQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent8? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent8> POIComponent { get; init; } = [];
 }

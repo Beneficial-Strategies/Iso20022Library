@@ -54,7 +54,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjA3-AOSNFX-8224491")]
     [DisplayName("Related Letter")]
     [IsoXmlTag("RltdLttr")]
-    public QualifiedDocumentInformation1? RelatedLetter { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedLetter { get; init; } = [];
 
     /// <summary>
     /// Identifier of a related message.
@@ -62,7 +62,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjA4-AOSNFX-822449")]
     [DisplayName("Related Message")]
     [IsoXmlTag("RltdMsg")]
-    public QualifiedDocumentInformation1? RelatedMessage { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedMessage { get; init; } = [];
 
     /// <summary>
     /// Cross references the lists that are associated to this letter inside a message. The identifiers are relative to the Originator.
@@ -70,9 +70,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjA5-AOSNFX-8224491")]
     [DisplayName("Content Identifier")]
     [IsoXmlTag("CnttIdr")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ContentIdentifier { get; init; }
+    public SimpleValueList<IsoMax35Text> ContentIdentifier { get; init; } = [];
 
     /// <summary>
     /// Urgency or order of importance that the originator would like the recipient of the business letter to apply to the processing of the letter.
@@ -106,7 +104,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjE1-AOSNFX-8224492")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public QualifiedPartyIdentification1? Sender { get; init; }
+    public ValueList<QualifiedPartyIdentification1> Sender { get; init; } = [];
 
     /// <summary>
     /// User who, either individually or in concert with others, authorises the origination of a message.
@@ -124,7 +122,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjE3-AOSNFX-8224492")]
     [DisplayName("Response Recipient")]
     [IsoXmlTag("RspnRcpt")]
-    public QualifiedPartyIdentification1? ResponseRecipient { get; init; }
+    public ValueList<QualifiedPartyIdentification1> ResponseRecipient { get; init; } = [];
 
     /// <summary>
     /// Party to receive a copy of the message.
@@ -132,7 +130,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjE4-AOSNFX-8224492")]
     [DisplayName("Copy Recipient")]
     [IsoXmlTag("CpyRcpt")]
-    public QualifiedPartyIdentification1? CopyRecipient { get; init; }
+    public ValueList<QualifiedPartyIdentification1> CopyRecipient { get; init; } = [];
 
     /// <summary>
     /// Other party involved. This element is usable as a target for IDREFs.
@@ -140,7 +138,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjE5-AOSNFX-8224492")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
-    public QualifiedPartyIdentification1? OtherParty { get; init; }
+    public ValueList<QualifiedPartyIdentification1> OtherParty { get; init; } = [];
 
     /// <summary>
     /// Associated free form document.
@@ -148,7 +146,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjIw-AOSNFX-8224493")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Governing contract.
@@ -156,7 +154,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjIx-AOSNFX-8224493")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
-    public QualifiedDocumentInformation1? GoverningContract { get; init; }
+    public ValueList<QualifiedDocumentInformation1> GoverningContract { get; init; } = [];
 
     /// <summary>
     /// Rules and laws governing the letter.
@@ -164,7 +162,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjIz-AOSNFX-8224493")]
     [DisplayName("Legal Context")]
     [IsoXmlTag("LglCntxt")]
-    public GovernanceRules2? LegalContext { get; init; }
+    public ValueList<GovernanceRules2> LegalContext { get; init; } = [];
 
     /// <summary>
     /// Free form information about this message.
@@ -200,5 +198,5 @@ public record BusinessLetter1
     [IsoId("_OTgzMjI4-AOSNFX-8224493")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public QualifiedPartyAndXMLSignature1? DigitalSignature { get; init; }
+    public ValueList<QualifiedPartyAndXMLSignature1> DigitalSignature { get; init; } = [];
 }

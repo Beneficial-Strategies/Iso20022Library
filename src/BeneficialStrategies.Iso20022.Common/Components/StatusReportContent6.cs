@@ -30,7 +30,7 @@ public record StatusReportContent6
     [IsoId("_22n847CZEeapjPTKZHuM2w")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent7? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent7> POIComponent { get; init; } = [];
 
     /// <summary>
     /// Human attendance at the POI (Point Of Interaction) location during transactions.
@@ -63,7 +63,7 @@ public record StatusReportContent6
     [IsoId("_22n867CZEeapjPTKZHuM2w")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public TMSEvent5? Event { get; init; }
+    public ValueList<TMSEvent5> Event { get; init; } = [];
 
     /// <summary>
     /// Error log of the point of interaction since the last status report.
@@ -71,7 +71,5 @@ public record StatusReportContent6
     [IsoId("_22n87bCZEeapjPTKZHuM2w")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Errors { get; init; }
+    public SimpleValueList<IsoMax140Text> Errors { get; init; } = [];
 }

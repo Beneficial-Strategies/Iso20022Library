@@ -54,5 +54,5 @@ public record FraudDispositionInitiation2
     [IsoId("_I-jCSYgrEeu8-LhY4KPfWg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

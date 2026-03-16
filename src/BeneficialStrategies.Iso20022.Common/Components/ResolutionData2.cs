@@ -84,5 +84,5 @@ public record ResolutionData2
     [IsoId("_pg0QkcQHEemsic1bQcEtLA")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges8? Charges { get; init; }
+    public ValueList<Charges8> Charges { get; init; } = [];
 }

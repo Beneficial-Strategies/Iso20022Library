@@ -47,5 +47,5 @@ public record CustomReport1
     [IsoId("_Iw3vgclOEeuJ35KoBRZFOg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -56,7 +56,7 @@ public record CollateralSubstitution5
     [IsoId("_1hkYe4FvEeWtPe6Crjmeug")]
     [DisplayName("Securities Collateral")]
     [IsoXmlTag("SctiesColl")]
-    public SecuritiesCollateral7? SecuritiesCollateral { get; init; }
+    public ValueList<SecuritiesCollateral7> SecuritiesCollateral { get; init; } = [];
 
     /// <summary>
     /// Collateral type is cash.
@@ -64,7 +64,7 @@ public record CollateralSubstitution5
     [IsoId("_1hkYfYFvEeWtPe6Crjmeug")]
     [DisplayName("Cash Collateral")]
     [IsoXmlTag("CshColl")]
-    public CashCollateral5? CashCollateral { get; init; }
+    public ValueList<CashCollateral5> CashCollateral { get; init; } = [];
 
     /// <summary>
     /// Collateral type is other than securities or cash for example letter of credit.
@@ -72,7 +72,7 @@ public record CollateralSubstitution5
     [IsoId("_1hkYf4FvEeWtPe6Crjmeug")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
-    public OtherCollateral7? OtherCollateral { get; init; }
+    public ValueList<OtherCollateral7> OtherCollateral { get; init; } = [];
 
     /// <summary>
     /// Provides details on the identification of previously sent and/or received message(s), in case of updated substitution request.

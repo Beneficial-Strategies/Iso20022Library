@@ -42,7 +42,7 @@ public record SettlementSubTotalCalculatedTax1
     [IsoId("_S0j3KAEcEeCQm6a_G2yO_w_1356444979")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
-    public CurrencyAndAmount? CalculatedAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CalculatedAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value used as the basis on which this tax, levy or duty is calculated.
@@ -50,7 +50,7 @@ public record SettlementSubTotalCalculatedTax1
     [IsoId("_S0j3KQEcEeCQm6a_G2yO_w_-878123317")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
-    public CurrencyAndAmount? BasisAmount { get; init; }
+    public ValueList<CurrencyAndAmount> BasisAmount { get; init; } = [];
 
     /// <summary>
     /// Rate used to calculate the amount of this tax, levy or duty.

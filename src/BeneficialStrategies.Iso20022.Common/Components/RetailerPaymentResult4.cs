@@ -30,7 +30,7 @@ public record RetailerPaymentResult4
     [IsoId("_eauYY00aEeybj420QgWBkA")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -62,7 +62,7 @@ public record RetailerPaymentResult4
     [IsoId("_eauYa00aEeybj420QgWBkA")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; }
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 
     /// <summary>
     /// Numeric value of a handwritten signature.

@@ -47,7 +47,6 @@ public record DebitAuthorisation2
     [IsoId("_xeOH2UgtEeaGKYpLDboHPQ")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalCancellationReasonInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalCancellationReasonInformation { get; init; } =
+        [];
 }

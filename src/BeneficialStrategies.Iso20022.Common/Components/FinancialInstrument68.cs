@@ -48,7 +48,7 @@ public record FinancialInstrument68
     [IsoId("_zwUuEaFXEei_VZq-6SQkuQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit11? UnitsDetails { get; init; }
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -121,7 +121,7 @@ public record FinancialInstrument68
     [IsoId("_JOToU04DEeiQHa-q1Uephw")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
-    public Crystallisation1? CrystallisationDetails { get; init; }
+    public ValueList<Crystallisation1> CrystallisationDetails { get; init; } = [];
 
     /// <summary>
     /// Date or tax quarter used for the calculation of tax on the asset.
@@ -145,5 +145,5 @@ public record FinancialInstrument68
     [IsoId("_dU2nkXVaEeiiHo4Gse0d2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

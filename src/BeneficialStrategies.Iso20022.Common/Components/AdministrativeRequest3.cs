@@ -48,5 +48,5 @@ public record AdministrativeRequest3
     [IsoId("_a4UW9wxREeqEbo60f0v6aw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

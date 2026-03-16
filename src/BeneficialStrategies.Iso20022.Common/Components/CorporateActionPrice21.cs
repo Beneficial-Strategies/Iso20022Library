@@ -22,7 +22,7 @@ public record CorporateActionPrice21
     [IsoId("_4roWM_PEEd-SiYFtSzfh2Q")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    public PriceFormat7Choice_? GenericCashPriceReceivedPerProduct { get; init; }
+    public ValueList<PriceFormat7Choice_> GenericCashPriceReceivedPerProduct { get; init; } = [];
 
     /// <summary>
     /// Cash disbursement in lieu of equities; usually in lieu of fractional quantity.

@@ -57,7 +57,7 @@ public record LineItem12
     [IsoId("_SxvlbTAWEeOKib24wnHaFg")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment6? Adjustment { get; init; }
+    public ValueList<Adjustment6> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Charges related to the conveyance of goods.
@@ -73,7 +73,7 @@ public record LineItem12
     [IsoId("_SxvlcTAWEeOKib24wnHaFg")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax22? Tax { get; init; }
+    public ValueList<Tax22> Tax { get; init; } = [];
 
     /// <summary>
     /// Total net amount of a trade transaction. Total amount resulting from the gross amount plus freight charges, tax and plus/minus Adjustments.
@@ -89,7 +89,7 @@ public record LineItem12
     [IsoId("_SxvldTAWEeOKib24wnHaFg")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
-    public UserDefinedInformation1? BuyerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> BuyerDefinedInformation { get; init; } = [];
 
     /// <summary>
     /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
@@ -97,7 +97,7 @@ public record LineItem12
     [IsoId("_SxvldzAWEeOKib24wnHaFg")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
-    public UserDefinedInformation1? SellerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> SellerDefinedInformation { get; init; } = [];
 
     /// <summary>
     /// Specifies the applicable Incoterm and associated location.

@@ -30,7 +30,7 @@ public record PassengerTransport1
     [IsoId("_E2tJZPQcEeihCvvpsmGI2w")]
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
-    public TripLeg1? TripLeg { get; init; }
+    public ValueList<TripLeg1> TripLeg { get; init; } = [];
 
     /// <summary>
     /// Contains additional charges related to or during transit (for example, baggage fee, in-flight purchase). These are separate from the original ticket purchase.
@@ -38,7 +38,7 @@ public record PassengerTransport1
     [IsoId("_oA_s4PQcEeihCvvpsmGI2w")]
     [DisplayName("Ancillary Purchase")]
     [IsoXmlTag("AncllryPurchs")]
-    public AncillaryPurchase1? AncillaryPurchase { get; init; }
+    public ValueList<AncillaryPurchase1> AncillaryPurchase { get; init; } = [];
 
     /// <summary>
     /// Vehicle for hire for passenger transport - excludes vehicles driven by a renter.  Examples include, but are not limited to, taxi, chauffered limousine, boats.
@@ -46,5 +46,5 @@ public record PassengerTransport1
     [IsoId("_3YFysPQcEeihCvvpsmGI2w")]
     [DisplayName("Hired Vehicle Details")]
     [IsoXmlTag("HirdVhclDtls")]
-    public HiredVehicle1? HiredVehicleDetails { get; init; }
+    public ValueList<HiredVehicle1> HiredVehicleDetails { get; init; } = [];
 }

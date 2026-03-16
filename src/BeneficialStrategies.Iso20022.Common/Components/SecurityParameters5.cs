@@ -31,7 +31,7 @@ public record SecurityParameters5
     [IsoId("_i2b08YtcEeST3ocKVc8_qA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey8? Key { get; init; }
+    public ValueList<CryptographicKey8> Key { get; init; } = [];
 
     /// <summary>
     /// Digital signature of implicit data depending on the security scheme download procedure.

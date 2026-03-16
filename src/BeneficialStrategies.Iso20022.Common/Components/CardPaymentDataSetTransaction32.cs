@@ -31,7 +31,7 @@ public record CardPaymentDataSetTransaction32
     [IsoId("_ePLL8wx7Eeqdx6buGpCCQw")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability8? Traceability { get; init; }
+    public ValueList<Traceability8> Traceability { get; init; } = [];
 
     /// <summary>
     /// Data related to the environment of the card payment transaction to authorise.

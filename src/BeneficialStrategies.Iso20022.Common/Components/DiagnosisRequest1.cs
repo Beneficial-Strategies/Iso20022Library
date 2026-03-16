@@ -31,7 +31,5 @@ public record DiagnosisRequest1
     [IsoId("_ETK4sN6KEeiwsev40qZGEQ")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AcquirerIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> AcquirerIdentification { get; init; } = [];
 }

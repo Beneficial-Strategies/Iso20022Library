@@ -55,7 +55,7 @@ public record ExtendOrPayQuery1
     [IsoId("_-Dn203ltEeG7BsjMvd1mEw_916958004")]
     [DisplayName("Bank Contact")]
     [IsoXmlTag("BkCtct")]
-    public Contacts3? BankContact { get; init; }
+    public ValueList<Contacts3> BankContact { get; init; } = [];
 
     /// <summary>
     /// Document or template enclosed in the request.
@@ -63,7 +63,7 @@ public record ExtendOrPayQuery1
     [IsoId("_-Dxn0HltEeG7BsjMvd1mEw_-1682717592")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the request.

@@ -197,5 +197,5 @@ public record Mandate18
     [IsoId("_eVBHr9cZEeqRFcf2R4bPBw")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
-    public ReferredMandateDocument1? ReferredDocument { get; init; }
+    public ValueList<ReferredMandateDocument1> ReferredDocument { get; init; } = [];
 }

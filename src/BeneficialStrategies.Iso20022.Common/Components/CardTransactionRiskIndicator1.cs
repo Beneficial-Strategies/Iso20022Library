@@ -22,7 +22,7 @@ public record CardTransactionRiskIndicator1
     [IsoId("_BJYHkHsNEeSR68OJvMfxJQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public CardTransactionRiskReason1Code? Reason { get; init; }
+    public SimpleValueList<CardTransactionRiskReason1Code> Reason { get; init; } = [];
 
     /// <summary>
     /// Level of risk, from 1 to 99.
@@ -39,5 +39,5 @@ public record CardTransactionRiskIndicator1
     [IsoId("_4l1jwHsNEeSR68OJvMfxJQ")]
     [DisplayName("Recommended Action")]
     [IsoXmlTag("RcmmnddActn")]
-    public ActionType4Code? RecommendedAction { get; init; }
+    public SimpleValueList<ActionType4Code> RecommendedAction { get; init; } = [];
 }

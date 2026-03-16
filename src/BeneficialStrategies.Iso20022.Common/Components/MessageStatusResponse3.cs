@@ -55,5 +55,5 @@ public record MessageStatusResponse3
     [IsoId("_bJpfCQ03EeqUVL7sB4m7NA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

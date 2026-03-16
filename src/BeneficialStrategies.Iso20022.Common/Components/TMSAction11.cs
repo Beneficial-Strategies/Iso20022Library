@@ -38,7 +38,7 @@ public record TMSAction11
     [IsoId("_fC8Y9XGkEe2TbaNWBpRZpQ")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public KEKIdentifier5? Key { get; init; }
+    public ValueList<KEKIdentifier5> Key { get; init; } = [];
 
     /// <summary>
     /// Identification of the master terminal manager or the terminal manager with which the POI has to perform the action.
@@ -82,7 +82,7 @@ public record TMSAction11
     [IsoId("_fC8Y_3GkEe2TbaNWBpRZpQ")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
-    public DataSetCategory18Code? ComponentType { get; init; }
+    public SimpleValueList<DataSetCategory18Code> ComponentType { get; init; } = [];
 
     /// <summary>
     /// Identifies the delegation scope assigned by the MTM.
@@ -134,7 +134,8 @@ public record TMSAction11
     [IsoId("_fC9nGHGkEe2TbaNWBpRZpQ")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
-    public TerminalManagementAdditionalProcess1Code? AdditionalProcess { get; init; }
+    public SimpleValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
 
     /// <summary>
     /// Definition of retry process if activation of the action fails.
@@ -167,8 +168,7 @@ public record TMSAction11
     [IsoId("_fC9nIHGkEe2TbaNWBpRZpQ")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -176,7 +176,7 @@ public record TMSAction11
     [IsoId("_fC9nInGkEe2TbaNWBpRZpQ")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction5? ErrorAction { get; init; }
+    public ValueList<ErrorAction5> ErrorAction { get; init; } = [];
 
     /// <summary>
     /// Additional information about the maintenance action.
@@ -184,8 +184,7 @@ public record TMSAction11
     [IsoId("_fC9nJHGkEe2TbaNWBpRZpQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Configuration of a message item.
@@ -193,7 +192,7 @@ public record TMSAction11
     [IsoId("_fC9nJnGkEe2TbaNWBpRZpQ")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition2? MessageItem { get; init; }
+    public ValueList<MessageItemCondition2> MessageItem { get; init; } = [];
 
     /// <summary>
     /// Information related to a device request of the POI.

@@ -38,7 +38,7 @@ public record StatementOfInvestmentFundTransactions3
     [IsoId("_xQD-yQf7EeSNB7vR9dc0nw")]
     [DisplayName("Transaction On Account")]
     [IsoXmlTag("TxOnAcct")]
-    public InvestmentFundTransactionsByFund3? TransactionOnAccount { get; init; }
+    public ValueList<InvestmentFundTransactionsByFund3> TransactionOnAccount { get; init; } = [];
 
     /// <summary>
     /// Sub-account of the safekeeping or investment account.
@@ -46,7 +46,7 @@ public record StatementOfInvestmentFundTransactions3
     [IsoId("_xQD-ywf7EeSNB7vR9dc0nw")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification36? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification36> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -54,5 +54,5 @@ public record StatementOfInvestmentFundTransactions3
     [IsoId("_xQD-zQf7EeSNB7vR9dc0nw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -68,7 +68,7 @@ public record OperationMandate3
     [IsoId("_QYmhag4fEeK3IMoVvcTkkg")]
     [DisplayName("Mandate Holder")]
     [IsoXmlTag("MndtHldr")]
-    public PartyAndAuthorisation3? MandateHolder { get; init; }
+    public ValueList<PartyAndAuthorisation3> MandateHolder { get; init; } = [];
 
     /// <summary>
     /// Bank operation allowed by a mandate.

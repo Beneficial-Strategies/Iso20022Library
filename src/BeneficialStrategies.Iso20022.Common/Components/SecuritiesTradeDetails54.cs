@@ -22,9 +22,7 @@ public record SecuritiesTradeDetails54
     [IsoId("_UbSYWTnXEeWV5sr121Fc8A")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -32,9 +30,7 @@ public record SecuritiesTradeDetails54
     [IsoId("_UbSYXTnXEeWV5sr121Fc8A")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -42,9 +38,7 @@ public record SecuritiesTradeDetails54
     [IsoId("_UbSYYTnXEeWV5sr121Fc8A")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
@@ -111,7 +105,8 @@ public record SecuritiesTradeDetails54
     [IsoId("_UbSYfznXEeWV5sr121Fc8A")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition5Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of price and information about the price.

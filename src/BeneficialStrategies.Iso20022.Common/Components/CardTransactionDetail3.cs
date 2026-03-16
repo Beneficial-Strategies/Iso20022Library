@@ -30,7 +30,7 @@ public record CardTransactionDetail3
     [IsoId("_DCm_oIKYEeSIRfXNMHH5mQ")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
-    public DetailedAmount11? TransactionFees { get; init; }
+    public ValueList<DetailedAmount11> TransactionFees { get; init; } = [];
 
     /// <summary>
     /// Additional amounts from the processor or the issuer without financial impacts on the transaction amount.
@@ -38,7 +38,7 @@ public record CardTransactionDetail3
     [IsoId("_zhWcM4IeEeSvPp7yXrNQIw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public DetailedAmount10? AdditionalAmounts { get; init; }
+    public ValueList<DetailedAmount10> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Reason to send a card acquirer to issuer message.

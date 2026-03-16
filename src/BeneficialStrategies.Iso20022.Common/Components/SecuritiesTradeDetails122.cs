@@ -62,9 +62,7 @@ public record SecuritiesTradeDetails122
     [IsoId("_kQMiDQzOEeuTPv2wqaotHg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -92,9 +90,7 @@ public record SecuritiesTradeDetails122
     [IsoId("_kQMiGQzOEeuTPv2wqaotHg")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -191,7 +187,8 @@ public record SecuritiesTradeDetails122
     [IsoId("_kQMiSQzOEeuTPv2wqaotHg")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition5Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of price and information about the price.
@@ -271,5 +268,5 @@ public record SecuritiesTradeDetails122
     [IsoId("_kQMicQzOEeuTPv2wqaotHg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

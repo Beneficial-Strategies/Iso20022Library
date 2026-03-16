@@ -176,5 +176,5 @@ public record CardData6
     [IsoId("_RidYy4EHEeu6D49Gi-ZPwQ")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
-    public AdditionalData1? AdditionalCardData { get; init; }
+    public ValueList<AdditionalData1> AdditionalCardData { get; init; } = [];
 }

@@ -38,7 +38,7 @@ public record UndertakingTerminationNotice1
     [IsoId("_974QE3ltEeG7BsjMvd1mEw_1574400589")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the notification.

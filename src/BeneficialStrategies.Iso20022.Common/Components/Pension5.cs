@@ -46,7 +46,7 @@ public record Pension5
     [IsoId("_xOEHyelmEeuvhrZwLF0fDg")]
     [DisplayName("Tax Reference")]
     [IsoXmlTag("TaxRef")]
-    public TaxReference1? TaxReference { get; init; }
+    public ValueList<TaxReference1> TaxReference { get; init; } = [];
 
     /// <summary>
     /// Reference of the drawdown.
@@ -168,7 +168,7 @@ public record Pension5
     [IsoId("_xOEH4-lmEeuvhrZwLF0fDg")]
     [DisplayName("Lump Sum Type")]
     [IsoXmlTag("LumpSumTp")]
-    public LumpSumType1Choice_? LumpSumType { get; init; }
+    public ValueList<LumpSumType1Choice_> LumpSumType { get; init; } = [];
 
     /// <summary>
     /// Order attached to the pension policy, plan or scheme.
@@ -176,7 +176,7 @@ public record Pension5
     [IsoId("_xOEH5elmEeuvhrZwLF0fDg")]
     [DisplayName("Pension Order")]
     [IsoXmlTag("PnsnOrdr")]
-    public PensionOrder1? PensionOrder { get; init; }
+    public ValueList<PensionOrder1> PensionOrder { get; init; } = [];
 
     /// <summary>
     /// Indicates whether assets held within the pension are ring-fenced into specific tranches.
@@ -255,5 +255,5 @@ public record Pension5
     [IsoId("_xOEH9elmEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

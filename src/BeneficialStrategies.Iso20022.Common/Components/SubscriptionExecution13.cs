@@ -207,7 +207,7 @@ public record SubscriptionExecution13
     [IsoId("_HtVnpzbtEead9bDRE_1DAQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms33> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
@@ -404,7 +404,7 @@ public record SubscriptionExecution13
     [IsoId("_3oiToTlIEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public SourceOfCash1Choice_? SourceOfCash { get; init; }
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     /// <summary>
     /// Assessment of the customer’s behaviour at the time of the account opening application.

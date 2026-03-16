@@ -30,7 +30,7 @@ public record TransactionTotals13
     [IsoId("_Q0DxA5MjEeuleeHpFMMhmQ")]
     [DisplayName("Financial Reconciliation")]
     [IsoXmlTag("FinRcncltn")]
-    public FinancialReconciliation2? FinancialReconciliation { get; init; }
+    public ValueList<FinancialReconciliation2> FinancialReconciliation { get; init; } = [];
 
     /// <summary>
     /// Contains total message count.
@@ -38,7 +38,7 @@ public record TransactionTotals13
     [IsoId("_Q0DxBZMjEeuleeHpFMMhmQ")]
     [DisplayName("Message Reconciliation")]
     [IsoXmlTag("MsgRcncltn")]
-    public MessageReconciliation3? MessageReconciliation { get; init; }
+    public ValueList<MessageReconciliation3> MessageReconciliation { get; init; } = [];
 
     /// <summary>
     /// Contains additional fee reconciliation data.
@@ -46,7 +46,7 @@ public record TransactionTotals13
     [IsoId("_Q0DxB5MjEeuleeHpFMMhmQ")]
     [DisplayName("Additional Fee Reconciliation")]
     [IsoXmlTag("AddtlFeeRcncltn")]
-    public AdditionalFeeReconciliation2? AdditionalFeeReconciliation { get; init; }
+    public ValueList<AdditionalFeeReconciliation2> AdditionalFeeReconciliation { get; init; } = [];
 
     /// <summary>
     /// Currency of the transaction.

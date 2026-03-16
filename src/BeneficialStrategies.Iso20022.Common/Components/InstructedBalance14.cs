@@ -70,5 +70,5 @@ public record InstructedBalance14
     [IsoId("_2yfWLe6KEeqc-LCjwLsUVg")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public InstructedCorporateActionOption15? OptionDetails { get; init; }
+    public ValueList<InstructedCorporateActionOption15> OptionDetails { get; init; } = [];
 }

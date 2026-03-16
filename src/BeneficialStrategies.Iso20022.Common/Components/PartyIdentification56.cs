@@ -30,7 +30,7 @@ public record PartyIdentification56
     [IsoId("_QsN-YwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification2? AlternateIdentification { get; init; }
+    public ValueList<AlternatePartyIdentification2> AlternateIdentification { get; init; } = [];
 
     /// <summary>
     /// Country in which a person is permanently domiciled (the place of a persons permanent home).
@@ -46,7 +46,7 @@ public record PartyIdentification56
     [IsoId("_QsN-dwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
-    public CountryCode? NonDomicileCountry { get; init; }
+    public SimpleValueList<CountryCode> NonDomicileCountry { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities belonging to the beneficial owner specified.
@@ -62,7 +62,7 @@ public record PartyIdentification56
     [IsoId("_QsN-iwE4EeG0G9kfgQ0HLA")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public BeneficiaryCertificationType6Choice_? CertificationType { get; init; }
+    public ValueList<BeneficiaryCertificationType6Choice_> CertificationType { get; init; } = [];
 
     /// <summary>
     /// Provides details relative to the beneficial owner not included within structured fields of this message.

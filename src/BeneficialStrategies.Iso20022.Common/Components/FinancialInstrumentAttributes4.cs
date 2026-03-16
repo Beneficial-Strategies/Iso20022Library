@@ -269,7 +269,7 @@ public record FinancialInstrumentAttributes4
     [IsoId("_Tvyphdp-Ed-ak6NoX_4Aeg_1007213800")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown5? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown5> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the interest rate of an interest bearing instrument is reset periodically.
@@ -360,7 +360,8 @@ public record FinancialInstrumentAttributes4
     [IsoId("_Tv8ah9p-Ed-ak6NoX_4Aeg_-765957170")]
     [DisplayName("Underlying Financial Instrument Identification")]
     [IsoXmlTag("UndrlygFinInstrmId")]
-    public SecurityIdentification11? UnderlyingFinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification11> UnderlyingFinancialInstrumentIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional information about the financial instrument in narrative form.

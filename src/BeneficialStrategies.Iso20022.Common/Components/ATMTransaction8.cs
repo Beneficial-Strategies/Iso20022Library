@@ -66,5 +66,5 @@ public record ATMTransaction8
     [IsoId("_kq6SU4q3EeSIDtZ76p6McQ")]
     [DisplayName("Mix")]
     [IsoXmlTag("Mix")]
-    public ATMMediaMix2? Mix { get; init; }
+    public ValueList<ATMMediaMix2> Mix { get; init; } = [];
 }

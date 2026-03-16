@@ -67,7 +67,7 @@ public record InquiryInitiation1
     [IsoId("_QyW58dXxEee5XtaG1wqDfQ")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; }
+    public ValueList<ProtectedData1> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
@@ -75,5 +75,5 @@ public record InquiryInitiation1
     [IsoId("_r5BSUaK5EeeQobSgLcPRvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

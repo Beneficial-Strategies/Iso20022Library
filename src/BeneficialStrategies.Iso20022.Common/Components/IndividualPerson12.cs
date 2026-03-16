@@ -49,5 +49,5 @@ public record IndividualPerson12
     [IsoId("_QB-T8tp-Ed-ak6NoX_4Aeg_-1844077056")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public GenericIdentification11? OtherIdentification { get; init; }
+    public ValueList<GenericIdentification11> OtherIdentification { get; init; } = [];
 }

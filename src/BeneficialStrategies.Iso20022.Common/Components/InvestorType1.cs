@@ -46,5 +46,5 @@ public record InvestorType1
     [IsoId("_3ng9MDcLEeiIxKQErQxblg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherTargetMarketInvestor1? Other { get; init; }
+    public ValueList<OtherTargetMarketInvestor1> Other { get; init; } = [];
 }

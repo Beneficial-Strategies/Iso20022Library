@@ -32,7 +32,7 @@ public record FeeAndTax1
     [IsoId("_0lFUGzkkEeahTcrfPSjpxA")]
     [DisplayName("Individual Fee")]
     [IsoXmlTag("IndvFee")]
-    public Fee1? IndividualFee { get; init; }
+    public ValueList<Fee1> IndividualFee { get; init; } = [];
 
     /// <summary>
     /// Individual tax amount.
@@ -40,5 +40,5 @@ public record FeeAndTax1
     [IsoId("_0lFUHTkkEeahTcrfPSjpxA")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax30? IndividualTax { get; init; }
+    public ValueList<Tax30> IndividualTax { get; init; } = [];
 }

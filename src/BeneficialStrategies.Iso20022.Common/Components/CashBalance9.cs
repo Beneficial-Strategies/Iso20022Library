@@ -22,7 +22,7 @@ public record CashBalance9
     [IsoId("_yttMZ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public BalanceType8Choice_? Type { get; init; }
+    public ValueList<BalanceType8Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of counterparty for which the balance is calculated.
@@ -38,7 +38,8 @@ public record CashBalance9
     [IsoId("_yttMa5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
-    public BranchAndFinancialInstitutionIdentification5? CounterpartyIdentification { get; init; }
+    public ValueList<BranchAndFinancialInstitutionIdentification5> CounterpartyIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Date and time at which the balance is or will be available.
@@ -46,5 +47,5 @@ public record CashBalance9
     [IsoId("_yttMbZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTimeSearch3Choice_? ValueDate { get; init; }
+    public ValueList<DateAndDateTimeSearch3Choice_> ValueDate { get; init; } = [];
 }

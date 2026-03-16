@@ -78,7 +78,7 @@ public record Baseline3
     [IsoId("_SrGSVNp-Ed-ak6NoX_4Aeg_-909961174")]
     [DisplayName("Buyer Side Submitting Bank")]
     [IsoXmlTag("BuyrSdSubmitgBk")]
-    public BICIdentification1? BuyerSideSubmittingBank { get; init; }
+    public ValueList<BICIdentification1> BuyerSideSubmittingBank { get; init; } = [];
 
     /// <summary>
     /// Financial institution on the seller&apos;s side, uniquely identified by its BIC. As part of the transaction, it may submit data sets.
@@ -86,7 +86,7 @@ public record Baseline3
     [IsoId("_SrGSVdp-Ed-ak6NoX_4Aeg_-481446980")]
     [DisplayName("Seller Side Submitting Bank")]
     [IsoXmlTag("SellrSdSubmitgBk")]
-    public BICIdentification1? SellerSideSubmittingBank { get; init; }
+    public ValueList<BICIdentification1> SellerSideSubmittingBank { get; init; } = [];
 
     /// <summary>
     /// Party to be invoiced for the purchase.
@@ -144,7 +144,7 @@ public record Baseline3
     [IsoId("_SrQDUtp-Ed-ak6NoX_4Aeg_491944940")]
     [DisplayName("Payment Obligation")]
     [IsoXmlTag("PmtOblgtn")]
-    public PaymentObligation1? PaymentObligation { get; init; }
+    public ValueList<PaymentObligation1> PaymentObligation { get; init; } = [];
 
     /// <summary>
     /// Specifies the latest date on which a data set must be matched with a baseline.
@@ -185,7 +185,7 @@ public record Baseline3
     [IsoId("_SrQDV9p-Ed-ak6NoX_4Aeg_-1995693519")]
     [DisplayName("Certificate Data Set Required")]
     [IsoXmlTag("CertDataSetReqrd")]
-    public RequiredSubmission4? CertificateDataSetRequired { get; init; }
+    public ValueList<RequiredSubmission4> CertificateDataSetRequired { get; init; } = [];
 
     /// <summary>
     /// Specifies that another type of certificate data set is required for each shipment part of the transaction.
@@ -193,7 +193,7 @@ public record Baseline3
     [IsoId("_SrZNQNp-Ed-ak6NoX_4Aeg_-2130617300")]
     [DisplayName("Other Certificate Data Set Required")]
     [IsoXmlTag("OthrCertDataSetReqrd")]
-    public RequiredSubmission5? OtherCertificateDataSetRequired { get; init; }
+    public ValueList<RequiredSubmission5> OtherCertificateDataSetRequired { get; init; } = [];
 
     /// <summary>
     /// Specifies that IntentToPayNotice message(s) are expected as part of this transaction.

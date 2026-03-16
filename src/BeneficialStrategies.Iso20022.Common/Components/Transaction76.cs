@@ -44,8 +44,7 @@ public record Transaction76
     [IsoId("_l3yOMN3iEeieV46qhAnbyQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MessageReason { get; init; }
+    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -89,7 +88,7 @@ public record Transaction76
     [IsoId("_LKIAUa0wEeiBP5PZ97xcEA")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount20? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount20> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount used for reconciliation.
@@ -107,7 +106,7 @@ public record Transaction76
     [IsoId("_iWqAEa0qEeiBP5PZ97xcEA")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -115,7 +114,7 @@ public record Transaction76
     [IsoId("_Z4Bn4fF7EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -139,5 +138,5 @@ public record Transaction76
     [IsoId("_yFzqgRqlEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

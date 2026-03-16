@@ -49,5 +49,5 @@ public record Amount10
     [IsoId("_5NuCoPfBEei89sMSHxl1ew")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax33? Tax { get; init; }
+    public ValueList<Tax33> Tax { get; init; } = [];
 }

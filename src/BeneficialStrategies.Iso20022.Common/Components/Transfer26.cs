@@ -136,7 +136,7 @@ public record Transfer26
     [IsoId("_3bfWWRgnEeK-_89we2b-bA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit3? UnitsDetails { get; init; }
+    public ValueList<Unit3> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.

@@ -60,7 +60,7 @@ public record ATMCassette2
     [IsoId("_UrYH164MEeWZgJQOa6iKCQ")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public ATMNoteType1Code? SubType { get; init; }
+    public SimpleValueList<ATMNoteType1Code> SubType { get; init; } = [];
 
     /// <summary>
     /// Type of media inside the cassette.
@@ -76,5 +76,5 @@ public record ATMCassette2
     [IsoId("_UrYH264MEeWZgJQOa6iKCQ")]
     [DisplayName("Media Counters")]
     [IsoXmlTag("MdiaCntrs")]
-    public ATMCassetteCounters3? MediaCounters { get; init; }
+    public ValueList<ATMCassetteCounters3> MediaCounters { get; init; } = [];
 }

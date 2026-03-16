@@ -22,7 +22,7 @@ public record SecurityCommodity4
     [IsoId("_lLk3Aa-tEemF0ZVFnxVu4g")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public Security17? Security { get; init; }
+    public ValueList<Security17> Security { get; init; } = [];
 
     /// <summary>
     /// Data specific to commodities being subject to the transaction.
@@ -30,5 +30,5 @@ public record SecurityCommodity4
     [IsoId("_lLk3A6-tEemF0ZVFnxVu4g")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
-    public Commodity21? Commodity { get; init; }
+    public ValueList<Commodity21> Commodity { get; init; } = [];
 }

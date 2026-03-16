@@ -258,5 +258,5 @@ public record FinancialInstrument96
     [IsoId("_AKCqWZ9UEeqxTNfi5y7ywQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

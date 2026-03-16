@@ -32,7 +32,7 @@ public record MemberCriteria4
     [IsoId("_i_D_JXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public MemberSearchCriteria4? SearchCriteria { get; init; }
+    public ValueList<MemberSearchCriteria4> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected report.

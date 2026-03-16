@@ -30,7 +30,7 @@ public record StatusReportContent11
     [IsoId("_THgog06rEeyGi9JAv6wq7Q")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent12? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent12> POIComponent { get; init; } = [];
 
     /// <summary>
     /// Identifier assigned to a set of POI terminals performing some categories of transactions.
@@ -38,9 +38,7 @@ public record StatusReportContent11
     [IsoId("_THgohU6rEeyGi9JAv6wq7Q")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIGroupIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
     /// Human attendance at the POI (Point Of Interaction) location during transactions.
@@ -65,7 +63,7 @@ public record StatusReportContent11
     [IsoId("_THgoi06rEeyGi9JAv6wq7Q")]
     [DisplayName("Data Set Required")]
     [IsoXmlTag("DataSetReqrd")]
-    public DataSetRequest3? DataSetRequired { get; init; }
+    public ValueList<DataSetRequest3> DataSetRequired { get; init; } = [];
 
     /// <summary>
     /// Result of an individual terminal management action by the point of interaction.
@@ -73,7 +71,7 @@ public record StatusReportContent11
     [IsoId("_THgojU6rEeyGi9JAv6wq7Q")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public TMSEvent9? Event { get; init; }
+    public ValueList<TMSEvent9> Event { get; init; } = [];
 
     /// <summary>
     /// Error log of the point of interaction since the last status report.
@@ -81,7 +79,5 @@ public record StatusReportContent11
     [IsoId("_THgoj06rEeyGi9JAv6wq7Q")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Errors { get; init; }
+    public SimpleValueList<IsoMax140Text> Errors { get; init; } = [];
 }

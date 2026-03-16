@@ -22,7 +22,7 @@ public record SecurityCommodityCash1
     [IsoId("_l0q9sa-1EemF0ZVFnxVu4g")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public Security17? Security { get; init; }
+    public ValueList<Security17> Security { get; init; } = [];
 
     /// <summary>
     /// Data specific to commodities being subject to the transaction.
@@ -30,7 +30,7 @@ public record SecurityCommodityCash1
     [IsoId("_l0q9s6-1EemF0ZVFnxVu4g")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
-    public Commodity21? Commodity { get; init; }
+    public ValueList<Commodity21> Commodity { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the values defined as active or historic currency and amount are matching or not.
@@ -38,5 +38,5 @@ public record SecurityCommodityCash1
     [IsoId("_pTFlUK-1EemF0ZVFnxVu4g")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
-    public CashCompare1? Cash { get; init; }
+    public ValueList<CashCompare1> Cash { get; init; } = [];
 }

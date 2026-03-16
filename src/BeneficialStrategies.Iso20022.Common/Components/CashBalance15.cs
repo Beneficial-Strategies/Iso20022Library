@@ -54,5 +54,5 @@ public record CashBalance15
     [IsoId("_rn_kORIwEeydmIVkS03esw")]
     [DisplayName("Transaction Lot Number")]
     [IsoXmlTag("TxLotNb")]
-    public GenericIdentification178? TransactionLotNumber { get; init; }
+    public ValueList<GenericIdentification178> TransactionLotNumber { get; init; } = [];
 }

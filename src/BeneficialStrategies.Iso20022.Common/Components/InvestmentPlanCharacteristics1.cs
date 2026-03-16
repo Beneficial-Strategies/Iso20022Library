@@ -82,5 +82,5 @@ public record InvestmentPlanCharacteristics1
     [IsoId("_qpMmsWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

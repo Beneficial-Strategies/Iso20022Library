@@ -31,7 +31,7 @@ public record FinancialItem1
     [IsoId("_OTgzMzk4-AOSNFX-8224503")]
     [DisplayName("Financial Document Reference")]
     [IsoXmlTag("FinDocRef")]
-    public QualifiedDocumentInformation1? FinancialDocumentReference { get; init; }
+    public ValueList<QualifiedDocumentInformation1> FinancialDocumentReference { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the value is a debit or credit.
@@ -63,7 +63,7 @@ public record FinancialItem1
     [IsoId("_OTgzNDAy-AOSNFX-8224503")]
     [DisplayName("Instalment Information")]
     [IsoXmlTag("InstlmtInf")]
-    public Instalment2? InstalmentInformation { get; init; }
+    public ValueList<Instalment2> InstalmentInformation { get; init; } = [];
 
     /// <summary>
     /// Additional proprietary textual information concerning the item.
@@ -81,7 +81,7 @@ public record FinancialItem1
     [IsoId("_OTgzNDA2-AOSNFX-8224503")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Validation status of the item.

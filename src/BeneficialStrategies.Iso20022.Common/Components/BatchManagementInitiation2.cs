@@ -46,7 +46,7 @@ public record BatchManagementInitiation2
     [IsoId("_l-CZ14dOEeuBS50MFjViNw")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; }
+    public ValueList<ProtectedData1> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
@@ -54,5 +54,5 @@ public record BatchManagementInitiation2
     [IsoId("_l-CZ2YdOEeuBS50MFjViNw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

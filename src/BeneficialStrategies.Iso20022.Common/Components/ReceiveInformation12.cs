@@ -63,7 +63,7 @@ public record ReceiveInformation12
     [IsoId("_gqDHExYBEeOBE-jZfcm4KQ")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge20? ChargeDetails { get; init; }
+    public ValueList<Charge20> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
@@ -71,7 +71,7 @@ public record ReceiveInformation12
     [IsoId("_gqDHFRYBEeOBE-jZfcm4KQ")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission17? CommissionDetails { get; init; }
+    public ValueList<Commission17> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -79,7 +79,7 @@ public record ReceiveInformation12
     [IsoId("_gqDHFxYBEeOBE-jZfcm4KQ")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax21? TaxDetails { get; init; }
+    public ValueList<Tax21> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer.
@@ -87,7 +87,7 @@ public record ReceiveInformation12
     [IsoId("_q40BEBYBEeOBE-jZfcm4KQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms7? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms7> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.

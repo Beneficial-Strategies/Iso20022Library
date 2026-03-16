@@ -71,7 +71,8 @@ public record CollateralAmount18
     [IsoId("_qxKcLRIrEeyZaPkaPAzTvQ")]
     [DisplayName("Transaction Amount Breakdown")]
     [IsoXmlTag("TxAmtBrkdwn")]
-    public CollateralTransactionAmountBreakdown2? TransactionAmountBreakdown { get; init; }
+    public ValueList<CollateralTransactionAmountBreakdown2> TransactionAmountBreakdown { get; init; } =
+        [];
 
     /// <summary>
     /// Value of collateral offered or sought.

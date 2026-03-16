@@ -72,7 +72,7 @@ public record CorporateActionElection3
     [IsoId("_UKBHZdp-Ed-ak6NoX_4Aeg_-1328972579")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CorporateActionCashMovements2? CashMovementDetails { get; init; }
+    public ValueList<CorporateActionCashMovements2> CashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the securities movement resulting from the election instruction.
@@ -80,5 +80,6 @@ public record CorporateActionElection3
     [IsoId("_UKBHZtp-Ed-ak6NoX_4Aeg_-1078102161")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public CorporateActionSecuritiesMovement2? SecuritiesMovementDetails { get; init; }
+    public ValueList<CorporateActionSecuritiesMovement2> SecuritiesMovementDetails { get; init; } =
+        [];
 }

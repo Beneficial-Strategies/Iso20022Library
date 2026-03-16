@@ -50,9 +50,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_hgGMhypUEeuUucRY0yCMTA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -60,7 +58,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_hgGMiSpUEeuUucRY0yCMTA")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
-    public AcquirerHostConfiguration8? Host { get; init; }
+    public ValueList<AcquirerHostConfiguration8> Host { get; init; } = [];
 
     /// <summary>
     /// Acquirer protocol parameters of transactions performing an online authorisation.
@@ -119,7 +117,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_R-Fv0CpXEeuUucRY0yCMTA")]
     [DisplayName("Split Total Criteria")]
     [IsoXmlTag("SpltTtlCrit")]
-    public ReconciliationCriteria1Code? SplitTotalCriteria { get; init; }
+    public SimpleValueList<ReconciliationCriteria1Code> SplitTotalCriteria { get; init; } = [];
 
     /// <summary>
     /// To notify that the acquirer expect to receive a completion advice after each update of reservation.
@@ -136,7 +134,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_y4FZwCpZEeuUucRY0yCMTA")]
     [DisplayName("Amount Qualifier For Reservation")]
     [IsoXmlTag("AmtQlfrForRsvatn")]
-    public TypeOfAmount8Code? AmountQualifierForReservation { get; init; }
+    public SimpleValueList<TypeOfAmount8Code> AmountQualifierForReservation { get; init; } = [];
 
     /// <summary>
     /// After an error in a totals of the Reconciliation, the POI sends transactions in error in the BatchTransfer messages.
@@ -171,7 +169,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_hgGzlSpUEeuUucRY0yCMTA")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
-    public BatchTransactionType1Code? BatchTransferContent { get; init; }
+    public SimpleValueList<BatchTransactionType1Code> BatchTransferContent { get; init; } = [];
 
     /// <summary>
     /// BatchTransfer are exchanged per file transfer protocol rather than per message.
@@ -197,7 +195,7 @@ public record AcquirerProtocolParameters14
     [IsoId("_hgGzmypUEeuUucRY0yCMTA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition1? MessageItem { get; init; }
+    public ValueList<MessageItemCondition1> MessageItem { get; init; } = [];
 
     /// <summary>
     /// Indicator to require protection of sensitive card data in messages.

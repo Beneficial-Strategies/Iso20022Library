@@ -51,8 +51,7 @@ public record NetworkParameters3
     [IsoId("_H9hTQGpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ServerCertificate { get; init; }
+    public SimpleValueList<IsoMax3000Binary> ServerCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the X.509 Certificate required to authenticate the server, for instance a digest of the certificate.
@@ -60,6 +59,5 @@ public record NetworkParameters3
     [IsoId("_PZZO8GpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
-    [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ServerCertificateIdentifier { get; init; }
+    public SimpleValueList<IsoMax140Binary> ServerCertificateIdentifier { get; init; } = [];
 }

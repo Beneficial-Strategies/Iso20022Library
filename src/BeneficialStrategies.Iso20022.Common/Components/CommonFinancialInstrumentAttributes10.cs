@@ -198,7 +198,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoId("_P1p055JKEeuAlLVx8pyt3w")]
     [DisplayName("Trading Market")]
     [IsoXmlTag("TradgMkt")]
-    public TradingParameters2? TradingMarket { get; init; }
+    public ValueList<TradingParameters2> TradingMarket { get; init; } = [];
 
     /// <summary>
     /// Indicates the spread to benchmark details of an indication of interest.
@@ -206,7 +206,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoId("_P1p06ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Spread And Benchmark Curve")]
     [IsoXmlTag("SprdAndBchmkCrv")]
-    public BenchmarkCurve6? SpreadAndBenchmarkCurve { get; init; }
+    public ValueList<BenchmarkCurve6> SpreadAndBenchmarkCurve { get; init; } = [];
 
     /// <summary>
     /// Represents the type of put.
@@ -334,7 +334,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoId("_P1p1B5JKEeuAlLVx8pyt3w")]
     [DisplayName("Withholding Tax Regime")]
     [IsoXmlTag("WhldgTaxRgm")]
-    public SecurityWithHoldingTax1? WithholdingTaxRegime { get; init; }
+    public ValueList<SecurityWithHoldingTax1> WithholdingTaxRegime { get; init; } = [];
 
     /// <summary>
     /// Status of payment of a security at a particular time.
@@ -391,7 +391,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoId("_P1rp2ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public SecurityRestriction3? Restriction { get; init; }
+    public ValueList<SecurityRestriction3> Restriction { get; init; } = [];
 
     /// <summary>
     /// Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.
@@ -399,7 +399,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoId("_P1rp25JKEeuAlLVx8pyt3w")]
     [DisplayName("Settlement Information")]
     [IsoXmlTag("SttlmInf")]
-    public SettlementInformation17? SettlementInformation { get; init; }
+    public ValueList<SettlementInformation17> SettlementInformation { get; init; } = [];
 
     /// <summary>
     /// Indicates the form of the financial Instrument.

@@ -66,7 +66,7 @@ public record TelecomServicesLineItem2
     [IsoId("_BVmFWx1DEey8XKHwKquEQw")]
     [DisplayName("Charge")]
     [IsoXmlTag("Chrg")]
-    public Amount20? Charge { get; init; }
+    public ValueList<Amount20> Charge { get; init; } = [];
 
     /// <summary>
     /// Total of taxes applicable to the billing amount
@@ -74,7 +74,7 @@ public record TelecomServicesLineItem2
     [IsoId("_BVmFXR1DEey8XKHwKquEQw")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
-    public Tax39? TotalTax { get; init; }
+    public ValueList<Tax39> TotalTax { get; init; } = [];
 
     /// <summary>
     /// Total amount applicable to the billing event.

@@ -54,5 +54,5 @@ public record FeeCollectionResponse2
     [IsoId("_JGA0yYaBEeuSbct6WWD-Ng")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

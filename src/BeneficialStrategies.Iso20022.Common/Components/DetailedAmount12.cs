@@ -38,7 +38,7 @@ public record DetailedAmount12
     [IsoId("_NvDH0IolEeSaAcF2oE2GNQ")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public DetailedAmount13? Fees { get; init; }
+    public ValueList<DetailedAmount13> Fees { get; init; } = [];
 
     /// <summary>
     /// Amount of the donation.
@@ -46,5 +46,5 @@ public record DetailedAmount12
     [IsoId("_g4F1QIolEeSaAcF2oE2GNQ")]
     [DisplayName("Donation")]
     [IsoXmlTag("Dontn")]
-    public DetailedAmount13? Donation { get; init; }
+    public ValueList<DetailedAmount13> Donation { get; init; } = [];
 }

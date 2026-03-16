@@ -76,5 +76,5 @@ public record PointOfInteraction12
     [IsoId("_w2CHGVFBEeyApZmLzm74zA")]
     [DisplayName("Component")]
     [IsoXmlTag("Cmpnt")]
-    public PointOfInteractionComponent12? Component { get; init; }
+    public ValueList<PointOfInteractionComponent12> Component { get; init; } = [];
 }

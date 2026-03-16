@@ -66,7 +66,7 @@ public record InvestmentFund1
     [IsoId("_m-47ovNBEeCuA5Tr22BnwA_-574968216")]
     [DisplayName("Price")]
     [IsoXmlTag("Pric")]
-    public PriceInformation10? Price { get; init; }
+    public ValueList<PriceInformation10> Price { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -74,5 +74,5 @@ public record InvestmentFund1
     [IsoId("_m-47o_NBEeCuA5Tr22BnwA_-14332001")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

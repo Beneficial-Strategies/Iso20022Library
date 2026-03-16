@@ -75,8 +75,7 @@ public record MaintenanceDelegateAction7
     [IsoId("_tMkpvU6nEeyGi9JAv6wq7Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Sequence of action to include in the next MTM management plan.
@@ -84,5 +83,5 @@ public record MaintenanceDelegateAction7
     [IsoId("_tMkpv06nEeyGi9JAv6wq7Q")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public TMSAction10? Action { get; init; }
+    public ValueList<TMSAction10> Action { get; init; } = [];
 }

@@ -41,5 +41,5 @@ public record AggregateHoldingBalance2
     [IsoId("_gDcioaB9EeOEyO7fCl8lLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

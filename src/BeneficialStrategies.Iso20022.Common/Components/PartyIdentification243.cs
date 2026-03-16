@@ -22,7 +22,7 @@ public record PartyIdentification243
     [IsoId("_JmJYZCgxEeuqgbMAZaNiGw")]
     [DisplayName("Legal Person")]
     [IsoXmlTag("LglPrsn")]
-    public PartyIdentification237? LegalPerson { get; init; }
+    public ValueList<PartyIdentification237> LegalPerson { get; init; } = [];
 
     /// <summary>
     /// Private person.
@@ -30,5 +30,5 @@ public record PartyIdentification243
     [IsoId("_JmJYZSgxEeuqgbMAZaNiGw")]
     [DisplayName("Natural Person")]
     [IsoXmlTag("NtrlPrsn")]
-    public PartyIdentification217? NaturalPerson { get; init; }
+    public ValueList<PartyIdentification217> NaturalPerson { get; init; } = [];
 }

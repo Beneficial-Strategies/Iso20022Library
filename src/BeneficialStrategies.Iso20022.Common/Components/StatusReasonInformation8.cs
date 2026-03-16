@@ -38,7 +38,5 @@ public record StatusReasonInformation8
     [IsoId("_TRPsU9p-Ed-ak6NoX_4Aeg_1156620597")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 }

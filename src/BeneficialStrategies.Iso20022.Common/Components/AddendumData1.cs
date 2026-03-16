@@ -106,7 +106,7 @@ public record AddendumData1
     [IsoId("_W9dLwvJNEeiJn9rM2Znz2w")]
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
-    public VehicleRentalService1? VehicleRental { get; init; }
+    public ValueList<VehicleRentalService1> VehicleRental { get; init; } = [];
 
     /// <summary>
     /// Component provides detailed information about lodging accommodations and related expenses for the cardholder. Acquirers can submit multiple occurrences of this component for each lodging transaction, to provide details of one or more folios.
@@ -114,7 +114,7 @@ public record AddendumData1
     [IsoId("_W9dLw_JNEeiJn9rM2Znz2w")]
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
-    public Lodging2? Lodging { get; init; }
+    public ValueList<Lodging2> Lodging { get; init; } = [];
 
     /// <summary>
     /// Shipping or Courier Service detail component provides detailed information regarding delivery or courier services.
@@ -138,7 +138,7 @@ public record AddendumData1
     [IsoId("_bfPSoPfkEei89sMSHxl1ew")]
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
-    public TemporaryServices1? TemporaryServices { get; init; }
+    public ValueList<TemporaryServices1> TemporaryServices { get; init; } = [];
 
     /// <summary>
     /// Data exclusively related to a card issuer financial loan of the payment transaction, or instalment.
@@ -154,5 +154,5 @@ public record AddendumData1
     [IsoId("_jeXOgP75Eeic54G0fOJNMg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

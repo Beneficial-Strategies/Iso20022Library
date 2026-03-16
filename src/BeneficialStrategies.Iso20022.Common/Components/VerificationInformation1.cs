@@ -41,9 +41,7 @@ public record VerificationInformation1
     [IsoId("_DDFDQdIoEeirx-13kKhDlQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; }
+    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Date and time when the verification was performed.

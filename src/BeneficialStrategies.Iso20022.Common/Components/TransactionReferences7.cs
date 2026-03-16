@@ -171,5 +171,5 @@ public record TransactionReferences7
     [IsoId("_rIcOLykbEeuBrrgCSpsocg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public ProprietaryReference1? Proprietary { get; init; }
+    public ValueList<ProprietaryReference1> Proprietary { get; init; } = [];
 }

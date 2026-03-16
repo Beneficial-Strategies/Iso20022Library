@@ -30,7 +30,7 @@ public record TradeQueryExecutionFrequency3
     [IsoId("_evMXOd1dEeqxpKDfBZC1vg")]
     [DisplayName("Delivery Day")]
     [IsoXmlTag("DlvryDay")]
-    public WeekDay3Code? DeliveryDay { get; init; }
+    public SimpleValueList<WeekDay3Code> DeliveryDay { get; init; } = [];
 
     /// <summary>
     /// Day of the month of the monthly query execution.
@@ -38,6 +38,5 @@ public record TradeQueryExecutionFrequency3
     [IsoId("_evMXO91dEeqxpKDfBZC1vg")]
     [DisplayName("Day Of Month")]
     [IsoXmlTag("DayOfMnth")]
-    [IsoSimpleType(IsoSimpleType.DayOfMonthNumber)]
-    public IsoDayOfMonthNumber? DayOfMonth { get; init; }
+    public SimpleValueList<IsoDayOfMonthNumber> DayOfMonth { get; init; } = [];
 }

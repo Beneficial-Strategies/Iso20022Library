@@ -46,5 +46,5 @@ public record MessageAndBusinessReference4
     [IsoId("_RMVOTdp-Ed-ak6NoX_4Aeg_-14820658")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public InvestmentFundOrder2? OrderReference { get; init; }
+    public ValueList<InvestmentFundOrder2> OrderReference { get; init; } = [];
 }

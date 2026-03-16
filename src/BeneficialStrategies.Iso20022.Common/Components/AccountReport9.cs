@@ -91,7 +91,7 @@ public record AccountReport9
     [IsoId("_RTx6FNp-Ed-ak6NoX_4Aeg_-149678698")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest1? Interest { get; init; }
+    public ValueList<AccountInterest1> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements defining the balance(s).
@@ -99,7 +99,7 @@ public record AccountReport9
     [IsoId("_RTx6Fdp-Ed-ak6NoX_4Aeg_580186645")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance1? Balance { get; init; }
+    public ValueList<CashBalance1> Balance { get; init; } = [];
 
     /// <summary>
     /// Set of element providing summary information on entries.
@@ -115,7 +115,7 @@ public record AccountReport9
     [IsoId("_RTx6F9p-Ed-ak6NoX_4Aeg_-1994259931")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry1? Entry { get; init; }
+    public ValueList<ReportEntry1> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details on the account report.

@@ -30,7 +30,7 @@ public record CardTransactionDetail2
     [IsoId("_vi_983uUEeSVeNXcmBQ4hQ")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public DetailedAmount10? AdditionalAmounts { get; init; }
+    public ValueList<DetailedAmount10> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Account involved in the card transaction.
@@ -38,7 +38,7 @@ public record CardTransactionDetail2
     [IsoId("_AMoNMHuWEeSVeNXcmBQ4hQ")]
     [DisplayName("Account And Balance")]
     [IsoXmlTag("AcctAndBal")]
-    public CardAccount2? AccountAndBalance { get; init; }
+    public ValueList<CardAccount2> AccountAndBalance { get; init; } = [];
 
     /// <summary>
     /// Results of the verifications performed by the various agents during the processing of the transaction.
@@ -46,7 +46,8 @@ public record CardTransactionDetail2
     [IsoId("_lNdbkHuWEeSVeNXcmBQ4hQ")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Transaction authorisation deadline to complete the related payment.

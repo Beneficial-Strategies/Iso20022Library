@@ -22,7 +22,7 @@ public record CurrentAndDefaultReservation3
     [IsoId("_Tr4EU5liEeeE1Ya-LgRsuQ")]
     [DisplayName("Current Reservation")]
     [IsoXmlTag("CurRsvatn")]
-    public ReservationReport5? CurrentReservation { get; init; }
+    public ValueList<ReservationReport5> CurrentReservation { get; init; } = [];
 
     /// <summary>
     /// Report is given for a default reservation.
@@ -30,5 +30,5 @@ public record CurrentAndDefaultReservation3
     [IsoId("_Tr4EVZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Default Reservation")]
     [IsoXmlTag("DfltRsvatn")]
-    public ReservationReport5? DefaultReservation { get; init; }
+    public ValueList<ReservationReport5> DefaultReservation { get; init; } = [];
 }

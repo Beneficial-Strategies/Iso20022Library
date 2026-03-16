@@ -171,8 +171,7 @@ public record TradeTransaction49
     [IsoId("_fWRQYWEfEe2P-L9DBerEgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public SimpleValueList<IsoISODate> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.
@@ -317,7 +316,7 @@ public record TradeTransaction49
     [IsoId("_fWRQhWEfEe2P-L9DBerEgA")]
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
-    public OtherPayment5? OtherPayment { get; init; }
+    public ValueList<OtherPayment5> OtherPayment { get; init; } = [];
 
     /// <summary>
     /// A combination of two or more transactions that are reported separately but that are negotiated together as the product of a single economic agreement.

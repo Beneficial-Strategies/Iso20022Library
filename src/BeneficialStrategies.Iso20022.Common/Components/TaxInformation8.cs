@@ -102,5 +102,5 @@ public record TaxInformation8
     [IsoId("_w6bBQf7IEeifc-yx3AlK3Q")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public TaxRecord2? Record { get; init; }
+    public ValueList<TaxRecord2> Record { get; init; } = [];
 }

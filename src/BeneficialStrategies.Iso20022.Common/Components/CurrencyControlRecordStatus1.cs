@@ -40,7 +40,7 @@ public record CurrencyControlRecordStatus1
     [IsoId("_Fe-w4QtPEeWkxvNyFrBT8Q")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public ValidationStatusReason1? StatusReason { get; init; }
+    public ValueList<ValidationStatusReason1> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Provides the date and time when the status was issued.

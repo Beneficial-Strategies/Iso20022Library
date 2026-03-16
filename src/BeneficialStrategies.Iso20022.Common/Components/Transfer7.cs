@@ -86,7 +86,7 @@ public record Transfer7
     [IsoId("_SfxzJ9p-Ed-ak6NoX_4Aeg_-216558063")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit3? UnitsDetails { get; init; }
+    public ValueList<Unit3> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the transfer results in a change of beneficial owner.

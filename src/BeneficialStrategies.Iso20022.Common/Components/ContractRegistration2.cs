@@ -48,7 +48,7 @@ public record ContractRegistration2
     [IsoId("_OsJYkAhxEeWvSuDXP3iRXQ")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
-    public ContractBalance1? ContractBalance { get; init; }
+    public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
     /// Type of the payment schedule provided in the contract.
@@ -64,7 +64,8 @@ public record ContractRegistration2
     [IsoId("_keBCsAqQEeWqX7rjSIiMuQ")]
     [DisplayName("Previous Registration Identification")]
     [IsoXmlTag("PrvsRegnId")]
-    public DocumentIdentification22? PreviousRegistrationIdentification { get; init; }
+    public ValueList<DocumentIdentification22> PreviousRegistrationIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Further details on the registered contract opening.
@@ -82,7 +83,7 @@ public record ContractRegistration2
     [IsoId("_C3Vv89LKEeSdq5yU2aaSNw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation3? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation3> Attachment { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -90,5 +91,5 @@ public record ContractRegistration2
     [IsoId("_F8PBUdLrEeSDLevdaFPXHw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

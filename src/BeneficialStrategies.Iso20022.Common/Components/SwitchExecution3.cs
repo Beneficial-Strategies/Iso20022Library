@@ -119,5 +119,5 @@ public record SwitchExecution3
     [IsoId("_VVuFhNp-Ed-ak6NoX_4Aeg_-1431911102")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms4? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms4> ForeignExchangeDetails { get; init; } = [];
 }

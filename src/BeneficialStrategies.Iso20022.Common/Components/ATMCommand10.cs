@@ -63,7 +63,7 @@ public record ATMCommand10
     [IsoId("_j_HRW1_SEeeD0NpJQPACzA")]
     [DisplayName("Trace Reason")]
     [IsoXmlTag("TracRsn")]
-    public ATMCommandReason1Code? TraceReason { get; init; }
+    public SimpleValueList<ATMCommandReason1Code> TraceReason { get; init; } = [];
 
     /// <summary>
     /// Additional information about the reason to request this command.

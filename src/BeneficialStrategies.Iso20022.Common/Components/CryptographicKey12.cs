@@ -88,7 +88,7 @@ public record CryptographicKey12
     [IsoId("_5EX0f7TwEeeQy4o2AayYHg")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
-    public KeyUsage1Code? Function { get; init; }
+    public SimpleValueList<KeyUsage1Code> Function { get; init; } = [];
 
     /// <summary>
     /// Date and time on which the key must be activated.

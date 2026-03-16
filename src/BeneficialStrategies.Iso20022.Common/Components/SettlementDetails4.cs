@@ -22,7 +22,8 @@ public record SettlementDetails4
     [IsoId("_UiAwr9p-Ed-ak6NoX_4Aeg_-120769371")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition2Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition2Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether registration should occur upon receipt.

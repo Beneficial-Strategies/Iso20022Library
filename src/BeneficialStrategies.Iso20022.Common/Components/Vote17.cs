@@ -32,7 +32,7 @@ public record Vote17
     [IsoId("_IZCKMTUGEe2tRf29bleifQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ItemDescription1? Description { get; init; }
+    public ValueList<ItemDescription1> Description { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the resolution is a new or an amended resolution.

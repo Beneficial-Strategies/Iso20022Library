@@ -22,9 +22,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7pPzdp-Ed-ak6NoX_4Aeg_-546856590")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -32,9 +30,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7yZsNp-Ed-ak6NoX_4Aeg_-546856477")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -42,9 +38,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7yZsdp-Ed-ak6NoX_4Aeg_1640865534")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -118,7 +112,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S78KsNp-Ed-ak6NoX_4Aeg_-546856105")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting1Choice_? Reporting { get; init; }
+    public ValueList<Reporting1Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.
@@ -126,7 +120,8 @@ public record SecuritiesTradeDetails8
     [IsoId("_S78Ksdp-Ed-ak6NoX_4Aeg_-545936014")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition1Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition1Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of price and information about the price.

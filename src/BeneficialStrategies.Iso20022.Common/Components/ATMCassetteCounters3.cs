@@ -63,5 +63,5 @@ public record ATMCassetteCounters3
     [IsoId("_lAXZR64MEeWZgJQOa6iKCQ")]
     [DisplayName("Flow Totals")]
     [IsoXmlTag("FlowTtls")]
-    public ATMCassetteCounters4? FlowTotals { get; init; }
+    public ValueList<ATMCassetteCounters4> FlowTotals { get; init; } = [];
 }

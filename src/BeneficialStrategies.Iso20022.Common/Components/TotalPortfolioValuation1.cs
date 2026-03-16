@@ -126,5 +126,5 @@ public record TotalPortfolioValuation1
     [IsoId("_m_VAg_NBEeCuA5Tr22BnwA_-867400971")]
     [DisplayName("Investment Fund Details")]
     [IsoXmlTag("InvstmtFndDtls")]
-    public InvestmentFund1? InvestmentFundDetails { get; init; }
+    public ValueList<InvestmentFund1> InvestmentFundDetails { get; init; } = [];
 }

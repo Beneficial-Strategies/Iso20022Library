@@ -38,7 +38,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOJZQ_EemqYPWMBuVawg")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
-    public PartyProfileInformation5? InvestorProfileValidation { get; init; }
+    public ValueList<PartyProfileInformation5> InvestorProfileValidation { get; init; } = [];
 
     /// <summary>
     /// Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells will be allocated using the same percentage.
@@ -90,7 +90,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOMZQ_EemqYPWMBuVawg")]
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
-    public Notification2? Notification { get; init; }
+    public ValueList<Notification2> Notification { get; init; } = [];
 
     /// <summary>
     /// Type of Foreign Account Tax Compliance Act (FATCA) form submitted by the investor or account owner.
@@ -98,7 +98,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOM5Q_EemqYPWMBuVawg")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
-    public FATCAForm1Choice_? FATCAFormType { get; init; }
+    public ValueList<FATCAForm1Choice_> FATCAFormType { get; init; } = [];
 
     /// <summary>
     /// Foreign Account Tax Compliance Act (FATCA) status of the investor or account owner.
@@ -106,7 +106,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVONZQ_EemqYPWMBuVawg")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
-    public FATCAStatus2? FATCAStatus { get; init; }
+    public ValueList<FATCAStatus2> FATCAStatus { get; init; } = [];
 
     /// <summary>
     /// Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.
@@ -123,7 +123,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOOZQ_EemqYPWMBuVawg")]
     [DisplayName("CRS Form Type")]
     [IsoXmlTag("CRSFormTp")]
-    public CRSForm1Choice_? CRSFormType { get; init; }
+    public ValueList<CRSForm1Choice_> CRSFormType { get; init; } = [];
 
     /// <summary>
     /// Common Reporting Standard (CRS) status of the investor or account owner.
@@ -131,7 +131,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOO5Q_EemqYPWMBuVawg")]
     [DisplayName("CRS Status")]
     [IsoXmlTag("CRSSts")]
-    public CRSStatus4? CRSStatus { get; init; }
+    public ValueList<CRSStatus4> CRSStatus { get; init; } = [];
 
     /// <summary>
     /// Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.
@@ -148,7 +148,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOP5Q_EemqYPWMBuVawg")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public GenericIdentification82? OtherIdentification { get; init; }
+    public ValueList<GenericIdentification82> OtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Tax advantage specific to the account party.
@@ -164,7 +164,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOQ5Q_EemqYPWMBuVawg")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
-    public TaxReporting3? TaxReporting { get; init; }
+    public ValueList<TaxReporting3> TaxReporting { get; init; } = [];
 
     /// <summary>
     /// Language in which the organisation or person communicates.
@@ -238,7 +238,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOV5Q_EemqYPWMBuVawg")]
     [DisplayName("Primary Communication Address")]
     [IsoXmlTag("PmryComAdr")]
-    public CommunicationAddress6? PrimaryCommunicationAddress { get; init; }
+    public ValueList<CommunicationAddress6> PrimaryCommunicationAddress { get; init; } = [];
 
     /// <summary>
     /// Communication device number or electronic address used for communication.
@@ -246,7 +246,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOWZQ_EemqYPWMBuVawg")]
     [DisplayName("Secondary Communication Address")]
     [IsoXmlTag("ScndryComAdr")]
-    public CommunicationAddress6? SecondaryCommunicationAddress { get; init; }
+    public ValueList<CommunicationAddress6> SecondaryCommunicationAddress { get; init; } = [];
 
     /// <summary>
     /// Additional regulatory information about the investor or account owner that is required in some markets to support anti-money laundering laws.
@@ -270,7 +270,7 @@ public record InvestmentAccountOwnershipInformation16
     [IsoId("_lvVOX5Q_EemqYPWMBuVawg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditiononalInformation13? AdditionalInformation { get; init; }
+    public ValueList<AdditiononalInformation13> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Party is the controlling person.

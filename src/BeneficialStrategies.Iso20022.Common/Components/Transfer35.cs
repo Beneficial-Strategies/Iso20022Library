@@ -152,7 +152,7 @@ public record Transfer35
     [IsoId("_D9JcBYfuEeevKP8c-ilVhA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit8? UnitsDetails { get; init; }
+    public ValueList<Unit8> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Rounding direction applied to nearest unit.

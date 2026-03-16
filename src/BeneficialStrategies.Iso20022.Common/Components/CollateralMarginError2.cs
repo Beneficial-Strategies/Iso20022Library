@@ -59,5 +59,5 @@ public record CollateralMarginError2
     [IsoId("_HWeQqa4aEemB_csI4yyKLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

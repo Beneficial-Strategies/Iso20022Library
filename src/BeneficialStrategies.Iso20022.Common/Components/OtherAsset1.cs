@@ -61,5 +61,5 @@ public record OtherAsset1
     [IsoId("_OAtCoEyKEeir2sRRVd9XhA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

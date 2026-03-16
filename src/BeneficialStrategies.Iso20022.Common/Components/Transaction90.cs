@@ -30,7 +30,7 @@ public record Transaction90
     [IsoId("_oDAeUf-9Eei7rYq35FFO4A")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -38,5 +38,5 @@ public record Transaction90
     [IsoId("_K3MEARqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

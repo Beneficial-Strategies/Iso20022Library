@@ -40,5 +40,5 @@ public record CurrencyConversion28
     [IsoId("_mJ75xXD0Ee2MCaKO5AtGsA")]
     [DisplayName("Conversion Details")]
     [IsoXmlTag("ConvsDtls")]
-    public CurrencyConversion26? ConversionDetails { get; init; }
+    public ValueList<CurrencyConversion26> ConversionDetails { get; init; } = [];
 }

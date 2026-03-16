@@ -32,7 +32,7 @@ public record Member7
     [IsoId("_fUF-49cZEeqRFcf2R4bPBw")]
     [DisplayName("Return Address")]
     [IsoXmlTag("RtrAdr")]
-    public MemberIdentification3Choice_? ReturnAddress { get; init; }
+    public ValueList<MemberIdentification3Choice_> ReturnAddress { get; init; } = [];
 
     /// <summary>
     /// Account to or from which a cash entry is made.
@@ -40,7 +40,7 @@ public record Member7
     [IsoId("_fUF-5dcZEeqRFcf2R4bPBw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; }
+    public ValueList<CashAccount40> Account { get; init; } = [];
 
     /// <summary>
     /// Nature of the relationship a member has with a system.
@@ -64,7 +64,7 @@ public record Member7
     [IsoId("_fUF-69cZEeqRFcf2R4bPBw")]
     [DisplayName("Contact Reference")]
     [IsoXmlTag("CtctRef")]
-    public ContactIdentificationAndAddress2? ContactReference { get; init; }
+    public ValueList<ContactIdentificationAndAddress2> ContactReference { get; init; } = [];
 
     /// <summary>
     /// Number, or virtual address, used for communication.

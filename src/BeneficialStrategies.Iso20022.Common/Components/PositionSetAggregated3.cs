@@ -31,7 +31,7 @@ public record PositionSetAggregated3
     [IsoId("_0w29Mw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Position Set")]
     [IsoXmlTag("PosSet")]
-    public PositionSet5? PositionSet { get; init; }
+    public ValueList<PositionSet5> PositionSet { get; init; } = [];
 
     /// <summary>
     /// Aggregation of outstanding derivatives according to the currency of the position, for use by central banks issuing specific currencies.
@@ -39,7 +39,7 @@ public record PositionSetAggregated3
     [IsoId("_0w29NQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Currency Position Set")]
     [IsoXmlTag("CcyPosSet")]
-    public PositionSet5? CurrencyPositionSet { get; init; }
+    public ValueList<PositionSet5> CurrencyPositionSet { get; init; } = [];
 
     /// <summary>
     /// Aggregation of collateral for derivative positions using collateral fields as metrics.
@@ -47,7 +47,7 @@ public record PositionSetAggregated3
     [IsoId("_0w29Nw1MEeqV4s5SpzR1dQ")]
     [DisplayName("Collateral Position Set")]
     [IsoXmlTag("CollPosSet")]
-    public PositionSet4? CollateralPositionSet { get; init; }
+    public ValueList<PositionSet4> CollateralPositionSet { get; init; } = [];
 
     /// <summary>
     /// Aggregation of collateral with similar dimensions that relate to the currency position sets, with relevant collateral related metrics.
@@ -55,5 +55,5 @@ public record PositionSetAggregated3
     [IsoId("_0w29OQ1MEeqV4s5SpzR1dQ")]
     [DisplayName("Currency Collateral Position Set")]
     [IsoXmlTag("CcyCollPosSet")]
-    public PositionSet4? CurrencyCollateralPositionSet { get; init; }
+    public ValueList<PositionSet4> CurrencyCollateralPositionSet { get; init; } = [];
 }

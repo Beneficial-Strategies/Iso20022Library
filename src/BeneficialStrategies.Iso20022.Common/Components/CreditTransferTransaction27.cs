@@ -150,7 +150,7 @@ public record CreditTransferTransaction27
     [IsoId("_AyXSOeRsEeaY150p1rZlTg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent1? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent1> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Underlying reason for the payment transaction.

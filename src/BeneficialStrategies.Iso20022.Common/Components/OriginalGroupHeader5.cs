@@ -95,7 +95,8 @@ public record OriginalGroupHeader5
     [IsoId("_sfMUAVkyEeGeoaLUQk__nA_746391324")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
-    public CancellationStatusReason2? CancellationStatusReasonInformation { get; init; }
+    public ValueList<CancellationStatusReason2> CancellationStatusReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Detailed information on the number of transactions for each identical cancellation status.
@@ -103,5 +104,6 @@ public record OriginalGroupHeader5
     [IsoId("_sfMUAlkyEeGeoaLUQk__nA_-1790738466")]
     [DisplayName("Number Of Transactions Per Cancellation Status")]
     [IsoXmlTag("NbOfTxsPerCxlSts")]
-    public NumberOfTransactionsPerStatus1? NumberOfTransactionsPerCancellationStatus { get; init; }
+    public ValueList<NumberOfTransactionsPerStatus1> NumberOfTransactionsPerCancellationStatus { get; init; } =
+        [];
 }

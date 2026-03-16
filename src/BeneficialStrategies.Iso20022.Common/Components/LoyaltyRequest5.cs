@@ -38,5 +38,5 @@ public record LoyaltyRequest5
     [IsoId("_fE1OVXGvEe2TbaNWBpRZpQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public LoyaltyRequestData3? Data { get; init; }
+    public ValueList<LoyaltyRequestData3> Data { get; init; } = [];
 }

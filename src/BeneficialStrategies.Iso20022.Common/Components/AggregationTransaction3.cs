@@ -49,5 +49,5 @@ public record AggregationTransaction3
     [IsoId("_0mGelwxjEeqEbo60f0v6aw")]
     [DisplayName("Individual Payment")]
     [IsoXmlTag("IndvPmt")]
-    public DetailedAmount21? IndividualPayment { get; init; }
+    public ValueList<DetailedAmount21> IndividualPayment { get; init; } = [];
 }

@@ -41,7 +41,7 @@ public record FinancialItemParameters1
     [IsoId("_OTgzMjk2-AOSNFX-8224497")]
     [DisplayName("Related Item")]
     [IsoXmlTag("RltdItm")]
-    public QualifiedDocumentInformation1? RelatedItem { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedItem { get; init; } = [];
 
     /// <summary>
     /// Specifies the function of the document related to the item.
@@ -113,7 +113,7 @@ public record FinancialItemParameters1
     [IsoId("_OTgzMzA2-AOSNFX-8224498")]
     [DisplayName("Governing Contract")]
     [IsoXmlTag("GovngCtrct")]
-    public QualifiedDocumentInformation1? GoverningContract { get; init; }
+    public ValueList<QualifiedDocumentInformation1> GoverningContract { get; init; } = [];
 
     /// <summary>
     /// Rules and laws governing the item.

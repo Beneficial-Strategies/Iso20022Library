@@ -41,7 +41,7 @@ public record Transaction133
     [IsoId("_uMxA98sJEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Alternate reason to send a message.
@@ -49,9 +49,7 @@ public record Transaction133
     [IsoId("_LKnqN4v6EeumSPwlS1PkxQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -94,7 +92,7 @@ public record Transaction133
     [IsoId("_LKnqQYv6EeumSPwlS1PkxQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -102,5 +100,5 @@ public record Transaction133
     [IsoId("_LKnqQ4v6EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

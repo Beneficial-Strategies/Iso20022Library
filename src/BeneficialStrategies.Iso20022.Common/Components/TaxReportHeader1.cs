@@ -39,5 +39,5 @@ public record TaxReportHeader1
     [IsoId("_VbSuYGn0Eea5EcY2TpG1mw")]
     [DisplayName("Tax Authority")]
     [IsoXmlTag("TaxAuthrty")]
-    public TaxOrganisationIdentification1? TaxAuthority { get; init; }
+    public ValueList<TaxOrganisationIdentification1> TaxAuthority { get; init; } = [];
 }

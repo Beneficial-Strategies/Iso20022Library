@@ -50,9 +50,7 @@ public record ATMTransaction27
     [IsoId("_57VncK5FEeWCgYcWSNgX5g")]
     [DisplayName("Exception Detail")]
     [IsoXmlTag("XcptnDtl")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ExceptionDetail { get; init; }
+    public SimpleValueList<IsoMax70Text> ExceptionDetail { get; init; } = [];
 
     /// <summary>
     /// Balance of the captured card or epurse if available.

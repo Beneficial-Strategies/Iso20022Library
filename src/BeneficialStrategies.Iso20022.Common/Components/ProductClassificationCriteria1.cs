@@ -22,8 +22,8 @@ public record ProductClassificationCriteria1
     [IsoId("_hfq2VR3YEeWNp95x0ENf8w")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
-    [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
+    public SimpleValueList<IsoCFIOct2015Identifier> ClassificationFinancialInstrument { get; init; } =
+        [];
 
     /// <summary>
     /// Identification through a unique product identifier.
@@ -31,7 +31,5 @@ public record ProductClassificationCriteria1
     [IsoId("_hfq2VB3YEeWNp95x0ENf8w")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? UniqueProductIdentifier { get; init; }
+    public SimpleValueList<IsoMax52Text> UniqueProductIdentifier { get; init; } = [];
 }

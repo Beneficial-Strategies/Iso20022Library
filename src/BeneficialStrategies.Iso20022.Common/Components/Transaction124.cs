@@ -180,7 +180,7 @@ public record Transaction124
     [IsoId("_NVOMWSs9EeySlt9bF77XfA")]
     [DisplayName("Securities Balance")]
     [IsoXmlTag("SctiesBal")]
-    public SecuritiesBalance3? SecuritiesBalance { get; init; }
+    public ValueList<SecuritiesBalance3> SecuritiesBalance { get; init; } = [];
 
     /// <summary>
     /// Amount of cash assigned as collateral position.
@@ -188,5 +188,5 @@ public record Transaction124
     [IsoId("_NVOMWys9EeySlt9bF77XfA")]
     [DisplayName("Cash Balance")]
     [IsoXmlTag("CshBal")]
-    public CashBalance15? CashBalance { get; init; }
+    public ValueList<CashBalance15> CashBalance { get; init; } = [];
 }

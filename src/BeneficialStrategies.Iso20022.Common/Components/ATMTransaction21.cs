@@ -38,7 +38,7 @@ public record ATMTransaction21
     [IsoId("__Afuxa4WEeW_TaP-ygI0SQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action7? Action { get; init; }
+    public ValueList<Action7> Action { get; init; } = [];
 
     /// <summary>
     /// Profile of the customer with the allowed services and restrictions.
@@ -62,7 +62,7 @@ public record ATMTransaction21
     [IsoId("__Afuy64WEeW_TaP-ygI0SQ")]
     [DisplayName("Account Information")]
     [IsoXmlTag("AcctInf")]
-    public CardAccount12? AccountInformation { get; init; }
+    public ValueList<CardAccount12> AccountInformation { get; init; } = [];
 
     /// <summary>
     /// Statement information of an account.
@@ -70,7 +70,7 @@ public record ATMTransaction21
     [IsoId("__Afuza4WEeW_TaP-ygI0SQ")]
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
-    public ATMAccountStatement1? AccountStatementData { get; init; }
+    public ValueList<ATMAccountStatement1> AccountStatementData { get; init; } = [];
 
     /// <summary>
     /// Exchange rate and calculated amount to be presented to the customer when the dispense currency or the deposit currency (target currency) is different to account currency (source currency).
@@ -95,5 +95,5 @@ public record ATMTransaction21
     [IsoId("__Afu064WEeW_TaP-ygI0SQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

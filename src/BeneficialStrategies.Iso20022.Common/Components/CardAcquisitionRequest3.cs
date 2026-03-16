@@ -30,9 +30,7 @@ public record CardAcquisitionRequest3
     [IsoId("_DCr5MU7bEeyGi9JAv6wq7Q")]
     [DisplayName("Allowed Payment Brand")]
     [IsoXmlTag("AllwdPmtBrnd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AllowedPaymentBrand { get; init; }
+    public SimpleValueList<IsoMax35Text> AllowedPaymentBrand { get; init; } = [];
 
     /// <summary>
     /// Loyalty brands or programs allowed by the Sale System for the loyalty transaction.
@@ -40,9 +38,7 @@ public record CardAcquisitionRequest3
     [IsoId("_DCr5M07bEeyGi9JAv6wq7Q")]
     [DisplayName("Allowed Loyalty Brand")]
     [IsoXmlTag("AllwdLltyBrnd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AllowedLoyaltyBrand { get; init; }
+    public SimpleValueList<IsoMax35Text> AllowedLoyaltyBrand { get; init; } = [];
 
     /// <summary>
     /// Indicates if the Customer realises the selection of the card application.

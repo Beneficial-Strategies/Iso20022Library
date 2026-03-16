@@ -105,5 +105,5 @@ public record InvestorRequirements1
     [IsoId("_EcKPMDceEeidBoT_PugKiA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherInvestmentNeed1? Other { get; init; }
+    public ValueList<OtherInvestmentNeed1> Other { get; init; } = [];
 }

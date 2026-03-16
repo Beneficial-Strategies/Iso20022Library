@@ -24,8 +24,7 @@ public record Transaction89
     [IsoId("_uRyeC6bXEeiva6IOmhpVHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MessageReason { get; init; }
+    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -33,9 +32,7 @@ public record Transaction89
     [IsoId("_uRyeDabXEeiva6IOmhpVHw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -43,7 +40,8 @@ public record Transaction89
     [IsoId("_uRyeE6bXEeiva6IOmhpVHw")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -59,7 +57,7 @@ public record Transaction89
     [IsoId("_wG1MsabaEeiva6IOmhpVHw")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
-    public DisputeReference1? DisputeReference { get; init; }
+    public ValueList<DisputeReference1> DisputeReference { get; init; } = [];
 
     /// <summary>
     /// Fulfilment request instructions for the retrieval.
@@ -67,7 +65,8 @@ public record Transaction89
     [IsoId("_3EYDEabZEeiva6IOmhpVHw")]
     [DisplayName("Retrieval Fulfilment Instructions")]
     [IsoXmlTag("RtrvlFlfmtInstrs")]
-    public RetrievalFulfilmentInstructions1? RetrievalFulfilmentInstructions { get; init; }
+    public ValueList<RetrievalFulfilmentInstructions1> RetrievalFulfilmentInstructions { get; init; } =
+        [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -75,7 +74,7 @@ public record Transaction89
     [IsoId("_uRyeHabXEeiva6IOmhpVHw")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -93,5 +92,5 @@ public record Transaction89
     [IsoId("_umAQ4RqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

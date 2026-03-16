@@ -151,5 +151,5 @@ public record OvernightIndexSwapTransaction4
     [IsoId("_G-P9icEREea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -103,7 +103,7 @@ public record SecurityIdentification41
     [IsoId("__DHaqdANEeuSBa1PsnseFg")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
-    public CountryCode? RegisteredDistributionCountry { get; init; }
+    public SimpleValueList<CountryCode> RegisteredDistributionCountry { get; init; } = [];
 
     /// <summary>
     /// Classification of the financial instrument. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00060.
@@ -199,5 +199,5 @@ public record SecurityIdentification41
     [IsoId("__DHav9ANEeuSBa1PsnseFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

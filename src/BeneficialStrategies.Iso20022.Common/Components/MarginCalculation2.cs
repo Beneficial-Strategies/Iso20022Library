@@ -46,7 +46,7 @@ public record MarginCalculation2
     [IsoId("_-eDlEKMOEeCojJW5vEuTEQ_-2053475098")]
     [DisplayName("Collateral On Deposit")]
     [IsoXmlTag("CollOnDpst")]
-    public Collateral6? CollateralOnDeposit { get; init; }
+    public ValueList<Collateral6> CollateralOnDeposit { get; init; } = [];
 
     /// <summary>
     /// Minimum requirement (expressed in the reporting currency) for a participant if their requirement falls below a specific amount set by the central counterparty.

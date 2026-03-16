@@ -38,5 +38,5 @@ public record SecuritiesTransactionPrice6
     [IsoId("_NPG9MpivEe2f7NHvXATP5g")]
     [DisplayName("Digital Token")]
     [IsoXmlTag("DgtlTkn")]
-    public DigitalTokenAmount2? DigitalToken { get; init; }
+    public ValueList<DigitalTokenAmount2> DigitalToken { get; init; } = [];
 }

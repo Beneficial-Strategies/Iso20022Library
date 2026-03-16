@@ -62,5 +62,5 @@ public record LoyaltyTransaction5
     [IsoId("_ZDB5a3GuEe2TbaNWBpRZpQ")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public Product6? SaleItem { get; init; }
+    public ValueList<Product6> SaleItem { get; init; } = [];
 }

@@ -94,5 +94,5 @@ public record CorporateActionDate48
     [IsoId("_hp3uMGLDEeWR9ZSfjmHwUA")]
     [DisplayName("Borrower Stock Lending Deadline")]
     [IsoXmlTag("BrrwrStockLndgDdln")]
-    public BorrowerLendingDeadline1? BorrowerStockLendingDeadline { get; init; }
+    public ValueList<BorrowerLendingDeadline1> BorrowerStockLendingDeadline { get; init; } = [];
 }

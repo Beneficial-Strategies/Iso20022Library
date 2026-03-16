@@ -38,7 +38,7 @@ public record Context18
     [IsoId("_uNL-JTNIEeylu6lH-gut-A")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public Verification5? Verification { get; init; }
+    public ValueList<Verification5> Verification { get; init; } = [];
 
     /// <summary>
     /// Context of risk associated with the transaction.
@@ -46,7 +46,7 @@ public record Context18
     [IsoId("_uNL-JzNIEeylu6lH-gut-A")]
     [DisplayName("Risk Context")]
     [IsoXmlTag("RskCntxt")]
-    public RiskContext2? RiskContext { get; init; }
+    public ValueList<RiskContext2> RiskContext { get; init; } = [];
 
     /// <summary>
     /// Context of the sale associated with the card payment transaction.
@@ -62,5 +62,5 @@ public record Context18
     [IsoId("_6DFOETNIEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData2? AdditionalData { get; init; }
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 }

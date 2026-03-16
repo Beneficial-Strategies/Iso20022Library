@@ -41,7 +41,7 @@ public record SettlementSubTotalCalculatedTax2
     [IsoId("_PI8kwKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
-    public CurrencyAndAmount? BasisAmount { get; init; }
+    public ValueList<CurrencyAndAmount> BasisAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value resulting from the calculation of this tax, levy or duty.
@@ -49,7 +49,7 @@ public record SettlementSubTotalCalculatedTax2
     [IsoId("_Khf4gKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
-    public CurrencyAndAmount? CalculatedAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CalculatedAmount { get; init; } = [];
 
     /// <summary>
     /// Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.

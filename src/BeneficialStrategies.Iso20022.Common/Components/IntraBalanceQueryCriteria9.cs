@@ -22,7 +22,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bQTp9EemwKdP955WBJQ")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public References36Choice_? References { get; init; }
+    public ValueList<References36Choice_> References { get; init; } = [];
 
     /// <summary>
     /// Provides the status of settlement of a transaction.
@@ -38,7 +38,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bTTp9EemwKdP955WBJQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public AccountIdentificationSearchCriteria2Choice_? CashAccount { get; init; }
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> CashAccount { get; init; } = [];
 
     /// <summary>
     /// Party that owns the account.
@@ -46,7 +46,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bSzp9EemwKdP955WBJQ")]
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
-    public SystemPartyIdentification8? CashAccountOwner { get; init; }
+    public ValueList<SystemPartyIdentification8> CashAccountOwner { get; init; } = [];
 
     /// <summary>
     /// Party that manages the cash account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
@@ -62,7 +62,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bTzp9EemwKdP955WBJQ")]
     [DisplayName("Balance Type")]
     [IsoXmlTag("BalTp")]
-    public IntraBalanceType3? BalanceType { get; init; }
+    public ValueList<IntraBalanceType3> BalanceType { get; init; } = [];
 
     /// <summary>
     /// Number identifying a lot constituting the sub-balance.
@@ -70,7 +70,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bVzp9EemwKdP955WBJQ")]
     [DisplayName("Cash Sub Balance Identification")]
     [IsoXmlTag("CshSubBalId")]
-    public GenericIdentification37? CashSubBalanceIdentification { get; init; }
+    public ValueList<GenericIdentification37> CashSubBalanceIdentification { get; init; } = [];
 
     /// <summary>
     /// Total amount of money to be settled.
@@ -94,7 +94,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-baTp9EemwKdP955WBJQ")]
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
-    public ActiveOrHistoricCurrencyCode? SettlementCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> SettlementCurrency { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the amount of money is intended to be moved.
@@ -118,7 +118,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bezp9EemwKdP955WBJQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice_? Priority { get; init; }
+    public ValueList<PriorityNumeric4Choice_> Priority { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.
@@ -126,7 +126,7 @@ public record IntraBalanceQueryCriteria9
     [IsoId("_Ve-bgzp9EemwKdP955WBJQ")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
-    public SystemPartyIdentification8? MessageOriginator { get; init; }
+    public ValueList<SystemPartyIdentification8> MessageOriginator { get; init; } = [];
 
     /// <summary>
     /// Specifies the creation date/time of the intra-balance movement.

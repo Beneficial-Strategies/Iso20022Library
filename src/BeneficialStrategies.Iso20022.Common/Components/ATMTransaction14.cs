@@ -97,7 +97,7 @@ public record ATMTransaction14
     [IsoId("_2k4Q0617EeWMg5rOByfExw")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
-    public DetailedAmount13? AdditionalCharge { get; init; }
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
 
     /// <summary>
     /// Limit of amounts for the customer.
@@ -123,7 +123,7 @@ public record ATMTransaction14
     [IsoId("_2k4Q2a17EeWMg5rOByfExw")]
     [DisplayName("Mix")]
     [IsoXmlTag("Mix")]
-    public ATMMediaMix1? Mix { get; init; }
+    public ValueList<ATMMediaMix1> Mix { get; init; } = [];
 
     /// <summary>
     /// Outcome of the withdrawal authorisation.
@@ -148,5 +148,5 @@ public record ATMTransaction14
     [IsoId("_2k4Q3617EeWMg5rOByfExw")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

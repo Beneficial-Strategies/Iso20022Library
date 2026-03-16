@@ -30,7 +30,7 @@ public record RateDetails10
     [IsoId("_sCsgURFIEeKp2ZN13DI_pA")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat7Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat7Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// The actual interest rate used for the payment of the interest for the specified interest period. |Usage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.
@@ -38,7 +38,8 @@ public record RateDetails10
     [IsoId("_sCsgVRFIEeKp2ZN13DI_pA")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat5Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat5Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Percentage of the gross dividend rate on which tax must be paid.
@@ -46,7 +47,7 @@ public record RateDetails10
     [IsoId("_sCsgWRFIEeKp2ZN13DI_pA")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.
@@ -110,7 +111,7 @@ public record RateDetails10
     [IsoId("_sCsgeRFIEeKp2ZN13DI_pA")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat9Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat9Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
@@ -150,7 +151,7 @@ public record RateDetails10
     [IsoId("_sCsgjRFIEeKp2ZN13DI_pA")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat5Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat5Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.

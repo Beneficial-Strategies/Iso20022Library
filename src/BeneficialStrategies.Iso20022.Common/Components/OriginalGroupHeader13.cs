@@ -77,7 +77,7 @@ public record OriginalGroupHeader13
     [IsoId("_FsipM7ThEeef0oKPLRNatg")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation11? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation11> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Detailed information on the number of transactions for each identical transaction status.
@@ -85,5 +85,6 @@ public record OriginalGroupHeader13
     [IsoId("_FsipNbThEeef0oKPLRNatg")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
-    public NumberOfTransactionsPerStatus5? NumberOfTransactionsPerStatus { get; init; }
+    public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
+        [];
 }

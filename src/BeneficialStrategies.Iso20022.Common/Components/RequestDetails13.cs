@@ -63,7 +63,7 @@ public record RequestDetails13
     [IsoId("_POxd4SzQEeOsiuMH68so7Q")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
-    public GenericIdentification20? OtherProcessing { get; init; }
+    public ValueList<GenericIdentification20> OtherProcessing { get; init; } = [];
 
     /// <summary>
     /// Specifies whether partial settlement is allowed.
@@ -111,5 +111,5 @@ public record RequestDetails13
     [IsoId("_POxeESzQEeOsiuMH68so7Q")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages27? Linkages { get; init; }
+    public ValueList<Linkages27> Linkages { get; init; } = [];
 }

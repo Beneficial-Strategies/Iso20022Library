@@ -72,5 +72,5 @@ public record TradeStateReport16
     [IsoId("_yAM0DcK-EeuCIrYISEfoUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

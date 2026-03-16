@@ -22,7 +22,7 @@ public record OrderWaiver1
     [IsoId("__Q1k4ToQEeabspMEjqY5TQ")]
     [DisplayName("Order Waiver Reason")]
     [IsoXmlTag("OrdrWvrRsn")]
-    public OrderWaiverReason3Choice_? OrderWaiverReason { get; init; }
+    public ValueList<OrderWaiverReason3Choice_> OrderWaiverReason { get; init; } = [];
 
     /// <summary>
     /// Additional information about the order waiver.

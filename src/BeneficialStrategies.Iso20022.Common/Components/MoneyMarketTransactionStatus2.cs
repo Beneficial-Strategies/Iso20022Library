@@ -61,7 +61,7 @@ public record MoneyMarketTransactionStatus2
     [IsoId("_C4xcl6igEeWHO_l3hf2rlA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -69,5 +69,5 @@ public record MoneyMarketTransactionStatus2
     [IsoId("_C4xcmaigEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

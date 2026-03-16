@@ -49,7 +49,7 @@ public record TransactionReconciliation3
     [IsoId("_5Uzbp2l_EeSxgrJ0GX4SQQ")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotals3? TransactionTotals { get; init; }
+    public ValueList<TransactionTotals3> TransactionTotals { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the reconciliation transaction.

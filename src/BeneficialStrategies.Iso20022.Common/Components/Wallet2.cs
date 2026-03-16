@@ -181,5 +181,5 @@ public record Wallet2
     [IsoId("_jFQqc5lYEeu76rs9yGlfEg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

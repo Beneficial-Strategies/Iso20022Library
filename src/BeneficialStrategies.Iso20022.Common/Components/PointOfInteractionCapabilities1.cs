@@ -22,7 +22,7 @@ public record PointOfInteractionCapabilities1
     [IsoId("_TGJWawEcEeCQm6a_G2yO_w_477826154")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
-    public CardDataReading1Code? CardReadingCapabilities { get; init; }
+    public SimpleValueList<CardDataReading1Code> CardReadingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Cardholder verification capabilities of the POI performing the transaction.
@@ -30,7 +30,8 @@ public record PointOfInteractionCapabilities1
     [IsoId("_TGJWbAEcEeCQm6a_G2yO_w_1143315363")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
-    public CardholderVerificationCapability1Code? CardholderVerificationCapabilities { get; init; }
+    public SimpleValueList<CardholderVerificationCapability1Code> CardholderVerificationCapabilities { get; init; } =
+        [];
 
     /// <summary>
     /// On-line and off-line capabilities of the POI.
@@ -46,7 +47,7 @@ public record PointOfInteractionCapabilities1
     [IsoId("_TGSgUQEcEeCQm6a_G2yO_w_666196014")]
     [DisplayName("Display Capabilities")]
     [IsoXmlTag("DispCpblties")]
-    public DisplayCapabilities1? DisplayCapabilities { get; init; }
+    public ValueList<DisplayCapabilities1> DisplayCapabilities { get; init; } = [];
 
     /// <summary>
     /// Number of columns of the printer component.

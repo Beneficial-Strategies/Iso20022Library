@@ -78,7 +78,7 @@ public record SecuritiesOption77
     [IsoId("_0UQ6ERe9EeyroI8qKgB7Mg")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
-    public GenericIdentification30? OtherIncomeType { get; init; }
+    public ValueList<GenericIdentification30> OtherIncomeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the basis for the reduced rate of withholding.
@@ -86,7 +86,7 @@ public record SecuritiesOption77
     [IsoId("_leTLlRe9EeyroI8qKgB7Mg")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification30? ExemptionType { get; init; }
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities based on the terms of the corporate action event and balance of underlying securities entitled to the account owner. (This quantity can be positive or negative).

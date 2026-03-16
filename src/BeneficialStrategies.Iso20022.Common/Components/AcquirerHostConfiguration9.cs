@@ -32,7 +32,7 @@ public record AcquirerHostConfiguration9
     [IsoId("_gcAZE1FLEeyApZmLzm74zA")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
-    public MessageFunction43Code? MessageToSend { get; init; }
+    public SimpleValueList<MessageFunction43Code> MessageToSend { get; init; } = [];
 
     /// <summary>
     /// Protocol version to use when using these parameters.
@@ -50,7 +50,5 @@ public record AcquirerHostConfiguration9
     [IsoId("_5Pb2cFFLEeyApZmLzm74zA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ExternallyTypeSupported { get; init; }
+    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
 }

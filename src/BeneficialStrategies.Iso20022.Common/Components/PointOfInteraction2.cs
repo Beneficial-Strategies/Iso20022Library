@@ -58,5 +58,5 @@ public record PointOfInteraction2
     [IsoId("_zIH76AyUEeK5P9Ihqok3VA")]
     [DisplayName("Component")]
     [IsoXmlTag("Cmpnt")]
-    public PointOfInteractionComponent3? Component { get; init; }
+    public ValueList<PointOfInteractionComponent3> Component { get; init; } = [];
 }

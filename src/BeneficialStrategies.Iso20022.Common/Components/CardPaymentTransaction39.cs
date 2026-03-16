@@ -30,7 +30,8 @@ public record CardPaymentTransaction39
     [IsoId("_lK-2A2kkEeSTIuB9A-QJ6g")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult3? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult3> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Product code for which the authorisation was declined.
@@ -38,9 +39,7 @@ public record CardPaymentTransaction39
     [IsoId("_I9lWsGklEeSTIuB9A-QJ6g")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? DeclinedProductCode { get; init; }
+    public SimpleValueList<IsoMax70Text> DeclinedProductCode { get; init; } = [];
 
     /// <summary>
     /// Balance of the account, related to the payment.
@@ -64,7 +63,7 @@ public record CardPaymentTransaction39
     [IsoId("_lK-2B2kkEeSTIuB9A-QJ6g")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action3? Action { get; init; }
+    public ValueList<Action3> Action { get; init; } = [];
 
     /// <summary>
     /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.

@@ -30,5 +30,5 @@ public record ProprietaryStatusAndReason6
     [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
-    public ProprietaryReason4? ProprietaryReason { get; init; }
+    public ValueList<ProprietaryReason4> ProprietaryReason { get; init; } = [];
 }

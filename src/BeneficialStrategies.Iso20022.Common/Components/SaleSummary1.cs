@@ -40,5 +40,5 @@ public record SaleSummary1
     [IsoId("_rYJ6GfJoEeiJn9rM2Znz2w")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment9? Adjustment { get; init; }
+    public ValueList<Adjustment9> Adjustment { get; init; } = [];
 }

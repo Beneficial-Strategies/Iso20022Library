@@ -86,7 +86,7 @@ public record Transfer10
     [IsoId("_SgEuENp-Ed-ak6NoX_4Aeg_-1995991779")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit3? UnitsDetails { get; init; }
+    public ValueList<Unit3> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Total quantity of securities settled.

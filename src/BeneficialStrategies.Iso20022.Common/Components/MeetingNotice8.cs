@@ -75,7 +75,7 @@ public record MeetingNotice8
     [IsoId("_g8u3nzUIEe2tRf29bleifQ")]
     [DisplayName("Participation")]
     [IsoXmlTag("Prtcptn")]
-    public ParticipationMethod2? Participation { get; init; }
+    public ValueList<ParticipationMethod2> Participation { get; init; } = [];
 
     /// <summary>
     /// Information and conditions for physical attendance at the general meeting.
@@ -91,9 +91,7 @@ public record MeetingNotice8
     [IsoId("_g8u3ozUIEe2tRf29bleifQ")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? AdditionalDocumentationURLAddress { get; init; }
+    public SimpleValueList<IsoMax2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
     /// Provides web address of an account servicer (or of a service provider) that contains information solely intended for the immediate account holder to enable or facilitate event processing between parties.

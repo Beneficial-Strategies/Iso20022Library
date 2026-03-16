@@ -31,8 +31,7 @@ public record ManagementPlanContent9
     [IsoId("_611Acyi5Eeurkfo6MpvKDA")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Terminal management action to be performed by the point of interaction (POI).

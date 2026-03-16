@@ -38,5 +38,5 @@ public record SecuritiesAccountStatus2
     [IsoId("_2DI1meGEEeWCAvUNsZ5u6g")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation10? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation10> StatusReason { get; init; } = [];
 }

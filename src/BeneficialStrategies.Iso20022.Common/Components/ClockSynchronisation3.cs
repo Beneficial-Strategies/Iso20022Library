@@ -32,7 +32,7 @@ public record ClockSynchronisation3
     [IsoId("_cMQ1kw0WEeqUVL7sB4m7NA")]
     [DisplayName("Synchronisation Server")]
     [IsoXmlTag("SynctnSvr")]
-    public NetworkParameters7? SynchronisationServer { get; init; }
+    public ValueList<NetworkParameters7> SynchronisationServer { get; init; } = [];
 
     /// <summary>
     /// Delay between two contacts of the server.

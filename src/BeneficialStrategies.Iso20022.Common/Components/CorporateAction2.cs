@@ -22,7 +22,7 @@ public record CorporateAction2
     [IsoId("_TdKodNp-Ed-ak6NoX_4Aeg_-642508316")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStage1FormatChoice_? EventStage { get; init; }
+    public ValueList<CorporateActionEventStage1FormatChoice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Identifies the option that will be selected by default if no instruction is provided by account owner.
@@ -127,7 +127,7 @@ public record CorporateAction2
     [IsoId("_TdUZd9p-Ed-ak6NoX_4Aeg_-1796992526")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeType1FormatChoice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeType1FormatChoice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the conditions that apply to the offer.
@@ -135,7 +135,7 @@ public record CorporateAction2
     [IsoId("_TdUZeNp-Ed-ak6NoX_4Aeg_-1408191238")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferType1FormatChoice_? OfferType { get; init; }
+    public ValueList<OfferType1FormatChoice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Indicates whether there is restrictions apply to the CA event or not.||Yes = There is restrictions.|No = There is no restrictions.
@@ -201,8 +201,7 @@ public record CorporateAction2
     [IsoId("_TddjZtp-Ed-ak6NoX_4Aeg_-1756777381")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? CouponNumber { get; init; }
+    public SimpleValueList<IsoMax3NumericText> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Number of days used for calculating the accrued interest amount.
@@ -235,7 +234,7 @@ public record CorporateAction2
     [IsoId("_TdnUYNp-Ed-ak6NoX_4Aeg_-915572886")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public CorporateActionPrice2? PriceDetails { get; init; }
+    public ValueList<CorporateActionPrice2> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the periods related to a CA event.

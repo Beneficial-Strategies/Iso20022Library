@@ -46,5 +46,5 @@ public record AdditionalProductInformation1
     [IsoId("_D4f3UM2sEeuAE-cYsQdwHQ")]
     [DisplayName("ESG Label Or Standard")]
     [IsoXmlTag("ESGLablOrStd")]
-    public ESGLabelOrStandard1Code? ESGLabelOrStandard { get; init; }
+    public SimpleValueList<ESGLabelOrStandard1Code> ESGLabelOrStandard { get; init; } = [];
 }

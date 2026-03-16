@@ -69,7 +69,7 @@ public record PassengerTransportSummary2
     [IsoId("_UUE6G5GBEeukDPgU2BMkjQ")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
-    public CustomerReference1? CustomerReference { get; init; }
+    public ValueList<CustomerReference1> CustomerReference { get; init; } = [];
 
     /// <summary>
     /// Contains the details of the passenger.
@@ -77,7 +77,7 @@ public record PassengerTransportSummary2
     [IsoId("_UUE6HZGBEeukDPgU2BMkjQ")]
     [DisplayName("Passenger")]
     [IsoXmlTag("Pssngr")]
-    public Customer8? Passenger { get; init; }
+    public ValueList<Customer8> Passenger { get; init; } = [];
 
     /// <summary>
     /// Contains departure location, date and time.
@@ -111,7 +111,7 @@ public record PassengerTransportSummary2
     [IsoId("_UUE6JZGBEeukDPgU2BMkjQ")]
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
-    public AmountDetails2? TotalAmount { get; init; }
+    public ValueList<AmountDetails2> TotalAmount { get; init; } = [];
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.

@@ -38,9 +38,7 @@ public record FinancingResult1
     [IsoId("_TiFkuNp-Ed-ak6NoX_4Aeg_-99752141")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalStatusReasonInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalStatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Indicates amount financed related to the request.

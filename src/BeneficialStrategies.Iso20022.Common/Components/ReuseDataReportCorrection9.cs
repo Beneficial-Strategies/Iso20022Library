@@ -66,7 +66,7 @@ public record ReuseDataReportCorrection9
     [IsoId("_qlrv7f_pEemm3skPVSMJQg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
-    public FundingSource1? FundingSource { get; init; }
+    public ValueList<FundingSource1> FundingSource { get; init; } = [];
 
     /// <summary>
     /// List of possible values for TRs reconciliation purposes.
@@ -90,5 +90,5 @@ public record ReuseDataReportCorrection9
     [IsoId("_qlrv8__pEemm3skPVSMJQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

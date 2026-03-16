@@ -81,7 +81,7 @@ public record ATMTransaction16
     [IsoId("_0cneK64HEeWL1uap3dNhCQ")]
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount16? DetailedRequestedAmount { get; init; }
+    public ValueList<DetailedAmount16> DetailedRequestedAmount { get; init; } = [];
 
     /// <summary>
     /// Additional charge (for instance tax or fee).
@@ -89,7 +89,7 @@ public record ATMTransaction16
     [IsoId("_59U4MK4IEeWL1uap3dNhCQ")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
-    public DetailedAmount13? AdditionalCharge { get; init; }
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
 
     /// <summary>
     /// Outcome of the deposit authorisation.
@@ -114,5 +114,5 @@ public record ATMTransaction16
     [IsoId("_EbeSEK4JEeWL1uap3dNhCQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

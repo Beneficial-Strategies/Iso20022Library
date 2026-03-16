@@ -69,7 +69,7 @@ public record PlainCardData4
     [IsoId("_2XsaKy9mEeOlZIh7PImd0A")]
     [DisplayName("Track Data")]
     [IsoXmlTag("TrckData")]
-    public TrackData1? TrackData { get; init; }
+    public ValueList<TrackData1> TrackData { get; init; } = [];
 
     /// <summary>
     /// Card security code (CSC) associated with the card performing the transaction.

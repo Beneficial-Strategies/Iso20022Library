@@ -46,7 +46,7 @@ public record DetailedAmount15
     [IsoId("__WKmRZZ8EeWuSaWgzo19MQ")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public DetailedAmount4? Fees { get; init; }
+    public ValueList<DetailedAmount4> Fees { get; init; } = [];
 
     /// <summary>
     /// Global rebate of the transaction. This amount is counted as a negative amount.
@@ -54,7 +54,7 @@ public record DetailedAmount15
     [IsoId("__WKmR5Z8EeWuSaWgzo19MQ")]
     [DisplayName("Rebate")]
     [IsoXmlTag("Rbt")]
-    public DetailedAmount4? Rebate { get; init; }
+    public ValueList<DetailedAmount4> Rebate { get; init; } = [];
 
     /// <summary>
     /// Value added tax amount.
@@ -62,7 +62,7 @@ public record DetailedAmount15
     [IsoId("__WKmSZZ8EeWuSaWgzo19MQ")]
     [DisplayName("Value Added Tax")]
     [IsoXmlTag("ValAddedTax")]
-    public DetailedAmount4? ValueAddedTax { get; init; }
+    public ValueList<DetailedAmount4> ValueAddedTax { get; init; } = [];
 
     /// <summary>
     /// Additional charge paid by the cardholder. For example airline credit card surcharge.
@@ -70,5 +70,5 @@ public record DetailedAmount15
     [IsoId("__WKmS5Z8EeWuSaWgzo19MQ")]
     [DisplayName("Surcharge")]
     [IsoXmlTag("Srchrg")]
-    public DetailedAmount4? Surcharge { get; init; }
+    public ValueList<DetailedAmount4> Surcharge { get; init; } = [];
 }

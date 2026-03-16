@@ -40,7 +40,8 @@ public record TransactionVerificationResult2
     [IsoId("_8YFcqR2xEeKyZ4l838zwaQ")]
     [DisplayName("Cardholder Address Verification Result")]
     [IsoXmlTag("CrdhldrAdrVrfctnRslt")]
-    public CardholderAddressVerificationResult1Code? CardholderAddressVerificationResult { get; init; }
+    public SimpleValueList<CardholderAddressVerificationResult1Code> CardholderAddressVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Product code for which the authorisation was declined.
@@ -48,7 +49,5 @@ public record TransactionVerificationResult2
     [IsoId("_8YFcrR2xEeKyZ4l838zwaQ")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? DeclinedProductCode { get; init; }
+    public SimpleValueList<IsoMax70Text> DeclinedProductCode { get; init; } = [];
 }

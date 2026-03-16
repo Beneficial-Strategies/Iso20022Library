@@ -91,7 +91,7 @@ public record AccountStatement1
     [IsoId("_RUE1ANp-Ed-ak6NoX_4Aeg_-1253221269")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest1? Interest { get; init; }
+    public ValueList<AccountInterest1> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements defining the balance(s).
@@ -117,7 +117,7 @@ public record AccountStatement1
     [IsoId("_RUE1A9p-Ed-ak6NoX_4Aeg_-1137198067")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public StatementEntry1? Entry { get; init; }
+    public ValueList<StatementEntry1> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details on the account statement.

@@ -42,7 +42,8 @@ public record Transaction87
     [IsoId("_JNaHrUTHEeiTBYbU3rWV0A")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -68,7 +69,7 @@ public record Transaction87
     [IsoId("_JNaHt0THEeiTBYbU3rWV0A")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -76,7 +77,7 @@ public record Transaction87
     [IsoId("_JNaHtUTHEeiTBYbU3rWV0A")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Balance of an account.
@@ -84,7 +85,7 @@ public record Transaction87
     [IsoId("_JNaHuUTHEeiTBYbU3rWV0A")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalance1? AccountBalance { get; init; }
+    public ValueList<AccountBalance1> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Account information of a statement of account.
@@ -92,7 +93,7 @@ public record Transaction87
     [IsoId("_JNaHu0THEeiTBYbU3rWV0A")]
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
-    public AccountStatementData1? AccountStatementData { get; init; }
+    public ValueList<AccountStatementData1> AccountStatementData { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -118,5 +119,5 @@ public record Transaction87
     [IsoId("_F_KakRqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

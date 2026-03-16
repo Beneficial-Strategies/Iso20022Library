@@ -39,7 +39,5 @@ public record PartyLockStatus1
     [IsoId("_JfT99GjMEeiRg5NzP0jkQg")]
     [DisplayName("Lock Reason")]
     [IsoXmlTag("LckRsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LockReason { get; init; }
+    public SimpleValueList<IsoMax35Text> LockReason { get; init; } = [];
 }

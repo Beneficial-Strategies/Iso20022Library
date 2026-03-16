@@ -76,7 +76,7 @@ public record PaymentResponse3
     [IsoId("_BmjoHS82Eeu125Ip9zFcsQ")]
     [DisplayName("Payment Receipt")]
     [IsoXmlTag("PmtRct")]
-    public PaymentReceipt3? PaymentReceipt { get; init; }
+    public ValueList<PaymentReceipt3> PaymentReceipt { get; init; } = [];
 
     /// <summary>
     /// Data related to the result of a processed loyalty transaction.
@@ -84,7 +84,7 @@ public record PaymentResponse3
     [IsoId("_BmjoHy82Eeu125Ip9zFcsQ")]
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
-    public LoyaltyResult2? LoyaltyResult { get; init; }
+    public ValueList<LoyaltyResult2> LoyaltyResult { get; init; } = [];
 
     /// <summary>
     /// Customer order attached to a customer, recorded in the POI system.
@@ -92,5 +92,5 @@ public record PaymentResponse3
     [IsoId("_BmjoIS82Eeu125Ip9zFcsQ")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; }
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 }

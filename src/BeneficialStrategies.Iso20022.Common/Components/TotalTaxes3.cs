@@ -83,5 +83,5 @@ public record TotalTaxes3
     [IsoId("_SllgMdp-Ed-ak6NoX_4Aeg_-655709586")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax14? TaxDetails { get; init; }
+    public ValueList<Tax14> TaxDetails { get; init; } = [];
 }

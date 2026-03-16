@@ -22,7 +22,7 @@ public record ConfirmationParties9
     [IsoId("_YfhWgQasEe2phaVG0lYKTw")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentificationAndAccount220? Investor { get; init; }
+    public ValueList<PartyIdentificationAndAccount220> Investor { get; init; } = [];
 
     /// <summary>
     /// Party that buys goods or services, or a financial instrument.

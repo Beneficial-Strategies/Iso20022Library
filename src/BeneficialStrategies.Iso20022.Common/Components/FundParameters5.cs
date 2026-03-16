@@ -22,7 +22,7 @@ public record FundParameters5
     [IsoId("_Kf9RY2omEeipaMTLlhaKMQ")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrument71? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrument71> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Fund management company for which the report is requested.
@@ -30,7 +30,7 @@ public record FundParameters5
     [IsoId("_Kf9RZWomEeipaMTLlhaKMQ")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
-    public PartyIdentification139? FundManagementCompany { get; init; }
+    public ValueList<PartyIdentification139> FundManagementCompany { get; init; } = [];
 
     /// <summary>
     /// Specifies the date on or after which the information required will have been last updated. Only the most recent versions of the data is required.
@@ -55,5 +55,5 @@ public record FundParameters5
     [IsoId("_Kf9Ra2omEeipaMTLlhaKMQ")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
-    public CountryCode? RegisteredDistributionCountry { get; init; }
+    public SimpleValueList<CountryCode> RegisteredDistributionCountry { get; init; } = [];
 }

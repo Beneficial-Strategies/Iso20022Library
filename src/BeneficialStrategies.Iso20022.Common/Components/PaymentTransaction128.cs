@@ -69,7 +69,7 @@ public record PaymentTransaction128
     [IsoId("_YOlxXQbPEeqF8ePC1fs2Gg")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation12? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation12> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Status related to the requested conditions for the execution of the payment.
@@ -85,7 +85,7 @@ public record PaymentTransaction128
     [IsoId("_YOlxYQbPEeqF8ePC1fs2Gg")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public Charges7? ChargesInformation { get; init; }
+    public ValueList<Charges7> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Date and time on when the debtor has accepted or rejected the request.
@@ -140,7 +140,7 @@ public record PaymentTransaction128
     [IsoId("_YOlxbQbPEeqF8ePC1fs2Gg")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document12? EnclosedFile { get; init; }
+    public ValueList<Document12> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -148,5 +148,5 @@ public record PaymentTransaction128
     [IsoId("_YOlxbwbPEeqF8ePC1fs2Gg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

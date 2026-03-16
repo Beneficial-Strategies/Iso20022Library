@@ -89,7 +89,7 @@ public record TaxEfficientProduct7
     [IsoId("_YUPys-lfEeu9cf4XM82AQQ")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
-    public BonusWithdrawal2? BonusOrWithdrawal { get; init; }
+    public ValueList<BonusWithdrawal2> BonusOrWithdrawal { get; init; } = [];
 
     /// <summary>
     /// Indicates if there is a related property purchase in progress at the point of transfer. May be applicable to products such as Lifetime Individual Savings Account (LISA) products.
@@ -124,7 +124,7 @@ public record TaxEfficientProduct7
     [IsoId("_YUPyuelfEeu9cf4XM82AQQ")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
-    public OtherAmount3? OtherAmount { get; init; }
+    public ValueList<OtherAmount3> OtherAmount { get; init; } = [];
 
     /// <summary>
     /// Date the first qualifying additional amount was made to the product.  Qualifying additional amounts may be made to a Lifetime Individual Savings Account (LISA) product.
@@ -149,7 +149,7 @@ public record TaxEfficientProduct7
     [IsoId("_YUPyv-lfEeu9cf4XM82AQQ")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
-    public DateAndAmount2? InvestmentsToFollowValue { get; init; }
+    public ValueList<DateAndAmount2> InvestmentsToFollowValue { get; init; } = [];
 
     /// <summary>
     /// Information about an innovative finance product.
@@ -157,7 +157,7 @@ public record TaxEfficientProduct7
     [IsoId("_YUPywelfEeu9cf4XM82AQQ")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
-    public InnovativeFinance1? InnovativeFinance { get; init; }
+    public ValueList<InnovativeFinance1> InnovativeFinance { get; init; } = [];
 
     /// <summary>
     /// Lowest investment amount in the current year, used to calculate a tax deduction amount.
@@ -205,5 +205,5 @@ public record TaxEfficientProduct7
     [IsoId("_YUPyzelfEeu9cf4XM82AQQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

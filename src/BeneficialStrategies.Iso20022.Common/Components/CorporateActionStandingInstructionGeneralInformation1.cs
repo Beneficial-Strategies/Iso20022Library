@@ -30,7 +30,7 @@ public record CorporateActionStandingInstructionGeneralInformation1
     [IsoId("_UJkbdtp-Ed-ak6NoX_4Aeg_1471624351")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public CorporateActionEventType2FormatChoice_? EventType { get; init; }
+    public ValueList<CorporateActionEventType2FormatChoice_> EventType { get; init; } = [];
 
     /// <summary>
     /// Identification of the instructing party, ie, the CSD client.
@@ -56,7 +56,7 @@ public record CorporateActionStandingInstructionGeneralInformation1
     [IsoId("_UJkbedp-Ed-ak6NoX_4Aeg_-1954368406")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public IncludedAccount1? AccountDetails { get; init; }
+    public ValueList<IncludedAccount1> AccountDetails { get; init; } = [];
 
     /// <summary>
     /// Identification of the underlying financial instrument, ie, the financial instrument affected by the corporate action event.

@@ -39,7 +39,8 @@ public record SettlementDetails25
     [IsoId("_W7BPv9zvEd-a791rB7tZXQ")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition5Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition5Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether partial settlement is allowed.

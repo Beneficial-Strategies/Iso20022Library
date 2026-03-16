@@ -110,5 +110,5 @@ public record DeviceResponse3
     [IsoId("_TgiZpw0sEeqUVL7sB4m7NA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

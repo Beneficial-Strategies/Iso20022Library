@@ -142,7 +142,7 @@ public record CorporateActionBalance44
     [IsoId("_2IO4o-6KEeqc-LCjwLsUVg")]
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
-    public PendingBalance5? PendingDeliveryBalance { get; init; }
+    public ValueList<PendingBalance5> PendingDeliveryBalance { get; init; } = [];
 
     /// <summary>
     /// Balance of financial instruments that are pending receipt.
@@ -150,5 +150,5 @@ public record CorporateActionBalance44
     [IsoId("_2IO4q-6KEeqc-LCjwLsUVg")]
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
-    public PendingBalance5? PendingReceiptBalance { get; init; }
+    public ValueList<PendingBalance5> PendingReceiptBalance { get; init; } = [];
 }

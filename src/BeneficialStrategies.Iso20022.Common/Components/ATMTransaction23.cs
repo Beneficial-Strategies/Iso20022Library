@@ -86,7 +86,7 @@ public record ATMTransaction23
     [IsoId("_dtODUK4uEeWLdt0vLARX2Q")]
     [DisplayName("Account To")]
     [IsoXmlTag("AcctTo")]
-    public CardAccount7? AccountTo { get; init; }
+    public ValueList<CardAccount7> AccountTo { get; init; } = [];
 
     /// <summary>
     /// Encryption of the destination account information.

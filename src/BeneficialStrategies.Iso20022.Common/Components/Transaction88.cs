@@ -42,7 +42,8 @@ public record Transaction88
     [IsoId("_XT1hqZ_eEeihutZpWtx1zA")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -68,7 +69,7 @@ public record Transaction88
     [IsoId("_XT1hp5_eEeihutZpWtx1zA")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -76,7 +77,7 @@ public record Transaction88
     [IsoId("_XT1hq5_eEeihutZpWtx1zA")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Balance of an account.
@@ -84,7 +85,7 @@ public record Transaction88
     [IsoId("_XT1hop_eEeihutZpWtx1zA")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalance1? AccountBalance { get; init; }
+    public ValueList<AccountBalance1> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -110,5 +111,5 @@ public record Transaction88
     [IsoId("_HhzSARqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

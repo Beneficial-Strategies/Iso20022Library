@@ -40,5 +40,5 @@ public record PartyIdentification120
     [IsoId("_cMzSA62hEeaYS91sTIbkkQ")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification9? AlternateIdentification { get; init; }
+    public ValueList<AlternatePartyIdentification9> AlternateIdentification { get; init; } = [];
 }

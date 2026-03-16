@@ -62,7 +62,7 @@ public record SaleContext4
     [IsoId("_cUONGQx5Eeqdx6buGpCCQw")]
     [DisplayName("Cashier Language")]
     [IsoXmlTag("CshrLang")]
-    public LanguageCode? CashierLanguage { get; init; }
+    public SimpleValueList<LanguageCode> CashierLanguage { get; init; } = [];
 
     /// <summary>
     /// Identifies the shift of the cashier.
@@ -118,7 +118,7 @@ public record SaleContext4
     [IsoId("_cUONJQx5Eeqdx6buGpCCQw")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
-    public Organisation26? SponsoredMerchant { get; init; }
+    public ValueList<Organisation26> SponsoredMerchant { get; init; } = [];
 
     /// <summary>
     /// True if the payment transaction is a partial payment of the sale transaction.
@@ -161,7 +161,7 @@ public record SaleContext4
     [IsoId("_cUONLwx5Eeqdx6buGpCCQw")]
     [DisplayName("Allowed Entry Mode")]
     [IsoXmlTag("AllwdNtryMd")]
-    public CardDataReading8Code? AllowedEntryMode { get; init; }
+    public SimpleValueList<CardDataReading8Code> AllowedEntryMode { get; init; } = [];
 
     /// <summary>
     /// Scope of the token that identifies the payment mean of the customer.

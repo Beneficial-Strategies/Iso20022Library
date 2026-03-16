@@ -22,7 +22,8 @@ public record CashAccountSearchCriteria7
     [IsoId("_QHzu9W49EeiU9cctagi5ow")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentificationSearchCriteria2Choice_? AccountIdentification { get; init; }
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> AccountIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the nature, or use, of the cash account.
@@ -30,7 +31,7 @@ public record CashAccountSearchCriteria7
     [IsoId("_QHzu9249EeiU9cctagi5ow")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CashAccountType2Choice_? Type { get; init; }
+    public ValueList<CashAccountType2Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Specifies the currency of the cash account.
@@ -38,7 +39,7 @@ public record CashAccountSearchCriteria7
     [IsoId("_QHzu-W49EeiU9cctagi5ow")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveOrHistoricCurrencyCode? Currency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
 
     /// <summary>
     /// Balance of the account which is being queried.
@@ -46,7 +47,7 @@ public record CashAccountSearchCriteria7
     [IsoId("_QHzu-249EeiU9cctagi5ow")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance12? Balance { get; init; }
+    public ValueList<CashBalance12> Balance { get; init; } = [];
 
     /// <summary>
     /// Owner of the account which is being queried.

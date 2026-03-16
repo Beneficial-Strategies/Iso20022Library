@@ -32,7 +32,7 @@ public record StandingOrderCriteria2
     [IsoId("_jE-P5ZlPEee-Zps0fZQaFQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public StandingOrderSearchCriteria2? SearchCriteria { get; init; }
+    public ValueList<StandingOrderSearchCriteria2> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected standing order report.

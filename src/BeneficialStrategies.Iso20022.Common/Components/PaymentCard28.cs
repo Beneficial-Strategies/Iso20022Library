@@ -141,9 +141,7 @@ public record PaymentCard28
     [IsoId("_ldyoE9qjEeearpaEPXv9UA")]
     [DisplayName("Allowed Product")]
     [IsoXmlTag("AllwdPdct")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AllowedProduct { get; init; }
+    public SimpleValueList<IsoMax70Text> AllowedProduct { get; init; } = [];
 
     /// <summary>
     /// Options to the service provided by the card.

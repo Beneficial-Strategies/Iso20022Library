@@ -57,8 +57,7 @@ public record Transaction94
     [IsoId("_--3oMcybEeiqqJhU2tqK8A")]
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
-    [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? RequestedCurrency { get; init; }
+    public SimpleValueList<IsoExact3NumericText> RequestedCurrency { get; init; } = [];
 
     /// <summary>
     /// Totals of the reconciliation.
@@ -66,7 +65,7 @@ public record Transaction94
     [IsoId("_BWEP0FASEeedyPuM0kK2EQ")]
     [DisplayName("Reconciliation Totals")]
     [IsoXmlTag("RcncltnTtls")]
-    public TransactionTotals11? ReconciliationTotals { get; init; }
+    public ValueList<TransactionTotals11> ReconciliationTotals { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -74,7 +73,7 @@ public record Transaction94
     [IsoId("_NVFkYvF-EeiGNursv3uE_g")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -82,5 +81,5 @@ public record Transaction94
     [IsoId("_pq5o0RqnEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

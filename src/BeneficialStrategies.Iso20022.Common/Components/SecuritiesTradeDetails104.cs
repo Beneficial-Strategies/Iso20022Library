@@ -22,9 +22,7 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIw_fXEeiNZp_PtLohLw")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoRestrictedFINXMax52Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -32,9 +30,8 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIx_fXEeiNZp_PtLohLw")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
-    [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax16Text> CollateralTransactionIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -42,9 +39,8 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIy_fXEeiNZp_PtLohLw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
-    [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax16Text> AccountOwnerTransactionIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -111,7 +107,8 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqI6ffXEeiNZp_PtLohLw")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition6Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition6Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of price and information about the price.

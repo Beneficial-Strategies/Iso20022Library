@@ -30,9 +30,7 @@ public record Order17
     [IsoId("_JMDZWzAdEeOdVfle5cojCg")]
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OrderIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> OrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.
@@ -40,9 +38,7 @@ public record Order17
     [IsoId("_JMDZYzAdEeOdVfle5cojCg")]
     [DisplayName("Client Order Identification")]
     [IsoXmlTag("ClntOrdrId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientOrderIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ClientOrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Assigned by the party that originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.
@@ -50,9 +46,7 @@ public record Order17
     [IsoId("_JMDZazAdEeOdVfle5cojCg")]
     [DisplayName("Secondary Client Order Identification")]
     [IsoXmlTag("ScndryClntOrdrId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecondaryClientOrderIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> SecondaryClientOrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.
@@ -60,9 +54,7 @@ public record Order17
     [IsoId("_JMDZczAdEeOdVfle5cojCg")]
     [DisplayName("List Identification")]
     [IsoXmlTag("ListId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ListIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ListIdentification { get; init; } = [];
 
     /// <summary>
     /// Coded list to specify the side of the order.
@@ -94,7 +86,8 @@ public record Order17
     [IsoId("_JMDZkzAdEeOdVfle5cojCg")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition4Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition4Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Transaction is a pre-advice, that is, for matching purposes only.
@@ -169,7 +162,7 @@ public record Order17
     [IsoId("_JMDZvTAdEeOdVfle5cojCg")]
     [DisplayName("Partial Fill Details")]
     [IsoXmlTag("PrtlFillDtls")]
-    public PartialFill2? PartialFillDetails { get; init; }
+    public ValueList<PartialFill2> PartialFillDetails { get; init; } = [];
 
     /// <summary>
     /// Quantity of financial instrument that is being confirmed for the account.The quantity of the security to be settled.
@@ -185,7 +178,7 @@ public record Order17
     [IsoId("_JMDZwTAdEeOdVfle5cojCg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown11? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown11> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Principal amount of a trade (price multiplied by quantity).
@@ -357,7 +350,7 @@ public record Order17
     [IsoId("_JMDaFTAdEeOdVfle5cojCg")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting5Choice_? Reporting { get; init; }
+    public ValueList<Reporting5Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration or physical settlement.

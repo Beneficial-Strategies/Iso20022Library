@@ -47,7 +47,7 @@ public record CorporateActionOption139
     [IsoId("_PMbao5ShEeeh5JjedkaA_g")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferTypeFormat10Choice_? OfferType { get; init; }
+    public ValueList<OfferTypeFormat10Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies the features that may apply to a corporate action option.
@@ -55,7 +55,7 @@ public record CorporateActionOption139
     [IsoId("_PMbaq5ShEeeh5JjedkaA_g")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public OptionFeaturesFormat22Choice_? OptionFeatures { get; init; }
+    public ValueList<OptionFeaturesFormat22Choice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of intermediates securities distribution.
@@ -79,7 +79,8 @@ public record CorporateActionOption139
     [IsoId("_PMbaw5ShEeeh5JjedkaA_g")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
-    public BeneficiaryCertificationType9Choice_? CertificationBreakdownType { get; init; }
+    public ValueList<BeneficiaryCertificationType9Choice_> CertificationBreakdownType { get; init; } =
+        [];
 
     /// <summary>
     /// Holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.
@@ -87,7 +88,7 @@ public record CorporateActionOption139
     [IsoId("_PMbay5ShEeeh5JjedkaA_g")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
-    public CountryCode? NonDomicileCountry { get; init; }
+    public SimpleValueList<CountryCode> NonDomicileCountry { get; init; } = [];
 
     /// <summary>
     /// Country of domicile in which the Corporate Action option is valid. The holder of the security has to certify that it is domiciled in the country indicated.
@@ -95,7 +96,7 @@ public record CorporateActionOption139
     [IsoId("_PMba05ShEeeh5JjedkaA_g")]
     [DisplayName("Valid Domicile Country")]
     [IsoXmlTag("VldDmclCtry")]
-    public CountryCode? ValidDomicileCountry { get; init; }
+    public SimpleValueList<CountryCode> ValidDomicileCountry { get; init; } = [];
 
     /// <summary>
     /// Currency in which the cash disbursed from an interest or dividend payment is offered.
@@ -214,7 +215,7 @@ public record CorporateActionOption139
     [IsoId("_PMbbPZShEeeh5JjedkaA_g")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOption64? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOption64> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash movement linked to the corporate action option.
@@ -222,7 +223,7 @@ public record CorporateActionOption139
     [IsoId("_PMbbRZShEeeh5JjedkaA_g")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOption57? CashMovementDetails { get; init; }
+    public ValueList<CashOption57> CashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information about the corporate action movement.

@@ -63,5 +63,5 @@ public record FundCashInBreakdown1
     [IsoId("_VBwAqdp-Ed-ak6NoX_4Aeg_257394767")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission4? CommissionDetails { get; init; }
+    public ValueList<Commission4> CommissionDetails { get; init; } = [];
 }

@@ -22,7 +22,5 @@ public record RemittanceInformation2
     [IsoId("_QFsWVtp-Ed-ak6NoX_4Aeg_-1039592586")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Unstructured { get; init; }
+    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
 }

@@ -40,5 +40,5 @@ public record ReportItemStatus1
     [IsoId("_j5TZhClEEeWwYv6HydV_vw")]
     [DisplayName("Report Item")]
     [IsoXmlTag("RptItm")]
-    public ReportItem1? ReportItem { get; init; }
+    public ValueList<ReportItem1> ReportItem { get; init; } = [];
 }

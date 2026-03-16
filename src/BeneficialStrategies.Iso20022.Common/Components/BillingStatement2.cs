@@ -65,7 +65,7 @@ public record BillingStatement2
     [IsoId("_ayMbuzq2EeWZFYSPlduMhw")]
     [DisplayName("Rate Data")]
     [IsoXmlTag("RateData")]
-    public BillingRate1? RateData { get; init; }
+    public ValueList<BillingRate1> RateData { get; init; } = [];
 
     /// <summary>
     /// Specifies details related to currency exchange data.
@@ -73,7 +73,7 @@ public record BillingStatement2
     [IsoId("_ayMbvTq2EeWZFYSPlduMhw")]
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
-    public CurrencyExchange6? CurrencyExchange { get; init; }
+    public ValueList<CurrencyExchange6> CurrencyExchange { get; init; } = [];
 
     /// <summary>
     /// Identifies the average value of balances held within the statement period.
@@ -81,7 +81,7 @@ public record BillingStatement2
     [IsoId("_ayMbvzq2EeWZFYSPlduMhw")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public BillingBalance1? Balance { get; init; }
+    public ValueList<BillingBalance1> Balance { get; init; } = [];
 
     /// <summary>
     /// Identifies the set of values and totals that are used to provide compensation information, service and tax totals.
@@ -89,7 +89,7 @@ public record BillingStatement2
     [IsoId("_ayMbwTq2EeWZFYSPlduMhw")]
     [DisplayName("Compensation")]
     [IsoXmlTag("Compstn")]
-    public BillingCompensation1? Compensation { get; init; }
+    public ValueList<BillingCompensation1> Compensation { get; init; } = [];
 
     /// <summary>
     /// Specifies the values used for every line item service in the statement.
@@ -97,7 +97,7 @@ public record BillingStatement2
     [IsoId("_ayMbwzq2EeWZFYSPlduMhw")]
     [DisplayName("Service")]
     [IsoXmlTag("Svc")]
-    public BillingService2? Service { get; init; }
+    public ValueList<BillingService2> Service { get; init; } = [];
 
     /// <summary>
     /// Tax region(s) that levy a tax on the services within this statement.
@@ -105,7 +105,7 @@ public record BillingStatement2
     [IsoId("_ayMbxTq2EeWZFYSPlduMhw")]
     [DisplayName("Tax Region")]
     [IsoXmlTag("TaxRgn")]
-    public BillingTaxRegion1? TaxRegion { get; init; }
+    public ValueList<BillingTaxRegion1> TaxRegion { get; init; } = [];
 
     /// <summary>
     /// One or more sections that identify balance or float adjustments to the account. They can reflect either adjustments to the current statement or adjustments to statements from prior reporting periods.
@@ -113,7 +113,7 @@ public record BillingStatement2
     [IsoId("_ayMbxzq2EeWZFYSPlduMhw")]
     [DisplayName("Balance Adjustment")]
     [IsoXmlTag("BalAdjstmnt")]
-    public BalanceAdjustment1? BalanceAdjustment { get; init; }
+    public ValueList<BalanceAdjustment1> BalanceAdjustment { get; init; } = [];
 
     /// <summary>
     /// One or more sections that identify line item service adjustments to the account. They reflect adjustments to statements from prior reporting periods.
@@ -121,5 +121,5 @@ public record BillingStatement2
     [IsoId("_ayMbyTq2EeWZFYSPlduMhw")]
     [DisplayName("Service Adjustment")]
     [IsoXmlTag("SvcAdjstmnt")]
-    public BillingServiceAdjustment1? ServiceAdjustment { get; init; }
+    public ValueList<BillingServiceAdjustment1> ServiceAdjustment { get; init; } = [];
 }

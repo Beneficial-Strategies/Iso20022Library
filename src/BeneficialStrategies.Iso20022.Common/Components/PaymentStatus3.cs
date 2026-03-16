@@ -38,5 +38,5 @@ public record PaymentStatus3
     [IsoId("_NqBxR5lPEee-Zps0fZQaFQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public PaymentStatusReasonCode7Choice_? Reason { get; init; }
+    public ValueList<PaymentStatusReasonCode7Choice_> Reason { get; init; } = [];
 }

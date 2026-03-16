@@ -50,9 +50,7 @@ public record AcquirerProtocolParameters12
     [IsoId("_IoCIB9X2Eeia9rtBTv_9KA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -60,7 +58,7 @@ public record AcquirerProtocolParameters12
     [IsoId("_IoCICdX2Eeia9rtBTv_9KA")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
-    public AcquirerHostConfiguration6? Host { get; init; }
+    public ValueList<AcquirerHostConfiguration6> Host { get; init; } = [];
 
     /// <summary>
     /// Acquirer protocol parameters of transactions performing an online authorisation.
@@ -146,7 +144,7 @@ public record AcquirerProtocolParameters12
     [IsoId("_IoCIHdX2Eeia9rtBTv_9KA")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
-    public BatchTransactionType1Code? BatchTransferContent { get; init; }
+    public SimpleValueList<BatchTransactionType1Code> BatchTransferContent { get; init; } = [];
 
     /// <summary>
     /// BatchTransfer are exchanged per file transfer protocol rather than per message.
@@ -172,7 +170,7 @@ public record AcquirerProtocolParameters12
     [IsoId("_IoCII9X2Eeia9rtBTv_9KA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition1? MessageItem { get; init; }
+    public ValueList<MessageItemCondition1> MessageItem { get; init; } = [];
 
     /// <summary>
     /// Indicator to require protection of sensitive card data in messages.

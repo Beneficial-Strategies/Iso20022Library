@@ -48,5 +48,5 @@ public record LoyaltyResponse1
     [IsoId("_rCZgwNxUEeioifFt1dhnJA")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public LoyaltyResult1? Result { get; init; }
+    public ValueList<LoyaltyResult1> Result { get; init; } = [];
 }

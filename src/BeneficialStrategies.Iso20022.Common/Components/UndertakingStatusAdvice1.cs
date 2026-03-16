@@ -83,7 +83,7 @@ public record UndertakingStatusAdvice1
     [IsoId("_-DU743ltEeG7BsjMvd1mEw_1827841012")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation8? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation8> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Amount reported.
@@ -91,7 +91,7 @@ public record UndertakingStatusAdvice1
     [IsoId("_rO8tFq-2EeGNi5z8K_XPKQ")]
     [DisplayName("Reported Amount")]
     [IsoXmlTag("RptdAmt")]
-    public ReportedAmount1? ReportedAmount { get; init; }
+    public ValueList<ReportedAmount1> ReportedAmount { get; init; } = [];
 
     /// <summary>
     /// Information concerning the original message to which the status report may be sent in response.
@@ -107,7 +107,7 @@ public record UndertakingStatusAdvice1
     [IsoId("_1IyGs37nEeGudZE4UaJCHQ")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the report.

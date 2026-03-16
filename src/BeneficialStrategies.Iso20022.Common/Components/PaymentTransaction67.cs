@@ -96,7 +96,8 @@ public record PaymentTransaction67
     [IsoId("_lW9llTq3EeWZFYSPlduMhw")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
-    public CancellationStatusReason2? CancellationStatusReasonInformation { get; init; }
+    public ValueList<CancellationStatusReason2> CancellationStatusReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Reference of a return or a reversal transaction that is initiated to fix the case under investigation as part of the resolution.

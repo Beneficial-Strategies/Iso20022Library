@@ -54,5 +54,5 @@ public record TransferOut1
     [IsoId("_U07spdp-Ed-ak6NoX_4Aeg_-779468033")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

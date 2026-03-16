@@ -48,5 +48,6 @@ public record ReconciliationStatisticsPerCounterparty3
     [IsoId("_cHFOd1ovEe23K4GXSpBSeg")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public ReconciliationCounterpartyPairStatistics6? TransactionDetails { get; init; }
+    public ValueList<ReconciliationCounterpartyPairStatistics6> TransactionDetails { get; init; } =
+        [];
 }

@@ -48,7 +48,7 @@ public record ATMTransaction25
     [IsoId("_DtSON648EeWRfYPBaeOY8w")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
-    public ATMTotals1? ATMTotals { get; init; }
+    public ValueList<ATMTotals1> ATMTotals { get; init; } = [];
 
     /// <summary>
     /// Information on the cassette of the ATM.
@@ -56,7 +56,7 @@ public record ATMTransaction25
     [IsoId("_DtSOOa48EeWRfYPBaeOY8w")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
-    public ATMCassette2? Cassette { get; init; }
+    public ValueList<ATMCassette2> Cassette { get; init; } = [];
 
     /// <summary>
     /// Transaction counters that are set to zero after a reconciliation with counter reinitialisation command.
@@ -64,7 +64,7 @@ public record ATMTransaction25
     [IsoId("_DtSOO648EeWRfYPBaeOY8w")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public ATMTotals3? TransactionTotals { get; init; }
+    public ValueList<ATMTotals3> TransactionTotals { get; init; } = [];
 
     /// <summary>
     /// Total number of retained cards.

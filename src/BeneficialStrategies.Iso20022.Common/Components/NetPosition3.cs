@@ -143,5 +143,5 @@ public record NetPosition3
     [IsoId("_H3p9oS6aEeSQQqw1BT_aMg")]
     [DisplayName("Trade Leg Details")]
     [IsoXmlTag("TradLegDtls")]
-    public TradeLeg10? TradeLegDetails { get; init; }
+    public ValueList<TradeLeg10> TradeLegDetails { get; init; } = [];
 }

@@ -99,7 +99,7 @@ public record ATMTransaction1
     [IsoId("_MXSYwIonEeSaAcF2oE2GNQ")]
     [DisplayName("Selected Mix")]
     [IsoXmlTag("SelctdMix")]
-    public ATMMediaMix1? SelectedMix { get; init; }
+    public ValueList<ATMMediaMix1> SelectedMix { get; init; } = [];
 
     /// <summary>
     /// True if a receipt has be requested by the customer.

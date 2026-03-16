@@ -42,8 +42,7 @@ public record ApplicationParameters2
     [IsoId("_yzIiaQvbEeK9Xewg3qiFQA")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
-    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? Parameters { get; init; }
+    public SimpleValueList<IsoMax10000Binary> Parameters { get; init; } = [];
 
     /// <summary>
     /// Sensitive parameters (sequence of Parameters including the enveloppes) encrypted with a cryptographic key.

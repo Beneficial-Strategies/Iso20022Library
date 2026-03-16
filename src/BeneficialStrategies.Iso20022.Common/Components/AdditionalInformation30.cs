@@ -30,7 +30,7 @@ public record AdditionalInformation30
     [IsoId("_YPONM0JKEeycgPMNjuGITQ")]
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
-    public UserInterface8Code? Target { get; init; }
+    public SimpleValueList<UserInterface8Code> Target { get; init; } = [];
 
     /// <summary>
     /// Format of the additional information.

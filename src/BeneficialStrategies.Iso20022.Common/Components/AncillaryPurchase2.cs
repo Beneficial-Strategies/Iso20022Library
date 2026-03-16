@@ -108,7 +108,7 @@ public record AncillaryPurchase2
     [IsoId("_2yvFo5JQEeuuktRxxQZoNQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 
     /// <summary>
     /// Additional user-defined data pertaining to the transportation.

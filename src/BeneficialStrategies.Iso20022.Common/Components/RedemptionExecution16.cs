@@ -62,7 +62,7 @@ public record RedemptionExecution16
     [IsoId("_FXOEsTbtEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson32? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Number of investment funds units redeemed.
@@ -216,7 +216,7 @@ public record RedemptionExecution16
     [IsoId("_FXOE0zbtEead9bDRE_1DAQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms33> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

@@ -66,7 +66,7 @@ public record CardPaymentTransaction17
     [IsoId("_jIoiNR0jEeK5OKMB21JFBg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType2Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType2Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.

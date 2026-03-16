@@ -86,7 +86,7 @@ public record Plan2
     [IsoId("_00qTi5JJEeuuktRxxQZoNQ")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public InterestRateDetails2? InterestRate { get; init; }
+    public ValueList<InterestRateDetails2> InterestRate { get; init; } = [];
 
     /// <summary>
     /// Date of the first payment.
@@ -144,7 +144,7 @@ public record Plan2
     [IsoId("_00qTmZJJEeuuktRxxQZoNQ")]
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
-    public InstalmentAmountDetails2? AmountDetails { get; init; }
+    public ValueList<InstalmentAmountDetails2> AmountDetails { get; init; } = [];
 
     /// <summary>
     /// Total amount of the instalment including charges, insurance and taxes in addition to the funded amount.
@@ -160,5 +160,5 @@ public record Plan2
     [IsoId("_5Q7OAJJKEeuuktRxxQZoNQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -30,7 +30,7 @@ public record CardTransactionDetail6
     [IsoId("_4uVxEIN0EeSXtJ8rlirVJw")]
     [DisplayName("Transaction Fees")]
     [IsoXmlTag("TxFees")]
-    public DetailedAmount11? TransactionFees { get; init; }
+    public ValueList<DetailedAmount11> TransactionFees { get; init; } = [];
 
     /// <summary>
     /// Additional amounts from the processor or the issuer without financial impacts on the transaction amount.
@@ -38,7 +38,7 @@ public record CardTransactionDetail6
     [IsoId("__cFbcIN0EeSXtJ8rlirVJw")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public DetailedAmount10? AdditionalAmounts { get; init; }
+    public ValueList<DetailedAmount10> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Data related to an integrated circuit card application.

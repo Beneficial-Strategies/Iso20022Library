@@ -75,5 +75,5 @@ public record TMSHeader1
     [IsoId("_2UVvoRBhEeqgJK7e3n_EXA")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability8? Traceability { get; init; }
+    public ValueList<Traceability8> Traceability { get; init; } = [];
 }

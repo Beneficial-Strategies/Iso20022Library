@@ -76,7 +76,7 @@ public record ReportedFraud1
     [IsoId("_ffFEsHbIEeef9c2nwgY9Xw")]
     [DisplayName("Compromised Credential")]
     [IsoXmlTag("CmprmsdCrdntl")]
-    public AuthenticationMethod11Code? CompromisedCredential { get; init; }
+    public SimpleValueList<AuthenticationMethod11Code> CompromisedCredential { get; init; } = [];
 
     /// <summary>
     /// Date of fraud as reported by the cardholder

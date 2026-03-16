@@ -40,5 +40,5 @@ public record SecurityParameters2
     [IsoId("_J1bEJTZ4EeOP_KvUKe29ng")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
-    public CryptographicKey4? SymmetricKey { get; init; }
+    public ValueList<CryptographicKey4> SymmetricKey { get; init; } = [];
 }

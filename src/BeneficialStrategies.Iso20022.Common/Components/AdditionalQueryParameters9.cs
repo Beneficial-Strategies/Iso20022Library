@@ -30,7 +30,7 @@ public record AdditionalQueryParameters9
     [IsoId("_uW-mtVhpEeS8HfHHd4stCA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public Reason14Choice_? Reason { get; init; }
+    public ValueList<Reason14Choice_> Reason { get; init; } = [];
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
@@ -38,5 +38,6 @@ public record AdditionalQueryParameters9
     [IsoId("_uW-muVhpEeS8HfHHd4stCA")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification14? FinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification14> FinancialInstrumentIdentification { get; init; } =
+        [];
 }

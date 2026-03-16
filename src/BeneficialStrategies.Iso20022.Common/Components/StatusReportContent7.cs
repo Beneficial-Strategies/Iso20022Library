@@ -30,7 +30,7 @@ public record StatusReportContent7
     [IsoId("_2U7mQ9qNEeearpaEPXv9UA")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent8? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent8> POIComponent { get; init; } = [];
 
     /// <summary>
     /// Human attendance at the POI (Point Of Interaction) location during transactions.
@@ -55,7 +55,7 @@ public record StatusReportContent7
     [IsoId("_2U7mSdqNEeearpaEPXv9UA")]
     [DisplayName("Data Set Required")]
     [IsoXmlTag("DataSetReqrd")]
-    public TerminalManagementDataSet25? DataSetRequired { get; init; }
+    public ValueList<TerminalManagementDataSet25> DataSetRequired { get; init; } = [];
 
     /// <summary>
     /// Result of an individual terminal management action by the point of interaction.
@@ -63,7 +63,7 @@ public record StatusReportContent7
     [IsoId("_2U7mS9qNEeearpaEPXv9UA")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public TMSEvent6? Event { get; init; }
+    public ValueList<TMSEvent6> Event { get; init; } = [];
 
     /// <summary>
     /// Error log of the point of interaction since the last status report.
@@ -71,7 +71,5 @@ public record StatusReportContent7
     [IsoId("_2U7mTdqNEeearpaEPXv9UA")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Errors { get; init; }
+    public SimpleValueList<IsoMax140Text> Errors { get; init; } = [];
 }

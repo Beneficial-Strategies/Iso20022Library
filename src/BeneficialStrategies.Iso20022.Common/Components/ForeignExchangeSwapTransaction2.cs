@@ -132,5 +132,5 @@ public record ForeignExchangeSwapTransaction2
     [IsoId("_qua2J52WEeW_58xcYxhewg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

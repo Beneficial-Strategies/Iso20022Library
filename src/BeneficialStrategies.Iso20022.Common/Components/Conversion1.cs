@@ -30,5 +30,5 @@ public record Conversion1
     [IsoId("_V7oZ4E3fEeidB49bWZiS0g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

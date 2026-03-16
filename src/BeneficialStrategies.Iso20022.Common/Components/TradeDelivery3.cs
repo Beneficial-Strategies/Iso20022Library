@@ -71,5 +71,5 @@ public record TradeDelivery3
     [IsoId("_23eM_eWhEeevU7McUP3D1w")]
     [DisplayName("Consignment")]
     [IsoXmlTag("Consgnmt")]
-    public Consignment5? Consignment { get; init; }
+    public ValueList<Consignment5> Consignment { get; init; } = [];
 }

@@ -151,7 +151,7 @@ public record InvestmentAccount34
     [IsoId("_tGCB9RHBEeKVqeHljBM1MQ")]
     [DisplayName("Fund Details")]
     [IsoXmlTag("FndDtls")]
-    public FinancialInstrument29? FundDetails { get; init; }
+    public ValueList<FinancialInstrument29> FundDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
@@ -175,7 +175,7 @@ public record InvestmentAccount34
     [IsoId("_u7mcAxHBEeKVqeHljBM1MQ")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
-    public Blocked1? BlockedStatus { get; init; }
+    public ValueList<Blocked1> BlockedStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of usage of the account.

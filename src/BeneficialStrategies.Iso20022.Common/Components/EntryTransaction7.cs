@@ -54,7 +54,7 @@ public record EntryTransaction7
     [IsoId("_cUoyOx77EeSxevWRRWxNAg")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability2? Availability { get; init; }
+    public ValueList<CashBalanceAvailability2> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.
@@ -145,7 +145,7 @@ public record EntryTransaction7
     [IsoId("_cUoyUR77EeSxevWRRWxNAg")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
-    public TransactionQuantities2Choice_? RelatedQuantities { get; init; }
+    public ValueList<TransactionQuantities2Choice_> RelatedQuantities { get; init; } = [];
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.
@@ -193,7 +193,7 @@ public record EntryTransaction7
     [IsoId("_cUoyXR77EeSxevWRRWxNAg")]
     [DisplayName("Cash Deposit")]
     [IsoXmlTag("CshDpst")]
-    public CashDeposit1? CashDeposit { get; init; }
+    public ValueList<CashDeposit1> CashDeposit { get; init; } = [];
 
     /// <summary>
     /// Provides the data related to the card (number, scheme), terminal (number, identification) and transactional data used to uniquely identify a card transaction.
@@ -219,5 +219,5 @@ public record EntryTransaction7
     [IsoId("_cUoyYx77EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

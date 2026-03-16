@@ -48,9 +48,7 @@ public record TradeReportHeader4
     [IsoId("_hzTQhxZ6Ee27wrM4RUjLog")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
-    [IsoSimpleType(IsoSimpleType.Max100Text)]
-    [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? CompetentAuthority { get; init; }
+    public SimpleValueList<IsoMax100Text> CompetentAuthority { get; init; } = [];
 
     /// <summary>
     /// Identifies the new trade repository to which the derivative is transfered to.
@@ -66,7 +64,5 @@ public record TradeReportHeader4
     [IsoId("_Uu4gsCLrEe2KAJot-YBP6w")]
     [DisplayName("Reporting Purpose")]
     [IsoXmlTag("RptgPurp")]
-    [IsoSimpleType(IsoSimpleType.Max100Text)]
-    [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? ReportingPurpose { get; init; }
+    public SimpleValueList<IsoMax100Text> ReportingPurpose { get; init; } = [];
 }

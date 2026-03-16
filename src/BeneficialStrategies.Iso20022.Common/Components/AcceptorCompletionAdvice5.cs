@@ -46,5 +46,5 @@ public record AcceptorCompletionAdvice5
     [IsoId("_migv5407EeWPUZwhUA4U-w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

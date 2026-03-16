@@ -96,5 +96,6 @@ public record OriginalGroupInformation23
     [IsoId("_Pl9GVNp-Ed-ak6NoX_4Aeg_161103598")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
-    public CancellationReasonInformation3? CancellationReasonInformation { get; init; }
+    public ValueList<CancellationReasonInformation3> CancellationReasonInformation { get; init; } =
+        [];
 }

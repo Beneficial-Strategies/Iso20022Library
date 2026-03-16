@@ -40,7 +40,5 @@ public record RequestDetails30
     [IsoId("_6nOu9QR4Ee29PP19jELcvQ")]
     [DisplayName("Additional Request Information")]
     [IsoXmlTag("AddtlReqInf")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalRequestInformation { get; init; }
+    public SimpleValueList<IsoMax35Text> AdditionalRequestInformation { get; init; } = [];
 }

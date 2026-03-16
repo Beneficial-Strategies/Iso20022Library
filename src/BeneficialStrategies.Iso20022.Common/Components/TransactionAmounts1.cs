@@ -56,7 +56,7 @@ public record TransactionAmounts1
     [IsoId("_M9dY8EUKEeea986VZkEPUw")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount19? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount19> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount related to the original transaction.

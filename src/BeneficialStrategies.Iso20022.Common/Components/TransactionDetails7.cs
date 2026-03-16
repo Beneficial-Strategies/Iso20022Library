@@ -177,5 +177,5 @@ public record TransactionDetails7
     [IsoId("_Ueb4M9p-Ed-ak6NoX_4Aeg_-796810387")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

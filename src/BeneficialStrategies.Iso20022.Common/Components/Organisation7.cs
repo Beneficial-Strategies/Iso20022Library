@@ -91,7 +91,7 @@ public record Organisation7
     [IsoId("_QM_4Ntp-Ed-ak6NoX_4Aeg_2035364210")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
-    public PartyIdentification40? RepresentativeOfficer { get; init; }
+    public ValueList<PartyIdentification40> RepresentativeOfficer { get; init; } = [];
 
     /// <summary>
     /// Identification of the person responsible of the treasury department within an organisation.
@@ -107,7 +107,7 @@ public record Organisation7
     [IsoId("_QM_4ONp-Ed-ak6NoX_4Aeg_41219504")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
-    public PartyIdentification40? MainMandateHolder { get; init; }
+    public ValueList<PartyIdentification40> MainMandateHolder { get; init; } = [];
 
     /// <summary>
     /// Potential sender of a message related to the life cyle of an account.
@@ -115,5 +115,5 @@ public record Organisation7
     [IsoId("_QM_4Odp-Ed-ak6NoX_4Aeg_-878814148")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyIdentification40? Sender { get; init; }
+    public ValueList<PartyIdentification40> Sender { get; init; } = [];
 }

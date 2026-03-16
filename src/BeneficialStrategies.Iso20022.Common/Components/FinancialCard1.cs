@@ -22,7 +22,7 @@ public record FinancialCard1
     [IsoId("_Sp--1wEcEeCQm6a_G2yO_w_-447801115")]
     [DisplayName("Credit Limit Amount")]
     [IsoXmlTag("CdtLmtAmt")]
-    public CurrencyAndAmount? CreditLimitAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CreditLimitAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the credit available for this financial card.
@@ -30,7 +30,7 @@ public record FinancialCard1
     [IsoId("_Sp--2AEcEeCQm6a_G2yO_w_-496515812")]
     [DisplayName("Credit Available Amount")]
     [IsoXmlTag("CdtAvlblAmt")]
-    public CurrencyAndAmount? CreditAvailableAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CreditAvailableAmount { get; init; } = [];
 
     /// <summary>
     /// Interest rate expressed as a percentage for this financial card.

@@ -96,5 +96,5 @@ public record IntraPositionMovementDetails1
     [IsoId("_QXR1ltp-Ed-ak6NoX_4Aeg_1256391520")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

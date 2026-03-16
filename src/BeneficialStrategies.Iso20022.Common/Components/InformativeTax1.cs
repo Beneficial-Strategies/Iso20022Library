@@ -55,5 +55,5 @@ public record InformativeTax1
     [IsoId("_n8kqwTh8EeaH-93K5JKmzw")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax32? IndividualTax { get; init; }
+    public ValueList<Tax32> IndividualTax { get; init; } = [];
 }

@@ -130,7 +130,7 @@ public record SwitchOrderStatusAndReason1
     [IsoId("_TR2JR9p-Ed-ak6NoX_4Aeg_-31894611")]
     [DisplayName("Leg Information")]
     [IsoXmlTag("LegInf")]
-    public SwitchLegReferences1? LegInformation { get; init; }
+    public ValueList<SwitchLegReferences1> LegInformation { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status of the order.

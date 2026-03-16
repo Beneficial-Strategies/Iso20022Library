@@ -47,5 +47,5 @@ public record Warrant4
     [IsoId("_rsuFJ2f2Eembv_9KtOEw8g")]
     [DisplayName("Warrant Agent")]
     [IsoXmlTag("WarrtAgt")]
-    public Organisation38? WarrantAgent { get; init; }
+    public ValueList<Organisation38> WarrantAgent { get; init; } = [];
 }

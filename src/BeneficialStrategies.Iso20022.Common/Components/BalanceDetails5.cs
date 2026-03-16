@@ -46,5 +46,5 @@ public record BalanceDetails5
     [IsoId("_m-ItsfNBEeCuA5Tr22BnwA_1949015826")]
     [DisplayName("Detailed Balance")]
     [IsoXmlTag("DtldBal")]
-    public BalanceDetails6? DetailedBalance { get; init; }
+    public ValueList<BalanceDetails6> DetailedBalance { get; init; } = [];
 }

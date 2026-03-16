@@ -103,7 +103,7 @@ public record IntraBalanceMovement6
     [IsoId("_YisEUzneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages57? Linkages { get; init; }
+    public ValueList<Linkages57> Linkages { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
@@ -146,5 +146,5 @@ public record IntraBalanceMovement6
     [IsoId("_YisEbzneEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

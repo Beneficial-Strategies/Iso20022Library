@@ -80,5 +80,5 @@ public record BenchmarkCreate1
     [IsoId("_-mkGftOtEeilDKNlC_3bSg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

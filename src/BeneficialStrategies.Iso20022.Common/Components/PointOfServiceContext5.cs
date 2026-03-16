@@ -103,7 +103,7 @@ public record PointOfServiceContext5
     [IsoId("_TCqRI8SoEeuBjv5G5kw00g")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
-    public ECommerceData1? ECommerceData { get; init; }
+    public ValueList<ECommerceData1> ECommerceData { get; init; } = [];
 
     /// <summary>
     /// A code that identifies the type of MOTO transaction.
@@ -151,7 +151,8 @@ public record PointOfServiceContext5
     [IsoId("_TCqRK8SoEeuBjv5G5kw00g")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
-    public SecurityCharacteristics1Code? SecurityCharacteristics { get; init; }
+    public SimpleValueList<SecurityCharacteristics1Code> SecurityCharacteristics { get; init; } =
+        [];
 
     /// <summary>
     /// Other security characteristics.
@@ -215,7 +216,7 @@ public record PointOfServiceContext5
     [IsoId("_TCqRNcSoEeuBjv5G5kw00g")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public SpecialConditions1? SpecialConditions { get; init; }
+    public ValueList<SpecialConditions1> SpecialConditions { get; init; } = [];
 
     /// <summary>
     /// Additional point of service context data.
@@ -223,5 +224,5 @@ public record PointOfServiceContext5
     [IsoId("_etypYTECEeyjbpgZW6G1Fg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

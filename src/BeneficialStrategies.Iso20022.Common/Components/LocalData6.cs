@@ -66,7 +66,7 @@ public record LocalData6
     [IsoId("_6Mr10cooEeuuJ571wNLKkA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation22? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation22> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Additional local language data
@@ -74,5 +74,5 @@ public record LocalData6
     [IsoId("_ojr9YMXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

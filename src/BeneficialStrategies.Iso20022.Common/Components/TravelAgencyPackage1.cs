@@ -51,7 +51,7 @@ public record TravelAgencyPackage1
     [IsoId("_VWwMRfPYEeihCvvpsmGI2w")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
-    public CustomerReference1? CustomerReference { get; init; }
+    public ValueList<CustomerReference1> CustomerReference { get; init; } = [];
 
     /// <summary>
     /// Indicates the source of enhanced data that is matched to the transaction.

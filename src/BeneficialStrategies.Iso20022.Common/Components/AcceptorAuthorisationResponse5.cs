@@ -47,5 +47,5 @@ public record AcceptorAuthorisationResponse5
     [IsoId("_InFjJ40pEeWzoK7sd7oTyw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

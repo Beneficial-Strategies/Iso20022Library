@@ -101,7 +101,7 @@ public record SaleContext2
     [IsoId("_93rfUI0WEeWRYffwL7E13A")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
-    public Organisation26? SponsoredMerchant { get; init; }
+    public ValueList<Organisation26> SponsoredMerchant { get; init; } = [];
 
     /// <summary>
     /// True if the payment transaction is a partial payment of the sale transaction.

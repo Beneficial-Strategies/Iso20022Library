@@ -30,5 +30,5 @@ public record Lodging3
     [IsoId("_Sm2Sc8WmEeuhguwJmlgagQ")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public LodgingLineItem2? LineItem { get; init; }
+    public ValueList<LodgingLineItem2> LineItem { get; init; } = [];
 }

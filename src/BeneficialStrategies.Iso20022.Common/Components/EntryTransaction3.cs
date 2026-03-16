@@ -54,7 +54,7 @@ public record EntryTransaction3
     [IsoId("_tuKoklkyEeGeoaLUQk__nA_822340411")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability2? Availability { get; init; }
+    public ValueList<CashBalanceAvailability2> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.
@@ -70,7 +70,7 @@ public record EntryTransaction3
     [IsoId("_tuKolFkyEeGeoaLUQk__nA_932867223")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges3? Charges { get; init; }
+    public ValueList<Charges3> Charges { get; init; } = [];
 
     /// <summary>
     /// Provides details of the interest amount included in the entry amount.||Usage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount. It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking.
@@ -78,7 +78,7 @@ public record EntryTransaction3
     [IsoId("_tuUZkFkyEeGeoaLUQk__nA_-442057789")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public TransactionInterest3? Interest { get; init; }
+    public ValueList<TransactionInterest3> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to identify the parties related to the underlying transaction.
@@ -144,7 +144,7 @@ public record EntryTransaction3
     [IsoId("_tueKk1kyEeGeoaLUQk__nA_-915365354")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
-    public TransactionQuantities2Choice_? RelatedQuantities { get; init; }
+    public ValueList<TransactionQuantities2Choice_> RelatedQuantities { get; init; } = [];
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.
@@ -192,7 +192,7 @@ public record EntryTransaction3
     [IsoId("_tunUhFkyEeGeoaLUQk__nA_1988203952")]
     [DisplayName("Cash Deposit")]
     [IsoXmlTag("CshDpst")]
-    public CashDeposit1? CashDeposit { get; init; }
+    public ValueList<CashDeposit1> CashDeposit { get; init; } = [];
 
     /// <summary>
     /// Provides the data related to the card (number, scheme), terminal (number, identification) and transactional data used to uniquely identify a card transaction.

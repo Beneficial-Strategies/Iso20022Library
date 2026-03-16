@@ -22,7 +22,7 @@ public record ProceedsMovement1
     [IsoId("_Ri1Cstp-Ed-ak6NoX_4Aeg_-2002064127")]
     [DisplayName("Cash Proceeds Movement Details")]
     [IsoXmlTag("CshPrcdsMvmntDtls")]
-    public CashProceeds1? CashProceedsMovementDetails { get; init; }
+    public ValueList<CashProceeds1> CashProceedsMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the movement of the securities proceeds.
@@ -30,7 +30,7 @@ public record ProceedsMovement1
     [IsoId("_Ri1Cs9p-Ed-ak6NoX_4Aeg_-2011300771")]
     [DisplayName("Securities Proceeds Movement Details")]
     [IsoXmlTag("SctiesPrcdsMvmntDtls")]
-    public SecuritiesProceeds1? SecuritiesProceedsMovementDetails { get; init; }
+    public ValueList<SecuritiesProceeds1> SecuritiesProceedsMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the tax voucher.

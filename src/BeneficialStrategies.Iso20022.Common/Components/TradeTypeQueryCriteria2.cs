@@ -30,7 +30,8 @@ public record TradeTypeQueryCriteria2
     [IsoId("_2PddoxfMEeyPHpqpKwtFdw")]
     [DisplayName("Securities Financing Transaction Type")]
     [IsoXmlTag("SctiesFincgTxTp")]
-    public ExposureType10Code? SecuritiesFinancingTransactionType { get; init; }
+    public SimpleValueList<ExposureType10Code> SecuritiesFinancingTransactionType { get; init; } =
+        [];
 
     /// <summary>
     /// Query criteria related to the type of the collateral component.
@@ -38,5 +39,5 @@ public record TradeTypeQueryCriteria2
     [IsoId("_2PddpRfMEeyPHpqpKwtFdw")]
     [DisplayName("Collateral Component Type")]
     [IsoXmlTag("CollCmpntTp")]
-    public CollateralType6Code? CollateralComponentType { get; init; }
+    public SimpleValueList<CollateralType6Code> CollateralComponentType { get; init; } = [];
 }

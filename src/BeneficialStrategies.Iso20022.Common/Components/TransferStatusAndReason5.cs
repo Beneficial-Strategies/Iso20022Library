@@ -103,7 +103,7 @@ public record TransferStatusAndReason5
     [IsoId("_B1vy8ImNEeeJpL7HBafurA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit8? UnitsDetails { get; init; }
+    public ValueList<Unit8> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status.

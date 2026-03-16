@@ -122,7 +122,7 @@ public record CardPaymentTransactionDetails39
     [IsoId("_Ospvea2QEeawR4FMacHsRQ")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public Product3? SaleItem { get; init; }
+    public ValueList<Product3> SaleItem { get; init; } = [];
 
     /// <summary>
     /// Location of the delivery, for instance pump number or parking bay.

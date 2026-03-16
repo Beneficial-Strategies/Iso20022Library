@@ -38,7 +38,7 @@ public record ATMTransaction20
     [IsoId("_dsJgla4TEeWZgJQOa6iKCQ")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
-    public FailureReason7Code? Incident { get; init; }
+    public SimpleValueList<FailureReason7Code> Incident { get; init; } = [];
 
     /// <summary>
     /// Explanation of the incident.
@@ -46,9 +46,7 @@ public record ATMTransaction20
     [IsoId("_dsJgl64TEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IncidentDetail { get; init; }
+    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Identification of the reconciliation period assigned by the ATM.

@@ -115,5 +115,5 @@ public record PaymentContext28
     [IsoId("_RA-b306VEeyGi9JAv6wq7Q")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
-    public SupportedPaymentOption2Code? SupportedOption { get; init; }
+    public SimpleValueList<SupportedPaymentOption2Code> SupportedOption { get; init; } = [];
 }

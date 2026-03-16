@@ -114,5 +114,5 @@ public record Token2
     [IsoId("_uAZ_wJyBEeuo7tDc4CDHXg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

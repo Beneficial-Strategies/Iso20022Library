@@ -99,7 +99,7 @@ public record AccountReport11
     [IsoId("_RpPMtNp-Ed-ak6NoX_4Aeg_-1975944978")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest2? Interest { get; init; }
+    public ValueList<AccountInterest2> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.
@@ -107,7 +107,7 @@ public record AccountReport11
     [IsoId("_RpPMtdp-Ed-ak6NoX_4Aeg_-1975944608")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance3? Balance { get; init; }
+    public ValueList<CashBalance3> Balance { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to provide summary information on entries.
@@ -123,7 +123,7 @@ public record AccountReport11
     [IsoId("_RpPMt9p-Ed-ak6NoX_4Aeg_-1975945070")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry2? Entry { get; init; }
+    public ValueList<ReportEntry2> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details of the account report.

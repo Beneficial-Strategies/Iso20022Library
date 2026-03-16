@@ -117,7 +117,7 @@ public record VehicleRentalInvoice2
     [IsoId("_llnX96yfEeuupt0UCH5uiw")]
     [DisplayName("Rental Charge")]
     [IsoXmlTag("RntlChrg")]
-    public RentalRate1? RentalCharge { get; init; }
+    public ValueList<RentalRate1> RentalCharge { get; init; } = [];
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -144,7 +144,7 @@ public record VehicleRentalInvoice2
     [IsoId("_llnX_ayfEeuupt0UCH5uiw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public Amount18? AdditionalAmount { get; init; }
+    public ValueList<Amount18> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Taxes related to the products or services.
@@ -152,5 +152,5 @@ public record VehicleRentalInvoice2
     [IsoId("_llnX_6yfEeuupt0UCH5uiw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 }

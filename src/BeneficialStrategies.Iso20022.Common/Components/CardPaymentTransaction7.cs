@@ -75,7 +75,7 @@ public record CardPaymentTransaction7
     [IsoId("_TEgXqwEcEeCQm6a_G2yO_w_-760327743")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason1Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason1Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.

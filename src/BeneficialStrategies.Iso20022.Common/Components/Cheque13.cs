@@ -126,5 +126,5 @@ public record Cheque13
     [IsoId("_i4gX4Sm6EeutWNGMV2XKIQ")]
     [DisplayName("Instruction For Cheque Agent")]
     [IsoXmlTag("InstrForChqAgt")]
-    public InstructionForChequeAgent1? InstructionForChequeAgent { get; init; }
+    public ValueList<InstructionForChequeAgent1> InstructionForChequeAgent { get; init; } = [];
 }

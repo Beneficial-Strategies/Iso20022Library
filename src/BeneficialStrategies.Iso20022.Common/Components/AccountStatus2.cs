@@ -78,5 +78,5 @@ public record AccountStatus2
     [IsoId("_h6vsIEy9EeafiMTDrtSnyw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherAccountStatus1? Other { get; init; }
+    public ValueList<OtherAccountStatus1> Other { get; init; } = [];
 }

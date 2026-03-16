@@ -74,7 +74,7 @@ public record TMSAction6
     [IsoId("_mwlDbbC6EeamYaqfhG1ZuA")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
-    public DataSetCategory9Code? ComponentType { get; init; }
+    public SimpleValueList<DataSetCategory9Code> ComponentType { get; init; } = [];
 
     /// <summary>
     /// Identification of the delegation scope assigned by the MTM.
@@ -126,7 +126,8 @@ public record TMSAction6
     [IsoId("_mwlDebC6EeamYaqfhG1ZuA")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
-    public TerminalManagementAdditionalProcess1Code? AdditionalProcess { get; init; }
+    public SimpleValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
 
     /// <summary>
     /// Definition of retry process if activation of the action fails.
@@ -159,8 +160,7 @@ public record TMSAction6
     [IsoId("_mwlDgbC6EeamYaqfhG1ZuA")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -168,7 +168,7 @@ public record TMSAction6
     [IsoId("_mwlDg7C6EeamYaqfhG1ZuA")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction3? ErrorAction { get; init; }
+    public ValueList<ErrorAction3> ErrorAction { get; init; } = [];
 
     /// <summary>
     /// Additional information about the maintenance action.
@@ -176,6 +176,5 @@ public record TMSAction6
     [IsoId("_mwlDhbC6EeamYaqfhG1ZuA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
 }

@@ -48,5 +48,5 @@ public record AuthorisationResult7
     [IsoId("_q7dNMIO6EeSWSLYdc10LRg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ActionMessage3? AdditionalInformation { get; init; }
+    public ValueList<ActionMessage3> AdditionalInformation { get; init; } = [];
 }

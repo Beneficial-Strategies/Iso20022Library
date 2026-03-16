@@ -108,7 +108,7 @@ public record AggregateBalancePerSafekeepingPlace4
     [IsoId("_R-_aQNp-Ed-ak6NoX_4Aeg_247963074")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
-    public SubBalanceInformation2? BalanceBreakdownDetails { get; init; }
+    public ValueList<SubBalanceInformation2> BalanceBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.
@@ -116,5 +116,6 @@ public record AggregateBalancePerSafekeepingPlace4
     [IsoId("_R-_aQdp-Ed-ak6NoX_4Aeg_247963033")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation2? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation2> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 }

@@ -97,7 +97,7 @@ public record FundCashForecast4
     [IsoId("_Sjpmgtp-Ed-ak6NoX_4Aeg_-222208129")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Net cash movements per financial instrument.
@@ -105,7 +105,7 @@ public record FundCashForecast4
     [IsoId("_Sjpmg9p-Ed-ak6NoX_4Aeg_-222207648")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
-    public NetCashForecast2? NetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast2> NetCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the net cash flow is exceptional.
@@ -122,7 +122,7 @@ public record FundCashForecast4
     [IsoId("_Sjpmhdp-Ed-ak6NoX_4Aeg_-761081801")]
     [DisplayName("Breakdown By Country")]
     [IsoXmlTag("BrkdwnByCtry")]
-    public BreakdownByCountry1? BreakdownByCountry { get; init; }
+    public ValueList<BreakdownByCountry1> BreakdownByCountry { get; init; } = [];
 
     /// <summary>
     /// Cash flow by currency.
@@ -130,7 +130,7 @@ public record FundCashForecast4
     [IsoId("_Sjpmhtp-Ed-ak6NoX_4Aeg_-755543099")]
     [DisplayName("Breakdown By Currency")]
     [IsoXmlTag("BrkdwnByCcy")]
-    public BreakdownByCurrency1? BreakdownByCurrency { get; init; }
+    public ValueList<BreakdownByCurrency1> BreakdownByCurrency { get; init; } = [];
 
     /// <summary>
     /// Cash flow by party.
@@ -138,7 +138,7 @@ public record FundCashForecast4
     [IsoId("_Sjpmh9p-Ed-ak6NoX_4Aeg_243049335")]
     [DisplayName("Breakdown By Party")]
     [IsoXmlTag("BrkdwnByPty")]
-    public BreakdownByParty1? BreakdownByParty { get; init; }
+    public ValueList<BreakdownByParty1> BreakdownByParty { get; init; } = [];
 
     /// <summary>
     /// Cash flow by a user defined parameter/s.
@@ -146,5 +146,6 @@ public record FundCashForecast4
     [IsoId("_SjpmiNp-Ed-ak6NoX_4Aeg_-745382905")]
     [DisplayName("Breakdown By User Defined Parameter")]
     [IsoXmlTag("BrkdwnByUsrDfndParam")]
-    public BreakdownByUserDefinedParameter1? BreakdownByUserDefinedParameter { get; init; }
+    public ValueList<BreakdownByUserDefinedParameter1> BreakdownByUserDefinedParameter { get; init; } =
+        [];
 }

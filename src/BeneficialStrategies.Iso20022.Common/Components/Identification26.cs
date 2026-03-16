@@ -72,9 +72,7 @@ public record Identification26
     [IsoId("_9a8sRdBxEeihG9bKfarOOA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

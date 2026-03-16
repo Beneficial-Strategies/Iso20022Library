@@ -40,7 +40,7 @@ public record QuantityAndAccount3
     [IsoId("_UdPlZdp-Ed-ak6NoX_4Aeg_1087576457")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SecuritiesCertificate1? CertificateNumber { get; init; }
+    public ValueList<SecuritiesCertificate1> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Party that legally owns the account.
@@ -72,7 +72,7 @@ public record QuantityAndAccount3
     [IsoId("_UdPladp-Ed-ak6NoX_4Aeg_-1233976507")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown3? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown3> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

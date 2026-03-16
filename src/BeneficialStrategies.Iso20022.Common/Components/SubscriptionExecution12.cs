@@ -70,7 +70,7 @@ public record SubscriptionExecution12
     [IsoId("_WVFo8zk7EeapUO0vUIo9Xw")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson31? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson31> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Number of investment fund units subscribed.
@@ -207,7 +207,7 @@ public record SubscriptionExecution12
     [IsoId("_WVFpETk7EeapUO0vUIo9Xw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms33> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
@@ -388,7 +388,7 @@ public record SubscriptionExecution12
     [IsoId("_AQC8ATlJEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public SourceOfCash1Choice_? SourceOfCash { get; init; }
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     /// <summary>
     /// Assessment of the customer’s behaviour at the time of the account opening application.

@@ -92,7 +92,7 @@ public record RedemptionMultipleExecution5
     [IsoId("_GjGB7zbtEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson32? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Execution of a redemption order.

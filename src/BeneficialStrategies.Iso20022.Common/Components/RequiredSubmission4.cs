@@ -92,7 +92,5 @@ public record RequiredSubmission4
     [IsoId("_TnwH1tp-Ed-ak6NoX_4Aeg_161434273")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? LineItemIdentification { get; init; }
+    public SimpleValueList<IsoMax70Text> LineItemIdentification { get; init; } = [];
 }

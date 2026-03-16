@@ -22,7 +22,7 @@ public record OtherParties35
     [IsoId("_6svio_fVEeiNZp_PtLohLw")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentificationAndAccount179? Investor { get; init; }
+    public ValueList<PartyIdentificationAndAccount179> Investor { get; init; } = [];
 
     /// <summary>
     /// Foreign financial institution which has been authorised by local authorities to act as account management institution in the country.

@@ -352,7 +352,8 @@ public record FinancialInstrumentAttributes20
     [IsoId("_z0gCoeaWEd-q8fx_Zl_34A")]
     [DisplayName("Underlying Financial Instrument Identification")]
     [IsoXmlTag("UndrlygFinInstrmId")]
-    public SecurityIdentification14? UnderlyingFinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification14> UnderlyingFinancialInstrumentIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional information about the financial instrument in narrative form.

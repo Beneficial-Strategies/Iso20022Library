@@ -80,7 +80,7 @@ public record CashAccount37
     [IsoId("_M_PbkW49EeiU9cctagi5ow")]
     [DisplayName("Multilateral Balance")]
     [IsoXmlTag("MulBal")]
-    public CashBalance13? MultilateralBalance { get; init; }
+    public ValueList<CashBalance13> MultilateralBalance { get; init; } = [];
 
     /// <summary>
     /// Limit fixed by a party A with regard to a specific counterparty B and corresponding to the maximum amount of traffic that party A may send to party B. The bilateral limit can be expressed as a debit limit or a credit limit. |With the help of a bilateral limit, the direct participant restricts the use of liquidity when clearing payments with another direct participant.
@@ -88,7 +88,7 @@ public record CashAccount37
     [IsoId("_M_Pbk249EeiU9cctagi5ow")]
     [DisplayName("Current Bilateral Limit")]
     [IsoXmlTag("CurBilLmt")]
-    public BilateralLimit3? CurrentBilateralLimit { get; init; }
+    public ValueList<BilateralLimit3> CurrentBilateralLimit { get; init; } = [];
 
     /// <summary>
     /// Instruction given by a party that has explicit authority to instruct a debit on the account, that is either the debtor or originating party, to the debtor agent, to process liquidity transfers at specified intervals during an implicit or explicit period of time. A standing order is given once and is valid for an open or closed period of time.
@@ -96,5 +96,5 @@ public record CashAccount37
     [IsoId("_M_PblW49EeiU9cctagi5ow")]
     [DisplayName("Standing Order")]
     [IsoXmlTag("StgOrdr")]
-    public StandingOrder6? StandingOrder { get; init; }
+    public ValueList<StandingOrder6> StandingOrder { get; init; } = [];
 }

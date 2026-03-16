@@ -67,5 +67,5 @@ public record FinancialInstrumentIdentification3
     [IsoId("_4-IZEJy1Eem54rMzia0iag")]
     [DisplayName("Alternate Security")]
     [IsoXmlTag("AltrnScty")]
-    public FinancialInstrumentIdentification4? AlternateSecurity { get; init; }
+    public ValueList<FinancialInstrumentIdentification4> AlternateSecurity { get; init; } = [];
 }

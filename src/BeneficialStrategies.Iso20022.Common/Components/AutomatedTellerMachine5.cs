@@ -84,7 +84,7 @@ public record AutomatedTellerMachine5
     [IsoId("_kwfOsYrfEeSvuOJS0mmL0g")]
     [DisplayName("Out Of Service Device")]
     [IsoXmlTag("OutOfSvcDvc")]
-    public ATMDevice2Code? OutOfServiceDevice { get; init; }
+    public SimpleValueList<ATMDevice2Code> OutOfServiceDevice { get; init; } = [];
 
     /// <summary>
     /// Mechanism used to protect the message of the ATM protocol.

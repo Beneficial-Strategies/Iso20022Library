@@ -30,7 +30,7 @@ public record CardPaymentTransaction60
     [IsoId("_N0o-I43OEeWjkqXgn_0Imw")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -109,7 +109,7 @@ public record CardPaymentTransaction60
     [IsoId("_N0o-NY3OEeWjkqXgn_0Imw")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -173,7 +173,8 @@ public record CardPaymentTransaction60
     [IsoId("_N0o-Q43OEeWjkqXgn_0Imw")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Additional information related to the transaction.
@@ -181,7 +182,5 @@ public record CardPaymentTransaction60
     [IsoId("_N0o-RY3OEeWjkqXgn_0Imw")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

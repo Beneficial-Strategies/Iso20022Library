@@ -101,5 +101,6 @@ public record CustodianDetailsSD1
     [IsoId("_1RIYYTL3EeKU9IrkkToqcw_1582463489")]
     [DisplayName("Related Custodian Message Details")]
     [IsoXmlTag("RltdCtdnMsgDtls")]
-    public RelatedCustodianMessageDetailsSD1? RelatedCustodianMessageDetails { get; init; }
+    public ValueList<RelatedCustodianMessageDetailsSD1> RelatedCustodianMessageDetails { get; init; } =
+        [];
 }

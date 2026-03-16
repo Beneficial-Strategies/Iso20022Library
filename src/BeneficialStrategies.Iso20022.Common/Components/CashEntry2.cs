@@ -75,7 +75,5 @@ public record CashEntry2
     [IsoId("_HWrCPZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalEntryInformation { get; init; }
+    public SimpleValueList<IsoMax140Text> AdditionalEntryInformation { get; init; } = [];
 }

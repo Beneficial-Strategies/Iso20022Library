@@ -40,7 +40,5 @@ public record AccountAndParties2
     [IsoId("_dQJnUC_9EeOKib24wnHaFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax256Text> AdditionalInformation { get; init; } = [];
 }

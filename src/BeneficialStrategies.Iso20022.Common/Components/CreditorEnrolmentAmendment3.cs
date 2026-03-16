@@ -54,5 +54,5 @@ public record CreditorEnrolmentAmendment3
     [IsoId("_zxUwCeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

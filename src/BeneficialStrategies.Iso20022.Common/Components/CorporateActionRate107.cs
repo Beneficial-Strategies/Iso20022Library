@@ -22,7 +22,7 @@ public record CorporateActionRate107
     [IsoId("_EjIxxe2-Eeqc-LCjwLsUVg")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat35Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat35Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -30,7 +30,7 @@ public record CorporateActionRate107
     [IsoId("_EjIxze2-Eeqc-LCjwLsUVg")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat37Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat37Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Actual interest rate used for the payment of the interest for the specified interest period.
@@ -38,7 +38,8 @@ public record CorporateActionRate107
     [IsoId("_EjIx1-2-Eeqc-LCjwLsUVg")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat7Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat7Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// A maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.
@@ -64,7 +65,7 @@ public record CorporateActionRate107
     [IsoId("_EjIx7-2-Eeqc-LCjwLsUVg")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat40Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat40Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.
@@ -72,7 +73,7 @@ public record CorporateActionRate107
     [IsoId("_EjIx9-2-Eeqc-LCjwLsUVg")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public RateAndAmountFormat40Choice_? SecondLevelTax { get; init; }
+    public ValueList<RateAndAmountFormat40Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
     /// Rate used for additional tax that cannot be categorised.
@@ -88,5 +89,6 @@ public record CorporateActionRate107
     [IsoId("_EjIyAe2-Eeqc-LCjwLsUVg")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
-    public RateTypeAndAmountAndStatus26? TaxableIncomePerDividendShare { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus26> TaxableIncomePerDividendShare { get; init; } =
+        [];
 }

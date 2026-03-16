@@ -65,5 +65,5 @@ public record InterestStatement4
     [IsoId("_iSEre4F0EeWtPe6Crjmeug")]
     [DisplayName("Interest Calculation")]
     [IsoXmlTag("IntrstClctn")]
-    public InterestCalculation4? InterestCalculation { get; init; }
+    public ValueList<InterestCalculation4> InterestCalculation { get; init; } = [];
 }

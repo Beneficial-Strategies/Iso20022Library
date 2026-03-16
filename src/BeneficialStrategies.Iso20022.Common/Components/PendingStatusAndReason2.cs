@@ -22,7 +22,7 @@ public record PendingStatusAndReason2
     [IsoId("_BmSl8eFUEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus66Choice_? ProcessingStatus { get; init; }
+    public ValueList<ProcessingStatus66Choice_> ProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Provides the settlement status of a transaction.
@@ -30,5 +30,5 @@ public record PendingStatusAndReason2
     [IsoId("_BmSl8-FUEeWIA4E9cYSxxQ")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public SettlementStatus16Choice_? SettlementStatus { get; init; }
+    public ValueList<SettlementStatus16Choice_> SettlementStatus { get; init; } = [];
 }

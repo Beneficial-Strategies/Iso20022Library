@@ -48,5 +48,6 @@ public record AccountIdentification54
     [IsoId("_Dkb2QQVSEeqjd8n6wD9JVw")]
     [DisplayName("Corporate Action Event And Balance")]
     [IsoXmlTag("CorpActnEvtAndBal")]
-    public CorporateActionEventAndBalance18? CorporateActionEventAndBalance { get; init; }
+    public ValueList<CorporateActionEventAndBalance18> CorporateActionEventAndBalance { get; init; } =
+        [];
 }

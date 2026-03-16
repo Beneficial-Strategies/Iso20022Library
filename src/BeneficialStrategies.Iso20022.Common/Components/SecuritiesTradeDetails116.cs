@@ -71,7 +71,7 @@ public record SecuritiesTradeDetails116
     [IsoId("_gL-8QwmNEeuQ1MenzX1l-g")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting6Choice_? Reporting { get; init; }
+    public ValueList<Reporting6Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.
@@ -79,7 +79,8 @@ public record SecuritiesTradeDetails116
     [IsoId("_gL-8RwmNEeuQ1MenzX1l-g")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition5Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the role of the investor in the transaction.

@@ -70,5 +70,5 @@ public record SessionManagementResponse4
     [IsoId("_zk8CPSi4Eeurkfo6MpvKDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

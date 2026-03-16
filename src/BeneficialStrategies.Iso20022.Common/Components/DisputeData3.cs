@@ -60,7 +60,7 @@ public record DisputeData3
     [IsoId("_UAP-GTEBEeyjbpgZW6G1Fg")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
-    public DisputeReference1? DisputeReference { get; init; }
+    public ValueList<DisputeReference1> DisputeReference { get; init; } = [];
 
     /// <summary>
     /// Status of the dispute documentation.
@@ -86,9 +86,7 @@ public record DisputeData3
     [IsoId("_UAP-HzEBEeyjbpgZW6G1Fg")]
     [DisplayName("Dispute Reject Reason")]
     [IsoXmlTag("DsptRjctRsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DisputeRejectReason { get; init; }
+    public SimpleValueList<IsoMax35Text> DisputeRejectReason { get; init; } = [];
 
     /// <summary>
     /// Provides transaction chargeback eligibility conditions.

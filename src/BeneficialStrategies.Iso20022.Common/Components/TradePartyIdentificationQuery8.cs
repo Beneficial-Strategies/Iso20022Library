@@ -22,8 +22,7 @@ public record TradePartyIdentificationQuery8
     [IsoId("_FS0mEZQTEeiok48Eh9lW9Q")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public SimpleValueList<IsoLEIIdentifier> LEI { get; init; } = [];
 
     /// <summary>
     /// Business identifier code used to identify the trade party.
@@ -31,8 +30,7 @@ public record TradePartyIdentificationQuery8
     [IsoId("_FS0mE5QTEeiok48Eh9lW9Q")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
-    [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+    public SimpleValueList<IsoAnyBICDec2014Identifier> AnyBIC { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the client counterparty.
@@ -40,9 +38,7 @@ public record TradePartyIdentificationQuery8
     [IsoId("_FS0mFZQTEeiok48Eh9lW9Q")]
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
-    [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? ClientIdentification { get; init; }
+    public SimpleValueList<IsoMax50Text> ClientIdentification { get; init; } = [];
 
     /// <summary>
     /// Field can be queried for not reported value.

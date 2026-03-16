@@ -134,7 +134,7 @@ public record Trade1
     [IsoId("_ybY9oQ2GEeSw7Op2IIeBeQ")]
     [DisplayName("Swap Leg")]
     [IsoXmlTag("SwpLeg")]
-    public InstrumentLeg6? SwapLeg { get; init; }
+    public ValueList<InstrumentLeg6> SwapLeg { get; init; } = [];
 
     /// <summary>
     /// Specifies the parameters of the foreign exchange option.

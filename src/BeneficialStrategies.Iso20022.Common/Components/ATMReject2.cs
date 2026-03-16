@@ -51,7 +51,7 @@ public record ATMReject2
     [IsoId("_RoSYN642EeWpsoxRhdX-8A")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 
     /// <summary>
     /// Received message that has been rejected.

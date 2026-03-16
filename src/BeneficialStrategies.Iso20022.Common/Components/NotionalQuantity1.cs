@@ -31,7 +31,7 @@ public record NotionalQuantity1
     [IsoId("_ZIXWIQbIEeqrW7Meu5r3kQ")]
     [DisplayName("Schedule")]
     [IsoXmlTag("Schdl")]
-    public Schedule2? Schedule { get; init; }
+    public ValueList<Schedule2> Schedule { get; init; } = [];
 
     /// <summary>
     /// Indicates the unit of measure in which the total notional quantity and notional quantity schedules are expressed.

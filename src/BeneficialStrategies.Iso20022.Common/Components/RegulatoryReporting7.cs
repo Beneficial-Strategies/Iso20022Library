@@ -23,7 +23,8 @@ public record RegulatoryReporting7
     [IsoId("_VHDDEQNwEe2-vqzwMUAewg")]
     [DisplayName("Trading Side Transaction Reporting")]
     [IsoXmlTag("TradgSdTxRptg")]
-    public TradingSideTransactionReporting2? TradingSideTransactionReporting { get; init; }
+    public ValueList<TradingSideTransactionReporting2> TradingSideTransactionReporting { get; init; } =
+        [];
 
     /// <summary>
     /// Regulatory transaction reporting information from the Counterparty Side party.
@@ -31,7 +32,8 @@ public record RegulatoryReporting7
     [IsoId("_VHDDEwNwEe2-vqzwMUAewg")]
     [DisplayName("Counterparty Side Transaction Reporting")]
     [IsoXmlTag("CtrPtySdTxRptg")]
-    public CounterpartySideTransactionReporting2? CounterpartySideTransactionReporting { get; init; }
+    public ValueList<CounterpartySideTransactionReporting2> CounterpartySideTransactionReporting { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies an agency or separate corporation of a futures exchange responsible for settling and
@@ -249,7 +251,7 @@ public record RegulatoryReporting7
     [IsoId("_vk2-oANwEe2-vqzwMUAewg")]
     [DisplayName("Commissions And Fees")]
     [IsoXmlTag("ComssnsAndFees")]
-    public FXCommissionOrFee1? CommissionsAndFees { get; init; }
+    public ValueList<FXCommissionOrFee1> CommissionsAndFees { get; init; } = [];
 
     /// <summary>
     /// Specifies additional information that might be required by the regulator.

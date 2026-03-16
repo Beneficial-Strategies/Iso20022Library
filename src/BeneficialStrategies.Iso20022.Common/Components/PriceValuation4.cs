@@ -64,7 +64,7 @@ public record PriceValuation4
     [IsoId("_fDeDLRl_EeKxsrht2duUcg")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? TotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; init; } = [];
 
     /// <summary>
     /// Total number of investment fund class units that have been issued.
@@ -130,7 +130,7 @@ public record PriceValuation4
     [IsoId("_fDeDTRl_EeKxsrht2duUcg")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public UnitPrice15? PriceDetails { get; init; }
+    public ValueList<UnitPrice15> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the price variations of an investment fund class.
@@ -138,7 +138,7 @@ public record PriceValuation4
     [IsoId("_fDeDURl_EeKxsrht2duUcg")]
     [DisplayName("Valuation Statistics")]
     [IsoXmlTag("ValtnSttstcs")]
-    public ValuationStatistics3? ValuationStatistics { get; init; }
+    public ValueList<ValuationStatistics3> ValuationStatistics { get; init; } = [];
 
     /// <summary>
     /// Factors that give indications about the performance of a fund.

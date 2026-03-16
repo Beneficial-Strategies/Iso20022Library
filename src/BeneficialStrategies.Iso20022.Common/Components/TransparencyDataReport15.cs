@@ -79,5 +79,5 @@ public record TransparencyDataReport15
     [IsoId("_hWyFoX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Aggregated Quantitative Data")]
     [IsoXmlTag("AggtdQttvData")]
-    public TransactionsBin2? AggregatedQuantitativeData { get; init; }
+    public ValueList<TransactionsBin2> AggregatedQuantitativeData { get; init; } = [];
 }

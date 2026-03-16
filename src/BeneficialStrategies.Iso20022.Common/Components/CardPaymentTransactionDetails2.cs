@@ -38,7 +38,7 @@ public record CardPaymentTransactionDetails2
     [IsoId("_TE9DlgEcEeCQm6a_G2yO_w_779768475")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount2? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount2> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Transaction authorisation deadline to complete the related payment.

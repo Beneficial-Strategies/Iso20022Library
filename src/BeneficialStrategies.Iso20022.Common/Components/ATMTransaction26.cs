@@ -56,7 +56,7 @@ public record ATMTransaction26
     [IsoId("_uEGp0K48EeWRfYPBaeOY8w")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
-    public ATMTotals1? ATMTotals { get; init; }
+    public ValueList<ATMTotals1> ATMTotals { get; init; } = [];
 
     /// <summary>
     /// Information on the cassettes of the ATM.
@@ -64,7 +64,7 @@ public record ATMTransaction26
     [IsoId("_36_PYK48EeWRfYPBaeOY8w")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
-    public ATMCassette2? Cassette { get; init; }
+    public ValueList<ATMCassette2> Cassette { get; init; } = [];
 
     /// <summary>
     /// Maintenance command to perform on the ATM.
@@ -72,5 +72,5 @@ public record ATMTransaction26
     [IsoId("_iskw6a48EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

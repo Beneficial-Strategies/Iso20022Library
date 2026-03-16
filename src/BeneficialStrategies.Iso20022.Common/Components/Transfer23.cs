@@ -136,7 +136,7 @@ public record Transfer23
     [IsoId("_Gk7-jRgkEeK-_89we2b-bA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit3? UnitsDetails { get; init; }
+    public ValueList<Unit3> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Total quantity of securities settled.

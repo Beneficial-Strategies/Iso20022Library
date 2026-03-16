@@ -237,7 +237,7 @@ public record TransactionContext7
     [IsoId("_OieIkINvEeuHqfO1LgkE9Q")]
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
-    public ExchangeRateInformation2? ExchangeRateInformation { get; init; }
+    public ValueList<ExchangeRateInformation2> ExchangeRateInformation { get; init; } = [];
 
     /// <summary>
     /// Date the transaction was completed and captured.
@@ -264,5 +264,5 @@ public record TransactionContext7
     [IsoId("_dHP2EMVZEeuips4fuphvoQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

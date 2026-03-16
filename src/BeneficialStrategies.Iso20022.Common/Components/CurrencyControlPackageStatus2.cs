@@ -40,7 +40,7 @@ public record CurrencyControlPackageStatus2
     [IsoId("_9gw7VW48EeiU9cctagi5ow")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public ValidationStatusReason2? StatusReason { get; init; }
+    public ValueList<ValidationStatusReason2> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Provides the date and time when the status was issued.
@@ -57,5 +57,5 @@ public record CurrencyControlPackageStatus2
     [IsoId("_9gw7WW48EeiU9cctagi5ow")]
     [DisplayName("Record Status")]
     [IsoXmlTag("RcrdSts")]
-    public CurrencyControlRecordStatus2? RecordStatus { get; init; }
+    public ValueList<CurrencyControlRecordStatus2> RecordStatus { get; init; } = [];
 }

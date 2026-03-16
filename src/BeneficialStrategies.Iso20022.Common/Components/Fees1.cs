@@ -32,5 +32,5 @@ public record Fees1
     [IsoId("_2ShncYjIEeeqaMoyJI1HbA")]
     [DisplayName("Individual Fee")]
     [IsoXmlTag("IndvFee")]
-    public Fee4? IndividualFee { get; init; }
+    public ValueList<Fee4> IndividualFee { get; init; } = [];
 }

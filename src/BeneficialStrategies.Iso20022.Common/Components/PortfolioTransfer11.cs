@@ -69,7 +69,7 @@ public record PortfolioTransfer11
     [IsoId("_X_g3zelqEeuvhrZwLF0fDg")]
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
-    public AllOtherCash1? AllOtherCash { get; init; }
+    public ValueList<AllOtherCash1> AllOtherCash { get; init; } = [];
 
     /// <summary>
     /// Specifies whether all assets in the portfolio are to be liquidated and transferred as cash.
@@ -77,7 +77,7 @@ public record PortfolioTransfer11
     [IsoId("_X_g3z-lqEeuvhrZwLF0fDg")]
     [DisplayName("Cash All")]
     [IsoXmlTag("CshAll")]
-    public CashAll1? CashAll { get; init; }
+    public ValueList<CashAll1> CashAll { get; init; } = [];
 
     /// <summary>
     /// Specifies how the cash in the account that is awaiting investment is to be dealt with.
@@ -85,7 +85,7 @@ public record PortfolioTransfer11
     [IsoId("_X_g30elqEeuvhrZwLF0fDg")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
-    public ResidualCash2? ResidualCash { get; init; }
+    public ValueList<ResidualCash2> ResidualCash { get; init; } = [];
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.
@@ -101,7 +101,8 @@ public record PortfolioTransfer11
     [IsoId("_X_g31elqEeuvhrZwLF0fDg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument102? FinancialInstrumentAssetForTransfer { get; init; }
+    public ValueList<FinancialInstrument102> FinancialInstrumentAssetForTransfer { get; init; } =
+        [];
 
     /// <summary>
     /// Additional information about the product transfer.
@@ -109,5 +110,5 @@ public record PortfolioTransfer11
     [IsoId("_X_g31-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record CardPaymentBatchTransferResponse4
     [IsoId("_66ixoa1IEeW10_0PQ-btow")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotals7? TransactionTotals { get; init; }
+    public ValueList<TransactionTotals7> TransactionTotals { get; init; } = [];
 
     /// <summary>
     /// Information related to the previously sent set of transaction.
@@ -30,5 +30,5 @@ public record CardPaymentBatchTransferResponse4
     [IsoId("_66ixo61IEeW10_0PQ-btow")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public CardPaymentDataSet14? DataSet { get; init; }
+    public ValueList<CardPaymentDataSet14> DataSet { get; init; } = [];
 }

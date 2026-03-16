@@ -38,7 +38,7 @@ public record StatementOfInvestmentFundTransactions2
     [IsoId("_RORH8Np-Ed-ak6NoX_4Aeg_-1658316898")]
     [DisplayName("Transaction On Account")]
     [IsoXmlTag("TxOnAcct")]
-    public InvestmentFundTransactionsByFund2? TransactionOnAccount { get; init; }
+    public ValueList<InvestmentFundTransactionsByFund2> TransactionOnAccount { get; init; } = [];
 
     /// <summary>
     /// Sub-account of the safekeeping or investment account.
@@ -54,5 +54,5 @@ public record StatementOfInvestmentFundTransactions2
     [IsoId("_RORH8tp-Ed-ak6NoX_4Aeg_-1658316820")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

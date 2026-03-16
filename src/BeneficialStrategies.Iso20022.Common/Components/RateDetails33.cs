@@ -47,7 +47,7 @@ public record RateDetails33
     [IsoId("_sk060c3wEee5nJBZsW8MFQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat32Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat32Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.
@@ -71,7 +71,8 @@ public record RateDetails33
     [IsoId("_sk06183wEee5nJBZsW8MFQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat9Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat9Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -79,7 +80,7 @@ public record RateDetails33
     [IsoId("_sk062c3wEee5nJBZsW8MFQ")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat34Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat34Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.
@@ -112,7 +113,7 @@ public record RateDetails33
     [IsoId("_sk064c3wEee5nJBZsW8MFQ")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat45Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat45Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.
@@ -120,7 +121,7 @@ public record RateDetails33
     [IsoId("_sk06483wEee5nJBZsW8MFQ")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public RateAndAmountFormat45Choice_? SecondLevelTax { get; init; }
+    public ValueList<RateAndAmountFormat45Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.
@@ -162,5 +163,5 @@ public record RateDetails33
     [IsoId("_sk067c3wEee5nJBZsW8MFQ")]
     [DisplayName("Deemed Rate")]
     [IsoXmlTag("DmdRate")]
-    public RateAndAmountFormat54Choice_? DeemedRate { get; init; }
+    public ValueList<RateAndAmountFormat54Choice_> DeemedRate { get; init; } = [];
 }

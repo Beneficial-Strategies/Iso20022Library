@@ -74,5 +74,5 @@ public record PartyUpdate1
     [IsoId("_5O9IYTbvEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

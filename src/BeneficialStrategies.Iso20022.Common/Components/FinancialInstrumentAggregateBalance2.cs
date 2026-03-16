@@ -38,5 +38,5 @@ public record FinancialInstrumentAggregateBalance2
     [IsoId("_aA5_K6CCEeOEyO7fCl8lLA")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceBreakdown1? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceBreakdown1> BalanceBreakdown { get; init; } = [];
 }

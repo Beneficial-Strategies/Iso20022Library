@@ -22,7 +22,7 @@ public record TradeAdditionalQueryCriteria9
     [IsoId("__s2oo2TmEe2Qhbz5WMMCCA")]
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public TransactionOperationType8Code? ActionType { get; init; }
+    public SimpleValueList<TransactionOperationType8Code> ActionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the execution venue of the reported transaction.
@@ -54,7 +54,7 @@ public record TradeAdditionalQueryCriteria9
     [IsoId("__s2oq2TmEe2Qhbz5WMMCCA")]
     [DisplayName("Asset Class")]
     [IsoXmlTag("AsstClss")]
-    public ProductType4Code? AssetClass { get; init; }
+    public SimpleValueList<ProductType4Code> AssetClass { get; init; } = [];
 
     /// <summary>
     /// Indicates the product classification of the reported transaction.
@@ -78,5 +78,5 @@ public record TradeAdditionalQueryCriteria9
     [IsoId("_CfiysGTnEe2Qhbz5WMMCCA")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public DerivativeEventType3Code? EventType { get; init; }
+    public SimpleValueList<DerivativeEventType3Code> EventType { get; init; } = [];
 }

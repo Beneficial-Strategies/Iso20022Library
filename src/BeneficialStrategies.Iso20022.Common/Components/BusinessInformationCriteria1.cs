@@ -32,7 +32,7 @@ public record BusinessInformationCriteria1
     [IsoId("_1mEoBZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public GeneralBusinessInformationSearchCriteria1? SearchCriteria { get; init; }
+    public ValueList<GeneralBusinessInformationSearchCriteria1> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected report.

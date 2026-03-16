@@ -323,7 +323,7 @@ public record Debt5
     [IsoId("_MVJl_ZJOEeuAlLVx8pyt3w")]
     [DisplayName("Actual Denomination Amount")]
     [IsoXmlTag("ActlDnmtnAmt")]
-    public ActiveCurrencyAndAmount? ActualDenominationAmount { get; init; }
+    public ValueList<ActiveCurrencyAndAmount> ActualDenominationAmount { get; init; } = [];
 
     /// <summary>
     /// Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for factored securities).
@@ -485,7 +485,7 @@ public record Debt5
     [IsoId("_MVJmIZJOEeuAlLVx8pyt3w")]
     [DisplayName("Yield Calculation")]
     [IsoXmlTag("YldClctn")]
-    public YieldCalculation6? YieldCalculation { get; init; }
+    public ValueList<YieldCalculation6> YieldCalculation { get; init; } = [];
 
     /// <summary>
     /// Indicates whether interest rate is fixed, variable or other.

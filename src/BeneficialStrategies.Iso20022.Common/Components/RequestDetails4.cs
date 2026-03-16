@@ -32,5 +32,5 @@ public record RequestDetails4
     [IsoId("_SuwKGAEcEeCQm6a_G2yO_w_-56014594")]
     [DisplayName("Report Data")]
     [IsoXmlTag("RptData")]
-    public ReportParameter1? ReportData { get; init; }
+    public ValueList<ReportParameter1> ReportData { get; init; } = [];
 }

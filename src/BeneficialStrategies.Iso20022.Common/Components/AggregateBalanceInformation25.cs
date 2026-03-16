@@ -94,7 +94,7 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7T099EeSn2-3swbRbzg")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation5? PriceDetails { get; init; }
+    public ValueList<PriceInformation5> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -102,7 +102,7 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7V099EeSn2-3swbRbzg")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms14? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms14> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
@@ -135,7 +135,7 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7d099EeSn2-3swbRbzg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown23? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown23> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.
@@ -143,7 +143,7 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7f099EeSn2-3swbRbzg")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceInformation11? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceInformation11> BalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -151,7 +151,7 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7h099EeSn2-3swbRbzg")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
-    public AdditionalBalanceInformation11? AdditionalBalanceBreakdown { get; init; }
+    public ValueList<AdditionalBalanceInformation11> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of positions per place of safekeeping (and optionally per place of listing).
@@ -159,7 +159,8 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7j099EeSn2-3swbRbzg")]
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
-    public AggregateBalancePerSafekeepingPlace24? BalanceAtSafekeepingPlace { get; init; }
+    public ValueList<AggregateBalancePerSafekeepingPlace24> BalanceAtSafekeepingPlace { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional information on the holding.
@@ -177,5 +178,5 @@ public record AggregateBalanceInformation25
     [IsoId("_88H7n099EeSn2-3swbRbzg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -56,5 +56,5 @@ public record MandateSuspension1
     [IsoId("_H2d6wH5pEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

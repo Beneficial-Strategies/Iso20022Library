@@ -22,7 +22,7 @@ public record PointOfInteractionComponentCharacteristics8
     [IsoId("_evM6AVFAEeyApZmLzm74zA")]
     [DisplayName("Memory")]
     [IsoXmlTag("Mmry")]
-    public MemoryCharacteristics1? Memory { get; init; }
+    public ValueList<MemoryCharacteristics1> Memory { get; init; } = [];
 
     /// <summary>
     /// Low level communication of the hardware or software component toward another component or an external entity.
@@ -30,7 +30,7 @@ public record PointOfInteractionComponentCharacteristics8
     [IsoId("_evM6A1FAEeyApZmLzm74zA")]
     [DisplayName("Communication")]
     [IsoXmlTag("Com")]
-    public CommunicationCharacteristics5? Communication { get; init; }
+    public ValueList<CommunicationCharacteristics5> Communication { get; init; } = [];
 
     /// <summary>
     /// Number of security access modules (SAM).
@@ -56,5 +56,5 @@ public record PointOfInteractionComponentCharacteristics8
     [IsoId("_evM6CVFAEeyApZmLzm74zA")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
-    public CryptographicKey16? SecurityElement { get; init; }
+    public ValueList<CryptographicKey16> SecurityElement { get; init; } = [];
 }

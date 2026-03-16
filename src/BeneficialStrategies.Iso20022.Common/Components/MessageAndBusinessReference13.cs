@@ -92,7 +92,7 @@ public record MessageAndBusinessReference13
     [IsoId("_Zy7pAXdiEeuvip1zrZRWzw")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary48? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary48> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Information about the query.
@@ -100,7 +100,7 @@ public record MessageAndBusinessReference13
     [IsoId("_MGY6EdveEeqxGfKJubfhIw")]
     [DisplayName("Query Information")]
     [IsoXmlTag("QryInf")]
-    public AdditionalInformation25? QueryInformation { get; init; }
+    public ValueList<AdditionalInformation25> QueryInformation { get; init; } = [];
 
     /// <summary>
     /// Party that issues the request message.

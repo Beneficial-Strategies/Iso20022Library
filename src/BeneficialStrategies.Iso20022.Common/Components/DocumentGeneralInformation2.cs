@@ -69,5 +69,5 @@ public record DocumentGeneralInformation2
     [IsoId("_S-ZIlgEcEeCQm6a_G2yO_w_1137361683")]
     [DisplayName("Attached Binary File")]
     [IsoXmlTag("AttchdBinryFile")]
-    public BinaryFile1? AttachedBinaryFile { get; init; }
+    public ValueList<BinaryFile1> AttachedBinaryFile { get; init; } = [];
 }

@@ -65,7 +65,7 @@ public record CardPaymentDataSet24
     [IsoId("_9MPL8Qx5Eeqdx6buGpCCQw")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
-    public CardPaymentDataSet25? RejectedTransaction { get; init; }
+    public ValueList<CardPaymentDataSet25> RejectedTransaction { get; init; } = [];
 
     /// <summary>
     /// Transaction in the batch, whose capture has been suspendeed.
@@ -73,7 +73,7 @@ public record CardPaymentDataSet24
     [IsoId("_1-gPawx4Eeqdx6buGpCCQw")]
     [DisplayName("Suspended Transaction")]
     [IsoXmlTag("SspdTx")]
-    public CardPaymentDataSet25? SuspendedTransaction { get; init; }
+    public ValueList<CardPaymentDataSet25> SuspendedTransaction { get; init; } = [];
 
     /// <summary>
     /// Transaction in the batch, whose capture has been approved after suspension.
@@ -81,7 +81,7 @@ public record CardPaymentDataSet24
     [IsoId("_90xLkQx5Eeqdx6buGpCCQw")]
     [DisplayName("Resumed Approval")]
     [IsoXmlTag("RsmdApprvl")]
-    public CardPaymentDataSet25? ResumedApproval { get; init; }
+    public ValueList<CardPaymentDataSet25> ResumedApproval { get; init; } = [];
 
     /// <summary>
     /// Transaction in the batch, whose capture has been rejected after suspension.
@@ -89,5 +89,5 @@ public record CardPaymentDataSet24
     [IsoId("_-P-g4Qx5Eeqdx6buGpCCQw")]
     [DisplayName("Resumed Rejection")]
     [IsoXmlTag("RsmdRjctn")]
-    public CardPaymentDataSet25? ResumedRejection { get; init; }
+    public ValueList<CardPaymentDataSet25> ResumedRejection { get; init; } = [];
 }

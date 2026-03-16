@@ -108,7 +108,7 @@ public record AccountReport16
     [IsoId("_kx_4ASGxEeKjd4jizyIDGA")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest3? Interest { get; init; }
+    public ValueList<AccountInterest3> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.
@@ -116,7 +116,7 @@ public record AccountReport16
     [IsoId("_kx_4BSGxEeKjd4jizyIDGA")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance3? Balance { get; init; }
+    public ValueList<CashBalance3> Balance { get; init; } = [];
 
     /// <summary>
     /// Provides summary information on entries.
@@ -132,7 +132,7 @@ public record AccountReport16
     [IsoId("_kx_4DSGxEeKjd4jizyIDGA")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry4? Entry { get; init; }
+    public ValueList<ReportEntry4> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details of the account report.

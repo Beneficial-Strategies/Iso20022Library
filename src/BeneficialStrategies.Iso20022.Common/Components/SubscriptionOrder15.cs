@@ -109,7 +109,7 @@ public record SubscriptionOrder15
     [IsoId("_yaFsYTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson31? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson31> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -249,7 +249,7 @@ public record SubscriptionOrder15
     [IsoId("_8ZhWYTlIEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public SourceOfCash1Choice_? SourceOfCash { get; init; }
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     /// <summary>
     /// Assessment of the customer’s behaviour at the time of the account opening application.

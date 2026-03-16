@@ -22,8 +22,7 @@ public record FinancingDateDetails1
     [IsoId("_T8KRk9p-Ed-ak6NoX_4Aeg_-558847054")]
     [DisplayName("Book Date")]
     [IsoXmlTag("BookDt")]
-    [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BookDate { get; init; }
+    public SimpleValueList<IsoISODate> BookDate { get; init; } = [];
 
     /// <summary>
     /// Date on which a financed amount has been credited.

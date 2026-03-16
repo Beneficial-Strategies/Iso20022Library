@@ -71,5 +71,5 @@ public record TargetMarket3
     [IsoId("_XtujW80SEeuAE-cYsQdwHQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherTargetMarket1? Other { get; init; }
+    public ValueList<OtherTargetMarket1> Other { get; init; } = [];
 }

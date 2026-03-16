@@ -30,7 +30,7 @@ public record AccountManagementStatusAndReason5
     [IsoId("_cPlMMGBdEeaR1OOiVxm3Gg")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public AcceptedStatusReason1Choice_? StatusReason { get; init; }
+    public ValueList<AcceptedStatusReason1Choice_> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of the account opening or modification instruction at application level.
@@ -48,7 +48,7 @@ public record AccountManagementStatusAndReason5
     [IsoId("_9H6nZUQSEealVdmlTDXWkw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
-    public Account23? ExistingAccountIdentification { get; init; }
+    public ValueList<Account23> ExistingAccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

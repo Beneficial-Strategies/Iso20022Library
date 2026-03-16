@@ -60,7 +60,7 @@ public record AdditionalAcceptorData1
     [IsoId("_ZG0vMPJREeiJn9rM2Znz2w")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public AdditionalIdentification1? AdditionalIdentification { get; init; }
+    public ValueList<AdditionalIdentification1> AdditionalIdentification { get; init; } = [];
 
     /// <summary>
     /// Contains various classifications of business ownership characteristics.

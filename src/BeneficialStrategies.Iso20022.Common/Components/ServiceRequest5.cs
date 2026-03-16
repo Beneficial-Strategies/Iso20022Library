@@ -110,5 +110,5 @@ public record ServiceRequest5
     [IsoId("_R9ztQU31Eey_VecAUE-C9Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

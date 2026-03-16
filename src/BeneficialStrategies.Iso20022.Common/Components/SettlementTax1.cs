@@ -30,7 +30,7 @@ public record SettlementTax1
     [IsoId("_S0j3LgEcEeCQm6a_G2yO_w_588725222")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
-    public CurrencyAndAmount? CalculatedAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CalculatedAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value used as the basis on which this tax, levy or duty is calculated.
@@ -38,7 +38,7 @@ public record SettlementTax1
     [IsoId("_S0j3LwEcEeCQm6a_G2yO_w_-780660433")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
-    public CurrencyAndAmount? BasisAmount { get; init; }
+    public ValueList<CurrencyAndAmount> BasisAmount { get; init; } = [];
 
     /// <summary>
     /// Date of the tax point when this tax, levy or duty becomes applicable.

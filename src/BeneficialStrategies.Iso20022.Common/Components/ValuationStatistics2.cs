@@ -63,5 +63,6 @@ public record ValuationStatistics2
     [IsoId("_VZJM8Np-Ed-ak6NoX_4Aeg_1063190202")]
     [DisplayName("By User Defined Time Period")]
     [IsoXmlTag("ByUsrDfndTmPrd")]
-    public StatisticsByUserDefinedTimePeriod1? ByUserDefinedTimePeriod { get; init; }
+    public ValueList<StatisticsByUserDefinedTimePeriod1> ByUserDefinedTimePeriod { get; init; } =
+        [];
 }

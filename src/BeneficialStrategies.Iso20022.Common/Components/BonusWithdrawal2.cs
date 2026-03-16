@@ -73,5 +73,5 @@ public record BonusWithdrawal2
     [IsoId("_zJhGa5zGEembF9M4GR6EAA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

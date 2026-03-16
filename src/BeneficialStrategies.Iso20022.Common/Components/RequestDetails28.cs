@@ -30,7 +30,8 @@ public record RequestDetails28
     [IsoId("_3zn85StFEeySlt9bF77XfA")]
     [DisplayName("Financial Instrument And Attributes")]
     [IsoXmlTag("FinInstrmAndAttrbts")]
-    public RemovalProcessing2Choice_? FinancialInstrumentAndAttributes { get; init; }
+    public ValueList<RemovalProcessing2Choice_> FinancialInstrumentAndAttributes { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies the collateral parties of a contract.

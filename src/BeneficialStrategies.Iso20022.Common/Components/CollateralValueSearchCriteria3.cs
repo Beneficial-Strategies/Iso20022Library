@@ -30,7 +30,7 @@ public record CollateralValueSearchCriteria3
     [IsoId("_Au-79TpuEemk2e6qGBk8IQ")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveOrHistoricCurrencyCode? Currency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
 
     /// <summary>
     /// Party that legally owns the account being queried.
@@ -54,7 +54,8 @@ public record CollateralValueSearchCriteria3
     [IsoId("_Au-7-zpuEemk2e6qGBk8IQ")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification19> FinancialInstrumentIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Unique and unambiguous identification of the securities account owner.

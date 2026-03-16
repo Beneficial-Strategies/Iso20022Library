@@ -101,5 +101,5 @@ public record CardAccount12
     [IsoId("_ehflg64ZEeW_TaP-ygI0SQ")]
     [DisplayName("Allowed Service")]
     [IsoXmlTag("AllwdSvc")]
-    public ATMService19? AllowedService { get; init; }
+    public ValueList<ATMService19> AllowedService { get; init; } = [];
 }

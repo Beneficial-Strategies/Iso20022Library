@@ -31,5 +31,5 @@ public record OrganisationIdentification9
     [IsoId("_Jswv5xBBEeGyZLI6olyk-Q")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public GenericOrganisationIdentification2? Other { get; init; }
+    public ValueList<GenericOrganisationIdentification2> Other { get; init; } = [];
 }

@@ -30,7 +30,7 @@ public record PartyIdentification93
     [IsoId("_oM4i3UGTEeWqy4niLuXETA")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
+    public ValueList<AlternatePartyIdentification7> AlternateIdentification { get; init; } = [];
 
     /// <summary>
     /// Country in which a person is permanently domiciled (the place of a person&apos;s permanent home).
@@ -46,7 +46,7 @@ public record PartyIdentification93
     [IsoId("_oM4i7UGTEeWqy4niLuXETA")]
     [DisplayName("Non Domicile Country")]
     [IsoXmlTag("NonDmclCtry")]
-    public CountryCode? NonDomicileCountry { get; init; }
+    public SimpleValueList<CountryCode> NonDomicileCountry { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities belonging to the beneficial owner specified.
@@ -62,7 +62,7 @@ public record PartyIdentification93
     [IsoId("_oM4i_UGTEeWqy4niLuXETA")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public BeneficiaryCertificationType10Choice_? CertificationType { get; init; }
+    public ValueList<BeneficiaryCertificationType10Choice_> CertificationType { get; init; } = [];
 
     /// <summary>
     /// Provides additional information about the type of certification/breakdown required.

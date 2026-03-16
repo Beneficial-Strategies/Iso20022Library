@@ -22,7 +22,7 @@ public record Cardholder4
     [IsoId("_k72x8TSKEeK8M6X9iBRU5A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public CardholderIdentification1? Identification { get; init; }
+    public ValueList<CardholderIdentification1> Identification { get; init; } = [];
 
     /// <summary>
     /// Cardholder name associated with the card.
@@ -40,7 +40,7 @@ public record Cardholder4
     [IsoId("_k72x-TSKEeK8M6X9iBRU5A")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderAuthentication4? Authentication { get; init; }
+    public ValueList<CardholderAuthentication4> Authentication { get; init; } = [];
 
     /// <summary>
     /// Numeric characters of the cardholder&apos;s address for verification.

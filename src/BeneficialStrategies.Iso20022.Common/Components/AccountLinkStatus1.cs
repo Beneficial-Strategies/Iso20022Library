@@ -30,5 +30,5 @@ public record AccountLinkStatus1
     [IsoId("_3L62c3HeEeG8t-w1mFnmhg_-1124656957")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation10? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation10> StatusReason { get; init; } = [];
 }

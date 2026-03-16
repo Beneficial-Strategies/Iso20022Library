@@ -46,7 +46,7 @@ public record AdministrativeInitiation1
     [IsoId("_ojhuUTNFEeylu6lH-gut-A")]
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
-    public OriginalTransaction2? OriginalTransaction { get; init; }
+    public ValueList<OriginalTransaction2> OriginalTransaction { get; init; } = [];
 
     /// <summary>
     /// Component contains data structures applicable to certain industries that require specific data within transaction messages.
@@ -62,7 +62,7 @@ public record AdministrativeInitiation1
     [IsoId("_9Q5VQDNFEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData2? AdditionalData { get; init; }
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Outcome of the processing of the authorisation
@@ -88,7 +88,7 @@ public record AdministrativeInitiation1
     [IsoId("_zaURsDNFEeylu6lH-gut-A")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; }
+    public ValueList<ProtectedData1> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
@@ -96,5 +96,5 @@ public record AdministrativeInitiation1
     [IsoId("_02U8sTNFEeylu6lH-gut-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

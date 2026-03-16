@@ -22,7 +22,7 @@ public record RetailerSaleEnvironment2
     [IsoId("_ES4RkYX-EemxIqbaFEE8-w")]
     [DisplayName("Sale Capabilities")]
     [IsoXmlTag("SaleCpblties")]
-    public SaleCapabilities1Code? SaleCapabilities { get; init; }
+    public SimpleValueList<SaleCapabilities1Code> SaleCapabilities { get; init; } = [];
 
     /// <summary>
     /// Default currency associated with the sale system.

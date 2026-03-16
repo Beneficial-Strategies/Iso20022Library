@@ -22,7 +22,5 @@ public record CorporateEventNarrative2
     [IsoId("_Qo3U0Np-Ed-ak6NoX_4Aeg_2043448080")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; }
+    public SimpleValueList<IsoMax350Text> Disclaimer { get; init; } = [];
 }

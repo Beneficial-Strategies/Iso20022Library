@@ -38,5 +38,5 @@ public record TransactionType1
     [IsoId("_P9p0pdp-Ed-ak6NoX_4Aeg_-1506075611")]
     [DisplayName("Floor Limit")]
     [IsoXmlTag("FlrLmt")]
-    public Limit2? FloorLimit { get; init; }
+    public ValueList<Limit2> FloorLimit { get; init; } = [];
 }

@@ -55,5 +55,5 @@ public record CardPaymentEnvironment42
     [IsoId("_hUasGWpAEeS4VPLpYyQgxQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent5? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent5> POIComponent { get; init; } = [];
 }

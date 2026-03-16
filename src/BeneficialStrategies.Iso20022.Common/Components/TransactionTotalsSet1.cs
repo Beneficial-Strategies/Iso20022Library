@@ -109,7 +109,7 @@ public record TransactionTotalsSet1
     [IsoId("_W-gowNxhEeioifFt1dhnJA")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
-    public Organisation26? SponsoredMerchant { get; init; }
+    public ValueList<Organisation26> SponsoredMerchant { get; init; } = [];
 
     /// <summary>
     /// Payment Transaction totals during the reconciliation period, for a certain type of transaction.
@@ -125,5 +125,5 @@ public record TransactionTotalsSet1
     [IsoId("_WAtHQNxiEeioifFt1dhnJA")]
     [DisplayName("Loyalty Transaction Total")]
     [IsoXmlTag("LltyTxTtl")]
-    public LoyaltyTransactionTotals1? LoyaltyTransactionTotal { get; init; }
+    public ValueList<LoyaltyTransactionTotals1> LoyaltyTransactionTotal { get; init; } = [];
 }

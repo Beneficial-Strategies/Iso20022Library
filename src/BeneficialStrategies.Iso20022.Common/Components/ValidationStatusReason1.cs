@@ -38,7 +38,7 @@ public record ValidationStatusReason1
     [IsoId("_T2qoIQtPEeWkxvNyFrBT8Q")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 
     /// <summary>
     /// Further details on the status reason.||Usage: Additional information can be used for several purposes such as the reporting of repaired information.
@@ -46,7 +46,5 @@ public record ValidationStatusReason1
     [IsoId("_N71BaQtPEeWkxvNyFrBT8Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 }

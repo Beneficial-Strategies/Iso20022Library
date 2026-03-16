@@ -38,5 +38,5 @@ public record UndertakingWording1
     [IsoId("_94mSkXltEeG7BsjMvd1mEw_-752831189")]
     [DisplayName("Undertaking Terms And Conditions")]
     [IsoXmlTag("UdrtkgTermsAndConds")]
-    public Narrative1? UndertakingTermsAndConditions { get; init; }
+    public ValueList<Narrative1> UndertakingTermsAndConditions { get; init; } = [];
 }

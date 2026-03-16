@@ -93,7 +93,7 @@ public record Header43
     [IsoId("_qMpwYVULEeetiruPyDPo0Q")]
     [DisplayName("Trace Data")]
     [IsoXmlTag("TracData")]
-    public AdditionalData1? TraceData { get; init; }
+    public ValueList<AdditionalData1> TraceData { get; init; } = [];
 
     /// <summary>
     /// Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.
@@ -101,5 +101,5 @@ public record Header43
     [IsoId("_qMpwY1ULEeetiruPyDPo0Q")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability7? Traceability { get; init; }
+    public ValueList<Traceability7> Traceability { get; init; } = [];
 }

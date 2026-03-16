@@ -40,5 +40,5 @@ public record LoyaltyRebates1
     [IsoId("_dE2PgNxOEeioifFt1dhnJA")]
     [DisplayName("Sale Item Rebate")]
     [IsoXmlTag("SaleItmRbt")]
-    public SaleItemRebate1? SaleItemRebate { get; init; }
+    public ValueList<SaleItemRebate1> SaleItemRebate { get; init; } = [];
 }

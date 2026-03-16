@@ -58,7 +58,7 @@ public record UnitPrice15
     [IsoId("_QeuhYtp-Ed-ak6NoX_4Aeg_116968480")]
     [DisplayName("Value In Alternative Currency")]
     [IsoXmlTag("ValInAltrntvCcy")]
-    public PriceValue1? ValueInAlternativeCurrency { get; init; }
+    public ValueList<PriceValue1> ValueInAlternativeCurrency { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the price information can be used for the execution of a transaction.
@@ -163,7 +163,7 @@ public record UnitPrice15
     [IsoId("_Qe4SZNp-Ed-ak6NoX_4Aeg_116969935")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge15? ChargeDetails { get; init; }
+    public ValueList<Charge15> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to taxes that are due.
@@ -171,7 +171,7 @@ public record UnitPrice15
     [IsoId("_Qe4SZdp-Ed-ak6NoX_4Aeg_1606728234")]
     [DisplayName("Tax Liability Details")]
     [IsoXmlTag("TaxLbltyDtls")]
-    public Tax17? TaxLiabilityDetails { get; init; }
+    public ValueList<Tax17> TaxLiabilityDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to taxes that are paid back.
@@ -179,5 +179,5 @@ public record UnitPrice15
     [IsoId("_Qe4SZtp-Ed-ak6NoX_4Aeg_1615962093")]
     [DisplayName("Tax Refund Details")]
     [IsoXmlTag("TaxRfndDtls")]
-    public Tax17? TaxRefundDetails { get; init; }
+    public ValueList<Tax17> TaxRefundDetails { get; init; } = [];
 }

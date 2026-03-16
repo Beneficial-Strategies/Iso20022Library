@@ -38,7 +38,7 @@ public record DeliverInformation20
     [IsoId("_Dxf-LZEHEem7fvtoGpNpow")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary43? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Form, that is, ownership, of the security, that is, registered or bearer.
@@ -129,7 +129,7 @@ public record DeliverInformation20
     [IsoId("_Dxf-OZEHEem7fvtoGpNpow")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public Fees2? Fees { get; init; }
+    public ValueList<Fees2> Fees { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -137,7 +137,7 @@ public record DeliverInformation20
     [IsoId("_Dxf-O5EHEem7fvtoGpNpow")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax38? IndividualTax { get; init; }
+    public ValueList<Tax38> IndividualTax { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -154,7 +154,7 @@ public record DeliverInformation20
     [IsoId("_Dxf-PZEHEem7fvtoGpNpow")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms37? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms37> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of the transaction.

@@ -66,7 +66,7 @@ public record Undertaking1
     [IsoId("_9zrWUnltEeG7BsjMvd1mEw_-679982016")]
     [DisplayName("Applicant")]
     [IsoXmlTag("Applcnt")]
-    public PartyIdentification43? Applicant { get; init; }
+    public ValueList<PartyIdentification43> Applicant { get; init; } = [];
 
     /// <summary>
     /// Party that issues the undertaking (or counter-undertaking).
@@ -158,7 +158,7 @@ public record Undertaking1
     [IsoId("_9z-4UnltEeG7BsjMvd1mEw_-1228971442")]
     [DisplayName("Additional Party")]
     [IsoXmlTag("AddtlPty")]
-    public PartyAndType1? AdditionalParty { get; init; }
+    public ValueList<PartyAndType1> AdditionalParty { get; init; } = [];
 
     /// <summary>
     /// Rules and laws governing the undertaking.
@@ -174,7 +174,7 @@ public record Undertaking1
     [IsoId("_9z-4VHltEeG7BsjMvd1mEw_1809587553")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
-    public UnderlyingTradeTransaction1? UnderlyingTransaction { get; init; }
+    public ValueList<UnderlyingTradeTransaction1> UnderlyingTransaction { get; init; } = [];
 
     /// <summary>
     /// Presentation details related to the undertaking.
@@ -241,7 +241,7 @@ public record Undertaking1
     [IsoId("_90RzQXltEeG7BsjMvd1mEw_1001580649")]
     [DisplayName("Automatic Amount Variation")]
     [IsoXmlTag("AutomtcAmtVartn")]
-    public AutomaticVariation1? AutomaticAmountVariation { get; init; }
+    public ValueList<AutomaticVariation1> AutomaticAmountVariation { get; init; } = [];
 
     /// <summary>
     /// Details of the communication channel.
@@ -281,7 +281,7 @@ public record Undertaking1
     [IsoId("_90a9MHltEeG7BsjMvd1mEw_1646449472")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the application for an undertaking.

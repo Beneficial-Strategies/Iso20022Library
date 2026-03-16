@@ -96,5 +96,5 @@ public record OriginalGroupHeader15
     [IsoId("_UUB30249EeiU9cctagi5ow")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
-    public PaymentCancellationReason5? CancellationReasonInformation { get; init; }
+    public ValueList<PaymentCancellationReason5> CancellationReasonInformation { get; init; } = [];
 }

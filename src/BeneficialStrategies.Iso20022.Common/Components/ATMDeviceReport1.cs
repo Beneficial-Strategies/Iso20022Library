@@ -38,7 +38,7 @@ public record ATMDeviceReport1
     [IsoId("_2agesIryEeSvuOJS0mmL0g")]
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
-    public ATMCommand2? CommandResult { get; init; }
+    public ValueList<ATMCommand2> CommandResult { get; init; } = [];
 
     /// <summary>
     /// Maintenance command which has requested the device report.

@@ -22,7 +22,7 @@ public record RiskContext2
     [IsoId("_VKsiYcStEeuBjv5G5kw00g")]
     [DisplayName("Risk Input Data")]
     [IsoXmlTag("RskInptData")]
-    public RiskInputData1? RiskInputData { get; init; }
+    public ValueList<RiskInputData1> RiskInputData { get; init; } = [];
 
     /// <summary>
     /// Indicates to the card issuer the level of risk associated with the transaction.
@@ -30,5 +30,5 @@ public record RiskContext2
     [IsoId("_VKtJccStEeuBjv5G5kw00g")]
     [DisplayName("Risk Assessment")]
     [IsoXmlTag("RskAssmnt")]
-    public RiskAssessment2? RiskAssessment { get; init; }
+    public ValueList<RiskAssessment2> RiskAssessment { get; init; } = [];
 }

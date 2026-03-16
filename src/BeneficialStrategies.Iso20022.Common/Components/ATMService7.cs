@@ -30,7 +30,7 @@ public record ATMService7
     [IsoId("_nMR4QIq2EeSIDtZ76p6McQ")]
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts3? Limits { get; init; }
+    public ValueList<ATMTransactionAmounts3> Limits { get; init; } = [];
 
     /// <summary>
     /// Preferred withdrawal transaction chosen by the customer.

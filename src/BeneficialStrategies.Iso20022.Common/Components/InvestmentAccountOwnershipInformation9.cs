@@ -38,7 +38,7 @@ public record InvestmentAccountOwnershipInformation9
     [IsoId("_Ez9zFRRjEeOKWo1NF21OVw")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
-    public PartyProfileInformation3? InvestorProfileValidation { get; init; }
+    public ValueList<PartyProfileInformation3> InvestorProfileValidation { get; init; } = [];
 
     /// <summary>
     /// Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions and or redemptions will be allocated using the same percentage.

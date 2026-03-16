@@ -40,5 +40,5 @@ public record HostCommunicationParameter3
     [IsoId("_fk7YtWpyEeSMqvBfBY1c9A")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public KEKIdentifier2? Key { get; init; }
+    public ValueList<KEKIdentifier2> Key { get; init; } = [];
 }

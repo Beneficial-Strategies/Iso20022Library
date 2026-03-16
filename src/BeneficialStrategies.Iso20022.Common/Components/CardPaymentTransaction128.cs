@@ -30,7 +30,8 @@ public record CardPaymentTransaction128
     [IsoId("_LaAzEXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Product code which are allowed by the payment card.
@@ -38,7 +39,7 @@ public record CardPaymentTransaction128
     [IsoId("_LaAzE3G7Ee2TbaNWBpRZpQ")]
     [DisplayName("Allowed Product Code")]
     [IsoXmlTag("AllwdPdctCd")]
-    public Product4? AllowedProductCode { get; init; }
+    public ValueList<Product4> AllowedProductCode { get; init; } = [];
 
     /// <summary>
     /// Product code not allowed by the payment card.
@@ -46,7 +47,7 @@ public record CardPaymentTransaction128
     [IsoId("_LaCoQXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Not Allowed Product Code")]
     [IsoXmlTag("NotAllwdPdctCd")]
-    public Product4? NotAllowedProductCode { get; init; }
+    public ValueList<Product4> NotAllowedProductCode { get; init; } = [];
 
     /// <summary>
     /// Products that may be added to the purchase after the authorisation.
@@ -54,7 +55,7 @@ public record CardPaymentTransaction128
     [IsoId("_LaDPUXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Additional Available Product")]
     [IsoXmlTag("AddtlAvlblPdct")]
-    public Product5? AdditionalAvailableProduct { get; init; }
+    public ValueList<Product5> AdditionalAvailableProduct { get; init; } = [];
 
     /// <summary>
     /// Balance and currency code of the account, related to the payment.
@@ -78,7 +79,7 @@ public record CardPaymentTransaction128
     [IsoId("_LaDPV3G7Ee2TbaNWBpRZpQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action14? Action { get; init; }
+    public ValueList<Action14> Action { get; init; } = [];
 
     /// <summary>
     /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be proposed to the cardholder.

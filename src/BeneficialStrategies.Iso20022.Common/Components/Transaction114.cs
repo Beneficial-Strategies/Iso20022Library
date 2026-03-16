@@ -62,9 +62,7 @@ public record Transaction114
     [IsoId("_UdCwAQllEeuQ1MenzX1l-g")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -188,5 +186,5 @@ public record Transaction114
     [IsoId("_UdCwKQllEeuQ1MenzX1l-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

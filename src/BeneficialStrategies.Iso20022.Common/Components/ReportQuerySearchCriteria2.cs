@@ -22,7 +22,8 @@ public record ReportQuerySearchCriteria2
     [IsoId("_3pS-0Zb6Eee4htziCyV8eA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentificationSearchCriteria2Choice_? AccountIdentification { get; init; }
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> AccountIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.
@@ -30,7 +31,7 @@ public record ReportQuerySearchCriteria2
     [IsoId("_3pS-05b6Eee4htziCyV8eA")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance12? Balance { get; init; }
+    public ValueList<CashBalance12> Balance { get; init; } = [];
 
     /// <summary>
     /// Values of possible reports.

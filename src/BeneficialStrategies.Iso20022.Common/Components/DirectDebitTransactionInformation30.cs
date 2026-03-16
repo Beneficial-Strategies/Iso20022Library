@@ -97,7 +97,7 @@ public record DirectDebitTransactionInformation30
     [IsoId("_OmlhixlWEe2Do_UtrNmb2g")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public Charges12? ChargesInformation { get; init; }
+    public ValueList<Charges12> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.
@@ -310,5 +310,5 @@ public record DirectDebitTransactionInformation30
     [IsoId("_OmlhvxlWEe2Do_UtrNmb2g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

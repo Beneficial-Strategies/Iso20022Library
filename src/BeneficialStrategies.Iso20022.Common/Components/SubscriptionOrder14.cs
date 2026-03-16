@@ -265,7 +265,7 @@ public record SubscriptionOrder14
     [IsoId("_hXHc0DlEEealR6-8aQ15BA")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public SourceOfCash1Choice_? SourceOfCash { get; init; }
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     /// <summary>
     /// Assessment of the customer’s behaviour at the time of the account opening application.

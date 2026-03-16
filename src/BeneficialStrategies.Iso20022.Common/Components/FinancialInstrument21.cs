@@ -109,5 +109,5 @@ public record FinancialInstrument21
     [IsoId("_Sb5YuNp-Ed-ak6NoX_4Aeg_-992501229")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
-    public CountryCode? RegisteredDistributionCountry { get; init; }
+    public SimpleValueList<CountryCode> RegisteredDistributionCountry { get; init; } = [];
 }

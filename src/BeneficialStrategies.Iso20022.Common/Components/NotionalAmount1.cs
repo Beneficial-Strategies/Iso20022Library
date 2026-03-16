@@ -31,5 +31,5 @@ public record NotionalAmount1
     [IsoId("_h7Os4eXtEemUbdOm9aOvMg")]
     [DisplayName("Schedule")]
     [IsoXmlTag("Schdl")]
-    public Schedule3? Schedule { get; init; }
+    public ValueList<Schedule3> Schedule { get; init; } = [];
 }

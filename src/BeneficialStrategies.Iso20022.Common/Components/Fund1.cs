@@ -114,7 +114,7 @@ public record Fund1
     [IsoId("_wzHsEF-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
-    public CashInOutForecast7? EstimatedCashInForecastDetails { get; init; }
+    public ValueList<CashInOutForecast7> EstimatedCashInForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated cash movement out of the fund/sub fund.
@@ -122,7 +122,7 @@ public record Fund1
     [IsoId("_wzHsEV-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
-    public CashInOutForecast7? EstimatedCashOutForecastDetails { get; init; }
+    public ValueList<CashInOutForecast7> EstimatedCashOutForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows.
@@ -130,5 +130,5 @@ public record Fund1
     [IsoId("_wzHsEl-HEeS7xuKaq75oiQ")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast5? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast5> EstimatedNetCashForecastDetails { get; init; } = [];
 }

@@ -101,7 +101,7 @@ public record CurrencyConversion26
     [IsoId("_v_oeQHDNEe2MCaKO5AtGsA")]
     [DisplayName("Applicable Bin Range")]
     [IsoXmlTag("AplblBinRg")]
-    public BinRange1? ApplicableBinRange { get; init; }
+    public ValueList<BinRange1> ApplicableBinRange { get; init; } = [];
 
     /// <summary>
     /// Original amount in the source currency.
@@ -117,7 +117,7 @@ public record CurrencyConversion26
     [IsoId("_3kYUB3DLEe2MCaKO5AtGsA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission19? CommissionDetails { get; init; }
+    public ValueList<Commission19> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Markup made as part of a currency conversion.
@@ -125,7 +125,7 @@ public record CurrencyConversion26
     [IsoId("_3kYUCXDLEe2MCaKO5AtGsA")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
-    public Commission18? MarkUpDetails { get; init; }
+    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
 
     /// <summary>
     /// Card scheme declaration (disclaimer) to present to the cardholder.
@@ -133,5 +133,5 @@ public record CurrencyConversion26
     [IsoId("_3kYUC3DLEe2MCaKO5AtGsA")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
-    public ActionMessage10? DeclarationDetails { get; init; }
+    public ValueList<ActionMessage10> DeclarationDetails { get; init; } = [];
 }

@@ -46,7 +46,7 @@ public record NonFinancialResponseContentComponent3
     [IsoId("_Jpl0gHJOEe299ZbWCkdR_w")]
     [DisplayName("Instalment")]
     [IsoXmlTag("Instlmt")]
-    public RecurringTransaction5? Instalment { get; init; }
+    public ValueList<RecurringTransaction5> Instalment { get; init; } = [];
 
     /// <summary>
     /// Additional elements sent by the ServiceProvider which are not linked to payment.
@@ -54,7 +54,7 @@ public record NonFinancialResponseContentComponent3
     [IsoId("_6qrvwHJOEe299ZbWCkdR_w")]
     [DisplayName("Additional Response")]
     [IsoXmlTag("AddtlRspn")]
-    public ExternallyDefinedData4? AdditionalResponse { get; init; }
+    public ValueList<ExternallyDefinedData4> AdditionalResponse { get; init; } = [];
 
     /// <summary>
     /// Set of actions to be performed by the POI (Point Of Interaction) system.
@@ -62,7 +62,7 @@ public record NonFinancialResponseContentComponent3
     [IsoId("_JsqzJ3JNEe299ZbWCkdR_w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action14? Action { get; init; }
+    public ValueList<Action14> Action { get; init; } = [];
 
     /// <summary>
     /// Result of the processing of the request.

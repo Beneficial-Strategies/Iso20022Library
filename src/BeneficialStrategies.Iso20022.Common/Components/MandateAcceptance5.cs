@@ -46,5 +46,5 @@ public record MandateAcceptance5
     [IsoId("_dTODiUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

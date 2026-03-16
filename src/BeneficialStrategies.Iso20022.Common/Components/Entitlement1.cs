@@ -40,7 +40,7 @@ public record Entitlement1
     [IsoId("_UJRghdp-Ed-ak6NoX_4Aeg_1936794544")]
     [DisplayName("Securities Distribution Details")]
     [IsoXmlTag("SctiesDstrbtnDtls")]
-    public SecuritiesEntitlement1? SecuritiesDistributionDetails { get; init; }
+    public ValueList<SecuritiesEntitlement1> SecuritiesDistributionDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash distribution.
@@ -48,5 +48,5 @@ public record Entitlement1
     [IsoId("_UJRghtp-Ed-ak6NoX_4Aeg_1939563150")]
     [DisplayName("Cash Distribution Details")]
     [IsoXmlTag("CshDstrbtnDtls")]
-    public CashEntitlement1? CashDistributionDetails { get; init; }
+    public ValueList<CashEntitlement1> CashDistributionDetails { get; init; } = [];
 }

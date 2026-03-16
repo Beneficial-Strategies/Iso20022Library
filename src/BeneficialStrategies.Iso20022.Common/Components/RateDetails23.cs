@@ -55,7 +55,7 @@ public record RateDetails23
     [IsoId("_7YUqCUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat22Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat22Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.
@@ -79,7 +79,8 @@ public record RateDetails23
     [IsoId("_7YUqD0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat7Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat7Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -87,7 +88,7 @@ public record RateDetails23
     [IsoId("_7YUqEUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat24Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat24Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
@@ -120,7 +121,7 @@ public record RateDetails23
     [IsoId("_7YUqG0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat7Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat7Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
@@ -128,7 +129,7 @@ public record RateDetails23
     [IsoId("_7YUqH0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat40Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat40Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.
@@ -136,7 +137,7 @@ public record RateDetails23
     [IsoId("_zqQ-AWXjEeWht50_j0HXAQ")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public RateAndAmountFormat40Choice_? SecondLevelTax { get; init; }
+    public ValueList<RateAndAmountFormat40Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.

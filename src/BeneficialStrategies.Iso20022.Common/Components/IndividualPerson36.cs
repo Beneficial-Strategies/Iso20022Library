@@ -30,7 +30,7 @@ public record IndividualPerson36
     [IsoId("_-2MLQ24-EeiU9cctagi5ow")]
     [DisplayName("Previous Name")]
     [IsoXmlTag("PrvsNm")]
-    public IndividualPersonNameLong2? PreviousName { get; init; }
+    public ValueList<IndividualPersonNameLong2> PreviousName { get; init; } = [];
 
     /// <summary>
     /// Specifies the gender of the person.
@@ -117,7 +117,7 @@ public record IndividualPerson36
     [IsoId("_-2MLV24-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public PostalAddress24? PostalAddress { get; init; }
+    public ValueList<PostalAddress24> PostalAddress { get; init; } = [];
 
     /// <summary>
     /// Information about a citizen.
@@ -125,7 +125,7 @@ public record IndividualPerson36
     [IsoId("_-2MLWW4-EeiU9cctagi5ow")]
     [DisplayName("Citizenship Information")]
     [IsoXmlTag("CtznshInf")]
-    public CitizenshipInformation1? CitizenshipInformation { get; init; }
+    public ValueList<CitizenshipInformation1> CitizenshipInformation { get; init; } = [];
 
     /// <summary>
     /// Address for the primary contact.
@@ -149,7 +149,7 @@ public record IndividualPerson36
     [IsoId("_-2MLX24-EeiU9cctagi5ow")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public GenericIdentification44? OtherIdentification { get; init; }
+    public ValueList<GenericIdentification44> OtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Additional information required for the account switch.
@@ -157,5 +157,5 @@ public record IndividualPerson36
     [IsoId("_-2MLYW4-EeiU9cctagi5ow")]
     [DisplayName("Other Details")]
     [IsoXmlTag("OthrDtls")]
-    public TransferInstruction1? OtherDetails { get; init; }
+    public ValueList<TransferInstruction1> OtherDetails { get; init; } = [];
 }

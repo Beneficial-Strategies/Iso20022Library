@@ -38,7 +38,7 @@ public record AuthorisationResult8
     [IsoId("_EJ63QHuYEeSVeNXcmBQ4hQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action4? Action { get; init; }
+    public ValueList<Action4> Action { get; init; } = [];
 
     /// <summary>
     /// Value assigned by the authorising party.
@@ -56,5 +56,5 @@ public record AuthorisationResult8
     [IsoId("_qE0V4C-tEeWfYucYWs4iQg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ActionMessage3? AdditionalInformation { get; init; }
+    public ValueList<ActionMessage3> AdditionalInformation { get; init; } = [];
 }

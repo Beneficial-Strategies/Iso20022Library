@@ -30,7 +30,7 @@ public record SettlementParties35
     [IsoId("_HjKEoNQiEeKvJeoOII0e7w")]
     [DisplayName("Local Market Identification")]
     [IsoXmlTag("LclMktId")]
-    public GenericIdentification49? LocalMarketIdentification { get; init; }
+    public ValueList<GenericIdentification49> LocalMarketIdentification { get; init; } = [];
 
     /// <summary>
     /// Registration information required for settlement. For some markets, for example, Spain (Iberclear) registration details are mandatory and should be part of the SSI. In some cases, the name of the institution is different than what&apos;s provided in the BIC Directory. If this is the case, the name should be provided.

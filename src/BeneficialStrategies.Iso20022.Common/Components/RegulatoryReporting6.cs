@@ -22,7 +22,8 @@ public record RegulatoryReporting6
     [IsoId("_vlrHAZR6Eeak6e8_Fc5fQg")]
     [DisplayName("Trading Side Transaction Reporting")]
     [IsoXmlTag("TradgSdTxRptg")]
-    public TradingSideTransactionReporting1? TradingSideTransactionReporting { get; init; }
+    public ValueList<TradingSideTransactionReporting1> TradingSideTransactionReporting { get; init; } =
+        [];
 
     /// <summary>
     /// Regulatory transaction reporting information from the Counterparty Side party.
@@ -30,7 +31,8 @@ public record RegulatoryReporting6
     [IsoId("_vlrHA5R6Eeak6e8_Fc5fQg")]
     [DisplayName("Counterparty Side Transaction Reporting")]
     [IsoXmlTag("CtrPtySdTxRptg")]
-    public CounterpartySideTransactionReporting1? CounterpartySideTransactionReporting { get; init; }
+    public ValueList<CounterpartySideTransactionReporting1> CounterpartySideTransactionReporting { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies an agency or separate corporation of a futures exchange responsible for settling and

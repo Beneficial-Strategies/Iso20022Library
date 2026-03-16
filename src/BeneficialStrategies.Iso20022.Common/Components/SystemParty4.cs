@@ -32,7 +32,7 @@ public record SystemParty4
     [IsoId("_-7V-kxirEeiNm9ItaZcR2A")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public PostalAddress25? Address { get; init; }
+    public ValueList<PostalAddress25> Address { get; init; } = [];
 
     /// <summary>
     /// Specifies the options on how to contact the party.
@@ -40,7 +40,7 @@ public record SystemParty4
     [IsoId("_Q47wEBitEeiNm9ItaZcR2A")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
-    public Contact5? ContactDetails { get; init; }
+    public ValueList<Contact5> ContactDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the opening date of the party.
@@ -74,7 +74,7 @@ public record SystemParty4
     [IsoId("_-7V-mxirEeiNm9ItaZcR2A")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
-    public TechnicalIdentification2Choice_? TechnicalAddress { get; init; }
+    public ValueList<TechnicalIdentification2Choice_> TechnicalAddress { get; init; } = [];
 
     /// <summary>
     /// Additional attributes defined by a central security depositary for a party.
@@ -82,7 +82,7 @@ public record SystemParty4
     [IsoId("_-7V-nRirEeiNm9ItaZcR2A")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
-    public MarketSpecificAttribute1? MarketSpecificAttribute { get; init; }
+    public ValueList<MarketSpecificAttribute1> MarketSpecificAttribute { get; init; } = [];
 
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
@@ -114,5 +114,5 @@ public record SystemParty4
     [IsoId("_-7V-oRirEeiNm9ItaZcR2A")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public SystemRestriction1? Restriction { get; init; }
+    public ValueList<SystemRestriction1> Restriction { get; init; } = [];
 }

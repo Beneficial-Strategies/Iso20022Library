@@ -64,7 +64,7 @@ public record LocalMarketAnnex5
     [IsoId("_WHtlW9ATEeuSBa1PsnseFg")]
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
-    public CashAccount205? CashSettlementDetails { get; init; }
+    public ValueList<CashAccount205> CashSettlementDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information about the fund order desk.
@@ -72,5 +72,5 @@ public record LocalMarketAnnex5
     [IsoId("_WHtlXdATEeuSBa1PsnseFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

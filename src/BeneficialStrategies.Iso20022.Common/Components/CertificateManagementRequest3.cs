@@ -56,7 +56,7 @@ public record CertificateManagementRequest3
     [IsoId("_4c7aYHIwEe299ZbWCkdR_w")]
     [DisplayName("Key Function")]
     [IsoXmlTag("KeyFctn")]
-    public KeyUsage1Code? KeyFunction { get; init; }
+    public SimpleValueList<KeyUsage1Code> KeyFunction { get; init; } = [];
 
     /// <summary>
     /// Challenge value sends by the POI to be received back in a message response.

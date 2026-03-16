@@ -25,8 +25,7 @@ public record LoyaltyProgramme3
     [IsoId("_bQ4QEcW2EeuhguwJmlgagQ")]
     [DisplayName("Programme Eligibility Indicator")]
     [IsoXmlTag("PrgrmmElgbltyInd")]
-    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ProgrammeEligibilityIndicator { get; init; }
+    public SimpleValueList<IsoTrueFalseIndicator> ProgrammeEligibilityIndicator { get; init; } = [];
 
     /// <summary>
     /// Entity issuing the loyalty programme.

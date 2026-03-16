@@ -30,5 +30,5 @@ public record CollateralMovement12
     [IsoId("_6IUJIyqREeyR9JrVGfaMKw")]
     [DisplayName("Movement Direction")]
     [IsoXmlTag("MvmntDrctn")]
-    public CollateralMovement6Choice_? MovementDirection { get; init; }
+    public ValueList<CollateralMovement6Choice_> MovementDirection { get; init; } = [];
 }

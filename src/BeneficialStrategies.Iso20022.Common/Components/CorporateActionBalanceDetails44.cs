@@ -70,7 +70,7 @@ public record CorporateActionBalanceDetails44
     [IsoId("_piuiQTi7Eeydid5dcNPKvg")]
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
-    public BalanceFormat14Choice_? PendingDeliveryBalance { get; init; }
+    public ValueList<BalanceFormat14Choice_> PendingDeliveryBalance { get; init; } = [];
 
     /// <summary>
     /// Balance of financial instruments that are pending receipt.
@@ -78,7 +78,7 @@ public record CorporateActionBalanceDetails44
     [IsoId("_piuiSTi7Eeydid5dcNPKvg")]
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
-    public BalanceFormat14Choice_? PendingReceiptBalance { get; init; }
+    public ValueList<BalanceFormat14Choice_> PendingReceiptBalance { get; init; } = [];
 
     /// <summary>
     /// Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).

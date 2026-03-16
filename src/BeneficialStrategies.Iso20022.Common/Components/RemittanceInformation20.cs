@@ -32,9 +32,7 @@ public record RemittanceInformation20
     [IsoId("_d7M5U9cZEeqRFcf2R4bPBw")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Unstructured { get; init; }
+    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts&apos; receivable system, in a structured form.
@@ -42,7 +40,7 @@ public record RemittanceInformation20
     [IsoId("_d7M5VdcZEeqRFcf2R4bPBw")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
-    public StructuredRemittanceInformation17? Structured { get; init; }
+    public ValueList<StructuredRemittanceInformation17> Structured { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to provide information on the original transactions, to which the remittance message refers.

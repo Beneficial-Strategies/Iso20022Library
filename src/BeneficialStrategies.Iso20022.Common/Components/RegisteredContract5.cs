@@ -48,7 +48,7 @@ public record RegisteredContract5
     [IsoId("_qyfmiwtWEeWpCbkYWAYO5g")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
-    public ContractBalance1? ContractBalance { get; init; }
+    public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
     /// Type of the payment schedule provided in the contract.
@@ -82,7 +82,7 @@ public record RegisteredContract5
     [IsoId("_qyowdQtWEeWpCbkYWAYO5g")]
     [DisplayName("Registered Contract Journal")]
     [IsoXmlTag("RegdCtrctJrnl")]
-    public RegisteredContractJournal1? RegisteredContractJournal { get; init; }
+    public ValueList<RegisteredContractJournal1> RegisteredContractJournal { get; init; } = [];
 
     /// <summary>
     /// Details on amendments to the registered contract.
@@ -90,7 +90,7 @@ public record RegisteredContract5
     [IsoId("_qyowdwtWEeWpCbkYWAYO5g")]
     [DisplayName("Amendment")]
     [IsoXmlTag("Amdmnt")]
-    public RegisteredContractAmendment1? Amendment { get; init; }
+    public ValueList<RegisteredContractAmendment1> Amendment { get; init; } = [];
 
     /// <summary>
     /// Provides the communication method for the submission of the registered contract.

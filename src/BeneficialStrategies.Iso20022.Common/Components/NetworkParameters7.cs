@@ -51,8 +51,7 @@ public record NetworkParameters7
     [IsoId("_gsopdw0WEeqUVL7sB4m7NA")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ServerCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> ServerCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the X.509 Certificates required to authenticate the server, for instance a digest of the certificate.
@@ -60,8 +59,7 @@ public record NetworkParameters7
     [IsoId("_gsopeQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
-    [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ServerCertificateIdentifier { get; init; }
+    public SimpleValueList<IsoMax140Binary> ServerCertificateIdentifier { get; init; } = [];
 
     /// <summary>
     /// X.509 Certificate required to authenticate the client.
@@ -69,8 +67,7 @@ public record NetworkParameters7
     [IsoId("_gspQgQ0WEeqUVL7sB4m7NA")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ClientCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> ClientCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the set of security elements to access the host.

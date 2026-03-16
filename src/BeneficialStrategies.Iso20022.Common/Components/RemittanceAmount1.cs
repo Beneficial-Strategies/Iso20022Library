@@ -54,7 +54,7 @@ public record RemittanceAmount1
     [IsoId("_QGSzQtp-Ed-ak6NoX_4Aeg_1253864295")]
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
-    public DocumentAdjustment1? AdjustmentAmountAndReason { get; init; }
+    public ValueList<DocumentAdjustment1> AdjustmentAmountAndReason { get; init; } = [];
 
     /// <summary>
     /// Amount of money remitted for the referred document.

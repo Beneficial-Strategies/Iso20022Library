@@ -31,7 +31,7 @@ public record SignedData5
     [IsoId("_sbEZk9tbEee9e6xduATmQg")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public AlgorithmIdentification21? DigestAlgorithm { get; init; }
+    public ValueList<AlgorithmIdentification21> DigestAlgorithm { get; init; } = [];
 
     /// <summary>
     /// Data to sign.
@@ -47,8 +47,7 @@ public record SignedData5
     [IsoId("_sbEZl9tbEee9e6xduATmQg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; }
+    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Digital signature and identification of a signer.
@@ -56,5 +55,5 @@ public record SignedData5
     [IsoId("_sbEZmdtbEee9e6xduATmQg")]
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
-    public Signer4? Signer { get; init; }
+    public ValueList<Signer4> Signer { get; init; } = [];
 }

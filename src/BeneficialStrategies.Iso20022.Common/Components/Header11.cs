@@ -83,5 +83,5 @@ public record Header11
     [IsoId("_ds7tT2lqEeSGkpGpjm7tzg")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability2? Traceability { get; init; }
+    public ValueList<Traceability2> Traceability { get; init; } = [];
 }

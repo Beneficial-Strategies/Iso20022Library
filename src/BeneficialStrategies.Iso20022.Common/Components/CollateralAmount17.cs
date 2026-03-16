@@ -46,7 +46,8 @@ public record CollateralAmount17
     [IsoId("_TDEzBxInEeyZaPkaPAzTvQ")]
     [DisplayName("Transaction Amount Breakdown")]
     [IsoXmlTag("TxAmtBrkdwn")]
-    public CollateralTransactionAmountBreakdown2? TransactionAmountBreakdown { get; init; }
+    public ValueList<CollateralTransactionAmountBreakdown2> TransactionAmountBreakdown { get; init; } =
+        [];
 
     /// <summary>
     /// The difference between the total collateral value and the total collateral required.

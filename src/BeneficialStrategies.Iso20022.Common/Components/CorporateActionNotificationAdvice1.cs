@@ -30,5 +30,5 @@ public record CorporateActionNotificationAdvice1
     [IsoId("_RjH9o9p-Ed-ak6NoX_4Aeg_635191264")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption1? CorporateActionOptionDetails { get; init; }
+    public ValueList<CorporateActionOption1> CorporateActionOptionDetails { get; init; } = [];
 }

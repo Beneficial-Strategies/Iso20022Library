@@ -315,7 +315,7 @@ public record PaymentComplementaryInformation10
     [IsoId("_ghyhc9cZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
-    public InstructionForNextAgent1? InstructionForNextAgent { get; init; }
+    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
 
     /// <summary>
     /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
@@ -323,7 +323,7 @@ public record PaymentComplementaryInformation10
     [IsoId("_ghyhddcZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent3? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.

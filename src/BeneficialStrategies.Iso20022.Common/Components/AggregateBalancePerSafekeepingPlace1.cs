@@ -55,7 +55,7 @@ public record AggregateBalancePerSafekeepingPlace1
     [IsoId("_VLlSE9p-Ed-ak6NoX_4Aeg_-1353365824")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
-    public ActiveOrHistoricCurrencyAndAmount? HoldingValue { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = [];
 
     /// <summary>
     /// Interest amount that has accrued in between coupon payment periods.
@@ -87,7 +87,7 @@ public record AggregateBalancePerSafekeepingPlace1
     [IsoId("_VLlSF9p-Ed-ak6NoX_4Aeg_-738225302")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation1? PriceDetails { get; init; }
+    public ValueList<PriceInformation1> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Currency exchange related to a securities order.
@@ -103,7 +103,7 @@ public record AggregateBalancePerSafekeepingPlace1
     [IsoId("_VLlSGdp-Ed-ak6NoX_4Aeg_-985941865")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
-    public SubBalanceInformation1? BalanceBreakdownDetails { get; init; }
+    public ValueList<SubBalanceInformation1> BalanceBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.
@@ -111,5 +111,6 @@ public record AggregateBalancePerSafekeepingPlace1
     [IsoId("_VLvDENp-Ed-ak6NoX_4Aeg_-196328617")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 }

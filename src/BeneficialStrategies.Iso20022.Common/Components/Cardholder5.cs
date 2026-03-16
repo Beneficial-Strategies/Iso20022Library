@@ -64,7 +64,7 @@ public record Cardholder5
     [IsoId("_5KB2Fy_uEeO4w-IWHJMI9g")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderAuthentication5? Authentication { get; init; }
+    public ValueList<CardholderAuthentication5> Authentication { get; init; } = [];
 
     /// <summary>
     /// Numeric characters of the cardholder&apos;s address for verification.

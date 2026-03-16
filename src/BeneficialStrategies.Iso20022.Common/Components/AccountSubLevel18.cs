@@ -46,7 +46,7 @@ public record AccountSubLevel18
     [IsoId("_iqpf51jCEea1XpTdyimpLA")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
-    public BeneficialOwner2? BeneficialOwner { get; init; }
+    public ValueList<BeneficialOwner2> BeneficialOwner { get; init; } = [];
 
     /// <summary>
     /// Report on the net position of a financial instrument on the sub-account (sub-account level 8), for a certain date. The agent, for example, a trade intermediary, may also be specified.
@@ -54,7 +54,7 @@ public record AccountSubLevel18
     [IsoId("_lMg_sVjCEea1XpTdyimpLA")]
     [DisplayName("Balance Details")]
     [IsoXmlTag("BalDtls")]
-    public AggregateHoldingBalance3? BalanceDetails { get; init; }
+    public ValueList<AggregateHoldingBalance3> BalanceDetails { get; init; } = [];
 
     /// <summary>
     /// Holdings of level 9.
@@ -62,7 +62,7 @@ public record AccountSubLevel18
     [IsoId("_iqpf61jCEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl9")]
-    public AccountSubLevel19? AccountSubLevel9 { get; init; }
+    public ValueList<AccountSubLevel19> AccountSubLevel9 { get; init; } = [];
 
     /// <summary>
     /// Difference in holdings between the sub-account at level 8 and the sub-accounts of level 9.
@@ -70,7 +70,7 @@ public record AccountSubLevel18
     [IsoId("_iqpf7VjCEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level 9 Difference")]
     [IsoXmlTag("AcctSubLvl9Diff")]
-    public AggregateHoldingBalance2? AccountSubLevel9Difference { get; init; }
+    public ValueList<AggregateHoldingBalance2> AccountSubLevel9Difference { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -78,5 +78,5 @@ public record AccountSubLevel18
     [IsoId("_iqpf8VjCEea1XpTdyimpLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

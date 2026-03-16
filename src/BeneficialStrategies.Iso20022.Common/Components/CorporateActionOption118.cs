@@ -46,7 +46,7 @@ public record CorporateActionOption118
     [IsoId("_7-tUpUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeTypeFormat6Choice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeTypeFormat6Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Specifies that the corporate action instruction is to be processed using the Available-for-Collateral pool.

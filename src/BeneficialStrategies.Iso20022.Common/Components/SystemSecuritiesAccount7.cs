@@ -87,7 +87,7 @@ public record SystemSecuritiesAccount7
     [IsoId("_4SjBL55EEemQg7pJhFUUYg")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
-    public MarketSpecificAttribute1? MarketSpecificAttribute { get; init; }
+    public ValueList<MarketSpecificAttribute1> MarketSpecificAttribute { get; init; } = [];
 
     /// <summary>
     /// Defines the specific processing characteristics for a securities account to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.
@@ -95,7 +95,7 @@ public record SystemSecuritiesAccount7
     [IsoId("_4SjBMZ5EEemQg7pJhFUUYg")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public SystemRestriction1? Restriction { get; init; }
+    public ValueList<SystemRestriction1> Restriction { get; init; } = [];
 
     /// <summary>
     /// Specifies information to identify securities accounts where allocation instructions are posted.

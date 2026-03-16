@@ -40,7 +40,7 @@ public record TransportedGoods1
     [IsoId("_Spw1kdp-Ed-ak6NoX_4Aeg_-1285621274")]
     [DisplayName("Buyer Defined Information")]
     [IsoXmlTag("BuyrDfndInf")]
-    public UserDefinedInformation1? BuyerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> BuyerDefinedInformation { get; init; } = [];
 
     /// <summary>
     /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.
@@ -48,5 +48,5 @@ public record TransportedGoods1
     [IsoId("_Spw1ktp-Ed-ak6NoX_4Aeg_-1295781121")]
     [DisplayName("Seller Defined Information")]
     [IsoXmlTag("SellrDfndInf")]
-    public UserDefinedInformation1? SellerDefinedInformation { get; init; }
+    public ValueList<UserDefinedInformation1> SellerDefinedInformation { get; init; } = [];
 }

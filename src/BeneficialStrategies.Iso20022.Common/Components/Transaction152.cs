@@ -42,7 +42,7 @@ public record Transaction152
     [IsoId("_2MYYV8sIEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -50,9 +50,7 @@ public record Transaction152
     [IsoId("_8Y2kl4dPEeuBS50MFjViNw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -60,7 +58,7 @@ public record Transaction152
     [IsoId("_q_Dw8bXjEeusf7oR9YukCg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService2? AdditionalService { get; init; }
+    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -94,7 +92,7 @@ public record Transaction152
     [IsoId("_8Y2kn4dPEeuBS50MFjViNw")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount23? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount23> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount used for reconciliation.
@@ -111,7 +109,7 @@ public record Transaction152
     [IsoId("_8Y2ko4dPEeuBS50MFjViNw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmounts3? AdditionalAmount { get; init; }
+    public ValueList<AdditionalAmounts3> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -119,7 +117,7 @@ public record Transaction152
     [IsoId("_8Y2kpYdPEeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -143,5 +141,5 @@ public record Transaction152
     [IsoId("_8Y2kq4dPEeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

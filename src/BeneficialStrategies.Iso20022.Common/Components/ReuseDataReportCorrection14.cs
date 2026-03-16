@@ -49,7 +49,7 @@ public record ReuseDataReportCorrection14
     [IsoId("_jZla18K8EeuCIrYISEfoUg")]
     [DisplayName("Collateral Component")]
     [IsoXmlTag("CollCmpnt")]
-    public CollateralType19? CollateralComponent { get; init; }
+    public ValueList<CollateralType19> CollateralComponent { get; init; } = [];
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -66,7 +66,7 @@ public record ReuseDataReportCorrection14
     [IsoId("_jZla28K8EeuCIrYISEfoUg")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
-    public FundingSource3? FundingSource { get; init; }
+    public ValueList<FundingSource3> FundingSource { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -74,5 +74,5 @@ public record ReuseDataReportCorrection14
     [IsoId("_jZla3cK8EeuCIrYISEfoUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

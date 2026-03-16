@@ -22,8 +22,7 @@ public record NonFinancialInstitutionSector2
     [IsoId("_Q2aJAcDyEeW6TPUXKSV6dQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
-    [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-    public IsoNACEDomainIdentifier? Sector { get; init; }
+    public SimpleValueList<IsoNACEDomainIdentifier> Sector { get; init; } = [];
 
     /// <summary>
     /// Information whether the reporting counterparty is above the clearing threshold.

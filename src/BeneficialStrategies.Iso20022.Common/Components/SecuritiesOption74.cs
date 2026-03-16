@@ -70,7 +70,7 @@ public record SecuritiesOption74
     [IsoId("_8Ghp0ffREeiNZp_PtLohLw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification47? ExemptionType { get; init; }
+    public ValueList<GenericIdentification47> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the country from which the income originates.

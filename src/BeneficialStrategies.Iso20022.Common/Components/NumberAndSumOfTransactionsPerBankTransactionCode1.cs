@@ -65,5 +65,5 @@ public record NumberAndSumOfTransactionsPerBankTransactionCode1
     [IsoId("_RVH94Np-Ed-ak6NoX_4Aeg_1922475023")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability1? Availability { get; init; }
+    public ValueList<CashBalanceAvailability1> Availability { get; init; } = [];
 }

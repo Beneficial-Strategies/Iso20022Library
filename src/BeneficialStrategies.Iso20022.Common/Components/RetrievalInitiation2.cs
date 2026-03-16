@@ -54,7 +54,7 @@ public record RetrievalInitiation2
     [IsoId("_o5oPOYHSEeuwq_rv81SdXw")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; }
+    public ValueList<ProtectedData1> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Destination ID or routing information of Retrieval fulfilment initiation message.
@@ -70,5 +70,5 @@ public record RetrievalInitiation2
     [IsoId("_o5oPPYHSEeuwq_rv81SdXw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

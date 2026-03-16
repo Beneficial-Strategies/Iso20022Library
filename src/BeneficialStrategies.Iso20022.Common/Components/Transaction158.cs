@@ -30,7 +30,7 @@ public record Transaction158
     [IsoId("_Dfd_44gqEeu8-LhY4KPfWg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -38,7 +38,7 @@ public record Transaction158
     [IsoId("_Dfd_5YgqEeu8-LhY4KPfWg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Details pertaining to the file action.

@@ -22,7 +22,7 @@ public record TradeSettlement1
     [IsoId("_TB-BBgEcEeCQm6a_G2yO_w_-689724916")]
     [DisplayName("Due Payable Amount")]
     [IsoXmlTag("DuePyblAmt")]
-    public CurrencyAndAmount? DuePayableAmount { get; init; }
+    public ValueList<CurrencyAndAmount> DuePayableAmount { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous reference assigned by the creditor.
@@ -30,7 +30,7 @@ public record TradeSettlement1
     [IsoId("_TB-BBwEcEeCQm6a_G2yO_w_1023225472")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
-    public CreditorReferenceInformation2? CreditorReference { get; init; }
+    public ValueList<CreditorReferenceInformation2> CreditorReference { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier for a payment transaction, as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment transaction.
@@ -38,9 +38,7 @@ public record TradeSettlement1
     [IsoId("_TB-BCAEcEeCQm6a_G2yO_w_-2064443525")]
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentReference { get; init; }
+    public SimpleValueList<IsoMax35Text> PaymentReference { get; init; } = [];
 
     /// <summary>
     /// Code specifying the currency of the invoice.
@@ -112,7 +110,7 @@ public record TradeSettlement1
     [IsoId("_TB-BEQEcEeCQm6a_G2yO_w_776679773")]
     [DisplayName("Payment Means")]
     [IsoXmlTag("PmtMeans")]
-    public PaymentMeans1? PaymentMeans { get; init; }
+    public ValueList<PaymentMeans1> PaymentMeans { get; init; } = [];
 
     /// <summary>
     /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
@@ -120,7 +118,7 @@ public record TradeSettlement1
     [IsoId("_TB-BEgEcEeCQm6a_G2yO_w_-417754292")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public SettlementTax1? Tax { get; init; }
+    public ValueList<SettlementTax1> Tax { get; init; } = [];
 
     /// <summary>
     /// Specifies the applicable billing period.
@@ -136,7 +134,7 @@ public record TradeSettlement1
     [IsoId("_TCHyAAEcEeCQm6a_G2yO_w_-1971858521")]
     [DisplayName("Allowance Charge")]
     [IsoXmlTag("AllwncChrg")]
-    public SettlementAllowanceCharge1? AllowanceCharge { get; init; }
+    public ValueList<SettlementAllowanceCharge1> AllowanceCharge { get; init; } = [];
 
     /// <summary>
     /// Tax subtotal calculated.
@@ -144,7 +142,7 @@ public record TradeSettlement1
     [IsoId("_TCHyAQEcEeCQm6a_G2yO_w_1581027470")]
     [DisplayName("Sub Total Calculated Tax")]
     [IsoXmlTag("SubTtlClctdTax")]
-    public SettlementSubTotalCalculatedTax1? SubTotalCalculatedTax { get; init; }
+    public ValueList<SettlementSubTotalCalculatedTax1> SubTotalCalculatedTax { get; init; } = [];
 
     /// <summary>
     /// Logistics service charge specified.
@@ -152,7 +150,7 @@ public record TradeSettlement1
     [IsoId("_TCHyAgEcEeCQm6a_G2yO_w_885870949")]
     [DisplayName("Logistics Charge")]
     [IsoXmlTag("LogstcsChrg")]
-    public ChargesDetails2? LogisticsCharge { get; init; }
+    public ValueList<ChargesDetails2> LogisticsCharge { get; init; } = [];
 
     /// <summary>
     /// Payment terms.
@@ -160,7 +158,7 @@ public record TradeSettlement1
     [IsoId("_TCHyAwEcEeCQm6a_G2yO_w_2019362636")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
-    public PaymentTerms3? PaymentTerms { get; init; }
+    public ValueList<PaymentTerms3> PaymentTerms { get; init; } = [];
 
     /// <summary>
     /// Monetary totals specified for the invoice.
@@ -176,7 +174,7 @@ public record TradeSettlement1
     [IsoId("_TCHyBQEcEeCQm6a_G2yO_w_1706467980")]
     [DisplayName("Adjustment Amount And Reason")]
     [IsoXmlTag("AdjstmntAmtAndRsn")]
-    public DocumentAdjustment2? AdjustmentAmountAndReason { get; init; }
+    public ValueList<DocumentAdjustment2> AdjustmentAmountAndReason { get; init; } = [];
 
     /// <summary>
     /// Invoice document referenced.
@@ -208,7 +206,7 @@ public record TradeSettlement1
     [IsoId("_TCHyCQEcEeCQm6a_G2yO_w_316575445")]
     [DisplayName("Financial Card")]
     [IsoXmlTag("FinCard")]
-    public FinancialCard1? FinancialCard { get; init; }
+    public ValueList<FinancialCard1> FinancialCard { get; init; } = [];
 
     /// <summary>
     /// Specific purchase account for recording debits and credits for accounting purposes.
@@ -216,7 +214,7 @@ public record TradeSettlement1
     [IsoId("_TCHyCgEcEeCQm6a_G2yO_w_180570420")]
     [DisplayName("Purchase Accounting Account")]
     [IsoXmlTag("PurchsAcctgAcct")]
-    public AccountingAccount1? PurchaseAccountingAccount { get; init; }
+    public ValueList<AccountingAccount1> PurchaseAccountingAccount { get; init; } = [];
 
     /// <summary>
     /// Factoring list document referenced.
@@ -224,9 +222,7 @@ public record TradeSettlement1
     [IsoId("_TCHyCwEcEeCQm6a_G2yO_w_-1864555444")]
     [DisplayName("Issuer Factoring List Identification")]
     [IsoXmlTag("IssrFactrgListId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerFactoringListIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> IssuerFactoringListIdentification { get; init; } = [];
 
     /// <summary>
     /// Factoring agreement document referenced.
@@ -234,7 +230,5 @@ public record TradeSettlement1
     [IsoId("_TCHyDAEcEeCQm6a_G2yO_w_-626725410")]
     [DisplayName("Issuer Factoring Agreement Identification")]
     [IsoXmlTag("IssrFactrgAgrmtId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerFactoringAgreementIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> IssuerFactoringAgreementIdentification { get; init; } = [];
 }

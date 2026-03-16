@@ -30,5 +30,5 @@ public record PensionOrder1
     [IsoId("_4z8_ALTqEeiENt6AoDfPXg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

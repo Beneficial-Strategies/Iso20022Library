@@ -22,7 +22,7 @@ public record CorporateActionNarrative50
     [IsoId("_pIDmwxcBEeyroI8qKgB7Mg")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public UpdatedAdditionalInformation3? Offeror { get; init; }
+    public ValueList<UpdatedAdditionalInformation3> Offeror { get; init; } = [];
 
     /// <summary>
     /// Provides the new name of a company following a name change.
@@ -38,7 +38,7 @@ public record CorporateActionNarrative50
     [IsoId("_pIDm0xcBEeyroI8qKgB7Mg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public UpdatedURLlnformation4? URLAddress { get; init; }
+    public ValueList<UpdatedURLlnformation4> URLAddress { get; init; } = [];
 
     /// <summary>
     /// Provides web address of an account servicer (or of a service provider) that contains information solely intended for the immediate account holder to enable or facilitate event processing between parties.

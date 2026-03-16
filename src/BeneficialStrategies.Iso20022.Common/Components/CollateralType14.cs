@@ -22,7 +22,7 @@ public record CollateralType14
     [IsoId("_k7YIYf_9Eemefbt-QjTNnA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public Security16? Security { get; init; }
+    public ValueList<Security16> Security { get; init; } = [];
 
     /// <summary>
     /// Amount of funds provided as collateral for borrowing the securities or commodities.
@@ -30,7 +30,7 @@ public record CollateralType14
     [IsoId("_k7YIY__9Eemefbt-QjTNnA")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
-    public AmountHaircutMargin1? Cash { get; init; }
+    public ValueList<AmountHaircutMargin1> Cash { get; init; } = [];
 
     /// <summary>
     /// Data specific to commodities and related fields used as a collateral.
@@ -38,5 +38,5 @@ public record CollateralType14
     [IsoId("_k7YIZf_9Eemefbt-QjTNnA")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
-    public Commodity20? Commodity { get; init; }
+    public ValueList<Commodity20> Commodity { get; init; } = [];
 }

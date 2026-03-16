@@ -62,5 +62,5 @@ public record ActivityReportItems3
     [IsoId("_jT1Fg-fGEeKNfc-Rw_dPYg")]
     [DisplayName("Pending Request For Action")]
     [IsoXmlTag("PdgReqForActn")]
-    public PendingActivity2? PendingRequestForAction { get; init; }
+    public ValueList<PendingActivity2> PendingRequestForAction { get; init; } = [];
 }

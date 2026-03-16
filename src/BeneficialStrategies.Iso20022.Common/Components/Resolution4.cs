@@ -94,7 +94,7 @@ public record Resolution4
     [IsoId("_J3mZUK4JEemG7MmivSuE5g")]
     [DisplayName("Vote Instruction Type")]
     [IsoXmlTag("VoteInstrTp")]
-    public VoteInstructionType1? VoteInstructionType { get; init; }
+    public ValueList<VoteInstructionType1> VoteInstructionType { get; init; } = [];
 
     /// <summary>
     /// Specifies how the management of the issuing company wishes the security holders to vote.

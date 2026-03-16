@@ -188,7 +188,7 @@ public record InvoiceLineItem2
     [IsoId("_EeSwJSCCEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 
     /// <summary>
     /// Identifies the value-added tax (VAT) invoice or tax receipt.

@@ -31,7 +31,7 @@ public record NotionalAmount6
     [IsoId("_0P8qU2EeEe2P-L9DBerEgA")]
     [DisplayName("Schedule Period")]
     [IsoXmlTag("SchdlPrd")]
-    public Schedule11? SchedulePeriod { get; init; }
+    public ValueList<Schedule11> SchedulePeriod { get; init; } = [];
 
     /// <summary>
     /// Specifies the currency of the notional amount.

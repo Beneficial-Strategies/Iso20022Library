@@ -39,5 +39,5 @@ public record AutoExtension1
     [IsoId("_95V5eXltEeG7BsjMvd1mEw_-1641257680")]
     [DisplayName("Non Extension Notification")]
     [IsoXmlTag("NonXtnsnNtfctn")]
-    public NonExtension1? NonExtensionNotification { get; init; }
+    public ValueList<NonExtension1> NonExtensionNotification { get; init; } = [];
 }

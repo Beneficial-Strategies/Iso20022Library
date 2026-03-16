@@ -39,7 +39,7 @@ public record CardPaymentTransaction69
     [IsoId("_77gt9a12EeawR4FMacHsRQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -65,8 +65,7 @@ public record CardPaymentTransaction69
     [IsoId("_exRuwLJgEea44Jgo0L1zqw")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public SimpleValueList<IsoTrueFalseIndicator> CustomerConsent { get; init; } = [];
 
     /// <summary>
     /// The card program proposed by a retailer to a cardholder among a series of payment programmes offered by the retailer.
@@ -74,9 +73,7 @@ public record CardPaymentTransaction69
     [IsoId("_lkl1oLJgEea44Jgo0L1zqw")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeProposed { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// The card program actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.
@@ -84,9 +81,7 @@ public record CardPaymentTransaction69
     [IsoId("_sEXVcLJgEea44Jgo0L1zqw")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeApplied { get; init; } = [];
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -147,7 +142,7 @@ public record CardPaymentTransaction69
     [IsoId("_77guB612EeawR4FMacHsRQ")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -211,7 +206,8 @@ public record CardPaymentTransaction69
     [IsoId("_77hVB612EeawR4FMacHsRQ")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Additional information related to the transaction.
@@ -219,7 +215,5 @@ public record CardPaymentTransaction69
     [IsoId("_77hVCa12EeawR4FMacHsRQ")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

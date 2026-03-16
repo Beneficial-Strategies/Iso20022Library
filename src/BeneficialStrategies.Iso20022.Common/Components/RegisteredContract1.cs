@@ -58,5 +58,5 @@ public record RegisteredContract1
     [IsoId("__7OX8TmyEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

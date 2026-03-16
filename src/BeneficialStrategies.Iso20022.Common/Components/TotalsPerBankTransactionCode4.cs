@@ -65,5 +65,5 @@ public record TotalsPerBankTransactionCode4
     [IsoId("_VYy83TqwEeWZFYSPlduMhw")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashAvailability1? Availability { get; init; }
+    public ValueList<CashAvailability1> Availability { get; init; } = [];
 }

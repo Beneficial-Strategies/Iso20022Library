@@ -22,7 +22,7 @@ public record CompareEnergyDeliveryAttribute1
     [IsoId("_YTTokVo0Ee23K4GXSpBSeg")]
     [DisplayName("Energy Delivery Interval")]
     [IsoXmlTag("NrgyDlvryIntrvl")]
-    public CompareTimePeriod2? EnergyDeliveryInterval { get; init; }
+    public ValueList<CompareTimePeriod2> EnergyDeliveryInterval { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the delivery start date and end date are matching or not.
@@ -46,7 +46,7 @@ public record CompareEnergyDeliveryAttribute1
     [IsoId("_YTTol1o0Ee23K4GXSpBSeg")]
     [DisplayName("Energy Week Day")]
     [IsoXmlTag("NrgyWkDay")]
-    public CompareWeekDay1? EnergyWeekDay { get; init; }
+    public ValueList<CompareWeekDay1> EnergyWeekDay { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the delivery capacity are matching or not.

@@ -30,5 +30,5 @@ public record TelecomServices2
     [IsoId("_vZWswx1DEey8XKHwKquEQw")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public TelecomServicesLineItem2? LineItem { get; init; }
+    public ValueList<TelecomServicesLineItem2> LineItem { get; init; } = [];
 }

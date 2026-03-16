@@ -65,7 +65,7 @@ public record Cardholder9
     [IsoId("_6azi-4IAEeS7UOLM47txvA")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderAuthentication7? Authentication { get; init; }
+    public ValueList<CardholderAuthentication7> Authentication { get; init; } = [];
 
     /// <summary>
     /// Result of performed verifications for the transaction.
@@ -73,7 +73,8 @@ public record Cardholder9
     [IsoId("_6azi_YIAEeS7UOLM47txvA")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies personal data related to the cardholder.

@@ -30,7 +30,7 @@ public record RateDetails31
     [IsoId("_O6R6oZShEeeh5JjedkaA_g")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat30Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat30Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// The actual interest rate used for the payment of the interest for the specified interest period. |Usage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.
@@ -38,7 +38,8 @@ public record RateDetails31
     [IsoId("_O6R6o5ShEeeh5JjedkaA_g")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat8Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat8Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
@@ -46,7 +47,7 @@ public record RateDetails31
     [IsoId("_O6R6pZShEeeh5JjedkaA_g")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat41Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat41Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.
@@ -54,7 +55,7 @@ public record RateDetails31
     [IsoId("_O6R6p5ShEeeh5JjedkaA_g")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public RateAndAmountFormat41Choice_? SecondLevelTax { get; init; }
+    public ValueList<RateAndAmountFormat41Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
     /// Rate used to calculate the amount of the charges/fees that cannot be categorised.
@@ -94,7 +95,7 @@ public record RateDetails31
     [IsoId("_O6R6sZShEeeh5JjedkaA_g")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat31Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat31Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.
@@ -158,5 +159,5 @@ public record RateDetails31
     [IsoId("_ZRrMMJShEeeh5JjedkaA_g")]
     [DisplayName("Deemed Rate")]
     [IsoXmlTag("DmdRate")]
-    public RateAndAmountFormat51Choice_? DeemedRate { get; init; }
+    public ValueList<RateAndAmountFormat51Choice_> DeemedRate { get; init; } = [];
 }

@@ -54,7 +54,7 @@ public record BreakdownByUserDefinedParameter1
     [IsoId("_RP6Gsdp-Ed-ak6NoX_4Aeg_-1574438054")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
-    public CashInForecast3? CashInForecast { get; init; }
+    public ValueList<CashInForecast3> CashInForecast { get; init; } = [];
 
     /// <summary>
     /// Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.
@@ -62,7 +62,7 @@ public record BreakdownByUserDefinedParameter1
     [IsoId("_RP6Gstp-Ed-ak6NoX_4Aeg_-1573517987")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
-    public CashOutForecast3? CashOutForecast { get; init; }
+    public ValueList<CashOutForecast3> CashOutForecast { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows specified for the user defined parameter.
@@ -70,5 +70,5 @@ public record BreakdownByUserDefinedParameter1
     [IsoId("_RP6Gs9p-Ed-ak6NoX_4Aeg_-1574438373")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
-    public NetCashForecast2? NetCashForecast { get; init; }
+    public ValueList<NetCashForecast2> NetCashForecast { get; init; } = [];
 }

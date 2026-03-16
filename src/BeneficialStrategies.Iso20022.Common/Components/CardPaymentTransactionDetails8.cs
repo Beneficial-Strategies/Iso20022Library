@@ -22,7 +22,7 @@ public record CardPaymentTransactionDetails8
     [IsoId("_Y-phEfwLEeGHDMP28rpT3g_-629455657")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public CardAmountAndCurrencyExchange1? Amount { get; init; }
+    public ValueList<CardAmountAndCurrencyExchange1> Amount { get; init; } = [];
 
     /// <summary>
     /// Data related to an integrated circuit card application.

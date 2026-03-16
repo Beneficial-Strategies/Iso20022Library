@@ -138,7 +138,7 @@ public record PaymentTransactionInformation27
     [IsoId("_P5efRdp-Ed-ak6NoX_4Aeg_225115360")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public ChargesInformation5? ChargesInformation { get; init; }
+    public ValueList<ChargesInformation5> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.
@@ -162,7 +162,7 @@ public record PaymentTransactionInformation27
     [IsoId("_P5efSNp-Ed-ak6NoX_4Aeg_225115761")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
-    public ReturnReasonInformation9? ReturnReasonInformation { get; init; }
+    public ValueList<ReturnReasonInformation9> ReturnReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Set of key elements used to identify the original transaction that is being referred to.

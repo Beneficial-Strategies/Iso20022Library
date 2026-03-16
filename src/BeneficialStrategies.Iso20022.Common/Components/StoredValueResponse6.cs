@@ -38,7 +38,7 @@ public record StoredValueResponse6
     [IsoId("_INZ-FXHEEe2TbaNWBpRZpQ")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public StoredValueData6? Result { get; init; }
+    public ValueList<StoredValueData6> Result { get; init; } = [];
 
     /// <summary>
     /// Customer or Merchant payment receipt.
@@ -46,5 +46,5 @@ public record StoredValueResponse6
     [IsoId("_INZ-F3HEEe2TbaNWBpRZpQ")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
-    public PaymentReceipt5? Receipt { get; init; }
+    public ValueList<PaymentReceipt5> Receipt { get; init; } = [];
 }

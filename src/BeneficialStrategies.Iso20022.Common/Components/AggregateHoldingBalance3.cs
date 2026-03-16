@@ -32,5 +32,5 @@ public record AggregateHoldingBalance3
     [IsoId("_g8YpU1V3Eea1MPROA61PoQ")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public Intermediary29? Agent { get; init; }
+    public ValueList<Intermediary29> Agent { get; init; } = [];
 }

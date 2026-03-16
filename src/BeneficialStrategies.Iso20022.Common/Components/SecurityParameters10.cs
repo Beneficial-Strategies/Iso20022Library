@@ -31,7 +31,7 @@ public record SecurityParameters10
     [IsoId("_u1uZs7TxEeeQy4o2AayYHg")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey12? Key { get; init; }
+    public ValueList<CryptographicKey12> Key { get; init; } = [];
 
     /// <summary>
     /// Element containing the signature.

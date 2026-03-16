@@ -22,5 +22,5 @@ public record CorporateEventNarrative3
     [IsoId("_jGvoQfNAEeqRfth943bvEA")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    public LanguageSpecifiedNarrative1? Disclaimer { get; init; }
+    public ValueList<LanguageSpecifiedNarrative1> Disclaimer { get; init; } = [];
 }

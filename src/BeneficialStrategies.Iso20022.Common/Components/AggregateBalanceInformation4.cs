@@ -55,7 +55,7 @@ public record AggregateBalanceInformation4
     [IsoId("_R_SVO9p-Ed-ak6NoX_4Aeg_1705166884")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
-    public ActiveOrHistoricCurrencyAndAmount? HoldingValue { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = [];
 
     /// <summary>
     /// Previous total value of a balance of the securities account for a specific financial instrument, expressed in one or more currencies.
@@ -112,7 +112,7 @@ public record AggregateBalanceInformation4
     [IsoId("_R_cGNdp-Ed-ak6NoX_4Aeg_1705167618")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation2? PriceDetails { get; init; }
+    public ValueList<PriceInformation2> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Currency exchange related to a securities order.
@@ -128,7 +128,7 @@ public record AggregateBalanceInformation4
     [IsoId("_R_cGN9p-Ed-ak6NoX_4Aeg_1705167257")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
-    public SubBalanceInformation2? BalanceBreakdownDetails { get; init; }
+    public ValueList<SubBalanceInformation2> BalanceBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.
@@ -136,7 +136,8 @@ public record AggregateBalanceInformation4
     [IsoId("_R_l3MNp-Ed-ak6NoX_4Aeg_1705167225")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation2? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation2> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
@@ -144,5 +145,6 @@ public record AggregateBalanceInformation4
     [IsoId("_R_l3Mdp-Ed-ak6NoX_4Aeg_1705167292")]
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
-    public AggregateBalancePerSafekeepingPlace3? BalanceAtSafekeepingPlace { get; init; }
+    public ValueList<AggregateBalancePerSafekeepingPlace3> BalanceAtSafekeepingPlace { get; init; } =
+        [];
 }

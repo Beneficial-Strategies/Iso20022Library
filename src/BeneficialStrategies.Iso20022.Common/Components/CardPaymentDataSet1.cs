@@ -30,7 +30,7 @@ public record CardPaymentDataSet1
     [IsoId("_TDm_ygEcEeCQm6a_G2yO_w_449079350")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability1? Traceability { get; init; }
+    public ValueList<Traceability1> Traceability { get; init; } = [];
 
     /// <summary>
     /// Initiator of the data set.
@@ -64,5 +64,5 @@ public record CardPaymentDataSet1
     [IsoId("_TDm_zgEcEeCQm6a_G2yO_w_-7296977")]
     [DisplayName("Transaction To Capture")]
     [IsoXmlTag("TxToCaptr")]
-    public CardPaymentDataSetTransaction1? TransactionToCapture { get; init; }
+    public ValueList<CardPaymentDataSetTransaction1> TransactionToCapture { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record SecurityAttributes12
     [IsoId("_QKNvYZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Type")]
     [IsoXmlTag("FinInstrmTp")]
-    public FinancialInstrument97? FinancialInstrumentType { get; init; }
+    public ValueList<FinancialInstrument97> FinancialInstrumentType { get; init; } = [];
 
     /// <summary>
     /// Provides details about the financial instrument attributes of a particular leg.
@@ -30,7 +30,8 @@ public record SecurityAttributes12
     [IsoId("_QKNvY5JKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
-    public CommonFinancialInstrumentAttributes12? FinancialInstrumentAttributes { get; init; }
+    public ValueList<CommonFinancialInstrumentAttributes12> FinancialInstrumentAttributes { get; init; } =
+        [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -38,5 +39,5 @@ public record SecurityAttributes12
     [IsoId("_QKNvZZJKEeuAlLVx8pyt3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

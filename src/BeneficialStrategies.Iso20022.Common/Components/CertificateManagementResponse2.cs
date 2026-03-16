@@ -73,8 +73,7 @@ public record CertificateManagementResponse2
     [IsoId("_mjztrQ0VEeqUVL7sB4m7NA")]
     [DisplayName("Client Certificate Path")]
     [IsoXmlTag("ClntCertPth")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ClientCertificatePath { get; init; }
+    public SimpleValueList<IsoMax10KBinary> ClientCertificatePath { get; init; } = [];
 
     /// <summary>
     /// Certificate of the server certificate path, from the CA (Certificate Authority) certificate, to the root certificate, for renewal or revocation of certificate.
@@ -82,6 +81,5 @@ public record CertificateManagementResponse2
     [IsoId("_mjztrw0VEeqUVL7sB4m7NA")]
     [DisplayName("Server Certificate Path")]
     [IsoXmlTag("SvrCertPth")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ServerCertificatePath { get; init; }
+    public SimpleValueList<IsoMax10KBinary> ServerCertificatePath { get; init; } = [];
 }

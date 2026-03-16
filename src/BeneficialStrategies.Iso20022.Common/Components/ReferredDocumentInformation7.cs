@@ -49,5 +49,5 @@ public record ReferredDocumentInformation7
     [IsoId("_A4iOsTq5EeWZFYSPlduMhw")]
     [DisplayName("Line Details")]
     [IsoXmlTag("LineDtls")]
-    public DocumentLineInformation1? LineDetails { get; init; }
+    public ValueList<DocumentLineInformation1> LineDetails { get; init; } = [];
 }

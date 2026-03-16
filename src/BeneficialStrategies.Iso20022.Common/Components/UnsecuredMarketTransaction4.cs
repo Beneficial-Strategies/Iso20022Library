@@ -208,5 +208,5 @@ public record UnsecuredMarketTransaction4
     [IsoId("_HQZdi8EREea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

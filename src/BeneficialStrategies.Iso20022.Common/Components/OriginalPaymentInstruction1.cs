@@ -58,7 +58,7 @@ public record OriginalPaymentInstruction1
     [IsoId("_sok5gVkyEeGeoaLUQk__nA_1702211545")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation9? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation9> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Detailed information on the number of transactions for each identical transaction status.
@@ -66,7 +66,8 @@ public record OriginalPaymentInstruction1
     [IsoId("_sok5glkyEeGeoaLUQk__nA_323528602")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
-    public NumberOfTransactionsPerStatus3? NumberOfTransactionsPerStatus { get; init; }
+    public ValueList<NumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; init; } =
+        [];
 
     /// <summary>
     /// Provides information on the original transactions to which the status report message refers.
@@ -74,5 +75,5 @@ public record OriginalPaymentInstruction1
     [IsoId("_souqgFkyEeGeoaLUQk__nA_1658379449")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransaction32? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransaction32> TransactionInformationAndStatus { get; init; } = [];
 }

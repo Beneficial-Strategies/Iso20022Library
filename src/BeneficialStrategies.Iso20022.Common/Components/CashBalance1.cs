@@ -62,5 +62,5 @@ public record CashBalance1
     [IsoId("_SYLWWdp-Ed-ak6NoX_4Aeg_1099826436")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability1? Availability { get; init; }
+    public ValueList<CashBalanceAvailability1> Availability { get; init; } = [];
 }

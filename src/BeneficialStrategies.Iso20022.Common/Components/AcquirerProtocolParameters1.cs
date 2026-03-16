@@ -32,9 +32,7 @@ public record AcquirerProtocolParameters1
     [IsoId("_Ksqnwn1DEeCF8NjrBemJWQ_-2090866337")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -42,7 +40,7 @@ public record AcquirerProtocolParameters1
     [IsoId("_Ksqnw31DEeCF8NjrBemJWQ_1104861220")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
-    public AcquirerHostConfiguration1? Host { get; init; }
+    public ValueList<AcquirerHostConfiguration1> Host { get; init; } = [];
 
     /// <summary>
     /// Acquirer protocol parameters of transactions performing an online authorisation.
@@ -92,7 +90,7 @@ public record AcquirerProtocolParameters1
     [IsoId("_KszxsH1DEeCF8NjrBemJWQ_-1428276857")]
     [DisplayName("Batch Transfer Content")]
     [IsoXmlTag("BtchTrfCntt")]
-    public BatchTransactionType1Code? BatchTransferContent { get; init; }
+    public SimpleValueList<BatchTransactionType1Code> BatchTransferContent { get; init; } = [];
 
     /// <summary>
     /// Configuration of a message item.
@@ -100,7 +98,7 @@ public record AcquirerProtocolParameters1
     [IsoId("_KszxsX1DEeCF8NjrBemJWQ_-717374790")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition1? MessageItem { get; init; }
+    public ValueList<MessageItemCondition1> MessageItem { get; init; } = [];
 
     /// <summary>
     /// Indicator to require protection of sensitive card data in messages.

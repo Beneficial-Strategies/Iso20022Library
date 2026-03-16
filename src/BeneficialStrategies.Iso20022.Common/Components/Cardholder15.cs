@@ -33,7 +33,7 @@ public record Cardholder15
     [IsoId("_Wy6cMEasEeeIjf8aP9KbJA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public Credentials1? Identification { get; init; }
+    public ValueList<Credentials1> Identification { get; init; } = [];
 
     /// <summary>
     /// Complete address of the cardholder.

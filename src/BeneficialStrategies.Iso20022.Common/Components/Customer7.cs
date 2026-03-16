@@ -65,7 +65,7 @@ public record Customer7
     [IsoId("_NCiYZ6d1EeuEcqP2FGAFaA")]
     [DisplayName("Credentials")]
     [IsoXmlTag("Crdntls")]
-    public Credentials2? Credentials { get; init; }
+    public ValueList<Credentials2> Credentials { get; init; } = [];
 
     /// <summary>
     /// Nationality information (ISO 3166-1 alpha-2 or alpha-3)
@@ -106,5 +106,5 @@ public record Customer7
     [IsoId("_NCiYaad1EeuEcqP2FGAFaA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

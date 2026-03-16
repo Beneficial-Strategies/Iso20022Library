@@ -90,5 +90,5 @@ public record ReportingRequest4
     [IsoId("_5K3J8YaAEee8r9VKRbnJSg")]
     [DisplayName("Requested Balance Type")]
     [IsoXmlTag("ReqdBalTp")]
-    public BalanceType13? RequestedBalanceType { get; init; }
+    public ValueList<BalanceType13> RequestedBalanceType { get; init; } = [];
 }

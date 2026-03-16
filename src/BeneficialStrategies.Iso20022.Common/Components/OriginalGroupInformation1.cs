@@ -97,7 +97,7 @@ public record OriginalGroupInformation1
     [IsoId("_PhCxKNp-Ed-ak6NoX_4Aeg_832816360")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
-    public StatusReasonInformation1? StatusReasonInformation { get; init; }
+    public ValueList<StatusReasonInformation1> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Detailed information on the number of transactions for each identical individual transaction status.
@@ -105,5 +105,6 @@ public record OriginalGroupInformation1
     [IsoId("_PhCxKdp-Ed-ak6NoX_4Aeg_2049376412")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
-    public NumberOfTransactionsPerStatus1? NumberOfTransactionsPerStatus { get; init; }
+    public ValueList<NumberOfTransactionsPerStatus1> NumberOfTransactionsPerStatus { get; init; } =
+        [];
 }

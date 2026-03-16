@@ -30,5 +30,5 @@ public record ContentInformationType3
     [IsoId("_SvV__gEcEeCQm6a_G2yO_w_-801238934")]
     [DisplayName("Authenticated Data")]
     [IsoXmlTag("AuthntcdData")]
-    public AuthenticatedData1? AuthenticatedData { get; init; }
+    public ValueList<AuthenticatedData1> AuthenticatedData { get; init; } = [];
 }

@@ -56,7 +56,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJbQatEeS3lpTattq7hg")]
     [DisplayName("Estimated Total NAV")]
     [IsoXmlTag("EstmtdTtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? EstimatedTotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> EstimatedTotalNAV { get; init; } = [];
 
     /// <summary>
     /// Previous value of all the holdings, less the fund&apos;s liabilities, attributable to a specific investment fund class.
@@ -64,7 +64,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJbwatEeS3lpTattq7hg")]
     [DisplayName("Previous Total NAV")]
     [IsoXmlTag("PrvsTtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? PreviousTotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> PreviousTotalNAV { get; init; } = [];
 
     /// <summary>
     /// Estimated total number of investment fund class units that have been issued.
@@ -97,7 +97,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJfwatEeS3lpTattq7hg")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Information about the designation of the share class currency, that is, whether it is for onshore or offshore purposes and other information that may be required. This is typically only required for CNY funds.
@@ -147,7 +147,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJdQatEeS3lpTattq7hg")]
     [DisplayName("Breakdown By Party")]
     [IsoXmlTag("BrkdwnByPty")]
-    public BreakdownByParty3? BreakdownByParty { get; init; }
+    public ValueList<BreakdownByParty3> BreakdownByParty { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by country.
@@ -155,7 +155,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJdwatEeS3lpTattq7hg")]
     [DisplayName("Breakdown By Country")]
     [IsoXmlTag("BrkdwnByCtry")]
-    public BreakdownByCountry2? BreakdownByCountry { get; init; }
+    public ValueList<BreakdownByCountry2> BreakdownByCountry { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by currency.
@@ -163,7 +163,7 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJeQatEeS3lpTattq7hg")]
     [DisplayName("Breakdown By Currency")]
     [IsoXmlTag("BrkdwnByCcy")]
-    public BreakdownByCurrency2? BreakdownByCurrency { get; init; }
+    public ValueList<BreakdownByCurrency2> BreakdownByCurrency { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by a user defined parameter/s.
@@ -171,7 +171,8 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJewatEeS3lpTattq7hg")]
     [DisplayName("Breakdown By User Defined Parameter")]
     [IsoXmlTag("BrkdwnByUsrDfndParam")]
-    public BreakdownByUserDefinedParameter3? BreakdownByUserDefinedParameter { get; init; }
+    public ValueList<BreakdownByUserDefinedParameter3> BreakdownByUserDefinedParameter { get; init; } =
+        [];
 
     /// <summary>
     /// Estimated net cash movements per financial instrument.
@@ -179,5 +180,5 @@ public record EstimatedFundCashForecast5
     [IsoId("_MJUJgwatEeS3lpTattq7hg")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast4? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast4> EstimatedNetCashForecastDetails { get; init; } = [];
 }

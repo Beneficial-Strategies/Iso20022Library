@@ -40,5 +40,5 @@ public record Document8
     [IsoId("_96r9QHltEeG7BsjMvd1mEw_-701738172")]
     [DisplayName("Electronic Details")]
     [IsoXmlTag("ElctrncDtls")]
-    public Presentation3? ElectronicDetails { get; init; }
+    public ValueList<Presentation3> ElectronicDetails { get; init; } = [];
 }

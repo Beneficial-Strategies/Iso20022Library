@@ -74,5 +74,5 @@ public record TotalsPerBankTransactionCode2
     [IsoId("_RpiHotp-Ed-ak6NoX_4Aeg_-609547181")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability2? Availability { get; init; }
+    public ValueList<CashBalanceAvailability2> Availability { get; init; } = [];
 }

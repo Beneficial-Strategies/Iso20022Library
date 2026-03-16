@@ -31,5 +31,5 @@ public record MisMatchReport3
     [IsoId("_RaowAtp-Ed-ak6NoX_4Aeg_-1146147848")]
     [DisplayName("Mis Match Information")]
     [IsoXmlTag("MisMtchInf")]
-    public ValidationResult5? MisMatchInformation { get; init; }
+    public ValueList<ValidationResult5> MisMatchInformation { get; init; } = [];
 }

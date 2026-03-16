@@ -30,9 +30,7 @@ public record PaymentTerminalParameters1
     [IsoId("_JFopIEeTEeODR7vDcYOqmg")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TimeZoneLine { get; init; }
+    public SimpleValueList<IsoMax70Text> TimeZoneLine { get; init; } = [];
 
     /// <summary>
     /// Others manufacturer configuration parameters of the point of interaction.

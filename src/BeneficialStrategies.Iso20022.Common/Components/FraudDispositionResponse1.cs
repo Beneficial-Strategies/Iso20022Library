@@ -54,5 +54,5 @@ public record FraudDispositionResponse1
     [IsoId("_WC83YZjIEeeMBq7G6mQ32Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

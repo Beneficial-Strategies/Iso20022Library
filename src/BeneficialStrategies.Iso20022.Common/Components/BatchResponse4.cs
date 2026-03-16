@@ -38,5 +38,5 @@ public record BatchResponse4
     [IsoId("_3fnZYU0_Eeybj420QgWBkA")]
     [DisplayName("Performed Transaction")]
     [IsoXmlTag("PrfrmdTx")]
-    public PerformedTransaction4? PerformedTransaction { get; init; }
+    public ValueList<PerformedTransaction4> PerformedTransaction { get; init; } = [];
 }

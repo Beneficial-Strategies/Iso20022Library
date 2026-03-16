@@ -177,5 +177,5 @@ public record TransactionDetails69
     [IsoId("_S-UnX032EeSGA7fXFuKIIQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record ProcessingCharacteristics6
     [IsoId("_jk5l9V84Eeicg40_9gK9vQ")]
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
-    public ActiveCurrencyCode? DealingCurrencyAccepted { get; init; }
+    public SimpleValueList<ActiveCurrencyCode> DealingCurrencyAccepted { get; init; } = [];
 
     /// <summary>
     /// Specifies whether an application form is required for a switch.
@@ -142,5 +142,5 @@ public record ProcessingCharacteristics6
     [IsoId("_mNfQYWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

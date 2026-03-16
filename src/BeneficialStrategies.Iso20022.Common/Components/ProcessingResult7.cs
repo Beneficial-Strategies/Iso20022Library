@@ -39,5 +39,5 @@ public record ProcessingResult7
     [IsoId("_7o9LzUQkEeiO2efj8UFv0A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation20? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation20> AdditionalInformation { get; init; } = [];
 }

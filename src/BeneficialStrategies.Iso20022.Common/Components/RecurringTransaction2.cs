@@ -22,7 +22,7 @@ public record RecurringTransaction2
     [IsoId("_gVyDADDjEeO9waS4ina8CA")]
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
-    public InstalmentPlan1Code? InstalmentPlan { get; init; }
+    public SimpleValueList<InstalmentPlan1Code> InstalmentPlan { get; init; } = [];
 
     /// <summary>
     /// Identification of the instalment plan.

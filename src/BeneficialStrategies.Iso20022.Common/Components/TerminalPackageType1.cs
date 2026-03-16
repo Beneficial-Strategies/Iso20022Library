@@ -22,7 +22,8 @@ public record TerminalPackageType1
     [IsoId("_zCO7IBBgEeqgJK7e3n_EXA")]
     [DisplayName("POI Component Identification")]
     [IsoXmlTag("POICmpntId")]
-    public PointOfInteractionComponentIdentification1? POIComponentIdentification { get; init; }
+    public ValueList<PointOfInteractionComponentIdentification1> POIComponentIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Chunk of a software package.

@@ -40,7 +40,7 @@ public record PaymentInstruction32
     [IsoId("__cH_V249EeiU9cctagi5ow")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public PaymentStatus6? Status { get; init; }
+    public ValueList<PaymentStatus6> Status { get; init; } = [];
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.

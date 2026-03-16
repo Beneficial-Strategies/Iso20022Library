@@ -38,7 +38,7 @@ public record InvestmentAccountOwnershipInformation10
     [IsoId("_DxEjlQhDEeSUPbC7DbLJpQ")]
     [DisplayName("Investor Profile Validation")]
     [IsoXmlTag("InvstrPrflVldtn")]
-    public PartyProfileInformation4? InvestorProfileValidation { get; init; }
+    public ValueList<PartyProfileInformation4> InvestorProfileValidation { get; init; } = [];
 
     /// <summary>
     /// Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions and or redemptions will be allocated using the same percentage.
@@ -99,7 +99,7 @@ public record InvestmentAccountOwnershipInformation10
     [IsoId("_Ul20UQjQEeS5F6qHcKOrew")]
     [DisplayName("FATCA Form Type")]
     [IsoXmlTag("FATCAFormTp")]
-    public FATCAForm1Choice_? FATCAFormType { get; init; }
+    public ValueList<FATCAForm1Choice_> FATCAFormType { get; init; } = [];
 
     /// <summary>
     /// Foreign Account Tax Compliance Act (FATCA) status of the investor.
@@ -107,5 +107,5 @@ public record InvestmentAccountOwnershipInformation10
     [IsoId("_YNqBcQjQEeS5F6qHcKOrew")]
     [DisplayName("FATCA Status")]
     [IsoXmlTag("FATCASts")]
-    public FATCAStatus1? FATCAStatus { get; init; }
+    public ValueList<FATCAStatus1> FATCAStatus { get; init; } = [];
 }

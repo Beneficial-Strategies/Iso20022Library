@@ -113,7 +113,7 @@ public record ReportData6
     [IsoId("_ugTB4MlREeuJ35KoBRZFOg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Report format.
@@ -139,5 +139,5 @@ public record ReportData6
     [IsoId("_syuwAMlVEeuJ35KoBRZFOg")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
-    public ReportContent1? Content { get; init; }
+    public ValueList<ReportContent1> Content { get; init; } = [];
 }

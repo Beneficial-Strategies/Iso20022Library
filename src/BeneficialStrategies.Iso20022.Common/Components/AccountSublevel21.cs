@@ -38,5 +38,5 @@ public record AccountSublevel21
     [IsoId("_KKnNUMAPEembi_x1QDJfxw")]
     [DisplayName("Disclosure")]
     [IsoXmlTag("Dsclsr")]
-    public AccountSubLevel20? Disclosure { get; init; }
+    public ValueList<AccountSubLevel20> Disclosure { get; init; } = [];
 }

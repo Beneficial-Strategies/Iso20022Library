@@ -94,7 +94,5 @@ public record DetailedReconciliationStatistics2
     [IsoId("_6lXh8VfcEeqZr5K1Woax-g")]
     [DisplayName("Top Reasons For Paired Non Matched")]
     [IsoXmlTag("TopRsnsForPairdNonMtchd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TopReasonsForPairedNonMatched { get; init; }
+    public SimpleValueList<IsoMax35Text> TopReasonsForPairedNonMatched { get; init; } = [];
 }

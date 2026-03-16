@@ -204,7 +204,7 @@ public record RedemptionExecution6
     [IsoId("_R03N59p-Ed-ak6NoX_4Aeg_-2085139478")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms7? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms7> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

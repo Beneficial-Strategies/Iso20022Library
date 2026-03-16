@@ -30,8 +30,7 @@ public record OrderDesk1
     [IsoId("_WyRNsF9IEeicg40_9gK9vQ")]
     [DisplayName("Closure Dates")]
     [IsoXmlTag("ClsrDts")]
-    [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClosureDates { get; init; }
+    public SimpleValueList<IsoISODate> ClosureDates { get; init; } = [];
 
     /// <summary>
     /// Additional information about the main order desk.
@@ -39,5 +38,5 @@ public record OrderDesk1
     [IsoId("_6umMIbAbEeiADpd1Q5gEyQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

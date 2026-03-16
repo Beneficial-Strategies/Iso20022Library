@@ -87,7 +87,7 @@ public record FundCashForecast2
     [IsoId("_VBmPptp-Ed-ak6NoX_4Aeg_386758019")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the net cash flow is exceptional.
@@ -114,5 +114,5 @@ public record FundCashForecast2
     [IsoId("_VBmPqdp-Ed-ak6NoX_4Aeg_1702783920")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
-    public NetCashForecast1? NetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast1> NetCashForecastDetails { get; init; } = [];
 }

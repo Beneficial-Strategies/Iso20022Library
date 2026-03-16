@@ -57,5 +57,5 @@ public record PackageType4
     [IsoId("_fsSucXDUEe2MCaKO5AtGsA")]
     [DisplayName("Package Block")]
     [IsoXmlTag("PackgBlck")]
-    public ExternallyDefinedData4? PackageBlock { get; init; }
+    public ValueList<ExternallyDefinedData4> PackageBlock { get; init; } = [];
 }

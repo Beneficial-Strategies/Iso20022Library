@@ -71,7 +71,7 @@ public record CorporateAction12
     [IsoId("_QqnkxSHjEeOQ7qT4JUI53A")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    public IdentificationFormat1Choice_? CouponNumber { get; init; }
+    public ValueList<IdentificationFormat1Choice_> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Indicates whether certification/breakdown is required.
@@ -150,7 +150,7 @@ public record CorporateAction12
     [IsoId("_QqnlByHjEeOQ7qT4JUI53A")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferTypeFormat5Choice_? OfferType { get; init; }
+    public ValueList<OfferTypeFormat5Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -166,7 +166,7 @@ public record CorporateAction12
     [IsoId("_QqnlFyHjEeOQ7qT4JUI53A")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat5Choice_? EventStage { get; init; }
+    public ValueList<CorporateActionEventStageFormat5Choice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of the additional business process linked to a corporate action event such as a claim compensation or tax refund.
@@ -174,7 +174,8 @@ public record CorporateAction12
     [IsoId("_QqnlHyHjEeOQ7qT4JUI53A")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public AdditionalBusinessProcessFormat1Choice_? AdditionalBusinessProcessIndicator { get; init; }
+    public ValueList<AdditionalBusinessProcessFormat1Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of change announced.
@@ -182,7 +183,7 @@ public record CorporateAction12
     [IsoId("_QqnlJyHjEeOQ7qT4JUI53A")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeTypeFormat1Choice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeTypeFormat1Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Type of intermediates securities distribution.

@@ -129,7 +129,7 @@ public record LoanContract3
     [IsoId("_2o1kN7GIEeuSTr8k0UEM8A")]
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
-    public LoanContractTranche1? Tranche { get; init; }
+    public ValueList<LoanContractTranche1> Tranche { get; init; } = [];
 
     /// <summary>
     /// Schedule of the payments defined for the loan contract.
@@ -137,7 +137,7 @@ public record LoanContract3
     [IsoId("_2o1kObGIEeuSTr8k0UEM8A")]
     [DisplayName("Payment Schedule")]
     [IsoXmlTag("PmtSchdl")]
-    public PaymentSchedule1? PaymentSchedule { get; init; }
+    public ValueList<PaymentSchedule1> PaymentSchedule { get; init; } = [];
 
     /// <summary>
     /// Schedule of the interest payments defined for the loan contract.
@@ -145,7 +145,7 @@ public record LoanContract3
     [IsoId("_2o1kO7GIEeuSTr8k0UEM8A")]
     [DisplayName("Interest Schedule")]
     [IsoXmlTag("IntrstSchdl")]
-    public InterestPaymentSchedule1? InterestSchedule { get; init; }
+    public ValueList<InterestPaymentSchedule1> InterestSchedule { get; init; } = [];
 
     /// <summary>
     /// Loan is an intra company loan.
@@ -170,7 +170,7 @@ public record LoanContract3
     [IsoId("_2o1kQbGIEeuSTr8k0UEM8A")]
     [DisplayName("Syndicated Loan")]
     [IsoXmlTag("SndctdLn")]
-    public SyndicatedLoan2? SyndicatedLoan { get; init; }
+    public ValueList<SyndicatedLoan2> SyndicatedLoan { get; init; } = [];
 
     /// <summary>
     /// Documents provided as attachments to the loan contract.
@@ -178,5 +178,5 @@ public record LoanContract3
     [IsoId("_2o1kQ7GIEeuSTr8k0UEM8A")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation5? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 }

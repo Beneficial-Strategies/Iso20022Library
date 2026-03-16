@@ -54,7 +54,7 @@ public record CashOption85
     [IsoId("_qpF0tTQKEe2o-K1dwNg8Gg")]
     [DisplayName("Other Income Type")]
     [IsoXmlTag("OthrIncmTp")]
-    public GenericIdentification30? OtherIncomeType { get; init; }
+    public ValueList<GenericIdentification30> OtherIncomeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the basis for the reduced rate of withholding.
@@ -62,7 +62,7 @@ public record CashOption85
     [IsoId("_qpF0tzQKEe2o-K1dwNg8Gg")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification30? ExemptionType { get; init; }
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the country from which the income originates.
@@ -110,7 +110,7 @@ public record CashOption85
     [IsoId("_qpF02zQKEe2o-K1dwNg8Gg")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms23? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms23> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the tax voucher related to a cash movement.

@@ -22,7 +22,7 @@ public record ExpectedCollateralMovement1
     [IsoId("_UmVP9tp-Ed-ak6NoX_4Aeg_759302404")]
     [DisplayName("Delivery")]
     [IsoXmlTag("Dlvry")]
-    public CollateralType1Code? Delivery { get; init; }
+    public SimpleValueList<CollateralType1Code> Delivery { get; init; } = [];
 
     /// <summary>
     /// Type of collateral that will be returned.
@@ -30,5 +30,5 @@ public record ExpectedCollateralMovement1
     [IsoId("_UmVP99p-Ed-ak6NoX_4Aeg_1623020220")]
     [DisplayName("Return")]
     [IsoXmlTag("Rtr")]
-    public CollateralType1Code? Return { get; init; }
+    public SimpleValueList<CollateralType1Code> Return { get; init; } = [];
 }

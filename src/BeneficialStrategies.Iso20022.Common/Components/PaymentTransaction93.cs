@@ -78,7 +78,7 @@ public record PaymentTransaction93
     [IsoId("_xDhDnbPfEeeppqgHuc69jg")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public PaymentReversalReason8? ReversalReasonInformation { get; init; }
+    public ValueList<PaymentReversalReason8> ReversalReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
@@ -94,5 +94,5 @@ public record PaymentTransaction93
     [IsoId("_xDhDobPfEeeppqgHuc69jg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

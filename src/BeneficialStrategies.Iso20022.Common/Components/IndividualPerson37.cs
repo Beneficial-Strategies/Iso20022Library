@@ -208,5 +208,5 @@ public record IndividualPerson37
     [IsoId("_3EpKUJTSEemC09f0MxYkRg")]
     [DisplayName("GDPR Data")]
     [IsoXmlTag("GDPRData")]
-    public GDPRData1? GDPRData { get; init; }
+    public ValueList<GDPRData1> GDPRData { get; init; } = [];
 }

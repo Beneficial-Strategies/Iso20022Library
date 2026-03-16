@@ -30,5 +30,5 @@ public record CardPaymentBatchTransferResponse1
     [IsoId("_K_Bd0C46EeKIarvwWcPThw")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public CardPaymentDataSet5? DataSet { get; init; }
+    public ValueList<CardPaymentDataSet5> DataSet { get; init; } = [];
 }

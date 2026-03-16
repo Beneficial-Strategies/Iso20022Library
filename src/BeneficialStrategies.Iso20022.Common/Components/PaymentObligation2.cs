@@ -46,7 +46,7 @@ public record PaymentObligation2
     [IsoId("_bUWsINP_EeK0PPbKncCqzA")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges5? Charges { get; init; }
+    public ValueList<Charges5> Charges { get; init; } = [];
 
     /// <summary>
     /// Date at which the obligation will expire.
@@ -87,7 +87,7 @@ public record PaymentObligation2
     [IsoId("_IbM2I9NVEeKdOs2hjJ_3WQ")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
-    public PaymentTerms4? PaymentTerms { get; init; }
+    public ValueList<PaymentTerms4> PaymentTerms { get; init; } = [];
 
     /// <summary>
     /// Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties.

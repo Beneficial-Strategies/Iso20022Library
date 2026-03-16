@@ -30,5 +30,5 @@ public record CardPaymentTransaction43
     [IsoId("_fHbFk2l7EeSQMKir9owD5A")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action3? Action { get; init; }
+    public ValueList<Action3> Action { get; init; } = [];
 }

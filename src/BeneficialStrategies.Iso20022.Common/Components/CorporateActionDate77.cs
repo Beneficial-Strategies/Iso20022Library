@@ -94,7 +94,7 @@ public record CorporateActionDate77
     [IsoId("_wPpYte2_Eeqc-LCjwLsUVg")]
     [DisplayName("Borrower Stock Lending Deadline")]
     [IsoXmlTag("BrrwrStockLndgDdln")]
-    public BorrowerLendingDeadline5? BorrowerStockLendingDeadline { get; init; }
+    public ValueList<BorrowerLendingDeadline5> BorrowerStockLendingDeadline { get; init; } = [];
 
     /// <summary>
     /// Date until which  the blocking of securities can occur upon instructing this option.

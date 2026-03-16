@@ -92,5 +92,5 @@ public record TradeCounterpartyReport20
     [IsoId("_NnAawCR6Ee2VuKUpJ7HXPg")]
     [DisplayName("Relationship Record")]
     [IsoXmlTag("RltshRcrd")]
-    public TradeCounterpartyRelationshipRecord1? RelationshipRecord { get; init; }
+    public ValueList<TradeCounterpartyRelationshipRecord1> RelationshipRecord { get; init; } = [];
 }

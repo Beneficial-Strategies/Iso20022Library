@@ -41,7 +41,7 @@ public record FinancingAgreementList1
     [IsoId("_OTgzMzUw-AOSNFX-8224501")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
-    public QualifiedDocumentInformation1? RelatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedDocument { get; init; } = [];
 
     /// <summary>
     /// Requestor of the agreement(s).
@@ -89,7 +89,7 @@ public record FinancingAgreementList1
     [IsoId("_OTgzMzU1-AOSNFX-8224501")]
     [DisplayName("Notification Information")]
     [IsoXmlTag("NtfctnInf")]
-    public FinancingNotificationParties1? NotificationInformation { get; init; }
+    public ValueList<FinancingNotificationParties1> NotificationInformation { get; init; } = [];
 
     /// <summary>
     /// List of agreement items.

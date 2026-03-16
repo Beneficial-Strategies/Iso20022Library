@@ -46,7 +46,7 @@ public record CardPaymentTransactionDetails10
     [IsoId("_G3rarS8OEeKW5usMQLtzqw")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount1? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount1> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Transaction authorisation deadline to complete the related payment.
@@ -96,7 +96,7 @@ public record CardPaymentTransactionDetails10
     [IsoId("_G3raxS8OEeKW5usMQLtzqw")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
-    public Product1? Product { get; init; }
+    public ValueList<Product1> Product { get; init; } = [];
 
     /// <summary>
     /// Data related to an integrated circuit card application.

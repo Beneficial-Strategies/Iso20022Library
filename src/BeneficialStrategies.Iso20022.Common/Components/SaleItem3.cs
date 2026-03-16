@@ -132,7 +132,7 @@ public record SaleItem3
     [IsoId("_tQC9SSCAEey8XKHwKquEQw")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment10? Adjustment { get; init; }
+    public ValueList<Adjustment10> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Total cost of the line item amount, inclusive adjustments and exclusive of taxes.
@@ -165,7 +165,7 @@ public record SaleItem3
     [IsoId("_tQC9USCAEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 
     /// <summary>
     /// Total cost of the line item, inclusive of all applicable adjustments and taxes.

@@ -32,5 +32,5 @@ public record FundDetailedConfirmedCashForecastReport1
     [IsoId("_UvH_kdp-Ed-ak6NoX_4Aeg_556654600")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

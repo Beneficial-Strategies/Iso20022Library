@@ -116,7 +116,7 @@ public record Trade2
     [IsoId("_FQB2ew2JEeSwB74WgTbh4Q")]
     [DisplayName("Swap Leg")]
     [IsoXmlTag("SwpLeg")]
-    public InstrumentLeg6? SwapLeg { get; init; }
+    public ValueList<InstrumentLeg6> SwapLeg { get; init; } = [];
 
     /// <summary>
     /// Identification of the treasury trade product, as assigned under a formal or proprietary identification scheme.
@@ -132,7 +132,5 @@ public record Trade2
     [IsoId("_BLgREA2JEeSwB74WgTbh4Q")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedTradeReference { get; init; }
+    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
 }

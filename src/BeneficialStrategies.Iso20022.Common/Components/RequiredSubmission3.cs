@@ -67,7 +67,7 @@ public record RequiredSubmission3
     [IsoId("_Rax5-Np-Ed-ak6NoX_4Aeg_-1000355227")]
     [DisplayName("Clauses Required")]
     [IsoXmlTag("ClausesReqrd")]
-    public InsuranceClauses1Code? ClausesRequired { get; init; }
+    public SimpleValueList<InsuranceClauses1Code> ClausesRequired { get; init; } = [];
 
     /// <summary>
     /// Specifies if the assured (insured) party must be matched as part of the validation of the data set.

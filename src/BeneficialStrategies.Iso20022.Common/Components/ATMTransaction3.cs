@@ -47,7 +47,7 @@ public record ATMTransaction3
     [IsoId("_r6HqwIqSEeSRT5rEzcAHEw")]
     [DisplayName("Bundle Presented Amount")]
     [IsoXmlTag("BndlPresntdAmt")]
-    public ImpliedCurrencyAndAmount? BundlePresentedAmount { get; init; }
+    public ValueList<ImpliedCurrencyAndAmount> BundlePresentedAmount { get; init; } = [];
 
     /// <summary>
     /// Status of the amount presented to the customer in the last bundle.
@@ -63,7 +63,7 @@ public record ATMTransaction3
     [IsoId("_FvzZ4IqUEeSRT5rEzcAHEw")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
-    public FailureReason4Code? Incident { get; init; }
+    public SimpleValueList<FailureReason4Code> Incident { get; init; } = [];
 
     /// <summary>
     /// Explanation of the incident.
@@ -71,9 +71,7 @@ public record ATMTransaction3
     [IsoId("_nDZfgCvMEeW-qbryg71zJw")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IncidentDetail { get; init; }
+    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Identification of the reconciliation period assigned by the ATM.
@@ -147,7 +145,7 @@ public record ATMTransaction3
     [IsoId("_kdrWMCyXEeWFrdXv6dBUzw")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
-    public DetailedAmount13? AdditionalCharge { get; init; }
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
 
     /// <summary>
     /// True if the customer has requested a receipt.
@@ -207,7 +205,7 @@ public record ATMTransaction3
     [IsoId("_eMdm8IqdEeS4a4abTJTSSw")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
-    public ATMTotals1? ATMTotals { get; init; }
+    public ValueList<ATMTotals1> ATMTotals { get; init; } = [];
 
     /// <summary>
     /// Information on the cassettes of the ATM.
@@ -215,5 +213,5 @@ public record ATMTransaction3
     [IsoId("_FSoUsIqfEeS4a4abTJTSSw")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
-    public ATMCassette1? Cassette { get; init; }
+    public ValueList<ATMCassette1> Cassette { get; init; } = [];
 }

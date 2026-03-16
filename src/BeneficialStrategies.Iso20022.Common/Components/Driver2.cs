@@ -80,7 +80,7 @@ public record Driver2
     [IsoId("_XkokjRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public TravelDocument2? AdditionalIdentification { get; init; }
+    public ValueList<TravelDocument2> AdditionalIdentification { get; init; } = [];
 
     /// <summary>
     /// Date of birth of vehicle rental driver.

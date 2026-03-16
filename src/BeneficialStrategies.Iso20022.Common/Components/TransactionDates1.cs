@@ -76,5 +76,5 @@ public record TransactionDates1
     [IsoId("_RU0b5dp-Ed-ak6NoX_4Aeg_768963176")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public ProprietaryDate1? Proprietary { get; init; }
+    public ValueList<ProprietaryDate1> Proprietary { get; init; } = [];
 }

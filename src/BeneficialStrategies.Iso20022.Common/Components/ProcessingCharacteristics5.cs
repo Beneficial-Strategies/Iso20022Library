@@ -22,7 +22,7 @@ public record ProcessingCharacteristics5
     [IsoId("_K_uxZTgEEei6RvewLQWEqw")]
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
-    public ActiveCurrencyCode? DealingCurrencyAccepted { get; init; }
+    public SimpleValueList<ActiveCurrencyCode> DealingCurrencyAccepted { get; init; } = [];
 
     /// <summary>
     /// Specifies whether an application form is required for a redemption.
@@ -151,5 +151,5 @@ public record ProcessingCharacteristics5
     [IsoId("_iSNGkWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

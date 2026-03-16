@@ -39,7 +39,7 @@ public record TerminalManagementDataSet19
     [IsoId("_0ypuQI33EeWRwov1g9WL_A")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public GenericIdentification71? POIIdentification { get; init; }
+    public ValueList<GenericIdentification71> POIIdentification { get; init; } = [];
 
     /// <summary>
     /// Scope of the configuration contained in the data set.

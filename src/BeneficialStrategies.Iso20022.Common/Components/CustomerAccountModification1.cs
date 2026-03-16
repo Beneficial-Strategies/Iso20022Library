@@ -120,7 +120,8 @@ public record CustomerAccountModification1
     [IsoId("_sRvcqQ4oEeK3IMoVvcTkkg")]
     [DisplayName("Statement Frequency And Format")]
     [IsoXmlTag("StmtFrqcyAndFrmt")]
-    public StatementFrequencyAndFormModification1? StatementFrequencyAndFormat { get; init; }
+    public ValueList<StatementFrequencyAndFormModification1> StatementFrequencyAndFormat { get; init; } =
+        [];
 
     /// <summary>
     /// Date when the account will be or was closed.
@@ -136,5 +137,5 @@ public record CustomerAccountModification1
     [IsoId("_sRvctw4oEeK3IMoVvcTkkg")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public RestrictionModification1? Restriction { get; init; }
+    public ValueList<RestrictionModification1> Restriction { get; init; } = [];
 }

@@ -47,5 +47,5 @@ public record GovernanceRules2
     [IsoId("_OTgzMjMy-AOSNFX-8224493")]
     [DisplayName("Jurisdiction")]
     [IsoXmlTag("Jursdctn")]
-    public Location1? Jurisdiction { get; init; }
+    public ValueList<Location1> Jurisdiction { get; init; } = [];
 }

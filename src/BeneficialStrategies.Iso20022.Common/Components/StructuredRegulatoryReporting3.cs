@@ -67,7 +67,5 @@ public record StructuredRegulatoryReporting3
     [IsoId("_SnhZ6Np-Ed-ak6NoX_4Aeg_797412333")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Information { get; init; }
+    public SimpleValueList<IsoMax35Text> Information { get; init; } = [];
 }

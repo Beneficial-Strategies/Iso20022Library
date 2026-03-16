@@ -58,5 +58,5 @@ public record SecurityParameters15
     [IsoId("_re0O6XIUEe2OqYulmHWukQ")]
     [DisplayName("Security Element")]
     [IsoXmlTag("SctyElmt")]
-    public CryptographicKey17? SecurityElement { get; init; }
+    public ValueList<CryptographicKey17> SecurityElement { get; init; } = [];
 }

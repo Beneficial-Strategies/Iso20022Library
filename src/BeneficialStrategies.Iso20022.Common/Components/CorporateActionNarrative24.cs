@@ -22,7 +22,7 @@ public record CorporateActionNarrative24
     [IsoId("_pVPkpRN7EeKyONjZVQUqzg")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public UpdatedAdditionalInformation3? Offeror { get; init; }
+    public ValueList<UpdatedAdditionalInformation3> Offeror { get; init; } = [];
 
     /// <summary>
     /// Provides the new name of a company following a name change.

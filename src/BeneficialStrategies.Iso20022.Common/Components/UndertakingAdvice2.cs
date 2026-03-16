@@ -56,7 +56,7 @@ public record UndertakingAdvice2
     [IsoId("_-ApbUXltEeG7BsjMvd1mEw_637726234")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the undertaking notification.

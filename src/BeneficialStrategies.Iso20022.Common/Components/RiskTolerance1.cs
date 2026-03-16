@@ -65,5 +65,5 @@ public record RiskTolerance1
     [IsoId("_An9MgDcYEeidBoT_PugKiA")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherTargetMarketRiskTolerance1? Other { get; init; }
+    public ValueList<OtherTargetMarketRiskTolerance1> Other { get; init; } = [];
 }

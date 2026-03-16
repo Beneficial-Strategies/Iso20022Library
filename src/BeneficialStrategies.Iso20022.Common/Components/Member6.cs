@@ -22,7 +22,7 @@ public record Member6
     [IsoId("_XBEbwXSeEeiH1ZOt2UD8vQ")]
     [DisplayName("Member Return Address")]
     [IsoXmlTag("MmbRtrAdr")]
-    public MemberIdentification3Choice_? MemberReturnAddress { get; init; }
+    public ValueList<MemberIdentification3Choice_> MemberReturnAddress { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in a given organisation.
@@ -30,7 +30,7 @@ public record Member6
     [IsoId("_XBEbw3SeEeiH1ZOt2UD8vQ")]
     [DisplayName("Contact Reference")]
     [IsoXmlTag("CtctRef")]
-    public ContactIdentificationAndAddress1? ContactReference { get; init; }
+    public ValueList<ContactIdentificationAndAddress1> ContactReference { get; init; } = [];
 
     /// <summary>
     /// Number, or virtual address, used for communication.

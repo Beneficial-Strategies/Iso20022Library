@@ -56,5 +56,5 @@ public record CashInForecast1
     [IsoId("_VCC7ltp-Ed-ak6NoX_4Aeg_-455150453")]
     [DisplayName("Cash In Breakdown Details")]
     [IsoXmlTag("CshInBrkdwnDtls")]
-    public FundCashInBreakdown1? CashInBreakdownDetails { get; init; }
+    public ValueList<FundCashInBreakdown1> CashInBreakdownDetails { get; init; } = [];
 }

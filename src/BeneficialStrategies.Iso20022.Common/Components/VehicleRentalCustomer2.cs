@@ -60,7 +60,7 @@ public record VehicleRentalCustomer2
     [IsoId("_hVxcqcW0EeuhguwJmlgagQ")]
     [DisplayName("Primary Driver")]
     [IsoXmlTag("PmryDrvr")]
-    public DriverInParty2? PrimaryDriver { get; init; }
+    public ValueList<DriverInParty2> PrimaryDriver { get; init; } = [];
 
     /// <summary>
     /// Type of identification of the additional vehicle rental customer.
@@ -68,7 +68,7 @@ public record VehicleRentalCustomer2
     [IsoId("_hVxcq8W0EeuhguwJmlgagQ")]
     [DisplayName("Additional Driver")]
     [IsoXmlTag("AddtlDrvr")]
-    public DriverInParty2? AdditionalDriver { get; init; }
+    public ValueList<DriverInParty2> AdditionalDriver { get; init; } = [];
 
     /// <summary>
     /// Loyalty programme details.

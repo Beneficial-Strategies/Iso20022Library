@@ -31,5 +31,5 @@ public record NotionalAmount5
     [IsoId("_xoHtIz3XEe2uHKhHp3bXyA")]
     [DisplayName("Schedule Period")]
     [IsoXmlTag("SchdlPrd")]
-    public Schedule11? SchedulePeriod { get; init; }
+    public ValueList<Schedule11> SchedulePeriod { get; init; } = [];
 }

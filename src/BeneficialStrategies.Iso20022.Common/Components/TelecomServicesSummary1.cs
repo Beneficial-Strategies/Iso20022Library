@@ -48,7 +48,7 @@ public record TelecomServicesSummary1
     [IsoId("_3YK9p_e-Eei89sMSHxl1ew")]
     [DisplayName("Billing Event")]
     [IsoXmlTag("BllgEvt")]
-    public Amount10? BillingEvent { get; init; }
+    public ValueList<Amount10> BillingEvent { get; init; } = [];
 
     /// <summary>
     /// Total of taxes applicable to the billing amount.
@@ -56,7 +56,7 @@ public record TelecomServicesSummary1
     [IsoId("_sjf9UffCEei89sMSHxl1ew")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
-    public Tax33? TotalTax { get; init; }
+    public ValueList<Tax33> TotalTax { get; init; } = [];
 
     /// <summary>
     /// Additional user-defined data pertaining to the shipment.

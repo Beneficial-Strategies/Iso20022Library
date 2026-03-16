@@ -154,5 +154,5 @@ public record Mandate5
     [IsoId("_Y12XRR77EeSxevWRRWxNAg")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
-    public ReferredDocumentInformation6? ReferredDocument { get; init; }
+    public ValueList<ReferredDocumentInformation6> ReferredDocument { get; init; } = [];
 }

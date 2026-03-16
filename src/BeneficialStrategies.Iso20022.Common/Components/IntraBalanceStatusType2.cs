@@ -22,7 +22,7 @@ public record IntraBalanceStatusType2
     [IsoId("_TDntkeFWEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus68Choice_? ProcessingStatus { get; init; }
+    public ValueList<ProcessingStatus68Choice_> ProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Provides the settlement status of a transaction.
@@ -30,7 +30,7 @@ public record IntraBalanceStatusType2
     [IsoId("_TDntk-FWEeWIA4E9cYSxxQ")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public SettlementStatus26Choice_? SettlementStatus { get; init; }
+    public ValueList<SettlementStatus26Choice_> SettlementStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the state or the condition.

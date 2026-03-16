@@ -46,5 +46,5 @@ public record CorporateActionEventAndBalance1
     [IsoId("_QzTDNNp-Ed-ak6NoX_4Aeg_496694477")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

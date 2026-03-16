@@ -30,7 +30,7 @@ public record ATMKeyDownloadRequest4
     [IsoId("_4_OvY7ToEeeQy4o2AayYHg")]
     [DisplayName("Command Result")]
     [IsoXmlTag("CmdRslt")]
-    public ATMCommand11? CommandResult { get; init; }
+    public ValueList<ATMCommand11> CommandResult { get; init; } = [];
 
     /// <summary>
     /// Security command in progress inside which the key download is requested.

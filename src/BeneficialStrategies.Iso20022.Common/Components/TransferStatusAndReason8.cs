@@ -60,7 +60,7 @@ public record TransferStatusAndReason8
     [IsoId("_UXzWZdx9EeqKxsvOxFQHKA")]
     [DisplayName("Transfer Event Type")]
     [IsoXmlTag("TrfEvtTp")]
-    public TransferStatusType3Choice_? TransferEventType { get; init; }
+    public ValueList<TransferStatusType3Choice_> TransferEventType { get; init; } = [];
 
     /// <summary>
     /// Status of the transfer instruction.
@@ -92,7 +92,7 @@ public record TransferStatusAndReason8
     [IsoId("_vRGQMXdhEeuvip1zrZRWzw")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary48? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary48> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Date on which the transfer was executed.
@@ -154,7 +154,7 @@ public record TransferStatusAndReason8
     [IsoId("_UXzWc9x9EeqKxsvOxFQHKA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit11? UnitsDetails { get; init; }
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Information about the source security following a conversion.
@@ -178,7 +178,7 @@ public record TransferStatusAndReason8
     [IsoId("_UXzWd9x9EeqKxsvOxFQHKA")]
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument18? PaymentDetails { get; init; }
+    public ValueList<PaymentInstrument18> PaymentDetails { get; init; } = [];
 
     /// <summary>
     /// Information about the realisation of benefits taken from a pension.
@@ -186,7 +186,7 @@ public record TransferStatusAndReason8
     [IsoId("_UXzWedx9EeqKxsvOxFQHKA")]
     [DisplayName("Benefit Crystallisation Event")]
     [IsoXmlTag("BnftCrstllstnEvt")]
-    public BenefitCrystallisationEvent2? BenefitCrystallisationEvent { get; init; }
+    public ValueList<BenefitCrystallisationEvent2> BenefitCrystallisationEvent { get; init; } = [];
 
     /// <summary>
     /// Details of a drawdown tranche.
@@ -194,7 +194,7 @@ public record TransferStatusAndReason8
     [IsoId("_UXzWe9x9EeqKxsvOxFQHKA")]
     [DisplayName("Drawdown Tranche")]
     [IsoXmlTag("DrwdwnTrch")]
-    public Drawdown2? DrawdownTranche { get; init; }
+    public ValueList<Drawdown2> DrawdownTranche { get; init; } = [];
 
     /// <summary>
     /// Drawdown information not specifically associated with a drawdown tranche.
@@ -210,9 +210,7 @@ public record TransferStatusAndReason8
     [IsoId("_OfS3sXp6EeuldpLtvj4F0Q")]
     [DisplayName("Query Response")]
     [IsoXmlTag("QryRspn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? QueryResponse { get; init; }
+    public SimpleValueList<IsoMax350Text> QueryResponse { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status.
@@ -244,5 +242,5 @@ public record TransferStatusAndReason8
     [IsoId("_tGEMsXp6EeuldpLtvj4F0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

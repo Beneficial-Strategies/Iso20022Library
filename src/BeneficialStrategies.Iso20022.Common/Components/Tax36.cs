@@ -30,5 +30,5 @@ public record Tax36
     [IsoId("_fQMk0HVYEeiiHo4Gse0d2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

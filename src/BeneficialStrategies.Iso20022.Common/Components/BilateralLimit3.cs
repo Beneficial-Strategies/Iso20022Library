@@ -46,5 +46,5 @@ public record BilateralLimit3
     [IsoId("_F3jKqW4-EeiU9cctagi5ow")]
     [DisplayName("Bilateral Balance")]
     [IsoXmlTag("BilBal")]
-    public CashBalance11? BilateralBalance { get; init; }
+    public ValueList<CashBalance11> BilateralBalance { get; init; } = [];
 }

@@ -85,7 +85,7 @@ public record OriginalPaymentInstruction44
     [IsoId("_g8jxldcZEeqRFcf2R4bPBw")]
     [DisplayName("Cancellation Reason Information")]
     [IsoXmlTag("CxlRsnInf")]
-    public PaymentCancellationReason5? CancellationReasonInformation { get; init; }
+    public ValueList<PaymentCancellationReason5> CancellationReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Information concerning the original transactions, to which the cancellation request message refers.
@@ -93,5 +93,5 @@ public record OriginalPaymentInstruction44
     [IsoId("_g8jxl9cZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransaction140? TransactionInformation { get; init; }
+    public ValueList<PaymentTransaction140> TransactionInformation { get; init; } = [];
 }

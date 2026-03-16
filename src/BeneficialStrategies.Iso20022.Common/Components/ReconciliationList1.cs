@@ -31,7 +31,7 @@ public record ReconciliationList1
     [IsoId("_OTgzNDIw-AOSNFX-8224504")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
-    public QualifiedDocumentInformation1? RelatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedDocument { get; init; } = [];
 
     /// <summary>
     /// Party to be advised.
@@ -132,7 +132,7 @@ public record ReconciliationList1
     [IsoId("_OTgzNDMy-AOSNFX-8224504")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Additional proprietary formal information concerning the list.

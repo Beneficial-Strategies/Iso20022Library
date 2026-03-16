@@ -22,7 +22,7 @@ public record Limits7
     [IsoId("_DAtgY24-EeiU9cctagi5ow")]
     [DisplayName("Current Limit")]
     [IsoXmlTag("CurLmt")]
-    public LimitReport7? CurrentLimit { get; init; }
+    public ValueList<LimitReport7> CurrentLimit { get; init; } = [];
 
     /// <summary>
     /// Report is given for a default risk management type limit.
@@ -30,5 +30,5 @@ public record Limits7
     [IsoId("_DAtgZW4-EeiU9cctagi5ow")]
     [DisplayName("Default Limit")]
     [IsoXmlTag("DfltLmt")]
-    public LimitReport7? DefaultLimit { get; init; }
+    public ValueList<LimitReport7> DefaultLimit { get; init; } = [];
 }

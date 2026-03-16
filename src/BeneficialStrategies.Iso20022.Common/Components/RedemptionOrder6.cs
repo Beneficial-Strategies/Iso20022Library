@@ -168,7 +168,7 @@ public record RedemptionOrder6
     [IsoId("_SDdqltp-Ed-ak6NoX_4Aeg_-122473916")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge17? ChargeDetails { get; init; }
+    public ValueList<Charge17> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Amount of money due to a party as compensation for a service.
@@ -176,7 +176,7 @@ public record RedemptionOrder6
     [IsoId("_SDdql9p-Ed-ak6NoX_4Aeg_1964867528")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission10? CommissionDetails { get; init; }
+    public ValueList<Commission10> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax applicable to an investment fund order.
@@ -184,7 +184,7 @@ public record RedemptionOrder6
     [IsoId("_SDdqmNp-Ed-ak6NoX_4Aeg_264482669")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax16? TaxDetails { get; init; }
+    public ValueList<Tax16> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.

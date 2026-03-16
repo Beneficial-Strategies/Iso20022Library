@@ -54,7 +54,8 @@ public record TMSAction3
     [IsoId("_8vr6qTV_EeODSIIQsYYKhw")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
-    public TerminalManagementAdditionalProcess1Code? AdditionalProcess { get; init; }
+    public SimpleValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
 
     /// <summary>
     /// Definition of retry process if activation of the action fails.
@@ -87,8 +88,7 @@ public record TMSAction3
     [IsoId("_8vr6rzV_EeODSIIQsYYKhw")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -96,5 +96,5 @@ public record TMSAction3
     [IsoId("_8vr6sTV_EeODSIIQsYYKhw")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction2? ErrorAction { get; init; }
+    public ValueList<ErrorAction2> ErrorAction { get; init; } = [];
 }

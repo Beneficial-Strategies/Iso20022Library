@@ -78,5 +78,5 @@ public record DirectDebitInstructionDetails2
     [IsoId("_IGnfvW49EeiU9cctagi5ow")]
     [DisplayName("Other Details")]
     [IsoXmlTag("OthrDtls")]
-    public TransferInstruction1? OtherDetails { get; init; }
+    public ValueList<TransferInstruction1> OtherDetails { get; init; } = [];
 }

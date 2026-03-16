@@ -92,7 +92,7 @@ public record ShippingData1
     [IsoId("_ScxsYPcjEeiW-auGnDPZIw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax33? Tax { get; init; }
+    public ValueList<Tax33> Tax { get; init; } = [];
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -119,7 +119,7 @@ public record ShippingData1
     [IsoId("_ScxsXPcjEeiW-auGnDPZIw")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
-    public ShippingPackage1? Package { get; init; }
+    public ValueList<ShippingPackage1> Package { get; init; } = [];
 
     /// <summary>
     /// Contains additional shipping data.

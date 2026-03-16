@@ -46,7 +46,7 @@ public record AccountReport1
     [IsoId("_QokZ49p-Ed-ak6NoX_4Aeg_1192047529")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate1? Mandate { get; init; }
+    public ValueList<OperationMandate1> Mandate { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the account used as a reference for the opening of another account.

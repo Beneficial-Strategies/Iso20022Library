@@ -22,7 +22,7 @@ public record SingleTransport7
     [IsoId("_adK_8RrhEeOVR9VN6fAMUg")]
     [DisplayName("Transport By Air")]
     [IsoXmlTag("TrnsprtByAir")]
-    public TransportByAir5? TransportByAir { get; init; }
+    public ValueList<TransportByAir5> TransportByAir { get; init; } = [];
 
     /// <summary>
     /// Information related for the transportation of goods by sea.
@@ -30,7 +30,7 @@ public record SingleTransport7
     [IsoId("_adK_8xrhEeOVR9VN6fAMUg")]
     [DisplayName("Transport By Sea")]
     [IsoXmlTag("TrnsprtBySea")]
-    public TransportBySea6? TransportBySea { get; init; }
+    public ValueList<TransportBySea6> TransportBySea { get; init; } = [];
 
     /// <summary>
     /// Information related to the transportation of goods by road.
@@ -38,7 +38,7 @@ public record SingleTransport7
     [IsoId("_adK_9RrhEeOVR9VN6fAMUg")]
     [DisplayName("Transport By Road")]
     [IsoXmlTag("TrnsprtByRoad")]
-    public TransportByRoad5? TransportByRoad { get; init; }
+    public ValueList<TransportByRoad5> TransportByRoad { get; init; } = [];
 
     /// <summary>
     /// Information related to the transportation of goods by rail.
@@ -46,5 +46,5 @@ public record SingleTransport7
     [IsoId("_adK_9xrhEeOVR9VN6fAMUg")]
     [DisplayName("Transport By Rail")]
     [IsoXmlTag("TrnsprtByRail")]
-    public TransportByRail5? TransportByRail { get; init; }
+    public ValueList<TransportByRail5> TransportByRail { get; init; } = [];
 }

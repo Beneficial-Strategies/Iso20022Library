@@ -22,7 +22,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPgx9REeuFz_FaCzCLgQ")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    public UpdatedAdditionalInformation16? AdditionalText { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.
@@ -30,7 +30,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPix9REeuFz_FaCzCLgQ")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    public UpdatedAdditionalInformation16? NarrativeVersion { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.
@@ -38,7 +38,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPkx9REeuFz_FaCzCLgQ")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
-    public UpdatedAdditionalInformation16? InformationConditions { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> InformationConditions { get; init; } = [];
 
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or SIL (Sophisticated Investor Letter) to be provided.
@@ -46,7 +46,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPmx9REeuFz_FaCzCLgQ")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    public UpdatedAdditionalInformation16? InformationToComplyWith { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
@@ -54,7 +54,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPox9REeuFz_FaCzCLgQ")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
-    public UpdatedAdditionalInformation16? TaxationConditions { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> TaxationConditions { get; init; } = [];
 
     /// <summary>
     /// Provides a disclaimer relative to the information provided in the message. It may be ignored for automated processing.
@@ -62,7 +62,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPqx9REeuFz_FaCzCLgQ")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    public UpdatedAdditionalInformation16? Disclaimer { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -70,7 +70,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPsx9REeuFz_FaCzCLgQ")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    public UpdatedAdditionalInformation16? PartyContactNarrative { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration.
@@ -78,7 +78,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPux9REeuFz_FaCzCLgQ")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    public UpdatedAdditionalInformation16? RegistrationDetails { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
@@ -86,7 +86,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPwx9REeuFz_FaCzCLgQ")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
-    public UpdatedAdditionalInformation16? BasketOrIndexInformation { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> BasketOrIndexInformation { get; init; } = [];
 
     /// <summary>
     /// Provides additional information about the type of certification/breakdown required.
@@ -94,7 +94,7 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPyx9REeuFz_FaCzCLgQ")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public UpdatedAdditionalInformation16? CertificationBreakdown { get; init; }
+    public ValueList<UpdatedAdditionalInformation16> CertificationBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
@@ -102,5 +102,5 @@ public record CorporateActionNarrative49
     [IsoId("_x_UPzR9REeuFz_FaCzCLgQ")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public UpdatedURLlnformation5? URLAddress { get; init; }
+    public ValueList<UpdatedURLlnformation5> URLAddress { get; init; } = [];
 }

@@ -40,7 +40,7 @@ public record Quantity49
     [IsoId("_cefa-zi8Eeydid5dcNPKvg")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SecuritiesCertificate5? CertificateNumber { get; init; }
+    public ValueList<SecuritiesCertificate5> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Breakdown of a quantity into lots such as tax lots, instrument series.
@@ -48,5 +48,5 @@ public record Quantity49
     [IsoId("_cefbAzi8Eeydid5dcNPKvg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown69? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown69> QuantityBreakdown { get; init; } = [];
 }

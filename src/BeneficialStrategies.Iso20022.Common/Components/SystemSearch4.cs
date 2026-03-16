@@ -22,7 +22,7 @@ public record SystemSearch4
     [IsoId("_-RLPI249EeiU9cctagi5ow")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
-    public ClearingSystemIdentification3Choice_? SystemIdentification { get; init; }
+    public ValueList<ClearingSystemIdentification3Choice_> SystemIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.
@@ -30,7 +30,8 @@ public record SystemSearch4
     [IsoId("_-RLPJW49EeiU9cctagi5ow")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
-    public BranchAndFinancialInstitutionIdentification6? MemberIdentification { get; init; }
+    public ValueList<BranchAndFinancialInstitutionIdentification6> MemberIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Country in which the system is located.

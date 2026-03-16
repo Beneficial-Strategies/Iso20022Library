@@ -40,7 +40,7 @@ public record CreditorInvoice4
     [IsoId("_zz-bZeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
-    public DocumentFormat2Choice_? ContractFormatType { get; init; }
+    public ValueList<DocumentFormat2Choice_> ContractFormatType { get; init; } = [];
 
     /// <summary>
     /// Type of the contract reference requested by the creditor which the debtor must provide in the debtor activation request  to identify the contract(s) for which the RTP is requested.
@@ -48,7 +48,7 @@ public record CreditorInvoice4
     [IsoId("_zz-bZ-H5Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Reference Type")]
     [IsoXmlTag("CtrctRefTp")]
-    public DocumentType1Choice_? ContractReferenceType { get; init; }
+    public ValueList<DocumentType1Choice_> ContractReferenceType { get; init; } = [];
 
     /// <summary>
     /// Instructions provided by the seller (that is creditor or ultimate creditor) for the Request-To-Pay (RTP) recipient (that is the debtor). The instructions may include for example the time required by the creditor to take into account the activation request. The debtor agent may display the information in the customer’s own service language.

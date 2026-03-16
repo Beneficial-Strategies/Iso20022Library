@@ -46,5 +46,5 @@ public record CorporateActionEventAndBalance7
     [IsoId("_VYKtjQ4xEeKVsZQr6J31Tg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

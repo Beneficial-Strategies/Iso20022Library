@@ -46,5 +46,5 @@ public record FundParties1
     [IsoId("_F-x3wWALEeiNMJ262H2pWg")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
-    public ExtendedParty13? OtherParty { get; init; }
+    public ValueList<ExtendedParty13> OtherParty { get; init; } = [];
 }

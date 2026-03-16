@@ -64,7 +64,7 @@ public record AggregateBalancePerSafekeepingPlace34
     [IsoId("_tJL0KdLFEeiN28wlpBQScw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms34? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
@@ -105,7 +105,7 @@ public record AggregateBalancePerSafekeepingPlace34
     [IsoId("_tJL0UdLFEeiN28wlpBQScw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown53? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown53> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Specifies the underlying business area/type of trade causing the collateral movement.
@@ -121,7 +121,7 @@ public record AggregateBalancePerSafekeepingPlace34
     [IsoId("_tJL0W9LFEeiN28wlpBQScw")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceInformation14? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceInformation14> BalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -129,7 +129,7 @@ public record AggregateBalancePerSafekeepingPlace34
     [IsoId("_tJL0Y9LFEeiN28wlpBQScw")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
-    public AdditionalBalanceInformation14? AdditionalBalanceBreakdown { get; init; }
+    public ValueList<AdditionalBalanceInformation14> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the holding.

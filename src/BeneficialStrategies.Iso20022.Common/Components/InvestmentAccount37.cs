@@ -106,7 +106,7 @@ public record InvestmentAccount37
     [IsoId("_it_BgBQ8EeOKWo1NF21OVw")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment1? ReinvestmentDetails { get; init; }
+    public ValueList<Reinvestment1> ReinvestmentDetails { get; init; } = [];
 
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed i.e. either withheld at source or tax information reported to tax authorities or tax information is reported due to the provision of a tax certificate.
@@ -159,7 +159,7 @@ public record InvestmentAccount37
     [IsoId("_SdJ3cxQ8EeOKWo1NF21OVw")]
     [DisplayName("Fund Details")]
     [IsoXmlTag("FndDtls")]
-    public FinancialInstrument29? FundDetails { get; init; }
+    public ValueList<FinancialInstrument29> FundDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
@@ -183,7 +183,7 @@ public record InvestmentAccount37
     [IsoId("_SdJ3eRQ8EeOKWo1NF21OVw")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
-    public Blocked1? BlockedStatus { get; init; }
+    public ValueList<Blocked1> BlockedStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of usage of the account.

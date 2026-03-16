@@ -38,7 +38,7 @@ public record DeliverInformation18
     [IsoId("_93NYbYftEeevKP8c-ilVhA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary41? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary41> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -87,7 +87,7 @@ public record DeliverInformation18
     [IsoId("_mUNagojREeeiYZ2e3mpBRA")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public Fees1? Fees { get; init; }
+    public ValueList<Fees1> Fees { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -95,7 +95,7 @@ public record DeliverInformation18
     [IsoId("_mUNag4jREeeiYZ2e3mpBRA")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax34? IndividualTax { get; init; }
+    public ValueList<Tax34> IndividualTax { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -112,7 +112,7 @@ public record DeliverInformation18
     [IsoId("_93NYf4ftEeevKP8c-ilVhA")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms33> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of the transaction.

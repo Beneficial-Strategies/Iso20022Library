@@ -174,7 +174,7 @@ public record CreditTransferTransaction24
     [IsoId("_2K2kOTq4EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent1? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent1> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent.
@@ -182,7 +182,7 @@ public record CreditTransferTransaction24
     [IsoId("_2K2kOzq4EeWZFYSPlduMhw")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
-    public InstructionForNextAgent1? InstructionForNextAgent { get; init; }
+    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
 
     /// <summary>
     /// Provides details on the tax.

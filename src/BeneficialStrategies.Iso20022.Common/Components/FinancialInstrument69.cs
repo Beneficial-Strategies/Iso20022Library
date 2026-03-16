@@ -64,7 +64,7 @@ public record FinancialInstrument69
     [IsoId("_INYoIaFYEei_VZq-6SQkuQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit11? UnitsDetails { get; init; }
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -196,5 +196,5 @@ public record FinancialInstrument69
     [IsoId("_Q-2UMHVaEeiiHo4Gse0d2w")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

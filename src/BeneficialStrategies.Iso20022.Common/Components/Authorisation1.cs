@@ -38,5 +38,5 @@ public record Authorisation1
     [IsoId("_PUrJGtp-Ed-ak6NoX_4Aeg_-1091239434")]
     [DisplayName("Maximum Amount By Period")]
     [IsoXmlTag("MaxAmtByPrd")]
-    public MaximumAmountByPeriod1? MaximumAmountByPeriod { get; init; }
+    public ValueList<MaximumAmountByPeriod1> MaximumAmountByPeriod { get; init; } = [];
 }

@@ -132,5 +132,5 @@ public record Vehicle1
     [IsoId("_ww05oJbhEeW6aPG6p-lhQQ")]
     [DisplayName("Additional Vehicle Data")]
     [IsoXmlTag("AddtlVhclData")]
-    public Vehicle2? AdditionalVehicleData { get; init; }
+    public ValueList<Vehicle2> AdditionalVehicleData { get; init; } = [];
 }

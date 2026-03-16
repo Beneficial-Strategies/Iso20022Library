@@ -52,7 +52,7 @@ public record SubscriptionOrder6
     [IsoId("_SHfO89p-Ed-ak6NoX_4Aeg_-1269679915")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType2? OrderType { get; init; }
+    public ValueList<FundOrderType2> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class related to an order.
@@ -169,7 +169,7 @@ public record SubscriptionOrder6
     [IsoId("_SHoY6Np-Ed-ak6NoX_4Aeg_-616425913")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge17? ChargeDetails { get; init; }
+    public ValueList<Charge17> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Amount of money due to a party as compensation for a service.
@@ -177,7 +177,7 @@ public record SubscriptionOrder6
     [IsoId("_SHoY6dp-Ed-ak6NoX_4Aeg_-1409413280")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission10? CommissionDetails { get; init; }
+    public ValueList<Commission10> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax applicable to an investment fund order.
@@ -185,7 +185,7 @@ public record SubscriptionOrder6
     [IsoId("_SHyJ4Np-Ed-ak6NoX_4Aeg_139111860")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax16? TaxDetails { get; init; }
+    public ValueList<Tax16> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.

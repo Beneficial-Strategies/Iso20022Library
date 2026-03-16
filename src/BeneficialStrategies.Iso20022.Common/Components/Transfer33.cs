@@ -142,7 +142,7 @@ public record Transfer33
     [IsoId("_4PLC0yPvEeWQjryFgN2ITg")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit6? UnitsDetails { get; init; }
+    public ValueList<Unit6> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Weighted average price of the units in the account before the transfer was executed.

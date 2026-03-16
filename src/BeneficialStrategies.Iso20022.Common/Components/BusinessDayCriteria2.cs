@@ -32,7 +32,7 @@ public record BusinessDayCriteria2
     [IsoId("_yNYGhZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public BusinessDaySearchCriteria2? SearchCriteria { get; init; }
+    public ValueList<BusinessDaySearchCriteria2> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected report.

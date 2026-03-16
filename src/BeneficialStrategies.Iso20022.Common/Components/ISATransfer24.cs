@@ -38,7 +38,7 @@ public record ISATransfer24
     [IsoId("_9MFBoSPvEeWQjryFgN2ITg")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, for example, name and address.
@@ -62,7 +62,7 @@ public record ISATransfer24
     [IsoId("_9MFBpyPvEeWQjryFgN2ITg")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation21? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation21> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -94,7 +94,7 @@ public record ISATransfer24
     [IsoId("_ky2vYSYdEeWJkOUkQWu90g")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary34? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary34> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).
@@ -118,5 +118,5 @@ public record ISATransfer24
     [IsoId("_9MFBsyPvEeWQjryFgN2ITg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

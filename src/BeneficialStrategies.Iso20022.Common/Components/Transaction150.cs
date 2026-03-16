@@ -70,7 +70,7 @@ public record Transaction150
     [IsoId("_Bp1qUbXlEeusf7oR9YukCg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService2? AdditionalService { get; init; }
+    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Destination value to be used in the subsequent addendum message.
@@ -88,7 +88,8 @@ public record Transaction150
     [IsoId("_5sAELYdMEeuBS50MFjViNw")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction
@@ -112,7 +113,7 @@ public record Transaction150
     [IsoId("_5sAEM4dMEeuBS50MFjViNw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmounts3? AdditionalAmount { get; init; }
+    public ValueList<AdditionalAmounts3> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -120,7 +121,7 @@ public record Transaction150
     [IsoId("_5sAENYdMEeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the original transaction amount.
@@ -128,7 +129,7 @@ public record Transaction150
     [IsoId("_5sAEN4dMEeuBS50MFjViNw")]
     [DisplayName("Original Additional Fee")]
     [IsoXmlTag("OrgnlAddtlFee")]
-    public AdditionalFee2? OriginalAdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> OriginalAdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Balance of the account involved in the card transaction.
@@ -136,7 +137,7 @@ public record Transaction150
     [IsoId("_5sAEOYdMEeuBS50MFjViNw")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalance2? AccountBalance { get; init; }
+    public ValueList<AccountBalance2> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -170,5 +171,5 @@ public record Transaction150
     [IsoId("_5sAEQYdMEeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

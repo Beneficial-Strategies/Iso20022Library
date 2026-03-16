@@ -148,7 +148,7 @@ public record PaymentTransaction65
     [IsoId("_ko_sZTq3EeWZFYSPlduMhw")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public Charges2? ChargesInformation { get; init; }
+    public ValueList<Charges2> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.
@@ -172,7 +172,7 @@ public record PaymentTransaction65
     [IsoId("_ko_sazq3EeWZFYSPlduMhw")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
-    public PaymentReturnReason1? ReturnReasonInformation { get; init; }
+    public ValueList<PaymentReturnReason1> ReturnReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
@@ -188,5 +188,5 @@ public record PaymentTransaction65
     [IsoId("_ko_sbzq3EeWZFYSPlduMhw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

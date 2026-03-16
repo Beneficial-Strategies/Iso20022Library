@@ -55,5 +55,5 @@ public record SubAccountIdentification64
     [IsoId("_-ZuuTSgQEeym1_Zp1BTvEw")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrumentDetails41? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrumentDetails41> FinancialInstrumentDetails { get; init; } = [];
 }

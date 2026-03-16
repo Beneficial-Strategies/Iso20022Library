@@ -30,7 +30,7 @@ public record SecurityAttributes10
     [IsoId("_PzlYE5JKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Type")]
     [IsoXmlTag("FinInstrmTp")]
-    public FinancialInstrument97? FinancialInstrumentType { get; init; }
+    public ValueList<FinancialInstrument97> FinancialInstrumentType { get; init; } = [];
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
@@ -38,5 +38,6 @@ public record SecurityAttributes10
     [IsoId("_PzlYFZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
-    public CommonFinancialInstrumentAttributes10? FinancialInstrumentAttributes { get; init; }
+    public ValueList<CommonFinancialInstrumentAttributes10> FinancialInstrumentAttributes { get; init; } =
+        [];
 }

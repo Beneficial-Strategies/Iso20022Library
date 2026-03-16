@@ -38,5 +38,5 @@ public record PriceCorrection2
     [IsoId("_U1YYmdp-Ed-ak6NoX_4Aeg_-884858901")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -50,7 +50,8 @@ public record PortfolioTransfer12
     [IsoId("_ZCbGSelqEeuvhrZwLF0fDg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument101? FinancialInstrumentAssetForTransfer { get; init; }
+    public ValueList<FinancialInstrument101> FinancialInstrumentAssetForTransfer { get; init; } =
+        [];
 
     /// <summary>
     /// Additional information about the product transfer.
@@ -58,5 +59,5 @@ public record PortfolioTransfer12
     [IsoId("_ZCbGS-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

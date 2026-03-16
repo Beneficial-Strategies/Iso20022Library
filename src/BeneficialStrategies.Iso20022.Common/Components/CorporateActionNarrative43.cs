@@ -102,7 +102,5 @@ public record CorporateActionNarrative43
     [IsoId("_00j_BQVTEeqjd8n6wD9JVw")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINZMax2048Text)]
-    [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoRestrictedFINZMax2048Text? URLAddress { get; init; }
+    public SimpleValueList<IsoRestrictedFINZMax2048Text> URLAddress { get; init; } = [];
 }

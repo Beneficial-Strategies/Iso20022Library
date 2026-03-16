@@ -64,7 +64,7 @@ public record Intermediary46
     [IsoId("_kgCwjZQ_EemqYPWMBuVawg")]
     [DisplayName("Primary Communication Address")]
     [IsoXmlTag("PmryComAdr")]
-    public CommunicationAddress6? PrimaryCommunicationAddress { get; init; }
+    public ValueList<CommunicationAddress6> PrimaryCommunicationAddress { get; init; } = [];
 
     /// <summary>
     /// Communication device number or electronic address used for communication.
@@ -72,7 +72,7 @@ public record Intermediary46
     [IsoId("_kgCwj5Q_EemqYPWMBuVawg")]
     [DisplayName("Secondary Communication Address")]
     [IsoXmlTag("ScndryComAdr")]
-    public CommunicationAddress6? SecondaryCommunicationAddress { get; init; }
+    public ValueList<CommunicationAddress6> SecondaryCommunicationAddress { get; init; } = [];
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

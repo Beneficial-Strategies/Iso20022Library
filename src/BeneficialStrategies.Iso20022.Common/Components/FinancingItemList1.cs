@@ -41,7 +41,7 @@ public record FinancingItemList1
     [IsoId("_OTgzMzI2-AOSNFX-8224500")]
     [DisplayName("Related Document")]
     [IsoXmlTag("RltdDoc")]
-    public QualifiedDocumentInformation1? RelatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> RelatedDocument { get; init; } = [];
 
     /// <summary>
     /// Cut off date for items used to establish the total request amount.
@@ -74,7 +74,7 @@ public record FinancingItemList1
     [IsoId("_OTgzMzMx-AOSNFX-8224500")]
     [DisplayName("Notification Information")]
     [IsoXmlTag("NtfctnInf")]
-    public FinancingNotificationParties1? NotificationInformation { get; init; }
+    public ValueList<FinancingNotificationParties1> NotificationInformation { get; init; } = [];
 
     /// <summary>
     /// List of items/transactions.
@@ -82,7 +82,7 @@ public record FinancingItemList1
     [IsoId("_OTgzMzMz-AOSNFX-8224500")]
     [DisplayName("Financial Item")]
     [IsoXmlTag("FinItm")]
-    public FinancialItem1? FinancialItem { get; init; }
+    public ValueList<FinancialItem1> FinancialItem { get; init; } = [];
 
     /// <summary>
     /// Number of individual items contained in the list.
@@ -132,7 +132,7 @@ public record FinancingItemList1
     [IsoId("_OTgzMzQw-AOSNFX-8224500")]
     [DisplayName("Financing Instalment")]
     [IsoXmlTag("FincgInstlmt")]
-    public Instalment2? FinancingInstalment { get; init; }
+    public ValueList<Instalment2> FinancingInstalment { get; init; } = [];
 
     /// <summary>
     /// Additional free form information concerning the list.

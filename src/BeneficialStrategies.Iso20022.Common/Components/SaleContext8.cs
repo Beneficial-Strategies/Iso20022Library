@@ -136,7 +136,7 @@ public record SaleContext8
     [IsoId("_GknVMShKEeyhZIgCcGlTyA")]
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
-    public ReceiptType1Code? ReceiptType { get; init; }
+    public SimpleValueList<ReceiptType1Code> ReceiptType { get; init; } = [];
 
     /// <summary>
     /// Destination of the receipt (for example, e-mail address, SMS number, etc.).
@@ -154,5 +154,5 @@ public record SaleContext8
     [IsoId("_SeXxYShKEeyhZIgCcGlTyA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

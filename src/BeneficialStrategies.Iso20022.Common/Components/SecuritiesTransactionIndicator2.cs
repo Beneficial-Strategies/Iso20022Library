@@ -22,7 +22,7 @@ public record SecuritiesTransactionIndicator2
     [IsoId("_ZmkY8WhoEeaqBY_HJicULw")]
     [DisplayName("Waiver Indicator")]
     [IsoXmlTag("WvrInd")]
-    public ReportingWaiverType1Code? WaiverIndicator { get; init; }
+    public SimpleValueList<ReportingWaiverType1Code> WaiverIndicator { get; init; } = [];
 
     /// <summary>
     /// Indicates a short sell concluded by the investment agent on its own accounts or on behalf of a client, as described in the local regulation.
@@ -38,7 +38,7 @@ public record SecuritiesTransactionIndicator2
     [IsoId("_ZmkY9WhoEeaqBY_HJicULw")]
     [DisplayName("OTC Post Trade Indicator")]
     [IsoXmlTag("OTCPstTradInd")]
-    public ReportingWaiverType3Code? OTCPostTradeIndicator { get; init; }
+    public SimpleValueList<ReportingWaiverType3Code> OTCPostTradeIndicator { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the transaction is objectively measurable as reducing risks directly relating to the commercial activity of the entity executing the transaction.

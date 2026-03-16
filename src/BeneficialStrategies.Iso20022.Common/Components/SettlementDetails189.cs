@@ -30,7 +30,8 @@ public record SettlementDetails189
     [IsoId("_mJ53ewleEeuQ1MenzX1l-g")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition16Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition16Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether there is change of beneficial ownership.

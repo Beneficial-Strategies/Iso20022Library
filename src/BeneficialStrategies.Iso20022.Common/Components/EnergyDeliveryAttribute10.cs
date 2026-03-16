@@ -22,7 +22,7 @@ public record EnergyDeliveryAttribute10
     [IsoId("_iJWMoQzwEe2YoLD-1vFj0g")]
     [DisplayName("Delivery Interval")]
     [IsoXmlTag("DlvryIntrvl")]
-    public TimePeriodDetails1? DeliveryInterval { get; init; }
+    public ValueList<TimePeriodDetails1> DeliveryInterval { get; init; } = [];
 
     /// <summary>
     /// Definition of delivery start date and end date.
@@ -46,7 +46,7 @@ public record EnergyDeliveryAttribute10
     [IsoId("_iJWMqQzwEe2YoLD-1vFj0g")]
     [DisplayName("Week Day")]
     [IsoXmlTag("WkDay")]
-    public WeekDay3Code? WeekDay { get; init; }
+    public SimpleValueList<WeekDay3Code> WeekDay { get; init; } = [];
 
     /// <summary>
     /// Delivery capacity for each delivery interval specified.

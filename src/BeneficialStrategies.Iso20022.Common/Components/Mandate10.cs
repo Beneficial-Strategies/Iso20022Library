@@ -22,9 +22,7 @@ public record Mandate10
     [IsoId("_dceGJ0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> MandateIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification for the mandate request, as assigned by the initiating party.
@@ -197,7 +195,7 @@ public record Mandate10
     [IsoId("_dceGR0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
-    public ReferredMandateDocument1? ReferredDocument { get; init; }
+    public ValueList<ReferredMandateDocument1> ReferredDocument { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements within the message component.
@@ -205,5 +203,5 @@ public record Mandate10
     [IsoId("_dceGSUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

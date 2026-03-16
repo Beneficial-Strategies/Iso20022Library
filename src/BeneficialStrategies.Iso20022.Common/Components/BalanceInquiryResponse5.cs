@@ -54,7 +54,7 @@ public record BalanceInquiryResponse5
     [IsoId("_DT68GXHDEe2TbaNWBpRZpQ")]
     [DisplayName("Stored Value Account")]
     [IsoXmlTag("StordValAcct")]
-    public StoredValueAccount2? StoredValueAccount { get; init; }
+    public ValueList<StoredValueAccount2> StoredValueAccount { get; init; } = [];
 
     /// <summary>
     /// Receipt to print after a balance inquiry.
@@ -62,5 +62,5 @@ public record BalanceInquiryResponse5
     [IsoId("_DT68G3HDEe2TbaNWBpRZpQ")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
-    public PaymentReceipt5? Receipt { get; init; }
+    public ValueList<PaymentReceipt5> Receipt { get; init; } = [];
 }

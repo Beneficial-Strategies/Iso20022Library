@@ -23,7 +23,7 @@ public record Transaction154
     [IsoId("_IjBYd8sJEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined  in external code list.
@@ -31,9 +31,7 @@ public record Transaction154
     [IsoId("_RDCfM4dREeuBS50MFjViNw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -65,7 +63,7 @@ public record Transaction154
     [IsoId("_RDCfO4dREeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the chargeback.
@@ -81,5 +79,5 @@ public record Transaction154
     [IsoId("_RDCfP4dREeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

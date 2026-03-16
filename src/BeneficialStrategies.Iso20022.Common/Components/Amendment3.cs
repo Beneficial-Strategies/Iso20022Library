@@ -80,7 +80,7 @@ public record Amendment3
     [IsoId("_9-HEtHltEeG7BsjMvd1mEw_-2101190221")]
     [DisplayName("New Undertaking Terms And Conditions")]
     [IsoXmlTag("NewUdrtkgTermsAndConds")]
-    public Narrative1? NewUndertakingTermsAndConditions { get; init; }
+    public ValueList<Narrative1> NewUndertakingTermsAndConditions { get; init; } = [];
 
     /// <summary>
     /// Amendment details related to the counter-undertaking.
@@ -104,7 +104,7 @@ public record Amendment3
     [IsoId("_9-Q1sHltEeG7BsjMvd1mEw_1278799241")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the request.

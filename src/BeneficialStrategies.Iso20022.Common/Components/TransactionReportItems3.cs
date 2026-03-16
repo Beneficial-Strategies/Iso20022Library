@@ -114,7 +114,7 @@ public record TransactionReportItems3
     [IsoId("_Pckg2dp-Ed-ak6NoX_4Aeg_244469562")]
     [DisplayName("Obligor Bank")]
     [IsoXmlTag("OblgrBk")]
-    public BICIdentification1? ObligorBank { get; init; }
+    public ValueList<BICIdentification1> ObligorBank { get; init; } = [];
 
     /// <summary>
     /// Financial institution that is a data set submitting bank to the transaction.
@@ -122,7 +122,7 @@ public record TransactionReportItems3
     [IsoId("_PcuR0Np-Ed-ak6NoX_4Aeg_600025147")]
     [DisplayName("Submitting Bank")]
     [IsoXmlTag("SubmitgBk")]
-    public BICIdentification1? SubmittingBank { get; init; }
+    public ValueList<BICIdentification1> SubmittingBank { get; init; } = [];
 
     /// <summary>
     /// Amount of baseline not yet utilised.
@@ -146,5 +146,5 @@ public record TransactionReportItems3
     [IsoId("_PcuR09p-Ed-ak6NoX_4Aeg_-340643379")]
     [DisplayName("Pending Request For Action")]
     [IsoXmlTag("PdgReqForActn")]
-    public PendingActivity2? PendingRequestForAction { get; init; }
+    public ValueList<PendingActivity2> PendingRequestForAction { get; init; } = [];
 }

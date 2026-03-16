@@ -48,7 +48,5 @@ public record TransactionVerificationResult1
     [IsoId("_SxbqpAEcEeCQm6a_G2yO_w_2039129918")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? DeclinedProductCode { get; init; }
+    public SimpleValueList<IsoMax70Text> DeclinedProductCode { get; init; } = [];
 }

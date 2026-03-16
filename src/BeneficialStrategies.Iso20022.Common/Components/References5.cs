@@ -46,7 +46,7 @@ public record References5
     [IsoId("_Qoao4tp-Ed-ak6NoX_4Aeg_-1789477840")]
     [DisplayName("Acknowledged Message Identification")]
     [IsoXmlTag("AckdMsgId")]
-    public MessageIdentification1? AcknowledgedMessageIdentification { get; init; }
+    public ValueList<MessageIdentification1> AcknowledgedMessageIdentification { get; init; } = [];
 
     /// <summary>
     /// Status of the request.
@@ -64,7 +64,5 @@ public record References5
     [IsoId("_Qoao5Np-Ed-ak6NoX_4Aeg_186950521")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AttachedDocumentName { get; init; }
+    public SimpleValueList<IsoMax70Text> AttachedDocumentName { get; init; } = [];
 }

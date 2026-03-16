@@ -22,7 +22,7 @@ public record CardProgramme2
     [IsoId("_h_TdsSuBEeyg-aG5nXcnfg")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public CardProgrammeMode2? CardProgrammeProposed { get; init; }
+    public ValueList<CardProgrammeMode2> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Card programme or brand actually applied to the transaction.

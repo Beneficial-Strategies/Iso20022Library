@@ -39,5 +39,5 @@ public record BatchRequest4
     [IsoId("_rfaiYU35Eey_VecAUE-C9Q")]
     [DisplayName("Transaction To Perform")]
     [IsoXmlTag("TxToPrfrm")]
-    public TransactionToPerform4Choice_? TransactionToPerform { get; init; }
+    public ValueList<TransactionToPerform4Choice_> TransactionToPerform { get; init; } = [];
 }

@@ -88,7 +88,7 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkGSdtp-Ed-ak6NoX_4Aeg_1392936682")]
     [DisplayName("Breakdown By Party")]
     [IsoXmlTag("BrkdwnByPty")]
-    public BreakdownByParty1? BreakdownByParty { get; init; }
+    public ValueList<BreakdownByParty1> BreakdownByParty { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by country.
@@ -96,7 +96,7 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkGSd9p-Ed-ak6NoX_4Aeg_1473281612")]
     [DisplayName("Breakdown By Country")]
     [IsoXmlTag("BrkdwnByCtry")]
-    public BreakdownByCountry1? BreakdownByCountry { get; init; }
+    public ValueList<BreakdownByCountry1> BreakdownByCountry { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by currency.
@@ -104,7 +104,7 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkGSeNp-Ed-ak6NoX_4Aeg_1573945036")]
     [DisplayName("Breakdown By Currency")]
     [IsoXmlTag("BrkdwnByCcy")]
-    public BreakdownByCurrency1? BreakdownByCurrency { get; init; }
+    public ValueList<BreakdownByCurrency1> BreakdownByCurrency { get; init; } = [];
 
     /// <summary>
     /// Estimated cash flow by a user defined parameter/s.
@@ -112,7 +112,8 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkPcYNp-Ed-ak6NoX_4Aeg_1619196494")]
     [DisplayName("Breakdown By User Defined Parameter")]
     [IsoXmlTag("BrkdwnByUsrDfndParam")]
-    public BreakdownByUserDefinedParameter1? BreakdownByUserDefinedParameter { get; init; }
+    public ValueList<BreakdownByUserDefinedParameter1> BreakdownByUserDefinedParameter { get; init; } =
+        [];
 
     /// <summary>
     /// Rate of change of the net asset value.
@@ -129,7 +130,7 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkPcYtp-Ed-ak6NoX_4Aeg_-271541615")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the estimated net cash flow is exceptional.
@@ -146,5 +147,5 @@ public record EstimatedFundCashForecast4
     [IsoId("_SkPcZNp-Ed-ak6NoX_4Aeg_-270621384")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast2? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast2> EstimatedNetCashForecastDetails { get; init; } = [];
 }

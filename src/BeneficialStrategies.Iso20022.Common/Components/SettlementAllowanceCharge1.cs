@@ -31,7 +31,7 @@ public record SettlementAllowanceCharge1
     [IsoId("_S0Q8TAEcEeCQm6a_G2yO_w_-2142675469")]
     [DisplayName("Actual Amount")]
     [IsoXmlTag("ActlAmt")]
-    public CurrencyAndAmount? ActualAmount { get; init; }
+    public ValueList<CurrencyAndAmount> ActualAmount { get; init; } = [];
 
     /// <summary>
     /// Reason, expressed as text, for this allowance or charge.

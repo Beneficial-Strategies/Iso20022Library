@@ -30,5 +30,5 @@ public record EntryDetails11
     [IsoId("_UWNP8ytvEeysar7zFstVmw")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public EntryTransaction12? TransactionDetails { get; init; }
+    public ValueList<EntryTransaction12> TransactionDetails { get; init; } = [];
 }

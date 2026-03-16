@@ -30,7 +30,7 @@ public record ForecastParameter1
     [IsoId("_UwUSY9p-Ed-ak6NoX_4Aeg_-550549201")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
-    public CashInForecast1? EstimatedCashInForecastDetails { get; init; }
+    public ValueList<CashInForecast1> EstimatedCashInForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.
@@ -38,7 +38,7 @@ public record ForecastParameter1
     [IsoId("_UwUSZNp-Ed-ak6NoX_4Aeg_-550549141")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
-    public CashOutForecast1? EstimatedCashOutForecastDetails { get; init; }
+    public ValueList<CashOutForecast1> EstimatedCashOutForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Net cash movements to a fund as a result of investment funds transactions.
@@ -46,5 +46,5 @@ public record ForecastParameter1
     [IsoId("_UwUSZdp-Ed-ak6NoX_4Aeg_-550549260")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast1? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast1> EstimatedNetCashForecastDetails { get; init; } = [];
 }

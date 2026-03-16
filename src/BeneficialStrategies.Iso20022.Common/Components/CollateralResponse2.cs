@@ -22,7 +22,8 @@ public record CollateralResponse2
     [IsoId("_tKLRM4pDEeaNTaanBSMWmg")]
     [DisplayName("Securities Collateral Response")]
     [IsoXmlTag("SctiesCollRspn")]
-    public SecuritiesCollateralResponse1? SecuritiesCollateralResponse { get; init; }
+    public ValueList<SecuritiesCollateralResponse1> SecuritiesCollateralResponse { get; init; } =
+        [];
 
     /// <summary>
     /// Provides details on the cash collateral proposal.
@@ -30,7 +31,7 @@ public record CollateralResponse2
     [IsoId("_tKLRNYpDEeaNTaanBSMWmg")]
     [DisplayName("Cash Collateral Response")]
     [IsoXmlTag("CshCollRspn")]
-    public CashCollateralResponse2? CashCollateralResponse { get; init; }
+    public ValueList<CashCollateralResponse2> CashCollateralResponse { get; init; } = [];
 
     /// <summary>
     /// Provides details on other collateral proposal.
@@ -38,5 +39,5 @@ public record CollateralResponse2
     [IsoId("_tKLRN4pDEeaNTaanBSMWmg")]
     [DisplayName("Other Collateral Response")]
     [IsoXmlTag("OthrCollRspn")]
-    public OtherCollateralResponse2? OtherCollateralResponse { get; init; }
+    public ValueList<OtherCollateralResponse2> OtherCollateralResponse { get; init; } = [];
 }

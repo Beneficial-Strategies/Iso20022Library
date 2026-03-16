@@ -57,7 +57,7 @@ public record ATMTransaction10
     [IsoId("_FmVUAIrEEeSgLpgNvMAP2g")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action5? Action { get; init; }
+    public ValueList<Action5> Action { get; init; } = [];
 
     /// <summary>
     /// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
@@ -74,5 +74,5 @@ public record ATMTransaction10
     [IsoId("_VqDEyYrDEeSgLpgNvMAP2g")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand1? Command { get; init; }
+    public ValueList<ATMCommand1> Command { get; init; } = [];
 }

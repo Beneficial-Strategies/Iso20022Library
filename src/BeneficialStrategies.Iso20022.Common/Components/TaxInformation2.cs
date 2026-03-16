@@ -87,5 +87,5 @@ public record TaxInformation2
     [IsoId("_RvfluNp-Ed-ak6NoX_4Aeg_-296863056")]
     [DisplayName("Tax Type Information")]
     [IsoXmlTag("TaxTpInf")]
-    public TaxDetails? TaxTypeInformation { get; init; }
+    public ValueList<TaxDetails> TaxTypeInformation { get; init; } = [];
 }

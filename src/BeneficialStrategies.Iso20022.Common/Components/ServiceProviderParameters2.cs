@@ -50,9 +50,7 @@ public record ServiceProviderParameters2
     [IsoId("_YW_kV1FMEeyApZmLzm74zA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Service provider host configuration.
@@ -60,7 +58,7 @@ public record ServiceProviderParameters2
     [IsoId("_YW_kWVFMEeyApZmLzm74zA")]
     [DisplayName("Host")]
     [IsoXmlTag("Hst")]
-    public AcquirerHostConfiguration9? Host { get; init; }
+    public ValueList<AcquirerHostConfiguration9> Host { get; init; } = [];
 
     /// <summary>
     /// Identification of non financial action supported by the Service Provider.
@@ -68,5 +66,6 @@ public record ServiceProviderParameters2
     [IsoId("_YW_kW1FMEeyApZmLzm74zA")]
     [DisplayName("Non Financial Action Supported")]
     [IsoXmlTag("NonFinActnSpprtd")]
-    public NonFinancialRequestType1Code? NonFinancialActionSupported { get; init; }
+    public SimpleValueList<NonFinancialRequestType1Code> NonFinancialActionSupported { get; init; } =
+        [];
 }

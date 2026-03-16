@@ -22,7 +22,7 @@ public record MarginReport2
     [IsoId("_-eDlGKMOEeCojJW5vEuTEQ_1535794841")]
     [DisplayName("Margin Product")]
     [IsoXmlTag("MrgnPdct")]
-    public MarginProductType1Choice_? MarginProduct { get; init; }
+    public ValueList<MarginProductType1Choice_> MarginProduct { get; init; } = [];
 
     /// <summary>
     /// Identifies the clearing member&apos;s account.
@@ -47,7 +47,7 @@ public record MarginReport2
     [IsoId("_-eMvAaMOEeCojJW5vEuTEQ_-1762100102")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
-    public PartyIdentificationAndAccount31? NonClearingMember { get; init; }
+    public ValueList<PartyIdentificationAndAccount31> NonClearingMember { get; init; } = [];
 
     /// <summary>
     /// Provides the margin calculation summary per margin account.

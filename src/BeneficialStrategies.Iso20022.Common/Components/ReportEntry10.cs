@@ -91,7 +91,7 @@ public record ReportEntry10
     [IsoId("_-Ro-tW48EeiU9cctagi5ow")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashAvailability1? Availability { get; init; }
+    public ValueList<CashAvailability1> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.
@@ -165,7 +165,7 @@ public record ReportEntry10
     [IsoId("_-Ro-x248EeiU9cctagi5ow")]
     [DisplayName("Entry Details")]
     [IsoXmlTag("NtryDtls")]
-    public EntryDetails9? EntryDetails { get; init; }
+    public ValueList<EntryDetails9> EntryDetails { get; init; } = [];
 
     /// <summary>
     /// Further details of the entry.

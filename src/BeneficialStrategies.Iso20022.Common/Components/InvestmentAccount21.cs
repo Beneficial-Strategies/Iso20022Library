@@ -50,7 +50,7 @@ public record InvestmentAccount21
     [IsoId("_RxbfYNp-Ed-ak6NoX_4Aeg_-792129971")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public PartyIdentification2Choice_? OwnerIdentification { get; init; }
+    public ValueList<PartyIdentification2Choice_> OwnerIdentification { get; init; } = [];
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.

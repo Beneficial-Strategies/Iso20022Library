@@ -130,5 +130,5 @@ public record PersonIdentification7
     [IsoId("_DtoGxS_mEeO4w-IWHJMI9g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public GenericIdentification4? Other { get; init; }
+    public ValueList<GenericIdentification4> Other { get; init; } = [];
 }

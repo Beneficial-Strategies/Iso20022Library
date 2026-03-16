@@ -164,5 +164,5 @@ public record DirectDebitTransactionInformation13
     [IsoId("_mEBo-iHIEeK1OvoXgbVMNg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -185,7 +185,7 @@ public record InvestmentAccount28
     [IsoId("_Rx4LV9p-Ed-ak6NoX_4Aeg_-195151534")]
     [DisplayName("Modified Fund Details")]
     [IsoXmlTag("ModfdFndDtls")]
-    public ModificationScope12? ModifiedFundDetails { get; init; }
+    public ValueList<ModificationScope12> ModifiedFundDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.

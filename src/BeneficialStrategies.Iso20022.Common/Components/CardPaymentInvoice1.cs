@@ -46,5 +46,5 @@ public record CardPaymentInvoice1
     [IsoId("_3mI7YDD0EeO9waS4ina8CA")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public LineItem10? LineItem { get; init; }
+    public ValueList<LineItem10> LineItem { get; init; } = [];
 }

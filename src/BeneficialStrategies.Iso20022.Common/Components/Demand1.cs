@@ -86,7 +86,7 @@ public record Demand1
     [IsoId("_-A8WQ3ltEeG7BsjMvd1mEw_-1782957178")]
     [DisplayName("Settlement Account")]
     [IsoXmlTag("SttlmAcct")]
-    public CashAccount27? SettlementAccount { get; init; }
+    public ValueList<CashAccount27> SettlementAccount { get; init; } = [];
 
     /// <summary>
     /// Details of the beneficiary&apos;s presentation of documents.

@@ -82,7 +82,7 @@ public record TemporaryServices2
     [IsoId("_nub6z8WnEeuhguwJmlgagQ")]
     [DisplayName("Miscellaneous Expenses")]
     [IsoXmlTag("MiscExpnss")]
-    public Amount13? MiscellaneousExpenses { get; init; }
+    public ValueList<Amount13> MiscellaneousExpenses { get; init; } = [];
 
     /// <summary>
     /// Subtotal amount exclusive of tax.
@@ -98,7 +98,7 @@ public record TemporaryServices2
     [IsoId("_nub608WnEeuhguwJmlgagQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 
     /// <summary>
     /// Additional user-defined data pertaining to the temporary services.

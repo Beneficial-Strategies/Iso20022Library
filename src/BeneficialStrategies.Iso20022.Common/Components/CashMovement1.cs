@@ -48,7 +48,7 @@ public record CashMovement1
     [IsoId("_UI-ll9p-Ed-ak6NoX_4Aeg_1122249828")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges1? Charges { get; init; }
+    public ValueList<Charges1> Charges { get; init; } = [];
 
     /// <summary>
     /// Provides information about the account which is debited/credited.

@@ -39,7 +39,7 @@ public record CardPaymentTransaction3
     [IsoId("_TD56uwEcEeCQm6a_G2yO_w_-376300047")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType2Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType2Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -108,7 +108,7 @@ public record CardPaymentTransaction3
     [IsoId("_TEDrsQEcEeCQm6a_G2yO_w_1541643541")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason1Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason1Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.

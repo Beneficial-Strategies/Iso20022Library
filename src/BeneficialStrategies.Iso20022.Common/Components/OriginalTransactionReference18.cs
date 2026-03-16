@@ -51,5 +51,5 @@ public record OriginalTransactionReference18
     [IsoId("_tqcmMlkyEeGeoaLUQk__nA_-592918627")]
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
-    public PaymentIdentification4? OriginalTransaction { get; init; }
+    public ValueList<PaymentIdentification4> OriginalTransaction { get; init; } = [];
 }

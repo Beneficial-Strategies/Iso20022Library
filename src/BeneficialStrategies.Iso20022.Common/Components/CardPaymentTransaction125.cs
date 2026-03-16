@@ -39,7 +39,7 @@ public record CardPaymentTransaction125
     [IsoId("_TZFRlXDuEe2MCaKO5AtGsA")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -83,9 +83,7 @@ public record CardPaymentTransaction125
     [IsoId("_TZFRn3DuEe2MCaKO5AtGsA")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeProposed { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Specifies the card program actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.
@@ -156,7 +154,7 @@ public record CardPaymentTransaction125
     [IsoId("_TZFRr3DuEe2MCaKO5AtGsA")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -240,7 +238,8 @@ public record CardPaymentTransaction125
     [IsoId("_TZFRwXDuEe2MCaKO5AtGsA")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Merchant information that must be returned unchanged in the response.
@@ -274,7 +273,5 @@ public record CardPaymentTransaction125
     [IsoId("_TZFRyXDuEe2MCaKO5AtGsA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

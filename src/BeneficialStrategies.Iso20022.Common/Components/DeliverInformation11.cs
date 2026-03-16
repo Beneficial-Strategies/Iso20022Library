@@ -63,7 +63,7 @@ public record DeliverInformation11
     [IsoId("_zCfyMRgmEeK-_89we2b-bA")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge20? ChargeDetails { get; init; }
+    public ValueList<Charge20> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
@@ -71,7 +71,7 @@ public record DeliverInformation11
     [IsoId("_zCfyNRgmEeK-_89we2b-bA")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission12? CommissionDetails { get; init; }
+    public ValueList<Commission12> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -79,7 +79,7 @@ public record DeliverInformation11
     [IsoId("_zCfyORgmEeK-_89we2b-bA")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax15? TaxDetails { get; init; }
+    public ValueList<Tax15> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.

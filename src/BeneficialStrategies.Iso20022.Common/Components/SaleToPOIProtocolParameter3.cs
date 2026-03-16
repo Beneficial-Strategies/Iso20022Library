@@ -78,7 +78,7 @@ public record SaleToPOIProtocolParameter3
     [IsoId("_3C5rMHIWEe2OqYulmHWukQ")]
     [DisplayName("Allowed Sale Message")]
     [IsoXmlTag("AllwdSaleMsg")]
-    public RetailerMessage1Code? AllowedSaleMessage { get; init; }
+    public SimpleValueList<RetailerMessage1Code> AllowedSaleMessage { get; init; } = [];
 
     /// <summary>
     /// Identify a message that a POI system could send to the Sale system.
@@ -86,7 +86,7 @@ public record SaleToPOIProtocolParameter3
     [IsoId("_js7fkHIXEe2OqYulmHWukQ")]
     [DisplayName("Allowed POI Message")]
     [IsoXmlTag("AllwdPOIMsg")]
-    public RetailerMessage1Code? AllowedPOIMessage { get; init; }
+    public SimpleValueList<RetailerMessage1Code> AllowedPOIMessage { get; init; } = [];
 
     /// <summary>
     /// Identify a service that a POI system could support to the Sale system.
@@ -94,7 +94,7 @@ public record SaleToPOIProtocolParameter3
     [IsoId("_RC-scHIYEe2OqYulmHWukQ")]
     [DisplayName("Allowed POI Service")]
     [IsoXmlTag("AllwdPOISvc")]
-    public RetailerService2Code? AllowedPOIService { get; init; }
+    public SimpleValueList<RetailerService2Code> AllowedPOIService { get; init; } = [];
 
     /// <summary>
     /// Identify a device request that a Sale system could ask to the POI system.
@@ -102,7 +102,7 @@ public record SaleToPOIProtocolParameter3
     [IsoId("__D-60HIYEe2OqYulmHWukQ")]
     [DisplayName("Allowed Sale Device")]
     [IsoXmlTag("AllwdSaleDvc")]
-    public RetailerService8Code? AllowedSaleDevice { get; init; }
+    public SimpleValueList<RetailerService8Code> AllowedSaleDevice { get; init; } = [];
 
     /// <summary>
     /// List of types that the receiver supports and that the sender could use as type of an ExternallyDefinedData message component.
@@ -110,7 +110,5 @@ public record SaleToPOIProtocolParameter3
     [IsoId("_ttnzXXIVEe2OqYulmHWukQ")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ExternallyTypeSupported { get; init; }
+    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
 }

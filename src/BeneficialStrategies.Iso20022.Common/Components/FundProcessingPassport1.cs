@@ -106,7 +106,7 @@ public record FundProcessingPassport1
     [IsoId("_Q5jcM9p-Ed-ak6NoX_4Aeg_4177264")]
     [DisplayName("Local Market Annex")]
     [IsoXmlTag("LclMktAnx")]
-    public LocalMarketAnnex2? LocalMarketAnnex { get; init; }
+    public ValueList<LocalMarketAnnex2> LocalMarketAnnex { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -114,5 +114,5 @@ public record FundProcessingPassport1
     [IsoId("_Q5jcNNp-Ed-ak6NoX_4Aeg_113830738")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

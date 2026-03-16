@@ -166,7 +166,7 @@ public record CreditTransferTransactionInformation1
     [IsoId("_PxbWh9p-Ed-ak6NoX_4Aeg_566500867")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent1? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent1> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Further information related to the processing of the payment instruction that may need to be acted upon by the debtor agent, depending on agreement between debtor and the debtor agent. ||Usage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor&apos;s agent, or can be information required by the debtor&apos;s agent to process the instruction.

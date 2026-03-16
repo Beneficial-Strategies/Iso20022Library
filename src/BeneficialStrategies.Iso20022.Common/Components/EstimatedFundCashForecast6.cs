@@ -56,7 +56,7 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YbQdlEeSPHJIdUs1USg")]
     [DisplayName("Estimated Total NAV")]
     [IsoXmlTag("EstmtdTtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? EstimatedTotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> EstimatedTotalNAV { get; init; } = [];
 
     /// <summary>
     /// Previous value of all the holdings, less the fund&apos;s liabilities, attributable to a specific investment fund class.
@@ -64,7 +64,7 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YbwdlEeSPHJIdUs1USg")]
     [DisplayName("Previous Total NAV")]
     [IsoXmlTag("PrvsTtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? PreviousTotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> PreviousTotalNAV { get; init; } = [];
 
     /// <summary>
     /// Estimated total number of investment fund class units that have been issued.
@@ -97,7 +97,7 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YdwdlEeSPHJIdUs1USg")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Information about the designation of the share class currency, that is, whether it is for onshore or offshore purposes and other information that may be required. This is typically only required for CNY funds.
@@ -147,7 +147,7 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YewdlEeSPHJIdUs1USg")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
-    public CashInForecast6? EstimatedCashInForecastDetails { get; init; }
+    public ValueList<CashInForecast6> EstimatedCashInForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated cash movements out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.
@@ -155,7 +155,7 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YfQdlEeSPHJIdUs1USg")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
-    public CashOutForecast6? EstimatedCashOutForecastDetails { get; init; }
+    public ValueList<CashOutForecast6> EstimatedCashOutForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows.
@@ -163,5 +163,5 @@ public record EstimatedFundCashForecast6
     [IsoId("_736YfwdlEeSPHJIdUs1USg")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast4? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast4> EstimatedNetCashForecastDetails { get; init; } = [];
 }

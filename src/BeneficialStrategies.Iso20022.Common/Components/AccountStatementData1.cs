@@ -40,5 +40,5 @@ public record AccountStatementData1
     [IsoId("_HJDngPGgEeiGNursv3uE_g")]
     [DisplayName("Account Statement")]
     [IsoXmlTag("AcctStmt")]
-    public AccountStatementDetails1? AccountStatement { get; init; }
+    public ValueList<AccountStatementDetails1> AccountStatement { get; init; } = [];
 }

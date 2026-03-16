@@ -50,7 +50,5 @@ public record ATMService22
     [IsoId("_om2xR64sEeWLdt0vLARX2Q")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceVariantIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
 }

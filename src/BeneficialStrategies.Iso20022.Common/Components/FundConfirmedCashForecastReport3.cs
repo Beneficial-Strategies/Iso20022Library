@@ -22,7 +22,7 @@ public record FundConfirmedCashForecastReport3
     [IsoId("_ac6KwQdxEeSPHJIdUs1USg")]
     [DisplayName("Fund Or Sub Fund Details")]
     [IsoXmlTag("FndOrSubFndDtls")]
-    public Fund2? FundOrSubFundDetails { get; init; }
+    public ValueList<Fund2> FundOrSubFundDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund.
@@ -30,7 +30,7 @@ public record FundConfirmedCashForecastReport3
     [IsoId("_RXVGUwdxEeSPHJIdUs1USg")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
-    public FundCashForecast7? FundCashForecastDetails { get; init; }
+    public ValueList<FundCashForecast7> FundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated net cash as a result of the cash-in and cash-out flows.
@@ -46,5 +46,5 @@ public record FundConfirmedCashForecastReport3
     [IsoId("_RXVGVwdxEeSPHJIdUs1USg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -30,7 +30,7 @@ public record TradeSecurityIdentificationQueryCriteria3
     [IsoId("_GQzJRZNeEeytjZlcgApf6A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public SecurityIdentificationQueryCriteria1? Identification { get; init; }
+    public ValueList<SecurityIdentificationQueryCriteria1> Identification { get; init; } = [];
 
     /// <summary>
     /// Classification of information according to contract type.
@@ -38,7 +38,7 @@ public record TradeSecurityIdentificationQueryCriteria3
     [IsoId("_kgZXkJNiEeytjZlcgApf6A")]
     [DisplayName("Contract Type")]
     [IsoXmlTag("CtrctTp")]
-    public FinancialInstrumentContractType2Code? ContractType { get; init; }
+    public SimpleValueList<FinancialInstrumentContractType2Code> ContractType { get; init; } = [];
 
     /// <summary>
     /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
@@ -46,7 +46,7 @@ public record TradeSecurityIdentificationQueryCriteria3
     [IsoId("_1sYF8JNjEeytjZlcgApf6A")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public ISINQueryCriteria1? ISIN { get; init; }
+    public ValueList<ISINQueryCriteria1> ISIN { get; init; } = [];
 
     /// <summary>
     /// Identification of the product through a unique product identifier.
@@ -54,7 +54,7 @@ public record TradeSecurityIdentificationQueryCriteria3
     [IsoId("_567KAJNjEeytjZlcgApf6A")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
-    public UPIQueryCriteria1? UniqueProductIdentifier { get; init; }
+    public ValueList<UPIQueryCriteria1> UniqueProductIdentifier { get; init; } = [];
 
     /// <summary>
     /// Unique identification to identify the direct underlying instrument based on its type.
@@ -62,5 +62,6 @@ public record TradeSecurityIdentificationQueryCriteria3
     [IsoId("_GQzJR5NeEeytjZlcgApf6A")]
     [DisplayName("Underlying Instrument Identification")]
     [IsoXmlTag("UndrlygInstrmId")]
-    public SecurityIdentificationQuery4Choice_? UnderlyingInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentificationQuery4Choice_> UnderlyingInstrumentIdentification { get; init; } =
+        [];
 }

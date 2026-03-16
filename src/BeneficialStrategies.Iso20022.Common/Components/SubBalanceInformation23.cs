@@ -48,5 +48,6 @@ public record SubBalanceInformation23
     [IsoId("_ciAotTi8Eeydid5dcNPKvg")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation23? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation23> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 }

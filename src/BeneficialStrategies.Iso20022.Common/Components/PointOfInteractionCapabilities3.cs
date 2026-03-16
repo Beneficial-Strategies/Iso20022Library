@@ -22,7 +22,7 @@ public record PointOfInteractionCapabilities3
     [IsoId("_MMNH4WiuEeS87LmvcA55sg")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
-    public CardDataReading1Code? CardReadingCapabilities { get; init; }
+    public SimpleValueList<CardDataReading1Code> CardReadingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Cardholder verification capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -30,7 +30,8 @@ public record PointOfInteractionCapabilities3
     [IsoId("_MMNH42iuEeS87LmvcA55sg")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
-    public CardholderVerificationCapability1Code? CardholderVerificationCapabilities { get; init; }
+    public SimpleValueList<CardholderVerificationCapability1Code> CardholderVerificationCapabilities { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum number of digits the POI is able to accept when the cardholder enters its PIN.
@@ -73,7 +74,7 @@ public record PointOfInteractionCapabilities3
     [IsoId("_MMNH52iuEeS87LmvcA55sg")]
     [DisplayName("Display Capabilities")]
     [IsoXmlTag("DispCpblties")]
-    public DisplayCapabilities2? DisplayCapabilities { get; init; }
+    public ValueList<DisplayCapabilities2> DisplayCapabilities { get; init; } = [];
 
     /// <summary>
     /// Number of columns of the printer component.
@@ -91,5 +92,5 @@ public record PointOfInteractionCapabilities3
     [IsoId("_MMNH62iuEeS87LmvcA55sg")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
-    public LanguageCode? AvailableLanguage { get; init; }
+    public SimpleValueList<LanguageCode> AvailableLanguage { get; init; } = [];
 }

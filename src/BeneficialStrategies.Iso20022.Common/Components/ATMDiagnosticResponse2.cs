@@ -30,5 +30,5 @@ public record ATMDiagnosticResponse2
     [IsoId("_qlQPQ646EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

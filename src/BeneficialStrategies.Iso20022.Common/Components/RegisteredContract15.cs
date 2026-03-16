@@ -80,7 +80,7 @@ public record RegisteredContract15
     [IsoId("_XWoJYLcCEeu9Cp6InX88Vw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation5? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -88,5 +88,5 @@ public record RegisteredContract15
     [IsoId("_KUOcZ7b9Eeu9Cp6InX88Vw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

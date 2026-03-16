@@ -22,7 +22,8 @@ public record CorporateSectorCriteria6
     [IsoId("_L70cQZNnEeytjZlcgApf6A")]
     [DisplayName("Financial Institution Sector")]
     [IsoXmlTag("FISctr")]
-    public FinancialPartySectorType2Code? FinancialInstitutionSector { get; init; }
+    public SimpleValueList<FinancialPartySectorType2Code> FinancialInstitutionSector { get; init; } =
+        [];
 
     /// <summary>
     /// Indicates that reporting counterparty is a non financial institution.
@@ -30,7 +31,8 @@ public record CorporateSectorCriteria6
     [IsoId("_L70cQ5NnEeytjZlcgApf6A")]
     [DisplayName("Non Financial Institution Sector")]
     [IsoXmlTag("NFISctr")]
-    public NonFinancialPartySector1Code? NonFinancialInstitutionSector { get; init; }
+    public SimpleValueList<NonFinancialPartySector1Code> NonFinancialInstitutionSector { get; init; } =
+        [];
 
     /// <summary>
     /// Indicates that reporting counterparty is another type of counterparty as defined by specific regulations (e.g. a CCP) and the detailed sector is not reported.

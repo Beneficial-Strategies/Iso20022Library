@@ -40,9 +40,7 @@ public record FraudDispositionStatus1
     [IsoId("_bl7lcHdjEeeKH6vrEwvLHA")]
     [DisplayName("Error Data")]
     [IsoXmlTag("ErrData")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? ErrorData { get; init; }
+    public SimpleValueList<IsoMax256Text> ErrorData { get; init; } = [];
 
     /// <summary>
     /// Contains warnings found in the submitted fraud report message.
@@ -50,9 +48,7 @@ public record FraudDispositionStatus1
     [IsoId("_iUehEHdjEeeKH6vrEwvLHA")]
     [DisplayName("Warning Data")]
     [IsoXmlTag("WrngData")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? WarningData { get; init; }
+    public SimpleValueList<IsoMax256Text> WarningData { get; init; } = [];
 
     /// <summary>
     /// Additional information

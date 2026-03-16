@@ -58,5 +58,5 @@ public record ResultData10
     [IsoId("_sHuet8sXEeuNe7RtB4qFHw")]
     [DisplayName("Additional Result Information")]
     [IsoXmlTag("AddtlRsltInf")]
-    public AdditionalData1? AdditionalResultInformation { get; init; }
+    public ValueList<AdditionalData1> AdditionalResultInformation { get; init; } = [];
 }

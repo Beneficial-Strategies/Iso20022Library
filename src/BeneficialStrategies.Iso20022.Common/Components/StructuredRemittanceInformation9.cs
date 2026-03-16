@@ -22,7 +22,7 @@ public record StructuredRemittanceInformation9
     [IsoId("_tdxcIlkyEeGeoaLUQk__nA_-1066811179")]
     [DisplayName("Referred Document Information")]
     [IsoXmlTag("RfrdDocInf")]
-    public ReferredDocumentInformation3? ReferredDocumentInformation { get; init; }
+    public ValueList<ReferredDocumentInformation3> ReferredDocumentInformation { get; init; } = [];
 
     /// <summary>
     /// Provides details on the amounts of the referred document.

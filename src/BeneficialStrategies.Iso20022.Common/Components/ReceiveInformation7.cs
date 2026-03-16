@@ -54,7 +54,7 @@ public record ReceiveInformation7
     [IsoId("_Yqs6o_snEeCFH_HrG1Cfjg")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge20? ChargeDetails { get; init; }
+    public ValueList<Charge20> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
@@ -62,7 +62,7 @@ public record ReceiveInformation7
     [IsoId("_Yqs6p_snEeCFH_HrG1Cfjg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission12? CommissionDetails { get; init; }
+    public ValueList<Commission12> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -70,7 +70,7 @@ public record ReceiveInformation7
     [IsoId("_Yqs6q_snEeCFH_HrG1Cfjg")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax15? TaxDetails { get; init; }
+    public ValueList<Tax15> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.

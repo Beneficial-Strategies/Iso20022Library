@@ -38,7 +38,7 @@ public record Context13
     [IsoId("_67DedahMEeuOaMA1YOy5YQ")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public Verification4? Verification { get; init; }
+    public ValueList<Verification4> Verification { get; init; } = [];
 
     /// <summary>
     /// Context of risk associated with the transaction.

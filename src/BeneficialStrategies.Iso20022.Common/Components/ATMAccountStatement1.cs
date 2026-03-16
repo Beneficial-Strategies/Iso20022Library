@@ -41,5 +41,5 @@ public record ATMAccountStatement1
     [IsoId("_XaRwYIq8EeSHjtO_wHA7PQ")]
     [DisplayName("Account Statement")]
     [IsoXmlTag("AcctStmt")]
-    public ATMAccountStatement2? AccountStatement { get; init; }
+    public ValueList<ATMAccountStatement2> AccountStatement { get; init; } = [];
 }

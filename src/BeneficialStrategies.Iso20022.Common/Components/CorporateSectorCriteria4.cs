@@ -22,7 +22,8 @@ public record CorporateSectorCriteria4
     [IsoId("_TA-14c4AEeigHZFdShPUJQ")]
     [DisplayName("Financial Institution Sector")]
     [IsoXmlTag("FISctr")]
-    public FinancialPartySectorType2Code? FinancialInstitutionSector { get; init; }
+    public SimpleValueList<FinancialPartySectorType2Code> FinancialInstitutionSector { get; init; } =
+        [];
 
     /// <summary>
     /// Indicates that reporting counterparty is a non financial institution.
@@ -30,8 +31,8 @@ public record CorporateSectorCriteria4
     [IsoId("_TA-1484AEeigHZFdShPUJQ")]
     [DisplayName("Non Financial Institution Sector")]
     [IsoXmlTag("NFISctr")]
-    [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-    public IsoNACEDomainIdentifier? NonFinancialInstitutionSector { get; init; }
+    public SimpleValueList<IsoNACEDomainIdentifier> NonFinancialInstitutionSector { get; init; } =
+        [];
 
     /// <summary>
     /// Indicates that reporting counterparty is a financial institution.

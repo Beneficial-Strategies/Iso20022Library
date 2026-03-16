@@ -49,9 +49,7 @@ public record MaintenanceDelegation3
     [IsoId("_AahvVY4DEeWrZqsymMFdfg")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POISubset { get; init; }
+    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Information for the MTM to build or include delegated actions in the management plan of the POI.
@@ -86,8 +84,7 @@ public record MaintenanceDelegation3
     [IsoId("_AahvXY4DEeWrZqsymMFdfg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? Certificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Association of the TM identifier and the MTM identifier of a POI.
@@ -95,7 +92,8 @@ public record MaintenanceDelegation3
     [IsoId("_AahvX44DEeWrZqsymMFdfg")]
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
-    public MaintenanceIdentificationAssociation1? POIIdentificationAssociation { get; init; }
+    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the key to manage or to download.
@@ -103,7 +101,7 @@ public record MaintenanceDelegation3
     [IsoId("_AahvYY4DEeWrZqsymMFdfg")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
-    public KEKIdentifier5? SymmetricKey { get; init; }
+    public ValueList<KEKIdentifier5> SymmetricKey { get; init; } = [];
 
     /// <summary>
     /// Configuration parameters of the terminal manager to be sent by the MTM.

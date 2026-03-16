@@ -74,7 +74,7 @@ public record Instruction2
     [IsoId("_RC8BuNp-Ed-ak6NoX_4Aeg_927603219")]
     [DisplayName("Meeting Attendee")]
     [IsoXmlTag("MtgAttndee")]
-    public IndividualPerson17? MeetingAttendee { get; init; }
+    public ValueList<IndividualPerson17> MeetingAttendee { get; init; } = [];
 
     /// <summary>
     /// Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.

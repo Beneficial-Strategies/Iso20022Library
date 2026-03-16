@@ -88,7 +88,7 @@ public record AggregateBalanceInformation40
     [IsoId("_grsy0yglEey2k_sfZmJz4g")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms34? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
@@ -129,7 +129,7 @@ public record AggregateBalanceInformation40
     [IsoId("_grsy-yglEey2k_sfZmJz4g")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown58? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown58> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.
@@ -137,7 +137,7 @@ public record AggregateBalanceInformation40
     [IsoId("_grszAyglEey2k_sfZmJz4g")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceInformation22? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceInformation22> BalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -145,7 +145,7 @@ public record AggregateBalanceInformation40
     [IsoId("_grszCyglEey2k_sfZmJz4g")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
-    public AdditionalBalanceInformation22? AdditionalBalanceBreakdown { get; init; }
+    public ValueList<AdditionalBalanceInformation22> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of positions per place of safekeeping (and optionally per place of listing).
@@ -153,7 +153,8 @@ public record AggregateBalanceInformation40
     [IsoId("_grszEyglEey2k_sfZmJz4g")]
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
-    public AggregateBalancePerSafekeepingPlace37? BalanceAtSafekeepingPlace { get; init; }
+    public ValueList<AggregateBalancePerSafekeepingPlace37> BalanceAtSafekeepingPlace { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional information on the holding.
@@ -171,5 +172,5 @@ public record AggregateBalanceInformation40
     [IsoId("_grszIyglEey2k_sfZmJz4g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

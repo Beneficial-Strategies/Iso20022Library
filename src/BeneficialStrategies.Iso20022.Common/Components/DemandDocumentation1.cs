@@ -41,7 +41,7 @@ public record DemandDocumentation1
     [IsoId("_-E0JonltEeG7BsjMvd1mEw_32400156")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Narrative text constituting the demand.

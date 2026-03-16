@@ -46,7 +46,7 @@ public record TransactionInterest1
     [IsoId("_SRnbUNp-Ed-ak6NoX_4Aeg_1981961621")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public Rate1? Rate { get; init; }
+    public ValueList<Rate1> Rate { get; init; } = [];
 
     /// <summary>
     /// Range of time between a start date and an end date.

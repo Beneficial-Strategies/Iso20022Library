@@ -31,7 +31,7 @@ public record StrongCustomerAuthentication1
     [IsoId("_gEuy0AMlEeujMs2LsB3mMw")]
     [DisplayName("Exemption")]
     [IsoXmlTag("Xmptn")]
-    public Exemption1? Exemption { get; init; }
+    public ValueList<Exemption1> Exemption { get; init; } = [];
 
     /// <summary>
     /// Authentication performed by a delegated authority (for example by a wallet solution).

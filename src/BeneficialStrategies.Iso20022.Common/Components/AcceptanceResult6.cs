@@ -39,7 +39,5 @@ public record AcceptanceResult6
     [IsoId("_RBvu5Np-Ed-ak6NoX_4Aeg_-192674430")]
     [DisplayName("Additional Reject Reason Information")]
     [IsoXmlTag("AddtlRjctRsnInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalRejectReasonInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalRejectReasonInformation { get; init; } = [];
 }

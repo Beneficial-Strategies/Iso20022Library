@@ -114,7 +114,7 @@ public record InvestmentAccount38
     [IsoId("_jdRpEBQ_EeOKWo1NF21OVw")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment1? ReinvestmentDetails { get; init; }
+    public ValueList<Reinvestment1> ReinvestmentDetails { get; init; } = [];
 
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed i.e. either withheld at source or tax information reported to tax authorities or tax information is reported due to the provision of a tax certificate.
@@ -183,7 +183,7 @@ public record InvestmentAccount38
     [IsoId("_ggz4GRQ_EeOKWo1NF21OVw")]
     [DisplayName("Funds Details")]
     [IsoXmlTag("FndsDtls")]
-    public FinancialInstrument29? FundsDetails { get; init; }
+    public ValueList<FinancialInstrument29> FundsDetails { get; init; } = [];
 
     /// <summary>
     /// Part of the investment account to or from which cash entries are made.

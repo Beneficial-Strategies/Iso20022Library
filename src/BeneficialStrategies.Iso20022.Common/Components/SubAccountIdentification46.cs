@@ -47,5 +47,5 @@ public record SubAccountIdentification46
     [IsoId("_5enAqZNLEeWGlc8L7oPDIg")]
     [DisplayName("Balance For Sub Account")]
     [IsoXmlTag("BalForSubAcct")]
-    public AggregateBalanceInformation33? BalanceForSubAccount { get; init; }
+    public ValueList<AggregateBalanceInformation33> BalanceForSubAccount { get; init; } = [];
 }

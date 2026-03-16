@@ -103,5 +103,5 @@ public record InstructedCorporateActionOption16
     [IsoId("_pUFZOR9QEeuFz_FaCzCLgQ")]
     [DisplayName("Option Instruction Details")]
     [IsoXmlTag("OptnInstrDtls")]
-    public OptionInstructionDetails6? OptionInstructionDetails { get; init; }
+    public ValueList<OptionInstructionDetails6> OptionInstructionDetails { get; init; } = [];
 }

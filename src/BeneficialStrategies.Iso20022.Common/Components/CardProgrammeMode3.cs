@@ -42,5 +42,5 @@ public record CardProgrammeMode3
     [IsoId("_E6Xu4CuBEeyg-aG5nXcnfg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public AdditionalData1? AdditionalIdentification { get; init; }
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
 }

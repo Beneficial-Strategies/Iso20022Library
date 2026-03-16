@@ -72,5 +72,5 @@ public record Future4
     [IsoId("_2CcLyWp7EemmaZLSPtWX5A")]
     [DisplayName("Additional Underlying Attributes")]
     [IsoXmlTag("AddtlUndrlygAttrbts")]
-    public UnderlyingAttributes4? AdditionalUnderlyingAttributes { get; init; }
+    public ValueList<UnderlyingAttributes4> AdditionalUnderlyingAttributes { get; init; } = [];
 }

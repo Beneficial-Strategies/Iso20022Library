@@ -56,5 +56,5 @@ public record Action13
     [IsoId("_RpPBAMVhEeuips4fuphvoQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -38,7 +38,7 @@ public record DefaultFund1
     [IsoId("_UqzgQNp-Ed-ak6NoX_4Aeg_-799365417")]
     [DisplayName("Contribution")]
     [IsoXmlTag("Cntrbtn")]
-    public Contribution1? Contribution { get; init; }
+    public ValueList<Contribution1> Contribution { get; init; } = [];
 
     /// <summary>
     /// Additional amount that the clearing member will have to provide to cover a risk increase. This results from a risk management decision depending on central counterparty specific criteria.

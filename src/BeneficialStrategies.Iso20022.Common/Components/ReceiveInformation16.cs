@@ -38,7 +38,7 @@ public record ReceiveInformation16
     [IsoId("_WeviISTAEeWEdM0tuoNJdg")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary34? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary34> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -87,7 +87,7 @@ public record ReceiveInformation16
     [IsoId("_ZoIToySBEeWWV-wpfEW00A")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge29? ChargeDetails { get; init; }
+    public ValueList<Charge29> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
@@ -95,7 +95,7 @@ public record ReceiveInformation16
     [IsoId("_ZoITpSSBEeWWV-wpfEW00A")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission23? CommissionDetails { get; init; }
+    public ValueList<Commission23> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -103,7 +103,7 @@ public record ReceiveInformation16
     [IsoId("_ZoITpySBEeWWV-wpfEW00A")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax28? TaxDetails { get; init; }
+    public ValueList<Tax28> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer.
@@ -111,7 +111,7 @@ public record ReceiveInformation16
     [IsoId("_ZoITqSSBEeWWV-wpfEW00A")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms26? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms26> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.

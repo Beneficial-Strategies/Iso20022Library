@@ -22,9 +22,7 @@ public record CorporateActionNarrative19
     [IsoId("_WbKDmdp-Ed-ak6NoX_4Aeg_-309105960")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? AdditionalText { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -32,7 +30,5 @@ public record CorporateActionNarrative19
     [IsoId("_WbKDmtp-Ed-ak6NoX_4Aeg_2105555696")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
 }

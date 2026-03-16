@@ -70,5 +70,5 @@ public record TMSAction1
     [IsoId("_KsN72H1DEeCF8NjrBemJWQ_1120775201")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction1? ErrorAction { get; init; }
+    public ValueList<ErrorAction1> ErrorAction { get; init; } = [];
 }

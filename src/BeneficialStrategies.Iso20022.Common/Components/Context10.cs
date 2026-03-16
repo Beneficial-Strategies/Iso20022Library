@@ -38,7 +38,7 @@ public record Context10
     [IsoId("_qgLXVYN0EeuHqfO1LgkE9Q")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public Verification5? Verification { get; init; }
+    public ValueList<Verification5> Verification { get; init; } = [];
 
     /// <summary>
     /// Context of risk associated with the transaction.
@@ -46,7 +46,7 @@ public record Context10
     [IsoId("_qgLXV4N0EeuHqfO1LgkE9Q")]
     [DisplayName("Risk Context")]
     [IsoXmlTag("RskCntxt")]
-    public RiskContext2? RiskContext { get; init; }
+    public ValueList<RiskContext2> RiskContext { get; init; } = [];
 
     /// <summary>
     /// Context of the sale associated with the card payment transaction.

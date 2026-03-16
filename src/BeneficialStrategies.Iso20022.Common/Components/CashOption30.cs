@@ -46,7 +46,7 @@ public record CashOption30
     [IsoId("_okWDoSeSEeOXAt_43VmZGw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification20? ExemptionType { get; init; }
+    public ValueList<GenericIdentification20> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Choice between a cash account, a charges account or a tax account.

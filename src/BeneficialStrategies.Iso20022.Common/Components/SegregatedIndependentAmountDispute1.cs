@@ -30,5 +30,6 @@ public record SegregatedIndependentAmountDispute1
     [IsoId("_Ulb4Fdp-Ed-ak6NoX_4Aeg_-432473842")]
     [DisplayName("Dispute Resolution Type 1 Choice")]
     [IsoXmlTag("DsptRsltnTp1Chc")]
-    public DisputeResolutionType1Choice_? DisputeResolutionType1Choice { get; init; }
+    public ValueList<DisputeResolutionType1Choice_> DisputeResolutionType1Choice { get; init; } =
+        [];
 }

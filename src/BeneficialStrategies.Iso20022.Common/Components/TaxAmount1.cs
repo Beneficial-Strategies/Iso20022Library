@@ -47,5 +47,5 @@ public record TaxAmount1
     [IsoId("_RwPMkNp-Ed-ak6NoX_4Aeg_-515652974")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public TaxRecordDetails1? Details { get; init; }
+    public ValueList<TaxRecordDetails1> Details { get; init; } = [];
 }

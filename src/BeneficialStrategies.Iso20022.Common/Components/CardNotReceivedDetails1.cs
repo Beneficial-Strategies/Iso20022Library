@@ -79,5 +79,5 @@ public record CardNotReceivedDetails1
     [IsoId("_9PS30HdaEeeKH6vrEwvLHA")]
     [DisplayName("Card Security Capability")]
     [IsoXmlTag("CardSctyCpblty")]
-    public CardSecurityCapability1? CardSecurityCapability { get; init; }
+    public ValueList<CardSecurityCapability1> CardSecurityCapability { get; init; } = [];
 }

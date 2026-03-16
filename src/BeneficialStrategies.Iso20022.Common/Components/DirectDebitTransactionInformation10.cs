@@ -80,7 +80,7 @@ public record DirectDebitTransactionInformation10
     [IsoId("_P4lHYtp-Ed-ak6NoX_4Aeg_1929840777")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public ChargesInformation5? ChargesInformation { get; init; }
+    public ValueList<ChargesInformation5> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.

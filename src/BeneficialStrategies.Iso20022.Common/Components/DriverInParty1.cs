@@ -66,7 +66,7 @@ public record DriverInParty1
     [IsoId("_K7dFAFywEeeve7Je9cXtkQ")]
     [DisplayName("Driver Credential")]
     [IsoXmlTag("DrvrCrdntl")]
-    public TravelDocument1? DriverCredential { get; init; }
+    public ValueList<TravelDocument1> DriverCredential { get; init; } = [];
 
     /// <summary>
     /// Driving license details.

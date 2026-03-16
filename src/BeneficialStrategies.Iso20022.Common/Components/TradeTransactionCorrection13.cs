@@ -64,5 +64,5 @@ public record TradeTransactionCorrection13
     [IsoId("_GRkqy8zsEeux2uvSBFU54Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

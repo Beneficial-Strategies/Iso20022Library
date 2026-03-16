@@ -58,7 +58,7 @@ public record TwoLegTransactionDetails5
     [IsoId("_yM4DaQhKEe2fOITqoTnSLQ")]
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
-    public OtherAmounts16? OtherAmounts { get; init; }
+    public ValueList<OtherAmounts16> OtherAmounts { get; init; } = [];
 
     /// <summary>
     /// Provides additional information about the second leg in narrative form.

@@ -58,5 +58,5 @@ public record AccountManagementConfirmation4
     [IsoId("_bMBB-UzLEeafiMTDrtSnyw")]
     [DisplayName("Existing Account Identification")]
     [IsoXmlTag("ExstgAcctId")]
-    public Account23? ExistingAccountIdentification { get; init; }
+    public ValueList<Account23> ExistingAccountIdentification { get; init; } = [];
 }

@@ -46,5 +46,5 @@ public record ATMTransactionAmounts6
     [IsoId("__lqC0K19EeWMg5rOByfExw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public ATMTransactionAmounts7? AdditionalAmount { get; init; }
+    public ValueList<ATMTransactionAmounts7> AdditionalAmount { get; init; } = [];
 }

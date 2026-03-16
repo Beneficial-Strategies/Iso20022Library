@@ -38,7 +38,7 @@ public record TMSAction9
     [IsoId("_oIosFSi6Eeurkfo6MpvKDA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public KEKIdentifier5? Key { get; init; }
+    public ValueList<KEKIdentifier5> Key { get; init; } = [];
 
     /// <summary>
     /// Identification of the master terminal manager or the terminal manager with which the POI has to perform the action.
@@ -82,7 +82,7 @@ public record TMSAction9
     [IsoId("_oIpTJSi6Eeurkfo6MpvKDA")]
     [DisplayName("Component Type")]
     [IsoXmlTag("CmpntTp")]
-    public DataSetCategory14Code? ComponentType { get; init; }
+    public SimpleValueList<DataSetCategory14Code> ComponentType { get; init; } = [];
 
     /// <summary>
     /// Identification of the delegation scope assigned by the MTM.
@@ -134,7 +134,8 @@ public record TMSAction9
     [IsoId("_oIpTMSi6Eeurkfo6MpvKDA")]
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
-    public TerminalManagementAdditionalProcess1Code? AdditionalProcess { get; init; }
+    public SimpleValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
 
     /// <summary>
     /// Definition of retry process if activation of the action fails.
@@ -167,8 +168,7 @@ public record TMSAction9
     [IsoId("_oIpTOSi6Eeurkfo6MpvKDA")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -176,7 +176,7 @@ public record TMSAction9
     [IsoId("_oIpTOyi6Eeurkfo6MpvKDA")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction4? ErrorAction { get; init; }
+    public ValueList<ErrorAction4> ErrorAction { get; init; } = [];
 
     /// <summary>
     /// Additional information about the maintenance action.
@@ -184,8 +184,7 @@ public record TMSAction9
     [IsoId("_oIpTPSi6Eeurkfo6MpvKDA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? AdditionalInformation { get; init; }
+    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Configuration of a message item.
@@ -193,7 +192,7 @@ public record TMSAction9
     [IsoId("_oIpTPyi6Eeurkfo6MpvKDA")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition1? MessageItem { get; init; }
+    public ValueList<MessageItemCondition1> MessageItem { get; init; } = [];
 
     /// <summary>
     /// Information related to a device request of the POI.

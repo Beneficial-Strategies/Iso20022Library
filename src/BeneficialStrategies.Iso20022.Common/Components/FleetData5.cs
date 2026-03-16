@@ -22,5 +22,5 @@ public record FleetData5
     [IsoId("_FKop8R1TEey8XKHwKquEQw")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public FleetLineItem3? LineItem { get; init; }
+    public ValueList<FleetLineItem3> LineItem { get; init; } = [];
 }

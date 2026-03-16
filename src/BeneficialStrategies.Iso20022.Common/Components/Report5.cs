@@ -22,7 +22,7 @@ public record Report5
     [IsoId("_71U0AS9dEeS94oXWDaBauA")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
-    public PartyIdentificationAndAccount31? NonClearingMember { get; init; }
+    public ValueList<PartyIdentificationAndAccount31> NonClearingMember { get; init; } = [];
 
     /// <summary>
     /// Provides information about the settlement obligation details.

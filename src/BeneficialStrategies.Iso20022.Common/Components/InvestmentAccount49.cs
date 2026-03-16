@@ -108,7 +108,7 @@ public record InvestmentAccount49
     [IsoId("_y8Y6nSC6EeWPMvNwVtiMsA")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment2? ReinvestmentDetails { get; init; }
+    public ValueList<Reinvestment2> ReinvestmentDetails { get; init; } = [];
 
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed, that is, either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.
@@ -124,7 +124,7 @@ public record InvestmentAccount49
     [IsoId("_WgQXcSDCEeWPMvNwVtiMsA")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
-    public TaxReporting1? TaxReporting { get; init; }
+    public ValueList<TaxReporting1> TaxReporting { get; init; } = [];
 
     /// <summary>
     /// Details of the letter of intent.
@@ -169,7 +169,7 @@ public record InvestmentAccount49
     [IsoId("_y8Y6qSC6EeWPMvNwVtiMsA")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrument51? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrument51> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
@@ -193,7 +193,7 @@ public record InvestmentAccount49
     [IsoId("_y8Y6ryC6EeWPMvNwVtiMsA")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
-    public Blocked2? BlockedStatus { get; init; }
+    public ValueList<Blocked2> BlockedStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of usage of the account.
@@ -322,7 +322,7 @@ public record InvestmentAccount49
     [IsoId("_StOwwCDNEeWPMvNwVtiMsA")]
     [DisplayName("Investor Profile")]
     [IsoXmlTag("InvstrPrfl")]
-    public InvestorProfile1? InvestorProfile { get; init; }
+    public ValueList<InvestorProfile1> InvestorProfile { get; init; } = [];
 
     /// <summary>
     /// Fiscal year, when not the same as the calendar year.

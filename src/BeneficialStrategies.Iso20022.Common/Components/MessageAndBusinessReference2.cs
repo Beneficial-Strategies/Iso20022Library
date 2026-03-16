@@ -38,9 +38,7 @@ public record MessageAndBusinessReference2
     [IsoId("_UvH_l9p-Ed-ak6NoX_4Aeg_-1275621169")]
     [DisplayName("Individual Order Reference")]
     [IsoXmlTag("IndvOrdrRef")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IndividualOrderReference { get; init; }
+    public SimpleValueList<IsoMax35Text> IndividualOrderReference { get; init; } = [];
 
     /// <summary>
     /// Account information of the order message for which the status is requested.

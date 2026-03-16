@@ -41,9 +41,7 @@ public record CardPaymentTransaction116
     [IsoId("_6kAlNU1EEeybj420QgWBkA")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeProposed { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// The card programme actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.
@@ -105,7 +103,7 @@ public record CardPaymentTransaction116
     [IsoId("_6kBMQU1EEeybj420QgWBkA")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -169,7 +167,5 @@ public record CardPaymentTransaction116
     [IsoId("_6kBMT01EEeybj420QgWBkA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

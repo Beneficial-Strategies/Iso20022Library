@@ -55,7 +55,7 @@ public record AggregateBalanceInformation1
     [IsoId("_VLImItp-Ed-ak6NoX_4Aeg_-1535411945")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
-    public ActiveOrHistoricCurrencyAndAmount? HoldingValue { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = [];
 
     /// <summary>
     /// Interest amount that has accrued in between coupon payment periods.
@@ -95,7 +95,7 @@ public record AggregateBalanceInformation1
     [IsoId("_VLImJ9p-Ed-ak6NoX_4Aeg_-1877647934")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation1? PriceDetails { get; init; }
+    public ValueList<PriceInformation1> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Currency exchange related to a securities order.
@@ -111,7 +111,7 @@ public record AggregateBalanceInformation1
     [IsoId("_VLImKdp-Ed-ak6NoX_4Aeg_-957311041")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
-    public SubBalanceInformation1? BalanceBreakdownDetails { get; init; }
+    public ValueList<SubBalanceInformation1> BalanceBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.
@@ -119,7 +119,8 @@ public record AggregateBalanceInformation1
     [IsoId("_VLSXINp-Ed-ak6NoX_4Aeg_451173603")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account at a specified place of safekeeping.
@@ -127,5 +128,6 @@ public record AggregateBalanceInformation1
     [IsoId("_VLSXIdp-Ed-ak6NoX_4Aeg_-1070903194")]
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
-    public AggregateBalancePerSafekeepingPlace1? BalanceAtSafekeepingPlace { get; init; }
+    public ValueList<AggregateBalancePerSafekeepingPlace1> BalanceAtSafekeepingPlace { get; init; } =
+        [];
 }

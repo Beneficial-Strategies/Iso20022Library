@@ -40,5 +40,5 @@ public record ATMSecurityConfiguration4
     [IsoId("_vBzAOYr8EeSvuOJS0mmL0g")]
     [DisplayName("Digital Signature Algorithm")]
     [IsoXmlTag("DgtlSgntrAlgo")]
-    public Algorithm14Code? DigitalSignatureAlgorithm { get; init; }
+    public SimpleValueList<Algorithm14Code> DigitalSignatureAlgorithm { get; init; } = [];
 }

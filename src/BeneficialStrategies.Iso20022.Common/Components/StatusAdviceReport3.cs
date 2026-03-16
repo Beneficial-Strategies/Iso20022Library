@@ -30,7 +30,7 @@ public record StatusAdviceReport3
     [IsoId("_CduBs9GdEeaQk737TH1Fzw")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 
     /// <summary>
     /// Indicates the report date with the status advice message is related to.

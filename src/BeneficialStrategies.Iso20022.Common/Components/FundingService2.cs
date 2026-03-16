@@ -30,7 +30,7 @@ public record FundingService2
     [IsoId("_eH_dQ4KxEeu4svNQ5N-l6w")]
     [DisplayName("Funding Source")]
     [IsoXmlTag("FndgSrc")]
-    public FundingSource2? FundingSource { get; init; }
+    public ValueList<FundingSource2> FundingSource { get; init; } = [];
 
     /// <summary>
     /// Information for claiming funds.

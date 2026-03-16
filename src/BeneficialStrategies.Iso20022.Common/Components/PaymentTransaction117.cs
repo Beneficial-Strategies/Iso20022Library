@@ -48,7 +48,7 @@ public record PaymentTransaction117
     [IsoId("_Bf1dc_jAEeiJaN6-Lf-c_w")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
-    public Tax33? TaxTotal { get; init; }
+    public ValueList<Tax33> TaxTotal { get; init; } = [];
 
     /// <summary>
     /// Total amount of the transaction, inclusive of all applicable taxes and fees.

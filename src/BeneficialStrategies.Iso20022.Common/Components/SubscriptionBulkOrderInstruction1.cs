@@ -48,5 +48,5 @@ public record SubscriptionBulkOrderInstruction1
     [IsoId("_UzJj-dp-Ed-ak6NoX_4Aeg_-830968388")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

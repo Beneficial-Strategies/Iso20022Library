@@ -50,9 +50,7 @@ public record TMSProtocolParameters1
     [IsoId("_zmYW0GpcEeS4r8z7dKyh1g")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Addresses of the terminal manager host.
@@ -68,7 +66,7 @@ public record TMSProtocolParameters1
     [IsoId("_Iby-IGprEeSMqvBfBY1c9A")]
     [DisplayName("Host Key")]
     [IsoXmlTag("HstKey")]
-    public KEKIdentifier2? HostKey { get; init; }
+    public ValueList<KEKIdentifier2> HostKey { get; init; } = [];
 
     /// <summary>
     /// New identification of the POI for the terminal manager.

@@ -49,7 +49,7 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nhZ_SwEeife6veM7daYw")]
     [DisplayName("Pickup Location")]
     [IsoXmlTag("PckpLctn")]
-    public Address1? PickupLocation { get; init; }
+    public ValueList<Address1> PickupLocation { get; init; } = [];
 
     /// <summary>
     /// Date the vehicle was picked-up by the customer.  In the case of a no-show transaction or a prepaid transaction, this contains the scheduled pickup date.
@@ -126,7 +126,7 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nha_SwEeife6veM7daYw")]
     [DisplayName("Rental Rate")]
     [IsoXmlTag("RntlRate")]
-    public RentalRate1? RentalRate { get; init; }
+    public ValueList<RentalRate1> RentalRate { get; init; } = [];
 
     /// <summary>
     /// Vehicle rental details.
@@ -161,7 +161,7 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nhb_SwEeife6veM7daYw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public Amount9? AdditionalAmount { get; init; }
+    public ValueList<Amount9> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Taxes related to the products or services.
@@ -169,7 +169,7 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nhXPSwEeife6veM7daYw")]
     [DisplayName("Estimated Tax")]
     [IsoXmlTag("EstmtdTax")]
-    public Tax33? EstimatedTax { get; init; }
+    public ValueList<Tax33> EstimatedTax { get; init; } = [];
 
     /// <summary>
     /// Discount applied to the vehicle rental.
@@ -177,7 +177,7 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nhYvSwEeife6veM7daYw")]
     [DisplayName("Discount Programme")]
     [IsoXmlTag("DscntPrgrmm")]
-    public Discount3? DiscountProgramme { get; init; }
+    public ValueList<Discount3> DiscountProgramme { get; init; } = [];
 
     /// <summary>
     /// Loyalty programme details.
@@ -185,5 +185,5 @@ public record VehicleRentalAgreement1
     [IsoId("_R4nhXfSwEeife6veM7daYw")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme1? LoyaltyProgramme { get; init; }
+    public ValueList<LoyaltyProgramme1> LoyaltyProgramme { get; init; } = [];
 }

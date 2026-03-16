@@ -32,7 +32,7 @@ public record ReservationCriteria3
     [IsoId("_kuH-B5laEeeE1Ya-LgRsuQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public ReservationSearchCriteria2? SearchCriteria { get; init; }
+    public ValueList<ReservationSearchCriteria2> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected reservation report.

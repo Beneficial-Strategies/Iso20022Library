@@ -42,7 +42,7 @@ public record MessageReportHeader4
     [IsoId("_CUoXJdGdEeaQk737TH1Fzw")]
     [DisplayName("Record Status")]
     [IsoXmlTag("RcrdSts")]
-    public StatusReportRecord3? RecordStatus { get; init; }
+    public ValueList<StatusReportRecord3> RecordStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -50,5 +50,5 @@ public record MessageReportHeader4
     [IsoId("_CUoXJ9GdEeaQk737TH1Fzw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

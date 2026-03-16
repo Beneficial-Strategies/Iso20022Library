@@ -63,7 +63,7 @@ public record CardPaymentTransactionDetails45
     [IsoId("_DF31K9wuEeeKpa-yxjuKzQ")]
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
-    public OnLineReason1Code? OnLineReason { get; init; }
+    public SimpleValueList<OnLineReason1Code> OnLineReason { get; init; } = [];
 
     /// <summary>
     /// Transaction category level on an unattended POI (Point Of Interaction).
@@ -122,7 +122,7 @@ public record CardPaymentTransactionDetails45
     [IsoId("_DF31OdwuEeeKpa-yxjuKzQ")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public Product3? SaleItem { get; init; }
+    public ValueList<Product3> SaleItem { get; init; } = [];
 
     /// <summary>
     /// Location of the delivery, for instance pump number or parking bay.

@@ -130,7 +130,7 @@ public record PaymentTransactionInformation5
     [IsoId("_Pr6kYNp-Ed-ak6NoX_4Aeg_1834388055")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public ChargesInformation1? ChargesInformation { get; init; }
+    public ValueList<ChargesInformation1> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
@@ -154,7 +154,7 @@ public record PaymentTransactionInformation5
     [IsoId("_Pr6kY9p-Ed-ak6NoX_4Aeg_14128664")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public ReversalReasonInformation1? ReversalReasonInformation { get; init; }
+    public ValueList<ReversalReasonInformation1> ReversalReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Set of key elements of the original transaction being referred to.

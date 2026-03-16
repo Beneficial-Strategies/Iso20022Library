@@ -62,5 +62,6 @@ public record CollateralValueReport3
     [IsoId("_-ORAxzpvEemk2e6qGBk8IQ")]
     [DisplayName("Collateral Value Report")]
     [IsoXmlTag("CollValRpt")]
-    public CollateralValueReportOrError6Choice_? CollateralValueReport { get; init; }
+    public ValueList<CollateralValueReportOrError6Choice_> CollateralValueReport { get; init; } =
+        [];
 }

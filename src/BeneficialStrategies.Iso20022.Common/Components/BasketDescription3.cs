@@ -22,8 +22,7 @@ public record BasketDescription3
     [IsoId("_LS6l4YG-EeaalK9UbuVGFw")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public SimpleValueList<IsoISINOct2015Identifier> ISIN { get; init; } = [];
 
     /// <summary>
     /// Index on which the financial instrument is based.
@@ -31,5 +30,5 @@ public record BasketDescription3
     [IsoId("_LS6l44G-EeaalK9UbuVGFw")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
-    public FinancialInstrument58? Index { get; init; }
+    public ValueList<FinancialInstrument58> Index { get; init; } = [];
 }

@@ -56,7 +56,7 @@ public record AggregateBalancePerSafekeepingPlace16
     [IsoId("_0L7Bm__pEeCiHMrKuf9tBw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms14? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms14> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
@@ -97,7 +97,7 @@ public record AggregateBalancePerSafekeepingPlace16
     [IsoId("_0L7Bzf_pEeCiHMrKuf9tBw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown14? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown14> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.
@@ -105,7 +105,7 @@ public record AggregateBalancePerSafekeepingPlace16
     [IsoId("_0L7B1__pEeCiHMrKuf9tBw")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceInformation6? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceInformation6> BalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -113,7 +113,7 @@ public record AggregateBalancePerSafekeepingPlace16
     [IsoId("_0L7B4f_pEeCiHMrKuf9tBw")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
-    public AdditionalBalanceInformation6? AdditionalBalanceBreakdown { get; init; }
+    public ValueList<AdditionalBalanceInformation6> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the holding.

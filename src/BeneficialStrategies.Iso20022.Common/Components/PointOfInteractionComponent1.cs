@@ -71,7 +71,5 @@ public record PointOfInteractionComponent1
     [IsoId("_TGJWZQEcEeCQm6a_G2yO_w_1420031608")]
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ApprovalNumber { get; init; }
+    public SimpleValueList<IsoMax70Text> ApprovalNumber { get; init; } = [];
 }

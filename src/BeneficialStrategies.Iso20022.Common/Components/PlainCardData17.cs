@@ -61,9 +61,7 @@ public record PlainCardData17
     [IsoId("_TnrZMJbhEeW6aPG6p-lhQQ")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalCardData { get; init; }
+    public SimpleValueList<IsoMax35Text> AdditionalCardData { get; init; } = [];
 
     /// <summary>
     /// Entry mode of the card.

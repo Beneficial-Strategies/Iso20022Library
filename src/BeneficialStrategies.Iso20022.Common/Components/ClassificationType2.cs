@@ -39,5 +39,5 @@ public record ClassificationType2
     [IsoId("_6LaXZeLVEeWFtOV72FbX9w")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public GenericIdentification36? AlternateClassification { get; init; }
+    public ValueList<GenericIdentification36> AlternateClassification { get; init; } = [];
 }

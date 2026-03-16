@@ -30,7 +30,7 @@ public record CardPaymentDataSet19
     [IsoId("_7Fa5k9poEeearpaEPXv9UA")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability5? Traceability { get; init; }
+    public ValueList<Traceability5> Traceability { get; init; } = [];
 
     /// <summary>
     /// Initiator of the data set.

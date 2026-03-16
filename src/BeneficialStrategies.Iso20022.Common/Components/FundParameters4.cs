@@ -22,7 +22,7 @@ public record FundParameters4
     [IsoId("_Q6c0ENp-Ed-ak6NoX_4Aeg_651660733")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrument17? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrument17> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Fund management company for which the report is requested.
@@ -30,7 +30,7 @@ public record FundParameters4
     [IsoId("_Q6c0Edp-Ed-ak6NoX_4Aeg_-345411620")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
-    public PartyIdentification2Choice_? FundManagementCompany { get; init; }
+    public ValueList<PartyIdentification2Choice_> FundManagementCompany { get; init; } = [];
 
     /// <summary>
     /// Specifies the date on or after which the information required will have been last updated. Only the most recent versions of the data is required.

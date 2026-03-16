@@ -154,7 +154,7 @@ public record FleetLineItem1
     [IsoId("_BF7_lvjUEeiM7KpzmLtmTQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax33? Tax { get; init; }
+    public ValueList<Tax33> Tax { get; init; } = [];
 
     /// <summary>
     /// Total amount excluding tax.

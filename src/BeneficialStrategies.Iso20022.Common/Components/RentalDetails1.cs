@@ -57,7 +57,7 @@ public record RentalDetails1
     [IsoId("_yw6tMF1rEeeu75xdwwAXQw")]
     [DisplayName("Rental Time Period")]
     [IsoXmlTag("RntlTmPrd")]
-    public PeriodUnit2Code? RentalTimePeriod { get; init; }
+    public SimpleValueList<PeriodUnit2Code> RentalTimePeriod { get; init; } = [];
 
     /// <summary>
     /// Time period expressed in a number of units (for example, 1 week, 3 days, etc.).

@@ -161,8 +161,7 @@ public record TradeTransaction28
     [IsoId("_nfI6fw1KEeqV4s5SpzR1dQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public SimpleValueList<IsoISODate> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.

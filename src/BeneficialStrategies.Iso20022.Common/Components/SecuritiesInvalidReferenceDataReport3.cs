@@ -30,5 +30,5 @@ public record SecuritiesInvalidReferenceDataReport3
     [IsoId("_INfRc35aEea2k7EBUopqxw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

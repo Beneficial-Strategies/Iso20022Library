@@ -92,5 +92,5 @@ public record AutomatedTellerMachine4
     [IsoId("_GAjz4IquEeSIDtZ76p6McQ")]
     [DisplayName("Available Device")]
     [IsoXmlTag("AvlblDvc")]
-    public ATMDevice2Code? AvailableDevice { get; init; }
+    public SimpleValueList<ATMDevice2Code> AvailableDevice { get; init; } = [];
 }

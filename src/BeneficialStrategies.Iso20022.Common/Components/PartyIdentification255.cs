@@ -183,7 +183,7 @@ public record PartyIdentification255
     [IsoId("_h5m8O4Z_EeuSbct6WWD-Ng")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.
@@ -199,5 +199,5 @@ public record PartyIdentification255
     [IsoId("_h5m8PYZ_EeuSbct6WWD-Ng")]
     [DisplayName("Sponsored Merchant")]
     [IsoXmlTag("SpnsrdMrchnt")]
-    public SponsoredMerchant2? SponsoredMerchant { get; init; }
+    public ValueList<SponsoredMerchant2> SponsoredMerchant { get; init; } = [];
 }

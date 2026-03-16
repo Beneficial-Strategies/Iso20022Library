@@ -89,7 +89,7 @@ public record TaxEfficientProduct5
     [IsoId("_alOcLZNNEemQB_8XA98K0Q")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
-    public BonusWithdrawal2? BonusOrWithdrawal { get; init; }
+    public ValueList<BonusWithdrawal2> BonusOrWithdrawal { get; init; } = [];
 
     /// <summary>
     /// Alternative identification for the transferor (ceding party), for example, the &apos;ISA manager Z reference&apos; in the UK.
@@ -115,7 +115,7 @@ public record TaxEfficientProduct5
     [IsoId("_kEJ0UJzHEembF9M4GR6EAA")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
-    public OtherAmount3? OtherAmount { get; init; }
+    public ValueList<OtherAmount3> OtherAmount { get; init; } = [];
 
     /// <summary>
     /// Date the first qualifying additional amount was made to the product.  Qualifying additional amounts may be made to a Lifetime Individual Savings Account (LISA) product.
@@ -140,7 +140,7 @@ public record TaxEfficientProduct5
     [IsoId("_alOcMZNNEemQB_8XA98K0Q")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
-    public DateAndAmount2? InvestmentsToFollowValue { get; init; }
+    public ValueList<DateAndAmount2> InvestmentsToFollowValue { get; init; } = [];
 
     /// <summary>
     /// Information about an innovative finance product.
@@ -148,7 +148,7 @@ public record TaxEfficientProduct5
     [IsoId("_alOcM5NNEemQB_8XA98K0Q")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
-    public InnovativeFinance1? InnovativeFinance { get; init; }
+    public ValueList<InnovativeFinance1> InnovativeFinance { get; init; } = [];
 
     /// <summary>
     /// Lowest investment amount in the current year, used to calculate a tax deduction amount.
@@ -196,5 +196,5 @@ public record TaxEfficientProduct5
     [IsoId("_alOcP5NNEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

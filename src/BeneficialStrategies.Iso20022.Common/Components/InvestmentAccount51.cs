@@ -98,7 +98,7 @@ public record InvestmentAccount51
     [IsoId("_0UG7eyC6EeWPMvNwVtiMsA")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment2? ReinvestmentDetails { get; init; }
+    public ValueList<Reinvestment2> ReinvestmentDetails { get; init; } = [];
 
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed, that is, either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.
@@ -114,7 +114,7 @@ public record InvestmentAccount51
     [IsoId("_cfqVISDCEeWPMvNwVtiMsA")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
-    public TaxReporting1? TaxReporting { get; init; }
+    public ValueList<TaxReporting1> TaxReporting { get; init; } = [];
 
     /// <summary>
     /// Details of the letter of intent.
@@ -159,7 +159,7 @@ public record InvestmentAccount51
     [IsoId("_0UG7hyC6EeWPMvNwVtiMsA")]
     [DisplayName("Modified Financial Instrument Details")]
     [IsoXmlTag("ModfdFinInstrmDtls")]
-    public ModificationScope29? ModifiedFinancialInstrumentDetails { get; init; }
+    public ValueList<ModificationScope29> ModifiedFinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
@@ -183,7 +183,7 @@ public record InvestmentAccount51
     [IsoId("_0UG7jSC6EeWPMvNwVtiMsA")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
-    public Blocked2? BlockedStatus { get; init; }
+    public ValueList<Blocked2> BlockedStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of usage of the account.
@@ -312,7 +312,7 @@ public record InvestmentAccount51
     [IsoId("_NRtXcCF2EeW9XJWqfgXIIA")]
     [DisplayName("Modified Investor Profile")]
     [IsoXmlTag("ModfdInvstrPrfl")]
-    public ModificationScope32? ModifiedInvestorProfile { get; init; }
+    public ValueList<ModificationScope32> ModifiedInvestorProfile { get; init; } = [];
 
     /// <summary>
     /// Fiscal year, when not the same as the calendar year.

@@ -62,7 +62,7 @@ public record Transaction145
     [IsoId("_QT17e4KyEeu4svNQ5N-l6w")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -70,9 +70,7 @@ public record Transaction145
     [IsoId("_QT17fYKyEeu4svNQ5N-l6w")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Contains the period (expressed in minutes) within which a merchant is expected to complete the transaction.
@@ -90,7 +88,7 @@ public record Transaction145
     [IsoId("_QT17dYKyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService2? AdditionalService { get; init; }
+    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Indicates that additional data will be provided in a separate addendum message.
@@ -127,7 +125,8 @@ public record Transaction145
     [IsoId("_QT17h4KyEeu4svNQ5N-l6w")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -143,7 +142,7 @@ public record Transaction145
     [IsoId("_QT17i4KyEeu4svNQ5N-l6w")]
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
-    public DisputeData3? DisputeData { get; init; }
+    public ValueList<DisputeData3> DisputeData { get; init; } = [];
 
     /// <summary>
     /// Amounts of the card transaction.
@@ -159,7 +158,7 @@ public record Transaction145
     [IsoId("_QT17j4KyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmounts3? AdditionalAmount { get; init; }
+    public ValueList<AdditionalAmounts3> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -167,7 +166,7 @@ public record Transaction145
     [IsoId("_QT17kYKyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the original transaction amount.
@@ -175,7 +174,7 @@ public record Transaction145
     [IsoId("_QT17k4KyEeu4svNQ5N-l6w")]
     [DisplayName("Original Additional Fee")]
     [IsoXmlTag("OrgnlAddtlFee")]
-    public AdditionalFee2? OriginalAdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> OriginalAdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Contains ATM deposit details.
@@ -183,7 +182,7 @@ public record Transaction145
     [IsoId("_QT17lYKyEeu4svNQ5N-l6w")]
     [DisplayName("Deposit Details")]
     [IsoXmlTag("DpstDtls")]
-    public DepositDetails2? DepositDetails { get; init; }
+    public ValueList<DepositDetails2> DepositDetails { get; init; } = [];
 
     /// <summary>
     /// Financial services related to the account.
@@ -227,7 +226,7 @@ public record Transaction145
     [IsoId("_QT17n4KyEeu4svNQ5N-l6w")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the chargeback.

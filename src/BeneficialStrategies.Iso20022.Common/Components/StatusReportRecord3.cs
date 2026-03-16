@@ -40,7 +40,7 @@ public record StatusReportRecord3
     [IsoId("_Yiw7hdHEEeaokquJJ-K6uA")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -48,5 +48,5 @@ public record StatusReportRecord3
     [IsoId("_Yiw7h9HEEeaokquJJ-K6uA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

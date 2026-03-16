@@ -55,7 +55,7 @@ public record TaxReport1
     [IsoId("_ErRwwJD1EeSZY4BVJy2t3A")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
-    public PartyIdentification72? OtherParty { get; init; }
+    public ValueList<PartyIdentification72> OtherParty { get; init; } = [];
 
     /// <summary>
     /// Additional reference like site key or identifier.
@@ -63,7 +63,7 @@ public record TaxReport1
     [IsoId("_zSTYoFm6EeOQYsoJizpkVw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation1? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation1> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Structure to deliver link to external attachment or deliver base64-coded attachment inside message.
@@ -71,7 +71,7 @@ public record TaxReport1
     [IsoId("_5Jz-kFm6EeOQYsoJizpkVw")]
     [DisplayName("Additional Reference")]
     [IsoXmlTag("AddtlRef")]
-    public DocumentGeneralInformation2? AdditionalReference { get; init; }
+    public ValueList<DocumentGeneralInformation2> AdditionalReference { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -79,5 +79,5 @@ public record TaxReport1
     [IsoId("_nHYhsEjvEeaOe8w0NJ11wQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

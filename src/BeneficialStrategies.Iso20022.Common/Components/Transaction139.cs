@@ -30,7 +30,7 @@ public record Transaction139
     [IsoId("_K6f0Y4zHEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -48,5 +48,5 @@ public record Transaction139
     [IsoId("_K6f0Z4zHEeujJfnIQ4NlpQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

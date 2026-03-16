@@ -22,9 +22,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ5dp-Ed-ak6NoX_4Aeg_1845305224")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InformationToComplyWith { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ5tp-Ed-ak6NoX_4Aeg_1617142961")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? DeliveryDetails { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> DeliveryDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
@@ -42,9 +38,8 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ59p-Ed-ak6NoX_4Aeg_-263162679")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? ForeignExchangeInstructionsAdditionalInformation { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.
@@ -52,9 +47,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ6Np-Ed-ak6NoX_4Aeg_-1374074098")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? Disclaimer { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to the corporate action instruction.
@@ -62,7 +55,6 @@ public record CorporateActionNarrative13
     [IsoId("_WZX64Np-Ed-ak6NoX_4Aeg_-1744370468")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionAdditionalInformation { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> InstructionAdditionalInformation { get; init; } =
+        [];
 }

@@ -136,5 +136,6 @@ public record SettlementObligation8
     [IsoId("_8G4eHS9dEeS94oXWDaBauA")]
     [DisplayName("Additional Settlement Obligation Details")]
     [IsoXmlTag("AddtlSttlmOblgtnDtls")]
-    public SettlementObligation5? AdditionalSettlementObligationDetails { get; init; }
+    public ValueList<SettlementObligation5> AdditionalSettlementObligationDetails { get; init; } =
+        [];
 }

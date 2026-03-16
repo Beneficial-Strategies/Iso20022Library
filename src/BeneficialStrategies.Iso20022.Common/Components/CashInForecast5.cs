@@ -56,7 +56,7 @@ public record CashInForecast5
     [IsoId("_KIxN-watEeS3lpTattq7hg")]
     [DisplayName("Cash In Breakdown Details")]
     [IsoXmlTag("CshInBrkdwnDtls")]
-    public FundCashInBreakdown3? CashInBreakdownDetails { get; init; }
+    public ValueList<FundCashInBreakdown3> CashInBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Additional balances for cash amounts and number of units.

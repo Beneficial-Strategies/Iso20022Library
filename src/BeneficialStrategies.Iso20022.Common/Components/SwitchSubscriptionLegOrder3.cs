@@ -80,7 +80,7 @@ public record SwitchSubscriptionLegOrder3
     [IsoId("_SLgzUdp-Ed-ak6NoX_4Aeg_-707854027")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge17? ChargeDetails { get; init; }
+    public ValueList<Charge17> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission linked to the execution of an investment fund order.
@@ -88,7 +88,7 @@ public record SwitchSubscriptionLegOrder3
     [IsoId("_SLgzUtp-Ed-ak6NoX_4Aeg_-108109082")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission10? CommissionDetails { get; init; }
+    public ValueList<Commission10> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.
@@ -113,7 +113,7 @@ public record SwitchSubscriptionLegOrder3
     [IsoId("_SLgzVdp-Ed-ak6NoX_4Aeg_895209820")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax16? TaxDetails { get; init; }
+    public ValueList<Tax16> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.

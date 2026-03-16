@@ -30,7 +30,8 @@ public record UnderlyingTransaction25
     [IsoId("_p4Nc28QHEemsic1bQcEtLA")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    public OriginalPaymentInstruction35? OriginalPaymentInformationAndStatus { get; init; }
+    public ValueList<OriginalPaymentInstruction35> OriginalPaymentInformationAndStatus { get; init; } =
+        [];
 
     /// <summary>
     /// Provides details on the original transactions to which the cancellation request message refers.
@@ -38,5 +39,5 @@ public record UnderlyingTransaction25
     [IsoId("_p4Nc3cQHEemsic1bQcEtLA")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransaction127? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransaction127> TransactionInformationAndStatus { get; init; } = [];
 }

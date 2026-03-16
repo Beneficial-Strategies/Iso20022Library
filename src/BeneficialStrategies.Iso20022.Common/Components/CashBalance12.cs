@@ -22,7 +22,7 @@ public record CashBalance12
     [IsoId("_6yG5133sEeibM9CPDGCw0g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public BalanceType11Choice_? Type { get; init; }
+    public ValueList<BalanceType11Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of counterparty for which the balance is calculated.
@@ -38,7 +38,8 @@ public record CashBalance12
     [IsoId("_6yG5233sEeibM9CPDGCw0g")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
-    public BranchAndFinancialInstitutionIdentification6? CounterpartyIdentification { get; init; }
+    public ValueList<BranchAndFinancialInstitutionIdentification6> CounterpartyIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Date and time at which the balance is or will be available.
@@ -46,7 +47,7 @@ public record CashBalance12
     [IsoId("_6yG53X3sEeibM9CPDGCw0g")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTimeSearch4Choice_? ValueDate { get; init; }
+    public ValueList<DateAndDateTimeSearch4Choice_> ValueDate { get; init; } = [];
 
     /// <summary>
     /// Date or date time when the balance was last updated following an entry posted to the account, in the books of the account servicing institution.

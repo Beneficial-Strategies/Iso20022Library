@@ -31,7 +31,7 @@ public record SecurityInstrumentDescription23
     [IsoId("_k7vj4JiqEe2f7NHvXATP5g")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public OtherIdentification1? OtherIdentification { get; init; }
+    public ValueList<OtherIdentification1> OtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Full name or description of the financial instrument.

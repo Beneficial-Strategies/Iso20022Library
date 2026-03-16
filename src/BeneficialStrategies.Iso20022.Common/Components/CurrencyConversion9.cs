@@ -100,7 +100,7 @@ public record CurrencyConversion9
     [IsoId("_Ncpkta16EeWMg5rOByfExw")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission19? CommissionDetails { get; init; }
+    public ValueList<Commission19> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Mark-up made as part of a currency conversion.
@@ -108,7 +108,7 @@ public record CurrencyConversion9
     [IsoId("_Ncpkt616EeWMg5rOByfExw")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
-    public Commission18? MarkUpDetails { get; init; }
+    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
 
     /// <summary>
     /// Card scheme declaration (disclaimer) to present to the cardholder.

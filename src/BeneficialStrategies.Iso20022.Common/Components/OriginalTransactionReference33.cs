@@ -89,7 +89,7 @@ public record OriginalTransactionReference33
     [IsoId("_Ya5IAQbPEeqF8ePC1fs2Gg")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document12? EnclosedFile { get; init; }
+    public ValueList<Document12> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor.

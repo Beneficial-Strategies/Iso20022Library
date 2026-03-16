@@ -38,9 +38,7 @@ public record CardAcquisitionResponse3
     [IsoId("_8fgzA07NEeyGi9JAv6wq7Q")]
     [DisplayName("Payment Brand")]
     [IsoXmlTag("PmtBrnd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentBrand { get; init; }
+    public SimpleValueList<IsoMax35Text> PaymentBrand { get; init; } = [];
 
     /// <summary>
     /// Language used to display messages to the customer.
@@ -56,7 +54,7 @@ public record CardAcquisitionResponse3
     [IsoId("_8fgzB07NEeyGi9JAv6wq7Q")]
     [DisplayName("Loyalty Account")]
     [IsoXmlTag("LltyAcct")]
-    public LoyaltyAccount3? LoyaltyAccount { get; init; }
+    public ValueList<LoyaltyAccount3> LoyaltyAccount { get; init; } = [];
 
     /// <summary>
     /// Customer order attached to a customer, recorded in the POI system.
@@ -64,5 +62,5 @@ public record CardAcquisitionResponse3
     [IsoId("_8fgzCU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; }
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 }

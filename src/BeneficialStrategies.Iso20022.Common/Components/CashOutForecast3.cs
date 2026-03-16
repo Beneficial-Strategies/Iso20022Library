@@ -56,5 +56,5 @@ public record CashOutForecast3
     [IsoId("_SksIVdp-Ed-ak6NoX_4Aeg_1916216157")]
     [DisplayName("Cash Out Breakdown Details")]
     [IsoXmlTag("CshOutBrkdwnDtls")]
-    public FundCashOutBreakdown2? CashOutBreakdownDetails { get; init; }
+    public ValueList<FundCashOutBreakdown2> CashOutBreakdownDetails { get; init; } = [];
 }

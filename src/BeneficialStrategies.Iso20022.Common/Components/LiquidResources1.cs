@@ -32,7 +32,8 @@ public record LiquidResources1
     [IsoId("_ADHekEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed Lines Of Credit")]
     [IsoXmlTag("FcltiesCmmtdLinesOfCdt")]
-    public LiquidResourceInformation1? FacilitiesCommittedLinesOfCredit { get; init; }
+    public ValueList<LiquidResourceInformation1> FacilitiesCommittedLinesOfCredit { get; init; } =
+        [];
 
     /// <summary>
     /// Repurchase agreement that are contractually committed with the liquidity provider.
@@ -40,7 +41,8 @@ public record LiquidResources1
     [IsoId("_GH3PQEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed Repurchase Agreements")]
     [IsoXmlTag("FcltiesCmmtdRpAgrmts")]
-    public LiquidResourceInformation1? FacilitiesCommittedRepurchaseAgreements { get; init; }
+    public ValueList<LiquidResourceInformation1> FacilitiesCommittedRepurchaseAgreements { get; init; } =
+        [];
 
     /// <summary>
     /// FX swaps that are contractually committed with the liquidity provider.
@@ -48,7 +50,7 @@ public record LiquidResources1
     [IsoId("_LR_KwEStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Committed FX Swaps")]
     [IsoXmlTag("FcltiesCmmtdFxSwps")]
-    public LiquidResourceInformation1? FacilitiesCommittedFXSwaps { get; init; }
+    public ValueList<LiquidResourceInformation1> FacilitiesCommittedFXSwaps { get; init; } = [];
 
     /// <summary>
     /// Other liquidity facilities that are contractually committed with the liquidity provider.
@@ -56,7 +58,7 @@ public record LiquidResources1
     [IsoId("_RIdO4EStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Other Committed")]
     [IsoXmlTag("FcltiesOthrCmmtd")]
-    public LiquidResourceInformation1? FacilitiesOtherCommitted { get; init; }
+    public ValueList<LiquidResourceInformation1> FacilitiesOtherCommitted { get; init; } = [];
 
     /// <summary>
     /// Liquidity facilities that are not contractually committed.
@@ -64,7 +66,7 @@ public record LiquidResources1
     [IsoId("_V9wJ4EStEemM8-DVOYzdVQ")]
     [DisplayName("Facilities Uncommitted")]
     [IsoXmlTag("FcltiesUcmmtd")]
-    public LiquidResourceInformation1? FacilitiesUncommitted { get; init; }
+    public ValueList<LiquidResourceInformation1> FacilitiesUncommitted { get; init; } = [];
 
     /// <summary>
     /// CCPs own non cash resources.
@@ -72,7 +74,7 @@ public record LiquidResources1
     [IsoId("_bPLAMEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments CCP")]
     [IsoXmlTag("FinInstrmsCCP")]
-    public LiquidResourceInformation1? FinancialInstrumentsCCP { get; init; }
+    public ValueList<LiquidResourceInformation1> FinancialInstrumentsCCP { get; init; } = [];
 
     /// <summary>
     /// Financial instruments from CCP treasury investments of clearing members cash collateral with any of the CCPs own cash invested included.
@@ -80,7 +82,8 @@ public record LiquidResources1
     [IsoId("_hQgQgEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Treasury Investments")]
     [IsoXmlTag("FinInstrmsTrsrInvstmts")]
-    public LiquidResourceInformation1? FinancialInstrumentsTreasuryInvestments { get; init; }
+    public ValueList<LiquidResourceInformation1> FinancialInstrumentsTreasuryInvestments { get; init; } =
+        [];
 
     /// <summary>
     /// Financial instruments due to be delivered to the defaulting member that post-default can be used to meet liquidity needs in the event of their default.
@@ -88,7 +91,8 @@ public record LiquidResources1
     [IsoId("_l39j0EStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Defaulters Settlement Collateral")]
     [IsoXmlTag("FinInstrmsDfltrsSttlmColl")]
-    public LiquidResourceInformation1? FinancialInstrumentsDefaultersSettlementCollateral { get; init; }
+    public ValueList<LiquidResourceInformation1> FinancialInstrumentsDefaultersSettlementCollateral { get; init; } =
+        [];
 
     /// <summary>
     /// Non-cash collateral e.g. margin provided by the defaulting counterparty that can be used to meet liquidity needs in the event of their default.
@@ -96,5 +100,6 @@ public record LiquidResources1
     [IsoId("_qv8mcEStEemM8-DVOYzdVQ")]
     [DisplayName("Financial Instruments Defaulters Non Cash Collateral")]
     [IsoXmlTag("FinInstrmsDfltrsNonCshColl")]
-    public LiquidResourceInformation1? FinancialInstrumentsDefaultersNonCashCollateral { get; init; }
+    public ValueList<LiquidResourceInformation1> FinancialInstrumentsDefaultersNonCashCollateral { get; init; } =
+        [];
 }

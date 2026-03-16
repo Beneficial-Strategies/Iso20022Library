@@ -31,7 +31,7 @@ public record MergerDetailsType1
     [IsoId("_DPO70GHPEeGknP6xAc4fKw")]
     [DisplayName("Counterparty Details")]
     [IsoXmlTag("CtrPtyDtls")]
-    public CounterpartyDetailsType1? CounterpartyDetails { get; init; }
+    public ValueList<CounterpartyDetailsType1> CounterpartyDetails { get; init; } = [];
 
     /// <summary>
     /// Classification of the simplified merger regulatory condition of the parent company.

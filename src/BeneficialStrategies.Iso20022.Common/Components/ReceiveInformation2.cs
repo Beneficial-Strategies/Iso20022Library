@@ -22,7 +22,7 @@ public record ReceiveInformation2
     [IsoId("_VN93ttp-Ed-ak6NoX_4Aeg_-682749671")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge4? ChargeDetails { get; init; }
+    public ValueList<Charge4> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -30,7 +30,7 @@ public record ReceiveInformation2
     [IsoId("_VN93t9p-Ed-ak6NoX_4Aeg_1276116650")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax3? TaxDetails { get; init; }
+    public ValueList<Tax3> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.

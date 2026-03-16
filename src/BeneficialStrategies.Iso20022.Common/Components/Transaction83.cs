@@ -42,7 +42,7 @@ public record Transaction83
     [IsoId("_Ys_u5d-tEeelLeeCyrjnCQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService1? AdditionalService { get; init; }
+    public ValueList<AdditionalService1> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Attribute of the transaction.
@@ -71,7 +71,7 @@ public record Transaction83
     [IsoId("_Ys_u7d-tEeelLeeCyrjnCQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public MessageReason2Code? MessageReason { get; init; }
+    public SimpleValueList<MessageReason2Code> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined  in external code list.
@@ -79,9 +79,7 @@ public record Transaction83
     [IsoId("_Ys_u79-tEeelLeeCyrjnCQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -89,7 +87,8 @@ public record Transaction83
     [IsoId("_Ys_u89-tEeelLeeCyrjnCQ")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -115,7 +114,7 @@ public record Transaction83
     [IsoId("_NgRYUa0wEeiBP5PZ97xcEA")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount20? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount20> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount used for reconciliation.
@@ -133,7 +132,7 @@ public record Transaction83
     [IsoId("_i_Q4Ma0qEeiBP5PZ97xcEA")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -141,7 +140,7 @@ public record Transaction83
     [IsoId("_N_ubURcNEeit0dtP9bTmEg")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Financial services related to the account.
@@ -183,5 +182,5 @@ public record Transaction83
     [IsoId("_AYUt4RqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

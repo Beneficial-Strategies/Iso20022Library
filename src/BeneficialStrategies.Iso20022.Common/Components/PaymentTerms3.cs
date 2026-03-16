@@ -39,9 +39,7 @@ public record PaymentTerms3
     [IsoId("_TCHyEAEcEeCQm6a_G2yO_w_202278077")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public SimpleValueList<IsoMax140Text> Description { get; init; } = [];
 
     /// <summary>
     /// Partial payment, expressed as a percentage, for the payment terms.
@@ -58,9 +56,7 @@ public record PaymentTerms3
     [IsoId("_TCRjAQEcEeCQm6a_G2yO_w_-1812933723")]
     [DisplayName("Direct Debit Mandate Identification")]
     [IsoXmlTag("DrctDbtMndtId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DirectDebitMandateIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> DirectDebitMandateIdentification { get; init; } = [];
 
     /// <summary>
     /// Monetary value used as a basis to calculate the discount in these payment terms.

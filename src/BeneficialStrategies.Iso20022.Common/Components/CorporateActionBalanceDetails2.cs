@@ -78,7 +78,7 @@ public record CorporateActionBalanceDetails2
     [IsoId("_R984c9p-Ed-ak6NoX_4Aeg_-947936038")]
     [DisplayName("Pending Delivery Balance")]
     [IsoXmlTag("PdgDlvryBal")]
-    public BalanceFormat1Choice_? PendingDeliveryBalance { get; init; }
+    public ValueList<BalanceFormat1Choice_> PendingDeliveryBalance { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities in the sub-balance.
@@ -86,7 +86,7 @@ public record CorporateActionBalanceDetails2
     [IsoId("_R984dNp-Ed-ak6NoX_4Aeg_-947936007")]
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
-    public BalanceFormat1Choice_? PendingReceiptBalance { get; init; }
+    public ValueList<BalanceFormat1Choice_> PendingReceiptBalance { get; init; } = [];
 
     /// <summary>
     /// Quantity of securities in the sub-balance.

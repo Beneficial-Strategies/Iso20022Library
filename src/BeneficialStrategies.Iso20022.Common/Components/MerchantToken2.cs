@@ -42,9 +42,7 @@ public record MerchantToken2
     [IsoId("_VGaPRU7ZEeyGi9JAv6wq7Q")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TokenCharacteristic { get; init; }
+    public SimpleValueList<IsoMax35Text> TokenCharacteristic { get; init; } = [];
 
     /// <summary>
     /// Identifier of a token provider requestor.

@@ -46,7 +46,7 @@ public record CardPaymentTransaction24
     [IsoId("_GSZriTGlEeO118ZQJgaQSQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action3? Action { get; init; }
+    public ValueList<Action3> Action { get; init; } = [];
 
     /// <summary>
     /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.

@@ -30,7 +30,7 @@ public record TradeSecurityIdentificationQueryCriteria2
     [IsoId("_Y5Yz89GREeaQk737TH1Fzw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public SecurityIdentificationQueryCriteria1? Identification { get; init; }
+    public ValueList<SecurityIdentificationQueryCriteria1> Identification { get; init; } = [];
 
     /// <summary>
     /// Unique identification to identify the direct underlying instrument based on its type.
@@ -38,5 +38,6 @@ public record TradeSecurityIdentificationQueryCriteria2
     [IsoId("_Y5Yz9dGREeaQk737TH1Fzw")]
     [DisplayName("Underlying Instrument Identification")]
     [IsoXmlTag("UndrlygInstrmId")]
-    public SecurityIdentificationQuery3Choice_? UnderlyingInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentificationQuery3Choice_> UnderlyingInstrumentIdentification { get; init; } =
+        [];
 }

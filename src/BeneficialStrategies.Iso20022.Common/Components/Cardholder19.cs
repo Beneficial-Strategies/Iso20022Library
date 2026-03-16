@@ -33,7 +33,7 @@ public record Cardholder19
     [IsoId("__o_cc51EEeublrfU-wN95w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public Credentials2? Identification { get; init; }
+    public ValueList<Credentials2> Identification { get; init; } = [];
 
     /// <summary>
     /// Complete address of the cardholder.
@@ -78,7 +78,7 @@ public record Cardholder19
     [IsoId("_GL2qMMXOEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Contains text fields in the local language.

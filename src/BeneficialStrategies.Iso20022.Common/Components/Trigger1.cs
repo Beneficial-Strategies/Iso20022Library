@@ -30,5 +30,5 @@ public record Trigger1
     [IsoId("_99Ns2HltEeG7BsjMvd1mEw_-1230694624")]
     [DisplayName("Documentary Event")]
     [IsoXmlTag("DcmntryEvt")]
-    public Document10? DocumentaryEvent { get; init; }
+    public ValueList<Document10> DocumentaryEvent { get; init; } = [];
 }

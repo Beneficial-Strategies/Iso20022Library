@@ -69,7 +69,7 @@ public record PassengerTransportSummary1
     [IsoId("_YkXooPPhEeihCvvpsmGI2w")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
-    public CustomerReference1? CustomerReference { get; init; }
+    public ValueList<CustomerReference1> CustomerReference { get; init; } = [];
 
     /// <summary>
     /// Contains the details of the passenger.
@@ -77,7 +77,7 @@ public record PassengerTransportSummary1
     [IsoId("_YkXopPPhEeihCvvpsmGI2w")]
     [DisplayName("Passenger")]
     [IsoXmlTag("Pssngr")]
-    public Customer5? Passenger { get; init; }
+    public ValueList<Customer5> Passenger { get; init; } = [];
 
     /// <summary>
     /// Contains departure location, date and time.

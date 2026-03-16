@@ -22,5 +22,5 @@ public record BatchResponse3
     [IsoId("_crs7IS8PEeu125Ip9zFcsQ")]
     [DisplayName("Performed Transaction")]
     [IsoXmlTag("PrfrmdTx")]
-    public PerformedTransaction3? PerformedTransaction { get; init; }
+    public ValueList<PerformedTransaction3> PerformedTransaction { get; init; } = [];
 }

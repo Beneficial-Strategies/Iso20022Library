@@ -104,7 +104,7 @@ public record PointOfServiceContext4
     [IsoId("_GeCtr67pEeuHdo3E3txH4A")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
-    public ECommerceData1? ECommerceData { get; init; }
+    public ValueList<ECommerceData1> ECommerceData { get; init; } = [];
 
     /// <summary>
     /// A code that identifies the type of MOTO transaction.
@@ -152,7 +152,8 @@ public record PointOfServiceContext4
     [IsoId("_GeCtt67pEeuHdo3E3txH4A")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
-    public SecurityCharacteristics1Code? SecurityCharacteristics { get; init; }
+    public SimpleValueList<SecurityCharacteristics1Code> SecurityCharacteristics { get; init; } =
+        [];
 
     /// <summary>
     /// Other security characteristics.
@@ -226,5 +227,5 @@ public record PointOfServiceContext4
     [IsoId("_GeCtw67pEeuHdo3E3txH4A")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public SpecialConditions1? SpecialConditions { get; init; }
+    public ValueList<SpecialConditions1> SpecialConditions { get; init; } = [];
 }

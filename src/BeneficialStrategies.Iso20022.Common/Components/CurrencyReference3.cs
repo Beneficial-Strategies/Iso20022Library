@@ -38,5 +38,5 @@ public record CurrencyReference3
     [IsoId("_odTWBWoQEea5EcY2TpG1mw")]
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
-    public ExchangeRateInformation1? ExchangeRateInformation { get; init; }
+    public ValueList<ExchangeRateInformation1> ExchangeRateInformation { get; init; } = [];
 }

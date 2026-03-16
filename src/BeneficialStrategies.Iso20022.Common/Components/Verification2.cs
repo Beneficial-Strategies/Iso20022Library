@@ -60,5 +60,5 @@ public record Verification2
     [IsoId("_eJNK4d-rEeelLeeCyrjnCQ")]
     [DisplayName("Verification Result")]
     [IsoXmlTag("VrfctnRslt")]
-    public VerificationResult1? VerificationResult { get; init; }
+    public ValueList<VerificationResult1> VerificationResult { get; init; } = [];
 }

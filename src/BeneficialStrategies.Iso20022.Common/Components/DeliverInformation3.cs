@@ -55,7 +55,7 @@ public record DeliverInformation3
     [IsoId("_QWr_sNp-Ed-ak6NoX_4Aeg_-49884403")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge20? ChargeDetails { get; init; }
+    public ValueList<Charge20> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
@@ -63,7 +63,7 @@ public record DeliverInformation3
     [IsoId("_QWr_sdp-Ed-ak6NoX_4Aeg_1381572526")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission12? CommissionDetails { get; init; }
+    public ValueList<Commission12> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
@@ -71,7 +71,7 @@ public record DeliverInformation3
     [IsoId("_QWr_stp-Ed-ak6NoX_4Aeg_-238551714")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax15? TaxDetails { get; init; }
+    public ValueList<Tax15> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.

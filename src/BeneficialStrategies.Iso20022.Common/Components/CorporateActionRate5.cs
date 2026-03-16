@@ -62,7 +62,7 @@ public record CorporateActionRate5
     [IsoId("_TYjONdp-Ed-ak6NoX_4Aeg_-1791514458")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat1Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat1Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example, consent fees.
@@ -86,7 +86,8 @@ public record CorporateActionRate5
     [IsoId("_TYjOONp-Ed-ak6NoX_4Aeg_-1791514044")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat1Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat1Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -94,7 +95,7 @@ public record CorporateActionRate5
     [IsoId("_TYjOOdp-Ed-ak6NoX_4Aeg_-1791513598")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat1Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat1Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
@@ -126,7 +127,7 @@ public record CorporateActionRate5
     [IsoId("_TYsYI9p-Ed-ak6NoX_4Aeg_781413201")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat1Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat1Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Proportionate allocation used for the offer.
@@ -206,7 +207,7 @@ public record CorporateActionRate5
     [IsoId("_TY2JI9p-Ed-ak6NoX_4Aeg_-1783204586")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.

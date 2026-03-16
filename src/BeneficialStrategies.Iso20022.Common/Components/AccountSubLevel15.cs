@@ -46,7 +46,7 @@ public record AccountSubLevel15
     [IsoId("_68-311jBEea1XpTdyimpLA")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
-    public BeneficialOwner2? BeneficialOwner { get; init; }
+    public ValueList<BeneficialOwner2> BeneficialOwner { get; init; } = [];
 
     /// <summary>
     /// Report on the net position of a financial instrument on the sub-account (sub-account level 5), for a certain date. The agent, for example, a trade intermediary, may also be specified.
@@ -54,7 +54,7 @@ public record AccountSubLevel15
     [IsoId("_97tSwVjBEea1XpTdyimpLA")]
     [DisplayName("Balance Details")]
     [IsoXmlTag("BalDtls")]
-    public AggregateHoldingBalance3? BalanceDetails { get; init; }
+    public ValueList<AggregateHoldingBalance3> BalanceDetails { get; init; } = [];
 
     /// <summary>
     /// Holdings of level 5.
@@ -62,7 +62,7 @@ public record AccountSubLevel15
     [IsoId("_68-321jBEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl6")]
-    public AccountSubLevel16? AccountSubLevel6 { get; init; }
+    public ValueList<AccountSubLevel16> AccountSubLevel6 { get; init; } = [];
 
     /// <summary>
     /// Difference in holdings between the safekeeping account and the sub-accounts of level 6.
@@ -70,7 +70,7 @@ public record AccountSubLevel15
     [IsoId("_68-33VjBEea1XpTdyimpLA")]
     [DisplayName("Account Sub Level 6 Difference")]
     [IsoXmlTag("AcctSubLvl6Diff")]
-    public AggregateHoldingBalance2? AccountSubLevel6Difference { get; init; }
+    public ValueList<AggregateHoldingBalance2> AccountSubLevel6Difference { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -78,5 +78,5 @@ public record AccountSubLevel15
     [IsoId("_68-34VjBEea1XpTdyimpLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

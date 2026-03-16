@@ -39,5 +39,5 @@ public record BusinessDay7
     [IsoId("_xCzJxZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("System Information Per Currency")]
     [IsoXmlTag("SysInfPerCcy")]
-    public SystemAvailabilityAndEvents2? SystemInformationPerCurrency { get; init; }
+    public ValueList<SystemAvailabilityAndEvents2> SystemInformationPerCurrency { get; init; } = [];
 }

@@ -58,7 +58,7 @@ public record StatementResolutionEntry3
     [IsoId("_cHruy9wYEee0mvR9H3APRg")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges3? Charges { get; init; }
+    public ValueList<Charges3> Charges { get; init; } = [];
 
     /// <summary>
     /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.

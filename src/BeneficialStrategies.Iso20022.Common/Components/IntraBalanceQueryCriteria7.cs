@@ -22,9 +22,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcQTp6EemwKdP955WBJQ")]
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationRequestIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Provides the status of settlement of a transaction.
@@ -32,7 +30,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcSTp6EemwKdP955WBJQ")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public CancellationProcessingStatus9Choice_? ProcessingStatus { get; init; }
+    public ValueList<CancellationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Account in which cash is maintained.
@@ -40,7 +38,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcSzp6EemwKdP955WBJQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public AccountIdentificationSearchCriteria2Choice_? CashAccount { get; init; }
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> CashAccount { get; init; } = [];
 
     /// <summary>
     /// Party that owns the account.
@@ -48,7 +46,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcTTp6EemwKdP955WBJQ")]
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
-    public SystemPartyIdentification8? CashAccountOwner { get; init; }
+    public ValueList<SystemPartyIdentification8> CashAccountOwner { get; init; } = [];
 
     /// <summary>
     /// Party that manages the cash account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
@@ -64,7 +62,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcTzp6EemwKdP955WBJQ")]
     [DisplayName("Message Originator")]
     [IsoXmlTag("MsgOrgtr")]
-    public SystemPartyIdentification8? MessageOriginator { get; init; }
+    public ValueList<SystemPartyIdentification8> MessageOriginator { get; init; } = [];
 
     /// <summary>
     /// Specifies the creation date/time of the intra-balance movement.

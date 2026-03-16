@@ -22,7 +22,7 @@ public record CollateralType19
     [IsoId("__431Ea5nEeuo-IflVgGqiA")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public SecurityReuseData1? Security { get; init; }
+    public ValueList<SecurityReuseData1> Security { get; init; } = [];
 
     /// <summary>
     /// Provides details on the type and amount of the cash reinvestment in a given currency and the average interest rate received.
@@ -30,5 +30,5 @@ public record CollateralType19
     [IsoId("__431E65nEeuo-IflVgGqiA")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
-    public CashReuseData1? Cash { get; init; }
+    public ValueList<CashReuseData1> Cash { get; init; } = [];
 }

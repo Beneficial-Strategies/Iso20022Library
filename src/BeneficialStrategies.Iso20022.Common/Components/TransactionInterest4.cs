@@ -30,5 +30,5 @@ public record TransactionInterest4
     [IsoId("_uDYn1a6QEeexrtTFgmVD3Q")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public InterestRecord2? Record { get; init; }
+    public ValueList<InterestRecord2> Record { get; init; } = [];
 }

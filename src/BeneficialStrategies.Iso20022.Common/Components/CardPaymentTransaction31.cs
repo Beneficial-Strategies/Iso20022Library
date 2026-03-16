@@ -39,7 +39,7 @@ public record CardPaymentTransaction31
     [IsoId("_mtB11TKMEeOqyZqt0rCZLg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType6Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType6Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.
@@ -119,7 +119,5 @@ public record CardPaymentTransaction31
     [IsoId("_mtB15TKMEeOqyZqt0rCZLg")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

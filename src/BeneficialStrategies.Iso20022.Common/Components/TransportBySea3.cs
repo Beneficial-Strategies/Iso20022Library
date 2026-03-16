@@ -22,9 +22,7 @@ public record TransportBySea3
     [IsoId("_SuYP4Np-Ed-ak6NoX_4Aeg_-719790542")]
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PortOfLoading { get; init; }
+    public SimpleValueList<IsoMax35Text> PortOfLoading { get; init; } = [];
 
     /// <summary>
     /// Identifies the port where the goods are discharged.

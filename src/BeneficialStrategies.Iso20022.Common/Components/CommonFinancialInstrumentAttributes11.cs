@@ -30,7 +30,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8SZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Name")]
     [IsoXmlTag("FinInstrmNm")]
-    public FinancialInstrumentName2? FinancialInstrumentName { get; init; }
+    public ValueList<FinancialInstrumentName2> FinancialInstrumentName { get; init; } = [];
 
     /// <summary>
     /// Currency in which a security is issued or redenominated.
@@ -178,7 +178,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8g5JKEeuAlLVx8pyt3w")]
     [DisplayName("Trading Market")]
     [IsoXmlTag("TradgMkt")]
-    public TradingParameters2? TradingMarket { get; init; }
+    public ValueList<TradingParameters2> TradingMarket { get; init; } = [];
 
     /// <summary>
     /// Indicates the spread to benchmark details of an indication of interest.
@@ -186,7 +186,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8hZJKEeuAlLVx8pyt3w")]
     [DisplayName("Spread And Benchmark Curve")]
     [IsoXmlTag("SprdAndBchmkCrv")]
-    public BenchmarkCurve6? SpreadAndBenchmarkCurve { get; init; }
+    public ValueList<BenchmarkCurve6> SpreadAndBenchmarkCurve { get; init; } = [];
 
     /// <summary>
     /// Represents the type of put.
@@ -314,7 +314,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8o5JKEeuAlLVx8pyt3w")]
     [DisplayName("Withholding Tax Regime")]
     [IsoXmlTag("WhldgTaxRgm")]
-    public SecurityWithHoldingTax1? WithholdingTaxRegime { get; init; }
+    public ValueList<SecurityWithHoldingTax1> WithholdingTaxRegime { get; init; } = [];
 
     /// <summary>
     /// Status of payment of a security at a particular time.
@@ -370,7 +370,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8sZJKEeuAlLVx8pyt3w")]
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
-    public SecurityRestriction3? Restriction { get; init; }
+    public ValueList<SecurityRestriction3> Restriction { get; init; } = [];
 
     /// <summary>
     /// Specifies the date from which the financial instrument identification is valid.
@@ -378,7 +378,8 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8s5JKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Identification Validity")]
     [IsoXmlTag("FinInstrmIdVldty")]
-    public FinancialInstrumentIdentificationValidity3? FinancialInstrumentIdentificationValidity { get; init; }
+    public ValueList<FinancialInstrumentIdentificationValidity3> FinancialInstrumentIdentificationValidity { get; init; } =
+        [];
 
     /// <summary>
     /// Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.
@@ -386,7 +387,7 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8tZJKEeuAlLVx8pyt3w")]
     [DisplayName("Settlement Information")]
     [IsoXmlTag("SttlmInf")]
-    public SettlementInformation17? SettlementInformation { get; init; }
+    public ValueList<SettlementInformation17> SettlementInformation { get; init; } = [];
 
     /// <summary>
     /// Indicates the form of the financial Instrument.
@@ -450,5 +451,5 @@ public record CommonFinancialInstrumentAttributes11
     [IsoId("_QCG8xZJKEeuAlLVx8pyt3w")]
     [DisplayName("Security CSD Link")]
     [IsoXmlTag("SctyCSDLk")]
-    public SecurityCSDLink7? SecurityCSDLink { get; init; }
+    public ValueList<SecurityCSDLink7> SecurityCSDLink { get; init; } = [];
 }

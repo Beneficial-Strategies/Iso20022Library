@@ -78,7 +78,5 @@ public record SaleToPOIProtocolParameter2
     [IsoId("_vrXpwVFMEeyApZmLzm74zA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ExternallyTypeSupported { get; init; }
+    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
 }

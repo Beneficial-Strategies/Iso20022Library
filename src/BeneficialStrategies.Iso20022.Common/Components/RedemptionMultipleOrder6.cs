@@ -82,7 +82,7 @@ public record RedemptionMultipleOrder6
     [IsoId("_7rQ8zTbsEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson32? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Instruction from an investor to sell investment fund units back to the fund.

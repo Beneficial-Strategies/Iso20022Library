@@ -48,5 +48,5 @@ public record AdditionalBalanceInformation24
     [IsoId("_csZUpTi8Eeydid5dcNPKvg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown71? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown71> QuantityBreakdown { get; init; } = [];
 }

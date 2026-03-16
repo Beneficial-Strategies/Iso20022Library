@@ -41,7 +41,7 @@ public record Transaction144
     [IsoId("_vIt83zNJEeylu6lH-gut-A")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -49,9 +49,7 @@ public record Transaction144
     [IsoId("_vIt87TNJEeylu6lH-gut-A")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -59,7 +57,7 @@ public record Transaction144
     [IsoId("_vIt88TNJEeylu6lH-gut-A")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService2? AdditionalService { get; init; }
+    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Indicates that additional data will be provided in a separate addendum message.
@@ -96,7 +94,8 @@ public record Transaction144
     [IsoId("_vIt8-TNJEeylu6lH-gut-A")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -122,7 +121,7 @@ public record Transaction144
     [IsoId("_NCW0IDNMEeylu6lH-gut-A")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
-    public LocalData9? LocalData { get; init; }
+    public ValueList<LocalData9> LocalData { get; init; } = [];
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -142,5 +141,5 @@ public record Transaction144
     [IsoId("_vIt9IzNJEeylu6lH-gut-A")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData2? AdditionalData { get; init; }
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 }

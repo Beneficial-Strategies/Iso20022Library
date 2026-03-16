@@ -145,7 +145,7 @@ public record Organisation35
     [IsoId("_XtGsfW49EeiU9cctagi5ow")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
-    public PartyIdentification135? RepresentativeOfficer { get; init; }
+    public ValueList<PartyIdentification135> RepresentativeOfficer { get; init; } = [];
 
     /// <summary>
     /// Person responsible of the treasury department within an organisation.
@@ -161,7 +161,7 @@ public record Organisation35
     [IsoId("_XtGsgW49EeiU9cctagi5ow")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
-    public PartyIdentification135? MainMandateHolder { get; init; }
+    public ValueList<PartyIdentification135> MainMandateHolder { get; init; } = [];
 
     /// <summary>
     /// Sender of a message related to the life cycle of an account.
@@ -169,5 +169,5 @@ public record Organisation35
     [IsoId("_XtGsg249EeiU9cctagi5ow")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyIdentification135? Sender { get; init; }
+    public ValueList<PartyIdentification135> Sender { get; init; } = [];
 }

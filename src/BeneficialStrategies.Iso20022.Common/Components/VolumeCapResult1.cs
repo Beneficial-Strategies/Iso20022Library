@@ -65,7 +65,8 @@ public record VolumeCapResult1
     [IsoId("_dyll4JuLEeaPcol5ibnfBQ")]
     [DisplayName("Trading Under Waiver Breakdown")]
     [IsoXmlTag("TradgUdrWvrBrkdwn")]
-    public TradingUnderWaiversPercentage1? TradingUnderWaiverBreakdown { get; init; }
+    public ValueList<TradingUnderWaiversPercentage1> TradingUnderWaiverBreakdown { get; init; } =
+        [];
 
     /// <summary>
     /// Information for interpreting the result.

@@ -30,7 +30,7 @@ public record OptionOrSwaption7
     [IsoId("_b2aH6eXmEemlzfnIR22x_w")]
     [DisplayName("Exercise Style")]
     [IsoXmlTag("ExrcStyle")]
-    public OptionStyle6Code? ExerciseStyle { get; init; }
+    public SimpleValueList<OptionStyle6Code> ExerciseStyle { get; init; } = [];
 
     /// <summary>
     /// Specifies the earliest unadjusted date during the exercise period on which an option can be exercised.
@@ -56,7 +56,7 @@ public record OptionOrSwaption7
     [IsoId("_MKFDIfWjEemquc94423dxw")]
     [DisplayName("Strike Price Schedule")]
     [IsoXmlTag("StrkPricSchdl")]
-    public Schedule4? StrikePriceSchedule { get; init; }
+    public ValueList<Schedule4> StrikePriceSchedule { get; init; } = [];
 
     /// <summary>
     /// Indicates the amount and currency of a foreign exchange option that the option holder has the right to buy.

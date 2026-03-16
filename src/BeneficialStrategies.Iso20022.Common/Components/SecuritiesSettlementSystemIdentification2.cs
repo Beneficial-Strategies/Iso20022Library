@@ -69,5 +69,5 @@ public record SecuritiesSettlementSystemIdentification2
     [IsoId("_iAmBmx2yEeqF2P5v-Rtejg")]
     [DisplayName("Responsible Party")]
     [IsoXmlTag("RspnsblPty")]
-    public Contact9? ResponsibleParty { get; init; }
+    public ValueList<Contact9> ResponsibleParty { get; init; } = [];
 }

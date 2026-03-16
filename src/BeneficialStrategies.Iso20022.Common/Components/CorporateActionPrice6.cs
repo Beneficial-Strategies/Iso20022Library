@@ -38,7 +38,7 @@ public record CorporateActionPrice6
     [IsoId("_TYZdM9p-Ed-ak6NoX_4Aeg_506588335")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    public PriceFormat9Choice_? GenericCashPriceReceivedPerProduct { get; init; }
+    public ValueList<PriceFormat9Choice_> GenericCashPriceReceivedPerProduct { get; init; } = [];
 
     /// <summary>
     /// Amount of money required per over-subscribed equity as defined by the issuer.

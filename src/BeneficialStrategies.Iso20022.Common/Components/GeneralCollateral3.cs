@@ -22,7 +22,7 @@ public record GeneralCollateral3
     [IsoId("_plT7AfnbEeaHA8tUPpXMKA")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public FinancialInstrument59? FinancialInstrumentIdentification { get; init; }
+    public ValueList<FinancialInstrument59> FinancialInstrumentIdentification { get; init; } = [];
 
     /// <summary>
     /// List of eligible securities to be allocated where known.
@@ -30,6 +30,6 @@ public record GeneralCollateral3
     [IsoId("_M-XbUeoaEeadseq5W5YLvQ")]
     [DisplayName("Eligible Financial Instrument Identification")]
     [IsoXmlTag("ElgblFinInstrmId")]
-    [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? EligibleFinancialInstrumentIdentification { get; init; }
+    public SimpleValueList<IsoISINOct2015Identifier> EligibleFinancialInstrumentIdentification { get; init; } =
+        [];
 }

@@ -71,7 +71,7 @@ public record CorporateAction3
     [IsoId("_TafH5dp-Ed-ak6NoX_4Aeg_-812698870")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    public IdentificationFormat1Choice_? CouponNumber { get; init; }
+    public ValueList<IdentificationFormat1Choice_> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Indicates whether certification is required from the account owner. |Yes = certification required.|No = no certification required.
@@ -139,7 +139,7 @@ public record CorporateAction3
     [IsoId("_Tao449p-Ed-ak6NoX_4Aeg_-812698481")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferTypeFormat1Choice_? OfferType { get; init; }
+    public ValueList<OfferTypeFormat1Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -155,7 +155,7 @@ public record CorporateAction3
     [IsoId("_Tao45dp-Ed-ak6NoX_4Aeg_-812698060")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat1Choice_? EventStage { get; init; }
+    public ValueList<CorporateActionEventStageFormat1Choice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of the additional business process linked to a corporate action event such as a claim compensation or tax refund.
@@ -163,7 +163,8 @@ public record CorporateAction3
     [IsoId("_Tao45tp-Ed-ak6NoX_4Aeg_-930957469")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public AdditionalBusinessProcessFormat1Choice_? AdditionalBusinessProcessIndicator { get; init; }
+    public ValueList<AdditionalBusinessProcessFormat1Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of change announced.
@@ -171,7 +172,7 @@ public record CorporateAction3
     [IsoId("_Tao459p-Ed-ak6NoX_4Aeg_-812698463")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeTypeFormat1Choice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeTypeFormat1Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Type of intermediates securities distribution.

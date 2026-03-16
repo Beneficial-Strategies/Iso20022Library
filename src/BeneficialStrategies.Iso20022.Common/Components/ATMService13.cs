@@ -60,9 +60,7 @@ public record ATMService13
     [IsoId("_4dlVCa4OEeWZgJQOa6iKCQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceVariantIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
 
     /// <summary>
     /// True if deposit with cash back transaction.

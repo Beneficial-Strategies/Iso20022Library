@@ -58,5 +58,5 @@ public record DisplayCapabilities3
     [IsoId("_Nx3MsHr6EeSZrs_hiwNOWA")]
     [DisplayName("Available Language")]
     [IsoXmlTag("AvlblLang")]
-    public LanguageCode? AvailableLanguage { get; init; }
+    public SimpleValueList<LanguageCode> AvailableLanguage { get; init; } = [];
 }

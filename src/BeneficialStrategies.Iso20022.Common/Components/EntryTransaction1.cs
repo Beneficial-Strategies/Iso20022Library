@@ -38,7 +38,7 @@ public record EntryTransaction1
     [IsoId("_T7kbsdp-Ed-ak6NoX_4Aeg_-2095271147")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability1? Availability { get; init; }
+    public ValueList<CashBalanceAvailability1> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements to fully identify the type of underlying transaction resulting in an entry.
@@ -54,7 +54,7 @@ public record EntryTransaction1
     [IsoId("_T7kbs9p-Ed-ak6NoX_4Aeg_-2095270371")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public ChargesInformation3? Charges { get; init; }
+    public ValueList<ChargesInformation3> Charges { get; init; } = [];
 
     /// <summary>
     /// Set of elements providing details on the interest amount included in the entry amount.||Usage: This component (on transaction level) can be used in case the booking is for a single transaction, and interest amount is included in the entry amount. It can also be used in case individual interest amounts are applied to individual transactions in case of a batch or aggregate amount booking.
@@ -62,7 +62,7 @@ public record EntryTransaction1
     [IsoId("_T7kbtNp-Ed-ak6NoX_4Aeg_-2095270449")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public TransactionInterest1? Interest { get; init; }
+    public ValueList<TransactionInterest1> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements identifying the parties related to the underlying transaction.
@@ -128,7 +128,7 @@ public record EntryTransaction1
     [IsoId("_T7tlotp-Ed-ak6NoX_4Aeg_1681931917")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
-    public TransactionQuantities1Choice_? RelatedQuantities { get; init; }
+    public ValueList<TransactionQuantities1Choice_> RelatedQuantities { get; init; } = [];
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.

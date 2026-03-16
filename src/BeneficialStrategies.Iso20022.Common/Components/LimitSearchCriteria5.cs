@@ -30,7 +30,8 @@ public record LimitSearchCriteria5
     [IsoId("_P4oq-ZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Bilateral Limit Counterparty Identification")]
     [IsoXmlTag("BilLmtCtrPtyId")]
-    public BranchAndFinancialInstitutionIdentification5? BilateralLimitCounterpartyIdentification { get; init; }
+    public ValueList<BranchAndFinancialInstitutionIdentification5> BilateralLimitCounterpartyIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Type of limit as set by default in the system. The default limit is applicable by the system unless otherwise instructed.
@@ -38,7 +39,7 @@ public record LimitSearchCriteria5
     [IsoId("_P4oq-5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Default Limit Type")]
     [IsoXmlTag("DfltLmtTp")]
-    public LimitType1Choice_? DefaultLimitType { get; init; }
+    public ValueList<LimitType1Choice_> DefaultLimitType { get; init; } = [];
 
     /// <summary>
     /// Type of limit applied by the system at the present time.
@@ -46,7 +47,7 @@ public record LimitSearchCriteria5
     [IsoId("_P4oq_ZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Current Limit Type")]
     [IsoXmlTag("CurLmtTp")]
-    public LimitType1Choice_? CurrentLimitType { get; init; }
+    public ValueList<LimitType1Choice_> CurrentLimitType { get; init; } = [];
 
     /// <summary>
     /// Owner of the account which is being queried.

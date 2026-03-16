@@ -40,7 +40,7 @@ public record QuantityAndAccount8
     [IsoId("_UbTrstp-Ed-ak6NoX_4Aeg_-1799656129")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SecuritiesCertificate1? CertificateNumber { get; init; }
+    public ValueList<SecuritiesCertificate1> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Account to or from which a cash entry is made.
@@ -56,7 +56,7 @@ public record QuantityAndAccount8
     [IsoId("_UbTrtNp-Ed-ak6NoX_4Aeg_-1748051437")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown3? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown3> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

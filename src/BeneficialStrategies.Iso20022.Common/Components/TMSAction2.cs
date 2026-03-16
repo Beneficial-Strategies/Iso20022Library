@@ -79,8 +79,7 @@ public record TMSAction2
     [IsoId("_GhvusCmvEeKIjpr--01h3Q")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? KeyEnciphermentCertificate { get; init; }
+    public SimpleValueList<IsoMax5000Binary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -88,5 +87,5 @@ public record TMSAction2
     [IsoId("_ZCYzSR3ZEeKKrOIoqWglDw")]
     [DisplayName("Error Action")]
     [IsoXmlTag("ErrActn")]
-    public ErrorAction2? ErrorAction { get; init; }
+    public ValueList<ErrorAction2> ErrorAction { get; init; } = [];
 }

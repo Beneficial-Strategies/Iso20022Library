@@ -32,5 +32,5 @@ public record ReportGetTotalsResponse1
     [IsoId("_wvXBMN6REeiwsev40qZGEQ")]
     [DisplayName("Transaction Totals Set")]
     [IsoXmlTag("TxTtlsSet")]
-    public TransactionTotalsSet1? TransactionTotalsSet { get; init; }
+    public ValueList<TransactionTotalsSet1> TransactionTotalsSet { get; init; } = [];
 }

@@ -239,7 +239,7 @@ public record CreditTransferTransaction17
     [IsoId("_UVyXrxfLEeSEFrADmEUU2w")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent2? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent2> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. ||Usage: The next agent may not be the creditor agent.|The instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.
@@ -247,7 +247,7 @@ public record CreditTransferTransaction17
     [IsoId("_UVyXsRfLEeSEFrADmEUU2w")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
-    public InstructionForNextAgent1? InstructionForNextAgent { get; init; }
+    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
@@ -271,5 +271,5 @@ public record CreditTransferTransaction17
     [IsoId("_UVyXtxfLEeSEFrADmEUU2w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

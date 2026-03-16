@@ -68,7 +68,8 @@ public record PaymentTransaction84
     [IsoId("_tAznbYlrEeePr-EGJjGYzQ")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
-    public CancellationStatusReason3? CancellationStatusReasonInformation { get; init; }
+    public ValueList<CancellationStatusReason3> CancellationStatusReasonInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.

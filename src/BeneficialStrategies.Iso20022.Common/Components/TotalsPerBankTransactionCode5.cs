@@ -81,7 +81,7 @@ public record TotalsPerBankTransactionCode5
     [IsoId("_xwGpTaRgEeeKoo4sGOxgwA")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashAvailability1? Availability { get; init; }
+    public ValueList<CashAvailability1> Availability { get; init; } = [];
 
     /// <summary>
     /// Indicates the date (and time) of the transaction summary.

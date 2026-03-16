@@ -48,7 +48,7 @@ public record ATMTransaction19
     [IsoId("_tR7fcK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Incident")]
     [IsoXmlTag("Incdnt")]
-    public FailureReason7Code? Incident { get; init; }
+    public SimpleValueList<FailureReason7Code> Incident { get; init; } = [];
 
     /// <summary>
     /// Explanation of the incident.
@@ -56,9 +56,7 @@ public record ATMTransaction19
     [IsoId("_wxbsMK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IncidentDetail { get; init; }
+    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Unprotected account information.
@@ -114,7 +112,7 @@ public record ATMTransaction19
     [IsoId("_YXa0ca4PEeWZgJQOa6iKCQ")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
-    public DetailedAmount13? AdditionalCharge { get; init; }
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
 
     /// <summary>
     /// True if the customer has requested a receipt.
@@ -148,7 +146,7 @@ public record ATMTransaction19
     [IsoId("_asex0K4QEeWZgJQOa6iKCQ")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
-    public ATMDepositedMedia1? DepositedMedia { get; init; }
+    public ValueList<ATMDepositedMedia1> DepositedMedia { get; init; } = [];
 
     /// <summary>
     /// Media unit not put in the safe. These deposits have to be reconciliated.
@@ -156,7 +154,7 @@ public record ATMTransaction19
     [IsoId("_nqGe0K4QEeWZgJQOa6iKCQ")]
     [DisplayName("To Be Reconciled Media Counters")]
     [IsoXmlTag("ToBeRcncldMdiaCntrs")]
-    public ATMDepositedMedia3? ToBeReconciledMediaCounters { get; init; }
+    public ValueList<ATMDepositedMedia3> ToBeReconciledMediaCounters { get; init; } = [];
 
     /// <summary>
     /// Current totals of the ATM.
@@ -164,7 +162,7 @@ public record ATMTransaction19
     [IsoId("_9m6UYK4QEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Totals")]
     [IsoXmlTag("ATMTtls")]
-    public ATMTotals1? ATMTotals { get; init; }
+    public ValueList<ATMTotals1> ATMTotals { get; init; } = [];
 
     /// <summary>
     /// Information on the cassettes of the ATM.
@@ -172,7 +170,7 @@ public record ATMTransaction19
     [IsoId("_BIZeIK4REeWZgJQOa6iKCQ")]
     [DisplayName("Cassette")]
     [IsoXmlTag("Csstt")]
-    public ATMCassette2? Cassette { get; init; }
+    public ValueList<ATMCassette2> Cassette { get; init; } = [];
 
     /// <summary>
     /// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.

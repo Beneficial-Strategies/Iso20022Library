@@ -30,7 +30,7 @@ public record RequestDetails20
     [IsoId("_w_ZYodj8EeiHnvcp3FV_5w")]
     [DisplayName("Restriction Reference")]
     [IsoXmlTag("RstrctnRef")]
-    public RestrictionIdentification1? RestrictionReference { get; init; }
+    public ValueList<RestrictionIdentification1> RestrictionReference { get; init; } = [];
 
     /// <summary>
     /// Condition for automatic borrowing.
@@ -71,7 +71,7 @@ public record RequestDetails20
     [IsoId("_sDQdG9BwEeihG9bKfarOOA")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
-    public GenericIdentification30? OtherProcessing { get; init; }
+    public ValueList<GenericIdentification30> OtherProcessing { get; init; } = [];
 
     /// <summary>
     /// Specifies whether partial settlement is allowed.
@@ -119,5 +119,5 @@ public record RequestDetails20
     [IsoId("_sDQdM9BwEeihG9bKfarOOA")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages53? Linkages { get; init; }
+    public ValueList<Linkages53> Linkages { get; init; } = [];
 }

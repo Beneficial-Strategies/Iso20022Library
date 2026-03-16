@@ -30,7 +30,7 @@ public record CashSettlement2
     [IsoId("_ZoD24iC3EeWJd9HF2tO7BA")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
-    public CashAccount33? CashAccountDetails { get; init; }
+    public ValueList<CashAccount33> CashAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Method of payment other than a cash account.
@@ -38,5 +38,5 @@ public record CashSettlement2
     [IsoId("_ZoD24yC3EeWJd9HF2tO7BA")]
     [DisplayName("Other Cash Settlement Details")]
     [IsoXmlTag("OthrCshSttlmDtls")]
-    public PaymentInstrument13? OtherCashSettlementDetails { get; init; }
+    public ValueList<PaymentInstrument13> OtherCashSettlementDetails { get; init; } = [];
 }

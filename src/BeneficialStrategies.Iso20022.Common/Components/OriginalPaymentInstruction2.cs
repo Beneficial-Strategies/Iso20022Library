@@ -78,7 +78,7 @@ public record OriginalPaymentInstruction2
     [IsoId("_sjEHZFkyEeGeoaLUQk__nA_1592794882")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public PaymentReversalReason7? ReversalReasonInformation { get; init; }
+    public ValueList<PaymentReversalReason7> ReversalReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Provides information on the original transactions to which the reversal message refers.
@@ -86,5 +86,5 @@ public record OriginalPaymentInstruction2
     [IsoId("_sjN4YFkyEeGeoaLUQk__nA_-99385315")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransaction35? TransactionInformation { get; init; }
+    public ValueList<PaymentTransaction35> TransactionInformation { get; init; } = [];
 }

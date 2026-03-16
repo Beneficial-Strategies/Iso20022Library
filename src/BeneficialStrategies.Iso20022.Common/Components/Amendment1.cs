@@ -97,7 +97,7 @@ public record Amendment1
     [IsoId("_9-2rkHltEeG7BsjMvd1mEw_1346112541")]
     [DisplayName("New Undertaking Terms And Conditions")]
     [IsoXmlTag("NewUdrtkgTermsAndConds")]
-    public Narrative1? NewUndertakingTermsAndConditions { get; init; }
+    public ValueList<Narrative1> NewUndertakingTermsAndConditions { get; init; } = [];
 
     /// <summary>
     /// Amendment details related to the local undertaking.
@@ -130,7 +130,7 @@ public record Amendment1
     [IsoId("_9-2rk3ltEeG7BsjMvd1mEw_-1801397282")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document9? EnclosedFile { get; init; }
+    public ValueList<Document9> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the proposed amendment.

@@ -56,5 +56,5 @@ public record QuantityAndAccount111
     [IsoId("_eZWlATi8Eeydid5dcNPKvg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown69? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown69> QuantityBreakdown { get; init; } = [];
 }

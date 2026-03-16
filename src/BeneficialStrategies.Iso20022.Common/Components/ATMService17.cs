@@ -30,7 +30,7 @@ public record ATMService17
     [IsoId("_Y-HR4K4YEeW_TaP-ygI0SQ")]
     [DisplayName("Service Variant")]
     [IsoXmlTag("SvcVarnt")]
-    public ATMService18? ServiceVariant { get; init; }
+    public ValueList<ATMService18> ServiceVariant { get; init; } = [];
 
     /// <summary>
     /// Limits of amounts.
@@ -38,7 +38,7 @@ public record ATMService17
     [IsoId("_XFtbQ64XEeW_TaP-ygI0SQ")]
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts6? Limits { get; init; }
+    public ValueList<ATMTransactionAmounts6> Limits { get; init; } = [];
 
     /// <summary>
     /// Preferred withdrawal transaction chosen by the customer.

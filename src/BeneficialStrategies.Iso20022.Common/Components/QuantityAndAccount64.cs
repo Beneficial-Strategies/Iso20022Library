@@ -96,7 +96,7 @@ public record QuantityAndAccount64
     [IsoId("_8v4zQ65YEeey8N0JWnVPUw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown47? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown47> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

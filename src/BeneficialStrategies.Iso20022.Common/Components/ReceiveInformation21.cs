@@ -38,7 +38,7 @@ public record ReceiveInformation21
     [IsoId("_HJOH7ZEHEem7fvtoGpNpow")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary43? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Form, that is, ownership, of the security, that is, registered or bearer.
@@ -121,7 +121,7 @@ public record ReceiveInformation21
     [IsoId("_HJOH95EHEem7fvtoGpNpow")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public Fees2? Fees { get; init; }
+    public ValueList<Fees2> Fees { get; init; } = [];
 
     /// <summary>
     /// Tax related to the transfer of the financial instrument.
@@ -129,7 +129,7 @@ public record ReceiveInformation21
     [IsoId("_HJOH-ZEHEem7fvtoGpNpow")]
     [DisplayName("Individual Tax")]
     [IsoXmlTag("IndvTax")]
-    public Tax38? IndividualTax { get; init; }
+    public ValueList<Tax38> IndividualTax { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -146,7 +146,7 @@ public record ReceiveInformation21
     [IsoId("_HJOH-5EHEem7fvtoGpNpow")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms37? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms37> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of the transaction.

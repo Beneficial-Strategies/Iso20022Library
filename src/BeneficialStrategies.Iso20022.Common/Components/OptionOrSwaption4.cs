@@ -38,7 +38,7 @@ public record OptionOrSwaption4
     [IsoId("_5xdTB6gAEeW_OId9wS8dsQ")]
     [DisplayName("Option Exercise Style")]
     [IsoXmlTag("OptnExrcStyle")]
-    public OptionStyle6Code? OptionExerciseStyle { get; init; }
+    public SimpleValueList<OptionStyle6Code> OptionExerciseStyle { get; init; } = [];
 
     /// <summary>
     /// In case of swaptions, maturity date of the underlying swap.

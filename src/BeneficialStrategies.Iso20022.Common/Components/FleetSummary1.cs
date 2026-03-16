@@ -73,7 +73,7 @@ public record FleetSummary1
     [IsoId("_lowBwPi_EeiJaN6-Lf-c_w")]
     [DisplayName("Local Amenity")]
     [IsoXmlTag("LclAmnty")]
-    public LocalAmenity1? LocalAmenity { get; init; }
+    public ValueList<LocalAmenity1> LocalAmenity { get; init; } = [];
 
     /// <summary>
     /// Contains information related specifically to the transaction.
@@ -81,7 +81,7 @@ public record FleetSummary1
     [IsoId("_GVZhUPjEEeiJaN6-Lf-c_w")]
     [DisplayName("Transaction Related Data")]
     [IsoXmlTag("TxRltdData")]
-    public PaymentTransaction117? TransactionRelatedData { get; init; }
+    public ValueList<PaymentTransaction117> TransactionRelatedData { get; init; } = [];
 
     /// <summary>
     /// Contains additional fleet summary data.

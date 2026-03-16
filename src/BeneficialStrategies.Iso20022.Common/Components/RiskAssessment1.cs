@@ -40,9 +40,7 @@ public record RiskAssessment1
     [IsoId("_0lY4kEbPEeeIjf8aP9KbJA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; }
+    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Risk assessment result.
@@ -60,7 +58,7 @@ public record RiskAssessment1
     [IsoId("_6vP9UEbQEeeIjf8aP9KbJA")]
     [DisplayName("Additional Risk Data")]
     [IsoXmlTag("AddtlRskData")]
-    public AdditionalRiskData1? AdditionalRiskData { get; init; }
+    public ValueList<AdditionalRiskData1> AdditionalRiskData { get; init; } = [];
 
     /// <summary>
     /// Recommended action based on risk assessment.
@@ -68,7 +66,7 @@ public record RiskAssessment1
     [IsoId("_DacL0EbREeeIjf8aP9KbJA")]
     [DisplayName("Recommended Action")]
     [IsoXmlTag("RcmmnddActn")]
-    public ActionType8Code? RecommendedAction { get; init; }
+    public SimpleValueList<ActionType8Code> RecommendedAction { get; init; } = [];
 
     /// <summary>
     /// Other recommended action based on risk assessment defined at national or private level.

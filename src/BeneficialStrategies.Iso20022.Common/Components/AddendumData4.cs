@@ -38,5 +38,5 @@ public record AddendumData4
     [IsoId("_D-S9Mx1UEey8XKHwKquEQw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

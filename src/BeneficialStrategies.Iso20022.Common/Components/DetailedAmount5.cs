@@ -38,7 +38,7 @@ public record DetailedAmount5
     [IsoId("_x29u8DAsEeOqioR9srQH1g")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public DetailedAmount4? Fees { get; init; }
+    public ValueList<DetailedAmount4> Fees { get; init; } = [];
 
     /// <summary>
     /// Global rebate of the transaction. This amount is counted as a negative amount.
@@ -46,7 +46,7 @@ public record DetailedAmount5
     [IsoId("_6tylsDAsEeOqioR9srQH1g")]
     [DisplayName("Rebate")]
     [IsoXmlTag("Rbt")]
-    public DetailedAmount4? Rebate { get; init; }
+    public ValueList<DetailedAmount4> Rebate { get; init; } = [];
 
     /// <summary>
     /// Value added tax amount.
@@ -54,5 +54,5 @@ public record DetailedAmount5
     [IsoId("_A-JJcDAtEeOqioR9srQH1g")]
     [DisplayName("Value Added Tax")]
     [IsoXmlTag("ValAddedTax")]
-    public DetailedAmount4? ValueAddedTax { get; init; }
+    public ValueList<DetailedAmount4> ValueAddedTax { get; init; } = [];
 }

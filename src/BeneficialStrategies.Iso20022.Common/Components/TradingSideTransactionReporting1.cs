@@ -40,5 +40,6 @@ public record TradingSideTransactionReporting1
     [IsoId("_qaB5gU4LEeOHYs5EqIAeTw")]
     [DisplayName("Trading Side Unique Transaction Identifier")]
     [IsoXmlTag("TradgSdUnqTxIdr")]
-    public UniqueTransactionIdentifier2? TradingSideUniqueTransactionIdentifier { get; init; }
+    public ValueList<UniqueTransactionIdentifier2> TradingSideUniqueTransactionIdentifier { get; init; } =
+        [];
 }

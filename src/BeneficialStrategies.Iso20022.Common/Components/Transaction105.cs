@@ -42,7 +42,7 @@ public record Transaction105
     [IsoId("_Tr8CFN-oEeelLeeCyrjnCQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService1? AdditionalService { get; init; }
+    public ValueList<AdditionalService1> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Reason to send the message.
@@ -52,8 +52,7 @@ public record Transaction105
     [IsoId("_EQjcst-pEeelLeeCyrjnCQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MessageReason { get; init; }
+    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined  in external code list.
@@ -71,7 +70,8 @@ public record Transaction105
     [IsoId("_ZbFwEVdaEeeIAMBcVOw01w")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -97,7 +97,7 @@ public record Transaction105
     [IsoId("_AD7Fg0TFEeiTBYbU3rWV0A")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount20? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount20> DetailedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount used for reconciliation.
@@ -115,7 +115,7 @@ public record Transaction105
     [IsoId("_AD7FhETFEeiTBYbU3rWV0A")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts2? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts2> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -123,7 +123,7 @@ public record Transaction105
     [IsoId("_AD7FhUTFEeiTBYbU3rWV0A")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -149,5 +149,5 @@ public record Transaction105
     [IsoId("_MPz5QRqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

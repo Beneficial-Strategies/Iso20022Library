@@ -104,7 +104,7 @@ public record PointOfServiceContext1
     [IsoId("_KqdoUGzcEemD24gVaMSpeA")]
     [DisplayName("E Commerce Data")]
     [IsoXmlTag("EComrcData")]
-    public ECommerceData1? ECommerceData { get; init; }
+    public ValueList<ECommerceData1> ECommerceData { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the context of the point of service is a MOTO one or not.
@@ -150,7 +150,8 @@ public record PointOfServiceContext1
     [IsoId("_eTd00EayEeeIjf8aP9KbJA")]
     [DisplayName("Security Characteristics")]
     [IsoXmlTag("SctyChrtcs")]
-    public SecurityCharacteristics1Code? SecurityCharacteristics { get; init; }
+    public SimpleValueList<SecurityCharacteristics1Code> SecurityCharacteristics { get; init; } =
+        [];
 
     /// <summary>
     /// Other security characteristics.
@@ -197,5 +198,5 @@ public record PointOfServiceContext1
     [IsoId("_1Tn7wEbIEeeIjf8aP9KbJA")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public SpecialConditions1? SpecialConditions { get; init; }
+    public ValueList<SpecialConditions1> SpecialConditions { get; init; } = [];
 }

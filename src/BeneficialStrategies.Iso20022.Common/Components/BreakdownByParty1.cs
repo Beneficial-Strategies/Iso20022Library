@@ -38,7 +38,7 @@ public record BreakdownByParty1
     [IsoId("_RP6Gutp-Ed-ak6NoX_4Aeg_-2077163620")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
-    public CashInForecast3? CashInForecast { get; init; }
+    public ValueList<CashInForecast3> CashInForecast { get; init; } = [];
 
     /// <summary>
     /// Cash movement out of the fund as a result of investment funds transactions, eg, redemptions or switch-out.
@@ -46,7 +46,7 @@ public record BreakdownByParty1
     [IsoId("_RP6Gu9p-Ed-ak6NoX_4Aeg_-2070700651")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
-    public CashOutForecast3? CashOutForecast { get; init; }
+    public ValueList<CashOutForecast3> CashOutForecast { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows specified for the party.
@@ -54,5 +54,5 @@ public record BreakdownByParty1
     [IsoId("_RQDQoNp-Ed-ak6NoX_4Aeg_-2101175737")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
-    public NetCashForecast2? NetCashForecast { get; init; }
+    public ValueList<NetCashForecast2> NetCashForecast { get; init; } = [];
 }

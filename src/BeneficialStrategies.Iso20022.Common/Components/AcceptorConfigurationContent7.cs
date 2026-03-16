@@ -31,7 +31,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquw9qGEeearpaEPXv9UA")]
     [DisplayName("TMS Protocol Parameters")]
     [IsoXmlTag("TMSPrtcolParams")]
-    public TMSProtocolParameters3? TMSProtocolParameters { get; init; }
+    public ValueList<TMSProtocolParameters3> TMSProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to an acquirer protocol.
@@ -39,7 +39,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquxdqGEeearpaEPXv9UA")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
-    public AcquirerProtocolParameters11? AcquirerProtocolParameters { get; init; }
+    public ValueList<AcquirerProtocolParameters11> AcquirerProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the merchant.
@@ -47,7 +47,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGqux9qGEeearpaEPXv9UA")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    public MerchantConfigurationParameters3? MerchantParameters { get; init; }
+    public ValueList<MerchantConfigurationParameters3> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.
@@ -55,7 +55,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquydqGEeearpaEPXv9UA")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
-    public PaymentTerminalParameters5? TerminalParameters { get; init; }
+    public ValueList<PaymentTerminalParameters5> TerminalParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.
@@ -63,7 +63,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquy9qGEeearpaEPXv9UA")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
-    public ApplicationParameters7? ApplicationParameters { get; init; }
+    public ValueList<ApplicationParameters7> ApplicationParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the communication with an acquirer host or a terminal manager host.
@@ -71,7 +71,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquzdqGEeearpaEPXv9UA")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
-    public HostCommunicationParameter5? HostCommunicationParameters { get; init; }
+    public ValueList<HostCommunicationParameter5> HostCommunicationParameters { get; init; } = [];
 
     /// <summary>
     /// Point of interaction parameters related to the security of software application and application protocol.
@@ -79,7 +79,7 @@ public record AcceptorConfigurationContent7
     [IsoId("_VGquz9qGEeearpaEPXv9UA")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
-    public SecurityParameters11? SecurityParameters { get; init; }
+    public ValueList<SecurityParameters11> SecurityParameters { get; init; } = [];
 
     /// <summary>
     /// Parameters dedicated to protocols between a sale system and the POI.
@@ -87,5 +87,5 @@ public record AcceptorConfigurationContent7
     [IsoId("_FoV2MNqfEeearpaEPXv9UA")]
     [DisplayName("Sale To POI Parameters")]
     [IsoXmlTag("SaleToPOIParams")]
-    public SaleToPOIProtocolParameter1? SaleToPOIParameters { get; init; }
+    public ValueList<SaleToPOIProtocolParameter1> SaleToPOIParameters { get; init; } = [];
 }

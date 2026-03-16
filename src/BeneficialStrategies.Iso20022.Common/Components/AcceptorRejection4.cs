@@ -30,7 +30,7 @@ public record AcceptorRejection4
     [IsoId("_q1SJYIPeEeS-ibzJaEIoIQ")]
     [DisplayName("Error Reporting")]
     [IsoXmlTag("ErrRptg")]
-    public ErrorReporting1? ErrorReporting { get; init; }
+    public ValueList<ErrorReporting1> ErrorReporting { get; init; } = [];
 
     /// <summary>
     /// Original request that caused the party to reject it.

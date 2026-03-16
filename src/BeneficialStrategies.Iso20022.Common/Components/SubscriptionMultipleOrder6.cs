@@ -82,7 +82,7 @@ public record SubscriptionMultipleOrder6
     [IsoId("_Cnz4LTbtEead9bDRE_1DAQ")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson31? BeneficiaryDetails { get; init; }
+    public ValueList<IndividualPerson31> BeneficiaryDetails { get; init; } = [];
 
     /// <summary>
     /// Order to invest the investor&apos;s principal in an investment fund.

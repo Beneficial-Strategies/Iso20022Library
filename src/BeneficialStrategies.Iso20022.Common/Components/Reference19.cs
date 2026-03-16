@@ -22,9 +22,7 @@ public record Reference19
     [IsoId("_Ql4SRtp-Ed-ak6NoX_4Aeg_1904546885")]
     [DisplayName("Trade Leg Notification Identification")]
     [IsoXmlTag("TradLegNtfctnId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeLegNotificationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> TradeLegNotificationIdentification { get; init; } = [];
 
     /// <summary>
     /// After netting, reference that is common to a net transaction to settle and all its underlying trades.

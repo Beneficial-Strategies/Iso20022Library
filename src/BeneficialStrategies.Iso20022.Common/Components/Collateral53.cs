@@ -46,5 +46,5 @@ public record Collateral53
     [IsoId("_0AdHJSgtEeyB747fKu7_rw")]
     [DisplayName("Collateral Valuation")]
     [IsoXmlTag("CollValtn")]
-    public CollateralValuation13? CollateralValuation { get; init; }
+    public ValueList<CollateralValuation13> CollateralValuation { get; init; } = [];
 }

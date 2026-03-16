@@ -91,7 +91,7 @@ public record ReportEntry2
     [IsoId("_T8m9htp-Ed-ak6NoX_4Aeg_-250805879")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability2? Availability { get; init; }
+    public ValueList<CashBalanceAvailability2> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.
@@ -132,7 +132,7 @@ public record ReportEntry2
     [IsoId("_T8wugtp-Ed-ak6NoX_4Aeg_-250805818")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public ChargesInformation6? Charges { get; init; }
+    public ValueList<ChargesInformation6> Charges { get; init; } = [];
 
     /// <summary>
     /// Channel used to technically input the instruction related to the entry.
@@ -148,7 +148,7 @@ public record ReportEntry2
     [IsoId("_T8wuhNp-Ed-ak6NoX_4Aeg_-250805787")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public TransactionInterest2? Interest { get; init; }
+    public ValueList<TransactionInterest2> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to provide details on the entry.
@@ -156,7 +156,7 @@ public record ReportEntry2
     [IsoId("_T8wuhdp-Ed-ak6NoX_4Aeg_252249651")]
     [DisplayName("Entry Details")]
     [IsoXmlTag("NtryDtls")]
-    public EntryDetails1? EntryDetails { get; init; }
+    public ValueList<EntryDetails1> EntryDetails { get; init; } = [];
 
     /// <summary>
     /// Further details of the entry.

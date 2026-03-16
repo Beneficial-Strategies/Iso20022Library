@@ -30,5 +30,5 @@ public record PersonIdentification14
     [IsoId("_pYxExeWkEeevU7McUP3D1w")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public GenericPersonIdentification1? Other { get; init; }
+    public ValueList<GenericPersonIdentification1> Other { get; init; } = [];
 }

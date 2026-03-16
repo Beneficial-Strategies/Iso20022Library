@@ -48,5 +48,5 @@ public record MoneyMarketStatusReportHeader1
     [IsoId("_Bqe1sd7HEeSaBeqd_btViQ")]
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
-    public GenericValidationRuleIdentification1? ValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
 }

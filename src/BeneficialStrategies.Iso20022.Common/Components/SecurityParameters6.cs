@@ -58,5 +58,5 @@ public record SecurityParameters6
     [IsoId("_LE2EV44AEeWRwov1g9WL_A")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
-    public CryptographicKey5? SymmetricKey { get; init; }
+    public ValueList<CryptographicKey5> SymmetricKey { get; init; } = [];
 }

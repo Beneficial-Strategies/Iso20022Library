@@ -32,7 +32,7 @@ public record SubscriptionOrder4
     [IsoId("_VToa2Np-Ed-ak6NoX_4Aeg_-610302717")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType1? OrderType { get; init; }
+    public ValueList<FundOrderType1> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class related to an order.
@@ -116,7 +116,7 @@ public record SubscriptionOrder4
     [IsoId("_VTyL1dp-Ed-ak6NoX_4Aeg_-610302414")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge8? ChargeDetails { get; init; }
+    public ValueList<Charge8> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission linked to the execution of an investment fund order.
@@ -124,7 +124,7 @@ public record SubscriptionOrder4
     [IsoId("_VTyL1tp-Ed-ak6NoX_4Aeg_-610302379")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission6? CommissionDetails { get; init; }
+    public ValueList<Commission6> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax applicable to an investment fund order.
@@ -132,7 +132,7 @@ public record SubscriptionOrder4
     [IsoId("_VTyL19p-Ed-ak6NoX_4Aeg_-610302457")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax6? TaxDetails { get; init; }
+    public ValueList<Tax6> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.

@@ -55,5 +55,5 @@ public record ATMKeyDownloadResponse2
     [IsoId("_GF1r6a46EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

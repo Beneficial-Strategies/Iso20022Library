@@ -54,5 +54,5 @@ public record AmountAndCurrencyExchange3
     [IsoId("_SWFrpdp-Ed-ak6NoX_4Aeg_2123721310")]
     [DisplayName("Proprietary Amount")]
     [IsoXmlTag("PrtryAmt")]
-    public AmountAndCurrencyExchangeDetails4? ProprietaryAmount { get; init; }
+    public ValueList<AmountAndCurrencyExchangeDetails4> ProprietaryAmount { get; init; } = [];
 }

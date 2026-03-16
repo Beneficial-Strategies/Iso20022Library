@@ -38,7 +38,7 @@ public record SettlementFailsData3
     [IsoId("_ahZ_FR2lEeqF2P5v-Rtejg")]
     [DisplayName("Fails Per Currency")]
     [IsoXmlTag("FlsPerCcy")]
-    public SettlementFailsCurrency2? FailsPerCurrency { get; init; }
+    public ValueList<SettlementFailsCurrency2> FailsPerCurrency { get; init; } = [];
 
     /// <summary>
     /// Further details on the settlement fails per financial instrument type.

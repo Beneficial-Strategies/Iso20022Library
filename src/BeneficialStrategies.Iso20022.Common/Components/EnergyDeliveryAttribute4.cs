@@ -39,7 +39,7 @@ public record EnergyDeliveryAttribute4
     [IsoId("_Ue8oEIeIEei3PYANOK_QWA")]
     [DisplayName("Delivery Time")]
     [IsoXmlTag("DlvryTm")]
-    public TimePeriodDetails1? DeliveryTime { get; init; }
+    public ValueList<TimePeriodDetails1> DeliveryTime { get; init; } = [];
 
     /// <summary>
     /// Duration of the delivery period.
@@ -55,7 +55,7 @@ public record EnergyDeliveryAttribute4
     [IsoId("_HWlqt4eIEei3PYANOK_QWA")]
     [DisplayName("Week Day")]
     [IsoXmlTag("WkDay")]
-    public WeekDay3Code? WeekDay { get; init; }
+    public SimpleValueList<WeekDay3Code> WeekDay { get; init; } = [];
 
     /// <summary>
     /// Delivery capacity for each delivery interval specified.

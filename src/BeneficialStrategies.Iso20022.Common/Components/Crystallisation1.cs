@@ -50,5 +50,5 @@ public record Crystallisation1
     [IsoId("_tmFnkE3gEeidB49bWZiS0g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

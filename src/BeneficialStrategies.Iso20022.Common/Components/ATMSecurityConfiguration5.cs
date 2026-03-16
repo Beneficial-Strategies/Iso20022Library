@@ -22,7 +22,7 @@ public record ATMSecurityConfiguration5
     [IsoId("_lihz8Ir9EeSvuOJS0mmL0g")]
     [DisplayName("PIN Format")]
     [IsoXmlTag("PINFrmt")]
-    public PINFormat4Code? PINFormat { get; init; }
+    public SimpleValueList<PINFormat4Code> PINFormat { get; init; } = [];
 
     /// <summary>
     /// Maximum number of digits the security module is able to accept when the cardholder enters its PIN.

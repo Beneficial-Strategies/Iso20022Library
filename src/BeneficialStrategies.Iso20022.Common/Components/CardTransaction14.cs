@@ -39,7 +39,7 @@ public record CardTransaction14
     [IsoId("__taDUHvREeS2PZh7wUMQog")]
     [DisplayName("Key Verification")]
     [IsoXmlTag("KeyVrfctn")]
-    public KEKIdentifier3? KeyVerification { get; init; }
+    public ValueList<KEKIdentifier3> KeyVerification { get; init; } = [];
 
     /// <summary>
     /// Created key to be stored.
@@ -47,7 +47,7 @@ public record CardTransaction14
     [IsoId("_lurQd3vREeS2PZh7wUMQog")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey6? Key { get; init; }
+    public ValueList<CryptographicKey6> Key { get; init; } = [];
 
     /// <summary>
     /// Response to the key exchange request.

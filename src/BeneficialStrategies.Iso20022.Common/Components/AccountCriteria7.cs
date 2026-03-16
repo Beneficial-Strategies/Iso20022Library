@@ -32,7 +32,7 @@ public record AccountCriteria7
     [IsoId("_P8Cj1W49EeiU9cctagi5ow")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public CashAccountSearchCriteria7? SearchCriteria { get; init; }
+    public ValueList<CashAccountSearchCriteria7> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected account report.

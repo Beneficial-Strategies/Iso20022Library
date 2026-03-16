@@ -57,5 +57,5 @@ public record MissingValuationsData2
     [IsoId("_x24hmVyGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public MissingValuationsTransactionData2? TransactionDetails { get; init; }
+    public ValueList<MissingValuationsTransactionData2> TransactionDetails { get; init; } = [];
 }

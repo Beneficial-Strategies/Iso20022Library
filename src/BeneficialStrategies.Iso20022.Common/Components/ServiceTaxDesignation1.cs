@@ -40,5 +40,5 @@ public record ServiceTaxDesignation1
     [IsoId("_6RSgcJqlEeGSON8vddiWzQ_1740386990")]
     [DisplayName("Tax Reason")]
     [IsoXmlTag("TaxRsn")]
-    public TaxReason1? TaxReason { get; init; }
+    public ValueList<TaxReason1> TaxReason { get; init; } = [];
 }

@@ -84,7 +84,7 @@ public record ValuationDealingProcessingCharacteristics3
     [IsoId("_D4puT0lNEeiZP-CimVE7Hg")]
     [DisplayName("Price Currency")]
     [IsoXmlTag("PricCcy")]
-    public ActiveCurrencyCode? PriceCurrency { get; init; }
+    public SimpleValueList<ActiveCurrencyCode> PriceCurrency { get; init; } = [];
 
     /// <summary>
     /// Additional information about the valuation dealing characteristics.
@@ -92,5 +92,5 @@ public record ValuationDealingProcessingCharacteristics3
     [IsoId("_TaV6cWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

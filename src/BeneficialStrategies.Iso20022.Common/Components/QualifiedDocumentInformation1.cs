@@ -123,5 +123,5 @@ public record QualifiedDocumentInformation1
     [IsoId("_OTgzMjQ0-AOSNFX-8224494")]
     [DisplayName("Attached File")]
     [IsoXmlTag("AttchdFile")]
-    public BinaryFile1? AttachedFile { get; init; }
+    public ValueList<BinaryFile1> AttachedFile { get; init; } = [];
 }

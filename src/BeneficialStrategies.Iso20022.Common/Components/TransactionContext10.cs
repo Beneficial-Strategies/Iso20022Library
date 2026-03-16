@@ -54,5 +54,5 @@ public record TransactionContext10
     [IsoId("_VLKJccV-Eeua2vd9tJAtHg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

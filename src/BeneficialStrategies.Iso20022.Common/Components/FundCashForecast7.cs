@@ -56,7 +56,7 @@ public record FundCashForecast7
     [IsoId("_8NmXvQdpEeSPHJIdUs1USg")]
     [DisplayName("Total NAV")]
     [IsoXmlTag("TtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? TotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> TotalNAV { get; init; } = [];
 
     /// <summary>
     /// Previous value of all the holdings, less the fund&apos;s liabilities, attributable to a specific investment fund class.
@@ -64,7 +64,7 @@ public record FundCashForecast7
     [IsoId("_8NmXvwdpEeSPHJIdUs1USg")]
     [DisplayName("Previous Total NAV")]
     [IsoXmlTag("PrvsTtlNAV")]
-    public ActiveOrHistoricCurrencyAndAmount? PreviousTotalNAV { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> PreviousTotalNAV { get; init; } = [];
 
     /// <summary>
     /// Total number of investment fund class units that have been issued.
@@ -97,7 +97,7 @@ public record FundCashForecast7
     [IsoId("_8NmXxwdpEeSPHJIdUs1USg")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Information about the designation of the share class currency, that is, whether it is for onshore or offshore purposes and other information that may be required. This is typically only required for CNY funds.
@@ -147,7 +147,7 @@ public record FundCashForecast7
     [IsoId("_8NmXywdpEeSPHJIdUs1USg")]
     [DisplayName("Cash In Forecast Details")]
     [IsoXmlTag("CshInFcstDtls")]
-    public CashInForecast6? CashInForecastDetails { get; init; }
+    public ValueList<CashInForecast6> CashInForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Cash movements out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.
@@ -155,7 +155,7 @@ public record FundCashForecast7
     [IsoId("_8NmXzQdpEeSPHJIdUs1USg")]
     [DisplayName("Cash Out Forecast Details")]
     [IsoXmlTag("CshOutFcstDtls")]
-    public CashOutForecast6? CashOutForecastDetails { get; init; }
+    public ValueList<CashOutForecast6> CashOutForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows.
@@ -163,5 +163,5 @@ public record FundCashForecast7
     [IsoId("_8NmXzwdpEeSPHJIdUs1USg")]
     [DisplayName("Net Cash Forecast Details")]
     [IsoXmlTag("NetCshFcstDtls")]
-    public NetCashForecast4? NetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast4> NetCashForecastDetails { get; init; } = [];
 }

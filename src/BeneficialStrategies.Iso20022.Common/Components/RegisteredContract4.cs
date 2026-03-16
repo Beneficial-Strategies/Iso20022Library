@@ -64,7 +64,7 @@ public record RegisteredContract4
     [IsoId("_i7VeAgtLEeWkxvNyFrBT8Q")]
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
-    public ContractBalance1? ContractBalance { get; init; }
+    public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
     /// Type of the payment schedule provided in the contract.
@@ -98,7 +98,7 @@ public record RegisteredContract4
     [IsoId("_Dedg4NL3EeSDLevdaFPXHw")]
     [DisplayName("Registered Contract Journal")]
     [IsoXmlTag("RegdCtrctJrnl")]
-    public RegisteredContractJournal1? RegisteredContractJournal { get; init; }
+    public ValueList<RegisteredContractJournal1> RegisteredContractJournal { get; init; } = [];
 
     /// <summary>
     /// Details on amendments to the registered contract.
@@ -106,7 +106,7 @@ public record RegisteredContract4
     [IsoId("_78d5oNL3EeSDLevdaFPXHw")]
     [DisplayName("Amendment")]
     [IsoXmlTag("Amdmnt")]
-    public RegisteredContractAmendment1? Amendment { get; init; }
+    public ValueList<RegisteredContractAmendment1> Amendment { get; init; } = [];
 
     /// <summary>
     /// Provides the communication method for the submission of the registered contract.
@@ -170,5 +170,5 @@ public record RegisteredContract4
     [IsoId("_94lKwTmyEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

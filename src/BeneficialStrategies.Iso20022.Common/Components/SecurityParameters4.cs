@@ -38,8 +38,7 @@ public record SecurityParameters4
     [IsoId("_9DOk4ItPEeSxlKlAGYErFg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; }
+    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Random value from the ATM to avoid message replay.

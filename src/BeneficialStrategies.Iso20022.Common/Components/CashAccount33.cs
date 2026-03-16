@@ -62,7 +62,7 @@ public record CashAccount33
     [IsoId("_8WdQ-yCpEeWJd9HF2tO7BA")]
     [DisplayName("Account Owner Other Identification")]
     [IsoXmlTag("AcctOwnrOthrId")]
-    public GenericIdentification82? AccountOwnerOtherIdentification { get; init; }
+    public ValueList<GenericIdentification82> AccountOwnerOtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Type of account.

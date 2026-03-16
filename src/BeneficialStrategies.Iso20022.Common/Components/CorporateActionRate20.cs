@@ -22,7 +22,7 @@ public record CorporateActionRate20
     [IsoId("_yL-eG_O3Ed-yo7KFlNZstA")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat2Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat2Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Public index rate applied to the amount paid to adjust it to inflation.
@@ -38,7 +38,8 @@ public record CorporateActionRate20
     [IsoId("_yL-eIfO3Ed-yo7KFlNZstA")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat2Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat2Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// A maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.
@@ -64,7 +65,7 @@ public record CorporateActionRate20
     [IsoId("_yL-eMfO3Ed-yo7KFlNZstA")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.
@@ -89,5 +90,6 @@ public record CorporateActionRate20
     [IsoId("_r2hqAfZLEd-UWJwmvO-D7w")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
-    public RateTypeAndAmountAndStatus11? TaxableIncomePerDividendShare { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus11> TaxableIncomePerDividendShare { get; init; } =
+        [];
 }

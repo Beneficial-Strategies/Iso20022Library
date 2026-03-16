@@ -30,7 +30,7 @@ public record ATMSecurityContext5
     [IsoId("_VkuF87TlEeeQy4o2AayYHg")]
     [DisplayName("Security Scheme Capabilities")]
     [IsoXmlTag("SctySchmeCpblties")]
-    public ATMSecurityScheme4Code? SecuritySchemeCapabilities { get; init; }
+    public SimpleValueList<ATMSecurityScheme4Code> SecuritySchemeCapabilities { get; init; } = [];
 
     /// <summary>
     /// Hardware security module of the ATM.
@@ -46,7 +46,7 @@ public record ATMSecurityContext5
     [IsoId("_VkuF97TlEeeQy4o2AayYHg")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey11? Key { get; init; }
+    public ValueList<CryptographicKey11> Key { get; init; } = [];
 
     /// <summary>
     /// Random value from the host provided during a previous exchange.

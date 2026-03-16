@@ -46,7 +46,7 @@ public record RequestDetails22
     [IsoId("_ZMt4rTneEem7JZMuWtwtsg")]
     [DisplayName("Other Processing")]
     [IsoXmlTag("OthrPrcg")]
-    public GenericIdentification30? OtherProcessing { get; init; }
+    public ValueList<GenericIdentification30> OtherProcessing { get; init; } = [];
 
     /// <summary>
     /// Specifies whether partial settlement is allowed.
@@ -71,5 +71,5 @@ public record RequestDetails22
     [IsoId("_ZMt4xTneEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages57? Linkages { get; init; }
+    public ValueList<Linkages57> Linkages { get; init; } = [];
 }

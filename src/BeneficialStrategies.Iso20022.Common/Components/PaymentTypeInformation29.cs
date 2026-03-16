@@ -30,7 +30,7 @@ public record PaymentTypeInformation29
     [IsoId("_gk4C5e10Eei2O5Op8j5zpA")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
-    public ServiceLevel8Choice_? ServiceLevel { get; init; }
+    public ValueList<ServiceLevel8Choice_> ServiceLevel { get; init; } = [];
 
     /// <summary>
     /// User community specific instrument.||Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.

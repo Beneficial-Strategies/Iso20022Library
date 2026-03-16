@@ -39,7 +39,7 @@ public record TripLeg1
     [IsoId("_Z21Q7PPzEeihCvvpsmGI2w")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
-    public DocumentReference1? Document { get; init; }
+    public ValueList<DocumentReference1> Document { get; init; } = [];
 
     /// <summary>
     /// Contains identification of the rail server procedure or the order in which service was booked or cancellation was done.
@@ -176,7 +176,7 @@ public record TripLeg1
     [IsoId("_HddcI_QPEeihCvvpsmGI2w")]
     [DisplayName("Trip Leg Amount")]
     [IsoXmlTag("TripLegAmt")]
-    public AmountDetails1? TripLegAmount { get; init; }
+    public ValueList<AmountDetails1> TripLegAmount { get; init; } = [];
 
     /// <summary>
     /// Indicates reason for the credit to the cardholder.  Includes: ancillary purchase cancelled, passenger transport ticket and related ancillary purchase cancelled, etc.

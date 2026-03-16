@@ -50,7 +50,7 @@ public record Transaction151
     [IsoId("_h2rYV4dNEeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Identification of a collection.
@@ -168,9 +168,7 @@ public record Transaction151
     [IsoId("_YnxPgJb1Eeuc6pwKtqbEVQ")]
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CollectionIdentificationList { get; init; }
+    public SimpleValueList<IsoMax70Text> CollectionIdentificationList { get; init; } = [];
 
     /// <summary>
     /// List of batch identifications of the collection.
@@ -181,9 +179,7 @@ public record Transaction151
     [IsoId("_h2rYa4dNEeuBS50MFjViNw")]
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BatchIdentificationList { get; init; }
+    public SimpleValueList<IsoMax70Text> BatchIdentificationList { get; init; } = [];
 
     /// <summary>
     /// Identification of a specific checkpoint.
@@ -250,7 +246,7 @@ public record Transaction151
     [IsoId("_h2rYd4dNEeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Identifies that this batch or collection is a corrected version of a batch or collection that was previously sent.

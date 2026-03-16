@@ -40,7 +40,5 @@ public record MessageItemCondition2
     [IsoId("_NLeYdXDxEe2MCaKO5AtGsA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Value { get; init; }
+    public SimpleValueList<IsoMax140Text> Value { get; init; } = [];
 }

@@ -55,7 +55,7 @@ public record CorporateActionRate4
     [IsoId("_TXNKY9p-Ed-ak6NoX_4Aeg_-524726373")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat2Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat2Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example, consent fees.
@@ -80,7 +80,8 @@ public record CorporateActionRate4
     [IsoId("_TXNKZtp-Ed-ak6NoX_4Aeg_-524726311")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat2Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat2Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -88,7 +89,7 @@ public record CorporateActionRate4
     [IsoId("_TXNKZ9p-Ed-ak6NoX_4Aeg_-524726158")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat2Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat2Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
@@ -139,7 +140,7 @@ public record CorporateActionRate4
     [IsoId("_TXW7Y9p-Ed-ak6NoX_4Aeg_361018486")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat2Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat2Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of the gross dividend rate on which tax must be paid.
@@ -147,7 +148,7 @@ public record CorporateActionRate4
     [IsoId("_TXW7ZNp-Ed-ak6NoX_4Aeg_-524725326")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.

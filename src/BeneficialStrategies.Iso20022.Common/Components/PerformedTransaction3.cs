@@ -64,7 +64,7 @@ public record PerformedTransaction3
     [IsoId("_XaGeqy8PEeu125Ip9zFcsQ")]
     [DisplayName("Loyalty Result")]
     [IsoXmlTag("LltyRslt")]
-    public LoyaltyResult2? LoyaltyResult { get; init; }
+    public ValueList<LoyaltyResult2> LoyaltyResult { get; init; } = [];
 
     /// <summary>
     /// Amount of the payment or loyalty to reverse.

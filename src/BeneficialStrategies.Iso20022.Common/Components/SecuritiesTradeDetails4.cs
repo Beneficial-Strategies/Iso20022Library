@@ -52,9 +52,7 @@ public record SecuritiesTradeDetails4
     [IsoId("_S9lJedp-Ed-ak6NoX_4Aeg_1590303490")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -82,9 +80,7 @@ public record SecuritiesTradeDetails4
     [IsoId("_S9lJfNp-Ed-ak6NoX_4Aeg_-1158247577")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -190,7 +186,8 @@ public record SecuritiesTradeDetails4
     [IsoId("_S94EYtp-Ed-ak6NoX_4Aeg_1590304036")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition1Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition1Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies additional information relative to the processing of the trade.
@@ -214,7 +211,7 @@ public record SecuritiesTradeDetails4
     [IsoId("_S94EZdp-Ed-ak6NoX_4Aeg_1590303952")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting1Choice_? Reporting { get; init; }
+    public ValueList<Reporting1Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Details about the financial instrument quantity and the account involved in the transaction.
@@ -294,5 +291,5 @@ public record SecuritiesTradeDetails4
     [IsoId("_S-B1Zdp-Ed-ak6NoX_4Aeg_-1441875531")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

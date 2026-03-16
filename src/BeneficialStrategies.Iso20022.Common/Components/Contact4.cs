@@ -117,7 +117,7 @@ public record Contact4
     [IsoId("_A96WInRoEeiH1ZOt2UD8vQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherContact1? Other { get; init; }
+    public ValueList<OtherContact1> Other { get; init; } = [];
 
     /// <summary>
     /// Preferred method used to reach the contact.

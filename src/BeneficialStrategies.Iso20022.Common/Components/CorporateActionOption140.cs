@@ -38,7 +38,7 @@ public record CorporateActionOption140
     [IsoId("_TaFCk5SoEeeh5JjedkaA_g")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public OptionFeaturesFormat18Choice_? OptionFeatures { get; init; }
+    public ValueList<OptionFeaturesFormat18Choice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
@@ -102,7 +102,7 @@ public record CorporateActionOption140
     [IsoId("_TaFC05SoEeeh5JjedkaA_g")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOption65? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOption65> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash movement related to a corporate action option.
@@ -110,5 +110,5 @@ public record CorporateActionOption140
     [IsoId("_TaFC25SoEeeh5JjedkaA_g")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOption58? CashMovementDetails { get; init; }
+    public ValueList<CashOption58> CashMovementDetails { get; init; } = [];
 }

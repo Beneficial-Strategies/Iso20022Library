@@ -55,5 +55,5 @@ public record ATMTransaction18
     [IsoId("_n_Ewqa4NEeWZgJQOa6iKCQ")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

@@ -39,7 +39,7 @@ public record StructuredRemittanceInformation2
     [IsoId("_QFsWUNp-Ed-ak6NoX_4Aeg_-479270891")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
-    public ReferredDocumentAmount1Choice_? ReferredDocumentAmount { get; init; }
+    public ValueList<ReferredDocumentAmount1Choice_> ReferredDocumentAmount { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of a document that distinguishes that document from another document referred to in the remittance information, usually assigned by the originator of the referred document/transaction.

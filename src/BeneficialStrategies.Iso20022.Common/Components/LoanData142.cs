@@ -83,7 +83,7 @@ public record LoanData142
     [IsoId("_IXw-b8zwEeux2uvSBFU54Q")]
     [DisplayName("Margin Loan Attribute")]
     [IsoXmlTag("MrgnLnAttr")]
-    public InterestRate6? MarginLoanAttribute { get; init; }
+    public ValueList<InterestRate6> MarginLoanAttribute { get; init; } = [];
 
     /// <summary>
     /// Termination date in the case of a full early termination of the SFT.

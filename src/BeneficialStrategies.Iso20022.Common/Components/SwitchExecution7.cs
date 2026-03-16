@@ -211,7 +211,7 @@ public record SwitchExecution7
     [IsoId("_8d2QXzbsEead9bDRE_1DAQ")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms33> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.

@@ -31,7 +31,8 @@ public record SettlementDetails8
     [IsoId("_UfeaANp-Ed-ak6NoX_4Aeg_301635397")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition1Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition1Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies the type of securities transaction.

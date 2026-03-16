@@ -30,5 +30,5 @@ public record SecuritiesSubBalanceTypeAndQuantityBreakdown1
     [IsoId("_4JvoMP8IEeCKBMQETXEXKQ")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown12? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown12> QuantityBreakdown { get; init; } = [];
 }

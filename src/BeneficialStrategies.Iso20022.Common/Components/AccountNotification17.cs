@@ -116,7 +116,7 @@ public record AccountNotification17
     [IsoId("_RICc-W49EeiU9cctagi5ow")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest4? Interest { get; init; }
+    public ValueList<AccountInterest4> Interest { get; init; } = [];
 
     /// <summary>
     /// Provides summary information on entries.
@@ -136,7 +136,7 @@ public record AccountNotification17
     [IsoId("_RICc_W49EeiU9cctagi5ow")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry10? Entry { get; init; }
+    public ValueList<ReportEntry10> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details of the account notification.

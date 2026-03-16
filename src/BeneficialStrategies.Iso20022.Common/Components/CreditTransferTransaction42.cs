@@ -142,7 +142,7 @@ public record CreditTransferTransaction42
     [IsoId("_QZ0bOcQAEemsic1bQcEtLA")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent3? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
@@ -195,7 +195,7 @@ public record CreditTransferTransaction42
     [IsoId("_QZ0bRcQAEemsic1bQcEtLA")]
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
-    public Document12? EnclosedFile { get; init; }
+    public ValueList<Document12> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -203,5 +203,5 @@ public record CreditTransferTransaction42
     [IsoId("_QZ0bR8QAEemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

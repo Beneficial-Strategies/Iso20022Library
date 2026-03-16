@@ -63,5 +63,5 @@ public record FundCashOutBreakdown1
     [IsoId("_VB5xpdp-Ed-ak6NoX_4Aeg_1237784504")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission4? CommissionDetails { get; init; }
+    public ValueList<Commission4> CommissionDetails { get; init; } = [];
 }

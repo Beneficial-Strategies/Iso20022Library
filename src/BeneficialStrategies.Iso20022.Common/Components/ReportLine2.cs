@@ -40,7 +40,7 @@ public record ReportLine2
     [IsoId("_ToDCx9p-Ed-ak6NoX_4Aeg_1398433973")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment4? Adjustment { get; init; }
+    public ValueList<Adjustment4> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Net amount, after adjustments, intended to be paid.

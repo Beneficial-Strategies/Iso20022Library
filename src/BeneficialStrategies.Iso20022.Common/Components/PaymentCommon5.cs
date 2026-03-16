@@ -38,7 +38,7 @@ public record PaymentCommon5
     [IsoId("_di9YddcZEeqRFcf2R4bPBw")]
     [DisplayName("Common Status")]
     [IsoXmlTag("CmonSts")]
-    public PaymentStatus6? CommonStatus { get; init; }
+    public ValueList<PaymentStatus6> CommonStatus { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.

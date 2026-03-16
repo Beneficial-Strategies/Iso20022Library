@@ -22,7 +22,7 @@ public record RecurringTransaction4
     [IsoId("_YAz0cU3UEey_VecAUE-C9Q")]
     [DisplayName("Instalment Plan")]
     [IsoXmlTag("InstlmtPlan")]
-    public InstalmentPlan1Code? InstalmentPlan { get; init; }
+    public SimpleValueList<InstalmentPlan1Code> InstalmentPlan { get; init; } = [];
 
     /// <summary>
     /// Identification of the instalment plan.
@@ -132,7 +132,7 @@ public record RecurringTransaction4
     [IsoId("_-8UxYU3VEey_VecAUE-C9Q")]
     [DisplayName("Detailed Charges")]
     [IsoXmlTag("DtldChrgs")]
-    public InstalmentAmountDetails1? DetailedCharges { get; init; }
+    public ValueList<InstalmentAmountDetails1> DetailedCharges { get; init; } = [];
 
     /// <summary>
     /// Details of the interest rate.
@@ -140,7 +140,7 @@ public record RecurringTransaction4
     [IsoId("_Yd0rIU3VEey_VecAUE-C9Q")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public InterestRateDetails1? InterestRate { get; init; }
+    public ValueList<InterestRateDetails1> InterestRate { get; init; } = [];
 
     /// <summary>
     /// Contains grace period details.
@@ -148,5 +148,5 @@ public record RecurringTransaction4
     [IsoId("_icQqMU3VEey_VecAUE-C9Q")]
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
-    public GracePeriod1? GracePeriod { get; init; }
+    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
 }

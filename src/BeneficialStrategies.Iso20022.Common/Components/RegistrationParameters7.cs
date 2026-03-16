@@ -50,5 +50,5 @@ public record RegistrationParameters7
     [IsoId("_vXd6A83zEee5nJBZsW8MFQ")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SecuritiesCertificate5? CertificateNumber { get; init; }
+    public ValueList<SecuritiesCertificate5> CertificateNumber { get; init; } = [];
 }

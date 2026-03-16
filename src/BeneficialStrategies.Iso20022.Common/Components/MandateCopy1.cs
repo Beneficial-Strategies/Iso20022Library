@@ -46,5 +46,5 @@ public record MandateCopy1
     [IsoId("_IoCecH5lEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

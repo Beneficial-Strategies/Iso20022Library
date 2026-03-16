@@ -70,7 +70,7 @@ public record SecuritiesTradeDetails101
     [IsoId("_6sbs__fVEeiNZp_PtLohLw")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting11Choice_? Reporting { get; init; }
+    public ValueList<Reporting11Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Number of days on which the interest rate accrues (daily accrual note).
@@ -87,7 +87,8 @@ public record SecuritiesTradeDetails101
     [IsoId("_6sbtB_fVEeiNZp_PtLohLw")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition6Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition6Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the role of the investor in the transaction.

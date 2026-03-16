@@ -32,5 +32,5 @@ public record PriceReport1
     [IsoId("_U1iJkdp-Ed-ak6NoX_4Aeg_-622300758")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -87,7 +87,7 @@ public record EstimatedFundCashForecast1
     [IsoId("_VCpYiNp-Ed-ak6NoX_4Aeg_811517572")]
     [DisplayName("Investment Currency")]
     [IsoXmlTag("InvstmtCcy")]
-    public ActiveOrHistoricCurrencyCode? InvestmentCurrency { get; init; }
+    public SimpleValueList<ActiveOrHistoricCurrencyCode> InvestmentCurrency { get; init; } = [];
 
     /// <summary>
     /// Indicates whether the estimated net cash flow is exceptional.
@@ -104,7 +104,7 @@ public record EstimatedFundCashForecast1
     [IsoId("_VCyicdp-Ed-ak6NoX_4Aeg_811518002")]
     [DisplayName("Estimated Cash In Forecast Details")]
     [IsoXmlTag("EstmtdCshInFcstDtls")]
-    public CashInForecast2? EstimatedCashInForecastDetails { get; init; }
+    public ValueList<CashInForecast2> EstimatedCashInForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Cash movements out of a fund as a result of investment funds transactions, eg, redemptions or switch-out.
@@ -112,7 +112,7 @@ public record EstimatedFundCashForecast1
     [IsoId("_VCyictp-Ed-ak6NoX_4Aeg_811517967")]
     [DisplayName("Estimated Cash Out Forecast Details")]
     [IsoXmlTag("EstmtdCshOutFcstDtls")]
-    public CashOutForecast2? EstimatedCashOutForecastDetails { get; init; }
+    public ValueList<CashOutForecast2> EstimatedCashOutForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Net cash movements to a fund as a result of investment funds transactions.
@@ -120,5 +120,5 @@ public record EstimatedFundCashForecast1
     [IsoId("_VCyic9p-Ed-ak6NoX_4Aeg_811517907")]
     [DisplayName("Estimated Net Cash Forecast Details")]
     [IsoXmlTag("EstmtdNetCshFcstDtls")]
-    public NetCashForecast1? EstimatedNetCashForecastDetails { get; init; }
+    public ValueList<NetCashForecast1> EstimatedNetCashForecastDetails { get; init; } = [];
 }

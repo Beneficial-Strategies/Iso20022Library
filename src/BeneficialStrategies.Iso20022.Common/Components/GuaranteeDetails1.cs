@@ -49,7 +49,7 @@ public record GuaranteeDetails1
     [IsoId("_OTgzMzkx-AOSNFX-8224502")]
     [DisplayName("Guaranteed Amount")]
     [IsoXmlTag("GrntedAmt")]
-    public AmountAndPeriod1? GuaranteedAmount { get; init; }
+    public ValueList<AmountAndPeriod1> GuaranteedAmount { get; init; } = [];
 
     /// <summary>
     /// Amount not covered by the guarantee. Maximum value applies at any given date.
@@ -57,7 +57,7 @@ public record GuaranteeDetails1
     [IsoId("_OTgzMzky-AOSNFX-8224502")]
     [DisplayName("Excess")]
     [IsoXmlTag("Xcss")]
-    public AmountAndPeriod1? Excess { get; init; }
+    public ValueList<AmountAndPeriod1> Excess { get; init; } = [];
 
     /// <summary>
     /// Covered percentage, the maximum value applies at any given date.
@@ -65,7 +65,7 @@ public record GuaranteeDetails1
     [IsoId("_OTgzMzkz-AOSNFX-8224502")]
     [DisplayName("Covered Percentage")]
     [IsoXmlTag("CvrdPctg")]
-    public PercentageAndPeriod1? CoveredPercentage { get; init; }
+    public ValueList<PercentageAndPeriod1> CoveredPercentage { get; init; } = [];
 
     /// <summary>
     /// Associated free form document.
@@ -73,7 +73,7 @@ public record GuaranteeDetails1
     [IsoId("_OTgzMzk0-AOSNFX-8224502")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the demand.

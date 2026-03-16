@@ -30,7 +30,7 @@ public record Authorisation2
     [IsoId("_xujkyQ3wEeKGXqvMN6jpiw")]
     [DisplayName("Maximum Amount By Period")]
     [IsoXmlTag("MaxAmtByPrd")]
-    public MaximumAmountByPeriod1? MaximumAmountByPeriod { get; init; }
+    public ValueList<MaximumAmountByPeriod1> MaximumAmountByPeriod { get; init; } = [];
 
     /// <summary>
     /// Specifies the maximum amount for each bulk submission.

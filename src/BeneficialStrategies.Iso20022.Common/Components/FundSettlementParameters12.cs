@@ -57,7 +57,8 @@ public record FundSettlementParameters12
     [IsoId("_Q7ZZ41-nEeaUzKc-faDzVQ")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition8Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Condition under which the order/trade is to be settled. This may be required for settlement through T2S.
@@ -65,7 +66,8 @@ public record FundSettlementParameters12
     [IsoId("_Q7ZZ5V-nEeaUzKc-faDzVQ")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition30Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition30Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.

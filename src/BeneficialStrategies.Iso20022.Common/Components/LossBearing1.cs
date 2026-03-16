@@ -63,5 +63,5 @@ public record LossBearing1
     [IsoId("_1Bc9EDcPEeiIxKQErQxblg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherTargetMarketLossBearing1? Other { get; init; }
+    public ValueList<OtherTargetMarketLossBearing1> Other { get; init; } = [];
 }

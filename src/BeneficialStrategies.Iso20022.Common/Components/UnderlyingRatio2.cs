@@ -38,5 +38,6 @@ public record UnderlyingRatio2
     [IsoId("_XcwXhY-eEeaEa8S_GI1QNA")]
     [DisplayName("Related Financial Instrument Identification")]
     [IsoXmlTag("RltdFinInstrmId")]
-    public SecurityIdentification19? RelatedFinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification19> RelatedFinancialInstrumentIdentification { get; init; } =
+        [];
 }

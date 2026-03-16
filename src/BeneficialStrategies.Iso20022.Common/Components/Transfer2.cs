@@ -67,7 +67,7 @@ public record Transfer2
     [IsoId("_VNFG59p-Ed-ak6NoX_4Aeg_1908338067")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit1? UnitsDetails { get; init; }
+    public ValueList<Unit1> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Total quantity of securities settled.

@@ -68,5 +68,5 @@ public record KEKIdentifier5
     [IsoId("_yrJ8oI3_EeWRwov1g9WL_A")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
-    public KeyUsage1Code? Function { get; init; }
+    public SimpleValueList<KeyUsage1Code> Function { get; init; } = [];
 }

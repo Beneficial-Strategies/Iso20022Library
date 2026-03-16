@@ -70,7 +70,7 @@ public record PlainCardData10
     [IsoId("_gQUPm3r7EeSZrs_hiwNOWA")]
     [DisplayName("Track Data")]
     [IsoXmlTag("TrckData")]
-    public TrackData1? TrackData { get; init; }
+    public ValueList<TrackData1> TrackData { get; init; } = [];
 
     /// <summary>
     /// Name of the cardholder stored on the card.

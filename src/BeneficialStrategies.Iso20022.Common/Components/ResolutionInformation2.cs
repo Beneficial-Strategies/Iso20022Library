@@ -55,5 +55,5 @@ public record ResolutionInformation2
     [IsoId("_ZR5zQYttEee-OJ-wXSj3YQ")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges2? Charges { get; init; }
+    public ValueList<Charges2> Charges { get; init; } = [];
 }

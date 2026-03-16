@@ -51,5 +51,5 @@ public record OriginalGroupHeader18
     [IsoId("_I5-c2XL_EeidQ_AAdEzxQA")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
-    public PaymentReturnReason6? ReturnReasonInformation { get; init; }
+    public ValueList<PaymentReturnReason6> ReturnReasonInformation { get; init; } = [];
 }

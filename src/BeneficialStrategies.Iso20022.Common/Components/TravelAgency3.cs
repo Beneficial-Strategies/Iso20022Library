@@ -30,7 +30,7 @@ public record TravelAgency3
     [IsoId("_q7ZlA8WyEeuhguwJmlgagQ")]
     [DisplayName("Travel Package")]
     [IsoXmlTag("TrvlPackg")]
-    public TravelAgencyPackage1? TravelPackage { get; init; }
+    public ValueList<TravelAgencyPackage1> TravelPackage { get; init; } = [];
 
     /// <summary>
     /// Provides additional travel details.

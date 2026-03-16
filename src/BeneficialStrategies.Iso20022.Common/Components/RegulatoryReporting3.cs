@@ -38,5 +38,5 @@ public record RegulatoryReporting3
     [IsoId("_SnhZ4dp-Ed-ak6NoX_4Aeg_-1655670493")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public StructuredRegulatoryReporting3? Details { get; init; }
+    public ValueList<StructuredRegulatoryReporting3> Details { get; init; } = [];
 }

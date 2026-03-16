@@ -64,7 +64,7 @@ public record ContractRegistrationStatement1
     [IsoId("_VScq4NnREeS--7IJLPC9lw")]
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
-    public TransactionCertificate1? TransactionJournal { get; init; }
+    public ValueList<TransactionCertificate1> TransactionJournal { get; init; } = [];
 
     /// <summary>
     /// Journal of the supporting documents recorded under the registered currency control contract.
@@ -72,7 +72,7 @@ public record ContractRegistrationStatement1
     [IsoId("_WxgC0NnREeS--7IJLPC9lw")]
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
-    public SupportingDocument1? SupportingDocumentJournal { get; init; }
+    public ValueList<SupportingDocument1> SupportingDocumentJournal { get; init; } = [];
 
     /// <summary>
     /// Journal of additional supporting documents recorded under the registered currency control contract.
@@ -80,7 +80,7 @@ public record ContractRegistrationStatement1
     [IsoId("_cJCvQNnREeS--7IJLPC9lw")]
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
-    public SupportingDocument1? AdditionalSupportingDocumentJournal { get; init; }
+    public ValueList<SupportingDocument1> AdditionalSupportingDocumentJournal { get; init; } = [];
 
     /// <summary>
     /// Details on the currency control rule against which has been violated.
@@ -88,7 +88,8 @@ public record ContractRegistrationStatement1
     [IsoId("_eqWOYNnREeS--7IJLPC9lw")]
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
-    public GenericValidationRuleIdentification1? RegulatoryRuleValidation { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> RegulatoryRuleValidation { get; init; } =
+        [];
 
     /// <summary>
     /// Total turn over amount recorded under the currency control contract for the amount of all.
@@ -104,5 +105,5 @@ public record ContractRegistrationStatement1
     [IsoId("_qPwb8QtNEeWkxvNyFrBT8Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

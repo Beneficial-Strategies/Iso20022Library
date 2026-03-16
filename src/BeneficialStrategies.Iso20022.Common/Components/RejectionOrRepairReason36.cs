@@ -22,7 +22,7 @@ public record RejectionOrRepairReason36
     [IsoId("_aWRJMStUEeyhipY4f42fZQ")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public RejectionAndRepairReason36Choice_? Code { get; init; }
+    public ValueList<RejectionAndRepairReason36Choice_> Code { get; init; } = [];
 
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.

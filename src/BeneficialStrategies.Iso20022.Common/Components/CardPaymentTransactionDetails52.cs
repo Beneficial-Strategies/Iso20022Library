@@ -95,7 +95,7 @@ public record CardPaymentTransactionDetails52
     [IsoId("_P2b5A3DoEe2MCaKO5AtGsA")]
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
-    public OnLineReason2Code? OnLineReason { get; init; }
+    public SimpleValueList<OnLineReason2Code> OnLineReason { get; init; } = [];
 
     /// <summary>
     /// Transaction category level on an unattended POI (Point Of Interaction).
@@ -128,7 +128,7 @@ public record CardPaymentTransactionDetails52
     [IsoId("_P2b5C3DoEe2MCaKO5AtGsA")]
     [DisplayName("Instalment")]
     [IsoXmlTag("Instlmt")]
-    public RecurringTransaction5? Instalment { get; init; }
+    public ValueList<RecurringTransaction5> Instalment { get; init; } = [];
 
     /// <summary>
     /// Payment transaction with an aggregated amount.
@@ -154,7 +154,7 @@ public record CardPaymentTransactionDetails52
     [IsoId("_P2b5EXDoEe2MCaKO5AtGsA")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public Product6? SaleItem { get; init; }
+    public ValueList<Product6> SaleItem { get; init; } = [];
 
     /// <summary>
     /// Location of the delivery, for instance pump number or parking bay.
@@ -181,7 +181,7 @@ public record CardPaymentTransactionDetails52
     [IsoId("_P2b5F3DoEe2MCaKO5AtGsA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ExternallyDefinedData4? AdditionalInformation { get; init; }
+    public ValueList<ExternallyDefinedData4> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Data related to an integrated circuit card application.

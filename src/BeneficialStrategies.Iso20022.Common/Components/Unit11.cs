@@ -49,9 +49,7 @@ public record Unit11
     [IsoId("_cHHVSW1bEeiqaPNRWUnGNA")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CertificateNumber { get; init; }
+    public SimpleValueList<IsoMax35Text> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.
@@ -93,5 +91,5 @@ public record Unit11
     [IsoId("_cHHVU21bEeiqaPNRWUnGNA")]
     [DisplayName("Other Amount")]
     [IsoXmlTag("OthrAmt")]
-    public OtherAmount1? OtherAmount { get; init; }
+    public ValueList<OtherAmount1> OtherAmount { get; init; } = [];
 }

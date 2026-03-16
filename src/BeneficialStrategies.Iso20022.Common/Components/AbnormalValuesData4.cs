@@ -48,5 +48,5 @@ public record AbnormalValuesData4
     [IsoId("_x6yxN1yGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public AbnormalValuesTransactionData2? TransactionDetails { get; init; }
+    public ValueList<AbnormalValuesTransactionData2> TransactionDetails { get; init; } = [];
 }

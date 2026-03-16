@@ -130,7 +130,7 @@ public record PaymentTransactionInformation29
     [IsoId("_P4SMdNp-Ed-ak6NoX_4Aeg_-327432187")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public ChargesInformation5? ChargesInformation { get; init; }
+    public ValueList<ChargesInformation5> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.
@@ -154,7 +154,7 @@ public record PaymentTransactionInformation29
     [IsoId("_P4SMd9p-Ed-ak6NoX_4Aeg_-327431940")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public ReversalReasonInformation6? ReversalReasonInformation { get; init; }
+    public ValueList<ReversalReasonInformation6> ReversalReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Set of key elements used to identify the original transaction that is being referred to.

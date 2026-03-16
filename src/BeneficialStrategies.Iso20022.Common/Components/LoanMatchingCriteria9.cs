@@ -246,7 +246,7 @@ public record LoanMatchingCriteria9
     [IsoId("_sFf5MM3MEeuiU4QSC_BouQ")]
     [DisplayName("Margin Loan Attribute")]
     [IsoXmlTag("MrgnLnAttr")]
-    public CompareInterestRate1? MarginLoanAttribute { get; init; }
+    public ValueList<CompareInterestRate1> MarginLoanAttribute { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the values defined as active or historic currency and amount are matching or not.
@@ -358,7 +358,7 @@ public record LoanMatchingCriteria9
     [IsoId("_9-J8N8gxEeuGrNSsxk3B0A")]
     [DisplayName("Floating Rate Adjustment")]
     [IsoXmlTag("FltgRateAdjstmnt")]
-    public ComparePercentageRate3? FloatingRateAdjustment { get; init; }
+    public ValueList<ComparePercentageRate3> FloatingRateAdjustment { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the values defined as the Rate Date are matching or not.
@@ -366,7 +366,7 @@ public record LoanMatchingCriteria9
     [IsoId("_9-J8OcgxEeuGrNSsxk3B0A")]
     [DisplayName("Floating Rate Adjustment Date")]
     [IsoXmlTag("FltgRateAdjstmntDt")]
-    public CompareDate3? FloatingRateAdjustmentDate { get; init; }
+    public ValueList<CompareDate3> FloatingRateAdjustmentDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the values defined as percentage rate are matching or not.

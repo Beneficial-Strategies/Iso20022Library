@@ -82,5 +82,5 @@ public record CorporateActionInformation2
     [IsoId("_TeEAUdp-Ed-ak6NoX_4Aeg_301729875")]
     [DisplayName("Other Underlying Security")]
     [IsoXmlTag("OthrUndrlygScty")]
-    public FinancialInstrumentDescription3? OtherUnderlyingSecurity { get; init; }
+    public ValueList<FinancialInstrumentDescription3> OtherUnderlyingSecurity { get; init; } = [];
 }

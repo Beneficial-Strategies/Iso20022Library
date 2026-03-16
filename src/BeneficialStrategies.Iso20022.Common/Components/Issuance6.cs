@@ -106,5 +106,5 @@ public record Issuance6
     [IsoId("_sG_mfWf2Eembv_9KtOEw8g")]
     [DisplayName("Governing Law")]
     [IsoXmlTag("GovngLaw")]
-    public Jurisdiction1? GoverningLaw { get; init; }
+    public ValueList<Jurisdiction1> GoverningLaw { get; init; } = [];
 }

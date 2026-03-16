@@ -46,5 +46,5 @@ public record DetailedStatisticsPerCounterparty7
     [IsoId("_DPXdJ82HEeqFGLkKbAvCGg")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
-    public CompetentAuthority1? CompetentAuthority { get; init; }
+    public ValueList<CompetentAuthority1> CompetentAuthority { get; init; } = [];
 }

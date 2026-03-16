@@ -32,8 +32,7 @@ public record CardPaymentTransaction75
     [IsoId("_SUuSwLL1EeaRnrUTla0j3A")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public SimpleValueList<IsoTrueFalseIndicator> CustomerConsent { get; init; } = [];
 
     /// <summary>
     /// The card programme proposed by a retailer to a cardholder among a series of payment programmes offered by the retailer.
@@ -41,9 +40,7 @@ public record CardPaymentTransaction75
     [IsoId("_ZTT1gLL1EeaRnrUTla0j3A")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeProposed { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// The card programme actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.
@@ -51,9 +48,7 @@ public record CardPaymentTransaction75
     [IsoId("_eKME4LL1EeaRnrUTla0j3A")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public SimpleValueList<IsoMax35Text> CardProgrammeApplied { get; init; } = [];
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -105,7 +100,7 @@ public record CardPaymentTransaction75
     [IsoId("_K15wzbL1EeaRnrUTla0j3A")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
@@ -169,7 +164,5 @@ public record CardPaymentTransaction75
     [IsoId("_K15w27L1EeaRnrUTla0j3A")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

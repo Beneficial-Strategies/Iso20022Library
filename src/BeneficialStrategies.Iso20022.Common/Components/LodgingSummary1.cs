@@ -57,7 +57,7 @@ public record LodgingSummary1
     [IsoId("_npqEI_b_EeiW-auGnDPZIw")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
-    public LodgingRoom1? Room { get; init; }
+    public ValueList<LodgingRoom1> Room { get; init; } = [];
 
     /// <summary>
     /// Duration of stay in days.
@@ -116,7 +116,7 @@ public record LodgingSummary1
     [IsoId("_fKVahfcXEeiW-auGnDPZIw")]
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
-    public Tax33? TotalTax { get; init; }
+    public ValueList<Tax33> TotalTax { get; init; } = [];
 
     /// <summary>
     /// Contains the total amount of lodging expenses.
@@ -132,7 +132,7 @@ public record LodgingSummary1
     [IsoId("_fKVahPcXEeiW-auGnDPZIw")]
     [DisplayName("Authorised Amount")]
     [IsoXmlTag("AuthrsdAmt")]
-    public AuthorisedAmount1? AuthorisedAmount { get; init; }
+    public ValueList<AuthorisedAmount1> AuthorisedAmount { get; init; } = [];
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -150,7 +150,7 @@ public record LodgingSummary1
     [IsoId("_zIKFx_cVEeiW-auGnDPZIw")]
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme2? LoyaltyProgramme { get; init; }
+    public ValueList<LoyaltyProgramme2> LoyaltyProgramme { get; init; } = [];
 
     /// <summary>
     /// Additional user-defined data pertaining to the lodging.

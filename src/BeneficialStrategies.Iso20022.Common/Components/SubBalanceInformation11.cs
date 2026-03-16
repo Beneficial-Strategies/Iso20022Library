@@ -48,7 +48,7 @@ public record SubBalanceInformation11
     [IsoId("_mhruyw0qEeK9as54HthO0w")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown23? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown23> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -56,5 +56,6 @@ public record SubBalanceInformation11
     [IsoId("_mhru1Q0qEeK9as54HthO0w")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation11? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation11> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 }

@@ -32,9 +32,7 @@ public record TransactionDetails3
     [IsoId("_S-6mM9p-Ed-ak6NoX_4Aeg_-160365253")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedTradeReference { get; init; }
+    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
 
     /// <summary>
     /// Identifies the execution venue. In the case of an exchange or a Multilateral Trading Facility (MTF), this should be identified using a MIC code. In the case of a systematic internaliser, place of trade should be identified using a BIC code.

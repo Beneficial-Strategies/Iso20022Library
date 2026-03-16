@@ -41,5 +41,5 @@ public record DisputeData2
     [IsoId("_18M3ucZiEeiCDcGzDHI_9Q")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
-    public DisputeReference1? DisputeReference { get; init; }
+    public ValueList<DisputeReference1> DisputeReference { get; init; } = [];
 }

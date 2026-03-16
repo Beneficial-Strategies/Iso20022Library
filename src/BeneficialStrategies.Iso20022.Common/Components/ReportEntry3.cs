@@ -91,7 +91,7 @@ public record ReportEntry3
     [IsoId("_ttkysVkyEeGeoaLUQk__nA_-1318731482")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashBalanceAvailability2? Availability { get; init; }
+    public ValueList<CashBalanceAvailability2> Availability { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.
@@ -132,7 +132,7 @@ public record ReportEntry3
     [IsoId("_ttt8oVkyEeGeoaLUQk__nA_-1531996610")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public Charges3? Charges { get; init; }
+    public ValueList<Charges3> Charges { get; init; } = [];
 
     /// <summary>
     /// Channel used to technically input the instruction related to the entry.
@@ -148,7 +148,7 @@ public record ReportEntry3
     [IsoId("_ttt8o1kyEeGeoaLUQk__nA_646357846")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public TransactionInterest3? Interest { get; init; }
+    public ValueList<TransactionInterest3> Interest { get; init; } = [];
 
     /// <summary>
     /// Provides details of the card transaction included in the entry amount, when globalised by the account servicer.
@@ -164,7 +164,7 @@ public record ReportEntry3
     [IsoId("_tt3toFkyEeGeoaLUQk__nA_2030768153")]
     [DisplayName("Entry Details")]
     [IsoXmlTag("NtryDtls")]
-    public EntryDetails2? EntryDetails { get; init; }
+    public ValueList<EntryDetails2> EntryDetails { get; init; } = [];
 
     /// <summary>
     /// Further details of the entry.

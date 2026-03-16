@@ -60,7 +60,5 @@ public record ErrorDetails1
     [IsoId("_uYYqcMcyEeiYIbmhB2-RrQ")]
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
-    [IsoSimpleType(IsoSimpleType.Max4000Text)]
-    [StringLength(maximumLength: 4000, MinimumLength = 1)]
-    public IsoMax4000Text? DataElementInError { get; init; }
+    public SimpleValueList<IsoMax4000Text> DataElementInError { get; init; } = [];
 }

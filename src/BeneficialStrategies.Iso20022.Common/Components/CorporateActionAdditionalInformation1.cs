@@ -22,7 +22,7 @@ public record CorporateActionAdditionalInformation1
     [IsoId("_UMjeANp-Ed-ak6NoX_4Aeg_-2045712044")]
     [DisplayName("Beneficial Owner Details")]
     [IsoXmlTag("BnfclOwnrDtls")]
-    public BeneficialOwner1? BeneficialOwnerDetails { get; init; }
+    public ValueList<BeneficialOwner1> BeneficialOwnerDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration.
@@ -65,7 +65,7 @@ public record CorporateActionAdditionalInformation1
     [IsoId("_UMjeBdp-Ed-ak6NoX_4Aeg_138497699")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
-    public ProceedsDelivery1? DeliveryDetails { get; init; }
+    public ValueList<ProceedsDelivery1> DeliveryDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to the corporate action instruction.

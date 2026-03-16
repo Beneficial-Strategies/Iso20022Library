@@ -38,5 +38,5 @@ public record TradePartyIdentification5
     [IsoId("_SkxHrAEcEeCQm6a_G2yO_w_669353995")]
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
-    public FundIdentification3? FundIdentification { get; init; }
+    public ValueList<FundIdentification3> FundIdentification { get; init; } = [];
 }

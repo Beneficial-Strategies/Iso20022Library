@@ -117,5 +117,5 @@ public record TradeContract1
     [IsoId("_HyjhwdNDEeSDLevdaFPXHw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation3? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation3> Attachment { get; init; } = [];
 }

@@ -40,5 +40,6 @@ public record CounterpartySideTransactionReporting2
     [IsoId("_B5DK5QN1Ee2-vqzwMUAewg")]
     [DisplayName("Counterparty Side Unique Transaction Identifier")]
     [IsoXmlTag("CtrPtySdUnqTxIdr")]
-    public UniqueTransactionIdentifier2? CounterpartySideUniqueTransactionIdentifier { get; init; }
+    public ValueList<UniqueTransactionIdentifier2> CounterpartySideUniqueTransactionIdentifier { get; init; } =
+        [];
 }

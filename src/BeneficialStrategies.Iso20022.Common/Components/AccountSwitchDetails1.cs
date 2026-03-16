@@ -86,5 +86,5 @@ public record AccountSwitchDetails1
     [IsoId("_wTtyIBE7EeafpqhYGpTDnw")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public ResponseDetails1? Response { get; init; }
+    public ValueList<ResponseDetails1> Response { get; init; } = [];
 }

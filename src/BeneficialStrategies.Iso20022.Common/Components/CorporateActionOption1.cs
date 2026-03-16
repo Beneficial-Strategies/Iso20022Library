@@ -90,7 +90,7 @@ public record CorporateActionOption1
     [IsoId("_UF2ZFdp-Ed-ak6NoX_4Aeg_-616320822")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferType1FormatChoice_? OfferType { get; init; }
+    public ValueList<OfferType1FormatChoice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Type of intermediates securities distribution, eg, stock dividend, reverse right.
@@ -156,7 +156,7 @@ public record CorporateActionOption1
     [IsoId("_UF_jA9p-Ed-ak6NoX_4Aeg_3077583")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecurityOption1? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecurityOption1> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash movement linked to the CA option.
@@ -164,7 +164,7 @@ public record CorporateActionOption1
     [IsoId("_UF_jBNp-Ed-ak6NoX_4Aeg_-127876028")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOption1? CashMovementDetails { get; init; }
+    public ValueList<CashOption1> CashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the agents linked to the CA option.
@@ -172,7 +172,7 @@ public record CorporateActionOption1
     [IsoId("_UF_jBdp-Ed-ak6NoX_4Aeg_1521015328")]
     [DisplayName("Corporate Action Other Agent Details")]
     [IsoXmlTag("CorpActnOthrAgtDtls")]
-    public CorporateActionAgent1? CorporateActionOtherAgentDetails { get; init; }
+    public ValueList<CorporateActionAgent1> CorporateActionOtherAgentDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
@@ -197,7 +197,7 @@ public record CorporateActionOption1
     [IsoId("_UF_jCNp-Ed-ak6NoX_4Aeg_330286965")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public OptionFeatures1FormatChoice_? OptionFeatures { get; init; }
+    public ValueList<OptionFeatures1FormatChoice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.

@@ -30,5 +30,5 @@ public record Invoice1
     [IsoId("_179ylPPSEeihCvvpsmGI2w")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public InvoiceLineItem1? LineItem { get; init; }
+    public ValueList<InvoiceLineItem1> LineItem { get; init; } = [];
 }

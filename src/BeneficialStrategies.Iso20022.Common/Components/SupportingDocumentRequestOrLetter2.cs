@@ -57,7 +57,7 @@ public record SupportingDocumentRequestOrLetter2
     [IsoId("_LdpF6W49EeiU9cctagi5ow")]
     [DisplayName("Original References")]
     [IsoXmlTag("OrgnlRefs")]
-    public OriginalMessage4? OriginalReferences { get; init; }
+    public ValueList<OriginalMessage4> OriginalReferences { get; init; } = [];
 
     /// <summary>
     /// Subject of the letter or supporting document.
@@ -112,7 +112,7 @@ public record SupportingDocumentRequestOrLetter2
     [IsoId("_LdpF9W49EeiU9cctagi5ow")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation3? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation3> Attachment { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -120,5 +120,5 @@ public record SupportingDocumentRequestOrLetter2
     [IsoId("_LdpF9249EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

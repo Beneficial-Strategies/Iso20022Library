@@ -88,7 +88,7 @@ public record Transaction96
     [IsoId("_onRW0FA9EeedyPuM0kK2EQ")]
     [DisplayName("Clearing Batch Data")]
     [IsoXmlTag("ClrBtchData")]
-    public ClearingBatchData1? ClearingBatchData { get; init; }
+    public ValueList<ClearingBatchData1> ClearingBatchData { get; init; } = [];
 
     /// <summary>
     /// Gross amount clearing totals.
@@ -104,7 +104,7 @@ public record Transaction96
     [IsoId("_lwazkFA_EeedyPuM0kK2EQ")]
     [DisplayName("Agent Data")]
     [IsoXmlTag("AgtData")]
-    public AdditionalInformation21? AgentData { get; init; }
+    public ValueList<AdditionalInformation21> AgentData { get; init; } = [];
 
     /// <summary>
     /// Record in batch.
@@ -112,7 +112,7 @@ public record Transaction96
     [IsoId("_gh0uIFBHEeedyPuM0kK2EQ")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public Record1? Record { get; init; }
+    public ValueList<Record1> Record { get; init; } = [];
 
     /// <summary>
     /// Contains additional data.
@@ -120,5 +120,5 @@ public record Transaction96
     [IsoId("_qDF70RqmEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

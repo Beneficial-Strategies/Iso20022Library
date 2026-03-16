@@ -47,7 +47,7 @@ public record SecuritiesTransaction3
     [IsoId("_IvEBUKOjEe2UDKy7o9_HIg")]
     [DisplayName("Digital Token Quantity")]
     [IsoXmlTag("DgtlTknQty")]
-    public DigitalTokenAmount2? DigitalTokenQuantity { get; init; }
+    public ValueList<DigitalTokenAmount2> DigitalTokenQuantity { get; init; } = [];
 
     /// <summary>
     /// Indicates as to whether an increase or a decrease of notional of derivative contracts has taken place.

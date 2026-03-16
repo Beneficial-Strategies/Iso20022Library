@@ -30,7 +30,7 @@ public record BreakdownByCurrency2
     [IsoId("_IhEQUwatEeS3lpTattq7hg")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
-    public CashOutForecast5? CashOutForecast { get; init; }
+    public ValueList<CashOutForecast5> CashOutForecast { get; init; } = [];
 
     /// <summary>
     /// Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.
@@ -38,7 +38,7 @@ public record BreakdownByCurrency2
     [IsoId("_IhEQVQatEeS3lpTattq7hg")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
-    public CashInForecast5? CashInForecast { get; init; }
+    public ValueList<CashInForecast5> CashInForecast { get; init; } = [];
 
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows specified for the currency.
@@ -46,5 +46,5 @@ public record BreakdownByCurrency2
     [IsoId("_IhEQVwatEeS3lpTattq7hg")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
-    public NetCashForecast4? NetCashForecast { get; init; }
+    public ValueList<NetCashForecast4> NetCashForecast { get; init; } = [];
 }

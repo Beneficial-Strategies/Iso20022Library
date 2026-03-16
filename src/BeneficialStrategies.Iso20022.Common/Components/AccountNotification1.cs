@@ -99,7 +99,7 @@ public record AccountNotification1
     [IsoId("_RToJEtp-Ed-ak6NoX_4Aeg_1577699848")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public NotificationEntry1? Entry { get; init; }
+    public ValueList<NotificationEntry1> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details on the account notification.

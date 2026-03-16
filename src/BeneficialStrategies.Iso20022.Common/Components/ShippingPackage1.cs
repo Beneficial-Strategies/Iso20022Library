@@ -65,7 +65,7 @@ public record ShippingPackage1
     [IsoId("_knVpMPcsEeiW-auGnDPZIw")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
-    public Product7? Product { get; init; }
+    public ValueList<Product7> Product { get; init; } = [];
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.

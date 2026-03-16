@@ -89,7 +89,7 @@ public record PaymentObligation1
     [IsoId("_Tms-8Np-Ed-ak6NoX_4Aeg_1971081576")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
-    public PaymentTerms2? PaymentTerms { get; init; }
+    public ValueList<PaymentTerms2> PaymentTerms { get; init; } = [];
 
     /// <summary>
     /// Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties.

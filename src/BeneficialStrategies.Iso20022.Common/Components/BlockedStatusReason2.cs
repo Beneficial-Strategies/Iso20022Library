@@ -39,7 +39,7 @@ public record BlockedStatusReason2
     [IsoId("__4jh811LEeagR5I1rq5oaw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public BlockedReason2Choice_? Reason { get; init; }
+    public ValueList<BlockedReason2Choice_> Reason { get; init; } = [];
 
     /// <summary>
     /// Additional information about the blocked account status.

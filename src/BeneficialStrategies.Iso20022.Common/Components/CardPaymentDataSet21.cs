@@ -65,5 +65,5 @@ public record CardPaymentDataSet21
     [IsoId("_mimAy9tPEee9e6xduATmQg")]
     [DisplayName("Rejected Transaction")]
     [IsoXmlTag("RjctdTx")]
-    public CardPaymentDataSet20? RejectedTransaction { get; init; }
+    public ValueList<CardPaymentDataSet20> RejectedTransaction { get; init; } = [];
 }

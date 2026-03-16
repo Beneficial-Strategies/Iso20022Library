@@ -30,7 +30,8 @@ public record MovementInstruction1
     [IsoId("_RirRt9p-Ed-ak6NoX_4Aeg_-1853745607")]
     [DisplayName("Underlying Securities Movement Details")]
     [IsoXmlTag("UndrlygSctiesMvmntDtls")]
-    public UnderlyingSecurityMovement1? UnderlyingSecuritiesMovementDetails { get; init; }
+    public ValueList<UnderlyingSecurityMovement1> UnderlyingSecuritiesMovementDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Provides information about the underlying cash movement.
@@ -38,7 +39,7 @@ public record MovementInstruction1
     [IsoId("_RirRuNp-Ed-ak6NoX_4Aeg_-1965607200")]
     [DisplayName("Underlying Cash Movement Details")]
     [IsoXmlTag("UndrlygCshMvmntDtls")]
-    public CashMovement2? UnderlyingCashMovementDetails { get; init; }
+    public ValueList<CashMovement2> UnderlyingCashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the proceeds, ie, outturned resources.
@@ -46,5 +47,5 @@ public record MovementInstruction1
     [IsoId("_Ri1CsNp-Ed-ak6NoX_4Aeg_-1820497873")]
     [DisplayName("Proceeds Movement Details")]
     [IsoXmlTag("PrcdsMvmntDtls")]
-    public ProceedsMovement1? ProceedsMovementDetails { get; init; }
+    public ValueList<ProceedsMovement1> ProceedsMovementDetails { get; init; } = [];
 }

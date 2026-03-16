@@ -46,5 +46,6 @@ public record TotalTransactions3
     [IsoId("_tsra0VkyEeGeoaLUQk__nA_107106544")]
     [DisplayName("Total Entries Per Bank Transaction Code")]
     [IsoXmlTag("TtlNtriesPerBkTxCd")]
-    public TotalsPerBankTransactionCode2? TotalEntriesPerBankTransactionCode { get; init; }
+    public ValueList<TotalsPerBankTransactionCode2> TotalEntriesPerBankTransactionCode { get; init; } =
+        [];
 }

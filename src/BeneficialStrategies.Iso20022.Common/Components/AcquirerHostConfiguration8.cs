@@ -32,7 +32,7 @@ public record AcquirerHostConfiguration8
     [IsoId("_GkiaYy_5EeugIJ3Gvoevmg")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
-    public MessageFunction43Code? MessageToSend { get; init; }
+    public SimpleValueList<MessageFunction43Code> MessageToSend { get; init; } = [];
 
     /// <summary>
     /// Protocol version to use when using these parameters.

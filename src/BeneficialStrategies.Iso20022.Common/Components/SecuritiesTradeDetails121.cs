@@ -22,9 +22,7 @@ public record SecuritiesTradeDetails121
     [IsoId("_MS7PLwyPEeuG8M5giQ2e0w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -32,9 +30,7 @@ public record SecuritiesTradeDetails121
     [IsoId("_MS7PMwyPEeuG8M5giQ2e0w")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralTransactionIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -107,7 +103,7 @@ public record SecuritiesTradeDetails121
     [IsoId("_MS7PVwyPEeuG8M5giQ2e0w")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public Reporting6Choice_? Reporting { get; init; }
+    public ValueList<Reporting6Choice_> Reporting { get; init; } = [];
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.
@@ -115,7 +111,8 @@ public record SecuritiesTradeDetails121
     [IsoId("_MS7PWwyPEeuG8M5giQ2e0w")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition5Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the role of the investor in the transaction.

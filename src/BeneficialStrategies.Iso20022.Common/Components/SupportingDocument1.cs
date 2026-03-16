@@ -92,5 +92,5 @@ public record SupportingDocument1
     [IsoId("_4p0uQQtMEeWkxvNyFrBT8Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -38,5 +38,6 @@ public record RejectionReason71
     [IsoId("_yBsqdVyGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Validation Rule")]
     [IsoXmlTag("DtldVldtnRule")]
-    public GenericValidationRuleIdentification1? DetailedValidationRule { get; init; }
+    public ValueList<GenericValidationRuleIdentification1> DetailedValidationRule { get; init; } =
+        [];
 }

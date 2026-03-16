@@ -40,5 +40,5 @@ public record ReconciliationResponseData1
     [IsoId("_9SsAQNxfEeioifFt1dhnJA")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotalsSet1? TransactionTotals { get; init; }
+    public ValueList<TransactionTotalsSet1> TransactionTotals { get; init; } = [];
 }

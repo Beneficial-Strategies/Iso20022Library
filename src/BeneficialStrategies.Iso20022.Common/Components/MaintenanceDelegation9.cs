@@ -58,9 +58,7 @@ public record MaintenanceDelegation9
     [IsoId("_J1SiqQ00EeqUVL7sB4m7NA")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POISubset { get; init; }
+    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Identification of the parameters subset assigned by the MTM.
@@ -104,5 +102,6 @@ public record MaintenanceDelegation9
     [IsoId("_J1Sisw00EeqUVL7sB4m7NA")]
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
-    public MaintenanceIdentificationAssociation1? POIIdentificationAssociation { get; init; }
+    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } =
+        [];
 }

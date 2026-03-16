@@ -48,7 +48,7 @@ public record HostCommunicationParameter5
     [IsoId("_HaTDZdqcEeearpaEPXv9UA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public KEKIdentifier5? Key { get; init; }
+    public ValueList<KEKIdentifier5> Key { get; init; } = [];
 
     /// <summary>
     /// Access information to reach an intermediate network service provider.

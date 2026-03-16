@@ -22,7 +22,7 @@ public record InvestmentAccount65
     [IsoId("__N8h14ftEeevKP8c-ilVhA")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public PartyIdentification113? OwnerIdentification { get; init; }
+    public ValueList<PartyIdentification113> OwnerIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

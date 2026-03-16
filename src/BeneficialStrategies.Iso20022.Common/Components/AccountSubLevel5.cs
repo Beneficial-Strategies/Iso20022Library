@@ -46,7 +46,7 @@ public record AccountSubLevel5
     [IsoId("_xZr-ETyvEeSBD_ZW60GwCQ")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
-    public BeneficialOwner2? BeneficialOwner { get; init; }
+    public ValueList<BeneficialOwner2> BeneficialOwner { get; init; } = [];
 
     /// <summary>
     /// Report on the net position of a single financial instrument on the sub-level account, for a certain date.
@@ -54,7 +54,7 @@ public record AccountSubLevel5
     [IsoId("_KnXN-oj3EeONZKAAW4pOaQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateHoldingBalance1? BalanceForAccount { get; init; }
+    public ValueList<AggregateHoldingBalance1> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// Holdings of level 5.
@@ -62,7 +62,7 @@ public record AccountSubLevel5
     [IsoId("_KnXN-Yj3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level")]
     [IsoXmlTag("AcctSubLvl6")]
-    public AccountSubLevel6? AccountSubLevel6 { get; init; }
+    public ValueList<AccountSubLevel6> AccountSubLevel6 { get; init; } = [];
 
     /// <summary>
     /// Difference in holdings between the safekeeping account and the sub-accounts of level 6.
@@ -70,7 +70,7 @@ public record AccountSubLevel5
     [IsoId("_KnXN-Ij3EeONZKAAW4pOaQ")]
     [DisplayName("Account Sub Level 6 Difference")]
     [IsoXmlTag("AcctSubLvl6Diff")]
-    public AggregateHoldingBalance2? AccountSubLevel6Difference { get; init; }
+    public ValueList<AggregateHoldingBalance2> AccountSubLevel6Difference { get; init; } = [];
 
     /// <summary>
     /// Identification of a related party acting as an intermediary.
@@ -78,7 +78,7 @@ public record AccountSubLevel5
     [IsoId("_K4_k0b3OEeO2FLWuu_JIqg")]
     [DisplayName("Agent Code")]
     [IsoXmlTag("AgtCd")]
-    public Intermediary29? AgentCode { get; init; }
+    public ValueList<Intermediary29> AgentCode { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -86,5 +86,5 @@ public record AccountSubLevel5
     [IsoId("_Ms1bkW5HEeSFHPWGV34yZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

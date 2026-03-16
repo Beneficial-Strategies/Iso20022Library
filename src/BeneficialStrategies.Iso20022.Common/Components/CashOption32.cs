@@ -54,7 +54,7 @@ public record CashOption32
     [IsoId("_9b7zACeREeOXAt_43VmZGw")]
     [DisplayName("Exemption Type")]
     [IsoXmlTag("XmptnTp")]
-    public GenericIdentification20? ExemptionType { get; init; }
+    public ValueList<GenericIdentification20> ExemptionType { get; init; } = [];
 
     /// <summary>
     /// Identification of the account in which cash is maintained.

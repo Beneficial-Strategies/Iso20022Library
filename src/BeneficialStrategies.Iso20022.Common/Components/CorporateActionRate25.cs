@@ -30,7 +30,7 @@ public record CorporateActionRate25
     [IsoId("_nmltVfmUEeCcAY_zfcalaA")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat5Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat5Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -38,7 +38,7 @@ public record CorporateActionRate25
     [IsoId("_BOqVdfo4EeCVCIR-Uq3c5A")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat5Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat5Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Public index rate applied to the amount paid to adjust it to inflation.
@@ -54,7 +54,8 @@ public record CorporateActionRate25
     [IsoId("_nmltafmUEeCcAY_zfcalaA")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat5Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat5Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.
@@ -94,7 +95,7 @@ public record CorporateActionRate25
     [IsoId("_nmltkfmUEeCcAY_zfcalaA")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments within the scope of the EU Savings directive.
@@ -102,5 +103,6 @@ public record CorporateActionRate25
     [IsoId("_nmltm_mUEeCcAY_zfcalaA")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
-    public RateTypeAndAmountAndStatus11? TaxableIncomePerDividendShare { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus11> TaxableIncomePerDividendShare { get; init; } =
+        [];
 }

@@ -49,9 +49,7 @@ public record RiskAssessment2
     [IsoId("_hm9rRcSsEeuBjv5G5kw00g")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; }
+    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Risk assessment result.
@@ -69,7 +67,7 @@ public record RiskAssessment2
     [IsoId("_3xgWYMVSEeuPIIgba4mCug")]
     [DisplayName("Risk Condition")]
     [IsoXmlTag("RskCond")]
-    public AdditionalData1? RiskCondition { get; init; }
+    public ValueList<AdditionalData1> RiskCondition { get; init; } = [];
 
     /// <summary>
     /// Additional risk data associated with the transaction.
@@ -77,7 +75,7 @@ public record RiskAssessment2
     [IsoId("_hm9rScSsEeuBjv5G5kw00g")]
     [DisplayName("Additional Risk Data")]
     [IsoXmlTag("AddtlRskData")]
-    public AdditionalRiskData1? AdditionalRiskData { get; init; }
+    public ValueList<AdditionalRiskData1> AdditionalRiskData { get; init; } = [];
 
     /// <summary>
     /// Recommended action based on risk assessment.
@@ -85,7 +83,7 @@ public record RiskAssessment2
     [IsoId("_hm9rS8SsEeuBjv5G5kw00g")]
     [DisplayName("Recommended Action")]
     [IsoXmlTag("RcmmnddActn")]
-    public ActionType8Code? RecommendedAction { get; init; }
+    public SimpleValueList<ActionType8Code> RecommendedAction { get; init; } = [];
 
     /// <summary>
     /// Other recommended action based on risk assessment defined at national or private level.

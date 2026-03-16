@@ -69,5 +69,6 @@ public record OriginalNotification3
     [IsoId("_1HFoghf2Ed--ta5221d4PQ")]
     [DisplayName("Original Notification Reference")]
     [IsoXmlTag("OrgnlNtfctnRef")]
-    public OriginalNotificationReference2? OriginalNotificationReference { get; init; }
+    public ValueList<OriginalNotificationReference2> OriginalNotificationReference { get; init; } =
+        [];
 }

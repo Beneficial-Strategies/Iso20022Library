@@ -31,5 +31,5 @@ public record SecuritiesAccountStatement2
     [IsoId("_QPfxk-GBEeWCAvUNsZ5u6g")]
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
-    public SecuritiesAccountReferenceDataChange2? Change { get; init; }
+    public ValueList<SecuritiesAccountReferenceDataChange2> Change { get; init; } = [];
 }

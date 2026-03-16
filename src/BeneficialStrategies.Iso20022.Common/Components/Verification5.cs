@@ -50,7 +50,7 @@ public record Verification5
     [IsoId("_YYHKR8VVEeuPIIgba4mCug")]
     [DisplayName("Verification Information")]
     [IsoXmlTag("VrfctnInf")]
-    public VerificationInformation1? VerificationInformation { get; init; }
+    public ValueList<VerificationInformation1> VerificationInformation { get; init; } = [];
 
     /// <summary>
     /// Result of verifications performed prior or after the transaction.
@@ -60,5 +60,5 @@ public record Verification5
     [IsoId("_YYHKScVVEeuPIIgba4mCug")]
     [DisplayName("Verification Result")]
     [IsoXmlTag("VrfctnRslt")]
-    public VerificationResult2? VerificationResult { get; init; }
+    public ValueList<VerificationResult2> VerificationResult { get; init; } = [];
 }

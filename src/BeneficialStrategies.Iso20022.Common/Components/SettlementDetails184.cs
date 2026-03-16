@@ -30,7 +30,8 @@ public record SettlementDetails184
     [IsoId("_Vs7qiQllEeuQ1MenzX1l-g")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition34Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition34Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Role of a party in the settlement of the transaction.

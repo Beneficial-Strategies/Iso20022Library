@@ -109,7 +109,7 @@ public record LoanData137
     [IsoId("_6aY2Fcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
-    public ContractTerm7Choice_? Term { get; init; }
+    public ValueList<ContractTerm7Choice_> Term { get; init; } = [];
 
     /// <summary>
     /// Indication of the type of assets subject of the transaction.

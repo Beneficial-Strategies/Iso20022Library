@@ -22,7 +22,7 @@ public record InvestmentAccount66
     [IsoId("_BDegE4fuEeevKP8c-ilVhA")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public PartyIdentification113? OwnerIdentification { get; init; }
+    public ValueList<PartyIdentification113> OwnerIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
@@ -60,7 +60,7 @@ public record InvestmentAccount66
     [IsoId("_BDegG4fuEeevKP8c-ilVhA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary41? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary41> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Form, that is, ownership, of the security, that is, registered or bearer.

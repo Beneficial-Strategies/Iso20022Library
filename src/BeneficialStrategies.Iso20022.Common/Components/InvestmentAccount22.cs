@@ -22,7 +22,7 @@ public record InvestmentAccount22
     [IsoId("_RxIkeNp-Ed-ak6NoX_4Aeg_-730101107")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public PartyIdentification2Choice_? OwnerIdentification { get; init; }
+    public ValueList<PartyIdentification2Choice_> OwnerIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
@@ -58,7 +58,7 @@ public record InvestmentAccount22
     [IsoId("_RxIkfNp-Ed-ak6NoX_4Aeg_-770993745")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary11? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary11> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Form, ie, ownership, of the security, eg, registered or bearer.

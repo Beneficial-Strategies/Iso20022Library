@@ -100,7 +100,7 @@ public record LodgingLineItem2
     [IsoId("_Z_7QEyCDEey8XKHwKquEQw")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax39? Tax { get; init; }
+    public ValueList<Tax39> Tax { get; init; } = [];
 
     /// <summary>
     /// Additional data.

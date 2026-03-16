@@ -63,7 +63,7 @@ public record CardPaymentEnvironment73
     [IsoId("_oH7pW4X-EemxIqbaFEE8-w")]
     [DisplayName("Stored Value Account")]
     [IsoXmlTag("StordValAcct")]
-    public StoredValueAccount1? StoredValueAccount { get; init; }
+    public ValueList<StoredValueAccount1> StoredValueAccount { get; init; } = [];
 
     /// <summary>
     /// Store value account associated to the payment.
@@ -71,7 +71,7 @@ public record CardPaymentEnvironment73
     [IsoId("_oH7pXYX-EemxIqbaFEE8-w")]
     [DisplayName("Loyalty Account")]
     [IsoXmlTag("LltyAcct")]
-    public LoyaltyAccount1? LoyaltyAccount { get; init; }
+    public ValueList<LoyaltyAccount1> LoyaltyAccount { get; init; } = [];
 
     /// <summary>
     /// Device used by the customer to perform the payment transaction.

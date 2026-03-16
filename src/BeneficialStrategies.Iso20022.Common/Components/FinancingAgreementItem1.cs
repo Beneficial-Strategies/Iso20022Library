@@ -72,7 +72,7 @@ public record FinancingAgreementItem1
     [IsoId("_OTgzMzc1-AOSNFX-8224501")]
     [DisplayName("Guarantee")]
     [IsoXmlTag("Grnt")]
-    public GuaranteeDetails1? Guarantee { get; init; }
+    public ValueList<GuaranteeDetails1> Guarantee { get; init; } = [];
 
     /// <summary>
     /// Status of guarantee if applicable.
@@ -96,7 +96,7 @@ public record FinancingAgreementItem1
     [IsoId("_OTgzMzc4-AOSNFX-8224501")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+    public ValueList<QualifiedDocumentInformation1> AssociatedDocument { get; init; } = [];
 
     /// <summary>
     /// Free form textual information related to the agreement.

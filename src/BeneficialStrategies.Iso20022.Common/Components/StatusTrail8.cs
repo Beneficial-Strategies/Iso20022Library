@@ -105,5 +105,5 @@ public record StatusTrail8
     [IsoId("_U2e7xewMEeiazoAmcoGsBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

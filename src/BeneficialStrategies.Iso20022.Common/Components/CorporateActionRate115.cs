@@ -95,7 +95,7 @@ public record CorporateActionRate115
     [IsoId("_Ts31g199Ee262vCSVgjImg")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat47Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat47Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.
@@ -103,5 +103,5 @@ public record CorporateActionRate115
     [IsoId("_Ts31hV99Ee262vCSVgjImg")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public RateAndAmountFormat47Choice_? SecondLevelTax { get; init; }
+    public ValueList<RateAndAmountFormat47Choice_> SecondLevelTax { get; init; } = [];
 }

@@ -39,8 +39,7 @@ public record ATMConfigurationParameter2
     [IsoId("_tNm-wItJEeSxlKlAGYErFg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; }
+    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Cryptographic key involved in the security command.
@@ -48,5 +47,5 @@ public record ATMConfigurationParameter2
     [IsoId("_ABCokItKEeSxlKlAGYErFg")]
     [DisplayName("Key Properties")]
     [IsoXmlTag("KeyProps")]
-    public KEKIdentifier4? KeyProperties { get; init; }
+    public ValueList<KEKIdentifier4> KeyProperties { get; init; } = [];
 }

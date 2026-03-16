@@ -22,7 +22,8 @@ public record SecurityAttributes11
     [IsoId("_QAKbgZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification39? FinancialInstrumentIdentification { get; init; }
+    public ValueList<SecurityIdentification39> FinancialInstrumentIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional details about the financial instrument.
@@ -38,5 +39,6 @@ public record SecurityAttributes11
     [IsoId("_QAKbhZJKEeuAlLVx8pyt3w")]
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
-    public CommonFinancialInstrumentAttributes11? FinancialInstrumentAttributes { get; init; }
+    public ValueList<CommonFinancialInstrumentAttributes11> FinancialInstrumentAttributes { get; init; } =
+        [];
 }

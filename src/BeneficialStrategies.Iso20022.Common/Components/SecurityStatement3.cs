@@ -31,5 +31,5 @@ public record SecurityStatement3
     [IsoId("_QSGgE5JKEeuAlLVx8pyt3w")]
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
-    public SecuritiesReferenceDataChange3? Change { get; init; }
+    public ValueList<SecuritiesReferenceDataChange3> Change { get; init; } = [];
 }

@@ -23,7 +23,7 @@ public record Transaction136
     [IsoId("_GImvB8sKEeuNe7RtB4qFHw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public ISO8583MessageReasonCode? MessageReason { get; init; }
+    public SimpleValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -31,9 +31,7 @@ public record Transaction136
     [IsoId("_frgiE4v_EeuC5632vxUfGg")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AlternateMessageReason { get; init; }
+    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -41,7 +39,8 @@ public record Transaction136
     [IsoId("_frgiFYv_EeuC5632vxUfGg")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -57,7 +56,7 @@ public record Transaction136
     [IsoId("_rtWXcDD_EeyjbpgZW6G1Fg")]
     [DisplayName("Dispute Data")]
     [IsoXmlTag("DsptData")]
-    public DisputeData3? DisputeData { get; init; }
+    public ValueList<DisputeData3> DisputeData { get; init; } = [];
 
     /// <summary>
     /// Fulfilment request instructions for the retrieval.
@@ -65,7 +64,8 @@ public record Transaction136
     [IsoId("_frgiG4v_EeuC5632vxUfGg")]
     [DisplayName("Retrieval Fulfilment Instructions")]
     [IsoXmlTag("RtrvlFlfmtInstrs")]
-    public RetrievalFulfilmentInstructions2? RetrievalFulfilmentInstructions { get; init; }
+    public ValueList<RetrievalFulfilmentInstructions2> RetrievalFulfilmentInstructions { get; init; } =
+        [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -73,7 +73,7 @@ public record Transaction136
     [IsoId("_frgiHYv_EeuC5632vxUfGg")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -91,5 +91,5 @@ public record Transaction136
     [IsoId("_frgiIYv_EeuC5632vxUfGg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

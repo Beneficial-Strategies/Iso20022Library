@@ -32,5 +32,5 @@ public record PlainCardData21
     [IsoId("_VfOyUyFPEey8XKHwKquEQw")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
-    public AdditionalData1? AdditionalCardData { get; init; }
+    public ValueList<AdditionalData1> AdditionalCardData { get; init; } = [];
 }

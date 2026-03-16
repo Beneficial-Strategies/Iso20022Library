@@ -32,7 +32,7 @@ public record RedemptionOrder4
     [IsoId("_VdKxUdp-Ed-ak6NoX_4Aeg_77313548")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType1? OrderType { get; init; }
+    public ValueList<FundOrderType1> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class related to an order.
@@ -113,7 +113,7 @@ public record RedemptionOrder4
     [IsoId("_VdUiUdp-Ed-ak6NoX_4Aeg_77313956")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge8? ChargeDetails { get; init; }
+    public ValueList<Charge8> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Commission linked to the execution of an investment fund order.
@@ -121,7 +121,7 @@ public record RedemptionOrder4
     [IsoId("_VdUiUtp-Ed-ak6NoX_4Aeg_77313938")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission6? CommissionDetails { get; init; }
+    public ValueList<Commission6> CommissionDetails { get; init; } = [];
 
     /// <summary>
     /// Tax applicable to an investment fund order.
@@ -129,7 +129,7 @@ public record RedemptionOrder4
     [IsoId("_VdUiU9p-Ed-ak6NoX_4Aeg_77313843")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax6? TaxDetails { get; init; }
+    public ValueList<Tax6> TaxDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.

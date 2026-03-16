@@ -46,7 +46,7 @@ public record AccountSubLevel9
     [IsoId("_4Nt2oTyvEeSBD_ZW60GwCQ")]
     [DisplayName("Beneficial Owner")]
     [IsoXmlTag("BnfclOwnr")]
-    public BeneficialOwner2? BeneficialOwner { get; init; }
+    public ValueList<BeneficialOwner2> BeneficialOwner { get; init; } = [];
 
     /// <summary>
     /// Report on the net position of a financial instrument on the sub-account, for a certain date.
@@ -54,7 +54,7 @@ public record AccountSubLevel9
     [IsoId("_MJ3iiYj3EeONZKAAW4pOaQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateHoldingBalance1? BalanceForAccount { get; init; }
+    public ValueList<AggregateHoldingBalance1> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// Identification of a related party acting as an intermediary.
@@ -62,7 +62,7 @@ public record AccountSubLevel9
     [IsoId("_NOomgb3OEeO2FLWuu_JIqg")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public Intermediary29? Agent { get; init; }
+    public ValueList<Intermediary29> Agent { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -70,5 +70,5 @@ public record AccountSubLevel9
     [IsoId("_Qx7osW5HEeSFHPWGV34yZw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -30,7 +30,8 @@ public record FundSettlementParameters18
     [IsoId("_mv-IgwVNEeq4ZaI1b_-GPA")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public TradeTransactionCondition8Choice_? TradeTransactionCondition { get; init; }
+    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Condition under which the order/trade is to be settled. This may be required for settlement through T2S.
@@ -38,7 +39,8 @@ public record FundSettlementParameters18
     [IsoId("_mv-IhwVNEeq4ZaI1b_-GPA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition30Choice_? SettlementTransactionCondition { get; init; }
+    public ValueList<SettlementTransactionCondition30Choice_> SettlementTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of a specific system or set of rules and/or processes to be applied at the settlement place.

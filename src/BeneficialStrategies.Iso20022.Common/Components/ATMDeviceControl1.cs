@@ -30,5 +30,5 @@ public record ATMDeviceControl1
     [IsoId("_laaFAItFEeSxlKlAGYErFg")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand4? Command { get; init; }
+    public ValueList<ATMCommand4> Command { get; init; } = [];
 }

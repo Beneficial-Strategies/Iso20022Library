@@ -143,7 +143,7 @@ public record InvestmentAccount36
     [IsoId("_KT9iYRKLEeKj15WxqwlXPw")]
     [DisplayName("Modified Fund Details")]
     [IsoXmlTag("ModfdFndDtls")]
-    public ModificationScope13? ModifiedFundDetails { get; init; }
+    public ValueList<ModificationScope13> ModifiedFundDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.

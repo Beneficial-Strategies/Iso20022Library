@@ -51,5 +51,5 @@ public record OriginalGroupInformation22
     [IsoId("_Pk6kg9p-Ed-ak6NoX_4Aeg_-554618090")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
-    public ReversalReasonInformation6? ReversalReasonInformation { get; init; }
+    public ValueList<ReversalReasonInformation6> ReversalReasonInformation { get; init; } = [];
 }

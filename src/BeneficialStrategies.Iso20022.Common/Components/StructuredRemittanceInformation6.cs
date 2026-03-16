@@ -39,7 +39,7 @@ public record StructuredRemittanceInformation6
     [IsoId("_QFZbZdp-Ed-ak6NoX_4Aeg_-141764204")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
-    public ReferredDocumentAmount1Choice_? ReferredDocumentAmount { get; init; }
+    public ValueList<ReferredDocumentAmount1Choice_> ReferredDocumentAmount { get; init; } = [];
 
     /// <summary>
     /// Reference information provided by the creditor to allow the identification of the underlying documents.

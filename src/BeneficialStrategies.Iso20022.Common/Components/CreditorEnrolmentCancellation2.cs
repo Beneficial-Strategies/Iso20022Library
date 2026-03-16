@@ -46,5 +46,5 @@ public record CreditorEnrolmentCancellation2
     [IsoId("_Ufpx9-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

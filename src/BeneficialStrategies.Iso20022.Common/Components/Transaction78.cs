@@ -81,7 +81,8 @@ public record Transaction78
     [IsoId("_9qHsd1ycEeeve7Je9cXtkQ")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction
@@ -106,7 +107,7 @@ public record Transaction78
     [IsoId("_ZvrdURb3Eeit0dtP9bTmEg")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public AdditionalAmounts1? AdditionalAmounts { get; init; }
+    public ValueList<AdditionalAmounts1> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount.
@@ -114,7 +115,7 @@ public record Transaction78
     [IsoId("_a09BURcNEeit0dtP9bTmEg")]
     [DisplayName("Additional Fees")]
     [IsoXmlTag("AddtlFees")]
-    public AdditionalFee1? AdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> AdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the original transaction amount.
@@ -122,7 +123,7 @@ public record Transaction78
     [IsoId("_diJaEUKAEeiEPYf_NDteSA")]
     [DisplayName("Original Additional Fees")]
     [IsoXmlTag("OrgnlAddtlFees")]
-    public AdditionalFee1? OriginalAdditionalFees { get; init; }
+    public ValueList<AdditionalFee1> OriginalAdditionalFees { get; init; } = [];
 
     /// <summary>
     /// Balance of the account involved in the card transaction.
@@ -130,7 +131,7 @@ public record Transaction78
     [IsoId("_9qHsfVycEeeve7Je9cXtkQ")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalance1? AccountBalance { get; init; }
+    public ValueList<AccountBalance1> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -164,5 +165,5 @@ public record Transaction78
     [IsoId("_9KQ2cRqlEeqH1IQNpbVpEw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

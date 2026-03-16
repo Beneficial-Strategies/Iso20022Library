@@ -62,7 +62,7 @@ public record CashOption76
     [IsoId("_ypu2UdvZEeqmdMJWobugpw")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat40Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat40Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.

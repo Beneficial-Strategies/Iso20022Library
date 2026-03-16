@@ -30,5 +30,5 @@ public record Sale1
     [IsoId("_MIdVJPJuEeiJn9rM2Znz2w")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public SaleItem2? LineItem { get; init; }
+    public ValueList<SaleItem2> LineItem { get; init; } = [];
 }

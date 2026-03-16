@@ -30,7 +30,7 @@ public record AccountParties13
     [IsoId("_G1n7JyCBEeWhHbfCMWc1cw")]
     [DisplayName("Secondary Owner")]
     [IsoXmlTag("ScndryOwnr")]
-    public InvestmentAccountOwnershipInformation12? SecondaryOwner { get; init; }
+    public ValueList<InvestmentAccountOwnershipInformation12> SecondaryOwner { get; init; } = [];
 
     /// <summary>
     /// Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.
@@ -38,7 +38,7 @@ public record AccountParties13
     [IsoId("_G1n7KSCBEeWhHbfCMWc1cw")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
-    public InvestmentAccountOwnershipInformation12? Beneficiary { get; init; }
+    public ValueList<InvestmentAccountOwnershipInformation12> Beneficiary { get; init; } = [];
 
     /// <summary>
     /// Entity that was given the authority by another entity to act on its behalf.
@@ -46,7 +46,7 @@ public record AccountParties13
     [IsoId("_G1n7KyCBEeWhHbfCMWc1cw")]
     [DisplayName("Power Of Attorney")]
     [IsoXmlTag("PwrOfAttny")]
-    public InvestmentAccountOwnershipInformation12? PowerOfAttorney { get; init; }
+    public ValueList<InvestmentAccountOwnershipInformation12> PowerOfAttorney { get; init; } = [];
 
     /// <summary>
     /// Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.
@@ -54,7 +54,7 @@ public record AccountParties13
     [IsoId("_G1n7LSCBEeWhHbfCMWc1cw")]
     [DisplayName("Legal Guardian")]
     [IsoXmlTag("LglGuardn")]
-    public InvestmentAccountOwnershipInformation12? LegalGuardian { get; init; }
+    public ValueList<InvestmentAccountOwnershipInformation12> LegalGuardian { get; init; } = [];
 
     /// <summary>
     /// Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.
@@ -80,7 +80,7 @@ public record AccountParties13
     [IsoId("_G1n7MSCBEeWhHbfCMWc1cw")]
     [DisplayName("Administrator")]
     [IsoXmlTag("Admstr")]
-    public InvestmentAccountOwnershipInformation12? Administrator { get; init; }
+    public ValueList<InvestmentAccountOwnershipInformation12> Administrator { get; init; } = [];
 
     /// <summary>
     /// Other type of party.
@@ -88,7 +88,7 @@ public record AccountParties13
     [IsoId("_G1n7MyCBEeWhHbfCMWc1cw")]
     [DisplayName("Other Party")]
     [IsoXmlTag("OthrPty")]
-    public ExtendedParty9? OtherParty { get; init; }
+    public ValueList<ExtendedParty9> OtherParty { get; init; } = [];
 
     /// <summary>
     /// Granter role in the hedge funds industry.

@@ -83,7 +83,7 @@ public record FundCashInBreakdown2
     [IsoId("_SjWrldp-Ed-ak6NoX_4Aeg_1648566786")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge16? ChargeDetails { get; init; }
+    public ValueList<Charge16> ChargeDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the commission applied to an order, eg, back-end or front-end commission.
@@ -91,5 +91,5 @@ public record FundCashInBreakdown2
     [IsoId("_SjWrltp-Ed-ak6NoX_4Aeg_-1363801795")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission9? CommissionDetails { get; init; }
+    public ValueList<Commission9> CommissionDetails { get; init; } = [];
 }

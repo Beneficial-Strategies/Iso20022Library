@@ -22,7 +22,7 @@ public record MemberSearchCriteria4
     [IsoId("_jUYH0XSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public MemberIdentification3Choice_? Identification { get; init; }
+    public ValueList<MemberIdentification3Choice_> Identification { get; init; } = [];
 
     /// <summary>
     /// Nature of the relationship a member has with a system.
@@ -30,7 +30,7 @@ public record MemberSearchCriteria4
     [IsoId("_jUYH03SbEeiH1ZOt2UD8vQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public SystemMemberType1Choice_? Type { get; init; }
+    public ValueList<SystemMemberType1Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Status of a member in a system, such as enabled or deleted.
@@ -38,5 +38,5 @@ public record MemberSearchCriteria4
     [IsoId("_jUYH1XSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public SystemMemberStatus1Choice_? Status { get; init; }
+    public ValueList<SystemMemberStatus1Choice_> Status { get; init; } = [];
 }

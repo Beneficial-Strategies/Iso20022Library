@@ -64,7 +64,7 @@ public record TaxEfficientProduct2
     [IsoId("_uXXFQl2_EeiFXdiLi_Nf4A")]
     [DisplayName("Bonus Or Withdrawal")]
     [IsoXmlTag("BnsOrWdrwl")]
-    public BonusWithdrawal1? BonusOrWithdrawal { get; init; }
+    public ValueList<BonusWithdrawal1> BonusOrWithdrawal { get; init; } = [];
 
     /// <summary>
     /// Identification of the investor as assigned by a tax authority.
@@ -80,7 +80,7 @@ public record TaxEfficientProduct2
     [IsoId("_71Xu8E4bEeiQHa-q1Uephw")]
     [DisplayName("Investments To Follow Value")]
     [IsoXmlTag("InvstmtsToFllwVal")]
-    public DateAndAmount2? InvestmentsToFollowValue { get; init; }
+    public ValueList<DateAndAmount2> InvestmentsToFollowValue { get; init; } = [];
 
     /// <summary>
     /// Information about an innovative finance product.
@@ -88,7 +88,7 @@ public record TaxEfficientProduct2
     [IsoId("_FGYnUE4cEeiQHa-q1Uephw")]
     [DisplayName("Innovative Finance")]
     [IsoXmlTag("InnvtvFinc")]
-    public InnovativeFinance1? InnovativeFinance { get; init; }
+    public ValueList<InnovativeFinance1> InnovativeFinance { get; init; } = [];
 
     /// <summary>
     /// Lowest investment amount in the current year, used to calculate a tax deduction amount.
@@ -136,5 +136,5 @@ public record TaxEfficientProduct2
     [IsoId("_GY9CcE4cEeiQHa-q1Uephw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

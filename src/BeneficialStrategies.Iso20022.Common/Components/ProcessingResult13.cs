@@ -47,7 +47,7 @@ public record ProcessingResult13
     [IsoId("_e2jC0SFWEey8XKHwKquEQw")]
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
-    public ErrorDetails2? ErrorDetail { get; init; }
+    public ValueList<ErrorDetails2> ErrorDetail { get; init; } = [];
 
     /// <summary>
     /// Outcome of a previous processing, for example, in response to a duplicate request.
@@ -64,5 +64,5 @@ public record ProcessingResult13
     [IsoId("_MiqNQTHUEeyTT91yHXSlSQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation29? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation29> AdditionalInformation { get; init; } = [];
 }

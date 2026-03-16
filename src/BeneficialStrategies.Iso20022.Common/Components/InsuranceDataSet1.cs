@@ -100,9 +100,7 @@ public record InsuranceDataSet1
     [IsoId("_Tm_549p-Ed-ak6NoX_4Aeg_515013339")]
     [DisplayName("Insurance Conditions")]
     [IsoXmlTag("InsrncConds")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InsuranceConditions { get; init; }
+    public SimpleValueList<IsoMax350Text> InsuranceConditions { get; init; } = [];
 
     /// <summary>
     /// Standard insurance clauses defined by the Institute of London Underwriters (or the American Institute of marine Underwriters).
@@ -110,7 +108,7 @@ public record InsuranceDataSet1
     [IsoId("_Tm_55Np-Ed-ak6NoX_4Aeg_812386949")]
     [DisplayName("Insurance Clauses")]
     [IsoXmlTag("InsrncClauses")]
-    public InsuranceClauses1Code? InsuranceClauses { get; init; }
+    public SimpleValueList<InsuranceClauses1Code> InsuranceClauses { get; init; } = [];
 
     /// <summary>
     /// Party that is covered under the assurance policy.

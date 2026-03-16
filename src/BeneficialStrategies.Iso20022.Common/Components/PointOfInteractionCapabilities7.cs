@@ -22,7 +22,7 @@ public record PointOfInteractionCapabilities7
     [IsoId("_n8Qwoa1yEeWMg5rOByfExw")]
     [DisplayName("Card Read Data")]
     [IsoXmlTag("CardRdData")]
-    public CardDataReading4Code? CardReadData { get; init; }
+    public SimpleValueList<CardDataReading4Code> CardReadData { get; init; } = [];
 
     /// <summary>
     /// Card writing capabilities of the terminal performing the transaction.
@@ -30,7 +30,7 @@ public record PointOfInteractionCapabilities7
     [IsoId("_n8Qwo61yEeWMg5rOByfExw")]
     [DisplayName("Card Write Data")]
     [IsoXmlTag("CardWrtData")]
-    public CardDataReading4Code? CardWriteData { get; init; }
+    public SimpleValueList<CardDataReading4Code> CardWriteData { get; init; } = [];
 
     /// <summary>
     /// Customer and card authentication capabilities available at the ATM.
@@ -38,7 +38,8 @@ public record PointOfInteractionCapabilities7
     [IsoId("_n8Qwpa1yEeWMg5rOByfExw")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderVerificationCapability3Code? Authentication { get; init; }
+    public SimpleValueList<CardholderVerificationCapability3Code> Authentication { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum number of digits the ATM is able to accept when the cardholder enters its PIN.
@@ -82,7 +83,7 @@ public record PointOfInteractionCapabilities7
     [IsoId("_zXT3oK1yEeWMg5rOByfExw")]
     [DisplayName("Withdrawal Media")]
     [IsoXmlTag("WdrwlMdia")]
-    public ATMMediaType1Code? WithdrawalMedia { get; init; }
+    public SimpleValueList<ATMMediaType1Code> WithdrawalMedia { get; init; } = [];
 
     /// <summary>
     /// Type of media the customer is able to deposit in the ATM.
@@ -90,7 +91,7 @@ public record PointOfInteractionCapabilities7
     [IsoId("_432IAK1yEeWMg5rOByfExw")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
-    public ATMMediaType2Code? DepositedMedia { get; init; }
+    public SimpleValueList<ATMMediaType2Code> DepositedMedia { get; init; } = [];
 
     /// <summary>
     /// Capabilities of the terminal to display or print message to the cardholder and the merchant.
@@ -98,5 +99,5 @@ public record PointOfInteractionCapabilities7
     [IsoId("_-GjBgK1yEeWMg5rOByfExw")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
-    public DisplayCapabilities5? MessageCapabilities { get; init; }
+    public ValueList<DisplayCapabilities5> MessageCapabilities { get; init; } = [];
 }

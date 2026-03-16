@@ -68,7 +68,7 @@ public record DebtorActivation4
     [IsoId("_USzBu-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
-    public Party49Choice_? CustomerIdentification { get; init; }
+    public ValueList<Party49Choice_> CustomerIdentification { get; init; } = [];
 
     /// <summary>
     /// Document format type supported to exchange the contracts.
@@ -76,7 +76,7 @@ public record DebtorActivation4
     [IsoId("_USzBveH7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Format Type")]
     [IsoXmlTag("CtrctFrmtTp")]
-    public DocumentFormat2Choice_? ContractFormatType { get; init; }
+    public ValueList<DocumentFormat2Choice_> ContractFormatType { get; init; } = [];
 
     /// <summary>
     /// Code choice external/prop
@@ -86,7 +86,7 @@ public record DebtorActivation4
     [IsoId("_USzBv-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
-    public ContractReference1? ContractReference { get; init; }
+    public ValueList<ContractReference1> ContractReference { get; init; } = [];
 
     /// <summary>
     /// Party to which an amount of money is due.

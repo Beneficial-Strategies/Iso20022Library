@@ -57,5 +57,5 @@ public record MissingMarginData2
     [IsoId("_rud9mVowEe23K4GXSpBSeg")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public MissingMarginTransactionData2? TransactionDetails { get; init; }
+    public ValueList<MissingMarginTransactionData2> TransactionDetails { get; init; } = [];
 }

@@ -88,7 +88,7 @@ public record ATMTransaction24
     [IsoId("_smZr0K4zEeWpsoxRhdX-8A")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action7? Action { get; init; }
+    public ValueList<Action7> Action { get; init; } = [];
 
     /// <summary>
     /// Information about the source account of the transfer.
@@ -112,7 +112,7 @@ public record ATMTransaction24
     [IsoId("_E_40sa4zEeWpsoxRhdX-8A")]
     [DisplayName("Account To")]
     [IsoXmlTag("AcctTo")]
-    public CardAccount13? AccountTo { get; init; }
+    public ValueList<CardAccount13> AccountTo { get; init; } = [];
 
     /// <summary>
     /// Encryption of the destination account information.
@@ -152,7 +152,7 @@ public record ATMTransaction24
     [IsoId("_vu1m8K40EeWpsoxRhdX-8A")]
     [DisplayName("Additional Charge")]
     [IsoXmlTag("AddtlChrg")]
-    public DetailedAmount18? AdditionalCharge { get; init; }
+    public ValueList<DetailedAmount18> AdditionalCharge { get; init; } = [];
 
     /// <summary>
     /// Limit of amounts for the customer.
@@ -221,5 +221,5 @@ public record ATMTransaction24
     [IsoId("_irfP8K41EeWpsoxRhdX-8A")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; }
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

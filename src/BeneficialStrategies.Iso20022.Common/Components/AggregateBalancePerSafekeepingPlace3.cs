@@ -55,7 +55,7 @@ public record AggregateBalancePerSafekeepingPlace3
     [IsoId("_R-_aStp-Ed-ak6NoX_4Aeg_1472551873")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
-    public ActiveOrHistoricCurrencyAndAmount? HoldingValue { get; init; }
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = [];
 
     /// <summary>
     /// Previous total value of a balance of the securities account for a specific financial instrument, expressed in one or more currencies.
@@ -104,7 +104,7 @@ public record AggregateBalancePerSafekeepingPlace3
     [IsoId("_R_JLRdp-Ed-ak6NoX_4Aeg_1472552243")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation2? PriceDetails { get; init; }
+    public ValueList<PriceInformation2> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Currency exchange related to a securities order.
@@ -120,7 +120,7 @@ public record AggregateBalancePerSafekeepingPlace3
     [IsoId("_R_JLR9p-Ed-ak6NoX_4Aeg_1472552294")]
     [DisplayName("Balance Breakdown Details")]
     [IsoXmlTag("BalBrkdwnDtls")]
-    public SubBalanceInformation2? BalanceBreakdownDetails { get; init; }
+    public ValueList<SubBalanceInformation2> BalanceBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.
@@ -128,5 +128,6 @@ public record AggregateBalancePerSafekeepingPlace3
     [IsoId("_R_JLSNp-Ed-ak6NoX_4Aeg_1472552337")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation2? AdditionalBalanceBreakdownDetails { get; init; }
+    public ValueList<AdditionalBalanceInformation2> AdditionalBalanceBreakdownDetails { get; init; } =
+        [];
 }

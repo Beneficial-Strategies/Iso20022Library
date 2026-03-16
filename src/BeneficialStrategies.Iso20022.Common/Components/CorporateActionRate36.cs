@@ -30,7 +30,7 @@ public record CorporateActionRate36
     [IsoId("_265eBxK-EeKJ5uSjVyVvug")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat9Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat9Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -38,7 +38,7 @@ public record CorporateActionRate36
     [IsoId("_265eERK-EeKJ5uSjVyVvug")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat11Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat11Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Public index rate applied to the amount paid to adjust it to inflation.
@@ -54,7 +54,8 @@ public record CorporateActionRate36
     [IsoId("_265eHxK-EeKJ5uSjVyVvug")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat5Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat5Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.
@@ -94,7 +95,7 @@ public record CorporateActionRate36
     [IsoId("_265eSxK-EeKJ5uSjVyVvug")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive.
@@ -102,7 +103,8 @@ public record CorporateActionRate36
     [IsoId("_265eVRK-EeKJ5uSjVyVvug")]
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
-    public RateTypeAndAmountAndStatus11? TaxableIncomePerDividendShare { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus11> TaxableIncomePerDividendShare { get; init; } =
+        [];
 
     /// <summary>
     /// Exchange rate (provided by the issuer) between the dividend or interest rate in the paid currency and the declared dividend or interest rate.

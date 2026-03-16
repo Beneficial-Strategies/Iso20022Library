@@ -84,7 +84,7 @@ public record InvoiceSummary2
     [IsoId("_B3u7v8WkEeuhguwJmlgagQ")]
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
-    public Tax39? TaxTotal { get; init; }
+    public ValueList<Tax39> TaxTotal { get; init; } = [];
 
     /// <summary>
     /// Code that identifies the disposition of the tax reclaim invoice.

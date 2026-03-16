@@ -72,5 +72,5 @@ public record CorporateActionRate29
     [IsoId("_e7pbdfo7EeCVCIR-Uq3c5A")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat2Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat2Choice_> TaxCreditRate { get; init; } = [];
 }

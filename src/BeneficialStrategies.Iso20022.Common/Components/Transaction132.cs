@@ -41,7 +41,7 @@ public record Transaction132
     [IsoId("_wU8JIbXmEeusf7oR9YukCg")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public AdditionalService2? AdditionalService { get; init; }
+    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -49,7 +49,8 @@ public record Transaction132
     [IsoId("_nTf15Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SpecialProgrammeQualification1? SpecialProgrammeQualification { get; init; }
+    public ValueList<SpecialProgrammeQualification1> SpecialProgrammeQualification { get; init; } =
+        [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -74,7 +75,7 @@ public record Transaction132
     [IsoId("_nTf164v5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmounts3? AdditionalAmount { get; init; }
+    public ValueList<AdditionalAmounts3> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -82,7 +83,7 @@ public record Transaction132
     [IsoId("_nTgc8Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; }
+    public ValueList<AdditionalFee2> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Balance of an account.
@@ -90,7 +91,7 @@ public record Transaction132
     [IsoId("_nTgc84v5EeumSPwlS1PkxQ")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalance2? AccountBalance { get; init; }
+    public ValueList<AccountBalance2> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Account information of a statement of account.
@@ -98,7 +99,7 @@ public record Transaction132
     [IsoId("_nTgc9Yv5EeumSPwlS1PkxQ")]
     [DisplayName("Account Statement Data")]
     [IsoXmlTag("AcctStmtData")]
-    public AccountStatementData2? AccountStatementData { get; init; }
+    public ValueList<AccountStatementData2> AccountStatementData { get; init; } = [];
 
     /// <summary>
     /// Identifies a customer account or a relationship to its account affected for debit, inquiries and the source of funding for transfers.
@@ -124,5 +125,5 @@ public record Transaction132
     [IsoId("_nTgc-4v5EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

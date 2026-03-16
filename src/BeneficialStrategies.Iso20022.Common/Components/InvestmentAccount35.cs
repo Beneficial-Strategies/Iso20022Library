@@ -175,7 +175,7 @@ public record InvestmentAccount35
     [IsoId("_FIgcIRKJEeKj15WxqwlXPw")]
     [DisplayName("Funds Details")]
     [IsoXmlTag("FndsDtls")]
-    public FinancialInstrument29? FundsDetails { get; init; }
+    public ValueList<FinancialInstrument29> FundsDetails { get; init; } = [];
 
     /// <summary>
     /// Part of the investment account to or from which cash entries are made.

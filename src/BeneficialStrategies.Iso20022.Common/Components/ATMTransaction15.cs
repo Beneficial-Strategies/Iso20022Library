@@ -64,7 +64,7 @@ public record ATMTransaction15
     [IsoId("_DRHG3a4AEeWL1uap3dNhCQ")]
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount16? DetailedRequestedAmount { get; init; }
+    public ValueList<DetailedAmount16> DetailedRequestedAmount { get; init; } = [];
 
     /// <summary>
     /// Deposited media put in the safe.
@@ -72,7 +72,7 @@ public record ATMTransaction15
     [IsoId("_f3v6oK4BEeWL1uap3dNhCQ")]
     [DisplayName("Deposited Media")]
     [IsoXmlTag("DpstdMdia")]
-    public ATMDepositedMedia1? DepositedMedia { get; init; }
+    public ValueList<ATMDepositedMedia1> DepositedMedia { get; init; } = [];
 
     /// <summary>
     /// True if a receipt has be requested by the customer.

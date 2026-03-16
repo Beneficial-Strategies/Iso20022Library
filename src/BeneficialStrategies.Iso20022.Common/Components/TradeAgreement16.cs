@@ -62,7 +62,7 @@ public record TradeAgreement16
     [IsoId("_I1Xjq-WnEeevU7McUP3D1w")]
     [DisplayName("Additional Reference Document")]
     [IsoXmlTag("AddtlRefDoc")]
-    public DocumentGeneralInformation2? AdditionalReferenceDocument { get; init; }
+    public ValueList<DocumentGeneralInformation2> AdditionalReferenceDocument { get; init; } = [];
 
     /// <summary>
     /// Specifies the applicable Incoterm and associated location.

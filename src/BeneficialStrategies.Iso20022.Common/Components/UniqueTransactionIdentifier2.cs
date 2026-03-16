@@ -32,7 +32,5 @@ public record UniqueTransactionIdentifier2
     [IsoId("_sbuvQ1NgEeOEi5J12GuNGQ")]
     [DisplayName("Prior Unique Transaction Identifier")]
     [IsoXmlTag("PrrUnqTxIdr")]
-    [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? PriorUniqueTransactionIdentifier { get; init; }
+    public SimpleValueList<IsoMax52Text> PriorUniqueTransactionIdentifier { get; init; } = [];
 }

@@ -57,5 +57,5 @@ public record PackageType2
     [IsoId("_DU2NiS9EEeu125Ip9zFcsQ")]
     [DisplayName("Package Block")]
     [IsoXmlTag("PackgBlck")]
-    public ExternallyDefinedData2? PackageBlock { get; init; }
+    public ValueList<ExternallyDefinedData2> PackageBlock { get; init; } = [];
 }

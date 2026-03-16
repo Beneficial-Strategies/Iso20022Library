@@ -22,7 +22,7 @@ public record TransportByAir5
     [IsoId("_E-k68RriEeOVR9VN6fAMUg")]
     [DisplayName("Departure Airport")]
     [IsoXmlTag("DprtureAirprt")]
-    public AirportName1Choice_? DepartureAirport { get; init; }
+    public ValueList<AirportName1Choice_> DepartureAirport { get; init; } = [];
 
     /// <summary>
     /// Place where the goods must arrive.

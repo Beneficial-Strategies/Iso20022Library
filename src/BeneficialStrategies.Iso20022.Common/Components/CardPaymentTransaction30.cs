@@ -76,7 +76,7 @@ public record CardPaymentTransaction30
     [IsoId("_9pCl-zKJEeOqyZqt0rCZLg")]
     [DisplayName("Failure Reason")]
     [IsoXmlTag("FailrRsn")]
-    public FailureReason3Code? FailureReason { get; init; }
+    public SimpleValueList<FailureReason3Code> FailureReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.
@@ -130,7 +130,5 @@ public record CardPaymentTransaction30
     [IsoId("_9pCmBzKJEeOqyZqt0rCZLg")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
 }

@@ -94,5 +94,5 @@ public record TransactionAgents3
     [IsoId("_tXq0IlkyEeGeoaLUQk__nA_-1025208769")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public ProprietaryAgent3? Proprietary { get; init; }
+    public ValueList<ProprietaryAgent3> Proprietary { get; init; } = [];
 }

@@ -30,7 +30,7 @@ public record CashBalance8
     [IsoId("_oZe7lYZ5Eee8r9VKRbnJSg")]
     [DisplayName("Credit Line")]
     [IsoXmlTag("CdtLine")]
-    public CreditLine3? CreditLine { get; init; }
+    public ValueList<CreditLine3> CreditLine { get; init; } = [];
 
     /// <summary>
     /// Amount of money of the cash balance.
@@ -62,5 +62,5 @@ public record CashBalance8
     [IsoId("_oZe7nYZ5Eee8r9VKRbnJSg")]
     [DisplayName("Availability")]
     [IsoXmlTag("Avlbty")]
-    public CashAvailability1? Availability { get; init; }
+    public ValueList<CashAvailability1> Availability { get; init; } = [];
 }

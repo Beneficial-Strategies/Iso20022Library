@@ -49,5 +49,5 @@ public record ReportTransactionResponse1
     [IsoId("_3MsUMN6VEeiwsev40qZGEQ")]
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
-    public PointOfInteractionTransactionReport1? TransactionReport { get; init; }
+    public ValueList<PointOfInteractionTransactionReport1> TransactionReport { get; init; } = [];
 }

@@ -31,5 +31,5 @@ public record CorporateActionDeactivationInstruction1
     [IsoId("_UJuMd9p-Ed-ak6NoX_4Aeg_972006480")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public CorporateActionOption2? OptionDetails { get; init; }
+    public ValueList<CorporateActionOption2> OptionDetails { get; init; } = [];
 }

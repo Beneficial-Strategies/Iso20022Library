@@ -22,9 +22,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0UfocEeCs84bkrlkROA")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; }
+    public SimpleValueList<IsoMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0W_ocEeCs84bkrlkROA")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NarrativeVersion { get; init; }
+    public SimpleValueList<IsoMax350Text> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration.
@@ -42,9 +38,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0ZfocEeCs84bkrlkROA")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public SimpleValueList<IsoMax350Text> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -52,9 +46,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0b_ocEeCs84bkrlkROA")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.
@@ -62,9 +54,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0efocEeCs84bkrlkROA")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; }
+    public SimpleValueList<IsoMax350Text> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
@@ -72,9 +62,7 @@ public record CorporateActionNarrative21
     [IsoId("_zRz0g_ocEeCs84bkrlkROA")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? BasketOrIndexInformation { get; init; }
+    public SimpleValueList<IsoMax350Text> BasketOrIndexInformation { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the certification/breakdown.
@@ -82,7 +70,5 @@ public record CorporateActionNarrative21
     [IsoId("_znH9APocEeCs84bkrlkROA")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CertificationBreakdown { get; init; }
+    public SimpleValueList<IsoMax350Text> CertificationBreakdown { get; init; } = [];
 }

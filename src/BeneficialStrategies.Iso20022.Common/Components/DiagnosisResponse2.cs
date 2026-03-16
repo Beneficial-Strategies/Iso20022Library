@@ -22,9 +22,7 @@ public record DiagnosisResponse2
     [IsoId("_-JB0AQ0sEeqUVL7sB4m7NA")]
     [DisplayName("Logged Sale Identification")]
     [IsoXmlTag("LggdSaleId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LoggedSaleIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> LoggedSaleIdentification { get; init; } = [];
 
     /// <summary>
     /// Status of the POI.
@@ -40,5 +38,5 @@ public record DiagnosisResponse2
     [IsoId("_-JB0BQ0sEeqUVL7sB4m7NA")]
     [DisplayName("Host Status")]
     [IsoXmlTag("HstSts")]
-    public HostStatus1? HostStatus { get; init; }
+    public ValueList<HostStatus1> HostStatus { get; init; } = [];
 }

@@ -140,7 +140,5 @@ public record Trade3
     [IsoId("_CP330YaNEeSzIqahkBT6cQ")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedTradeReference { get; init; }
+    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
 }

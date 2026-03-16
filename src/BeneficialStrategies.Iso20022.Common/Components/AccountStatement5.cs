@@ -108,7 +108,7 @@ public record AccountStatement5
     [IsoId("_bg8rhx77EeSxevWRRWxNAg")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest3? Interest { get; init; }
+    public ValueList<AccountInterest3> Interest { get; init; } = [];
 
     /// <summary>
     /// Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.
@@ -138,7 +138,7 @@ public record AccountStatement5
     [IsoId("_bg8rjR77EeSxevWRRWxNAg")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry7? Entry { get; init; }
+    public ValueList<ReportEntry7> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details of the account statement.

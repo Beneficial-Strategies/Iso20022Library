@@ -22,9 +22,7 @@ public record CorporateActionNarrative33
     [IsoId("_chfbQZKQEeWHWpTQn1FFVg")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InformationToComplyWith { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative33
     [IsoId("_chfbSZKQEeWHWpTQn1FFVg")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? DeliveryDetails { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> DeliveryDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
@@ -42,9 +38,8 @@ public record CorporateActionNarrative33
     [IsoId("_chfbUZKQEeWHWpTQn1FFVg")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? ForeignExchangeInstructionsAdditionalInformation { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
+        [];
 
     /// <summary>
     /// Provides additional details pertaining to the corporate action instruction.
@@ -52,7 +47,6 @@ public record CorporateActionNarrative33
     [IsoId("_chfbWZKQEeWHWpTQn1FFVg")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionAdditionalInformation { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax350Text> InstructionAdditionalInformation { get; init; } =
+        [];
 }

@@ -31,7 +31,7 @@ public record NamedPosition3
     [IsoId("_0pQCQ8KwEeuM4pgP8Vixbg")]
     [DisplayName("General Information")]
     [IsoXmlTag("GnlInf")]
-    public PositionSet16? GeneralInformation { get; init; }
+    public ValueList<PositionSet16> GeneralInformation { get; init; } = [];
 
     /// <summary>
     /// Aggregation of data for all transactions pertaining to the loan side, by Securities Financing Transaction type.
@@ -39,7 +39,7 @@ public record NamedPosition3
     [IsoId("_0pQCRcKwEeuM4pgP8Vixbg")]
     [DisplayName("Loan")]
     [IsoXmlTag("Ln")]
-    public PositionSet17? Loan { get; init; }
+    public ValueList<PositionSet17> Loan { get; init; } = [];
 
     /// <summary>
     /// Aggregation of data for all submissions pertaining to the collateral side, by Securities Financing Transaction type.
@@ -47,7 +47,7 @@ public record NamedPosition3
     [IsoId("_0pQCR8KwEeuM4pgP8Vixbg")]
     [DisplayName("Collateral")]
     [IsoXmlTag("Coll")]
-    public PositionSet18? Collateral { get; init; }
+    public ValueList<PositionSet18> Collateral { get; init; } = [];
 
     /// <summary>
     /// Aggregation of data related to margin reported for cleared Securities Financing Transactions at the level of each pair of entities and portfolio code.
@@ -55,7 +55,7 @@ public record NamedPosition3
     [IsoId("_0pQCScKwEeuM4pgP8Vixbg")]
     [DisplayName("Margin")]
     [IsoXmlTag("Mrgn")]
-    public PositionSet20? Margin { get; init; }
+    public ValueList<PositionSet20> Margin { get; init; } = [];
 
     /// <summary>
     /// Aggregation of data on collateral reuse transactions, at entity level.
@@ -63,5 +63,5 @@ public record NamedPosition3
     [IsoId("_0pQCS8KwEeuM4pgP8Vixbg")]
     [DisplayName("Reuse")]
     [IsoXmlTag("Reuse")]
-    public PositionSet19? Reuse { get; init; }
+    public ValueList<PositionSet19> Reuse { get; init; } = [];
 }

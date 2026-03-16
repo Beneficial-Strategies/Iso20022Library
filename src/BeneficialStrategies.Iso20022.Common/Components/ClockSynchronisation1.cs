@@ -32,5 +32,5 @@ public record ClockSynchronisation1
     [IsoId("_Spmn0EeVEeODR7vDcYOqmg")]
     [DisplayName("Synchronisation Server")]
     [IsoXmlTag("SynctnSvr")]
-    public NetworkParameters2? SynchronisationServer { get; init; }
+    public ValueList<NetworkParameters2> SynchronisationServer { get; init; } = [];
 }

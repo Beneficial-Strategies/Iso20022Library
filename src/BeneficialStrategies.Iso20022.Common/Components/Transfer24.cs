@@ -81,7 +81,7 @@ public record Transfer24
     [IsoId("_-6dwoRgkEeK-_89we2b-bA")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit3? UnitsDetails { get; init; }
+    public ValueList<Unit3> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Total quantity of securities settled.

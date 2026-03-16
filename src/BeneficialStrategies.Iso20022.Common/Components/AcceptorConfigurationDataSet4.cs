@@ -48,7 +48,7 @@ public record AcceptorConfigurationDataSet4
     [IsoId("_aUNpd3InEe299ZbWCkdR_w")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public GenericIdentification176? POIIdentification { get; init; }
+    public ValueList<GenericIdentification176> POIIdentification { get; init; } = [];
 
     /// <summary>
     /// Scope of the configuration contained in the data set.

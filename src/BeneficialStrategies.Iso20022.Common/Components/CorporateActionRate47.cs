@@ -39,7 +39,7 @@ public record CorporateActionRate47
     [IsoId("_TUa0MSeQEeOXAt_43VmZGw")]
     [DisplayName("Requested Taxation Rate")]
     [IsoXmlTag("ReqdTaxtnRate")]
-    public RateAndAmountFormat21Choice_? RequestedTaxationRate { get; init; }
+    public ValueList<RateAndAmountFormat21Choice_> RequestedTaxationRate { get; init; } = [];
 
     /// <summary>
     /// Requested rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.
@@ -47,7 +47,8 @@ public record CorporateActionRate47
     [IsoId("_bZ3RQieQEeOXAt_43VmZGw")]
     [DisplayName("Requested Withholding Of Foreign Tax")]
     [IsoXmlTag("ReqdWhldgOfFrgnTax")]
-    public RateAndAmountFormat21Choice_? RequestedWithholdingOfForeignTax { get; init; }
+    public ValueList<RateAndAmountFormat21Choice_> RequestedWithholdingOfForeignTax { get; init; } =
+        [];
 
     /// <summary>
     /// Requested rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.
@@ -55,5 +56,6 @@ public record CorporateActionRate47
     [IsoId("_bZ3RQyeQEeOXAt_43VmZGw")]
     [DisplayName("Requested Withholding Of Local Tax")]
     [IsoXmlTag("ReqdWhldgOfLclTax")]
-    public RateAndAmountFormat21Choice_? RequestedWithholdingOfLocalTax { get; init; }
+    public ValueList<RateAndAmountFormat21Choice_> RequestedWithholdingOfLocalTax { get; init; } =
+        [];
 }

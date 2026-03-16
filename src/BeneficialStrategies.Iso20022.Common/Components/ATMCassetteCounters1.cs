@@ -46,7 +46,7 @@ public record ATMCassetteCounters1
     [IsoId("_-Ib3gIqhEeS4a4abTJTSSw")]
     [DisplayName("Counter")]
     [IsoXmlTag("Cntr")]
-    public ATMCassetteCounters2? Counter { get; init; }
+    public ValueList<ATMCassetteCounters2> Counter { get; init; } = [];
 
     /// <summary>
     /// Current number of media present in the cassette.

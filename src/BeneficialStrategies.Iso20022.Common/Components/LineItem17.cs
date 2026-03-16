@@ -56,7 +56,7 @@ public record LineItem17
     [IsoId("__wBlOeWlEeevU7McUP3D1w")]
     [DisplayName("Purchase Accounting Account")]
     [IsoXmlTag("PurchsAcctgAcct")]
-    public AccountingAccount1? PurchaseAccountingAccount { get; init; }
+    public ValueList<AccountingAccount1> PurchaseAccountingAccount { get; init; } = [];
 
     /// <summary>
     /// Value of the price, eg, as a currency and value.
@@ -64,7 +64,7 @@ public record LineItem17
     [IsoId("__wBlO-WlEeevU7McUP3D1w")]
     [DisplayName("Net Price")]
     [IsoXmlTag("NetPric")]
-    public CurrencyAndAmount? NetPrice { get; init; }
+    public ValueList<CurrencyAndAmount> NetPrice { get; init; } = [];
 
     /// <summary>
     /// Quantity and conversion factor on which the net price is based for this line item product and/or service.
@@ -80,7 +80,7 @@ public record LineItem17
     [IsoId("__wBlP-WlEeevU7McUP3D1w")]
     [DisplayName("Net Price Allowance Charge")]
     [IsoXmlTag("NetPricAllwncChrg")]
-    public LineItemAllowanceCharge3? NetPriceAllowanceCharge { get; init; }
+    public ValueList<LineItemAllowanceCharge3> NetPriceAllowanceCharge { get; init; } = [];
 
     /// <summary>
     /// Net weight of the product.
@@ -96,7 +96,7 @@ public record LineItem17
     [IsoId("__wBlQ-WlEeevU7McUP3D1w")]
     [DisplayName("Gross Price")]
     [IsoXmlTag("GrssPric")]
-    public CurrencyAndAmount? GrossPrice { get; init; }
+    public ValueList<CurrencyAndAmount> GrossPrice { get; init; } = [];
 
     /// <summary>
     /// Quantity and conversion factor on which the gross price is based for this line item product and/or service.
@@ -120,7 +120,7 @@ public record LineItem17
     [IsoId("__wBlSeWlEeevU7McUP3D1w")]
     [DisplayName("Logistics Charge")]
     [IsoXmlTag("LogstcsChrg")]
-    public ChargesDetails4? LogisticsCharge { get; init; }
+    public ValueList<ChargesDetails4> LogisticsCharge { get; init; } = [];
 
     /// <summary>
     /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
@@ -128,7 +128,7 @@ public record LineItem17
     [IsoId("__wBlS-WlEeevU7McUP3D1w")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public LineItemTax1? Tax { get; init; }
+    public ValueList<LineItemTax1> Tax { get; init; } = [];
 
     /// <summary>
     /// Allowance or charge specified for this line item.
@@ -136,7 +136,7 @@ public record LineItem17
     [IsoId("__wBlTeWlEeevU7McUP3D1w")]
     [DisplayName("Allowance Charge")]
     [IsoXmlTag("AllwncChrg")]
-    public LineItemAllowanceCharge3? AllowanceCharge { get; init; }
+    public ValueList<LineItemAllowanceCharge3> AllowanceCharge { get; init; } = [];
 
     /// <summary>
     /// Modification on the value of goods and / or services. For example: rebate, discount, surcharge.
@@ -144,7 +144,7 @@ public record LineItem17
     [IsoId("__wBlT-WlEeevU7McUP3D1w")]
     [DisplayName("Financial Adjustment")]
     [IsoXmlTag("FinAdjstmnt")]
-    public Adjustment6? FinancialAdjustment { get; init; }
+    public ValueList<Adjustment6> FinancialAdjustment { get; init; } = [];
 
     /// <summary>
     /// Quantity billed for this line item.
@@ -177,7 +177,7 @@ public record LineItem17
     [IsoId("__wBlV-WlEeevU7McUP3D1w")]
     [DisplayName("Packaging")]
     [IsoXmlTag("Packgng")]
-    public Packaging1? Packaging { get; init; }
+    public ValueList<Packaging1> Packaging { get; init; } = [];
 
     /// <summary>
     /// Quantity that is free of charge for this line item.
@@ -268,5 +268,5 @@ public record LineItem17
     [IsoId("__wBlbeWlEeevU7McUP3D1w")]
     [DisplayName("Included Note")]
     [IsoXmlTag("InclNote")]
-    public AdditionalInformation1? IncludedNote { get; init; }
+    public ValueList<AdditionalInformation1> IncludedNote { get; init; } = [];
 }

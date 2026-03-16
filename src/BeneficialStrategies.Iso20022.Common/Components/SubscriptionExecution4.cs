@@ -42,7 +42,7 @@ public record SubscriptionExecution4
     [IsoId("_VU0tp9p-Ed-ak6NoX_4Aeg_554712170")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType1? OrderType { get; init; }
+    public ValueList<FundOrderType1> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class to which an investment fund order execution is related.
@@ -132,7 +132,7 @@ public record SubscriptionExecution4
     [IsoId("_VU-eptp-Ed-ak6NoX_4Aeg_556559608")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms4? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms4> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

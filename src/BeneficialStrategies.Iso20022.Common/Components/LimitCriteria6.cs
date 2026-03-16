@@ -32,7 +32,7 @@ public record LimitCriteria6
     [IsoId("_FZ5lWW4-EeiU9cctagi5ow")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public LimitSearchCriteria6? SearchCriteria { get; init; }
+    public ValueList<LimitSearchCriteria6> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Defines the expected limit report.

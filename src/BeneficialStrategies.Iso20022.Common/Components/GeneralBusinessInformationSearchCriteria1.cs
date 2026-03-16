@@ -22,9 +22,7 @@ public record GeneralBusinessInformationSearchCriteria1
     [IsoId("_59y2MZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public SimpleValueList<IsoMax35Text> Reference { get; init; } = [];
 
     /// <summary>
     /// Subject line of an item of general business information, summarizing the topic and intended destination of the information.
@@ -32,7 +30,7 @@ public record GeneralBusinessInformationSearchCriteria1
     [IsoId("_59y2M5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
-    public CharacterSearch1Choice_? Subject { get; init; }
+    public ValueList<CharacterSearch1Choice_> Subject { get; init; } = [];
 
     /// <summary>
     /// Further information about the criticality or importance of a general business information system.
@@ -40,5 +38,5 @@ public record GeneralBusinessInformationSearchCriteria1
     [IsoId("_59y2NZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
-    public InformationQualifierType1? Qualifier { get; init; }
+    public ValueList<InformationQualifierType1> Qualifier { get; init; } = [];
 }

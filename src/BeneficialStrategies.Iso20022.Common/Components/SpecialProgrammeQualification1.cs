@@ -32,5 +32,5 @@ public record SpecialProgrammeQualification1
     [IsoId("_oRYU8EU9Eeea-M6VZkEPUw")]
     [DisplayName("Detail")]
     [IsoXmlTag("Dtl")]
-    public SpecialProgrammeDetails1? Detail { get; init; }
+    public ValueList<SpecialProgrammeDetails1> Detail { get; init; } = [];
 }

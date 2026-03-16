@@ -103,7 +103,7 @@ public record CardTransactionContext2
     [IsoId("_tOOvIHsJEeSR68OJvMfxJQ")]
     [DisplayName("Supported Option")]
     [IsoXmlTag("SpprtdOptn")]
-    public SupportedPaymentOption1Code? SupportedOption { get; init; }
+    public SimpleValueList<SupportedPaymentOption1Code> SupportedOption { get; init; } = [];
 
     /// <summary>
     /// Data used to assign specific condition such as liability shift or preferential interchange fees.
@@ -111,7 +111,7 @@ public record CardTransactionContext2
     [IsoId("_-BLu8HsJEeSR68OJvMfxJQ")]
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public CardTransactionCondition1? SpecialConditions { get; init; }
+    public ValueList<CardTransactionCondition1> SpecialConditions { get; init; } = [];
 
     /// <summary>
     /// Indicates to the issuer the level of risk of the transaction.
@@ -119,5 +119,5 @@ public record CardTransactionContext2
     [IsoId("_vLIrQHsKEeSR68OJvMfxJQ")]
     [DisplayName("Risk Indicator")]
     [IsoXmlTag("RskInd")]
-    public CardTransactionRiskIndicator1? RiskIndicator { get; init; }
+    public ValueList<CardTransactionRiskIndicator1> RiskIndicator { get; init; } = [];
 }

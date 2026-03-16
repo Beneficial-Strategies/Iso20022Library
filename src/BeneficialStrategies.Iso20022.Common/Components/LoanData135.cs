@@ -127,7 +127,7 @@ public record LoanData135
     [IsoId("_gI_l6cg4Eeu4ecZgAYuz5w")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
-    public ContractTerm7Choice_? Term { get; init; }
+    public ValueList<ContractTerm7Choice_> Term { get; init; } = [];
 
     /// <summary>
     /// Interest rate of the loan.

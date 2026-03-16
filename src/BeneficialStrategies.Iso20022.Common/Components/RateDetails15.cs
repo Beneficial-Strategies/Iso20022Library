@@ -63,7 +63,7 @@ public record RateDetails15
     [IsoId("_prhOiSePEeOXAt_43VmZGw")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat8Choice_? GrossDividendRate { get; init; }
+    public ValueList<GrossDividendRateFormat8Choice_> GrossDividendRate { get; init; } = [];
 
     /// <summary>
     /// Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.
@@ -87,7 +87,8 @@ public record RateDetails15
     [IsoId("_prhOjyePEeOXAt_43VmZGw")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat2Choice_? InterestRateUsedForPayment { get; init; }
+    public ValueList<InterestRateUsedForPaymentFormat2Choice_> InterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
@@ -95,7 +96,7 @@ public record RateDetails15
     [IsoId("_prhOkSePEeOXAt_43VmZGw")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat10Choice_? NetDividendRate { get; init; }
+    public ValueList<NetDividendRateFormat10Choice_> NetDividendRate { get; init; } = [];
 
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
@@ -136,7 +137,7 @@ public record RateDetails15
     [IsoId("_prhOmyePEeOXAt_43VmZGw")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat2Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat2Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of the gross dividend rate on which tax must be paid.
@@ -144,7 +145,7 @@ public record RateDetails15
     [IsoId("_prhOnSePEeOXAt_43VmZGw")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+    public ValueList<RateTypeAndAmountAndStatus6> TaxRelatedRate { get; init; } = [];
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.
@@ -152,7 +153,7 @@ public record RateDetails15
     [IsoId("_prhOnyePEeOXAt_43VmZGw")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateFormat11Choice_? WithholdingTaxRate { get; init; }
+    public ValueList<RateFormat11Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.
@@ -186,7 +187,7 @@ public record RateDetails15
     [IsoId("_prhOpyePEeOXAt_43VmZGw")]
     [DisplayName("Withholding Of Foreign Tax")]
     [IsoXmlTag("WhldgOfFrgnTax")]
-    public RateAndAmountFormat21Choice_? WithholdingOfForeignTax { get; init; }
+    public ValueList<RateAndAmountFormat21Choice_> WithholdingOfForeignTax { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.
@@ -194,7 +195,7 @@ public record RateDetails15
     [IsoId("_prhOqSePEeOXAt_43VmZGw")]
     [DisplayName("Withholding Of Local Tax")]
     [IsoXmlTag("WhldgOfLclTax")]
-    public RateAndAmountFormat21Choice_? WithholdingOfLocalTax { get; init; }
+    public ValueList<RateAndAmountFormat21Choice_> WithholdingOfLocalTax { get; init; } = [];
 
     /// <summary>
     /// Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.

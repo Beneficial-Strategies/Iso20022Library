@@ -22,9 +22,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8Mtp-Ed-ak6NoX_4Aeg_-1990132028")]
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public SimpleValueList<IsoMax350Text> DeclarationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.
@@ -32,9 +30,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8M9p-Ed-ak6NoX_4Aeg_1415487030")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; }
+    public SimpleValueList<IsoMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.
@@ -42,9 +38,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8NNp-Ed-ak6NoX_4Aeg_-1922714840")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NarrativeVersion { get; init; }
+    public SimpleValueList<IsoMax350Text> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration.
@@ -52,9 +46,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8Ndp-Ed-ak6NoX_4Aeg_-1664129143")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public SimpleValueList<IsoMax350Text> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.
@@ -62,9 +54,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8Ntp-Ed-ak6NoX_4Aeg_1415487091")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationConditions { get; init; }
+    public SimpleValueList<IsoMax350Text> InformationConditions { get; init; } = [];
 
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or SIL (Sophisticated Investor Letter) to be provided.
@@ -72,9 +62,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8N9p-Ed-ak6NoX_4Aeg_1416407124")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationToComplyWith { get; init; }
+    public SimpleValueList<IsoMax350Text> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -82,9 +70,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8ONp-Ed-ak6NoX_4Aeg_-1574546412")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PartyContactNarrative { get; init; }
+    public SimpleValueList<IsoMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
@@ -92,9 +78,7 @@ public record CorporateActionNarrative4
     [IsoId("_ULg8Odp-Ed-ak6NoX_4Aeg_1416407093")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TaxationConditions { get; init; }
+    public SimpleValueList<IsoMax350Text> TaxationConditions { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
@@ -102,7 +86,5 @@ public record CorporateActionNarrative4
     [IsoId("_ULqGINp-Ed-ak6NoX_4Aeg_594668071")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? BasketOrIndexInformation { get; init; }
+    public SimpleValueList<IsoMax350Text> BasketOrIndexInformation { get; init; } = [];
 }

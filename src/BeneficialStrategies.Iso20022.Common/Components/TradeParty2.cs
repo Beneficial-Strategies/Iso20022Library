@@ -38,5 +38,5 @@ public record TradeParty2
     [IsoId("_4Xc2VdOdEeS75MhTUaTyUQ")]
     [DisplayName("Tax Party")]
     [IsoXmlTag("TaxPty")]
-    public TaxParty3? TaxParty { get; init; }
+    public ValueList<TaxParty3> TaxParty { get; init; } = [];
 }

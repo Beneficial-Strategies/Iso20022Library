@@ -89,7 +89,7 @@ public record Security15
     [IsoId("_MeGL4c1VEem4K5qLxnWwMA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public SecuritiesLendingType3Choice_? Type { get; init; }
+    public ValueList<SecuritiesLendingType3Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Indication whether the borrower has exclusive access to borrow from the lender&apos;s securities portfolio.

@@ -62,7 +62,7 @@ public record AggregateBalancePerSafekeepingPlace11
     [IsoId("_K14CpeaOEd-q8fx_Zl_34A")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public PriceInformation5? PriceDetails { get; init; }
+    public ValueList<PriceInformation5> PriceDetails { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -70,7 +70,7 @@ public record AggregateBalancePerSafekeepingPlace11
     [IsoId("_K14Cp-aOEd-q8fx_Zl_34A")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms14? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms14> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
@@ -103,7 +103,7 @@ public record AggregateBalancePerSafekeepingPlace11
     [IsoId("_K14Cr-aOEd-q8fx_Zl_34A")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown3? QuantityBreakdown { get; init; }
+    public ValueList<QuantityBreakdown3> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.
@@ -111,7 +111,7 @@ public record AggregateBalancePerSafekeepingPlace11
     [IsoId("_K14CseaOEd-q8fx_Zl_34A")]
     [DisplayName("Balance Breakdown")]
     [IsoXmlTag("BalBrkdwn")]
-    public SubBalanceInformation5? BalanceBreakdown { get; init; }
+    public ValueList<SubBalanceInformation5> BalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
@@ -119,7 +119,7 @@ public record AggregateBalancePerSafekeepingPlace11
     [IsoId("_K14Cs-aOEd-q8fx_Zl_34A")]
     [DisplayName("Additional Balance Breakdown")]
     [IsoXmlTag("AddtlBalBrkdwn")]
-    public AdditionalBalanceInformation5? AdditionalBalanceBreakdown { get; init; }
+    public ValueList<AdditionalBalanceInformation5> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the holding.

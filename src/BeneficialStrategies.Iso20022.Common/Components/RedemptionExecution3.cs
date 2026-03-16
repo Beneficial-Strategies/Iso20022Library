@@ -42,7 +42,7 @@ public record RedemptionExecution3
     [IsoId("_VWwnUtp-Ed-ak6NoX_4Aeg_857435388")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType1? OrderType { get; init; }
+    public ValueList<FundOrderType1> OrderType { get; init; } = [];
 
     /// <summary>
     /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
@@ -149,7 +149,7 @@ public record RedemptionExecution3
     [IsoId("_VW6YVdp-Ed-ak6NoX_4Aeg_857435502")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms4? ForeignExchangeDetails { get; init; }
+    public ValueList<ForeignExchangeTerms4> ForeignExchangeDetails { get; init; } = [];
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

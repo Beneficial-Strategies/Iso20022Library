@@ -32,9 +32,7 @@ public record Event1
     [IsoId("_Uslo-9p-Ed-ak6NoX_4Aeg_871066371")]
     [DisplayName("Event Parameter")]
     [IsoXmlTag("EvtParam")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EventParameter { get; init; }
+    public SimpleValueList<IsoMax35Text> EventParameter { get; init; } = [];
 
     /// <summary>
     /// Free text used to describe an event which occurred in a system.

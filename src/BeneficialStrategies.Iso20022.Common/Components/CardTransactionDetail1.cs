@@ -30,7 +30,7 @@ public record CardTransactionDetail1
     [IsoId("_N1G2sHs2EeSTS7uHCe8FPQ")]
     [DisplayName("Additional Amounts")]
     [IsoXmlTag("AddtlAmts")]
-    public DetailedAmount10? AdditionalAmounts { get; init; }
+    public ValueList<DetailedAmount10> AdditionalAmounts { get; init; } = [];
 
     /// <summary>
     /// Reason to send an card acquirer to issuer message.

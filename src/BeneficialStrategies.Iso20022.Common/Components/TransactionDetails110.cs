@@ -22,9 +22,7 @@ public record TransactionDetails110
     [IsoId("_vE74g832Eee5nJBZsW8MFQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
-    [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TradeIdentification { get; init; }
+    public SimpleValueList<IsoRestrictedFINXMax16Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.

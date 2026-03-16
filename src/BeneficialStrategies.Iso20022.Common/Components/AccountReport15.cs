@@ -46,7 +46,7 @@ public record AccountReport15
     [IsoId("_xL0btQ1iEeKGXqvMN6jpiw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate2? Mandate { get; init; }
+    public ValueList<OperationMandate2> Mandate { get; init; } = [];
 
     /// <summary>
     /// Definition of a group of parties.
@@ -54,7 +54,7 @@ public record AccountReport15
     [IsoId("_ahYo0A4XEeKGXqvMN6jpiw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
-    public Group1? Group { get; init; }
+    public ValueList<Group1> Group { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the account used as a reference for the opening of another account.

@@ -46,5 +46,5 @@ public record NetworkManagementResponse2
     [IsoId("_n4bnl4v8EeumSPwlS1PkxQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

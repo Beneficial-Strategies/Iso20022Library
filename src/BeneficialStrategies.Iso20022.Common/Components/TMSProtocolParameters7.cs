@@ -68,9 +68,7 @@ public record TMSProtocolParameters7
     [IsoId("_jM3jq3IQEe2OqYulmHWukQ")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the terminal manager host.
@@ -127,7 +125,7 @@ public record TMSProtocolParameters7
     [IsoId("_jM5Y1XIQEe2OqYulmHWukQ")]
     [DisplayName("Message Item")]
     [IsoXmlTag("MsgItm")]
-    public MessageItemCondition2? MessageItem { get; init; }
+    public ValueList<MessageItemCondition2> MessageItem { get; init; } = [];
 
     /// <summary>
     /// List of types that the receiver supports and that the sender could use as type of an ExternallyDefinedData message component.
@@ -135,7 +133,5 @@ public record TMSProtocolParameters7
     [IsoId("_jM5Y13IQEe2OqYulmHWukQ")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ExternallyTypeSupported { get; init; }
+    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
 }

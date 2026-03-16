@@ -91,7 +91,7 @@ public record CryptographicKey15
     [IsoId("_4y6YTy8hEeu125Ip9zFcsQ")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
-    public KeyUsage1Code? Function { get; init; }
+    public SimpleValueList<KeyUsage1Code> Function { get; init; } = [];
 
     /// <summary>
     /// Date and time on which the key must be activated.
@@ -134,5 +134,5 @@ public record CryptographicKey15
     [IsoId("_4y6YWS8hEeu125Ip9zFcsQ")]
     [DisplayName("Additional Management Information")]
     [IsoXmlTag("AddtlMgmtInf")]
-    public GenericInformation1? AdditionalManagementInformation { get; init; }
+    public ValueList<GenericInformation1> AdditionalManagementInformation { get; init; } = [];
 }

@@ -112,5 +112,5 @@ public record IntraPositionMovementDetails7
     [IsoId("_mKkkof7xEeCvPoRGOxRobQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

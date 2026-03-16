@@ -206,7 +206,7 @@ public record CorporateActionSD21
     [IsoId("_ALAoU-aKEei5aPS232E3Mw")]
     [DisplayName("Certificate Details")]
     [IsoXmlTag("CertDtls")]
-    public CorporateActionSD15? CertificateDetails { get; init; }
+    public ValueList<CorporateActionSD15> CertificateDetails { get; init; } = [];
 
     /// <summary>
     /// Country of issue used to determine whether the electable option requires tax Exempt or wire information when sending EDS elections via the CAIN message type.

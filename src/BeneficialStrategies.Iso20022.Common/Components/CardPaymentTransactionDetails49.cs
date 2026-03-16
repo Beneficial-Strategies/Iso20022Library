@@ -95,7 +95,7 @@ public record CardPaymentTransactionDetails49
     [IsoId("_WV2FMy83Eeu125Ip9zFcsQ")]
     [DisplayName("On Line Reason")]
     [IsoXmlTag("OnLineRsn")]
-    public OnLineReason1Code? OnLineReason { get; init; }
+    public SimpleValueList<OnLineReason1Code> OnLineReason { get; init; } = [];
 
     /// <summary>
     /// Transaction category level on an unattended POI (Point Of Interaction).
@@ -154,7 +154,7 @@ public record CardPaymentTransactionDetails49
     [IsoId("_WV2FQS83Eeu125Ip9zFcsQ")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public Product6? SaleItem { get; init; }
+    public ValueList<Product6> SaleItem { get; init; } = [];
 
     /// <summary>
     /// Location of the delivery, for instance pump number or parking bay.
@@ -172,7 +172,7 @@ public record CardPaymentTransactionDetails49
     [IsoId("_WV2FRS83Eeu125Ip9zFcsQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ExternallyDefinedData2? AdditionalInformation { get; init; }
+    public ValueList<ExternallyDefinedData2> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Data related to an integrated circuit card application.

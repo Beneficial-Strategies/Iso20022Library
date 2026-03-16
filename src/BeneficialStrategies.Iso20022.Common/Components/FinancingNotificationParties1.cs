@@ -38,5 +38,5 @@ public record FinancingNotificationParties1
     [IsoId("_OTMxOTc0-AOSNFX-0262747")]
     [DisplayName("Acknowledgement Receiver")]
     [IsoXmlTag("AckRcvr")]
-    public QualifiedPartyIdentification1? AcknowledgementReceiver { get; init; }
+    public ValueList<QualifiedPartyIdentification1> AcknowledgementReceiver { get; init; } = [];
 }

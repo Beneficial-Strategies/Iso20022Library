@@ -108,7 +108,7 @@ public record Undertaking4
     [IsoId("_9zYbYnltEeG7BsjMvd1mEw_-1413623178")]
     [DisplayName("Additional Party")]
     [IsoXmlTag("AddtlPty")]
-    public PartyAndType1? AdditionalParty { get; init; }
+    public ValueList<PartyAndType1> AdditionalParty { get; init; } = [];
 
     /// <summary>
     /// Rules and laws governing the requested local undertaking.
@@ -124,7 +124,7 @@ public record Undertaking4
     [IsoId("_NC1go31qEeGlwNeVP9egyg")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
-    public UnderlyingTradeTransaction1? UnderlyingTransaction { get; init; }
+    public ValueList<UnderlyingTradeTransaction1> UnderlyingTransaction { get; init; } = [];
 
     /// <summary>
     /// Presentation details related to the undertaking.
@@ -182,7 +182,7 @@ public record Undertaking4
     [IsoId("_WEveQxSBEeKyNbjzgBLUcA")]
     [DisplayName("Automatic Amount Variation")]
     [IsoXmlTag("AutomtcAmtVartn")]
-    public AutomaticVariation1? AutomaticAmountVariation { get; init; }
+    public ValueList<AutomaticVariation1> AutomaticAmountVariation { get; init; } = [];
 
     /// <summary>
     /// Details of the communication channel.

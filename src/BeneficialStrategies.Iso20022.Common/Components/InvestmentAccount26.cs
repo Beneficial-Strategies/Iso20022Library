@@ -193,7 +193,7 @@ public record InvestmentAccount26
     [IsoId("_RzhKFdp-Ed-ak6NoX_4Aeg_-1102970680")]
     [DisplayName("Fund Details")]
     [IsoXmlTag("FndDtls")]
-    public FinancialInstrument10? FundDetails { get; init; }
+    public ValueList<FinancialInstrument10> FundDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.

@@ -191,7 +191,7 @@ public record PaymentTransaction146
     [IsoId("_OwAjTRlWEe2Do_UtrNmb2g")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
-    public Charges12? ChargesInformation { get; init; }
+    public ValueList<Charges12> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Unique reference, as assigned by the clearing system, to unambiguously identify the return instruction.
@@ -233,7 +233,7 @@ public record PaymentTransaction146
     [IsoId("_OwAjVxlWEe2Do_UtrNmb2g")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
-    public PaymentReturnReason6? ReturnReasonInformation { get; init; }
+    public ValueList<PaymentReturnReason6> ReturnReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
@@ -249,5 +249,5 @@ public record PaymentTransaction146
     [IsoId("_OwAjWxlWEe2Do_UtrNmb2g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

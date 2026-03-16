@@ -132,7 +132,7 @@ public record InvestmentAccount74
     [IsoId("_QqT0g5S8EemqYPWMBuVawg")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment4? ReinvestmentDetails { get; init; }
+    public ValueList<Reinvestment4> ReinvestmentDetails { get; init; } = [];
 
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed, that is, either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.
@@ -148,7 +148,7 @@ public record InvestmentAccount74
     [IsoId("_QqT0h5S8EemqYPWMBuVawg")]
     [DisplayName("Tax Reporting")]
     [IsoXmlTag("TaxRptg")]
-    public TaxReporting3? TaxReporting { get; init; }
+    public ValueList<TaxReporting3> TaxReporting { get; init; } = [];
 
     /// <summary>
     /// Details of the letter of intent.
@@ -193,7 +193,7 @@ public record InvestmentAccount74
     [IsoId("_QqT0kZS8EemqYPWMBuVawg")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrument87? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrument87> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
@@ -338,7 +338,7 @@ public record InvestmentAccount74
     [IsoId("_QqT0tZS8EemqYPWMBuVawg")]
     [DisplayName("Investor Profile")]
     [IsoXmlTag("InvstrPrfl")]
-    public InvestorProfile2? InvestorProfile { get; init; }
+    public ValueList<InvestorProfile2> InvestorProfile { get; init; } = [];
 
     /// <summary>
     /// Fiscal year, when not the same as the calendar year.

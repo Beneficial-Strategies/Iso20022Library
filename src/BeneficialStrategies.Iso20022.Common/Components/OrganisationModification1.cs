@@ -95,7 +95,7 @@ public record OrganisationModification1
     [IsoId("_Ph-UNA4iEeK3IMoVvcTkkg")]
     [DisplayName("Representative Officer")]
     [IsoXmlTag("RprtvOffcr")]
-    public PartyModification1? RepresentativeOfficer { get; init; }
+    public ValueList<PartyModification1> RepresentativeOfficer { get; init; } = [];
 
     /// <summary>
     /// Person responsible of the treasury department within the customer’s organisation.
@@ -111,7 +111,7 @@ public record OrganisationModification1
     [IsoId("_Ph-UQg4iEeK3IMoVvcTkkg")]
     [DisplayName("Main Mandate Holder")]
     [IsoXmlTag("MainMndtHldr")]
-    public PartyModification1? MainMandateHolder { get; init; }
+    public ValueList<PartyModification1> MainMandateHolder { get; init; } = [];
 
     /// <summary>
     /// Person that may be the potential sender of a message related to the life cycle of the account.
@@ -119,7 +119,7 @@ public record OrganisationModification1
     [IsoId("_Ph-USQ4iEeK3IMoVvcTkkg")]
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyModification1? Sender { get; init; }
+    public ValueList<PartyModification1> Sender { get; init; } = [];
 
     /// <summary>
     /// Person that is officially and legally mandated to represent the organisation. Depending on legislation, the legal representative(s) might for instance be assigned by the Board, identified in the by-laws of the organisation, be publicly announced in the official journal of a country, etc.
@@ -127,5 +127,5 @@ public record OrganisationModification1
     [IsoId("_Ph-UUA4iEeK3IMoVvcTkkg")]
     [DisplayName("Legal Representative")]
     [IsoXmlTag("LglRprtv")]
-    public PartyModification1? LegalRepresentative { get; init; }
+    public ValueList<PartyModification1> LegalRepresentative { get; init; } = [];
 }

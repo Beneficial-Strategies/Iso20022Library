@@ -166,7 +166,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGFVoyEe23K4GXSpBSeg")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public CompareDate3? SettlementDate { get; init; }
+    public ValueList<CompareDate3> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the delivery types are matching or not.
@@ -190,7 +190,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGG1oyEe23K4GXSpBSeg")]
     [DisplayName("Price Schedule Unadjusted Effective Date")]
     [IsoXmlTag("PricSchdlUadjstdFctvDt")]
-    public CompareDate3? PriceScheduleUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> PriceScheduleUnadjustedEffectiveDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -198,7 +198,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGHVoyEe23K4GXSpBSeg")]
     [DisplayName("Price Schedule Unadjusted End Date")]
     [IsoXmlTag("PricSchdlUadjstdEndDt")]
-    public CompareDate3? PriceScheduleUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> PriceScheduleUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the transaction price in effect between the unadjusted effective and end date are matching or not.
@@ -206,7 +206,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGH1oyEe23K4GXSpBSeg")]
     [DisplayName("Transaction Schedule Price")]
     [IsoXmlTag("TxSchdlPric")]
-    public CompareUnitPrice5? TransactionSchedulePrice { get; init; }
+    public ValueList<CompareUnitPrice5> TransactionSchedulePrice { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the package prices are matching or not.
@@ -230,7 +230,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGJVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount First Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlAmtFrstLegUadjstdFctvDt")]
-    public CompareDate3? NotionalAmountFirstLegUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> NotionalAmountFirstLegUnadjustedEffectiveDate { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -238,7 +239,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGJ1oyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount First Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlAmtFrstLegUadjstdEndDt")]
-    public CompareDate3? NotionalAmountFirstLegUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> NotionalAmountFirstLegUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the notional amount in effect on associated effective date of first legs are matching or not.
@@ -246,7 +247,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGKVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount First Leg Schedule Amount")]
     [IsoXmlTag("NtnlAmtFrstLegSchdlAmt")]
-    public CompareAmountAndDirection3? NotionalAmountFirstLegScheduleAmount { get; init; }
+    public ValueList<CompareAmountAndDirection3> NotionalAmountFirstLegScheduleAmount { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the notional quantity first legs are matching or not.
@@ -262,7 +264,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGLVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity First Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlQtyFrstLegUadjstdFctvDt")]
-    public CompareDate3? NotionalQuantityFirstLegUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> NotionalQuantityFirstLegUnadjustedEffectiveDate { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -270,7 +273,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGL1oyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity First Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlQtyFrstLegUadjstdEndDt")]
-    public CompareDate3? NotionalQuantityFirstLegUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> NotionalQuantityFirstLegUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the notional quantity in effect on associated effective date of first legs are matching or not.
@@ -278,7 +281,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGMVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity First Leg Schedule Quantity")]
     [IsoXmlTag("NtnlQtyFrstLegSchdlQty")]
-    public CompareLongFraction19DecimalNumber1? NotionalQuantityFirstLegScheduleQuantity { get; init; }
+    public ValueList<CompareLongFraction19DecimalNumber1> NotionalQuantityFirstLegScheduleQuantity { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the notional amount second legs are matching or not.
@@ -294,7 +298,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGNVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount Second Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlAmtScndLegUadjstdFctvDt")]
-    public CompareDate3? NotionalAmountSecondLegUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> NotionalAmountSecondLegUnadjustedEffectiveDate { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -302,7 +307,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGN1oyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount Second Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlAmtScndLegUadjstdEndDt")]
-    public CompareDate3? NotionalAmountSecondLegUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> NotionalAmountSecondLegUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the notional amount in effect on associated effective date of second legs are matching or not.
@@ -310,7 +315,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGOVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Amount Second Leg Schedule Amount")]
     [IsoXmlTag("NtnlAmtScndLegSchdlAmt")]
-    public CompareAmountAndDirection3? NotionalAmountSecondLegScheduleAmount { get; init; }
+    public ValueList<CompareAmountAndDirection3> NotionalAmountSecondLegScheduleAmount { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the notional quantity second legs are matching or not.
@@ -326,7 +332,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGPVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity Second Leg Unadjusted Effective Date")]
     [IsoXmlTag("NtnlQtyScndLegUadjstdFctvDt")]
-    public CompareDate3? NotionalQuantitySecondLegUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> NotionalQuantitySecondLegUnadjustedEffectiveDate { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -334,7 +341,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGP1oyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity Second Leg Unadjusted End Date")]
     [IsoXmlTag("NtnlQtyScndLegUadjstdEndDt")]
-    public CompareDate3? NotionalQuantitySecondLegUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> NotionalQuantitySecondLegUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the notional quantity in effect on associated effective date of second legs are matching or not.
@@ -342,7 +349,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGQVoyEe23K4GXSpBSeg")]
     [DisplayName("Notional Quantity Second Leg Schedule Quantity")]
     [IsoXmlTag("NtnlQtyScndLegSchdlQty")]
-    public CompareLongFraction19DecimalNumber1? NotionalQuantitySecondLegScheduleQuantity { get; init; }
+    public ValueList<CompareLongFraction19DecimalNumber1> NotionalQuantitySecondLegScheduleQuantity { get; init; } =
+        [];
 
     /// <summary>
     /// Payment related to elements not reported in dedicated fields.
@@ -350,7 +358,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGQ1oyEe23K4GXSpBSeg")]
     [DisplayName("Other Payment")]
     [IsoXmlTag("OthrPmt")]
-    public CompareOtherPayment1? OtherPayment { get; init; }
+    public ValueList<CompareOtherPayment1> OtherPayment { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the interest fixed rate legs are matching or not.
@@ -638,7 +646,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGi1oyEe23K4GXSpBSeg")]
     [DisplayName("Energy Delivery Point Or Zone")]
     [IsoXmlTag("NrgyDlvryPtOrZone")]
-    public CompareDeliveryInterconnectionPoint1? EnergyDeliveryPointOrZone { get; init; }
+    public ValueList<CompareDeliveryInterconnectionPoint1> EnergyDeliveryPointOrZone { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the interconnection points are matching or not.
@@ -662,7 +671,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGkVoyEe23K4GXSpBSeg")]
     [DisplayName("Delivery Attribute")]
     [IsoXmlTag("DlvryAttr")]
-    public CompareEnergyDeliveryAttribute1? DeliveryAttribute { get; init; }
+    public ValueList<CompareEnergyDeliveryAttribute1> DeliveryAttribute { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the option types are matching or not.
@@ -678,7 +687,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGlVoyEe23K4GXSpBSeg")]
     [DisplayName("Option Exercise Style")]
     [IsoXmlTag("OptnExrcStyle")]
-    public CompareOptionStyle1? OptionExerciseStyle { get; init; }
+    public ValueList<CompareOptionStyle1> OptionExerciseStyle { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the strike prices are matching or not.
@@ -694,7 +703,8 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGmVoyEe23K4GXSpBSeg")]
     [DisplayName("Option Strike Price Schedule Unadjusted Effective Date")]
     [IsoXmlTag("OptnStrkPricSchdlUadjstdFctvDt")]
-    public CompareDate3? OptionStrikePriceScheduleUnadjustedEffectiveDate { get; init; }
+    public ValueList<CompareDate3> OptionStrikePriceScheduleUnadjustedEffectiveDate { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies whether the information on the unadjusted end dates are matching or not.
@@ -702,7 +712,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGm1oyEe23K4GXSpBSeg")]
     [DisplayName("Option Strike Price Schedule Unadjusted End Date")]
     [IsoXmlTag("OptnStrkPricSchdlUadjstdEndDt")]
-    public CompareDate3? OptionStrikePriceScheduleUnadjustedEndDate { get; init; }
+    public ValueList<CompareDate3> OptionStrikePriceScheduleUnadjustedEndDate { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the strike price in effect on associated effective dates are matching or not.
@@ -710,7 +720,7 @@ public record TransactionMatchingCriteria6
     [IsoId("_wBBGnVoyEe23K4GXSpBSeg")]
     [DisplayName("Option Strike Price Schedule Amount")]
     [IsoXmlTag("OptnStrkPricSchdlAmt")]
-    public CompareUnitPrice4? OptionStrikePriceScheduleAmount { get; init; }
+    public ValueList<CompareUnitPrice4> OptionStrikePriceScheduleAmount { get; init; } = [];
 
     /// <summary>
     /// Specifies whether the information on the premium amounts are matching or not.

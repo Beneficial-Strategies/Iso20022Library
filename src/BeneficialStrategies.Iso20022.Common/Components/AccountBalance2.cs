@@ -31,5 +31,5 @@ public record AccountBalance2
     [IsoId("_K7YRQ6ycEeupy7O5H7ITjQ")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public Balance28? Balance { get; init; }
+    public ValueList<Balance28> Balance { get; init; } = [];
 }

@@ -48,7 +48,7 @@ public record EarlyPayment1
     [IsoId("_EkXkEFnAEeOQYsoJizpkVw")]
     [DisplayName("Early Payment Tax Specification")]
     [IsoXmlTag("EarlyPmtTaxSpcfctn")]
-    public EarlyPaymentsVAT1? EarlyPaymentTaxSpecification { get; init; }
+    public ValueList<EarlyPaymentsVAT1> EarlyPaymentTaxSpecification { get; init; } = [];
 
     /// <summary>
     /// Tax total in early payment, with currency.

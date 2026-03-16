@@ -56,7 +56,7 @@ public record PointOfInteractionComponent12
     [IsoId("_tHIo6VFAEeyApZmLzm74zA")]
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
-    public GenericIdentification48? StandardCompliance { get; init; }
+    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
 
     /// <summary>
     /// Characteristics of a POI (Point Of Interaction) component.
@@ -72,7 +72,7 @@ public record PointOfInteractionComponent12
     [IsoId("_tHIo7VFAEeyApZmLzm74zA")]
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
-    public PointOfInteractionComponentAssessment1? Assessment { get; init; }
+    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
 
     /// <summary>
     /// Chunk of a software package.
@@ -80,5 +80,5 @@ public record PointOfInteractionComponent12
     [IsoId("_tHIo71FAEeyApZmLzm74zA")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
-    public PackageType3? Package { get; init; }
+    public ValueList<PackageType3> Package { get; init; } = [];
 }

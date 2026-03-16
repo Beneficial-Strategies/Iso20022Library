@@ -62,7 +62,7 @@ public record Collateral54
     [IsoId("_63jNuSqREeyR9JrVGfaMKw")]
     [DisplayName("Securities Collateral")]
     [IsoXmlTag("SctiesColl")]
-    public SecuritiesCollateral10? SecuritiesCollateral { get; init; }
+    public ValueList<SecuritiesCollateral10> SecuritiesCollateral { get; init; } = [];
 
     /// <summary>
     /// Collateral type is cash.
@@ -70,7 +70,7 @@ public record Collateral54
     [IsoId("_63jNuyqREeyR9JrVGfaMKw")]
     [DisplayName("Cash Collateral")]
     [IsoXmlTag("CshColl")]
-    public CashCollateral2? CashCollateral { get; init; }
+    public ValueList<CashCollateral2> CashCollateral { get; init; } = [];
 
     /// <summary>
     /// Collateral type is other than securities or cash for example letter of credit.
@@ -78,5 +78,5 @@ public record Collateral54
     [IsoId("_63jNvSqREeyR9JrVGfaMKw")]
     [DisplayName("Other Collateral")]
     [IsoXmlTag("OthrColl")]
-    public OtherCollateral9? OtherCollateral { get; init; }
+    public ValueList<OtherCollateral9> OtherCollateral { get; init; } = [];
 }

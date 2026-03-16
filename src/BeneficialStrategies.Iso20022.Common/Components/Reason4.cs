@@ -22,5 +22,5 @@ public record Reason4
     [IsoId("_qTYa0eLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ProprietaryReason4? Reason { get; init; }
+    public ValueList<ProprietaryReason4> Reason { get; init; } = [];
 }

@@ -39,5 +39,5 @@ public record FinancialInstrumentAggregateBalance1
     [IsoId("_KMa34TywEeSBD_ZW60GwCQ")]
     [DisplayName("Price")]
     [IsoXmlTag("Pric")]
-    public Price6? Price { get; init; }
+    public ValueList<Price6> Price { get; init; } = [];
 }

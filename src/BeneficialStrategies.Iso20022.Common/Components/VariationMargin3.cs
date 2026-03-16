@@ -48,7 +48,7 @@ public record VariationMargin3
     [IsoId("_-eWgBKMOEeCojJW5vEuTEQ_2134633660")]
     [DisplayName("Mark To Market Netted")]
     [IsoXmlTag("MrkToMktNetd")]
-    public Amount2? MarkToMarketNetted { get; init; }
+    public ValueList<Amount2> MarkToMarketNetted { get; init; } = [];
 
     /// <summary>
     /// Unrealised net loss calculated in that market/boundary.
@@ -56,7 +56,7 @@ public record VariationMargin3
     [IsoId("_-eWgBaMOEeCojJW5vEuTEQ_1137561307")]
     [DisplayName("Mark To Market Gross")]
     [IsoXmlTag("MrkToMktGrss")]
-    public Amount2? MarkToMarketGross { get; init; }
+    public ValueList<Amount2> MarkToMarketGross { get; init; } = [];
 
     /// <summary>
     /// Sum of the unrealised loss without taking profit into consideration.
@@ -64,7 +64,7 @@ public record VariationMargin3
     [IsoId("_-eWgBqMOEeCojJW5vEuTEQ_1906471397")]
     [DisplayName("Mark To Market Fails")]
     [IsoXmlTag("MrkToMktFls")]
-    public Amount2? MarkToMarketFails { get; init; }
+    public ValueList<Amount2> MarkToMarketFails { get; init; } = [];
 
     /// <summary>
     /// Haircut applied to the absolute value of the participants net positions. Calculation depends on a participants credit rating.

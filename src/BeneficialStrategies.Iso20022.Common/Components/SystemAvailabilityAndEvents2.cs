@@ -38,7 +38,7 @@ public record SystemAvailabilityAndEvents2
     [IsoId("_xkRfJ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public SystemEvent2? Event { get; init; }
+    public ValueList<SystemEvent2> Event { get; init; } = [];
 
     /// <summary>
     /// Information regarding the closure time of a system.
@@ -46,5 +46,5 @@ public record SystemAvailabilityAndEvents2
     [IsoId("_xkRfKZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Closure Information")]
     [IsoXmlTag("ClsrInf")]
-    public SystemClosure2? ClosureInformation { get; init; }
+    public ValueList<SystemClosure2> ClosureInformation { get; init; } = [];
 }

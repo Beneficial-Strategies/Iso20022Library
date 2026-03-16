@@ -48,5 +48,5 @@ public record NonFinancialResponseComponent2
     [IsoId("_qUPSV01BEeybj420QgWBkA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

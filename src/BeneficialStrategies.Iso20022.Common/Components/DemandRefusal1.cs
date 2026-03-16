@@ -77,7 +77,7 @@ public record DemandRefusal1
     [IsoId("_-FQ1kHltEeG7BsjMvd1mEw_733408168")]
     [DisplayName("Discrepancy")]
     [IsoXmlTag("Dscrpncy")]
-    public Discrepancy1? Discrepancy { get; init; }
+    public ValueList<Discrepancy1> Discrepancy { get; init; } = [];
 
     /// <summary>
     /// Indication of how the demand presentation documents will be handled as a consequence of the demand refusal.

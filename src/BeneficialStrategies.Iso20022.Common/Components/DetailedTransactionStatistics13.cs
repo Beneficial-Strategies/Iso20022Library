@@ -49,5 +49,5 @@ public record DetailedTransactionStatistics13
     [IsoId("_hV-hJ8K4EeuFNp8LZAnorg")]
     [DisplayName("Transactions Rejections Reason")]
     [IsoXmlTag("TxsRjctnsRsn")]
-    public RejectionReason53? TransactionsRejectionsReason { get; init; }
+    public ValueList<RejectionReason53> TransactionsRejectionsReason { get; init; } = [];
 }

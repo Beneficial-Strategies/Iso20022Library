@@ -30,7 +30,7 @@ public record ContractCollateral1
     [IsoId("_FP2C4NOPEeSQ_-lmj1tzfw")]
     [DisplayName("Collateral Description")]
     [IsoXmlTag("CollDesc")]
-    public CashCollateral5? CollateralDescription { get; init; }
+    public ValueList<CashCollateral5> CollateralDescription { get; init; } = [];
 
     /// <summary>
     /// Further information on the contract collateral.

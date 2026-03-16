@@ -46,7 +46,7 @@ public record CommonData1
     [IsoId("_TDm_wwEcEeCQm6a_G2yO_w_1186746515")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType2Code? AdditionalService { get; init; }
+    public SimpleValueList<CardPaymentServiceType2Code> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Additional attribute of the service type.

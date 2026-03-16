@@ -52,5 +52,5 @@ public record TaxParty4
     [IsoId("_4V-dJ-5oEemXBpiFxCCWFQ")]
     [DisplayName("Tax Exemption Reason")]
     [IsoXmlTag("TaxXmptnRsn")]
-    public TaxExemptionReasonFormat1Choice_? TaxExemptionReason { get; init; }
+    public ValueList<TaxExemptionReasonFormat1Choice_> TaxExemptionReason { get; init; } = [];
 }

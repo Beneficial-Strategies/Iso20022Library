@@ -22,7 +22,7 @@ public record AcceptorConfigurationContent1
     [IsoId("_Ksg2xn1DEeCF8NjrBemJWQ_2005180344")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
-    public AcquirerProtocolParameters1? AcquirerProtocolParameters { get; init; }
+    public ValueList<AcquirerProtocolParameters1> AcquirerProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the merchant.
@@ -30,8 +30,7 @@ public record AcceptorConfigurationContent1
     [IsoId("_Ksg2x31DEeCF8NjrBemJWQ_1029963495")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? MerchantParameters { get; init; }
+    public SimpleValueList<IsoMax10000Binary> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.
@@ -39,7 +38,7 @@ public record AcceptorConfigurationContent1
     [IsoId("_Ksg2yH1DEeCF8NjrBemJWQ_1720135233")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
-    public ApplicationParameters1? ApplicationParameters { get; init; }
+    public ValueList<ApplicationParameters1> ApplicationParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the communication with an acquirer host.
@@ -47,5 +46,5 @@ public record AcceptorConfigurationContent1
     [IsoId("_Ksg2yX1DEeCF8NjrBemJWQ_-131390732")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
-    public HostCommunicationParameter1? HostCommunicationParameters { get; init; }
+    public ValueList<HostCommunicationParameter1> HostCommunicationParameters { get; init; } = [];
 }

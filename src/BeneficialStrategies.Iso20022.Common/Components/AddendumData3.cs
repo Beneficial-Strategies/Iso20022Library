@@ -90,7 +90,7 @@ public record AddendumData3
     [IsoId("_-2QH4Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Travel Agency")]
     [IsoXmlTag("TrvlAgcy")]
-    public TravelAgency3? TravelAgency { get; init; }
+    public ValueList<TravelAgency3> TravelAgency { get; init; } = [];
 
     /// <summary>
     /// Component supports ticketing transactions for airline, railway, and travel agency transactions to provide passenger ticket information for the cardholder.
@@ -106,7 +106,7 @@ public record AddendumData3
     [IsoId("_-2QH5Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Vehicle Rental")]
     [IsoXmlTag("VhclRntl")]
-    public VehicleRentalService2? VehicleRental { get; init; }
+    public ValueList<VehicleRentalService2> VehicleRental { get; init; } = [];
 
     /// <summary>
     /// Component provides detailed information about lodging accommodations and related expenses for the cardholder. Acquirers can submit multiple occurrences of this component for each lodging transaction, to provide details of one or more folios.
@@ -114,7 +114,7 @@ public record AddendumData3
     [IsoId("_-2QH54v0EeumSPwlS1PkxQ")]
     [DisplayName("Lodging")]
     [IsoXmlTag("Ldgg")]
-    public Lodging3? Lodging { get; init; }
+    public ValueList<Lodging3> Lodging { get; init; } = [];
 
     /// <summary>
     /// Shipping or Courier Service detail component provides detailed information regarding delivery or courier services.
@@ -138,7 +138,7 @@ public record AddendumData3
     [IsoId("_-2QH7Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Temporary Services")]
     [IsoXmlTag("TempSvcs")]
-    public TemporaryServices2? TemporaryServices { get; init; }
+    public ValueList<TemporaryServices2> TemporaryServices { get; init; } = [];
 
     /// <summary>
     /// Data exclusively related to a card issuer financial loan of the payment transaction, or instalment.
@@ -154,5 +154,5 @@ public record AddendumData3
     [IsoId("_-2QH8Yv0EeumSPwlS1PkxQ")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

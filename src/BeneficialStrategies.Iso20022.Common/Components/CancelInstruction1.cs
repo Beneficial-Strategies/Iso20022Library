@@ -32,5 +32,5 @@ public record CancelInstruction1
     [IsoId("_TGfmIa-bEemJ1NnLPsTFaw")]
     [DisplayName("Instructed Position")]
     [IsoXmlTag("InstdPos")]
-    public SafekeepingAccount9? InstructedPosition { get; init; }
+    public ValueList<SafekeepingAccount9> InstructedPosition { get; init; } = [];
 }

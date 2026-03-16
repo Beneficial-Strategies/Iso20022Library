@@ -38,5 +38,5 @@ public record GovernanceRules1
     [IsoId("_94TXqXltEeG7BsjMvd1mEw_1402302275")]
     [DisplayName("Jurisdiction")]
     [IsoXmlTag("Jursdctn")]
-    public Location1? Jurisdiction { get; init; }
+    public ValueList<Location1> Jurisdiction { get; init; } = [];
 }

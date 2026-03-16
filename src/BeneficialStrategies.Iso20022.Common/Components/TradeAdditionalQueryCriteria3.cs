@@ -22,7 +22,7 @@ public record TradeAdditionalQueryCriteria3
     [IsoId("_bmONodGREeaQk737TH1Fzw")]
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public TransactionOperationType3Code? ActionType { get; init; }
+    public SimpleValueList<TransactionOperationType3Code> ActionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the execution venue of the reported transaction.
@@ -54,7 +54,7 @@ public record TradeAdditionalQueryCriteria3
     [IsoId("_bmONqdGREeaQk737TH1Fzw")]
     [DisplayName("Asset Class")]
     [IsoXmlTag("AsstClss")]
-    public ProductType4Code? AssetClass { get; init; }
+    public SimpleValueList<ProductType4Code> AssetClass { get; init; } = [];
 
     /// <summary>
     /// Indicates the product classification of the reported transaction.

@@ -38,7 +38,7 @@ public record TrackerStatus1
     [IsoId("_pLlJM87wEemEIuVuDudp4g")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public PaymentStatusReason1? StatusReason { get; init; }
+    public ValueList<PaymentStatusReason1> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Provides detailed information on the return reason.
@@ -46,5 +46,5 @@ public record TrackerStatus1
     [IsoId("_vhy8UPSrEemJpbG3s5kY2A")]
     [DisplayName("Reject Return Reason")]
     [IsoXmlTag("RjctRtrRsn")]
-    public PaymentRejectReturnReason1? RejectReturnReason { get; init; }
+    public ValueList<PaymentRejectReturnReason1> RejectReturnReason { get; init; } = [];
 }

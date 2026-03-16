@@ -71,7 +71,7 @@ public record CorporateAction53
     [IsoId("_o-RAvPfUEeiNZp_PtLohLw")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    public IdentificationFormat4Choice_? CouponNumber { get; init; }
+    public ValueList<IdentificationFormat4Choice_> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Indicates whether certification/breakdown is required.
@@ -150,7 +150,7 @@ public record CorporateAction53
     [IsoId("_o-RA-PfUEeiNZp_PtLohLw")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public OfferTypeFormat11Choice_? OfferType { get; init; }
+    public ValueList<OfferTypeFormat11Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -166,7 +166,7 @@ public record CorporateAction53
     [IsoId("_o-RBCPfUEeiNZp_PtLohLw")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat20Choice_? EventStage { get; init; }
+    public ValueList<CorporateActionEventStageFormat20Choice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of the additional business process linked to a corporate action event such as a claim compensation or tax refund.
@@ -174,7 +174,8 @@ public record CorporateAction53
     [IsoId("_o-RBEPfUEeiNZp_PtLohLw")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public AdditionalBusinessProcessFormat12Choice_? AdditionalBusinessProcessIndicator { get; init; }
+    public ValueList<AdditionalBusinessProcessFormat12Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Specifies the type of change announced.
@@ -182,7 +183,7 @@ public record CorporateAction53
     [IsoId("_o-RBGPfUEeiNZp_PtLohLw")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public CorporateActionChangeTypeFormat8Choice_? ChangeType { get; init; }
+    public ValueList<CorporateActionChangeTypeFormat8Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Type of intermediates securities distribution.

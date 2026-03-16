@@ -30,5 +30,5 @@ public record Charges6
     [IsoId("_9RGSNW49EeiU9cctagi5ow")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public ChargesRecord3? Record { get; init; }
+    public ValueList<ChargesRecord3> Record { get; init; } = [];
 }

@@ -30,5 +30,5 @@ public record CashSubBalanceTypeAndQuantityBreakdown3
     [IsoId("_NLbXEzqFEemJ3KLLPeYl6g")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public AmountAndQuantityBreakdown1? QuantityBreakdown { get; init; }
+    public ValueList<AmountAndQuantityBreakdown1> QuantityBreakdown { get; init; } = [];
 }

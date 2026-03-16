@@ -22,9 +22,7 @@ public record TransportByRail5
     [IsoId("_hl1_EYj7EeO0H4aqD2Yw9Q")]
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PlaceOfReceipt { get; init; }
+    public SimpleValueList<IsoMax35Text> PlaceOfReceipt { get; init; } = [];
 
     /// <summary>
     /// Identifies the location of delivery of the goods.

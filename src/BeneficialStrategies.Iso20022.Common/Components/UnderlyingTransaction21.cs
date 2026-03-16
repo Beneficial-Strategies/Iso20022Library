@@ -30,5 +30,6 @@ public record UnderlyingTransaction21
     [IsoId("_QUjdgbPgEeeppqgHuc69jg")]
     [DisplayName("Original Payment Information And Cancellation")]
     [IsoXmlTag("OrgnlPmtInfAndCxl")]
-    public OriginalPaymentInstruction29? OriginalPaymentInformationAndCancellation { get; init; }
+    public ValueList<OriginalPaymentInstruction29> OriginalPaymentInformationAndCancellation { get; init; } =
+        [];
 }

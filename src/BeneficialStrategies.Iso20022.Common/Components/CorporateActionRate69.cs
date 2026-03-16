@@ -79,7 +79,7 @@ public record CorporateActionRate69
     [IsoId("_rBio50EEEeWVgfuHGaKtRQ")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat8Choice_? TaxCreditRate { get; init; }
+    public ValueList<TaxCreditRateFormat8Choice_> TaxCreditRate { get; init; } = [];
 
     /// <summary>
     /// Rate of financial transaction tax.

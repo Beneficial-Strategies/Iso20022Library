@@ -22,7 +22,7 @@ public record Capabilities2
     [IsoId("_e88L4aH4EeuiuNcvKhXmNQ")]
     [DisplayName("Card Reading Capability")]
     [IsoXmlTag("CardRdngCpblty")]
-    public CardReadingCapabilities1? CardReadingCapability { get; init; }
+    public ValueList<CardReadingCapabilities1> CardReadingCapability { get; init; } = [];
 
     /// <summary>
     /// Card writing or output capabilities of the terminal performing the transaction.
@@ -30,7 +30,7 @@ public record Capabilities2
     [IsoId("_e88L5aH4EeuiuNcvKhXmNQ")]
     [DisplayName("Card Writing Capability")]
     [IsoXmlTag("CardWrtgCpblty")]
-    public CardWritingCapabilities1? CardWritingCapability { get; init; }
+    public ValueList<CardWritingCapabilities1> CardWritingCapability { get; init; } = [];
 
     /// <summary>
     /// Maximum number of digits that the Point of Interaction is able to accept when the cardholder enters its PIN.
@@ -102,7 +102,7 @@ public record Capabilities2
     [IsoId("_e88L9aH4EeuiuNcvKhXmNQ")]
     [DisplayName("Message Capability")]
     [IsoXmlTag("MsgCpblty")]
-    public DisplayCapabilities6? MessageCapability { get; init; }
+    public ValueList<DisplayCapabilities6> MessageCapability { get; init; } = [];
 
     /// <summary>
     /// Cardholder verification capabilities performing the transaction at the point of service.
@@ -110,7 +110,8 @@ public record Capabilities2
     [IsoId("_e88L96H4EeuiuNcvKhXmNQ")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
-    public CardholderVerificationCapabilities1? CardholderVerificationCapability { get; init; }
+    public ValueList<CardholderVerificationCapabilities1> CardholderVerificationCapability { get; init; } =
+        [];
 
     /// <summary>
     /// Terminal is capable of temporary secure storage of the card details for reuse upon permission of the card issuer.

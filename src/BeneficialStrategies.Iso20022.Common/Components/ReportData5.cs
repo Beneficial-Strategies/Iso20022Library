@@ -58,7 +58,7 @@ public record ReportData5
     [IsoId("_t_XP0TqeEeKqTf3MbquCbA")]
     [DisplayName("Pay In Call Amount")]
     [IsoXmlTag("PayInCallAmt")]
-    public PayInCallItem? PayInCallAmount { get; init; }
+    public ValueList<PayInCallItem> PayInCallAmount { get; init; } = [];
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.

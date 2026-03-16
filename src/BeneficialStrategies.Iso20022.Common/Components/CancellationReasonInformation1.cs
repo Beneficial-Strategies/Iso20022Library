@@ -38,7 +38,6 @@ public record CancellationReasonInformation1
     [IsoId("_TPA3sdp-Ed-ak6NoX_4Aeg_-436227125")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
-    [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalCancellationReasonInformation { get; init; }
+    public SimpleValueList<IsoMax105Text> AdditionalCancellationReasonInformation { get; init; } =
+        [];
 }

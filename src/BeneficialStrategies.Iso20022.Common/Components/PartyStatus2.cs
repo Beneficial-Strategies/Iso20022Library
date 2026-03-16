@@ -30,7 +30,7 @@ public record PartyStatus2
     [IsoId("_8KDGZ1hLEeih3fUfzR38Ig")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation10? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation10> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Specifications of a party defined within a system.

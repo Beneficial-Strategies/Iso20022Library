@@ -56,7 +56,7 @@ public record PointOfInteractionComponent9
     [IsoId("_09v_x-zgEeiojesOXOKoug")]
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
-    public GenericIdentification48? StandardCompliance { get; init; }
+    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
 
     /// <summary>
     /// Characteristics of a POI (Point Of Interaction) component.
@@ -72,5 +72,5 @@ public record PointOfInteractionComponent9
     [IsoId("_09v_y-zgEeiojesOXOKoug")]
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
-    public PointOfInteractionComponentAssessment1? Assessment { get; init; }
+    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAETZ6EeOP_KvUKe29ng")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
-    public AcquirerProtocolParameters6? AcquirerProtocolParameters { get; init; }
+    public ValueList<AcquirerProtocolParameters6> AcquirerProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the merchant.
@@ -30,8 +30,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAEzZ6EeOP_KvUKe29ng")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? MerchantParameters { get; init; }
+    public SimpleValueList<IsoMax10000Binary> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.
@@ -39,7 +38,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAFTZ6EeOP_KvUKe29ng")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
-    public PaymentTerminalParameters1? TerminalParameters { get; init; }
+    public ValueList<PaymentTerminalParameters1> TerminalParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.
@@ -47,7 +46,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAFzZ6EeOP_KvUKe29ng")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
-    public ApplicationParameters3? ApplicationParameters { get; init; }
+    public ValueList<ApplicationParameters3> ApplicationParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the communication with an acquirer host.
@@ -55,7 +54,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAGTZ6EeOP_KvUKe29ng")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
-    public HostCommunicationParameter2? HostCommunicationParameters { get; init; }
+    public ValueList<HostCommunicationParameter2> HostCommunicationParameters { get; init; } = [];
 
     /// <summary>
     /// Point of interaction parameters related to the security of software application and application protocol.
@@ -63,5 +62,5 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAGzZ6EeOP_KvUKe29ng")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
-    public SecurityParameters2? SecurityParameters { get; init; }
+    public ValueList<SecurityParameters2> SecurityParameters { get; init; } = [];
 }

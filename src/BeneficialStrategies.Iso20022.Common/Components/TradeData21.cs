@@ -22,7 +22,7 @@ public record TradeData21
     [IsoId("_CtHU0f_oEemm3skPVSMJQg")]
     [DisplayName("Pairing Reconciliation Status")]
     [IsoXmlTag("PairgRcncltnSts")]
-    public NumberOfReportsPerStatus2? PairingReconciliationStatus { get; init; }
+    public ValueList<NumberOfReportsPerStatus2> PairingReconciliationStatus { get; init; } = [];
 
     /// <summary>
     /// Data on transaction requiring reconciliation or pairing.
@@ -40,5 +40,5 @@ public record TradeData21
     [IsoId("_CtHU1f_oEemm3skPVSMJQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

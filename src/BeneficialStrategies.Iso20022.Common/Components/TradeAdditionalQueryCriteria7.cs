@@ -22,7 +22,7 @@ public record TradeAdditionalQueryCriteria7
     [IsoId("_Qlef065pEeuo-IflVgGqiA")]
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public TransactionOperationType6Code? ActionType { get; init; }
+    public SimpleValueList<TransactionOperationType6Code> ActionType { get; init; } = [];
 
     /// <summary>
     /// Indicates the execution venue of the reported transaction.
@@ -38,7 +38,7 @@ public record TradeAdditionalQueryCriteria7
     [IsoId("_Qlef165pEeuo-IflVgGqiA")]
     [DisplayName("Nature Of Counterparty")]
     [IsoXmlTag("NtrOfCtrPty")]
-    public PartyNatureType1Code? NatureOfCounterparty { get; init; }
+    public SimpleValueList<PartyNatureType1Code> NatureOfCounterparty { get; init; } = [];
 
     /// <summary>
     /// Specifies the corporate sector of the reporting counterparty.
@@ -46,5 +46,5 @@ public record TradeAdditionalQueryCriteria7
     [IsoId("_Qlef2a5pEeuo-IflVgGqiA")]
     [DisplayName("Corporate Sector")]
     [IsoXmlTag("CorpSctr")]
-    public CorporateSectorCriteria5? CorporateSector { get; init; }
+    public ValueList<CorporateSectorCriteria5> CorporateSector { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record PointOfInteractionCapabilities9
     [IsoId("_oEy5EQ0yEeqUVL7sB4m7NA")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
-    public CardDataReading8Code? CardReadingCapabilities { get; init; }
+    public SimpleValueList<CardDataReading8Code> CardReadingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Cardholder verification capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -30,7 +30,8 @@ public record PointOfInteractionCapabilities9
     [IsoId("_oEy5Ew0yEeqUVL7sB4m7NA")]
     [DisplayName("Cardholder Verification Capabilities")]
     [IsoXmlTag("CrdhldrVrfctnCpblties")]
-    public CardholderVerificationCapability4Code? CardholderVerificationCapabilities { get; init; }
+    public SimpleValueList<CardholderVerificationCapability4Code> CardholderVerificationCapabilities { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum number of digits the POI is able to accept when the cardholder enters its PIN.
@@ -82,5 +83,5 @@ public record PointOfInteractionCapabilities9
     [IsoId("_oEy5Hw0yEeqUVL7sB4m7NA")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
-    public DisplayCapabilities4? MessageCapabilities { get; init; }
+    public ValueList<DisplayCapabilities4> MessageCapabilities { get; init; } = [];
 }

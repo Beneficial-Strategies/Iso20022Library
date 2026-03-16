@@ -32,5 +32,5 @@ public record AdditionalData2
     [IsoId("_MhSWIDNGEeylu6lH-gut-A")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public AdditionalData1? Details { get; init; }
+    public ValueList<AdditionalData1> Details { get; init; } = [];
 }

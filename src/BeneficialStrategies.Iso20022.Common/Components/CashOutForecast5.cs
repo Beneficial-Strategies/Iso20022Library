@@ -56,7 +56,7 @@ public record CashOutForecast5
     [IsoId("_I7Gg-watEeS3lpTattq7hg")]
     [DisplayName("Cash Out Breakdown Details")]
     [IsoXmlTag("CshOutBrkdwnDtls")]
-    public FundCashOutBreakdown3? CashOutBreakdownDetails { get; init; }
+    public ValueList<FundCashOutBreakdown3> CashOutBreakdownDetails { get; init; } = [];
 
     /// <summary>
     /// Additional balances for cash amounts and number of units.

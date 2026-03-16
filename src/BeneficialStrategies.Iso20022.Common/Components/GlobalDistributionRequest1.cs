@@ -64,7 +64,7 @@ public record GlobalDistributionRequest1
     [IsoId("_UKdzW9p-Ed-ak6NoX_4Aeg_1979460314")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
-    public SecurityMovement1? SecuritiesMovement { get; init; }
+    public ValueList<SecurityMovement1> SecuritiesMovement { get; init; } = [];
 
     /// <summary>
     /// Provides information about the cash movement.
@@ -72,5 +72,5 @@ public record GlobalDistributionRequest1
     [IsoId("_UKnkUNp-Ed-ak6NoX_4Aeg_1970224157")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
-    public CashMovement1? CashMovement { get; init; }
+    public ValueList<CashMovement1> CashMovement { get; init; } = [];
 }

@@ -46,5 +46,6 @@ public record InvoiceFinancingDetails1
     [IsoId("_ThypyNp-Ed-ak6NoX_4Aeg_2076029175")]
     [DisplayName("Instalment Financing Information")]
     [IsoXmlTag("InstlmtFincgInf")]
-    public InstalmentFinancingInformation1? InstalmentFinancingInformation { get; init; }
+    public ValueList<InstalmentFinancingInformation1> InstalmentFinancingInformation { get; init; } =
+        [];
 }

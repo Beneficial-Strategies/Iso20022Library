@@ -48,5 +48,5 @@ public record ATMCustomer4
     [IsoId("_JDfd9614EeWMg5rOByfExw")]
     [DisplayName("Authentication Result")]
     [IsoXmlTag("AuthntcnRslt")]
-    public TransactionVerificationResult5? AuthenticationResult { get; init; }
+    public ValueList<TransactionVerificationResult5> AuthenticationResult { get; init; } = [];
 }

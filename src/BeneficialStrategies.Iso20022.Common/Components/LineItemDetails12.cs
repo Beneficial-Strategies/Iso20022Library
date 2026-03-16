@@ -42,7 +42,7 @@ public record LineItemDetails12
     [IsoId("_994DFQy6EeS3puOfnJm56A")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
-    public ProductIdentifier2Choice_? ProductIdentifier { get; init; }
+    public ValueList<ProductIdentifier2Choice_> ProductIdentifier { get; init; } = [];
 
     /// <summary>
     /// Identifies the characteristic of a product.
@@ -50,7 +50,7 @@ public record LineItemDetails12
     [IsoId("_994DFwy6EeS3puOfnJm56A")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
-    public ProductCharacteristics1Choice_? ProductCharacteristics { get; init; }
+    public ValueList<ProductCharacteristics1Choice_> ProductCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Identifies the category of product.
@@ -58,7 +58,7 @@ public record LineItemDetails12
     [IsoId("_994DGQy6EeS3puOfnJm56A")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public ProductCategory1Choice_? ProductCategory { get; init; }
+    public ValueList<ProductCategory1Choice_> ProductCategory { get; init; } = [];
 
     /// <summary>
     /// Quantity ordered for a line as indicated in the baseline.

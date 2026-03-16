@@ -22,7 +22,7 @@ public record LineItemTax1
     [IsoId("_S0toIAEcEeCQm6a_G2yO_w_525289040")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
-    public CurrencyAndAmount? CalculatedAmount { get; init; }
+    public ValueList<CurrencyAndAmount> CalculatedAmount { get; init; } = [];
 
     /// <summary>
     /// Type of tax applied.
@@ -66,7 +66,5 @@ public record LineItemTax1
     [IsoId("_S0toJQEcEeCQm6a_G2yO_w_-1190517937")]
     [DisplayName("Category Name")]
     [IsoXmlTag("CtgyNm")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CategoryName { get; init; }
+    public SimpleValueList<IsoMax35Text> CategoryName { get; init; } = [];
 }

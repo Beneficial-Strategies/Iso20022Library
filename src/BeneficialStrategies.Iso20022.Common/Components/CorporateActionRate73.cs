@@ -39,7 +39,7 @@ public record CorporateActionRate73
     [IsoId("_cheNGZKQEeWHWpTQn1FFVg")]
     [DisplayName("Requested Withholding Tax Rate")]
     [IsoXmlTag("ReqdWhldgTaxRate")]
-    public RateAndAmountFormat45Choice_? RequestedWithholdingTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat45Choice_> RequestedWithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Requested rate at which the income will be withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible.
@@ -47,5 +47,5 @@ public record CorporateActionRate73
     [IsoId("_cheNIZKQEeWHWpTQn1FFVg")]
     [DisplayName("Requested Second Level Tax Rate")]
     [IsoXmlTag("ReqdScndLvlTaxRate")]
-    public RateAndAmountFormat45Choice_? RequestedSecondLevelTaxRate { get; init; }
+    public ValueList<RateAndAmountFormat45Choice_> RequestedSecondLevelTaxRate { get; init; } = [];
 }

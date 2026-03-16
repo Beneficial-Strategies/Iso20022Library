@@ -22,7 +22,7 @@ public record SecurityCharacteristics3
     [IsoId("_gGvsMTpyEemk2e6qGBk8IQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public SecurityIdentification19? Identification { get; init; }
+    public ValueList<SecurityIdentification19> Identification { get; init; } = [];
 
     /// <summary>
     /// Specifies the position for the security.
@@ -30,7 +30,7 @@ public record SecurityCharacteristics3
     [IsoId("_gGvsMzpyEemk2e6qGBk8IQ")]
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
-    public SecuritiesPosition1? Position { get; init; }
+    public ValueList<SecuritiesPosition1> Position { get; init; } = [];
 
     /// <summary>
     /// Specifies the price of the security for valuation purposes.

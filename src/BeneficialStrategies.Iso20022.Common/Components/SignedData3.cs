@@ -49,8 +49,7 @@ public record SignedData3
     [IsoId("_SS0SN1W8EeOlEMHvp-ipJg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? Certificate { get; init; }
+    public SimpleValueList<IsoMax3000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Entity who has signed the data.

@@ -62,5 +62,5 @@ public record CashAccount26
     [IsoId("_xpDeUBczEeK5g-3oYI0_9Q")]
     [DisplayName("Account Owner Other Identification")]
     [IsoXmlTag("AcctOwnrOthrId")]
-    public GenericIdentification46? AccountOwnerOtherIdentification { get; init; }
+    public ValueList<GenericIdentification46> AccountOwnerOtherIdentification { get; init; } = [];
 }

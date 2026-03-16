@@ -116,5 +116,5 @@ public record MarginReportData8
     [IsoId("_SCx7d152Ee2a_-MvhEjKmA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

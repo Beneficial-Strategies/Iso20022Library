@@ -63,5 +63,5 @@ public record InvestorKnowledge1
     [IsoId("_uChRgDcOEeiIxKQErQxblg")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public OtherTargetMarketInvestorKnowledge1? Other { get; init; }
+    public ValueList<OtherTargetMarketInvestorKnowledge1> Other { get; init; } = [];
 }

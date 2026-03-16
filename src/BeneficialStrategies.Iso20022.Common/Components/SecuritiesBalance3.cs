@@ -95,7 +95,7 @@ public record SecuritiesBalance3
     [IsoId("_ZQ3atStEEeySlt9bF77XfA")]
     [DisplayName("Rating Details")]
     [IsoXmlTag("RatgDtls")]
-    public Rating2? RatingDetails { get; init; }
+    public ValueList<Rating2> RatingDetails { get; init; } = [];
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -119,5 +119,5 @@ public record SecuritiesBalance3
     [IsoId("_ZQ3auytEEeySlt9bF77XfA")]
     [DisplayName("Transaction Lot Number")]
     [IsoXmlTag("TxLotNb")]
-    public GenericIdentification178? TransactionLotNumber { get; init; }
+    public ValueList<GenericIdentification178> TransactionLotNumber { get; init; } = [];
 }

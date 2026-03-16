@@ -22,7 +22,7 @@ public record TransactionSearchCriteria9
     [IsoId("_gXk1IdcZEeqRFcf2R4bPBw")]
     [DisplayName("Payment To")]
     [IsoXmlTag("PmtTo")]
-    public SystemSearch4? PaymentTo { get; init; }
+    public ValueList<SystemSearch4> PaymentTo { get; init; } = [];
 
     /// <summary>
     /// Defines the criteria which are used to search for the origin of the payment.
@@ -30,7 +30,7 @@ public record TransactionSearchCriteria9
     [IsoId("_gXk1I9cZEeqRFcf2R4bPBw")]
     [DisplayName("Payment From")]
     [IsoXmlTag("PmtFr")]
-    public SystemSearch4? PaymentFrom { get; init; }
+    public ValueList<SystemSearch4> PaymentFrom { get; init; } = [];
 
     /// <summary>
     /// Defines the criteria which are used to search for a payment.

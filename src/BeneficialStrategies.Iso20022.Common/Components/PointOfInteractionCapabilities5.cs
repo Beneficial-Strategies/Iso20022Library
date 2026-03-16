@@ -22,7 +22,7 @@ public record PointOfInteractionCapabilities5
     [IsoId("_uqvUUYn6EeShMpas3885ww")]
     [DisplayName("Card Read Data")]
     [IsoXmlTag("CardRdData")]
-    public CardDataReading4Code? CardReadData { get; init; }
+    public SimpleValueList<CardDataReading4Code> CardReadData { get; init; } = [];
 
     /// <summary>
     /// Card writing capabilities of the terminal performing the transaction.
@@ -30,7 +30,7 @@ public record PointOfInteractionCapabilities5
     [IsoId("_UHJrcIn7EeShMpas3885ww")]
     [DisplayName("Card Write Data")]
     [IsoXmlTag("CardWrtData")]
-    public CardDataReading4Code? CardWriteData { get; init; }
+    public SimpleValueList<CardDataReading4Code> CardWriteData { get; init; } = [];
 
     /// <summary>
     /// Customer and card authentication capabilities available at the ATM.
@@ -38,7 +38,8 @@ public record PointOfInteractionCapabilities5
     [IsoId("_uqvUU4n6EeShMpas3885ww")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderVerificationCapability3Code? Authentication { get; init; }
+    public SimpleValueList<CardholderVerificationCapability3Code> Authentication { get; init; } =
+        [];
 
     /// <summary>
     /// Maximum number of digits the ATM is able to accept when the cardholder enters its PIN.

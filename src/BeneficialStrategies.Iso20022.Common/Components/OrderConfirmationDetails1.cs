@@ -49,5 +49,5 @@ public record OrderConfirmationDetails1
     [IsoId("_RPAu2Np-Ed-ak6NoX_4Aeg_2134620848")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

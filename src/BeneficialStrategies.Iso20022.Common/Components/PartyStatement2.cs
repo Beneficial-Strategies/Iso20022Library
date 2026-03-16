@@ -31,5 +31,5 @@ public record PartyStatement2
     [IsoId("_70efA1hLEeih3fUfzR38Ig")]
     [DisplayName("Change")]
     [IsoXmlTag("Chng")]
-    public PartyReferenceDataChange2? Change { get; init; }
+    public ValueList<PartyReferenceDataChange2> Change { get; init; } = [];
 }

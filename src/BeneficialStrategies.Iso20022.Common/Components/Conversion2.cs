@@ -39,7 +39,7 @@ public record Conversion2
     [IsoId("__g-GAXwgEeuQY_68iqAoCQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit13? UnitsDetails { get; init; }
+    public ValueList<Unit13> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information about the conversion.
@@ -47,5 +47,5 @@ public record Conversion2
     [IsoId("_lcDyo3wgEeuQY_68iqAoCQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

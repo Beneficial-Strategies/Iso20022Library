@@ -118,7 +118,7 @@ public record LoanContract1
     [IsoId("_QOgk8tNEEeSDLevdaFPXHw")]
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
-    public LoanContractTranche1? Tranche { get; init; }
+    public ValueList<LoanContractTranche1> Tranche { get; init; } = [];
 
     /// <summary>
     /// Schedule of the payments defined for the loan contract.
@@ -159,7 +159,7 @@ public record LoanContract1
     [IsoId("_KEsEMNOKEeSQ_-lmj1tzfw")]
     [DisplayName("Syndicated Loan")]
     [IsoXmlTag("SndctdLn")]
-    public SyndicatedLoan1? SyndicatedLoan { get; init; }
+    public ValueList<SyndicatedLoan1> SyndicatedLoan { get; init; } = [];
 
     /// <summary>
     /// Documents provided as attachments to the loan contract.
@@ -167,5 +167,5 @@ public record LoanContract1
     [IsoId("_HKFzkdNDEeSDLevdaFPXHw")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation3? Attachment { get; init; }
+    public ValueList<DocumentGeneralInformation3> Attachment { get; init; } = [];
 }

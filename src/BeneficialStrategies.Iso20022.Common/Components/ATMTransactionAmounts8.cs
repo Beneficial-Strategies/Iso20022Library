@@ -46,7 +46,7 @@ public record ATMTransactionAmounts8
     [IsoId("_uoeGZ6-VEeWJvLRJ8PsD_w")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public ATMTransactionAmounts7? AdditionalAmount { get; init; }
+    public ValueList<ATMTransactionAmounts7> AdditionalAmount { get; init; } = [];
 
     /// <summary>
     /// Limit of deposited media for the customer.
@@ -54,5 +54,5 @@ public record ATMTransactionAmounts8
     [IsoId("_3g-YIK-VEeWJvLRJ8PsD_w")]
     [DisplayName("Deposit Limits")]
     [IsoXmlTag("DpstLmts")]
-    public ATMTransactionAmounts9? DepositLimits { get; init; }
+    public ValueList<ATMTransactionAmounts9> DepositLimits { get; init; } = [];
 }

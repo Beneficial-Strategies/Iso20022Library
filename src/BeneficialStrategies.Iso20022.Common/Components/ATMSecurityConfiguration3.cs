@@ -40,7 +40,7 @@ public record ATMSecurityConfiguration3
     [IsoId("_CXeQ4Ir8EeSvuOJS0mmL0g")]
     [DisplayName("Asymmetric Encryption Algorithm")]
     [IsoXmlTag("AsmmtrcNcrptnAlgo")]
-    public Algorithm7Code? AsymmetricEncryptionAlgorithm { get; init; }
+    public SimpleValueList<Algorithm7Code> AsymmetricEncryptionAlgorithm { get; init; } = [];
 
     /// <summary>
     /// True if the security module is able to manage a symmetric transport session key to protect cryptographic keys and data. False if only a previously exchanged symmetric key must be used; a proprietary symmetric key identifier is then used.
@@ -57,7 +57,7 @@ public record ATMSecurityConfiguration3
     [IsoId("_LToTkIr8EeSvuOJS0mmL0g")]
     [DisplayName("Symmetric Transport Key Algorithm")]
     [IsoXmlTag("SmmtrcTrnsprtKeyAlgo")]
-    public Algorithm13Code? SymmetricTransportKeyAlgorithm { get; init; }
+    public SimpleValueList<Algorithm13Code> SymmetricTransportKeyAlgorithm { get; init; } = [];
 
     /// <summary>
     /// Symmetric encryption algorithm the security module is able to manage.
@@ -65,7 +65,7 @@ public record ATMSecurityConfiguration3
     [IsoId("_RIUPAIr8EeSvuOJS0mmL0g")]
     [DisplayName("Symmetric Encryption Algorithm")]
     [IsoXmlTag("SmmtrcNcrptnAlgo")]
-    public Algorithm15Code? SymmetricEncryptionAlgorithm { get; init; }
+    public SimpleValueList<Algorithm15Code> SymmetricEncryptionAlgorithm { get; init; } = [];
 
     /// <summary>
     /// Format of data before encryption, if the format is not plaintext or implicit.
@@ -73,5 +73,5 @@ public record ATMSecurityConfiguration3
     [IsoId("_WZP9IIr8EeSvuOJS0mmL0g")]
     [DisplayName("Encryption Format")]
     [IsoXmlTag("NcrptnFrmt")]
-    public EncryptionFormat1Code? EncryptionFormat { get; init; }
+    public SimpleValueList<EncryptionFormat1Code> EncryptionFormat { get; init; } = [];
 }

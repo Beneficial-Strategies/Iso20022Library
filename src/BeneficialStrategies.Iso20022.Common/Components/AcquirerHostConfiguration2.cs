@@ -32,5 +32,5 @@ public record AcquirerHostConfiguration2
     [IsoId("_LTDtJSmlEeKIjpr--01h3Q")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
-    public MessageFunction3Code? MessageToSend { get; init; }
+    public SimpleValueList<MessageFunction3Code> MessageToSend { get; init; } = [];
 }

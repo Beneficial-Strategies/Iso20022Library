@@ -100,7 +100,7 @@ public record FinancialInstrument83
     [IsoId("_mC_9iZNBEemQB_8XA98K0Q")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit11? UnitsDetails { get; init; }
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -189,7 +189,7 @@ public record FinancialInstrument83
     [IsoId("_H9j-0aIyEem3ELMJcnCmxA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary43? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Date to be used as the trade date when securities are settled through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -239,7 +239,7 @@ public record FinancialInstrument83
     [IsoId("_mC_9qZNBEemQB_8XA98K0Q")]
     [DisplayName("Crystallisation Details")]
     [IsoXmlTag("CrstllstnDtls")]
-    public Crystallisation2? CrystallisationDetails { get; init; }
+    public ValueList<Crystallisation2> CrystallisationDetails { get; init; } = [];
 
     /// <summary>
     /// Date or tax quarter used for the calculation of tax on the asset.
@@ -263,5 +263,5 @@ public record FinancialInstrument83
     [IsoId("_mC_9r5NBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

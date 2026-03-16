@@ -48,5 +48,5 @@ public record CardTransactionAmount1
     [IsoId("_-JY2oHszEeSTS7uHCe8FPQ")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount9? DetailedAmount { get; init; }
+    public ValueList<DetailedAmount9> DetailedAmount { get; init; } = [];
 }

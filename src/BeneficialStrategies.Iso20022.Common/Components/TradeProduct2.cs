@@ -22,7 +22,7 @@ public record TradeProduct2
     [IsoId("_KXJkYcNUEeWGDrnsYu2p6g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public ProductIdentifier2Choice_? Identification { get; init; }
+    public ValueList<ProductIdentifier2Choice_> Identification { get; init; } = [];
 
     /// <summary>
     /// Name of a product.
@@ -50,7 +50,7 @@ public record TradeProduct2
     [IsoId("_KXJkZ8NUEeWGDrnsYu2p6g")]
     [DisplayName("Country Of Origin")]
     [IsoXmlTag("CtryOfOrgn")]
-    public CountryCodeAndName1? CountryOfOrigin { get; init; }
+    public ValueList<CountryCodeAndName1> CountryOfOrigin { get; init; } = [];
 
     /// <summary>
     /// Identifies the characteristic of a product.
@@ -58,7 +58,7 @@ public record TradeProduct2
     [IsoId("_KXJkacNUEeWGDrnsYu2p6g")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
-    public ProductCharacteristics3? ProductCharacteristics { get; init; }
+    public ValueList<ProductCharacteristics3> ProductCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Category of the product.
@@ -66,7 +66,7 @@ public record TradeProduct2
     [IsoId("_KXJka8NUEeWGDrnsYu2p6g")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public ProductCategory1Choice_? ProductCategory { get; init; }
+    public ValueList<ProductCategory1Choice_> ProductCategory { get; init; } = [];
 
     /// <summary>
     /// Unique global serial identifier for this product instance.
@@ -74,7 +74,5 @@ public record TradeProduct2
     [IsoId("_KXJkbcNUEeWGDrnsYu2p6g")]
     [DisplayName("Global Serial Identifier")]
     [IsoXmlTag("GblSrlIdr")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GlobalSerialIdentifier { get; init; }
+    public SimpleValueList<IsoMax35Text> GlobalSerialIdentifier { get; init; } = [];
 }

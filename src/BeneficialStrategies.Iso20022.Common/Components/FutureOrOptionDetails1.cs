@@ -144,7 +144,7 @@ public record FutureOrOptionDetails1
     [IsoId("_AvUZktokEeC60axPepSq7g_1965979375")]
     [DisplayName("Ratio")]
     [IsoXmlTag("Ratio")]
-    public UnderlyingRatio1? Ratio { get; init; }
+    public ValueList<UnderlyingRatio1> Ratio { get; init; } = [];
 
     /// <summary>
     /// Rating(s) of the security.
@@ -152,7 +152,7 @@ public record FutureOrOptionDetails1
     [IsoId("_AvUZk9okEeC60axPepSq7g_-1389041298")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
-    public Rating1? Rating { get; init; }
+    public ValueList<Rating1> Rating { get; init; } = [];
 
     /// <summary>
     /// Initial issue price of a financial instrument.

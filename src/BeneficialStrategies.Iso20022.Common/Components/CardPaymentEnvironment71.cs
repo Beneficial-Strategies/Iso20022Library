@@ -55,7 +55,7 @@ public record CardPaymentEnvironment71
     [IsoId("_57FXCdwhEeeKpa-yxjuKzQ")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent8? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent8> POIComponent { get; init; } = [];
 
     /// <summary>
     /// Indicates if the acquirer is available.

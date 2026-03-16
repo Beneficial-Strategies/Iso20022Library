@@ -40,5 +40,5 @@ public record HostCommunicationParameter1
     [IsoId("_LYnu031DEeCF8NjrBemJWQ_-209462385")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey1? Key { get; init; }
+    public ValueList<CryptographicKey1> Key { get; init; } = [];
 }

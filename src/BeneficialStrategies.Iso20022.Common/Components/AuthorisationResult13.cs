@@ -38,7 +38,7 @@ public record AuthorisationResult13
     [IsoId("_NjiBAK2AEeWMg5rOByfExw")]
     [DisplayName("Response Trace")]
     [IsoXmlTag("RspnTrac")]
-    public ResponseType8? ResponseTrace { get; init; }
+    public ValueList<ResponseType8> ResponseTrace { get; init; } = [];
 
     /// <summary>
     /// Value assigned by the authorising party.
@@ -56,5 +56,5 @@ public record AuthorisationResult13
     [IsoId("_rUW3aa1-EeWMg5rOByfExw")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action7? Action { get; init; }
+    public ValueList<Action7> Action { get; init; } = [];
 }

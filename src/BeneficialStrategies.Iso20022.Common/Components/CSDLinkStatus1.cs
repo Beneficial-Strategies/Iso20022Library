@@ -30,5 +30,5 @@ public record CSDLinkStatus1
     [IsoId("_hiJFn2liEeGaMcKyqKNRfQ_-1124656957")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReasonInformation10? StatusReason { get; init; }
+    public ValueList<StatusReasonInformation10> StatusReason { get; init; } = [];
 }

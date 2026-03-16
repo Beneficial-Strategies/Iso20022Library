@@ -60,7 +60,7 @@ public record TransferStatusAndReason7
     [IsoId("_aLFN65M5EemKz5EOjv82iQ")]
     [DisplayName("Transfer Event Type")]
     [IsoXmlTag("TrfEvtTp")]
-    public TransferStatusType1Choice_? TransferEventType { get; init; }
+    public ValueList<TransferStatusType1Choice_> TransferEventType { get; init; } = [];
 
     /// <summary>
     /// Status of the transfer instruction.
@@ -121,7 +121,7 @@ public record TransferStatusAndReason7
     [IsoId("_aLFN-ZM5EemKz5EOjv82iQ")]
     [DisplayName("Units Details")]
     [IsoXmlTag("UnitsDtls")]
-    public Unit11? UnitsDetails { get; init; }
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
 
     /// <summary>
     /// Total transfer value.
@@ -137,7 +137,7 @@ public record TransferStatusAndReason7
     [IsoId("_aLFN_ZM5EemKz5EOjv82iQ")]
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument18? PaymentDetails { get; init; }
+    public ValueList<PaymentInstrument18> PaymentDetails { get; init; } = [];
 
     /// <summary>
     /// Information about the realisation of benefits taken from a pension.
@@ -145,7 +145,7 @@ public record TransferStatusAndReason7
     [IsoId("_aLFN_5M5EemKz5EOjv82iQ")]
     [DisplayName("Benefit Crystallisation Event")]
     [IsoXmlTag("BnftCrstllstnEvt")]
-    public BenefitCrystallisationEvent2? BenefitCrystallisationEvent { get; init; }
+    public ValueList<BenefitCrystallisationEvent2> BenefitCrystallisationEvent { get; init; } = [];
 
     /// <summary>
     /// Details of a drawdown tranche.
@@ -153,7 +153,7 @@ public record TransferStatusAndReason7
     [IsoId("_aLFOAZM5EemKz5EOjv82iQ")]
     [DisplayName("Drawdown Tranche")]
     [IsoXmlTag("DrwdwnTrch")]
-    public Drawdown2? DrawdownTranche { get; init; }
+    public ValueList<Drawdown2> DrawdownTranche { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status.

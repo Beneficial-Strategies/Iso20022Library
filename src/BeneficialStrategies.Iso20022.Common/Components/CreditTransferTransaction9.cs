@@ -171,7 +171,7 @@ public record CreditTransferTransaction9
     [IsoId("_7iAxiGcJEeKAGeP1fbluEg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public InstructionForCreditorAgent2? InstructionForCreditorAgent { get; init; }
+    public ValueList<InstructionForCreditorAgent2> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Provides information on the individual debit transaction(s) included in the message.
@@ -190,5 +190,5 @@ public record CreditTransferTransaction9
     [IsoId("_7iBYgmcJEeKAGeP1fbluEg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

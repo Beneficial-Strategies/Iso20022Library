@@ -52,5 +52,5 @@ public record ATMCustomerProfile5
     [IsoId("_QXf2164XEeW_TaP-ygI0SQ")]
     [DisplayName("Allowed Services")]
     [IsoXmlTag("AllwdSvcs")]
-    public ATMService17? AllowedServices { get; init; }
+    public ValueList<ATMService17> AllowedServices { get; init; } = [];
 }

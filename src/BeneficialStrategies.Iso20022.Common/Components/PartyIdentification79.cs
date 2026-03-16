@@ -32,5 +32,5 @@ public record PartyIdentification79
     [IsoId("_5c13BVCiEeWdp9NcseTlOw")]
     [DisplayName("Decision Maker")]
     [IsoXmlTag("DcsnMakr")]
-    public PersonOrOrganisation2Choice_? DecisionMaker { get; init; }
+    public ValueList<PersonOrOrganisation2Choice_> DecisionMaker { get; init; } = [];
 }

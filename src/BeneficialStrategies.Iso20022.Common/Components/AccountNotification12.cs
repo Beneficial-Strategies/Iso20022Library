@@ -108,7 +108,7 @@ public record AccountNotification12
     [IsoId("_WNDrZzqwEeWZFYSPlduMhw")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public AccountInterest3? Interest { get; init; }
+    public ValueList<AccountInterest3> Interest { get; init; } = [];
 
     /// <summary>
     /// Provides summary information on entries.
@@ -128,7 +128,7 @@ public record AccountNotification12
     [IsoId("_WNDrazqwEeWZFYSPlduMhw")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ReportEntry8? Entry { get; init; }
+    public ValueList<ReportEntry8> Entry { get; init; } = [];
 
     /// <summary>
     /// Further details of the account notification.

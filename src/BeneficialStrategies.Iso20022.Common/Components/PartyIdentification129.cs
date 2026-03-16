@@ -56,5 +56,5 @@ public record PartyIdentification129
     [IsoId("_a0cDOeWlEeevU7McUP3D1w")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
-    public Contacts3? ContactDetails { get; init; }
+    public ValueList<Contacts3> ContactDetails { get; init; } = [];
 }

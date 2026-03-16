@@ -50,7 +50,7 @@ public record Customer3
     [IsoId("_DEsCwECFEeeXpbqDpLawug")]
     [DisplayName("Credentials")]
     [IsoXmlTag("Crdntls")]
-    public Credentials1? Credentials { get; init; }
+    public ValueList<Credentials1> Credentials { get; init; } = [];
 
     /// <summary>
     /// Additional information related to the customer.

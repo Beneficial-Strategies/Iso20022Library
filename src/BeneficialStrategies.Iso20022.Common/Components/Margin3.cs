@@ -30,7 +30,7 @@ public record Margin3
     [IsoId("_-eMvBqMOEeCojJW5vEuTEQ_2054797146")]
     [DisplayName("Variation Margin")]
     [IsoXmlTag("VartnMrgn")]
-    public VariationMargin3? VariationMargin { get; init; }
+    public ValueList<VariationMargin3> VariationMargin { get; init; } = [];
 
     /// <summary>
     /// Provides details on the margin type and amount.
@@ -38,5 +38,5 @@ public record Margin3
     [IsoId("_-eMvB6MOEeCojJW5vEuTEQ_-399143130")]
     [DisplayName("Other Margin")]
     [IsoXmlTag("OthrMrgn")]
-    public Margin4? OtherMargin { get; init; }
+    public ValueList<Margin4> OtherMargin { get; init; } = [];
 }

@@ -83,7 +83,7 @@ public record Cardholder16
     [IsoId("_-WE_XwxtEeqdx6buGpCCQw")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderAuthentication13? Authentication { get; init; }
+    public ValueList<CardholderAuthentication13> Authentication { get; init; } = [];
 
     /// <summary>
     /// Result of performed verifications for the transaction.
@@ -91,7 +91,8 @@ public record Cardholder16
     [IsoId("_-WE_YQxtEeqdx6buGpCCQw")]
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; }
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Identifies personal data related to the cardholder.
@@ -109,5 +110,5 @@ public record Cardholder16
     [IsoId("_-WE_ZQxtEeqdx6buGpCCQw")]
     [DisplayName("Mobile Data")]
     [IsoXmlTag("MobData")]
-    public MobileData2? MobileData { get; init; }
+    public ValueList<MobileData2> MobileData { get; init; } = [];
 }

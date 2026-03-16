@@ -49,5 +49,5 @@ public record ReportTransactionResponse5
     [IsoId("_tJNTV3JEEe299ZbWCkdR_w")]
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
-    public ServiceResponse7? TransactionReport { get; init; }
+    public ValueList<ServiceResponse7> TransactionReport { get; init; } = [];
 }

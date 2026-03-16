@@ -149,5 +149,5 @@ public record Option15
     [IsoId("_PbMZVWp7EemmaZLSPtWX5A")]
     [DisplayName("Additional Underlying Attributes")]
     [IsoXmlTag("AddtlUndrlygAttrbts")]
-    public UnderlyingAttributes4? AdditionalUnderlyingAttributes { get; init; }
+    public ValueList<UnderlyingAttributes4> AdditionalUnderlyingAttributes { get; init; } = [];
 }

@@ -46,7 +46,7 @@ public record NonFinancialResponseContentComponent2
     [IsoId("_IOwj900DEeybj420QgWBkA")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action12? Action { get; init; }
+    public ValueList<Action12> Action { get; init; } = [];
 
     /// <summary>
     /// Result of the processing of the request.

@@ -30,7 +30,7 @@ public record AccountInterest1
     [IsoId("_SRxMUtp-Ed-ak6NoX_4Aeg_124611606")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public Rate1? Rate { get; init; }
+    public ValueList<Rate1> Rate { get; init; } = [];
 
     /// <summary>
     /// Range of time between a start date and an end date for the calculation of the interest.

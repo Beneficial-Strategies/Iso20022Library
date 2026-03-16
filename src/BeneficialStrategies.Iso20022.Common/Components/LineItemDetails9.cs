@@ -58,7 +58,7 @@ public record LineItemDetails9
     [IsoId("_SqWrddp-Ed-ak6NoX_4Aeg_1674749110")]
     [DisplayName("Product Identifier")]
     [IsoXmlTag("PdctIdr")]
-    public ProductIdentifier2Choice_? ProductIdentifier { get; init; }
+    public ValueList<ProductIdentifier2Choice_> ProductIdentifier { get; init; } = [];
 
     /// <summary>
     /// Identifies the characteristics of product.
@@ -66,7 +66,7 @@ public record LineItemDetails9
     [IsoId("_SqWrdtp-Ed-ak6NoX_4Aeg_1674749080")]
     [DisplayName("Product Characteristics")]
     [IsoXmlTag("PdctChrtcs")]
-    public ProductCharacteristics1Choice_? ProductCharacteristics { get; init; }
+    public ValueList<ProductCharacteristics1Choice_> ProductCharacteristics { get; init; } = [];
 
     /// <summary>
     /// Identifies the category of product.
@@ -74,7 +74,7 @@ public record LineItemDetails9
     [IsoId("_SqWrd9p-Ed-ak6NoX_4Aeg_1674749018")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public ProductCategory1Choice_? ProductCategory { get; init; }
+    public ValueList<ProductCategory1Choice_> ProductCategory { get; init; } = [];
 
     /// <summary>
     /// Country of origin of the goods.
@@ -90,7 +90,7 @@ public record LineItemDetails9
     [IsoId("_SqgccNp-Ed-ak6NoX_4Aeg_1674748709")]
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
-    public Adjustment4? Adjustment { get; init; }
+    public ValueList<Adjustment4> Adjustment { get; init; } = [];
 
     /// <summary>
     /// Charges related to the conveyance of goods.
@@ -106,7 +106,7 @@ public record LineItemDetails9
     [IsoId("_Sqgcctp-Ed-ak6NoX_4Aeg_1674748678")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax12? Tax { get; init; }
+    public ValueList<Tax12> Tax { get; init; } = [];
 
     /// <summary>
     /// Total amount of the line item after adjustments have been applied.

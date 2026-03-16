@@ -30,7 +30,7 @@ public record StatusReportContent2
     [IsoId("_N00oBQyVEeK5P9Ihqok3VA")]
     [DisplayName("POI Component")]
     [IsoXmlTag("POICmpnt")]
-    public PointOfInteractionComponent3? POIComponent { get; init; }
+    public ValueList<PointOfInteractionComponent3> POIComponent { get; init; } = [];
 
     /// <summary>
     /// Human attendance at the POI location during transactions.
@@ -63,7 +63,7 @@ public record StatusReportContent2
     [IsoId("_N00oFQyVEeK5P9Ihqok3VA")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public TMSEvent2? Event { get; init; }
+    public ValueList<TMSEvent2> Event { get; init; } = [];
 
     /// <summary>
     /// Error log of the point of interaction since the last status report.

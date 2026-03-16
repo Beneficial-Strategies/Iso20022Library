@@ -77,5 +77,5 @@ public record ISATransfer14
     [IsoId("_u16OsRwpEeOIveEnnb_1-A")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument37? FinancialInstrumentAssetForTransfer { get; init; }
+    public ValueList<FinancialInstrument37> FinancialInstrumentAssetForTransfer { get; init; } = [];
 }

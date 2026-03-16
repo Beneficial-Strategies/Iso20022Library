@@ -22,7 +22,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-ZIngEcEeCQm6a_G2yO_w_-1438063154")]
     [DisplayName("Line Total Amount")]
     [IsoXmlTag("LineTtlAmt")]
-    public CurrencyAndAmount? LineTotalAmount { get; init; }
+    public ValueList<CurrencyAndAmount> LineTotalAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the allowance total being reported for this settlement.
@@ -30,7 +30,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5kAEcEeCQm6a_G2yO_w_-1976793835")]
     [DisplayName("Allowance Total Amount")]
     [IsoXmlTag("AllwncTtlAmt")]
-    public CurrencyAndAmount? AllowanceTotalAmount { get; init; }
+    public ValueList<CurrencyAndAmount> AllowanceTotalAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the total discount being reported for this settlement.
@@ -38,7 +38,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5kQEcEeCQm6a_G2yO_w_427851198")]
     [DisplayName("Total Discount Amount")]
     [IsoXmlTag("TtlDscntAmt")]
-    public CurrencyAndAmount? TotalDiscountAmount { get; init; }
+    public ValueList<CurrencyAndAmount> TotalDiscountAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the charge amount total being reported for this settlement.
@@ -46,7 +46,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5kgEcEeCQm6a_G2yO_w_1451423672")]
     [DisplayName("Charge Total Amount")]
     [IsoXmlTag("ChrgTtlAmt")]
-    public CurrencyAndAmount? ChargeTotalAmount { get; init; }
+    public ValueList<CurrencyAndAmount> ChargeTotalAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the total prepaid amount being reported for this settlement.
@@ -54,7 +54,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5kwEcEeCQm6a_G2yO_w_1675528526")]
     [DisplayName("Total Prepaid Amount")]
     [IsoXmlTag("TtlPrepdAmt")]
-    public CurrencyAndAmount? TotalPrepaidAmount { get; init; }
+    public ValueList<CurrencyAndAmount> TotalPrepaidAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the total of all tax basis amounts being reported for this settlement.
@@ -62,7 +62,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5lAEcEeCQm6a_G2yO_w_-1622081227")]
     [DisplayName("Tax Total Amount")]
     [IsoXmlTag("TaxTtlAmt")]
-    public CurrencyAndAmount? TaxTotalAmount { get; init; }
+    public ValueList<CurrencyAndAmount> TaxTotalAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the total of all tax basis amounts being reported for this settlement.
@@ -70,7 +70,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5lQEcEeCQm6a_G2yO_w_1868239250")]
     [DisplayName("Tax Basis Amount")]
     [IsoXmlTag("TaxBsisAmt")]
-    public CurrencyAndAmount? TaxBasisAmount { get; init; }
+    public ValueList<CurrencyAndAmount> TaxBasisAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of a rounding amount being applied and reported for this settlement.
@@ -78,7 +78,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5lgEcEeCQm6a_G2yO_w_-575396775")]
     [DisplayName("Rounding Amount")]
     [IsoXmlTag("RndgAmt")]
-    public CurrencyAndAmount? RoundingAmount { get; init; }
+    public ValueList<CurrencyAndAmount> RoundingAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of the grand total being reported for this settlement, to include addition and subtraction of individual summation amounts.
@@ -86,7 +86,7 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5lwEcEeCQm6a_G2yO_w_-444855441")]
     [DisplayName("Grand Total Amount")]
     [IsoXmlTag("GrdTtlAmt")]
-    public CurrencyAndAmount? GrandTotalAmount { get; init; }
+    public ValueList<CurrencyAndAmount> GrandTotalAmount { get; init; } = [];
 
     /// <summary>
     /// Monetary value of an amount being reported as information for this settlement.
@@ -94,5 +94,5 @@ public record SettlementMonetarySummation1
     [IsoId("_S-i5mAEcEeCQm6a_G2yO_w_310144010")]
     [DisplayName("Information Amount")]
     [IsoXmlTag("InfAmt")]
-    public CurrencyAndAmount? InformationAmount { get; init; }
+    public ValueList<CurrencyAndAmount> InformationAmount { get; init; } = [];
 }

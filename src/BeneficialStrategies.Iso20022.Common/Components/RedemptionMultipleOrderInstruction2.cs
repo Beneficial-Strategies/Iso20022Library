@@ -40,5 +40,5 @@ public record RedemptionMultipleOrderInstruction2
     [IsoId("_RO292Np-Ed-ak6NoX_4Aeg_-632605169")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

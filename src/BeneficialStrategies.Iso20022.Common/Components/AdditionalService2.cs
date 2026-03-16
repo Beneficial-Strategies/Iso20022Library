@@ -58,5 +58,5 @@ public record AdditionalService2
     [IsoId("_DODP4J1LEeublrfU-wN95w")]
     [DisplayName("Service Detail")]
     [IsoXmlTag("SvcDtl")]
-    public AdditionalData1? ServiceDetail { get; init; }
+    public ValueList<AdditionalData1> ServiceDetail { get; init; } = [];
 }

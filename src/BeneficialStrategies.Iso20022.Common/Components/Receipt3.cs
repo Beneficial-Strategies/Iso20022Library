@@ -38,5 +38,5 @@ public record Receipt3
     [IsoId("_IMaJN24-EeiU9cctagi5ow")]
     [DisplayName("Request Handling")]
     [IsoXmlTag("ReqHdlg")]
-    public RequestHandling1? RequestHandling { get; init; }
+    public ValueList<RequestHandling1> RequestHandling { get; init; } = [];
 }

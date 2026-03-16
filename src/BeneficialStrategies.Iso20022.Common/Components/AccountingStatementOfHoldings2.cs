@@ -38,7 +38,7 @@ public record AccountingStatementOfHoldings2
     [IsoId("_RPdaxdp-Ed-ak6NoX_4Aeg_986842495")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateBalanceInformation3? BalanceForAccount { get; init; }
+    public ValueList<AggregateBalanceInformation3> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// The sub-account of the safekeeping or investment account.
@@ -46,7 +46,7 @@ public record AccountingStatementOfHoldings2
     [IsoId("_RPdaxtp-Ed-ak6NoX_4Aeg_986842530")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification3? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification3> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Value of total holdings reported.
@@ -62,5 +62,5 @@ public record AccountingStatementOfHoldings2
     [IsoId("_RPdayNp-Ed-ak6NoX_4Aeg_986842867")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -65,7 +65,5 @@ public record OtherCertificateDataSet1
     [IsoId("_TnmW1dp-Ed-ak6NoX_4Aeg_237674436")]
     [DisplayName("Certificate Information")]
     [IsoXmlTag("CertInf")]
-    [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CertificateInformation { get; init; }
+    public SimpleValueList<IsoMax350Text> CertificateInformation { get; init; } = [];
 }

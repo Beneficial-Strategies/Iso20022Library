@@ -92,5 +92,5 @@ public record ATMEquipment1
     [IsoId("_fAK8EIn-EeShMpas3885ww")]
     [DisplayName("Configuration Parameter")]
     [IsoXmlTag("CfgtnParam")]
-    public ATMConfigurationParameter1? ConfigurationParameter { get; init; }
+    public ValueList<ATMConfigurationParameter1> ConfigurationParameter { get; init; } = [];
 }

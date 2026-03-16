@@ -111,7 +111,7 @@ public record RequestGroupInformation1
     [IsoId("_TiiQodp-Ed-ak6NoX_4Aeg_1465496695")]
     [DisplayName("Agreement Clauses")]
     [IsoXmlTag("AgrmtClauses")]
-    public AgreementClauses1? AgreementClauses { get; init; }
+    public ValueList<AgreementClauses1> AgreementClauses { get; init; } = [];
 
     /// <summary>
     /// Additional information about the financing request.
@@ -119,5 +119,5 @@ public record RequestGroupInformation1
     [IsoId("_TiiQotp-Ed-ak6NoX_4Aeg_-1564243574")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation1? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation1> AdditionalInformation { get; init; } = [];
 }

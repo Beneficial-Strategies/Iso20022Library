@@ -31,7 +31,7 @@ public record DeviceInitialisationCardReaderRequest4
     [IsoId("_eRG3g1E6EeyApZmLzm74zA")]
     [DisplayName("Force Entry Mode")]
     [IsoXmlTag("ForceNtryMd")]
-    public CardDataReading8Code? ForceEntryMode { get; init; }
+    public SimpleValueList<CardDataReading8Code> ForceEntryMode { get; init; } = [];
 
     /// <summary>
     /// Flag to indicate the POI System to keep the card in the reader for a smart card.
