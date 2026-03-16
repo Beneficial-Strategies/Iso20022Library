@@ -74,14 +74,15 @@ public class FIToFIPaymentCancellationRequestV10XmlTests
         Assert.Equal(ExpectedCaseId, result.Case!.Identification);
 
         // Underlying transaction
-        var txn = result.Underlying.TransactionInformation;
-        Assert.NotNull(txn);
-        Assert.Equal(ExpectedAssignmentId, txn!.CancellationIdentification);
+        var txns = result.Underlying.TransactionInformation;
+        Assert.NotEmpty(txns);
+        var txn = txns![0];
+        Assert.Equal(ExpectedAssignmentId, txn.CancellationIdentification);
         Assert.Equal(ExpectedEndToEndId, txn.OriginalEndToEndIdentification);
         Assert.Equal(ExpectedUetr, txn.OriginalUETR);
 
         // Cancellation reason — Code variant (CUST)
-        var reason = Assert.IsType<Code>(txn.CancellationReasonInformation!.Reason);
+        var reason = Assert.IsType<Code>(txn.CancellationReasonInformation![0].Reason);
         Assert.Equal(ExternalCancellationReason1Code.RequestedByCustomer, reason.Value);
     }
 
@@ -111,13 +112,14 @@ public class FIToFIPaymentCancellationRequestV10XmlTests
         Assert.NotNull(result.Case);
         Assert.Equal(ExpectedCaseId, result.Case!.Identification);
 
-        var txn = result.Underlying.TransactionInformation;
-        Assert.NotNull(txn);
-        Assert.Equal(ExpectedAssignmentId, txn!.CancellationIdentification);
+        var txns2 = result.Underlying.TransactionInformation;
+        Assert.NotEmpty(txns2);
+        var txn = txns2![0];
+        Assert.Equal(ExpectedAssignmentId, txn.CancellationIdentification);
         Assert.Equal(ExpectedEndToEndId, txn.OriginalEndToEndIdentification);
         Assert.Equal(ExpectedUetr, txn.OriginalUETR);
 
-        var reason = Assert.IsType<Code>(txn.CancellationReasonInformation!.Reason);
+        var reason = Assert.IsType<Code>(txn.CancellationReasonInformation![0].Reason);
         Assert.Equal(ExternalCancellationReason1Code.RequestedByCustomer, reason.Value);
     }
 }

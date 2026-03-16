@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pacs.004.001.14 — Payment Return
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pacs.004.001.14
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pacs.004.001.14.xsd
+
+  Scenario  : BNP Paribas (BNPAFRPPXXX) returns EUR 47,250.00 to Deutsche Bank
+              (DEUTDEFFXXX) following a recall request. Two return reason items:
+              CUST (customer request) and NARR (narrative) with additional information.
+
+  NOTE — amounts use the ISO XSD simpleContent+Ccy-attribute pattern:
+  <RtrdIntrBkSttlmAmt Ccy="EUR">47250.00</RtrdIntrBkSttlmAmt>
+  The C# library serialises/deserialises this format correctly.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.004.001.14">
+  <PmtRtr>
+
+    <GrpHdr>
+      <MsgId>BNPAFRPP/240316/PAC004/00001</MsgId>
+      <CreDtTm>2024-03-16T09:00:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <SttlmInf>
+        <SttlmMtd>CLRG</SttlmMtd>
+      </SttlmInf>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+    </GrpHdr>
+
+    <OrgnlGrpInf>
+      <OrgnlMsgId>DEUTDEFF/240315/PAC008/00001</OrgnlMsgId>
+      <OrgnlMsgNmId>pacs.008.001.13</OrgnlMsgNmId>
+    </OrgnlGrpInf>
+
+    <TxInf>
+      <RtrId>BNPAFRPP/240316/RET/00001</RtrId>
+      <OrgnlEndToEndId>ACME/INV-2024-847/PAY001</OrgnlEndToEndId>
+      <OrgnlUETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</OrgnlUETR>
+      <OrgnlIntrBkSttlmDt>2024-03-15</OrgnlIntrBkSttlmDt>
+      <RtrdIntrBkSttlmAmt Ccy="EUR">47250.00</RtrdIntrBkSttlmAmt>
+      <IntrBkSttlmDt>2024-03-16</IntrBkSttlmDt>
+      <ChrgBr>SHAR</ChrgBr>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+      <RtrRsnInf>
+        <Rsn>
+          <Cd>CUST</Cd>
+        </Rsn>
+      </RtrRsnInf>
+      <RtrRsnInf>
+        <Rsn>
+          <Cd>NARR</Cd>
+        </Rsn>
+        <AddtlInf>Beneficiary confirmed return.</AddtlInf>
+      </RtrRsnInf>
+    </TxInf>
+
+  </PmtRtr>
+</Document>

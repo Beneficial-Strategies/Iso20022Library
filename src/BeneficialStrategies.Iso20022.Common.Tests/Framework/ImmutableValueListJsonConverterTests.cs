@@ -171,9 +171,9 @@ public class ImmutableValueListJsonConverterTests
                         CreditDebitCode.Credit
                     ),
                 ],
-                Entry = Camt053ExamplesTests.CreateCreditEntry(
+                Entry = [Camt053ExamplesTests.CreateCreditEntry(
                     new Code { Value = ExternalEntryStatus1Code.Booked }
-                ),
+                )],
             },
         };
 
@@ -189,7 +189,7 @@ public class ImmutableValueListJsonConverterTests
         Assert.Equal(905_500.00m, result.Statement.Balance[0].Amount.Amount);
 
         // Verify choice type round-tripped with correct concrete variant
-        var status = Assert.IsType<Code>(result.Statement.Entry!.Status);
+        var status = Assert.IsType<Code>(result.Statement.Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Booked, status.Value);
     }
 }

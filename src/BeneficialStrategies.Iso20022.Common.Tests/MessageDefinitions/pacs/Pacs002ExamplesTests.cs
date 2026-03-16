@@ -115,13 +115,13 @@ public class Pacs002ExamplesTests
                 OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                 OriginalUETR = Iso20022TestData.Uetr,
                 TransactionStatus = ExternalPaymentTransactionStatus1Code.Rejected,
-                StatusReasonInformation = new StatusReasonInformation12
+                StatusReasonInformation = [new StatusReasonInformation12
                 {
                     Originator = Iso20022TestData.Creditor,
                     Reason = new Code { Value = ExternalStatusReason1Code.ClosedAccountNumber, },
                     AdditionalInformation =
-                        "Beneficiary account FR7630006000011234567890189 was closed on 2024-01-31.",
-                },
+                        ["Beneficiary account FR7630006000011234567890189 was closed on 2024-01-31."],
+                }],
             },
         };
 
@@ -131,7 +131,7 @@ public class Pacs002ExamplesTests
             message.TransactionInformationAndStatus!.TransactionStatus
         );
         Assert.IsType<Code>(
-            message.TransactionInformationAndStatus.StatusReasonInformation!.Reason
+            message.TransactionInformationAndStatus.StatusReasonInformation![0].Reason
         );
     }
 
@@ -151,19 +151,19 @@ public class Pacs002ExamplesTests
                 OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                 OriginalUETR = Iso20022TestData.Uetr,
                 TransactionStatus = ExternalPaymentTransactionStatus1Code.Rejected,
-                StatusReasonInformation = new StatusReasonInformation12
+                StatusReasonInformation = [new StatusReasonInformation12
                 {
                     Originator = Iso20022TestData.Creditor,
                     Reason = new Proprietary { Value = "BNPFR-SANCTION-SCREENING-HOLD", },
                     AdditionalInformation =
-                        "Transaction held pending compliance review per internal policy CP-2024-007.",
-                },
+                        ["Transaction held pending compliance review per internal policy CP-2024-007."],
+                }],
             },
         };
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.TransactionInformationAndStatus!.StatusReasonInformation!.Reason
+            message.TransactionInformationAndStatus!.StatusReasonInformation![0].Reason
         );
     }
 }

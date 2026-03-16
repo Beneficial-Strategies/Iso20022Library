@@ -224,8 +224,13 @@ public static class Iso20022XmlSerializer
 
             if (hasClassTag)
             {
-                // Complex variant: <tag><VariantTag>...properties...</VariantTag></tag>
-                wrapper.Add(SerializeObject(value, ns, match.Tag));
+                // Complex variant: normally <tag><VariantTag>...properties...</VariantTag></tag>
+                // Exception: if the variant itself is an amount type (e.g. InstructedAmount with
+                // Currency+Amount), serialize as <tag><VariantTag Ccy="EUR">47250.00</VariantTag></tag>
+                if (IsAmountType(runtimeType))
+                    wrapper.Add(SerializeAmount(value, ns, match.Tag));
+                else
+                    wrapper.Add(SerializeObject(value, ns, match.Tag));
             }
             else
             {
@@ -334,6 +339,9 @@ public static class Iso20022XmlSerializer
                 var wrapperEl = parentEl.Element(ns + tag);
                 if (wrapperEl is null)
                     continue;
+                // Amount-like variants (e.g. InstructedAmount) use Ccy-attribute format
+                if (IsAmountType(variantType))
+                    return DeserializeAmount(variantType, wrapperEl);
                 return DeserializeObject(variantType, wrapperEl, ns);
             }
             else
@@ -447,7 +455,20 @@ public static class Iso20022XmlSerializer
     /// text content for the decimal amount — to match the ISO XSD simpleContent pattern.
     /// </summary>
     private static bool IsAmountType(Type t) =>
-        t.Namespace == "BeneficialStrategies.Iso20022.Amounts";
+        t.Namespace == "BeneficialStrategies.Iso20022.Amounts" || HasCurrencyAndAmountProperties(t);
+
+    /// <summary>
+    /// Returns true for types that carry exactly the ISO currency-and-amount property pair:
+    /// a string property tagged "Currency" and a decimal property tagged "Amount".
+    /// This catches both the canonical <c>Amounts</c>-namespace types and choice variants
+    /// such as <c>AmountType4Choice.InstructedAmount</c> that replicate the same structure.
+    /// </summary>
+    private static bool HasCurrencyAndAmountProperties(Type t)
+    {
+        var props = GetProps(t);
+        return props.Any(p => p.XmlTag == "Currency" && p.CoreType == typeof(string))
+            && props.Any(p => p.XmlTag == "Amount" && p.CoreType == typeof(decimal));
+    }
 
     private static XElement SerializeAmount(object obj, XNamespace ns, string tag)
     {

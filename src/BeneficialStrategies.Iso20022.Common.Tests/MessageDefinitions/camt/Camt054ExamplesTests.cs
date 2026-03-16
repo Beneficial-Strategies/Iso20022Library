@@ -69,9 +69,9 @@ public class Camt054ExamplesTests
                     },
                 },
             },
-            EntryDetails = new EntryDetails12
+            EntryDetails = [new EntryDetails12
             {
-                TransactionDetails = new EntryTransaction13
+                TransactionDetails = [new EntryTransaction13
                 {
                     References = new TransactionReferences6
                     {
@@ -80,7 +80,7 @@ public class Camt054ExamplesTests
                     },
                     RemittanceInformation = new RemittanceInformation21
                     {
-                        Unstructured = "INV-2024-847 EUR 47250.00",
+                        Unstructured = ["INV-2024-847 EUR 47250.00"],
                     },
                     RelatedParties = new TransactionParties9
                     {
@@ -90,8 +90,8 @@ public class Camt054ExamplesTests
                         },
                         DebtorAccount = Iso20022TestData.DebtorAccount,
                     },
-                },
-            },
+                }],
+            }],
         };
 
     // ── Examples ───────────────────────────────────────────────────────────────
@@ -112,14 +112,14 @@ public class Camt054ExamplesTests
             {
                 Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-001",
                 Account = CreateNotificationAccount(),
-                Entry = CreateIncomingCreditEntry(),
+                Entry = [CreateIncomingCreditEntry()],
             },
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.054.001.11", BankToCustomerDebitCreditNotificationV11.IsoIdentifier);
-        Assert.Equal(CreditDebitCode.Credit, message.Notification.Entry!.CreditDebitIndicator);
-        Assert.IsType<Code>(message.Notification.Entry.Status);
+        Assert.Equal(CreditDebitCode.Credit, message.Notification.Entry![0].CreditDebitIndicator);
+        Assert.IsType<Code>(message.Notification.Entry[0].Status);
     }
 
     /// <summary>
@@ -148,7 +148,7 @@ public class Camt054ExamplesTests
                     Owner = Iso20022TestData.Debtor,
                     Servicer = Iso20022TestData.DebtorAgent,
                 },
-                Entry = new ReportEntry13
+                Entry = [new ReportEntry13
                 {
                     Amount = new ActiveOrHistoricCurrencyAndAmount
                     {
@@ -172,9 +172,9 @@ public class Camt054ExamplesTests
                             },
                         },
                     },
-                    EntryDetails = new EntryDetails12
+                    EntryDetails = [new EntryDetails12
                     {
-                        TransactionDetails = new EntryTransaction13
+                        TransactionDetails = [new EntryTransaction13
                         {
                             References = new TransactionReferences6
                             {
@@ -189,14 +189,14 @@ public class Camt054ExamplesTests
                                 },
                                 CreditorAccount = Iso20022TestData.CreditorAccount,
                             },
-                        },
-                    },
-                },
+                        }],
+                    }],
+                }],
             },
         };
 
         Assert.NotNull(message);
-        Assert.Equal(CreditDebitCode.Debit, message.Notification.Entry!.CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Debit, message.Notification.Entry![0].CreditDebitIndicator);
     }
 
     /// <summary>
@@ -215,15 +215,15 @@ public class Camt054ExamplesTests
             {
                 Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-INST",
                 Account = CreateNotificationAccount(),
-                Entry = CreateIncomingCreditEntry() with
+                Entry = [CreateIncomingCreditEntry() with
                 {
                     Status = new Code { Value = ExternalEntryStatus1Code.Pending },
-                },
+                }],
             },
         };
 
         Assert.NotNull(message);
-        var status = Assert.IsType<Code>(message.Notification.Entry!.Status);
+        var status = Assert.IsType<Code>(message.Notification.Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Pending, status.Value);
     }
 
@@ -242,14 +242,14 @@ public class Camt054ExamplesTests
             {
                 Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-PROP",
                 Account = CreateNotificationAccount(),
-                Entry = CreateIncomingCreditEntry() with
+                Entry = [CreateIncomingCreditEntry() with
                 {
                     Status = new Proprietary { Value = "BNPFR-CREDITING" },
-                },
+                }],
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.Notification.Entry!.Status);
+        Assert.IsType<Proprietary>(message.Notification.Entry![0].Status);
     }
 }

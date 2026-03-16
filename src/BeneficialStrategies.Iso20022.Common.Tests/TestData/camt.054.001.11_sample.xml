@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample camt.054.001.11 — BankToCustomerDebitCreditNotification
+  Namespace : urn:iso:std:iso:20022:tech:xsd:camt.054.001.11
+
+  XSD VALIDATION STATUS: PENDING EXTERNAL VALIDATION
+  TODO: Validate against https://www.iso20022.org/sites/default/files/schemas/camt.054.001.11.xsd
+
+  Scenario  : BNP Paribas (BNPAFRPPXXX) sends two intraday credit notifications to
+              GlobalSupply S.A.S. for two incoming SEPA credit transfers received on
+              2024-03-15.
+
+  Entries   : 1. Credit EUR 47,250.00 CRDT BOOK — Acme pays GlobalSupply (INV-2024-847)
+                 UETR: 97ed4827-7b6f-4491-a06f-b548d5a7512d
+              2. Credit EUR 12,500.00 CRDT BOOK — Acme pays GlobalSupply (INV-2024-848)
+                 UETR: b1c2d3e4-f5a6-7890-abcd-ef1234567890
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.11">
+  <BkToCstmrDbtCdtNtfctn>
+
+    <GrpHdr>
+      <MsgId>BNPAFRPP/240315/CAM054/00001</MsgId>
+      <CreDtTm>2024-03-15T08:35:00</CreDtTm>
+      <MsgRcpt>
+        <Nm>GlobalSupply S.A.S.</Nm>
+        <PstlAdr>
+          <StrtNm>Rue de Rivoli</StrtNm>
+          <BldgNb>228</BldgNb>
+          <PstCd>75001</PstCd>
+          <TwnNm>Paris</TwnNm>
+          <Ctry>FR</Ctry>
+        </PstlAdr>
+      </MsgRcpt>
+    </GrpHdr>
+
+    <Ntfctn>
+      <Id>BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-001</Id>
+      <CreDtTm>2024-03-15T08:35:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>FR7630006000011234567890189</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Nm>GlobalSupply S.A.S. Current Account</Nm>
+        <Ownr>
+          <Nm>GlobalSupply S.A.S.</Nm>
+          <PstlAdr>
+            <StrtNm>Rue de Rivoli</StrtNm>
+            <BldgNb>228</BldgNb>
+            <PstCd>75001</PstCd>
+            <TwnNm>Paris</TwnNm>
+            <Ctry>FR</Ctry>
+          </PstlAdr>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>BNPAFRPPXXX</BICFI>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+
+      <!-- Entry 1 of 2 — Credit EUR 47,250.00 (INV-2024-847) -->
+      <Ntry>
+        <NtryRef>BNPAFRPP20240315CR001234</NtryRef>
+        <Amt Ccy="EUR">47250.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-15</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-15</Dt>
+        </ValDt>
+        <AcctSvcrRef>BNPAFRPP20240315001234</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>ACME/INV-2024-847/PAY001</EndToEndId>
+              <UETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</UETR>
+            </Refs>
+            <RmtInf>
+              <Ustrd>INV-2024-847 EUR 47250.00</Ustrd>
+              <Ustrd>Payment from Acme Manufacturing GmbH ref INV-2024-847</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+
+      <!-- Entry 2 of 2 — Credit EUR 12,500.00 (INV-2024-848) -->
+      <Ntry>
+        <NtryRef>BNPAFRPP20240315CR001235</NtryRef>
+        <Amt Ccy="EUR">12500.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-15</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-15</Dt>
+        </ValDt>
+        <AcctSvcrRef>BNPAFRPP20240315001235</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>ACME/INV-2024-848/PAY002</EndToEndId>
+              <UETR>b1c2d3e4-f5a6-7890-abcd-ef1234567890</UETR>
+            </Refs>
+            <RmtInf>
+              <Ustrd>INV-2024-848 EUR 12500.00</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+
+    </Ntfctn>
+
+  </BkToCstmrDbtCdtNtfctn>
+</Document>

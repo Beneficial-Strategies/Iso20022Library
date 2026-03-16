@@ -154,7 +154,7 @@ public class Pain001ExamplesTests
                     },
                     RemittanceInformation = new RemittanceInformation21
                     {
-                        Unstructured = "INV-2024-847 EUR 47250.00 due 2024-03-15",
+                        Unstructured = ["INV-2024-847 EUR 47250.00 due 2024-03-15"],
                     },
                 }
             ),
@@ -216,10 +216,10 @@ public class Pain001ExamplesTests
                 },
                 PaymentTypeInformation = new PaymentTypeInformation26
                 {
-                    ServiceLevel = new Choices.ServiceLevel8Choice.Code
+                    ServiceLevel = [new Choices.ServiceLevel8Choice.Code
                     {
                         Value = ExternalServiceLevel1Code.InstantCreditTransferOrInstantDirectDebit,
-                    },
+                    }],
                     LocalInstrument = new Choices.LocalInstrument2Choice.Code
                     {
                         Value = ExternalLocalInstrument1Code.InstantCreditTransfer,

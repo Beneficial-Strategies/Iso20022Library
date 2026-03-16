@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample camt.053.001.11 — BankToCustomerStatement
+  Namespace : urn:iso:std:iso:20022:tech:xsd:camt.053.001.11
+
+  XSD VALIDATION STATUS: PENDING EXTERNAL VALIDATION
+  TODO: Validate against https://www.iso20022.org/sites/default/files/schemas/camt.053.001.11.xsd
+
+  Scenario  : Deutsche Bank (DEUTDEFFXXX) sends an end-of-day account statement to
+              Acme Manufacturing GmbH for their operating account. Statement covers
+              2024-03-15 and contains opening and closing booked balances, one incoming
+              SEPA credit transfer (CRDT) and one outgoing SEPA credit transfer (DBIT).
+
+  Balances  : Opening booked (EUR 905,500.00) + Closing booked (EUR 952,750.00)
+  Entries   : 1. Incoming EUR 47,250.00 CRDT BOOK — GlobalSupply pays Acme (INV-2024-847)
+              2. Outgoing EUR 47,250.00 DBIT BOOK — Acme pays GlobalSupply (INV-2024-848)
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.11">
+  <BkToCstmrStmt>
+
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/CAM053/00001</MsgId>
+      <CreDtTm>2024-03-15T18:00:00</CreDtTm>
+      <MsgRcpt>
+        <Nm>Acme Manufacturing GmbH</Nm>
+        <PstlAdr>
+          <StrtNm>Mainzer Landstrasse</StrtNm>
+          <BldgNb>46</BldgNb>
+          <PstCd>60325</PstCd>
+          <TwnNm>Frankfurt am Main</TwnNm>
+          <Ctry>DE</Ctry>
+        </PstlAdr>
+      </MsgRcpt>
+    </GrpHdr>
+
+    <Stmt>
+      <Id>DEUTDEFF-ACME-STMT-20240315-001</Id>
+      <CreDtTm>2024-03-15T18:00:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Nm>Acme Manufacturing GmbH Operating Account</Nm>
+        <Ownr>
+          <Nm>Acme Manufacturing GmbH</Nm>
+          <PstlAdr>
+            <StrtNm>Mainzer Landstrasse</StrtNm>
+            <BldgNb>46</BldgNb>
+            <PstCd>60325</PstCd>
+            <TwnNm>Frankfurt am Main</TwnNm>
+            <Ctry>DE</Ctry>
+          </PstlAdr>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>DEUTDEFFXXX</BICFI>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+
+      <!-- Balance 1 of 2 — Opening Booked (OPBD) -->
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>OPBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">905500.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-14</Dt>
+        </Dt>
+      </Bal>
+
+      <!-- Balance 2 of 2 — Closing Booked (CLBD) -->
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>CLBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">952750.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-15</Dt>
+        </Dt>
+      </Bal>
+
+      <!-- Entry 1 of 2 — Incoming SEPA Credit Transfer EUR 47,250.00 (CRDT) -->
+      <Ntry>
+        <NtryRef>DEUTDEFF20240315CR001234</NtryRef>
+        <Amt Ccy="EUR">47250.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-15</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-15</Dt>
+        </ValDt>
+        <AcctSvcrRef>BNPAFRPP20240315001234</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>ACME/INV-2024-847/PAY001</EndToEndId>
+              <UETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</UETR>
+            </Refs>
+            <RmtInf>
+              <Ustrd>INV-2024-847 EUR 47250.00</Ustrd>
+              <Ustrd>Payment for invoice INV-2024-847 from GlobalSupply S.A.S.</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+
+      <!-- Entry 2 of 2 — Outgoing SEPA Credit Transfer EUR 47,250.00 (DBIT) -->
+      <Ntry>
+        <NtryRef>DEUTDEFF20240315DB005678</NtryRef>
+        <Amt Ccy="EUR">47250.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-15</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-15</Dt>
+        </ValDt>
+        <AcctSvcrRef>DEUTDEFF20240315005678</AcctSvcrRef>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>ICDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs>
+              <EndToEndId>ACME/INV-2024-848/PAY002</EndToEndId>
+              <UETR>b1c2d3e4-f5a6-7890-abcd-ef1234567890</UETR>
+            </Refs>
+            <RmtInf>
+              <Ustrd>INV-2024-848 EUR 47250.00</Ustrd>
+            </RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+
+    </Stmt>
+
+  </BkToCstmrStmt>
+</Document>

@@ -113,13 +113,13 @@ public class Pain002ExamplesTests
                 ExternalPaymentGroupStatus1Code.Rejected
             ) with
             {
-                TransactionInformationAndStatus = new PaymentTransaction144
+                TransactionInformationAndStatus = [new PaymentTransaction144
                 {
                     OriginalInstructionIdentification = Iso20022TestData.InstructionId,
                     OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                     OriginalUETR = Iso20022TestData.Uetr,
                     TransactionStatus = ExternalPaymentTransactionStatus1Code.Rejected,
-                    StatusReasonInformation = new StatusReasonInformation12
+                    StatusReasonInformation = [new StatusReasonInformation12
                     {
                         Originator = Iso20022TestData.Debtor,
                         Reason = new Code
@@ -127,9 +127,9 @@ public class Pain002ExamplesTests
                             Value = ExternalStatusReason1Code.ClosedAccountNumber,
                         },
                         AdditionalInformation =
-                            "Creditor account FR7630006000011234567890189 was closed on 2024-01-31.",
-                    },
-                },
+                            ["Creditor account FR7630006000011234567890189 was closed on 2024-01-31."],
+                    }],
+                }],
             },
         };
 
@@ -141,8 +141,8 @@ public class Pain002ExamplesTests
         Assert.IsType<Code>(
             message
                 .OriginalPaymentInformationAndStatus
-                .TransactionInformationAndStatus!
-                .StatusReasonInformation!
+                .TransactionInformationAndStatus![0]
+                .StatusReasonInformation![0]
                 .Reason
         );
     }
@@ -163,18 +163,18 @@ public class Pain002ExamplesTests
                 ExternalPaymentGroupStatus1Code.Rejected
             ) with
             {
-                TransactionInformationAndStatus = new PaymentTransaction144
+                TransactionInformationAndStatus = [new PaymentTransaction144
                 {
                     OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                     OriginalUETR = Iso20022TestData.Uetr,
                     TransactionStatus = ExternalPaymentTransactionStatus1Code.Rejected,
-                    StatusReasonInformation = new StatusReasonInformation12
+                    StatusReasonInformation = [new StatusReasonInformation12
                     {
                         Reason = new Proprietary { Value = "DEUTDE-DAILY-LIMIT-EXCEEDED", },
                         AdditionalInformation =
-                            "Single-payment limit EUR 50,000 exceeded. Contact your relationship manager.",
-                    },
-                },
+                            ["Single-payment limit EUR 50,000 exceeded. Contact your relationship manager."],
+                    }],
+                }],
             },
         };
 
@@ -182,8 +182,8 @@ public class Pain002ExamplesTests
         Assert.IsType<Proprietary>(
             message
                 .OriginalPaymentInformationAndStatus!
-                .TransactionInformationAndStatus!
-                .StatusReasonInformation!
+                .TransactionInformationAndStatus![0]
+                .StatusReasonInformation![0]
                 .Reason
         );
     }
@@ -206,13 +206,13 @@ public class Pain002ExamplesTests
             OriginalPaymentInformationAndStatus = new OriginalPaymentInstruction45
             {
                 OriginalPaymentInformationIdentification = "ACME/240315/PMTINF/001",
-                TransactionInformationAndStatus = new PaymentTransaction144
+                TransactionInformationAndStatus = [new PaymentTransaction144
                 {
                     OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                     OriginalUETR = Iso20022TestData.Uetr,
                     TransactionStatus = ExternalPaymentTransactionStatus1Code.Pending,
                     AcceptanceDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
-                },
+                }],
             },
         };
 
@@ -221,7 +221,7 @@ public class Pain002ExamplesTests
             ExternalPaymentTransactionStatus1Code.Pending,
             message
                 .OriginalPaymentInformationAndStatus!
-                .TransactionInformationAndStatus!
+                .TransactionInformationAndStatus![0]
                 .TransactionStatus
         );
     }

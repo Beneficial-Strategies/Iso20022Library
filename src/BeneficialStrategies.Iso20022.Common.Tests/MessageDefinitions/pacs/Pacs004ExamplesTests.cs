@@ -70,19 +70,19 @@ public class Pacs004ExamplesTests
             GroupHeader = CreateGroupHeader(),
             TransactionInformation = CreateReturnTransaction() with
             {
-                ReturnReasonInformation = new PaymentReturnReason6
+                ReturnReasonInformation = [new PaymentReturnReason6
                 {
                     Originator = Iso20022TestData.Creditor,
                     Reason = new Code { Value = ExternalReturnReason1Code.ClosedAccountNumber, },
                     AdditionalInformation =
-                        "Account FR7630006000011234567890189 closed 2024-01-31. Return per SEPA SCT rulebook section 4.3.",
-                },
+                        ["Account FR7630006000011234567890189 closed 2024-01-31. Return per SEPA SCT rulebook section 4.3."],
+                }],
             },
         };
 
         Assert.NotNull(message);
         Assert.Equal("pacs.004.001.12", PaymentReturnV12.IsoIdentifier);
-        Assert.IsType<Code>(message.TransactionInformation!.ReturnReasonInformation!.Reason);
+        Assert.IsType<Code>(message.TransactionInformation!.ReturnReasonInformation![0].Reason);
     }
 
     /// <summary>
@@ -104,18 +104,18 @@ public class Pacs004ExamplesTests
             },
             TransactionInformation = CreateReturnTransaction() with
             {
-                ReturnReasonInformation = new PaymentReturnReason6
+                ReturnReasonInformation = [new PaymentReturnReason6
                 {
                     Originator = Iso20022TestData.Creditor,
                     Reason = new Code { Value = ExternalReturnReason1Code.RequestedByCustomer, },
                     AdditionalInformation =
-                        "Return per recall request CAMT056-DEUTDEFF-240316-001 accepted by beneficiary.",
-                },
+                        ["Return per recall request CAMT056-DEUTDEFF-240316-001 accepted by beneficiary."],
+                }],
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Code>(message.TransactionInformation!.ReturnReasonInformation!.Reason);
+        Assert.IsType<Code>(message.TransactionInformation!.ReturnReasonInformation![0].Reason);
     }
 
     /// <summary>
@@ -131,16 +131,16 @@ public class Pacs004ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240316/PAC004/00003"),
             TransactionInformation = CreateReturnTransaction() with
             {
-                ReturnReasonInformation = new PaymentReturnReason6
+                ReturnReasonInformation = [new PaymentReturnReason6
                 {
                     Reason = new Proprietary { Value = "BNPFR-EXCEED-DAILY-LIMIT", },
                     AdditionalInformation =
-                        "Beneficiary single-day receipt limit exceeded. Contact relationship manager.",
-                },
+                        ["Beneficiary single-day receipt limit exceeded. Contact relationship manager."],
+                }],
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.TransactionInformation!.ReturnReasonInformation!.Reason);
+        Assert.IsType<Proprietary>(message.TransactionInformation!.ReturnReasonInformation![0].Reason);
     }
 }

@@ -73,13 +73,13 @@ public class Camt056ExamplesTests
                 Amount = Iso20022TestData.Amount,
             },
             OriginalInterbankSettlementDate = Iso20022TestData.SettlementDate,
-            CancellationReasonInformation = new PaymentCancellationReason5
+            CancellationReasonInformation = [new PaymentCancellationReason5
             {
                 Originator = Iso20022TestData.Debtor,
                 Reason =
                     reason
                     ?? new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer, },
-            },
+            }],
         };
 
     // ── Examples ───────────────────────────────────────────────────────────────
@@ -98,16 +98,16 @@ public class Camt056ExamplesTests
             Case = CreateCase(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = CreateTransactionCancellation(
+                TransactionInformation = [CreateTransactionCancellation(
                     new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer }
-                ),
+                )],
             },
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.056.001.10", FIToFIPaymentCancellationRequestV10.IsoIdentifier);
         Assert.IsType<Code>(
-            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
     }
 
@@ -128,27 +128,27 @@ public class Camt056ExamplesTests
             Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-002", },
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = CreateTransactionCancellation(
+                TransactionInformation = [CreateTransactionCancellation(
                     new Code { Value = ExternalCancellationReason1Code.DuplicatePayment }
                 ) with
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00002",
-                    CancellationReasonInformation = new PaymentCancellationReason5
+                    CancellationReasonInformation = [new PaymentCancellationReason5
                     {
                         Reason = new Code
                         {
                             Value = ExternalCancellationReason1Code.DuplicatePayment
                         },
                         AdditionalInformation =
-                            "Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent at 08:30 UTC; duplicate submitted at 08:31 UTC.",
-                    },
-                },
+                            ["Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent at 08:30 UTC; duplicate submitted at 08:31 UTC."],
+                    }],
+                }],
             },
         };
 
         Assert.NotNull(message);
         var reason = (Code)
-            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason!;
+            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason!;
         Assert.Equal(ExternalCancellationReason1Code.DuplicatePayment, reason.Value);
     }
 
@@ -169,18 +169,18 @@ public class Camt056ExamplesTests
             Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-003", },
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = CreateTransactionCancellation(
+                TransactionInformation = [CreateTransactionCancellation(
                     new Proprietary { Value = "DEUTDE-AML-FREEZE-REF-2024-03-16-0042", }
                 ) with
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00003",
-                },
+                }],
             },
         };
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
     }
 
@@ -210,15 +210,15 @@ public class Camt056ExamplesTests
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     OriginalCreationDateTime = Iso20022TestData.MessageCreationDateTime,
                     GroupCancellation = "true",
-                    CancellationReasonInformation = new PaymentCancellationReason5
+                    CancellationReasonInformation = [new PaymentCancellationReason5
                     {
                         Reason = new Code
                         {
                             Value = ExternalCancellationReason1Code.RequestedByCustomer
                         },
                         AdditionalInformation =
-                            "Customer requested cancellation of all payments in batch DEUTDEFF/240315/PAC008/00001.",
-                    },
+                            ["Customer requested cancellation of all payments in batch DEUTDEFF/240315/PAC008/00001."],
+                    }],
                 },
             },
         };
@@ -258,7 +258,7 @@ public class Camt056ExamplesTests
             },
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = CreateTransactionCancellation(),
+                TransactionInformation = [CreateTransactionCancellation()],
             },
         };
 

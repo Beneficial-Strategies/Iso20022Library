@@ -90,9 +90,9 @@ public class Camt053ExamplesTests
                     },
                 },
             },
-            EntryDetails = new EntryDetails12
+            EntryDetails = [new EntryDetails12
             {
-                TransactionDetails = new EntryTransaction13
+                TransactionDetails = [new EntryTransaction13
                 {
                     References = new TransactionReferences6
                     {
@@ -102,7 +102,7 @@ public class Camt053ExamplesTests
                     },
                     RemittanceInformation = new RemittanceInformation21
                     {
-                        Unstructured = "INV-2024-847 EUR 47250.00",
+                        Unstructured = ["INV-2024-847 EUR 47250.00"],
                     },
                     RelatedParties = new TransactionParties9
                     {
@@ -112,8 +112,8 @@ public class Camt053ExamplesTests
                         },
                         DebtorAccount = Iso20022TestData.DebtorAccount,
                     },
-                },
-            },
+                }],
+            }],
         };
 
     // ── Examples ───────────────────────────────────────────────────────────────
@@ -184,13 +184,13 @@ public class Camt053ExamplesTests
                     Servicer = Iso20022TestData.CreditorAgent,
                 },
                 Balance = [CreateClosingBookedBalance()],
-                Entry = CreateCreditEntry(),
+                Entry = [CreateCreditEntry()],
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Code>(message.Statement.Entry!.Status);
-        Assert.Equal(CreditDebitCode.Credit, message.Statement.Entry.CreditDebitIndicator);
+        Assert.IsType<Code>(message.Statement.Entry![0].Status);
+        Assert.Equal(CreditDebitCode.Credit, message.Statement.Entry[0].CreditDebitIndicator);
     }
 
     /// <summary>
@@ -213,12 +213,12 @@ public class Camt053ExamplesTests
                     Identification = new IBAN { Value = "FR7630006000011234567890189" },
                     Currency = Iso20022TestData.Currency,
                 },
-                Entry = CreateCreditEntry(new Code { Value = ExternalEntryStatus1Code.Pending }),
+                Entry = [CreateCreditEntry(new Code { Value = ExternalEntryStatus1Code.Pending })],
             },
         };
 
         Assert.NotNull(message);
-        var status = Assert.IsType<Code>(message.Statement.Entry!.Status);
+        var status = Assert.IsType<Code>(message.Statement.Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Pending, status.Value);
     }
 
@@ -241,12 +241,12 @@ public class Camt053ExamplesTests
                     Identification = new IBAN { Value = "FR7630006000011234567890189" },
                     Currency = Iso20022TestData.Currency,
                 },
-                Entry = CreateCreditEntry(new Proprietary { Value = "BNPFR-PRE-BOOKED" }),
+                Entry = [CreateCreditEntry(new Proprietary { Value = "BNPFR-PRE-BOOKED" })],
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.Statement.Entry!.Status);
+        Assert.IsType<Proprietary>(message.Statement.Entry![0].Status);
     }
 
     /// <summary>
@@ -290,11 +290,11 @@ public class Camt053ExamplesTests
                 Identification = "DEUTDEFF-ACME-STMT-20240315-DEBIT",
                 Account = CreateStatementAccount(),
                 Balance = [CreateClosingBookedBalance()],
-                Entry = debitEntry,
+                Entry = [debitEntry],
             },
         };
 
         Assert.NotNull(message);
-        Assert.Equal(CreditDebitCode.Debit, message.Statement.Entry!.CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Debit, message.Statement.Entry![0].CreditDebitIndicator);
     }
 }

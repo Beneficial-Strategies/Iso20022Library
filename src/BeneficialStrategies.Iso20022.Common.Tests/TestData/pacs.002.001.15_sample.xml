@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pacs.002.001.15 — FI-to-FI Payment Status Report
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pacs.002.001.15
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pacs.002.001.15.xsd
+
+  Scenario  : BNP Paribas (BNPAFRPPXXX) sends a payment status report to Deutsche Bank
+              (DEUTDEFFXXX) confirming acceptance of the pacs.008 payment.
+              Status is ACSP (Accepted Settlement In Process) with two status reason items.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.002.001.15">
+  <FIToFIPmtStsRpt>
+
+    <GrpHdr>
+      <MsgId>BNPAFRPP/240315/PAC002/00001</MsgId>
+      <CreDtTm>2024-03-15T08:32:00</CreDtTm>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+    </GrpHdr>
+
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>DEUTDEFF/240315/PAC008/00001</OrgnlMsgId>
+      <OrgnlMsgNmId>pacs.008.001.13</OrgnlMsgNmId>
+      <GrpSts>ACCP</GrpSts>
+    </OrgnlGrpInfAndSts>
+
+    <TxInfAndSts>
+      <OrgnlEndToEndId>ACME/INV-2024-847/PAY001</OrgnlEndToEndId>
+      <OrgnlUETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</OrgnlUETR>
+      <TxSts>ACSP</TxSts>
+      <StsRsnInf>
+        <Rsn>
+          <Prtry>ACCEPTED-CLEARING</Prtry>
+        </Rsn>
+      </StsRsnInf>
+      <StsRsnInf>
+        <Rsn>
+          <Prtry>SETTLEMENT-INITIATED</Prtry>
+        </Rsn>
+      </StsRsnInf>
+      <AccptncDtTm>2024-03-15T08:31:00</AccptncDtTm>
+    </TxInfAndSts>
+
+  </FIToFIPmtStsRpt>
+</Document>

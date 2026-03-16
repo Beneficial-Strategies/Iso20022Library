@@ -28,7 +28,7 @@ public record FinancialInstitutionCreditTransferV11 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "pacs.009.001.01";
+    public const string XmlTag = "FICdtTrf";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.

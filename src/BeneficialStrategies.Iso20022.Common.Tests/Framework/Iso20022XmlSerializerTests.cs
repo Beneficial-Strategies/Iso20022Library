@@ -109,16 +109,16 @@ public class Iso20022XmlSerializerTests
             {
                 Identification = "STMT-002",
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
-                Entry = Camt053ExamplesTests.CreateCreditEntry(
+                Entry = [Camt053ExamplesTests.CreateCreditEntry(
                     new EntryCode { Value = ExternalEntryStatus1Code.Booked }
-                ),
+                )],
             },
         };
 
         var xml = Iso20022XmlSerializer.SerializeToString(message);
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerStatementV11>(xml);
 
-        var status = Assert.IsType<EntryCode>(result.Statement.Entry!.Status);
+        var status = Assert.IsType<EntryCode>(result.Statement.Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Booked, status.Value);
     }
 
@@ -132,16 +132,16 @@ public class Iso20022XmlSerializerTests
             {
                 Identification = "STMT-003",
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
-                Entry = Camt053ExamplesTests.CreateCreditEntry(
+                Entry = [Camt053ExamplesTests.CreateCreditEntry(
                     new EntryProprietary { Value = "BNPFR-PRE-BOOKED" }
-                ),
+                )],
             },
         };
 
         var xml = Iso20022XmlSerializer.SerializeToString(message);
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerStatementV11>(xml);
 
-        var status = Assert.IsType<EntryProprietary>(result.Statement.Entry!.Status);
+        var status = Assert.IsType<EntryProprietary>(result.Statement.Entry![0].Status);
         Assert.Equal("BNPFR-PRE-BOOKED", status.Value);
     }
 
@@ -160,7 +160,7 @@ public class Iso20022XmlSerializerTests
             Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(),
+                TransactionInformation = [Camt056ExamplesTests.CreateTransactionCancellation()],
             },
         };
 
@@ -183,7 +183,7 @@ public class Iso20022XmlSerializerTests
             Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(),
+                TransactionInformation = [Camt056ExamplesTests.CreateTransactionCancellation()],
             },
         };
 
@@ -204,9 +204,9 @@ public class Iso20022XmlSerializerTests
             Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(
+                TransactionInformation = [Camt056ExamplesTests.CreateTransactionCancellation(
                     new CxlCode { Value = ExternalCancellationReason1Code.RequestedByCustomer }
-                ),
+                )],
             },
         };
 
@@ -214,7 +214,7 @@ public class Iso20022XmlSerializerTests
         var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
 
         var reason = Assert.IsType<CxlCode>(
-            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+            result.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
         Assert.Equal(ExternalCancellationReason1Code.RequestedByCustomer, reason.Value);
     }
@@ -227,9 +227,9 @@ public class Iso20022XmlSerializerTests
             Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(
+                TransactionInformation = [Camt056ExamplesTests.CreateTransactionCancellation(
                     new CxlProprietary { Value = "DEUTDE-FRAUD-HOLD" }
-                ),
+                )],
             },
         };
 
@@ -237,7 +237,7 @@ public class Iso20022XmlSerializerTests
         var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
 
         var reason = Assert.IsType<CxlProprietary>(
-            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+            result.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
         Assert.Equal("DEUTDE-FRAUD-HOLD", reason.Value);
     }
@@ -379,21 +379,21 @@ public class Iso20022XmlSerializerTests
             Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation() with
+                TransactionInformation = [Camt056ExamplesTests.CreateTransactionCancellation() with
                 {
                     OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
                     {
                         Currency = "EUR",
                         Amount = 47_250.00m,
                     },
-                },
+                }],
             },
         };
 
         var xml = Iso20022XmlSerializer.SerializeToString(message);
         var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
 
-        var amt = result.Underlying.TransactionInformation!.OriginalInterbankSettlementAmount;
+        var amt = result.Underlying.TransactionInformation![0].OriginalInterbankSettlementAmount;
         Assert.NotNull(amt);
         Assert.Equal("EUR", amt!.Currency);
         Assert.Equal(47_250.00m, amt.Amount);

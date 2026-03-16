@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType4Choice
     /// </summary>
     [IsoId("__k-HA1kJEeSeLKjZh_lWZw")]
     [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
     public record InstructedAmount : AmountType4Choice_
     {
         /// <summary>
