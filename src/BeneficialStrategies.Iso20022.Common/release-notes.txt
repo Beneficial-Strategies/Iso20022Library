@@ -33,3 +33,22 @@
     Library now targets net8.0 only; leverages C# 12 required members and global type aliases.
     Stripped ~1.9M lines of dead preprocessor directives for obsolete .NET versions.
     Added GitHub Actions workflow for automated NuGet publishing on version tags.
+
+0.4.0-alpha
+    Aligned with ISO 20022 spec snapshot dated April 24, 2025.
+    Added 2,747+ missing message types; removed types absent from the 2025-04-24 snapshot.
+    Fixed 8,981 unbounded properties incorrectly typed as scalars — now correctly typed as ValueList/SimpleValueList collections.
+    Fixed 4,734 complex choice variant classes missing class-level [IsoXmlTag] attribute (serializer threw on all of them).
+    Replaced mutable ValueList/SimpleValueList with ImmutableValueList<T> throughout.
+    Added System.Text.Json JsonConverter for ImmutableValueList<T> to enable MassTransit compatibility.
+    Added reflection-based Iso20022XmlSerializer supporting round-trip XML serialization and deserialization.
+    Fixed XML serializer to correctly emit Ccy attribute for currency-and-amount types.
+    Added BeneficialStrategies.Iso20022.FluentValidation companion package (not yet published to NuGet).
+    Added XSD-validated XML sample files and deserialization tests for popular message types.
+    Simplified generated source: removed partial modifiers, redundant nullable directives; reformatted with CSharpier.
+
+0.5.0-alpha
+    Fixed caad message placement: ReconciliationInitiationV04 (caad.005.001.04) and ReconciliationResponseV04 (caad.006.001.04) were filed under cain/ with incorrect ISO IDs; moved to caad/ with correct identifiers.
+    Updated repository URL from jefforyamos to Beneficial-Strategies throughout.
+    Refreshed Scope-Statement.md with verified message counts from the April 2025 MCP spec snapshot.
+    Overhauled README with MCP server reference, updated code examples, and merged package/NuGet documentation.

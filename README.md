@@ -65,7 +65,7 @@ It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.c
 mkdir test
 cd test
 dotnet new console
-dotnet add package BeneficialStrategies.Iso20022 --version 0.4.0-alpha
+dotnet add package BeneficialStrategies.Iso20022 --version 0.5.0-alpha
 ```
 
 Open your `Program.cs` and paste the following:
