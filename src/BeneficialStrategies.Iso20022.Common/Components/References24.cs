@@ -1,0 +1,88 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides a set if identifications to reference to a securities settlement transaction.
+/// </summary>
+[IsoId("_D9PVKffXEeiNZp_PtLohLw")]
+[DisplayName("References")]
+public record References24
+{
+    /// <summary>
+    /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
+    /// </summary>
+    [IsoId("_D9PVLffXEeiNZp_PtLohLw")]
+    [DisplayName("Account Owner Transaction Identification")]
+    [IsoXmlTag("AcctOwnrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Unambiguous identification of the transaction as known by the account servicer.
+    /// </summary>
+    [IsoId("_D9PVMffXEeiNZp_PtLohLw")]
+    [DisplayName("Account Servicer Transaction Identification")]
+    [IsoXmlTag("AcctSvcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
+    /// </summary>
+    [IsoId("_D9PVNffXEeiNZp_PtLohLw")]
+    [DisplayName("Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("MktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
+    /// </summary>
+    [IsoId("_D9PVOffXEeiNZp_PtLohLw")]
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Collective reference identifying a set of messages.
+    /// </summary>
+    [IsoId("_D9PVO_fXEeiNZp_PtLohLw")]
+    [DisplayName("Pool Identification")]
+    [IsoXmlTag("PoolId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? PoolIdentification { get; init; }
+
+    /// <summary>
+    /// Unique reference agreed upon by the two trade counterparties to identify the trade.
+    /// </summary>
+    [IsoId("_D9PVP_fXEeiNZp_PtLohLw")]
+    [DisplayName("Common Identification")]
+    [IsoXmlTag("CmonId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; }
+
+    /// <summary>
+    /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
+    /// </summary>
+    [IsoId("_D9PVQ_fXEeiNZp_PtLohLw")]
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax52Text)]
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public IsoRestrictedFINXMax52Text? TradeIdentification { get; init; }
+}

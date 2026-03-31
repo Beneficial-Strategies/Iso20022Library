@@ -1,0 +1,104 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information about a party&apos;s account.
+/// </summary>
+[IsoId("_C5k64QhDEeSUPbC7DbLJpQ")]
+[DisplayName("Account Parties")]
+public record AccountParties10
+{
+    /// <summary>
+    /// Main party associated with the account.
+    /// </summary>
+    [IsoId("_DVjFNwhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Principal Account Party")]
+    [IsoXmlTag("PrncplAcctPty")]
+    public required AccountParties5Choice_ PrincipalAccountParty { get; init; }
+
+    /// <summary>
+    /// Entity that is not the primary owner when the ownership of the investment account is split among several owners.
+    /// </summary>
+    [IsoId("_DVjFOQhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Secondary Owner")]
+    [IsoXmlTag("ScndryOwnr")]
+    public ValueList<InvestmentAccountOwnershipInformation10> SecondaryOwner { get; init; } = [];
+
+    /// <summary>
+    /// Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.
+    /// </summary>
+    [IsoId("_DVjFOwhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Beneficiary")]
+    [IsoXmlTag("Bnfcry")]
+    public ValueList<InvestmentAccountOwnershipInformation10> Beneficiary { get; init; } = [];
+
+    /// <summary>
+    /// Entity that was given the authority by another entity to act on its behalf.
+    /// </summary>
+    [IsoId("_DVjFPQhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Power Of Attorney")]
+    [IsoXmlTag("PwrOfAttny")]
+    public ValueList<InvestmentAccountOwnershipInformation10> PowerOfAttorney { get; init; } = [];
+
+    /// <summary>
+    /// Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.
+    /// </summary>
+    [IsoId("_DVjFPwhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Legal Guardian")]
+    [IsoXmlTag("LglGuardn")]
+    public ValueList<InvestmentAccountOwnershipInformation10> LegalGuardian { get; init; } = [];
+
+    /// <summary>
+    /// Deceased&apos;s estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.
+    /// </summary>
+    [IsoId("_DVjFQQhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Successor On Death")]
+    [IsoXmlTag("SucssrOnDth")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    public ValueList<InvestmentAccountOwnershipInformation10> SuccessorOnDeath { get; init; } = [];
+
+    /// <summary>
+    /// Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.
+    /// </summary>
+    [IsoId("_DVjFQwhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Administrator")]
+    [IsoXmlTag("Admstr")]
+    public ValueList<InvestmentAccountOwnershipInformation10> Administrator { get; init; } = [];
+
+    /// <summary>
+    /// Other type of party.
+    /// </summary>
+    [IsoId("_DVjFRQhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Other Party")]
+    [IsoXmlTag("OthrPty")]
+    public ValueList<ExtendedParty7> OtherParty { get; init; } = [];
+
+    /// <summary>
+    /// Granter role in the hedge funds industry.
+    /// </summary>
+    [IsoId("_DVjFRwhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Granter")]
+    [IsoXmlTag("Grntr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    public ValueList<InvestmentAccountOwnershipInformation10> Granter { get; init; } = [];
+
+    /// <summary>
+    /// Entity that creates a trust or contributes assets to the trust.
+    /// </summary>
+    [IsoId("_DVjFSQhDEeSUPbC7DbLJpQ")]
+    [DisplayName("Settlor")]
+    [IsoXmlTag("Sttlr")]
+    [MinLength(0)]
+    [MaxLength(5)]
+    public ValueList<InvestmentAccountOwnershipInformation10> Settlor { get; init; } = [];
+}

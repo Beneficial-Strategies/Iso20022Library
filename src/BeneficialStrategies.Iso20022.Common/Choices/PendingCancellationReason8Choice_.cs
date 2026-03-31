@@ -1,0 +1,25 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Text.Json.Serialization;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace BeneficialStrategies.Iso20022.Choices
+{
+    /// <summary>
+    /// Choice between a standard code or a proprietary code to specify the reason why a cancellation request sent for the related instruction is pending.
+    /// </summary>
+    [KnownType(typeof(PendingCancellationReason8Choice.Code))]
+    [KnownType(typeof(PendingCancellationReason8Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PendingCancellationReason8Choice.Code),
+        nameof(PendingCancellationReason8Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(PendingCancellationReason8Choice.Proprietary),
+        nameof(PendingCancellationReason8Choice.Proprietary)
+    )]
+    [IsoId("_0q2Z0RUOEeuYppTwWp55gA")]
+    [DisplayName("Pending Cancellation Reason 8 Choice")]
+    public abstract record PendingCancellationReason8Choice_ { }
+}

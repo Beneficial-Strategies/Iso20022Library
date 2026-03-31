@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies individually each leg of a transport of goods.
+/// </summary>
+[IsoId("_StL9Btp-Ed-ak6NoX_4Aeg_616484036")]
+[DisplayName("Single Transport")]
+public record SingleTransport4
+{
+    /// <summary>
+    /// Moving of goods or people from one place to another by vehicle.
+    /// </summary>
+    [IsoId("_StL9B9p-Ed-ak6NoX_4Aeg_616484190")]
+    [DisplayName("Transport By Air")]
+    [IsoXmlTag("TrnsprtByAir")]
+    public ValueList<TransportByAir3> TransportByAir { get; init; } = [];
+
+    /// <summary>
+    /// Information related for the transportation of goods by sea.
+    /// </summary>
+    [IsoId("_StL9CNp-Ed-ak6NoX_4Aeg_616484251")]
+    [DisplayName("Transport By Sea")]
+    [IsoXmlTag("TrnsprtBySea")]
+    public ValueList<TransportBySea3> TransportBySea { get; init; } = [];
+
+    /// <summary>
+    /// Information related to the transportation of goods by road.
+    /// </summary>
+    [IsoId("_StVuANp-Ed-ak6NoX_4Aeg_616484100")]
+    [DisplayName("Transport By Road")]
+    [IsoXmlTag("TrnsprtByRoad")]
+    public ValueList<TransportByRoad3> TransportByRoad { get; init; } = [];
+
+    /// <summary>
+    /// Information related to the transportation of goods by rail.
+    /// </summary>
+    [IsoId("_StVuAdp-Ed-ak6NoX_4Aeg_616484530")]
+    [DisplayName("Transport By Rail")]
+    [IsoXmlTag("TrnsprtByRail")]
+    public ValueList<TransportByRail3> TransportByRail { get; init; } = [];
+}

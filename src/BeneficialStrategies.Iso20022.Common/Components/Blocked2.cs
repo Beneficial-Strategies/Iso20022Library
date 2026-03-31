@@ -1,0 +1,45 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information about a blocked account.
+/// </summary>
+[IsoId("_EGbMcSGeEeWKAaDJcYGKLw")]
+[DisplayName("Blocked")]
+public record Blocked2
+{
+    /// <summary>
+    /// Specifies the order or transaction type for which the account is blocked.
+    /// </summary>
+    [IsoId("_EjSuoSGeEeWKAaDJcYGKLw")]
+    [DisplayName("Order Type")]
+    [IsoXmlTag("OrdrTp")]
+    public ValueList<OrderType2Choice_> OrderType { get; init; } = [];
+
+    // ID for the above is _EjSuoSGeEeWKAaDJcYGKLw
+
+    /// <summary>
+    /// Indicates whether the account is blocked.
+    /// </summary>
+    [IsoId("_EjSuoyGeEeWKAaDJcYGKLw")]
+    [DisplayName("Blocked")]
+    [IsoXmlTag("Blckd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public required IsoYesNoIndicator Blocked { get; init; }
+
+    /// <summary>
+    /// Specifies the reason the account is blocked.
+    /// </summary>
+    [IsoId("_EjSupSGeEeWKAaDJcYGKLw")]
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public BlockedReason1Choice_? Reason { get; init; }
+}

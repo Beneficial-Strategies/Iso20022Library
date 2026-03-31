@@ -1,0 +1,71 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics shared by all individual transactions included in the message.
+/// </summary>
+[IsoId("_G-MfEW49EeiU9cctagi5ow")]
+[DisplayName("Group Header")]
+public record GroupHeader80
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the instructing party, and sent to the instructed party, to unambiguously identify the message.|Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// </summary>
+    [IsoId("_HJg-Q249EeiU9cctagi5ow")]
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [IsoId("_HJg-RW49EeiU9cctagi5ow")]
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
+    public required IsoISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
+    /// User identification or any user key to be used to check the authority of the initiating party.||Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side. The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
+    /// </summary>
+    [IsoId("_HJg-R249EeiU9cctagi5ow")]
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    [MinLength(0)]
+    [MaxLength(2)]
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
+
+    /// <summary>
+    /// Party that initiates the mandate message.
+    /// </summary>
+    [IsoId("_HJg-SW49EeiU9cctagi5ow")]
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public PartyIdentification135? InitiatingParty { get; init; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out an instruction.||Usage Rule: |In case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.|In case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message.
+    /// </summary>
+    [IsoId("_HJg-S249EeiU9cctagi5ow")]
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification6? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out an instruction.||Usage Rule: |In case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.|In case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message.
+    /// </summary>
+    [IsoId("_HJg-TW49EeiU9cctagi5ow")]
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification6? InstructedAgent { get; init; }
+}

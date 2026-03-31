@@ -1,0 +1,46 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Specifies the role of a trading party in a transaction.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_Rcos0Ot2Ee6GDu6DljhDaQ")]
+[Description(@"Specifies the role of a trading party in a transaction.")]
+[DerivedFrom(typeof(TradingCapacityCode))]
+public enum TradingCapacity9Code
+{
+    /// <summary>
+    /// Party acting as an agent for both customer and another person.
+    /// Encoded/decoded by serializers as &quot;BAGN&quot;.
+    /// </summary>
+    [EnumMember(Value = "BAGN")]
+    [IsoId("")]
+    [Description(@"Party acting as an agent for both customer and another person.")]
+    ActingAgent = TradingCapacityCode.ActingAgent, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals.
+    /// Encoded/decoded by serializers as &quot;BILA&quot;.
+    /// </summary>
+    [EnumMember(Value = "BILA")]
+    [IsoId("")]
+    [Description(
+        @"Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals."
+    )]
+    Bilateral = TradingCapacityCode.Bilateral, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Trade executed through a broker. The confirmation is sent by a money broker.
+    /// Encoded/decoded by serializers as &quot;BROK&quot;.
+    /// </summary>
+    [EnumMember(Value = "BROK")]
+    [IsoId("")]
+    [Description(@"Trade executed through a broker. The confirmation is sent by a money broker.")]
+    Broker = TradingCapacityCode.Broker, // same ordinal as derivation source for type conversions
+}

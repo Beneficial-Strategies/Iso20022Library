@@ -1,0 +1,36 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// The status of an instruction, advice or request.
+/// </summary>
+[IsoId("_YFYT_Qd3Ee2fOITqoTnSLQ")]
+[DisplayName("Affirmation Reason")]
+public record AffirmationReason2
+{
+    /// <summary>
+    /// Specifies the reason why the instruction/request has a unaffirmed status.
+    /// </summary>
+    [IsoId("_YYTP8Qd3Ee2fOITqoTnSLQ")]
+    [DisplayName("Code")]
+    [IsoXmlTag("Cd")]
+    public required UnaffirmedReason3Choice_ Code { get; init; }
+
+    /// <summary>
+    /// Provides additional information about the reason in narrative form.
+    /// </summary>
+    [IsoId("_YYTP8wd3Ee2fOITqoTnSLQ")]
+    [DisplayName("Additional Reason Information")]
+    [IsoXmlTag("AddtlRsnInf")]
+    [IsoSimpleType(IsoSimpleType.Max210Text)]
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+}

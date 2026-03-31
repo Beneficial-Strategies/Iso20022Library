@@ -1,0 +1,38 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics, such as the identification or the creation date and time, specific to the message.
+/// </summary>
+[IsoId("_75DzkaMgEeCJ6YNENx4h-w_-613853819")]
+[DisplayName("Message Header")]
+public record MessageHeader1
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the sender, to unambiguously identify the message.
+    /// Usage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.
+    /// </summary>
+    [IsoId("_75DzkqMgEeCJ6YNENx4h-w_-727692885")]
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [IsoId("_75Dzk6MgEeCJ6YNENx4h-w_-1610926172")]
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
+    public IsoISODateTime? CreationDateTime { get; init; }
+}

@@ -1,0 +1,43 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Details of the intra-position movement.
+/// </summary>
+[IsoId("_6T8jcTnTEeWV5sr121Fc8A")]
+[DisplayName("Intra Position Details")]
+public record IntraPositionDetails32
+{
+    /// <summary>
+    /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
+    /// </summary>
+    [IsoId("_6zC6MznTEeWV5sr121Fc8A")]
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafekeepingPlaceFormat10Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Balance from which the securities were moved.
+    /// </summary>
+    [IsoId("_6zC6NTnTEeWV5sr121Fc8A")]
+    [DisplayName("Balance From")]
+    [IsoXmlTag("BalFr")]
+    public required SecuritiesBalanceType6Choice_ BalanceFrom { get; init; }
+
+    /// <summary>
+    /// Intra-position movement(s) having been performed.
+    /// </summary>
+    [IsoId("_6zC6NznTEeWV5sr121Fc8A")]
+    [DisplayName("Intra Position Movement")]
+    [IsoXmlTag("IntraPosMvmnt")]
+    public ValueList<IntraPositionMovementDetails11> IntraPositionMovement { get; init; } = [];
+    // ID for the above is _6zC6NznTEeWV5sr121Fc8A
+}

@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies two values to compare for a direction of the Leg.
+/// </summary>
+[IsoId("_uaggwTAlEe2Ne600gC45nw")]
+[DisplayName("Compare Leg Direction")]
+public record CompareLegDirection2
+{
+    /// <summary>
+    /// Information for the first side of the transaction.
+    /// </summary>
+    [IsoId("_ubeKETAlEe2Ne600gC45nw")]
+    [DisplayName("Value")]
+    [IsoXmlTag("Val1")]
+    public Direction4Choice_? Value1 { get; init; }
+
+    /// <summary>
+    /// Information for the second side of the transaction.
+    /// </summary>
+    [IsoId("_ubeKEzAlEe2Ne600gC45nw")]
+    [DisplayName("Value")]
+    [IsoXmlTag("Val2")]
+    public Direction4Choice_? Value2 { get; init; }
+}

@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Amounts of the withdrawal transaction.
+/// </summary>
+[IsoId("_gtlD0YokEeSaAcF2oE2GNQ")]
+[DisplayName("Detailed Amount")]
+public record DetailedAmount12
+{
+    /// <summary>
+    /// Amount to be dispensed by the ATM after the approval of the withdrawal transaction.
+    /// </summary>
+    [IsoId("_g6XipYokEeSaAcF2oE2GNQ")]
+    [DisplayName("Amount To Dispense")]
+    [IsoXmlTag("AmtToDspns")]
+    public required ImpliedCurrencyAndAmount AmountToDispense { get; init; }
+
+    /// <summary>
+    /// Currency of the amount to dispense when different from the base currency of the ATM.
+    /// </summary>
+    [IsoId("_8-oeoIokEeSaAcF2oE2GNQ")]
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Withdrawal fees, accepted by the customer.
+    /// </summary>
+    [IsoId("_NvDH0IolEeSaAcF2oE2GNQ")]
+    [DisplayName("Fees")]
+    [IsoXmlTag("Fees")]
+    public ValueList<DetailedAmount13> Fees { get; init; } = [];
+
+    /// <summary>
+    /// Amount of the donation.
+    /// </summary>
+    [IsoId("_g4F1QIolEeSaAcF2oE2GNQ")]
+    [DisplayName("Donation")]
+    [IsoXmlTag("Dontn")]
+    public ValueList<DetailedAmount13> Donation { get; init; } = [];
+}

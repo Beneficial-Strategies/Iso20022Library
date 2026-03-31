@@ -1,0 +1,201 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Corporate Action Option245.
+/// </summary>
+[IsoId("_l6Suv5t3Ee-wQIOX0djF2w")]
+[DisplayName("Corporate Action Option245")]
+public record CorporateActionOption245
+{
+    /// <summary>
+    /// Acceptance Priority Level.
+    /// </summary>
+    [DisplayName("Acceptance Priority Level")]
+    [IsoXmlTag("AccptncPrtyLvl")]
+    public IsoExact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative61? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Applied Option Indicator.
+    /// </summary>
+    [DisplayName("Applied Option Indicator")]
+    [IsoXmlTag("ApldOptnInd")]
+    public IsoYesNoIndicator? AppliedOptionIndicator { get; init; }
+
+    /// <summary>
+    /// Cash Movement Details.
+    /// </summary>
+    [DisplayName("Cash Movement Details")]
+    [IsoXmlTag("CshMvmntDtls")]
+    public ValueList<CashOption111> CashMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Certification Breakdown Indicator.
+    /// </summary>
+    [DisplayName("Certification Breakdown Indicator")]
+    [IsoXmlTag("CertfctnBrkdwnInd")]
+    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+
+    /// <summary>
+    /// Certification Breakdown Type.
+    /// </summary>
+    [DisplayName("Certification Breakdown Type")]
+    [IsoXmlTag("CertfctnBrkdwnTp")]
+    public ValueList<BeneficiaryCertificationType14Choice_> CertificationBreakdownType { get; init; } =
+        [];
+
+    /// <summary>
+    /// Change Allowed Indicator.
+    /// </summary>
+    [DisplayName("Change Allowed Indicator")]
+    [IsoXmlTag("ChngAllwdInd")]
+    public IsoYesNoIndicator? ChangeAllowedIndicator { get; init; }
+
+    /// <summary>
+    /// Charges Applied Indicator.
+    /// </summary>
+    [DisplayName("Charges Applied Indicator")]
+    [IsoXmlTag("ChrgsApldInd")]
+    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+
+    /// <summary>
+    /// Currency Option.
+    /// </summary>
+    [DisplayName("Currency Option")]
+    [IsoXmlTag("CcyOptn")]
+    public ActiveCurrencyCode? CurrencyOption { get; init; }
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public CorporateActionDate107? DateDetails { get; init; }
+
+    /// <summary>
+    /// Default Processing Or Standing Instruction.
+    /// </summary>
+    [DisplayName("Default Processing Or Standing Instruction")]
+    [IsoXmlTag("DfltPrcgOrStgInstr")]
+    public required DefaultProcessingOrStandingInstruction2Choice_ DefaultProcessingOrStandingInstruction { get; init; }
+
+    /// <summary>
+    /// Fraction Disposition.
+    /// </summary>
+    [DisplayName("Fraction Disposition")]
+    [IsoXmlTag("FrctnDspstn")]
+    public FractionDispositionType31Choice_? FractionDisposition { get; init; }
+
+    /// <summary>
+    /// Non Domicile Country.
+    /// </summary>
+    [DisplayName("Non Domicile Country")]
+    [IsoXmlTag("NonDmclCtry")]
+    public ValueList<CountryCode> NonDomicileCountry { get; init; } = [];
+
+    /// <summary>
+    /// Offer Type.
+    /// </summary>
+    [DisplayName("Offer Type")]
+    [IsoXmlTag("OfferTp")]
+    public ValueList<OfferTypeFormat15Choice_> OfferType { get; init; } = [];
+
+    /// <summary>
+    /// Option Availability Status.
+    /// </summary>
+    [DisplayName("Option Availability Status")]
+    [IsoXmlTag("OptnAvlbtySts")]
+    public OptionAvailabilityStatus4Choice_? OptionAvailabilityStatus { get; init; }
+
+    /// <summary>
+    /// Option Features.
+    /// </summary>
+    [DisplayName("Option Features")]
+    [IsoXmlTag("OptnFeatrs")]
+    public ValueList<OptionFeaturesFormat31Choice_> OptionFeatures { get; init; } = [];
+
+    /// <summary>
+    /// Option Number.
+    /// </summary>
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public required IsoExact3NumericText OptionNumber { get; init; }
+
+    /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption46Choice_ OptionType { get; init; }
+
+    /// <summary>
+    /// Period Details.
+    /// </summary>
+    [DisplayName("Period Details")]
+    [IsoXmlTag("PrdDtls")]
+    public CorporateActionPeriod12? PeriodDetails { get; init; }
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public CorporateActionPrice94? PriceDetails { get; init; }
+
+    /// <summary>
+    /// Rate And Amount Details.
+    /// </summary>
+    [DisplayName("Rate And Amount Details")]
+    [IsoXmlTag("RateAndAmtDtls")]
+    public CorporateActionRate133? RateAndAmountDetails { get; init; }
+
+    /// <summary>
+    /// Securities Movement Details.
+    /// </summary>
+    [DisplayName("Securities Movement Details")]
+    [IsoXmlTag("SctiesMvmntDtls")]
+    public ValueList<SecuritiesOption116> SecuritiesMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Securities Quantity.
+    /// </summary>
+    [DisplayName("Securities Quantity")]
+    [IsoXmlTag("SctiesQty")]
+    public SecuritiesOption84? SecuritiesQuantity { get; init; }
+
+    /// <summary>
+    /// Security Identification.
+    /// </summary>
+    [DisplayName("Security Identification")]
+    [IsoXmlTag("SctyId")]
+    public SecurityIdentification20? SecurityIdentification { get; init; }
+
+    /// <summary>
+    /// Valid Domicile Country.
+    /// </summary>
+    [DisplayName("Valid Domicile Country")]
+    [IsoXmlTag("VldDmclCtry")]
+    public ValueList<CountryCode> ValidDomicileCountry { get; init; } = [];
+
+    /// <summary>
+    /// Withdrawal Allowed Indicator.
+    /// </summary>
+    [DisplayName("Withdrawal Allowed Indicator")]
+    [IsoXmlTag("WdrwlAllwdInd")]
+    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+}

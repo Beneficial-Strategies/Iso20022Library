@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Signed quantity of security formats.
+/// </summary>
+[IsoId("_peYOSTi7Eeydid5dcNPKvg")]
+[DisplayName("Signed Quantity Format")]
+public record SignedQuantityFormat12
+{
+    /// <summary>
+    /// Sign of the quantity of security.
+    /// </summary>
+    [IsoId("_peYOSzi7Eeydid5dcNPKvg")]
+    [DisplayName("Short Long Position")]
+    [IsoXmlTag("ShrtLngPos")]
+    public required ShortLong1Code ShortLongPosition { get; init; }
+
+    /// <summary>
+    /// Choice between different quantity of security formats.
+    /// </summary>
+    [IsoId("_peYOTTi7Eeydid5dcNPKvg")]
+    [DisplayName("Quantity Choice")]
+    [IsoXmlTag("QtyChc")]
+    public required Quantity53Choice_ QuantityChoice { get; init; }
+}

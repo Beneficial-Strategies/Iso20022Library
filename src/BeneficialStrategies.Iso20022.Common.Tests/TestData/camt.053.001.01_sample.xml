@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : ~/Downloads/archive_banktocustomer_cash_management_1_73a757db02/camt.053.001.01.xsd
+
+  Scenario: Deutsche Bank sends an end-of-day account statement to Acme Manufacturing GmbH
+            covering 15 March 2024. The statement includes an opening booked balance
+            (EUR 905,500.00 CRDT) and a closing booked balance (EUR 952,750.00 CRDT).
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.01">
+  <BkToCstmrStmtV01>
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/CAM053/00001</MsgId>
+      <CreDtTm>2024-03-15T23:59:00</CreDtTm>
+      <MsgRcpt>
+        <Nm>Acme Manufacturing GmbH</Nm>
+      </MsgRcpt>
+    </GrpHdr>
+    <Stmt>
+      <Id>DEUTDEFF-ACME-STMT-20240315-001</Id>
+      <CreDtTm>2024-03-15T23:59:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Nm>Acme Manufacturing GmbH Operating Account</Nm>
+      </Acct>
+      <Bal>
+        <Tp>
+          <Cd>OPBD</Cd>
+        </Tp>
+        <Amt Ccy="EUR">905500.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-15</Dt>
+        </Dt>
+      </Bal>
+      <Bal>
+        <Tp>
+          <Cd>CLBD</Cd>
+        </Tp>
+        <Amt Ccy="EUR">952750.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-15</Dt>
+        </Dt>
+      </Bal>
+    </Stmt>
+  </BkToCstmrStmtV01>
+</Document>

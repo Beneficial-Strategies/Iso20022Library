@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Status of the transactions sent in a previous batch of card payment transactions.
+/// </summary>
+[IsoId("_cwQvgTShEeOnFuyVSIQZKg")]
+[DisplayName("Card Payment Batch Transfer Response")]
+public record CardPaymentBatchTransferResponse2
+{
+    /// <summary>
+    /// Totals of transactions of all the data sets.
+    /// </summary>
+    [IsoId("_c_SqATShEeOnFuyVSIQZKg")]
+    [DisplayName("Transaction Totals")]
+    [IsoXmlTag("TxTtls")]
+    public ValueList<TransactionTotals2> TransactionTotals { get; init; } = [];
+
+    /// <summary>
+    /// Information related to the previously sent set of transaction.
+    /// </summary>
+    [IsoId("_c_SqAzShEeOnFuyVSIQZKg")]
+    [DisplayName("Data Set")]
+    [IsoXmlTag("DataSet")]
+    public ValueList<CardPaymentDataSet9> DataSet { get; init; } = [];
+}

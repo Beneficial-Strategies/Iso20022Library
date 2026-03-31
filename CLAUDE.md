@@ -80,3 +80,63 @@ src/BeneficialStrategies.Iso20022.Common/
 - `IOuterRecord` - All top-level messages
 - `IOuterDocument` - XML document wrapper
 - `IIsoXmlSerializable` - Serialization contract
+
+## Multi-Package Repository Strategy
+
+**Chosen approach: monorepo.**
+
+All NuGet packages produced by Beneficial Strategies that depend on each other live in this
+single repository. The planned packages include (at minimum):
+
+- `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
+- `BeneficialStrategies.Iso20022.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages
+
+**Reasons:**
+
+- **Atomic changes** — when a type changes in the ISO 20022 library that the Sagas library depends
+  on, both can be updated and validated in a single PR. No cross-repo version coordination.
+- **Single build/CI** — one pipeline validates the entire dependency graph together, catching
+  breaking changes before they ship to NuGet.
+- **No bootstrap problem** — dependent projects reference each other as `<ProjectReference>` during
+  development. No need to publish `-preview` packages just to test an in-progress change.
+- **Consistent versioning** — package versions are managed in one place and released together on
+  the same cadence (Sagas releases track the ISO 20022 library release schedule).
+- **Simpler developer experience** — one clone, one `dotnet build`, everything works.
+
+Each package retains its own `.csproj` with its own `<PackageId>` and `<Version>`. CI packs and
+publishes them in dependency order (ISO 20022 library first, then Sagas).
+
+## Test Patterns
+
+### Embedded XML Sample Files
+
+XML sample files live in `src/BeneficialStrategies.Iso20022.Common.Tests/TestData/` and are
+compiled as `EmbeddedResource`. Every file **must** be validated against the official ISO 20022
+XSD **before** it is committed.
+
+**Validation requirement (mandatory):**
+
+1. Obtain the XSD from `https://www.iso20022.org/sites/default/files/schemas/<message-id>.xsd`
+   (e.g. `camt.056.001.10.xsd`).
+2. Validate the XML file against the XSD using an external tool (e.g. `xmllint --schema`
+   or an online validator such as freeformatter.com/xml-validator.html).
+3. Record the result in the file's header comment:
+   ```xml
+   <!--
+     XSD VALIDATION STATUS: VALID
+     Validated : YYYY-MM-DD
+     Schema    : https://www.iso20022.org/sites/default/files/schemas/<message-id>.xsd
+   -->
+   ```
+4. If the file cannot be validated externally, set the status to `PENDING EXTERNAL VALIDATION`
+   and add a TODO comment explaining why (e.g. amounts excluded due to Ccy-attribute mismatch).
+
+**Amount elements** use the ISO XSD `simpleContent+Ccy-attribute` pattern:
+`<Amt Ccy="EUR">47250.00</Amt>` — NOT child elements. The library's `Iso20022XmlSerializer`
+handles this correctly for all types in the `BeneficialStrategies.Iso20022.Amounts` namespace.
+
+### Embedded resource naming
+
+The manifest resource name is built from the `<RootNamespace>` (not the assembly name):
+`{RootNamespace}.TestData.{filename}` where path separators become dots.
+For this project: `BeneficialStrategies.Iso20022.TestData.<filename>`

@@ -1,0 +1,46 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Acceptor Completion Advice Response12.
+/// </summary>
+[IsoId("_cWIlQZI6Ee6RsYhlPIxpVw")]
+[DisplayName("Acceptor Completion Advice Response12")]
+public record AcceptorCompletionAdviceResponse12
+{
+    /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+
+    /// <summary>
+    /// TMS Trigger.
+    /// </summary>
+    [DisplayName("TMS Trigger")]
+    [IsoXmlTag("TMSTrggr")]
+    public TMSTrigger1? TMSTrigger { get; init; }
+
+    /// <summary>
+    /// Transaction.
+    /// </summary>
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    public required CardPaymentTransactionAdviceResponse8 Transaction { get; init; }
+}

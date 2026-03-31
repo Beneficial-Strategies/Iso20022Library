@@ -1,0 +1,35 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPolypropylene4Choice
+{
+    /// <summary>
+    /// Plastic commodity derivative.
+    /// </summary>
+    [IsoId("_ySLgwRZZEe2QNcZTDeoKnQ")]
+    [DisplayName("Plastic")]
+    [IsoXmlTag("Plstc")]
+    public record Plastic : AssetClassCommodityPolypropylene4Choice_
+    {
+        /// <summary>
+        /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.
+        /// </summary>
+        [IsoId("_0PMAARZZEe2QNcZTDeoKnQ")]
+        [DisplayName("Base Product")]
+        [IsoXmlTag("BasePdct")]
+        public required AssetClassProductType9Code BaseProduct { get; init; }
+
+        /// <summary>
+        /// Sub-product for the underlying asset class.
+        /// </summary>
+        [IsoId("_0PMAAxZZEe2QNcZTDeoKnQ")]
+        [DisplayName("Sub Product")]
+        [IsoXmlTag("SubPdct")]
+        public AssetClassSubProductType18Code? SubProduct { get; init; }
+    }
+}

@@ -1,0 +1,151 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.acmt;
+
+/// <summary>
+/// This record is an implementation of the acmt.008.001.02 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountOpeningAmendmentRequest message is sent from an organisation to a financial institution as part of the account opening process. It is sent in response to a request from the financial institution to send additional information.
+/// </summary>
+[Description(
+    @"The AccountOpeningAmendmentRequest message is sent from an organisation to a financial institution as part of the account opening process. It is sent in response to a request from the financial institution to send additional information."
+)]
+[IsoId("_cNqkgQ1TEeKGXqvMN6jpiw")]
+[DisplayName("Account Opening Amendment Request V")]
+public record AccountOpeningAmendmentRequestV02 : IOuterRecord
+{
+    /// <summary>
+    /// The official ISO 20022 designation for this version of this message.
+    /// </summary>
+    public const string IsoIdentifier = "acmt.008.001.02";
+
+    /// <summary>
+    /// The ISO specified XML tag that should be used for standardized serialization of this message.
+    /// </summary>
+    public const string XmlTag = "AcctOpngAmdmntReq";
+
+    /// <summary>
+    /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
+    /// </summary>
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:acmt.008.001.02";
+
+    /// <summary>
+    /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
+    /// </summary>
+    public const string DocumentElementName = "Document";
+
+    /// <summary>
+    /// The XML namespace in which this message is delivered.
+    /// </summary>
+    public static string IsoXmlNamspace => DocumentNamespace;
+
+    /// <summary>
+    /// Set of elements for the identification of the message and related references.
+    /// </summary>
+    [IsoId("_cNqkgw1TEeKGXqvMN6jpiw")]
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References4 References { get; init; }
+
+    /// <summary>
+    /// Identifies the business sender of the message, if it is not the account owner or account servicing financial institution.
+    /// </summary>
+    [IsoId("_cqi7gA1YEeKGXqvMN6jpiw")]
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification8? From { get; init; }
+
+    /// <summary>
+    /// Specifies target dates.
+    /// </summary>
+    [IsoId("_cNqkhw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Contract Dates")]
+    [IsoXmlTag("CtrctDts")]
+    public AccountContract2? ContractDates { get; init; }
+
+    /// <summary>
+    /// Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.
+    /// </summary>
+    [IsoId("_cNqkiw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Underlying Master Agreement")]
+    [IsoXmlTag("UndrlygMstrAgrmt")]
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
+
+    /// <summary>
+    /// Unique and unambiguous identification of the account between the account owner and the account servicer.
+    /// </summary>
+    [IsoId("_cNqkjw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public required CustomerAccount4 Account { get; init; }
+
+    /// <summary>
+    /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. |.
+    /// </summary>
+    [IsoId("_cNqkkw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification5 AccountServicerIdentification { get; init; }
+
+    /// <summary>
+    /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
+    /// </summary>
+    [IsoId("_cNqklw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Organisation")]
+    [IsoXmlTag("Org")]
+    public required Organisation12 Organisation { get; init; }
+
+    /// <summary>
+    /// Information specifying the account mandate.
+    /// </summary>
+    [IsoId("_cNqkmw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Mandate")]
+    [IsoXmlTag("Mndt")]
+    public OperationMandate2? Mandate { get; init; }
+
+    /// <summary>
+    /// Definition of a group of parties.
+    /// </summary>
+    [IsoId("_RFZ2kA4XEeKGXqvMN6jpiw")]
+    [DisplayName("Group")]
+    [IsoXmlTag("Grp")]
+    public Group1? Group { get; init; }
+
+    /// <summary>
+    /// Unique and unambiguous identification of the account used as a reference for the opening of another account.
+    /// </summary>
+    [IsoId("_cNqknw1TEeKGXqvMN6jpiw")]
+    [DisplayName("Reference Account")]
+    [IsoXmlTag("RefAcct")]
+    public CashAccount24? ReferenceAccount { get; init; }
+
+    /// <summary>
+    /// Contains the signature with its components, namely signed info, signature value, key info and the object.
+    /// </summary>
+    [IsoId("_cNqkow1TEeKGXqvMN6jpiw")]
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public PartyAndSignature2? DigitalSignature { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_wb0MsA3_EeKGXqvMN6jpiw")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public SupplementaryData1? SupplementaryData { get; init; }
+}
+
+// Since AccountOpeningAmendmentRequestV02Document is not really part of the logical business domain model,
+// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
+// Some of the constants previously declared there have been relocated to AccountOpeningAmendmentRequestV02.

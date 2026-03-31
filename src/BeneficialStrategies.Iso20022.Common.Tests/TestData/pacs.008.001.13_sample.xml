@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pacs.008.001.13 — FIToFICustomerCreditTransfer
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pacs.008.001.13
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pacs.008.001.13.xsd
+
+  Scenario  : Acme Manufacturing GmbH (DEUTDEFFXXX) pays GlobalSupply S.A.S.
+              (BNPAFRPPXXX) EUR 47,250.00 for invoice INV-2024-847.
+
+              This sample exercises:
+              - Full GrpHdr with SttlmInf (CLRG), InstgAgt, InstdAgt
+              - CdtTrfTxInf with all optional fields filled in
+              - COLLECTION: InstrForCdtrAgt with 2 items (CHQB and HOLD)
+              - RmtInf with 2 Ustrd lines
+
+  NOTE — amounts use the ISO XSD simpleContent+Ccy-attribute pattern:
+  <IntrBkSttlmAmt Ccy="EUR">47250.00</IntrBkSttlmAmt>
+  The C# library serialises/deserialises this format correctly.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.008.001.13">
+  <FIToFICstmrCdtTrf>
+
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/PAC008/00001</MsgId>
+      <CreDtTm>2024-03-15T08:30:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <SttlmInf>
+        <SttlmMtd>CLRG</SttlmMtd>
+      </SttlmInf>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+    </GrpHdr>
+
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>DEUTDEFF/240315/INSTR/00001</InstrId>
+        <EndToEndId>ACME/INV-2024-847/PAY001</EndToEndId>
+        <UETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="EUR">47250.00</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2024-03-15</IntrBkSttlmDt>
+      <ChrgBr>SHAR</ChrgBr>
+      <Dbtr>
+        <Nm>Acme Manufacturing GmbH</Nm>
+        <PstlAdr>
+          <StrtNm>Mainzer Landstrasse</StrtNm>
+          <BldgNb>46</BldgNb>
+          <PstCd>60325</PstCd>
+          <TwnNm>Frankfurt am Main</TwnNm>
+          <Ctry>DE</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtrAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </CdtrAgt>
+      <Cdtr>
+        <Nm>GlobalSupply S.A.S.</Nm>
+        <PstlAdr>
+          <StrtNm>Rue de Rivoli</StrtNm>
+          <BldgNb>228</BldgNb>
+          <PstCd>75001</PstCd>
+          <TwnNm>Paris</TwnNm>
+          <Ctry>FR</Ctry>
+        </PstlAdr>
+      </Cdtr>
+      <CdtrAcct>
+        <Id>
+          <IBAN>FR7630006000011234567890189</IBAN>
+        </Id>
+      </CdtrAcct>
+
+      <!-- Collection: 2 instructions for creditor agent -->
+      <InstrForCdtrAgt>
+        <Cd>CHQB</Cd>
+      </InstrForCdtrAgt>
+      <InstrForCdtrAgt>
+        <Cd>HOLD</Cd>
+      </InstrForCdtrAgt>
+
+      <!-- Remittance with 2 unstructured lines -->
+      <RmtInf>
+        <Ustrd>INV-2024-847 EUR 47250.00</Ustrd>
+        <Ustrd>Payment due 2024-03-15</Ustrd>
+      </RmtInf>
+    </CdtTrfTxInf>
+
+  </FIToFICstmrCdtTrf>
+</Document>

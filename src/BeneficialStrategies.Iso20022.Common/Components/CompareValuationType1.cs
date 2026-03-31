@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies two values to compare for a valuation method.
+/// </summary>
+[IsoId("_PmW3IExUEeywvc16MwOPfw")]
+[DisplayName("Compare Valuation Type")]
+public record CompareValuationType1
+{
+    /// <summary>
+    /// Information for the first side of the transaction.
+    /// </summary>
+    [IsoId("_fg95sExUEeywvc16MwOPfw")]
+    [DisplayName("Value")]
+    [IsoXmlTag("Val1")]
+    public ValuationType1Code? Value1 { get; init; }
+
+    /// <summary>
+    /// Information for the second side of the transaction.
+    /// </summary>
+    [IsoId("_lLOt0ExUEeywvc16MwOPfw")]
+    [DisplayName("Value")]
+    [IsoXmlTag("Val2")]
+    public ValuationType1Code? Value2 { get; init; }
+}

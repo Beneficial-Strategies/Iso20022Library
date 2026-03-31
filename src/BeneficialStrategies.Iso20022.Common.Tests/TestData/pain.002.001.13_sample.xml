@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pain.002.001.13 — CustomerPaymentStatusReport
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pain.002.001.13
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pain.002.001.13.xsd
+
+  Scenario  : Deutsche Bank rejects the payment information block from
+              Acme's pain.001 (ACME/240315/PAI001/00001) because the
+              creditor account FR7630006000011234567890189 was closed.
+
+              Group status  : PART (partially accepted — one of two transactions
+                              is rejected at payment-information level)
+              PmtInf status : RJCT (rejected)
+              Two StsRsnInf items at the PmtInf level:
+                1. Orgtr=Deutsche Bank AG, Rsn/Cd=AC04, two AddtlInf lines
+                2. Rsn/Prtry=NARR, one AddtlInf line (narrative)
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.002.001.13">
+  <CstmrPmtStsRpt>
+
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/PAI002/00001</MsgId>
+      <CreDtTm>2024-03-15T08:31:00</CreDtTm>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+    </GrpHdr>
+
+    <OrgnlGrpInfAndSts>
+      <OrgnlMsgId>ACME/240315/PAI001/00001</OrgnlMsgId>
+      <OrgnlMsgNmId>pain.001.001.11</OrgnlMsgNmId>
+      <GrpSts>PART</GrpSts>
+    </OrgnlGrpInfAndSts>
+
+    <OrgnlPmtInfAndSts>
+      <OrgnlPmtInfId>ACME/240315/PMTINF/001</OrgnlPmtInfId>
+      <PmtInfSts>RJCT</PmtInfSts>
+
+      <!-- Status Reason 1 of 2 — AC04 closed account, with originator and two detail lines -->
+      <StsRsnInf>
+        <Orgtr>
+          <Nm>Deutsche Bank AG</Nm>
+        </Orgtr>
+        <Rsn>
+          <Cd>AC04</Cd>
+        </Rsn>
+        <AddtlInf>Account FR7630006000011234567890189 closed</AddtlInf>
+        <AddtlInf>As of 2024-01-31</AddtlInf>
+      </StsRsnInf>
+
+      <!-- Status Reason 2 of 2 — proprietary NARR code, one narrative line -->
+      <StsRsnInf>
+        <Rsn>
+          <Prtry>NARR</Prtry>
+        </Rsn>
+        <AddtlInf>Contact your relationship manager</AddtlInf>
+      </StsRsnInf>
+
+    </OrgnlPmtInfAndSts>
+
+  </CstmrPmtStsRpt>
+</Document>

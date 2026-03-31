@@ -1,0 +1,52 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides account and balance information.
+/// </summary>
+[IsoId("_QSzlStp-Ed-ak6NoX_4Aeg_82130838")]
+[DisplayName("Account And Balance")]
+public record AccountAndBalance3
+{
+    /// <summary>
+    /// Account where financial instruments are maintained.
+    /// </summary>
+    [IsoId("_QS9WQNp-Ed-ak6NoX_4Aeg_82130848")]
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Party that legally owns the account.
+    /// </summary>
+    [IsoId("_QS9WQdp-Ed-ak6NoX_4Aeg_1347837189")]
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification13Choice_? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Location where the financial instruments are/will be safekept.
+    /// </summary>
+    [IsoId("_QS9WQtp-Ed-ak6NoX_4Aeg_1299813489")]
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafekeepingPlaceFormat2Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Provides information about balance related to a corporate action.
+    /// </summary>
+    [IsoId("_QS9WQ9p-Ed-ak6NoX_4Aeg_1090091581")]
+    [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
+    public required CorporateActionBalanceDetails2 Balance { get; init; }
+}

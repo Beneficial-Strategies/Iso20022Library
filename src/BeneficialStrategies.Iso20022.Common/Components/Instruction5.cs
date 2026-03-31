@@ -1,0 +1,86 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information about a meeting vote instruction.
+/// </summary>
+[IsoId("_7NKXMfNXEeqRfth943bvEA")]
+[DisplayName("Instruction")]
+public record Instruction5
+{
+    /// <summary>
+    /// Identification of the individual instruction.
+    /// </summary>
+    [IsoId("_7sZ3-fNXEeqRfth943bvEA")]
+    [DisplayName("Single Instruction Identification")]
+    [IsoXmlTag("SnglInstrId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Date at which the instruction must be executed.
+    /// </summary>
+    [IsoId("_7sZ3-_NXEeqRfth943bvEA")]
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
+    public IsoISODateTime? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Indicates that a vote execution confirmation is requested.
+    /// </summary>
+    [IsoId("_7sZ3_fNXEeqRfth943bvEA")]
+    [DisplayName("Vote Execution Confirmation")]
+    [IsoXmlTag("VoteExctnConf")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; }
+
+    /// <summary>
+    /// Identification of the securities account.
+    /// </summary>
+    [IsoId("_7sZ3__NXEeqRfth943bvEA")]
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required SafekeepingAccount12 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Identification of the person appointed by the security holder as the proxy.
+    /// </summary>
+    [IsoId("_7sZ4AfNXEeqRfth943bvEA")]
+    [DisplayName("Proxy")]
+    [IsoXmlTag("Prxy")]
+    public Proxy10? Proxy { get; init; }
+
+    /// <summary>
+    /// Detailed voting instructions.
+    /// </summary>
+    [IsoId("_7sZ4A_NXEeqRfth943bvEA")]
+    [DisplayName("Vote Details")]
+    [IsoXmlTag("VoteDtls")]
+    public VoteDetails5? VoteDetails { get; init; }
+
+    /// <summary>
+    /// Identification of the security holder who will attend and vote at the meeting in person and/or the person assigned by the security holder to attend the meeting without having any voting rights or taking any action.
+    /// </summary>
+    [IsoId("_7sZ4BfNXEeqRfth943bvEA")]
+    [DisplayName("Meeting Attendee")]
+    [IsoXmlTag("MtgAttndee")]
+    public ValueList<IndividualPerson41> MeetingAttendee { get; init; } = [];
+
+    /// <summary>
+    /// Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.
+    /// </summary>
+    [IsoId("_7sZ4B_NXEeqRfth943bvEA")]
+    [DisplayName("Specific Instruction Request")]
+    [IsoXmlTag("SpcfcInstrReq")]
+    public SpecificInstructionRequest3? SpecificInstructionRequest { get; init; }
+}

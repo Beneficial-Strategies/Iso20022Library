@@ -1,0 +1,97 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Specifies the feature of an option.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_JKoQoWKNEe6iKbrXdnOlfA")]
+[Description(@"Specifies the feature of an option.")]
+[DerivedFrom(typeof(OptionFeaturesCode))]
+public enum OptionFeatures14Code
+{
+    /// <summary>
+    /// Feature whereby the holder can elect to place a condition on the acceptance of the option.
+    /// Encoded/decoded by serializers as &quot;COND&quot;.
+    /// </summary>
+    [EnumMember(Value = "COND")]
+    [IsoId("")]
+    [Description(
+        @"Feature whereby the holder can elect to place a condition on the acceptance of the option."
+    )]
+    Conditional = OptionFeaturesCode.Conditional, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Maximum cash option, may be subject to scaling, as such you may receive a combination of cash and securities outturn.
+    /// Encoded/decoded by serializers as &quot;MAXC&quot;.
+    /// </summary>
+    [EnumMember(Value = "MAXC")]
+    [IsoId("")]
+    [Description(
+        @"Maximum cash option, may be subject to scaling, as such you may receive a combination of cash and securities outturn."
+    )]
+    MaximumCash = OptionFeaturesCode.MaximumCash, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Maximum stock option, may be subject to scaling, as such you may receive a combination of securities and cash outturn.
+    /// Encoded/decoded by serializers as &quot;MAXS&quot;.
+    /// </summary>
+    [EnumMember(Value = "MAXS")]
+    [IsoId("")]
+    [Description(
+        @"Maximum stock option, may be subject to scaling, as such you may receive a combination of securities and cash outturn."
+    )]
+    MaximumSecurities = OptionFeaturesCode.MaximumSecurities, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Tender or exchange with the odd lot preference.
+    /// Encoded/decoded by serializers as &quot;OPLF&quot;.
+    /// </summary>
+    [EnumMember(Value = "OPLF")]
+    [IsoId("")]
+    [Description(@"Tender or exchange with the odd lot preference.")]
+    OddLotPreference = OptionFeaturesCode.OddLotPreference, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Feature whereby the option can be subject to pro ration in case, for example, of over-subscription.
+    /// Encoded/decoded by serializers as &quot;PROR&quot;.
+    /// </summary>
+    [EnumMember(Value = "PROR")]
+    [IsoId("")]
+    [Description(
+        @"Feature whereby the option can be subject to pro ration in case, for example, of over-subscription."
+    )]
+    Proration = OptionFeaturesCode.Proration, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Gross dividend is reinvested.
+    /// Encoded/decoded by serializers as &quot;RGRS&quot;.
+    /// </summary>
+    [EnumMember(Value = "RGRS")]
+    [IsoId("")]
+    [Description(@"Gross dividend is reinvested.")]
+    GrossDividendReinvestment = OptionFeaturesCode.GrossDividendReinvestment, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Dividend reinvestment is processed net of withholding tax.
+    /// Encoded/decoded by serializers as &quot;RNET&quot;.
+    /// </summary>
+    [EnumMember(Value = "RNET")]
+    [IsoId("")]
+    [Description(@"Dividend reinvestment is processed net of withholding tax.")]
+    NetDividendReinvestment = OptionFeaturesCode.NetDividendReinvestment, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Reduced withholding tax rate applies to the option.
+    /// Encoded/decoded by serializers as &quot;VVPR&quot;.
+    /// </summary>
+    [EnumMember(Value = "VVPR")]
+    [IsoId("")]
+    [Description(@"Reduced withholding tax rate applies to the option.")]
+    ReducedWithholdingTax = OptionFeaturesCode.ReducedWithholdingTax, // same ordinal as derivation source for type conversions
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : ~/Downloads/archive_banktocustomer_cash_management_1_73a757db02/camt.054.001.01.xsd
+
+  Scenario: Deutsche Bank notifies Acme Manufacturing GmbH of a credit entry
+            (EUR 47,250.00) posted on 15 March 2024.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.054.001.01">
+  <BkToCstmrDbtCdtNtfctnV01>
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/CAM054/00001</MsgId>
+      <CreDtTm>2024-03-15T10:30:00</CreDtTm>
+      <MsgRcpt>
+        <Nm>Acme Manufacturing GmbH</Nm>
+      </MsgRcpt>
+    </GrpHdr>
+    <Ntfctn>
+      <Id>DEUTDEFF-ACME-NTFCTN-20240315-001</Id>
+      <CreDtTm>2024-03-15T10:30:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Nm>Acme Manufacturing GmbH Operating Account</Nm>
+      </Acct>
+    </Ntfctn>
+  </BkToCstmrDbtCdtNtfctnV01>
+</Document>

@@ -1,0 +1,39 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Choice
+{
+    /// <summary>
+    /// Official identification of an organisation in a specific register.
+    /// </summary>
+    [IsoId("_Qo3U09p-Ed-ak6NoX_4Aeg_136820808")]
+    [DisplayName("Registration Identification")]
+    [IsoXmlTag("RegnId")]
+    public record RegistrationIdentification : PartyAdditionalIdentification2Choice_
+    {
+        /// <summary>
+        /// Name of the register of legal entities.
+        /// </summary>
+        [IsoId("_QP1Jwdp-Ed-ak6NoX_4Aeg_-1308997280")]
+        [DisplayName("Registration Number")]
+        [IsoXmlTag("RegnNb")]
+        [IsoSimpleType(IsoSimpleType.Max35Text)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text RegistrationNumber { get; init; }
+
+        /// <summary>
+        /// Name of the register managed by a registration authority.
+        /// </summary>
+        [IsoId("_QP1Jwtp-Ed-ak6NoX_4Aeg_-1209035067")]
+        [DisplayName("Register Name")]
+        [IsoXmlTag("RegrNm")]
+        [IsoSimpleType(IsoSimpleType.Max35Text)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? RegisterName { get; init; }
+    }
+}

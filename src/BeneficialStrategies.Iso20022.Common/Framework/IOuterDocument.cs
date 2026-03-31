@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Framework;
 /// </summary>
 /// <typeparam name="TOuterRecord">Data type of the record included inside.</typeparam>
 public interface IOuterDocument<TOuterRecord>
-    where TOuterRecord: IOuterRecord
+    where TOuterRecord : IOuterRecord
 {
     /// <summary>
     /// Contains the inner message that contains most of the message content.

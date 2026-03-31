@@ -1,0 +1,44 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies additional parameters to the message or transaction.
+/// </summary>
+[IsoId("_5mrXWZNLEeWGlc8L7oPDIg")]
+[DisplayName("Additional Parameters")]
+public record AdditionalParameters26
+{
+    /// <summary>
+    /// Specifies whether there exists a pre-confirmation.
+    /// </summary>
+    [IsoId("_5mrXXZNLEeWGlc8L7oPDIg")]
+    [DisplayName("Pre Confirmation")]
+    [IsoXmlTag("PreConf")]
+    public PreConfirmation1Code? PreConfirmation { get; init; }
+
+    /// <summary>
+    /// Specifies partial settlement information.
+    /// </summary>
+    [IsoId("_5mrXZZNLEeWGlc8L7oPDIg")]
+    [DisplayName("Partial Settlement")]
+    [IsoXmlTag("PrtlSttlm")]
+    public PartialSettlement2Code? PartialSettlement { get; init; }
+
+    /// <summary>
+    /// Identification of the confirmation previously sent to confirm the partial settlement of a transaction.
+    /// </summary>
+    [IsoId("_5mrXbZNLEeWGlc8L7oPDIg")]
+    [DisplayName("Previous Partial Confirmation Identification")]
+    [IsoXmlTag("PrvsPrtlConfId")]
+    [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
+}

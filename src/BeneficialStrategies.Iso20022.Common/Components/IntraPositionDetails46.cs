@@ -1,0 +1,108 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Details of the intra-position movement.
+/// </summary>
+[IsoId("_zQw0kaOAEeeDTpy0mhI4TQ")]
+[DisplayName("Intra Position Details")]
+public record IntraPositionDetails46
+{
+    /// <summary>
+    /// Quantity of financial instrument effectively settled.
+    /// </summary>
+    [IsoId("_zfMSF6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Settled Quantity")]
+    [IsoXmlTag("SttldQty")]
+    public required FinancialInstrumentQuantity1Choice_ SettledQuantity { get; init; }
+
+    /// <summary>
+    /// Number identifying a Securities Sub balance Type for example restriction identification.
+    /// </summary>
+    [IsoId("_zfMSH6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Securities Sub Balance Identification")]
+    [IsoXmlTag("SctiesSubBalId")]
+    public GenericIdentification37? SecuritiesSubBalanceIdentification { get; init; }
+
+    /// <summary>
+    /// Value of the collateral available for the delivery settlement process at the account level.
+    /// </summary>
+    [IsoId("_zfMSIaOAEeeDTpy0mhI4TQ")]
+    [DisplayName("Collateral Monitor Amount")]
+    [IsoXmlTag("CollMntrAmt")]
+    public AmountAndDirection44? CollateralMonitorAmount { get; init; }
+
+    /// <summary>
+    /// Quantity of financial instrument previously settled.
+    /// </summary>
+    [IsoId("_zfMSI6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Previously Settled Quantity")]
+    [IsoXmlTag("PrevslySttldQty")]
+    public FinancialInstrumentQuantity1Choice_? PreviouslySettledQuantity { get; init; }
+
+    /// <summary>
+    /// Quantity of financial instrument remaining to be settled.
+    /// </summary>
+    [IsoId("_zfMSK6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Remaining To Be Settled Quantity")]
+    [IsoXmlTag("RmngToBeSttldQty")]
+    public FinancialInstrumentQuantity1Choice_? RemainingToBeSettledQuantity { get; init; }
+
+    /// <summary>
+    /// Date and time at which the securities were moved.
+    /// </summary>
+    [IsoId("_zfMSM6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required DateAndDateTime2Choice_ SettlementDate { get; init; }
+
+    /// <summary>
+    /// Date/time securities become available for sale (if securities become unavailable, this specifies the date/time at which they will become available again).
+    /// </summary>
+    [IsoId("_zfMSO6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Available Date")]
+    [IsoXmlTag("AvlblDt")]
+    public DateAndDateTime2Choice_? AvailableDate { get; init; }
+
+    /// <summary>
+    /// Specifies the type of corporate event.
+    /// </summary>
+    [IsoId("_zfMSQ6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Corporate Action Event Type")]
+    [IsoXmlTag("CorpActnEvtTp")]
+    public CorporateActionEventType73Choice_? CorporateActionEventType { get; init; }
+
+    /// <summary>
+    /// Balance from which the securities are moving.
+    /// </summary>
+    [IsoId("_zfMSS6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Balance From")]
+    [IsoXmlTag("BalFr")]
+    public required SecuritiesSubBalanceTypeAndQuantityBreakdown3 BalanceFrom { get; init; }
+
+    /// <summary>
+    /// Balance to which the securities are moving.
+    /// </summary>
+    [IsoId("_zfMSU6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Balance To")]
+    [IsoXmlTag("BalTo")]
+    public required SecuritiesSubBalanceTypeAndQuantityBreakdown3 BalanceTo { get; init; }
+
+    /// <summary>
+    /// Provides additional settlement processing information which can not be included within the structured fields of the message.
+    /// </summary>
+    [IsoId("_zfMSW6OAEeeDTpy0mhI4TQ")]
+    [DisplayName("Instruction Processing Additional Details")]
+    [IsoXmlTag("InstrPrcgAddtlDtls")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+}

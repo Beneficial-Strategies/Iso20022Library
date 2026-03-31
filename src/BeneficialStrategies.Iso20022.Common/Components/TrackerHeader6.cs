@@ -1,0 +1,70 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics shared by all individual transactions included in the message.
+/// </summary>
+[IsoId("_PAKeYWRPEeqImsG9JNoSQw")]
+[DisplayName("Tracker Header")]
+public record TrackerHeader6
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the tracker informing party and sent to the tracker to unambiguously identify the message.
+    /// </summary>
+    [IsoId("_PKeQ8WRPEeqImsG9JNoSQw")]
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [IsoId("_PKeQ82RPEeqImsG9JNoSQw")]
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    [IsoSimpleType(IsoSimpleType.ISODateTime)]
+    public IsoISODateTime? CreationDateTime { get; init; }
+
+    /// <summary>
+    /// Number of individual transactions contained in the message.
+    /// </summary>
+    [IsoId("_PKeQ9WRPEeqImsG9JNoSQw")]
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    [IsoSimpleType(IsoSimpleType.Max15NumericText)]
+    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Party that provides information on the status and related details of a transaction.
+    /// </summary>
+    [IsoId("_PKeQ92RPEeqImsG9JNoSQw")]
+    [DisplayName("Tracker Informing Party")]
+    [IsoXmlTag("TrckrInfrmgPty")]
+    public TrackerPartyIdentification2? TrackerInformingParty { get; init; }
+
+    /// <summary>
+    /// Party that is updated on the status and related details of a transaction.
+    /// </summary>
+    [IsoId("_PKeQ-WRPEeqImsG9JNoSQw")]
+    [DisplayName("Tracker Informed Party")]
+    [IsoXmlTag("TrckrInfrmdPty")]
+    public TrackerPartyIdentification2? TrackerInformedParty { get; init; }
+
+    /// <summary>
+    /// Agreement under which or rules under which the tracker update should be processed.
+    /// </summary>
+    [IsoId("_PKeQ-2RPEeqImsG9JNoSQw")]
+    [DisplayName("Service Level")]
+    [IsoXmlTag("SvcLvl")]
+    public ServiceLevel8Choice_? ServiceLevel { get; init; }
+}

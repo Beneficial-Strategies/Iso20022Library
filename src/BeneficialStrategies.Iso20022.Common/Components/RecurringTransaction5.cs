@@ -1,0 +1,160 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Financial loan (instalment) or a recurring transaction.
+/// </summary>
+[IsoId("_I0Ew0XDlEe2MCaKO5AtGsA")]
+[DisplayName("Recurring Transaction")]
+public record RecurringTransaction5
+{
+    /// <summary>
+    /// Type of instalment plan.
+    /// </summary>
+    [IsoId("_I60SAXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Instalment Plan")]
+    [IsoXmlTag("InstlmtPlan")]
+    public SimpleValueList<InstalmentPlan1Code> InstalmentPlan { get; init; } = [];
+
+    /// <summary>
+    /// Identification of the instalment plan.
+    /// </summary>
+    [IsoId("_I60SA3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Plan Identification")]
+    [IsoXmlTag("PlanId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PlanIdentification { get; init; }
+
+    /// <summary>
+    /// Type of the Plan Owner.
+    /// </summary>
+    [IsoId("_I60SBXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Plan Owner")]
+    [IsoXmlTag("PlanOwnr")]
+    public PlanOwner1Code? PlanOwner { get; init; }
+
+    /// <summary>
+    /// Indicates the recurring/instalment occurrence of the transaction (1 = 1st instalment, 2 = 2nd instalment, etc.).
+    /// </summary>
+    [IsoId("_I60SB3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Sequence Number")]
+    [IsoXmlTag("SeqNb")]
+    [IsoSimpleType(IsoSimpleType.Number)]
+    public IsoNumber? SequenceNumber { get; init; }
+
+    /// <summary>
+    /// Period unit between consecutive payments (for example day, month, year).
+    /// </summary>
+    [IsoId("_I60SCXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Period Unit")]
+    [IsoXmlTag("PrdUnit")]
+    public Frequency3Code? PeriodUnit { get; init; }
+
+    /// <summary>
+    /// Number of period units between consecutive payments.
+    /// </summary>
+    [IsoId("_I60SC3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Instalment Period")]
+    [IsoXmlTag("InstlmtPrd")]
+    [IsoSimpleType(IsoSimpleType.Number)]
+    public IsoNumber? InstalmentPeriod { get; init; }
+
+    /// <summary>
+    /// Total number of instalment payments.
+    /// </summary>
+    [IsoId("_I60SDXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Total Number Of Payments")]
+    [IsoXmlTag("TtlNbOfPmts")]
+    [IsoSimpleType(IsoSimpleType.Number)]
+    public IsoNumber? TotalNumberOfPayments { get; init; }
+
+    /// <summary>
+    /// Date of the first payment.
+    /// </summary>
+    [IsoId("_I60SD3DlEe2MCaKO5AtGsA")]
+    [DisplayName("First Payment Date")]
+    [IsoXmlTag("FrstPmtDt")]
+    [IsoSimpleType(IsoSimpleType.ISODate)]
+    public IsoISODate? FirstPaymentDate { get; init; }
+
+    /// <summary>
+    /// Cumulative amount of all the instalments.
+    /// </summary>
+    [IsoId("_I60SEXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public CurrencyAndAmount? TotalAmount { get; init; }
+
+    /// <summary>
+    /// Amount of the first payment.
+    /// </summary>
+    [IsoId("_I60SE3DlEe2MCaKO5AtGsA")]
+    [DisplayName("First Amount")]
+    [IsoXmlTag("FrstAmt")]
+    public ImpliedCurrencyAndAmount? FirstAmount { get; init; }
+
+    /// <summary>
+    /// Amount of subsequent payments but the first one.
+    /// </summary>
+    [IsoId("_I60SFXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Subsequent Amount")]
+    [IsoXmlTag("SbsqntAmt")]
+    public ImpliedCurrencyAndAmount? SubsequentAmount { get; init; }
+
+    /// <summary>
+    /// Amount of the last payment.
+    /// </summary>
+    [IsoId("_I60SF3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Last Amount")]
+    [IsoXmlTag("LastAmt")]
+    public ImpliedCurrencyAndAmount? LastAmount { get; init; }
+
+    /// <summary>
+    /// Charges related to the transaction.
+    /// </summary>
+    [IsoId("_I60SGXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public ImpliedCurrencyAndAmount? Charges { get; init; }
+
+    /// <summary>
+    /// Contains the charge details of an instalment plan.
+    /// </summary>
+    [IsoId("_I60SG3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Detailed Charges")]
+    [IsoXmlTag("DtldChrgs")]
+    public ValueList<InstalmentAmountDetails1> DetailedCharges { get; init; } = [];
+
+    /// <summary>
+    /// Details of the interest rate.
+    /// </summary>
+    [IsoId("_I60SHXDlEe2MCaKO5AtGsA")]
+    [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
+    public ValueList<InterestRateDetails1> InterestRate { get; init; } = [];
+
+    /// <summary>
+    /// Contains grace period details.
+    /// </summary>
+    [IsoId("_I60SH3DlEe2MCaKO5AtGsA")]
+    [DisplayName("Grace Period")]
+    [IsoXmlTag("GracePrd")]
+    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
+
+    /// <summary>
+    /// Notice related to the InstalmentPlan.
+    /// </summary>
+    [IsoId("_5ug1AHDmEe2MCaKO5AtGsA")]
+    [DisplayName("Plan Notice")]
+    [IsoXmlTag("PlanNtce")]
+    public ValueList<ActionMessage10> PlanNotice { get; init; } = [];
+}

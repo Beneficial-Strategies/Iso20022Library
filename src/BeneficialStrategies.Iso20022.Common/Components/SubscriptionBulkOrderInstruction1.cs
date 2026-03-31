@@ -1,0 +1,52 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information about a subscription bulk order.
+/// </summary>
+[IsoId("_UzJj9dp-Ed-ak6NoX_4Aeg_-1522841407")]
+[DisplayName("Subscription Bulk Order Instruction")]
+public record SubscriptionBulkOrderInstruction1
+{
+    /// <summary>
+    /// Common information related to all the orders to be cancelled.
+    /// </summary>
+    [IsoId("_UzJj9tp-Ed-ak6NoX_4Aeg_-1914974735")]
+    [DisplayName("Bulk Order Details")]
+    [IsoXmlTag("BlkOrdrDtls")]
+    public required SubscriptionBulkOrder2 BulkOrderDetails { get; init; }
+
+    /// <summary>
+    /// Information related to an intermediary.
+    /// </summary>
+    [IsoId("_UzJj99p-Ed-ak6NoX_4Aeg_-474644886")]
+    [DisplayName("Intermediary Details")]
+    [IsoXmlTag("IntrmyDtls")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    public ValueList<Intermediary4> IntermediaryDetails { get; init; } = [];
+
+    /// <summary>
+    /// Message is a copy.
+    /// </summary>
+    [IsoId("_UzJj-Np-Ed-ak6NoX_4Aeg_-264085212")]
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation1? CopyDetails { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_UzJj-dp-Ed-ak6NoX_4Aeg_-830968388")]
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
+}

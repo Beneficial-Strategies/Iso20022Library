@@ -1,0 +1,44 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies the attributes for the cancellation of the benchmark.
+/// </summary>
+[IsoId("_QSO71DrXEeedCZZ8dIPp6g")]
+[DisplayName("Benchmark Cancellation")]
+public record BenchmarkCancellation1
+{
+    /// <summary>
+    /// Unique identifier of a record in a message used as part of error management and status advice messages.
+    /// </summary>
+    [IsoId("_QSO71zrXEeedCZZ8dIPp6g")]
+    [DisplayName("Technical Record Identification")]
+    [IsoXmlTag("TechRcrdId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+
+    /// <summary>
+    /// Identification of the benchmark to be cancelled.
+    /// </summary>
+    [IsoId("_QSO71jrXEeedCZZ8dIPp6g")]
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required SecurityIdentification19 Identification { get; init; }
+
+    /// <summary>
+    /// Additional information that can not be captured in the structured fields and/or any other specific block.
+    /// </summary>
+    [IsoId("_QSO71TrXEeedCZZ8dIPp6g")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+}

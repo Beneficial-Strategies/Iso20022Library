@@ -1,0 +1,169 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides further details specific to the individual direct debit transaction(s) included in the message.
+/// </summary>
+[IsoId("_KVEUc249EeiU9cctagi5ow")]
+[DisplayName("Direct Debit Transaction Information")]
+public record DirectDebitTransactionInformation23
+{
+    /// <summary>
+    /// Set of elements used to reference a payment instruction.
+    /// </summary>
+    [IsoId("_KgsVdW49EeiU9cctagi5ow")]
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    public required PaymentIdentification6 PaymentIdentification { get; init; }
+
+    /// <summary>
+    /// Set of elements used to further specify the type of transaction.
+    /// </summary>
+    [IsoId("_KgsVd249EeiU9cctagi5ow")]
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
+    /// Usage: This amount has to be transported unchanged through the transaction chain.
+    /// </summary>
+    [IsoId("_KgsVeW49EeiU9cctagi5ow")]
+    [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
+    public required ActiveOrHistoricCurrencyAndAmount InstructedAmount { get; init; }
+
+    /// <summary>
+    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
+    /// </summary>
+    [IsoId("_KgsVe249EeiU9cctagi5ow")]
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    public ChargeBearerType1Code? ChargeBearer { get; init; }
+
+    /// <summary>
+    /// Provides information specific to the direct debit mandate.
+    /// </summary>
+    [IsoId("_KgsVfW49EeiU9cctagi5ow")]
+    [DisplayName("Direct Debit Transaction")]
+    [IsoXmlTag("DrctDbtTx")]
+    public DirectDebitTransaction10? DirectDebitTransaction { get; init; }
+
+    /// <summary>
+    /// Ultimate party to which an amount of money is due.
+    /// </summary>
+    [IsoId("_KgsVf249EeiU9cctagi5ow")]
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    public PartyIdentification135? UltimateCreditor { get; init; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the debtor.
+    /// </summary>
+    [IsoId("_KgsVgW49EeiU9cctagi5ow")]
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    public required BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; init; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_KgsVg249EeiU9cctagi5ow")]
+    [DisplayName("Debtor Agent Account")]
+    [IsoXmlTag("DbtrAgtAcct")]
+    public CashAccount38? DebtorAgentAccount { get; init; }
+
+    /// <summary>
+    /// Party that owes an amount of money to the (ultimate) creditor.
+    /// </summary>
+    [IsoId("_KgsVhW49EeiU9cctagi5ow")]
+    [DisplayName("Debtor")]
+    [IsoXmlTag("Dbtr")]
+    public required PartyIdentification135 Debtor { get; init; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
+    /// </summary>
+    [IsoId("_KgsVh249EeiU9cctagi5ow")]
+    [DisplayName("Debtor Account")]
+    [IsoXmlTag("DbtrAcct")]
+    public required CashAccount38 DebtorAccount { get; init; }
+
+    /// <summary>
+    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
+    /// </summary>
+    [IsoId("_KgsViW49EeiU9cctagi5ow")]
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification135? UltimateDebtor { get; init; }
+
+    /// <summary>
+    /// Further information, related to the processing of the payment instruction, that may need to be acted upon by the creditor agent, depending on agreement between creditor and the creditor agent.
+    /// </summary>
+    [IsoId("_KgsVi249EeiU9cctagi5ow")]
+    [DisplayName("Instruction For Creditor Agent")]
+    [IsoXmlTag("InstrForCdtrAgt")]
+    [IsoSimpleType(IsoSimpleType.Max140Text)]
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? InstructionForCreditorAgent { get; init; }
+
+    /// <summary>
+    /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
+    /// </summary>
+    [IsoId("_KgsVjW49EeiU9cctagi5ow")]
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Purpose2Choice_? Purpose { get; init; }
+
+    /// <summary>
+    /// Information needed due to regulatory and statutory requirements.
+    /// </summary>
+    [IsoId("_KgsVj249EeiU9cctagi5ow")]
+    [DisplayName("Regulatory Reporting")]
+    [IsoXmlTag("RgltryRptg")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
+
+    /// <summary>
+    /// Provides details on the tax.
+    /// </summary>
+    [IsoId("_KgsVkW49EeiU9cctagi5ow")]
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public TaxInformation8? Tax { get; init; }
+
+    /// <summary>
+    /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.
+    /// </summary>
+    [IsoId("_KgsVk249EeiU9cctagi5ow")]
+    [DisplayName("Related Remittance Information")]
+    [IsoXmlTag("RltdRmtInf")]
+    [MinLength(0)]
+    [MaxLength(10)]
+    public ValueList<RemittanceLocation7> RelatedRemittanceInformation { get; init; } = [];
+
+    /// <summary>
+    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
+    /// </summary>
+    [IsoId("_KgsVlW49EeiU9cctagi5ow")]
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    public RemittanceInformation16? RemittanceInformation { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_KgsVl249EeiU9cctagi5ow")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+}

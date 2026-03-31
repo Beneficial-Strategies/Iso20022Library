@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample camt.056.001.10 — FI-to-FI Payment Cancellation Request
+  Namespace : urn:iso:std:iso:20022:tech:xsd:camt.056.001.10
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-12
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/camt.056.001.10.xsd
+
+  Scenario  : Acme Manufacturing GmbH (via Deutsche Bank DEUTDEFFXXX) requests
+              cancellation of EUR 47 250.00 SEPA credit transfer to GlobalSupply S.A.S.
+              (BNPAFRPPXXX). Reason: customer request (CUST).
+
+  NOTE — amounts omitted intentionally:
+  In the ISO 20022 XSD, monetary amounts are represented as simpleContent with a
+  Ccy XML attribute (e.g. <Amt Ccy="EUR">47250.00</Amt>).  The C# model in this
+  library represents Currency and Amount as child elements instead.  Amounts are
+  therefore excluded from this sample to keep it XSD-valid; round-trip coverage
+  for amounts is tracked separately.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.056.001.10">
+  <FIToFIPmtCxlReq>
+
+    <Assgnmt>
+      <Id>DEUTDEFF/240316/CAMT056/00001</Id>
+      <Assgnr>
+        <Agt>
+          <FinInstnId>
+            <BICFI>DEUTDEFFXXX</BICFI>
+          </FinInstnId>
+        </Agt>
+      </Assgnr>
+      <Assgne>
+        <Agt>
+          <FinInstnId>
+            <BICFI>BNPAFRPPXXX</BICFI>
+          </FinInstnId>
+        </Agt>
+      </Assgne>
+      <CreDtTm>2024-03-16T09:00:00</CreDtTm>
+    </Assgnmt>
+
+    <Case>
+      <Id>CASE-DEUTDEFF-20240316-001</Id>
+      <Cretr>
+        <Agt>
+          <FinInstnId>
+            <BICFI>DEUTDEFFXXX</BICFI>
+          </FinInstnId>
+        </Agt>
+      </Cretr>
+    </Case>
+
+    <Undrlyg>
+      <TxInf>
+        <CxlId>DEUTDEFF/240316/CAMT056/00001</CxlId>
+        <OrgnlEndToEndId>E2E-ACME-GLOBALSUPPLY-20240315-001</OrgnlEndToEndId>
+        <OrgnlUETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</OrgnlUETR>
+        <CxlRsnInf>
+          <Rsn>
+            <Cd>CUST</Cd>
+          </Rsn>
+        </CxlRsnInf>
+      </TxInf>
+    </Undrlyg>
+
+  </FIToFIPmtCxlReq>
+</Document>

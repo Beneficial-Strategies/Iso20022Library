@@ -1,0 +1,54 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides information about identification and account of the party.
+/// </summary>
+[IsoId("_OECrlUGLEeWqy4niLuXETA")]
+[DisplayName("Party Identification And Account")]
+public record PartyIdentificationAndAccount122
+{
+    /// <summary>
+    /// Identification of a party.
+    /// </summary>
+    [IsoId("_OQ_iN0GLEeWqy4niLuXETA")]
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification71Choice_ Identification { get; init; }
+
+    /// <summary>
+    /// Account where financial instruments are maintained.
+    /// </summary>
+    [IsoId("_OQ_iP0GLEeWqy4niLuXETA")]
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Reference meaningful to the party identified.
+    /// </summary>
+    [IsoId("_OQ_iR0GLEeWqy4niLuXETA")]
+    [DisplayName("Processing Identification")]
+    [IsoXmlTag("PrcgId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProcessingIdentification { get; init; }
+
+    /// <summary>
+    /// Alternate identification for a party.
+    /// </summary>
+    [IsoId("_OQ_iV0GLEeWqy4niLuXETA")]
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public ValueList<AlternatePartyIdentification7> AlternateIdentification { get; init; } = [];
+}

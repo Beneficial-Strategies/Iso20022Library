@@ -1,0 +1,35 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Text.Json.Serialization;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace BeneficialStrategies.Iso20022.Choices
+{
+    /// <summary>
+    /// Choice of status for an order.
+    /// </summary>
+    [KnownType(typeof(OrderStatus5Choice.Status))]
+    [KnownType(typeof(OrderStatus5Choice.Cancelled))]
+    [KnownType(typeof(OrderStatus5Choice.ConditionallyAccepted))]
+    [KnownType(typeof(OrderStatus5Choice.Rejected))]
+    [KnownType(typeof(OrderStatus5Choice.Suspended))]
+    [KnownType(typeof(OrderStatus5Choice.InRepair))]
+    [KnownType(typeof(OrderStatus5Choice.PartiallySettled))]
+    [JsonDerivedType(typeof(OrderStatus5Choice.Status), nameof(OrderStatus5Choice.Status))]
+    [JsonDerivedType(typeof(OrderStatus5Choice.Cancelled), nameof(OrderStatus5Choice.Cancelled))]
+    [JsonDerivedType(
+        typeof(OrderStatus5Choice.ConditionallyAccepted),
+        nameof(OrderStatus5Choice.ConditionallyAccepted)
+    )]
+    [JsonDerivedType(typeof(OrderStatus5Choice.Rejected), nameof(OrderStatus5Choice.Rejected))]
+    [JsonDerivedType(typeof(OrderStatus5Choice.Suspended), nameof(OrderStatus5Choice.Suspended))]
+    [JsonDerivedType(typeof(OrderStatus5Choice.InRepair), nameof(OrderStatus5Choice.InRepair))]
+    [JsonDerivedType(
+        typeof(OrderStatus5Choice.PartiallySettled),
+        nameof(OrderStatus5Choice.PartiallySettled)
+    )]
+    [IsoId("_GSNBUEHREeasdbKMiqizqA")]
+    [DisplayName("Order Status 5 Choice")]
+    public abstract record OrderStatus5Choice_ { }
+}

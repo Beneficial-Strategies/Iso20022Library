@@ -1,0 +1,48 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Specifies the type of the underlying identification.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_puHQcHZWEeWM6LeFwEMTgg")]
+[Description(@"Specifies the type of the underlying identification.")]
+[DerivedFrom(typeof(UnderlyingIdentificationCode))]
+#if NET8_0_OR_GREATER // C# 12 Global type alias
+[JsonConverter(typeof(JsonStringEnumConverter<UnderlyingIdentification1Code>))]
+#endif
+public enum UnderlyingIdentification1Code
+{
+    /// <summary>
+    /// Unknown (not available) underlying identification code.
+    /// Encoded/decoded by serializers as &quot;UKWN&quot;.
+    /// </summary>
+    [EnumMember(Value = "UKWN")]
+    [IsoId("_wlDTEXZWEeWM6LeFwEMTgg")]
+    [Description(@"Unknown (not available) underlying identification code.")]
+    Unknown = UnderlyingIdentificationCode.Unknown, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Basket of indexes identification code.
+    /// Encoded/decoded by serializers as &quot;BSKT&quot;.
+    /// </summary>
+    [EnumMember(Value = "BSKT")]
+    [IsoId("_5NIMEea4EeW1iL_FRZt8bg")]
+    [Description(@"Basket of indexes identification code.")]
+    Basket = UnderlyingIdentificationCode.Basket, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Index identification code.
+    /// Encoded/decoded by serializers as &quot;INDX&quot;.
+    /// </summary>
+    [EnumMember(Value = "INDX")]
+    [IsoId("_5X_YQea4EeW1iL_FRZt8bg")]
+    [Description(@"Index identification code.")]
+    Index = UnderlyingIdentificationCode.Index, // same ordinal as derivation source for type conversions
+}

@@ -1,0 +1,28 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Specifies the request objection code for the cross-element validation rules.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_9wqQ4CVFEe6EvsLBQ6cYtA")]
+[Description(@"Specifies the request objection code for the cross-element validation rules.")]
+[DerivedFrom(typeof(ValidationRuleCode))]
+public enum ValidationRuleRequestObjection1Code
+{
+    /// <summary>
+    /// Responder is requested to review an earlier response as the requestor objects to it.
+    /// Encoded/decoded by serializers as &quot;RQOB&quot;.
+    /// </summary>
+    [EnumMember(Value = "RQOB")]
+    [IsoId("")]
+    [Description(
+        @"Responder is requested to review an earlier response as the requestor objects to it."
+    )]
+    RequestObjection = ValidationRuleCode.RequestObjection, // same ordinal as derivation source for type conversions
+}

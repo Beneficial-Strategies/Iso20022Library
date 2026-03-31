@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pain.001.001.11 — CustomerCreditTransferInitiation
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pain.001.001.11
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pain.001.001.11.xsd
+
+  Scenario  : Acme Manufacturing GmbH instructs Deutsche Bank to pay
+              GlobalSupply S.A.S. for two invoices (EUR 47 250.00 and
+              EUR 12 500.00) — a single PmtInf with two CdtTrfTxInf items.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11">
+  <CstmrCdtTrfInitn>
+
+    <GrpHdr>
+      <MsgId>ACME/240315/PAI001/00001</MsgId>
+      <CreDtTm>2024-03-15T08:30:00</CreDtTm>
+      <NbOfTxs>2</NbOfTxs>
+      <InitgPty>
+        <Nm>Acme Manufacturing GmbH</Nm>
+        <PstlAdr>
+          <StrtNm>Mainzer Landstrasse</StrtNm>
+          <BldgNb>46</BldgNb>
+          <PstCd>60325</PstCd>
+          <TwnNm>Frankfurt am Main</TwnNm>
+          <Ctry>DE</Ctry>
+        </PstlAdr>
+      </InitgPty>
+    </GrpHdr>
+
+    <PmtInf>
+      <PmtInfId>ACME/240315/PMTINF/001</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <NbOfTxs>2</NbOfTxs>
+      <ReqdExctnDt>
+        <Dt>2024-03-15</Dt>
+      </ReqdExctnDt>
+      <Dbtr>
+        <Nm>Acme Manufacturing GmbH</Nm>
+        <PstlAdr>
+          <StrtNm>Mainzer Landstrasse</StrtNm>
+          <BldgNb>46</BldgNb>
+          <PstCd>60325</PstCd>
+          <TwnNm>Frankfurt am Main</TwnNm>
+          <Ctry>DE</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+
+      <!-- Credit Transfer 1 of 2 — Invoice INV-2024-847  EUR 47 250.00 -->
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>INSTR001</InstrId>
+          <EndToEndId>ACME/INV-2024-847/PAY001</EndToEndId>
+          <UETR>97ed4827-7b6f-4491-a06f-b548d5a7512d</UETR>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">47250.00</InstdAmt>
+        </Amt>
+        <ChrgBr>SHAR</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BICFI>BNPAFRPPXXX</BICFI>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>GlobalSupply S.A.S.</Nm>
+          <PstlAdr>
+            <StrtNm>Rue de Rivoli</StrtNm>
+            <BldgNb>228</BldgNb>
+            <PstCd>75001</PstCd>
+            <TwnNm>Paris</TwnNm>
+            <Ctry>FR</Ctry>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>FR7630006000011234567890189</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Invoice INV-2024-847 EUR 47250.00</Ustrd>
+          <Ustrd>Due date 2024-03-15</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+
+      <!-- Credit Transfer 2 of 2 — Invoice INV-2024-848  EUR 12 500.00 -->
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>INSTR002</InstrId>
+          <EndToEndId>ACME/INV-2024-848/PAY002</EndToEndId>
+          <UETR>b1c2d3e4-f5a6-4890-abcd-ef1234567890</UETR>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="EUR">12500.00</InstdAmt>
+        </Amt>
+        <ChrgBr>SHAR</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BICFI>BNPAFRPPXXX</BICFI>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>GlobalSupply S.A.S.</Nm>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <IBAN>FR7630006000011234567890189</IBAN>
+          </Id>
+        </CdtrAcct>
+        <RmtInf>
+          <Ustrd>Invoice INV-2024-848 EUR 12500.00</Ustrd>
+          <Ustrd>Due date 2024-03-15</Ustrd>
+        </RmtInf>
+      </CdtTrfTxInf>
+
+    </PmtInf>
+
+  </CstmrCdtTrfInitn>
+</Document>

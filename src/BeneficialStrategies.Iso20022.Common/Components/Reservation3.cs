@@ -1,0 +1,42 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Liquidity set aside by the account owner for specific purposes.
+/// </summary>
+[IsoId("_T9Cs1ZliEeeE1Ya-LgRsuQ")]
+[DisplayName("Reservation")]
+public record Reservation3
+{
+    /// <summary>
+    /// Amount of money of the limit, expressed in an eligible currency.
+    /// </summary>
+    [IsoId("_UFVtM5liEeeE1Ya-LgRsuQ")]
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required Amount2Choice_ Amount { get; init; }
+
+    /// <summary>
+    /// Status of the limit, such as enabled or disabled.
+    /// </summary>
+    [IsoId("_UFVtNZliEeeE1Ya-LgRsuQ")]
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public ReservationStatus1Choice_? Status { get; init; }
+
+    /// <summary>
+    /// Date and time at which the reservation becomes effective.
+    /// </summary>
+    [IsoId("_UFVtN5liEeeE1Ya-LgRsuQ")]
+    [DisplayName("Start Date Time")]
+    [IsoXmlTag("StartDtTm")]
+    public DateAndDateTime2Choice_? StartDateTime { get; init; }
+}

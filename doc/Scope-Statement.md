@@ -3,69 +3,67 @@ title : "Scope Statement"
 description : "Statement of the scope of work done on this library."
 summary : "Statement of the scope of work done on this library."
 categories : ["ISO20022"]
-generator : "RepositoryDocScopeStatementGenerator"
 ---
 # Beneficial Strategies Implementation Scope
 
-This document is to give you an idea of the scope of implementation of this library.
-Considering that it employs some 17,645 constituent data structures in additon to it's 2,665 ISO messages, the library is rather vast.
+This document gives you an idea of the scope of implementation of this library.
 
-## ISO 20022 Messages Implemented - 2,665
+The library currently contains **3,124 message files** across all 36 business areas. The ISO 20022 repository snapshot dated April 24, 2025 (source: [ISO 20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/)) defines **3,121 messages**. The library is at near-complete parity with the spec; the small discrepancies are flagged in the table below.
 
-This library currently contains the implementation of 2665 messages.
-They each fall into one of the 36 business categories enumerated below.
+## ISO 20022 Messages by Business Area
 
-|Abbreviation|Business Area|Messages Implemented|
-|------------|-------------|--------------------|
-|acmt|Messages that support the management of account related activities, such as the opening and maintenance of an account.|123|
-|admi|Generic messages, ie, system event notifications, generic rejections, etc.|10|
-|auth|Messages that support the provision of miscellaneous financial information to authorities, such as Regulators, Police, Customs, Tax authorities, Enforcement authorities, Ministries, etc.|138|
-|caaa|Messages that support any card payment related transactions and services between a card acceptor and a card transaction acquirer. It includes the authorisation, cancellation and capture of card transactions.|217|
-|caad|Messages that support any card related administrative services between financial institutions and their agents.|17|
-|caam|Messages that support card related terminal management services between an Automated Teller Machine (ATM) and an Acquirer.|24|
-|cafc|Messages that support the reporting and advising of card payment transactions, including the collection of fees and processing of charge-backs.|4|
-|cafm|Messages that support file management services in a card payment environment between financial institutions and/or their agents.|4|
-|cafr|Messages that support card payment related fraud reporting and disposition services between financial institutions and their agents.|8|
-|cain|Messages that support any card payment related transactions and services between a card transaction acquirer and a card issuer.|55|
-|camt|Messages that support the reporting and advicing of the cash side of any financial transactions, including cash movements, transactions and balances, plus any exceptions and investigations related to cash transactions.|279|
-|canm|Messages that support network management services in a card payment environment between financial institutions and/or their agents.|8|
-|casp|Messages that support any card related transactions and services between a sale system and a Point of Interaction (POI) system.|82|
-|casr|Messages that support card payment related settlement reporting services between financial institutions and their agents.|4|
-|catm|Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.|68|
-|catp|Messages that support any card related Automated Teller Machine (ATM) transactions and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.|28|
-|colr|Messages that support collateral management actions.|54|
-|fxtr|Messages that support management processes for foreign exchange contracts, including reporting on trades and balances, plus any exceptions and investigations related to foreign exchange contracts.|33|
-|head|Header that contains business information that is relevant before processing a message.|3|
-|nvlp|Envelope Message Definitions describe technical messages that are used to bundle multiple message instances, typically to support processing or transport. Envelopes may contain different types of message instance and typically define additional data elements that apply to all contained message instances.|1|
-|pacs|Messages that support the clearing and settlement processes for payment transactions between financial institutions.|78|
-|pain|Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.|98|
-|reda|Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities.|63|
-|remt|Messages that support communication between creditors and debtors regarding remittance details associated with payments.|7|
-|secl|Messages that support the clearing process for securities, including management of post-trading, pre-settlement credit exposure, netting, margining, borrowing, conformance with market settlement rules.|10|
-|seev|Messages that support asset servicing, including proxy voting, income and corporate actions.|344|
-|seev|Messages that support asset servicing, including proxy voting, income and corporate actions.|344|
-|semt|Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.|181|
-|semt|Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.|181|
-|sese|Messages that support the settlement process for securities and report its status and confirmation.|417|
-|sese|Messages that support the settlement process for securities and report its status and confirmation.|417|
-|setr|Messages that support trade and post-trade processes for securities, including order to buy or sell, trade execution, affirmation, confirmation, allocation and notification.|84|
-|supl|Messages that add new components to existing message definitions in existing business areas. The messages are each a separate extension of an existing message and should always be linked to the supplementary data component in the (core) registered message.|109|
-|tsin|Messages that support the request for a trade service, including any related application, instruction, request, acknowledgement or advice.|13|
-|tsmt|Messages that support ancillary commercial trade services functions, including checking, matching and reporting, plus any exceptions and investigations related to trade services transactions.|69|
-|tsrv|Messages that support the issuance of a trade services instrument, execution and/or settlement of a trade transaction, including any related reimbursement, acceptance, authorisation, claims, enquiries, invoicing, financing or other undertaking.|19|
+Counts verified against actual files in the repository (March 2026) and the ISO 20022 spec snapshot (April 24, 2025).
+
+| Abbreviation | Business Area | Library | Spec | Notes |
+|---|---|---:|---:|---|
+| acmt | Account management — opening, maintenance, and related activities. | 148 | 148 | ✓ |
+| admi | Generic messages — system event notifications, generic rejections, etc. | 13 | 13 | ✓ |
+| auth | Reporting miscellaneous financial information to authorities (regulators, tax, customs, enforcement, etc.). | 170 | 170 | ✓ |
+| caaa | Card payment transactions and services between a card acceptor and acquirer, including authorisation, cancellation, and capture. | 269 | 269 | ✓ |
+| caad | Card-related administrative services between financial institutions and their agents. | 27 | 27 | ✓ |
+| caam | Card terminal management services between an ATM and an acquirer. | 37 | 37 | ✓ |
+| cafc | Reporting and advising of card payment transactions, including fee collection and charge-backs. | 6 | 6 | ✓ |
+| cafm | File management services in a card payment environment. | 6 | 6 | ✓ |
+| cafr | Card payment fraud reporting and disposition services. | 12 | 12 | ✓ |
+| cain | Card payment transactions and services between a card acquirer and card issuer. | 76 | 76 | ✓ |
+| camt | Cash management — reporting and advising the cash side of financial transactions, including cash movements, balances, exceptions, and investigations. | 372 | 373 | ✓ (spec count inflated by 1 duplicate entry) |
+| canm | Network management services in a card payment environment. | 12 | 12 | ✓ |
+| casp | Card-related transactions and services between a sale system and a Point of Interaction (POI) system. | 114 | 114 | ✓ |
+| casr | Card payment settlement reporting services. | 6 | 6 | ✓ |
+| catm | Card terminal management services between a Terminal Management System (TMS) and a POI. | 79 | 79 | ✓ |
+| catp | ATM transactions and services between ATM equipment and an ATM acquirer, including cash withdrawals and account management. | 44 | 44 | ✓ |
+| colr | Collateral management actions. | 56 | 56 | ✓ |
+| fxtr | Foreign exchange contract management — reporting, trades, balances, exceptions, and investigations. | 47 | 47 | ✓ |
+| head | Business application header — business information relevant before processing a message. | 5 | 4 | ✓ (extra is head.002/BusinessFileHeaderV01, catalogued under OtherMessages but filed here by ISO ID prefix) |
+| nvlp | Envelope messages used to bundle multiple message instances, typically for processing or transport. | 2 | 2 | ✓ |
+| pacs | Payments clearing and settlement — clearing and settlement of payment transactions between financial institutions. | 91 | 91 | ✓ |
+| pain | Payment initiation — customer-initiated payments to a financial institution and their status. | 110 | 110 | ✓ |
+| reda | Reference data — financial instruments, parties, accounts, prices, and other supporting business data. | 79 | 79 | ✓ |
+| remt | Remittance — communication between creditors and debtors about remittance details associated with payments. | 9 | 9 | ✓ |
+| secl | Securities clearing — post-trading, pre-settlement credit exposure, netting, margining, and borrowing. | 15 | 15 | ✓ |
+| seev | Securities events — asset servicing, proxy voting, income, and corporate actions. | 407 | 407 | ✓ |
+| semt | Securities management — post-settlement reporting on movements, trades, and balances. | 190 | 190 | ✓ |
+| sese | Securities settlement — settlement process for securities and its status/confirmation. | 441 | 441 | ✓ |
+| setr | Securities trade — order to buy/sell, execution, affirmation, confirmation, allocation, and notification. | 89 | 89 | ✓ |
+| supl | Supplementary data extensions that add new components to existing message definitions. | 71 | 71 | ✓ |
+| trck | Payment tracking messages. | 3 | 3 | ✓ |
+| trea | Treasury operations (obsolete area, being progressively replaced by fxtr and related domains). | 13 | 13 | ✓ |
+| tsin | Trade service requests — applications, instructions, acknowledgements, and advice. | 13 | 13 | ✓ |
+| tsmt | Ancillary commercial trade services — checking, matching, reporting, exceptions, and investigations. | 69 | 69 | ✓ |
+| tsrv | Trade services instruments — issuance, execution, settlement, reimbursement, financing, and undertaking. | 19 | 19 | ✓ |
+
 ## Supporting Architecture Counts
 
-Each of the messages mentioned above requires supporting structures to fully describe the business content.
-To facilitate this, the supporting implementation includes the following implementations.
+Each message requires supporting structures to fully describe its business content. The table below shows counts from the current ISO 20022 specification (source: MCP server, April 24, 2025).
 
-
-| Type of supporting component                                         | Count                 |
-|----------------------------------------------------------------------|-----------------------|
-| Codesets supplying dropdown values defined from the specification    | 3,774 
-| Codesets supplied externally that may change independently           | 86        
-| Message components that are used to compose complex content          | 12,653   
-| Business components used as building blocks across messages          | 783
-| Simple types that are used for text, dates, etc, usually constrained | 337
-| Types relating to external schema.                                   | 6
-| Types relating to user-defined content.                              | 6
-        
+| Component Type | Current Spec |
+|---|---:|
+| Internal code sets supplying dropdown values defined by the specification | 3,664 |
+| External code sets that may change independently of the specification | 309 |
+| Message components used to compose complex content | 13,810 |
+| Business components used as building blocks across messages | 785 |
+| Simple types used for text, dates, etc., usually constrained | 328 |
+| Types relating to external schemas | 7 |
+| Types relating to user-defined content | 2 |
+| Choice types (polymorphic variants) | 4,136 |
+| **Total** | **23,041** |

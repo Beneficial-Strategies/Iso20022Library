@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
+    <AssemblyName>BeneficialStrategies.Iso20022.FluentValidation</AssemblyName>
+    <PackageId>BeneficialStrategies.Iso20022.FluentValidation</PackageId>
+    <Description>FluentValidation validators for ISO 20022 message types, generated from the ISO 20022 specification.</Description>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
+  </ItemGroup>
+
+</Project>

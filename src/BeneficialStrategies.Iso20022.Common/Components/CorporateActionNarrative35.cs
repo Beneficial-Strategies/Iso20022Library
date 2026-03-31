@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides additional information such as the taxation conditions.
+/// </summary>
+[IsoId("_ckQaw5KQEeWHWpTQn1FFVg")]
+[DisplayName("Corporate Action Narrative")]
+public record CorporateActionNarrative35
+{
+    /// <summary>
+    /// Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.
+    /// </summary>
+    [IsoId("_ckQaxZKQEeWHWpTQn1FFVg")]
+    [DisplayName("Additional Text")]
+    [IsoXmlTag("AddtlTxt")]
+    public SimpleValueList<IsoRestrictedFINXMax350Text> AdditionalText { get; init; } = [];
+
+    /// <summary>
+    /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.
+    /// </summary>
+    [IsoId("_ckQazZKQEeWHWpTQn1FFVg")]
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public SimpleValueList<IsoRestrictedFINXMax350Text> NarrativeVersion { get; init; } = [];
+
+    /// <summary>
+    /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
+    /// </summary>
+    [IsoId("_ckQa1ZKQEeWHWpTQn1FFVg")]
+    [DisplayName("Party Contact Narrative")]
+    [IsoXmlTag("PtyCtctNrrtv")]
+    public SimpleValueList<IsoRestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
+
+    /// <summary>
+    /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
+    /// </summary>
+    [IsoId("_ckQa3ZKQEeWHWpTQn1FFVg")]
+    [DisplayName("Taxation Conditions")]
+    [IsoXmlTag("TaxtnConds")]
+    public SimpleValueList<IsoRestrictedFINXMax350Text> TaxationConditions { get; init; } = [];
+}

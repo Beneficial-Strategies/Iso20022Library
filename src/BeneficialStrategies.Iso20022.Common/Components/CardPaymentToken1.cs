@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Payment token information.
+/// </summary>
+[IsoId("__GUTcGkgEeSTIuB9A-QJ6g")]
+[DisplayName("Card Payment Token")]
+public record CardPaymentToken1
+{
+    /// <summary>
+    /// Additional token payment information.
+    /// </summary>
+    [IsoId("_GB7asGkhEeSTIuB9A-QJ6g")]
+    [DisplayName("Token Characteristic")]
+    [IsoXmlTag("TknChrtc")]
+    public SimpleValueList<IsoMax35Text> TokenCharacteristic { get; init; } = [];
+
+    /// <summary>
+    /// Identifier of a token provider requestor.
+    /// </summary>
+    [IsoId("_k2kzoGkhEeSTIuB9A-QJ6g")]
+    [DisplayName("Token Requestor")]
+    [IsoXmlTag("TknRqstr")]
+    public PaymentTokenIdentifiers1? TokenRequestor { get; init; }
+}

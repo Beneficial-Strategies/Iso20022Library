@@ -1,0 +1,202 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
+{
+    /// <summary>
+    /// Provides the original mandate data.
+    /// </summary>
+    [IsoId("_bQuQE9cZEeqRFcf2R4bPBw")]
+    [DisplayName("Original Mandate")]
+    [IsoXmlTag("OrgnlMndt")]
+    public record OriginalMandate : OriginalMandate8Choice_
+    {
+        /// <summary>
+        /// Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.
+        /// </summary>
+        [IsoId("_bSCetdcZEeqRFcf2R4bPBw")]
+        [DisplayName("Mandate Identification")]
+        [IsoXmlTag("MndtId")]
+        [IsoSimpleType(IsoSimpleType.Max35Text)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MandateIdentification { get; init; }
+
+        /// <summary>
+        /// Identification for the mandate request, as assigned by the initiating party.
+        /// </summary>
+        [IsoId("_bSCet9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Mandate Request Identification")]
+        [IsoXmlTag("MndtReqId")]
+        [IsoSimpleType(IsoSimpleType.Max35Text)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MandateRequestIdentification { get; init; }
+
+        /// <summary>
+        /// Specifies the transport authentication details related to the mandate.
+        /// </summary>
+        [IsoId("_bSCeudcZEeqRFcf2R4bPBw")]
+        [DisplayName("Authentication")]
+        [IsoXmlTag("Authntcn")]
+        public MandateAuthentication1? Authentication { get; init; }
+
+        /// <summary>
+        /// Specifies the type of mandate, such as paper, electronic or scheme.
+        /// </summary>
+        [IsoId("_bSCeu9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Type")]
+        [IsoXmlTag("Tp")]
+        public MandateTypeInformation2? Type { get; init; }
+
+        /// <summary>
+        /// Provides details of the duration of the mandate and occurrence of the underlying transactions.
+        /// </summary>
+        [IsoId("_bSCevdcZEeqRFcf2R4bPBw")]
+        [DisplayName("Occurrences")]
+        [IsoXmlTag("Ocrncs")]
+        public MandateOccurrences5? Occurrences { get; init; }
+
+        /// <summary>
+        /// Specifies whether the direct debit instructions should be automatically re-submitted periodically when bilaterally agreed.
+        /// </summary>
+        [IsoId("_bSCev9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Tracking Indicator")]
+        [IsoXmlTag("TrckgInd")]
+        [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
+        public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
+
+        /// <summary>
+        /// Amount different from the collection amount, as it includes the costs associated with the first debited amount.
+        /// </summary>
+        [IsoId("_bSCewdcZEeqRFcf2R4bPBw")]
+        [DisplayName("First Collection Amount")]
+        [IsoXmlTag("FrstColltnAmt")]
+        public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
+
+        /// <summary>
+        /// Fixed amount to be collected from the debtor&apos;s account.
+        /// </summary>
+        [IsoId("_bSCew9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Collection Amount")]
+        [IsoXmlTag("ColltnAmt")]
+        public ActiveOrHistoricCurrencyAndAmount? CollectionAmount { get; init; }
+
+        /// <summary>
+        /// Maximum amount that may be collected from the debtor&apos;s account, per instruction.
+        /// </summary>
+        [IsoId("_bSCexdcZEeqRFcf2R4bPBw")]
+        [DisplayName("Maximum Amount")]
+        [IsoXmlTag("MaxAmt")]
+        public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
+
+        /// <summary>
+        /// Specifies the characteristics of the adjustment applied to the collection amount of a direct debit instruction.
+        /// </summary>
+        [IsoId("_bSCex9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Adjustment")]
+        [IsoXmlTag("Adjstmnt")]
+        public MandateAdjustment1? Adjustment { get; init; }
+
+        /// <summary>
+        /// Provides the reason for the setup of the mandate.
+        /// </summary>
+        [IsoId("_bSCeydcZEeqRFcf2R4bPBw")]
+        [DisplayName("Reason")]
+        [IsoXmlTag("Rsn")]
+        public MandateSetupReason1Choice_? Reason { get; init; }
+
+        /// <summary>
+        /// Credit party that signs the mandate.
+        /// </summary>
+        [IsoId("_bSCey9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Creditor Scheme Identification")]
+        [IsoXmlTag("CdtrSchmeId")]
+        public PartyIdentification135? CreditorSchemeIdentification { get; init; }
+
+        /// <summary>
+        /// Party that signs the mandate and to whom an amount of money is due.
+        /// </summary>
+        [IsoId("_bSCezdcZEeqRFcf2R4bPBw")]
+        [DisplayName("Creditor")]
+        [IsoXmlTag("Cdtr")]
+        public required PartyIdentification135 Creditor { get; init; }
+
+        /// <summary>
+        /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
+        /// </summary>
+        [IsoId("_bSCez9cZEeqRFcf2R4bPBw")]
+        [DisplayName("Creditor Account")]
+        [IsoXmlTag("CdtrAcct")]
+        public CashAccount40? CreditorAccount { get; init; }
+
+        /// <summary>
+        /// Financial institution servicing an account for the creditor.
+        /// </summary>
+        [IsoId("_bSCe0dcZEeqRFcf2R4bPBw")]
+        [DisplayName("Creditor Agent")]
+        [IsoXmlTag("CdtrAgt")]
+        public BranchAndFinancialInstitutionIdentification6? CreditorAgent { get; init; }
+
+        /// <summary>
+        /// Ultimate party to which an amount of money is due.
+        /// </summary>
+        [IsoId("_bSCe09cZEeqRFcf2R4bPBw")]
+        [DisplayName("Ultimate Creditor")]
+        [IsoXmlTag("UltmtCdtr")]
+        public PartyIdentification135? UltimateCreditor { get; init; }
+
+        /// <summary>
+        /// Party that signs the mandate and owes an amount of money to the (ultimate) creditor.
+        /// </summary>
+        [IsoId("_bSCe1dcZEeqRFcf2R4bPBw")]
+        [DisplayName("Debtor")]
+        [IsoXmlTag("Dbtr")]
+        public required PartyIdentification135 Debtor { get; init; }
+
+        /// <summary>
+        /// Unambiguous identification of the account of the debtor, to which a debit entry will be made as a result of the transaction.
+        /// </summary>
+        [IsoId("_bSCe19cZEeqRFcf2R4bPBw")]
+        [DisplayName("Debtor Account")]
+        [IsoXmlTag("DbtrAcct")]
+        public CashAccount40? DebtorAccount { get; init; }
+
+        /// <summary>
+        /// Financial institution servicing an account for the debtor.
+        /// </summary>
+        [IsoId("_bSCe2dcZEeqRFcf2R4bPBw")]
+        [DisplayName("Debtor Agent")]
+        [IsoXmlTag("DbtrAgt")]
+        public required BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; init; }
+
+        /// <summary>
+        /// Ultimate party that owes an amount of money to the (ultimate) creditor.
+        /// </summary>
+        [IsoId("_bSCe29cZEeqRFcf2R4bPBw")]
+        [DisplayName("Ultimate Debtor")]
+        [IsoXmlTag("UltmtDbtr")]
+        public PartyIdentification135? UltimateDebtor { get; init; }
+
+        /// <summary>
+        /// Reference assigned by a creditor or ultimate creditor for internal usage for the mandate.
+        /// </summary>
+        [IsoId("_bSCe3dcZEeqRFcf2R4bPBw")]
+        [DisplayName("Mandate Reference")]
+        [IsoXmlTag("MndtRef")]
+        [IsoSimpleType(IsoSimpleType.Max35Text)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MandateReference { get; init; }
+
+        /// <summary>
+        /// Provides information to identify the underlying documents associated with the mandate.
+        /// </summary>
+        [IsoId("_bSCe39cZEeqRFcf2R4bPBw")]
+        [DisplayName("Referred Document")]
+        [IsoXmlTag("RfrdDoc")]
+        public ReferredMandateDocument1? ReferredDocument { get; init; }
+    }
+}

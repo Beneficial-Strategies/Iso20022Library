@@ -1,0 +1,218 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides additional information regarding corporate action details.
+/// </summary>
+[IsoId("_-x-6wZ2FEeW-bsa36JFb9A")]
+[DisplayName("Corporate Action SD")]
+public record CorporateActionSD14
+{
+    /// <summary>
+    /// xPath to the element that is being extended.
+    /// </summary>
+    [IsoId("__LIak52FEeW-bsa36JFb9A")]
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    [IsoSimpleType(IsoSimpleType.Max350Text)]
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text PlaceAndName { get; init; }
+
+    /// <summary>
+    /// Indicates whether the notice received was universal or specific to securities registered in DTC&apos;s nominee name.
+    /// </summary>
+    [IsoId("__LIalZ2FEeW-bsa36JFb9A")]
+    [DisplayName("Notice Type")]
+    [IsoXmlTag("NtceTp")]
+    public NoticeType1Code? NoticeType { get; init; }
+
+    /// <summary>
+    /// Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer.
+    /// </summary>
+    [IsoId("__LIanZ2FEeW-bsa36JFb9A")]
+    [DisplayName("Event Cash Value")]
+    [IsoXmlTag("EvtCshVal")]
+    public RestrictedFINActiveCurrencyAnd13DecimalAmount? EventCashValue { get; init; }
+
+    /// <summary>
+    /// Number of shares the issuer is creating as part of the event.
+    /// </summary>
+    [IsoId("__LIaq52FEeW-bsa36JFb9A")]
+    [DisplayName("Number Of Shares To Be Issued")]
+    [IsoXmlTag("NbOfShrsToBeIssd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
+    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; }
+
+    /// <summary>
+    /// Total number of shares that are part of the offer for example subscription offer.
+    /// </summary>
+    [IsoId("__LIas52FEeW-bsa36JFb9A")]
+    [DisplayName("Total Number Of Shares Offered")]
+    [IsoXmlTag("TtlNbOfShrsOfferd")]
+    [IsoSimpleType(IsoSimpleType.DecimalNumber)]
+    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; }
+
+    /// <summary>
+    /// Number of additional days used to establish a DTC processing cut-off date. For example, DTC typically adds a cut-off off day (making it one business day prior) to the record date for issues with agents outside NYC. This allows time for DTC to deliver the securities.
+    /// </summary>
+    [IsoId("__LIau52FEeW-bsa36JFb9A")]
+    [DisplayName("Cut Off Days")]
+    [IsoXmlTag("CutOffDays")]
+    [IsoSimpleType(IsoSimpleType.Max3Number)]
+    public IsoMax3Number? CutOffDays { get; init; }
+
+    /// <summary>
+    /// Indicator that identifies the type of interface an event agent has with DTC (The Depository Trust Corporation). It defines how time sensitive instruction and withdrawal process is. Offline (non automated) agent will have earlier deadlines which will be reflected in response deadlines but importantly withdrawal procedures for manual agent require hard copy sign off from the agent that has to be delivered to DTC to proceed with withdrawal.
+    /// </summary>
+    [IsoId("__LIaw52FEeW-bsa36JFb9A")]
+    [DisplayName("DTC Automated Offer Program")]
+    [IsoXmlTag("DTCAutomtdOfferPrgm")]
+    public DTCAutoOfferProgram1Code? DTCAutomatedOfferProgram { get; init; }
+
+    /// <summary>
+    /// Indicates whether the recycling of instructions for eligible positions is set to end early or late at DTC (The Depository Trust Corporation).
+    /// </summary>
+    [IsoId("__LIay52FEeW-bsa36JFb9A")]
+    [DisplayName("DTC Recycle Cut Off Indicator")]
+    [IsoXmlTag("DTCRcyclCutOffInd")]
+    public CutOff1Code? DTCRecycleCutOffIndicator { get; init; }
+
+    /// <summary>
+    /// Denotes whether the first accrual period for debt instruments is either long or short, compared to the normal accrual period of the security.
+    /// </summary>
+    [IsoId("__LIa052FEeW-bsa36JFb9A")]
+    [DisplayName("Long Short Payment Indicator")]
+    [IsoXmlTag("LngShrtPmtInd")]
+    public AccrualPeriodType1Code? LongShortPaymentIndicator { get; init; }
+
+    /// <summary>
+    /// Type of oversubscription on the event.
+    /// </summary>
+    [IsoId("__LIa252FEeW-bsa36JFb9A")]
+    [DisplayName("Oversubscription Type")]
+    [IsoXmlTag("OvrsbcptTp")]
+    public OversubscriptionType1Code? OversubscriptionType { get; init; }
+
+    /// <summary>
+    /// Indicates whether the payment made by the issuer is based on a stated condition.
+    /// </summary>
+    [IsoId("__LIa452FEeW-bsa36JFb9A")]
+    [DisplayName("Conditional Payment Applicable Flag")]
+    [IsoXmlTag("CondlPmtAplblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether there is a solicitation fee on the event. This fee is paid by the soliciting dealer.
+    /// </summary>
+    [IsoId("__LIa652FEeW-bsa36JFb9A")]
+    [DisplayName("Solicitation Dealer Fee Flag")]
+    [IsoXmlTag("SlctnDealrFeeFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? SolicitationDealerFeeFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether positions held in Custody program are eligible for instruction processing at DTC (The Depository Trust Corporation).
+    /// </summary>
+    [IsoId("__LIa852FEeW-bsa36JFb9A")]
+    [DisplayName("DTC Custody Eligible Flag")]
+    [IsoXmlTag("DTCCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? DTCCustodyEligibleFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether the event is eligible for Custody Reorganisation service at DTC (The Depository Trust Corporation).
+    /// </summary>
+    [IsoId("__LIa-52FEeW-bsa36JFb9A")]
+    [DisplayName("DTC Reorganisation Custody Eligible Flag")]
+    [IsoXmlTag("DTCReorgCtdyElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether the event is eligible for Reorganisation Deposit Service at DTC (The Depository Trust Corporation).
+    /// </summary>
+    [IsoId("__LIbA52FEeW-bsa36JFb9A")]
+    [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
+    [IsoXmlTag("DTCReorgDpstElgblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement.
+    /// </summary>
+    [IsoId("__LIbC52FEeW-bsa36JFb9A")]
+    [DisplayName("Surrender Shares To Agent Flag")]
+    [IsoXmlTag("SrrndrShrsToAgtFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
+
+    /// <summary>
+    /// Indicates that the holder has the privilege to buy additional rights. Upon exercising this privilege, the holder may subscribe to one additional share of the new security in lieu of fractional shares to which the holder might otherwise be entitled.
+    /// </summary>
+    [IsoId("__LIbE52FEeW-bsa36JFb9A")]
+    [DisplayName("Step Up Privilege Flag")]
+    [IsoXmlTag("StepUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? StepUpPrivilegeFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether holders of rights will be afforded the opportunity to subscribe to purchase extra shares that are not picked up by the remaining holders.
+    /// </summary>
+    [IsoId("__LIbG52FEeW-bsa36JFb9A")]
+    [DisplayName("Rights Oversubscription Flag")]
+    [IsoXmlTag("RghtsOvrsbcptFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? RightsOversubscriptionFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether the shareholder will be able to round up his/her subscription in the event his/her rights are less than the requirement.
+    /// </summary>
+    [IsoId("__LIbI52FEeW-bsa36JFb9A")]
+    [DisplayName("Rights Round Up Privilege Flag")]
+    [IsoXmlTag("RghtsRndUpPrvlgFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
+
+    /// <summary>
+    /// Indicates whether rights can be transferred.
+    /// </summary>
+    [IsoId("__LIbK52FEeW-bsa36JFb9A")]
+    [DisplayName("Rights Transferable Flag")]
+    [IsoXmlTag("RghtsTrfblFlg")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public IsoYesNoIndicator? RightsTransferableFlag { get; init; }
+
+    /// <summary>
+    /// Provides details of certificates that have been called for redemption.
+    /// </summary>
+    [IsoId("__LIbM52FEeW-bsa36JFb9A")]
+    [DisplayName("Certificate Details")]
+    [IsoXmlTag("CertDtls")]
+    public ValueList<CorporateActionSD15> CertificateDetails { get; init; } = [];
+
+    /// <summary>
+    /// Country of Issue used to determine whether the electable option requires Tax Exempt or Wire information when sending EDS elections via the CAIN message type.
+    /// </summary>
+    [IsoId("__LIbO52FEeW-bsa36JFb9A")]
+    [DisplayName("EDS Messaging Country Code")]
+    [IsoXmlTag("EDSMsggCtryCd")]
+    public CountryCode? EDSMessagingCountryCode { get; init; }
+
+    /// <summary>
+    /// Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be &quot;on&quot; the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).
+    /// </summary>
+    [IsoId("__LIbPZ2FEeW-bsa36JFb9A")]
+    [DisplayName("RDP Reference Number")]
+    [IsoXmlTag("RDPRefNb")]
+    [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
+    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+}

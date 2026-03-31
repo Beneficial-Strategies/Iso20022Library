@@ -1,0 +1,120 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.seev;
+
+/// <summary>
+/// This record is an implementation of the seev.008.001.05 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An issuer, its agent or an intermediary sends the MeetingResultDissemination message to another intermediary, to a party holding the right to vote, to a registered security holder or to a beneficial holder to provide information on the voting results of a shareholders meeting.
+/// Usage
+/// The MeetingResultDissemination message is used to provide the vote results per resolution. It may also provide information on the level of participation.
+/// This message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.
+/// This message definition is intended for use with the Business Application Header.
+/// </summary>
+[Description(
+    @"Scope|An issuer, its agent or an intermediary sends the MeetingResultDissemination message to another intermediary, to a party holding the right to vote, to a registered security holder or to a beneficial holder to provide information on the voting results of a shareholders meeting.|Usage|The MeetingResultDissemination message is used to provide the vote results per resolution. It may also provide information on the level of participation.|This message is also used to notify an update or amendment to a previously sent MeetingResultDissemination message.|This message definition is intended for use with the Business Application Header."
+)]
+[IsoId("_xDJ_IVtcEeSwKe7KuKvXhg")]
+[DisplayName("Meeting Result Dissemination V")]
+public record MeetingResultDisseminationV05 : IOuterRecord
+{
+    /// <summary>
+    /// The official ISO 20022 designation for this version of this message.
+    /// </summary>
+    public const string IsoIdentifier = "seev.008.001.05";
+
+    /// <summary>
+    /// The ISO specified XML tag that should be used for standardized serialization of this message.
+    /// </summary>
+    public const string XmlTag = "MtgRsltDssmntn";
+
+    /// <summary>
+    /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
+    /// </summary>
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.008.001.05";
+
+    /// <summary>
+    /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
+    /// </summary>
+    public const string DocumentElementName = "Document";
+
+    /// <summary>
+    /// The XML namespace in which this message is delivered.
+    /// </summary>
+    public static string IsoXmlNamspace => DocumentNamespace;
+
+    /// <summary>
+    /// Information specific to an amendment.
+    /// </summary>
+    [IsoId("_xDJ_JVtcEeSwKe7KuKvXhg")]
+    [DisplayName("Amendment")]
+    [IsoXmlTag("Amdmnt")]
+    public AmendInformation3? Amendment { get; init; }
+
+    /// <summary>
+    /// Series of elements which allow to identify a meeting.
+    /// </summary>
+    [IsoId("_xDJ_J1tcEeSwKe7KuKvXhg")]
+    [DisplayName("Meeting Reference")]
+    [IsoXmlTag("MtgRef")]
+    public required MeetingReference7 MeetingReference { get; init; }
+
+    /// <summary>
+    /// Identifies the securities for which the meeting is organised.
+    /// </summary>
+    [IsoId("_xDJ_K1tcEeSwKe7KuKvXhg")]
+    [DisplayName("Security")]
+    [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition8> Security { get; init; } = [];
+
+    /// <summary>
+    /// Results per resolution.
+    /// </summary>
+    [IsoId("_xDJ_LVtcEeSwKe7KuKvXhg")]
+    [DisplayName("Vote Result")]
+    [IsoXmlTag("VoteRslt")]
+    [MinLength(1)]
+    [MaxLength(1000)]
+    public ValueList<Vote7> VoteResult { get; init; } = [];
+
+    /// <summary>
+    /// Information about the participation to the voting process.
+    /// </summary>
+    [IsoId("_xDJ_L1tcEeSwKe7KuKvXhg")]
+    [DisplayName("Participation")]
+    [IsoXmlTag("Prtcptn")]
+    public Participation4? Participation { get; init; }
+
+    /// <summary>
+    /// Information on where additional information can be received.
+    /// </summary>
+    [IsoId("_xDJ_MVtcEeSwKe7KuKvXhg")]
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CommunicationAddress4? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Additional information that can not be captured in the structured fields and/or any other specific block.
+    /// </summary>
+    [IsoId("_xXGYQFtoEeSwKe7KuKvXhg")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public SupplementaryData1? SupplementaryData { get; init; }
+}
+
+// Since MeetingResultDisseminationV05Document is not really part of the logical business domain model,
+// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
+// Some of the constants previously declared there have been relocated to MeetingResultDisseminationV05.

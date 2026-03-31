@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample pacs.009.001.12 — FinancialInstitutionCreditTransfer
+  Namespace : urn:iso:std:iso:20022:tech:xsd:pacs.009.001.12
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-16
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/pacs.009.001.12.xsd
+
+  Scenario  : Deutsche Bank (DEUTDEFFXXX) nostro rebalancing to BNP Paribas
+              (BNPAFRPPXXX) EUR 5,000,000.00. Bank-to-bank FI credit transfer
+              with no underlying customer payment, routed via JPMorgan Chase
+              New York (CHASUS33XXX) as intermediary agent.
+
+              This sample exercises:
+              - Full GrpHdr with SttlmInf (CLRG), InstgAgt, InstdAgt
+              - CdtTrfTxInf with optional DbtrAcct, CdtrAcct, IntrmyAgt1
+              - COLLECTION: InstrForCdtrAgt with 2 items (CHQB and HOLD)
+
+  NOTE — amounts use the ISO XSD simpleContent+Ccy-attribute pattern:
+  <IntrBkSttlmAmt Ccy="EUR">5000000.00</IntrBkSttlmAmt>
+  The C# library serialises/deserialises this format correctly.
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pacs.009.001.12">
+  <FICdtTrf>
+
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240315/PAC009/00001</MsgId>
+      <CreDtTm>2024-03-15T08:30:00</CreDtTm>
+      <NbOfTxs>1</NbOfTxs>
+      <SttlmInf>
+        <SttlmMtd>CLRG</SttlmMtd>
+      </SttlmInf>
+      <InstgAgt>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </InstgAgt>
+      <InstdAgt>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </InstdAgt>
+    </GrpHdr>
+
+    <CdtTrfTxInf>
+      <PmtId>
+        <InstrId>DEUTDEFF/240315/FI009/00001</InstrId>
+        <EndToEndId>NOSTRO-REBAL-20240315-001</EndToEndId>
+        <UETR>a3c8e91f-2b4d-4f67-8e9a-bc1234567890</UETR>
+      </PmtId>
+      <IntrBkSttlmAmt Ccy="EUR">5000000.00</IntrBkSttlmAmt>
+      <IntrBkSttlmDt>2024-03-15</IntrBkSttlmDt>
+      <IntrmyAgt1>
+        <FinInstnId>
+          <BICFI>CHASUS33XXX</BICFI>
+        </FinInstnId>
+      </IntrmyAgt1>
+      <Dbtr>
+        <FinInstnId>
+          <BICFI>DEUTDEFFXXX</BICFI>
+        </FinInstnId>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+        <Nm>Deutsche Bank EUR Nostro</Nm>
+      </DbtrAcct>
+      <Cdtr>
+        <FinInstnId>
+          <BICFI>BNPAFRPPXXX</BICFI>
+        </FinInstnId>
+      </Cdtr>
+      <CdtrAcct>
+        <Id>
+          <IBAN>FR7630006000011234567890189</IBAN>
+        </Id>
+        <Nm>BNP Paribas EUR Nostro</Nm>
+      </CdtrAcct>
+
+      <!-- Collection: 2 instructions for creditor agent -->
+      <InstrForCdtrAgt>
+        <Cd>CHQB</Cd>
+      </InstrForCdtrAgt>
+      <InstrForCdtrAgt>
+        <Cd>HOLD</Cd>
+      </InstrForCdtrAgt>
+    </CdtTrfTxInf>
+
+  </FICdtTrf>
+</Document>

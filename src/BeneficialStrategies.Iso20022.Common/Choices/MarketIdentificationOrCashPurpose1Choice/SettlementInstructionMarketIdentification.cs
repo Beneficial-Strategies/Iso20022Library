@@ -1,0 +1,44 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpose1Choice
+{
+    /// <summary>
+    /// Identifies the market for the settlement. This consists of the country code and the asset class. For example, if the SSI is for equities in the DTCC, the country code is ‘US’ and the classification type is ‘equity’.
+    /// </summary>
+    [IsoId("_kz-v4EiNEeOdL6nMHefDgg")]
+    [DisplayName("Settlement Instruction Market Identification")]
+    [IsoXmlTag("SttlmInstrMktId")]
+    public record SettlementInstructionMarketIdentification
+        : MarketIdentificationOrCashPurpose1Choice_
+    {
+        /// <summary>
+        /// Country in which the financial instrument is to be settled.
+        /// </summary>
+        [IsoId("_hzs3oNTPEeKvJeoOII0e7w")]
+        [DisplayName("Country")]
+        [IsoXmlTag("Ctry")]
+        public required CountryCode Country { get; init; }
+
+        /// <summary>
+        /// Type of instrument covered by the SSI instruction.
+        /// </summary>
+        [IsoId("_rmMscNTPEeKvJeoOII0e7w")]
+        [DisplayName("Classification Type")]
+        [IsoXmlTag("ClssfctnTp")]
+        public required ClassificationType1Choice_ ClassificationType { get; init; }
+
+        /// <summary>
+        /// Purpose of the instruction, for example, whether for regular payments, margin payments related to a collateral movement, securities settlements, securities lending.
+        /// </summary>
+        [IsoId("_FcKBEtQQEeKSSosHwGnjNw")]
+        [DisplayName("Settlement Purpose")]
+        [IsoXmlTag("SttlmPurp")]
+        public Purpose3Choice_? SettlementPurpose { get; init; }
+    }
+}

@@ -1,0 +1,35 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat22Choice
+{
+    /// <summary>
+    /// Specifies an amount and a rate status.
+    /// </summary>
+    [IsoId("_3YA3wWOWEeWYYI9c62RCjw")]
+    [DisplayName("Amount And Rate Status")]
+    [IsoXmlTag("AmtAndRateSts")]
+    public record AmountAndRateStatus : NetDividendRateFormat22Choice_
+    {
+        /// <summary>
+        /// Value expressed as an amount.
+        /// </summary>
+        [IsoId("_gx2YoGOVEeWYYI9c62RCjw")]
+        [DisplayName("Amount")]
+        [IsoXmlTag("Amt")]
+        public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
+        /// <summary>
+        /// Value expressed as a rate status.
+        /// </summary>
+        [IsoId("_j8yDkGOVEeWYYI9c62RCjw")]
+        [DisplayName("Rate Status")]
+        [IsoXmlTag("RateSts")]
+        public required RateStatus1Code RateStatus { get; init; }
+    }
+}

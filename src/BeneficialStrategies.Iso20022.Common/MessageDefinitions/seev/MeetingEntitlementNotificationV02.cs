@@ -1,0 +1,110 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.seev;
+
+/// <summary>
+/// This record is an implementation of the seev.003.001.02 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.
+/// Usage
+/// This message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.
+/// This entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer&apos;s agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.
+/// The message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.
+/// </summary>
+[Description(
+    @"Scope|An account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.|Usage|This message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.|This entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer's agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.|The message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message."
+)]
+[IsoId("_TmC0DdEwEd-BzquC8wXy7w_-554853973")]
+[DisplayName("Meeting Entitlement Notification V")]
+public record MeetingEntitlementNotificationV02 : IOuterRecord
+{
+    /// <summary>
+    /// The official ISO 20022 designation for this version of this message.
+    /// </summary>
+    public const string IsoIdentifier = "seev.003.001.02";
+
+    /// <summary>
+    /// The ISO specified XML tag that should be used for standardized serialization of this message.
+    /// </summary>
+    public const string XmlTag = "MtgEntitlmntNtfctn";
+
+    /// <summary>
+    /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
+    /// </summary>
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.003.001.02";
+
+    /// <summary>
+    /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
+    /// </summary>
+    public const string DocumentElementName = "Document";
+
+    /// <summary>
+    /// The XML namespace in which this message is delivered.
+    /// </summary>
+    public static string IsoXmlNamspace => DocumentNamespace;
+
+    /// <summary>
+    /// Identifies the notification of entitlement instruction.
+    /// </summary>
+    [IsoId("_TmL98NEwEd-BzquC8wXy7w_-554853971")]
+    [DisplayName("Entitlement Notification Identification")]
+    [IsoXmlTag("EntitlmntNtfctnId")]
+    public required MessageIdentification1 EntitlementNotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Identifies the meeting entitlement message to be modified.
+    /// </summary>
+    [IsoId("_TmL98dEwEd-BzquC8wXy7w_-554853690")]
+    [DisplayName("Related Reference")]
+    [IsoXmlTag("RltdRef")]
+    public MessageIdentification? RelatedReference { get; init; }
+
+    /// <summary>
+    /// Series of elements which allow to identify a meeting.
+    /// </summary>
+    [IsoId("_TmL98tEwEd-BzquC8wXy7w_-554853955")]
+    [DisplayName("Meeting Reference")]
+    [IsoXmlTag("MtgRef")]
+    public required MeetingReference3 MeetingReference { get; init; }
+
+    /// <summary>
+    /// Party notifying the entitlement.
+    /// </summary>
+    [IsoId("_TmL989EwEd-BzquC8wXy7w_-554853937")]
+    [DisplayName("Notifying Party")]
+    [IsoXmlTag("NtifngPty")]
+    public required PartyIdentification9Choice_ NotifyingParty { get; init; }
+
+    /// <summary>
+    /// Identifies the security for which the meeting is organised, the account and the positions of the security holder.
+    /// </summary>
+    [IsoId("_TmL99NEwEd-BzquC8wXy7w_-554853942")]
+    [DisplayName("Security")]
+    [IsoXmlTag("Scty")]
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition5> Security { get; init; } = [];
+
+    /// <summary>
+    /// Defines the dates determining eligibility.
+    /// </summary>
+    [IsoId("_TmL99dEwEd-BzquC8wXy7w_-554853695")]
+    [DisplayName("Eligibility")]
+    [IsoXmlTag("Elgblty")]
+    public required EligibilityDates1 Eligibility { get; init; }
+}
+
+// Since MeetingEntitlementNotificationV02Document is not really part of the logical business domain model,
+// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
+// Some of the constants previously declared there have been relocated to MeetingEntitlementNotificationV02.

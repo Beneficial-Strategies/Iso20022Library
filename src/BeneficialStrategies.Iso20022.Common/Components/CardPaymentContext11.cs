@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Context in which the transaction is performed (payment and sale).
+/// </summary>
+[IsoId("_sMw5QWl9EeSxgrJ0GX4SQQ")]
+[DisplayName("Card Payment Context")]
+public record CardPaymentContext11
+{
+    /// <summary>
+    /// Context of the card payment transaction.
+    /// </summary>
+    [IsoId("_sZ-14Gl9EeSxgrJ0GX4SQQ")]
+    [DisplayName("Payment Context")]
+    [IsoXmlTag("PmtCntxt")]
+    public required PaymentContext11 PaymentContext { get; init; }
+
+    /// <summary>
+    /// Context of the sale involving the card payment transaction.
+    /// </summary>
+    [IsoId("_sZ-14ml9EeSxgrJ0GX4SQQ")]
+    [DisplayName("Sale Context")]
+    [IsoXmlTag("SaleCntxt")]
+    public SaleContext1? SaleContext { get; init; }
+}

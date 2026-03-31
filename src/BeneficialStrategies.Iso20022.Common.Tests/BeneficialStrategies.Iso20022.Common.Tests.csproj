@@ -26,4 +26,8 @@
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="TestData/**/*.xml" />
+  </ItemGroup>
+
 </Project>

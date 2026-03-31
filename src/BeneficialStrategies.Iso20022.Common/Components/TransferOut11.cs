@@ -1,0 +1,70 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information about a transfer out transaction.
+/// </summary>
+[IsoId("_BMomQRXzEeOBE-jZfcm4KQ")]
+[DisplayName("Transfer Out")]
+public record TransferOut11
+{
+    /// <summary>
+    /// Requested date at which the instructing party places the transfer instruction.
+    /// </summary>
+    [IsoId("_BxFXJRXzEeOBE-jZfcm4KQ")]
+    [DisplayName("Requested Transfer Date")]
+    [IsoXmlTag("ReqdTrfDt")]
+    public DateFormat1Choice_? RequestedTransferDate { get; init; }
+
+    /// <summary>
+    /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
+    /// </summary>
+    [IsoId("_1EZlsS73EeO59oUFO5eLvw")]
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MasterReference { get; init; }
+
+    /// <summary>
+    /// Details of the transfer and cancellation.
+    /// </summary>
+    [IsoId("_RaIFIC74EeO59oUFO5eLvw")]
+    [DisplayName("Transfer And References")]
+    [IsoXmlTag("TrfAndRefs")]
+    public ValueList<TransferOut13> TransferAndReferences { get; init; } = [];
+
+    // ID for the above is _RaIFIC74EeO59oUFO5eLvw
+
+    /// <summary>
+    /// Information related to the account from which the financial instrument is to be withdrawn.
+    /// </summary>
+    [IsoId("_BxFXKRXzEeOBE-jZfcm4KQ")]
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required InvestmentAccount40 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Information related to the receiving side of the transfer.
+    /// </summary>
+    [IsoId("_BxFXKxXzEeOBE-jZfcm4KQ")]
+    [DisplayName("Settlement Details")]
+    [IsoXmlTag("SttlmDtls")]
+    public ReceiveInformation13? SettlementDetails { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_BxFXLRXzEeOBE-jZfcm4KQ")]
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
+}

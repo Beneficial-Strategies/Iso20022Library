@@ -1,0 +1,108 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Company in charge of a lodging establishment
+/// </summary>
+[IsoId("_-3z8AcWlEeuhguwJmlgagQ")]
+[DisplayName("Lodging Property")]
+public record LodgingProperty2
+{
+    /// <summary>
+    /// Type of accommodations.
+    /// </summary>
+    [IsoId("_-8GmIcWlEeuhguwJmlgagQ")]
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public LodgingActivity1Code? Type { get; init; }
+
+    /// <summary>
+    /// Other type of lodging establishment when Other National or Other Private is selected as a type code.
+    /// </summary>
+    [IsoId("_-8GmI8WlEeuhguwJmlgagQ")]
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Identifier that describes the lodging establishment as a prestigious property.
+    /// </summary>
+    [IsoId("_-8GmJcWlEeuhguwJmlgagQ")]
+    [DisplayName("Prestigious Property")]
+    [IsoXmlTag("PrstgsPrprty")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PrestigiousProperty { get; init; }
+
+    /// <summary>
+    /// Name of the property.
+    /// </summary>
+    [IsoId("_-8GmJ8WlEeuhguwJmlgagQ")]
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
+
+    /// <summary>
+    /// Identification of the lodging company.
+    /// </summary>
+    [IsoId("_-8GmKcWlEeuhguwJmlgagQ")]
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification258 Identification { get; init; }
+
+    /// <summary>
+    /// Address of the property.
+    /// </summary>
+    [IsoId("_-8GmK8WlEeuhguwJmlgagQ")]
+    [DisplayName("Location")]
+    [IsoXmlTag("Lctn")]
+    public Location4? Location { get; init; }
+
+    /// <summary>
+    /// Party in charge of assigning the identification.
+    /// </summary>
+    [IsoId("_-8GmLcWlEeuhguwJmlgagQ")]
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public CompanyAssigner2Code? Assigner { get; init; }
+
+    /// <summary>
+    /// Contact details at property.
+    /// </summary>
+    [IsoId("_-8GmL8WlEeuhguwJmlgagQ")]
+    [DisplayName("Contact")]
+    [IsoXmlTag("Ctct")]
+    public Contact3? Contact { get; init; }
+
+    /// <summary>
+    /// Country of the property.
+    /// ISO 3166
+    /// </summary>
+    [IsoId("_-8GmMcWlEeuhguwJmlgagQ")]
+    [DisplayName("Country")]
+    [IsoXmlTag("Ctry")]
+    public ISOMax3ACountryCode? Country { get; init; }
+
+    /// <summary>
+    /// Indicates whether or not the lodging facility complies with the US Hotel and Motel Fire Safety Act of 1990 (PL101-391) or similar legislation.
+    /// True = in compliance
+    /// False = not in compliance
+    /// </summary>
+    [IsoId("_-8GmM8WlEeuhguwJmlgagQ")]
+    [DisplayName("Fire Safety Act Indicator")]
+    [IsoXmlTag("FireSftyActInd")]
+    [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
+    public IsoTrueFalseIndicator? FireSafetyActIndicator { get; init; }
+}

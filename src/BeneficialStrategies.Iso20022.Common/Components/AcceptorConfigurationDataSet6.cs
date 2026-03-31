@@ -1,0 +1,60 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Acceptor Configuration Data Set6.
+/// </summary>
+[IsoId("_WJc5AaEXEe-MRKYsaX6JDg")]
+[DisplayName("Acceptor Configuration Data Set6")]
+public record AcceptorConfigurationDataSet6
+{
+    /// <summary>
+    /// Configuration Scope.
+    /// </summary>
+    [DisplayName("Configuration Scope")]
+    [IsoXmlTag("CfgtnScp")]
+    public PartyType15Code? ConfigurationScope { get; init; }
+
+    /// <summary>
+    /// Content.
+    /// </summary>
+    [DisplayName("Content")]
+    [IsoXmlTag("Cntt")]
+    public required AcceptorConfigurationContent14 Content { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required DataSetIdentification11 Identification { get; init; }
+
+    /// <summary>
+    /// Last Sequence.
+    /// </summary>
+    [DisplayName("Last Sequence")]
+    [IsoXmlTag("LastSeq")]
+    public IsoTrueFalseIndicator? LastSequence { get; init; }
+
+    /// <summary>
+    /// POI Identification.
+    /// </summary>
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public ValueList<GenericIdentification176> POIIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Sequence Counter.
+    /// </summary>
+    [DisplayName("Sequence Counter")]
+    [IsoXmlTag("SeqCntr")]
+    public IsoMax9NumericText? SequenceCounter { get; init; }
+}

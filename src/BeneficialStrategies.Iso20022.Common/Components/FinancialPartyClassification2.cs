@@ -1,0 +1,37 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies the classification of a financial institution.
+/// </summary>
+[IsoId("_0lQ2EbHXEemRPNDOvJwndA")]
+[DisplayName("Financial Party Classification")]
+public record FinancialPartyClassification2
+{
+    /// <summary>
+    /// Classification of the business activities of the reporting counterparty.
+    /// </summary>
+    [IsoId("_0uXHsbHXEemRPNDOvJwndA")]
+    [DisplayName("Classification")]
+    [IsoXmlTag("Clssfctn")]
+    [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
+    public SimpleValueList<System.String> Classification { get; init; } = [];
+
+    // ID for the above is _0uXHsbHXEemRPNDOvJwndA
+
+    /// <summary>
+    /// Nature business activities of the reporting counterparty as an investment fund.
+    /// </summary>
+    [IsoId("_0ugRobHXEemRPNDOvJwndA")]
+    [DisplayName("Investment Fund Classification")]
+    [IsoXmlTag("InvstmtFndClssfctn")]
+    public FundType2Code? InvestmentFundClassification { get; init; }
+}

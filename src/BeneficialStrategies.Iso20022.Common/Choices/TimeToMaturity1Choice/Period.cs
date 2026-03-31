@@ -1,0 +1,35 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+
+namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity1Choice
+{
+    /// <summary>
+    /// Provides the period for the time to maturity.
+    /// </summary>
+    [IsoId("__m-r4MVaEeiYpLQka876sg")]
+    [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
+    public record Period : TimeToMaturity1Choice_
+    {
+        /// <summary>
+        /// Specifies the start of the maturity period.
+        /// </summary>
+        [IsoId("_KfScwMVcEeiYpLQka876sg")]
+        [DisplayName("Start")]
+        [IsoXmlTag("Start")]
+        public MaturityTerm2? Start { get; init; }
+
+        /// <summary>
+        /// Specifies the end of the maturity period.
+        /// </summary>
+        [IsoId("_LNQ9EcVcEeiYpLQka876sg")]
+        [DisplayName("End")]
+        [IsoXmlTag("End")]
+        public MaturityTerm2? End { get; init; }
+    }
+}
