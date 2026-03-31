@@ -1,6 +1,8 @@
 # Beneficial Strategies ISO20022 Library
 
-This project contains a .NET implementation of containers for 2,665 different types of financial services messages as defined by the ISO20022 standard.
+This project contains a .NET implementation of containers for 2,665 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
+
+It is an ongoing proof-of-concept demonstrating what this library can do, maintained with the assistance of the [Beneficial Strategies ISO20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/).
 
 ## Let's talk why
 
@@ -9,80 +11,69 @@ It's not just for banks any more. Experts are encouraging corporations to hasten
 
 Even if you plan on changing toolsets somewhere down the road, it would be wise to start adapting your domain model to this new standard.
 
-## Let's talk scope
+## What this library provides
 
-Originally, the vision for this project included serialization, validation and several other objectives. 
-It was deep **and** wide.  It was deep given that it covered over 2600 messages, the full message set of ISO20022 defined messages.
-It was wide in that it sought to solve several business problems surrounding those messages.
-After much thrashing about, that scope has intentionally narrowed. 
-The depth remains the same. It [includes all currently defined messages](doc/Scope-Statement.md) in the ISO specification.
-However, the width has been curtailed to provide the technological answer to one question:
+This library [covers all currently defined messages](doc/Scope-Statement.md) in the ISO specification — over 2,600 message types — plus XML serialization and deserialization. Great attention has been paid to:
 
-> In what format should ISO20022 data exist in memory in an enterprise .NET application?
+- **Intellisense-friendly** — packaged so your IDE has access to source and commentary on all types, giving you context on how each class or field should be used.
+- **Compiler-enforced** — `required` properties ensure the compiler helps you construct valid ISO 20022 messages rather than discovering missing data at runtime.
+- **Immutable records** — full value-equivalence throughout; thread-safe by design.
+- **Strongly-typed dates and codes** — no string-typed enums, no ambiguous date formats.
+- **Multiplicity-correct** — where a field allows multiple values, it's a collection; where it's optional, it's nullable.
 
-It is the goal of this project to be *the most standard* answer to that question. A few things are in-scope and in-focus:
+## What's notably missing
 
-- Custom attribute metadata to assist in dependent tools.
-- Extremely rich with code comments.
-- Ability to quickly add newly declared types when the ISO specification is updated.
-- Use language features to ensure adherence to specified requirements. Make the compiler demand required data elements for example.
-- Leverage language features to enable good code practices
-    - Immutable [records](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/records) 
-    - Value equivalency
-- Remain as close as possible to the specification on naming. Make only the necessary adjustments in naming to make the code compile.
-
-## What's notably missing?
-
-There are many things, necessary things that are intentionally missing from this project. 
-They are intended to be follow-on projects that extend what we are doing here.
-They most certainly include the following:
-
-- Validation
 - XML Schema Validation
-- Serialization
-- Business rules
+- Business rules validation (a FluentValidation-based project has been started in this repository but is not yet published to NuGet)
+
+**Known limitations:**
+
+- Digital signatures not yet supported
+- External content not yet supported
+- External schema not yet supported
 
 ## Why is this approach better?
 
-The most common quick-and-dirty approach to serializing these messages is to use the only marginally supported [Microsoft XSD tool](https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) to generate a data proxy. If you only have a few messages to support, that might be a worthy approach. Here are the reasons you might not want to use that approach:
+The most common quick-and-dirty approach to serializing these messages is to use the only marginally supported [Microsoft XSD tool](https://learn.microsoft.com/en-us/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) to generate a data proxy. If you only have a few messages to support, that might be a worthy approach. Here are the reasons you might not want to:
 
 - Most of the classes generated in the proxy are repeats that are also used in other messages.
     - You get zero reuse across messages.
-    - If you have a certain type of Name and Address object in one object, you cannot assign that value to another object in another message because they are two different data types.
-    - If you end up using many ISO messages, you get code glut over time since there are multiple copies of many of the objects.
+    - If you have a certain type of Name and Address object in one message, you cannot assign it to another object in a different message because they are two different data types.
+    - If you end up using many ISO messages, you get code glut over time since there are multiple copies of many objects.
 - There is zero documentation burned into the proxy contents.
 - If there's something wrong about the way it generates, there's little you can do to fix it.
 - It is difficult to create frameworks around these proxy objects because there are no interfaces in common and no shared data objects.
 
-## A word about the support cycle
+## A word about the future
 
-At very least, [Beneficial Strategies](https://www.beneficialstrategies.com/iso20022/) has intentions of creating more tools with this library as its bedrock. We will be building those tools at any moment against a [Nuget-versioned](https://www.nuget.org) copy of this library. The release cycle on those tools will follow new releases of this library. Since the library doesn't include any procedural logic, there's none of that to break.  The updates/fixes should fall into these categories:
+The future of this library remains to be seen based on interest. [Beneficial Strategies](https://www.beneficialstrategies.com/iso20022/) continues to maintain and evolve the library as a proof-of-concept for the [ISO20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/). Updates and fixes generally fall into these categories:
 
-- ISO2002 standard update - feature branch
+- ISO20022 standard update — feature branch
 - Improvements in metadata
-- Correction of cardinality or data relationships - defect branch
-    - You've only got a single X for Y and it should be a collection
-    - In X, Y should be nullable and it's not
+- Correction of cardinality or data relationships — defect branch
 - Tweaking of compile directives across versions
 
-For anyone having a dependency on this library, the changes should be easy to maintain.  When you update the reference to the new version, the compiler is going to let you know very quickly if it sees any breaking changes.
+For anyone having a dependency on this library, the changes should be easy to maintain. When you update the reference to the new version, the compiler will let you know immediately if it sees any breaking changes.
 
-## Trying out the library 
+Questions or feedback? Reach us at [admin@beneficialstrategies.com](mailto:admin@beneficialstrategies.com).
 
-It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) installed. You should also have [Visual Studio Code](https://code.visualstudio.com/download) or some other text editor.  It is preferable if you have the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) also installed. 
+## Trying out the library
 
-#### Attention: This documentation is preliminary. The library is not yet published to NuGet.
+It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks) installed. You should also have [Visual Studio Code](https://code.visualstudio.com/download) or some other text editor, preferably with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit).
 
-```DOS
+```bash
 mkdir test
 cd test
 dotnet new console
-dotnet add package com.beneficialstrategies.iso20022.2024.02.09 --prerelease
+dotnet add package BeneficialStrategies.Iso20022 --version 0.4.0-alpha
 ```
 
-You should then open your Program.cs file, and paste the following code into your code:
+Open your `Program.cs` and paste the following:
 
 ```C#
+using Beneficial = BeneficialStrategies.Iso20022;
+using BeneficialStrategies.Iso20022.Codesets;
+
 var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
 {
     GroupHeader = new()
@@ -121,7 +112,6 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
                 TownName = "New York",
                 Country = "US"
             },
-            // Optionally add Contact details, other stuff here
         },
         DebtorAccount = new()
         {
@@ -129,108 +119,93 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
             {
                 Identification = "00125574999",
             },
-            // Lots more info you can add here
         },
         DebtorAgent = new()
         {
-            FinancialInstitutionIdentification = new ()
+            FinancialInstitutionIdentification = new()
             {
                 BICFI = "BBBBUS33",
-                // Lots more identifying information you can add here
             },
         },
         CreditTransferTransactionInformation =
-            [
-                new()
+        [
+            new()
+            {
+                PaymentIdentification = new()
                 {
-                    PaymentIdentification = new ()
+                    InstructionIdentification = "ABC/120928/CCT001/1",
+                    EndToEndIdentification = "ABC/4562/2012-09-08",
+                },
+                Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Currency = "USD", Amount = 10_000_000m },
+                ChargeBearer = ChargeBearerType1Code.Shared,
+                CreditorAgent = new()
+                {
+                    FinancialInstitutionIdentification = new()
                     {
-                        InstructionIdentification = "ABC/120928/CCT001/1",
-                        EndToEndIdentification = "ABC/4562/2012-09-08",
+                        BICFI = "AAAAGB2L",
                     },
-                    Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Currency = "USD", Amount = 10_000_000m },
-                    ChargeBearer = ChargeBearerType1Code.Shared,
-                    CreditorAgent = new()
+                },
+                Creditor = new()
+                {
+                    Name = "DEF Electronics",
+                    PostalAddress = new()
                     {
-                        FinancialInstitutionIdentification = new()
+                        AddressLine = [
+                            "Corn Exchange 5th Floor",
+                            "Mark Lane 55",
+                            "EC3R 7NE London",
+                            "GB"
+                        ]
+                    },
+                },
+                CreditorAccount = new()
+                {
+                    Identification = new Beneficial.Choices.AccountIdentification4Choice.Other
+                    {
+                        Identification = "23683707994215",
+                    },
+                },
+                Purpose = new Beneficial.Choices.Purpose2Choice.Code
+                {
+                    Value = ExternalPurpose1Code.InstantPaymentsForDonations,
+                },
+                RemittanceInformation = new()
+                {
+                    Structured =
+                    [
+                        new()
                         {
-                            BICFI = "AAAAGB2L",
-                            // Tons of more identifying information you can optionally add here
-                        },
-                        // Optionally add branch information here
-                    },
-                    Creditor = new()
-                    {
-                        Name = "DEF Electronics",
-                        PostalAddress = new()
-                        {
-                            AddressLine = [
-                                "Corn Exchange 5th Floor",
-                                "Mark Lane 55",
-                                "EC3R 7NE London",
-                                "GB"
-                                ]
-                        },
-                        // Optionally add ContactDetails, CountryOfResidence, Identification here
-                    },
-                    CreditorAccount = new()
-                    {
-                        Identification = new Beneficial.Choices.AccountIdentification4Choice.Other
-                        {
-                            Identification = "23683707994215",
-                            // Optionally add issuer, schema name here
-                        },
-                    },
-                    Purpose = new Beneficial.Choices.Purpose2Choice.Code
-                    {
-                        Value = ExternalPurpose1Code.InstantPaymentsForDonations,
-                    },
-                    RemittanceInformation = new()
-                    {
-                        Structured =
+                            ReferredDocumentInformation =
                             [
                                 new()
                                 {
-                                    ReferredDocumentInformation =
-                                        [
-                                            new()
-                                            {
-                                                Type = new()
-                                                {
-                                                    CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
-                                                    {
-                                                        Value = DocumentType6Code.CommercialInvoice,
-                                                    },
-                                                },
-                                                Number = "4562",
-                                                RelatedDate = new DateOnly(2012,09,08),
-                                                // Optionally add line details here
-                                            }
-                                        ]
-                                    ,
-                                    // Add more types of remittances here, use shift-spacebar for pop-up help
+                                    Type = new()
+                                    {
+                                        CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
+                                        {
+                                            Value = DocumentType6Code.CommercialInvoice,
+                                        },
+                                    },
+                                    Number = "4562",
+                                    RelatedDate = new DateOnly(2012, 09, 08),
                                 }
-                            ]
-                        ,
-                        // Optionally add Unstructured information here
-                    },
-                    // LOTS more stuff you can add at this level
+                            ],
+                        }
+                    ],
                 },
-                // Add additional transactions here
-            ]
+            },
+        ]
     },
-    // Optionally add Supplementary data at this level
 };
-
 ```
 
 Things to notice:
 
-- The compiler helps you do the right thing. Since it's all strongly-typed, you won't have a problem putting one System.Object instance where a different System.Object is expected.
-- Notice intellisense gives you context about the transaction.
-- Notice that date/time values are strongly typed. No worries about whether some string value is "yyyyMMdd" or "MMddYYY" or whatever.
-- Shift-Spacebar is your friend in finding other types of message content to add at various levels.
-- Notice if you get bored with this message, there's over 2600 that are just as good, maybe better!
+- The compiler helps you do the right thing — everything is strongly typed, so you won't accidentally assign the wrong type.
+- Intellisense gives you spec-level context on every field as you type.
+- Date/time values are strongly typed — no ambiguous string formats.
+- Use Shift-Spacebar to discover optional fields at any level.
+- There are over 2,600 messages just like this one.
 
 ## Serializing to XML
 
@@ -360,4 +335,3 @@ string msgId      = received.GroupHeader.MessageIdentification;  // "ABC/120928/
 string debtorName = received.PaymentInformation.Debtor.Name!;   // "ABC Corporation"
 int    txCount    = received.PaymentInformation.CreditTransferTransactionInformation.Count; // 1
 ```
-

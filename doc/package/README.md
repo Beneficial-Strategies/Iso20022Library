@@ -23,9 +23,9 @@ Known limitations:
 - External content not yet supported.
 - External schema not yet supported.
 
-For more information about the project, see [the repository](https://github.com/jefforyamos/Iso20022Library).
+For more information about the project, see [the repository](https://github.com/Beneficial-Strageties/Iso20022Library).
 
-This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community.  This library is a working proof of concept built using Claude Code and the Beneficial Strategies ISO20022 MCP server soon to be released.
+This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community.  This library is a working proof of concept built using Claude Code and the [Beneficial Strategies ISO20022 MCP server](https://beneficialstrategies.com/product/mcp-server/) soon to be released.
 
 If you have questions or concerns about the implementation, please send developer comments or questions to [admin@beneficialstrategies.com](mailto:admin@beneficialstrategies.com).
 

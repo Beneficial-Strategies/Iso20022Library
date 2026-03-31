@@ -10,30 +10,31 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.cain;
+namespace BeneficialStrategies.Iso20022.caad;
 
 /// <summary>
-/// This record is an implementation of the cain.007.001.04 ISO standard message type.
+/// This record is an implementation of the caad.006.001.04 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The ReconciliationResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a ReconciliationInitiation message.
 /// </summary>
-[IsoId("_LEPLMY1OEe6S0_1AaJzQCA")]
-[DisplayName("Reconciliation Initiation V04")]
-public record ReconciliationInitiationV04 : IOuterRecord
+[IsoId("_o_Fc8Y7QEe6S0_1AaJzQCA")]
+[DisplayName("Reconciliation Response V04")]
+public record ReconciliationResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "cain.007.001.04";
+    public const string IsoIdentifier = "caad.006.001.04";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "RcncltnInitn";
+    public const string XmlTag = "RcncltnRspn";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:cain.007.001.04";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.006.001.04";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -86,6 +87,13 @@ public record ReconciliationInitiationV04 : IOuterRecord
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
     public IsoExact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Original Response Code.
+    /// </summary>
+    [DisplayName("Original Response Code")]
+    [IsoXmlTag("OrgnlRspnCd")]
+    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
 
     /// <summary>
     /// Originator.
@@ -227,7 +235,3 @@ public record ReconciliationInitiationV04 : IOuterRecord
     [IsoXmlTag("TrnsmssnDtTm")]
     public IsoISODateTime? TransmissionDateTime { get; init; }
 }
-
-// Since ReconciliationInitiationV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ReconciliationInitiationV04.

@@ -14,7 +14,7 @@
     <Version>0.4.0-alpha</Version>
     <Authors>Jeff Ward,Beneficial Strategies</Authors>
     <Company>BeneficialStrategies.com</Company>
-    <RepositoryUrl>https://github.com/jefforyamos/Iso20022Library</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Beneficial-Strategies/Iso20022Library</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
