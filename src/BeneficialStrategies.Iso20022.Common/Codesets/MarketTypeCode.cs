@@ -1,0 +1,153 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_aUwLU9p-Ed-ak6NoX_4Aeg_1124995296")]
+[Description(
+    @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
+)]
+[Derivations(
+    typeof(MarketType2Code),
+    typeof(MarketType4Code),
+    typeof(MarketType5Code),
+    typeof(MarketType1Code),
+    typeof(MarketType3Code),
+    typeof(MarketType8Code),
+    typeof(MarketType6Code)
+)]
+public enum MarketTypeCode
+{
+    /// <summary>
+    /// The place is a primary market.
+    /// Encoded/decoded by serializers as &quot;PRIM&quot;.
+    /// </summary>
+    [EnumMember(Value = "PRIM")]
+    [IsoId("_aUwLVNp-Ed-ak6NoX_4Aeg_1011156230")]
+    [Description(@"The place is a primary market.")]
+    PrimaryMarket,
+
+    /// <summary>
+    /// The place is a secondary market.
+    /// Encoded/decoded by serializers as &quot;SECM&quot;.
+    /// </summary>
+    [EnumMember(Value = "SECM")]
+    [IsoId("_aUwLVdp-Ed-ak6NoX_4Aeg_306041615")]
+    [Description(@"The place is a secondary market.")]
+    SecondaryMarket,
+
+    /// <summary>
+    /// The place is a third market.
+    /// Encoded/decoded by serializers as &quot;THIM&quot;.
+    /// </summary>
+    [EnumMember(Value = "THIM")]
+    [IsoId("_aUwLVtp-Ed-ak6NoX_4Aeg_-869149410")]
+    [Description(@"The place is a third market.")]
+    ThirdMarket,
+
+    /// <summary>
+    /// The place is a fourth market.
+    /// Encoded/decoded by serializers as &quot;FOUM&quot;.
+    /// </summary>
+    [EnumMember(Value = "FOUM")]
+    [IsoId("_aUwLV9p-Ed-ak6NoX_4Aeg_776118025")]
+    [Description(@"The place is a fourth market.")]
+    FourthMarket,
+
+    /// <summary>
+    /// The place is over the counter.
+    /// Encoded/decoded by serializers as &quot;OTCO&quot;.
+    /// </summary>
+    [EnumMember(Value = "OTCO")]
+    [IsoId("_aUwLWNp-Ed-ak6NoX_4Aeg_-1980060829")]
+    [Description(@"The place is over the counter.")]
+    OverTheCounter,
+
+    /// <summary>
+    /// Various places.
+    /// Encoded/decoded by serializers as &quot;VARI&quot;.
+    /// </summary>
+    [EnumMember(Value = "VARI")]
+    [IsoId("_aU58UNp-Ed-ak6NoX_4Aeg_1609791852")]
+    [Description(@"Various places.")]
+    Various,
+
+    /// <summary>
+    /// The place is a stock exchange.
+    /// Encoded/decoded by serializers as &quot;EXCH&quot;.
+    /// </summary>
+    [EnumMember(Value = "EXCH")]
+    [IsoId("_aU58Udp-Ed-ak6NoX_4Aeg_434600827")]
+    [Description(@"The place is a stock exchange.")]
+    StockExchange,
+
+    /// <summary>
+    /// The place is a fund (transfer agent, fund itself, etc.).
+    /// Encoded/decoded by serializers as &quot;FUND&quot;.
+    /// </summary>
+    [EnumMember(Value = "FUND")]
+    [IsoId("_aU58Utp-Ed-ak6NoX_4Aeg_-1340620878")]
+    [Description(@"The place is a fund (transfer agent, fund itself, etc.).")]
+    Fund,
+
+    /// <summary>
+    /// The place is a local market.
+    /// Encoded/decoded by serializers as &quot;LMAR&quot;.
+    /// </summary>
+    [EnumMember(Value = "LMAR")]
+    [IsoId("_aU58U9p-Ed-ak6NoX_4Aeg_1499568600")]
+    [Description(@"The place is a local market.")]
+    LocalMarket,
+
+    /// <summary>
+    /// The place is theoretical.
+    /// Encoded/decoded by serializers as &quot;THEO&quot;.
+    /// </summary>
+    [EnumMember(Value = "THEO")]
+    [IsoId("_aU58VNp-Ed-ak6NoX_4Aeg_-1975383519")]
+    [Description(@"The place is theoretical.")]
+    Theoretical,
+
+    /// <summary>
+    /// The place is a vendor.
+    /// Encoded/decoded by serializers as &quot;VEND&quot;.
+    /// </summary>
+    [EnumMember(Value = "VEND")]
+    [IsoId("_aU58Vdp-Ed-ak6NoX_4Aeg_-692811024")]
+    [Description(@"The place is a vendor.")]
+    Vendor,
+
+    /// <summary>
+    /// Specified type of market is inter bank market.
+    /// Encoded/decoded by serializers as &quot;INBA&quot;.
+    /// </summary>
+    [EnumMember(Value = "INBA")]
+    [IsoId("_l8xukDxHEeWZTovCemTvqg")]
+    [Description(@"Specified type of market is inter bank market.")]
+    InterBank,
+
+    /// <summary>
+    /// Specified type of market is counter market.
+    /// Encoded/decoded by serializers as &quot;COUN&quot;.
+    /// </summary>
+    [EnumMember(Value = "COUN")]
+    [IsoId("_tWXyUDxHEeWZTovCemTvqg")]
+    [Description(@"Specified type of market is counter market.")]
+    Counter,
+
+    /// <summary>
+    /// Source of price quotation is a smart contract automated pricing system.
+    /// Encoded/decoded by serializers as &quot;SCAS&quot;.
+    /// </summary>
+    [EnumMember(Value = "SCAS")]
+    [IsoId("")]
+    [Description(@"Source of price quotation is a smart contract automated pricing system.")]
+    SmartContractAutomatedPricingSystem,
+}

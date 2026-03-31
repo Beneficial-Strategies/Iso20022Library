@@ -1,0 +1,125 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Reflection;
+using System.Runtime.Serialization;
+
+namespace BeneficialStrategies.Iso20022.Codesets;
+
+/// <summary>
+/// Unit of time.
+/// </summary>
+[DataContract]
+[Serializable]
+[IsoId("_UpPVgRfkEeS1K9gYCN87fQ")]
+[Description(@"Unit of time.")]
+[Derivations(typeof(PeriodUnit3Code), typeof(PeriodUnit2Code), typeof(PeriodUnit4Code))]
+public enum PeriodUnitCode
+{
+    /// <summary>
+    /// Counted in days.
+    /// Encoded/decoded by serializers as &quot;DAYS&quot;.
+    /// </summary>
+    [EnumMember(Value = "DAYS")]
+    [IsoId("_XFiY0BfkEeS1K9gYCN87fQ")]
+    [Description(@"Counted in days.")]
+    Days,
+
+    /// <summary>
+    /// Counted in weeks.
+    /// Encoded/decoded by serializers as &quot;WEEK&quot;.
+    /// </summary>
+    [EnumMember(Value = "WEEK")]
+    [IsoId("_YU35wBfkEeS1K9gYCN87fQ")]
+    [Description(@"Counted in weeks.")]
+    Weeks,
+
+    /// <summary>
+    /// Counted in months.
+    /// Encoded/decoded by serializers as &quot;MNTH&quot;.
+    /// </summary>
+    [EnumMember(Value = "MNTH")]
+    [IsoId("_ZaYwUBfkEeS1K9gYCN87fQ")]
+    [Description(@"Counted in months.")]
+    Months,
+
+    /// <summary>
+    /// Counted in some other unit.
+    /// Encoded/decoded by serializers as &quot;OTHR&quot;.
+    /// </summary>
+    [EnumMember(Value = "OTHR")]
+    [IsoId("_b9rzgBfkEeS1K9gYCN87fQ")]
+    [Description(@"Counted in some other unit.")]
+    Other,
+
+    /// <summary>
+    /// Counted in years.
+    /// Encoded/decoded by serializers as &quot;YEAR&quot;.
+    /// </summary>
+    [EnumMember(Value = "YEAR")]
+    [IsoId("_c6HmkBfkEeS1K9gYCN87fQ")]
+    [Description(@"Counted in years.")]
+    Years,
+
+    /// <summary>
+    /// Extra Days
+    /// Encoded/decoded by serializers as &quot;EXDY&quot;.
+    /// </summary>
+    [EnumMember(Value = "EXDY")]
+    [IsoId("__zIsB3yKEemHsOqJOzMVfg")]
+    [Description(@"Extra Days")]
+    ExtraDays,
+
+    /// <summary>
+    /// Half days
+    /// Encoded/decoded by serializers as &quot;HFDA&quot;.
+    /// </summary>
+    [EnumMember(Value = "HFDA")]
+    [IsoId("__zIsCHyKEemHsOqJOzMVfg")]
+    [Description(@"Half days")]
+    HalfDays,
+
+    /// <summary>
+    /// Period unit expressed in hours.
+    /// Encoded/decoded by serializers as &quot;HOUR&quot;.
+    /// </summary>
+    [EnumMember(Value = "HOUR")]
+    [IsoId("__zIsCXyKEemHsOqJOzMVfg")]
+    [Description(@"Period unit expressed in hours.")]
+    Hours,
+
+    /// <summary>
+    /// Period unit expressed in minutes
+    /// Encoded/decoded by serializers as &quot;MINU&quot;.
+    /// </summary>
+    [EnumMember(Value = "MINU")]
+    [IsoId("__zIsCnyKEemHsOqJOzMVfg")]
+    [Description(@"Period unit expressed in minutes")]
+    Minutes,
+
+    /// <summary>
+    /// Other National
+    /// Encoded/decoded by serializers as &quot;OTHN&quot;.
+    /// </summary>
+    [EnumMember(Value = "OTHN")]
+    [IsoId("__zIsC3yKEemHsOqJOzMVfg")]
+    [Description(@"Other National")]
+    OtherNational,
+
+    /// <summary>
+    /// Other Private
+    /// Encoded/decoded by serializers as &quot;OTHP&quot;.
+    /// </summary>
+    [EnumMember(Value = "OTHP")]
+    [IsoId("__zIsDHyKEemHsOqJOzMVfg")]
+    [Description(@"Other Private")]
+    OtherPrivate,
+
+    /// <summary>
+    /// Period unit expressed in seconds.
+    /// Encoded/decoded by serializers as &quot;SECO&quot;.
+    /// </summary>
+    [EnumMember(Value = "SECO")]
+    [IsoId("__zIsDXyKEemHsOqJOzMVfg")]
+    [Description(@"Period unit expressed in seconds.")]
+    Seconds,
+}
