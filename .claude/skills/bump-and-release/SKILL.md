@@ -42,7 +42,17 @@ Stage and commit those three files together:
 Bump version to $ARGUMENTS and add release notes
 ```
 
-### 5. Merge to main
+### 5. Build verification
+
+Before merging, confirm the build is clean locally:
+
+```bash
+cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
+```
+
+Fix any errors before proceeding.
+
+### 6. Merge to main
 
 ```bash
 git checkout main
@@ -50,10 +60,19 @@ git merge <current-branch>
 git push origin main
 ```
 
-### 6. Tag and push
+**Merge conflict warning:** If the working branch renamed or deleted many files (e.g. `.g.cs` → `.cs`), the merge may produce a large number of conflicts. Use `git merge -X theirs <branch>` to auto-resolve all conflicts in favour of the incoming branch, which avoids the risk of accidentally deleting files via `git rm` during manual resolution.
+
+After merging, verify the build is still clean:
+
+```bash
+cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
+```
+
+### 7. Tag and push
 
 ```bash
 git tag v$ARGUMENTS
+git push origin main
 git push origin v$ARGUMENTS
 ```
 
