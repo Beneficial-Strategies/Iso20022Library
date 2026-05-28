@@ -1,8 +1,6 @@
 {
-  "mcpServers": {
-    "iso20022-local": {
+  "iso20022": {
       "type": "sse",
-      "url": "http://localhost:3001/sse"
+      "url": "https://iso20022-mcp-v1.beneficialstrategies.com/sse"
     }
-  }
 }
