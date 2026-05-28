@@ -134,3 +134,32 @@ git commit -m "Snapshot sync {date} (iso20022): components — {N} done, {R} rem
 ```
 
 Report: items processed, items remaining, any follow-up items added. If Phase 2 is fully checked, remind the user that Milestone 2 (build) is next.
+
+---
+
+## MCP Friction Log
+
+After each batch, append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` for **each friction point actually observed**. Only log real issues — skip if the MCP tools worked cleanly.
+
+### Entry format
+
+```markdown
+## [Short descriptive title] — {date} (snapshot-sync-components)
+
+**Operation**: [One-line description]
+**What MCP provided**: [What the tool returned]
+**Gap**: [What was missing or required extra calls]
+**Workaround**: [What was done instead — include N extra API calls]
+**Enterprise Impact**: [Why this matters to an enterprise team automating sync across
+thousands of component changes per release cycle]
+**Suggested Enhancement**: [Specific new tool, parameter, or batch mode]
+**Commented-out candidate**: [Name of a commented-out MCP tool that might address this, or "None identified"]
+```
+
+### Known friction categories to watch for
+
+- **No batch lookup**: Each component required a separate `universal_lookup` call — 20 calls for 20 items. A `batch_lookup` mode would be the highest-impact improvement for enterprise users running automated syncs.
+- **Field-level diff not pre-computed**: Did `universal_lookup` return the current field list but leave you to diff it against the existing file manually? Or did the MCP server provide a structured field-level diff (added: [...], removed: [...], changed: [...])? Enterprise consumers need the latter to avoid expensive manual diffing at scale.
+- **Multiplicity ambiguity**: Was multiplicity (0..1, 0..∞, 1..∞) clearly and consistently expressed in the lookup response, or did it require interpretation? Inconsistent multiplicity representation is a common source of codegen bugs.
+- **Cascade impact analysis**: Was there any tool to discover "which other components or messages reference this component?" Without it, cascade risks must be flagged conservatively. A `get_dependents` or `find_references` capability would let the sync be more precise.
+- **No component-only filter**: Similar to codesets — was there a direct way to retrieve "all changed components for this snapshot" or did the full mixed diff need to be filtered?

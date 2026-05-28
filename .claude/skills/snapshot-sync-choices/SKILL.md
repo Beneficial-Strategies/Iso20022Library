@@ -145,3 +145,31 @@ git commit -m "Snapshot sync {date} (iso20022): choices — {N} done, {R} remain
 ```
 
 Report: items processed, items remaining, follow-up items added. If Phase 3 is fully checked, remind the user that Milestone 3 (build) is next.
+
+---
+
+## MCP Friction Log
+
+After each batch, append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` for **each friction point actually observed**. Only log real issues — skip if the MCP tools worked cleanly.
+
+### Entry format
+
+```markdown
+## [Short descriptive title] — {date} (snapshot-sync-choices)
+
+**Operation**: [One-line description]
+**What MCP provided**: [What the tool returned]
+**Gap**: [What was missing or required extra calls]
+**Workaround**: [What was done instead — include N extra API calls]
+**Enterprise Impact**: [Why this matters to an enterprise team running automated sync]
+**Suggested Enhancement**: [Specific new tool, parameter, or batch mode]
+**Commented-out candidate**: [Name of a commented-out MCP tool that might address this, or "None identified"]
+```
+
+### Known friction categories to watch for
+
+- **No batch lookup**: Each choice type required a separate `universal_lookup` call. Same throughput issue as codesets and components — a `batch_lookup` would address all three.
+- **Variant structure clarity**: Did `universal_lookup` clearly enumerate all variants of the choice with their XML tags, element types, and multiplicities in one call? Or did each variant require a follow-up?
+- **Nested structure depth**: Choice types often wrap components which themselves wrap other types. Was the lookup result deep enough to write the variant files without additional calls, or did it return only one level of depth?
+- **No choice-only filter**: Same cross-cutting concern as codesets and components — was there a direct way to retrieve "all changed choice types" from the diff without manually filtering a mixed result set?
+- **File structure convention**: The two-file pattern (abstract base `_.cs` + per-variant files in a directory) is library-specific. The MCP server has no way to know this. Note if the lookup result made it easy or difficult to derive the correct file layout.

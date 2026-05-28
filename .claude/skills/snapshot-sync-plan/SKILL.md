@@ -128,3 +128,36 @@ git commit -m "Snapshot sync {date} ({library}): create plan document (N total c
 | **Total** | | | | |
 
 Remind the user to run `/snapshot-sync` to begin execution.
+
+---
+
+## MCP Friction Log
+
+After completing the plan, review what happened and append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` for **each friction point actually encountered**. Do not invent hypothetical issues — only log what you observed. If everything worked cleanly, skip this section.
+
+### MCP-FEEDBACK.md entry format
+
+```markdown
+## [Short descriptive title] — {date} (snapshot-sync-plan)
+
+**Operation**: [One-line description of what was being attempted]
+**What MCP provided**: [What the tool actually returned]
+**Gap**: [What was missing, ambiguous, or required extra calls to compensate]
+**Workaround**: [What was done instead — include number of extra API calls if applicable]
+**Enterprise Impact**: [Why this matters at scale: CI pipelines, large diffs, developer productivity,
+automation reliability. Write from the perspective of an enterprise team running this on every
+ISO 20022 release, not a one-time manual run.]
+**Suggested Enhancement**: [Specific new tool, new parameter, or mode that would close the gap]
+**Commented-out candidate**: [Name of any currently commented-out MCP tool that might address this,
+or "None identified"]
+```
+
+### Known friction categories to watch for during planning
+
+- **Snapshot date**: Is the current snapshot date clearly returned by `get_repository_statistics`, or did you have to derive it from another call or infer it?
+- **Diff completeness**: Did `get_migration_diff` return enough detail (added/removed member codes for codesets, field-level changes for components) to write the PLAN.md without per-item follow-up calls? Or did you have to call `universal_lookup` on individual items just to populate the plan?
+- **Diff categorization**: Did the diff pre-sort results by artifact type (codeset / component / choice / message), or did you have to categorize them manually?
+- **Diff pagination**: Was the full diff returned in one response, or did it require multiple calls to retrieve all changes?
+- **Filtering**: Was there any way to request "only codeset changes" or "only message changes" to avoid processing irrelevant artifact types?
+
+Append the `MCP-FEEDBACK.md` file to the same git commit as the plan, or in a follow-up commit immediately after.

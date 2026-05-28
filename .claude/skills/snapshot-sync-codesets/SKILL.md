@@ -131,3 +131,32 @@ git commit -m "Snapshot sync {date} (iso20022): codesets — {N} done, {R} remai
 - How many items remain in Phase 1
 - Any broken references or follow-up items added
 - If Phase 1 is now fully checked: remind the user that Milestone 1 (build verification) is next — run `/snapshot-sync` or `/snapshot-sync-verify` to continue
+
+---
+
+## MCP Friction Log
+
+After each batch, append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` for **each friction point actually observed**. Only log real issues encountered during this batch — skip if the MCP tools worked cleanly.
+
+### Entry format
+
+```markdown
+## [Short descriptive title] — {date} (snapshot-sync-codesets)
+
+**Operation**: [One-line description]
+**What MCP provided**: [What the tool returned]
+**Gap**: [What was missing or required extra calls]
+**Workaround**: [What was done instead — include N extra API calls]
+**Enterprise Impact**: [Why this matters to an enterprise team automating sync across
+hundreds of codeset changes per release cycle]
+**Suggested Enhancement**: [Specific new tool, parameter, or batch mode]
+**Commented-out candidate**: [Name of a commented-out MCP tool that might address this, or "None identified"]
+```
+
+### Known friction categories to watch for
+
+- **No batch lookup**: Each codeset required a separate `universal_lookup` call. For a batch of 20 items this means 20 serial round-trips. At enterprise scale (hundreds of codesets changed per release), this is a significant throughput bottleneck. A `batch_lookup` accepting a list of identifiers and returning all results in one response would eliminate this.
+- **Incomplete single-call data**: Did `universal_lookup` return all enum members with their `[EnumMember]` values, `[IsoId]`, and descriptions in one call? Or were follow-up calls needed to get complete member data?
+- **No codeset-only filter**: Was there a way to query "all changed codesets for this snapshot" directly, or did the diff have to be pre-filtered manually from a mixed result set?
+- **Parent type resolution**: When a codeset is `DerivedFrom` a parent type, was the parent type clearly identified in the lookup result, or did it require a separate call?
+- **Ordinal/value conflicts**: Did the MCP server provide enough information to correctly assign enum ordinals without ambiguity, or was manual inference required?

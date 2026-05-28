@@ -132,3 +132,33 @@ git commit -m "Snapshot sync {date} (iso20022): messages [{area or 'all'}] — {
 ```
 
 Report: items processed, items remaining (total and by area if filtered), follow-up items added. If Phase 4 is fully checked, remind the user that Milestone 4 (full build + tests) is next.
+
+---
+
+## MCP Friction Log
+
+After each batch, append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` for **each friction point actually observed**. Only log real issues — skip if the MCP tools worked cleanly.
+
+### Entry format
+
+```markdown
+## [Short descriptive title] — {date} (snapshot-sync-messages)
+
+**Operation**: [One-line description]
+**What MCP provided**: [What the tool returned]
+**Gap**: [What was missing or required extra calls]
+**Workaround**: [What was done instead — include N extra API calls]
+**Enterprise Impact**: [Why this matters — message definitions are the largest phase,
+with potentially thousands of items across 37 business areas]
+**Suggested Enhancement**: [Specific new tool, parameter, or batch mode]
+**Commented-out candidate**: [Name of a commented-out MCP tool that might address this, or "None identified"]
+```
+
+### Known friction categories to watch for
+
+- **No batch lookup**: Each message required a separate `universal_lookup` call. With potentially hundreds of changed messages across 37 business areas, this is the highest-volume friction point in the entire sync. A `batch_lookup` that accepts a list of ISO identifiers (e.g., `["pain.001.001.12", "pacs.008.001.14"]`) and returns all specs in one response would dramatically reduce round-trip cost.
+- **No business-area query**: Was there a way to ask "give me all changed messages in the `pain` business area" directly? Or did you have to filter a full mixed diff? Enterprise users frequently need to delegate business-area work to different team members — area-scoped queries are essential.
+- **Message identifier vs. class name**: Did the MCP response clearly provide both the ISO message identifier (e.g., `pain.001.001.12`) and the C# class name (e.g., `CustomerCreditTransferInitiationV12`)? Or did the class name have to be derived from the display name with manual version-suffix construction?
+- **Field-level diff not pre-computed**: For *updated* messages, did the MCP server return a structured field diff, or did you have to retrieve the full field list and diff it against the existing file yourself? At scale, pre-computed field diffs would be the difference between a fast sync and an expensive one.
+- **Namespace derivation**: Was the `DocumentNamespace` (e.g., `urn:iso:std:iso:20022:tech:xsd:pain.001.001.12`) and `XmlTag` clearly provided in the lookup result, or did they need to be constructed from convention?
+- **Completeness verification**: Was there any way to confirm that all messages for a given business area had been retrieved (i.e., a count or a "list all IDs in area X" endpoint)? Without it, there's no way to verify the plan is exhaustive.
