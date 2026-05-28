@@ -21,32 +21,79 @@ Create `snapshot-sync/{date}/{library}/PLAN.md` — the master checklist that dr
 
 ## Steps
 
-### 1. Gather the diff from the MCP server
+### 1. Download the spec snapshot
 
-Call `mcp__iso20022__get_migration_diff` to retrieve all changes between the previous snapshot (2025-04-24) and the current snapshot.
+Load the MCP tool schema:
+```
+ToolSearch: select:mcp__iso20022__get_spec_snapshot
+```
 
-**COMPLETENESS IS MANDATORY — DO NOT PROCEED WITH A PARTIAL DIFF.**
+Call `mcp__iso20022__get_spec_snapshot` (Enterprise feature: `BulkOperations`). This returns a complete grep-friendly TSV of every entity in the ISO 20022 spec — approximately 20MB and 200,000+ lines.
 
-After receiving the response, verify it is complete before doing anything else:
+**WRITE IT TO DISK IMMEDIATELY. Do not attempt to read or process it in-context.**
 
-- Check for any pagination indicator in the response: `next_page`, `continuation_token`, `has_more`, `page`, `total_count` vs `returned_count`, or any similar field.
-- If pagination is present: loop through **all** subsequent pages, accumulating results, until no further pages remain.
-- If the response provides a `total_count` or item count: verify that the number of items received across all pages matches the total. If they do not match, this is a **CRITICAL BLOCKER** — stop immediately (see below).
-- If the response provides **no completeness signal at all** (no total count, no pagination token, no "end of results" marker): this is also a **CRITICAL BLOCKER** — you cannot trust that the data is complete.
+```bash
+# The MCP tool result must be written directly to disk:
+mkdir -p snapshot-sync/{date}
+# Write the full tool response to:
+snapshot-sync/{date}/spec-snapshot.tsv
+```
 
-**What to do on a CRITICAL BLOCKER:**
+**COMPLETENESS IS MANDATORY — DO NOT PROCEED WITH A PARTIAL SNAPSHOT.**
 
-1. Do **not** write `PLAN.md`. A plan built on a partial diff is actively harmful — it will produce a sync that is silently incomplete.
-2. Append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` describing the specific completeness failure (see MCP Friction Log section below for format).
-3. Report to the user:
-   - What was returned (count, any available metadata)
-   - Why this is a blocker (a partial plan is worse than no plan)
-   - What MCP server enhancement would resolve it (e.g., a paginated endpoint with a reliable `total_count`, or a streaming bulk-export endpoint)
-4. Stop. Do not attempt to work around the limitation by processing partial data.
+The TSV ends with a comment line of the form:
+```
+# Totals: N message definitions, M message components, P choices, Q code sets, R business components
+```
 
-Call `mcp__iso20022__get_migration_path` if the diff references intermediate steps or versioned upgrade paths. Apply the same completeness check to its response.
+Verify this line exists at the end of the file and that the counts are non-zero and plausible (cross-check against `get_repository_statistics` totals). If the totals line is missing or counts are suspiciously low, this is a **CRITICAL BLOCKER** — stop and log to `MCP-FEEDBACK.md` instead of proceeding.
 
-### 2. Categorize changes (iso20022 library)
+### 2. Diff against the previous snapshot
+
+Check for a previous snapshot:
+
+```bash
+ls snapshot-sync/*/spec-snapshot.tsv 2>/dev/null | sort | tail -2
+```
+
+**First run (no previous snapshot):** Compare the spec snapshot against the library's source files to find what's new, changed, or removed. Use `grep` to extract names from the TSV, then compare against directory listings:
+
+```bash
+# Messages in spec vs. files in MessageDefinitions/
+grep '^MSGDEF' snapshot-sync/{date}/spec-snapshot.tsv | cut -f2 > /tmp/spec-messages.txt
+find src/BeneficialStrategies.Iso20022.Common/MessageDefinitions -name "*.cs" \
+  | xargs -I{} basename {} .cs > /tmp/lib-messages.txt
+comm -23 <(sort /tmp/spec-messages.txt) <(sort /tmp/lib-messages.txt)  # in spec, not in lib = NEW
+comm -13 <(sort /tmp/spec-messages.txt) <(sort /tmp/lib-messages.txt)  # in lib, not in spec = REMOVED
+
+# Repeat for: MSGCOMP → Components/, CHOICE → Choices/, CODESET → Codesets/
+```
+
+**Subsequent runs (previous snapshot exists):** Diff the two TSV files directly:
+
+```bash
+PREV=$(ls snapshot-sync/*/spec-snapshot.tsv | sort | tail -2 | head -1)
+CURR=snapshot-sync/{date}/spec-snapshot.tsv
+
+# New lines (in current, not in previous):
+comm -13 <(sort "$PREV") <(sort "$CURR") | grep -v '^#' > /tmp/snapshot-added.tsv
+
+# Removed lines (in previous, not in current):
+comm -23 <(sort "$PREV") <(sort "$CURR") | grep -v '^#' > /tmp/snapshot-removed.tsv
+```
+
+Then filter by record type to get per-artifact-type diffs:
+```bash
+grep '^MSGDEF'    /tmp/snapshot-added.tsv    # New message definitions
+grep '^MSGCOMP'   /tmp/snapshot-added.tsv    # New message components
+grep '^CHOICE'    /tmp/snapshot-added.tsv    # New choice types
+grep '^CODESET'   /tmp/snapshot-added.tsv    # New code sets
+grep '^CODE'      /tmp/snapshot-added.tsv    # New codes within existing code sets
+grep '^MSGELEMENT' /tmp/snapshot-added.tsv   # New elements within existing components
+# etc. — and same for snapshot-removed.tsv
+```
+
+### 3. Categorize changes (iso20022 library)
 
 Sort every changed artifact into one of four phases. For each item record whether it is **new**, **changed**, or **removed**, and note enough detail to act on it without re-querying MCP (though re-querying for details is always fine):
 

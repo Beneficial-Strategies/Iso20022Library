@@ -6,6 +6,16 @@ consumer automating ISO 20022 library maintenance.
 
 ---
 
+## ~~No Repository-Wide Snapshot Diff Tool~~ — RESOLVED — 2026-05-11 (snapshot-sync-plan)
+
+> **Resolution**: `GetSpecSnapshot` and `GetDataTypeMembersSnapshot` were restored in
+> `SnapshotTools.cs` (commit `99b7f36` in Iso20022MasterControl). Access restricted to
+> `Feature.BulkOperations` (Enterprise/Support only). Staging deploy triggered 2026-05-28.
+> The planning skill now uses a write-to-disk + local grep/diff workflow.
+> Original report preserved below for reference.
+
+---
+
 ## No Repository-Wide Snapshot Diff Tool — 2026-05-11 (snapshot-sync-plan)
 
 **Operation**: Retrieve all artifact changes (codesets, components, choices, messages) between
