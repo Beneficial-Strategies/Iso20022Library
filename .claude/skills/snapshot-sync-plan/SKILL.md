@@ -28,30 +28,34 @@ Load the MCP tool schema:
 ToolSearch: select:mcp__iso20022__get_spec_snapshot
 ```
 
-Call `mcp__iso20022__get_spec_snapshot` **six times** — once per `artifactType` — writing each
-result to disk before calling the next. The full spec is ~20MB and cannot be returned in a
-single call; the tool requires a type filter to keep each response within transport limits.
+Call `mcp__iso20022__get_spec_snapshot` for each `artifactType`, writing each result to disk
+before calling the next. Large sections (`components`, `codesets`) require multiple pages —
+each response includes `# Page X of Y`; keep calling with `page+1` until `X == Y`.
 
-```bash
-mkdir -p snapshot-sync/{date}
-# Call the tool with each artifactType in order, writing results to disk:
-# artifactType: "messages"    → write/append to snapshot-sync/{date}/spec-snapshot.tsv
-# artifactType: "components"  → append to snapshot-sync/{date}/spec-snapshot.tsv
-# artifactType: "choices"     → append to snapshot-sync/{date}/spec-snapshot.tsv
-# artifactType: "codesets"    → append to snapshot-sync/{date}/spec-snapshot.tsv
-# artifactType: "business"    → append to snapshot-sync/{date}/spec-snapshot.tsv
-# artifactType: "types"       → append to snapshot-sync/{date}/spec-snapshot.tsv
+**WRITE EACH RESULT TO DISK BEFORE CALLING THE NEXT. Do not read or process in-context.**
+
+Call sequence (append all to `snapshot-sync/{date}/spec-snapshot.tsv`):
+
 ```
-
-**WRITE EACH RESULT TO DISK BEFORE CALLING THE NEXT. Do not attempt to read or process in-context.**
+messages         (page 1 of 1)
+components, 1    (check # Page X of Y in response)
+components, 2
+... repeat until page X == Y
+choices          (page 1 of 1)
+codesets, 1      (check # Page X of Y)
+codesets, 2
+... repeat until page X == Y
+business         (page 1 of 1)
+types            (page 1 of 1)
+```
 
 **COMPLETENESS IS MANDATORY — DO NOT PROCEED WITH A PARTIAL SNAPSHOT.**
 
-After all six calls, verify:
-1. The assembled file contains a `# Section:` line for each of the six types.
-2. Each section's counts are non-zero and plausible (cross-check against `get_repository_statistics`).
-3. If any section's Totals line is missing or counts are zero, that section failed — stop and log to
-   `MCP-FEEDBACK.md` instead of proceeding.
+After all calls, verify the assembled file:
+1. Contains a `# Section: ... | Page X of X` line for every section and every page.
+2. All `# Page X of Y` lines have X == Y (no pages skipped).
+3. Counts are non-zero and plausible vs `get_repository_statistics` totals.
+4. If any page or section is missing, stop and log to `MCP-FEEDBACK.md` — do not proceed.
 
 ### 2. Diff against the previous snapshot
 
