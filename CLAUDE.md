@@ -46,7 +46,8 @@ src/BeneficialStrategies.Iso20022.Common/
 ├── ExternalSchema/      # External schema references
 ├── UserDefined/         # User-defined content placeholders
 ├── Metadata/            # Attribute definitions
-└── [business areas]/    # 36 business area folders (pain, pacs, camt, seev, etc.)
+└── MessageDefinitions/  # Top-level message type files
+    └── [business areas]/    # 36 business area folders (pain, pacs, camt, seev, etc.)
 ```
 
 ### Business Area Abbreviations
@@ -62,7 +63,7 @@ src/BeneficialStrategies.Iso20022.Common/
 
 ### Generated Code Patterns
 
-**Messages** (`[area]/MessageName.g.cs`):
+**Messages** (`MessageDefinitions/[area]/MessageName.g.cs`):
 - Implement `IOuterRecord` interface
 - Include `IsoIdentifier` constant (e.g., `"pain.001.001.11"`)
 - Rich XML documentation from ISO spec
