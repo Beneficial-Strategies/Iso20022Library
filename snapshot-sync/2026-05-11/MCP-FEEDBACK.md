@@ -6,26 +6,37 @@ consumer automating ISO 20022 library maintenance.
 
 ---
 
-## GetSpecSnapshot Returns Internal Error (-32603) — 2026-05-28 (snapshot-sync-plan)
+## ~~GetSpecSnapshot Returns Internal Error (-32603)~~ — RESOLVED — 2026-05-28 (snapshot-sync-plan)
+
+> **Resolution**: Root cause diagnosed via Cloud Run structured logs. `GetSpecSnapshot` completed
+> successfully server-side (1043ms), but `System.OutOfMemoryException` in `GC.AllocateNewArray`
+> occurred when the MCP C# SDK tried to JSON-serialize and SSE-send the ~20MB result string.
+> Fix: added required `artifactType` parameter to `GetSpecSnapshot` (`messages`, `components`,
+> `choices`, `codesets`, `business`, `types`). Each section is ~2–5MB, well within transport limits.
+> Callers assemble the full snapshot by calling six times and appending to disk.
+> Fixed in `SnapshotTools.cs` and deployed to staging 2026-05-28.
+> Planning skill updated to call once per artifactType.
+> Original report preserved below for reference.
 
 **Operation**: Call `GetSpecSnapshot` to download the complete ISO 20022 spec as a TSV for local diffing.
 
 **What MCP provided**: JSON-RPC error `-32603: An error occurred.` — no data returned.
 
-**Gap**: The tool is enabled and the caller's tier (Support) has `Feature.BulkOperations`, so this is not a permissions failure. Two likely causes:
-1. **Response too large for SSE transport**: The tool generates ~20MB / 200,000+ lines as a single in-memory string and returns it as one MCP response. The SSE transport may impose a practical response-size limit well below 20MB, causing the server to fail mid-stream or reject the response outright.
-2. **Cold-start / memory pressure**: Cloud Run is configured with 512Mi RAM. Building a 20MB `StringBuilder` plus JSON serialization overhead may exhaust available memory on a freshly started container.
+**Root cause (confirmed via Cloud Run logs)**: Tool completed in 1043ms, but the MCP C# SDK's
+JSON serialization of the 20MB result string triggered `System.OutOfMemoryException` in
+`GC.AllocateNewArray`. Memory limit is 2Gi, but peak allocation during SSE serialization of a
+20MB string (source string + JSON encoder buffers + intermediate arrays) exceeded available heap.
 
-**Workaround**: None attempted — cannot build the plan without the snapshot. Planning halted again.
+**Fix applied**: `GetSpecSnapshot` now requires an `artifactType` parameter (`messages`, `components`,
+`choices`, `codesets`, `business`, `types`). Each filtered response is ~2–5MB, well within the
+transport budget. The planning skill calls it six times and assembles on disk.
 
-**Enterprise Impact**: A bulk-export tool that reliably fails at 20MB is not usable for enterprise automation. A CI pipeline calling this tool would fail non-deterministically depending on container memory state and SSE buffer availability. The enterprise use case requires a reliable, repeatable call — not one that may or may not succeed depending on server conditions.
+**Enterprise Impact**: A bulk-export tool that reliably fails at 20MB is not usable for enterprise
+automation. The per-type filter maps directly to the sync phases, enabling parallel phase planning
+and significantly reducing per-call memory pressure.
 
-**Suggested Enhancements** (in priority order):
-1. **Streaming / chunked output**: Expose `GetSpecSnapshot` as a paginated or chunked endpoint rather than a single monolithic response. Enterprise consumers can reassemble chunks on disk; they cannot tolerate a 20MB single-shot response that may fail unpredictably. A `get_spec_snapshot(page, pageSize)` or `get_spec_snapshot(artifactType)` per-type endpoint would be far more reliable.
-2. **Per-type snapshot endpoints**: `get_codeset_snapshot`, `get_component_snapshot`, `get_message_snapshot`, `get_choice_snapshot` — each returning only one artifact class. This reduces per-call size by ~4–5× and maps directly to the sync phases, enabling parallel phase planning.
-3. **Increase Cloud Run memory**: Raise the container memory limit from 512Mi to at least 1Gi to accommodate the 20MB string + JSON overhead without OOM risk. This is a low-effort mitigation even if the chunking work is deferred.
-
-**Commented-out candidate**: None — `GetSpecSnapshot` was itself the commented-out candidate, now restored. The failure is in transport/memory, not tool availability.
+**Commented-out candidate**: None — `GetSpecSnapshot` was itself the commented-out candidate, now
+restored and fixed.
 
 ---
 

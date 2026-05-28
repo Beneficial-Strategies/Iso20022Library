@@ -28,25 +28,30 @@ Load the MCP tool schema:
 ToolSearch: select:mcp__iso20022__get_spec_snapshot
 ```
 
-Call `mcp__iso20022__get_spec_snapshot` (Enterprise feature: `BulkOperations`). This returns a complete grep-friendly TSV of every entity in the ISO 20022 spec — approximately 20MB and 200,000+ lines.
-
-**WRITE IT TO DISK IMMEDIATELY. Do not attempt to read or process it in-context.**
+Call `mcp__iso20022__get_spec_snapshot` **six times** — once per `artifactType` — writing each
+result to disk before calling the next. The full spec is ~20MB and cannot be returned in a
+single call; the tool requires a type filter to keep each response within transport limits.
 
 ```bash
-# The MCP tool result must be written directly to disk:
 mkdir -p snapshot-sync/{date}
-# Write the full tool response to:
-snapshot-sync/{date}/spec-snapshot.tsv
+# Call the tool with each artifactType in order, writing results to disk:
+# artifactType: "messages"    → write/append to snapshot-sync/{date}/spec-snapshot.tsv
+# artifactType: "components"  → append to snapshot-sync/{date}/spec-snapshot.tsv
+# artifactType: "choices"     → append to snapshot-sync/{date}/spec-snapshot.tsv
+# artifactType: "codesets"    → append to snapshot-sync/{date}/spec-snapshot.tsv
+# artifactType: "business"    → append to snapshot-sync/{date}/spec-snapshot.tsv
+# artifactType: "types"       → append to snapshot-sync/{date}/spec-snapshot.tsv
 ```
+
+**WRITE EACH RESULT TO DISK BEFORE CALLING THE NEXT. Do not attempt to read or process in-context.**
 
 **COMPLETENESS IS MANDATORY — DO NOT PROCEED WITH A PARTIAL SNAPSHOT.**
 
-The TSV ends with a comment line of the form:
-```
-# Totals: N message definitions, M message components, P choices, Q code sets, R business components
-```
-
-Verify this line exists at the end of the file and that the counts are non-zero and plausible (cross-check against `get_repository_statistics` totals). If the totals line is missing or counts are suspiciously low, this is a **CRITICAL BLOCKER** — stop and log to `MCP-FEEDBACK.md` instead of proceeding.
+After all six calls, verify:
+1. The assembled file contains a `# Section:` line for each of the six types.
+2. Each section's counts are non-zero and plausible (cross-check against `get_repository_statistics`).
+3. If any section's Totals line is missing or counts are zero, that section failed — stop and log to
+   `MCP-FEEDBACK.md` instead of proceeding.
 
 ### 2. Diff against the previous snapshot
 
