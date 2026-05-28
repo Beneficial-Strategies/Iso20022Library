@@ -40,6 +40,16 @@ ToolSearch: select:mcp__iso20022__universal_lookup
 
 1. Call `mcp__iso20022__universal_lookup` with the component name to get: IsoId, display name, description, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
 
+   **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
+   Verify the field list is complete before proceeding:
+   - If the response includes a field count or `total_fields`: confirm it matches the number of fields received. Fetch additional pages if paginated.
+   - If there is no completeness signal and the field count seems suspiciously round (25, 50, 100): treat this as a potential truncation. Do **not** write the file. Instead:
+     1. Add a `BLOCKED` entry in PLAN.md below the item.
+     2. Append a friction entry to `snapshot-sync/{date}/MCP-FEEDBACK.md`.
+     3. Skip to the next item.
+
+   A component with missing fields will compile but silently drop data during deserialization. This is not acceptable.
+
 2. Create `src/BeneficialStrategies.Iso20022.Common/Components/{ComponentName}.cs` using this pattern:
 
 ```csharp

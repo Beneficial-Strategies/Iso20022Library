@@ -42,6 +42,20 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
 1. Call `mcp__iso20022__universal_lookup` with the codeset name to retrieve its full spec: IsoId, description, parent/DerivedFrom type, and all enum member codes with their values and descriptions.
 
+   **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
+   After receiving the lookup result, verify the member list is complete:
+   - If the response includes a `total_members`, `member_count`, or equivalent field: confirm the number of members returned matches. If not, fetch remaining pages before continuing.
+   - If the response offers pagination: exhaust all pages.
+   - If you have no completeness signal and the list seems suspiciously short (e.g., exactly 25, 50, or 100 items on a codeset that likely has more based on its name/description): treat this as a potential truncation. Do **not** write the file. Instead:
+     1. Add a `BLOCKED` entry to PLAN.md below the item:
+        ```
+          - [ ] BLOCKED: {CodesetName} — lookup returned {N} members but completeness cannot be verified. Resolve before continuing.
+        ```
+     2. Append a friction entry to `snapshot-sync/{date}/MCP-FEEDBACK.md`.
+     3. Skip to the next item in the batch.
+
+   A codeset file with missing enum members will compile but produce silent runtime errors (unmapped codes). This is not acceptable.
+
 2. Create `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs` using this pattern:
 
 ```csharp

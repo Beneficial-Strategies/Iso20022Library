@@ -48,6 +48,16 @@ The abstract base uses `[KnownType]` and `[JsonDerivedType]` attributes for each
 
 1. Call `mcp__iso20022__universal_lookup` with the choice name to get: IsoId, description, and all variants (each with its XML tag, element type, and description).
 
+   **COMPLETENESS CHECK — REQUIRED BEFORE WRITING ANY FILES.**
+   Verify the variant list is complete:
+   - If the response includes a variant count or `total_variants`: confirm it matches what was returned. Fetch additional pages if paginated.
+   - If there is no completeness signal and the number of variants seems suspiciously low or round: treat this as a potential truncation. Do **not** write any files. Instead:
+     1. Add a `BLOCKED` entry in PLAN.md below the item.
+     2. Append a friction entry to `snapshot-sync/{date}/MCP-FEEDBACK.md`.
+     3. Skip to the next item.
+
+   A choice type missing variants will break polymorphic deserialization at runtime for any message that uses the truncated variants. This is not acceptable.
+
 2. Create the abstract base file `Choices/{ChoiceName}_.cs`:
 
 ```csharp

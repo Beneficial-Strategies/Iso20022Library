@@ -25,7 +25,26 @@ Create `snapshot-sync/{date}/{library}/PLAN.md` — the master checklist that dr
 
 Call `mcp__iso20022__get_migration_diff` to retrieve all changes between the previous snapshot (2025-04-24) and the current snapshot.
 
-Call `mcp__iso20022__get_migration_path` if the diff references intermediate steps or versioned upgrade paths.
+**COMPLETENESS IS MANDATORY — DO NOT PROCEED WITH A PARTIAL DIFF.**
+
+After receiving the response, verify it is complete before doing anything else:
+
+- Check for any pagination indicator in the response: `next_page`, `continuation_token`, `has_more`, `page`, `total_count` vs `returned_count`, or any similar field.
+- If pagination is present: loop through **all** subsequent pages, accumulating results, until no further pages remain.
+- If the response provides a `total_count` or item count: verify that the number of items received across all pages matches the total. If they do not match, this is a **CRITICAL BLOCKER** — stop immediately (see below).
+- If the response provides **no completeness signal at all** (no total count, no pagination token, no "end of results" marker): this is also a **CRITICAL BLOCKER** — you cannot trust that the data is complete.
+
+**What to do on a CRITICAL BLOCKER:**
+
+1. Do **not** write `PLAN.md`. A plan built on a partial diff is actively harmful — it will produce a sync that is silently incomplete.
+2. Append an entry to `snapshot-sync/{date}/MCP-FEEDBACK.md` describing the specific completeness failure (see MCP Friction Log section below for format).
+3. Report to the user:
+   - What was returned (count, any available metadata)
+   - Why this is a blocker (a partial plan is worse than no plan)
+   - What MCP server enhancement would resolve it (e.g., a paginated endpoint with a reliable `total_count`, or a streaming bulk-export endpoint)
+4. Stop. Do not attempt to work around the limitation by processing partial data.
+
+Call `mcp__iso20022__get_migration_path` if the diff references intermediate steps or versioned upgrade paths. Apply the same completeness check to its response.
 
 ### 2. Categorize changes (iso20022 library)
 

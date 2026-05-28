@@ -44,6 +44,16 @@ For each item, extract the business area from the ISO message identifier (e.g., 
 
 1. Call `mcp__iso20022__universal_lookup` with the message identifier (e.g., `pain.001.001.12`) to retrieve: IsoId, display name, description, XmlTag, DocumentNamespace, DocumentElementName, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
 
+   **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
+   Verify the field list is complete:
+   - If the response includes a field count or `total_fields`: confirm it matches what was returned. Fetch additional pages if paginated.
+   - If there is no completeness signal and the field count seems suspiciously low or round: treat this as a potential truncation. Do **not** write the file. Instead:
+     1. Add a `BLOCKED` entry in PLAN.md below the item.
+     2. Append a friction entry to `snapshot-sync/{date}/MCP-FEEDBACK.md`.
+     3. Skip to the next item in the batch.
+
+   A message record with missing fields will parse XML silently discarding data, and will fail schema validation against ISO XSD. This is not acceptable.
+
 2. Determine the class name from the display name + version number (e.g., `CustomerCreditTransferInitiationV12`).
 
 3. Create `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/{area}/{ClassName}.cs`:
