@@ -9,7 +9,7 @@
 - **Plan created**: 2026-05-28
 - **Last updated**: 2026-05-28
 
-## Phase 1: Codesets (299 new · 0 changed · 2 removed)
+## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
 ### New
 - [ ] `ATICAPartyType1Code` — `Codesets/ATICAPartyType1Code.cs`
@@ -311,6 +311,65 @@
 - [ ] `ValidityPeriodTypeCode` — `Codesets/ValidityPeriodTypeCode.cs`
 - [ ] `Verification4Code` — `Codesets/Verification4Code.cs`
 - [ ] `VerificationEntity3Code` — `Codesets/VerificationEntity3Code.cs`
+### Changed
+- [ ] `AdditionalServiceTypeCode` — add: ADCA, ANIQ, CDTL, PVVS, REAC, SAVS, STIP, TXID
+- [ ] `AssetClassDetailedSubProductTypeCode` — add: CAPE, CLAN, DRTY, HAND, HYDG, NGAS, PNMX, SPMX
+- [ ] `BenchmarkCurveNameCode` — add: TONA
+- [ ] `CalculationTypeCode` — add: CDLY, WEAV
+- [ ] `CardDataReadingCode` — add: CDFS, DCPY, ICCP, ICFM, ICMG, MGSP, NFCF, OTHR
+- [ ] `CashSettlementSystemCode` — add: DCSS
+- [ ] `CryptographicKeyTypeCode` — add: UKA2
+- [ ] `CustomerDeviceTypeCode` — add: HDST, IOTS, TLVN
+- [ ] `DebtInstrumentSeniorityTypeCode` — add: SNPR, SPRF, SSEC, SUNS
+- [ ] `ExtendedEventTypeV2Code` — add: FPRE
+- [ ] `ExternalBalanceSubType1Code` — add: UnblockedFunds
+- [ ] `ExternalBalanceSubTypeCode` — add: UNBL
+- [ ] `ExternalCashAccountType1Code` — add: NonResidentLocalDomesticCurrencyAccount, ResidentEntityForeignCurrency, ResidentIndividualForeignCurrencyAccount, ResidentLocalDomesticCurrency
+- [ ] `ExternalCashAccountTypeCode` — add: NLCY, REFC, RFCA, RLCY
+- [ ] `ExternalCashClearingSystem1Code` — add: ACH, Albania, AlgeriaRTGS, Angola, AustraliaNPP, AustraliaPDS, Austrian, AustrianCSM, Azerbaijan, Bahamas, BancoDeMocambiqueRTGS, BankOfJapanNet, BankOfTheCentralAfricanStates, BankOfUgandaRTGS, Barbados, Belgium, BosniaHerzegovina, Botswana, Bulgaria, CITAD, COMESAREPSS, COMESASS, CanadaACSS, CanadaCAD, CanadaLVTS, CanadaUSBE, CentralBankOfArubaCSM, CentralInteroperabilityService, CentraleBankVanCuraçaoEnSintMaartenCSM, Chili, China, ColumbiaCEDEC, ColumbiaCENIT, ColumbiaCUD, Croatia, DEandNLEquens, Denmark, DenmarkDDK, EBAClearingSTEP2, EBAEuro1, EBAEuro1Step1, EBASTEP2XCT, EBAStep1, ECB, Ecuador, Egypt, FasterPaymentsServices, Finland, ForeignExchangeYenClearing, FranceFR, FrancePNS, Germany, GermanyELS, GermanyRTGSPlus, Ghana, Greece, HongKongCHATS, HongKongFPS, Hungary, Iceland, IndiaImmediatePaymentService, IndiaNationalElectronicFundsTransferSystem, IndiaRTGS, IndiaUnifiedPaymentsInterface, Ireland, IsraelRTGS, Italy, Jordan, Kenya, KoreaBOKWire, Latvia, Lesotho, Luxemburg, LynxCanada, MacaoRTGS, MalaysiaInterbankGIRO, Malta, Mauritius, NAPAS, NGInterswitch, Namibia, Netherlands, NewZealand, NewZealandRTGS, Norway, NorwayNICSReal, NorwayRTGS, P27, P27RealTime, PapuaNewGuineaKATS, Peru, Philippines, Portugal, RENTAS, RIXRTGSSverigesRiksbank, RPSAndSEPAClearer, RTGS, RTRCanada, ReserveBankOfMalawiRTGS, RomaniaEPO, RomaniaGSRS, RomaniaRTGS, SIC, SICIP, SORBNET3, SerbiaInterbankAndInternationalClearingOfFXPayments, SerbiaRTGS, Singapore, SingaporeSCRIPS, Slovania, SouthAfrica, SpainCAM, SpainES, SpainIberpayInstantPayments, SriLanka, SwedenBGC, SwedenSEC, SwedenSSK, Switzerland, TaiwanRTGS, Tanzania, Target, Thailand, Thailand-NITMX, TrinidadAndTobago, USFedACH, USFedNow, USFedwireFunds, USNSS, USTCHChips, USTCHEPN, USTCHRealTime, Uganda, UnitedKingdom, UnitedKingdomGBP, UnitedKingdomUKD, Venezuela, VocaLink, Zambia, Zengin, Zimbabwe, euroSIC; remove: ACH, Albania, Angola, AustraliaNPP, AustraliaPDS, Austrian, AustrianCSM, Azerbaijan, Bahamas, BancoDeMocambiqueRTGS, BankOfJapanNet, BankOfTheCentralAfricanStates, Barbados, Belgium, BosniaHerzegovina, Botswana, Bulgaria, CanadaACSS, CanadaCAD, CanadaLVTS, CanadaUSBE, CentralBankOfArubaCSM, CentralInteroperabilityService, CentraleBankVanCuraçaoEnSintMaartenCSM, Chili, China, ColumbiaCEDEC, ColumbiaCENIT, ColumbiaCUD, Croatia, DEandNLEquens, Denmark, DenmarkDDK, EBAClearingSTEP2, EBAEuro1, EBAEuro1Step1, EBASTEP2XCT, EBAStep1, ECB, Ecuador, Egypt, FasterPaymentsServices, Finland, ForeignExchangeYenClearing, FranceFR, FrancePNS, Germany, GermanyELS, GermanyRTGSPlus, Ghana, Greece, HongKongCHATS, HongKongFPS, Hungary, Iceland, IndiaImmediatePaymentService, IndiaNationalElectronicFundsTransferSystem, IndiaRTGS, IndiaUnifiedPaymentsInterface, Ireland, IsraelRTGS, Italy, Jordan, Kenya, KoreaBOKWire, Latvia, Lesotho, Luxemburg, LynxCanada, MacaoRTGS, MalaysiaInterbankGIRO, Malta, Mauritius, NGInterswitch, Namibia, Netherlands, NewZealand, NewZealandRTGS, Norway, NorwayNICSReal, NorwayRTGS, P27, P27RealTime, PapuaNewGuineaKATS, Peru, Philippines, Portugal, RENTAS, RIXRTGSSverigesRiksbank, RPSAndSEPAClearer, RTGS, RTRCanada, ReserveBankOfMalawiRTGS, RomaniaEPO, RomaniaGSRS, RomaniaRTGS, SIC, SICIP, SORBNET3, Singapore, SingaporeSCRIPS, Slovania, SouthAfrica, SpainCAM, SpainES, SpainIberpayInstantPayments, SriLanka, SwedenBGC, SwedenSEC, SwedenSSK, Switzerland, TaiwanRTGS, Tanzania, Target, Thailand, Thailand-NITMX, TrinidadAndTobago, USFedACH, USFedNow, USFedwireFunds, USNSS, USTCHChips, USTCHEPN, USTCHRealTime, Uganda, UnitedKingdom, UnitedKingdomGBP, UnitedKingdomUKD, Venezuela, VocaLink, Zambia, Zengin, Zimbabwe, euroSIC
+- [ ] `ExternalCashClearingSystemCode` — add: CBH, CBP, CIT, DZR, NAP, RSD, RSE, UGD
+- [ ] `ExternalClearingSystemIdentification1Code` — add: AlgeriaAcсountIdentificationCode, AlgeriaAgentIdentificationCode, BankOfCentralAfricanStateParticipantAccountIdentificationCode, BankOfCentralAfricanStateParticipantIdentificationCode, COMESAREPSSAccountIdentificationCode, COMESAREPSSParticipantIdentificationCode, COMESASSAccountIdentificationCode, COMESASSParticipantIdentificationCode, MauritiusRTGSAccountIdentificationCode, MauritiusRTGSParticipantIdentificationCode, SerbiaNationalClearingAccountIdentificationCode, SerbiaNationalClearingParticipantIdentificationCode, SerbiaRTGSAccountIdentificationCode, SerbiaRTGSParticipantIdentificationCode, UgandaRTGSAccountIdentificationCode, UgandaRTGSParticipantIdentificationCode
+- [ ] `ExternalClearingSystemIdentificationCode` — add: CBHAC, CBHPA, CBPAC, CBPPA, CEAAC, CEAPA, DZRAC, DZRPA, MUPAC, MUPPA, RSDAC, RSDPA, RSEAC, RSEPA, UGDAC, UGDPA
+- [ ] `ExternalInvestigationReasonSubType1Code` — add: Incomplete, Invalid, Missing, RequestBusinessWebsite, RequestDetailedPurposeOfPayment, RequestFinalUserAndUsageOfGoodsOrServices, RequestOriginOfGoods
+- [ ] `ExternalInvestigationReasonSubTypeCode` — add: ICOM, INVA, MISS, RQBW, RQDP, RQOG, RQUU
+- [ ] `ExternalInvestigationStatusReason1Code` — add: CorrectionMadeAsPerInquiry
+- [ ] `ExternalInvestigationStatusReasonCode` — add: CMPI
+- [ ] `ExternalInvestigationSubType1Code` — add: Other, RequestDebitAuthorisation, RequestRelatedToCharges, RequestUseOfFunds, RequestValueDateAdjustment
+- [ ] `ExternalInvestigationSubTypeCode` — add: OTHR, RQCH, RQDA, RQUF, RQVA
+- [ ] `ExternalInvestigationType1Code` — add: AccountRelatedInvestigation, CreditorAgentClaimCoverNonReceipt, CreditorClaimNonReceipt, Other, PaymentInitiationNotConfirmed, RequestDebitAuthorisation, RequestForInformation, RequestFromIMF, RequestRelatedToCharges, RequestUseOfFunds, RequestValueDateAdjustment, UnableToApplyByCreditor; remove: AccountRelatedInvestigation, CreditorAgentClaimCoverNonReceipt, CreditorClaimNonReceipt, Other, PaymentInitiationNotConfirmed, RequestDebitAuthorisation, RequestForInformation, RequestFromIMF, RequestRelatedToCharges, RequestUseOfFunds, RequestValueDateAdjustment, UnableToApplyByCreditor
+- [ ] `ExternalMandateStatus1Code` — add: PartiallyAcceptedTechnicalCorrect, Received, Rejected
+- [ ] `ExternalMandateStatusCode` — add: PATC, RCVD, RJCT
+- [ ] `ExternalMarketInfrastructure1Code` — add: ACH, Albania, Angola, AustraliaNPP, AustraliaPDS, Austrian, Azerbaijan, Bahamas, BankOfJapanNet, Barbados, Belgium, BosniaHerzegovina, Botswana, Bulgaria, CanadaACSS, CanadaCAD, CanadaLVTS, CanadaUSDUSBE, CentralBankOfArubaCSM, CentralInteroperabilityService, CentralLiquidityManagement, Chili, ColumbiaCEDEC, ColumbiaCENIT, ColumbiaRTGS, Croatia, DEandNLEquens, Denmark, DenmarkDDK, EBAClearingStep2, EBAEuro1, EBAEuro1Step1, EBAStep1, EBAStep2XCT, ECB, Ecuador, Egypt, FedNet, Finland, ForeignExchangeYenClearing, FranceFR, FrancePNS, Germany, GermanyELS, GermanyRTGSPlus, Ghana, Greece, Hungary, Ireland, Italy, Jordan, Kenya, Latvia, Luxemburg, Malta, Mauritius, Namibia, Netherlands, NewZealand, Norway, Philippines, Portugal, RPSAndSEPAClearer, RTGS, RomaniaEPO, RomaniaGSRS, SIC, SICIP, Singapore, Slovania, SouthAfrica, SpainCAM, SpainES, SriLanka, SwedenBGC, SwedenSEC, SwedenSSK, Switzerland, T2S, Tanzania, Target, Thailand, ThailandNITMX, TrinidadAndTobago, USFedACH, USFedwire, USTCHChips, USTCHEPN, USTCHRealTime, Uganda, UnitedKingdom, UnitedKingdomGBP, Venezuela, VocaLink, Zambia, Zengin, Zimbabwe, euroSIC; remove: ACH, Albania, Angola, AustraliaNPP, AustraliaPDS, Austrian, Azerbaijan, Bahamas, BankOfJapanNet, Barbados, Belgium, BosniaHerzegovina, Botswana, Bulgaria, CanadaACSS, CanadaCAD, CanadaLVTS, CanadaUSDUSBE, CentralBankOfArubaCSM, CentralInteroperabilityService, CentralLiquidityManagement, Chili, ColumbiaCEDEC, ColumbiaCENIT, ColumbiaRTGS, Croatia, DEandNLEquens, Denmark, DenmarkDDK, EBAClearingStep2, EBAEuro1, EBAEuro1Step1, EBAStep1, EBAStep2XCT, ECB, Ecuador, Egypt, FedNet, Finland, ForeignExchangeYenClearing, FranceFR, FrancePNS, Germany, GermanyELS, GermanyRTGSPlus, Ghana, Greece, Hungary, Ireland, Italy, Jordan, Kenya, Latvia, Luxemburg, Malta, Mauritius, Namibia, Netherlands, NewZealand, Norway, Philippines, Portugal, RPSAndSEPAClearer, RTGS, RomaniaEPO, RomaniaGSRS, SIC, SICIP, Singapore, Slovania, SouthAfrica, SpainCAM, SpainES, SriLanka, SwedenBGC, SwedenSEC, SwedenSSK, Switzerland, T2S, Tanzania, Target, Thailand, ThailandNITMX, TrinidadAndTobago, USFedACH, USFedwire, USTCHChips, USTCHEPN, USTCHRealTime, Uganda, UnitedKingdom, UnitedKingdomGBP, Venezuela, VocaLink, Zambia, Zengin, Zimbabwe, euroSIC
+- [ ] `ExternalPurpose1Code` — add: InterbankCharges, LongBoxTransfer, MutualFundSubscriptionRedemption
+- [ ] `ExternalPurposeCode` — add: INBC, LBXX, MFSR
+- [ ] `ExternalServiceLevel1Code` — add: EastAfricanPaymentSystem, IcelandicRulebookCouncilArea, SwiftScheme
+- [ ] `ExternalServiceLevelCode` — add: EAPS, IRCA, SPSC
+- [ ] `ExternalStatusReason1Code` — add: PaymentNotAlignedWithRTPRequest
+- [ ] `ExternalStatusReasonCode` — add: PNRT
+- [ ] `FinancialCenterCode` — add: TRG2, TRGT
+- [ ] `FormOfSecurityCode` — add: BKEN, CDBT, DBER, DBKN, DEMT, DREG, FDBK, MBER, MREG, UCRB, UCRT, UNCB, UNCR
+- [ ] `FundingSourceTypeCode` — add: CARD
+- [ ] `InvestmentFundFeeCode` — add: NTWK
+- [ ] `IssuanceTypeCode` — add: PROG, STND
+- [ ] `MessageClassCode` — add: INVR
+- [ ] `OptionFeaturesCode` — add: FCFS
+- [ ] `OriginatorRoleCode` — add: MSGM, RMQI
+- [ ] `PartyExceptionTypeCode` — add: INTC
+- [ ] `PartyTypeCode` — add: MKTP, PFAC
+- [ ] `PendingFailingReasonV2Code` — add: ECRD, WCTF
+- [ ] `ProrationBelowMinimumQuantityCode` — add: MILD, MILU
+- [ ] `RateTypeCode` — add: JLID
+- [ ] `RejectionReasonV3Code` — add: ADIM, CER0, DEFE, DEPO, DSNA, DUCK, DUEV, DUST, EFDM, FAS0, INSA, LOCK, MINC, NACD, NCON, NDEF, NMOD, NREF, ONCV, PR1K, PRIN, PUBD, REFR, REFU, SEEQ, UNDI, UNDM
+- [ ] `SecuritiesTransactionTypeCode` — add: AUCT, PPLC
+- [ ] `SecurityStatusCode` — add: HALT, RMOV
+- [ ] `ServiceLevelCode` — add: SPSC
+- [ ] `SettlementTransactionConditionCode` — add: GATE
+- [ ] `SpecialPurposeCode` — add: APPL
+- [ ] `StatusCode` — add: PART
+- [ ] `StatusV2Code` — add: PART
+- [ ] `TradingCapacityCode` — add: MIXC
+- [ ] `UnitOfMeasureCode` — add: CHMT
+- [ ] `UserInterfaceCode` — add: CSTM
 ### Removed
 - [ ] `TradingCapacity9Code` — delete `Codesets/TradingCapacity9Code.cs`
 - [ ] `UnableToApplyIncorrectInfo2Code` — delete `Codesets/UnableToApplyIncorrectInfo2Code.cs`
