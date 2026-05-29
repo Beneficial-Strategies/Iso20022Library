@@ -12,26 +12,26 @@
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
 ### New
-- [ ] `ATICAPartyType1Code` — `Codesets/ATICAPartyType1Code.cs`
-- [ ] `AccountOwnerOrganisationTypeCode` — `Codesets/AccountOwnerOrganisationTypeCode.cs`
-- [ ] `AcknowledgementReason11Code` — `Codesets/AcknowledgementReason11Code.cs`
-- [ ] `ActionTaken2Code` — `Codesets/ActionTaken2Code.cs`
-- [ ] `ActiveCurrencyCode` — `Codesets/ActiveCurrencyCode.cs`
-- [ ] `ActiveOrHistoricCurrencyCode` — `Codesets/ActiveOrHistoricCurrencyCode.cs`
-- [ ] `AddendumTaxType4Code` — `Codesets/AddendumTaxType4Code.cs`
-- [ ] `AdditionalBusinessProcess13Code` — `Codesets/AdditionalBusinessProcess13Code.cs`
-- [ ] `AdditionalServiceType3Code` — `Codesets/AdditionalServiceType3Code.cs`
-- [ ] `AllegementRemovalReason1Code` — `Codesets/AllegementRemovalReason1Code.cs`
-- [ ] `AllegementRemovalReasonCode` — `Codesets/AllegementRemovalReasonCode.cs`
-- [ ] `AuthenticationMethod13Code` — `Codesets/AuthenticationMethod13Code.cs`
-- [ ] `BatchManagementType3Code` — `Codesets/BatchManagementType3Code.cs`
-- [ ] `BusinessDayConvention2Code` — `Codesets/BusinessDayConvention2Code.cs`
-- [ ] `BusinessDayConventionV2Code` — `Codesets/BusinessDayConventionV2Code.cs`
-- [ ] `BusinessFilePriorityCode` — `Codesets/BusinessFilePriorityCode.cs`
-- [ ] `CarRentalActivity2Code` — `Codesets/CarRentalActivity2Code.cs`
-- [ ] `CarRentalServiceType3Code` — `Codesets/CarRentalServiceType3Code.cs`
-- [ ] `CardDataReading11Code` — `Codesets/CardDataReading11Code.cs`
-- [ ] `CardDataReading12Code` — `Codesets/CardDataReading12Code.cs`
+- [x] `ATICAPartyType1Code` — `Codesets/ATICAPartyType1Code.cs`
+- [x] `AccountOwnerOrganisationTypeCode` — `Codesets/AccountOwnerOrganisationTypeCode.cs`
+- [x] `AcknowledgementReason11Code` — `Codesets/AcknowledgementReason11Code.cs`
+- [x] `ActionTaken2Code` — `Codesets/ActionTaken2Code.cs`
+- [x] `ActiveCurrencyCode` — `Codesets/ActiveCurrencyCode.cs`
+- [x] `ActiveOrHistoricCurrencyCode` — `Codesets/ActiveOrHistoricCurrencyCode.cs`
+- [x] `AddendumTaxType4Code` — `Codesets/AddendumTaxType4Code.cs`
+- [x] `AdditionalBusinessProcess13Code` — `Codesets/AdditionalBusinessProcess13Code.cs`
+- [x] `AdditionalServiceType3Code` — `Codesets/AdditionalServiceType3Code.cs`
+- [x] `AllegementRemovalReason1Code` — `Codesets/AllegementRemovalReason1Code.cs`
+- [x] `AllegementRemovalReasonCode` — `Codesets/AllegementRemovalReasonCode.cs`
+- [x] `AuthenticationMethod13Code` — `Codesets/AuthenticationMethod13Code.cs`
+- [x] `BatchManagementType3Code` — `Codesets/BatchManagementType3Code.cs`
+- [x] `BusinessDayConvention2Code` — `Codesets/BusinessDayConvention2Code.cs`
+- [x] `BusinessDayConventionV2Code` — `Codesets/BusinessDayConventionV2Code.cs`
+- [x] `BusinessFilePriorityCode` — `Codesets/BusinessFilePriorityCode.cs`
+- [x] `CarRentalActivity2Code` — `Codesets/CarRentalActivity2Code.cs`
+- [x] `CarRentalServiceType3Code` — `Codesets/CarRentalServiceType3Code.cs`
+- [x] `CardDataReading11Code` — `Codesets/CardDataReading11Code.cs`
+- [x] `CardDataReading12Code` — `Codesets/CardDataReading12Code.cs`
 - [ ] `CardDataWriting2Code` — `Codesets/CardDataWriting2Code.cs`
 - [ ] `CardDepositType2Code` — `Codesets/CardDepositType2Code.cs`
 - [ ] `CardSecurityCapability2Code` — `Codesets/CardSecurityCapability2Code.cs`
