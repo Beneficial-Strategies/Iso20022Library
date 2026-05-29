@@ -23,7 +23,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CardDataReading10Code),
     typeof(CardDataReading1Code),
     typeof(CardDataReading8Code),
-    typeof(CardDataReading7Code)
+    typeof(CardDataReading7Code),
+    typeof(CardDataReading11Code),
+    typeof(CardDataReading12Code)
 )]
 public enum CardDataReadingCode
 {
@@ -275,4 +277,76 @@ public enum CardDataReadingCode
     [IsoId("_FyNH4MmvEeuF1f85xf6dbg")]
     [Description(@"Card details were obtained via a token.")]
     Token,
+
+    /// <summary>
+    /// Card information are stored on a server.
+    /// Encoded/decoded by serializers as &quot;CDFS&quot;.
+    /// </summary>
+    [EnumMember(Value = "CDFS")]
+    [IsoId("_uhlesBQcEfC1ZfCQz0xB3g")]
+    [Description(@"Card information are stored on a server.")]
+    CredentialOnServer,
+
+    /// <summary>
+    /// Domestic ICC Contactless.
+    /// Encoded/decoded by serializers as &quot;DCPY&quot;.
+    /// </summary>
+    [EnumMember(Value = "DCPY")]
+    [IsoId("_CwKgUHFxEfC68Y4jZPNEug")]
+    [Description(@"Domestic ICC Contactless.")]
+    ICCProximityPrivate,
+
+    /// <summary>
+    /// Integrated circuit card read; only partial data is available.
+    /// Encoded/decoded by serializers as &quot;ICCP&quot;.
+    /// </summary>
+    [EnumMember(Value = "ICCP")]
+    [IsoId("_IEmbYBQcEfC1ZfCQz0xB3g")]
+    [Description(@"Integrated circuit card read; only partial data is available.")]
+    ICCContactPartial,
+
+    /// <summary>
+    /// ICC contact with fallback to manual mode.
+    /// Encoded/decoded by serializers as &quot;ICFM&quot;.
+    /// </summary>
+    [EnumMember(Value = "ICFM")]
+    [IsoId("_HfBcIHFxEfC68Y4jZPNEug")]
+    [Description(@"ICC contact with fallback to manual mode.")]
+    ICCFallbackManual,
+
+    /// <summary>
+    /// ICC contact with fallback to magstripe mode.
+    /// Encoded/decoded by serializers as &quot;ICMG&quot;.
+    /// </summary>
+    [EnumMember(Value = "ICMG")]
+    [IsoId("_VIRgEHFxEfC68Y4jZPNEug")]
+    [Description(@"ICC contact with fallback to magstripe mode.")]
+    ICCFallbackMagstripe,
+
+    /// <summary>
+    /// Magnetic stripe is read, only partial data is available.
+    /// Encoded/decoded by serializers as &quot;MGSP&quot;.
+    /// </summary>
+    [EnumMember(Value = "MGSP")]
+    [IsoId("_zXLKEBQbEfC1ZfCQz0xB3g")]
+    [Description(@"Magnetic stripe is read, only partial data is available.")]
+    MagneticStripePartial,
+
+    /// <summary>
+    /// NFC Type-F frequency.
+    /// Encoded/decoded by serializers as &quot;NFCF&quot;.
+    /// </summary>
+    [EnumMember(Value = "NFCF")]
+    [IsoId("_ScDXYBQcEfC1ZfCQz0xB3g")]
+    [Description(@"NFC Type-F frequency.")]
+    TypeF,
+
+    /// <summary>
+    /// Other card data reading mode.
+    /// Encoded/decoded by serializers as &quot;OTHR&quot;.
+    /// </summary>
+    [EnumMember(Value = "OTHR")]
+    [IsoId("_eO3RIHFxEfC68Y4jZPNEug")]
+    [Description(@"Other card data reading mode.")]
+    Other,
 }

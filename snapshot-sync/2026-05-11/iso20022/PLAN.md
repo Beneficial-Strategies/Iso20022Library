@@ -312,11 +312,11 @@
 - [ ] `Verification4Code` — `Codesets/Verification4Code.cs`
 - [ ] `VerificationEntity3Code` — `Codesets/VerificationEntity3Code.cs`
 ### Changed
-- [ ] `AdditionalServiceTypeCode` — add: ADCA, ANIQ, CDTL, PVVS, REAC, SAVS, STIP, TXID
+- [x] `AdditionalServiceTypeCode` — add: ADCA, ANIQ, CDTL, PVVS, REAC, SAVS, STIP, TXID
 - [ ] `AssetClassDetailedSubProductTypeCode` — add: CAPE, CLAN, DRTY, HAND, HYDG, NGAS, PNMX, SPMX
 - [ ] `BenchmarkCurveNameCode` — add: TONA
 - [ ] `CalculationTypeCode` — add: CDLY, WEAV
-- [ ] `CardDataReadingCode` — add: CDFS, DCPY, ICCP, ICFM, ICMG, MGSP, NFCF, OTHR
+- [x] `CardDataReadingCode` — add: CDFS, DCPY, ICCP, ICFM, ICMG, MGSP, NFCF, OTHR
 - [ ] `CashSettlementSystemCode` — add: DCSS
 - [ ] `CryptographicKeyTypeCode` — add: UKA2
 - [ ] `CustomerDeviceTypeCode` — add: HDST, IOTS, TLVN

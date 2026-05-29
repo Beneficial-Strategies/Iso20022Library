@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_vnuScBZZEeiwvuY-sPnsNg")]
 [Description(@"Type of additional service")]
-[Derivations(typeof(AdditionalServiceType1Code), typeof(AdditionalServiceType2Code))]
+[Derivations(typeof(AdditionalServiceType1Code), typeof(AdditionalServiceType2Code), typeof(AdditionalServiceType3Code))]
 public enum AdditionalServiceTypeCode
 {
     /// <summary>
@@ -115,4 +115,76 @@ public enum AdditionalServiceTypeCode
     [IsoId("_mxsHgJ1LEeublrfU-wN95w")]
     [Description(@"Return the account balance with the transaction.")]
     AccountBalance,
+
+    /// <summary>
+    /// Card added to card on file.
+    /// Encoded/decoded by serializers as &quot;ADCA&quot;.
+    /// </summary>
+    [EnumMember(Value = "ADCA")]
+    [IsoId("_eo4mUF57EfCoP_h9uwd39Q")]
+    [Description(@"Card added to card on file.")]
+    CardAddedToCardOnFile,
+
+    /// <summary>
+    /// Account name inquiry service.
+    /// Encoded/decoded by serializers as &quot;ANIQ&quot;.
+    /// </summary>
+    [EnumMember(Value = "ANIQ")]
+    [IsoId("_4L1lcBN3EfC1ZfCQz0xB3g")]
+    [Description(@"Account name inquiry service.")]
+    AccountNameInquiryService,
+
+    /// <summary>
+    /// Credential status.
+    /// Encoded/decoded by serializers as &quot;CDTL&quot;.
+    /// </summary>
+    [EnumMember(Value = "CDTL")]
+    [IsoId("_wCxpEBN2EfC1ZfCQz0xB3g")]
+    [Description(@"Credential status.")]
+    CredentialStatus,
+
+    /// <summary>
+    /// PIN verification service.
+    /// Encoded/decoded by serializers as &quot;PVVS&quot;.
+    /// </summary>
+    [EnumMember(Value = "PVVS")]
+    [IsoId("_q4KlYBN2EfC1ZfCQz0xB3g")]
+    [Description(@"PIN verification service.")]
+    PINVerificationService,
+
+    /// <summary>
+    /// React.
+    /// Encoded/decoded by serializers as &quot;REAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "REAC")]
+    [IsoId("_CI_nkBN3EfC1ZfCQz0xB3g")]
+    [Description(@"React.")]
+    React,
+
+    /// <summary>
+    /// Smart account verification service.
+    /// Encoded/decoded by serializers as &quot;SAVS&quot;.
+    /// </summary>
+    [EnumMember(Value = "SAVS")]
+    [IsoId("_tTp68BN3EfC1ZfCQz0xB3g")]
+    [Description(@"Smart account verification service.")]
+    SmartAccountVerificationService,
+
+    /// <summary>
+    /// Stand-in processing.
+    /// Encoded/decoded by serializers as &quot;STIP&quot;.
+    /// </summary>
+    [EnumMember(Value = "STIP")]
+    [IsoId("_b3pMgBN2EfC1ZfCQz0xB3g")]
+    [Description(@"Stand-in processing.")]
+    StandInProcessing,
+
+    /// <summary>
+    /// Transaction identification service.
+    /// Encoded/decoded by serializers as &quot;TXID&quot;.
+    /// </summary>
+    [EnumMember(Value = "TXID")]
+    [IsoId("_UGz4ABN3EfC1ZfCQz0xB3g")]
+    [Description(@"Transaction identification service.")]
+    TransactionIdentificationService,
 }

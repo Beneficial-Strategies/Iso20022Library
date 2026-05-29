@@ -22,9 +22,24 @@ Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date
 snapshot-sync/{date}/iso20022/PLAN.md
 ```
 
-Read that file. Collect all unchecked items (`- [ ]`) from the `## Phase 1: Codesets` section, in document order. Take the first 20.
+Read that file. If there are no unchecked items in Phase 1, report that Phase 1 is already complete.
 
-If there are no unchecked items in Phase 1, report that Phase 1 is already complete.
+### 1b. Order items to avoid dependency errors
+
+**CRITICAL**: Derived codeset files reference parent enum members with `= ParentCode.MemberName` syntax. If a New derived codeset references a member that hasn't been added yet to a Changed base codeset, the file will compile with errors.
+
+Before selecting the batch of 20, apply this ordering rule:
+
+1. Collect **all** unchecked items from Phase 1 (both New and Changed sections).
+2. For each unchecked New codeset that is `DerivedFrom` a base codeset, check whether that base codeset has an unchecked Changed item.
+3. Any such Changed base codeset item must be processed **before** any New derived codeset that references it.
+4. Build the ordered batch (up to 20 items):
+   - First: Changed items for base codesets that are prerequisites for New items in this batch
+   - Then: New items (up to fill the remaining slots)
+   - Then: remaining Changed items (if slots remain)
+   - Then: Removed items
+
+This ordering ensures that when a derived file is written, all its parent members already exist in the compiled base type.
 
 ### 2. Load the lookup tool
 
