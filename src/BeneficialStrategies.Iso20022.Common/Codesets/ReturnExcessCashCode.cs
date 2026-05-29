@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates if excess cash collateral in the currency is automatically returned as per the collateral provider’s Excess Cash Margin Instruction (colr.017).|"
 )]
 [Derivations(typeof(ReturnExcessCash1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReturnExcessCashCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReturnExcessCashCode>))]
 public enum ReturnExcessCashCode
 {
     /// <summary>

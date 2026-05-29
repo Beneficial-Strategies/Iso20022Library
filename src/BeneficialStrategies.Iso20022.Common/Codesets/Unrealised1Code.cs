@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m59_YPNBEeCuA5Tr22BnwA_1987531471")]
 [Description(@"Specifies unrealised gain and loss.")]
 [DerivedFrom(typeof(UnrealisedCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Unrealised1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Unrealised1Code>))]
 public enum Unrealised1Code
 {
     /// <summary>

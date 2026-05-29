@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rj2EMJUgEemC09f0MxYkRg")]
 [Description(@"Specifies the political exposure type.")]
 [DerivedFrom(typeof(PoliticalExposureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PoliticalExposureType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PoliticalExposureType2Code>))]
 public enum PoliticalExposureType2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_xvY1YKxWEemRcYBAkJyjkg")]
 [Description(@"Specifies whether a financial instrument is transferred as an asset or as cash.")]
 [DerivedFrom(typeof(TransferTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransferType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferType4Code>))]
 public enum TransferType4Code
 {
     /// <summary>

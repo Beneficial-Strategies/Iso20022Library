@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the possibility to terminate the securitiesc lending contract either by the borrower or lender before the expiration date."
 )]
 [DerivedFrom(typeof(ReversibleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Reversible1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Reversible1Code>))]
 public enum Reversible1Code
 {
     /// <summary>

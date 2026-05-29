@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LeQrPNwoEeeiWo5KG3eipw")]
 [Description(@"Type of funding source used for a financial service")]
 [Derivations(typeof(FundingSourceType2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundingSourceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundingSourceTypeCode>))]
 public enum FundingSourceTypeCode
 {
     /// <summary>

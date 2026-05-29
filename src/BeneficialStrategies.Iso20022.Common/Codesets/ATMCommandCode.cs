@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -20,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ATMCommand2Code),
     typeof(ATMCommand6Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCommandCode>))]
 public enum ATMCommandCode
 {
     /// <summary>

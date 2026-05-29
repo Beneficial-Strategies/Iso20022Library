@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the balance sub-type, as published in an external balance sub-type code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalBalanceSubTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalBalanceSubType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalBalanceSubType1Code>))]
 public enum ExternalBalanceSubType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8PRUJKMgEeCJ6YNENx4h-w_881009565")]
 [Description(@"Specifies the final status of a transaction.")]
 [DerivedFrom(typeof(PaymentInstructionStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinalStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinalStatus1Code>))]
 public enum FinalStatus1Code
 {
     /// <summary>

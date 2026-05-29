@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VuwQltp-Ed-ak6NoX_4Aeg_-946443320")]
 [Description(@"Indicates the redemption type of the interest bearing instrument.")]
 [Derivations(typeof(RedemptionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RedemptionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RedemptionTypeCode>))]
 public enum RedemptionTypeCode
 {
     /// <summary>

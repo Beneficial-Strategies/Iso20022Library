@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dpBEkIr-EeSvuOJS0mmL0g")]
 [Description(@"Current status of the security device.")]
 [DerivedFrom(typeof(ATMStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMStatus2Code>))]
 public enum ATMStatus2Code
 {
     /// <summary>

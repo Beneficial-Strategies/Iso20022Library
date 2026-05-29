@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Swc0sE2WEe2bQ-Ksk8mwQg")]
 [Description(@"Explanation or reason for the action being taken on the transaction reporting.")]
 [DerivedFrom(typeof(DerivativeEventTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DerivativeEventType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DerivativeEventType3Code>))]
 public enum DerivativeEventType3Code
 {
     /// <summary>

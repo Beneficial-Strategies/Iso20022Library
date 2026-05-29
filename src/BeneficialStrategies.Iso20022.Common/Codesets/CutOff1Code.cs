@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1pktkTL3EeKU9IrkkToqcw_-1547713338")]
 [Description(@"Specifies the cut-off type.")]
 [DerivedFrom(typeof(CutOffCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CutOff1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CutOff1Code>))]
 public enum CutOff1Code
 {
     /// <summary>

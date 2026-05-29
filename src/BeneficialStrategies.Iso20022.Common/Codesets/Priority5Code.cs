@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kUSkAH_QEeiik6YN_dzlEA")]
 [Description(@"Specifies the priority level of an event.")]
 [DerivedFrom(typeof(PriorityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Priority5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Priority5Code>))]
 public enum Priority5Code
 {
     /// <summary>

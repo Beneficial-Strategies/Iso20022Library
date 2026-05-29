@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_QGY4gEqLEeenp6hmNprBHg")]
 [Description(@"Type of role assigned.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType17Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType17Code>))]
 public enum PartyType17Code
 {
     /// <summary>

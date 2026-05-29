@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__zj79dojEeC60axPepSq7g_1662306334")]
 [Description(@"Trading Date Code.")]
 [DerivedFrom(typeof(TradingDateCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingDate1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingDate1Code>))]
 public enum TradingDate1Code
 {
     /// <summary>

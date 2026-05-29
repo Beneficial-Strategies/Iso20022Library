@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies whether an order is a non-margin, an opening margin or a closing margin order."
 )]
 [DerivedFrom(typeof(CashMarginOrderCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashMarginOrder1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashMarginOrder1Code>))]
 public enum CashMarginOrder1Code
 {
     /// <summary>

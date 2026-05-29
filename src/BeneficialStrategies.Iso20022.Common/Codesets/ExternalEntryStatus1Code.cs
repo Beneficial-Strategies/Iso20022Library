@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of an entry on the books of the account servicer, as published in an external code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalEntryStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalEntryStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEntryStatus1Code>))]
 public enum ExternalEntryStatus1Code
 {
     /// <summary>

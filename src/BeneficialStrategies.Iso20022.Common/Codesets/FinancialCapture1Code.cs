@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KR_d8H1DEeCF8NjrBemJWQ_1904132354")]
 [Description(@"Mode for the financial capture of the transaction by the acquirer.")]
 [DerivedFrom(typeof(FinancialCaptureCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialCapture1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialCapture1Code>))]
 public enum FinancialCapture1Code
 {
     /// <summary>

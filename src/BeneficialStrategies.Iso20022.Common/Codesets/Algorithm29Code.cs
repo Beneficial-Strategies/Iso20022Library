@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Algorithm29Code")]
 [Description(@"Cryptographic algorithms for digital signatures.")]
 [DerivedFrom(typeof(AlgorithmCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm29Code>))]
 public enum Algorithm29Code
 {
     /// <summary>

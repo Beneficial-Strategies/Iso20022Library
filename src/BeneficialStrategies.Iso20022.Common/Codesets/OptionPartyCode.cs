@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aP_AFdp-Ed-ak6NoX_4Aeg_1203136897")]
 [Description(@"Specifies if a trade party is a buyer or a seller.")]
 [Derivations(typeof(OptionParty1Code), typeof(OptionParty3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionPartyCode>))]
 public enum OptionPartyCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VCCygDFxEeGKkIZzgd38VA")]
 [Description(@"TSE/JASDEC codes for planned, maximum and minimum of shares to be purchased.")]
 [DerivedFrom(typeof(SecuritiesQuantityTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesQuantity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesQuantity1Code>))]
 public enum SecuritiesQuantity1Code
 {
     /// <summary>

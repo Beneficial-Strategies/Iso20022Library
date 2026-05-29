@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1BC5kJljEeu76rs9yGlfEg")]
 [Description(@"Code that specifies risk assessment result.")]
 [DerivedFrom(typeof(RiskAssessmentCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RiskAssessment1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RiskAssessment1Code>))]
 public enum RiskAssessment1Code
 {
     /// <summary>

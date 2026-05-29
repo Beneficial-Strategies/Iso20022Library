@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bEJA59p-Ed-ak6NoX_4Aeg_2035657818")]
 [Description(@"Specifies the status of the CA option.")]
 [DerivedFrom(typeof(CorporateActionEventStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventStatus2Code>))]
 public enum CorporateActionEventStatus2Code
 {
     /// <summary>

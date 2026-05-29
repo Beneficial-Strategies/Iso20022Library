@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FSdaIBdxEeKYM7Bc71nDlA")]
 [Description(@"Specifies the risk level.")]
 [DerivedFrom(typeof(RiskLevelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RiskLevel1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RiskLevel1Code>))]
 public enum RiskLevel1Code
 {
     /// <summary>

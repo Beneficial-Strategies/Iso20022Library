@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_i5rVsWpsEeSMqvBfBY1c9A")]
 [Description(@"Type of message supporting a service.")]
 [DerivedFrom(typeof(MessageFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageFunction5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction5Code>))]
 public enum MessageFunction5Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VsEwBdp-Ed-ak6NoX_4Aeg_335333174")]
 [Description(@"Identifies the institution issuing a proprietary code.")]
 [Derivations(typeof(PartyIssuerCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IssuerCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IssuerCode>))]
 public enum IssuerCode
 {
     /// <summary>

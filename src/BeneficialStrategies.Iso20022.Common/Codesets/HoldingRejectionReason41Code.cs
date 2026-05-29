@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0vNGYL3REeO2FLWuu_JIqg")]
 [Description(@"Specifies the reason the report item is rejected.")]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HoldingRejectionReason41Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingRejectionReason41Code>))]
 public enum HoldingRejectionReason41Code
 {
     /// <summary>

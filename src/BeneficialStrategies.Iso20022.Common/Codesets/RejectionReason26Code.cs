@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason why the securities financing instruction has a rejected status."
 )]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason26Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason26Code>))]
 public enum RejectionReason26Code
 {
     /// <summary>

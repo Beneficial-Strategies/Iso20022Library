@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_awwx5dp-Ed-ak6NoX_4Aeg_-1525096597")]
 [Description(@"Specifies if income is to be paid out (distributed) or retained (accumulated).")]
 [Derivations(typeof(DistributionPolicy1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DistributionPolicyCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DistributionPolicyCode>))]
 public enum DistributionPolicyCode
 {
     /// <summary>

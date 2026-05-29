@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0NRCAAxzEeKa_56Jbsi1RQ")]
 [Description(@"Unit of the memory size.")]
 [DerivedFrom(typeof(MemoryUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MemoryUnit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MemoryUnit1Code>))]
 public enum MemoryUnit1Code
 {
     /// <summary>

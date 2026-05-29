@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies how the order is placed, for example by quantity of units or by amount of money."
 )]
 [DerivedFrom(typeof(OrderQuantityTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderQuantityType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderQuantityType3Code>))]
 public enum OrderQuantityType3Code
 {
     /// <summary>

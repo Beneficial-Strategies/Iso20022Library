@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason for the rejection of a claim non receipt, as published in an external claim non receipt rejection code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalClaimNonReceiptRejection1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalClaimNonReceiptRejectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalClaimNonReceiptRejectionCode>))]
 public enum ExternalClaimNonReceiptRejectionCode
 {
     /// <summary>

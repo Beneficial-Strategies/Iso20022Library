@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yb5zUNp-Ed-ak6NoX_4Aeg_-794314773")]
 [Description(@"Provides the status of the collateral substitution, either returned or released.")]
 [DerivedFrom(typeof(CollateralSubstitutionConfirmationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralSubstitutionConfirmation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralSubstitutionConfirmation1Code>))]
 public enum CollateralSubstitutionConfirmation1Code
 {
     /// <summary>

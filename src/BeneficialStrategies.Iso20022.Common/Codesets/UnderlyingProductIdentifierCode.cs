@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the underlying product type for reporting to trade repositories. These product codes must be in line with the ISDA Product Taxonomy."
 )]
 [Derivations(typeof(UnderlyingProductIdentifier1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnderlyingProductIdentifierCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnderlyingProductIdentifierCode>))]
 public enum UnderlyingProductIdentifierCode
 {
     /// <summary>

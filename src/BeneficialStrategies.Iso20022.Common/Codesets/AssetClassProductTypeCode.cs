@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -29,6 +30,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(AssetClassProductType11Code),
     typeof(AssetClassProductType15Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassProductTypeCode>))]
 public enum AssetClassProductTypeCode
 {
     /// <summary>

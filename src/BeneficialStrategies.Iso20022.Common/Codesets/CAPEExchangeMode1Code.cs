@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CAPEExchangeMode1Code")]
 [Description(@"Type of exchange supported by a host.")]
 [DerivedFrom(typeof(CAPEExchangeModeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CAPEExchangeMode1Code>))]
 public enum CAPEExchangeMode1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_jBmr4e5NEeCisYr99QEiWA_-1187231304")]
 [Description(@"Defines the type of eligibility.")]
 [Derivations(typeof(EligibilityType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EligibilityTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EligibilityTypeCode>))]
 public enum EligibilityTypeCode
 {
     /// <summary>

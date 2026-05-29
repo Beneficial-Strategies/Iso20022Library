@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_iotXoGoEEearR-CA7eRZXQ")]
 [Description(@"Specifies the regularity of an event.")]
 [DerivedFrom(typeof(FrequencyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Frequency10Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Frequency10Code>))]
 public enum Frequency10Code
 {
     /// <summary>

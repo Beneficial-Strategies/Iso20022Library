@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zsq3otp-Ed-ak6NoX_4Aeg_159300519")]
 [Description(@"Specifies the renounceable status.")]
 [Derivations(typeof(RenounceableStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RenounceableStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RenounceableStatusCode>))]
 public enum RenounceableStatusCode
 {
     /// <summary>

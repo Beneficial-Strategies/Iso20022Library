@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GYK4MZfJEeuqNYk2TG3bTg")]
 [Description(@"Type of customer device.")]
 [DerivedFrom(typeof(CustomerDeviceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustomerDeviceType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustomerDeviceType2Code>))]
 public enum CustomerDeviceType2Code
 {
     /// <summary>

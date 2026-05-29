@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1J-XwJfREeuqNYk2TG3bTg")]
 [Description(@"Type of operating system deployed on device.")]
 [DerivedFrom(typeof(DeviceOperatingSystemTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeviceOperatingSystemType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeviceOperatingSystemType1Code>))]
 public enum DeviceOperatingSystemType1Code
 {
     /// <summary>

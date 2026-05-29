@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_4keZoALtEeutW5-TpeYJhA")]
 [Description(@"Specifies the underlying business area/type of trade causing the exposure.")]
 [DerivedFrom(typeof(ExposureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExposureType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExposureType8Code>))]
 public enum ExposureType8Code
 {
     /// <summary>

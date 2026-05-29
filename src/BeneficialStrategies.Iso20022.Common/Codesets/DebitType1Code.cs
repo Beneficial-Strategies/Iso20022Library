@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vbn78MmKEeWAGphE2LvqeA")]
 [Description(@"Specifies the type of debit to be applied to the payment.")]
 [DerivedFrom(typeof(DebitTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DebitType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DebitType1Code>))]
 public enum DebitType1Code
 {
     /// <summary>

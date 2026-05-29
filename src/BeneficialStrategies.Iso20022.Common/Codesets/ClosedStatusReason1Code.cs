@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Sx9Z8E_wEeaB8-OWTiMVrQ")]
 [Description(@"Specifies the reason for the closed status.")]
 [DerivedFrom(typeof(ClosedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClosedStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClosedStatusReason1Code>))]
 public enum ClosedStatusReason1Code
 {
     /// <summary>

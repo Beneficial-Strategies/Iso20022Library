@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cgm0oO4EEeqc-LCjwLsUVg")]
 [Description(@"Date is specified as a fixed code value.")]
 [DerivedFrom(typeof(DateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DateType9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DateType9Code>))]
 public enum DateType9Code
 {
     /// <summary>

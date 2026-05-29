@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aO8eR9p-Ed-ak6NoX_4Aeg_336257253")]
 [Description(@"Indicates the relationship between two variables.")]
 [Derivations(typeof(Operation1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OperationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OperationCode>))]
 public enum OperationCode
 {
     /// <summary>

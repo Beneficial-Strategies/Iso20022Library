@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of an investigation case.||Note: |The Cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown."
 )]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseStatus1Code>))]
 public enum CaseStatus1Code
 {
     /// <summary>

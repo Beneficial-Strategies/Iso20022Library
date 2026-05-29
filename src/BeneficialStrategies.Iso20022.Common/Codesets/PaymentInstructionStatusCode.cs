@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zzq3h9p-Ed-ak6NoX_4Aeg_676865279")]
 [Description(@"Specifies the state of a payment.")]
 [Derivations(typeof(PendingStatus4Code), typeof(FinalStatus1Code), typeof(FinalStatusCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentInstructionStatusCode>))]
 public enum PaymentInstructionStatusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NLHlwdqMEeearpaEPXv9UA")]
 [Description(@"Category of data set.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataSetCategory12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory12Code>))]
 public enum DataSetCategory12Code
 {
     /// <summary>

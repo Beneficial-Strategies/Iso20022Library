@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_r1Pt8Bg2EeKnW4lR85q-0A")]
 [Description(@"Communication method used for the transmission of documents.")]
 [DerivedFrom(typeof(CommunicationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CommunicationMethod3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CommunicationMethod3Code>))]
 public enum CommunicationMethod3Code
 {
     /// <summary>

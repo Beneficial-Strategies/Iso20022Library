@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Ymocpdp-Ed-ak6NoX_4Aeg_-630382090")]
 [Description(@"Specifies the level of service offered.")]
 [DerivedFrom(typeof(TradeFinanceServiceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeFinanceService2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeFinanceService2Code>))]
 public enum TradeFinanceService2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-oF5Np-Ed-ak6NoX_4Aeg_1138474587")]
 [Description(@"Specifies the type of place of safekeeping.")]
 [DerivedFrom(typeof(SafekeepingPlaceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SafekeepingPlace2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SafekeepingPlace2Code>))]
 public enum SafekeepingPlace2Code
 {
     /// <summary>

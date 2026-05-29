@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ad1159p-Ed-ak6NoX_4Aeg_-752434714")]
 [Description(@"Specifies the regulatory restrictions applicable to a security.")]
 [DerivedFrom(typeof(LegalRestrictionsCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegalRestrictions1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegalRestrictions1Code>))]
 public enum LegalRestrictions1Code
 {
     /// <summary>

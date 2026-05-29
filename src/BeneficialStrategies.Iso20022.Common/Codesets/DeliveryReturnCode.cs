@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_azc5g9p-Ed-ak6NoX_4Aeg_-2045082222")]
 [Description(@"Specifies the type of delivery return.")]
 [Derivations(typeof(DeliveryReturn1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeliveryReturnCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliveryReturnCode>))]
 public enum DeliveryReturnCode
 {
     /// <summary>

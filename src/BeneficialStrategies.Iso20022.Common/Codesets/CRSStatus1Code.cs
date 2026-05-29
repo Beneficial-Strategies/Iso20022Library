@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_L4GYEENsEeaS-NnwLNvMPg")]
 [Description(@"Specifies the Common Reporting Status (CRS) status.")]
 [DerivedFrom(typeof(CRSStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CRSStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CRSStatus1Code>))]
 public enum CRSStatus1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aK655tp-Ed-ak6NoX_4Aeg_-1877116911")]
 [Description(@"Specifies the processing position.")]
 [DerivedFrom(typeof(ProcessingPositionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessingPosition3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessingPosition3Code>))]
 public enum ProcessingPosition3Code
 {
     /// <summary>

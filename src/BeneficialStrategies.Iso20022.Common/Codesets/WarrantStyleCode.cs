@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yg0vmNp-Ed-ak6NoX_4Aeg_2120180285")]
 [Description(@"Defines how a warrant can be exercised.")]
 [Derivations(typeof(WarrantStyle1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WarrantStyleCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WarrantStyleCode>))]
 public enum WarrantStyleCode
 {
     /// <summary>

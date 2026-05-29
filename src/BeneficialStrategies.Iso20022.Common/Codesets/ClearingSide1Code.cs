@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__1DJtNojEeC60axPepSq7g_384259332")]
 [Description(@"Side taken by a party on an order.")]
 [DerivedFrom(typeof(ClearingSideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingSide1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingSide1Code>))]
 public enum ClearingSide1Code
 {
     /// <summary>

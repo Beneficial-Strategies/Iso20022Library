@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_wQUvEA2YEeSNWNtJlXOAhg")]
 [Description(@"Specifies the status of the switch either full or part for a given account.")]
 [DerivedFrom(typeof(SwitchTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SwitchType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SwitchType1Code>))]
 public enum SwitchType1Code
 {
     /// <summary>

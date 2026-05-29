@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason of a rejection of a standing instruction cancellation request."
 )]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason10Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason10Code>))]
 public enum RejectionReason10Code
 {
     /// <summary>

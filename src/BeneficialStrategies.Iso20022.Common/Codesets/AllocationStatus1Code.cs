@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bopcJ9p-Ed-ak6NoX_4Aeg_1464332533")]
 [Description(@"Specifies the status of allocation of collateral to cover the instruction.")]
 [DerivedFrom(typeof(AllocationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AllocationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllocationStatus1Code>))]
 public enum AllocationStatus1Code
 {
     /// <summary>

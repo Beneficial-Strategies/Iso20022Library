@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VqbxRNp-Ed-ak6NoX_4Aeg_-2144991898")]
 [Description(@"Type of criterion is a country.")]
 [Derivations(typeof(ReportSortedType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportSortedTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportSortedTypeCode>))]
 public enum ReportSortedTypeCode
 {
     /// <summary>

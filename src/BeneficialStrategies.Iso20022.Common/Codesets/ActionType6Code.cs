@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_uiwXYIqGEeSRT5rEzcAHEw")]
 [Description(@"Type of action to be performed.")]
 [DerivedFrom(typeof(ActionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ActionType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionType6Code>))]
 public enum ActionType6Code
 {
     /// <summary>

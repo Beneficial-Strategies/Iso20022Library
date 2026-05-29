@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EDgcgDFrEeGKkIZzgd38VA")]
 [Description(@"TSE/JASDEC extension codes for the specific use of pro ration.")]
 [Derivations(typeof(ProrationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProrationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProrationTypeCode>))]
 public enum ProrationTypeCode
 {
     /// <summary>

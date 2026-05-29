@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sBK4QBvtEe6BvtAMnhq3zw")]
 [Description(@"Methodology used for the allocation of the performance fees.")]
 [DerivedFrom(typeof(EqualisationMethodologyTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EqualisationMethodologyType1Code>))]
 public enum EqualisationMethodologyType1Code
 {
     /// <summary>

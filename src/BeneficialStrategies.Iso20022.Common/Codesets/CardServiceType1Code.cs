@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0GHcoHu8EeSLmfFG0DG7zQ")]
 [Description(@"Type of reconciliation.")]
 [DerivedFrom(typeof(CardServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardServiceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardServiceType1Code>))]
 public enum CardServiceType1Code
 {
     /// <summary>

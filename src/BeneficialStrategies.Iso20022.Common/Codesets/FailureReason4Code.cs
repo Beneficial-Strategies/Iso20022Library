@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0dFU4IqTEeSRT5rEzcAHEw")]
 [Description(@"Incident occurring during the processing of an ATM transaction.")]
 [DerivedFrom(typeof(FailureReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FailureReason4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailureReason4Code>))]
 public enum FailureReason4Code
 {
     /// <summary>

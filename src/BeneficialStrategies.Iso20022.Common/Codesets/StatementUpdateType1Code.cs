@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature of a statement update, for example, it is a complete statement."
 )]
 [DerivedFrom(typeof(StatementUpdateTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatementUpdateType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementUpdateType1Code>))]
 public enum StatementUpdateType1Code
 {
     /// <summary>

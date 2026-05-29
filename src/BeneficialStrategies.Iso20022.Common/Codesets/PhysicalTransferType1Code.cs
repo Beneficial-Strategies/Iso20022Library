@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the financial instrument is to be physically delivered or is a dematerialised transfer."
 )]
 [DerivedFrom(typeof(PhysicalTransferTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PhysicalTransferType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PhysicalTransferType1Code>))]
 public enum PhysicalTransferType1Code
 {
     /// <summary>

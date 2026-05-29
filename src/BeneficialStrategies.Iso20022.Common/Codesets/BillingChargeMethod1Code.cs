@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Ukd9pqlEeGSON8vddiWzQ_1265216021")]
 [Description(@"Defines how the billing charge is calculated.")]
 [DerivedFrom(typeof(BillingChargeMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BillingChargeMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BillingChargeMethod1Code>))]
 public enum BillingChargeMethod1Code
 {
     /// <summary>

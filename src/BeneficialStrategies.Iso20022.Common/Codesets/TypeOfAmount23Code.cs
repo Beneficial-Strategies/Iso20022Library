@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_snyKwJp9Ee6bZt44gtg6XQ")]
 [Description(@"Identification or qualification of the type of amount.")]
 [DerivedFrom(typeof(TypeOfAmountCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TypeOfAmount23Code>))]
 public enum TypeOfAmount23Code
 {
     /// <summary>

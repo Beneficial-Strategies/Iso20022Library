@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the creditor enrolment cancellation reason code, as published in an external creditor enrolment cancellation reason code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalCreditorEnrolmentCancellationReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalCreditorEnrolmentCancellationReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCreditorEnrolmentCancellationReasonCode>))]
 public enum ExternalCreditorEnrolmentCancellationReasonCode
 {
     /// <summary>

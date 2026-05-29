@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_c2270Ab-EeamHPKpTHjX5Q")]
 [Description(@"Specifies the nature of the reporting counterparty business activities. ")]
 [DerivedFrom(typeof(FinancialPartySectorTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialPartySectorType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialPartySectorType2Code>))]
 public enum FinancialPartySectorType2Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if the occurrence of the event contained in the notification is confirmed or unconfirmed. Details of the event can be complete or incomplete."
 )]
 [Derivations(typeof(NotificationStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationStatusCode>))]
 public enum NotificationStatusCode
 {
     /// <summary>

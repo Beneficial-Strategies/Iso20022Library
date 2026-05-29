@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,4 +17,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the mandate setup reason, as published in an external mandate setup reason code set."
 )]
 [DerivedFrom(typeof(ExternalMandateSetupReasonCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalMandateSetupReason1Code>))]
 public enum ExternalMandateSetupReason1Code { }

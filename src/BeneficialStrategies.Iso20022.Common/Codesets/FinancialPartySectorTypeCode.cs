@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -17,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(FinancialPartySectorType2Code),
     typeof(FinancialPartySectorType3Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialPartySectorTypeCode>))]
 public enum FinancialPartySectorTypeCode
 {
     /// <summary>

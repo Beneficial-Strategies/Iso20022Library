@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bopcINp-Ed-ak6NoX_4Aeg_611998730")]
 [Description(@"Specifies the status of an allegement.")]
 [DerivedFrom(typeof(AllegementStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AllegementStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllegementStatus1Code>))]
 public enum AllegementStatus1Code
 {
     /// <summary>

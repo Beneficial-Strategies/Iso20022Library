@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aUTfZNp-Ed-ak6NoX_4Aeg_2050093734")]
 [Description(@"Specifies the type of market in which transactions take place, eg, primary.")]
 [DerivedFrom(typeof(MarketTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarketType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketType1Code>))]
 public enum MarketType1Code
 {
     /// <summary>

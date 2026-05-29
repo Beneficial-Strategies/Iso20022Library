@@ -15,9 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tr7uoFWPEeeiG_nL4vgKnQ")]
 [Description(@"Type of network management service.|ISO 8583 bit 24.")]
 [DerivedFrom(typeof(NetworkManagementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NetworkManagementType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NetworkManagementType1Code>))]
 public enum NetworkManagementType1Code
 {
     /// <summary>

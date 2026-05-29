@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the information type, as published in an external information type code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalInformationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalInformationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalInformationType1Code>))]
 public enum ExternalInformationType1Code
 {
     /// <summary>

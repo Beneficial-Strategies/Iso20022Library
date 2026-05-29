@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZW6qF9p-Ed-ak6NoX_4Aeg_336256227")]
 [Description(@"Qualifies the use of the quote or the indication of interest.")]
 [Derivations(typeof(Qualifier1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QualifierCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QualifierCode>))]
 public enum QualifierCode
 {
     /// <summary>

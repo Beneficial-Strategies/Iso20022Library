@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ahQ9VNp-Ed-ak6NoX_4Aeg_-245723672")]
 [Description(@"Specifies the type of an entry in a report.")]
 [DerivedFrom(typeof(EntryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Entry2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Entry2Code>))]
 public enum Entry2Code
 {
     /// <summary>

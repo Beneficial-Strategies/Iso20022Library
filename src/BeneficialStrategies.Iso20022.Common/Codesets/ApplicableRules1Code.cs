@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MZLBYFNfEeijdq8ilaxyOA")]
 [Description(@"Specifies applicable rules.")]
 [DerivedFrom(typeof(ApplicableRulesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ApplicableRules1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ApplicableRules1Code>))]
 public enum ApplicableRules1Code
 {
     /// <summary>

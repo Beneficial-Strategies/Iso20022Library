@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bXW31tp-Ed-ak6NoX_4Aeg_349830100")]
 [Description(@"Specifies the status of a cancellation request.")]
 [DerivedFrom(typeof(PaymentStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationIndividualStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationIndividualStatus1Code>))]
 public enum CancellationIndividualStatus1Code
 {
     /// <summary>

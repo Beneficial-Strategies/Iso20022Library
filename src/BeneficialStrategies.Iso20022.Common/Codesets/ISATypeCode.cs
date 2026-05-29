@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_adi6-Np-Ed-ak6NoX_4Aeg_277587694")]
 [Description(@"Specifies the type of the current year ISA.")]
 [Derivations(typeof(ISAType1Code), typeof(ISAType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ISATypeCode>))]
 public enum ISATypeCode
 {
     /// <summary>

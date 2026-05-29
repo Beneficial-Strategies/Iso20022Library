@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_atyWZNp-Ed-ak6NoX_4Aeg_-1618399361")]
 [Description(@"Specifies the structure of the fund.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundStructureCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundStructureCode>))]
 public enum FundStructureCode
 {
     /// <summary>

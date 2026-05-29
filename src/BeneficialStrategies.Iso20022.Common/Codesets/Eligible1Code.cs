@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_unGN4CC9EeWPMvNwVtiMsA")]
 [Description(@"Specifies whether the item is eligible or not eligible.")]
 [DerivedFrom(typeof(EligibleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Eligible1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Eligible1Code>))]
 public enum Eligible1Code
 {
     /// <summary>

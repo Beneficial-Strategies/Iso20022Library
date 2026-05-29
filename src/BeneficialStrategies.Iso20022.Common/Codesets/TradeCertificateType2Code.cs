@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YmLwt9p-Ed-ak6NoX_4Aeg_1999753422")]
 [Description(@"Specifies the type of trade certificate.")]
 [DerivedFrom(typeof(TradeCertificateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeCertificateType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeCertificateType2Code>))]
 public enum TradeCertificateType2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_O3cFQN8jEe-NrtAAlrBEgQ")]
 [Description(@"Specifies the reason for an allegement removal.")]
 [Derivations(typeof(AllegementRemovalReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AllegementRemovalReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllegementRemovalReasonCode>))]
 public enum AllegementRemovalReasonCode
 {
     /// <summary>

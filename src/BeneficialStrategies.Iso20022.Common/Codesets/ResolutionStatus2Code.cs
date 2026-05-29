@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_D8wF4F64EeSjaerr_EM7AQ")]
 [Description(@"Specifies the status of a resolution in a meeting agenda.")]
 [DerivedFrom(typeof(ResolutionStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResolutionStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResolutionStatus2Code>))]
 public enum ResolutionStatus2Code
 {
     /// <summary>

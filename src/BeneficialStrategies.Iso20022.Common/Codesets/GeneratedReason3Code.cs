@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OAFTICRjEeOCueHDQ36sww")]
 [Description(@"Specifies the reason why the transaction was generated.")]
 [DerivedFrom(typeof(GeneratedReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GeneratedReason3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GeneratedReason3Code>))]
 public enum GeneratedReason3Code
 {
     /// <summary>

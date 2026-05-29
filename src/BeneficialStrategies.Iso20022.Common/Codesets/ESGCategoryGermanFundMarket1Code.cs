@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FFM6IM6gEeuxwOWq_hqWVg")]
 [Description(@"Specifies the category of fund product.")]
 [DerivedFrom(typeof(ESGCategoryGermanFundMarketCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ESGCategoryGermanFundMarket1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ESGCategoryGermanFundMarket1Code>))]
 public enum ESGCategoryGermanFundMarket1Code
 {
     /// <summary>

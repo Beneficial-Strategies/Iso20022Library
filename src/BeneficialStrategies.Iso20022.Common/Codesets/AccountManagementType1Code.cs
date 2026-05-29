@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Refer to an account management instruction ie, either an account opening instruction or an account modification instruction."
 )]
 [DerivedFrom(typeof(AccountManagementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountManagementType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountManagementType1Code>))]
 public enum AccountManagementType1Code
 {
     /// <summary>

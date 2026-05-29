@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_g0YAgCCfEeWJd9HF2tO7BA")]
 [Description(@"Specifies a type of organisation.")]
 [DerivedFrom(typeof(OrganisationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrganisationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrganisationType1Code>))]
 public enum OrganisationType1Code
 {
     /// <summary>

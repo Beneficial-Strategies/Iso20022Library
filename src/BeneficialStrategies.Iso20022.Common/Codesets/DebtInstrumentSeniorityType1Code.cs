@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_xteCIM4tEeSc85GUbgBycw")]
 [Description(@"Specifies the seniority type of a specific debt instrument.")]
 [DerivedFrom(typeof(DebtInstrumentSeniorityTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DebtInstrumentSeniorityType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DebtInstrumentSeniorityType1Code>))]
 public enum DebtInstrumentSeniorityType1Code
 {
     /// <summary>

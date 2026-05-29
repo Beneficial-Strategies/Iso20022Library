@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of non financial request that could be processed between an Acceptor and an Intermediary Agent or an Acquirer."
 )]
 [DerivedFrom(typeof(NonFinancialRequestTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonFinancialRequestType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonFinancialRequestType2Code>))]
 public enum NonFinancialRequestType2Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the point in the transaction lifecycle at which the lifecycle identifier was assigned."
 )]
 [Derivations(typeof(LifeCycleSupport1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LifeCycleSupportCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LifeCycleSupportCode>))]
 public enum LifeCycleSupportCode
 {
     /// <summary>

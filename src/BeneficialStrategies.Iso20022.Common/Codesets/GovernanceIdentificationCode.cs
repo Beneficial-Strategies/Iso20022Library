@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6AaZoHyaEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the identification of the rules and laws governing the undertaking.")]
 [Derivations(typeof(GovernanceIdentification1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GovernanceIdentificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GovernanceIdentificationCode>))]
 public enum GovernanceIdentificationCode
 {
     /// <summary>

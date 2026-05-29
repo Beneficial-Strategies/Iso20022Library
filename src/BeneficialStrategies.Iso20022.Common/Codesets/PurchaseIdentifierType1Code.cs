@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_e3_SAPJQEeiJn9rM2Znz2w")]
 [Description(@"Identifies the type of identifier used in the Purchase Identifier field. ")]
 [DerivedFrom(typeof(PurchaseIdentifierTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PurchaseIdentifierType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PurchaseIdentifierType1Code>))]
 public enum PurchaseIdentifierType1Code
 {
     /// <summary>

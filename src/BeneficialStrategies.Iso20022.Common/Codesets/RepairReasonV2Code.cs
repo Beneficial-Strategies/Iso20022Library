@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -18,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RepairReason5Code),
     typeof(RepairReason6Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepairReasonV2Code>))]
 public enum RepairReasonV2Code
 {
     /// <summary>

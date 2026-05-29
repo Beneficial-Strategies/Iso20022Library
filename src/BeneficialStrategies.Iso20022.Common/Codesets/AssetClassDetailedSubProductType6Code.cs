@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_89jlYA2eEeW72qLtWESimw")]
 [Description(@"Further sub product code list for commodity derivative Natural Gas.")]
 [DerivedFrom(typeof(AssetClassDetailedSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassDetailedSubProductType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassDetailedSubProductType6Code>))]
 public enum AssetClassDetailedSubProductType6Code
 {
     /// <summary>

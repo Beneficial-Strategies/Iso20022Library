@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ysK0kID5Eeiw-daIkkmMqQ")]
 [Description(@"Specifies a type of governance process.")]
 [DerivedFrom(typeof(GovernanceProcessTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GovernanceProcessType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GovernanceProcessType1Code>))]
 public enum GovernanceProcessType1Code
 {
     /// <summary>

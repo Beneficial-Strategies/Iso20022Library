@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yDgk8K37EemG7MmivSuE5g")]
 [Description(@"Specifies the impact of a vote on an agenda resolution in general meetings.")]
 [DerivedFrom(typeof(VoteTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<VoteType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VoteType1Code>))]
 public enum VoteType1Code
 {
     /// <summary>

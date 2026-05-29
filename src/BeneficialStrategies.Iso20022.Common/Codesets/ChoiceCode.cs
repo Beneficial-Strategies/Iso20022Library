@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a_OEoNp-Ed-ak6NoX_4Aeg_-798981296")]
 [Description(@"Specifies if the separation of the security is optional or mandatory.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChoiceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChoiceCode>))]
 public enum ChoiceCode
 {
     /// <summary>

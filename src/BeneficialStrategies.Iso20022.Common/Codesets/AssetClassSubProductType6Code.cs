@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-FIKkAnyEeWnS-yHF1QhNQ")]
 [Description(@"Defines the sub-product of type Electricity.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType6Code>))]
 public enum AssetClassSubProductType6Code
 {
     /// <summary>

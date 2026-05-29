@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZQzbA9p-Ed-ak6NoX_4Aeg_689720893")]
 [Description(@"Specifies the reason the transaction/instruction is suspended.")]
 [DerivedFrom(typeof(SuspendedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SuspendedStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SuspendedStatusReason1Code>))]
 public enum SuspendedStatusReason1Code
 {
     /// <summary>

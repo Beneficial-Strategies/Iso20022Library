@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MjnR0N6_Eeiwsev40qZGEQ")]
 [Description(@"Type of sound to play.")]
 [DerivedFrom(typeof(SoundFormatCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SoundFormat1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SoundFormat1Code>))]
 public enum SoundFormat1Code
 {
     /// <summary>

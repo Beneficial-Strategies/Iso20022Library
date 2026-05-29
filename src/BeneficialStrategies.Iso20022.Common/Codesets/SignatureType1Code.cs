@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZPUNQdp-Ed-ak6NoX_4Aeg_1678391514")]
 [Description(@"Type of signature form.")]
 [DerivedFrom(typeof(SignatureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SignatureType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SignatureType1Code>))]
 public enum SignatureType1Code
 {
     /// <summary>

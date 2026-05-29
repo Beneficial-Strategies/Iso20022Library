@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of a trading venue which must use the market identification code (MIC)."
 )]
 [DerivedFrom(typeof(TradingVenueCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingVenue1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingVenue1Code>))]
 public enum TradingVenue1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the event agent has approved the acceptance of volunatry instructions for a given event."
 )]
 [DerivedFrom(typeof(AgentAcceptRejectCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgentAcceptReject1Code>))]
 public enum AgentAcceptReject1Code
 {
     /// <summary>

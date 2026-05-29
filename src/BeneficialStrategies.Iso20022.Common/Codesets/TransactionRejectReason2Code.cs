@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent."
 )]
 [DerivedFrom(typeof(TransactionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionRejectReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionRejectReason2Code>))]
 public enum TransactionRejectReason2Code
 {
     /// <summary>

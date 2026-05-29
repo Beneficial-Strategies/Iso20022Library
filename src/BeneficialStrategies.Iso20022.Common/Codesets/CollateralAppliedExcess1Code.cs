@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_t9d80AF7EeutW5-TpeYJhA")]
 [Description(@"Specifies if the collateral reported is applied or in excess.")]
 [DerivedFrom(typeof(CollateralAppliedExcessCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralAppliedExcess1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralAppliedExcess1Code>))]
 public enum CollateralAppliedExcess1Code
 {
     /// <summary>

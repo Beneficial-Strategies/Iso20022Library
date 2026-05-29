@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bXNt6Np-Ed-ak6NoX_4Aeg_-324730819")]
 [Description(@"Specifies the type of pay-in call report.")]
 [DerivedFrom(typeof(CallInCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CallIn1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CallIn1Code>))]
 public enum CallIn1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -22,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(UserInterface8Code),
     typeof(UserInterface3Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UserInterfaceCode>))]
 public enum UserInterfaceCode
 {
     /// <summary>

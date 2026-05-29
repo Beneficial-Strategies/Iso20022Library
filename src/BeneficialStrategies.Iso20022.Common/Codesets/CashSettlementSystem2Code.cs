@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a7WRQ9p-Ed-ak6NoX_4Aeg_408258420")]
 [Description(@"Specifies the cash settlement system used.")]
 [DerivedFrom(typeof(CashSettlementSystemCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashSettlementSystem2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashSettlementSystem2Code>))]
 public enum CashSettlementSystem2Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Nature of the quantity used as a basis to set a threshold for voting on resolutions at general meetings."
 )]
 [Derivations(typeof(ThresholdBasis1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ThresholdBasisCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ThresholdBasisCode>))]
 public enum ThresholdBasisCode
 {
     /// <summary>

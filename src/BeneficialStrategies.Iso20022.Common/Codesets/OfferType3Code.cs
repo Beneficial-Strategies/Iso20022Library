@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_is2QYCHiEeOQ7qT4JUI53A")]
 [Description(@"Specifies the conditions that apply to the offer.")]
 [DerivedFrom(typeof(OfferTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OfferType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OfferType3Code>))]
 public enum OfferType3Code
 {
     /// <summary>

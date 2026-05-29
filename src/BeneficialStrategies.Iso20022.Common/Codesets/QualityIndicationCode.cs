@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZXWu8Np-Ed-ak6NoX_4Aeg_336258088")]
 [Description(@"Indicates the relative quality of the indication of interest.")]
 [Derivations(typeof(QualityIndication1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QualityIndicationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QualityIndicationCode>))]
 public enum QualityIndicationCode
 {
     /// <summary>

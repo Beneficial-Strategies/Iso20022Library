@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZKsL9dp-Ed-ak6NoX_4Aeg_-13240435")]
 [Description(@"Specifies the reason for a partially settled status.")]
 [Derivations(typeof(SettledStatusReason1Code), typeof(SettledStatusReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettledStatusReasonCode>))]
 public enum SettledStatusReasonCode
 {
     /// <summary>

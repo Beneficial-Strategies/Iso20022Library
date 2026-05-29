@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0hGmQLC1EeaSl6vJk5Bd8w")]
 [Description(@"Categorisation of margin models used by central counterparties.")]
 [Derivations(typeof(ModelType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModelTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModelTypeCode>))]
 public enum ModelTypeCode
 {
     /// <summary>

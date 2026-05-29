@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1Pxg4S9HEeOlZIh7PImd0A")]
 [Description(@"Identifies the message function within a card payment exchange.")]
 [DerivedFrom(typeof(MessageFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageFunction4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction4Code>))]
 public enum MessageFunction4Code
 {
     /// <summary>

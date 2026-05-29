@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OLoUAK-uEemJ1NnLPsTFaw")]
 [Description(@"Modality through which the votes that have been recorded and counted.")]
 [Derivations(typeof(ModalityOfCounting1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModalityOfCountingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModalityOfCountingCode>))]
 public enum ModalityOfCountingCode
 {
     /// <summary>

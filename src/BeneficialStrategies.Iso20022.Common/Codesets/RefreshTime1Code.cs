@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zaydddp-Ed-ak6NoX_4Aeg_761872038")]
 [Description(@"Defines when to refresh.")]
 [DerivedFrom(typeof(RefreshTimeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RefreshTime1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RefreshTime1Code>))]
 public enum RefreshTime1Code
 {
     /// <summary>

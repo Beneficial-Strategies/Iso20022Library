@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicate whether or not registered investors are able to transfer some or all of their holdings to third parties."
 )]
 [Derivations(typeof(HoldingTransferable1Code), typeof(ReferToFundOrderDesk1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingTransferableCode>))]
 public enum HoldingTransferableCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of the current transaction that belongs to a sequence of transactions."
 )]
 [Derivations(typeof(SequenceType1Code), typeof(SequenceType3Code), typeof(SequenceType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SequenceTypeCode>))]
 public enum SequenceTypeCode
 {
     /// <summary>

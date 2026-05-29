@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_oMVPoA5EEeenr-7g_0TYag")]
 [Description(@"Specifies if an operation is a payment, or a receipt or none.")]
 [Derivations(typeof(PaymentReceipt1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentReceiptCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentReceiptCode>))]
 public enum PaymentReceiptCode
 {
     /// <summary>

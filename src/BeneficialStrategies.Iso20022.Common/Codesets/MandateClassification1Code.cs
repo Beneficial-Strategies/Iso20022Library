@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dYdaoGVREeacpJ-gG9kyUQ")]
 [Description(@"Specifies the type of direct debit amount, such as fixed or variable.")]
 [DerivedFrom(typeof(MandateClassificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MandateClassification1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MandateClassification1Code>))]
 public enum MandateClassification1Code
 {
     /// <summary>

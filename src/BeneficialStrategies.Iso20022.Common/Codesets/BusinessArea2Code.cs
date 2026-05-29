@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_p-CNYXC7Ee2bmOA3bkVsMg")]
 [Description(@"Specifies the business context of the transaction")]
 [DerivedFrom(typeof(BusinessAreaCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BusinessArea2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessArea2Code>))]
 public enum BusinessArea2Code
 {
     /// <summary>

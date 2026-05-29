@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YL5_oDiCEeaH-93K5JKmzw")]
 [Description(@"Specifies the type of service for which a fee e is asked or paid.")]
 [DerivedFrom(typeof(InvestmentFundFeeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundFee1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundFee1Code>))]
 public enum InvestmentFundFee1Code
 {
     /// <summary>

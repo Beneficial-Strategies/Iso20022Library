@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2Py7kEV2EemRx7jyevcLwg")]
 [Description(@"Type of disclosure request.")]
 [Derivations(typeof(DisclosureRequestType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DisclosureRequestTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DisclosureRequestTypeCode>))]
 public enum DisclosureRequestTypeCode
 {
     /// <summary>

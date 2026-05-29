@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bfaAlNp-Ed-ak6NoX_4Aeg_-1937835864")]
 [Description(@"Method under which assignment was conducted.")]
 [Derivations(typeof(AssignmentMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssignmentMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssignmentMethodCode>))]
 public enum AssignmentMethodCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the legal structure of a financial instrument as defined in the scope of European MiFID Template (EMT) reference 00060."
 )]
 [Derivations(typeof(LegalStructureFinancialInstrument1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegalStructureFinancialInstrumentCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegalStructureFinancialInstrumentCode>))]
 public enum LegalStructureFinancialInstrumentCode
 {
     /// <summary>

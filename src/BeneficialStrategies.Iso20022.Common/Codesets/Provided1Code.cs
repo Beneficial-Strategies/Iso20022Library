@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UbfaUBKFEeKj15WxqwlXPw")]
 [Description(@"Specifies whether items have been provided.")]
 [DerivedFrom(typeof(ProvidedCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Provided1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Provided1Code>))]
 public enum Provided1Code
 {
     /// <summary>

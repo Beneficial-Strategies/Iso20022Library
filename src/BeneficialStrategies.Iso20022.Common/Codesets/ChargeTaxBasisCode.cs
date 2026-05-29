@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__1DJsdojEeC60axPepSq7g_143503788")]
 [Description(@"Define the Charges/tax basis for the trade being allocated.")]
 [Derivations(typeof(ChargeTaxBasis1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChargeTaxBasisCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChargeTaxBasisCode>))]
 public enum ChargeTaxBasisCode
 {
     /// <summary>

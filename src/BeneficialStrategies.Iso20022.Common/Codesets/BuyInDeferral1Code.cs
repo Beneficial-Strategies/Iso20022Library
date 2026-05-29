@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KuU3YJwWEeqtp-LOti013g")]
 [Description(@"Specifies if the buy-in transaction was deferred or not.")]
 [DerivedFrom(typeof(BuyInDeferralCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BuyInDeferral1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BuyInDeferral1Code>))]
 public enum BuyInDeferral1Code
 {
     /// <summary>

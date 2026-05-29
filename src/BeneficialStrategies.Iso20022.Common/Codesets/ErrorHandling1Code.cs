@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Error codes generated when the response to a query exceeds the maximum size or the data is not available."
 )]
 [DerivedFrom(typeof(ErrorHandlingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ErrorHandling1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ErrorHandling1Code>))]
 public enum ErrorHandling1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of the current transaction that belongs to a sequence of transactions."
 )]
 [DerivedFrom(typeof(SequenceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SequenceType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SequenceType3Code>))]
 public enum SequenceType3Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types."
 )]
 [DerivedFrom(typeof(DTCCPayoutTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCCPayoutType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCCPayoutType2Code>))]
 public enum DTCCPayoutType2Code
 {
     /// <summary>

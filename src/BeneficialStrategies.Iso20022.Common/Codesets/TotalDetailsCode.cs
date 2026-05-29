@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the hierarchical structure of the reconciliation result of the Sale to POI reconciliation."
 )]
 [Derivations(typeof(TotalDetails1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TotalDetailsCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TotalDetailsCode>))]
 public enum TotalDetailsCode
 {
     /// <summary>

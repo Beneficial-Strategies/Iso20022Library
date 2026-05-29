@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZOREYdp-Ed-ak6NoX_4Aeg_-218476844")]
 [Description(@"Indicates how an option trade is settled.")]
 [Derivations(typeof(SettlementType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementTypeCode>))]
 public enum SettlementTypeCode
 {
     /// <summary>

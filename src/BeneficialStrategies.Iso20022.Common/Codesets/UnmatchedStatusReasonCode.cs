@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason the transaction/instruction is unmatched, as published in an external cancellation reason code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(UnmatchedStatusReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnmatchedStatusReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnmatchedStatusReasonCode>))]
 public enum UnmatchedStatusReasonCode
 {
     /// <summary>

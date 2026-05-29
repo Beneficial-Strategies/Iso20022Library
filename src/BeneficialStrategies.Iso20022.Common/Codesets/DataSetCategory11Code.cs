@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LGuE4Y4GEeWrZqsymMFdfg")]
 [Description(@"Maintenance service to delegate.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataSetCategory11Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory11Code>))]
 public enum DataSetCategory11Code
 {
     /// <summary>

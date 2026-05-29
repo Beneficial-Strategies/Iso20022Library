@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YaHqoNp-Ed-ak6NoX_4Aeg_-1681929473")]
 [Description(@"Specifies the type of executed order.")]
 [DerivedFrom(typeof(TradeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeType1Code>))]
 public enum TradeType1Code
 {
     /// <summary>

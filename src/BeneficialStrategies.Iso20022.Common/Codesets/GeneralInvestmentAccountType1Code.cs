@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bk_q4F2dEeiFXdiLi_Nf4A")]
 [Description(@"Specifies a type of investment account.")]
 [DerivedFrom(typeof(GeneralInvestmentAccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GeneralInvestmentAccountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GeneralInvestmentAccountType1Code>))]
 public enum GeneralInvestmentAccountType1Code
 {
     /// <summary>

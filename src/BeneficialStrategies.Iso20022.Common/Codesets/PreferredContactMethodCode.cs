@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6UHyCJqlEeGSON8vddiWzQ_1695397384")]
 [Description(@"Preferred method used to reach the individual contact within an organisation.")]
 [Derivations(typeof(PreferredContactMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PreferredContactMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PreferredContactMethodCode>))]
 public enum PreferredContactMethodCode
 {
     /// <summary>

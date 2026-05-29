@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the Internal Revenue Service under which the security is issued."
 )]
 [Derivations(typeof(TEFRARules1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TEFRARulesCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TEFRARulesCode>))]
 public enum TEFRARulesCode
 {
     /// <summary>

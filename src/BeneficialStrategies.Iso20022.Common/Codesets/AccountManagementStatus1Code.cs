@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bqbk1tp-Ed-ak6NoX_4Aeg_226141002")]
 [Description(@"Specifies the status of an account management instruction.")]
 [DerivedFrom(typeof(AccountManagementStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountManagementStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountManagementStatus1Code>))]
 public enum AccountManagementStatus1Code
 {
     /// <summary>

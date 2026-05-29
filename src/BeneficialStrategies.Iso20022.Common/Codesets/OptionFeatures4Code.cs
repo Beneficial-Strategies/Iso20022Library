@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_h8dHUQFJEeGwysJa71YlYA")]
 [Description(@"Specifies the features that may apply to a corporate action option.")]
 [DerivedFrom(typeof(OptionFeaturesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionFeatures4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionFeatures4Code>))]
 public enum OptionFeatures4Code
 {
     /// <summary>

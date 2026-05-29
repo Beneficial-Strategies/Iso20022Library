@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of counterparty to be taken into account for calculation of the balance."
 )]
 [Derivations(typeof(BalanceCounterparty1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BalanceCounterpartyCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BalanceCounterpartyCode>))]
 public enum BalanceCounterpartyCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Low level communication of the hardware or software component toward another component or an external entity."
 )]
 [DerivedFrom(typeof(POICommunicationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<POICommunicationType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<POICommunicationType2Code>))]
 public enum POICommunicationType2Code
 {
     /// <summary>

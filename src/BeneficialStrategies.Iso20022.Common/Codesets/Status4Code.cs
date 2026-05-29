@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YgFItdp-Ed-ak6NoX_4Aeg_-2065088389")]
 [Description(@"Specifies the status of an instruction.")]
 [DerivedFrom(typeof(StatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Status4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Status4Code>))]
 public enum Status4Code
 {
     /// <summary>

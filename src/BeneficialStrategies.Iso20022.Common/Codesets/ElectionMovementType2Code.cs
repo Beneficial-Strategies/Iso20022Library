@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ag-CYNp-Ed-ak6NoX_4Aeg_1842520223")]
 [Description(@"Specifies the effect on the holdings of electing a Corporate Action option.")]
 [DerivedFrom(typeof(ElectionMovementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ElectionMovementType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ElectionMovementType2Code>))]
 public enum ElectionMovementType2Code
 {
     /// <summary>

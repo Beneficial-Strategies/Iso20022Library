@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MImWcIluEeavwKddCbm3hg")]
 [Description(@"Specifies the reason why the cancellation request has a pending status.")]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PendingCancellationReason5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingCancellationReason5Code>))]
 public enum PendingCancellationReason5Code
 {
     /// <summary>

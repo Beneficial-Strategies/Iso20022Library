@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aPPZNtp-Ed-ak6NoX_4Aeg_2092234536")]
 [Description(@"Specifies the status of the option availability.")]
 [DerivedFrom(typeof(OptionAvailabilityStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionAvailabilityStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionAvailabilityStatus1Code>))]
 public enum OptionAvailabilityStatus1Code
 {
     /// <summary>

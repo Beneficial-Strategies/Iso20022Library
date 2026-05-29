@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external local instrument code in the format of character string with a maximum length of 35 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalLocalInstrument1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalLocalInstrumentCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalLocalInstrumentCode>))]
 public enum ExternalLocalInstrumentCode
 {
     /// <summary>

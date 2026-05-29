@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nBb6IPwhEeW4Wthd0Ze_kA")]
 [Description(@"Defines the sub-product types for specific asset classes.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType48Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType48Code>))]
 public enum AssetClassSubProductType48Code
 {
     /// <summary>

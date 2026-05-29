@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aP_AEtp-Ed-ak6NoX_4Aeg_2105414994")]
 [Description(@"Specifies if a trade party is a buyer or a seller.")]
 [DerivedFrom(typeof(OptionPartyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionParty1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionParty1Code>))]
 public enum OptionParty1Code
 {
     /// <summary>

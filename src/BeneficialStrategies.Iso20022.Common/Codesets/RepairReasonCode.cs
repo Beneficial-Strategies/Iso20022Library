@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zu5sR9p-Ed-ak6NoX_4Aeg_-1795442208")]
 [Description(@"Specifies the reason why the instruction is in repair.")]
 [Derivations(typeof(RepairReason1Code), typeof(RepairReason2Code), typeof(RepairReason3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepairReasonCode>))]
 public enum RepairReasonCode
 {
     /// <summary>

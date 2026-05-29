@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Reason of transmission of a rejection message in response to a request or an advice."
 )]
 [Derivations(typeof(RejectReason1Code), typeof(RejectReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectReasonCode>))]
 public enum RejectReasonCode
 {
     /// <summary>

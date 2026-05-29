@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2fUvkHrTEeSfJf8ETXpBxg")]
 [Description(@"Type of entity.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType9Code>))]
 public enum PartyType9Code
 {
     /// <summary>

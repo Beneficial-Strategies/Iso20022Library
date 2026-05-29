@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the contract was electronically confirmed, non-electronically confirmed or remains unconfirmed."
 )]
 [Derivations(typeof(TradeConfirmationType2Code), typeof(TradeConfirmationType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeConfirmationTypeCode>))]
 public enum TradeConfirmationTypeCode
 {
     /// <summary>

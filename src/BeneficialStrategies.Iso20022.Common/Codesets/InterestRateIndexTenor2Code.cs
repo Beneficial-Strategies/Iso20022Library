@@ -1,6 +1,7 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Specifies the tenor of the interest rate index (when the interest rate is paid out)."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestRateIndexTenor2Code>))]
 public enum InterestRateIndexTenor2Code
 {
     /// <summary>

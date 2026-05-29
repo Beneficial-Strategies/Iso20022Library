@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TcElYbv3EeiLRYqS-r-R-A")]
 [Description(@"Further sub product code list for commodity derivative Grain.")]
 [DerivedFrom(typeof(AssetClassDetailedSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassDetailedSubProductType30Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassDetailedSubProductType30Code>))]
 public enum AssetClassDetailedSubProductType30Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yLTcUFECEee94_dUz-hvgw")]
 [Description(@"File action result of processing.")]
 [DerivedFrom(typeof(FileActionResultCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FileActionResult1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FileActionResult1Code>))]
 public enum FileActionResult1Code
 {
     /// <summary>

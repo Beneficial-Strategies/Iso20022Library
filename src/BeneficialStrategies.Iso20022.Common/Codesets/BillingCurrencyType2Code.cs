@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6WzSkZqlEeGSON8vddiWzQ_-1596461946")]
 [Description(@"Defines the type of currency to be used for the billing of a service.")]
 [DerivedFrom(typeof(BillingCurrencyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BillingCurrencyType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BillingCurrencyType2Code>))]
 public enum BillingCurrencyType2Code
 {
     /// <summary>

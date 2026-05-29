@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specify the type of blocking when instructions are temporarily blocked for an event."
 )]
 [Derivations(typeof(InstructionLockoutType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstructionLockoutTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionLockoutTypeCode>))]
 public enum InstructionLockoutTypeCode
 {
     /// <summary>

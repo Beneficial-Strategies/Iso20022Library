@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates that an order is pegged against the offer/bid at the time of the order submission."
 )]
 [Derivations(typeof(StayOnSideType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StayOnSideTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StayOnSideTypeCode>))]
 public enum StayOnSideTypeCode
 {
     /// <summary>

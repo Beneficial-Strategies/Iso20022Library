@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-LZ8dp-Ed-ak6NoX_4Aeg_114226731")]
 [Description(@"Specifies the rounding direction applied to nearest unit.")]
 [DerivedFrom(typeof(RoundingDirectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RoundingDirection2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RoundingDirection2Code>))]
 public enum RoundingDirection2Code
 {
     /// <summary>

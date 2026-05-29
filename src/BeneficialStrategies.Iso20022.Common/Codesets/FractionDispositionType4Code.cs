@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 )]
 [DerivedFrom(typeof(FractionDispositionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FractionDispositionType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FractionDispositionType4Code>))]
 public enum FractionDispositionType4Code
 {
     /// <summary>

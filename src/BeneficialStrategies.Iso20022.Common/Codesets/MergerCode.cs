@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Classification of the regulatory condition of a merger for the TSE/JASDEC extension."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MergerCode>))]
 public enum MergerCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VeXEKNp-Ed-ak6NoX_4Aeg_-2144991913")]
 [Description(@"Specifies the type of criterion used to sort a report.")]
 [DerivedFrom(typeof(ReportSortedTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportSortedType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportSortedType1Code>))]
 public enum ReportSortedType1Code
 {
     /// <summary>

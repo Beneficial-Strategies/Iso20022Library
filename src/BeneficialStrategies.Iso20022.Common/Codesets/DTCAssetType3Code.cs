@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lR6JUL_iEeeb2ZBoAlSG1Q")]
 [Description(@"Specifies DTC (The Depository Trust Company) security sub-issue type.")]
 [DerivedFrom(typeof(DTCAssetTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCAssetType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCAssetType3Code>))]
 public enum DTCAssetType3Code
 {
     /// <summary>

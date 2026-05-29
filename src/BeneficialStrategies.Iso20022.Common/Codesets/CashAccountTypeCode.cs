@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -19,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CashAccountType2Code),
     typeof(CashAccountType5Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashAccountTypeCode>))]
 public enum CashAccountTypeCode
 {
     /// <summary>

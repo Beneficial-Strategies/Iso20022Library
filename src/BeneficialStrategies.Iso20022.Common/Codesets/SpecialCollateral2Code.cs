@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the collateral type against which all repurchase agreements are conducted."
 )]
 [DerivedFrom(typeof(SpecialCollateralCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SpecialCollateral2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SpecialCollateral2Code>))]
 public enum SpecialCollateral2Code
 {
     /// <summary>

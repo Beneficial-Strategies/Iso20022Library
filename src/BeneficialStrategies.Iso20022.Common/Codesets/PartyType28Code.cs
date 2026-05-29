@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GBytIdwBEeeOusYHZbyj7w")]
 [Description(@"Type of entity involved in a card payment transaction.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType28Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType28Code>))]
 public enum PartyType28Code
 {
     /// <summary>

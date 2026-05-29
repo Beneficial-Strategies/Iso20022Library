@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0mppcAlIEeGATtfOBToyew_753988061")]
 [Description(@"Specifies additional information about the processed instruction.")]
 [DerivedFrom(typeof(AcknowledgementReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AcknowledgementReason6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AcknowledgementReason6Code>))]
 public enum AcknowledgementReason6Code
 {
     /// <summary>

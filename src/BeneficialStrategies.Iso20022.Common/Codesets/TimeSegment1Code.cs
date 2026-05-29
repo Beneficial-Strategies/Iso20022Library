@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-A6pgF1lEeeu75xdwwAXQw")]
 [Description(@"Time period of the day.")]
 [DerivedFrom(typeof(TimeSegmentCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TimeSegment1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TimeSegment1Code>))]
 public enum TimeSegment1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_oMx7AK5FEeWCgYcWSNgX5g")]
 [Description(@"Exception occurring outside the service.")]
 [DerivedFrom(typeof(FailureReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FailureReason8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailureReason8Code>))]
 public enum FailureReason8Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_d4opsAxwEeKa_56Jbsi1RQ")]
 [Description(@"Status of a component belonging to a POI Terminal (Point of Interaction).")]
 [Derivations(typeof(POIComponentStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<POIComponentStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<POIComponentStatusCode>))]
 public enum POIComponentStatusCode
 {
     /// <summary>

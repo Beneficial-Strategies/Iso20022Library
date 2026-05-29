@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of an investigation case.||Note: |The cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown."
 )]
 [DerivedFrom(typeof(CaseStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CaseStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseStatus2Code>))]
 public enum CaseStatus2Code
 {
     /// <summary>

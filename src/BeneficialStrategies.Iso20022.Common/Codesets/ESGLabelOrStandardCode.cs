@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_XR6bsM2vEeuAE-cYsQdwHQ")]
 [Description(@"Specifies the ESG label or standard of a product.")]
 [Derivations(typeof(ESGLabelOrStandard1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ESGLabelOrStandardCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ESGLabelOrStandardCode>))]
 public enum ESGLabelOrStandardCode
 {
     /// <summary>

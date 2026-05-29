@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gFqv4ZxIEe-Jl6tBAvMHqA")]
 [Description(@"Type of message supporting a service.")]
 [DerivedFrom(typeof(MessageFunctionCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction47Code>))]
 public enum MessageFunction47Code
 {
     /// <summary>

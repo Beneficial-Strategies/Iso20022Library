@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_jreAAHvREeWrWYBng3OpVw")]
 [Description(@"Specifies whether the transaction is arranged via a third party broker or not.")]
 [DerivedFrom(typeof(BrokeredDealCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BrokeredDeal1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BrokeredDeal1Code>))]
 public enum BrokeredDeal1Code
 {
     /// <summary>

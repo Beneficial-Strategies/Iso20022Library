@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yUpw0Bs_EeqrvK3udMUsNQ")]
 [Description(@"Identifies a class of messages with the same high level function.")]
 [Derivations(typeof(MessageClass1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageClassCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageClassCode>))]
 public enum MessageClassCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_amyWh9p-Ed-ak6NoX_4Aeg_534843622")]
 [Description(@"Specifies the reason of a settlement failure.")]
 [Derivations(typeof(FailedSettlementReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FailedSettlementReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailedSettlementReasonCode>))]
 public enum FailedSettlementReasonCode
 {
     /// <summary>

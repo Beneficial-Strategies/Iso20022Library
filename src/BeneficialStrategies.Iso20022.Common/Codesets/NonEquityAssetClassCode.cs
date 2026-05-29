@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9f_awHBYEeqTZuDtO9NgaQ")]
 [Description(@"Specifies the asset class of a non-equity financial instrument.")]
 [Derivations(typeof(NonEquityAssetClass1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonEquityAssetClassCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonEquityAssetClassCode>))]
 public enum NonEquityAssetClassCode
 {
     /// <summary>

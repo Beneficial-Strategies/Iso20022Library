@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UdgZYMVcEeiYpLQka876sg")]
 [Description(@"Specifies blank or not available codes.")]
 [DerivedFrom(typeof(SpecialPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SpecialPurpose2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SpecialPurpose2Code>))]
 public enum SpecialPurpose2Code
 {
     /// <summary>

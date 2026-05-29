@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bc3p9dp-Ed-ak6NoX_4Aeg_-1712185588")]
 [Description(@"Indicates the status of a baseline.")]
 [Derivations(typeof(BaselineStatus1Code), typeof(BaselineStatus3Code), typeof(BaselineStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BaselineStatusCode>))]
 public enum BaselineStatusCode
 {
     /// <summary>

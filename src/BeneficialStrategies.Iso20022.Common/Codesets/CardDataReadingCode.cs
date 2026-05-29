@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -27,6 +28,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CardDataReading11Code),
     typeof(CardDataReading12Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDataReadingCode>))]
 public enum CardDataReadingCode
 {
     /// <summary>

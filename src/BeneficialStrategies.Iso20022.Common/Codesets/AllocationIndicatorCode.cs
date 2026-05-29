@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated."
 )]
 [Derivations(typeof(AllocationIndicator1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AllocationIndicatorCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllocationIndicatorCode>))]
 public enum AllocationIndicatorCode
 {
     /// <summary>

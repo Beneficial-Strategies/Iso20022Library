@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JJT9wLh0Eea3PLWeF1tJsQ")]
 [Description(@"Domain of an identifier.")]
 [Derivations(typeof(SchemeIdentificationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SchemeIdentificationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SchemeIdentificationTypeCode>))]
 public enum SchemeIdentificationTypeCode
 {
     /// <summary>

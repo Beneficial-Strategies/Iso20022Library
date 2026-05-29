@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aTQ9ltp-Ed-ak6NoX_4Aeg_-82502166")]
 [Description(@"Specifies a type of order based on the Financial Information Exchange Protocol.")]
 [DerivedFrom(typeof(OrderTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderType2Code>))]
 public enum OrderType2Code
 {
     /// <summary>

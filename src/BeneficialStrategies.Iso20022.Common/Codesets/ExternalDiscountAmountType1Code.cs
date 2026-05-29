@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalDiscountAmountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalDiscountAmountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDiscountAmountType1Code>))]
 public enum ExternalDiscountAmountType1Code
 {
     /// <summary>

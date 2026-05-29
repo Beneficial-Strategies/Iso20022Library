@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TYFa4ENwEeaS-NnwLNvMPg")]
 [Description(@"Specifies the type of Common Reporting Standard (CRS) form.")]
 [DerivedFrom(typeof(CRSFormTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CRSFormType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CRSFormType1Code>))]
 public enum CRSFormType1Code
 {
     /// <summary>

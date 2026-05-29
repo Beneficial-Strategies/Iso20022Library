@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a8YzGNp-Ed-ak6NoX_4Aeg_2072866116")]
 [Description(@"Specifies the type of service for which a charge is asked or paid.")]
 [DerivedFrom(typeof(ChargeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChargeType11Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChargeType11Code>))]
 public enum ChargeType11Code
 {
     /// <summary>

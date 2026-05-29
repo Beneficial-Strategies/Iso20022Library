@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_au04N9p-Ed-ak6NoX_4Aeg_1142175847")]
 [Description(@"Specifies the type of credit enhancement.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GuarantyTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GuarantyTypeCode>))]
 public enum GuarantyTypeCode
 {
     /// <summary>

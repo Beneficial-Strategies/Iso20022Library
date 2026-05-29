@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a_9rh9p-Ed-ak6NoX_4Aeg_1912267455")]
 [Description(@"Specifies the type of investment fund commission.")]
 [DerivedFrom(typeof(CommissionTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CommissionType7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CommissionType7Code>))]
 public enum CommissionType7Code
 {
     /// <summary>

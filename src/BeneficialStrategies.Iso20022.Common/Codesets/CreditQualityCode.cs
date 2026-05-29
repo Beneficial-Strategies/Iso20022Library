@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VUiw4KcjEeaGcf8_qtd8Yw")]
 [Description(@"Credit quality rating of an issuer or financial obligation.")]
 [Derivations(typeof(CreditQuality1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CreditQualityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CreditQualityCode>))]
 public enum CreditQualityCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_q1VvAF1xEeeu75xdwwAXQw")]
 [Description(@"Car rental service in addition to main car rental.")]
 [Derivations(typeof(CarRentalServiceType2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CarRentalServiceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CarRentalServiceTypeCode>))]
 public enum CarRentalServiceTypeCode
 {
     /// <summary>

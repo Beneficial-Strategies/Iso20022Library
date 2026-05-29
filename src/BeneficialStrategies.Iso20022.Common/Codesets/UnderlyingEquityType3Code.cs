@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SXRBIGlOEeaLAKoEUNsD9g")]
 [Description(@"Specifies the type for a contract for equity derivatives.")]
 [DerivedFrom(typeof(UnderlyingTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnderlyingEquityType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnderlyingEquityType3Code>))]
 public enum UnderlyingEquityType3Code
 {
     /// <summary>

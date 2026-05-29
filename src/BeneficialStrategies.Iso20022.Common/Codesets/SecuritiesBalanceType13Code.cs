@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZAHTo9p-Ed-ak6NoX_4Aeg_-409844332")]
 [Description(@"Specifies the nature of the securities or investment fund balance.")]
 [DerivedFrom(typeof(SecuritiesBalanceTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesBalanceType13Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesBalanceType13Code>))]
 public enum SecuritiesBalanceType13Code
 {
     /// <summary>

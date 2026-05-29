@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the cash clearing system, as published in an external cash clearing system code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalCashClearingSystemCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalCashClearingSystem1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCashClearingSystem1Code>))]
 public enum ExternalCashClearingSystem1Code
 {
     /// <summary>

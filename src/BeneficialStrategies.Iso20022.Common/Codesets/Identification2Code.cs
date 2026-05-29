@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MJNFcAwTEeiHgJ0O2VQ-kg")]
 [Description(@"Identification of an individual.")]
 [DerivedFrom(typeof(IdentificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Identification2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Identification2Code>))]
 public enum Identification2Code
 {
     /// <summary>

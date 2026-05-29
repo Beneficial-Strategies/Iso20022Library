@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TTG0YQEcEeCQm6a_G2yO_w_924003917")]
 [Description(@"Period unit between consecutive payments (for example day, month, year).")]
 [DerivedFrom(typeof(FrequencyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Frequency4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Frequency4Code>))]
 public enum Frequency4Code
 {
     /// <summary>

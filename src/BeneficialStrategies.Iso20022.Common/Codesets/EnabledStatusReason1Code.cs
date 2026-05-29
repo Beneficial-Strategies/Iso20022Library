@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LCqQYGBhEeaR1OOiVxm3Gg")]
 [Description(@"Specifies the reason for an enabled status.")]
 [DerivedFrom(typeof(EnabledStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EnabledStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EnabledStatusReason1Code>))]
 public enum EnabledStatusReason1Code
 {
     /// <summary>

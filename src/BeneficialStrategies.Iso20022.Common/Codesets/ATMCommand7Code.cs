@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMCommand7Code")]
 [Description(@"Type of command performed by the ATM.")]
 [DerivedFrom(typeof(ATMCommandCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCommand7Code>))]
 public enum ATMCommand7Code
 {
     /// <summary>

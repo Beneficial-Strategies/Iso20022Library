@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ha_Uu2liEeGaMcKyqKNRfQ_-331678715")]
 [Description(@"Indicates whether interest rate is fixed, variable or other.")]
 [DerivedFrom(typeof(InterestTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterestType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestType3Code>))]
 public enum InterestType3Code
 {
     /// <summary>

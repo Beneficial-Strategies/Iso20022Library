@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vMoZsIJTEeuDe9SyRl5qeg")]
 [Description(@"Specifies the list of codes applicable to the clearing exemptions or exceptions.")]
 [Derivations(typeof(ClearingExemptionException1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingExemptionExceptionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingExemptionExceptionCode>))]
 public enum ClearingExemptionExceptionCode
 {
     /// <summary>

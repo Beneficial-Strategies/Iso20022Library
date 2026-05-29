@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gI-FsCeFEeOXAt_43VmZGw")]
 [Description(@"Specifies the type of withholding tax rate.")]
 [Derivations(typeof(WithholdingTaxRateType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WithholdingTaxRateTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WithholdingTaxRateTypeCode>))]
 public enum WithholdingTaxRateTypeCode
 {
     /// <summary>

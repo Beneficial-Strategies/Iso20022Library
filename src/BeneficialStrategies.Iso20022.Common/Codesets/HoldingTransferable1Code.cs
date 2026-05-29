@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicate whether or not registered investors are able to transfer some or all of their holdings to third parties."
 )]
 [DerivedFrom(typeof(HoldingTransferableCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HoldingTransferable1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingTransferable1Code>))]
 public enum HoldingTransferable1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies an alternative identification of a party, for example, national registration identification number, passport number, tax identification number."
 )]
 [DerivedFrom(typeof(PersonIdentificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyIdentificationType7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyIdentificationType7Code>))]
 public enum PartyIdentificationType7Code
 {
     /// <summary>

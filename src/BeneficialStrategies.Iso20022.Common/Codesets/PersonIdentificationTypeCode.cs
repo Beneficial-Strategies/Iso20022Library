@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -23,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(PersonIdentificationType1Code),
     typeof(PersonIdentificationType5Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PersonIdentificationTypeCode>))]
 public enum PersonIdentificationTypeCode
 {
     /// <summary>

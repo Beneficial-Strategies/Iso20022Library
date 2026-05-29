@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the calculation basis is on base (original) or disbursed (distributed) security."
 )]
 [Derivations(typeof(DTCBaseDisbursed1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCBaseDisbursedCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCBaseDisbursedCode>))]
 public enum DTCBaseDisbursedCode
 {
     /// <summary>

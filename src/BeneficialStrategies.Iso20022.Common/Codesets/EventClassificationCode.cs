@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ajDtENp-Ed-ak6NoX_4Aeg_-407135956")]
 [Description(@"Provides information about how the holder must participate in the event.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventClassificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventClassificationCode>))]
 public enum EventClassificationCode
 {
     /// <summary>

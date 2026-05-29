@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the underlying business area/type of trade causing the collateral movement."
 )]
 [DerivedFrom(typeof(ExposureTypeV3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExposureType14Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExposureType14Code>))]
 public enum ExposureType14Code
 {
     /// <summary>

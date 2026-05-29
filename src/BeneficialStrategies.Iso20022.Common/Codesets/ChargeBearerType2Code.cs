@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a8PpJdp-Ed-ak6NoX_4Aeg_-867377904")]
 [Description(@"Specifies which party(ies) will pay charges due for processing of the instruction.")]
 [DerivedFrom(typeof(ChargeBearerTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChargeBearerType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChargeBearerType2Code>))]
 public enum ChargeBearerType2Code
 {
     /// <summary>

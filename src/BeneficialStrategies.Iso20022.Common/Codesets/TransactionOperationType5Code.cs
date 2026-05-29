@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EQebAK1UEemkQYpo6COeTA")]
 [Description(@"Specifies the transaction operation action type.")]
 [DerivedFrom(typeof(TransactionOperationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionOperationType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionOperationType5Code>))]
 public enum TransactionOperationType5Code
 {
     /// <summary>

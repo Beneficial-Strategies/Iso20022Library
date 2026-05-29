@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__1ywktojEeC60axPepSq7g_-1223322819")]
 [Description(@"Describes the delivery or custody arrangement for the underlying securities.")]
 [DerivedFrom(typeof(DeliveryTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeliveryType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliveryType2Code>))]
 public enum DeliveryType2Code
 {
     /// <summary>

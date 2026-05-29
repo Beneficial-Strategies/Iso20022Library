@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of the first accrual period for debt instruments compared to the normal accrual period of the security."
 )]
 [DerivedFrom(typeof(AccrualPeriodTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccrualPeriodType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccrualPeriodType1Code>))]
 public enum AccrualPeriodType1Code
 {
     /// <summary>

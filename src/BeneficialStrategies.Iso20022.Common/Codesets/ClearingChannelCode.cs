@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the clearing channel for the routing of the transaction, as part of the payment type identification."
 )]
 [Derivations(typeof(ClearingChannel2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingChannelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingChannelCode>))]
 public enum ClearingChannelCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ccCwYK7DEemG7MmivSuE5g")]
 [Description(@"Specifies a type of security holders meeting.")]
 [DerivedFrom(typeof(MeetingTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MeetingType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MeetingType4Code>))]
 public enum MeetingType4Code
 {
     /// <summary>

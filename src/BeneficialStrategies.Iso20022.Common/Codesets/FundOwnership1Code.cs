@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_j9NfQCDXEeWCLu74WLgP4w")]
 [Description(@"Specifies if all the shares are owned exclusively by the fund company.")]
 [DerivedFrom(typeof(FundOwnershipCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundOwnership1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundOwnership1Code>))]
 public enum FundOwnership1Code
 {
     /// <summary>

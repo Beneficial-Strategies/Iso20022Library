@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Q2ah4VrdEeWN79Bl6BUd3g")]
 [Description(@"Defines the sub-product of type Wet Freight.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType32Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType32Code>))]
 public enum AssetClassSubProductType32Code
 {
     /// <summary>

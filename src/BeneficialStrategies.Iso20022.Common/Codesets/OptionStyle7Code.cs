@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies how an option for a derivative or securities derivative can be exercised."
 )]
 [DerivedFrom(typeof(OptionStyleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionStyle7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionStyle7Code>))]
 public enum OptionStyle7Code
 {
     /// <summary>

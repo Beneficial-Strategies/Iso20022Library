@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process)."
 )]
 [DerivedFrom(typeof(BusinessFlowTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BusinessFlowType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessFlowType1Code>))]
 public enum BusinessFlowType1Code
 {
     /// <summary>

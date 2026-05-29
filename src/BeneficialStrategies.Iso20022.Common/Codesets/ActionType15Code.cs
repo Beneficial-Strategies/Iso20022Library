@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ActionType15Code")]
 [Description(@"Type of action to be performed by the point of interaction (POI).")]
 [DerivedFrom(typeof(ActionTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionType15Code>))]
 public enum ActionType15Code
 {
     /// <summary>

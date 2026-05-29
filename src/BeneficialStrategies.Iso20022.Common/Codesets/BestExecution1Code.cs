@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether best execution rules as defined in the EU MiFID directive were followed for a transaction."
 )]
 [DerivedFrom(typeof(BestExecutionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BestExecution1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BestExecution1Code>))]
 public enum BestExecution1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qRYe4QjLEeS5F6qHcKOrew")]
 [Description(@"Specifies the type of Foreign Account Tax Compliance Act (FATCA) form.")]
 [Derivations(typeof(FATCAFormType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FATCAFormTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FATCAFormTypeCode>))]
 public enum FATCAFormTypeCode
 {
     /// <summary>

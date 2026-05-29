@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aM2zkdp-Ed-ak6NoX_4Aeg_1618903822")]
 [Description(@"Describes whether peg or discretion price is static/fixed or floats.")]
 [Derivations(typeof(MoveType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MoveTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MoveTypeCode>))]
 public enum MoveTypeCode
 {
     /// <summary>

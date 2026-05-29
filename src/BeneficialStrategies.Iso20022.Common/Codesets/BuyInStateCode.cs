@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FentwJwVEeqtp-LOti013g")]
 [Description(@"Specifies the state of the buy-in transaction.")]
 [Derivations(typeof(BuyInState1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BuyInStateCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BuyInStateCode>))]
 public enum BuyInStateCode
 {
     /// <summary>

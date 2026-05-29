@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Provides the matching status of the instruction at the time the settlement instruction was sent."
 )]
 [Derivations(typeof(MatchingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MatchingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MatchingStatusCode>))]
 public enum MatchingStatusCode
 {
     /// <summary>

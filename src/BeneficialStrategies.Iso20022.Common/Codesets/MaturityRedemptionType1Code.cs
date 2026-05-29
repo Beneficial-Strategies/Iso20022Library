@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hbcApmliEeGaMcKyqKNRfQ_-883545842")]
 [Description(@"Indicates the type of redemption at maturity.")]
 [DerivedFrom(typeof(MaturityRedemptionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MaturityRedemptionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MaturityRedemptionType1Code>))]
 public enum MaturityRedemptionType1Code
 {
     /// <summary>

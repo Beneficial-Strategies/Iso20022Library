@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_eduTYGCMEeabZtzjEVWYCQ")]
 [Description(@"Specifies the reason for the closure pending status.")]
 [DerivedFrom(typeof(ClosurePendingStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClosurePendingStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClosurePendingStatusReason1Code>))]
 public enum ClosurePendingStatusReason1Code
 {
     /// <summary>

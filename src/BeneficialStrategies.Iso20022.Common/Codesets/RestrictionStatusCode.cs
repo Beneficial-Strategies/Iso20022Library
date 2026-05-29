@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_h5LIgCFnEeW9XJWqfgXIIA")]
 [Description(@"Specifies the status of a restriction.")]
 [Derivations(typeof(RestrictionStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RestrictionStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RestrictionStatusCode>))]
 public enum RestrictionStatusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_067hgh-0EeuxStysDTgLiw")]
 [Description(@"Specifies the narrative reason code for the cross-element validation rules.")]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRuleNarrative1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleNarrative1Code>))]
 public enum ValidationRuleNarrative1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Cardholder verification capabilities of the POI (Personal Identification Number) performing the transaction."
 )]
 [DerivedFrom(typeof(CardholderVerificationCapabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardholderVerificationCapability1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardholderVerificationCapability1Code>))]
 public enum CardholderVerificationCapability1Code
 {
     /// <summary>

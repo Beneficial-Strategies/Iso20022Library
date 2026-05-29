@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_AEXIl_JXEeiJn9rM2Znz2w")]
 [Description(@"Contains the additoinal identification type, for example NAICS, etc...")]
 [Derivations(typeof(AdditionalIdentificationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdditionalIdentificationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalIdentificationTypeCode>))]
 public enum AdditionalIdentificationTypeCode
 {
     /// <summary>

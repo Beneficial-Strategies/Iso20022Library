@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gNlkwFhWEeSewsfsZR0hxA")]
 [Description(@"Specifies the reason why the instruction request has a rejected status.")]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason43Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason43Code>))]
 public enum RejectionReason43Code
 {
     /// <summary>

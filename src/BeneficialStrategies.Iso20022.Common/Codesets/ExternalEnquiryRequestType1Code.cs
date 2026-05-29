@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external request type code for the enquiry on a position in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code set published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalEnquiryRequestTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalEnquiryRequestType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEnquiryRequestType1Code>))]
 public enum ExternalEnquiryRequestType1Code
 {
     /// <summary>

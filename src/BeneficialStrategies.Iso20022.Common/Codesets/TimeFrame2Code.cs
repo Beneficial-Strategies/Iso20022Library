@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dMCBcMztEeq1WLK5fVzKiQ")]
 [Description(@"Specifies a time frame.")]
 [DerivedFrom(typeof(TimeFrameCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TimeFrame2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TimeFrame2Code>))]
 public enum TimeFrame2Code
 {
     /// <summary>

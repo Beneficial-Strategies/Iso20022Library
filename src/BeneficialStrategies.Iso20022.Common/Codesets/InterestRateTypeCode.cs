@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_b3lpIO7nEeK-Kt3xkpFJcA_1739924161")]
 [Description(@"Specifies the type of interest rate.")]
 [Derivations(typeof(RateType7Code), typeof(RateType1Code), typeof(InterestRateType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestRateTypeCode>))]
 public enum InterestRateTypeCode
 {
     /// <summary>

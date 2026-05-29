@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1vTlA5EkEeKcLcxonNWTXg")]
 [Description(@"Specifies the reason that an alleged trade is withdrawn.")]
 [Derivations(typeof(WithdrawalReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WithdrawalReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WithdrawalReasonCode>))]
 public enum WithdrawalReasonCode
 {
     /// <summary>

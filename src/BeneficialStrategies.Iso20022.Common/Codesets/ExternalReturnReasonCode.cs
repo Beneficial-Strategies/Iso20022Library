@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the return reason, as published in an external return reason code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalReturnReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalReturnReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalReturnReasonCode>))]
 public enum ExternalReturnReasonCode
 {
     /// <summary>

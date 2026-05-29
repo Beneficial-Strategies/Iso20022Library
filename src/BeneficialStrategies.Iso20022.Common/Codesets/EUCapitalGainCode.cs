@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June) for an income realised upon sale, a refund or redemption of shares and units etc."
 )]
 [Derivations(typeof(EUCapitalGain1Code), typeof(EUCapitalGain2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EUCapitalGainCode>))]
 public enum EUCapitalGainCode
 {
     /// <summary>

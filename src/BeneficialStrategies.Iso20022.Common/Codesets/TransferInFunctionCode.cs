@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cP0N0CVNEeWI0orciOKunQ")]
 [Description(@"Specifies the function of the transfer in.")]
 [Derivations(typeof(TransferInFunction1Code), typeof(TransferInFunction2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferInFunctionCode>))]
 public enum TransferInFunctionCode
 {
     /// <summary>

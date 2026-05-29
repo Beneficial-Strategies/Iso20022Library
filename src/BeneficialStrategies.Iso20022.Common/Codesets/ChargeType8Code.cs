@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a9SK9Np-Ed-ak6NoX_4Aeg_-1551316006")]
 [Description(@"Identifies charges linked to the conveyance of goods.")]
 [DerivedFrom(typeof(ChargeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChargeType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChargeType8Code>))]
 public enum ChargeType8Code
 {
     /// <summary>

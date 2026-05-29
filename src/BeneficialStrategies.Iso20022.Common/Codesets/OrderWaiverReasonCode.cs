@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZwscBtp-Ed-ak6NoX_4Aeg_-2076610546")]
 [Description(@"Specifies investment fund processes.")]
 [Derivations(typeof(OrderWaiverReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderWaiverReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderWaiverReasonCode>))]
 public enum OrderWaiverReasonCode
 {
     /// <summary>

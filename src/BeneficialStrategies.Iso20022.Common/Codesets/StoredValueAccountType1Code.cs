@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qZrKMNtfEeipuvJHTHIw9A")]
 [Description(@"Type of stored value account.")]
 [DerivedFrom(typeof(StoredValueAccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StoredValueAccountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StoredValueAccountType1Code>))]
 public enum StoredValueAccountType1Code
 {
     /// <summary>

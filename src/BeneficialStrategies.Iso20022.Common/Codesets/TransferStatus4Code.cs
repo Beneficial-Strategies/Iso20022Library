@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ygeS8CY-EeW_ZNn8gbfY7Q")]
 [Description(@"Specifies the transfer or settlement instruction status.")]
 [DerivedFrom(typeof(TransferStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransferStatus4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferStatus4Code>))]
 public enum TransferStatus4Code
 {
     /// <summary>

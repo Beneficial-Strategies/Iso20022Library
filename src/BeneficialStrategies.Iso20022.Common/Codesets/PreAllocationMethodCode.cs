@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aH73WNp-Ed-ak6NoX_4Aeg_616932935")]
 [Description(@"Indicates the method of preallocation.")]
 [Derivations(typeof(PreAllocationMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PreAllocationMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PreAllocationMethodCode>))]
 public enum PreAllocationMethodCode
 {
     /// <summary>

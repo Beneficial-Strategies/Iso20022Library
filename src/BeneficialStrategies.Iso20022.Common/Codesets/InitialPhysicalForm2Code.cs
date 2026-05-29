@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hblKoGliEeGaMcKyqKNRfQ_-773946621")]
 [Description(@"Indicates the physical form of the securities.")]
 [DerivedFrom(typeof(InitialPhysicalFormCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InitialPhysicalForm2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InitialPhysicalForm2Code>))]
 public enum InitialPhysicalForm2Code
 {
     /// <summary>

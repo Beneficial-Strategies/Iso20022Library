@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YZOSyNp-Ed-ak6NoX_4Aeg_539037705")]
 [Description(@"Specifies the role of a trading party in a transaction.")]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingCapacity2Code>))]
 public enum TradingCapacity2Code
 {
     /// <summary>

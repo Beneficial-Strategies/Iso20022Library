@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of action concerning registration information.|The default value is OPEN."
 )]
 [DerivedFrom(typeof(AgreementItemActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AgreementItemAction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgreementItemAction1Code>))]
 public enum AgreementItemAction1Code
 {
     /// <summary>

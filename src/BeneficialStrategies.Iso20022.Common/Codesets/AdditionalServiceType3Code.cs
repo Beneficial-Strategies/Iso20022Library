@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_HMAZARN4EfC1ZfCQz0xB3g")]
 [Description(@"Type of additional service.")]
 [DerivedFrom(typeof(AdditionalServiceTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalServiceType3Code>))]
 public enum AdditionalServiceType3Code
 {
     /// <summary>

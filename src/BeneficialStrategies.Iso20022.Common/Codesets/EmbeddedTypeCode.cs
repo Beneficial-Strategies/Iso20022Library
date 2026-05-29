@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_w783gIcPEeu4rpsqTt37Pg")]
 [Description(@"Specifies the list of codes applicable to embedded option types.")]
 [Derivations(typeof(EmbeddedType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EmbeddedTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EmbeddedTypeCode>))]
 public enum EmbeddedTypeCode
 {
     /// <summary>

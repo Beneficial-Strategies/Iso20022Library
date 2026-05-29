@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6j0dcAbBEeqrW7Meu5r3kQ")]
 [Description(@"Status of the price of a financial instrument.")]
 [DerivedFrom(typeof(PriceStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceStatus2Code>))]
 public enum PriceStatus2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_14n2MDL3EeKU9IrkkToqcw_-767286658")]
 [Description(@"Specifies custodian activity codes.")]
 [DerivedFrom(typeof(CustodianActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustodianAction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustodianAction1Code>))]
 public enum CustodianAction1Code
 {
     /// <summary>

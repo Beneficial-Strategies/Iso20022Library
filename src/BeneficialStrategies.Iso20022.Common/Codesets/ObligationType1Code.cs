@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YZ95oNp-Ed-ak6NoX_4Aeg_-465800539")]
 [Description(@"Specifies the type of the obligation.")]
 [DerivedFrom(typeof(ObligationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ObligationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ObligationType1Code>))]
 public enum ObligationType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-aXGMESeEeS6cOLECtYLrA")]
 [Description(@"Identifies the type of the trading mode.")]
 [Derivations(typeof(TradingModeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingModeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingModeTypeCode>))]
 public enum TradingModeTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bWBbENp-Ed-ak6NoX_4Aeg_-1231865775")]
 [Description(@"Specifies calculation types such as yield, duration, analytics etc.")]
 [Derivations(typeof(CalculationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CalculationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CalculationTypeCode>))]
 public enum CalculationTypeCode
 {
     /// <summary>

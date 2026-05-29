@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZjlNFtp-Ed-ak6NoX_4Aeg_-1820710282")]
 [Description(@"Specifies the reason why the settlement instruction has a rejected status.")]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason25Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason25Code>))]
 public enum RejectionReason25Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bjlV9dp-Ed-ak6NoX_4Aeg_-1856844468")]
 [Description(@"Specifies the condition under which automatic borrowing is allowed.")]
 [DerivedFrom(typeof(AutoBorrowingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AutoBorrowing1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AutoBorrowing1Code>))]
 public enum AutoBorrowing1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZY_tttp-Ed-ak6NoX_4Aeg_878479095")]
 [Description(@"Specifies the type of rate.")]
 [Derivations(typeof(RateStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RateStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RateStatusCode>))]
 public enum RateStatusCode
 {
     /// <summary>

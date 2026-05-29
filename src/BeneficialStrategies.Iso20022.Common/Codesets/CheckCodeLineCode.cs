@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JUeaoK4EEeWL1uap3dNhCQ")]
 [Description(@"Format of the check code line.")]
 [Derivations(typeof(CheckCodeLine1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CheckCodeLineCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CheckCodeLineCode>))]
 public enum CheckCodeLineCode
 {
     /// <summary>

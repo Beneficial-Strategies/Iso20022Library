@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies late announcements: wither the announcement was made before or after position capture."
 )]
 [Derivations(typeof(DTCLate1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCLateCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCLateCode>))]
 public enum DTCLateCode
 {
     /// <summary>

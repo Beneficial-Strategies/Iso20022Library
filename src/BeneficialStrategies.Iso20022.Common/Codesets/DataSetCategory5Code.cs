@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_b3W8wGpcEeS4r8z7dKyh1g")]
 [Description(@"Maintenance services provided by a terminal manager.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataSetCategory5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory5Code>))]
 public enum DataSetCategory5Code
 {
     /// <summary>

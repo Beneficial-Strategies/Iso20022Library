@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_uif28In9EeShMpas3885ww")]
 [Description(@"Type of an ATM configuration.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataSetCategory7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory7Code>))]
 public enum DataSetCategory7Code
 {
     /// <summary>

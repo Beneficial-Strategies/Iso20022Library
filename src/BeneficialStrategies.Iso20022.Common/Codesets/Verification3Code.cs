@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_soVKwCYDEeym0KcvJF9aDQ")]
 [Description(@"Result of a verification.")]
 [DerivedFrom(typeof(VerificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Verification3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Verification3Code>))]
 public enum Verification3Code
 {
     /// <summary>

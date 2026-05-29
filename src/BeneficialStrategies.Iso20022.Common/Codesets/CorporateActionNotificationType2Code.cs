@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bLJAwNp-Ed-ak6NoX_4Aeg_746682206")]
 [Description(@"Type of notification cancellation request.")]
 [DerivedFrom(typeof(CorporateActionNotificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionNotificationType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionNotificationType2Code>))]
 public enum CorporateActionNotificationType2Code
 {
     /// <summary>

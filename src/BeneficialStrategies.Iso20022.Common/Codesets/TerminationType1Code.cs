@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yll619p-Ed-ak6NoX_4Aeg_2070054481")]
 [Description(@"Specifies the timing or method for terminating the agreement - for repos.")]
 [DerivedFrom(typeof(TerminationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminationType1Code>))]
 public enum TerminationType1Code
 {
     /// <summary>

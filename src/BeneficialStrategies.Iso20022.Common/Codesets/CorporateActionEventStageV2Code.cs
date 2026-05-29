@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_C_ElGyUZEeOxdNEux54C3Q")]
 [Description(@"Specifies the stage of the corporate action event.")]
 [Derivations(typeof(CorporateActionEventStage3Code), typeof(CorporateActionEventStage4Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventStageV2Code>))]
 public enum CorporateActionEventStageV2Code
 {
     /// <summary>

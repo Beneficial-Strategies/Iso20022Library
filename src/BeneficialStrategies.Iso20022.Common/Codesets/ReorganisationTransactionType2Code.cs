@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_al_E4OcZEei5aPS232E3Mw")]
 [Description(@"Specifies the type of reorganisation transaction.")]
 [DerivedFrom(typeof(ReorganisationTransactionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReorganisationTransactionType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReorganisationTransactionType2Code>))]
 public enum ReorganisationTransactionType2Code
 {
     /// <summary>

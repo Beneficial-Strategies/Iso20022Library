@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -27,6 +28,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(AdditionalBusinessProcess9Code),
     typeof(AdditionalBusinessProcess8Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalBusinessProcessCode>))]
 public enum AdditionalBusinessProcessCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YcMuSNp-Ed-ak6NoX_4Aeg_-543523872")]
 [Description(@"Specifies whether the deposit is fixed term or call/notice.")]
 [DerivedFrom(typeof(DepositTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DepositType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DepositType1Code>))]
 public enum DepositType1Code
 {
     /// <summary>

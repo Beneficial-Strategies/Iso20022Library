@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of the Logical device located on a Sale Terminal or a POI Terminal, in term of class of information to output (display, print or store), or input (keyboard) for the Cashier |or the Customer."
 )]
 [DerivedFrom(typeof(SaleCapabilitiesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SaleCapabilities2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SaleCapabilities2Code>))]
 public enum SaleCapabilities2Code
 {
     /// <summary>

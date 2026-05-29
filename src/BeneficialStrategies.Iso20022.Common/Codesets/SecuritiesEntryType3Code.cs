@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_AJfyYDUFEe2tRf29bleifQ")]
 [Description(@"Specifies the type of securities entry on an account.")]
 [DerivedFrom(typeof(SecuritiesEntryTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesEntryType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesEntryType3Code>))]
 public enum SecuritiesEntryType3Code
 {
     /// <summary>

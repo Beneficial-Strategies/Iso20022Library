@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_c9M7QIZ5EeuSbct6WWD-Ng")]
 [Description(@"Type of Exchange Rate agreement.")]
 [Derivations(typeof(ExchangeRateAgreementType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExchangeRateAgreementTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExchangeRateAgreementTypeCode>))]
 public enum ExchangeRateAgreementTypeCode
 {
     /// <summary>

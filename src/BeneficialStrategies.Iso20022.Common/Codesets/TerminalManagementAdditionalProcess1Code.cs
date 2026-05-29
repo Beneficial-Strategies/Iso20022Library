@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Additional process to perform before starting or after a terminal management action by the point of interaction (POI)."
 )]
 [DerivedFrom(typeof(TerminalManagementAdditionalProcessCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalManagementAdditionalProcess1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalManagementAdditionalProcess1Code>))]
 public enum TerminalManagementAdditionalProcess1Code
 {
     /// <summary>

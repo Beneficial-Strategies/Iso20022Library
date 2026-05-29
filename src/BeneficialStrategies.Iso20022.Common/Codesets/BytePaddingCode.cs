@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Byte padding for a cypher block chaining mode encryption, if the padding is not implicit."
 )]
 [Derivations(typeof(BytePadding1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BytePaddingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BytePaddingCode>))]
 public enum BytePaddingCode
 {
     /// <summary>

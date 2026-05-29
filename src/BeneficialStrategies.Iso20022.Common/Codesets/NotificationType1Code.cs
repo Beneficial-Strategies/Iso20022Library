@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aODGZtp-Ed-ak6NoX_4Aeg_507459033")]
 [Description(@"Specifies which type of action a user must take or is prevented to take.")]
 [DerivedFrom(typeof(NotificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotificationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationType1Code>))]
 public enum NotificationType1Code
 {
     /// <summary>

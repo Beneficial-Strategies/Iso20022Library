@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bR2FsNp-Ed-ak6NoX_4Aeg_570400157")]
 [Description(@"Type of movement preliminary advice.")]
 [Derivations(typeof(CorporateActionPreliminaryAdviceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionPreliminaryAdviceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionPreliminaryAdviceTypeCode>))]
 public enum CorporateActionPreliminaryAdviceTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aNJuiNp-Ed-ak6NoX_4Aeg_1309549909")]
 [Description(@"Specifies whether the trade is negotiated.")]
 [Derivations(typeof(NegotiatedTrade1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NegotiatedTradeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NegotiatedTradeCode>))]
 public enum NegotiatedTradeCode
 {
     /// <summary>

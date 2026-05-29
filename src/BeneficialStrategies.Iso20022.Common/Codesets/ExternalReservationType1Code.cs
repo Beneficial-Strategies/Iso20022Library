@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of reservation, as published in an external reservation type code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalReservationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalReservationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalReservationType1Code>))]
 public enum ExternalReservationType1Code
 {
     /// <summary>

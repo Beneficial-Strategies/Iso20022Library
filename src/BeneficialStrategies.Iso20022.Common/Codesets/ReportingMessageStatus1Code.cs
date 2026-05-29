@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1YwhUNHCEeaokquJJ-K6uA")]
 [Description(@"Specifies the status of a whole message processing.")]
 [DerivedFrom(typeof(MessageStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportingMessageStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportingMessageStatus1Code>))]
 public enum ReportingMessageStatus1Code
 {
     /// <summary>

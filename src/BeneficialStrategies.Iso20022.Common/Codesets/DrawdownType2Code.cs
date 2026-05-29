@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hZrdkJNwEembCsVG-3f_AA")]
 [Description(@"Specifies a type of drawdown.")]
 [DerivedFrom(typeof(DrawdownTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DrawdownType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DrawdownType2Code>))]
 public enum DrawdownType2Code
 {
     /// <summary>

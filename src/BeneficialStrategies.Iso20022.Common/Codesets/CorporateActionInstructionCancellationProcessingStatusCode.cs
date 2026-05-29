@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bKPo5Np-Ed-ak6NoX_4Aeg_1956200676")]
 [Description(@"Specifies the status of a corporate action instruction cancellation process.")]
 [Derivations(typeof(CorporateActionInstructionCancellationProcessingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionInstructionCancellationProcessingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionInstructionCancellationProcessingStatusCode>))]
 public enum CorporateActionInstructionCancellationProcessingStatusCode
 {
     /// <summary>

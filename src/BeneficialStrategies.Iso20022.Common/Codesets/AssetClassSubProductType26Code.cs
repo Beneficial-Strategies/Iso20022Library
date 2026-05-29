@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kVSQAVrKEeWN79Bl6BUd3g")]
 [Description(@"Defines the sub-product of type Inter Energy.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType26Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType26Code>))]
 public enum AssetClassSubProductType26Code
 {
     /// <summary>

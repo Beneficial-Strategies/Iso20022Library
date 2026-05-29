@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies a contract closure reason code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalContractClosureReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalContractClosureReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalContractClosureReasonCode>))]
 public enum ExternalContractClosureReasonCode
 {
     /// <summary>

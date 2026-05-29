@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_PFBiUHi6EeaRm5xIK6nGuQ")]
 [Description(@"Specifies the type of account status update instructed.")]
 [DerivedFrom(typeof(AccountStatusUpdateInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountStatusUpdateInstruction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountStatusUpdateInstruction1Code>))]
 public enum AccountStatusUpdateInstruction1Code
 {
     /// <summary>

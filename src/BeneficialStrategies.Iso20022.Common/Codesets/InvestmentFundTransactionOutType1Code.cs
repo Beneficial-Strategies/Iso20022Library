@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of investment fund transaction that results in a cash movement out of a fund."
 )]
 [DerivedFrom(typeof(InvestmentFundTransactionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundTransactionOutType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundTransactionOutType1Code>))]
 public enum InvestmentFundTransactionOutType1Code
 {
     /// <summary>

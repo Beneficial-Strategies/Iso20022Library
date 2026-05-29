@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SGnRUPr5EeCu2Z1WwxJVWA")]
 [Description(@"Specifies the reason for the assets transfer.")]
 [DerivedFrom(typeof(TransferReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransferReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferReason1Code>))]
 public enum TransferReason1Code
 {
     /// <summary>

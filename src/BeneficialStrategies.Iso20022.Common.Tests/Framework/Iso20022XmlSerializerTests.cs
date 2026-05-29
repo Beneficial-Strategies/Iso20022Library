@@ -8,6 +8,7 @@ using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.Party40Choice;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.Serialization;
 using CxlCode = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice.Code;
 using CxlProprietary = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice.Proprietary;
 using EntryCode = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Code;

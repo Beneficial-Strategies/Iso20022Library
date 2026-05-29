@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -12,7 +13,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a7WRRtp-Ed-ak6NoX_4Aeg_-901576222")]
 [Description(@"Specifies the cash settlement system used.")]
-[Derivations(typeof(CashSettlementSystem2Code), typeof(CashSettlementSystem1Code))]
+[Derivations(typeof(CashSettlementSystem2Code), typeof(CashSettlementSystem1Code), typeof(CashSettlementSystem3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashSettlementSystemCode>))]
 public enum CashSettlementSystemCode
 {
     /// <summary>
@@ -77,4 +79,13 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbNNp-Ed-ak6NoX_4Aeg_-901576136")]
     [Description(@"Settle money through Fedwire (US).")]
     FedWireUS,
+
+    /// <summary>
+    /// Digital cash settlement system used for the payment.
+    /// Encoded/decoded by serializers as &quot;DCSS&quot;.
+    /// </summary>
+    [EnumMember(Value = "DCSS")]
+    [IsoId("_6uJEwCm2EfGfZ9PfK70MMg")]
+    [Description(@"Digital cash settlement system used for the payment.")]
+    DigitalCashSettlementSystem,
 }

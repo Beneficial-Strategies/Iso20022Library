@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Configuration of the exchanges to perform the cancellation of a payment transaction."
 )]
 [Derivations(typeof(CancellationProcess1Code), typeof(CancellationProcess2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationProcessCode>))]
 public enum CancellationProcessCode
 {
     /// <summary>

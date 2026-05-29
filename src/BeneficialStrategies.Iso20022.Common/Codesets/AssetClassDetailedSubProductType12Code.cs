@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qOdIMVrdEeWN79Bl6BUd3g")]
 [Description(@"Further sub product code list for commodity derivative Wet.")]
 [DerivedFrom(typeof(AssetClassDetailedSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassDetailedSubProductType12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassDetailedSubProductType12Code>))]
 public enum AssetClassDetailedSubProductType12Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_mEFs8Q0vEeqUVL7sB4m7NA")]
 [Description(@"Exchange policy between parties.")]
 [DerivedFrom(typeof(ExchangePolicyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExchangePolicy2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExchangePolicy2Code>))]
 public enum ExchangePolicy2Code
 {
     /// <summary>

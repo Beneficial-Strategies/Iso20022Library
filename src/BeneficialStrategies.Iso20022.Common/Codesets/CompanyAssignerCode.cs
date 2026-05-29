@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_z_dukFyoEeeve7Je9cXtkQ")]
 [Description(@"Party in charge of assigning an identification to a company.")]
 [Derivations(typeof(CompanyAssigner2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CompanyAssignerCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CompanyAssignerCode>))]
 public enum CompanyAssignerCode
 {
     /// <summary>

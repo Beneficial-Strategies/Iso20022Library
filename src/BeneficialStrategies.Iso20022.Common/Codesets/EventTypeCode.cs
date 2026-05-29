@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aksr0dp-Ed-ak6NoX_4Aeg_-483323603")]
 [Description(@"Identifies the type of event.")]
 [Derivations(typeof(EventType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventTypeCode>))]
 public enum EventTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZRZQ5dp-Ed-ak6NoX_4Aeg_1212494654")]
 [Description(@"Specifies a type of event related to a system's operation.")]
 [DerivedFrom(typeof(SystemEventTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SystemEventType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SystemEventType2Code>))]
 public enum SystemEventType2Code
 {
     /// <summary>

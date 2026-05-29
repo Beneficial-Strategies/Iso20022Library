@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason for compensation for the processing of a payment, as published in an external code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalPaymentCompensationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalPaymentCompensationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalPaymentCompensationReason1Code>))]
 public enum ExternalPaymentCompensationReason1Code
 {
     /// <summary>

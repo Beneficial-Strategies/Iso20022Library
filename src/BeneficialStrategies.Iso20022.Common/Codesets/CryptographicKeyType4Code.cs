@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NwgesItJEeSxlKlAGYErFg")]
 [Description(@"Category of the cryptographic key.")]
 [DerivedFrom(typeof(CryptographicKeyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CryptographicKeyType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CryptographicKeyType4Code>))]
 public enum CryptographicKeyType4Code
 {
     /// <summary>

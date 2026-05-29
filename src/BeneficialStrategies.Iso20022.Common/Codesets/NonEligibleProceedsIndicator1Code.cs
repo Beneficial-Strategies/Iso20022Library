@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aNcpdtp-Ed-ak6NoX_4Aeg_1631723636")]
 [Description(@"Specifies information regarding the non eligibility of the outturn resources.")]
 [DerivedFrom(typeof(NonEligibleProceedsIndicatorCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonEligibleProceedsIndicator1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonEligibleProceedsIndicator1Code>))]
 public enum NonEligibleProceedsIndicator1Code
 {
     /// <summary>

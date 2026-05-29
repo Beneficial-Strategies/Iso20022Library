@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1fAkkBE2EeafpqhYGpTDnw")]
 [Description(@"Specifies the status of a given account switch.")]
 [Derivations(typeof(SwitchStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SwitchStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SwitchStatusCode>))]
 public enum SwitchStatusCode
 {
     /// <summary>

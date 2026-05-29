@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KSiJ8FM6EeaOrcVOcDJQkA")]
 [Description(@"Specifies the reason why a confirmation is cancelled.")]
 [Derivations(typeof(ConfirmationCancellationReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConfirmationCancellationReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConfirmationCancellationReasonCode>))]
 public enum ConfirmationCancellationReasonCode
 {
     /// <summary>

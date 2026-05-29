@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_QC-WYK7NEemG7MmivSuE5g")]
 [Description(@"Classifies the meeting type.")]
 [DerivedFrom(typeof(MeetingTypeClassificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MeetingTypeClassification2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MeetingTypeClassification2Code>))]
 public enum MeetingTypeClassification2Code
 {
     /// <summary>

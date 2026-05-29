@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aIFoUtp-Ed-ak6NoX_4Aeg_1034952016")]
 [Description(@"Specifies if there is a pre-confirmation of cash or securities.")]
 [Derivations(typeof(PreConfirmation1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PreConfirmationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PreConfirmationCode>))]
 public enum PreConfirmationCode
 {
     /// <summary>

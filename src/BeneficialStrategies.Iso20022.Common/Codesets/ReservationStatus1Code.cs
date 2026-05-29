@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8J5r8KMgEeCJ6YNENx4h-w_-308307214")]
 [Description(@"Specifies the current status of a limit.")]
 [DerivedFrom(typeof(ReservationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReservationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReservationStatus1Code>))]
 public enum ReservationStatus1Code
 {
     /// <summary>

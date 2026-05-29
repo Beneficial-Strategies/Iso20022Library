@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_au04M9p-Ed-ak6NoX_4Aeg_-1706891243")]
 [Description(@"Specifies the grouping options of the payment transaction.")]
 [Derivations(typeof(Grouping1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GroupingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GroupingCode>))]
 public enum GroupingCode
 {
     /// <summary>

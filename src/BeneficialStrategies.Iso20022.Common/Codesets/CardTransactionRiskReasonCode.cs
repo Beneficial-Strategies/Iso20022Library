@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1GyxYHsKEeSR68OJvMfxJQ")]
 [Description(@"Reason to indicate a certain level of risk for the transaction.")]
 [Derivations(typeof(CardTransactionRiskReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardTransactionRiskReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardTransactionRiskReasonCode>))]
 public enum CardTransactionRiskReasonCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Determines the type of file action service.|ISO 8583:87 bit 91; ISO 8583:93/2003 bit 24"
 )]
 [Derivations(typeof(FileActionType1Code), typeof(FileActionType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FileActionTypeCode>))]
 public enum FileActionTypeCode
 {
     /// <summary>

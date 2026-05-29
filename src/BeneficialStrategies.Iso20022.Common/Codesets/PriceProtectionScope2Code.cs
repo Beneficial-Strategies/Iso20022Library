@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines the type of price protection the customer requires on their order. Defines the scope of the ""related to"" price of the peg or the scope of ""related to"" price of the discretion (for example, local, global etc)."
 )]
 [DerivedFrom(typeof(PriceProtectionScopeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceProtectionScope2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceProtectionScope2Code>))]
 public enum PriceProtectionScope2Code
 {
     /// <summary>

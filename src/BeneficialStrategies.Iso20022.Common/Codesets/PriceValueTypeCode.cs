@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -28,6 +29,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(PriceValueType6Code),
     typeof(PriceValueType13Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceValueTypeCode>))]
 public enum PriceValueTypeCode
 {
     /// <summary>

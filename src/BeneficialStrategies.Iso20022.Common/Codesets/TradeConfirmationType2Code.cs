@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-AnesA27EeWmAKKPnqYEVQ")]
 [Description(@"Specifies that the contract was electronically non-confirmed.")]
 [DerivedFrom(typeof(TradeConfirmationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeConfirmationType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeConfirmationType2Code>))]
 public enum TradeConfirmationType2Code
 {
     /// <summary>

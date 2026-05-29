@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YyKVAQqPEeWqX7rjSIiMuQ")]
 [Description(@"Specifies a payment schedule type.")]
 [Derivations(typeof(PaymentScheduleType1Code), typeof(PaymentScheduleType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentScheduleTypeCode>))]
 public enum PaymentScheduleTypeCode
 {
     /// <summary>

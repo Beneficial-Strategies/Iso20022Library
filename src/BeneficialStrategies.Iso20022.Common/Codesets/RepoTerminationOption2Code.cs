@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2zdHkNX_EeiqhpuDZKadPg")]
 [Description(@"Indicates the termination option for a repurchase agreement.")]
 [DerivedFrom(typeof(RepoTerminationOptionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepoTerminationOption2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepoTerminationOption2Code>))]
 public enum RepoTerminationOption2Code
 {
     /// <summary>

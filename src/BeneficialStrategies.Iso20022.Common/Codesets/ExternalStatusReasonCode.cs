@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status reason, as published in an external status reason code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalStatusReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalStatusReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalStatusReasonCode>))]
 public enum ExternalStatusReasonCode
 {
     /// <summary>

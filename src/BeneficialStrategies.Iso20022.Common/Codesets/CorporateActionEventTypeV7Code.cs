@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -20,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CorporateActionEventType39Code),
     typeof(CorporateActionEventType40Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventTypeV7Code>))]
 public enum CorporateActionEventTypeV7Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vla3MBVeEeOrY9qSHVspCA")]
 [Description(@"Specifies the payment conditions.")]
 [DerivedFrom(typeof(PaymentTimeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentTime4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentTime4Code>))]
 public enum PaymentTime4Code
 {
     /// <summary>

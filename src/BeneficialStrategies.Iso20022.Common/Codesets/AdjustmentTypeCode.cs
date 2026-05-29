@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bnTYU9p-Ed-ak6NoX_4Aeg_-949764455")]
 [Description(@"Specifies the type of adjustment.")]
 [Derivations(typeof(AdjustmentType2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdjustmentTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdjustmentTypeCode>))]
 public enum AdjustmentTypeCode
 {
     /// <summary>

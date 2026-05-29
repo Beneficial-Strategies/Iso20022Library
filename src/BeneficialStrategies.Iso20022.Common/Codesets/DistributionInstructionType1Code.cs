@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_awd2-dp-Ed-ak6NoX_4Aeg_-1269116309")]
 [Description(@"Specifies the type of distribution instruction.")]
 [DerivedFrom(typeof(DistributionInstructionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DistributionInstructionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DistributionInstructionType1Code>))]
 public enum DistributionInstructionType1Code
 {
     /// <summary>

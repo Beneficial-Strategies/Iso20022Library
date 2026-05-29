@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tjpgUDEpEemzCpWiCwK4aQ")]
 [Description(@"Contains the details of the grace period applicable to the instalment.")]
 [DerivedFrom(typeof(GracePeriodUnitTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GracePeriodUnitType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GracePeriodUnitType1Code>))]
 public enum GracePeriodUnitType1Code
 {
     /// <summary>

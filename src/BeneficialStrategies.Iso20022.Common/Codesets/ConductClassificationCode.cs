@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ecbaIBdvEeKYM7Bc71nDlA")]
 [Description(@"Specifies the classification of the conduct.")]
 [Derivations(typeof(ConductClassification1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConductClassificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConductClassificationCode>))]
 public enum ConductClassificationCode
 {
     /// <summary>

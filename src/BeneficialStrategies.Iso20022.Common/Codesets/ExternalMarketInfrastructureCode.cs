@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the market infrastructure identification, as published in an external market infrastructure code list.|This is a synonym of the external cash clearing system code list, extended outside the pure cash domains.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalMarketInfrastructure1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalMarketInfrastructureCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalMarketInfrastructureCode>))]
 public enum ExternalMarketInfrastructureCode
 {
     /// <summary>

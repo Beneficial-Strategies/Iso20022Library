@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LHtH8FDhEee94_dUz-hvgw")]
 [Description(@"User interface used in case of chargebacks.")]
 [DerivedFrom(typeof(UserInterfaceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UserInterface8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UserInterface8Code>))]
 public enum UserInterface8Code
 {
     /// <summary>

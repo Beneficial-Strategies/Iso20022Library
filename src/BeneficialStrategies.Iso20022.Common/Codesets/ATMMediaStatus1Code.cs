@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMMediaStatus1Code")]
 [Description(@"Type of result after a media processing.")]
 [DerivedFrom(typeof(ATMMediaStatusCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMMediaStatus1Code>))]
 public enum ATMMediaStatus1Code
 {
     /// <summary>

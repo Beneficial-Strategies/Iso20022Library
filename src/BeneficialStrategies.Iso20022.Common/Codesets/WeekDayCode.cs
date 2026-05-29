@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vVeyEA3eEeW9YKj3GUmIEw")]
 [Description(@"Specifies the day of the week of the delivery.")]
 [Derivations(typeof(WeekDay2Code), typeof(WeekDay3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WeekDayCode>))]
 public enum WeekDayCode
 {
     /// <summary>

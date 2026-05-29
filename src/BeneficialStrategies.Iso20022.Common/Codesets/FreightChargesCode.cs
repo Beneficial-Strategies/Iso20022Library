@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ar_mpNp-Ed-ak6NoX_4Aeg_-1147157283")]
 [Description(@"Indicates the arrangement as to the freight charges.")]
 [Derivations(typeof(FreightCharges1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FreightChargesCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FreightChargesCode>))]
 public enum FreightChargesCode
 {
     /// <summary>

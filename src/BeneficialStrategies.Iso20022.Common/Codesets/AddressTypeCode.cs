@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bm2sZ9p-Ed-ak6NoX_4Aeg_-1036380604")]
 [Description(@"Specifies the type of address.")]
 [Derivations(typeof(AddressType2Code), typeof(AddressType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AddressTypeCode>))]
 public enum AddressTypeCode
 {
     /// <summary>

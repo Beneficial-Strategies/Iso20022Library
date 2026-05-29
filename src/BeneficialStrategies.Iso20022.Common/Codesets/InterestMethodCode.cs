@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YbAbdtp-Ed-ak6NoX_4Aeg_-843141968")]
 [Description(@"Specifies whether the interest will be setlled in cash or rolled in.")]
 [Derivations(typeof(InterestMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterestMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestMethodCode>))]
 public enum InterestMethodCode
 {
     /// <summary>

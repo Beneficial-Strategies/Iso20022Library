@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZWd-Jdp-Ed-ak6NoX_4Aeg_-1352917034")]
 [Description(@"Indicates that the assignment of a proxy is not allowed for the meeting.")]
 [Derivations(typeof(ProxyNotAllowed1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProxyNotAllowedCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProxyNotAllowedCode>))]
 public enum ProxyNotAllowedCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pBFH8YIJEeS7UOLM47txvA")]
 [Description(@"Methods used to authenticate a person or a card.")]
 [DerivedFrom(typeof(AuthenticationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AuthenticationMethod6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AuthenticationMethod6Code>))]
 public enum AuthenticationMethod6Code
 {
     /// <summary>

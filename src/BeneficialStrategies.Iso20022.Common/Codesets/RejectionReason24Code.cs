@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZjbcF9p-Ed-ak6NoX_4Aeg_-1383112473")]
 [Description(@"Specifies the reason why the request has a rejected or repair status.")]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason24Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason24Code>))]
 public enum RejectionReason24Code
 {
     /// <summary>

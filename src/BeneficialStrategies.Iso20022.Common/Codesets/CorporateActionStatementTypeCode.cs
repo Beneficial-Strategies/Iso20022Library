@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the statement contains missing instructions only or all instructions."
 )]
 [Derivations(typeof(CorporateActionStatementType1Code), typeof(CorporateActionStatementType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionStatementTypeCode>))]
 public enum CorporateActionStatementTypeCode
 {
     /// <summary>

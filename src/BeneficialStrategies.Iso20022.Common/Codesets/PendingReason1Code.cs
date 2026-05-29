@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason the transaction/instruction is pending settlement. Settlement on the instructed settlement date is still possible."
 )]
 [DerivedFrom(typeof(PendingFailingReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PendingReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingReason1Code>))]
 public enum PendingReason1Code
 {
     /// <summary>

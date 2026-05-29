@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2zud0CDNEeWPMvNwVtiMsA")]
 [Description(@"Specifies the type of profile.")]
 [Derivations(typeof(ProfileType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProfileTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProfileTypeCode>))]
 public enum ProfileTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_3qdwkDEvEemzCpWiCwK4aQ")]
 [Description(@"Charge types for temporary services")]
 [DerivedFrom(typeof(TemporaryServicesChargeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TemporaryServicesCharge1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TemporaryServicesCharge1Code>))]
 public enum TemporaryServicesCharge1Code
 {
     /// <summary>

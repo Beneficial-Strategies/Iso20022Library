@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ohWt4BVoEeWXLoZC9OIRgg")]
 [Description(@"Specifies the energy delivery profile.")]
 [DerivedFrom(typeof(EnergyLoadTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EnergyLoadType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EnergyLoadType1Code>))]
 public enum EnergyLoadType1Code
 {
     /// <summary>

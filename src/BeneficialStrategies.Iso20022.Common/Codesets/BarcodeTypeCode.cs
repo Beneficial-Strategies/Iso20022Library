@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1dJHwNuYEeiB5uLfkg9ZJA")]
 [Description(@"Type of Barcode coding.")]
 [Derivations(typeof(BarcodeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BarcodeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BarcodeTypeCode>))]
 public enum BarcodeTypeCode
 {
     /// <summary>

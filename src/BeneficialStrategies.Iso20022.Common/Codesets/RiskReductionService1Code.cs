@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicator of a type of a post trade risk reduction operation for the purpose of reporting."
 )]
 [DerivedFrom(typeof(RiskReductionServiceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RiskReductionService1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RiskReductionService1Code>))]
 public enum RiskReductionService1Code
 {
     /// <summary>

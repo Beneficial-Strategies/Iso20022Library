@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the role associated with a specific party in a payment instruction, as published in an external payment role code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalPaymentRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalPaymentRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalPaymentRole1Code>))]
 public enum ExternalPaymentRole1Code
 {
     /// <summary>

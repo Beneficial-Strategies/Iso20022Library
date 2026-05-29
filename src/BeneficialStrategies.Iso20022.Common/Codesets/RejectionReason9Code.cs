@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZmQtotp-Ed-ak6NoX_4Aeg_1266787897")]
 [Description(@"Specifies the reason of a rejection of an election cancellation request.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason9Code>))]
 public enum RejectionReason9Code
 {
     /// <summary>

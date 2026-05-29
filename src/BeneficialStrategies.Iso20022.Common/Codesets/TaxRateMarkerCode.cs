@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YwYvUQ2XEeStB9HSJRk0Qw")]
 [Description(@"Specifies the rate of tax levied.")]
 [Derivations(typeof(TaxRateMarker1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxRateMarkerCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxRateMarkerCode>))]
 public enum TaxRateMarkerCode
 {
     /// <summary>

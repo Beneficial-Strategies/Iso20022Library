@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the message is a final eligible balance and entitlements message or a preliminary advice of payment message."
 )]
 [Derivations(typeof(CorporateActionMovementPreliminaryAdviceFunction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionMovementPreliminaryAdviceFunctionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionMovementPreliminaryAdviceFunctionCode>))]
 public enum CorporateActionMovementPreliminaryAdviceFunctionCode
 {
     /// <summary>

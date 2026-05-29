@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VDR90AnyEeWnS-yHF1QhNQ")]
 [Description(@"Commodity derivative base product code list for Energy.")]
 [DerivedFrom(typeof(AssetClassProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassProductType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassProductType2Code>))]
 public enum AssetClassProductType2Code
 {
     /// <summary>

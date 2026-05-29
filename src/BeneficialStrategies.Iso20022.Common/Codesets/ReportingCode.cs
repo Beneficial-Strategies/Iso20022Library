@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZTMAptp-Ed-ak6NoX_4Aeg_974356909")]
 [Description(@"Identifies to which institution the reporting must be done.")]
 [Derivations(typeof(Reporting2Code), typeof(Reporting1Code), typeof(Reporting3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportingCode>))]
 public enum ReportingCode
 {
     /// <summary>

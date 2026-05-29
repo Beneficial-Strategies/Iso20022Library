@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__0An5dojEeC60axPepSq7g_-11269067")]
 [Description(@"Specifies the reason why the instruction has an allegement status.")]
 [DerivedFrom(typeof(AllegementReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AllegementReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllegementReason1Code>))]
 public enum AllegementReason1Code
 {
     /// <summary>

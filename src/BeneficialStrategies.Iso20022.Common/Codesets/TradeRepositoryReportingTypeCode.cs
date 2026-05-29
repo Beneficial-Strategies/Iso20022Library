@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indication whether both counterparties to the transaction have reported to the same trade repository or each counteraprty to the transaction reported two different trade repository."
 )]
 [Derivations(typeof(TradeRepositoryReportingType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeRepositoryReportingTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeRepositoryReportingTypeCode>))]
 public enum TradeRepositoryReportingTypeCode
 {
     /// <summary>

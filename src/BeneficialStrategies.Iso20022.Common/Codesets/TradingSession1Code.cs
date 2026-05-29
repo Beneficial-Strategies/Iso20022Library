@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zdcnYg93EeGeV5vP7Mvdig_-213678965")]
 [Description(@"Indicates the factors that are/were applied in the event of pre-allocation.")]
 [DerivedFrom(typeof(TradingSessionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingSession1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingSession1Code>))]
 public enum TradingSession1Code
 {
     /// <summary>

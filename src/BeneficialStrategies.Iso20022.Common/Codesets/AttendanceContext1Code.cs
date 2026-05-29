@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TSESgwEcEeCQm6a_G2yO_w_-1954159559")]
 [Description(@"Human attendance at the POI location during the transaction.")]
 [DerivedFrom(typeof(AttendanceContextCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AttendanceContext1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttendanceContext1Code>))]
 public enum AttendanceContext1Code
 {
     /// <summary>

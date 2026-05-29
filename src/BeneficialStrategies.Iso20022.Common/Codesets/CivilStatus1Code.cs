@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vaUrUCChEeWJd9HF2tO7BA")]
 [Description(@"Specifies the civil status of a person.")]
 [DerivedFrom(typeof(CivilStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CivilStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CivilStatus1Code>))]
 public enum CivilStatus1Code
 {
     /// <summary>

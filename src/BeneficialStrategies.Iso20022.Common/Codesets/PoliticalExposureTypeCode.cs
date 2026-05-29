@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7TMJ8RRuEeOKWo1NF21OVw")]
 [Description(@"Specifies the political exposure type.")]
 [Derivations(typeof(PoliticalExposureType1Code), typeof(PoliticalExposureType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PoliticalExposureTypeCode>))]
 public enum PoliticalExposureTypeCode
 {
     /// <summary>

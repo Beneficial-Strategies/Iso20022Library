@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OzTbUS84EeKNZpaVtgp8Wg")]
 [Description(@"Specifies the conditions that apply to the offer.")]
 [Derivations(typeof(OfferType2Code), typeof(OfferType3Code), typeof(OfferType4Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OfferTypeV2Code>))]
 public enum OfferTypeV2Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Criteria used to segment classes of non-equity instruments into sub classes as per local regulation."
 )]
 [Derivations(typeof(NonEquitySubClassSegmentationCriteria1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonEquitySubClassSegmentationCriteriaCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonEquitySubClassSegmentationCriteriaCode>))]
 public enum NonEquitySubClassSegmentationCriteriaCode
 {
     /// <summary>

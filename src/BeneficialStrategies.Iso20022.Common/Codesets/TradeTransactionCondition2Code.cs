@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YoHqZdp-Ed-ak6NoX_4Aeg_-128659706")]
 [Description(@"Specifies the conditions under which the order/trade is to be executed.")]
 [DerivedFrom(typeof(TradeTransactionConditionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeTransactionCondition2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeTransactionCondition2Code>))]
 public enum TradeTransactionCondition2Code
 {
     /// <summary>

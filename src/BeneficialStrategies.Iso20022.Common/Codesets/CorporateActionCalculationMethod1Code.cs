@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bCgCItp-Ed-ak6NoX_4Aeg_-666370508")]
 [Description(@"Specifies the calculation method for drawings.")]
 [DerivedFrom(typeof(CorporateActionCalculationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionCalculationMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionCalculationMethod1Code>))]
 public enum CorporateActionCalculationMethod1Code
 {
     /// <summary>

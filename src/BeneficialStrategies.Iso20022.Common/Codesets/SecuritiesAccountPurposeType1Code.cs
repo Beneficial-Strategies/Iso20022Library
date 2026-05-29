@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-7A1Np-Ed-ak6NoX_4Aeg_-1554401814")]
 [Description(@"Specifies the purpose of the securities account.")]
 [DerivedFrom(typeof(SecuritiesAccountPurposeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesAccountPurposeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesAccountPurposeType1Code>))]
 public enum SecuritiesAccountPurposeType1Code
 {
     /// <summary>

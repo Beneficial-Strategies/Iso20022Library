@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__0wOw9ojEeC60axPepSq7g_-159430534")]
 [Description(@"Type of business process model used to carry out the transaction.")]
 [Derivations(typeof(BusinessProcessType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BusinessProcessTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessProcessTypeCode>))]
 public enum BusinessProcessTypeCode
 {
     /// <summary>

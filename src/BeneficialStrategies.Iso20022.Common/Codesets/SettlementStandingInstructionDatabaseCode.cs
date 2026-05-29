@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction."
 )]
 [Derivations(typeof(SettlementStandingInstructionDatabase1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementStandingInstructionDatabaseCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementStandingInstructionDatabaseCode>))]
 public enum SettlementStandingInstructionDatabaseCode
 {
     /// <summary>

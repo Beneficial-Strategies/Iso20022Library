@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aVM3RNp-Ed-ak6NoX_4Aeg_-1321527474")]
 [Description(@"Specifies the reason for cancelling a meeting.")]
 [Derivations(typeof(MeetingCancellationReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MeetingCancellationReasonCode>))]
 public enum MeetingCancellationReasonCode
 {
     /// <summary>

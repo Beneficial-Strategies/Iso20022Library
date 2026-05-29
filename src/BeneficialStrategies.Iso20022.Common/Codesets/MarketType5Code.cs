@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
 )]
 [DerivedFrom(typeof(MarketTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarketType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketType5Code>))]
 public enum MarketType5Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YLOfAWH-EeWNUe-5HV3A_g")]
 [Description(@"Specifies the additional business process linked to a corporate action event.")]
 [DerivedFrom(typeof(AdditionalBusinessProcessCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdditionalBusinessProcess6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalBusinessProcess6Code>))]
 public enum AdditionalBusinessProcess6Code
 {
     /// <summary>

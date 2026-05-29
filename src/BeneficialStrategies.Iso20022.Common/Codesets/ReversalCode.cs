@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-Bo8tp-Ed-ak6NoX_4Aeg_450609101")]
 [Description(@"Specifies if an operation is the result of a reversal operation.")]
 [DerivedFrom(typeof(AmountDirectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReversalCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReversalCode>))]
 public enum ReversalCode
 {
     /// <summary>

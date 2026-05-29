@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Specifies the geographic environment, or zone, in which a payment is executed, from the perspective of the forwarding or first agent, eg, international."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GeographicalEnvironmentCode>))]
 public enum GeographicalEnvironmentCode
 {
     /// <summary>

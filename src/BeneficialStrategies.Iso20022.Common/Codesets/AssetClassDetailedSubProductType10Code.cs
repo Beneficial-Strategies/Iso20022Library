@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_BUgXgA2fEeW72qLtWESimw")]
 [Description(@"Further sub product code list for commodity derivative Non-Precious.")]
 [DerivedFrom(typeof(AssetClassDetailedSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassDetailedSubProductType10Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassDetailedSubProductType10Code>))]
 public enum AssetClassDetailedSubProductType10Code
 {
     /// <summary>

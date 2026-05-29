@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7Gewga13EeWMg5rOByfExw")]
 [Description(@"Destination of the message.")]
 [DerivedFrom(typeof(UserInterfaceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UserInterface5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UserInterface5Code>))]
 public enum UserInterface5Code
 {
     /// <summary>

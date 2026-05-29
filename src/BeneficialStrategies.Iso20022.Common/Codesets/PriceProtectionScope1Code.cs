@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aIreNtp-Ed-ak6NoX_4Aeg_-529859319")]
 [Description(@"Defines the type of price protection the customer requires on their order.")]
 [DerivedFrom(typeof(PriceProtectionScopeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceProtectionScope1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceProtectionScope1Code>))]
 public enum PriceProtectionScope1Code
 {
     /// <summary>

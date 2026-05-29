@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OiEAwFdJEeeIAMBcVOw01w")]
 [Description(@"Type of settlement report.")]
 [Derivations(typeof(SettlementReportType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementReportTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementReportTypeCode>))]
 public enum SettlementReportTypeCode
 {
     /// <summary>

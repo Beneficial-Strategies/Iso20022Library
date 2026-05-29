@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CIijUDHKEeyTT91yHXSlSQ")]
 [Description(@"A code that provides the reason of ICC fallback.")]
 [DerivedFrom(typeof(ICCFallbackReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ICCFallbackReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ICCFallbackReason1Code>))]
 public enum ICCFallbackReason1Code
 {
     /// <summary>

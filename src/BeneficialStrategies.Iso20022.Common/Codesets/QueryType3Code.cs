@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature of the request, that is whether all information be returned or only information that has changed since the last similar request was returned."
 )]
 [DerivedFrom(typeof(QueryTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QueryType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QueryType3Code>))]
 public enum QueryType3Code
 {
     /// <summary>

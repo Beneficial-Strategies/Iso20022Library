@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aQk189p-Ed-ak6NoX_4Aeg_85357733")]
 [Description(@"Specifies the current status of the order cancellation request.")]
 [Derivations(typeof(OrderCancellationStatus1Code), typeof(OrderCancellationStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderCancellationStatusCode>))]
 public enum OrderCancellationStatusCode
 {
     /// <summary>

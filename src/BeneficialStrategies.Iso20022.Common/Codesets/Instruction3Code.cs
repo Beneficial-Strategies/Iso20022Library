@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies further instructions concerning the processing of a payment instruction, provided by the sending clearing agent to the next agent(s)."
 )]
 [DerivedFrom(typeof(InstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Instruction3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Instruction3Code>))]
 public enum Instruction3Code
 {
     /// <summary>

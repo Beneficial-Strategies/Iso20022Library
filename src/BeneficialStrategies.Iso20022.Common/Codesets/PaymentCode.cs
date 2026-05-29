@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer."
 )]
 [Derivations(typeof(Payment1Code), typeof(Payment2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentCode>))]
 public enum PaymentCode
 {
     /// <summary>

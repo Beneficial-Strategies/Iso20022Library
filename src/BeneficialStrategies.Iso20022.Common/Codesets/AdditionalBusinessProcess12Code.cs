@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the additional business process linked to a corporate action event such as an automatic market claim."
 )]
 [DerivedFrom(typeof(AdditionalBusinessProcessCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalBusinessProcess12Code>))]
 public enum AdditionalBusinessProcess12Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_agEqidp-Ed-ak6NoX_4Aeg_665910872")]
 [Description(@"Specifies a type of financial or commercial document.")]
 [DerivedFrom(typeof(DocumentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DocumentType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DocumentType3Code>))]
 public enum DocumentType3Code
 {
     /// <summary>

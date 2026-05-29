@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_spkUwDOSEeqKY_RYlDm6Pw")]
 [Description(@"Specifies a type of pension scheme.")]
 [DerivedFrom(typeof(PensionSchemeTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PensionSchemeType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PensionSchemeType2Code>))]
 public enum PensionSchemeType2Code
 {
     /// <summary>

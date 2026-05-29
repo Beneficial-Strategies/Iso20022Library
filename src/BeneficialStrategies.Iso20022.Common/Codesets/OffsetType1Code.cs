@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of peg offset or type of discretion offset (e.g. price offset, tick offset etc)."
 )]
 [DerivedFrom(typeof(OffsetTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OffsetType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OffsetType1Code>))]
 public enum OffsetType1Code
 {
     /// <summary>

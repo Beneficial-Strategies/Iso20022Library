@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the level of approval depending on a number of factors, including payment type, threshold amount or local country or operations practice."
 )]
 [DerivedFrom(typeof(AuthorisationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Authorisation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Authorisation1Code>))]
 public enum Authorisation1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined."
 )]
 [Derivations(typeof(Standardisation1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StandardisationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StandardisationCode>))]
 public enum StandardisationCode
 {
     /// <summary>

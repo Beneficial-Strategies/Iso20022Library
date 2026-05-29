@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aM2zlNp-Ed-ak6NoX_4Aeg_-1038437267")]
 [Description(@"Indicates the method of execution reporting requested by issuer of the order.")]
 [DerivedFrom(typeof(MultilegReportTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MultilegReportType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MultilegReportType1Code>))]
 public enum MultilegReportType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8VSYwB3cEeKXIbeXfdPzuw")]
 [Description(@"Indicates the sub status of the trade notification.")]
 [DerivedFrom(typeof(StatusSubTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatusSubType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatusSubType1Code>))]
 public enum StatusSubType1Code
 {
     /// <summary>

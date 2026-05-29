@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_beqZs9p-Ed-ak6NoX_4Aeg_-1075944972")]
 [Description(@"Specifies the amount price type.")]
 [DerivedFrom(typeof(AmountPriceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AmountPriceType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountPriceType2Code>))]
 public enum AmountPriceType2Code
 {
     /// <summary>

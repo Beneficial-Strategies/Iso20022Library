@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VCgwEVr3EeWN79Bl6BUd3g")]
 [Description(@"Defines the sub-product of type Diammonium Phosphate.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType40Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType40Code>))]
 public enum AssetClassSubProductType40Code
 {
     /// <summary>

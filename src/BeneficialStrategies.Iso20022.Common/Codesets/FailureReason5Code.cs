@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zsPEIIr-EeSvuOJS0mmL0g")]
 [Description(@"Incident occurring on a device.")]
 [DerivedFrom(typeof(FailureReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FailureReason5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailureReason5Code>))]
 public enum FailureReason5Code
 {
     /// <summary>

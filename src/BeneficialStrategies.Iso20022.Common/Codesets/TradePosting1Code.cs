@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the trade is maintained as a separate individual position in the clearing account, or not."
 )]
 [DerivedFrom(typeof(TradePostingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradePosting1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradePosting1Code>))]
 public enum TradePosting1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 )]
 [Derivations(typeof(InsuranceClauses1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InsuranceClausesCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InsuranceClausesCode>))]
 public enum InsuranceClausesCode
 {
     /// <summary>

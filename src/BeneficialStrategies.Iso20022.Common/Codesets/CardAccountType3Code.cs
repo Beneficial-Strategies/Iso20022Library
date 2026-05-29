@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OJP9cY0kEeWzoK7sd7oTyw")]
 [Description(@"Type of cardholder account used for the transaction.")]
 [DerivedFrom(typeof(CardAccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardAccountType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardAccountType3Code>))]
 public enum CardAccountType3Code
 {
     /// <summary>

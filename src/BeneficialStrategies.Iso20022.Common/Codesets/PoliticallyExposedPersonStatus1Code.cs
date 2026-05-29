@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CDnRUJUrEemC09f0MxYkRg")]
 [Description(@"Status of a politically exposed person.")]
 [DerivedFrom(typeof(PoliticallyExposedPersonStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PoliticallyExposedPersonStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PoliticallyExposedPersonStatus1Code>))]
 public enum PoliticallyExposedPersonStatus1Code
 {
     /// <summary>

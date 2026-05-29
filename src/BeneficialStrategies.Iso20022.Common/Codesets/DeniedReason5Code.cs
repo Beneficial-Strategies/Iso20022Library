@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_avbVJdp-Ed-ak6NoX_4Aeg_279829805")]
 [Description(@"Specifies the denied reason.")]
 [DerivedFrom(typeof(DeniedReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeniedReason5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeniedReason5Code>))]
 public enum DeniedReason5Code
 {
     /// <summary>

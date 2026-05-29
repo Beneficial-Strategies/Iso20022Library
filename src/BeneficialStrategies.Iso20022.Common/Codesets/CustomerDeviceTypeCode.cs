@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Q1arsEesEee9r7QjOdsbFw")]
 [Description(@"Type of customer device used for a card payment transaction.")]
 [Derivations(typeof(CustomerDeviceType1Code), typeof(CustomerDeviceType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustomerDeviceTypeCode>))]
 public enum CustomerDeviceTypeCode
 {
     /// <summary>

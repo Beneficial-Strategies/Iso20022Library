@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JKoQoWKNEe6iKbrXdnOlfA")]
 [Description(@"Specifies the feature of an option.")]
 [DerivedFrom(typeof(OptionFeaturesCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionFeatures14Code>))]
 public enum OptionFeatures14Code
 {
     /// <summary>

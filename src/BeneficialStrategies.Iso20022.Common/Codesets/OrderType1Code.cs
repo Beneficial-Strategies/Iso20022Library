@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
 )]
 [DerivedFrom(typeof(OrderTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderType1Code>))]
 public enum OrderType1Code
 {
     /// <summary>

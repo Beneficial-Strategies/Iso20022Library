@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,4 +17,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external instruction code, as provided to a cheque agent for processing, in the format of character string with a maximum length of 4 characters."
 )]
 [Derivations(typeof(ExternalChequeAgentInstruction1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalChequeAgentInstructionCode>))]
 public enum ExternalChequeAgentInstructionCode { }

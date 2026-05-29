@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Low level communication of the hardware or software component toward another component or an external entity."
 )]
 [Derivations(typeof(POICommunicationType1Code), typeof(POICommunicationType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<POICommunicationTypeCode>))]
 public enum POICommunicationTypeCode
 {
     /// <summary>

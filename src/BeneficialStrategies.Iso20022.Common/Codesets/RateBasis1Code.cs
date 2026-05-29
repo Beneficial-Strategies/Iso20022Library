@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_N0uXAM5KEeSc85GUbgBycw")]
 [Description(@"Specifies a rate basis.")]
 [DerivedFrom(typeof(RateBasisCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RateBasis1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RateBasis1Code>))]
 public enum RateBasis1Code
 {
     /// <summary>

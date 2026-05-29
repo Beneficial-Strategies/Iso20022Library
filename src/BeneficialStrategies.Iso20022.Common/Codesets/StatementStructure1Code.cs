@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZQD0Jtp-Ed-ak6NoX_4Aeg_-1907403556")]
 [Description(@"Specifies the type of balances on which the statement is prepared.")]
 [DerivedFrom(typeof(StatementStructureCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatementStructure1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementStructure1Code>))]
 public enum StatementStructure1Code
 {
     /// <summary>

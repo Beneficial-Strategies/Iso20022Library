@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sPf1AF54Ee2a_-MvhEjKmA")]
 [Description(@"Pairing status for an individual transaction or report.")]
 [DerivedFrom(typeof(PairingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PairingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PairingStatus1Code>))]
 public enum PairingStatus1Code
 {
     /// <summary>

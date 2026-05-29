@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_W-ddQIqfEeS4a4abTJTSSw")]
 [Description(@"Type of cassette.")]
 [Derivations(typeof(ATMCassetteType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMCassetteTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCassetteTypeCode>))]
 public enum ATMCassetteTypeCode
 {
     /// <summary>

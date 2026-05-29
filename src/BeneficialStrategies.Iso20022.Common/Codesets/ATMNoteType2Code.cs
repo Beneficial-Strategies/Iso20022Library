@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_d5H3YIqhEeS4a4abTJTSSw")]
 [Description(@"Type of notes.")]
 [DerivedFrom(typeof(ATMNoteTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMNoteType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMNoteType2Code>))]
 public enum ATMNoteType2Code
 {
     /// <summary>

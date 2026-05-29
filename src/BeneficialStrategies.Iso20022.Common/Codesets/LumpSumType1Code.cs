@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TQu1cLKeEeiXL6Ccd-oU8g")]
 [Description(@"Specifies a type of lump sum.")]
 [DerivedFrom(typeof(LumpSumTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LumpSumType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LumpSumType1Code>))]
 public enum LumpSumType1Code
 {
     /// <summary>

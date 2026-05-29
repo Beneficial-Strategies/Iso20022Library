@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1VeIch-0EeuxStysDTgLiw")]
 [Description(@"Specifies the received status for the cross-element validation rules.")]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRuleReceived1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleReceived1Code>))]
 public enum ValidationRuleReceived1Code
 {
     /// <summary>

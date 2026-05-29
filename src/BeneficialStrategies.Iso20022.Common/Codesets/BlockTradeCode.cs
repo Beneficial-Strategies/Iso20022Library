@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bU1IQtp-Ed-ak6NoX_4Aeg_-1631812740")]
 [Description(@"Specifies whether the instruction is the parent or a children of a block trade.")]
 [Derivations(typeof(BlockTrade1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BlockTradeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BlockTradeCode>))]
 public enum BlockTradeCode
 {
     /// <summary>

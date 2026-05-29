@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_n3w1hsMQEee-Vv_OVx0uAQ")]
 [Description(@"DTC Unallocated reason codes for payment adjustments.")]
 [Derivations(typeof(DTCUnallocatedAdjustmentReason4Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCUnallocatedAdjustmentReasonV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCUnallocatedAdjustmentReasonV2Code>))]
 public enum DTCUnallocatedAdjustmentReasonV2Code
 {
     /// <summary>

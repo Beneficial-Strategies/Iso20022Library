@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TU5kHAEcEeCQm6a_G2yO_w_1796414491")]
 [Description(@"On-line and off-line capabilities of the POI (Point Of Interaction).")]
 [Derivations(typeof(OnLineCapability1Code), typeof(OnLineCapability2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OnLineCapabilityCode>))]
 public enum OnLineCapabilityCode
 {
     /// <summary>

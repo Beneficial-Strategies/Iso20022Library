@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aP_AENp-Ed-ak6NoX_4Aeg_1603970622")]
 [Description(@"Code identifying special corporate action option numbers.")]
 [Derivations(typeof(OptionNumber1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionNumberCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionNumberCode>))]
 public enum OptionNumberCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZQD0Itp-Ed-ak6NoX_4Aeg_836087748")]
 [Description(@"Specifies the type of balances on which the statement is prepared.")]
 [Derivations(typeof(StatementBasis1Code), typeof(StatementBasis2Code), typeof(StatementBasis3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementBasisCode>))]
 public enum StatementBasisCode
 {
     /// <summary>

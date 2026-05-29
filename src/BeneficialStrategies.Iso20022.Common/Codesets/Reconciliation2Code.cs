@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Tquq4HhCEeu3kecHd7QKUQ")]
 [Description(@"Specifies the process type used for the trade repository reconciliation.")]
 [DerivedFrom(typeof(ReconciliationV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Reconciliation2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Reconciliation2Code>))]
 public enum Reconciliation2Code
 {
     /// <summary>

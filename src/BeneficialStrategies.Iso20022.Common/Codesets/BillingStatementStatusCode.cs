@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6VUE1pqlEeGSON8vddiWzQ_861577519")]
 [Description(@"Defines the status of the billing statement.")]
 [Derivations(typeof(BillingStatementStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BillingStatementStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BillingStatementStatusCode>))]
 public enum BillingStatementStatusCode
 {
     /// <summary>

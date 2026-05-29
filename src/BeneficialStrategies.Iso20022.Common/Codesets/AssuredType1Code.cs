@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bfaAl9p-Ed-ak6NoX_4Aeg_1045068469")]
 [Description(@"Specifies which type of party should be the assured on the insurance certificate.")]
 [DerivedFrom(typeof(AssuredTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssuredType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssuredType1Code>))]
 public enum AssuredType1Code
 {
     /// <summary>

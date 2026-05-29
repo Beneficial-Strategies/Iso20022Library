@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yl41wdp-Ed-ak6NoX_4Aeg_2073766777")]
 [Description(@"Unit of time associated with the contract.")]
 [DerivedFrom(typeof(TimeUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TimeUnit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TimeUnit1Code>))]
 public enum TimeUnit1Code
 {
     /// <summary>

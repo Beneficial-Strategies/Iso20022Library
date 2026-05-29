@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_s2j4EItGEeSxlKlAGYErFg")]
 [Description(@"Reason for sending or requesting a maintenance command.")]
 [Derivations(typeof(ATMCommandReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMCommandReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCommandReasonCode>))]
 public enum ATMCommandReasonCode
 {
     /// <summary>

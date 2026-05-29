@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y9k9B9p-Ed-ak6NoX_4Aeg_-1179652008")]
 [Description(@"Specifies the form of the rebate when commission is waived.")]
 [DerivedFrom(typeof(WaivingInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WaivingInstruction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WaivingInstruction1Code>))]
 public enum WaivingInstruction1Code
 {
     /// <summary>

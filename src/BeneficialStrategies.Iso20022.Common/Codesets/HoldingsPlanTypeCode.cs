@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1TJzwwnwEeGRcv5_yGDZOA")]
 [Description(@"Specifies the holdings plan of the assets to transfer.")]
 [Derivations(typeof(HoldingsPlanType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HoldingsPlanTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingsPlanTypeCode>))]
 public enum HoldingsPlanTypeCode
 {
     /// <summary>

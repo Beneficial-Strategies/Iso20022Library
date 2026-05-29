@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YsCg1ph8EeumhIk_Pv20Lg")]
 [Description(@"Common report status for all individual reports sent / received.")]
 [Derivations(typeof(PairedReconciled3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PairedReconciledV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PairedReconciledV2Code>))]
 public enum PairedReconciledV2Code
 {
     /// <summary>

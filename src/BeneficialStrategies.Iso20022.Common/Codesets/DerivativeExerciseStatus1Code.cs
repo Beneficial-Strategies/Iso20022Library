@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_QJkDQIAxEeSUJZYcWGKkkw")]
 [Description(@"Specifies the exercise status of the derivative products.")]
 [DerivedFrom(typeof(DerivativeExerciseStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DerivativeExerciseStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DerivativeExerciseStatus1Code>))]
 public enum DerivativeExerciseStatus1Code
 {
     /// <summary>

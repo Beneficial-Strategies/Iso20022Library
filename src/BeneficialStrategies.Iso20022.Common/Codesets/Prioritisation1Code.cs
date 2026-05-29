@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aKBiANp-Ed-ak6NoX_4Aeg_1567908558")]
 [Description(@"Indicates if one side or the other of a cross order should be prioritized.")]
 [DerivedFrom(typeof(PrioritisationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Prioritisation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Prioritisation1Code>))]
 public enum Prioritisation1Code
 {
     /// <summary>

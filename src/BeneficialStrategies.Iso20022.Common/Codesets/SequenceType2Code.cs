@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether a once off transaction is covered or whether recurring transactions are covered."
 )]
 [DerivedFrom(typeof(SequenceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SequenceType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SequenceType2Code>))]
 public enum SequenceType2Code
 {
     /// <summary>

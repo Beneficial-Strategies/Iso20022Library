@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Ieq6AFlcEeGqx4xQw6z6Ug_-1712839316")]
 [Description(@"Specifies if an operation is an increase or a decrease.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DebitCreditCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DebitCreditCode>))]
 public enum DebitCreditCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_oLAXQD6IEemPvNTzinB5Vw")]
 [Description(@"Specifies the type of shareholding.")]
 [Derivations(typeof(ShareholdingType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ShareholdingTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ShareholdingTypeCode>))]
 public enum ShareholdingTypeCode
 {
     /// <summary>

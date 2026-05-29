@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aUJuZNp-Ed-ak6NoX_4Aeg_797163955")]
 [Description(@"Specifies the type of margin.")]
 [DerivedFrom(typeof(RemarketingMarginTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RemarketingMarginType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RemarketingMarginType1Code>))]
 public enum RemarketingMarginType1Code
 {
     /// <summary>

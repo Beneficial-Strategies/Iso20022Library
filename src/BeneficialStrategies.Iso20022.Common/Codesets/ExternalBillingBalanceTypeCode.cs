@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines the balance of the billing service, as published in an external billing balance code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalBillingBalanceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalBillingBalanceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalBillingBalanceTypeCode>))]
 public enum ExternalBillingBalanceTypeCode
 {
     /// <summary>

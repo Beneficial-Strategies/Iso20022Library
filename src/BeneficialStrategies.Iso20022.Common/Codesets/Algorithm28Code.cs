@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Algorithm28Code")]
 [Description(@"Cryptographic algorithms for the protection of transported keys.")]
 [DerivedFrom(typeof(AlgorithmCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm28Code>))]
 public enum Algorithm28Code
 {
     /// <summary>

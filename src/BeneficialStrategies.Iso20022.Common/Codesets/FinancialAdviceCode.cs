@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_an-pVNp-Ed-ak6NoX_4Aeg_610878701")]
 [Description(@"Specifies if advice has been received from an independent financial advisor.")]
 [Derivations(typeof(FinancialAdvice1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialAdviceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialAdviceCode>))]
 public enum FinancialAdviceCode
 {
     /// <summary>

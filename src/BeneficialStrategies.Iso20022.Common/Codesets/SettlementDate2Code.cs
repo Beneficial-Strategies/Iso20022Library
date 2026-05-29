@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZLI34dp-Ed-ak6NoX_4Aeg_1141279698")]
 [Description(@"Indicates the date of settlement in coded form.")]
 [DerivedFrom(typeof(SettlementDateCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementDate2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementDate2Code>))]
 public enum SettlementDate2Code
 {
     /// <summary>

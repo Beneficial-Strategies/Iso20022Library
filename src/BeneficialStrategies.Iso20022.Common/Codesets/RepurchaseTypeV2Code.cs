@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -17,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RepurchaseType10Code),
     typeof(RepurchaseType9Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepurchaseTypeV2Code>))]
 public enum RepurchaseTypeV2Code
 {
     /// <summary>

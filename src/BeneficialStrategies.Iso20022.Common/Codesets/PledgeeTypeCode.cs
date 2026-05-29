@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fynYkE9ZEeSn2-3swbRbzg")]
 [Description(@"Specifies the type of pledgee.")]
 [Derivations(typeof(PledgeeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PledgeeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PledgeeTypeCode>))]
 public enum PledgeeTypeCode
 {
     /// <summary>

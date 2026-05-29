@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ABtQoBl-EeKxsrht2duUcg")]
 [Description(@"Specifies the function of the price report.")]
 [DerivedFrom(typeof(PriceReportFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceReportFunction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceReportFunction1Code>))]
 public enum PriceReportFunction1Code
 {
     /// <summary>

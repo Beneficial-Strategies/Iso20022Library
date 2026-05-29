@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies a contract balance type code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalContractBalanceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalContractBalanceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalContractBalanceTypeCode>))]
 public enum ExternalContractBalanceTypeCode
 {
     /// <summary>

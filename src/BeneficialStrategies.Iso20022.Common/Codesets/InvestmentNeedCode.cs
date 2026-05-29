@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_S9gOMDcdEeidBoT_PugKiA")]
 [Description(@"Specifies an investment need.")]
 [Derivations(typeof(InvestmentNeed1Code), typeof(InvestmentNeed2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentNeedCode>))]
 public enum InvestmentNeedCode
 {
     /// <summary>

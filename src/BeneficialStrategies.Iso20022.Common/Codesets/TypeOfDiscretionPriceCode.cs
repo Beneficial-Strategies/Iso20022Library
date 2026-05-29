@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YwduFtp-Ed-ak6NoX_4Aeg_337179698")]
 [Description(@"Contains the type of price to which the discretion offset is related to.")]
 [Derivations(typeof(TypeOfDiscretionPrice1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TypeOfDiscretionPriceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TypeOfDiscretionPriceCode>))]
 public enum TypeOfDiscretionPriceCode
 {
     /// <summary>

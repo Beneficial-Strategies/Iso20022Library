@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_PZ7wxKUsEee4_75LDmHZiQ")]
 [Description(@"Specifies underlying information regarding the type of transaction.")]
 [DerivedFrom(typeof(SecuritiesTransactionTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesTransactionType21Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesTransactionType21Code>))]
 public enum SecuritiesTransactionType21Code
 {
     /// <summary>

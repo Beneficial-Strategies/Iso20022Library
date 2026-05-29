@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the business flow, in order to determine the role of the parties in the business process. This indicator is very important when there are multiple intermediaries in the exchange of information process."
 )]
 [Derivations(typeof(BusinessFlowDirectionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BusinessFlowDirectionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessFlowDirectionTypeCode>))]
 public enum BusinessFlowDirectionTypeCode
 {
     /// <summary>

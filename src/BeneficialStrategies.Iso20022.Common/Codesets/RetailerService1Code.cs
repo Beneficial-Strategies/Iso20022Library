@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"List of Retail services available and used in the Retail messages. Helps to know which service to activate."
 )]
 [DerivedFrom(typeof(RetailerServiceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RetailerService1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RetailerService1Code>))]
 public enum RetailerService1Code
 {
     /// <summary>

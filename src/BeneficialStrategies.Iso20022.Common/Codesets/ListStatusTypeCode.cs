@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_afe0o9p-Ed-ak6NoX_4Aeg_-430711327")]
 [Description(@"Identifies the type of status.")]
 [Derivations(typeof(ListStatusType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ListStatusTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ListStatusTypeCode>))]
 public enum ListStatusTypeCode
 {
     /// <summary>

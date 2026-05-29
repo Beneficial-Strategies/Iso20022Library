@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_99IlkA8SEeSFHsNYty4C9Q")]
 [Description(@"Specifies whether the value is net (inclusive of tax) or gross.")]
 [Derivations(typeof(ClearingMethod1Code), typeof(ClearingMethod2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingMethodCode>))]
 public enum ClearingMethodCode
 {
     /// <summary>

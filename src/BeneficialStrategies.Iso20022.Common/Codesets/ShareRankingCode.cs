@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZOkmaNp-Ed-ak6NoX_4Aeg_1801695812")]
 [Description(@"Specifies whether the shares are ranking for dividend or pari passu.")]
 [Derivations(typeof(ShareRanking1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ShareRankingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ShareRankingCode>))]
 public enum ShareRankingCode
 {
     /// <summary>

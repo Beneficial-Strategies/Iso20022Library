@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_L3FkYBE4EeafpqhYGpTDnw")]
 [Description(@"Specifies the status of a legal entity.")]
 [Derivations(typeof(OrganisationLegalStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrganisationLegalStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrganisationLegalStatusCode>))]
 public enum OrganisationLegalStatusCode
 {
     /// <summary>

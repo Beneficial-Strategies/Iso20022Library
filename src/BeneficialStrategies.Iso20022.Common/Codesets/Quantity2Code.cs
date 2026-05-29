@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZXWu9tp-Ed-ak6NoX_4Aeg_274124251")]
 [Description(@"Specifies quantity of a financial instrument.")]
 [DerivedFrom(typeof(QuantityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Quantity2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Quantity2Code>))]
 public enum Quantity2Code
 {
     /// <summary>

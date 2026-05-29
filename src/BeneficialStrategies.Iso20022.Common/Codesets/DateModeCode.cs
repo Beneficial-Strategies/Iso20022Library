@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day."
 )]
 [Derivations(typeof(DateMode1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DateModeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DateModeCode>))]
 public enum DateModeCode
 {
     /// <summary>

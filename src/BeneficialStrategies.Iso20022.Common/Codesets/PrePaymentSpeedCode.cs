@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Speed of unscheduled partial of complete payment of the principal amount outstanding on a debt obligation before its due date."
 )]
 [Derivations(typeof(PrePaymentSpeed1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PrePaymentSpeedCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PrePaymentSpeedCode>))]
 public enum PrePaymentSpeedCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aNmad9p-Ed-ak6NoX_4Aeg_1937897714")]
 [Description(@"Specifies that there is no reason available.")]
 [DerivedFrom(typeof(SpecialPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NoReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NoReasonCode>))]
 public enum NoReasonCode
 {
     /// <summary>

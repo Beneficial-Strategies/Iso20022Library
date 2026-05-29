@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pQ8HgDDgEeO9waS4ina8CA")]
 [Description(@"Type of instalment plan.")]
 [Derivations(typeof(InstalmentPlan1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstalmentPlanCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstalmentPlanCode>))]
 public enum InstalmentPlanCode
 {
     /// <summary>

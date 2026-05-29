@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type an event generated within a system, as published in an system event type code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalSystemEventType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalSystemEventTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalSystemEventTypeCode>))]
 public enum ExternalSystemEventTypeCode
 {
     /// <summary>

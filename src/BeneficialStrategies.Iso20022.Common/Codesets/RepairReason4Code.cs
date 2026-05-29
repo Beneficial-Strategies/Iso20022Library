@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZuAUYNp-Ed-ak6NoX_4Aeg_964099822")]
 [Description(@"Specifies the reason why the settlement instruction has a repair status.")]
 [DerivedFrom(typeof(RepairReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepairReason4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepairReason4Code>))]
 public enum RepairReason4Code
 {
     /// <summary>

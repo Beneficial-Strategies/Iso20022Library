@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZuT2adp-Ed-ak6NoX_4Aeg_1118630481")]
 [Description(@"Specifies the reason why the securities financing instruction has a repair status.")]
 [DerivedFrom(typeof(RepairReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepairReason5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepairReason5Code>))]
 public enum RepairReason5Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_iygrwWjBEeSP8Z8nx8HTuQ")]
 [Description(@"Cryptographic algorithms for digital signatures.")]
 [DerivedFrom(typeof(AlgorithmCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Algorithm14Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm14Code>))]
 public enum Algorithm14Code
 {
     /// <summary>

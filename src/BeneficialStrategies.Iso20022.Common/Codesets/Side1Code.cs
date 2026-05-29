@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZO3hUNp-Ed-ak6NoX_4Aeg_336258183")]
 [Description(@"Indicates the side of the quote request, from the buy-side perspective.")]
 [DerivedFrom(typeof(SideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Side1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Side1Code>))]
 public enum Side1Code
 {
     /// <summary>

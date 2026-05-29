@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external trade market code in the format of character string with a maximum length of 4 characters.|External code sets can be downloaded from www.iso20022.org.|"
 )]
 [DerivedFrom(typeof(ExternalTradeMarketCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalTradeMarket1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalTradeMarket1Code>))]
 public enum ExternalTradeMarket1Code
 {
     /// <summary>

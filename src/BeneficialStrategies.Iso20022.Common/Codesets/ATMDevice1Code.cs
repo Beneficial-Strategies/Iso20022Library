@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TVx90IqIEeSRT5rEzcAHEw")]
 [Description(@"ATM device to output message.")]
 [DerivedFrom(typeof(ATMDeviceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMDevice1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMDevice1Code>))]
 public enum ATMDevice1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bj4Q5Np-Ed-ak6NoX_4Aeg_1039779413")]
 [Description(@"Indicates whether an automatic routing system is involved.")]
 [DerivedFrom(typeof(AutoRoutingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AutoRouting1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AutoRouting1Code>))]
 public enum AutoRouting1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9JOc0MObEeWiEtRBUJSIaA")]
 [Description(@"Specifies the type of market identification code which is being defined.")]
 [DerivedFrom(typeof(MarketIdentificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarketIdentification1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketIdentification1Code>))]
 public enum MarketIdentification1Code
 {
     /// <summary>

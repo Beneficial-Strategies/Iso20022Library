@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nq1NEB5REeWc9bJOIIhUUw")]
 [Description(@"Specifies the reason for the exchange with the national competent authority.")]
 [DerivedFrom(typeof(AuthorityExchangeReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AuthorityExchangeReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AuthorityExchangeReason1Code>))]
 public enum AuthorityExchangeReason1Code
 {
     /// <summary>

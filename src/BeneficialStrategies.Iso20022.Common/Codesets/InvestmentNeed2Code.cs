@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gKzBAKDtEequlaOyi6MUhw")]
 [Description(@"Specifies an investment need.")]
 [DerivedFrom(typeof(InvestmentNeedCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentNeed2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentNeed2Code>))]
 public enum InvestmentNeed2Code
 {
     /// <summary>

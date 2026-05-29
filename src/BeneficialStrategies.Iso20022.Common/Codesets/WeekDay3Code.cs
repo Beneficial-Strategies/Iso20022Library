@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ybdoIJDpEeiZrojxmnmDSQ")]
 [Description(@"Specifies the day of the week of the delivery.")]
 [DerivedFrom(typeof(WeekDayCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WeekDay3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WeekDay3Code>))]
 public enum WeekDay3Code
 {
     /// <summary>

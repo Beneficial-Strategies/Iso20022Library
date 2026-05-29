@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_l1ruYaB6EeOEyO7fCl8lLA")]
 [Description(@"Specifies the source of a price quotation.")]
 [DerivedFrom(typeof(PriceSourceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceSource2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceSource2Code>))]
 public enum PriceSource2Code
 {
     /// <summary>

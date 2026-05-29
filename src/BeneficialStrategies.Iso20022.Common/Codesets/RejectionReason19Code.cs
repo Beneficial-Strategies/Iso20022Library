@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zir1Odp-Ed-ak6NoX_4Aeg_1364680565")]
 [Description(@"Specifies the reason of a rejection of a global movement authorisation request.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason19Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason19Code>))]
 public enum RejectionReason19Code
 {
     /// <summary>

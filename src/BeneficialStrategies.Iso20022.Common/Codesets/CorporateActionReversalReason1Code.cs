@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"The reason why a reversal of payment is taking place in corporate action processing."
 )]
 [DerivedFrom(typeof(CorporateActionReversalReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionReversalReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionReversalReason1Code>))]
 public enum CorporateActionReversalReason1Code
 {
     /// <summary>

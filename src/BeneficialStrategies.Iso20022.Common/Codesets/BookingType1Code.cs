@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar)."
 )]
 [DerivedFrom(typeof(BookingTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BookingType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BookingType1Code>))]
 public enum BookingType1Code
 {
     /// <summary>

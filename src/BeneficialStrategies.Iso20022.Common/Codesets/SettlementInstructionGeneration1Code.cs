@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__wk5ZdojEeC60axPepSq7g_1768123996")]
 [Description(@"Settlement Instruction Generation Code.")]
 [DerivedFrom(typeof(SettlementInstructionGenerationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementInstructionGeneration1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementInstructionGeneration1Code>))]
 public enum SettlementInstructionGeneration1Code
 {
     /// <summary>

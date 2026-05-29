@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SBhCMJmMEee_M7tURHTZTQ")]
 [Description(@"Type of entity acting as a Payment Initiation Service Provider.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType26Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType26Code>))]
 public enum PartyType26Code
 {
     /// <summary>

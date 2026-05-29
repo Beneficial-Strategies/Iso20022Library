@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_U8Z8ANomEembTrt_WixjyQ")]
 [Description(@"Specifies the type of advice to provide back in the report.")]
 [DerivedFrom(typeof(AdviceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdviceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdviceType1Code>))]
 public enum AdviceType1Code
 {
     /// <summary>

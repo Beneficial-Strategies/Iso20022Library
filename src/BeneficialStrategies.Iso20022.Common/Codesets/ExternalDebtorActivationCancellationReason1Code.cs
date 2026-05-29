@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the debtor activation cancellation reason code, as published in an external debtor activation cancellation reason code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalDebtorActivationCancellationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalDebtorActivationCancellationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDebtorActivationCancellationReason1Code>))]
 public enum ExternalDebtorActivationCancellationReason1Code
 {
     /// <summary>

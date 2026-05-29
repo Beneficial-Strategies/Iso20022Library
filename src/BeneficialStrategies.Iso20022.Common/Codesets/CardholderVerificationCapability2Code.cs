@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Cardholder verification capabilities by the terminal. |It correspond to the ISO 8583, field number 22-2 for the versions 87 and 93, and 27-2 for the version 2003."
 )]
 [DerivedFrom(typeof(CardholderVerificationCapabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardholderVerificationCapability2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardholderVerificationCapability2Code>))]
 public enum CardholderVerificationCapability2Code
 {
     /// <summary>

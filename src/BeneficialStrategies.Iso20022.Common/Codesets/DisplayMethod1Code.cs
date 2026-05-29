@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_awK8B9p-Ed-ak6NoX_4Aeg_1593903007")]
 [Description(@"Instructions for the use of display quantity.")]
 [DerivedFrom(typeof(DisplayMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DisplayMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DisplayMethod1Code>))]
 public enum DisplayMethod1Code
 {
     /// <summary>

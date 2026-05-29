@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions)."
 )]
 [Derivations(typeof(AdditionalRight1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdditionalRightCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalRightCode>))]
 public enum AdditionalRightCode
 {
     /// <summary>

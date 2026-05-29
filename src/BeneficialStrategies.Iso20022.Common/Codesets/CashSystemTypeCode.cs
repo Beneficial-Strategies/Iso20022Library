@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a7fbNdp-Ed-ak6NoX_4Aeg_-1434318267")]
 [Description(@"Specifies a type of payment system.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashSystemTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashSystemTypeCode>))]
 public enum CashSystemTypeCode
 {
     /// <summary>

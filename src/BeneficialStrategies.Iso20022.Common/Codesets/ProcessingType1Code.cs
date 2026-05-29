@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8JT2IaMgEeCJ6YNENx4h-w_-880711812")]
 [Description(@"Specifies the type of processing restrictions the central system must apply.")]
 [DerivedFrom(typeof(ProcessingTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessingType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessingType1Code>))]
 public enum ProcessingType1Code
 {
     /// <summary>

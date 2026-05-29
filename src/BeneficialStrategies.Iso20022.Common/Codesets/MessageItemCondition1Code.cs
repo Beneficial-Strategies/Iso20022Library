@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KS410H1DEeCF8NjrBemJWQ_1422822358")]
 [Description(@"Rule to apply for the presence of a message item.")]
 [DerivedFrom(typeof(MessageItemConditionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageItemCondition1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageItemCondition1Code>))]
 public enum MessageItemCondition1Code
 {
     /// <summary>

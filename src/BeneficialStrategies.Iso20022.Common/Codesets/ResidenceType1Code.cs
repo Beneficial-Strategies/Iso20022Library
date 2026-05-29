@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of residence where the party has its permanent home or principal establishment."
 )]
 [DerivedFrom(typeof(ResidenceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResidenceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResidenceType1Code>))]
 public enum ResidenceType1Code
 {
     /// <summary>

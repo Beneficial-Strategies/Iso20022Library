@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_i8_PME4SEeiQHa-q1Uephw")]
 [Description(@"Specifies a type of holder.")]
 [DerivedFrom(typeof(HolderTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HolderType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HolderType1Code>))]
 public enum HolderType1Code
 {
     /// <summary>

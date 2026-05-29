@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ad_m49p-Ed-ak6NoX_4Aeg_-636020179")]
 [Description(@"Specifies the regulatory restrictions applicable to a security.")]
 [Derivations(typeof(LegalRestrictions2Code), typeof(LegalRestrictions1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegalRestrictionsCode>))]
 public enum LegalRestrictionsCode
 {
     /// <summary>

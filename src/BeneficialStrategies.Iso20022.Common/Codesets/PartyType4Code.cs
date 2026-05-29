@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Entity assigning an identification (for example merchant, acceptor, acquirer, tax authority, etc.)."
 )]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType4Code>))]
 public enum PartyType4Code
 {
     /// <summary>

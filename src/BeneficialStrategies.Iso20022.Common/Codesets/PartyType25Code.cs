@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bs2o4XbLEeef9c2nwgY9Xw")]
 [Description(@"Type of entity submitting a card fraud report.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType25Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType25Code>))]
 public enum PartyType25Code
 {
     /// <summary>

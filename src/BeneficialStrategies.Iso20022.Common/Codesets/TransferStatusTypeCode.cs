@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_RqsCgFNYEeijdq8ilaxyOA")]
 [Description(@"Specifies a type of transfer status or transfer event.")]
 [Derivations(typeof(TransferStatusType1Code), typeof(TransferStatusType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferStatusTypeCode>))]
 public enum TransferStatusTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YDowcAnyEeWnS-yHF1QhNQ")]
 [Description(@"Commodity derivative base product code list for Paper.")]
 [DerivedFrom(typeof(AssetClassProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassProductType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassProductType8Code>))]
 public enum AssetClassProductType8Code
 {
     /// <summary>

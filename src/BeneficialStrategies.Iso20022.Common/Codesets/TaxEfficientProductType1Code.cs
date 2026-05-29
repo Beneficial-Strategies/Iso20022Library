@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Xccy8E4MEeiQHa-q1Uephw")]
 [Description(@"Specifies a type of tax efficient product.")]
 [DerivedFrom(typeof(TaxEfficientProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxEfficientProductType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxEfficientProductType1Code>))]
 public enum TaxEfficientProductType1Code
 {
     /// <summary>

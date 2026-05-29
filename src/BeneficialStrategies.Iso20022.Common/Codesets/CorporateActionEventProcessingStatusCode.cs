@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bDZaBtp-Ed-ak6NoX_4Aeg_391924005")]
 [Description(@"Specifies the stage in the corporate action event life cycle.")]
 [Derivations(typeof(CorporateActionEventProcessingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventProcessingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventProcessingStatusCode>))]
 public enum CorporateActionEventProcessingStatusCode
 {
     /// <summary>

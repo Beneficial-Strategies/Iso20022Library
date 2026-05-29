@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_r1AnQCXeEeO4bIO_HtGo9Q")]
 [Description(@"Automatic Reinvestment of Cash distributed by accumulating funds.")]
 [DerivedFrom(typeof(CorporateActionFrequencyTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionFrequencyType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionFrequencyType3Code>))]
 public enum CorporateActionFrequencyType3Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kcJ1ICDDEeWPMvNwVtiMsA")]
 [Description(@"Specifies the level of control.")]
 [DerivedFrom(typeof(LevelOfControlCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LevelOfControl1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LevelOfControl1Code>))]
 public enum LevelOfControl1Code
 {
     /// <summary>

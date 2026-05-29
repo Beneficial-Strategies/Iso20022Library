@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MSMgcNnTEeS--7IJLPC9lw")]
 [Description(@"Specifies a type of supporting document.")]
 [DerivedFrom(typeof(SupportDocumentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SupportDocumentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SupportDocumentType1Code>))]
 public enum SupportDocumentType1Code
 {
     /// <summary>

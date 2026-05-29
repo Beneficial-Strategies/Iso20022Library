@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_36RfYBUIEeOIaq8KyCdIDQ")]
 [Description(@"Specifies the role of the party.")]
 [DerivedFrom(typeof(PartyRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundRole6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundRole6Code>))]
 public enum InvestmentFundRole6Code
 {
     /// <summary>

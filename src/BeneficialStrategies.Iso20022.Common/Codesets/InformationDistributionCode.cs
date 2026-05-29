@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-jTPExOBEeKjmvxNCObNeQ")]
 [Description(@"Specifies how information is to be distributed.")]
 [Derivations(typeof(InformationDistribution1Code), typeof(InformationDistribution2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InformationDistributionCode>))]
 public enum InformationDistributionCode
 {
     /// <summary>

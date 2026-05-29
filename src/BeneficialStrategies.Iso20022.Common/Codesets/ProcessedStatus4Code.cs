@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aKnX49p-Ed-ak6NoX_4Aeg_1007090482")]
 [Description(@"Specifies the processing status of the standing instruction cancellation request.")]
 [DerivedFrom(typeof(CorporateActionProcessedStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessedStatus4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessedStatus4Code>))]
 public enum ProcessedStatus4Code
 {
     /// <summary>

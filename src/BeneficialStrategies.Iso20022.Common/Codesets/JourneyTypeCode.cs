@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LnTHAF1jEeeu75xdwwAXQw")]
 [Description(@"Journey type data in a car rental service.")]
 [Derivations(typeof(JourneyType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<JourneyTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<JourneyTypeCode>))]
 public enum JourneyTypeCode
 {
     /// <summary>

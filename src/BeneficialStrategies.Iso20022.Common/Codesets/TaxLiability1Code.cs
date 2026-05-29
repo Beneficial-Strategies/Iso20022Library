@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YiBCYdp-Ed-ak6NoX_4Aeg_230817252")]
 [Description(@"Specifies the tax role capacity of the instructing party.")]
 [DerivedFrom(typeof(TaxLiabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxLiability1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxLiability1Code>))]
 public enum TaxLiability1Code
 {
     /// <summary>

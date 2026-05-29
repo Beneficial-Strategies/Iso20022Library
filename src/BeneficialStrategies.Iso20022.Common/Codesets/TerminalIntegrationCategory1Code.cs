@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Terminal category code of the place where the merchant actually performed the transaction."
 )]
 [DerivedFrom(typeof(TerminalIntegrationCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalIntegrationCategory1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalIntegrationCategory1Code>))]
 public enum TerminalIntegrationCategory1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bCWRI9p-Ed-ak6NoX_4Aeg_-462671342")]
 [Description(@"Specifies if this document is a copy, a duplicate, or a duplicate of a copy.")]
 [DerivedFrom(typeof(CopyDuplicateCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CopyDuplicate1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CopyDuplicate1Code>))]
 public enum CopyDuplicate1Code
 {
     /// <summary>

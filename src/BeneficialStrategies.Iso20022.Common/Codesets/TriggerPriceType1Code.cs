@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yv34Ntp-Ed-ak6NoX_4Aeg_-1635338287")]
 [Description(@"Specifies the type of price that the trigger is compared to.")]
 [DerivedFrom(typeof(TriggerPriceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TriggerPriceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TriggerPriceType1Code>))]
 public enum TriggerPriceType1Code
 {
     /// <summary>

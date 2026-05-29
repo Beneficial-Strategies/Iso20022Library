@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of securities proceeds; whether they are newly issued or not, defeased or non-defeased."
 )]
 [DerivedFrom(typeof(NewSecuritiesIssuanceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NewSecuritiesIssuanceType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NewSecuritiesIssuanceType5Code>))]
 public enum NewSecuritiesIssuanceType5Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ygvPwDwvEeaFzejt0Yw_3A")]
 [Description(@"Specifies the type of hold back on redemption proceeds.")]
 [Derivations(typeof(GateHoldBack1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GateHoldBackCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GateHoldBackCode>))]
 public enum GateHoldBackCode
 {
     /// <summary>

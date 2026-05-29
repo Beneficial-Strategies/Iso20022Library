@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Pj1cZ1LEeublrfU-wN95w")]
 [Description(@"Type of additional service.")]
 [DerivedFrom(typeof(AdditionalServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdditionalServiceType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdditionalServiceType2Code>))]
 public enum AdditionalServiceType2Code
 {
     /// <summary>

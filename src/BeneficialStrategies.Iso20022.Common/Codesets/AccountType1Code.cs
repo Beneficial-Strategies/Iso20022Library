@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_brn3ptp-Ed-ak6NoX_4Aeg_-1407974386")]
 [Description(@"Specifies the type of account.")]
 [DerivedFrom(typeof(AccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountType1Code>))]
 public enum AccountType1Code
 {
     /// <summary>

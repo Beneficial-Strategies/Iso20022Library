@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LZZ2wE7bEeifNrXGwadPmg")]
 [Description(@"Specifies a reason for a withdrawal from the investment product.")]
 [DerivedFrom(typeof(PortfolioWithdrawalReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PortfolioWithdrawalReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PortfolioWithdrawalReason1Code>))]
 public enum PortfolioWithdrawalReason1Code
 {
     /// <summary>

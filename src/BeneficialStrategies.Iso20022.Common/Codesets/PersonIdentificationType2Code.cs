@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number."
 )]
 [DerivedFrom(typeof(PersonIdentificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PersonIdentificationType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PersonIdentificationType2Code>))]
 public enum PersonIdentificationType2Code
 {
     /// <summary>

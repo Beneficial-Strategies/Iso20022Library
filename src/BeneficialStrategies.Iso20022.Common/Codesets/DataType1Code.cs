@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of data to indicate whether a trade is an option or resulted by an option exercise."
 )]
 [DerivedFrom(typeof(DataTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataType1Code>))]
 public enum DataType1Code
 {
     /// <summary>

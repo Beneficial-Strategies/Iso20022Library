@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6WNcspqlEeGSON8vddiWzQ_908042461")]
 [Description(@"Defines the taxable status of the service.")]
 [DerivedFrom(typeof(ServiceTaxDesignationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ServiceTaxDesignation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ServiceTaxDesignation1Code>))]
 public enum ServiceTaxDesignation1Code
 {
     /// <summary>

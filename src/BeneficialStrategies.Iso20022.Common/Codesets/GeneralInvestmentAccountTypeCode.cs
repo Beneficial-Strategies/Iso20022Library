@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pXBs0F2cEeiFXdiLi_Nf4A")]
 [Description(@"Specifies a type of investment account.")]
 [Derivations(typeof(GeneralInvestmentAccountType1Code), typeof(GeneralInvestmentAccountType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GeneralInvestmentAccountTypeCode>))]
 public enum GeneralInvestmentAccountTypeCode
 {
     /// <summary>

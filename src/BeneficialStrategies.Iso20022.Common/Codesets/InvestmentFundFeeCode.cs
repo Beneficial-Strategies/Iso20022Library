@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GX-V4DiAEeaH-93K5JKmzw")]
 [Description(@"Specifies the type of service for which a fee is asked or paid.")]
 [Derivations(typeof(InvestmentFundFee1Code), typeof(InvestmentFundFee2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundFeeCode>))]
 public enum InvestmentFundFeeCode
 {
     /// <summary>

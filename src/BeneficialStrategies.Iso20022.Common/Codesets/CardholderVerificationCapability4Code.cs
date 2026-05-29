@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_xNKR4ZdFEeWhUvuI1bSHSA")]
 [Description(@"Cardholder verification capabilities by the terminal.")]
 [DerivedFrom(typeof(CardholderVerificationCapabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardholderVerificationCapability4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardholderVerificationCapability4Code>))]
 public enum CardholderVerificationCapability4Code
 {
     /// <summary>

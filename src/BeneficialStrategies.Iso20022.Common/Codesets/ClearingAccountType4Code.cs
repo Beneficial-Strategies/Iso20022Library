@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CGl4YIJLEeuDe9SyRl5qeg")]
 [Description(@"Specifies the clearing account type.")]
 [DerivedFrom(typeof(ClearingAccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingAccountType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingAccountType4Code>))]
 public enum ClearingAccountType4Code
 {
     /// <summary>

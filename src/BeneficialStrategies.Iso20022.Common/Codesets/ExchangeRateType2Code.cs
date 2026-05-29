@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YuZqcIZ3Eeufof77RM8ObQ")]
 [Description(@"Code used to define the type of the currency exchange.")]
 [DerivedFrom(typeof(ExchangeRateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExchangeRateType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExchangeRateType2Code>))]
 public enum ExchangeRateType2Code
 {
     /// <summary>

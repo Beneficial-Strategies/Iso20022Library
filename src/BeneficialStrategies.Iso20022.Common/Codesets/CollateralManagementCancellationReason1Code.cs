@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Ybm4aNp-Ed-ak6NoX_4Aeg_177526096")]
 [Description(@"Specifies the reason why the instruction/request has been cancelled.")]
 [DerivedFrom(typeof(CollateralManagementCancellationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralManagementCancellationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralManagementCancellationReason1Code>))]
 public enum CollateralManagementCancellationReason1Code
 {
     /// <summary>

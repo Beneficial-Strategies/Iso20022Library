@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bVR0NNp-Ed-ak6NoX_4Aeg_-1828402497")]
 [Description(@"Specifies the calculation basis.")]
 [DerivedFrom(typeof(CalculationBasisCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CalculationBasis2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CalculationBasis2Code>))]
 public enum CalculationBasis2Code
 {
     /// <summary>

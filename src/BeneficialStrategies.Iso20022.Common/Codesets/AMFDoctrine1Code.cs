@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the approach of the Autorite des Marches Financiers (AMF) recommendation 2020-03 to which the fund complies."
 )]
 [DerivedFrom(typeof(AMFDoctrineCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AMFDoctrine1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AMFDoctrine1Code>))]
 public enum AMFDoctrine1Code
 {
     /// <summary>

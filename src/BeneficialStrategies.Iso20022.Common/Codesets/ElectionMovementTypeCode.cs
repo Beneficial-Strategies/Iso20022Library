@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ag-CY9p-Ed-ak6NoX_4Aeg_855319504")]
 [Description(@"Specifies the effect on the holdings of electing a Corporate Action option.")]
 [Derivations(typeof(ElectionMovementType2Code), typeof(ElectionMovementType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ElectionMovementTypeCode>))]
 public enum ElectionMovementTypeCode
 {
     /// <summary>

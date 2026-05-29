@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bUYcVNp-Ed-ak6NoX_4Aeg_2017715514")]
 [Description(@"Type of cross being submitted to a market.")]
 [DerivedFrom(typeof(CrossTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CrossType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CrossType1Code>))]
 public enum CrossType1Code
 {
     /// <summary>

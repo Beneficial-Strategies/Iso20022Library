@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_M3WN8MlUEeuJ35KoBRZFOg")]
 [Description(@"Specifies the format of the data.")]
 [DerivedFrom(typeof(OutputFormatCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OutputFormat5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OutputFormat5Code>))]
 public enum OutputFormat5Code
 {
     /// <summary>

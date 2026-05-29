@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the workflow status of the announcement record based on validation procedure."
 )]
 [Derivations(typeof(EventWorkflowStatus1Code), typeof(EventWorkflowStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventWorkflowStatusCode>))]
 public enum EventWorkflowStatusCode
 {
     /// <summary>

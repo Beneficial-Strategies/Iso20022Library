@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zw_W9tp-Ed-ak6NoX_4Aeg_141531855")]
 [Description(@"Specifies in what capacity (role) the originator of a quote is acting.")]
 [Derivations(typeof(OriginatorRole2Code), typeof(OriginatorRole1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OriginatorRoleCode>))]
 public enum OriginatorRoleCode
 {
     /// <summary>

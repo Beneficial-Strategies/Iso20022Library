@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the state of the agreement of the custodian record when compared to composite record."
 )]
 [DerivedFrom(typeof(CustodianRecordAgreementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustodianRecordAgreementType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustodianRecordAgreementType1Code>))]
 public enum CustodianRecordAgreementType1Code
 {
     /// <summary>

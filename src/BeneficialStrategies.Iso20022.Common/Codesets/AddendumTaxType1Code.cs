@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ppyW4PMwEei4qfiLgRIZBA")]
 [Description(@"Specifies the specific type of tax applicable to a transaction.")]
 [DerivedFrom(typeof(AddendumTaxTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AddendumTaxType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AddendumTaxType1Code>))]
 public enum AddendumTaxType1Code
 {
     /// <summary>

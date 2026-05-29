@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OA4ukO8WEeSLA89yUYsVSw")]
 [Description(@"Specifies the type of regulatory reporting pre-trade waiver.")]
 [DerivedFrom(typeof(ReportingWaiverTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportingWaiverType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportingWaiverType1Code>))]
 public enum ReportingWaiverType1Code
 {
     /// <summary>

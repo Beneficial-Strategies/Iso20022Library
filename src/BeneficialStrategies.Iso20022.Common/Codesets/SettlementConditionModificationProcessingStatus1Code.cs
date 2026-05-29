@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZK188Np-Ed-ak6NoX_4Aeg_-1146323229")]
 [Description(@"Specifies the status of a securities settlement condition modification request.")]
 [DerivedFrom(typeof(InstructionProcessingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementConditionModificationProcessingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementConditionModificationProcessingStatus1Code>))]
 public enum SettlementConditionModificationProcessingStatus1Code
 {
     /// <summary>

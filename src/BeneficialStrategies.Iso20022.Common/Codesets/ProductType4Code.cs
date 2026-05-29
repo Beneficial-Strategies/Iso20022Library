@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2qJtcebCEeW1iL_FRZt8bg")]
 [Description(@"Specifies the underlying type of product or financial instrument.")]
 [DerivedFrom(typeof(ProductTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProductType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProductType4Code>))]
 public enum ProductType4Code
 {
     /// <summary>

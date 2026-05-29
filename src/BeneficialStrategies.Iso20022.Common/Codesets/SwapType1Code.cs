@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of an interest rate derivative when the contract type is a swap, a swaption, a future on a swap and / or a forward on a swap."
 )]
 [DerivedFrom(typeof(SwapTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SwapType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SwapType1Code>))]
 public enum SwapType1Code
 {
     /// <summary>

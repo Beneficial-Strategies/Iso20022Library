@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Code to specify the authentication method used, as published separately in an external authentication method code set."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAuthenticationMethodCode>))]
 public enum ExternalAuthenticationMethodCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_p3TiYF0gEeWErPfQ7BYx8A")]
 [Description(@"Specifies the type of a trading venue which can submit the report.")]
 [DerivedFrom(typeof(TradingVenueCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingVenue2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingVenue2Code>))]
 public enum TradingVenue2Code
 {
     /// <summary>

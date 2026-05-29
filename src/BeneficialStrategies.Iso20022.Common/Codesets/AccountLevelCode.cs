@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Ukd8pqlEeGSON8vddiWzQ_1919731713")]
 [Description(@"Defines the level of an account within the account hierarchy.")]
 [Derivations(typeof(AccountLevel2Code), typeof(AccountLevel1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountLevelCode>))]
 public enum AccountLevelCode
 {
     /// <summary>

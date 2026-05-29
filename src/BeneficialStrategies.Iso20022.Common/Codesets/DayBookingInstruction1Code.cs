@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aytSpNp-Ed-ak6NoX_4Aeg_1419752225")]
 [Description(@"Describes of the nature of execution booking process.")]
 [DerivedFrom(typeof(DayBookingInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DayBookingInstruction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DayBookingInstruction1Code>))]
 public enum DayBookingInstruction1Code
 {
     /// <summary>

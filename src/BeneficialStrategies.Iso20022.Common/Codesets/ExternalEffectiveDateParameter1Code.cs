@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies how the SSI update effective date is to be applied.|The list of valid codes is an external code list published separately. External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalEffectiveDateParameterCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalEffectiveDateParameter1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEffectiveDateParameter1Code>))]
 public enum ExternalEffectiveDateParameter1Code
 {
     /// <summary>

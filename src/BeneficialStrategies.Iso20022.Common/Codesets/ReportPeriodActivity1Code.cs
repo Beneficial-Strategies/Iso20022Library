@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_B2joAJfoEeSfnc-VXAEapg")]
 [Description(@"Specifies the type of report activity for a specific reporting period.")]
 [DerivedFrom(typeof(ReportPeriodActivityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportPeriodActivity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportPeriodActivity1Code>))]
 public enum ReportPeriodActivity1Code
 {
     /// <summary>

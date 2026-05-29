@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason of an unable to apply due to missing data, as published in an external unable to apply missing data code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalUnableToApplyMissingDataCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalUnableToApplyMissingData1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalUnableToApplyMissingData1Code>))]
 public enum ExternalUnableToApplyMissingData1Code
 {
     /// <summary>

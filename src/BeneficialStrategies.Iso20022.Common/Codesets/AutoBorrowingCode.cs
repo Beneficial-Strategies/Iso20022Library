@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bjuf5dp-Ed-ak6NoX_4Aeg_1205177778")]
 [Description(@"Specifies the condition under which automatic borrowing is allowed.")]
 [Derivations(typeof(AutoBorrowing1Code), typeof(AutoBorrowing2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AutoBorrowingCode>))]
 public enum AutoBorrowingCode
 {
     /// <summary>

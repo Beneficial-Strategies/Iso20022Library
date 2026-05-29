@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_t6X6sCDREeWCLu74WLgP4w")]
 [Description(@"Specifies the status of the investor profile.")]
 [DerivedFrom(typeof(InvestorProfileStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestorProfileStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestorProfileStatus1Code>))]
 public enum InvestorProfileStatus1Code
 {
     /// <summary>

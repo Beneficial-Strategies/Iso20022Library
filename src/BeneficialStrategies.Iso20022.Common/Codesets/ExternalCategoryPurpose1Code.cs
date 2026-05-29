@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the category purpose, as published in an external category purpose code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalCategoryPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalCategoryPurpose1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCategoryPurpose1Code>))]
 public enum ExternalCategoryPurpose1Code
 {
     /// <summary>

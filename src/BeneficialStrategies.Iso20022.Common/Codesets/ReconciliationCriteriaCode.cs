@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7DGFoCpUEeuUucRY0yCMTA")]
 [Description(@"Available criterion to group transactions when a reconliation is made.")]
 [Derivations(typeof(ReconciliationCriteria1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationCriteriaCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationCriteriaCode>))]
 public enum ReconciliationCriteriaCode
 {
     /// <summary>

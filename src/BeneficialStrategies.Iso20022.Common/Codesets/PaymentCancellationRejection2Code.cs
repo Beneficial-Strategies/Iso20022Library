@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_t8xsUFkyEeGeoaLUQk__nA_564743882")]
 [Description(@"Returned when a request for cancellation cannot be executed.")]
 [DerivedFrom(typeof(PaymentCancellationRejectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentCancellationRejection2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentCancellationRejection2Code>))]
 public enum PaymentCancellationRejection2Code
 {
     /// <summary>

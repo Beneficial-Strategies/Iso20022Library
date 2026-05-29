@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bdBa-dp-Ed-ak6NoX_4Aeg_1633141222")]
 [Description(@"Basis price type in a bid order. Used for list trading.")]
 [DerivedFrom(typeof(BasisPriceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BasisPriceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BasisPriceType1Code>))]
 public enum BasisPriceType1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Key exchange security schemes implemented in the hardware security module of the ATM."
 )]
 [DerivedFrom(typeof(ATMSecuritySchemeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMSecurityScheme2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMSecurityScheme2Code>))]
 public enum ATMSecurityScheme2Code
 {
     /// <summary>

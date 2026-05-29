@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of non financial request that could be processed between an Acceptor and an Intermediary Agent or an Acquirer."
 )]
 [Derivations(typeof(NonFinancialRequestType1Code), typeof(NonFinancialRequestType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonFinancialRequestTypeCode>))]
 public enum NonFinancialRequestTypeCode
 {
     /// <summary>

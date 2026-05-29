@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Vd10pqlEeGSON8vddiWzQ_-401381436")]
 [Description(@"Defines the tax calculation method.")]
 [DerivedFrom(typeof(BillingTaxCalculationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BillingTaxCalculationMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BillingTaxCalculationMethod1Code>))]
 public enum BillingTaxCalculationMethod1Code
 {
     /// <summary>

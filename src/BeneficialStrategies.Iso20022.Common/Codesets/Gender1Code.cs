@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JyNe4IoTEeahcZ3Nzs1Qag")]
 [Description(@"Specifies the gender of a person.")]
 [DerivedFrom(typeof(GenderCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Gender1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Gender1Code>))]
 public enum Gender1Code
 {
     /// <summary>

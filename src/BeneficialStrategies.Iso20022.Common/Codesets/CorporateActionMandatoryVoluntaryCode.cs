@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bKsU1dp-Ed-ak6NoX_4Aeg_735779459")]
 [Description(@"Specifies whether the event is mandatory, mandatory with options or voluntary.")]
 [Derivations(typeof(CorporateActionMandatoryVoluntary1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionMandatoryVoluntaryCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionMandatoryVoluntaryCode>))]
 public enum CorporateActionMandatoryVoluntaryCode
 {
     /// <summary>

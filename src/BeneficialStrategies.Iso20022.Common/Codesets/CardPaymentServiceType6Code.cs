@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DgRJ8TAXEeOqioR9srQH1g")]
 [Description(@"Service provided by the card payment transaction, in addition to the main service.")]
 [DerivedFrom(typeof(CardPaymentServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardPaymentServiceType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardPaymentServiceType6Code>))]
 public enum CardPaymentServiceType6Code
 {
     /// <summary>

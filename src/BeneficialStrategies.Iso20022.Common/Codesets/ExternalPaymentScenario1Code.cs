@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,4 +17,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the payment scenario, as published in an external payment scenario code set."
 )]
 [DerivedFrom(typeof(ExternalPaymentScenarioCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalPaymentScenario1Code>))]
 public enum ExternalPaymentScenario1Code { }

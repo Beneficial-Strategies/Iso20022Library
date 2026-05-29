@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gdIMkEyIEeir2sRRVd9XhA")]
 [Description(@"Specifies a source of the cash asset.")]
 [Derivations(typeof(CashAssetType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashAssetTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashAssetTypeCode>))]
 public enum CashAssetTypeCode
 {
     /// <summary>

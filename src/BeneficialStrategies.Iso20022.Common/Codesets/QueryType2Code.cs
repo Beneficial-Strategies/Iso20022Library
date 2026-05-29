@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned."
 )]
 [DerivedFrom(typeof(QueryTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QueryType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QueryType2Code>))]
 public enum QueryType2Code
 {
     /// <summary>

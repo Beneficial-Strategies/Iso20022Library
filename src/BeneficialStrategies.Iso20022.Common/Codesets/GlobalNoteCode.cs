@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN)."
 )]
 [Derivations(typeof(GlobalNote1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GlobalNoteCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GlobalNoteCode>))]
 public enum GlobalNoteCode
 {
     /// <summary>

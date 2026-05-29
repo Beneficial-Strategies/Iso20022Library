@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EsxP4ErCEeenp6hmNprBHg")]
 [Description(@"Recommended action for the card issuer.")]
 [DerivedFrom(typeof(ActionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ActionType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionType8Code>))]
 public enum ActionType8Code
 {
     /// <summary>

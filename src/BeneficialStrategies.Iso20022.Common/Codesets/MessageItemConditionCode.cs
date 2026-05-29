@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KS412H1DEeCF8NjrBemJWQ_-2004435660")]
 [Description(@"Rule to apply for the presence and the value of a message item.")]
 [Derivations(typeof(MessageItemCondition1Code), typeof(MessageItemCondition2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageItemConditionCode>))]
 public enum MessageItemConditionCode
 {
     /// <summary>

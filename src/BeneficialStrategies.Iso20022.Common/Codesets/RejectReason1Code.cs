@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Reason of transmission of a rejection message in response to a request or an advice."
 )]
 [DerivedFrom(typeof(RejectReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectReason1Code>))]
 public enum RejectReason1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zw1l-dp-Ed-ak6NoX_4Aeg_-30528564")]
 [Description(@"Specifies the role of the trading party in the transaction.")]
 [DerivedFrom(typeof(OriginatorRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OriginatorRole2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OriginatorRole2Code>))]
 public enum OriginatorRole2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VlEJE9p-Ed-ak6NoX_4Aeg_1966959880")]
 [Description(@"Specifies whether the fund calculates a taxable interest per share (TIS).")]
 [DerivedFrom(typeof(TaxableIncomePerShareCalculatedCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxableIncomePerShareCalculated1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxableIncomePerShareCalculated1Code>))]
 public enum TaxableIncomePerShareCalculated1Code
 {
     /// <summary>

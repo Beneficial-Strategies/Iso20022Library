@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_5BKA0VWXEeeiG_nL4vgKnQ")]
 [Description(@"Type of key exchange.")]
 [DerivedFrom(typeof(CardServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardServiceType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardServiceType5Code>))]
 public enum CardServiceType5Code
 {
     /// <summary>

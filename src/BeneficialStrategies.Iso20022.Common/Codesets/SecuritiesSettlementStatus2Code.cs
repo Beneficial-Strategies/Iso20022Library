@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JhIYoUABEeCaq78Ig8ATcA")]
 [Description(@"Provides the status of settlement of an instruction.")]
 [DerivedFrom(typeof(SecuritiesSettlementStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesSettlementStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesSettlementStatus2Code>))]
 public enum SecuritiesSettlementStatus2Code
 {
     /// <summary>

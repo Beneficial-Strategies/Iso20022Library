@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KUq-iH1DEeCF8NjrBemJWQ_-1037208756")]
 [Description(@"Type of transactions to include in a batch transfer.")]
 [Derivations(typeof(BatchTransactionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BatchTransactionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BatchTransactionTypeCode>))]
 public enum BatchTransactionTypeCode
 {
     /// <summary>

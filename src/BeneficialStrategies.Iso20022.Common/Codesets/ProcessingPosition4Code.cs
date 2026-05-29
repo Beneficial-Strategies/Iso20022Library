@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies when a transaction/instruction is to be executed relative to a linked transaction/instruction."
 )]
 [DerivedFrom(typeof(ProcessingPositionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessingPosition4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessingPosition4Code>))]
 public enum ProcessingPosition4Code
 {
     /// <summary>

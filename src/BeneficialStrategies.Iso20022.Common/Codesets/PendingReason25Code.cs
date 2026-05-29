@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FCAnsX_UEe6NNIFrPQqloA")]
 [Description(@"Specifies a reason why the instruction is pending.")]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingReason25Code>))]
 public enum PendingReason25Code
 {
     /// <summary>

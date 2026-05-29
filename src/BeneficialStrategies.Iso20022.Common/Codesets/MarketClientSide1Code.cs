@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YJO4wJ05Eeet_4BCDEBLdQ")]
 [Description(@"Specifies if an instruction is for a market or client side transaction.")]
 [DerivedFrom(typeof(MarketClientSideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarketClientSide1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketClientSide1Code>))]
 public enum MarketClientSide1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external cheque cancellation reason code in the format of character string with a maximum length of 4 characters."
 )]
 [DerivedFrom(typeof(ExternalChequeCancellationReasonCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalChequeCancellationReason1Code>))]
 public enum ExternalChequeCancellationReason1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_boLEIAyKEeKa_56Jbsi1RQ")]
 [Description(@"Type of assessment of a POI component (Point of Interaction).")]
 [Derivations(typeof(POIComponentAssessment1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<POIComponentAssessmentCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<POIComponentAssessmentCode>))]
 public enum POIComponentAssessmentCode
 {
     /// <summary>

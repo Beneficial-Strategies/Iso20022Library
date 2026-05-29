@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1zjwBDL3EeKU9IrkkToqcw_-811455456")]
 [Description(@"Specifies whether the foreign currency payment is offered.")]
 [Derivations(typeof(ForeignCurrencyPaymentElection1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ForeignCurrencyPaymentElectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ForeignCurrencyPaymentElectionCode>))]
 public enum ForeignCurrencyPaymentElectionCode
 {
     /// <summary>

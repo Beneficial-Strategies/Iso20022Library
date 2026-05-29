@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aN5VYdp-Ed-ak6NoX_4Aeg_-298790564")]
 [Description(@"Specifies the status of the notification in a coded form.")]
 [DerivedFrom(typeof(NotificationToReceiveStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotificationStatus3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationStatus3Code>))]
 public enum NotificationStatus3Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_PHzAsFAaEeedyPuM0kK2EQ")]
 [Description(@"Type of batch management activity.")]
 [DerivedFrom(typeof(BatchManagementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BatchManagementType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BatchManagementType1Code>))]
 public enum BatchManagementType1Code
 {
     /// <summary>

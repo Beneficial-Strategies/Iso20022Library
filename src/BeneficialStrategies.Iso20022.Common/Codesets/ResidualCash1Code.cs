@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9onxIPpeEeCLMa5EIHtDrg")]
 [Description(@"Specifies whether there is cash in the account that is awaiting investment.")]
 [DerivedFrom(typeof(ResidualCashCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResidualCash1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResidualCash1Code>))]
 public enum ResidualCash1Code
 {
     /// <summary>

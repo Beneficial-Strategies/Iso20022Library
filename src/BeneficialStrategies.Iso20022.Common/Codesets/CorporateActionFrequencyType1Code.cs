@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bJ8t99p-Ed-ak6NoX_4Aeg_1457749701")]
 [Description(@"Specifies the frequency of a CA event.")]
 [DerivedFrom(typeof(CorporateActionFrequencyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionFrequencyType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionFrequencyType1Code>))]
 public enum CorporateActionFrequencyType1Code
 {
     /// <summary>

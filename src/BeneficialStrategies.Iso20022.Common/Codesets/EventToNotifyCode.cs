@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cViSQN6aEeiwsev40qZGEQ")]
 [Description(@"Event the POI notifies to the sale system.")]
 [Derivations(typeof(EventToNotify1Code), typeof(EventToNotify2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventToNotifyCode>))]
 public enum EventToNotifyCode
 {
     /// <summary>

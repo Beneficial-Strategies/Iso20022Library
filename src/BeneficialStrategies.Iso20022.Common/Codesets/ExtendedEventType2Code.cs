@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type."
 )]
 [DerivedFrom(typeof(ExtendedEventTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExtendedEventType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExtendedEventType2Code>))]
 public enum ExtendedEventType2Code
 {
     /// <summary>

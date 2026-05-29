@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Codes pertaining to the amenities available at the location where the merchant actually performed the transaction."
 )]
 [DerivedFrom(typeof(LocationAmenityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LocationAmenity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LocationAmenity1Code>))]
 public enum LocationAmenity1Code
 {
     /// <summary>

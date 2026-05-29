@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-05-28
+- **Last updated**: 2026-05-29 (batch 3 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -32,46 +32,47 @@
 - [x] `CarRentalServiceType3Code` — `Codesets/CarRentalServiceType3Code.cs`
 - [x] `CardDataReading11Code` — `Codesets/CardDataReading11Code.cs`
 - [x] `CardDataReading12Code` — `Codesets/CardDataReading12Code.cs`
-- [ ] `CardDataWriting2Code` — `Codesets/CardDataWriting2Code.cs`
-- [ ] `CardDepositType2Code` — `Codesets/CardDepositType2Code.cs`
-- [ ] `CardSecurityCapability2Code` — `Codesets/CardSecurityCapability2Code.cs`
-- [ ] `CardServiceType6Code` — `Codesets/CardServiceType6Code.cs`
-- [ ] `CardServiceType7Code` — `Codesets/CardServiceType7Code.cs`
-- [ ] `CardholderVerificationCapability6Code` — `Codesets/CardholderVerificationCapability6Code.cs`
-- [ ] `CashSettlementSystem3Code` — `Codesets/CashSettlementSystem3Code.cs`
-- [ ] `ClearingMethod3Code` — `Codesets/ClearingMethod3Code.cs`
-- [ ] `CorporateActionAcceptedWithWarningStatus1Code` — `Codesets/CorporateActionAcceptedWithWarningStatus1Code.cs`
-- [ ] `CorporateActionAcceptedWithWarningStatusCode` — `Codesets/CorporateActionAcceptedWithWarningStatusCode.cs`
-- [ ] `CorporateActionEventType41Code` — `Codesets/CorporateActionEventType41Code.cs`
-- [ ] `CorporateActionOption18Code` — `Codesets/CorporateActionOption18Code.cs`
-- [ ] `CorporateActionPendingStatus1Code` — `Codesets/CorporateActionPendingStatus1Code.cs`
-- [ ] `CorporateActionPendingStatusCode` — `Codesets/CorporateActionPendingStatusCode.cs`
-- [ ] `CryptographicKeyType5Code` — `Codesets/CryptographicKeyType5Code.cs`
-- [ ] `CurrencyCode` — `Codesets/CurrencyCode.cs`
-- [ ] `DeviceIdentificationType2Code` — `Codesets/DeviceIdentificationType2Code.cs`
-- [ ] `Endpoint2Code` — `Codesets/Endpoint2Code.cs`
-- [ ] `ExchangeRateAgreementType2Code` — `Codesets/ExchangeRateAgreementType2Code.cs`
-- [ ] `ExchangeRateType3Code` — `Codesets/ExchangeRateType3Code.cs`
-- [ ] `ExtendedEventType8Code` — `Codesets/ExtendedEventType8Code.cs`
-- [ ] `ExternalClearingSystemMemberCode` — `Codesets/ExternalClearingSystemMemberCode.cs`
-- [ ] `ExternalCollateralReferenceDataStatusReason1Code` — `Codesets/ExternalCollateralReferenceDataStatusReason1Code.cs`
-- [ ] `ExternalCollateralReferenceDataStatusReasonCode` — `Codesets/ExternalCollateralReferenceDataStatusReasonCode.cs`
-- [ ] `ExternalCustomerDeviceType1Code` — `Codesets/ExternalCustomerDeviceType1Code.cs`
-- [ ] `ExternalCustomerDeviceTypeCode` — `Codesets/ExternalCustomerDeviceTypeCode.cs`
-- [ ] `ExternalDiscrepancyCode` — `Codesets/ExternalDiscrepancyCode.cs`
-- [ ] `ExternalFinancialInstitutionIdentification1Code` — `Codesets/ExternalFinancialInstitutionIdentification1Code.cs`
-- [ ] `ExternalFinancialInstitutionIdentificationCode` — `Codesets/ExternalFinancialInstitutionIdentificationCode.cs`
-- [ ] `ExternalFinancialInstrumentProductType1Code` — `Codesets/ExternalFinancialInstrumentProductType1Code.cs`
-- [ ] `ExternalFinancialInstrumentProductTypeCode` — `Codesets/ExternalFinancialInstrumentProductTypeCode.cs`
-- [ ] `ExternalIndustrySectorClassification1Code` — `Codesets/ExternalIndustrySectorClassification1Code.cs`
-- [ ] `ExternalIndustrySectorClassificationCode` — `Codesets/ExternalIndustrySectorClassificationCode.cs`
-- [ ] `ExternalInstructedAgentInstruction1Code` — `Codesets/ExternalInstructedAgentInstruction1Code.cs`
-- [ ] `ExternalInstructedAgentInstructionCode` — `Codesets/ExternalInstructedAgentInstructionCode.cs`
-- [ ] `ExternalInvestigationAction1Code` — `Codesets/ExternalInvestigationAction1Code.cs`
-- [ ] `ExternalInvestigationActionCode` — `Codesets/ExternalInvestigationActionCode.cs`
-- [ ] `ExternalInvestigationActionReason1Code` — `Codesets/ExternalInvestigationActionReason1Code.cs`
-- [ ] `ExternalInvestigationActionReasonCode` — `Codesets/ExternalInvestigationActionReasonCode.cs`
-- [ ] `ExternalInvestigationInstrument1Code` — `Codesets/ExternalInvestigationInstrument1Code.cs`
+- [x] `CardDataWriting2Code` — `Codesets/CardDataWriting2Code.cs`
+- [x] `CardDepositType2Code` — `Codesets/CardDepositType2Code.cs`
+- [x] `CardSecurityCapability2Code` — `Codesets/CardSecurityCapability2Code.cs`
+- [x] `CardServiceType6Code` — `Codesets/CardServiceType6Code.cs`
+- [x] `CardServiceType7Code` — `Codesets/CardServiceType7Code.cs`
+- [x] `CardholderVerificationCapability6Code` — `Codesets/CardholderVerificationCapability6Code.cs`
+- [x] `CashSettlementSystem3Code` — `Codesets/CashSettlementSystem3Code.cs`
+- [x] `ClearingMethod3Code` — `Codesets/ClearingMethod3Code.cs`
+- [x] `CorporateActionAcceptedWithWarningStatus1Code` — `Codesets/CorporateActionAcceptedWithWarningStatus1Code.cs`
+- [x] `CorporateActionAcceptedWithWarningStatusCode` — `Codesets/CorporateActionAcceptedWithWarningStatusCode.cs`
+- [x] `CorporateActionEventType41Code` — `Codesets/CorporateActionEventType41Code.cs`
+- [x] `CorporateActionOption18Code` — `Codesets/CorporateActionOption18Code.cs`
+- [x] `CorporateActionPendingStatus1Code` — `Codesets/CorporateActionPendingStatus1Code.cs`
+- [x] `CorporateActionPendingStatusCode` — `Codesets/CorporateActionPendingStatusCode.cs`
+- [x] `CryptographicKeyType5Code` — `Codesets/CryptographicKeyType5Code.cs`
+- [x] `CurrencyCode` — (string alias — already in GlobalUsings.cs)
+- [x] `DeviceIdentificationType2Code` — `Codesets/DeviceIdentificationType2Code.cs`
+- [x] `Endpoint2Code` — `Codesets/Endpoint2Code.cs`
+- [x] `ExchangeRateAgreementType2Code` — `Codesets/ExchangeRateAgreementType2Code.cs`
+- [x] `ExchangeRateType3Code` — `Codesets/ExchangeRateType3Code.cs`
+- [x] `ExtendedEventType8Code` — `Codesets/ExtendedEventType8Code.cs`
+- [x] `ExternalClearingSystemMemberCode` — `Codesets/ExternalClearingSystemMemberCode_Obsolete.cs` (obsolete at birth; used _Obsolete suffix)
+- [x] `ExternalCollateralReferenceDataStatusReason1Code` — `Codesets/ExternalCollateralReferenceDataStatusReason1Code.cs`
+- [x] `ExternalCollateralReferenceDataStatusReasonCode` — `Codesets/ExternalCollateralReferenceDataStatusReasonCode.cs`
+- [x] `ExternalCustomerDeviceType1Code` — `Codesets/ExternalCustomerDeviceType1Code.cs`
+- [x] `ExternalCustomerDeviceTypeCode` — `Codesets/ExternalCustomerDeviceTypeCode.cs`
+- [x] `ExternalDiscrepancyCode` — `Codesets/ExternalDiscrepancyCode.cs`
+- [x] `ExternalFinancialInstitutionIdentification1Code` — `Codesets/ExternalFinancialInstitutionIdentification1Code.cs`
+- [x] `ExternalFinancialInstitutionIdentificationCode` — `Codesets/ExternalFinancialInstitutionIdentificationCode.cs`
+- [x] `ExternalFinancialInstrumentProductType1Code` — `Codesets/ExternalFinancialInstrumentProductType1Code.cs`
+- [x] `ExternalFinancialInstrumentProductTypeCode` — `Codesets/ExternalFinancialInstrumentProductTypeCode.cs`
+- [x] `ExternalIndustrySectorClassification1Code` — `Codesets/ExternalIndustrySectorClassification1Code.cs`
+- [x] `ExternalIndustrySectorClassificationCode` — `Codesets/ExternalIndustrySectorClassificationCode.cs`
+- [x] `ExternalInstructedAgentInstruction1Code` — `Codesets/ExternalInstructedAgentInstruction1Code.cs`
+- [x] `ExternalInstructedAgentInstructionCode` — `Codesets/ExternalInstructedAgentInstructionCode.cs`
+- [x] `ExternalInvestigationAction1Code` — `Codesets/ExternalInvestigationAction1Code.cs`
+- [x] `ExternalInvestigationActionCode` — `Codesets/ExternalInvestigationActionCode.cs`
+- [x] `ExternalInvestigationActionReason1Code` — `Codesets/ExternalInvestigationActionReason1Code.cs`
+- [x] `ExternalInvestigationActionReasonCode` — `Codesets/ExternalInvestigationActionReasonCode.cs`
+- [x] `ExternalInvestigationInstrument1Code` — `Codesets/ExternalInvestigationInstrument1Code.cs`
+- [x] `ExternalInvestigationInstrumentCode` — `Codesets/ExternalInvestigationInstrumentCode.cs` (prerequisite base; added to plan)
 - [ ] `ExternalInvestigationInstrumentCode` — `Codesets/ExternalInvestigationInstrumentCode.cs`
 - [ ] `ExternalInvestigationReason1Code` — `Codesets/ExternalInvestigationReason1Code.cs`
 - [ ] `ExternalInvestigationReasonCode` — `Codesets/ExternalInvestigationReasonCode.cs`
@@ -317,11 +318,11 @@
 - [ ] `BenchmarkCurveNameCode` — add: TONA
 - [ ] `CalculationTypeCode` — add: CDLY, WEAV
 - [x] `CardDataReadingCode` — add: CDFS, DCPY, ICCP, ICFM, ICMG, MGSP, NFCF, OTHR
-- [ ] `CashSettlementSystemCode` — add: DCSS
-- [ ] `CryptographicKeyTypeCode` — add: UKA2
+- [x] `CashSettlementSystemCode` — add: DCSS
+- [x] `CryptographicKeyTypeCode` — add: UKA2
 - [ ] `CustomerDeviceTypeCode` — add: HDST, IOTS, TLVN
 - [ ] `DebtInstrumentSeniorityTypeCode` — add: SNPR, SPRF, SSEC, SUNS
-- [ ] `ExtendedEventTypeV2Code` — add: FPRE
+- [x] `ExtendedEventTypeV2Code` — add: FPRE
 - [ ] `ExternalBalanceSubType1Code` — add: UnblockedFunds
 - [ ] `ExternalBalanceSubTypeCode` — add: UNBL
 - [ ] `ExternalCashAccountType1Code` — add: NonResidentLocalDomesticCurrencyAccount, ResidentEntityForeignCurrency, ResidentIndividualForeignCurrencyAccount, ResidentLocalDomesticCurrency

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZbFYYNp-Ed-ak6NoX_4Aeg_-586829209")]
 [Description(@"Specifies the status of the registration processing.")]
 [DerivedFrom(typeof(RegistrationProcessingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RegistrationProcessingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RegistrationProcessingStatus1Code>))]
 public enum RegistrationProcessingStatus1Code
 {
     /// <summary>

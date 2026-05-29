@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_oJDlQVXZEfC0lMwgjvMClw")]
 [Description(@"Specifies the specific type of tax applicable to a transaction.")]
 [DerivedFrom(typeof(AddendumTaxTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AddendumTaxType4Code>))]
 public enum AddendumTaxType4Code
 {
     /// <summary>

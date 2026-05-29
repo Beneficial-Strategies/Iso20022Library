@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_12r8gTL3EeKU9IrkkToqcw_1999140726")]
 [Description(@"Specifies the type of the corporate action instruction.")]
 [DerivedFrom(typeof(DTCCorporateActionInstructionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCCorporateActionInstructionType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCCorporateActionInstructionType2Code>))]
 public enum DTCCorporateActionInstructionType2Code
 {
     /// <summary>

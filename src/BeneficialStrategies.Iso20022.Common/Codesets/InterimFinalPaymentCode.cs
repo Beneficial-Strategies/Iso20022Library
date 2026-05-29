@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1orVsTL3EeKU9IrkkToqcw_-1263884737")]
 [Description(@"Specifies payment type.")]
 [Derivations(typeof(InterimFinalPayment1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterimFinalPaymentCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterimFinalPaymentCode>))]
 public enum InterimFinalPaymentCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bCWRINp-Ed-ak6NoX_4Aeg_1752905694")]
 [Description(@"Specifies the type of conversion.")]
 [Derivations(typeof(ConversionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConversionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConversionTypeCode>))]
 public enum ConversionTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y0MXh9p-Ed-ak6NoX_4Aeg_-660282894")]
 [Description(@"Specifies the reason of an unable to apply due to incorrect information.")]
 [DerivedFrom(typeof(UnableToApplyIncorrectInformationV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnableToApplyIncorrectInformation3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnableToApplyIncorrectInformation3Code>))]
 public enum UnableToApplyIncorrectInformation3Code
 {
     /// <summary>

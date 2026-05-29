@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_POj5gEAuEeGeCKosDOIVvQ_1172446650")]
 [Description(@"Information about partial settlement.")]
 [DerivedFrom(typeof(PartialSettlementV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartialSettlement2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartialSettlement2Code>))]
 public enum PartialSettlement2Code
 {
     /// <summary>

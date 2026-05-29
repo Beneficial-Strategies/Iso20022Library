@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_j-SZYGjLEeOdXoiw6mfXMw")]
 [Description(@"Specifies the subtype of the payment adjustment.")]
 [DerivedFrom(typeof(DTCAdjustmentPaymentSubReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCAdjustmentPaymentSubReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCAdjustmentPaymentSubReason1Code>))]
 public enum DTCAdjustmentPaymentSubReason1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the function the agent is performing (for example, event agent, information agent)."
 )]
 [DerivedFrom(typeof(AgentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AgentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgentType1Code>))]
 public enum AgentType1Code
 {
     /// <summary>

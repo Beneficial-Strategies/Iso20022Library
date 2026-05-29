@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UgCXYKssEeayv9XxdmMwKQ")]
 [Description(@"Classification of the methodology used to derive a stress testing scenario.")]
 [DerivedFrom(typeof(ScenarioTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ScenarioType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ScenarioType1Code>))]
 public enum ScenarioType1Code
 {
     /// <summary>

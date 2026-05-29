@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_erlskNBVEeiirviLm7P0IA")]
 [Description(@"Specifies whether the report includes pending or settled transactions.")]
 [DerivedFrom(typeof(StatementStatusTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatementStatusType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementStatusType1Code>))]
 public enum StatementStatusType1Code
 {
     /// <summary>

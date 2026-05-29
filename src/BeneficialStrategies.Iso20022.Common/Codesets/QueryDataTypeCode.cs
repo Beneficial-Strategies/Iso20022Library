@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cklwEKa-EeSxuMLA5o46jQ")]
 [Description(@"Specifies the inquiry type of the data.")]
 [Derivations(typeof(QueryDataType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QueryDataTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QueryDataTypeCode>))]
 public enum QueryDataTypeCode
 {
     /// <summary>

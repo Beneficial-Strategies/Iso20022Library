@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0W9oEK53Eee6Q7mFsDuJBA")]
 [Description(@"Type of other amount.")]
 [DerivedFrom(typeof(OtherAmountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OtherAmountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OtherAmountType1Code>))]
 public enum OtherAmountType1Code
 {
     /// <summary>

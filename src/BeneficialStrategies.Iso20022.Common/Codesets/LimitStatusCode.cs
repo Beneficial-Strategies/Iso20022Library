@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aecS0tp-Ed-ak6NoX_4Aeg_231381284")]
 [Description(@"Specifies the current status of a limit.")]
 [Derivations(typeof(LimitStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LimitStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LimitStatusCode>))]
 public enum LimitStatusCode
 {
     /// <summary>

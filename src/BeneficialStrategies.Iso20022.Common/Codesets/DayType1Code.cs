@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ay2cktp-Ed-ak6NoX_4Aeg_1637875532")]
 [Description(@"Specifies the type of day.")]
 [DerivedFrom(typeof(DayTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DayType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DayType1Code>))]
 public enum DayType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LBcKoC7YEea1cMkrGwA6Gg")]
 [Description(@"Specifies the classification of the risk of the security used as collateral.")]
 [Derivations(typeof(CollateralQualityType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralQualityTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralQualityTypeCode>))]
 public enum CollateralQualityTypeCode
 {
     /// <summary>

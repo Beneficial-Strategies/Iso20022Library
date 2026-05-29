@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aLED19p-Ed-ak6NoX_4Aeg_-1833350814")]
 [Description(@"Specifies the processing status.")]
 [DerivedFrom(typeof(ProcessingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessingStatus1Code>))]
 public enum ProcessingStatus1Code
 {
     /// <summary>

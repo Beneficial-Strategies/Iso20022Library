@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7A9vUFuFEeSmO6RkXg92Lg")]
 [Description(@"Specifies the type of resolution.")]
 [DerivedFrom(typeof(ResolutionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResolutionType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResolutionType2Code>))]
 public enum ResolutionType2Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of risk management answer from an Acquirer (or its IntermediaryAgent) to a POI through a NonFinancialResponse. "
 )]
 [Derivations(typeof(NonFinancialResponseRisk1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonFinancialResponseRiskCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonFinancialResponseRiskCode>))]
 public enum NonFinancialResponseRiskCode
 {
     /// <summary>

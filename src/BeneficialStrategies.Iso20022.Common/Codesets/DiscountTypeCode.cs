@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TQ3_tgEcEeCQm6a_G2yO_w_1270296506")]
 [Description(@"Specifies the type of discount, that is, the reason why a discount is granted.")]
 [Derivations(typeof(DiscountType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DiscountTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DiscountTypeCode>))]
 public enum DiscountTypeCode
 {
     /// <summary>

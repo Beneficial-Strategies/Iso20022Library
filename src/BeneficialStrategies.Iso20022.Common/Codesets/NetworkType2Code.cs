@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9wfkQI39EeWRwov1g9WL_A")]
 [Description(@"Type of proxy.")]
 [DerivedFrom(typeof(NetworkTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NetworkType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NetworkType2Code>))]
 public enum NetworkType2Code
 {
     /// <summary>

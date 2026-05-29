@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NFe4o90mEeil7LQldntseg")]
 [Description(@"Indicates whether the action applies to a file or a record.")]
 [Derivations(typeof(FileActionScope1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FileActionScopeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FileActionScopeCode>))]
 public enum FileActionScopeCode
 {
     /// <summary>

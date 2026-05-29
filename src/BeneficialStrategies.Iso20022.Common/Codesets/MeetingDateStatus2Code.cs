@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LBwHMK4oEemG7MmivSuE5g")]
 [Description(@"Specifies a status for a meeting date.")]
 [DerivedFrom(typeof(MeetingDateStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MeetingDateStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MeetingDateStatus2Code>))]
 public enum MeetingDateStatus2Code
 {
     /// <summary>

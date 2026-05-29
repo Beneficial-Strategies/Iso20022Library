@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gJ_qoGAPEeiNMJ262H2pWg")]
 [Description(@"Specifies how a charge is to be deducted.")]
 [DerivedFrom(typeof(AnnualChargePaymentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AnnualChargePaymentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AnnualChargePaymentType1Code>))]
 public enum AnnualChargePaymentType1Code
 {
     /// <summary>

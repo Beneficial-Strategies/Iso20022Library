@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TGmBAcR0EeOg-a7zWL_U0A")]
 [Description(@"Specifies the type of event for an option.")]
 [Derivations(typeof(OptionEventType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionEventTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionEventTypeCode>))]
 public enum OptionEventTypeCode
 {
     /// <summary>

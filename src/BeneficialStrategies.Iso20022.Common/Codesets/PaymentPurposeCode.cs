@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Z5yGktp-Ed-ak6NoX_4Aeg_1855256934")]
 [Description(@"Specifies the type of transaction that resulted in a payment initiation.")]
 [Derivations(typeof(PaymentPurpose1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentPurposeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentPurposeCode>))]
 public enum PaymentPurposeCode
 {
     /// <summary>

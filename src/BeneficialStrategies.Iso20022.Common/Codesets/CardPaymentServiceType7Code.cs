@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of transaction being undertaken for the main service. |It correspond partially to the ISO 8583, field number 3."
 )]
 [DerivedFrom(typeof(CardPaymentServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardPaymentServiceType7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardPaymentServiceType7Code>))]
 public enum CardPaymentServiceType7Code
 {
     /// <summary>

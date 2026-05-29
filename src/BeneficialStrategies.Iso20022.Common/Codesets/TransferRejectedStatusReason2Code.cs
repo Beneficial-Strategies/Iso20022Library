@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YurlZ9p-Ed-ak6NoX_4Aeg_-1737790311")]
 [Description(@"Specifies the reason for a transfer or settlement instruction rejected status.")]
 [DerivedFrom(typeof(RejectedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransferRejectedStatusReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferRejectedStatusReason2Code>))]
 public enum TransferRejectedStatusReason2Code
 {
     /// <summary>

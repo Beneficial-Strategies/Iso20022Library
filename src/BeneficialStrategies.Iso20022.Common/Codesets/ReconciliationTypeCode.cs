@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_F091QNxeEeioifFt1dhnJA")]
 [Description(@"Type of Reconciliation requested by the Sale to the POI.")]
 [Derivations(typeof(ReconciliationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationTypeCode>))]
 public enum ReconciliationTypeCode
 {
     /// <summary>

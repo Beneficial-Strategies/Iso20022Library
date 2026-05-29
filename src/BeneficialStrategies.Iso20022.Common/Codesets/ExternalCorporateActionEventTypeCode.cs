@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Specifies the corporate action event type, as published in an external corporate action event type code set."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCorporateActionEventTypeCode>))]
 public enum ExternalCorporateActionEventTypeCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -23,6 +24,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RetailerService2Code),
     typeof(RetailerService8Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RetailerServiceCode>))]
 public enum RetailerServiceCode
 {
     /// <summary>

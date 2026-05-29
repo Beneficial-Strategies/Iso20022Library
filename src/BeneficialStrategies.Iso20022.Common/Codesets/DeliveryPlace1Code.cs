@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_azANkNp-Ed-ak6NoX_4Aeg_-743931469")]
 [Description(@"Specifies where the attendance card should be delivered.")]
 [DerivedFrom(typeof(DeliveryPlaceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeliveryPlace1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliveryPlace1Code>))]
 public enum DeliveryPlace1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1nV48zL3EeKU9IrkkToqcw_1768517900")]
 [Description(@"Specifies DTC (The Depository Trust Company) defined issuer status of the event.")]
 [Derivations(typeof(IssuerStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IssuerStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IssuerStatusCode>))]
 public enum IssuerStatusCode
 {
     /// <summary>

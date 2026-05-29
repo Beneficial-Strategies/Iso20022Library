@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nGL_MNj5EeiojJsa6FYyew")]
 [Description(@"Identifies the type of process related to the message.")]
 [DerivedFrom(typeof(RetailerMessageCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RetailerMessage1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RetailerMessage1Code>))]
 public enum RetailerMessage1Code
 {
     /// <summary>

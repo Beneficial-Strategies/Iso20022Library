@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GBdPUQE5EeG7DvnR_BzVoA")]
 [Description(@"Specifies the type of certification required.")]
 [DerivedFrom(typeof(BeneficiaryCertificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BeneficiaryCertificationType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BeneficiaryCertificationType4Code>))]
 public enum BeneficiaryCertificationType4Code
 {
     /// <summary>

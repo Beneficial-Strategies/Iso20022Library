@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NByw4WIIEe6Vre0WuwPTOg")]
 [Description(@"Specifies the reason why the instruction request has a rejected status.")]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason85Code>))]
 public enum RejectionReason85Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_atCvhdp-Ed-ak6NoX_4Aeg_1398779632")]
 [Description(@"Specifies the category of the investment fund order.")]
 [DerivedFrom(typeof(FundOrderTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundOrderType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundOrderType3Code>))]
 public enum FundOrderType3Code
 {
     /// <summary>

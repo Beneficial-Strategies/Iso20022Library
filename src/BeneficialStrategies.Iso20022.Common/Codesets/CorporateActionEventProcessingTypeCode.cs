@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bDij9dp-Ed-ak6NoX_4Aeg_-1352374921")]
 [Description(@"Specifies the type of event processing.")]
 [Derivations(typeof(CorporateActionEventProcessingType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventProcessingTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventProcessingTypeCode>))]
 public enum CorporateActionEventProcessingTypeCode
 {
     /// <summary>

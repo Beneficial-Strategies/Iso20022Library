@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YZ0Iodp-Ed-ak6NoX_4Aeg_1300222937")]
 [Description(@"Specifies whether the trade is eligible for netting.")]
 [DerivedFrom(typeof(NettingEligibleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NettingEligible1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NettingEligible1Code>))]
 public enum NettingEligible1Code
 {
     /// <summary>

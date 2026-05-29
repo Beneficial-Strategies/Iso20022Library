@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a65lUNp-Ed-ak6NoX_4Aeg_986167915")]
 [Description(@"Specifies the fund cash forecast message.")]
 [DerivedFrom(typeof(MessageTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashForecastMessage1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashForecastMessage1Code>))]
 public enum CashForecastMessage1Code
 {
     /// <summary>

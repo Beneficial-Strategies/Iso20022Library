@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZlDPEAMkEeujMs2LsB3mMw")]
 [Description(@"Attestation status value.")]
 [Derivations(typeof(AttestationValue1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AttestationValueCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttestationValueCode>))]
 public enum AttestationValueCode
 {
     /// <summary>

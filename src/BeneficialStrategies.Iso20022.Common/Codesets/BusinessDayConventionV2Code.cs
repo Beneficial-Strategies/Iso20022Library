@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_heg90BfvEeSBdtDwJiNe1g")]
 [Description(@"Specifies how a date is adjusted when it falls on a non-business day.")]
 [Derivations(typeof(BusinessDayConvention2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BusinessDayConventionV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessDayConventionV2Code>))]
 public enum BusinessDayConventionV2Code
 {
     /// <summary>

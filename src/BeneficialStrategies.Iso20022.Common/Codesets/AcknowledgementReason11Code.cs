@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_k9YrIY5bEfC_4ZEXsY0Xyg")]
 [Description(@"Specifies additional information about the processed instruction.")]
 [DerivedFrom(typeof(AcknowledgementReasonCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AcknowledgementReason11Code>))]
 public enum AcknowledgementReason11Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies what action needs to be taken by the validation service for this particular record."
 )]
 [Derivations(typeof(GCAActionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GCAActionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GCAActionTypeCode>))]
 public enum GCAActionTypeCode
 {
     /// <summary>

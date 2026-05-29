@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TSEShwEcEeCQm6a_G2yO_w_1647054539")]
 [Description(@"Type of attribute of a distinguished name (DN).")]
 [DerivedFrom(typeof(AttributeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AttributeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttributeType1Code>))]
 public enum AttributeType1Code
 {
     /// <summary>

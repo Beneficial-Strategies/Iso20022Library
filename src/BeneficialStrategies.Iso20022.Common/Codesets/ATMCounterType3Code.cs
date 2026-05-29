@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMCounterType3Code")]
 [Description(@"Type of ATM cassette counters.")]
 [DerivedFrom(typeof(ATMCounterTypeV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCounterType3Code>))]
 public enum ATMCounterType3Code
 {
     /// <summary>

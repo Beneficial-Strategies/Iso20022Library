@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin."
 )]
 [DerivedFrom(typeof(MarginTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarginType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarginType1Code>))]
 public enum MarginType1Code
 {
     /// <summary>

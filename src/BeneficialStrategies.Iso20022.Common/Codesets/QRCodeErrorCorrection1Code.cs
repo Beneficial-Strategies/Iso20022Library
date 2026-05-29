@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LwMBINubEeiB5uLfkg9ZJA")]
 [Description(@"Error Correction mode of Quick Response Code.")]
 [DerivedFrom(typeof(QRCodeErrorCorrectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QRCodeErrorCorrection1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QRCodeErrorCorrection1Code>))]
 public enum QRCodeErrorCorrection1Code
 {
     /// <summary>

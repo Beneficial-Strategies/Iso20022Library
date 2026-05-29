@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EnANEBsTEeWhp-Wous5jzA")]
 [Description(@"Specifies the type of price for an asset.")]
 [Derivations(typeof(AssetPriceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetPriceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetPriceTypeCode>))]
 public enum AssetPriceTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_mKuBsAIJEeutW5-TpeYJhA")]
 [Description(@"Specifies the type of membership the collateral provider holds with the CCP.")]
 [DerivedFrom(typeof(CCPMemberTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CCPMemberType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CCPMemberType1Code>))]
 public enum CCPMemberType1Code
 {
     /// <summary>

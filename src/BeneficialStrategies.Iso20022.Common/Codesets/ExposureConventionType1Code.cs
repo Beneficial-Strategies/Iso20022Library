@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Determines how the variation margin requirement will be calculated, either net or gross."
 )]
 [DerivedFrom(typeof(ExposureConventionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExposureConventionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExposureConventionType1Code>))]
 public enum ExposureConventionType1Code
 {
     /// <summary>

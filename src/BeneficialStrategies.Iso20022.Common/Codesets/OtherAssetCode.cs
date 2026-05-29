@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_deqTgEyMEeiepssxrmRw1A")]
 [Description(@"Specifies a type of asset.")]
 [Derivations(typeof(OtherAsset1Code), typeof(OtherAsset2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OtherAssetCode>))]
 public enum OtherAssetCode
 {
     /// <summary>

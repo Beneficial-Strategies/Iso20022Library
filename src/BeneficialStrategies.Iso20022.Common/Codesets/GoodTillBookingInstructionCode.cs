@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"States whether executions are booked out or accumulated on a partially filled good till order on the day of execution or to accumulate."
 )]
 [Derivations(typeof(GoodTillBookingInstruction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GoodTillBookingInstructionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GoodTillBookingInstructionCode>))]
 public enum GoodTillBookingInstructionCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies additional information about the status of the repurchase agreement call processed instruction."
 )]
 [DerivedFrom(typeof(RepoCallRequestStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepoCallRequestStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepoCallRequestStatus1Code>))]
 public enum RepoCallRequestStatus1Code
 {
     /// <summary>

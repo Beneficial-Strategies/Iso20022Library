@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Nff_g_M9Eei4qfiLgRIZBA")]
 [Description(@"Contains Tax Reclaim options")]
 [Derivations(typeof(TaxReclaimMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxReclaimMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxReclaimMethodCode>))]
 public enum TaxReclaimMethodCode
 {
     /// <summary>

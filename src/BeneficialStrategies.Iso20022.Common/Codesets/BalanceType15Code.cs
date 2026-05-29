@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_r56MocSqEeuBjv5G5kw00g")]
 [Description(@"Type of balance.")]
 [DerivedFrom(typeof(BalanceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BalanceType15Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BalanceType15Code>))]
 public enum BalanceType15Code
 {
     /// <summary>

@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Reason to send an card acquirer to issuer message.|It corresponds to ISO 8583, field number 25 for the version 93, and 9 for the version 2003."
 )]
 [DerivedFrom(typeof(MessageReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageReason1Code>))]
 public enum MessageReason1Code
 {
     /// <summary>

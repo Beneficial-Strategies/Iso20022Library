@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Indicates if a Cancel/Replace instruction has caused an order to loose its book priority."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BookPriorityIndicatorCode>))]
 public enum BookPriorityIndicatorCode
 {
     /// <summary>

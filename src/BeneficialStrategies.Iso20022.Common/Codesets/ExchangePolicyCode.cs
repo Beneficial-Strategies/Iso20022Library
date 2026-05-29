@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KR1s8X1DEeCF8NjrBemJWQ_-1574352782")]
 [Description(@"Exchange policy between parties.")]
 [Derivations(typeof(ExchangePolicy1Code), typeof(ExchangePolicy2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExchangePolicyCode>))]
 public enum ExchangePolicyCode
 {
     /// <summary>

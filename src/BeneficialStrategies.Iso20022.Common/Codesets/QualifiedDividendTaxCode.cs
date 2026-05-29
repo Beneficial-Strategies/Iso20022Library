@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the dividend as a whole or in part qualifies for lower/favourable tax rate."
 )]
 [Derivations(typeof(QualifiedDividendTax1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QualifiedDividendTaxCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QualifiedDividendTaxCode>))]
 public enum QualifiedDividendTaxCode
 {
     /// <summary>

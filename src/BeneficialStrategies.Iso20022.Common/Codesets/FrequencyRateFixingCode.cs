@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Frequencies for a floating rate transaction.||*** if an overnight frequency  rate fixing should be applied.  If not present, a periodic fixing frequency will be applied.****|"
 )]
 [Derivations(typeof(FrequencyRateFixing1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FrequencyRateFixingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FrequencyRateFixingCode>))]
 public enum FrequencyRateFixingCode
 {
     /// <summary>

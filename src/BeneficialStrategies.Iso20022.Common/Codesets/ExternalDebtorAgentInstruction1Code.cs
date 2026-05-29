@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies further instructions concerning the processing of a payment instruction, as provided to the creditor agent."
 )]
 [DerivedFrom(typeof(ExternalDebtorAgentInstructionCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDebtorAgentInstruction1Code>))]
 public enum ExternalDebtorAgentInstruction1Code
 {
     /// <summary>

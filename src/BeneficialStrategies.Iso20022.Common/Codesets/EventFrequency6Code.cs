@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YZq-sNp-Ed-ak6NoX_4Aeg_-209191195")]
 [Description(@"Specifies the regularity of an event.")]
 [DerivedFrom(typeof(EventFrequencyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventFrequency6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventFrequency6Code>))]
 public enum EventFrequency6Code
 {
     /// <summary>

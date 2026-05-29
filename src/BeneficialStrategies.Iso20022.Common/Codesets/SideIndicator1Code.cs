@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction."
 )]
 [DerivedFrom(typeof(SideIndicatorCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SideIndicator1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SideIndicator1Code>))]
 public enum SideIndicator1Code
 {
     /// <summary>

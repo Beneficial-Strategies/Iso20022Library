@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_4htAMHa-Eeef9c2nwgY9Xw")]
 [Description(@"Identifies the type of fraud in a card payment environment.")]
 [DerivedFrom(typeof(FraudTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FraudType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FraudType1Code>))]
 public enum FraudType1Code
 {
     /// <summary>

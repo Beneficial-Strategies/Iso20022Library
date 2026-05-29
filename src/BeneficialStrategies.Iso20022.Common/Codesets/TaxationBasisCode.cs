@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -18,6 +19,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(TaxationBasis3Code),
     typeof(TaxationBasis5Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxationBasisCode>))]
 public enum TaxationBasisCode
 {
     /// <summary>

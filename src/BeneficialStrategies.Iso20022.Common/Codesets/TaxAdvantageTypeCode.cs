@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8nnPAVf1EeOuDtoQo1qilA")]
 [Description(@"Code for the form of tax advantage on the dividend.")]
 [Derivations(typeof(TaxAdvantageType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxAdvantageTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxAdvantageTypeCode>))]
 public enum TaxAdvantageTypeCode
 {
     /// <summary>

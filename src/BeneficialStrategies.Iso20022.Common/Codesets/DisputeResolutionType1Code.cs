@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YcWfRdp-Ed-ak6NoX_4Aeg_-299139141")]
 [Description(@"Specifies the nature of the disputed collateral amount.")]
 [DerivedFrom(typeof(DisputeResolutionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DisputeResolutionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DisputeResolutionType1Code>))]
 public enum DisputeResolutionType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kkfWMGkCEeS7zPBpvm732w")]
 [Description(@"Information about card entry mode fallback.")]
 [DerivedFrom(typeof(CardFallbackCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardFallback1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardFallback1Code>))]
 public enum CardFallback1Code
 {
     /// <summary>

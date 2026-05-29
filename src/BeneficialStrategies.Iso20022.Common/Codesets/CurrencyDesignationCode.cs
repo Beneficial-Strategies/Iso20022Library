@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zhg64Qd1EeSPHJIdUs1USg")]
 [Description(@"Specifies whether a currency is settled offshore or onshore.")]
 [Derivations(typeof(CurrencyDesignation1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CurrencyDesignationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CurrencyDesignationCode>))]
 public enum CurrencyDesignationCode
 {
     /// <summary>

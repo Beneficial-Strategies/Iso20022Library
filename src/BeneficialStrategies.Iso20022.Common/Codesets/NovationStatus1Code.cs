@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_joS1IMETEea7jLfvGi1PDw")]
 [Description(@"Specifies the status of the novation.")]
 [DerivedFrom(typeof(NovationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NovationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NovationStatus1Code>))]
 public enum NovationStatus1Code
 {
     /// <summary>

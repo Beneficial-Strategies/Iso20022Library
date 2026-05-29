@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hlgS8NtsEeiXqq0XHEoNUA")]
 [Description(@"Hardware capabilities of the Sale Terminal.")]
 [DerivedFrom(typeof(SaleCapabilitiesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SaleCapabilities1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SaleCapabilities1Code>))]
 public enum SaleCapabilities1Code
 {
     /// <summary>

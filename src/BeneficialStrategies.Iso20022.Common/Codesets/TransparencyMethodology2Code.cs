@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EjDNwHvuEeanCNPcMT7sSg")]
 [Description(@"Specifies the methodology used for a transparency operation.")]
 [DerivedFrom(typeof(TransparencyMethodologyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransparencyMethodology2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransparencyMethodology2Code>))]
 public enum TransparencyMethodology2Code
 {
     /// <summary>

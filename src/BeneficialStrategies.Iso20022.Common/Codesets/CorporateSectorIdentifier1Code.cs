@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the corporate sector of the counterparty for reporting to trade repositories."
 )]
 [DerivedFrom(typeof(CorporateSectorIdentifierCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateSectorIdentifier1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateSectorIdentifier1Code>))]
 public enum CorporateSectorIdentifier1Code
 {
     /// <summary>

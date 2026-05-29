@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the product is compatible with investors that have sustainability preferences."
 )]
 [DerivedFrom(typeof(SustainabilityPreferencesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SustainabilityPreferences1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SustainabilityPreferences1Code>))]
 public enum SustainabilityPreferences1Code
 {
     /// <summary>

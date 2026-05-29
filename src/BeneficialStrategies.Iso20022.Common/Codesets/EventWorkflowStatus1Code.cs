@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the workflow status of the announcement record based on validation procedure."
 )]
 [DerivedFrom(typeof(EventWorkflowStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventWorkflowStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventWorkflowStatus1Code>))]
 public enum EventWorkflowStatus1Code
 {
     /// <summary>

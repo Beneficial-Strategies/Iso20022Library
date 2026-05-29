@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the confirmation for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
 )]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRuleAnyBank1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleAnyBank1Code>))]
 public enum ValidationRuleAnyBank1Code
 {
     /// <summary>

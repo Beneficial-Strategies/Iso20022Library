@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cBfSsN6LEeiwsev40qZGEQ")]
 [Description(@"List of specific services for SessionManagementResponse.")]
 [DerivedFrom(typeof(RetailerServiceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RetailerService5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RetailerService5Code>))]
 public enum RetailerService5Code
 {
     /// <summary>

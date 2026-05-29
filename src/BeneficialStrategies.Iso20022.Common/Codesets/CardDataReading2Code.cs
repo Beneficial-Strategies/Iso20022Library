@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Card reading capabilities of the terminal performing the transaction.|It correspond to the ISO 8583, field number 22-2 for the version 93, and 27-1 for the version 2003."
 )]
 [DerivedFrom(typeof(CardDataReadingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardDataReading2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDataReading2Code>))]
 public enum CardDataReading2Code
 {
     /// <summary>

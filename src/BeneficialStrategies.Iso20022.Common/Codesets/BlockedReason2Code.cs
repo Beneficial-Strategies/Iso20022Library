@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lXE7oFsMEeaY86V9afpFqA")]
 [Description(@"Specifies the reason an account is blocked.")]
 [DerivedFrom(typeof(BlockedReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BlockedReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BlockedReason2Code>))]
 public enum BlockedReason2Code
 {
     /// <summary>

@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the result of an investigation, as published in an external investigation execution confirmation code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalInvestigationExecutionConfirmationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalInvestigationExecutionConfirmation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalInvestigationExecutionConfirmation1Code>))]
 public enum ExternalInvestigationExecutionConfirmation1Code
 {
     /// <summary>

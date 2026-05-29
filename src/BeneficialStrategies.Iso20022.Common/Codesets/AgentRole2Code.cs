@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bnwEQNp-Ed-ak6NoX_4Aeg_-79264456")]
 [Description(@"Specifies the role of the agent.")]
 [DerivedFrom(typeof(AgentRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AgentRole2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgentRole2Code>))]
 public enum AgentRole2Code
 {
     /// <summary>

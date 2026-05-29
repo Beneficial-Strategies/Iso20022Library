@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMPropertyType1Code")]
 [Description(@"Encoding type of the property.")]
 [DerivedFrom(typeof(ATMPropertyTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMPropertyType1Code>))]
 public enum ATMPropertyType1Code
 {
     /// <summary>

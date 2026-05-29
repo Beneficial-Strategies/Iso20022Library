@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0dI9wJX5EeWMQt4mOczoDw")]
 [Description(@"Indicates the type of integration of the POI terminal in the sale environment.")]
 [DerivedFrom(typeof(LocationCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LocationCategory3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LocationCategory3Code>))]
 public enum LocationCategory3Code
 {
     /// <summary>

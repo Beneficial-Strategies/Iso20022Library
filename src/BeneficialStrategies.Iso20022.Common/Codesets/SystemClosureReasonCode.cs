@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZRQG-Np-Ed-ak6NoX_4Aeg_2007403378")]
 [Description(@"Specifies the reason for system inactivity.")]
 [Derivations(typeof(SystemClosureReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SystemClosureReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SystemClosureReasonCode>))]
 public enum SystemClosureReasonCode
 {
     /// <summary>

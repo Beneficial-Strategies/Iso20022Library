@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0mWuhAlIEeGATtfOBToyew_-723419449")]
 [Description(@"Specifies the type of counterparty's action the response is related to.")]
 [DerivedFrom(typeof(CounterpartyResponseStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CounterpartyResponseStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CounterpartyResponseStatusReason1Code>))]
 public enum CounterpartyResponseStatusReason1Code
 {
     /// <summary>

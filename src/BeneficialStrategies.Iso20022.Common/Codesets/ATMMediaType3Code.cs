@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Xci-AK4DEeWL1uap3dNhCQ")]
 [Description(@"Category of media items.")]
 [DerivedFrom(typeof(ATMMediaTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMMediaType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMMediaType3Code>))]
 public enum ATMMediaType3Code
 {
     /// <summary>

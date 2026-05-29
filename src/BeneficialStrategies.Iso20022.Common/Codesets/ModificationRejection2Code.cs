@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aMHMs9p-Ed-ak6NoX_4Aeg_-2138458517")]
 [Description(@"Specifies the reason for rejecting a modification reject.")]
 [DerivedFrom(typeof(PaymentModificationRejectionV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModificationRejection2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModificationRejection2Code>))]
 public enum ModificationRejection2Code
 {
     /// <summary>

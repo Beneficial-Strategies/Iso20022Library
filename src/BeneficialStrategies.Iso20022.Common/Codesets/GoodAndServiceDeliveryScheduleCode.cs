@@ -15,9 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(@"Code that specifies the good or service delivery schedule.")]
 [Derivations(typeof(GoodAndServiceDeliverySchedule1Code))]
 [Obsolete("Marked obsolete in the ISO 20022 2026-05-11 snapshot. Removal date: 2025-09-09.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GoodAndServiceDeliveryScheduleCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GoodAndServiceDeliveryScheduleCode>))]
 public enum GoodAndServiceDeliveryScheduleCode
 {
     /// <summary>

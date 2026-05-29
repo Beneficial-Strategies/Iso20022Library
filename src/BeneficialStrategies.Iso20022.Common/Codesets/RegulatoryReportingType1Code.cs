@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction."
 )]
 [DerivedFrom(typeof(RegulatoryReportingTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RegulatoryReportingType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RegulatoryReportingType1Code>))]
 public enum RegulatoryReportingType1Code
 {
     /// <summary>

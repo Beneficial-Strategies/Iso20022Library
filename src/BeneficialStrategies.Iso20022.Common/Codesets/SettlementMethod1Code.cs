@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZMCPwdp-Ed-ak6NoX_4Aeg_-115267772")]
 [Description(@"Specifies the method used to settle the credit transfer instruction.")]
 [DerivedFrom(typeof(SettlementMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementMethod1Code>))]
 public enum SettlementMethod1Code
 {
     /// <summary>

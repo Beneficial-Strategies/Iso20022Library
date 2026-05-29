@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TVs0sFfvEeOuDtoQo1qilA")]
 [Description(@"Specifies whether a date is actual or estimated.")]
 [DerivedFrom(typeof(TypeOfDateCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TypeOfDate1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TypeOfDate1Code>))]
 public enum TypeOfDate1Code
 {
     /// <summary>

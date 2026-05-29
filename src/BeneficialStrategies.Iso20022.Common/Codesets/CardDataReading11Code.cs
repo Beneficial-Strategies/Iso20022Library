@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hrr8kRQXEfC1ZfCQz0xB3g")]
 [Description(@"Card reading capabilities of the terminal performing the transaction.")]
 [DerivedFrom(typeof(CardDataReadingCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDataReading11Code>))]
 public enum CardDataReading11Code
 {
     /// <summary>

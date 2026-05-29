@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the collateral is a pool collateral, delivery by value specific pool or not a pool."
 )]
 [Derivations(typeof(CollateralPool1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralPoolCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralPoolCode>))]
 public enum CollateralPoolCode
 {
     /// <summary>

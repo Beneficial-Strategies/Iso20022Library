@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the type of investor. The rules that apply to each type of client are different."
 )]
 [Derivations(typeof(Eligibility1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EligibilityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EligibilityCode>))]
 public enum EligibilityCode
 {
     /// <summary>

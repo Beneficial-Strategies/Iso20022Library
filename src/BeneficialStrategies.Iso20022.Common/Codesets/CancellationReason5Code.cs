@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_t9XiMVkyEeGeoaLUQk__nA_-362261816")]
 [Description(@"Specifies the reason for requesting the cancellation of a payment instruction.")]
 [DerivedFrom(typeof(CancellationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationReason5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationReason5Code>))]
 public enum CancellationReason5Code
 {
     /// <summary>

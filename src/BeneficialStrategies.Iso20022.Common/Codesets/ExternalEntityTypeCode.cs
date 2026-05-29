@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,4 +14,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zu_aYOIZEe-eFYnrXcX-mQ")]
 [Description(@"Specifies the type of entity.")]
 [Derivations(typeof(ExternalEntityType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEntityTypeCode>))]
 public enum ExternalEntityTypeCode { }

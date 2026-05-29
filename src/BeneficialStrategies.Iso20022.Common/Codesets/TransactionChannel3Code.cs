@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the type of the communication channels used by the cardholder to the acceptor system."
 )]
 [DerivedFrom(typeof(TransactionChannelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionChannel3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionChannel3Code>))]
 public enum TransactionChannel3Code
 {
     /// <summary>

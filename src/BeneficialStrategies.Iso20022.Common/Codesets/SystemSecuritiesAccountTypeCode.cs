@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hjeiUmliEeGaMcKyqKNRfQ_-1442503299")]
 [Description(@"Lists the type of the securities account specific for a system.")]
 [Derivations(typeof(SystemSecuritiesAccountType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SystemSecuritiesAccountTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SystemSecuritiesAccountTypeCode>))]
 public enum SystemSecuritiesAccountTypeCode
 {
     /// <summary>

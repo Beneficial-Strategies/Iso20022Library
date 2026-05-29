@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hNwd8CCsEeWJd9HF2tO7BA")]
 [Description(@"Specifies the type of transaction.")]
 [Derivations(typeof(SettlementInstructionReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementInstructionReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementInstructionReasonCode>))]
 public enum SettlementInstructionReasonCode
 {
     /// <summary>

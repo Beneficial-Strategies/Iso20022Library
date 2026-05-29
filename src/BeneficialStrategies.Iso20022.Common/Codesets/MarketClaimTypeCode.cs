@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of market claim in the context of a corporate action distribution event."
 )]
 [Derivations(typeof(MarketClaimType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarketClaimTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketClaimTypeCode>))]
 public enum MarketClaimTypeCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the status of a single payment transaction or of a group of payment transactions."
 )]
 [DerivedFrom(typeof(PaymentStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationGroupStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationGroupStatus2Code>))]
 public enum ValidationGroupStatus2Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time."
 )]
 [Derivations(typeof(ClearingFeeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingFeeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingFeeTypeCode>))]
 public enum ClearingFeeTypeCode
 {
     /// <summary>

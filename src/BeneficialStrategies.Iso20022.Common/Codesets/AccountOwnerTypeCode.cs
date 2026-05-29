@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_r1Jf8I8mEeeBmcwCTnMfBg")]
 [Description(@"Specifies the type of account owner.")]
 [Derivations(typeof(AccountOwnerType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountOwnerTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountOwnerTypeCode>))]
 public enum AccountOwnerTypeCode
 {
     /// <summary>

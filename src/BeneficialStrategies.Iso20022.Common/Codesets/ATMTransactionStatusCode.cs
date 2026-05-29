@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EBcskIqSEeSRT5rEzcAHEw")]
 [Description(@"Status of an ATM transaction.")]
 [Derivations(typeof(ATMTransactionStatus1Code), typeof(ATMTransactionStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMTransactionStatusCode>))]
 public enum ATMTransactionStatusCode
 {
     /// <summary>

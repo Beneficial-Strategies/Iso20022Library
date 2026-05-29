@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FQp0QHyaEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the status of the demand for payment.")]
 [DerivedFrom(typeof(DemandStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DemandStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DemandStatus1Code>))]
 public enum DemandStatus1Code
 {
     /// <summary>

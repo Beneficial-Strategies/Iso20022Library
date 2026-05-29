@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1qxAYTL3EeKU9IrkkToqcw_904879687")]
 [Description(@"Specifies the type of cash proceeds that the holder is eligible to reinvest.")]
 [DerivedFrom(typeof(ReinvestmentIncomeClassificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReinvestmentIncomeClassification1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReinvestmentIncomeClassification1Code>))]
 public enum ReinvestmentIncomeClassification1Code
 {
     /// <summary>

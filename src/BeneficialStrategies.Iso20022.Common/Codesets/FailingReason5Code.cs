@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason the transaction/instruction is failing settlement. Settlement on the instructed settlement date is no longer possible."
 )]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailingReason5Code>))]
 public enum FailingReason5Code
 {
     /// <summary>

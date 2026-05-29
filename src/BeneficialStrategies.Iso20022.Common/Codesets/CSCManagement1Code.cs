@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TS9qYQEcEeCQm6a_G2yO_w_-804127704")]
 [Description(@"CSC (Card Security Code) management associated with the transaction.")]
 [DerivedFrom(typeof(CSCManagementCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CSCManagement1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CSCManagement1Code>))]
 public enum CSCManagement1Code
 {
     /// <summary>

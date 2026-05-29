@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-6GCUN8jEe-NrtAAlrBEgQ")]
 [Description(@"Specifies the reason for an allegement removal.")]
 [DerivedFrom(typeof(AllegementRemovalReasonCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllegementRemovalReason1Code>))]
 public enum AllegementRemovalReason1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6kfeUBQXEeWSI-Fz8Zwg6g")]
 [Description(@"Specifies the taxonomy type of a financial party.")]
 [DerivedFrom(typeof(FinancialPartySectorTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialPartySectorType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialPartySectorType1Code>))]
 public enum FinancialPartySectorType1Code
 {
     /// <summary>

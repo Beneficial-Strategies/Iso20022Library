@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZF7Atdp-Ed-ak6NoX_4Aeg_-1780504534")]
 [Description(@"Specifies whether the statement is an accounting or a custody statement.")]
 [Derivations(typeof(SecuritiesStatementType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesStatementTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesStatementTypeCode>))]
 public enum SecuritiesStatementTypeCode
 {
     /// <summary>

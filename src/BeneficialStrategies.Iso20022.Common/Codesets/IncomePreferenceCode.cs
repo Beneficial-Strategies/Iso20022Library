@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aWGPIdp-Ed-ak6NoX_4Aeg_-1985616336")]
 [Description(@"Specifies the options for distribution of dividend income.")]
 [Derivations(typeof(IncomePreference1Code), typeof(IncomePreference2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IncomePreferenceCode>))]
 public enum IncomePreferenceCode
 {
     /// <summary>

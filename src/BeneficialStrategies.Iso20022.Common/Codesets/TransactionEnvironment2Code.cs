@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cb7FAHsIEeSR68OJvMfxJQ")]
 [Description(@"Indicates the environment of the transaction location.")]
 [DerivedFrom(typeof(TransactionEnvironmentCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionEnvironment2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionEnvironment2Code>))]
 public enum TransactionEnvironment2Code
 {
     /// <summary>

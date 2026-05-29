@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates a type of instruction to a broker or dealer to buy or sell a financial instrument which is pegged against a certain value."
 )]
 [DerivedFrom(typeof(PegTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PegType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PegType1Code>))]
 public enum PegType1Code
 {
     /// <summary>

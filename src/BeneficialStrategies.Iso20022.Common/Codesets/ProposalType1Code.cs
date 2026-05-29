@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YdGGI9p-Ed-ak6NoX_4Aeg_1323819587")]
 [Description(@"Specifies whether the proposal is an initial or a counter proposal.")]
 [DerivedFrom(typeof(ProposalTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProposalType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProposalType1Code>))]
 public enum ProposalType1Code
 {
     /// <summary>

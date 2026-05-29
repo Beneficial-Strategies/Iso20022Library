@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_4YsNAHhREee6_vnrijrKgg")]
 [Description(@"Type of official document used for identification or authentication.")]
 [DerivedFrom(typeof(OfficialDocumentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OfficialDocumentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OfficialDocumentType1Code>))]
 public enum OfficialDocumentType1Code
 {
     /// <summary>

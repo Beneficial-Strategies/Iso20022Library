@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the reported contract belongs to a class of OTC derivatives that has been declared subject to the clearing obligation and both counterparties to the contract are subject to the clearing obligation under Regulation (EU) No 648/2012, as of the time of execution of the contract."
 )]
 [Derivations(typeof(ClearingObligationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ClearingObligationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ClearingObligationTypeCode>))]
 public enum ClearingObligationTypeCode
 {
     /// <summary>

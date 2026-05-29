@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_j4AIYO5NEeCisYr99QEiWA_-671204936")]
 [Description(@"Specifies the type of settlement instruction query to be executed.")]
 [DerivedFrom(typeof(SettlementQueryTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementQueryType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementQueryType1Code>))]
 public enum SettlementQueryType1Code
 {
     /// <summary>

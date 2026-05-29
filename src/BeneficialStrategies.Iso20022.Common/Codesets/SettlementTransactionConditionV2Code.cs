@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__uywsNojEeC60axPepSq7g_-615097257")]
 [Description(@"Specifies the conditions under which the order/trade is to be settled.")]
 [Derivations(typeof(SettlementTransactionCondition7Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementTransactionConditionV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementTransactionConditionV2Code>))]
 public enum SettlementTransactionConditionV2Code
 {
     /// <summary>

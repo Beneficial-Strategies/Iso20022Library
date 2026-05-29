@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries."
 )]
 [Derivations(typeof(FloorLimitType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FloorLimitTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FloorLimitTypeCode>))]
 public enum FloorLimitTypeCode
 {
     /// <summary>

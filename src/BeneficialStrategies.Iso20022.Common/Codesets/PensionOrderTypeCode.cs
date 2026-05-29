@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_QyyooLTpEeiENt6AoDfPXg")]
 [Description(@"Specifies a type of order attached to a pension.")]
 [Derivations(typeof(PensionOrderType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PensionOrderTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PensionOrderTypeCode>))]
 public enum PensionOrderTypeCode
 {
     /// <summary>

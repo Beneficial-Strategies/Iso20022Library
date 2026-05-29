@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_El9IgKbFEeSxuMLA5o46jQ")]
 [Description(@"Indicates the type of payout that will result from an in-the-money option.")]
 [DerivedFrom(typeof(OptionPayoutTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionPayoutType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionPayoutType1Code>))]
 public enum OptionPayoutType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_azJXhdp-Ed-ak6NoX_4Aeg_11908462")]
 [Description(@"Specifies how the transaction is to be settled.")]
 [DerivedFrom(typeof(DeliveryReceiptTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeliveryReceiptType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliveryReceiptType2Code>))]
 public enum DeliveryReceiptType2Code
 {
     /// <summary>

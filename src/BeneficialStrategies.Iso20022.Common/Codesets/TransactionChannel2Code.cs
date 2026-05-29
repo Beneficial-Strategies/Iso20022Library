@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_y2ltsBRFEeOKWo1NF21OVw")]
 [Description(@"Specifies the type of communication channel.")]
 [DerivedFrom(typeof(TransactionChannelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionChannel2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionChannel2Code>))]
 public enum TransactionChannel2Code
 {
     /// <summary>

@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_DppzQFOzEeGs_NnqHXQZkw")]
 [Description(@"Types of merger for the TSE/JASDEC extension.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MergerTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MergerTypeCode>))]
 public enum MergerTypeCode
 {
     /// <summary>

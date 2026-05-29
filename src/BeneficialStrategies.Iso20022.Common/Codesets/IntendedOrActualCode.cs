@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lko5sDcjEeidBoT_PugKiA")]
 [Description(@"Specifies if a charge or cost is intended (ex ante) or actual (post ante).")]
 [Derivations(typeof(IntendedOrActual2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IntendedOrActualCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IntendedOrActualCode>))]
 public enum IntendedOrActualCode
 {
     /// <summary>

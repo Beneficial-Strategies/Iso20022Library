@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rek3IB3YEeKKrOIoqWglDw")]
 [Description(@"Action to perform in case of error during the maintenance action in progress.")]
 [DerivedFrom(typeof(TerminalManagementErrorActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalManagementErrorAction2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalManagementErrorAction2Code>))]
 public enum TerminalManagementErrorAction2Code
 {
     /// <summary>

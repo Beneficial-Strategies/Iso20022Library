@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aoHzQNp-Ed-ak6NoX_4Aeg_627416502")]
 [Description(@"Indicates the financial center taken into account to adjust a date.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialCenterCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialCenterCode>))]
 public enum FinancialCenterCode
 {
     /// <summary>

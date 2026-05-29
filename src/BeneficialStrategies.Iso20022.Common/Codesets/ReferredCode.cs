@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZaoseNp-Ed-ak6NoX_4Aeg_-1818846482")]
 [Description(@"Indicates if the investor was referred.")]
 [Derivations(typeof(Referred1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReferredCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReferredCode>))]
 public enum ReferredCode
 {
     /// <summary>

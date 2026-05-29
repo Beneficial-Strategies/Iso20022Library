@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of alternate identification which can be used to give an alternate identification of the party identified."
 )]
 [DerivedFrom(typeof(TypeOfIdentificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TypeOfIdentification4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TypeOfIdentification4Code>))]
 public enum TypeOfIdentification4Code
 {
     /// <summary>

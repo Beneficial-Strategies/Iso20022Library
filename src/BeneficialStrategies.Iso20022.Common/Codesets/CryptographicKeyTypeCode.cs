@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,8 +17,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CryptographicKeyType1Code),
     typeof(CryptographicKeyType2Code),
     typeof(CryptographicKeyType3Code),
-    typeof(CryptographicKeyType4Code)
+    typeof(CryptographicKeyType4Code),
+    typeof(CryptographicKeyType5Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CryptographicKeyTypeCode>))]
 public enum CryptographicKeyTypeCode
 {
     /// <summary>
@@ -235,4 +238,15 @@ public enum CryptographicKeyTypeCode
         @"ISO 20038 - Banking and related financial services - Key wrap using symmetric keys. Method using symmetric keys as the wrapping algorithm."
     )]
     ISO20038KeyWrap,
+
+    /// <summary>
+    /// UKPT (Unique Key Per Transaction) or Master Session Key key encryption, using Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standard.
+    /// Encoded/decoded by serializers as &quot;UKA2&quot;.
+    /// </summary>
+    [EnumMember(Value = "UKA2")]
+    [IsoId("_vO2YYKB5EfC4Q_xhaK1hdQ")]
+    [Description(
+        @"UKPT (Unique Key Per Transaction) or Master Session Key key encryption, using Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standard."
+    )]
+    UKPTAES192,
 }

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Za7nY9p-Ed-ak6NoX_4Aeg_-423738675")]
 [Description(@"Specifies whether registration should occur upon receipt.")]
 [DerivedFrom(typeof(RegistrationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Registration1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Registration1Code>))]
 public enum Registration1Code
 {
     /// <summary>

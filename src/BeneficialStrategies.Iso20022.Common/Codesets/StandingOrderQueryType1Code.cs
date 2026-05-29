@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines the query type for standing orders queries, that identifies the predefined key attributes expected in the response to the query."
 )]
 [DerivedFrom(typeof(StandingOrderQueryTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StandingOrderQueryType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StandingOrderQueryType1Code>))]
 public enum StandingOrderQueryType1Code
 {
     /// <summary>

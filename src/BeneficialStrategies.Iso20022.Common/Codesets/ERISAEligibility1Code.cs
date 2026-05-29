@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies information about ERISA (Eligibility to federal Employee Retirement Income Security Act) eligibility."
 )]
 [DerivedFrom(typeof(ERISAEligibilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ERISAEligibility1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ERISAEligibility1Code>))]
 public enum ERISAEligibility1Code
 {
     /// <summary>

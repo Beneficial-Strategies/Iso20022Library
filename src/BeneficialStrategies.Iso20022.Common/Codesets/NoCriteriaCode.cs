@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aNcpdNp-Ed-ak6NoX_4Aeg_-452167930")]
 [Description(@"Specifies that there is no criteria.")]
 [Derivations(typeof(NoCriteria1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NoCriteriaCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NoCriteriaCode>))]
 public enum NoCriteriaCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nCKuwCC7EeWPMvNwVtiMsA")]
 [Description(@"Specifies the account type.")]
 [DerivedFrom(typeof(FundCashAccountCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundCashAccount4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundCashAccount4Code>))]
 public enum FundCashAccount4Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JK8y8Ax1Eeqdx6buGpCCQw")]
 [Description(@"Strong customer authentication exemption.")]
 [DerivedFrom(typeof(ExemptionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Exemption1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Exemption1Code>))]
 public enum Exemption1Code
 {
     /// <summary>

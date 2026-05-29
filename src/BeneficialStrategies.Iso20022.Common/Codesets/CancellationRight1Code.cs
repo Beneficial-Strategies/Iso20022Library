@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel."
 )]
 [DerivedFrom(typeof(CancellationRightCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationRight1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationRight1Code>))]
 public enum CancellationRight1Code
 {
     /// <summary>

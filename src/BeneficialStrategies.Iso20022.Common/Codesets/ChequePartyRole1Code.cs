@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Q-jNYCmyEeutWNGMV2XKIQ")]
 [Description(@"Specifies the roles of the parties linked to a cheque.")]
 [DerivedFrom(typeof(ChequePartyRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChequePartyRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChequePartyRole1Code>))]
 public enum ChequePartyRole1Code
 {
     /// <summary>

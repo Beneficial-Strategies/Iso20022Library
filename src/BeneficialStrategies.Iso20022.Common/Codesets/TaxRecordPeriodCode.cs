@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yim4RNp-Ed-ak6NoX_4Aeg_463735994")]
 [Description(@"Specifies the period related to the tax payment.")]
 [Derivations(typeof(TaxRecordPeriod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxRecordPeriodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxRecordPeriodCode>))]
 public enum TaxRecordPeriodCode
 {
     /// <summary>

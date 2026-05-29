@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9wqQ4CVFEe6EvsLBQ6cYtA")]
 [Description(@"Specifies the request objection code for the cross-element validation rules.")]
 [DerivedFrom(typeof(ValidationRuleCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleRequestObjection1Code>))]
 public enum ValidationRuleRequestObjection1Code
 {
     /// <summary>

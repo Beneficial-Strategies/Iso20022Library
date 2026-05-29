@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yTuAQNu8EeGvDJc6a1miEg_1096213532")]
 [Description(@"Specifies the form of the security.")]
 [Derivations(typeof(FormOfSecurity1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FormOfSecurityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FormOfSecurityCode>))]
 public enum FormOfSecurityCode
 {
     /// <summary>

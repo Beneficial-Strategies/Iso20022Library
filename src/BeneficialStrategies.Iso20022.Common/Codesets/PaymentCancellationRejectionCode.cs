@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zy7Qqdp-Ed-ak6NoX_4Aeg_1329401919")]
 [Description(@"Returned when a request for cancellation cannot be executed.")]
 [Derivations(typeof(PaymentCancellationRejection1Code), typeof(PaymentCancellationRejection2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentCancellationRejectionCode>))]
 public enum PaymentCancellationRejectionCode
 {
     /// <summary>

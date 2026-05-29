@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DwDwj6bHEeSDHtMWsSZVOg")]
 [Description(@"Non resident alien U.S. tax codes.")]
 [DerivedFrom(typeof(NRATaxCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NRATax2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NRATax2Code>))]
 public enum NRATax2Code
 {
     /// <summary>

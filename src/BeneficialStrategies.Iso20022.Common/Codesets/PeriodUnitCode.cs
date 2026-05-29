@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UpPVgRfkEeS1K9gYCN87fQ")]
 [Description(@"Unit of time.")]
 [Derivations(typeof(PeriodUnit3Code), typeof(PeriodUnit2Code), typeof(PeriodUnit4Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PeriodUnitCode>))]
 public enum PeriodUnitCode
 {
     /// <summary>

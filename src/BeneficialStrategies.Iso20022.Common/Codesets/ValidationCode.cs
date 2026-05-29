@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tUnxYMmKEeWAGphE2LvqeA")]
 [Description(@"Specifies the validation of a signature used to sign the file.")]
 [Derivations(typeof(Validation1Code), typeof(Validation2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationCode>))]
 public enum ValidationCode
 {
     /// <summary>

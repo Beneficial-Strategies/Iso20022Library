@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aXIw8Np-Ed-ak6NoX_4Aeg_-339948724")]
 [Description(@"Specifies the reason why the instruction is cancelled.")]
 [DerivedFrom(typeof(InstructionCancellationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstructionCancellationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionCancellationReason1Code>))]
 public enum InstructionCancellationReason1Code
 {
     /// <summary>

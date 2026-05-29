@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature of the membership of a party in a system. A system may recognise different types of membership, with different related rights and obligations."
 )]
 [DerivedFrom(typeof(MemberTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MemberType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MemberType1Code>))]
 public enum MemberType1Code
 {
     /// <summary>

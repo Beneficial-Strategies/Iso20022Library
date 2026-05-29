@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_be0KtNp-Ed-ak6NoX_4Aeg_-1456928482")]
 [Description(@"Specifies the reason why an amount is not specified.")]
 [Derivations(typeof(AmountType2Code), typeof(AmountType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountTypeCode>))]
 public enum AmountTypeCode
 {
     /// <summary>

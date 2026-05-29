@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bAkIcdp-Ed-ak6NoX_4Aeg_-623760703")]
 [Description(@"Specifies a type of value of the commission.")]
 [DerivedFrom(typeof(PriceValueTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CommissionValueType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CommissionValueType1Code>))]
 public enum CommissionValueType1Code
 {
     /// <summary>

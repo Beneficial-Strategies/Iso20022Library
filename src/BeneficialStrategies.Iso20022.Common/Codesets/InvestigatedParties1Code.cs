@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_U1p9sGKEEeG1ab6Vf7EgPA")]
 [Description(@"Specifies the investigated parties.")]
 [DerivedFrom(typeof(InvestigatedPartiesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestigatedParties1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestigatedParties1Code>))]
 public enum InvestigatedParties1Code
 {
     /// <summary>

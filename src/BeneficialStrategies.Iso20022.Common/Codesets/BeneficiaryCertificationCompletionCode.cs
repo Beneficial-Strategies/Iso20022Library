@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bdn359p-Ed-ak6NoX_4Aeg_-1583381957")]
 [Description(@"Specifies the type of certification completion required for a beneficiary.")]
 [Derivations(typeof(BeneficiaryCertificationCompletion1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BeneficiaryCertificationCompletionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BeneficiaryCertificationCompletionCode>))]
 public enum BeneficiaryCertificationCompletionCode
 {
     /// <summary>

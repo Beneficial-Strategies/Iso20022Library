@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VNYCoOhAEeSbwP3G-MV9YA")]
 [Description(@"Type of logical or physical operation on an ATM.")]
 [Derivations(typeof(ATMOperation1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMOperationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMOperationCode>))]
 public enum ATMOperationCode
 {
     /// <summary>

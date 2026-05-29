@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason of an unable to apply due to incorrect data, as published in an external unable to apply incorrect data code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalUnableToApplyIncorrectDataCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalUnableToApplyIncorrectData1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalUnableToApplyIncorrectData1Code>))]
 public enum ExternalUnableToApplyIncorrectData1Code
 {
     /// <summary>

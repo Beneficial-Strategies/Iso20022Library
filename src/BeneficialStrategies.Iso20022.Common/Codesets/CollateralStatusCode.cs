@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message."
 )]
 [Derivations(typeof(CollateralStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralStatusCode>))]
 public enum CollateralStatusCode
 {
     /// <summary>

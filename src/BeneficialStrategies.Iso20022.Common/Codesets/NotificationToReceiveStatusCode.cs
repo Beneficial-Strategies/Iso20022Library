@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether or not the event as mentioned in the notification occurred. Details of the event can be different from the details as per notification."
 )]
 [Derivations(typeof(NotificationStatus3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotificationToReceiveStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationToReceiveStatusCode>))]
 public enum NotificationToReceiveStatusCode
 {
     /// <summary>

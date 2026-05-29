@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Relates to non-standard orders, to handle them differently, probably in a manual fashion."
 )]
 [DerivedFrom(typeof(OrderWaiverReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderWaiverReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderWaiverReason1Code>))]
 public enum OrderWaiverReason1Code
 {
     /// <summary>

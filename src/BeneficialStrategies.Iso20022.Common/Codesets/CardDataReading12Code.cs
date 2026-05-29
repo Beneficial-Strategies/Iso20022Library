@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_u1jyURQWEfC1ZfCQz0xB3g")]
 [Description(@"Method used to obtain card payment information.")]
 [DerivedFrom(typeof(CardDataReadingCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDataReading12Code>))]
 public enum CardDataReading12Code
 {
     /// <summary>

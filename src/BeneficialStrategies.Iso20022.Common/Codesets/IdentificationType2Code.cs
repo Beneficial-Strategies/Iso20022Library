@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sowHEIA5EeSUJZYcWGKkkw")]
 [Description(@"Indicates the source of the leg identification.")]
 [DerivedFrom(typeof(IdentificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IdentificationType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IdentificationType2Code>))]
 public enum IdentificationType2Code
 {
     /// <summary>

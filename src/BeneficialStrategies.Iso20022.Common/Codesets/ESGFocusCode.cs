@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tYWj0M2uEeuAE-cYsQdwHQ")]
 [Description(@"Specifies if focus will be Environmental, Social or Governance.")]
 [Derivations(typeof(ESGFocus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ESGFocusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ESGFocusCode>))]
 public enum ESGFocusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_X6ShEQCUEeGL0ezt_jweVA")]
 [Description(@"Specifies the type of a corporate action event.")]
 [DerivedFrom(typeof(CorporateActionEventTypeV3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventType9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventType9Code>))]
 public enum CorporateActionEventType9Code
 {
     /// <summary>

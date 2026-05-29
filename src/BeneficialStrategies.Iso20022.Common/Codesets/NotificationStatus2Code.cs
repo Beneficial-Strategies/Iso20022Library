@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed."
 )]
 [DerivedFrom(typeof(NotificationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotificationStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationStatus2Code>))]
 public enum NotificationStatus2Code
 {
     /// <summary>

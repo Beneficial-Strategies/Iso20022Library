@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_fRO3QzFZEeGpgKb_ecoJPw")]
 [Description(@"TSE/JASDEC extension codes for the agreement of the target company.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TargetCompanyAgreementCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TargetCompanyAgreementCode>))]
 public enum TargetCompanyAgreementCode
 {
     /// <summary>

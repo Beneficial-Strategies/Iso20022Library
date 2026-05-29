@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Qualification of the information to sent to an output logical device, to display or print to the Cashier or the Customer."
 )]
 [DerivedFrom(typeof(InformationQualifyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InformationQualify1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InformationQualify1Code>))]
 public enum InformationQualify1Code
 {
     /// <summary>

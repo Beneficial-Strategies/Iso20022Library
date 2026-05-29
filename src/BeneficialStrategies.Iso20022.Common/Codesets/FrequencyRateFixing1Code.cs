@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_HAxU4I9PEeqMo4JxiuZGSw")]
 [Description(@"Defines the frequency rate fixing.")]
 [DerivedFrom(typeof(FrequencyRateFixingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FrequencyRateFixing1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FrequencyRateFixing1Code>))]
 public enum FrequencyRateFixing1Code
 {
     /// <summary>

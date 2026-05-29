@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Y2IRNdp-Ed-ak6NoX_4Aeg_-2038676269")]
 [Description(@"Specifies the underlying financial instrument.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnderlyingTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnderlyingTypeCode>))]
 public enum UnderlyingTypeCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether or not the fund is subject to reporting under the EU Savings Directive. Enter ""Variable"" if the status of the fund is likely to change from time to time."
 )]
 [Derivations(typeof(EUSavingsDirective1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EUSavingsDirectiveCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EUSavingsDirectiveCode>))]
 public enum EUSavingsDirectiveCode
 {
     /// <summary>

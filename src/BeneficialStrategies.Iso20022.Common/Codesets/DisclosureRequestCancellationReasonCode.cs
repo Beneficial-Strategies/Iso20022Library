@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_IZJRIEV4EemRx7jyevcLwg")]
 [Description(@"Specifies the reason for the cancellation of the disclosure request.")]
 [Derivations(typeof(DisclosureRequestCancellationReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DisclosureRequestCancellationReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DisclosureRequestCancellationReasonCode>))]
 public enum DisclosureRequestCancellationReasonCode
 {
     /// <summary>

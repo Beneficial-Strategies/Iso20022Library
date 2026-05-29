@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aa3aYtp-Ed-ak6NoX_4Aeg_-836406022")]
 [Description(@"Provides the processing status of a transaction (at account servicer level).")]
 [DerivedFrom(typeof(InstructionProcessingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IntraPositionTransactionProcessingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IntraPositionTransactionProcessingStatus1Code>))]
 public enum IntraPositionTransactionProcessingStatus1Code
 {
     /// <summary>

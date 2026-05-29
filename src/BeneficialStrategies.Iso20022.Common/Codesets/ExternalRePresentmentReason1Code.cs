@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external representment reason code in the format of character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately."
 )]
 [DerivedFrom(typeof(ExternalRePresentmentReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalRePresentmentReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalRePresentmentReason1Code>))]
 public enum ExternalRePresentmentReason1Code
 {
     /// <summary>

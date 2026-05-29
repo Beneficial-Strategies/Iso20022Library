@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a-xYudp-Ed-ak6NoX_4Aeg_1427080756")]
 [Description(@"Specifies the type of cheque.")]
 [DerivedFrom(typeof(ChequeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChequeType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChequeType2Code>))]
 public enum ChequeType2Code
 {
     /// <summary>

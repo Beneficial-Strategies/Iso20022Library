@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Algorithm26Code")]
 [Description(@"Identification of a digest algorithm.")]
 [DerivedFrom(typeof(AlgorithmCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm26Code>))]
 public enum Algorithm26Code
 {
     /// <summary>

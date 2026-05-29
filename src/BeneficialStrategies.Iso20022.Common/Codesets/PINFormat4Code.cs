@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_XsWNgIocEeSirOZJBRz_nA")]
 [Description(@"Format of an ATM PIN block before encryption.")]
 [DerivedFrom(typeof(PINFormatCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PINFormat4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PINFormat4Code>))]
 public enum PINFormat4Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TVyU5gEcEeCQm6a_G2yO_w_-64929302")]
 [Description(@"Type of attribute of a distinguished name (DN).")]
 [Derivations(typeof(AttributeType1Code), typeof(AttributeType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttributeTypeCode>))]
 public enum AttributeTypeCode
 {
     /// <summary>

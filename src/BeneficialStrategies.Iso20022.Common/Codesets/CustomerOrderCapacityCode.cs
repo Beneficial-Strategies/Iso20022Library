@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_axz6xNp-Ed-ak6NoX_4Aeg_335336023")]
 [Description(@"Designation of the capacity of the firm placing the order.")]
 [Derivations(typeof(CustomerOrderCapacity1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustomerOrderCapacityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustomerOrderCapacityCode>))]
 public enum CustomerOrderCapacityCode
 {
     /// <summary>

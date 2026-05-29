@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of operating system deployed on device, as published separately in an external device operating system type code set."
 )]
 [DerivedFrom(typeof(ExternalDeviceOperatingSystemTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDeviceOperatingSystemType1Code>))]
 public enum ExternalDeviceOperatingSystemType1Code
 {
     /// <summary>

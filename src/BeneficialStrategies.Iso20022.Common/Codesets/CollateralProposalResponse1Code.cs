@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YbwCU9p-Ed-ak6NoX_4Aeg_-89224518")]
 [Description(@"Specifies if the collateral proposal response is an initial or a counter proposal.")]
 [DerivedFrom(typeof(CollateralProposalResponseCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralProposalResponse1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralProposalResponse1Code>))]
 public enum CollateralProposalResponse1Code
 {
     /// <summary>

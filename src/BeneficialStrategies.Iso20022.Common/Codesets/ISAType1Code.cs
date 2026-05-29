@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_adZJ-Np-Ed-ak6NoX_4Aeg_948801052")]
 [Description(@"Specifies the type of the current year ISA.")]
 [DerivedFrom(typeof(ISATypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ISAType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ISAType1Code>))]
 public enum ISAType1Code
 {
     /// <summary>

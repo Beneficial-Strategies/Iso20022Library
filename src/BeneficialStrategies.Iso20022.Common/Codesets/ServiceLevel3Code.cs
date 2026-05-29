@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VwsKQNp-Ed-ak6NoX_4Aeg_-228092499")]
 [Description(@"Specifies the pre-agreed level of service between the parties.")]
 [DerivedFrom(typeof(ServiceLevelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ServiceLevel3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ServiceLevel3Code>))]
 public enum ServiceLevel3Code
 {
     /// <summary>

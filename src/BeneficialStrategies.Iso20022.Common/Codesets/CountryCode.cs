@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,4 +15,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code)."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CountryCode>))]
 public enum CountryCode { }

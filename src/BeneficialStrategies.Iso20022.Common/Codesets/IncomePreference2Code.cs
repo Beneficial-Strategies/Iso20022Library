@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pt6LwCFJEeWgV9SQSyaAog")]
 [Description(@"Specifies the options for distribution of dividend income.")]
 [DerivedFrom(typeof(IncomePreferenceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IncomePreference2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IncomePreference2Code>))]
 public enum IncomePreference2Code
 {
     /// <summary>

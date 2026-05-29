@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YfHZUN6lEeiwsev40qZGEQ")]
 [Description(@"List of specific services for DeviceRequest.")]
 [DerivedFrom(typeof(RetailerServiceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RetailerService8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RetailerService8Code>))]
 public enum RetailerService8Code
 {
     /// <summary>

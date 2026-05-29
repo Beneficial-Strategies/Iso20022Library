@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aZ-ChNp-Ed-ak6NoX_4Aeg_-657407757")]
 [Description(@"Indicates which type of interest is applied to a balance left on an account.")]
 [Derivations(typeof(InterestType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterestCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestCode>))]
 public enum InterestCode
 {
     /// <summary>

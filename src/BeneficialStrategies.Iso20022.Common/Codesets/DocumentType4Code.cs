@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of the document for example commercial invoice, credit note, debit note."
 )]
 [DerivedFrom(typeof(DocumentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DocumentType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DocumentType4Code>))]
 public enum DocumentType4Code
 {
     /// <summary>

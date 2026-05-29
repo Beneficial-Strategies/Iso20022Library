@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZUiEdNp-Ed-ak6NoX_4Aeg_865240256")]
 [Description(@"Specifies the precise type of reservation.")]
 [DerivedFrom(typeof(ReservationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReservationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReservationType1Code>))]
 public enum ReservationType1Code
 {
     /// <summary>

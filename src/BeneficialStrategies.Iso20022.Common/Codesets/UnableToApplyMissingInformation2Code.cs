@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y1ibWdp-Ed-ak6NoX_4Aeg_871704615")]
 [Description(@"Specifies the reason of an unable to apply due to missing information.")]
 [DerivedFrom(typeof(UnableToApplyMissingInformationV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnableToApplyMissingInformation2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnableToApplyMissingInformation2Code>))]
 public enum UnableToApplyMissingInformation2Code
 {
     /// <summary>

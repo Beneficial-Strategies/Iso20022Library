@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bopcI9p-Ed-ak6NoX_4Aeg_241665691")]
 [Description(@"Specifies the status of an allegement.")]
 [Derivations(typeof(AllegementStatus1Code), typeof(AllegementStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AllegementStatusCode>))]
 public enum AllegementStatusCode
 {
     /// <summary>

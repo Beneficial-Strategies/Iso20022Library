@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines the type of billing compensation to be applied, as published in an external billing compensation type code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalBillingCompensationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalBillingCompensationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalBillingCompensationTypeCode>))]
 public enum ExternalBillingCompensationTypeCode
 {
     /// <summary>

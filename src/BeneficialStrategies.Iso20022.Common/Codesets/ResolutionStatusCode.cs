@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZU0_aNp-Ed-ak6NoX_4Aeg_1388201869")]
 [Description(@"Specifies the status of a resolution in a meeting agenda.")]
 [Derivations(typeof(ResolutionStatus1Code), typeof(ResolutionStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResolutionStatusCode>))]
 public enum ResolutionStatusCode
 {
     /// <summary>

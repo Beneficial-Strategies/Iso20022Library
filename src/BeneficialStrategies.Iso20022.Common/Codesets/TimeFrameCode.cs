@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EKEEgDccEeidBoT_PugKiA")]
 [Description(@"Specifies a time frame.")]
 [Derivations(typeof(TimeFrame1Code), typeof(TimeFrame2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TimeFrameCode>))]
 public enum TimeFrameCode
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason the transaction, transfer or settlement instruction is unaffirmed."
 )]
 [Derivations(typeof(UnaffirmedReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnaffirmedReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnaffirmedReasonCode>))]
 public enum UnaffirmedReasonCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_mrGisGjMEeiRg5NzP0jkQg")]
 [Description(@"Specifies the lock status of a party.")]
 [DerivedFrom(typeof(LockStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LockStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LockStatus1Code>))]
 public enum LockStatus1Code
 {
     /// <summary>

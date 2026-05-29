@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8N7QU6MgEeCJ6YNENx4h-w_814542161")]
 [Description(@"Specifies the type of standing order.")]
 [Derivations(typeof(StandingOrderType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StandingOrderTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StandingOrderTypeCode>))]
 public enum StandingOrderTypeCode
 {
     /// <summary>

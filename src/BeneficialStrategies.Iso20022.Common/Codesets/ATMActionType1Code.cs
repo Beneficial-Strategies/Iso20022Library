@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMActionType1Code")]
 [Description(@"Type of action that could be run on a configuration.")]
 [DerivedFrom(typeof(ATMActionTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMActionType1Code>))]
 public enum ATMActionType1Code
 {
     /// <summary>

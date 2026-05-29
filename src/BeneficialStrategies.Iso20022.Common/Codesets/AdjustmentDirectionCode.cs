@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bnKOY9p-Ed-ak6NoX_4Aeg_-700576555")]
 [Description(@"Specifies whether the adjustment is added or substracted to the total amount.")]
 [Derivations(typeof(AdjustmentDirection1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdjustmentDirectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdjustmentDirectionCode>))]
 public enum AdjustmentDirectionCode
 {
     /// <summary>

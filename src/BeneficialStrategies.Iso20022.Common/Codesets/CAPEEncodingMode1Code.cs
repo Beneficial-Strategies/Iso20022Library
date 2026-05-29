@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CAPEEncodingMode1Code")]
 [Description(@"Mode of data encoding supported by exchanges.")]
 [DerivedFrom(typeof(CAPEEncodingModeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CAPEEncodingMode1Code>))]
 public enum CAPEEncodingMode1Code
 {
     /// <summary>

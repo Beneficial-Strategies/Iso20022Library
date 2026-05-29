@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective."
 )]
 [DerivedFrom(typeof(ResponseStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResponseStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResponseStatus2Code>))]
 public enum ResponseStatus2Code
 {
     /// <summary>

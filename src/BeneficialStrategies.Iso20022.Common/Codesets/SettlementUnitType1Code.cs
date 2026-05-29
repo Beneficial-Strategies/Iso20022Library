@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hblKlWliEeGaMcKyqKNRfQ_-582370355")]
 [Description(@"Type of settlement foreseen for the security.")]
 [DerivedFrom(typeof(SettlementUnitTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementUnitType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementUnitType1Code>))]
 public enum SettlementUnitType1Code
 {
     /// <summary>

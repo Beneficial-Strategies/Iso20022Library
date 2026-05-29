@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aRBh4dp-Ed-ak6NoX_4Aeg_-127818682")]
 [Description(@"Specifies if the order is sell or buy driven.")]
 [DerivedFrom(typeof(SideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderDriverCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderDriverCode>))]
 public enum OrderDriverCode
 {
     /// <summary>

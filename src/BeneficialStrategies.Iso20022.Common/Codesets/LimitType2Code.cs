@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aecS19p-Ed-ak6NoX_4Aeg_-1945298768")]
 [Description(@"Specifies the type of risk management limit.")]
 [DerivedFrom(typeof(LimitTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LimitType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LimitType2Code>))]
 public enum LimitType2Code
 {
     /// <summary>

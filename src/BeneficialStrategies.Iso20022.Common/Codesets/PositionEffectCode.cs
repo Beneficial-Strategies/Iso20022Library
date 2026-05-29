@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the resulting position after a trade should be an opening position or closing position."
 )]
 [Derivations(typeof(PositionEffect1Code), typeof(PositionEffect3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PositionEffectCode>))]
 public enum PositionEffectCode
 {
     /// <summary>

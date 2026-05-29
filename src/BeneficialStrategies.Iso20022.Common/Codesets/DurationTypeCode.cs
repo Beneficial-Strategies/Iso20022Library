@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SuhYsA3eEeW9YKj3GUmIEw")]
 [Description(@"Specifies the duration of the delivery period.")]
 [Derivations(typeof(DurationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DurationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DurationTypeCode>))]
 public enum DurationTypeCode
 {
     /// <summary>

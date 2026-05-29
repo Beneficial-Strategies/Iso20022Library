@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aAUwIINoEeuHqfO1LgkE9Q")]
 [Description(@"Defines the type of endpoint.")]
 [DerivedFrom(typeof(EndpointCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Endpoint1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Endpoint1Code>))]
 public enum Endpoint1Code
 {
     /// <summary>

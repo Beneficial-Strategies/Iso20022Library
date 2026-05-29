@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -33,6 +34,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ValidationRuleNarrative1Code),
     typeof(ValidationRuleIssuanceType1Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleCode>))]
 public enum ValidationRuleCode
 {
     /// <summary>

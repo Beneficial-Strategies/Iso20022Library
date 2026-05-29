@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_d6LiAM4mEeSc85GUbgBycw")]
 [Description(@"Specifies the type of bonds.")]
 [DerivedFrom(typeof(BondTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BondType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BondType1Code>))]
 public enum BondType1Code
 {
     /// <summary>

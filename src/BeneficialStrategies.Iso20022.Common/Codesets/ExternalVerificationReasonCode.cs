@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external verification reason code, as published in an external verification code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalVerificationReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalVerificationReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalVerificationReasonCode>))]
 public enum ExternalVerificationReasonCode
 {
     /// <summary>

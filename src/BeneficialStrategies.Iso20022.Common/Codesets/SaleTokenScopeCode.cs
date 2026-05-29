@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lucbANwsEeioifFt1dhnJA")]
 [Description(@"Scope of the token that identifies  the payment mean of the customer.")]
 [Derivations(typeof(SaleTokenScope1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SaleTokenScopeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SaleTokenScopeCode>))]
 public enum SaleTokenScopeCode
 {
     /// <summary>

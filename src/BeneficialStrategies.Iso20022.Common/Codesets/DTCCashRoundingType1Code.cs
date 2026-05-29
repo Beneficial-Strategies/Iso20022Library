@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1sZ_JDL3EeKU9IrkkToqcw_-1201472359")]
 [Description(@"Code qualifying types of cash rounding.")]
 [DerivedFrom(typeof(DTCCashRoundingTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCCashRoundingType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCCashRoundingType1Code>))]
 public enum DTCCashRoundingType1Code
 {
     /// <summary>

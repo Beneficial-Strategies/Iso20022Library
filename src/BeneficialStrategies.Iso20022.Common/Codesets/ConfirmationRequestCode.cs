@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0IqGIAJhEeS2H9l84F_isg")]
 [Description(@"Identifies the type of confirmation message being sent.")]
 [Derivations(typeof(ConfirmationRequest1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConfirmationRequestCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConfirmationRequestCode>))]
 public enum ConfirmationRequestCode
 {
     /// <summary>

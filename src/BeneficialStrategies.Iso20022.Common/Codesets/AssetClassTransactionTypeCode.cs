@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yNs5MNDREeSv_Pll20DdbA")]
 [Description(@"Code list of transaction type as specified by the trading venue.")]
 [Derivations(typeof(AssetClassTransactionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassTransactionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassTransactionTypeCode>))]
 public enum AssetClassTransactionTypeCode
 {
     /// <summary>

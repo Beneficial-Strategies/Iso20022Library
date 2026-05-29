@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vr6_BNp-Ed-ak6NoX_4Aeg_445510957")]
 [Description(@"Specifies the transfer method that will be used to transfer an amount of money.")]
 [DerivedFrom(typeof(PaymentMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentMethod5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentMethod5Code>))]
 public enum PaymentMethod5Code
 {
     /// <summary>

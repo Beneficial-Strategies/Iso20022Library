@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a11fIdp-Ed-ak6NoX_4Aeg_502156633")]
 [Description(@"Specifies the type of capital.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CapitalTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CapitalTypeCode>))]
 public enum CapitalTypeCode
 {
     /// <summary>

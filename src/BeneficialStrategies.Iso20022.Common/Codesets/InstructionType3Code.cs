@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aYn-uNp-Ed-ak6NoX_4Aeg_-1349456912")]
 [Description(@"Specifies whether the submitted data set must be matched or pre-matched.")]
 [DerivedFrom(typeof(InstructionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstructionType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionType3Code>))]
 public enum InstructionType3Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lwDTkxKfEeKj15WxqwlXPw")]
 [Description(@"Specifies how the holding is blocked.")]
 [Derivations(typeof(Holding1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HoldingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingCode>))]
 public enum HoldingCode
 {
     /// <summary>

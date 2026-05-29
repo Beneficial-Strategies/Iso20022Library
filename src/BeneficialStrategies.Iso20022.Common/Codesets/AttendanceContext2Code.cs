@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DnQc8JVJEeWu36UkS2TkoQ")]
 [Description(@"Identify the method of delivery or distribution.")]
 [DerivedFrom(typeof(AttendanceContextCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AttendanceContext2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttendanceContext2Code>))]
 public enum AttendanceContext2Code
 {
     /// <summary>

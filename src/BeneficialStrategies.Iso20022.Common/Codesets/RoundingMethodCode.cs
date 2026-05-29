@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded."
 )]
 [Derivations(typeof(RoundingMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RoundingMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RoundingMethodCode>))]
 public enum RoundingMethodCode
 {
     /// <summary>

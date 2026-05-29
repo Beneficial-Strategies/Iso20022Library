@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1APuIPS3Eeife6veM7daYw")]
 [Description(@"Type of period unit to be used.")]
 [DerivedFrom(typeof(PeriodUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PeriodUnit3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PeriodUnit3Code>))]
 public enum PeriodUnit3Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_npzGUVN8EfC0lMwgjvMClw")]
 [Description(@"Car rental service in addition to main car rental.")]
 [DerivedFrom(typeof(CarRentalServiceTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CarRentalServiceType3Code>))]
 public enum CarRentalServiceType3Code
 {
     /// <summary>

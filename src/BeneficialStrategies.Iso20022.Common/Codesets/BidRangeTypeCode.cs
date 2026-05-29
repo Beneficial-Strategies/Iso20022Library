@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vkpAsO3MEeqc-LCjwLsUVg")]
 [Description(@"Types of acceptable bid range values.")]
 [Derivations(typeof(BidRangeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BidRangeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BidRangeTypeCode>))]
 public enum BidRangeTypeCode
 {
     /// <summary>

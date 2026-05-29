@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ajDtF9p-Ed-ak6NoX_4Aeg_1258156300")]
 [Description(@"Indicates whether the details provided about an event are complete or incomplete.")]
 [Derivations(typeof(EventCompletenessStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventCompletenessStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventCompletenessStatusCode>))]
 public enum EventCompletenessStatusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zw1l89p-Ed-ak6NoX_4Aeg_144300492")]
 [Description(@"Specifies in what capacity (role) the originator of a quote is acting.")]
 [DerivedFrom(typeof(OriginatorRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OriginatorRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OriginatorRole1Code>))]
 public enum OriginatorRole1Code
 {
     /// <summary>

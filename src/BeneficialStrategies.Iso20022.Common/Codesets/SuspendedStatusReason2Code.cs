@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vk6_Ktp-Ed-ak6NoX_4Aeg_397035063")]
 [Description(@"Specifies the reason for a suspended status.")]
 [DerivedFrom(typeof(SuspendedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SuspendedStatusReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SuspendedStatusReason2Code>))]
 public enum SuspendedStatusReason2Code
 {
     /// <summary>

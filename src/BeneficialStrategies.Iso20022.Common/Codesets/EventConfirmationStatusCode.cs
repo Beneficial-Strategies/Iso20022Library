@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ajNeFNp-Ed-ak6NoX_4Aeg_-582418410")]
 [Description(@"Indicates the status of the occurrence of an event.")]
 [Derivations(typeof(EventConfirmationStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventConfirmationStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventConfirmationStatusCode>))]
 public enum EventConfirmationStatusCode
 {
     /// <summary>

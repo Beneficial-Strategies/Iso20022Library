@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kHVf0NDvEeS8V88MH4oPOQ")]
 [Description(@"Code list for freight related derivative contracts.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductFreight1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductFreight1Code>))]
 public enum AssetClassSubProductFreight1Code
 {
     /// <summary>

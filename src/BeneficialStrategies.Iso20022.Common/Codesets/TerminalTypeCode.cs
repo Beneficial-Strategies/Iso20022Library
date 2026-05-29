@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of terminal under the control of the card acceptor used for the card transaction."
 )]
 [Derivations(typeof(TerminalType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalTypeCode>))]
 public enum TerminalTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zg5Fddp-Ed-ak6NoX_4Aeg_1895706471")]
 [Description(@"Specifies the reason of a rejection of a movement cancellation request.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason14Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason14Code>))]
 public enum RejectionReason14Code
 {
     /// <summary>

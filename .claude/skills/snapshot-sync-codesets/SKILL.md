@@ -100,9 +100,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("{IsoId from spec}")]
 [Description(@"{ISO description from spec}")]
 [DerivedFrom(typeof({ParentCode}))]   // omit this line if there is no parent type
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<{CodesetName}>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<{CodesetName}>))]
 public enum {CodesetName}
 {
     /// <summary>

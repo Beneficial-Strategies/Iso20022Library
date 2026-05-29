@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_w7olUJitEeefZKJHxQTztg")]
 [Description(@"Identifies security capabilties of the card.")]
 [Derivations(typeof(CardSecurityCapability1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardSecurityCapabilityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardSecurityCapabilityCode>))]
 public enum CardSecurityCapabilityCode
 {
     /// <summary>

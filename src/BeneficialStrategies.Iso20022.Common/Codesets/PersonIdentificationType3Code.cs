@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aGvkh9p-Ed-ak6NoX_4Aeg_266470200")]
 [Description(@"Specifies the type of person's identification.")]
 [DerivedFrom(typeof(PersonIdentificationTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PersonIdentificationType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PersonIdentificationType3Code>))]
 public enum PersonIdentificationType3Code
 {
     /// <summary>

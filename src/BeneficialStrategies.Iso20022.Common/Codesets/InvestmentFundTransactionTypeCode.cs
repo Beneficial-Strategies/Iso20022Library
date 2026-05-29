@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -21,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(InvestmentFundTransactionInType3Code),
     typeof(InvestmentFundTransactionInType1Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundTransactionTypeCode>))]
 public enum InvestmentFundTransactionTypeCode
 {
     /// <summary>

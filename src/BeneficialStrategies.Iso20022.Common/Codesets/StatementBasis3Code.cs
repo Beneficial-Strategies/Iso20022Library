@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qaaAUMRxEeij-rSPpvD-Tw")]
 [Description(@"Specifies the basis on which the statement is prepared expressed as a code.")]
 [DerivedFrom(typeof(StatementBasisCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatementBasis3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementBasis3Code>))]
 public enum StatementBasis3Code
 {
     /// <summary>

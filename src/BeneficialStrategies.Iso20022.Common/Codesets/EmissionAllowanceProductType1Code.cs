@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aa07AAnWEeWa7rBfPECYsw")]
 [Description(@"Specifies an mission allowance type.")]
 [DerivedFrom(typeof(AssetClassDetailedSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EmissionAllowanceProductType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EmissionAllowanceProductType1Code>))]
 public enum EmissionAllowanceProductType1Code
 {
     /// <summary>

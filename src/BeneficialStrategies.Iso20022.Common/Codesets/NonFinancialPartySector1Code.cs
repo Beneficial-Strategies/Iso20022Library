@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vDGpUBQYEeWSI-Fz8Zwg6g")]
 [Description(@"Specifies the sector of a party with non financial activities.")]
 [DerivedFrom(typeof(NonFinancialPartySectorCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonFinancialPartySector1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonFinancialPartySector1Code>))]
 public enum NonFinancialPartySector1Code
 {
     /// <summary>

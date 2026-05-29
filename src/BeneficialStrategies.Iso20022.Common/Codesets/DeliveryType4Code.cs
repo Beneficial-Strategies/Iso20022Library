@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DeliveryType4Code")]
 [Description(@"Describes the delivery or custody arrangement for the underlying foreign exchange.")]
 [DerivedFrom(typeof(DeliveryTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliveryType4Code>))]
 public enum DeliveryType4Code
 {
     /// <summary>

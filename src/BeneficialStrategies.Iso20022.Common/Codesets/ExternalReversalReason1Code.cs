@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reversal reason, as published in an external reversal reason code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalReversalReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalReversalReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalReversalReason1Code>))]
 public enum ExternalReversalReason1Code
 {
     /// <summary>

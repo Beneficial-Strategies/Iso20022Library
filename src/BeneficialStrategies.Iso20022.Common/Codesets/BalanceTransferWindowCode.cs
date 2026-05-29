@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the processing window in which the balance transfer will be processed on the switch date."
 )]
 [Derivations(typeof(BalanceTransferWindow1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BalanceTransferWindowCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BalanceTransferWindowCode>))]
 public enum BalanceTransferWindowCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bmtiddp-Ed-ak6NoX_4Aeg_1664808083")]
 [Description(@"Specifies the type of address.")]
 [DerivedFrom(typeof(AddressTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AddressType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AddressType1Code>))]
 public enum AddressType1Code
 {
     /// <summary>

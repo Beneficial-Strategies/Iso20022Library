@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZZmKp9p-Ed-ak6NoX_4Aeg_-516051900")]
 [Description(@"Specifies the type of tax rate.")]
 [DerivedFrom(typeof(RateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RateType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RateType8Code>))]
 public enum RateType8Code
 {
     /// <summary>

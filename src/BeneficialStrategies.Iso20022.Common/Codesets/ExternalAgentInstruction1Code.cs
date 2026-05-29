@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies further instructions for the agent concerning the processing of an instruction.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalAgentInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalAgentInstruction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAgentInstruction1Code>))]
 public enum ExternalAgentInstruction1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the classification and thus the restrictions associated with an order (for regulatory purposes)."
 )]
 [Derivations(typeof(OrderRestrictions1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderClassificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderClassificationCode>))]
 public enum OrderClassificationCode
 {
     /// <summary>

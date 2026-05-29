@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__AyMYEgWEea9YuSvQGoi-w")]
 [Description(@"Partial settlement status information or information about gating.")]
 [DerivedFrom(typeof(SettledStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettledStatusReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettledStatusReason2Code>))]
 public enum SettledStatusReason2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bA3DYdp-Ed-ak6NoX_4Aeg_-1241620271")]
 [Description(@"Specifies the reason for a conditionally accepted status.")]
 [DerivedFrom(typeof(ConditionallyAcceptedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConditionallyAcceptedStatusReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConditionallyAcceptedStatusReason2Code>))]
 public enum ConditionallyAcceptedStatusReason2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ui-W4HdmEeeKH6vrEwvLHA")]
 [Description(@"Type of action taken as a disposition of a reported card payment fraud.")]
 [DerivedFrom(typeof(ActionTakenCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ActionTaken1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionTaken1Code>))]
 public enum ActionTaken1Code
 {
     /// <summary>

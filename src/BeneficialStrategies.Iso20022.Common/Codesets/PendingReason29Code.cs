@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Standard code to specify the reason why the instruction/event has a pending status."
 )]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingReason29Code>))]
 public enum PendingReason29Code
 {
     /// <summary>

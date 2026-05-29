@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the baseline report is based on matching or pre-matching data sets."
 )]
 [DerivedFrom(typeof(ReportTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportType2Code>))]
 public enum ReportType2Code
 {
     /// <summary>

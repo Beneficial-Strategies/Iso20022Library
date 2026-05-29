@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1rziMDL3EeKU9IrkkToqcw_1576727948")]
 [Description(@"Specifies types of linked events.")]
 [Derivations(typeof(DTCCLinkType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCCLinkTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCCLinkTypeCode>))]
 public enum DTCCLinkTypeCode
 {
     /// <summary>

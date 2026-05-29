@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -18,8 +19,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ExtendedEventType2Code),
     typeof(ExtendedEventType3Code),
     typeof(ExtendedEventType6Code),
-    typeof(ExtendedEventType7Code)
+    typeof(ExtendedEventType7Code),
+    typeof(ExtendedEventType8Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExtendedEventTypeV2Code>))]
 public enum ExtendedEventTypeV2Code
 {
     /// <summary>
@@ -140,4 +143,15 @@ public enum ExtendedEventTypeV2Code
     [IsoId("_kw2mgL_pEeeb2ZBoAlSG1Q")]
     [Description(@"Event is a redemption of warrant.")]
     RedemptionOfWarrant,
+
+    /// <summary>
+    /// Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt.
+    /// Encoded/decoded by serializers as &quot;FPRE&quot;.
+    /// </summary>
+    [EnumMember(Value = "FPRE")]
+    [IsoId("_blLDoKNZEfC9id413JK-Ig")]
+    [Description(
+        @"Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt."
+    )]
+    FullPrefunding,
 }

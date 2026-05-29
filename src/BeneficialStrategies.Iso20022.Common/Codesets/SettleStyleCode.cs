@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZOa1Ytp-Ed-ak6NoX_4Aeg_1310457218")]
 [Description(@"Specifies when the option contract settles.")]
 [Derivations(typeof(SettleStyle1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettleStyleCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettleStyleCode>))]
 public enum SettleStyleCode
 {
     /// <summary>

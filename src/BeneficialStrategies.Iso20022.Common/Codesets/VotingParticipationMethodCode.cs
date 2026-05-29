@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the different methods allowed for participating to the vote of agenda resolutions in a general meeting."
 )]
 [Derivations(typeof(VotingParticipationMethod1Code), typeof(VotingParticipationMethod2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VotingParticipationMethodCode>))]
 public enum VotingParticipationMethodCode
 {
     /// <summary>

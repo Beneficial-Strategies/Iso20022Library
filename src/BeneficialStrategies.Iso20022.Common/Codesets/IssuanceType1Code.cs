@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vRbJQH4MEeG05p8M2uqofg")]
 [Description(@"Specifies undertaking issuance type.")]
 [DerivedFrom(typeof(IssuanceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IssuanceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IssuanceType1Code>))]
 public enum IssuanceType1Code
 {
     /// <summary>

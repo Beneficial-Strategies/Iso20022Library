@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the calculation method to be used to caculate on which dates the shares have been acquired."
 )]
 [Derivations(typeof(DateCalculationMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DateCalculationMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DateCalculationMethodCode>))]
 public enum DateCalculationMethodCode
 {
     /// <summary>

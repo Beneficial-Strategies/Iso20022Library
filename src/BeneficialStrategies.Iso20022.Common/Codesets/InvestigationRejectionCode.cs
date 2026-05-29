@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ab58Mtp-Ed-ak6NoX_4Aeg_-1473436095")]
 [Description(@"Specifies the reason for rejecting an investigation case.")]
 [Derivations(typeof(InvestigationRejection1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestigationRejectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestigationRejectionCode>))]
 public enum InvestigationRejectionCode
 {
     /// <summary>

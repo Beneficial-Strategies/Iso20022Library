@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of account to which an account opening request is related, for instance a new account."
 )]
 [Derivations(typeof(AccountOpeningType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountOpeningTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountOpeningTypeCode>))]
 public enum AccountOpeningTypeCode
 {
     /// <summary>

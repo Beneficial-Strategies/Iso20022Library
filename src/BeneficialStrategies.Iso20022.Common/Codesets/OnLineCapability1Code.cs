@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TTZvTgEcEeCQm6a_G2yO_w_-1858574023")]
 [Description(@"On-line and off-line capabilities of the POI (Point Of Interaction).")]
 [DerivedFrom(typeof(OnLineCapabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OnLineCapability1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OnLineCapability1Code>))]
 public enum OnLineCapability1Code
 {
     /// <summary>

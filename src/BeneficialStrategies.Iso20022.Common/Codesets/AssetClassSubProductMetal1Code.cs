@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Wi3yENDrEeS8V88MH4oPOQ")]
 [Description(@"Code list for metal related derivative contracts.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductMetal1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductMetal1Code>))]
 public enum AssetClassSubProductMetal1Code
 {
     /// <summary>

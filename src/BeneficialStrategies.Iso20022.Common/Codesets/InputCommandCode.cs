@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_jBTTwN6nEeiwsev40qZGEQ")]
 [Description(@"Type of requested input.")]
 [Derivations(typeof(InputCommand1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InputCommandCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InputCommandCode>))]
 public enum InputCommandCode
 {
     /// <summary>

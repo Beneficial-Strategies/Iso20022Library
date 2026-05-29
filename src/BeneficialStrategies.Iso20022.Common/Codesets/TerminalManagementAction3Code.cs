@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pzYu4I34EeWRwov1g9WL_A")]
 [Description(@"Type of action to perform.")]
 [DerivedFrom(typeof(TerminalManagementActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalManagementAction3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalManagementAction3Code>))]
 public enum TerminalManagementAction3Code
 {
     /// <summary>

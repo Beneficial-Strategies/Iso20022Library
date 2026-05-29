@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YAQMcPPREeS_qLctCs2aRQ")]
 [Description(@"Specifies the non-equity financial instruments.")]
 [DerivedFrom(typeof(FinancialInstrumentReportingClassificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonEquityInstrumentReportingClassification1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonEquityInstrumentReportingClassification1Code>))]
 public enum NonEquityInstrumentReportingClassification1Code
 {
     /// <summary>

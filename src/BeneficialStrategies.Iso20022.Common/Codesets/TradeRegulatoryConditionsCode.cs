@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__yXpItojEeC60axPepSq7g_-160167061")]
 [Description(@"indicates if the Trade Regulatory Conditions is solicited or not.")]
 [Derivations(typeof(TradeRegulatoryConditions1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeRegulatoryConditionsCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeRegulatoryConditionsCode>))]
 public enum TradeRegulatoryConditionsCode
 {
     /// <summary>

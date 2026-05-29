@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_d9DQsA4SEeKGXqvMN6jpiw")]
 [Description(@"Specifies if an item is added, modified, deleted or unchanged.")]
 [Derivations(typeof(Modification1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModificationCode>))]
 public enum ModificationCode
 {
     /// <summary>

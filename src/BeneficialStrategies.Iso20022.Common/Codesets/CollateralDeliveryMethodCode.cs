@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use."
 )]
 [Derivations(typeof(CollateralDeliveryMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralDeliveryMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralDeliveryMethodCode>))]
 public enum CollateralDeliveryMethodCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -17,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(TransactionEnvironment3Code),
     typeof(TransactionEnvironment2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionEnvironmentCode>))]
 public enum TransactionEnvironmentCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_3AoIYMV1Eee3gsS0IxDWIA")]
 [Description(@"Code to identify an individual.")]
 [Derivations(typeof(Identification2Code), typeof(Identification3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IdentificationCode>))]
 public enum IdentificationCode
 {
     /// <summary>

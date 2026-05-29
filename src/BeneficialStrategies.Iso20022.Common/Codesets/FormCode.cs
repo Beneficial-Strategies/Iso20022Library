@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VsEwAdp-Ed-ak6NoX_4Aeg_-1720487337")]
 [Description(@"Specifies whether a physical form is required.")]
 [Derivations(typeof(Form1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FormCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FormCode>))]
 public enum FormCode
 {
     /// <summary>

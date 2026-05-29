@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rDVVUMm4EeWAGphE2LvqeA")]
 [Description(@"Specifies the combination of mode and type of the query information.")]
 [DerivedFrom(typeof(RequestModeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RequestModeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RequestModeType1Code>))]
 public enum RequestModeType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qiEvsM2tEeuAE-cYsQdwHQ")]
 [Description(@"Specifies the category of structured securities product.")]
 [Derivations(typeof(ESGCategoryGermanStructuredSecuritiesMarket1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ESGCategoryGermanStructuredSecuritiesMarketCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ESGCategoryGermanStructuredSecuritiesMarketCode>))]
 public enum ESGCategoryGermanStructuredSecuritiesMarketCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZPdXMtp-Ed-ak6NoX_4Aeg_330107896")]
 [Description(@"Specifies if the stamp duty is applicable.")]
 [DerivedFrom(typeof(StampDutyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StampDutyType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StampDutyType1Code>))]
 public enum StampDutyType1Code
 {
     /// <summary>

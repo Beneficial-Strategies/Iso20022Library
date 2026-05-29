@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__zHQANojEeC60axPepSq7g_1923931952")]
 [Description(@"Specifies the role of a trading party in a transaction.")]
 [DerivedFrom(typeof(TradingCapacityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingCapacity4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingCapacity4Code>))]
 public enum TradingCapacity4Code
 {
     /// <summary>

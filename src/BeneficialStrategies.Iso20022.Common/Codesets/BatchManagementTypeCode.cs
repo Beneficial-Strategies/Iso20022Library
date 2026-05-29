@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zw7p8FAXEeedyPuM0kK2EQ")]
 [Description(@"Type of batch management activity.")]
 [Derivations(typeof(BatchManagementType1Code), typeof(BatchManagementType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BatchManagementTypeCode>))]
 public enum BatchManagementTypeCode
 {
     /// <summary>

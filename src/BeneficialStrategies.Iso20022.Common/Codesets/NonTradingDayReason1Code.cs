@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dktzIGw5EeWD9e8QDBgUOw")]
 [Description(@"Specifies the reason capturing a non trading day.")]
 [DerivedFrom(typeof(NonTradingDayReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NonTradingDayReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NonTradingDayReason1Code>))]
 public enum NonTradingDayReason1Code
 {
     /// <summary>

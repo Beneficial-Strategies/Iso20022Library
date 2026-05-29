@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pTnR0EWeEempSe_3C1a9EQ")]
 [Description(@"Specifies which elements types must be presented in an e-invoice.")]
 [DerivedFrom(typeof(PresentmentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PresentmentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PresentmentType1Code>))]
 public enum PresentmentType1Code
 {
     /// <summary>

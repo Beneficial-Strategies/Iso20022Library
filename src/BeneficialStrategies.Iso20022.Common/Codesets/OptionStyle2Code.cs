@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aQIxFtp-Ed-ak6NoX_4Aeg_-1177091144")]
 [Description(@"Defines how an option can be exercised.")]
 [DerivedFrom(typeof(OptionStyleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionStyle2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionStyle2Code>))]
 public enum OptionStyle2Code
 {
     /// <summary>

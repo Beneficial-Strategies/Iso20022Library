@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aL9bs9p-Ed-ak6NoX_4Aeg_-127004772")]
 [Description(@"Specifies the message type.")]
 [Derivations(typeof(CashForecastMessage1Code), typeof(StatementType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageTypeCode>))]
 public enum MessageTypeCode
 {
     /// <summary>

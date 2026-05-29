@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_u-L_cK7PEemG7MmivSuE5g")]
 [Description(@"Specifies a type of notification.")]
 [DerivedFrom(typeof(CorporateActionNotificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotificationType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotificationType3Code>))]
 public enum NotificationType3Code
 {
     /// <summary>

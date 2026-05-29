@@ -15,9 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-KhpoFBNEeedyPuM0kK2EQ")]
 [Description(@"Identifies the type of chargeback process related to the message.|ISO 8583 MTI")]
 [DerivedFrom(typeof(MessageFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageFunction20Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction20Code>))]
 public enum MessageFunction20Code
 {
     /// <summary>

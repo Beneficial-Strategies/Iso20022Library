@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_q8cosCxQEeW0Obqrzm1X8Q")]
 [Description(@"Result of the performed service.")]
 [DerivedFrom(typeof(ResponseCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Response4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Response4Code>))]
 public enum Response4Code
 {
     /// <summary>

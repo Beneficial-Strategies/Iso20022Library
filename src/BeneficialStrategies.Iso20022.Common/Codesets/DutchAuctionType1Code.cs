@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DutchAuctionType1Code")]
 [Description(@"Specifies the type of Dutch auction.")]
 [DerivedFrom(typeof(DutchAuctionTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DutchAuctionType1Code>))]
 public enum DutchAuctionType1Code
 {
     /// <summary>

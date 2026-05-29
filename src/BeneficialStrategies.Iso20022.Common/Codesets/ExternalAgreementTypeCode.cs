@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_B-g18MkeEeeiAIB1i4AlQw")]
 [Description(@"Details related to the master agreement.")]
 [Derivations(typeof(ExternalAgreementType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalAgreementTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAgreementTypeCode>))]
 public enum ExternalAgreementTypeCode
 {
     /// <summary>

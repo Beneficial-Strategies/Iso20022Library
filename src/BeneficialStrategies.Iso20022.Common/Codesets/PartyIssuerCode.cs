@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VtaMxtp-Ed-ak6NoX_4Aeg_335333605")]
 [Description(@"Identifies the institution having originated a party.")]
 [DerivedFrom(typeof(IssuerCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyIssuerCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyIssuerCode>))]
 public enum PartyIssuerCode
 {
     /// <summary>

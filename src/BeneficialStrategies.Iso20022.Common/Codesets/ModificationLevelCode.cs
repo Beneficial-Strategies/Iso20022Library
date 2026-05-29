@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZzzfsQ3mEeWc7_0KPiuk6w")]
 [Description(@"Specifies the transaction or position level.")]
 [Derivations(typeof(ModificationLevel1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModificationLevelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModificationLevelCode>))]
 public enum ModificationLevelCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_arLtkWjoEeSDR-pyia6Xtg")]
 [Description(@"Entity or device that has performed the verification.")]
 [DerivedFrom(typeof(AuthenticationEntityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AuthenticationEntity2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AuthenticationEntity2Code>))]
 public enum AuthenticationEntity2Code
 {
     /// <summary>

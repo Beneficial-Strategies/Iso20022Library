@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZsOLstp-Ed-ak6NoX_4Aeg_336258693")]
 [Description(@"A type of quantity of financial instrument expressed in a relative size.")]
 [Derivations(typeof(RelativeSize1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RelativeSizeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RelativeSizeCode>))]
 public enum RelativeSizeCode
 {
     /// <summary>

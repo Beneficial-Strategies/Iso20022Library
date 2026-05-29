@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zdmYYw93EeGeV5vP7Mvdig_311511603")]
 [Description(@"Specifies the live status of a member of a system.")]
 [DerivedFrom(typeof(MemberStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MemberStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MemberStatus1Code>))]
 public enum MemberStatus1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of DTC (The Depository Trust Company) service for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc."
 )]
 [DerivedFrom(typeof(DTCServiceType))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCServiceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCServiceType1Code>))]
 public enum DTCServiceType1Code
 {
     /// <summary>

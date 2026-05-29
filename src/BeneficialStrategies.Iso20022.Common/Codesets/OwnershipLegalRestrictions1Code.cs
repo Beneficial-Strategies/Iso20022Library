@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZxJH9Np-Ed-ak6NoX_4Aeg_1692772034")]
 [Description(@"Specifies the regulatory restrictions applicable to a financial instrument.")]
 [DerivedFrom(typeof(OwnershipLegalRestrictionsCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OwnershipLegalRestrictions1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OwnershipLegalRestrictions1Code>))]
 public enum OwnershipLegalRestrictions1Code
 {
     /// <summary>

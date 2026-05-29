@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a2IaEdp-Ed-ak6NoX_4Aeg_-2044863229")]
 [Description(@"Specifies the reason for not accepting a Case.")]
 [DerivedFrom(typeof(CaseAssignmentRejectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CaseAssignmentRejection2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseAssignmentRejection2Code>))]
 public enum CaseAssignmentRejection2Code
 {
     /// <summary>

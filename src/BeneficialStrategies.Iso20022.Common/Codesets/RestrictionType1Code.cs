@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hbcArmliEeGaMcKyqKNRfQ_2033612003")]
 [Description(@"Specifies the type of restriction.")]
 [DerivedFrom(typeof(RestrictionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RestrictionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RestrictionType1Code>))]
 public enum RestrictionType1Code
 {
     /// <summary>

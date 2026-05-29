@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Uas9pqlEeGSON8vddiWzQ_-1016370047")]
 [Description(@"Defines the level of an account within the account hierarchy.")]
 [DerivedFrom(typeof(AccountLevelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountLevel2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountLevel2Code>))]
 public enum AccountLevel2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OJzv4Hi9EeaRm5xIK6nGuQ")]
 [Description(@"Sepcifes the reason for a request for a change to an account status.")]
 [DerivedFrom(typeof(AccountStatusUpdateRequestReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountStatusUpdateRequestReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountStatusUpdateRequestReason1Code>))]
 public enum AccountStatusUpdateRequestReason1Code
 {
     /// <summary>

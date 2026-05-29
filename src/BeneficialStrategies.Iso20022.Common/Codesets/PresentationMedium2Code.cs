@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YcK2AFzGEeeDqe2giKl0eQ")]
 [Description(@"Presentation medium type.")]
 [DerivedFrom(typeof(PresentationMediumCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PresentationMedium2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PresentationMedium2Code>))]
 public enum PresentationMedium2Code
 {
     /// <summary>

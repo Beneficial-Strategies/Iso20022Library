@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2nZSYJ9XEeqxTNfi5y7ywQ")]
 [Description(@"Specifies a basis for ex post calculations.")]
 [DerivedFrom(typeof(ExPostCostCalculationBasisCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExPostCostCalculationBasis1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExPostCostCalculationBasis1Code>))]
 public enum ExPostCostCalculationBasis1Code
 {
     /// <summary>

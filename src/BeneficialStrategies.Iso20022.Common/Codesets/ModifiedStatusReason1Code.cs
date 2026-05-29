@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0mgfgglIEeGATtfOBToyew_-1343301078")]
 [Description(@"Specifies that the transaction has been modified.")]
 [DerivedFrom(typeof(ModifiedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ModifiedStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ModifiedStatusReason1Code>))]
 public enum ModifiedStatusReason1Code
 {
     /// <summary>

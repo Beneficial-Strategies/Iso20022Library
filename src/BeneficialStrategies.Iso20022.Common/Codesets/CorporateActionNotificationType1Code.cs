@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bK_Pxdp-Ed-ak6NoX_4Aeg_724518589")]
 [Description(@"Type of notification advice.")]
 [DerivedFrom(typeof(CorporateActionNotificationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionNotificationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionNotificationType1Code>))]
 public enum CorporateActionNotificationType1Code
 {
     /// <summary>

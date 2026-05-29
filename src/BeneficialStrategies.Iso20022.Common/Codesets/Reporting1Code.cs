@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZTCPqNp-Ed-ak6NoX_4Aeg_-1780982221")]
 [Description(@"Identifies to which institution the reporting must be done.")]
 [DerivedFrom(typeof(ReportingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Reporting1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Reporting1Code>))]
 public enum Reporting1Code
 {
     /// <summary>

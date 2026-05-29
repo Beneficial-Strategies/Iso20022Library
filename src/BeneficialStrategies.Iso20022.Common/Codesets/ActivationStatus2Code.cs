@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ActivationStatus2Code")]
 [Description(@"Status of a configuration.")]
 [DerivedFrom(typeof(ActivationStatusCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActivationStatus2Code>))]
 public enum ActivationStatus2Code
 {
     /// <summary>

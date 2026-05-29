@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bYjKotp-Ed-ak6NoX_4Aeg_-534177110")]
 [Description(@"Specifies the reason for a cancellation rejected status.")]
 [DerivedFrom(typeof(RejectedStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationRejectedReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationRejectedReason1Code>))]
 public enum CancellationRejectedReason1Code
 {
     /// <summary>

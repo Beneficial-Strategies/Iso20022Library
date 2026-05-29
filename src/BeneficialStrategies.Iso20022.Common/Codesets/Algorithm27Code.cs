@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Algorithm27Code")]
 [Description(@"Cryptographic algorithms for the MAC (Message Authentication Code).")]
 [DerivedFrom(typeof(AlgorithmCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm27Code>))]
 public enum Algorithm27Code
 {
     /// <summary>

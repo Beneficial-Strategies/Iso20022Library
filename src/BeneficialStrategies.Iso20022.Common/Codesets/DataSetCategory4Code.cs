@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zmd7kWpKEeSR-ZWLvO-1dg")]
 [Description(@"Category of data set to transfer to the point of interaction.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataSetCategory4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory4Code>))]
 public enum DataSetCategory4Code
 {
     /// <summary>

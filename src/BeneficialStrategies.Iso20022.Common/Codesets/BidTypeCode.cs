@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_begosNp-Ed-ak6NoX_4Aeg_451517447")]
 [Description(@"Code to identify the type of bid request.")]
 [Derivations(typeof(BidType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BidTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BidTypeCode>))]
 public enum BidTypeCode
 {
     /// <summary>

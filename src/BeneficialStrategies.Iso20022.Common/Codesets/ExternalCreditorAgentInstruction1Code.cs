@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies further instructions concerning the processing of a payment instruction, as provided to the creditor agent."
 )]
 [DerivedFrom(typeof(ExternalCreditorAgentInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalCreditorAgentInstruction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCreditorAgentInstruction1Code>))]
 public enum ExternalCreditorAgentInstruction1Code
 {
     /// <summary>

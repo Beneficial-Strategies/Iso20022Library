@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ha1js2liEeGaMcKyqKNRfQ_477387752")]
 [Description(@"Defines the type of execution of the put feature.")]
 [Derivations(typeof(PutType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PutTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PutTypeCode>))]
 public enum PutTypeCode
 {
     /// <summary>

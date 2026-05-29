@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the state of details of the composite record on the system. Applicable to custodian service only."
 )]
 [Derivations(typeof(CustodianRecordCompletenessType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustodianRecordCompletenessTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustodianRecordCompletenessTypeCode>))]
 public enum CustodianRecordCompletenessTypeCode
 {
     /// <summary>

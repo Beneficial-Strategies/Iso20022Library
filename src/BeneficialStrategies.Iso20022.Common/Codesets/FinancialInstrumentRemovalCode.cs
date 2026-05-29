@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_J5tA0PkMEeicy5Zn42b9bg")]
 [Description(@"Specifies the removal process.")]
 [Derivations(typeof(FinancialInstrumentRemoval1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialInstrumentRemovalCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialInstrumentRemovalCode>))]
 public enum FinancialInstrumentRemovalCode
 {
     /// <summary>

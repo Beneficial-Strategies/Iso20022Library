@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Kl0T0CDEEeWPMvNwVtiMsA")]
 [Description(@"Specifies the accounting status.")]
 [Derivations(typeof(AccountingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountingStatusCode>))]
 public enum AccountingStatusCode
 {
     /// <summary>

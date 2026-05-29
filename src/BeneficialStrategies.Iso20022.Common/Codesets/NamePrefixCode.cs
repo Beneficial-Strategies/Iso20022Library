@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GP3GkIMmEeeBDNMiErKunw")]
 [Description(@"Specifies the terms used to formally address a person.")]
 [Derivations(typeof(NamePrefix1Code), typeof(NamePrefix2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NamePrefixCode>))]
 public enum NamePrefixCode
 {
     /// <summary>

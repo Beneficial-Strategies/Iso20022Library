@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_goS4AFNdEeijdq8ilaxyOA")]
 [Description(@"Specifies a type of drawdown.")]
 [Derivations(typeof(DrawdownType1Code), typeof(DrawdownType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DrawdownTypeCode>))]
 public enum DrawdownTypeCode
 {
     /// <summary>

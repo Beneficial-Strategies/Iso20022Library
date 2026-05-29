@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tIBiYP4zEeix6ug6HlF6IQ")]
 [Description(@"Indicates the corporate tax identification type.")]
 [Derivations(typeof(CorporateTaxType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateTaxTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateTaxTypeCode>))]
 public enum CorporateTaxTypeCode
 {
     /// <summary>

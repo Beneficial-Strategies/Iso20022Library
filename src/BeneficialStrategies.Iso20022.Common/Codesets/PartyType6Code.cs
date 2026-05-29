@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Entity assigning an identification of an entity involved in a maintenance operation."
 )]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType6Code>))]
 public enum PartyType6Code
 {
     /// <summary>

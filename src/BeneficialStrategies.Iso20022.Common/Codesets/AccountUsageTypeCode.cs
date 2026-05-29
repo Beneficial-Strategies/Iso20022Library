@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LjTZABKCEeKj15WxqwlXPw")]
 [Description(@"Specifies the type of usage of the account.")]
 [Derivations(typeof(AccountUsageType1Code), typeof(AccountUsageType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountUsageTypeCode>))]
 public enum AccountUsageTypeCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aYxvstp-Ed-ak6NoX_4Aeg_-1770372143")]
 [Description(@"Specifies the action that the TSU must take on a baseline or a data set.")]
 [Derivations(typeof(InstructionType3Code), typeof(InstructionType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionTypeCode>))]
 public enum InstructionTypeCode
 {
     /// <summary>

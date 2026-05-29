@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the margin call request was sent on a non valuation day or was received after notification time."
 )]
 [Derivations(typeof(MarginCallResponse1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarginCallResponseCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarginCallResponseCode>))]
 public enum MarginCallResponseCode
 {
     /// <summary>

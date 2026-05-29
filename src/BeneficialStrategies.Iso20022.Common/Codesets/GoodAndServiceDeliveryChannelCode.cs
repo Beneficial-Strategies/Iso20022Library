@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_A9WDQD5GEeyHI64WSlzTlg")]
 [Description(@"Code that specifies the good or service delivery channel.")]
 [Derivations(typeof(GoodAndServiceDeliveryChannel1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GoodAndServiceDeliveryChannelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GoodAndServiceDeliveryChannelCode>))]
 public enum GoodAndServiceDeliveryChannelCode
 {
     /// <summary>

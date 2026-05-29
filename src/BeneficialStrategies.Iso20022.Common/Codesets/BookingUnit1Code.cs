@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VuwQktp-Ed-ak6NoX_4Aeg_-2003409419")]
 [Description(@"Description of the method used to book single or grouped executions.")]
 [DerivedFrom(typeof(BookingUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BookingUnit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BookingUnit1Code>))]
 public enum BookingUnit1Code
 {
     /// <summary>

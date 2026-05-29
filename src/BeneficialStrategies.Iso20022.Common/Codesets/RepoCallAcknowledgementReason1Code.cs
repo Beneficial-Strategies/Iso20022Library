@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies additional information about the repurchase agreement call processed instruction."
 )]
 [DerivedFrom(typeof(RepoCallAcknowledgementReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepoCallAcknowledgementReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepoCallAcknowledgementReason1Code>))]
 public enum RepoCallAcknowledgementReason1Code
 {
     /// <summary>

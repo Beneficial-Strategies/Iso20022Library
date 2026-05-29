@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date."
 )]
 [DerivedFrom(typeof(DistributionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DistributionType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DistributionType3Code>))]
 public enum DistributionType3Code
 {
     /// <summary>

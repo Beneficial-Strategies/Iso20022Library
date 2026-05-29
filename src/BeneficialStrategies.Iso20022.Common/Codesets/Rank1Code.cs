@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6S0e4JNgEeWSf8tCOKY7Ug")]
 [Description(@"Specifies the rank of an element (party, market) in a specific environment.")]
 [DerivedFrom(typeof(RankCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Rank1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Rank1Code>))]
 public enum Rank1Code
 {
     /// <summary>

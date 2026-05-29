@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1orVtDL3EeKU9IrkkToqcw_-113809036")]
 [Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) specific options.")]
 [Derivations(typeof(ExtendedOptionFeature1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExtendedOptionFeatureCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExtendedOptionFeatureCode>))]
 public enum ExtendedOptionFeatureCode
 {
     /// <summary>

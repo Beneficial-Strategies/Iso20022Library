@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GHNZAIqvEeSIDtZ76p6McQ")]
 [Description(@"Describes the type of inquiry selected by the customer or the ATM.")]
 [DerivedFrom(typeof(ATMServiceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMServiceType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMServiceType3Code>))]
 public enum ATMServiceType3Code
 {
     /// <summary>

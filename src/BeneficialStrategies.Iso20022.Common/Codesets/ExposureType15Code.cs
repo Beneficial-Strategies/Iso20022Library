@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the underlying business area/type of trade causing the collateral movement."
 )]
 [DerivedFrom(typeof(ExposureTypeV3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExposureType15Code>))]
 public enum ExposureType15Code
 {
     /// <summary>

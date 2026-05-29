@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_RAAqYM4FEeiAhd-njDxLnA")]
 [Description(@"Specifies if all assets are encashed and transferred as cash.")]
 [DerivedFrom(typeof(CashAllCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashAll1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashAll1Code>))]
 public enum CashAll1Code
 {
     /// <summary>

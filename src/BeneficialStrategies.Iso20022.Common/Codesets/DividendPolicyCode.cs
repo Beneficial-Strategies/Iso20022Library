@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_axET4dp-Ed-ak6NoX_4Aeg_800833900")]
 [Description(@"Specifies the dividend policy of the financial instrument.")]
 [Derivations(typeof(DividendPolicy1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DividendPolicyCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DividendPolicyCode>))]
 public enum DividendPolicyCode
 {
     /// <summary>

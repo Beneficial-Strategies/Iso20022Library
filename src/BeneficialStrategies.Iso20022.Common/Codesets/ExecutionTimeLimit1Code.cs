@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ak11x9p-Ed-ak6NoX_4Aeg_1168575945")]
 [Description(@"Indicates from/until when an order must be executed.")]
 [DerivedFrom(typeof(ExecutionTimeLimitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExecutionTimeLimit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExecutionTimeLimit1Code>))]
 public enum ExecutionTimeLimit1Code
 {
     /// <summary>

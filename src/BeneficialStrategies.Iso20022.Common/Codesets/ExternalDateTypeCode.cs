@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -12,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ExternalDateTypeCode")]
 [Description(@"Defines the type of date, as published in an external date type code list.")]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDateTypeCode>))]
 public enum ExternalDateTypeCode
 {
     /// <summary>

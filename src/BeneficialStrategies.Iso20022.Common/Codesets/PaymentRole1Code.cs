@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Role associated with a specific party in relation to a payment instruction. The role identifies either the specific function of the party, or the party's rights regarding management of the instruction."
 )]
 [DerivedFrom(typeof(PartyRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentRole1Code>))]
 public enum PaymentRole1Code
 {
     /// <summary>

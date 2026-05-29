@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments."
 )]
 [Derivations(typeof(EUDividendStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EUDividendStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EUDividendStatusCode>))]
 public enum EUDividendStatusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2DXCYDlEEealR6-8aQ15BA")]
 [Description(@"Specifies the origin of cash.")]
 [Derivations(typeof(SourceOfCash1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SourceOfCashCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SourceOfCashCode>))]
 public enum SourceOfCashCode
 {
     /// <summary>

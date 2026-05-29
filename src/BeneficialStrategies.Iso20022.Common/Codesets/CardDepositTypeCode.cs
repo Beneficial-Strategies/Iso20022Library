@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nVXTF9CHEei_pMueJh_zOA")]
 [Description(@"Contains the type of deposit")]
 [Derivations(typeof(CardDepositType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardDepositTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDepositTypeCode>))]
 public enum CardDepositTypeCode
 {
     /// <summary>

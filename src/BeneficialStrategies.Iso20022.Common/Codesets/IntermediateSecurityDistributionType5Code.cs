@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-q_4AQCcEeGiE5oKUBl5wQ")]
 [Description(@"Specifies the type of intermediate security distribution.")]
 [DerivedFrom(typeof(IntermediateSecurityDistributionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IntermediateSecurityDistributionType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IntermediateSecurityDistributionType5Code>))]
 public enum IntermediateSecurityDistributionType5Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the pay creditor by cheque instruction code for the cross-element validation rules."
 )]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRulePayCreditorByCheque1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRulePayCreditorByCheque1Code>))]
 public enum ValidationRulePayCreditorByCheque1Code
 {
     /// <summary>

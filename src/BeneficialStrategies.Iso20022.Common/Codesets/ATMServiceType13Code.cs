@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ATMServiceType13Code")]
 [Description(@"Type of service to be offered for a customer at an ATM.")]
 [DerivedFrom(typeof(ATMServiceTypeV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMServiceType13Code>))]
 public enum ATMServiceType13Code
 {
     /// <summary>

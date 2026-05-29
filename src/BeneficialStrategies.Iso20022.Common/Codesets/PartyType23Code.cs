@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NFZZYFBBEeedyPuM0kK2EQ")]
 [Description(@"Party in charge of clearing payment or related transactions.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType23Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType23Code>))]
 public enum PartyType23Code
 {
     /// <summary>

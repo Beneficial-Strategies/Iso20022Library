@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ahkfVNp-Ed-ak6NoX_4Aeg_-1206685365")]
 [Description(@"Specifies the status of an entry.")]
 [DerivedFrom(typeof(EntryStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EntryStatus3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EntryStatus3Code>))]
 public enum EntryStatus3Code
 {
     /// <summary>

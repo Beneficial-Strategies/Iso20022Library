@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_QRvGMf4hEeCH9dkaY_DhYw")]
 [Description(@"Specifies the reason the transaction/instruction is unmatched.")]
 [DerivedFrom(typeof(UnmatchedReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnmatchedReason7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnmatchedReason7Code>))]
 public enum UnmatchedReason7Code
 {
     /// <summary>

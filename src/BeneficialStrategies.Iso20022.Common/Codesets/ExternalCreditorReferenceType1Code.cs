@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of creditor reference as published in an external creditor reference type code set."
 )]
 [DerivedFrom(typeof(ExternalCreditorReferenceTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCreditorReferenceType1Code>))]
 public enum ExternalCreditorReferenceType1Code
 {
     /// <summary>

@@ -10,6 +10,7 @@ global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.Codesets;
 global using BeneficialStrategies.Iso20022.Framework;
 global using BeneficialStrategies.Iso20022.Metadata;
+global using BeneficialStrategies.Iso20022.Serialization;
 #if NET8_0_OR_GREATER // C# 12 global type aliases
 global using IsoMax35Text = System.String; // Text
 global using IsoMax70Text = System.String; // Text

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_AWjbYGMdEeexSYCBvAp_qA")]
 [Description(@"Lodging type of activity.")]
 [DerivedFrom(typeof(LodgingActivityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LodgingActivity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LodgingActivity1Code>))]
 public enum LodgingActivity1Code
 {
     /// <summary>

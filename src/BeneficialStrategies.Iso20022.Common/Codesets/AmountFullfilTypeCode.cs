@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_bo8XEdp-Ed-ak6NoX_4Aeg_-793137810")]
 [Description(@"Specifies if the redemption is partly or fully.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AmountFullfilTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountFullfilTypeCode>))]
 public enum AmountFullfilTypeCode
 {
     /// <summary>

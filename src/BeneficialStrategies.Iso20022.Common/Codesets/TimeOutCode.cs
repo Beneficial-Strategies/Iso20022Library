@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vr6_Adp-Ed-ak6NoX_4Aeg_1010349399")]
 [Description(@"Specifies the reason for time-out.")]
 [Derivations(typeof(TimeOut1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TimeOutCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TimeOutCode>))]
 public enum TimeOutCode
 {
     /// <summary>

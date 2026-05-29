@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fRlkkEesEeODR7vDcYOqmg")]
 [Description(@"Result of a requested currency conversion.")]
 [DerivedFrom(typeof(CurrencyConversionResponseCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CurrencyConversionResponse1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CurrencyConversionResponse1Code>))]
 public enum CurrencyConversionResponse1Code
 {
     /// <summary>

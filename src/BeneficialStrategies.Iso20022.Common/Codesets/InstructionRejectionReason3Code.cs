@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Reason for rejection of a corporate action instruction or of an instruction cancellation."
 )]
 [DerivedFrom(typeof(InstructionRejectionReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstructionRejectionReason3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionRejectionReason3Code>))]
 public enum InstructionRejectionReason3Code
 {
     /// <summary>

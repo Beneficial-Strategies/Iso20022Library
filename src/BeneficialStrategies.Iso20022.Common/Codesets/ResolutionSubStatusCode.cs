@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vmscgDUGEe2tRf29bleifQ")]
 [Description(@"Specifies the sub-status of a resolution.  ")]
 [Derivations(typeof(ResolutionSubStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResolutionSubStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResolutionSubStatusCode>))]
 public enum ResolutionSubStatusCode
 {
     /// <summary>

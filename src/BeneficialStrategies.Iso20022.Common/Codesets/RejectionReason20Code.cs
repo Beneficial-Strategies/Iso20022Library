@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zi-wJ9p-Ed-ak6NoX_4Aeg_1390539565")]
 [Description(@"Specifies the reason of a rejection of the standing instruction request.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason20Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason20Code>))]
 public enum RejectionReason20Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dB7rMNuaEeiB5uLfkg9ZJA")]
 [Description(@"Encoding Mode of Quick Response Code.")]
 [DerivedFrom(typeof(QRCodeEncodingModeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QRCodeEncodingMode1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QRCodeEncodingMode1Code>))]
 public enum QRCodeEncodingMode1Code
 {
     /// <summary>

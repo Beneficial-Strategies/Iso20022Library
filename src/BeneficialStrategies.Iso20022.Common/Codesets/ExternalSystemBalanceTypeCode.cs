@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the system balance type, as published in an external system balance type code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalSystemBalanceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalSystemBalanceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalSystemBalanceTypeCode>))]
 public enum ExternalSystemBalanceTypeCode
 {
     /// <summary>

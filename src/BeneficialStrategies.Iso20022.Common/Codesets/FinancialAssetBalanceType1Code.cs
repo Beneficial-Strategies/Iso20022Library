@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m2iQ5fNBEeCuA5Tr22BnwA_1714463594")]
 [Description(@"Specifies balances of assets and other balances.")]
 [DerivedFrom(typeof(FinancialAssetBalanceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialAssetBalanceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialAssetBalanceType1Code>))]
 public enum FinancialAssetBalanceType1Code
 {
     /// <summary>

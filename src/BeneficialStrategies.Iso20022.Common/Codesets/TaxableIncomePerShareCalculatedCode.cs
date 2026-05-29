@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(TaxableIncomePerShareCalculated1Code),
     typeof(TaxableIncomePerShareCalculated2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxableIncomePerShareCalculatedCode>))]
 public enum TaxableIncomePerShareCalculatedCode
 {
     /// <summary>

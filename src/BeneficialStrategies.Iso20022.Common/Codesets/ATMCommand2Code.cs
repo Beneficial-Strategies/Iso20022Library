@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FSEd8Ir1EeSvuOJS0mmL0g")]
 [Description(@"Type of command performed by the ATM.")]
 [DerivedFrom(typeof(ATMCommandCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMCommand2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCommand2Code>))]
 public enum ATMCommand2Code
 {
     /// <summary>

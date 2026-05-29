@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZOa1Zdp-Ed-ak6NoX_4Aeg_-1034938036")]
 [Description(@"Specifies the role of the party in the settlement of the transaction.")]
 [DerivedFrom(typeof(SettlingCapacityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlingCapacity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlingCapacity1Code>))]
 public enum SettlingCapacity1Code
 {
     /// <summary>

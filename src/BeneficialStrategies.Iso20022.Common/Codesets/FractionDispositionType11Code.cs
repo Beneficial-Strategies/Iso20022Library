@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_dafmQGSCEeKFfdK0gKYFLQ")]
 [Description(@"Indicates that fractional value should be retained; no rounding.")]
 [DerivedFrom(typeof(FractionDispositionTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FractionDispositionType11Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FractionDispositionType11Code>))]
 public enum FractionDispositionType11Code
 {
     /// <summary>

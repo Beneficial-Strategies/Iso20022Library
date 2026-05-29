@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_U_0-vOXzEemEj48jhmlA0Q")]
 [Description(@"Specifies the reason why the instruction has a pending status.")]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PendingReason18Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingReason18Code>))]
 public enum PendingReason18Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EGOq0aRHEeeWXKXf3KjtmQ")]
 [Description(@"Identification of a digest algorithm.")]
 [DerivedFrom(typeof(AlgorithmCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Algorithm20Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm20Code>))]
 public enum Algorithm20Code
 {
     /// <summary>

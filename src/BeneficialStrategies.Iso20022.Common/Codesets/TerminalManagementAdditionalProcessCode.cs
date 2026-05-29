@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Additional process to perform before starting or after completing a terminal management action."
 )]
 [Derivations(typeof(TerminalManagementAdditionalProcess1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalManagementAdditionalProcessCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalManagementAdditionalProcessCode>))]
 public enum TerminalManagementAdditionalProcessCode
 {
     /// <summary>

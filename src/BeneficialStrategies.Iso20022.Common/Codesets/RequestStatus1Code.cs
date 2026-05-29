@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZT7nidp-Ed-ak6NoX_4Aeg_783372839")]
 [Description(@"Specifies the coded status of invoice financing request.")]
 [DerivedFrom(typeof(RequestStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RequestStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RequestStatus1Code>))]
 public enum RequestStatus1Code
 {
     /// <summary>

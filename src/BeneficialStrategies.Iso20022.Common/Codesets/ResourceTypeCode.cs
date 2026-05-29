@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lu4ewC8CEeu125Ip9zFcsQ")]
 [Description(@"Type of resource.")]
 [Derivations(typeof(ResourceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResourceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResourceTypeCode>))]
 public enum ResourceTypeCode
 {
     /// <summary>

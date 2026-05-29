@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rC5MMF6-EeSjaerr_EM7AQ")]
 [Description(@"Specifies the possible types of voting instructions.")]
 [DerivedFrom(typeof(VoteInstructionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<VoteInstruction4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VoteInstruction4Code>))]
 public enum VoteInstruction4Code
 {
     /// <summary>

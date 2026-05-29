@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if the status on a  transaction is pending initiation or has been initiated."
 )]
 [Derivations(typeof(ExecutionStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExecutionStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExecutionStatusCode>))]
 public enum ExecutionStatusCode
 {
     /// <summary>

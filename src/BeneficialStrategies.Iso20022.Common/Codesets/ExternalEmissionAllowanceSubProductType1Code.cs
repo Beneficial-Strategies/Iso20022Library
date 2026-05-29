@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the detailed sub products types allowed for emission allowances and associated derivatives."
 )]
 [DerivedFrom(typeof(ExternalEmissionAllowanceSubProductTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEmissionAllowanceSubProductType1Code>))]
 public enum ExternalEmissionAllowanceSubProductType1Code
 {
     /// <summary>

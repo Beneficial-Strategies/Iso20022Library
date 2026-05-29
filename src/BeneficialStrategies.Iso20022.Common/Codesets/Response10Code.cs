@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gImmcPBkEeesZ516Jn5sHw")]
 [Description(@"Response codes for verification")]
 [DerivedFrom(typeof(ResponseCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Response10Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Response10Code>))]
 public enum Response10Code
 {
     /// <summary>

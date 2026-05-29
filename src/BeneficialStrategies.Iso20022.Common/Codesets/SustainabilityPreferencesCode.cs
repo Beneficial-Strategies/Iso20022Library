@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the product is compatible with investors that have sustainability preferences. "
 )]
 [Derivations(typeof(SustainabilityPreferences1Code), typeof(SustainabilityPreferences2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SustainabilityPreferencesCode>))]
 public enum SustainabilityPreferencesCode
 {
     /// <summary>

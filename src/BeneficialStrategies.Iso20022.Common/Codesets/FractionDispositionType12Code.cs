@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KmzLEJFGEeanIpS4qvJ1tw")]
 [Description(@"Indicates the processing to apply to fractions of securities.")]
 [DerivedFrom(typeof(FractionDispositionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FractionDispositionType12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FractionDispositionType12Code>))]
 public enum FractionDispositionType12Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yatghtp-Ed-ak6NoX_4Aeg_-2122748244")]
 [Description(@"Specifies the action on the cash account.")]
 [DerivedFrom(typeof(UseCasesCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UseCases1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UseCases1Code>))]
 public enum UseCases1Code
 {
     /// <summary>

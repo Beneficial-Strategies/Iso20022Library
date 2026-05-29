@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZGOisNp-Ed-ak6NoX_4Aeg_464976126")]
 [Description(@"Identifies the reason why the transaction has a specific status.")]
 [Derivations(typeof(SecuritiesTransactionReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesTransactionReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesTransactionReasonCode>))]
 public enum SecuritiesTransactionReasonCode
 {
     /// <summary>

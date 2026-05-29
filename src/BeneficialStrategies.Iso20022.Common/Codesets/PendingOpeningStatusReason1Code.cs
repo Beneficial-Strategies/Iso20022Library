@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_uBUPAGCKEeabZtzjEVWYCQ")]
 [Description(@"Specifies the reason for a pending account opening status.")]
 [DerivedFrom(typeof(PendingOpeningStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PendingOpeningStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingOpeningStatusReason1Code>))]
 public enum PendingOpeningStatusReason1Code
 {
     /// <summary>

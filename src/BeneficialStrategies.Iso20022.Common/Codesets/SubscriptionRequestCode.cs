@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZQpqCNp-Ed-ak6NoX_4Aeg_336259528")]
 [Description(@"Type of subscription to market data.")]
 [Derivations(typeof(SubscriptionRequest1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SubscriptionRequestCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SubscriptionRequestCode>))]
 public enum SubscriptionRequestCode
 {
     /// <summary>

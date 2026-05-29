@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_g7FHoAxyEeqdx6buGpCCQw")]
 [Description(@"List of  available exemption codes to strong customer authentication.")]
 [Derivations(typeof(Exemption1Code), typeof(Exemption2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExemptionCode>))]
 public enum ExemptionCode
 {
     /// <summary>

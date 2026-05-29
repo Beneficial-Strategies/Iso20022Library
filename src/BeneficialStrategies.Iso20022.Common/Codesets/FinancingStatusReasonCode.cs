@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aqgY5Np-Ed-ak6NoX_4Aeg_1593858714")]
 [Description(@"Specifies the coded reason for the financing status.")]
 [Derivations(typeof(FinancingStatusReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancingStatusReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancingStatusReasonCode>))]
 public enum FinancingStatusReasonCode
 {
     /// <summary>

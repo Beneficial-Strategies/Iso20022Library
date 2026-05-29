@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9DYWQXHHEe60F8I8TAMKmg")]
 [Description(@"Card domain type of party.")]
 [DerivedFrom(typeof(PartyTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType34Code>))]
 public enum PartyType34Code
 {
     /// <summary>

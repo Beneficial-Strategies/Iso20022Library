@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fyQcYNtbEeipuvJHTHIw9A")]
 [Description(@"Type of bank check.")]
 [DerivedFrom(typeof(CheckTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CheckType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CheckType1Code>))]
 public enum CheckType1Code
 {
     /// <summary>

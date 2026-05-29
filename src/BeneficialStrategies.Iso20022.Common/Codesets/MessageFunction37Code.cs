@@ -15,9 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VzKWseE8EeeV6-yubHrZaQ")]
 [Description(@"Identifies messages related to a retrieval request process.|ISO 8583 MTI")]
 [DerivedFrom(typeof(MessageFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageFunction37Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction37Code>))]
 public enum MessageFunction37Code
 {
     /// <summary>

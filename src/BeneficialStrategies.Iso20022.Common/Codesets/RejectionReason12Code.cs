@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZgmKgdp-Ed-ak6NoX_4Aeg_1795040901")]
 [Description(@"Specifies the reason of a rejection of a deactivation instruction.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason12Code>))]
 public enum RejectionReason12Code
 {
     /// <summary>

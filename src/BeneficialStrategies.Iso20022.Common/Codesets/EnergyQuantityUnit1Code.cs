@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_agE0AA3fEeWc7_0KPiuk6w")]
 [Description(@"Specifies an energy quantity unit.")]
 [DerivedFrom(typeof(EnergyQuantityUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EnergyQuantityUnit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EnergyQuantityUnit1Code>))]
 public enum EnergyQuantityUnit1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of scenario based on how the risk factors moves for that scenario were conceived."
 )]
 [Derivations(typeof(ScenarioType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ScenarioTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ScenarioTypeCode>))]
 public enum ScenarioTypeCode
 {
     /// <summary>

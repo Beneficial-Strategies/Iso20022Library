@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DebtIssuerType1Code")]
 [Description(@"Specifies the debt issuer type for debt.")]
 [DerivedFrom(typeof(ProductTypeV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DebtIssuerType1Code>))]
 public enum DebtIssuerType1Code
 {
     /// <summary>

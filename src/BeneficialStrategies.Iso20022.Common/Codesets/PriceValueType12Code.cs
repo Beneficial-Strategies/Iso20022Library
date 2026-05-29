@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ETkqkAydEeuG8M5giQ2e0w")]
 [Description(@"Price will not be paid.")]
 [DerivedFrom(typeof(PriceValueTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceValueType12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceValueType12Code>))]
 public enum PriceValueType12Code
 {
     /// <summary>

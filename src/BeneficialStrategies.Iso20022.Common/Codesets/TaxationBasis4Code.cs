@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZScZx9p-Ed-ak6NoX_4Aeg_678158284")]
 [Description(@"Specifies the tax basis.")]
 [DerivedFrom(typeof(TaxationBasisCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxationBasis4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxationBasis4Code>))]
 public enum TaxationBasis4Code
 {
     /// <summary>

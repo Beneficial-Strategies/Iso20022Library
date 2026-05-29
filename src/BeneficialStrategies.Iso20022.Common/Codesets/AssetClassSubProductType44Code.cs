@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vdR-sVr3EeWN79Bl6BUd3g")]
 [Description(@"Defines the sub-product of type Urea and Ammonium Nitrate.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType44Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType44Code>))]
 public enum AssetClassSubProductType44Code
 {
     /// <summary>

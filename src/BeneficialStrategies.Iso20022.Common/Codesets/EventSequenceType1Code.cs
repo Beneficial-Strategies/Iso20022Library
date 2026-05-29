@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the event is an interim or a final event in a series of successive events. "
 )]
 [DerivedFrom(typeof(EventSequenceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventSequenceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventSequenceType1Code>))]
 public enum EventSequenceType1Code
 {
     /// <summary>

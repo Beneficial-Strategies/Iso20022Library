@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if the investor has the right to cancel an instruction or, if not, the reason the investor cannot cancel."
 )]
 [Derivations(typeof(CancellationRight2Code), typeof(CancellationRight1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationRightCode>))]
 public enum CancellationRightCode
 {
     /// <summary>

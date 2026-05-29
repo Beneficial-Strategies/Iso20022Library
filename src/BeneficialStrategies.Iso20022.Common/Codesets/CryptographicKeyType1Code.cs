@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KU0vhH1DEeCF8NjrBemJWQ_-221293967")]
 [Description(@"Type of algorithm used by the cryptographic key.")]
 [DerivedFrom(typeof(CryptographicKeyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CryptographicKeyType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CryptographicKeyType1Code>))]
 public enum CryptographicKeyType1Code
 {
     /// <summary>

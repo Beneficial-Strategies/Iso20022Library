@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bK2F19p-Ed-ak6NoX_4Aeg_-1191141683")]
 [Description(@"Standard code to specify the narrative type of a corporate action.")]
 [Derivations(typeof(CorporateActionNarrative1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionNarrativeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionNarrativeCode>))]
 public enum CorporateActionNarrativeCode
 {
     /// <summary>

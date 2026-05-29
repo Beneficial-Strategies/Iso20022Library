@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_38ZrgOkCEemeDPHh-U9b6w")]
 [Description(@"Sub type of goods and services purchased.")]
 [Derivations(typeof(GoodsAndServicesSubType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GoodsAndServicesSubTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GoodsAndServicesSubTypeCode>))]
 public enum GoodsAndServicesSubTypeCode
 {
     /// <summary>

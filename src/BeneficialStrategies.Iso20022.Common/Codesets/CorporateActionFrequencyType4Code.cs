@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Sm9LEKFUEeSK_vfd3NHBGg")]
 [Description(@"Specifies the frequency type of a corporate action event.")]
 [DerivedFrom(typeof(CorporateActionFrequencyTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionFrequencyType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionFrequencyType4Code>))]
 public enum CorporateActionFrequencyType4Code
 {
     /// <summary>

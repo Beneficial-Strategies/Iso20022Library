@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_mec4cNGyEeaokquJJ-K6uA")]
 [Description(@"Specifies an AND or an OR operator.")]
 [DerivedFrom(typeof(OperationV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Operation3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Operation3Code>))]
 public enum Operation3Code
 {
     /// <summary>

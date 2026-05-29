@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of Know Your Customer (KYC) or anti-money laundering due diligence to which the investor has been subjected."
 )]
 [Derivations(typeof(KnowYourCustomerCheckType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<KnowYourCustomerCheckTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<KnowYourCustomerCheckTypeCode>))]
 public enum KnowYourCustomerCheckTypeCode
 {
     /// <summary>

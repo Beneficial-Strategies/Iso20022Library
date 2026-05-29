@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -22,6 +23,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(CancelledStatusReason1Code),
     typeof(CancelledStatusReason2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancelledStatusReasonCode>))]
 public enum CancelledStatusReasonCode
 {
     /// <summary>

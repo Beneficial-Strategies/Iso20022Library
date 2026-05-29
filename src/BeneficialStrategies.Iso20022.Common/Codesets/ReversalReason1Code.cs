@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DBKyoNuHEeiB5uLfkg9ZJA")]
 [Description(@"Reason of the payment or loyalty reversal.")]
 [DerivedFrom(typeof(ReversalReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReversalReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReversalReason1Code>))]
 public enum ReversalReason1Code
 {
     /// <summary>

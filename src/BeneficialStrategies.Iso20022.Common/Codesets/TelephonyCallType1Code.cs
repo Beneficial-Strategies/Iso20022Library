@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YOAJsDEvEemzCpWiCwK4aQ")]
 [Description(@"Indicates the call type")]
 [DerivedFrom(typeof(TelephonyCallTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TelephonyCallType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TelephonyCallType1Code>))]
 public enum TelephonyCallType1Code
 {
     /// <summary>

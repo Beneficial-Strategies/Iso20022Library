@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YrjY6Np-Ed-ak6NoX_4Aeg_-1876118210")]
 [Description(@"Specifies the status of a group of payment instructions.")]
 [DerivedFrom(typeof(PaymentStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionGroupStatus3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionGroupStatus3Code>))]
 public enum TransactionGroupStatus3Code
 {
     /// <summary>

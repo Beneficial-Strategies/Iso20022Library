@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZBS2UDFxEeGKkIZzgd38VA")]
 [Description(@"TSE/JASDEC codes for unknown number of shares to be purchased.")]
 [DerivedFrom(typeof(SecuritiesQuantityTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesQuantity2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesQuantity2Code>))]
 public enum SecuritiesQuantity2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_EuVucNveEeqxGfKJubfhIw")]
 [Description(@"Specifies a type of request.")]
 [DerivedFrom(typeof(TypeOfRequestCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TypeOfRequest1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TypeOfRequest1Code>))]
 public enum TypeOfRequest1Code
 {
     /// <summary>

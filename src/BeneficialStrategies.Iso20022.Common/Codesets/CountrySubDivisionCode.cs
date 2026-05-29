@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,4 +15,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Code to identify a name of a unit resulting from the division of a country, dependency, or other area of special geopolitical interest contained in ISO 3166-1, on the basis of country names obtained from the United Nations (ISO 3166-2: Country subdivision code)."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CountrySubDivisionCode>))]
 public enum CountrySubDivisionCode { }

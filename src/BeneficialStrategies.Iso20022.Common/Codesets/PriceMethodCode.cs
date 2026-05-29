@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aIreM9p-Ed-ak6NoX_4Aeg_-1724055279")]
 [Description(@"Specifies the type of pricing calculation method.")]
 [Derivations(typeof(PriceMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PriceMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceMethodCode>))]
 public enum PriceMethodCode
 {
     /// <summary>

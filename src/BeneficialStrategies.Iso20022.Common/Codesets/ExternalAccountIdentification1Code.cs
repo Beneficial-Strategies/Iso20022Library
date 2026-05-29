@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external account identification scheme name code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalAccountIdentificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalAccountIdentification1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAccountIdentification1Code>))]
 public enum ExternalAccountIdentification1Code
 {
     /// <summary>

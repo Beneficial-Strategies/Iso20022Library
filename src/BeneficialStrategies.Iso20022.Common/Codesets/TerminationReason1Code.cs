@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0mEXMHyiEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the termination reason.")]
 [DerivedFrom(typeof(TerminationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminationReason1Code>))]
 public enum TerminationReason1Code
 {
     /// <summary>

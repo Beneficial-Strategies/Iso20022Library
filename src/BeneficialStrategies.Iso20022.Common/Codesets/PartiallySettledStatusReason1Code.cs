@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZxSR59p-Ed-ak6NoX_4Aeg_-674686926")]
 [Description(@"Specifies the reason for a partially settled status.")]
 [DerivedFrom(typeof(PartiallySettledStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartiallySettledStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartiallySettledStatusReason1Code>))]
 public enum PartiallySettledStatusReason1Code
 {
     /// <summary>

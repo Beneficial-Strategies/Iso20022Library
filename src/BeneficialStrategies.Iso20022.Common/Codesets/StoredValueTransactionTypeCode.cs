@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identification of operation to proceed on the stored value account or the stored value card."
 )]
 [Derivations(typeof(StoredValueTransactionType2Code), typeof(StoredValueTransactionType3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StoredValueTransactionTypeCode>))]
 public enum StoredValueTransactionTypeCode
 {
     /// <summary>

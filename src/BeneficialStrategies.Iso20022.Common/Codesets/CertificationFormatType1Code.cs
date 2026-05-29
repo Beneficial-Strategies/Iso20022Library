@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the certification format required, that is, physical or electronic format."
 )]
 [DerivedFrom(typeof(CertificationFormatTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CertificationFormatType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CertificationFormatType1Code>))]
 public enum CertificationFormatType1Code
 {
     /// <summary>

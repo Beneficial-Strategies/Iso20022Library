@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
 )]
 [DerivedFrom(typeof(MarketTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarketType9Code>))]
 public enum MarketType9Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the underlying reason for the cancellation of the associated transaction."
 )]
 [DerivedFrom(typeof(CancelledStatusReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancelledStatusReason4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancelledStatusReason4Code>))]
 public enum CancelledStatusReason4Code
 {
     /// <summary>

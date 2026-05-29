@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_5cohQCR7Ee2VuKUpJ7HXPg")]
 [Description(@"Specifies the type of the trade counterparty.")]
 [Derivations(typeof(TradeCounterpartyType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeCounterpartyTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeCounterpartyTypeCode>))]
 public enum TradeCounterpartyTypeCode
 {
     /// <summary>

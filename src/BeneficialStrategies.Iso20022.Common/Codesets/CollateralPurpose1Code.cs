@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the collateral has been posted against the variation margin or the segregated independent amount."
 )]
 [DerivedFrom(typeof(CollateralPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralPurpose1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralPurpose1Code>))]
 public enum CollateralPurpose1Code
 {
     /// <summary>

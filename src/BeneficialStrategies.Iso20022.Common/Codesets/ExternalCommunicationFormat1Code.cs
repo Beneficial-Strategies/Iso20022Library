@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,4 +16,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the communication format for statements in the format of a character string with a maximum length of 4 characters."
 )]
 [DerivedFrom(typeof(ExternalCommunicationFormatCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCommunicationFormat1Code>))]
 public enum ExternalCommunicationFormat1Code { }

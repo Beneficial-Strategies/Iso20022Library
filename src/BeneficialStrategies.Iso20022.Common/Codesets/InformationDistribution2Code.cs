@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zDak0CCUEeWJd9HF2tO7BA")]
 [Description(@"Specifies how information is to be distributed.")]
 [DerivedFrom(typeof(InformationDistributionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InformationDistribution2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InformationDistribution2Code>))]
 public enum InformationDistribution2Code
 {
     /// <summary>

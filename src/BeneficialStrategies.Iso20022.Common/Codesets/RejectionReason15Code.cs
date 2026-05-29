@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZhMnctp-Ed-ak6NoX_4Aeg_1863383216")]
 [Description(@"Specifies the reason of a rejection of an information advice.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason15Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason15Code>))]
 public enum RejectionReason15Code
 {
     /// <summary>

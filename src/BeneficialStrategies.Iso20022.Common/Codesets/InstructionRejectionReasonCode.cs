@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Reason for rejection of a corporate action instruction or of an instruction cancellation."
 )]
 [Derivations(typeof(InstructionRejectionReason1Code), typeof(InstructionRejectionReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionRejectionReasonCode>))]
 public enum InstructionRejectionReasonCode
 {
     /// <summary>

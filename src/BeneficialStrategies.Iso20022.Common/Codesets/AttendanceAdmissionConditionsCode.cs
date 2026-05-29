@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(AttendanceAdmissionConditions1Code),
     typeof(AttendanceAdmissionConditions2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttendanceAdmissionConditionsCode>))]
 public enum AttendanceAdmissionConditionsCode
 {
     /// <summary>

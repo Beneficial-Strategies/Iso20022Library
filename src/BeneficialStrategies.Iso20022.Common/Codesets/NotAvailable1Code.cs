@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hKMZUBvaEeWeg9zOuV6DZQ")]
 [Description(@"Specifies a not available value code.")]
 [DerivedFrom(typeof(SpecialPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotAvailable1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotAvailable1Code>))]
 public enum NotAvailable1Code
 {
     /// <summary>

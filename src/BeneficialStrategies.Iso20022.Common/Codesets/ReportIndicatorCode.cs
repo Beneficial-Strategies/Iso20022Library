@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZTCPpdp-Ed-ak6NoX_4Aeg_613407085")]
 [Description(@"Specifies the nature of the report, ie, standard or proprietary.")]
 [Derivations(typeof(ReportIndicator1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReportIndicatorCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportIndicatorCode>))]
 public enum ReportIndicatorCode
 {
     /// <summary>

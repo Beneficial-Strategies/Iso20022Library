@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vrqp8F24EeiFXdiLi_Nf4A")]
 [Description(@"Specifies a type of amount.")]
 [Derivations(typeof(TaxWrapperAmountType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxWrapperAmountTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxWrapperAmountTypeCode>))]
 public enum TaxWrapperAmountTypeCode
 {
     /// <summary>

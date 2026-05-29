@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_lupawAHwEeiJObvChJn-OA")]
 [Description(@"Format used to encrypt the data.")]
 [Derivations(typeof(EncryptedDataFormat1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EncryptedDataFormatCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EncryptedDataFormatCode>))]
 public enum EncryptedDataFormatCode
 {
     /// <summary>

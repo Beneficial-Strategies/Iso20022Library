@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_WrnSAN6-Eeiwsev40qZGEQ")]
 [Description(@"Type of action to perform on the sound.")]
 [Derivations(typeof(SoundAction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SoundActionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SoundActionCode>))]
 public enum SoundActionCode
 {
     /// <summary>

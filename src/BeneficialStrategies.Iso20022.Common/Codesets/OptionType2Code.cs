@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset) or any other type of option."
 )]
 [DerivedFrom(typeof(OptionDefinitionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionType2Code>))]
 public enum OptionType2Code
 {
     /// <summary>

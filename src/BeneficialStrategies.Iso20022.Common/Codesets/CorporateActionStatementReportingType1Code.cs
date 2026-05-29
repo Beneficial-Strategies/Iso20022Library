@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Type of statement reporting on account holdings for corporate action events for example. reporting on multiple accounts or multiple events."
 )]
 [DerivedFrom(typeof(CorporateActionStatementReportingTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionStatementReportingType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionStatementReportingType1Code>))]
 public enum CorporateActionStatementReportingType1Code
 {
     /// <summary>

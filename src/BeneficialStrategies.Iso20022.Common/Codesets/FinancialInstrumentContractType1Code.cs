@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_xfQ6kAOBEeWs3sTa9Sj6Lg")]
 [Description(@"Specifies the contract type of a derivative.")]
 [DerivedFrom(typeof(FinancialInstrumentContractTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialInstrumentContractType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialInstrumentContractType1Code>))]
 public enum FinancialInstrumentContractType1Code
 {
     /// <summary>

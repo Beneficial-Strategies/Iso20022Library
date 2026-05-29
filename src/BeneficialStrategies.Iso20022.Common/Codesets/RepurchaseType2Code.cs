@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZTe7ltp-Ed-ak6NoX_4Aeg_212758394")]
 [Description(@"Specifies the type of repurchase transaction.")]
 [DerivedFrom(typeof(RepurchaseTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepurchaseType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepurchaseType2Code>))]
 public enum RepurchaseType2Code
 {
     /// <summary>

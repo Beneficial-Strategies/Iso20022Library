@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8byFsFNgEeijdq8ilaxyOA")]
 [Description(@"Specifies a type of beneficiary.")]
 [Derivations(typeof(BeneficiaryType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BeneficiaryTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BeneficiaryTypeCode>))]
 public enum BeneficiaryTypeCode
 {
     /// <summary>

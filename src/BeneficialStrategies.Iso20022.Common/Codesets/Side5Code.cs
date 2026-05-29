@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_I0b5MOzkEeSBf_ghFpb9rQ")]
 [Description(@"Side taken by a party on an order.")]
 [DerivedFrom(typeof(SideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Side5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Side5Code>))]
 public enum Side5Code
 {
     /// <summary>

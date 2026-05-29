@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zaydc9p-Ed-ak6NoX_4Aeg_347400994")]
 [Description(@"Indicates that the operation is only possible in restricted circumstances.")]
 [DerivedFrom(typeof(HoldingTransferableCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReferToFundOrderDesk1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReferToFundOrderDesk1Code>))]
 public enum ReferToFundOrderDesk1Code
 {
     /// <summary>

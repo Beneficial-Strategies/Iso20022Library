@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the unit of measure by means of a code. The code is taken from UN/ECE Recommendation 20."
 )]
 [DerivedFrom(typeof(UnitOfMeasureCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnitOfMeasure9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnitOfMeasure9Code>))]
 public enum UnitOfMeasure9Code
 {
     /// <summary>

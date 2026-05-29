@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason why the corporate actio notification advice has a rejected status."
 )]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason80Code>))]
 public enum RejectionReason80Code
 {
     /// <summary>

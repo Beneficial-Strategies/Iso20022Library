@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Describes the main way customer information was collected to build up the customer menu and the withdrawal request."
 )]
 [Derivations(typeof(ATMCustomerProfile1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMCustomerProfileCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCustomerProfileCode>))]
 public enum ATMCustomerProfileCode
 {
     /// <summary>

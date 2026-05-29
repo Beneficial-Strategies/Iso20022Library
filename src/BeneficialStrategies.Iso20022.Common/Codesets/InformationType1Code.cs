@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aWiUCNp-Ed-ak6NoX_4Aeg_1720047653")]
 [Description(@"Specifies the coded type of additional information provided.")]
 [DerivedFrom(typeof(InformationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InformationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InformationType1Code>))]
 public enum InformationType1Code
 {
     /// <summary>

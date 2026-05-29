@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gbgLkLb0Eeu9Cp6InX88Vw")]
 [Description(@"Specifies a payment schedule type.")]
 [DerivedFrom(typeof(PaymentScheduleTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PaymentScheduleType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentScheduleType2Code>))]
 public enum PaymentScheduleType2Code
 {
     /// <summary>

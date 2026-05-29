@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect."
 )]
 [Derivations(typeof(TriggerType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TriggerTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TriggerTypeCode>))]
 public enum TriggerTypeCode
 {
     /// <summary>

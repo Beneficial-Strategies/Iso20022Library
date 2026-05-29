@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UHnL0LVNEeqkjqDuFVh1-A")]
 [Description(@"Specifies whether a financial product is in scope of a target market parameter.")]
 [DerivedFrom(typeof(TargetMarketCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TargetMarket3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TargetMarket3Code>))]
 public enum TargetMarket3Code
 {
     /// <summary>

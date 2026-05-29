@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_wZYWYESsEeSTS-T7FO4CUQ")]
 [Description(@"Identifies the status of the confirmation acknowledgement.")]
 [Derivations(typeof(AffirmStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AffirmStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AffirmStatusCode>))]
 public enum AffirmStatusCode
 {
     /// <summary>

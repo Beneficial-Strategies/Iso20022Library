@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YgYDotp-Ed-ak6NoX_4Aeg_-651849166")]
 [Description(@"Defines whether the threshold was applied on an unsecured or securited basis.")]
 [DerivedFrom(typeof(ThresholdTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ThresholdType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ThresholdType1Code>))]
 public enum ThresholdType1Code
 {
     /// <summary>

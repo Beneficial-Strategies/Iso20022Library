@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the current status of an order confirmation or of an order confirmation amendment."
 )]
 [Derivations(typeof(OrderConfirmationStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderConfirmationStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderConfirmationStatusCode>))]
 public enum OrderConfirmationStatusCode
 {
     /// <summary>

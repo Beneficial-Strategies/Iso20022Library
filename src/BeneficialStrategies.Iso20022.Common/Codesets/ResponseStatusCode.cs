@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective."
 )]
 [Derivations(typeof(ResponseStatus1Code), typeof(ResponseStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResponseStatusCode>))]
 public enum ResponseStatusCode
 {
     /// <summary>

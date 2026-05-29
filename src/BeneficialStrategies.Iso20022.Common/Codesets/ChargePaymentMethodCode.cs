@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_H8wEoRXyEeOBE-jZfcm4KQ")]
 [Description(@"Specifies how expenses are paid.")]
 [Derivations(typeof(ChargePaymentMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChargePaymentMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChargePaymentMethodCode>))]
 public enum ChargePaymentMethodCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1oiLwDL3EeKU9IrkkToqcw_-1432180896")]
 [Description(@"Specifies the type of account where the disbursed CUSIP will be allocated.")]
 [Derivations(typeof(DistributionAccount1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DistributionAccountCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DistributionAccountCode>))]
 public enum DistributionAccountCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fJFegJiuEeO4o528ngEXuw")]
 [Description(@"Specifies different levels of permission.")]
 [Derivations(typeof(AccountPermissionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AccountPermissionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AccountPermissionTypeCode>))]
 public enum AccountPermissionTypeCode
 {
     /// <summary>

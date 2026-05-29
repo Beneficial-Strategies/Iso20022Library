@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fzjwULpTEeilsanBGAzy4A")]
 [Description(@"Specifies the status of the protect transaction.")]
 [DerivedFrom(typeof(DTCInstructionStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProtectInstructionStatus3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProtectInstructionStatus3Code>))]
 public enum ProtectInstructionStatus3Code
 {
     /// <summary>

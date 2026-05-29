@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SRmoIeIaEe-eFYnrXcX-mQ")]
 [Description(@"Specifies the transaction operation action type.")]
 [DerivedFrom(typeof(TransactionOperationTypeV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionOperationType13Code>))]
 public enum TransactionOperationType13Code
 {
     /// <summary>

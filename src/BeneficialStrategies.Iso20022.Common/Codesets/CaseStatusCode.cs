@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a2uP9Np-Ed-ak6NoX_4Aeg_-1002966557")]
 [Description(@"Specifies the status of an investigation case.")]
 [Derivations(typeof(CaseStatus2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CaseStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseStatusCode>))]
 public enum CaseStatusCode
 {
     /// <summary>

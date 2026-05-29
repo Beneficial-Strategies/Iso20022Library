@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y9uuAdp-Ed-ak6NoX_4Aeg_-1758874043")]
 [Description(@"Specifies the form of the rebate when commission is waived.")]
 [Derivations(typeof(WaivingInstruction2Code), typeof(WaivingInstruction1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WaivingInstructionCode>))]
 public enum WaivingInstructionCode
 {
     /// <summary>

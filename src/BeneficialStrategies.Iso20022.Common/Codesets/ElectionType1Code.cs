@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ag-CZ9p-Ed-ak6NoX_4Aeg_-1602987297")]
 [Description(@"Specifies the type of election.")]
 [DerivedFrom(typeof(ElectionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ElectionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ElectionType1Code>))]
 public enum ElectionType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GUa7UKsuEeayv9XxdmMwKQ")]
 [Description(@"Scenario type based on the type of portfolio the scenario is designed to stress.")]
 [DerivedFrom(typeof(StrategyStressTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StrategyStressType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StrategyStressType1Code>))]
 public enum StrategyStressType1Code
 {
     /// <summary>

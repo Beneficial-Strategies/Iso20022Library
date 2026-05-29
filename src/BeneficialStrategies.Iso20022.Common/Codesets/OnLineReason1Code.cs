@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TTZvUgEcEeCQm6a_G2yO_w_1798387883")]
 [Description(@"Reason to process an online authorisation.")]
 [DerivedFrom(typeof(OnLineReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OnLineReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OnLineReason1Code>))]
 public enum OnLineReason1Code
 {
     /// <summary>

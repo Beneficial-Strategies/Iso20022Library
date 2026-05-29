@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aO8eQNp-Ed-ak6NoX_4Aeg_492685359")]
 [Description(@"Specifies additional information relative to the processing of the trade.")]
 [Derivations(typeof(OpeningClosing1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OpeningClosingCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OpeningClosingCode>))]
 public enum OpeningClosingCode
 {
     /// <summary>

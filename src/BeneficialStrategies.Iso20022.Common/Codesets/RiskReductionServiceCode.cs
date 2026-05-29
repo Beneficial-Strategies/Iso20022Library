@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LecYgCi6EeuKKc2MztSwPw")]
 [Description(@"RiskReductionServiceCode definition here")]
 [Derivations(typeof(RiskReductionService1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RiskReductionServiceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RiskReductionServiceCode>))]
 public enum RiskReductionServiceCode
 {
     /// <summary>

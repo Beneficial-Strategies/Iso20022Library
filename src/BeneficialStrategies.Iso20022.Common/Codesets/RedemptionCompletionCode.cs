@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yPkKwDwwEeaFzejt0Yw_3A")]
 [Description(@"Specifies the redemption status of the redemption order.")]
 [Derivations(typeof(RedemptionCompletion1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RedemptionCompletionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RedemptionCompletionCode>))]
 public enum RedemptionCompletionCode
 {
     /// <summary>

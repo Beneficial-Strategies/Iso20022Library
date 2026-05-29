@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__1WEodojEeC60axPepSq7g_534060743")]
 [Description(@"Specifies the type of collateral.")]
 [DerivedFrom(typeof(CollateralTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralType3Code>))]
 public enum CollateralType3Code
 {
     /// <summary>

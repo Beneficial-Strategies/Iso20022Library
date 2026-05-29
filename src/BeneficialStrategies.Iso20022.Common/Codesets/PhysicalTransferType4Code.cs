@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nzrsQIBAEeall68-KLgmUw")]
 [Description(@"Specifies the asset delivery type when the financial instrument is settled.")]
 [DerivedFrom(typeof(PhysicalTransferTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PhysicalTransferType4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PhysicalTransferType4Code>))]
 public enum PhysicalTransferType4Code
 {
     /// <summary>

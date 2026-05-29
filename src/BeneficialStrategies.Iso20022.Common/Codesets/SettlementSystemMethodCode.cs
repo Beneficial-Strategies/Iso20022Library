@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system."
 )]
 [Derivations(typeof(SettlementSystemMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SettlementSystemMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementSystemMethodCode>))]
 public enum SettlementSystemMethodCode
 {
     /// <summary>

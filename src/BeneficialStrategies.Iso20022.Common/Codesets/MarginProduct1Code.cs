@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YZq-tNp-Ed-ak6NoX_4Aeg_115662957")]
 [Description(@"Specifies the underlying product of the margin.")]
 [DerivedFrom(typeof(MarginProductCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MarginProduct1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarginProduct1Code>))]
 public enum MarginProduct1Code
 {
     /// <summary>

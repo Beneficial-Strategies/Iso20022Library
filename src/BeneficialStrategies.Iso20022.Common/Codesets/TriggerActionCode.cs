@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Yv34Mtp-Ed-ak6NoX_4Aeg_-920863827")]
 [Description(@"Defines the type of action to take when the trigger hits.")]
 [Derivations(typeof(TriggerAction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TriggerActionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TriggerActionCode>))]
 public enum TriggerActionCode
 {
     /// <summary>

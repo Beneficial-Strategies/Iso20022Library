@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZwirANp-Ed-ak6NoX_4Aeg_478087079")]
 [Description(@"Specifies the processing status of the replacement request.")]
 [Derivations(typeof(ReplacementProcessingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReplacementProcessingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReplacementProcessingStatusCode>))]
 public enum ReplacementProcessingStatusCode
 {
     /// <summary>

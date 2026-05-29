@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Configuration of the exchanges to perform the cancellation of a payment transaction."
 )]
 [DerivedFrom(typeof(CancellationProcessCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationProcess2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationProcess2Code>))]
 public enum CancellationProcess2Code
 {
     /// <summary>

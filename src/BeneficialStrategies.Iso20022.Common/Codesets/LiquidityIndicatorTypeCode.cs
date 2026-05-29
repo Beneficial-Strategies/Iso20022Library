@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the market and statistic conditions upon which a liquidity indicator has been computed."
 )]
 [Derivations(typeof(LiquidityIndicatorType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LiquidityIndicatorTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LiquidityIndicatorTypeCode>))]
 public enum LiquidityIndicatorTypeCode
 {
     /// <summary>

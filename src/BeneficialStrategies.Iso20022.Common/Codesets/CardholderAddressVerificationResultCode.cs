@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Result of the cardholder verification address checks on the street number and the postal code from the cardholder's address."
 )]
 [Derivations(typeof(CardholderAddressVerificationResult1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardholderAddressVerificationResultCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardholderAddressVerificationResultCode>))]
 public enum CardholderAddressVerificationResultCode
 {
     /// <summary>

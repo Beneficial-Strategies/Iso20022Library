@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_H58RoNdkEeibyvRfU9vJ7w")]
 [Description(@"Specifies the type of investor.")]
 [DerivedFrom(typeof(InvestorTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestorType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestorType3Code>))]
 public enum InvestorType3Code
 {
     /// <summary>

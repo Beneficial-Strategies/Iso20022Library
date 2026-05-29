@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the outcome of other review about fair value and/or charges. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09070."
 )]
 [Derivations(typeof(OtherReviewRelatedToValueAndOrChargesUKType1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OtherReviewRelatedToValueAndOrChargesUKTypeCode>))]
 public enum OtherReviewRelatedToValueAndOrChargesUKTypeCode
 {
     /// <summary>

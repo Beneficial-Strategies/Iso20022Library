@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UIVnYHaaEeavseMKyTsJEA")]
 [Description(@"Identification of the type of the transaction.")]
 [DerivedFrom(typeof(ExposureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExposureType6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExposureType6Code>))]
 public enum ExposureType6Code
 {
     /// <summary>

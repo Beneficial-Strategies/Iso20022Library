@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_SvcYkU1pEeSvz4A_x0ui8g")]
 [Description(@"Specifies the level of the safekeeping holding account.")]
 [Derivations(typeof(HoldingAccountLevel1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<HoldingAccountLevelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<HoldingAccountLevelCode>))]
 public enum HoldingAccountLevelCode
 {
     /// <summary>

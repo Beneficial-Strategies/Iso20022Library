@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VpPT4RNSEfC1ZfCQz0xB3g")]
 [Description(@"Type of action taken as a disposition of a reported card payment fraud. P000-P999 reserved for private use, Z000-Z999 reserved for national use.")]
 [DerivedFrom(typeof(ActionTakenCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionTaken2Code>))]
 public enum ActionTaken2Code
 {
     /// <summary>

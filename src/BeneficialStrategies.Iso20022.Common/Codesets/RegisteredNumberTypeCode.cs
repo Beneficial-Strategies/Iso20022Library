@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_V0O2MFf7EeOuDtoQo1qilA")]
 [Description(@"Code values for the registered number type.")]
 [Derivations(typeof(RegisteredNumberType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RegisteredNumberTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RegisteredNumberTypeCode>))]
 public enum RegisteredNumberTypeCode
 {
     /// <summary>

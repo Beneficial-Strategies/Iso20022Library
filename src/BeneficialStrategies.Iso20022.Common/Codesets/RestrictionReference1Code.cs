@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Q1UTcNavEei60tlze8Pqbw")]
 [Description(@"Specifies the restriction references to be applied to a transaction.")]
 [DerivedFrom(typeof(RestrictionReferenceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RestrictionReference1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RestrictionReference1Code>))]
 public enum RestrictionReference1Code
 {
     /// <summary>

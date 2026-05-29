@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__0Ti09ojEeC60axPepSq7g_-1282873817")]
 [Description(@"Specifies the reason why the instruction has a awaiting cancellation status.")]
 [Derivations(typeof(AwaitingCancellationReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AwaitingCancellationReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AwaitingCancellationReasonCode>))]
 public enum AwaitingCancellationReasonCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a-oOwNp-Ed-ak6NoX_4Aeg_94504006")]
 [Description(@"Specifies the method to be used in delivering a cheque to a party.")]
 [DerivedFrom(typeof(ChequeDeliveryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ChequeDelivery2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ChequeDelivery2Code>))]
 public enum ChequeDelivery2Code
 {
     /// <summary>

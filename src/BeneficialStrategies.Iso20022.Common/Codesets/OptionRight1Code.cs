@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__vPcotojEeC60axPepSq7g_-921943396")]
 [Description(@"Specifies the option rights.")]
 [DerivedFrom(typeof(OptionRightCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OptionRight1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionRight1Code>))]
 public enum OptionRight1Code
 {
     /// <summary>

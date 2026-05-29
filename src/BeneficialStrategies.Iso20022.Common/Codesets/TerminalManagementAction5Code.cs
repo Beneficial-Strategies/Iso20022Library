@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GO0LkSiyEeurkfo6MpvKDA")]
 [Description(@"Types of terminal management action to be performed by a point of interaction.")]
 [DerivedFrom(typeof(TerminalManagementActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TerminalManagementAction5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TerminalManagementAction5Code>))]
 public enum TerminalManagementAction5Code
 {
     /// <summary>

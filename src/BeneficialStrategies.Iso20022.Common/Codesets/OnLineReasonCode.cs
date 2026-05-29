@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TU5kIAEcEeCQm6a_G2yO_w_329831590")]
 [Description(@"Reason to process an online authorisation.")]
 [Derivations(typeof(OnLineReason1Code), typeof(OnLineReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OnLineReasonCode>))]
 public enum OnLineReasonCode
 {
     /// <summary>

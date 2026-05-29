@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_WkTlYcRxEeOg-a7zWL_U0A")]
 [Description(@"Specifies the option style.")]
 [Derivations(typeof(ExoticOptionStyle1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExoticOptionStyleCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExoticOptionStyleCode>))]
 public enum ExoticOptionStyleCode
 {
     /// <summary>

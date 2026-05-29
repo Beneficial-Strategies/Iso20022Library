@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9_E2EFXIEeeUQbJN-rt4dg")]
 [Description(@"Information on Funding sources used to finance margin loans.")]
 [Derivations(typeof(FundingSourceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundingSourcesTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundingSourcesTypeCode>))]
 public enum FundingSourcesTypeCode
 {
     /// <summary>

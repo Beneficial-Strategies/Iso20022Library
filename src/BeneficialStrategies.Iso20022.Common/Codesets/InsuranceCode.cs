@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gQ8SUxQaEeKebsB9eKJSkA")]
 [Description(@"Specifies the type of insurance.")]
 [Derivations(typeof(Insurance1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InsuranceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InsuranceCode>))]
 public enum InsuranceCode
 {
     /// <summary>

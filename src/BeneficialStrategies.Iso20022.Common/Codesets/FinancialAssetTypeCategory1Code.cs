@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m9i30fNBEeCuA5Tr22BnwA_99681721")]
 [Description(@"Categorization of financial asset type.")]
 [DerivedFrom(typeof(FinancialAssetTypeCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FinancialAssetTypeCategory1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FinancialAssetTypeCategory1Code>))]
 public enum FinancialAssetTypeCategory1Code
 {
     /// <summary>

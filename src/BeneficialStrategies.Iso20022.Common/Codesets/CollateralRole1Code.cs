@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies whether the reporting counterparty is a collateral provider or a collateral taker."
 )]
 [DerivedFrom(typeof(CollateralRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralRole1Code>))]
 public enum CollateralRole1Code
 {
     /// <summary>

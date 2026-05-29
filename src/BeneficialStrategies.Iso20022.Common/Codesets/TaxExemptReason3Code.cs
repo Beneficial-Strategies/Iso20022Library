@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason a specific tax has not been levied/deducted on a given transaction."
 )]
 [DerivedFrom(typeof(TaxExemptReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxExemptReason3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxExemptReason3Code>))]
 public enum TaxExemptReason3Code
 {
     /// <summary>

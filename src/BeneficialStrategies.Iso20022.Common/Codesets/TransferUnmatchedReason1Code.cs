@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vj32Sdp-Ed-ak6NoX_4Aeg_-661831225")]
 [Description(@"Specifies the reason for a transfer or settlement instruction unmatched status.")]
 [DerivedFrom(typeof(TransferUnmatchedReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransferUnmatchedReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransferUnmatchedReason1Code>))]
 public enum TransferUnmatchedReason1Code
 {
     /// <summary>

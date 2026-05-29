@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"In the case where the reporting counterparty is a UCIT or AIF, an indication whether it is an ETF or a MMF."
 )]
 [Derivations(typeof(FundType2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FundTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FundTypeCode>))]
 public enum FundTypeCode
 {
     /// <summary>

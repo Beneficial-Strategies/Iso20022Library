@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_z_QlkdkIEeiojJsa6FYyew")]
 [Description(@"Type of reading of the card data.")]
 [DerivedFrom(typeof(CardDataReadingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CardDataReading6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardDataReading6Code>))]
 public enum CardDataReading6Code
 {
     /// <summary>

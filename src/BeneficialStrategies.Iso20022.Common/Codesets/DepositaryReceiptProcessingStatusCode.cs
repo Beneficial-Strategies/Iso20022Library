@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_av4BF9p-Ed-ak6NoX_4Aeg_1948323043")]
 [Description(@"Specifies the status of a depositary receipt processing.")]
 [Derivations(typeof(DepositaryReceiptProcessingStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DepositaryReceiptProcessingStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DepositaryReceiptProcessingStatusCode>))]
 public enum DepositaryReceiptProcessingStatusCode
 {
     /// <summary>

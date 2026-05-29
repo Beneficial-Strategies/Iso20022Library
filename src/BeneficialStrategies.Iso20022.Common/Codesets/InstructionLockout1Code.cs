@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1tJmAzL3EeKU9IrkkToqcw_-1498537719")]
 [Description(@"Specifies the status of the instruction lock (for elections).")]
 [DerivedFrom(typeof(InstructionLockoutCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstructionLockout1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstructionLockout1Code>))]
 public enum InstructionLockout1Code
 {
     /// <summary>

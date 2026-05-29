@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aa3aZ9p-Ed-ak6NoX_4Aeg_-904367584")]
 [Description(@"Indicates the result of an investigation.")]
 [DerivedFrom(typeof(InvestigationExecutionConfirmationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestigationExecutionConfirmation2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestigationExecutionConfirmation2Code>))]
 public enum InvestigationExecutionConfirmation2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bfHFotp-Ed-ak6NoX_4Aeg_-1137977786")]
 [Description(@"Specifies the deliverability of a security.")]
 [Derivations(typeof(Appearance1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AppearanceCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AppearanceCode>))]
 public enum AppearanceCode
 {
     /// <summary>

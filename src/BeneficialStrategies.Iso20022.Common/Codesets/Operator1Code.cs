@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Code containing the operator used to indicate the relationship between a variable and a fixed value."
 )]
 [DerivedFrom(typeof(OperatorCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Operator1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Operator1Code>))]
 public enum Operator1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_INWe4Ff9EeOuDtoQo1qilA")]
 [Description(@"Indicates the specific reinvestment plan type.")]
 [DerivedFrom(typeof(ReinvestmentPlanCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReinvestmentPlan1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReinvestmentPlan1Code>))]
 public enum ReinvestmentPlan1Code
 {
     /// <summary>

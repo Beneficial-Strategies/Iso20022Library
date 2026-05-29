@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_jfoDtmzfEemD24gVaMSpeA")]
 [Description(@"Identifies the transaction initiator.")]
 [Derivations(typeof(TransactionInitiator1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransactionInitiatorCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionInitiatorCode>))]
 public enum TransactionInitiatorCode
 {
     /// <summary>

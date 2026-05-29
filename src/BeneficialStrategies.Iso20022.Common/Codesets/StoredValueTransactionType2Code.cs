@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identification of operation to proceed on the stored value account or the stored value card."
 )]
 [DerivedFrom(typeof(StoredValueTransactionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StoredValueTransactionType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StoredValueTransactionType2Code>))]
 public enum StoredValueTransactionType2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OrfCICCXEeWJd9HF2tO7BA")]
 [Description(@"Specifies the type of mail service.")]
 [Derivations(typeof(MailType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MailTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MailTypeCode>))]
 public enum MailTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m5hTcvNBEeCuA5Tr22BnwA_770688257")]
 [Description(@"Specifies the source of the report.")]
 [DerivedFrom(typeof(StatementSourceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StatementSource1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StatementSource1Code>))]
 public enum StatementSource1Code
 {
     /// <summary>

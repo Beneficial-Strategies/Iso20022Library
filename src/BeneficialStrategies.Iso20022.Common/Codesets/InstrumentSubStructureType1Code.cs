@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hbSPoGliEeGaMcKyqKNRfQ_2045189258")]
 [Description(@"Indicates the type of deal for structured finance.")]
 [DerivedFrom(typeof(InstrumentSubStructureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstrumentSubStructureType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstrumentSubStructureType1Code>))]
 public enum InstrumentSubStructureType1Code
 {
     /// <summary>

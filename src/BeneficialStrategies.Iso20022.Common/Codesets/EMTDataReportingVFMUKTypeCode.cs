@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -12,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_EMTDataReportingVFMUKTypeCode")]
 [Description(@"Specifies if the value for money section is filled in the current EMT posting.")]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EMTDataReportingVFMUKTypeCode>))]
 public enum EMTDataReportingVFMUKTypeCode
 {
     /// <summary>

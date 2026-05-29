@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the collateral type against which all repurchase agreements are conducted."
 )]
 [Derivations(typeof(SpecialCollateral1Code), typeof(SpecialCollateral2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SpecialCollateralCode>))]
 public enum SpecialCollateralCode
 {
     /// <summary>

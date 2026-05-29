@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason for a transfer or settlement instruction settlement pending status."
 )]
 [DerivedFrom(typeof(PendingSettlementStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PendingSettlementStatusReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingSettlementStatusReason2Code>))]
 public enum PendingSettlementStatusReason2Code
 {
     /// <summary>

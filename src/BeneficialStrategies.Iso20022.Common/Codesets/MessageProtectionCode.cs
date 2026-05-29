@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_5Id0YIrfEeSvuOJS0mmL0g")]
 [Description(@"Mechanism used to protect the message of the ATM protocol.")]
 [Derivations(typeof(MessageProtection1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageProtectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageProtectionCode>))]
 public enum MessageProtectionCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-eU4Np-Ed-ak6NoX_4Aeg_-770553292")]
 [Description(@"Indicates the type of routing.")]
 [Derivations(typeof(RoutingType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RoutingTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RoutingTypeCode>))]
 public enum RoutingTypeCode
 {
     /// <summary>

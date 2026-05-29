@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,4 +16,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the bank transaction code family, as published in an external bank transaction code family code list."
 )]
 [DerivedFrom(typeof(ExternalBankTransactionFamilyCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalBankTransactionFamily1Code>))]
 public enum ExternalBankTransactionFamily1Code { }

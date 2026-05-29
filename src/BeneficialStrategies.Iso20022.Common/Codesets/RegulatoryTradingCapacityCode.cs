@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CeQmoO8bEeSLA89yUYsVSw")]
 [Description(@"Specifies the regulatory trading capacity.")]
 [Derivations(typeof(RegulatoryTradingCapacity1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RegulatoryTradingCapacityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RegulatoryTradingCapacityCode>))]
 public enum RegulatoryTradingCapacityCode
 {
     /// <summary>

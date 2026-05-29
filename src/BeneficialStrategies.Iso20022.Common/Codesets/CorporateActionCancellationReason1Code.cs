@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bCpME9p-Ed-ak6NoX_4Aeg_-232047484")]
 [Description(@"Specifies reasons for cancellation of a corporate action event.")]
 [DerivedFrom(typeof(CorporateActionCancellationReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionCancellationReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionCancellationReason1Code>))]
 public enum CorporateActionCancellationReason1Code
 {
     /// <summary>

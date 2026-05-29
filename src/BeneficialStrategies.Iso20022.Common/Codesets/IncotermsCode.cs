@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"A set of international standard trade terms (delivery terms) used to designate a point at which the costs and risks of transport are divided between the buyer and the seller."
 )]
 [Derivations(typeof(Incoterms1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IncotermsCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IncotermsCode>))]
 public enum IncotermsCode
 {
     /// <summary>

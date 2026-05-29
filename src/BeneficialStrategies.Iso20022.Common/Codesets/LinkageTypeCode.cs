@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_afCIsNp-Ed-ak6NoX_4Aeg_1075790667")]
 [Description(@"Type of linkage requested.")]
 [Derivations(typeof(LinkageType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LinkageTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LinkageTypeCode>))]
 public enum LinkageTypeCode
 {
     /// <summary>

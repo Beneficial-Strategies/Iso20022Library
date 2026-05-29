@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Cq2tgJIdEeaNbfbSYshZYw")]
 [Description(@"DTC (The Depository Trust Company) system status code of protect instruction.")]
 [DerivedFrom(typeof(DTCInstructionStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCProtectInstructionStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCProtectInstructionStatus1Code>))]
 public enum DTCProtectInstructionStatus1Code
 {
     /// <summary>

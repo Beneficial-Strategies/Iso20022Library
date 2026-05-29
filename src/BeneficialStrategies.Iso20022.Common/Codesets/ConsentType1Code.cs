@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Ux3xACHnEeOQ7qT4JUI53A")]
 [Description(@"Specifies the type of consent announced.")]
 [DerivedFrom(typeof(ConsentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConsentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConsentType1Code>))]
 public enum ConsentType1Code
 {
     /// <summary>

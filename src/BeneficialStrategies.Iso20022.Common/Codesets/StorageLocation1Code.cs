@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_WmlrkJx_EeuwYeL1lHu9zw")]
 [Description(@"Code that specifies the storage location.")]
 [DerivedFrom(typeof(StorageLocationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StorageLocation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StorageLocation1Code>))]
 public enum StorageLocation1Code
 {
     /// <summary>

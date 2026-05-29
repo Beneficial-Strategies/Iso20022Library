@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June) for an income realised upon sale, a refund or redemption of shares and units etc."
 )]
 [DerivedFrom(typeof(EUCapitalGainCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EUCapitalGain1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EUCapitalGain1Code>))]
 public enum EUCapitalGain1Code
 {
     /// <summary>

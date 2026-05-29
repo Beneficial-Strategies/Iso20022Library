@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the status of a group of payment instructions, as published in an external payment group status code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalPaymentGroupStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalPaymentGroupStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalPaymentGroupStatusCode>))]
 public enum ExternalPaymentGroupStatusCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_E3W44QneEeWa7rBfPECYsw")]
 [Description(@"Specifies an equity derivative return parameter.")]
 [Derivations(typeof(EquityReturnParameter1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EquityReturnParameterCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EquityReturnParameterCode>))]
 public enum EquityReturnParameterCode
 {
     /// <summary>

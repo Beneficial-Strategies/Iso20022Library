@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-bKw0IqiEeS4a4abTJTSSw")]
 [Description(@"Type of ATM cassette counters.")]
 [DerivedFrom(typeof(ATMCounterTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ATMCounterType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMCounterType1Code>))]
 public enum ATMCounterType1Code
 {
     /// <summary>

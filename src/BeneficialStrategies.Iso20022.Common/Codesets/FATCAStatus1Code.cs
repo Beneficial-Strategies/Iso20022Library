@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VA8RAAjUEeS5F6qHcKOrew")]
 [Description(@"Specifies the Foreign Account Tax Compliance Act (FATCA) status.")]
 [DerivedFrom(typeof(FATCAStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FATCAStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FATCAStatus1Code>))]
 public enum FATCAStatus1Code
 {
     /// <summary>

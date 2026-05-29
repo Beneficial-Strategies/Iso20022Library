@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0bBW4MmLEeWAGphE2LvqeA")]
 [Description(@"Specifies the trigger code used by the sender to generate the file.")]
 [DerivedFrom(typeof(SenderTriggerCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SenderTrigger1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SenderTrigger1Code>))]
 public enum SenderTrigger1Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Consent type in the context of the General Protection Regulation (GDPR) 2016/679 regulation."
 )]
 [Derivations(typeof(GDPRDataConsent1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GDPRDataConsentCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GDPRDataConsentCode>))]
 public enum GDPRDataConsentCode
 {
     /// <summary>

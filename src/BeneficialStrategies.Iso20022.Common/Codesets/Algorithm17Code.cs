@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2ZJ5sdtjEee9e6xduATmQg")]
 [Description(@"Cryptographic algorithms for the MAC (Message Authentication Code).")]
 [DerivedFrom(typeof(AlgorithmCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Algorithm17Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm17Code>))]
 public enum Algorithm17Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -26,6 +27,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(DateType1Code),
     typeof(DateType2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DateTypeCode>))]
 public enum DateTypeCode
 {
     /// <summary>

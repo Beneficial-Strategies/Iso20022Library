@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8F7HcN6qEeiwsev40qZGEQ")]
 [Description(@"Message response awaited by the initiator of the Request.")]
 [Derivations(typeof(ResponseMode1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResponseModeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResponseModeCode>))]
 public enum ResponseModeCode
 {
     /// <summary>

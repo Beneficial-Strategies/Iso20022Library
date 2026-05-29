@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_p7dkgFV0Eea1MPROA61PoQ")]
 [Description(@"Specifies whether an account owner or account servicer sends the message.")]
 [DerivedFrom(typeof(SenderBusinessRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SenderBusinessRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SenderBusinessRole1Code>))]
 public enum SenderBusinessRole1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aevNwNp-Ed-ak6NoX_4Aeg_-1698330264")]
 [Description(@"Specifies the type of risk management limit.")]
 [Derivations(typeof(LimitType4Code), typeof(LimitType3Code), typeof(LimitType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LimitTypeCode>))]
 public enum LimitTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bnmTRtp-Ed-ak6NoX_4Aeg_1217480497")]
 [Description(@"Specifies the role of the Issuer agent.")]
 [DerivedFrom(typeof(AgentRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AgentRole1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgentRole1Code>))]
 public enum AgentRole1Code
 {
     /// <summary>

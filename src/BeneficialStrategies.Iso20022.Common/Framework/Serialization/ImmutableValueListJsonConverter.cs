@@ -3,7 +3,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace BeneficialStrategies.Iso20022;
+namespace BeneficialStrategies.Iso20022.Serialization;
 
 /// <summary>
 /// <see cref="JsonConverterFactory"/> that handles <see cref="ImmutableValueList{T}"/>,

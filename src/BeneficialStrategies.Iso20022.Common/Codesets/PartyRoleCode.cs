@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -26,6 +27,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(InternalPartyRole1Code),
     typeof(PartyRole3Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyRoleCode>))]
 public enum PartyRoleCode
 {
     /// <summary>

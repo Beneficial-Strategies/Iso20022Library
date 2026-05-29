@@ -15,9 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(@"A code that identifies the type of MOTO transaction.")]
 [DerivedFrom(typeof(MOTOCode))]
 [Obsolete("Marked obsolete in the ISO 20022 2026-05-11 snapshot. Removal date: 2025-09-09.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MOTO1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MOTO1Code>))]
 public enum MOTO1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YcMuQtp-Ed-ak6NoX_4Aeg_2021261628")]
 [Description(@"Specifies if the collateral is to be delivered or returned.")]
 [DerivedFrom(typeof(DeliverReturnCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DeliverReturn1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DeliverReturn1Code>))]
 public enum DeliverReturn1Code
 {
     /// <summary>

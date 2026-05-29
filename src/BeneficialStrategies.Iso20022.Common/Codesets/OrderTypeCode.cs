@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
 )]
 [Derivations(typeof(OrderType1Code), typeof(OrderType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderTypeCode>))]
 public enum OrderTypeCode
 {
     /// <summary>

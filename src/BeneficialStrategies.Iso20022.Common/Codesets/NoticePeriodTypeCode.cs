@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aNwLcNp-Ed-ak6NoX_4Aeg_1085847746")]
 [Description(@"Specifies the type of notice period.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NoticePeriodTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NoticePeriodTypeCode>))]
 public enum NoticePeriodTypeCode
 {
     /// <summary>

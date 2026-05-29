@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -27,6 +28,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(SettlementTransactionCondition5Code),
     typeof(SettlementTransactionCondition2Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementTransactionConditionCode>))]
 public enum SettlementTransactionConditionCode
 {
     /// <summary>

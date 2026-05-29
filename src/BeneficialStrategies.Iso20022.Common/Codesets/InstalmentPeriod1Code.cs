@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_s75uYDEqEemzCpWiCwK4aQ")]
 [Description(@"Instalment period.")]
 [DerivedFrom(typeof(InstalmentPeriodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InstalmentPeriod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InstalmentPeriod1Code>))]
 public enum InstalmentPeriod1Code
 {
     /// <summary>

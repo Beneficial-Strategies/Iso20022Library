@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nc7WUCUmEeO8eOSw0QN9mA")]
 [Description(@"Specifies the stage of the CA lottery event.")]
 [DerivedFrom(typeof(CorporateActionEventStageV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventStage4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventStage4Code>))]
 public enum CorporateActionEventStage4Code
 {
     /// <summary>

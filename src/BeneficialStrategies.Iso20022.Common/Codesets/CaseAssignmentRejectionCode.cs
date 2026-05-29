@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a2IaFtp-Ed-ak6NoX_4Aeg_-898092331")]
 [Description(@"Specifies the reason for not accepting a Case.")]
 [Derivations(typeof(CaseAssignmentRejection1Code), typeof(CaseAssignmentRejection2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseAssignmentRejectionCode>))]
 public enum CaseAssignmentRejectionCode
 {
     /// <summary>

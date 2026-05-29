@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JDSnceFeEe64Zfh-zMOIZQ")]
 [Description(@"Defines the sub-product of type as either recovered paper or other.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType50Code>))]
 public enum AssetClassSubProductType50Code
 {
     /// <summary>

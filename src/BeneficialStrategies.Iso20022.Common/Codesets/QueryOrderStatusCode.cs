@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_BfWdUA2NEeSwB74WgTbh4Q")]
 [Description(@"Specifies the inquiry status of order.")]
 [Derivations(typeof(QueryOrderStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QueryOrderStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QueryOrderStatusCode>))]
 public enum QueryOrderStatusCode
 {
     /// <summary>

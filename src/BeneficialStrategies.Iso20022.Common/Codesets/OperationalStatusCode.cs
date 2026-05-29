@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_w6pwoCDYEeWCLu74WLgP4w")]
 [Description(@"Specifes the operational status.")]
 [Derivations(typeof(OperationalStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OperationalStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OperationalStatusCode>))]
 public enum OperationalStatusCode
 {
     /// <summary>

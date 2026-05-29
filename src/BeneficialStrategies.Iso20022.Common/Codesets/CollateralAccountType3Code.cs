@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Classification of the requirement that collateral in the collateral account is covering."
 )]
 [DerivedFrom(typeof(CollateralAccountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralAccountType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralAccountType3Code>))]
 public enum CollateralAccountType3Code
 {
     /// <summary>

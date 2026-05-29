@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_LmV-saacEeSR8qifggAitQ")]
 [Description(@"Specifies the inquiry status of the trade.")]
 [Derivations(typeof(QueryTradeStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QueryTradeStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QueryTradeStatusCode>))]
 public enum QueryTradeStatusCode
 {
     /// <summary>

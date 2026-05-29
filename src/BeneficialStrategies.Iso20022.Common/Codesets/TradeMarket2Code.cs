@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m4hZMJhyEeumhIk_Pv20Lg")]
 [Description(@"Specifies a code for a trade market.")]
 [DerivedFrom(typeof(TradeMarketCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeMarket2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeMarket2Code>))]
 public enum TradeMarket2Code
 {
     /// <summary>

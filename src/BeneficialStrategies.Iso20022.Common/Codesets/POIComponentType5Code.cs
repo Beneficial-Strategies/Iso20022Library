@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Ezi00dqiEeearpaEPXv9UA")]
 [Description(@"Type of component belonging to a POI (Point of Interaction) Terminal.")]
 [DerivedFrom(typeof(POIComponentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<POIComponentType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<POIComponentType5Code>))]
 public enum POIComponentType5Code
 {
     /// <summary>

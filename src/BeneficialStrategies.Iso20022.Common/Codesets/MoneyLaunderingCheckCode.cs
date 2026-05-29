@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aMj4qNp-Ed-ak6NoX_4Aeg_-1506297478")]
 [Description(@"Specifies the status of money laundering identification procedures.")]
 [Derivations(typeof(MoneyLaunderingCheck1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MoneyLaunderingCheckCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MoneyLaunderingCheckCode>))]
 public enum MoneyLaunderingCheckCode
 {
     /// <summary>

@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reporting source, as published in an external reporting source code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalReportingSourceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalReportingSource1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalReportingSource1Code>))]
 public enum ExternalReportingSource1Code
 {
     /// <summary>

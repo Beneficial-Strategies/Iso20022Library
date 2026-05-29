@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1pRyojL3EeKU9IrkkToqcw_-898186420")]
 [Description(@"Specifies the workflow status of the details of a specific level.")]
 [DerivedFrom(typeof(WorkflowStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<WorkflowStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<WorkflowStatus1Code>))]
 public enum WorkflowStatus1Code
 {
     /// <summary>

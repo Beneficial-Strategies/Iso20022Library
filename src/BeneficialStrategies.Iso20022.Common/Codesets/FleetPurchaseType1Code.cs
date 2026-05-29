@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hoJpkDEnEemzCpWiCwK4aQ")]
 [Description(@"List of codes representing type of fleet purchases.")]
 [DerivedFrom(typeof(FleetPurchaseTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FleetPurchaseType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FleetPurchaseType1Code>))]
 public enum FleetPurchaseType1Code
 {
     /// <summary>

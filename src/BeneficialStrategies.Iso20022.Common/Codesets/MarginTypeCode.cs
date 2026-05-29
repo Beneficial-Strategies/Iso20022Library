@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin."
 )]
 [Derivations(typeof(MarginType1Code), typeof(MarginType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MarginTypeCode>))]
 public enum MarginTypeCode
 {
     /// <summary>

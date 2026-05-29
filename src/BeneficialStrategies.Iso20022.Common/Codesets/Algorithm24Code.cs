@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2gn1EQxkEeqEbo60f0v6aw")]
 [Description(@"Cryptographic algorithms for the protection of transported keys.")]
 [DerivedFrom(typeof(AlgorithmCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Algorithm24Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Algorithm24Code>))]
 public enum Algorithm24Code
 {
     /// <summary>

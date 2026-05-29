@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_NdyGMICmEea6KOHFXW8q7A")]
 [Description(@"Specifies the type of an underlying contract for interest rate derivatives.")]
 [DerivedFrom(typeof(UnderlyingTypeV3Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnderlyingInterestRateType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnderlyingInterestRateType3Code>))]
 public enum UnderlyingInterestRateType3Code
 {
     /// <summary>

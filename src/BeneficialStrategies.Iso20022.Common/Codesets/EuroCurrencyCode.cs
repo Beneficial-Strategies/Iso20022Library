@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,4 +15,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Code allocated to the Euro currency, as described in the latest edition of the international standard ISO 4217."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EuroCurrencyCode>))]
 public enum EuroCurrencyCode { }

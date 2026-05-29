@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_W1_04IqLEeSRT5rEzcAHEw")]
 [Description(@"Required status of the ATM, parameters of the status update command.")]
 [Derivations(typeof(ATMStatus1Code), typeof(ATMStatus2Code), typeof(ATMStatus3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMStatusCode>))]
 public enum ATMStatusCode
 {
     /// <summary>

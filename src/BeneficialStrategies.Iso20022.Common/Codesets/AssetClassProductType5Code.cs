@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_WMBukAnyEeWnS-yHF1QhNQ")]
 [Description(@"Commodity derivative base product code list for Fertilizer.")]
 [DerivedFrom(typeof(AssetClassProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassProductType5Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassProductType5Code>))]
 public enum AssetClassProductType5Code
 {
     /// <summary>

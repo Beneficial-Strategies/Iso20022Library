@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6aFcMAnyEeWnS-yHF1QhNQ")]
 [Description(@"Defines the sub-product of type Grain Oil Seeds.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType1Code>))]
 public enum AssetClassSubProductType1Code
 {
     /// <summary>

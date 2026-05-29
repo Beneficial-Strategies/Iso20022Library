@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1q93Uh-0EeuxStysDTgLiw")]
 [Description(@"Specifies the pending status code for the cross-element validation rules.")]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRulePending1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRulePending1Code>))]
 public enum ValidationRulePending1Code
 {
     /// <summary>

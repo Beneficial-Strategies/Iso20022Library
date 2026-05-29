@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the result of the technical validation carried out by the receiver (forwarding or first agent)."
 )]
 [DerivedFrom(typeof(TechnicalValidationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TechnicalValidationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TechnicalValidationStatus1Code>))]
 public enum TechnicalValidationStatus1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__p30cNojEeC60axPepSq7g_603245162")]
 [Description(@"Specifies the reason why the instruction is in repair.")]
 [DerivedFrom(typeof(RepairReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RepairReason7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RepairReason7Code>))]
 public enum RepairReason7Code
 {
     /// <summary>

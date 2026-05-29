@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason for a received status.||The list of valid codes is an external code list published separately. |External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalReceivedReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalReceivedReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalReceivedReasonCode>))]
 public enum ExternalReceivedReasonCode
 {
     /// <summary>

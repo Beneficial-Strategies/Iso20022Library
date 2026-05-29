@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the resulting position after a trade should be an opening position or closing position."
 )]
 [Derivations(typeof(PositionEffect2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PositionEffectV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PositionEffectV2Code>))]
 public enum PositionEffectV2Code
 {
     /// <summary>

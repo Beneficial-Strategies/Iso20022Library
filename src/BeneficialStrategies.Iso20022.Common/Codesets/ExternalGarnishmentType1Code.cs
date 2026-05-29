@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the garnishment type as published in an external document type code list."
 )]
 [DerivedFrom(typeof(ExternalGarnishmentTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalGarnishmentType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalGarnishmentType1Code>))]
 public enum ExternalGarnishmentType1Code
 {
     /// <summary>

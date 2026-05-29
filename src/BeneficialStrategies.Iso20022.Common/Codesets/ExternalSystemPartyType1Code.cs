@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the system party type, as published in an external system party type code set."
 )]
 [DerivedFrom(typeof(ExternalSystemPartyTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalSystemPartyType1Code>))]
 public enum ExternalSystemPartyType1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the reason the transaction/instruction is pending settlement. Settlement on the instructed settlement date is still possible."
 )]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PendingReason28Code>))]
 public enum PendingReason28Code
 {
     /// <summary>

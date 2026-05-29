@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hXsYANdcEeibyvRfU9vJ7w")]
 [Description(@"Specifies whether a financial product is in scope of a target market parameter.")]
 [Derivations(typeof(TargetMarket1Code), typeof(TargetMarket2Code), typeof(TargetMarket3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TargetMarketCode>))]
 public enum TargetMarketCode
 {
     /// <summary>

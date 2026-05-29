@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bDsU8Np-Ed-ak6NoX_4Aeg_1114905444")]
 [Description(@"Specifies the stage of the CA event.")]
 [DerivedFrom(typeof(CorporateActionEventStageCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionEventStage1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionEventStage1Code>))]
 public enum CorporateActionEventStage1Code
 {
     /// <summary>

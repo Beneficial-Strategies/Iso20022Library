@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_arP_wdp-Ed-ak6NoX_4Aeg_1608809377")]
 [Description(@"Form of a financial instrument.")]
 [DerivedFrom(typeof(FormOfSecurityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FormOfSecurity1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FormOfSecurity1Code>))]
 public enum FormOfSecurity1Code
 {
     /// <summary>

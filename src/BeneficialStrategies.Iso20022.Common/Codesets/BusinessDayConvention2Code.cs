@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7SEbcBfvEeSBdtDwJiNe1g")]
 [Description(@"Specifies how a date is adjusted when it falls on a non-business day.")]
 [DerivedFrom(typeof(BusinessDayConventionV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BusinessDayConvention2Code>))]
 public enum BusinessDayConvention2Code
 {
     /// <summary>

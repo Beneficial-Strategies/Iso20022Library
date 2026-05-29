@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_qavIYEyMEeiepssxrmRw1A")]
 [Description(@"Specifies a type of asset")]
 [DerivedFrom(typeof(OtherAssetCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OtherAsset1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OtherAsset1Code>))]
 public enum OtherAsset1Code
 {
     /// <summary>

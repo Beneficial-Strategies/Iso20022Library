@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aKeN-Np-Ed-ak6NoX_4Aeg_969222817")]
 [Description(@"Specifies the processing status of an advice, a request or a movement.")]
 [DerivedFrom(typeof(CorporateActionProcessedStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProcessedStatus3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProcessedStatus3Code>))]
 public enum ProcessedStatus3Code
 {
     /// <summary>

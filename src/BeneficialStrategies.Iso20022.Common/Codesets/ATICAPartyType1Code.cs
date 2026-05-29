@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_7K32gROEEfC1ZfCQz0xB3g")]
 [Description(@"Type of entity acting as a Payment Initiation Service Provider.")]
 [DerivedFrom(typeof(PartyTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATICAPartyType1Code>))]
 public enum ATICAPartyType1Code
 {
     /// <summary>

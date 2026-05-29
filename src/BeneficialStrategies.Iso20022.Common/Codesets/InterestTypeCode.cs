@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__215c9ojEeC60axPepSq7g_-1926390567")]
 [Description(@"Indicates if the deal price is excluding or including the accrued interest.")]
 [Derivations(typeof(InterestType2Code), typeof(InterestType3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestTypeCode>))]
 public enum InterestTypeCode
 {
     /// <summary>

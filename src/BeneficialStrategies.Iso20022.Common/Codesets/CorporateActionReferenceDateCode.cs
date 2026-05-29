@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bR_2stp-Ed-ak6NoX_4Aeg_-280874700")]
 [Description(@"Specifies the reference date of corporate action, in coded form.")]
 [Derivations(typeof(CorporateActionDeadline1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionReferenceDateCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionReferenceDateCode>))]
 public enum CorporateActionReferenceDateCode
 {
     /// <summary>

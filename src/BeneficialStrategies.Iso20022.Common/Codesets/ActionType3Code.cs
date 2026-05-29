@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_3I4WYTGeEeO118ZQJgaQSQ")]
 [Description(@"Type of action to be performed by the point of interaction (POI).")]
 [DerivedFrom(typeof(ActionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ActionType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionType3Code>))]
 public enum ActionType3Code
 {
     /// <summary>

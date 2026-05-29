@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_o7g-JvJ7EeiJn9rM2Znz2w")]
 [Description(@"Specifies the specific type of tax(es) applicable to a transaction.")]
 [Derivations(typeof(AddendumTaxType1Code), typeof(AddendumTaxType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AddendumTaxTypeCode>))]
 public enum AddendumTaxTypeCode
 {
     /// <summary>
@@ -1141,4 +1143,13 @@ public enum AddendumTaxTypeCode
     [IsoId("_fYcwsCB_Eey8XKHwKquEQw")]
     [Description(@"Tax levied on non-room expenditures.")]
     TotalNonRoomTax,
+
+    /// <summary>
+    /// Departure Tax.
+    /// Encoded/decoded by serializers as &quot;DPTX&quot;.
+    /// </summary>
+    [EnumMember(Value = "DPTX")]
+    [IsoId("_oLcL-1XZEfC0lMwgjvMClw")]
+    [Description(@"Departure Tax.")]
+    DepartureTax,
 }

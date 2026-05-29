@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -17,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(VoteInstruction6Code),
     typeof(VoteInstruction7Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VoteInstructionV2Code>))]
 public enum VoteInstructionV2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_3BW3kDNKEeylu6lH-gut-A")]
 [Description(@"Code that specifies the administrative type.")]
 [DerivedFrom(typeof(AdministrativeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AdministrativeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AdministrativeType1Code>))]
 public enum AdministrativeType1Code
 {
     /// <summary>

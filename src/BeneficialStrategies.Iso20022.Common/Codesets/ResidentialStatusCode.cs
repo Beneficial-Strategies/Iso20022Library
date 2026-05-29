@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZU0_Ydp-Ed-ak6NoX_4Aeg_-1411597800")]
 [Description(@"Specifies the residential status of an individual.")]
 [Derivations(typeof(ResidentialStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResidentialStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResidentialStatusCode>))]
 public enum ResidentialStatusCode
 {
     /// <summary>

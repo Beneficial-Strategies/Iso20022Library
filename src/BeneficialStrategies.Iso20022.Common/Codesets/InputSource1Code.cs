@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m9EHgMmMEeWAGphE2LvqeA")]
 [Description(@"Specifies the input source for the generation of the file.")]
 [DerivedFrom(typeof(InputSourceCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InputSource1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InputSource1Code>))]
 public enum InputSource1Code
 {
     /// <summary>

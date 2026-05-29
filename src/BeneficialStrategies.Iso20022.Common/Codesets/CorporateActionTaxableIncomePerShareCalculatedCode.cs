@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS)."
 )]
 [Derivations(typeof(CorporateActionTaxableIncomePerShareCalculated1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionTaxableIncomePerShareCalculatedCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionTaxableIncomePerShareCalculatedCode>))]
 public enum CorporateActionTaxableIncomePerShareCalculatedCode
 {
     /// <summary>

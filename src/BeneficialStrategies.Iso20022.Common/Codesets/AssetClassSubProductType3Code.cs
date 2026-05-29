@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_70F8EAnyEeWnS-yHF1QhNQ")]
 [Description(@"Defines the sub-product of type Olive Oil.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType3Code>))]
 public enum AssetClassSubProductType3Code
 {
     /// <summary>

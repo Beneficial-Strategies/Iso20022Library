@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties."
 )]
 [Derivations(typeof(OrderOriginatorEligibility1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OrderOriginatorEligibilityCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OrderOriginatorEligibilityCode>))]
 public enum OrderOriginatorEligibilityCode
 {
     /// <summary>

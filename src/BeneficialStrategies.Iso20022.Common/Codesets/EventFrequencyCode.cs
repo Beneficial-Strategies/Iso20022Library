@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -25,6 +26,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(EventFrequency12Code),
     typeof(EventFrequency3Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventFrequencyCode>))]
 public enum EventFrequencyCode
 {
     /// <summary>

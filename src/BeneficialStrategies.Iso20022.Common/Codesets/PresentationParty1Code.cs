@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_RvL0sHyeEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the party to receive the presentation.")]
 [DerivedFrom(typeof(PresentationPartyCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PresentationParty1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PresentationParty1Code>))]
 public enum PresentationParty1Code
 {
     /// <summary>

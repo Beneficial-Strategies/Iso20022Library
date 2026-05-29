@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_awK8BNp-Ed-ak6NoX_4Aeg_1863385862")]
 [Description(@"Specifies the direction of a payment.")]
 [Derivations(typeof(Direction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DirectionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DirectionCode>))]
 public enum DirectionCode
 {
     /// <summary>

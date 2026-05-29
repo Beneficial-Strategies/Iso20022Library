@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external status stage code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalUndertakingStatusCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalUndertakingStatusCategory1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalUndertakingStatusCategory1Code>))]
 public enum ExternalUndertakingStatusCategory1Code
 {
     /// <summary>

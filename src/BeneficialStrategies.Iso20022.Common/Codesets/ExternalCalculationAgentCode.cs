@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Specifies the calculation agent, as published in an external calculation agent code list."
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCalculationAgentCode>))]
 public enum ExternalCalculationAgentCode
 {
     /// <summary>

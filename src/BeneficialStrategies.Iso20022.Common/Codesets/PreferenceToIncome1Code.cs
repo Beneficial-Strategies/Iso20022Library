@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the level of priority to claim on income and assets of |the company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc."
 )]
 [DerivedFrom(typeof(PreferenceToIncomeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PreferenceToIncome1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PreferenceToIncome1Code>))]
 public enum PreferenceToIncome1Code
 {
     /// <summary>

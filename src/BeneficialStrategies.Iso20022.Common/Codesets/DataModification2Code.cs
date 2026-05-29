@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ax9EtNp-Ed-ak6NoX_4Aeg_-1133981230")]
 [Description(@"Specified the type of modification to be applied on a data set.")]
 [DerivedFrom(typeof(DataModificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataModification2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataModification2Code>))]
 public enum DataModification2Code
 {
     /// <summary>

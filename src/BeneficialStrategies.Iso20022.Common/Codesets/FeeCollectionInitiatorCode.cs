@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9YEBsCxJEeyg-aG5nXcnfg")]
 [Description(@"Specifies the initiator of the fee collection message.")]
 [Derivations(typeof(FeeCollectionInitiator1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FeeCollectionInitiatorCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FeeCollectionInitiatorCode>))]
 public enum FeeCollectionInitiatorCode
 {
     /// <summary>

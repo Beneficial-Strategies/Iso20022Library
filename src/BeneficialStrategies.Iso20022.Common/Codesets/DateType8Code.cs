@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_m23dkeEMEd-qUMZtd_eZuQ")]
 [Description(@"Specifies the type of dates.")]
 [DerivedFrom(typeof(DateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DateType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DateType8Code>))]
 public enum DateType8Code
 {
     /// <summary>

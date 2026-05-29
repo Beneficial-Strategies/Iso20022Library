@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_vqQWWBIkEeyLzJfz3xPQNA")]
 [Description(@"Specifies a benchmark curve name.")]
 [DerivedFrom(typeof(BenchmarkCurveNameV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BenchmarkCurveName7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BenchmarkCurveName7Code>))]
 public enum BenchmarkCurveName7Code
 {
     /// <summary>

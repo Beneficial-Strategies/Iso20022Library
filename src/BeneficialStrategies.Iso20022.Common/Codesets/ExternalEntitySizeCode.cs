@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,4 +14,5 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Hvx6EOIYEe-eFYnrXcX-mQ")]
 [Description(@"Specifies the size of an entity according to a list of categories.")]
 [Derivations(typeof(ExternalEntitySize1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalEntitySizeCode>))]
 public enum ExternalEntitySizeCode { }

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YbT9d9p-Ed-ak6NoX_4Aeg_643669747")]
 [Description(@"Specifies the agreement type details for the margin call.")]
 [DerivedFrom(typeof(AgreementFrameworkCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AgreementFramework1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AgreementFramework1Code>))]
 public enum AgreementFramework1Code
 {
     /// <summary>

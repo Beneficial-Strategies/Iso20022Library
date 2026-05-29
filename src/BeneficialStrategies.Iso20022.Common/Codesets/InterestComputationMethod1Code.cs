@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aZObpdp-Ed-ak6NoX_4Aeg_664048312")]
 [Description(@"Specifies the method used to compute accruing interest of a financial instrument.")]
 [DerivedFrom(typeof(InterestComputationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterestComputationMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestComputationMethod1Code>))]
 public enum InterestComputationMethod1Code
 {
     /// <summary>

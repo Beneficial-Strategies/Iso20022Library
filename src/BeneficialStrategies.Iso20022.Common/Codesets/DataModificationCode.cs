@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ax9Et9p-Ed-ak6NoX_4Aeg_1251381702")]
 [Description(@"Specified the type of modification to be applied on a data set.")]
 [Derivations(typeof(DataModification1Code), typeof(DataModification2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataModificationCode>))]
 public enum DataModificationCode
 {
     /// <summary>

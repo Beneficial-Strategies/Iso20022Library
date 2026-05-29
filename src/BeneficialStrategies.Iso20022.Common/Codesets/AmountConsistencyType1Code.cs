@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies a type of amount inconsistencies, that the amount type provided matches the reference amount or not."
 )]
 [DerivedFrom(typeof(AmountConsistencyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AmountConsistencyType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountConsistencyType1Code>))]
 public enum AmountConsistencyType1Code
 {
     /// <summary>

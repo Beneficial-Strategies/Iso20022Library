@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ExchangeRateType4Code")]
 [Description(@"Code used to define the type of the currency exchange.")]
 [DerivedFrom(typeof(ExchangeRateTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExchangeRateType4Code>))]
 public enum ExchangeRateType4Code
 {
     /// <summary>

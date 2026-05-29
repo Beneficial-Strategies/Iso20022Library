@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9zEEI_jUEeiM7KpzmLtmTQ")]
 [Description(@"Contains the list of fleet service type codes.")]
 [Derivations(typeof(FleetServiceType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FleetServiceTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FleetServiceTypeCode>))]
 public enum FleetServiceTypeCode
 {
     /// <summary>

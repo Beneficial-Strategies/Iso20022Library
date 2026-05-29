@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Location category code of the place where the merchant actually performed the transaction."
 )]
 [Derivations(typeof(LocationCategory4Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LocationCategoryV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LocationCategoryV2Code>))]
 public enum LocationCategoryV2Code
 {
     /// <summary>

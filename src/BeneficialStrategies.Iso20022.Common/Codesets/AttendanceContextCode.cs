@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TVyU4gEcEeCQm6a_G2yO_w_-1187530480")]
 [Description(@"Human attendance at the POI location during the transaction.")]
 [Derivations(typeof(AttendanceContext1Code), typeof(AttendanceContext2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttendanceContextCode>))]
 public enum AttendanceContextCode
 {
     /// <summary>

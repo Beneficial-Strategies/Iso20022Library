@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Hq0xkLpaEeilsanBGAzy4A")]
 [Description(@"Specifies the type of protect instruction.")]
 [DerivedFrom(typeof(ReorganisationTransactionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProtectTransactionType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProtectTransactionType3Code>))]
 public enum ProtectTransactionType3Code
 {
     /// <summary>

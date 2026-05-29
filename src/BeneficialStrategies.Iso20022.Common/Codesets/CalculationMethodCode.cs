@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YbAbcNp-Ed-ak6NoX_4Aeg_181218670")]
 [Description(@"Specifies whether the interest calculation method is simple or compounding.")]
 [Derivations(typeof(CalculationMethod1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CalculationMethodCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CalculationMethodCode>))]
 public enum CalculationMethodCode
 {
     /// <summary>

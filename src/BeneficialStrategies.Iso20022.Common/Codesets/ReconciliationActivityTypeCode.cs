@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ikZkgCX_Eeym0KcvJF9aDQ")]
 [Description(@"Code to indicate the activity type to be reconciled")]
 [Derivations(typeof(ReconciliationActivityType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationActivityTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationActivityTypeCode>))]
 public enum ReconciliationActivityTypeCode
 {
     /// <summary>

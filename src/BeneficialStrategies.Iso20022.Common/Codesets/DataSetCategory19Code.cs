@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_DataSetCategory19Code")]
 [Description(@"Maintenance service to delegate.")]
 [DerivedFrom(typeof(DataSetCategoryCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataSetCategory19Code>))]
 public enum DataSetCategory19Code
 {
     /// <summary>

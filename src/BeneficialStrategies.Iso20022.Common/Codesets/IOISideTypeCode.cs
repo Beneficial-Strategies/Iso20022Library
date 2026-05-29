@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_adZJ8tp-Ed-ak6NoX_4Aeg_336256305")]
 [Description(@"Indicates the type of the side of the indication.")]
 [DerivedFrom(typeof(SideCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IOISideTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IOISideTypeCode>))]
 public enum IOISideTypeCode
 {
     /// <summary>

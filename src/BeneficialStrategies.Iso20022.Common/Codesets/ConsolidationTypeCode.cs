@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zjlq8CDVEeWCLu74WLgP4w")]
 [Description(@"Specifies the consolidation type.")]
 [Derivations(typeof(ConsolidationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ConsolidationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ConsolidationTypeCode>))]
 public enum ConsolidationTypeCode
 {
     /// <summary>

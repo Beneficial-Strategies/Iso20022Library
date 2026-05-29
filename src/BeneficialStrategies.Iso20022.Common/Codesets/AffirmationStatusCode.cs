@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bndJUtp-Ed-ak6NoX_4Aeg_693549629")]
 [Description(@"Specifies the affirmation status of a trade.")]
 [Derivations(typeof(AffirmationStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AffirmationStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AffirmationStatusCode>))]
 public enum AffirmationStatusCode
 {
     /// <summary>

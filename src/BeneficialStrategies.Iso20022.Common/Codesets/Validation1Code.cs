@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_8982sMmKEeWAGphE2LvqeA")]
 [Description(@"Specifies the validation of a signature used to sign the file.")]
 [DerivedFrom(typeof(ValidationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Validation1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Validation1Code>))]
 public enum Validation1Code
 {
     /// <summary>

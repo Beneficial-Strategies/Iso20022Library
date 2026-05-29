@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_a7DWVNp-Ed-ak6NoX_4Aeg_1461915328")]
 [Description(@"Specifies the state of a payment instruction at a specified time.")]
 [DerivedFrom(typeof(CashPaymentStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CashPaymentStatus2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CashPaymentStatus2Code>))]
 public enum CashPaymentStatus2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_PJSbgJgFEee-7IkMvqfAcA")]
 [Description(@"Fraud reporting action codes.")]
 [DerivedFrom(typeof(FraudReportingActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FraudReportingAction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FraudReportingAction1Code>))]
 public enum FraudReportingAction1Code
 {
     /// <summary>

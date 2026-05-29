@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9dkccEeAEeSzluxs8tdrVw")]
 [Description(@"Specifies the type of data.")]
 [Derivations(typeof(DataType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DataTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DataTypeCode>))]
 public enum DataTypeCode
 {
     /// <summary>

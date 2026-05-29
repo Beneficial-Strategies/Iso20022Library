@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZUrOYNp-Ed-ak6NoX_4Aeg_-459088300")]
 [Description(@"Specifies the precise type of reservation.")]
 [Derivations(typeof(ReservationType1Code), typeof(ReservationType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReservationTypeCode>))]
 public enum ReservationTypeCode
 {
     /// <summary>

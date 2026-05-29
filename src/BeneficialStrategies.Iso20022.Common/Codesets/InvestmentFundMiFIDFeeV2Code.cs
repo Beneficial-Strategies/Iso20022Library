@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ipm_QLSVEeq-6ssAXwSh-g")]
 [Description(@"Specifies a type of cost or charge.")]
 [Derivations(typeof(InvestmentFundMiFIDFee2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundMiFIDFeeV2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundMiFIDFeeV2Code>))]
 public enum InvestmentFundMiFIDFeeV2Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MeQ9YZxGEe-Jl6tBAvMHqA")]
 [Description(@"Additional attributes of the service provided by the card payment transaction.")]
 [DerivedFrom(typeof(CardPaymentServiceTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CardPaymentServiceType15Code>))]
 public enum CardPaymentServiceType15Code
 {
     /// <summary>

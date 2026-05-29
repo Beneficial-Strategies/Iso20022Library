@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YO9n4C8AEeu125Ip9zFcsQ")]
 [Description(@"Type of action to perform on a media resource.")]
 [DerivedFrom(typeof(ResourceActionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ResourceAction1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ResourceAction1Code>))]
 public enum ResourceAction1Code
 {
     /// <summary>

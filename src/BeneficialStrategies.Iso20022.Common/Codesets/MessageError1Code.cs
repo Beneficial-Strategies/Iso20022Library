@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_uIhSgPGwEeiGNursv3uE_g")]
 [Description(@"Code list containing a code that identifies the error condition.")]
 [DerivedFrom(typeof(MessageErrorCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageError1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageError1Code>))]
 public enum MessageError1Code
 {
     /// <summary>

@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the transaction authentication channel, as published in an external authentication channel code set.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalAuthenticationChannel1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalAuthenticationChannelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAuthenticationChannelCode>))]
 public enum ExternalAuthenticationChannelCode
 {
     /// <summary>

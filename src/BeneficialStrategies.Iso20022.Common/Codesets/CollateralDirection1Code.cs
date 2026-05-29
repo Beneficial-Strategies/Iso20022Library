@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bpmYYAMyEeutW5-TpeYJhA")]
 [Description(@"Direction of the collateral being reported expressed as a code.")]
 [DerivedFrom(typeof(CollateralDirectionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CollateralDirection1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralDirection1Code>))]
 public enum CollateralDirection1Code
 {
     /// <summary>

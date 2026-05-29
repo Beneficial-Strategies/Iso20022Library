@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_C-csoF9CEeicg40_9gK9vQ")]
 [Description(@"Specifies a type of investment fund plan.")]
 [DerivedFrom(typeof(InvestmentFundPlanTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundPlanType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundPlanType1Code>))]
 public enum InvestmentFundPlanType1Code
 {
     /// <summary>

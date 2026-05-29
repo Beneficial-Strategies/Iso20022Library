@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Location category of the place where the transaction is actually performed. |It correspond partially to the ISO 8583: 1993, field number 22-4."
 )]
 [DerivedFrom(typeof(LocationCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LocationCategory2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LocationCategory2Code>))]
 public enum LocationCategory2Code
 {
     /// <summary>

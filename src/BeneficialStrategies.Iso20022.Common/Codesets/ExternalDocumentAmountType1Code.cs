@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -16,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the nature, or use, of the amount, as published in an external document amount type code set."
 )]
 [DerivedFrom(typeof(ExternalDocumentAmountTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDocumentAmountType1Code>))]
 public enum ExternalDocumentAmountType1Code
 {
     /// <summary>

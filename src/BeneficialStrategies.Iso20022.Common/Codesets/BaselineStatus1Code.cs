@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VroEEtp-Ed-ak6NoX_4Aeg_-553164939")]
 [Description(@"Indicates the status of a baseline.")]
 [DerivedFrom(typeof(BaselineStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BaselineStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BaselineStatus1Code>))]
 public enum BaselineStatus1Code
 {
     /// <summary>

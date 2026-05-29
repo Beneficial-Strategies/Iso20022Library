@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset)."
 )]
 [Derivations(typeof(OptionType1Code), typeof(OptionTypeCode), typeof(OptionType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OptionDefinitionTypeCode>))]
 public enum OptionDefinitionTypeCode
 {
     /// <summary>

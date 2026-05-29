@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__215cNojEeC60axPepSq7g_96023160")]
 [Description(@"Indicates if the deal price is excluding or including the accrued interest.")]
 [DerivedFrom(typeof(InterestTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InterestType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InterestType2Code>))]
 public enum InterestType2Code
 {
     /// <summary>

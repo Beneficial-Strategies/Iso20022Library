@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the accepted credit settlement completed status code for the cross-element validation rules."
 )]
 [DerivedFrom(typeof(ValidationRuleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValidationRuleCreditSettlement1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValidationRuleCreditSettlement1Code>))]
 public enum ValidationRuleCreditSettlement1Code
 {
     /// <summary>

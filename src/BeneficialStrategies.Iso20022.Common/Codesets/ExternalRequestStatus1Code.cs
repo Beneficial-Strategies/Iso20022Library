@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -14,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gy_x0LqtEe68nbz8Nl_hLQ")]
 [Description(@"Specifies the request status, as published in an external request status code set.")]
 [DerivedFrom(typeof(ExternalRequestStatusCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalRequestStatus1Code>))]
 public enum ExternalRequestStatus1Code
 {
     /// <summary>

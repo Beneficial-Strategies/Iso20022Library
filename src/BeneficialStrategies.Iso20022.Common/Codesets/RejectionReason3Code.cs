@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Zk6p0Np-Ed-ak6NoX_4Aeg_336258976")]
 [Description(@"Specifies the reason for which a request has not been accepted.")]
 [DerivedFrom(typeof(RejectionReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<RejectionReason3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReason3Code>))]
 public enum RejectionReason3Code
 {
     /// <summary>

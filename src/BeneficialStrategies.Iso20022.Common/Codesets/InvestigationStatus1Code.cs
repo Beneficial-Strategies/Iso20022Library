@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Provides the status of the investigation response related to a previously sent request."
 )]
 [DerivedFrom(typeof(InvestigationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestigationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestigationStatus1Code>))]
 public enum InvestigationStatus1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__2hJcCDMEeWPMvNwVtiMsA")]
 [Description(@"Specifies the party responsible for the liability.")]
 [DerivedFrom(typeof(LiabilityCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Liability1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Liability1Code>))]
 public enum Liability1Code
 {
     /// <summary>

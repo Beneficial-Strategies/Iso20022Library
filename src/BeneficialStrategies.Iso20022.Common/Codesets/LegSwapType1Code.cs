@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates the type of leg structuring a swap. For fixed income, it is used to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap."
 )]
 [DerivedFrom(typeof(LegSwapTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegSwapType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegSwapType1Code>))]
 public enum LegSwapType1Code
 {
     /// <summary>

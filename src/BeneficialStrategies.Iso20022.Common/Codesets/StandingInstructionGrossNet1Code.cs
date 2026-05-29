@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZPnIN9p-Ed-ak6NoX_4Aeg_977181318")]
 [Description(@"Specifies the type of standing instruction.")]
 [DerivedFrom(typeof(StandingInstructionGrossNetCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<StandingInstructionGrossNet1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<StandingInstructionGrossNet1Code>))]
 public enum StandingInstructionGrossNet1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_acfyEdp-Ed-ak6NoX_4Aeg_2104979731")]
 [Description(@"Specifies the role played by an actor in an investment fund transaction.")]
 [DerivedFrom(typeof(PartyRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestmentFundRole4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundRole4Code>))]
 public enum InvestmentFundRole4Code
 {
     /// <summary>

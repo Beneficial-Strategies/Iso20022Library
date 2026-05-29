@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Subc8GjpEeSDR-pyia6Xtg")]
 [Description(@"Result of a verification.")]
 [Derivations(typeof(Verification1Code), typeof(Verification2Code), typeof(Verification3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VerificationCode>))]
 public enum VerificationCode
 {
     /// <summary>

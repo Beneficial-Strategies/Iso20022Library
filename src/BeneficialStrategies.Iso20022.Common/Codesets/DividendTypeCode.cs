@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_axNd2dp-Ed-ak6NoX_4Aeg_-1189024253")]
 [Description(@"Specifies the nature of the dividend.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DividendTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DividendTypeCode>))]
 public enum DividendTypeCode
 {
     /// <summary>

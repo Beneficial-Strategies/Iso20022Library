@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UqvosD5LEeyHI64WSlzTlg")]
 [Description(@"Code that specifies the good or service delivery schedule.")]
 [DerivedFrom(typeof(GoodAndServiceDeliveryScheduleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<GoodAndServiceDeliverySchedule1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<GoodAndServiceDeliverySchedule1Code>))]
 public enum GoodAndServiceDeliverySchedule1Code
 {
     /// <summary>

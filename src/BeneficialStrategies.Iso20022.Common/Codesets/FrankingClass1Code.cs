@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Code defining the dvidend / distribution class where this franking information applies to."
 )]
 [DerivedFrom(typeof(FrankingClassCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FrankingClass1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FrankingClass1Code>))]
 public enum FrankingClass1Code
 {
     /// <summary>

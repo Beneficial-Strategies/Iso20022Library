@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_idBPwErGEeenp6hmNprBHg")]
 [Description(@"Channel to transmit receipt information to the recipient.")]
 [Derivations(typeof(ReceiptType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReceiptTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReceiptTypeCode>))]
 public enum ReceiptTypeCode
 {
     /// <summary>

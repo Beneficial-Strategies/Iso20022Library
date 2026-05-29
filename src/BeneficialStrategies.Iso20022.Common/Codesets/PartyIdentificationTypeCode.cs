@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies an alternative identification of a trading party, for example, trader code, trader name, short legal name of firm and so on."
 )]
 [Derivations(typeof(PartyIdentificationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyIdentificationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyIdentificationTypeCode>))]
 public enum PartyIdentificationTypeCode
 {
     /// <summary>

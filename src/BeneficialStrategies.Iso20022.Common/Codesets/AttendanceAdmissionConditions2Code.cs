@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vuhm8PNhEeqRfth943bvEA")]
 [Description(@"Specifies the conditions for physical admittance to a general meeting.")]
 [DerivedFrom(typeof(AttendanceAdmissionConditionsCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AttendanceAdmissionConditions2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AttendanceAdmissionConditions2Code>))]
 public enum AttendanceAdmissionConditions2Code
 {
     /// <summary>

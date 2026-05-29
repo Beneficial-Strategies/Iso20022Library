@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Identifies the type of quote. Can be either an indicative, a tradeable or a restricted tradeable quote."
 )]
 [Derivations(typeof(QuoteType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QuoteTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QuoteTypeCode>))]
 public enum QuoteTypeCode
 {
     /// <summary>

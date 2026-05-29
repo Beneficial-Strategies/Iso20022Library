@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_2s_Z0ZU8EeaYkf5FCqYMeA")]
 [Description(@"Specifies the status of a trade in a central matching and settlement system.")]
 [DerivedFrom(typeof(TradeStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradeStatus7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradeStatus7Code>))]
 public enum TradeStatus7Code
 {
     /// <summary>

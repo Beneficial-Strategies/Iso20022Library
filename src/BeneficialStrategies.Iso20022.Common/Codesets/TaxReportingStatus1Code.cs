@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rHMhkWueEeaRcazd7EYKFQ")]
 [Description(@"Specifies the status of a group of tax reporting transactions.")]
 [DerivedFrom(typeof(StatisticalReportingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxReportingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxReportingStatus1Code>))]
 public enum TaxReportingStatus1Code
 {
     /// <summary>

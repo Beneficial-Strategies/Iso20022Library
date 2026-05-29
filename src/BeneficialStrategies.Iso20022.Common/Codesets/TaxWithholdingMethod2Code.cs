@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the method by which the tax on the interests is to be processed i.e. either withheld at source or reported to tax authorities or a tax certificate has been provided by the beneficiary."
 )]
 [DerivedFrom(typeof(TaxWithholdingMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TaxWithholdingMethod2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TaxWithholdingMethod2Code>))]
 public enum TaxWithholdingMethod2Code
 {
     /// <summary>

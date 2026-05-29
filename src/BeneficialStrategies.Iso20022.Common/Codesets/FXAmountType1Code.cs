@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CcW-MANzEe2-vqzwMUAewg")]
 [Description(@"Specifies the type of amount for foreign exchange commissions or fees.")]
 [DerivedFrom(typeof(FXAmountTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FXAmountType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FXAmountType1Code>))]
 public enum FXAmountType1Code
 {
     /// <summary>

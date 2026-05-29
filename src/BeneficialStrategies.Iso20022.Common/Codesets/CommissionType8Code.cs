@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bAHcgdp-Ed-ak6NoX_4Aeg_365784850")]
 [Description(@"Used to identify soft trades at order entry.")]
 [DerivedFrom(typeof(CommissionTypeV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CommissionType8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CommissionType8Code>))]
 public enum CommissionType8Code
 {
     /// <summary>

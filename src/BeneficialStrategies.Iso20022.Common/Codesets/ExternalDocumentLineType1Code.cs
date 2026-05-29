@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the document line type as published in an external document type code list."
 )]
 [DerivedFrom(typeof(ExternalDocumentLineTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalDocumentLineType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDocumentLineType1Code>))]
 public enum ExternalDocumentLineType1Code
 {
     /// <summary>

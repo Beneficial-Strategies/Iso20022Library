@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_UzChQNGfEeaQk737TH1Fzw")]
 [Description(@"Specifies a not reported value code.")]
 [DerivedFrom(typeof(SpecialPurposeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NotReported1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NotReported1Code>))]
 public enum NotReported1Code
 {
     /// <summary>

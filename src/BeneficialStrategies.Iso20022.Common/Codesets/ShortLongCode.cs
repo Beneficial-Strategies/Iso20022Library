@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance."
 )]
 [Derivations(typeof(ShortLong1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ShortLongCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ShortLongCode>))]
 public enum ShortLongCode
 {
     /// <summary>

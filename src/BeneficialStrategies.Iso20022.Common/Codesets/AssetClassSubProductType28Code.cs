@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sFQMYVrKEeWN79Bl6BUd3g")]
 [Description(@"Defines the sub-product of type Renewable Energy.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType28Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType28Code>))]
 public enum AssetClassSubProductType28Code
 {
     /// <summary>

@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the clearing system identification code, as published in an external clearing system identification code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalClearingSystemIdentification1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalClearingSystemIdentificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalClearingSystemIdentificationCode>))]
 public enum ExternalClearingSystemIdentificationCode
 {
     /// <summary>

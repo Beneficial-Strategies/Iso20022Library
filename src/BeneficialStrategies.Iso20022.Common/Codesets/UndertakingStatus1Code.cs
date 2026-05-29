@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_IWcDAHymEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the undertaking transaction status.")]
 [DerivedFrom(typeof(UndertakingStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UndertakingStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UndertakingStatus1Code>))]
 public enum UndertakingStatus1Code
 {
     /// <summary>

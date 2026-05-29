@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_waUkkqMOEeCojJW5vEuTEQ_951032316")]
 [Description(@"Specifies the collateral account type.")]
 [Derivations(typeof(CollateralAccountType1Code), typeof(CollateralAccountType3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CollateralAccountTypeCode>))]
 public enum CollateralAccountTypeCode
 {
     /// <summary>

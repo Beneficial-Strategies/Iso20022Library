@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_tIL3gCDLEeWPMvNwVtiMsA")]
 [Description(@"Specifies the order in which events are processed.")]
 [DerivedFrom(typeof(PositionEffectCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PositionEffect3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PositionEffect3Code>))]
 public enum PositionEffect3Code
 {
     /// <summary>

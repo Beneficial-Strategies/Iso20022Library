@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kyRs4I6VEemzmeK8_tPygg")]
 [Description(@"Specifies the role of the party in the transaction.")]
 [DerivedFrom(typeof(PartyRoleCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyRole2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyRole2Code>))]
 public enum PartyRole2Code
 {
     /// <summary>

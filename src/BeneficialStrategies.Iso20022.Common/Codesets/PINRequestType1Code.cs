@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_VB20AN7AEeiwsev40qZGEQ")]
 [Description(@"Type of PIN Service.")]
 [DerivedFrom(typeof(PINRequestTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PINRequestType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PINRequestType1Code>))]
 public enum PINRequestType1Code
 {
     /// <summary>

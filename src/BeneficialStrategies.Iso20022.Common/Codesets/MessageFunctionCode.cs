@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -46,6 +47,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(MessageFunction42Code),
     typeof(MessageFunction20Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunctionCode>))]
 public enum MessageFunctionCode
 {
     /// <summary>

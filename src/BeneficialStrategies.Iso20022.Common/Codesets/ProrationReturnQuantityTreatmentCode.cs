@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination."
 )]
 [Derivations(typeof(ProrationReturnQuantityTreatment1Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProrationReturnQuantityTreatmentCode>))]
 public enum ProrationReturnQuantityTreatmentCode
 {
     /// <summary>

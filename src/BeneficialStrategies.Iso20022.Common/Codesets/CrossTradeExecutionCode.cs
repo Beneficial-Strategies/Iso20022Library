@@ -13,9 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_bUOrWdp-Ed-ak6NoX_4Aeg_335335746")]
 [Description(@"Type of cross being submitted to a market.")]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CrossTradeExecutionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CrossTradeExecutionCode>))]
 public enum CrossTradeExecutionCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if assessment of value is required under UK Collective Investment Schemes. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09040."
 )]
 [DerivedFrom(typeof(AssessmentOfValueRequiredUnderCOLLUKTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssessmentOfValueRequiredUnderCOLLUKType1Code>))]
 public enum AssessmentOfValueRequiredUnderCOLLUKType1Code
 {
     /// <summary>

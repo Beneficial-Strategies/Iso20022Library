@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the action requested when forwarding a case. Assignees taking the decision to cancel or modify to further case assignees must communicate this decision to their case assigners."
 )]
 [DerivedFrom(typeof(CaseForwardingNotificationCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CaseForwardingNotification2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CaseForwardingNotification2Code>))]
 public enum CaseForwardingNotification2Code
 {
     /// <summary>

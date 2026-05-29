@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Security characteristics of the communication link between a cardholder and a card acceptor."
 )]
 [Derivations(typeof(SecurityCharacteristics1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecurityCharacteristicsCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecurityCharacteristicsCode>))]
 public enum SecurityCharacteristicsCode
 {
     /// <summary>

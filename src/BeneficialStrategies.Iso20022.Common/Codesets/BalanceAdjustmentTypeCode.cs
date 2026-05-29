@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6URjCJqlEeGSON8vddiWzQ_-920501493")]
 [Description(@"Defines the type of allowed balance adjustment.")]
 [Derivations(typeof(BalanceAdjustmentType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BalanceAdjustmentTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BalanceAdjustmentTypeCode>))]
 public enum BalanceAdjustmentTypeCode
 {
     /// <summary>

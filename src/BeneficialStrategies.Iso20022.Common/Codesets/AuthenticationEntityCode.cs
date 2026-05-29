@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TVyU7AEcEeCQm6a_G2yO_w_1327141076")]
 [Description(@"Entity or object in charge of verifying the cardholder authenticity.")]
 [Derivations(typeof(AuthenticationEntity1Code), typeof(AuthenticationEntity2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AuthenticationEntityCode>))]
 public enum AuthenticationEntityCode
 {
     /// <summary>

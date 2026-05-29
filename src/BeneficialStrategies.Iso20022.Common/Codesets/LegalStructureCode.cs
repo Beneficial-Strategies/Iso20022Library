@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aeIw0Np-Ed-ak6NoX_4Aeg_-705480493")]
 [Description(@"Specifies the legal standing of the organisation.")]
 [Derivations(typeof(LegalStructure1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegalStructureCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegalStructureCode>))]
 public enum LegalStructureCode
 {
     /// <summary>

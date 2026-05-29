@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZYQG0tp-Ed-ak6NoX_4Aeg_-363697938")]
 [Description(@"Identifies the status of a quote acknowledgement.")]
 [DerivedFrom(typeof(QuoteStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QuoteStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QuoteStatus1Code>))]
 public enum QuoteStatus1Code
 {
     /// <summary>

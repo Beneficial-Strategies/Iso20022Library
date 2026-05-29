@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer."
 )]
 [DerivedFrom(typeof(PaymentCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<Payment2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<Payment2Code>))]
 public enum Payment2Code
 {
     /// <summary>

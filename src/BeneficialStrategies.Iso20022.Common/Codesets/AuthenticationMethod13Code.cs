@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_C71jURODEfC1ZfCQz0xB3g")]
 [Description(@"Type of authentication method.")]
 [DerivedFrom(typeof(AuthenticationMethodCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AuthenticationMethod13Code>))]
 public enum AuthenticationMethod13Code
 {
     /// <summary>

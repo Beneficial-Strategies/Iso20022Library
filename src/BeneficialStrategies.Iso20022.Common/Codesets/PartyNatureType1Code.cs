@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_eGrH8B3dEeWTa7N6lo4ufA")]
 [Description(@"Specifies the nature of a counterparty.")]
 [DerivedFrom(typeof(PartyNatureTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyNatureType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyNatureType1Code>))]
 public enum PartyNatureType1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_x-5LMItDEeSxlKlAGYErFg")]
 [Description(@"Reason for which the key has been stopped.")]
 [DerivedFrom(typeof(FailureReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FailureReason6Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FailureReason6Code>))]
 public enum FailureReason6Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bm4kgOXuEemUbdOm9aOvMg")]
 [Description(@"Identifies the unit of measure by means of a code.")]
 [DerivedFrom(typeof(UnitOfMeasureCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<UnitOfMeasure12Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<UnitOfMeasure12Code>))]
 public enum UnitOfMeasure12Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6Vm_x5qlEeGSON8vddiWzQ_2080901699")]
 [Description(@"Defines if and how charges and taxes due are paid to the financial institution.")]
 [DerivedFrom(typeof(CompensationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CompensationMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CompensationMethod1Code>))]
 public enum CompensationMethod1Code
 {
     /// <summary>

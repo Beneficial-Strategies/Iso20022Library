@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_JsWoAMV3Eeua2vd9tJAtHg")]
 [Description(@"Identifies the mode used to present a QR Code for a transaction.")]
 [Derivations(typeof(QRCodePresentmentMode1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QRCodePresentmentModeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QRCodePresentmentModeCode>))]
 public enum QRCodePresentmentModeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aeSh1tp-Ed-ak6NoX_4Aeg_336256659")]
 [Description(@"Indicates the type of leg structuring a swap.")]
 [Derivations(typeof(LegSwapType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegSwapTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegSwapTypeCode>))]
 public enum LegSwapTypeCode
 {
     /// <summary>

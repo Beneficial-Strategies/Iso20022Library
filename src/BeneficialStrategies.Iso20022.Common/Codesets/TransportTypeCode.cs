@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sf5qh_QDEeihCvvpsmGI2w")]
 [Description(@"Contains the transportation type code list")]
 [Derivations(typeof(TransportType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TransportTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransportTypeCode>))]
 public enum TransportTypeCode
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YnMwgAnyEeWnS-yHF1QhNQ")]
 [Description(@"Commodity derivative base product code list for Polypropylene.")]
 [DerivedFrom(typeof(AssetClassProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassProductType9Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassProductType9Code>))]
 public enum AssetClassProductType9Code
 {
     /// <summary>

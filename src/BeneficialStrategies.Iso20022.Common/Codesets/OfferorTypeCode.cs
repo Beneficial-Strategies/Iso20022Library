@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies whether the offeror for the event is the issuing company or a third party."
 )]
 [Derivations(typeof(OfferorType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<OfferorTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OfferorTypeCode>))]
 public enum OfferorTypeCode
 {
     /// <summary>

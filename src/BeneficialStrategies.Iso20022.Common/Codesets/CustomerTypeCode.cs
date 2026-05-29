@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_nElNsFzCEeeDqe2giKl0eQ")]
 [Description(@"Type of customer.")]
 [Derivations(typeof(CustomerType2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CustomerTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CustomerTypeCode>))]
 public enum CustomerTypeCode
 {
     /// <summary>

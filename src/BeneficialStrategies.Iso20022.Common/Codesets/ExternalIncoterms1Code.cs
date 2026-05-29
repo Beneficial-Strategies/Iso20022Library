@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the incoterms, as published in an external incoterms code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalIncotermsCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalIncoterms1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalIncoterms1Code>))]
 public enum ExternalIncoterms1Code
 {
     /// <summary>

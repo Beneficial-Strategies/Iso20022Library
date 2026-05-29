@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FFnMsCCaEeWJd9HF2tO7BA")]
 [Description(@"Specifies the type of links to a company.")]
 [Derivations(typeof(CompanyLink1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CompanyLinkCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CompanyLinkCode>))]
 public enum CompanyLinkCode
 {
     /// <summary>

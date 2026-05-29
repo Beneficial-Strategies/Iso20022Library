@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aHWBcdp-Ed-ak6NoX_4Aeg_-1566893898")]
 [Description(@"Type of date.")]
 [DerivedFrom(typeof(PlaceTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PlaceType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PlaceType1Code>))]
 public enum PlaceType1Code
 {
     /// <summary>

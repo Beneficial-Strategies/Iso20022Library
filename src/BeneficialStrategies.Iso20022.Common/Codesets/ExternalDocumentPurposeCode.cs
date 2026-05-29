@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the document purpose as published in an external document purpose code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalDocumentPurpose1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalDocumentPurposeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalDocumentPurposeCode>))]
 public enum ExternalDocumentPurposeCode
 {
     /// <summary>

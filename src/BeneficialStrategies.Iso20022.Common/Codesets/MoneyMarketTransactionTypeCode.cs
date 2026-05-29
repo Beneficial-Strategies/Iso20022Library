@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_hxCgQJfrEeSfnc-VXAEapg")]
 [Description(@"Specifies the transaction type used in the money market statistical reporting.")]
 [Derivations(typeof(MoneyMarketTransactionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MoneyMarketTransactionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MoneyMarketTransactionTypeCode>))]
 public enum MoneyMarketTransactionTypeCode
 {
     /// <summary>

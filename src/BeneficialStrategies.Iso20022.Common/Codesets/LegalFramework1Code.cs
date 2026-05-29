@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ad1149p-Ed-ak6NoX_4Aeg_-712964613")]
 [Description(@"Identifies the legal framework of the transaction.")]
 [DerivedFrom(typeof(LegalFrameworkCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LegalFramework1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LegalFramework1Code>))]
 public enum LegalFramework1Code
 {
     /// <summary>

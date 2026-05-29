@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gpSC0_GHEeiGNursv3uE_g")]
 [Description(@"Indicates wheneter the message is a request for totals or to convey totals. ")]
 [Derivations(typeof(ReconciliationFunction1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationFunctionCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationFunctionCode>))]
 public enum ReconciliationFunctionCode
 {
     /// <summary>

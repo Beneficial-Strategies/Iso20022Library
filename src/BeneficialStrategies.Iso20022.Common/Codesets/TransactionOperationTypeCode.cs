@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -21,6 +22,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(TransactionOperationType1Code)
 )]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TransactionOperationTypeCode>))]
 public enum TransactionOperationTypeCode
 {
     /// <summary>

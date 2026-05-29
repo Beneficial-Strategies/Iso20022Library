@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies if an operation is an increase or a decrease or the result of a reversal operation."
 )]
 [Derivations(typeof(CreditDebitCode), typeof(ReversalCode), typeof(CreditDebit3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountDirectionCode>))]
 public enum AmountDirectionCode
 {
     /// <summary>

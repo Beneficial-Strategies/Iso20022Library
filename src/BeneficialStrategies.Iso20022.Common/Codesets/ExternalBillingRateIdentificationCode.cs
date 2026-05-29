@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the type of billing rate or factor, as published in an external billing rate identification code list.|External code sets can be downloaded from www.iso20022.org."
 )]
 [Derivations(typeof(ExternalBillingRateIdentification1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalBillingRateIdentificationCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalBillingRateIdentificationCode>))]
 public enum ExternalBillingRateIdentificationCode
 {
     /// <summary>

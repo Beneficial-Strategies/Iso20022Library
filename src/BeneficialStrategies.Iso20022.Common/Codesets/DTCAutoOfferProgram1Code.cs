@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates what type of interface an agent has with DTC (The Depository Trust Corporation)."
 )]
 [DerivedFrom(typeof(DTCAutoOfferProgramCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCAutoOfferProgram1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCAutoOfferProgram1Code>))]
 public enum DTCAutoOfferProgram1Code
 {
     /// <summary>

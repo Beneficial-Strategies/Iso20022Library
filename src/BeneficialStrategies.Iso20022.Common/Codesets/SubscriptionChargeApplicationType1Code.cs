@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the cash debit for the subscription charge is made immediately or accumulated."
 )]
 [DerivedFrom(typeof(SubscriptionChargeApplicationTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SubscriptionChargeApplicationType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SubscriptionChargeApplicationType1Code>))]
 public enum SubscriptionChargeApplicationType1Code
 {
     /// <summary>

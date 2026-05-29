@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_9SiF8DT8Ee2tRf29bleifQ")]
 [Description(@"Specifies the network channel through which the vote should be sent.")]
 [Derivations(typeof(VoteChannel1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<VoteChannelCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VoteChannelCode>))]
 public enum VoteChannelCode
 {
     /// <summary>

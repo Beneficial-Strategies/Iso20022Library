@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bp-44tp-Ed-ak6NoX_4Aeg_-1917186008")]
 [Description(@"Specifies which type of action a user should take.")]
 [Derivations(typeof(Action1Code), typeof(Action2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionCode>))]
 public enum ActionCode
 {
     /// <summary>

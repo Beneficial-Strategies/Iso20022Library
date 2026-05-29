@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_KSSY6H1DEeCF8NjrBemJWQ_-383369433")]
 [Description(@"Allowed usages of the key.")]
 [Derivations(typeof(KeyUsage1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<KeyUsageCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<KeyUsageCode>))]
 public enum KeyUsageCode
 {
     /// <summary>

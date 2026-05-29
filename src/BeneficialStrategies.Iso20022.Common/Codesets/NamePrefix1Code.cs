@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aM_9hNp-Ed-ak6NoX_4Aeg_1660850708")]
 [Description(@"Specifies the terms used to formally address a person.")]
 [DerivedFrom(typeof(NamePrefixCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NamePrefix1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NamePrefix1Code>))]
 public enum NamePrefix1Code
 {
     /// <summary>

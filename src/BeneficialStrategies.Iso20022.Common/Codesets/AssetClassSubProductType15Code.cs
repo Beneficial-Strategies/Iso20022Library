@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_FF7T0AnzEeWnS-yHF1QhNQ")]
 [Description(@"Defines the sub-product of type Non Precious Metal.")]
 [DerivedFrom(typeof(AssetClassSubProductTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AssetClassSubProductType15Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AssetClassSubProductType15Code>))]
 public enum AssetClassSubProductType15Code
 {
     /// <summary>

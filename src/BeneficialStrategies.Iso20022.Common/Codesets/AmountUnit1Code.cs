@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ipaEINtlEeipuvJHTHIw9A")]
 [Description(@"Unit of a amount (for loyalty or account).")]
 [DerivedFrom(typeof(AmountUnitCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<AmountUnit1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<AmountUnit1Code>))]
 public enum AmountUnit1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bkLL0tp-Ed-ak6NoX_4Aeg_882404778")]
 [Description(@"Specifies the balance of transactions with a certain status.")]
 [Derivations(typeof(BalanceStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BalanceStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BalanceStatusCode>))]
 public enum BalanceStatusCode
 {
     /// <summary>

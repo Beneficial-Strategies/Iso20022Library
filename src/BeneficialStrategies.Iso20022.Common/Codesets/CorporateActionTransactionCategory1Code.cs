@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the transaction category to which the corporate action event type belongs to for reporting purposes."
 )]
 [DerivedFrom(typeof(CorporateActionTransactionCategoryCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionTransactionCategory1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionTransactionCategory1Code>))]
 public enum CorporateActionTransactionCategory1Code
 {
     /// <summary>

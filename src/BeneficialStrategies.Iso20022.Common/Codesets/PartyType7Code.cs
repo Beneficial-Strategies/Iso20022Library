@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Party that communicate with a POI component (Point of Interaction), using a communication device."
 )]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType7Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType7Code>))]
 public enum PartyType7Code
 {
     /// <summary>

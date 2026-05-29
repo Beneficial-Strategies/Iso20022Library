@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_afolpNp-Ed-ak6NoX_4Aeg_1755473361")]
 [Description(@"Specifies the type of lottery.")]
 [Derivations(typeof(LotteryType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LotteryTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LotteryTypeCode>))]
 public enum LotteryTypeCode
 {
     /// <summary>

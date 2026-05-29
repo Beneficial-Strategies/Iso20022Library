@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_yh4FcNNsEeKdOs2hjJ_3WQ")]
 [Description(@"Specifies the role of the bank in the transaction.")]
 [Derivations(typeof(BankRole1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BankRoleCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BankRoleCode>))]
 public enum BankRoleCode
 {
     /// <summary>

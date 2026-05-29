@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_xKIOEHs3EeSTS7uHCe8FPQ")]
 [Description(@"Reason to send an card acquirer to issuer message.")]
 [Derivations(typeof(MessageReason1Code), typeof(MessageReason2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageReasonCode>))]
 public enum MessageReasonCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CjsMwIqgEeS4a4abTJTSSw")]
 [Description(@"Type of items the cash-in cassette.")]
 [Derivations(typeof(ATMNoteType1Code), typeof(ATMNoteType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ATMNoteTypeCode>))]
 public enum ATMNoteTypeCode
 {
     /// <summary>

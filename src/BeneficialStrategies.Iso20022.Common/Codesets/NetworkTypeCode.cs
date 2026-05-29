@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Wl2EAGpVEeSR-ZWLvO-1dg")]
 [Description(@"Type of communication network.")]
 [Derivations(typeof(NetworkType1Code), typeof(NetworkType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NetworkTypeCode>))]
 public enum NetworkTypeCode
 {
     /// <summary>

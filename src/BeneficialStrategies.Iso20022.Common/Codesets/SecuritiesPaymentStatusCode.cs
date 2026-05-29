@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZFx2wdp-Ed-ak6NoX_4Aeg_274626372")]
 [Description(@"Specifies the state of payment of a security at a particular time.")]
 [Derivations(typeof(SecuritiesPaymentStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<SecuritiesPaymentStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<SecuritiesPaymentStatusCode>))]
 public enum SecuritiesPaymentStatusCode
 {
     /// <summary>

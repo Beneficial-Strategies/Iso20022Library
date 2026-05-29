@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_adQAAtp-Ed-ak6NoX_4Aeg_935487797")]
 [Description(@"Specifies to whom or what the restriction applies.")]
 [Derivations(typeof(InvestorRestrictionType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<InvestorRestrictionTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<InvestorRestrictionTypeCode>))]
 public enum InvestorRestrictionTypeCode
 {
     /// <summary>

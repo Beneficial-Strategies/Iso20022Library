@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_eXhhcvF5EemQ7oqCO5NTQw")]
 [Description(@"Specifies the status of a service request.")]
 [Derivations(typeof(ServiceRequestStatus1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ServiceRequestStatusCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ServiceRequestStatusCode>))]
 public enum ServiceRequestStatusCode
 {
     /// <summary>

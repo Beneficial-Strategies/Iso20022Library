@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_rzY6gErMEeenp6hmNprBHg")]
 [Description(@"Type of product codification used to identify a product uniquely.")]
 [DerivedFrom(typeof(ProductCodeTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProductCodeType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProductCodeType1Code>))]
 public enum ProductCodeType1Code
 {
     /// <summary>

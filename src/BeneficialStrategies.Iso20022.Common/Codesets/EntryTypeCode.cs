@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_GwgOMHvEEemW9qhOy0scyg")]
 [Description(@"Specifies whether the quantity or amount is to be delivered or received.")]
 [Derivations(typeof(CollateralEntryType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EntryTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EntryTypeCode>))]
 public enum EntryTypeCode
 {
     /// <summary>

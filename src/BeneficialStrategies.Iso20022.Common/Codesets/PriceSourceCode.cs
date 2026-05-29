@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_aJIKI9p-Ed-ak6NoX_4Aeg_-1943381521")]
 [Description(@"Specifies the source of a price quotation.")]
 [Derivations(typeof(PriceSource1Code), typeof(PriceSource2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PriceSourceCode>))]
 public enum PriceSourceCode
 {
     /// <summary>

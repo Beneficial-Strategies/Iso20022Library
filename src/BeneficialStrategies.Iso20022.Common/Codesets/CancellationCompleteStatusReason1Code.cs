@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vjk7Udp-Ed-ak6NoX_4Aeg_126887481")]
 [Description(@"Specifies the reason for a cancellation complete status.")]
 [DerivedFrom(typeof(CancelledStatusReasonCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CancellationCompleteStatusReason1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CancellationCompleteStatusReason1Code>))]
 public enum CancellationCompleteStatusReason1Code
 {
     /// <summary>

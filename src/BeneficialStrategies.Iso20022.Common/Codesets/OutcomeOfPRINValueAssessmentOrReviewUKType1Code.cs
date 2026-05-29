@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the outcome of PRIN value assessment or review about fair value of product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09060."
 )]
 [DerivedFrom(typeof(OutcomeOfPRINValueAssessmentOrReviewUKTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OutcomeOfPRINValueAssessmentOrReviewUKType1Code>))]
 public enum OutcomeOfPRINValueAssessmentOrReviewUKType1Code
 {
     /// <summary>

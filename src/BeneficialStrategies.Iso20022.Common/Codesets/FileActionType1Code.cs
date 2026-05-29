@@ -17,9 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Determines the type of file action service.|ISO 8583:87 bit 91; ISO 8583:93/2003 bit 24"
 )]
 [DerivedFrom(typeof(FileActionTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<FileActionType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<FileActionType1Code>))]
 public enum FileActionType1Code
 {
     /// <summary>

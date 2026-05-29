@@ -18,9 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies the external unit of measure by means of a code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
 )]
 [DerivedFrom(typeof(ExternalUnitOfMeasureCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ExternalUnitOfMeasure1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalUnitOfMeasure1Code>))]
 public enum ExternalUnitOfMeasure1Code
 {
     /// <summary>

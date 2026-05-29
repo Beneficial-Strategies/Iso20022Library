@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_sNAZ0O8UEeSLA89yUYsVSw")]
 [Description(@"Specifies the type of regulatory reporting pre-trade waiver.")]
 [Derivations(typeof(ReportingWaiverType1Code), typeof(ReportingWaiverType3Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReportingWaiverTypeCode>))]
 public enum ReportingWaiverTypeCode
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -27,6 +28,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ActionType1Code),
     typeof(ActionType10Code)
 )]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ActionTypeCode>))]
 public enum ActionTypeCode
 {
     /// <summary>

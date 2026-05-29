@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type."
 )]
 [Derivations(typeof(NoticeType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<NoticeTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<NoticeTypeCode>))]
 public enum NoticeTypeCode
 {
     /// <summary>

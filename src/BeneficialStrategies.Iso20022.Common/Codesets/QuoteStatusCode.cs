@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZYjBxdp-Ed-ak6NoX_4Aeg_336258615")]
 [Description(@"Identifies the status of a quote acknowledgement.")]
 [Derivations(typeof(QuoteStatus1Code), typeof(QuoteStatus2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QuoteStatusCode>))]
 public enum QuoteStatusCode
 {
     /// <summary>

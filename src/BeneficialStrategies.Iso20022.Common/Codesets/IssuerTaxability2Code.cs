@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0EPMQIlyEeavwKddCbm3hg")]
 [Description(@"Specifies whether the corporate action proceeds are taxable at issuer level.")]
 [DerivedFrom(typeof(IssuerTaxabilityV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<IssuerTaxability2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<IssuerTaxability2Code>))]
 public enum IssuerTaxability2Code
 {
     /// <summary>

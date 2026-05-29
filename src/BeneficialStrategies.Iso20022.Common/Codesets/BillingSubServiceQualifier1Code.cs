@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_6WgXpJqlEeGSON8vddiWzQ_-2011541661")]
 [Description(@"Qualifies the content of the subservice code.")]
 [DerivedFrom(typeof(BillingSubServiceQualifierCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<BillingSubServiceQualifier1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BillingSubServiceQualifier1Code>))]
 public enum BillingSubServiceQualifier1Code
 {
     /// <summary>

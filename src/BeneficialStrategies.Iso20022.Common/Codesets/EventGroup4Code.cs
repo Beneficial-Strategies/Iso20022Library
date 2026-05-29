@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_i8tCgAB8EeqouY-yI_q3qQ")]
 [Description(@"Specifies DTC (The Depository Trust Company) processing domain for the event.")]
 [DerivedFrom(typeof(EventGroupCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<EventGroup4Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<EventGroup4Code>))]
 public enum EventGroup4Code
 {
     /// <summary>

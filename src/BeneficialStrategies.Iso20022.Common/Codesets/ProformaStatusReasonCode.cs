@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_3uoL8E_uEeaB8-OWTiMVrQ")]
 [Description(@"Specifies the reason for proforma status.")]
 [Derivations(typeof(ProformaStatusReason1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProformaStatusReasonCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProformaStatusReasonCode>))]
 public enum ProformaStatusReasonCode
 {
     /// <summary>

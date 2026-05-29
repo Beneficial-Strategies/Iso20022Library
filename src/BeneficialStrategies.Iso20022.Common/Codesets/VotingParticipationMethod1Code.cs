@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies a method for participating to the voting of agenda resolutions in a general meeting."
 )]
 [DerivedFrom(typeof(VotingParticipationMethodCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<VotingParticipationMethod1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<VotingParticipationMethod1Code>))]
 public enum VotingParticipationMethod1Code
 {
     /// <summary>

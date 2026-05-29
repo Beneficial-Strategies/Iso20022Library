@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pHKm8Q0wEeqUVL7sB4m7NA")]
 [Description(@"Identification of the type of entity involved in a transaction.")]
 [DerivedFrom(typeof(PartyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<PartyType33Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<PartyType33Code>))]
 public enum PartyType33Code
 {
     /// <summary>

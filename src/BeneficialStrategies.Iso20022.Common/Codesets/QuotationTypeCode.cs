@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_kgo8wNK4EeihtcVwfFPNlg")]
 [Description(@"Specifies the type of quotation.")]
 [Derivations(typeof(QuotationType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<QuotationTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<QuotationTypeCode>))]
 public enum QuotationTypeCode
 {
     /// <summary>

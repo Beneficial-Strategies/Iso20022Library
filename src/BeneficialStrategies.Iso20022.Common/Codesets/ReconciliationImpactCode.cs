@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_fGUkscyqEeiqqJhU2tqK8A")]
 [Description(@"Reconciliation credit or debit indicator")]
 [Derivations(typeof(ReconciliationImpact1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationImpactCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationImpactCode>))]
 public enum ReconciliationImpactCode
 {
     /// <summary>

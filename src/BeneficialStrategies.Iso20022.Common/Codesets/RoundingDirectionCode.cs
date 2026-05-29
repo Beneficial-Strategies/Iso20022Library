@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y-LZ9Np-Ed-ak6NoX_4Aeg_404618713")]
 [Description(@"Specifies the rounding direction.")]
 [Derivations(typeof(RoundingDirection1Code), typeof(RoundingDirection2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RoundingDirectionCode>))]
 public enum RoundingDirectionCode
 {
     /// <summary>

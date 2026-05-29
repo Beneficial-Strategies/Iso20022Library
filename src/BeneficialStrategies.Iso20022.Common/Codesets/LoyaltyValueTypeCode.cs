@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ln1yYF_BEee_oqB7UglxLw")]
 [Description(@"Type of value used for the loyalty programme.")]
 [Derivations(typeof(LoyaltyValueType1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<LoyaltyValueTypeCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<LoyaltyValueTypeCode>))]
 public enum LoyaltyValueTypeCode
 {
     /// <summary>

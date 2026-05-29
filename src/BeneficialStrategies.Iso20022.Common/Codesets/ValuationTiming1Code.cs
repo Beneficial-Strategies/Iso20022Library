@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Specifies how the price valuation timing is done based on the timeline defined in the prospectus."
 )]
 [DerivedFrom(typeof(ValuationTimingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ValuationTiming1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ValuationTiming1Code>))]
 public enum ValuationTiming1Code
 {
     /// <summary>

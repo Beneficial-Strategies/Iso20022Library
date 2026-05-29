@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_MQkg4IDBEe-eGe8fbP3Zug")]
 [Description(@"Specifies the type of proration when below the minimum quantity to instruct.")]
 [DerivedFrom(typeof(ProrationBelowMinimumQuantityCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProrationBelowMinimumQuantity1Code>))]
 public enum ProrationBelowMinimumQuantity1Code
 {
     /// <summary>

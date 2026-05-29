@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_E0Tvl8yyEeiqqJhU2tqK8A")]
 [Description(@"Contains the reconciliation type")]
 [Derivations(typeof(ReconciliationMessageType1Code), typeof(ReconciliationMessageType2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationMessageTypeCode>))]
 public enum ReconciliationMessageTypeCode
 {
     /// <summary>

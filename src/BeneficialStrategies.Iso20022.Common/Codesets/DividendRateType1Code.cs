@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_pWIogfPoEd-_UpPm03UNGQ")]
 [Description(@"Specifies the type of dividend rate.")]
 [DerivedFrom(typeof(DividendRateTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DividendRateType1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DividendRateType1Code>))]
 public enum DividendRateType1Code
 {
     /// <summary>

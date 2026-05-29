@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -15,6 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform."
 )]
 [Derivations(typeof(Registration1Code), typeof(Registration2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<RegistrationCode>))]
 public enum RegistrationCode
 {
     /// <summary>

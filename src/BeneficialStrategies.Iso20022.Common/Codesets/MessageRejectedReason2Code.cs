@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_e6CmIEpIEe2Kv_AXFg3f7A")]
 [Description(@"Specifies the reason for a message rejected status.")]
 [DerivedFrom(typeof(RejectedStatusReasonV2Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageRejectedReason2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageRejectedReason2Code>))]
 public enum MessageRejectedReason2Code
 {
     /// <summary>

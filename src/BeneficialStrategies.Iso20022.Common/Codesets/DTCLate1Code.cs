@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1rD7UDL3EeKU9IrkkToqcw_1757333975")]
 [Description(@"Specifies late announcements.")]
 [DerivedFrom(typeof(DTCLateCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<DTCLate1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<DTCLate1Code>))]
 public enum DTCLate1Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_gPu80CycEeWT0qwwEKj7sA")]
 [Description(@"Identifies the type of process requested by the host to an ATM.")]
 [DerivedFrom(typeof(MessageFunctionCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<MessageFunction8Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageFunction8Code>))]
 public enum MessageFunction8Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicator if reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances."
 )]
 [DerivedFrom(typeof(ReconciliationStatusCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ReconciliationStatus1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationStatus1Code>))]
 public enum ReconciliationStatus1Code
 {
     /// <summary>

@@ -2,6 +2,7 @@
 
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -13,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_BeneficiaryCertificationType6Code")]
 [Description(@"Specifies the type of certification required.")]
 [DerivedFrom(typeof(BeneficiaryCertificationTypeCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<BeneficiaryCertificationType6Code>))]
 public enum BeneficiaryCertificationType6Code
 {
     /// <summary>

@@ -16,9 +16,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     @"Indicates whether the statement contains missing instructions only or all instructions."
 )]
 [DerivedFrom(typeof(CorporateActionStatementTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<CorporateActionStatementType2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionStatementType2Code>))]
 public enum CorporateActionStatementType2Code
 {
     /// <summary>

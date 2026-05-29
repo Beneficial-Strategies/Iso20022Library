@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_X2Qi8BrfEeyhRdHRjakS2w")]
 [Description(@"Specifies the type of proxy person.")]
 [DerivedFrom(typeof(ProxyTypeCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<ProxyType3Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<ProxyType3Code>))]
 public enum ProxyType3Code
 {
     /// <summary>

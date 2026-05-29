@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cNM_kIqKEeSRT5rEzcAHEw")]
 [Description(@"Urgency of the command.")]
 [DerivedFrom(typeof(TMSContactLevelCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TMSContactLevel2Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TMSContactLevel2Code>))]
 public enum TMSContactLevel2Code
 {
     /// <summary>

@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("__ztF4dojEeC60axPepSq7g_723432947")]
 [Description(@"Indicates if the Trading Date is various.")]
 [Derivations(typeof(TradingDate1Code))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingDateCode>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingDateCode>))]
 public enum TradingDateCode
 {
     /// <summary>

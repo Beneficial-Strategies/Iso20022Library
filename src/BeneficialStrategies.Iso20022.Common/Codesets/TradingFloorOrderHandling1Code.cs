@@ -14,9 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YqzyBdp-Ed-ak6NoX_4Aeg_530358384")]
 [Description(@"Description of the parameters under which an order must be handled on the floor.")]
 [DerivedFrom(typeof(TradingFloorOrderHandlingCode))]
-#if NET8_0_OR_GREATER // C# 12 Global type alias
-[JsonConverter(typeof(JsonStringEnumConverter<TradingFloorOrderHandling1Code>))]
-#endif
+[JsonConverter(typeof(Iso20022EnumJsonConverter<TradingFloorOrderHandling1Code>))]
 public enum TradingFloorOrderHandling1Code
 {
     /// <summary>
