@@ -7,9 +7,8 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using System.Xml.Linq;
-using BeneficialStrategies.Iso20022.Framework;
 
-namespace BeneficialStrategies.Iso20022;
+namespace BeneficialStrategies.Iso20022.Serialization;
 
 /// <summary>
 /// Reflection-based XML serializer for ISO 20022 message records.
