@@ -370,6 +370,9 @@
 - [ ] `TradingCapacityCode` — add: MIXC
 - [ ] `UnitOfMeasureCode` — add: CHMT
 - [ ] `UserInterfaceCode` — add: CSTM
+### Obsolete
+- [x] `GoodAndServiceDeliveryScheduleCode` — add [Obsolete] (removal date: 2025-09-09)
+- [x] `MOTO1Code` — add [Obsolete] (removal date: 2025-09-09)
 ### Removed
 - [ ] `TradingCapacity9Code` — delete `Codesets/TradingCapacity9Code.cs`
 - [ ] `UnableToApplyIncorrectInfo2Code` — delete `Codesets/UnableToApplyIncorrectInfo2Code.cs`

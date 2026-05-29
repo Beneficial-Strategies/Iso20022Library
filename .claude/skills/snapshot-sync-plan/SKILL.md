@@ -109,7 +109,8 @@ Sort every changed artifact into one of four phases. For each item record whethe
 - **Phase 1 — Codesets**: enum types under `src/BeneficialStrategies.Iso20022.Common/Codesets/`
   - New: full name + file path
   - Changed: added/removed enum member codes
-  - Removed: file path to delete
+  - Obsolete: call `get_snapshot_diff` with `section: changedContent` and `xsiType: CodeSet`, then filter for records where `changes.registrationStatus[1] === "Obsolete"`. For each match, check if the file exists in `Codesets/`; if so, add an `### Obsolete` subsection entry noting the removalDate from `changes.removalDate[1]` (if present). These files stay in the library — they get `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]` (or `"No removal date recorded."` if absent). Do NOT put them in `### Removed`.
+  - Removed: file path to delete — only for codesets that appear in `get_snapshot_diff` `section: removed` with `xsi:type: CodeSet` AND whose file exists in `Codesets/`. Items that are merely Obsolete are NOT removals.
 - **Phase 2 — Components**: record types under `src/BeneficialStrategies.Iso20022.Common/Components/`
   - Changed: field-level description (type change, added field, removed field)
 - **Phase 3 — Choices**: abstract choice records under `src/BeneficialStrategies.Iso20022.Common/Choices/`

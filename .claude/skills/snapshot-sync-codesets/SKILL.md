@@ -126,6 +126,21 @@ Omit `[DerivedFrom]` and the `= {ParentCode}.{MemberName}` ordinal assignment if
 
 ---
 
+### Obsolete Codeset
+
+1. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`.
+
+2. Add the `[Obsolete]` attribute immediately before `public enum {CodesetName}`, after all other attributes:
+   - If a removalDate is recorded in PLAN.md: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. Removal date: {removalDate}.")]`
+   - If no removalDate: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. No removal date recorded.")]`
+   - Place it after the last `[...]` attribute block and before `#if NET8_0_OR_GREATER` (if present), or directly before `public enum` if there is no `#if` block.
+
+3. Do NOT delete the file or remove any enum members.
+
+4. Mark the item `[x]` in PLAN.md.
+
+---
+
 ### Removed Codeset
 
 1. Search for all references to the type: `grep -r "{CodesetName}" src/ --include="*.cs" -l`
