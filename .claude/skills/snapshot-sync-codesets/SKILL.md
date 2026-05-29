@@ -57,6 +57,16 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
 1. Call `mcp__iso20022__universal_lookup` with the codeset name to retrieve its full spec: IsoId, description, parent/DerivedFrom type, and all enum member codes with their values and descriptions.
 
+   **MEMBERLESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
+   Inspect the lookup result for enum members first:
+   - If the codeset has **no codes** in the spec (no `[EnumMember]` entries to write), do NOT create an empty enum. Instead:
+     1. Check whether the codeset has a `pattern` attribute (regex-validated, e.g. `[A-Z]{3,3}`) or a `ValidationByTable` constraint — if either is present, it is a string alias type.
+     2. Check whether the codeset is marked `IsExternal` by the MCP. If external, check whether the MCP returns any members sourced from the external codeset JSON (the server loads `*externalcodesets*.json` at startup and merges members for external codesets). If external members are available, use them and proceed to create a normal enum.
+     3. If no members are available from any source (spec or external JSON), the type must be a `global using` string alias:
+        - Check `src/BeneficialStrategies.Iso20022.Common/GlobalUsings.cs` — if the alias already exists there, this codeset is already handled; mark the PLAN.md item `[x]` with note `(string alias — already in GlobalUsings.cs)` and skip file creation.
+        - If the alias is missing, add `global using {CodesetName} = System.String;` to the `// External Codesets` section of `GlobalUsings.cs`, then mark the item `[x]` with note `(string alias — added to GlobalUsings.cs)`.
+        - In either case, do NOT create a `.cs` file in `Codesets/`.
+
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
    After receiving the lookup result, verify the member list is complete:
    - If the response includes a `total_members`, `member_count`, or equivalent field: confirm the number of members returned matches. If not, fetch remaining pages before continuing.

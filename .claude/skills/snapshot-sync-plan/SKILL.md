@@ -107,7 +107,10 @@ grep '^MSGELEMENT' /tmp/snapshot-added.tsv   # New elements within existing comp
 Sort every changed artifact into one of four phases. For each item record whether it is **new**, **changed**, or **removed**, and note enough detail to act on it without re-querying MCP (though re-querying for details is always fine):
 
 - **Phase 1 — Codesets**: enum types under `src/BeneficialStrategies.Iso20022.Common/Codesets/`
-  - New: full name + file path
+  - New: full name + file path. **Important — before adding a "New" entry, check whether the codeset has any enumerated codes in the spec.** A codeset with no codes is one of three things, in priority order:
+    1. **External with members**: `IsExternal` flag is set AND the MCP returns members sourced from the external codeset JSON (`*externalcodesets*.json`). Treat as a normal enum New entry — the codeset skill will create the file with those members.
+    2. **String alias**: pattern-validated (`pattern` attribute present), table-validated (`ValidationByTable` constraint), or external with no JSON members. Do NOT add to the New section. Instead check `GlobalUsings.cs` — if the alias is missing, add a note to create it there. If the alias already exists, no action needed.
+    3. A codeset that has zero codes but is none of the above is unexpected — flag it for manual investigation rather than creating an empty enum file.
   - Changed: added/removed enum member codes
   - Obsolete: call `get_snapshot_diff` with `section: changedContent` and `xsiType: CodeSet`, then filter for records where `changes.registrationStatus[1] === "Obsolete"`. For each match, check if the file exists in `Codesets/`; if so, add an `### Obsolete` subsection entry noting the removalDate from `changes.removalDate[1]` (if present). These files stay in the library — they get `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]` (or `"No removal date recorded."` if absent). Do NOT put them in `### Removed`.
   - Removed: file path to delete — only for codesets that appear in `get_snapshot_diff` `section: removed` with `xsi:type: CodeSet` AND whose file exists in `Codesets/`. Items that are merely Obsolete are NOT removals.

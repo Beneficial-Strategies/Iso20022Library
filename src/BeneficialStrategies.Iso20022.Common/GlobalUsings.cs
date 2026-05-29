@@ -380,6 +380,7 @@ global using ISO2ALanguageCode = System.String;
 global using ISO3ACountryCode = System.String;
 global using ISO3NumericCountryCode = System.String;
 global using UnicodeChartsCode = System.String;
+global using BusinessFilePriorityCode = System.String;
 global using BusinessMessagePriorityCode = System.String;
 global using ExternalDiscrepancyCode = System.String;
 global using ExternalDiscrepancy1Code = System.String;
