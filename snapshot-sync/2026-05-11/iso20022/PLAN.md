@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 6 complete)
+- **Last updated**: 2026-06-01 (batch 7 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -131,26 +131,26 @@
 - [x] `ExternalTrackerNotificationTypeCode` — (0 codes — string alias in GlobalUsings.cs)
 - [x] `ExternalTransactorType1Code` — `Codesets/ExternalTransactorType1Code.cs` (8 members, derived)
 - [x] `ExternalTransactorTypeCode` — `Codesets/ExternalTransactorTypeCode.cs`
-- [ ] `FailingReason6Code` — `Codesets/FailingReason6Code.cs`
-- [ ] `FailureReason9Code` — `Codesets/FailureReason9Code.cs`
-- [ ] `FileActionType3Code` — `Codesets/FileActionType3Code.cs`
-- [ ] `FinancialInstrumentIdentificationType1Code` — `Codesets/FinancialInstrumentIdentificationType1Code.cs`
-- [ ] `FinancialInstrumentIdentificationTypeCode` — `Codesets/FinancialInstrumentIdentificationTypeCode.cs`
-- [ ] `FraudReportingAction2Code` — `Codesets/FraudReportingAction2Code.cs`
-- [ ] `FraudType2Code` — `Codesets/FraudType2Code.cs`
-- [ ] `FundingSourceType3Code` — `Codesets/FundingSourceType3Code.cs`
-- [ ] `FundingSourceType4Code` — `Codesets/FundingSourceType4Code.cs`
-- [ ] `GoodAndServiceDeliveryChannel2Code` — `Codesets/GoodAndServiceDeliveryChannel2Code.cs`
-- [ ] `GoodAndServiceDeliverySchedule2Code` — `Codesets/GoodAndServiceDeliverySchedule2Code.cs`
-- [ ] `GoodAndServiceDeliveryScheduleV2Code` — `Codesets/GoodAndServiceDeliveryScheduleV2Code.cs`
-- [ ] `GoodsAndServicesSubType2Code` — `Codesets/GoodsAndServicesSubType2Code.cs`
-- [ ] `GracePeriodUnitType2Code` — `Codesets/GracePeriodUnitType2Code.cs`
-- [ ] `ICCFallbackReason2Code` — `Codesets/ICCFallbackReason2Code.cs`
-- [ ] `ISO18245MerchantCategoryCode` — `Codesets/ISO18245MerchantCategoryCode.cs`
-- [ ] `ISO2ALanguageCode` — `Codesets/ISO2ALanguageCode.cs`
-- [ ] `ISO3ACountryCode` — `Codesets/ISO3ACountryCode.cs`
-- [ ] `ISO3NumericCountryCode` — `Codesets/ISO3NumericCountryCode.cs`
-- [ ] `ISO3NumericCurrencyCode` — `Codesets/ISO3NumericCurrencyCode.cs`
+- [x] `FailingReason6Code` — `Codesets/FailingReason6Code.cs` (11 members, derived from PendingFailingReasonV2Code)
+- [x] `FailureReason9Code` — `Codesets/FailureReason9Code.cs` (31 members, derived; also added 12 new members to FailureReasonCode.cs base)
+- [x] `FileActionType3Code` — `Codesets/FileActionType3Code.cs` (8 members, derived)
+- [x] `FinancialInstrumentIdentificationType1Code` — `Codesets/FinancialInstrumentIdentificationType1Code.cs` (24 members, derived)
+- [x] `FinancialInstrumentIdentificationTypeCode` — `Codesets/FinancialInstrumentIdentificationTypeCode.cs` (24 members, new base)
+- [x] `FraudReportingAction2Code` — `Codesets/FraudReportingAction2Code.cs` (5 members, derived)
+- [x] `FraudType2Code` — `Codesets/FraudType2Code.cs` (12 members, derived)
+- [x] `FundingSourceType3Code` — `Codesets/FundingSourceType3Code.cs` (14 members, derived; also added LOYT+CARD to FundingSourceTypeCode.cs base)
+- [x] `FundingSourceType4Code` — `Codesets/FundingSourceType4Code.cs` (13 members, derived)
+- [x] `GoodAndServiceDeliveryChannel2Code` — `Codesets/GoodAndServiceDeliveryChannel2Code.cs` (5 members, derived)
+- [x] `GoodAndServiceDeliverySchedule2Code` — `Codesets/GoodAndServiceDeliverySchedule2Code.cs` (3 members, derived from V2Code)
+- [x] `GoodAndServiceDeliveryScheduleV2Code` — `Codesets/GoodAndServiceDeliveryScheduleV2Code.cs` (5 members, new base)
+- [x] `GoodsAndServicesSubType2Code` — `Codesets/GoodsAndServicesSubType2Code.cs` (3 members, derived)
+- [x] `GracePeriodUnitType2Code` — `Codesets/GracePeriodUnitType2Code.cs` (3 members, derived)
+- [x] `ICCFallbackReason2Code` — `Codesets/ICCFallbackReason2Code.cs` (3 members, derived)
+- [x] `ISO18245MerchantCategoryCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO2ALanguageCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO3ACountryCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO3NumericCountryCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO3NumericCurrencyCode` — (pattern-constrained string alias in GlobalUsings.cs)
 - [ ] `ISO8583AccountEntryDeviceTypeCode` — `Codesets/ISO8583AccountEntryDeviceTypeCode.cs`
 - [ ] `ISO8583AccountIdentifierTypeCode` — `Codesets/ISO8583AccountIdentifierTypeCode.cs`
 - [ ] `ISO8583AccountTypeCode` — `Codesets/ISO8583AccountTypeCode.cs`

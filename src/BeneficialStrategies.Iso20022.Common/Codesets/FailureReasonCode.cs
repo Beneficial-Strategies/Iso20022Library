@@ -276,4 +276,112 @@ public enum FailureReasonCode
     [IsoId("_l1L94K4LEeWZgJQOa6iKCQ")]
     [Description(@"Customer has not been performed in time an action.")]
     CustomerTimeOut,
+
+    /// <summary>
+    /// Following a cash dispense operation the consumer forgot to take the returned notes, which have subsequently been retracted following a Present time-out. The number of notes retracted is known as the device was able to count the notes retracted.
+    /// Encoded/decoded by serializers as &quot;CFGC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CFGC")]
+    [IsoId("_AxkK4Jw0Ee--557UVrMuSQ")]
+    [Description(@"Following a cash dispense operation the consumer forgot to take the returned notes, which have subsequently been retracted following a Present time-out. The number of notes retracted is known as the device was able to count the notes retracted.")]
+    CashDispenserRetractCounted,
+
+    /// <summary>
+    /// Following a cash dispense operation the consumer forgot to take the notes, which have subsequently been retracted following a Present time-out. The number of notes retracted is unknown.
+    /// Encoded/decoded by serializers as &quot;CHFG&quot;.
+    /// </summary>
+    [EnumMember(Value = "CHFG")]
+    [IsoId("_0EOVkJwzEe--557UVrMuSQ")]
+    [Description(@"Following a cash dispense operation the consumer forgot to take the notes, which have subsequently been retracted following a Present time-out. The number of notes retracted is unknown.")]
+    CashDispenserRetract,
+
+    /// <summary>
+    /// Following cheques being returned, on a cheque deposit operation, the consumer forgot to take the returned cheques, causing them to be retracted. The number of cheques retracted is unknown.
+    /// Encoded/decoded by serializers as &quot;CQFG&quot;.
+    /// </summary>
+    [EnumMember(Value = "CQFG")]
+    [IsoId("_8hI3gJwzEe--557UVrMuSQ")]
+    [Description(@"Following cheques being returned, on a cheque deposit operation, the consumer forgot to take the returned cheques, causing them to be retracted. The number of cheques retracted is unknown.")]
+    ChequeDepositRetract,
+
+    /// <summary>
+    /// Cheques have been retained by the terminal since it has been unable to return them.
+    /// Encoded/decoded by serializers as &quot;CQRT&quot;.
+    /// </summary>
+    [EnumMember(Value = "CQRT")]
+    [IsoId("_RpaRwJw0Ee--557UVrMuSQ")]
+    [Description(@"Cheques have been retained by the terminal since it has been unable to return them.")]
+    ChequesRetained,
+
+    /// <summary>
+    /// Following a cash return, on a deposit operation, the consumer forgot to take the returned notes, causing them to be retracted. The number of notes retracted is unknown.
+    /// Encoded/decoded by serializers as &quot;DCFG&quot;.
+    /// </summary>
+    [EnumMember(Value = "DCFG")]
+    [IsoId("_4Sqr8JwzEe--557UVrMuSQ")]
+    [Description(@"Following a cash return, on a deposit operation, the consumer forgot to take the returned notes, causing them to be retracted. The number of notes retracted is unknown.")]
+    CashDepositRetract,
+
+    /// <summary>
+    /// Cash has been retained by the terminal since it has been unable to return it.
+    /// Encoded/decoded by serializers as &quot;DCRT&quot;.
+    /// </summary>
+    [EnumMember(Value = "DCRT")]
+    [IsoId("_Na8tQJw0Ee--557UVrMuSQ")]
+    [Description(@"Cash has been retained by the terminal since it has been unable to return it.")]
+    DepositsRetained,
+
+    /// <summary>
+    /// Following a cash return, on a deposit operation, the consumer forgot to take the returned notes, causing them to be retracted. The number of notes retracted is known as the device was able to count the notes retracted.
+    /// Encoded/decoded by serializers as &quot;DFGC&quot;.
+    /// </summary>
+    [EnumMember(Value = "DFGC")]
+    [IsoId("_E-CyYJw0Ee--557UVrMuSQ")]
+    [Description(@"Following a cash return, on a deposit operation, the consumer forgot to take the returned notes, causing them to be retracted. The number of notes retracted is known as the device was able to count the notes retracted.")]
+    CashDepositRetractCounted,
+
+    /// <summary>
+    /// The ATM Manager has sent a response message in response to an authorisation request where some of its required elements were badly formatted (for example an integer value where a dateTime value was expected).
+    /// Encoded/decoded by serializers as &quot;FMTE&quot;.
+    /// </summary>
+    [EnumMember(Value = "FMTE")]
+    [IsoId("_rnR-cJwzEe--557UVrMuSQ")]
+    [Description(@"The ATM Manager has sent a response message in response to an authorisation request where some of its required elements were badly formatted (for example an integer value where a dateTime value was expected).")]
+    FormatError,
+
+    /// <summary>
+    /// Following cheques being returned, on a cheque deposit operation, the consumer forgot to take the returned cheques, causing them to be retracted. The number of cheques retracted is known as the device was able to count the cheques retracted.
+    /// Encoded/decoded by serializers as &quot;QFGC&quot;.
+    /// </summary>
+    [EnumMember(Value = "QFGC")]
+    [IsoId("_JMgW4Jw0Ee--557UVrMuSQ")]
+    [Description(@"Following cheques being returned, on a cheque deposit operation, the consumer forgot to take the returned cheques, causing them to be retracted. The number of cheques retracted is known as the device was able to count the cheques retracted.")]
+    ChequeDepositRetractCounted,
+
+    /// <summary>
+    /// The ATM Manager has sent an ATMReject message in response to an authorisation request.
+    /// Encoded/decoded by serializers as &quot;RJCT&quot;.
+    /// </summary>
+    [EnumMember(Value = "RJCT")]
+    [IsoId("_nY2PIJwzEe--557UVrMuSQ")]
+    [Description(@"The ATM Manager has sent an ATMReject message in response to an authorisation request.")]
+    Reject,
+
+    /// <summary>
+    /// The ATM has restarted.
+    /// Encoded/decoded by serializers as &quot;RSTR&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSTR")]
+    [IsoId("_6l7UUKjyEe--FqfI7l8ySw")]
+    [Description(@"The ATM has restarted.")]
+    Restart,
+
+    /// <summary>
+    /// The ATM Manager has sent a response message in response to an authorisation request where some of its required elements were invalid (for example an incorrect ExchangeIdentifier).
+    /// Encoded/decoded by serializers as &quot;VLTE&quot;.
+    /// </summary>
+    [EnumMember(Value = "VLTE")]
+    [IsoId("_v1vi8JwzEe--557UVrMuSQ")]
+    [Description(@"The ATM Manager has sent a response message in response to an authorisation request where some of its required elements were invalid (for example an incorrect ExchangeIdentifier).")]
+    ValidationError,
 }

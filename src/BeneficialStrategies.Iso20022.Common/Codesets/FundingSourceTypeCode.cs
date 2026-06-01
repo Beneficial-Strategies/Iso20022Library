@@ -277,4 +277,22 @@ public enum FundingSourceTypeCode
     [IsoId("_odBggNwoEeeiWo5KG3eipw")]
     [Description(@"Loyalty points converted into cash")]
     Loyaly,
+
+    /// <summary>
+    /// Loyalty points converted into cash.
+    /// Encoded/decoded by serializers as &quot;LOYT&quot;.
+    /// </summary>
+    [EnumMember(Value = "LOYT")]
+    [IsoId("_-3sLIH29Ee6YlIMyoxWMJA")]
+    [Description(@"Loyalty points converted into cash.")]
+    Loyalty,
+
+    /// <summary>
+    /// Card.
+    /// Encoded/decoded by serializers as &quot;CARD&quot;.
+    /// </summary>
+    [EnumMember(Value = "CARD")]
+    [IsoId("_wec8MD_bEfCQAqQ9lolFUg")]
+    [Description(@"Card.")]
+    Card,
 }
