@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_U7-5MGMbEeexSYCBvAp_qA")]
 [Description(@"Type of lodging activity.")]
-[Derivations(typeof(LodgingActivity1Code))]
+[Derivations(typeof(LodgingActivity1Code), typeof(LodgingActivity2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<LodgingActivityCode>))]
 public enum LodgingActivityCode
 {

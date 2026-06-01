@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 8 complete)
+- **Last updated**: 2026-06-01 (batch 9 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -171,27 +171,27 @@
 - [x] `ISOMax3ALanguageCode` — (pattern-constrained string alias in GlobalUsings.cs)
 - [x] `InstalmentAmountDetailsType3Code` — `Codesets/InstalmentAmountDetailsType3Code.cs` (13 members, DerivedFrom InstalmentAmountDetailsTypeCode; also fixed incorrect string alias)
 - [x] `InstalmentAmountDetailsType4Code` — `Codesets/InstalmentAmountDetailsType4Code.cs` (11 members, DerivedFrom InstalmentAmountDetailsTypeCode)
-- [ ] `InterestRateIndexTenorCode` — `Codesets/InterestRateIndexTenorCode.cs`
-- [ ] `IntermediateSecurityDistributionType6Code` — `Codesets/IntermediateSecurityDistributionType6Code.cs`
-- [ ] `IntermediateSecurityDistributionType7Code` — `Codesets/IntermediateSecurityDistributionType7Code.cs`
-- [ ] `IntermediateSecurityDistributionTypeV2Code` — `Codesets/IntermediateSecurityDistributionTypeV2Code.cs`
-- [ ] `InvestigationLocationMethod1Code` — `Codesets/InvestigationLocationMethod1Code.cs`
-- [ ] `InvestigationLocationMethodCode` — `Codesets/InvestigationLocationMethodCode.cs`
-- [ ] `InvestmentFundFee3Code` — `Codesets/InvestmentFundFee3Code.cs`
-- [ ] `InvestorClassificationType1Code` — `Codesets/InvestorClassificationType1Code.cs`
-- [ ] `InvestorClassificationTypeCode` — `Codesets/InvestorClassificationTypeCode.cs`
-- [ ] `IssuerAgentRejection1Code` — `Codesets/IssuerAgentRejection1Code.cs`
-- [ ] `IssuerAgentRejectionCode` — `Codesets/IssuerAgentRejectionCode.cs`
-- [ ] `KeyType2Code` — `Codesets/KeyType2Code.cs`
-- [ ] `LanguageCode` — `Codesets/LanguageCode.cs`
-- [ ] `LanguageVersion1Code` — `Codesets/LanguageVersion1Code.cs`
-- [ ] `LanguageVersionCode` — `Codesets/LanguageVersionCode.cs`
-- [ ] `LocationAmenity2Code` — `Codesets/LocationAmenity2Code.cs`
-- [ ] `LodgingActivity2Code` — `Codesets/LodgingActivity2Code.cs`
-- [ ] `LotteryFeatureType1Code` — `Codesets/LotteryFeatureType1Code.cs`
-- [ ] `LotteryFeatureTypeCode` — `Codesets/LotteryFeatureTypeCode.cs`
-- [ ] `MOTO2Code` — `Codesets/MOTO2Code.cs`
-- [ ] `MOTOV2Code` — `Codesets/MOTOV2Code.cs`
+- [x] `InterestRateIndexTenorCode` — `Codesets/InterestRateIndexTenorCode.cs` (NEW BASE, 13 members; fixed incorrect string alias)
+- [x] `IntermediateSecurityDistributionType6Code` — `Codesets/IntermediateSecurityDistributionType6Code.cs` (16 members, DerivedFrom V2Code)
+- [x] `IntermediateSecurityDistributionType7Code` — `Codesets/IntermediateSecurityDistributionType7Code.cs` (13 members, DerivedFrom V2Code)
+- [x] `IntermediateSecurityDistributionTypeV2Code` — `Codesets/IntermediateSecurityDistributionTypeV2Code.cs` (NEW BASE, 16 members)
+- [x] `InvestigationLocationMethod1Code` — `Codesets/InvestigationLocationMethod1Code.cs` (6 members; fixed incorrect string alias)
+- [x] `InvestigationLocationMethodCode` — `Codesets/InvestigationLocationMethodCode.cs` (NEW BASE, 6 members; fixed incorrect string alias)
+- [x] `InvestmentFundFee3Code` — `Codesets/InvestmentFundFee3Code.cs` (19 members; added NTWK to base first)
+- [x] `InvestorClassificationType1Code` — `Codesets/InvestorClassificationType1Code.cs` (5 members)
+- [x] `InvestorClassificationTypeCode` — `Codesets/InvestorClassificationTypeCode.cs` (NEW BASE, 5 members)
+- [x] `IssuerAgentRejection1Code` — `Codesets/IssuerAgentRejection1Code.cs` (72 members)
+- [x] `IssuerAgentRejectionCode` — `Codesets/IssuerAgentRejectionCode.cs` (NEW BASE, 72 members)
+- [x] `KeyType2Code` — `Codesets/KeyType2Code.cs` (2 members)
+- [x] `LanguageCode` — confirmed string alias (0 codes, correct)
+- [x] `LanguageVersion1Code` — `Codesets/LanguageVersion1Code.cs` (2 members; fixed incorrect string alias)
+- [x] `LanguageVersionCode` — `Codesets/LanguageVersionCode.cs` (NEW BASE, 2 members; fixed incorrect string alias)
+- [x] `LocationAmenity2Code` — `Codesets/LocationAmenity2Code.cs` (16 members)
+- [x] `LodgingActivity2Code` — `Codesets/LodgingActivity2Code.cs` (12 members)
+- [x] `LotteryFeatureType1Code` — `Codesets/LotteryFeatureType1Code.cs` (4 members)
+- [x] `LotteryFeatureTypeCode` — `Codesets/LotteryFeatureTypeCode.cs` (NEW BASE, 4 members)
+- [x] `MOTO2Code` — `Codesets/MOTO2Code.cs` (3 members, DerivedFrom MOTOV2Code)
+- [x] `MOTOV2Code` — `Codesets/MOTOV2Code.cs` (NEW BASE, 3 members; created as dependency for MOTO2Code)
 - [ ] `MessageClass2Code` — `Codesets/MessageClass2Code.cs`
 - [ ] `NationalityCode` — `Codesets/NationalityCode.cs`
 - [ ] `NonEligibleProceedsIndicator2Code` — `Codesets/NonEligibleProceedsIndicator2Code.cs`

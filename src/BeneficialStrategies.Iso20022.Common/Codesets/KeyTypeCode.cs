@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_uPcTB_8bEeic54G0fOJNMg")]
 [Description(@"Contains the list of key types that may be exchanged")]
-[Derivations(typeof(KeyType1Code))]
+[Derivations(typeof(KeyType1Code), typeof(KeyType2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<KeyTypeCode>))]
 public enum KeyTypeCode
 {

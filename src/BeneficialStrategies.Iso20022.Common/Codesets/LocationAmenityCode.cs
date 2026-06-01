@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Codes pertaining to the amenities available at the location where the merchant actually performed the transaction."
 )]
-[Derivations(typeof(LocationAmenity1Code))]
+[Derivations(typeof(LocationAmenity1Code), typeof(LocationAmenity2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<LocationAmenityCode>))]
 public enum LocationAmenityCode
 {

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_GX-V4DiAEeaH-93K5JKmzw")]
 [Description(@"Specifies the type of service for which a fee is asked or paid.")]
-[Derivations(typeof(InvestmentFundFee1Code), typeof(InvestmentFundFee2Code))]
+[Derivations(typeof(InvestmentFundFee1Code), typeof(InvestmentFundFee2Code), typeof(InvestmentFundFee3Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<InvestmentFundFeeCode>))]
 public enum InvestmentFundFeeCode
 {
@@ -254,4 +254,13 @@ public enum InvestmentFundFeeCode
     [IsoId("_nL7QlK27EeerDLLe8bZJCA")]
     [Description(@"Fees, drawdown, or other reduction from or in addition to the deal price.")]
     SpecialConcessions,
+
+    /// <summary>
+    /// Network fee assigned to a transaction on a DLT network.
+    /// Encoded/decoded by serializers as &quot;NTWK&quot;.
+    /// </summary>
+    [EnumMember(Value = "NTWK")]
+    [IsoId("5e813292-611a-477a-ae08-d681737d1834")]
+    [Description(@"Network fee assigned to a transaction on a DLT network.")]
+    NetworkFee,
 }
