@@ -24,7 +24,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(OptionFeatures4Code),
     typeof(OptionFeatures11Code),
     typeof(OptionFeatures1Code),
-    typeof(OptionFeatures10Code)
+    typeof(OptionFeatures10Code),
+    typeof(OptionFeatures13Code),
+    typeof(OptionFeatures14Code),
+    typeof(OptionFeatures15Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<OptionFeaturesCode>))]
 public enum OptionFeaturesCode
@@ -187,7 +190,7 @@ public enum OptionFeaturesCode
     /// Encoded/decoded by serializers as &quot;RGRS&quot;.
     /// </summary>
     [EnumMember(Value = "RGRS")]
-    [IsoId("")]
+    [IsoId("_xiXQ0GHGEe6yt_d72zQZeQ")]
     [Description(@"Gross dividend is reinvested.")]
     GrossDividendReinvestment,
 
@@ -196,7 +199,18 @@ public enum OptionFeaturesCode
     /// Encoded/decoded by serializers as &quot;RNET&quot;.
     /// </summary>
     [EnumMember(Value = "RNET")]
-    [IsoId("")]
+    [IsoId("_9DkDIGHGEe6yt_d72zQZeQ")]
     [Description(@"Dividend reinvestment is processed net of withholding tax.")]
     NetDividendReinvestment,
+
+    /// <summary>
+    /// Securities will be accepted in the order they have been submitted until the target number of quantity sought is reached.
+    /// Encoded/decoded by serializers as &quot;FCFS&quot;.
+    /// </summary>
+    [EnumMember(Value = "FCFS")]
+    [IsoId("58ec191a-f9de-45ee-8321-386b1dbffb48")]
+    [Description(
+        @"Securities will be accepted in the order they have been submitted until the target number of quantity sought is reached."
+    )]
+    FirstComeFirstServed,
 }

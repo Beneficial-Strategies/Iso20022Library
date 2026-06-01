@@ -21,7 +21,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(OrderStatus3Code),
     typeof(OrderStatus5Code),
     typeof(OrderStatus6Code),
-    typeof(OrderStatus8Code)
+    typeof(OrderStatus8Code),
+    typeof(OrderStatus10Code),
+    typeof(OrderStatus11Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<OrderStatusCode>))]
 public enum OrderStatusCode

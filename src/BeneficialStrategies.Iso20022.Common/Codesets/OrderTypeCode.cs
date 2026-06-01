@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
 )]
-[Derivations(typeof(OrderType1Code), typeof(OrderType2Code))]
+[Derivations(typeof(OrderType1Code), typeof(OrderType2Code), typeof(OrderType3Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<OrderTypeCode>))]
 public enum OrderTypeCode
 {

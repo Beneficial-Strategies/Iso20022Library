@@ -18,7 +18,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(OutputFormat2Code),
     typeof(OutputFormat3Code),
     typeof(OutputFormat1Code),
-    typeof(OutputFormat4Code)
+    typeof(OutputFormat4Code),
+    typeof(OutputFormat6Code),
+    typeof(OutputFormat7Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<OutputFormatCode>))]
 public enum OutputFormatCode

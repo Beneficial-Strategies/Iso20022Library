@@ -11,104 +11,82 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 /// </summary>
 [DataContract]
 [Serializable]
-[IsoId("_OzTbUS84EeKNZpaVtgp8Wg")]
+[IsoId("_7dEPkfH4EfCS-OXqezZQmw")]
 [Description(@"Specifies the conditions that apply to the offer.")]
-[Derivations(typeof(OfferType2Code), typeof(OfferType3Code), typeof(OfferType4Code), typeof(OfferType5Code), typeof(OfferType6Code), typeof(OfferType7Code))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<OfferTypeV2Code>))]
-public enum OfferTypeV2Code
+[DerivedFrom(typeof(OfferTypeV2Code))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<OfferType7Code>))]
+public enum OfferType7Code
 {
     /// <summary>
     /// Event will be paid in a particular priority stated in the offering documentation. Higher tiers of securities will be paid ahead of lower tiers of securities.
     /// Encoded/decoded by serializers as &quot;ACPR&quot;.
     /// </summary>
     [EnumMember(Value = "ACPR")]
-    [IsoId("_F_IYsISKEe-AUMVyVXihZg")]
+    [IsoId("_9xlP4fH4EfCS-OXqezZQmw")]
     [Description(
         @"Event will be paid in a particular priority stated in the offering documentation. Higher tiers of securities will be paid ahead of lower tiers of securities."
     )]
-    AcceptancePriority,
+    AcceptancePriority = OfferTypeV2Code.AcceptancePriority, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Securities holder has the right to disagree with a mandatory event. This right is not inherent in all offers and therefore must be noted in announcements only when applicable.
     /// Encoded/decoded by serializers as &quot;DISS&quot;.
     /// </summary>
     [EnumMember(Value = "DISS")]
-    [IsoId("_PKP7tS84EeKNZpaVtgp8Wg")]
+    [IsoId("_7scvYfH4EfCS-OXqezZQmw")]
     [Description(
         @"Securities holder has the right to disagree with a mandatory event. This right is not inherent in all offers and therefore must be noted in announcements only when applicable."
     )]
-    DissenterRights,
+    DissenterRights = OfferTypeV2Code.DissenterRights, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Exchange of Restricted to Unrestricted (or vice versa).
     /// Encoded/decoded by serializers as &quot;ERUN&quot;.
     /// </summary>
     [EnumMember(Value = "ERUN")]
-    [IsoId("_PKP7uS84EeKNZpaVtgp8Wg")]
+    [IsoId("_7scvY_H4EfCS-OXqezZQmw")]
     [Description(@"Exchange of Restricted to Unrestricted (or vice versa).")]
-    RestrictionExchange,
-
-    /// <summary>
-    /// Securities will be accepted in the order they have been submitted until the target number of quantity sought is reached.
-    /// Encoded/decoded by serializers as &quot;FCFS&quot;.
-    /// </summary>
-    [EnumMember(Value = "FCFS")]
-    [IsoId("_PKP7vS84EeKNZpaVtgp8Wg")]
-    [Description(
-        @"Securities will be accepted in the order they have been submitted until the target number of quantity sought is reached."
-    )]
-    FirstComeFirstServed,
+    RestrictionExchange = OfferTypeV2Code.RestrictionExchange, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Final or last offer to holders subject to offer conditions being reached, for example, 50 percent accepted on a tender.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
     /// </summary>
     [EnumMember(Value = "FINL")]
-    [IsoId("_PKP7wS84EeKNZpaVtgp8Wg")]
+    [IsoId("_7scvZfH4EfCS-OXqezZQmw")]
     [Description(
         @"Final or last offer to holders subject to offer conditions being reached, for example, 50 percent accepted on a tender."
     )]
-    FinalOffer,
-
-    /// <summary>
-    /// Sale or purchase of odd lots to/from a third party other than the issuing company.
-    /// Encoded/decoded by serializers as &quot;MINI&quot;.
-    /// </summary>
-    [EnumMember(Value = "MINI")]
-    [IsoId("_PKP7xS84EeKNZpaVtgp8Wg")]
-    [Description(
-        @"Sale or purchase of odd lots to/from a third party other than the issuing company."
-    )]
-    MiniOddLotOffer,
+    FinalOffer = OfferTypeV2Code.FinalOffer, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Dissenter's rights are not applicable for this option of the offer.
     /// Encoded/decoded by serializers as &quot;NDIS&quot;.
     /// </summary>
     [EnumMember(Value = "NDIS")]
-    [IsoId("_8_NnEBe0EeyroI8qKgB7Mg")]
+    [IsoId("_7scva_H4EfCS-OXqezZQmw")]
     [Description(@"Dissenter's rights are not applicable for this option of the offer.")]
-    DissenterRightsNotApplicable,
+    DissenterRightsNotApplicable = OfferTypeV2Code.DissenterRightsNotApplicable, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Offer made by the offeror for a portion of the outstanding shares not already owned by the offeror.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
     /// </summary>
     [EnumMember(Value = "PART")]
-    [IsoId("_PKP7yS84EeKNZpaVtgp8Wg")]
+    [IsoId("_7scvZ_H4EfCS-OXqezZQmw")]
     [Description(
         @"Offer made by the offeror for a portion of the outstanding shares not already owned by the offeror."
     )]
-    PartialOffer,
+    PartialOffer = OfferTypeV2Code.PartialOffer, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Offer launched by a company, in possession of a large number of the shares (90% - 95%) of a company (generally as a result of a tender offer), in order to acquire the remaining shares of that company.
     /// Encoded/decoded by serializers as &quot;SQUE&quot;.
     /// </summary>
     [EnumMember(Value = "SQUE")]
-    [IsoId("_PKP7zS84EeKNZpaVtgp8Wg")]
+    [IsoId("_7scvafH4EfCS-OXqezZQmw")]
     [Description(
         @"Offer launched by a company, in possession of a large number of the shares (90% - 95%) of a company (generally as a result of a tender offer), in order to acquire the remaining shares of that company."
     )]
-    SqueezeOutBid,
+    SqueezeOutBid = OfferTypeV2Code.SqueezeOutBid, // same ordinal as derivation source for type conversions
 }

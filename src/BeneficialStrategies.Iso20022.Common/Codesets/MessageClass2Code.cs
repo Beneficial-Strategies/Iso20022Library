@@ -11,99 +11,81 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 /// </summary>
 [DataContract]
 [Serializable]
-[IsoId("_yUpw0Bs_EeqrvK3udMUsNQ")]
+[IsoId("_yAHa4WvbEfCyxsm1jzUNug")]
 [Description(@"Identifies a class of messages with the same high level function.")]
-[Derivations(typeof(MessageClass1Code), typeof(MessageClass2Code))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageClassCode>))]
-public enum MessageClassCode
+[DerivedFrom(typeof(MessageClassCode))]
+[JsonConverter(typeof(Iso20022EnumJsonConverter<MessageClass2Code>))]
+public enum MessageClass2Code
 {
     /// <summary>
     /// Addendum class of messages.
     /// Encoded/decoded by serializers as &quot;ADDE&quot;.
     /// </summary>
     [EnumMember(Value = "ADDE")]
-    [IsoId("_5ZRNoBtAEeqrvK3udMUsNQ")]
+    [IsoId("_yCYrwWvbEfCyxsm1jzUNug")]
     [Description(@"Addendum class of messages.")]
-    Addendum,
+    Addendum = MessageClassCode.Addendum, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Amendment class of messages.
     /// Encoded/decoded by serializers as &quot;AMDT&quot;.
     /// </summary>
     [EnumMember(Value = "AMDT")]
-    [IsoId("_EOQaMBtBEeqrvK3udMUsNQ")]
+    [IsoId("_yCYrw2vbEfCyxsm1jzUNug")]
     [Description(@"Amendment class of messages.")]
-    Amendment,
+    Amendment = MessageClassCode.Amendment, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Authorisation class of messages.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
     /// </summary>
     [EnumMember(Value = "AUTH")]
-    [IsoId("_OBMT4BtBEeqrvK3udMUsNQ")]
+    [IsoId("_yCYrxWvbEfCyxsm1jzUNug")]
     [Description(@"Authorisation class of messages.")]
-    Authorisation,
-
-    /// <summary>
-    /// Card management class of messages.
-    /// Encoded/decoded by serializers as &quot;CMGT&quot;.
-    /// </summary>
-    [EnumMember(Value = "CMGT")]
-    [IsoId("_d8JUsBtBEeqrvK3udMUsNQ")]
-    [Description(@"Card management class of messages.")]
-    CardManagement,
+    Authorisation = MessageClassCode.Authorisation, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Charge back class of messages.
     /// Encoded/decoded by serializers as &quot;CBCK&quot;.
     /// </summary>
     [EnumMember(Value = "CBCK")]
-    [IsoId("_okyuYBtBEeqrvK3udMUsNQ")]
+    [IsoId("_yCYryWvbEfCyxsm1jzUNug")]
     [Description(@"Charge back class of messages.")]
-    ChargeBack,
+    ChargeBack = MessageClassCode.ChargeBack, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Card management class of messages.
+    /// Encoded/decoded by serializers as &quot;CMGT&quot;.
+    /// </summary>
+    [EnumMember(Value = "CMGT")]
+    [IsoId("_yCYrx2vbEfCyxsm1jzUNug")]
+    [Description(@"Card management class of messages.")]
+    CardManagement = MessageClassCode.CardManagement, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Fee collection class of messages.
     /// Encoded/decoded by serializers as &quot;FEEC&quot;.
     /// </summary>
     [EnumMember(Value = "FEEC")]
-    [IsoId("_vc3ZcBtBEeqrvK3udMUsNQ")]
+    [IsoId("_yCYry2vbEfCyxsm1jzUNug")]
     [Description(@"Fee collection class of messages.")]
-    FeeCollection,
+    FeeCollection = MessageClassCode.FeeCollection, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Financial class of messages.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
     /// </summary>
     [EnumMember(Value = "FINL")]
-    [IsoId("_3EZLgBtBEeqrvK3udMUsNQ")]
+    [IsoId("_yCYrzWvbEfCyxsm1jzUNug")]
     [Description(@"Financial class of messages.")]
-    Financial,
-
-    /// <summary>
-    /// Inquiry class of messages.
-    /// Encoded/decoded by serializers as &quot;INQY&quot;.
-    /// </summary>
-    [EnumMember(Value = "INQY")]
-    [IsoId("_8m6_8BtBEeqrvK3udMUsNQ")]
-    [Description(@"Inquiry class of messages.")]
-    Inquiry,
-
-    /// <summary>
-    /// Verification class of messages.
-    /// Encoded/decoded by serializers as &quot;VERI&quot;.
-    /// </summary>
-    [EnumMember(Value = "VERI")]
-    [IsoId("_BKOMABtCEeqrvK3udMUsNQ")]
-    [Description(@"Verification class of messages.")]
-    Verification,
+    Financial = MessageClassCode.Financial, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Inquiry verification class of messages.
     /// Encoded/decoded by serializers as &quot;INVR&quot;.
     /// </summary>
     [EnumMember(Value = "INVR")]
-    [IsoId("_FZrQkGvcEfCyxsm1jzUNug")]
+    [IsoId("_yCYrz2vbEfCyxsm1jzUNug")]
     [Description(@"Inquiry verification class of messages")]
-    InquiryVerification,
+    InquiryVerification = MessageClassCode.InquiryVerification, // same ordinal as derivation source for type conversions
 }

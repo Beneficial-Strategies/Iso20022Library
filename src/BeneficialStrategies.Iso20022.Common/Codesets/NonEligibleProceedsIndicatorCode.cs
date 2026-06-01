@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aNmactp-Ed-ak6NoX_4Aeg_975102968")]
 [Description(@"Specifies information regarding the non eligibility of the outturn resources.")]
-[Derivations(typeof(NonEligibleProceedsIndicator1Code))]
+[Derivations(typeof(NonEligibleProceedsIndicator1Code), typeof(NonEligibleProceedsIndicator2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<NonEligibleProceedsIndicatorCode>))]
 public enum NonEligibleProceedsIndicatorCode
 {

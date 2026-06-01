@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 9 complete)
+- **Last updated**: 2026-06-01 (batch 10 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -192,26 +192,26 @@
 - [x] `LotteryFeatureTypeCode` — `Codesets/LotteryFeatureTypeCode.cs` (NEW BASE, 4 members)
 - [x] `MOTO2Code` — `Codesets/MOTO2Code.cs` (3 members, DerivedFrom MOTOV2Code)
 - [x] `MOTOV2Code` — `Codesets/MOTOV2Code.cs` (NEW BASE, 3 members; created as dependency for MOTO2Code)
-- [ ] `MessageClass2Code` — `Codesets/MessageClass2Code.cs`
-- [ ] `NationalityCode` — `Codesets/NationalityCode.cs`
-- [ ] `NonEligibleProceedsIndicator2Code` — `Codesets/NonEligibleProceedsIndicator2Code.cs`
-- [ ] `OfferType5Code` — `Codesets/OfferType5Code.cs`
-- [ ] `OfferType6Code` — `Codesets/OfferType6Code.cs`
-- [ ] `OfferType7Code` — `Codesets/OfferType7Code.cs`
-- [ ] `OfficialDocumentType2Code` — `Codesets/OfficialDocumentType2Code.cs`
-- [ ] `OptionFeatures15Code` — `Codesets/OptionFeatures15Code.cs`
-- [ ] `OrderEventType1Code` — `Codesets/OrderEventType1Code.cs`
-- [ ] `OrderEventTypeCode` — `Codesets/OrderEventTypeCode.cs`
-- [ ] `OrderRestrictionType1Code` — `Codesets/OrderRestrictionType1Code.cs`
-- [ ] `OrderRestrictionTypeCode` — `Codesets/OrderRestrictionTypeCode.cs`
-- [ ] `OrderStatus10Code` — `Codesets/OrderStatus10Code.cs`
-- [ ] `OrderStatus11Code` — `Codesets/OrderStatus11Code.cs`
-- [ ] `OrderType3Code` — `Codesets/OrderType3Code.cs`
-- [ ] `OutputFormat6Code` — `Codesets/OutputFormat6Code.cs`
-- [ ] `OutputFormat7Code` — `Codesets/OutputFormat7Code.cs`
-- [ ] `POIComponentType7Code` — `Codesets/POIComponentType7Code.cs`
-- [ ] `ParentCurrencyCode` — `Codesets/ParentCurrencyCode.cs`
-- [ ] `PartyExceptionType1Code` — `Codesets/PartyExceptionType1Code.cs`
+- [x] `MessageClass2Code` — `Codesets/MessageClass2Code.cs` (8 members; added INVR to base first)
+- [x] `NationalityCode` — confirmed string alias (0 codes, correct)
+- [x] `NonEligibleProceedsIndicator2Code` — `Codesets/NonEligibleProceedsIndicator2Code.cs` (4 members)
+- [x] `OfferType5Code` — `Codesets/OfferType5Code.cs` (8 members; added ACPR to base first)
+- [x] `OfferType6Code` — `Codesets/OfferType6Code.cs` (6 members)
+- [x] `OfferType7Code` — `Codesets/OfferType7Code.cs` (7 members)
+- [x] `OfficialDocumentType2Code` — `Codesets/OfficialDocumentType2Code.cs` (13 members)
+- [x] `OptionFeatures15Code` — `Codesets/OptionFeatures15Code.cs` (16 members; added FCFS to base, fixed RGRS/RNET IsoIds)
+- [x] `OrderEventType1Code` — `Codesets/OrderEventType1Code.cs` (15 members)
+- [x] `OrderEventTypeCode` — `Codesets/OrderEventTypeCode.cs` (NEW BASE, 15 members)
+- [x] `OrderRestrictionType1Code` — `Codesets/OrderRestrictionType1Code.cs` (3 members)
+- [x] `OrderRestrictionTypeCode` — `Codesets/OrderRestrictionTypeCode.cs` (NEW BASE, 3 members)
+- [x] `OrderStatus10Code` — `Codesets/OrderStatus10Code.cs` (3 members)
+- [x] `OrderStatus11Code` — `Codesets/OrderStatus11Code.cs` (4 members)
+- [x] `OrderType3Code` — `Codesets/OrderType3Code.cs` (2 members)
+- [x] `OutputFormat6Code` — `Codesets/OutputFormat6Code.cs` (6 members)
+- [x] `OutputFormat7Code` — `Codesets/OutputFormat7Code.cs` (12 members)
+- [x] `POIComponentType7Code` — `Codesets/POIComponentType7Code.cs` (25 members; added Probe to base first)
+- [x] `ParentCurrencyCode` — confirmed string alias (pattern-constrained, correct)
+- [x] `PartyExceptionType1Code` — `Codesets/PartyExceptionType1Code.cs` (2 members)
 - [ ] `PartyExceptionTypeCode` — `Codesets/PartyExceptionTypeCode.cs`
 - [ ] `PartyType35Code` — `Codesets/PartyType35Code.cs`
 - [ ] `PartyVerificationScopeCode` — `Codesets/PartyVerificationScopeCode.cs`
