@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 7 complete)
+- **Last updated**: 2026-06-01 (batch 8 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -151,26 +151,26 @@
 - [x] `ISO3ACountryCode` — (pattern-constrained string alias in GlobalUsings.cs)
 - [x] `ISO3NumericCountryCode` — (pattern-constrained string alias in GlobalUsings.cs)
 - [x] `ISO3NumericCurrencyCode` — (pattern-constrained string alias in GlobalUsings.cs)
-- [ ] `ISO8583AccountEntryDeviceTypeCode` — `Codesets/ISO8583AccountEntryDeviceTypeCode.cs`
-- [ ] `ISO8583AccountIdentifierTypeCode` — `Codesets/ISO8583AccountIdentifierTypeCode.cs`
-- [ ] `ISO8583AccountTypeCode` — `Codesets/ISO8583AccountTypeCode.cs`
-- [ ] `ISO8583ActionCode` — `Codesets/ISO8583ActionCode.cs`
-- [ ] `ISO8583AdditionalServiceResultCode` — `Codesets/ISO8583AdditionalServiceResultCode.cs`
-- [ ] `ISO8583AmountTypeCode` — `Codesets/ISO8583AmountTypeCode.cs`
-- [ ] `ISO8583FeeTypeCode` — `Codesets/ISO8583FeeTypeCode.cs`
-- [ ] `ISO8583MessageErrorCode` — `Codesets/ISO8583MessageErrorCode.cs`
-- [ ] `ISO8583MessageReasonCode` — `Codesets/ISO8583MessageReasonCode.cs`
-- [ ] `ISO8583NetworkManagementInformationCode` — `Codesets/ISO8583NetworkManagementInformationCode.cs`
-- [ ] `ISO8583PINEntryCapabilityCode` — `Codesets/ISO8583PINEntryCapabilityCode.cs`
-- [ ] `ISO8583POSConditionCode` — `Codesets/ISO8583POSConditionCode.cs`
-- [ ] `ISO8583ResponseCode` — `Codesets/ISO8583ResponseCode.cs`
-- [ ] `ISO8583ShippingIndicatorCode` — `Codesets/ISO8583ShippingIndicatorCode.cs`
-- [ ] `ISO8583TransactionTypeCode` — `Codesets/ISO8583TransactionTypeCode.cs`
-- [ ] `ISOCountrySubDivisionCode` — `Codesets/ISOCountrySubDivisionCode.cs`
-- [ ] `ISOMax3ACountryCode` — `Codesets/ISOMax3ACountryCode.cs`
-- [ ] `ISOMax3ALanguageCode` — `Codesets/ISOMax3ALanguageCode.cs`
-- [ ] `InstalmentAmountDetailsType3Code` — `Codesets/InstalmentAmountDetailsType3Code.cs`
-- [ ] `InstalmentAmountDetailsType4Code` — `Codesets/InstalmentAmountDetailsType4Code.cs`
+- [x] `ISO8583AccountEntryDeviceTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583AccountIdentifierTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583AccountTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583ActionCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583AdditionalServiceResultCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583AmountTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583FeeTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583MessageErrorCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583MessageReasonCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583NetworkManagementInformationCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583PINEntryCapabilityCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583POSConditionCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583ResponseCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583ShippingIndicatorCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISO8583TransactionTypeCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISOCountrySubDivisionCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISOMax3ACountryCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `ISOMax3ALanguageCode` — (pattern-constrained string alias in GlobalUsings.cs)
+- [x] `InstalmentAmountDetailsType3Code` — `Codesets/InstalmentAmountDetailsType3Code.cs` (13 members, DerivedFrom InstalmentAmountDetailsTypeCode; also fixed incorrect string alias)
+- [x] `InstalmentAmountDetailsType4Code` — `Codesets/InstalmentAmountDetailsType4Code.cs` (11 members, DerivedFrom InstalmentAmountDetailsTypeCode)
 - [ ] `InterestRateIndexTenorCode` — `Codesets/InterestRateIndexTenorCode.cs`
 - [ ] `IntermediateSecurityDistributionType6Code` — `Codesets/IntermediateSecurityDistributionType6Code.cs`
 - [ ] `IntermediateSecurityDistributionType7Code` — `Codesets/IntermediateSecurityDistributionType7Code.cs`
