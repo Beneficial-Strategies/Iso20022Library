@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 10 complete)
+- **Last updated**: 2026-06-01 (batch 13 complete: through RejectionReason91Code)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -254,24 +254,24 @@
 - [x] `PriceCalculationMethod1Code` — `Codesets/PriceCalculationMethod1Code.cs`
 - [x] `PriceCalculationMethodCode` — `Codesets/PriceCalculationMethodCode.cs`
 - [x] `ProcessedStatus7Code` — `Codesets/ProcessedStatus7Code.cs`
-- [ ] `ProrationBelowMinimumQuantity2Code` — `Codesets/ProrationBelowMinimumQuantity2Code.cs`
-- [ ] `ProtectionMethod2Code` — `Codesets/ProtectionMethod2Code.cs`
-- [ ] `PurchaseIdentifierType2Code` — `Codesets/PurchaseIdentifierType2Code.cs`
-- [ ] `PurchaseIdentifierType3Code` — `Codesets/PurchaseIdentifierType3Code.cs`
-- [ ] `QRCodePresentmentMode2Code` — `Codesets/QRCodePresentmentMode2Code.cs`
-- [ ] `RateType14Code` — `Codesets/RateType14Code.cs`
-- [ ] `RecommendedActionCode1` — `Codesets/RecommendedActionCode1.cs`
-- [ ] `ReconciliationActivityType2Code` — `Codesets/ReconciliationActivityType2Code.cs`
-- [ ] `ReconciliationCategory2Code` — `Codesets/ReconciliationCategory2Code.cs`
-- [ ] `RedemptionAnnouncementNoticeType1Code` — `Codesets/RedemptionAnnouncementNoticeType1Code.cs`
-- [ ] `RedemptionAnnouncementNoticeTypeCode` — `Codesets/RedemptionAnnouncementNoticeTypeCode.cs`
-- [ ] `RejectedStatusReason14Code` — `Codesets/RejectedStatusReason14Code.cs`
-- [ ] `RejectedStatusReason15Code` — `Codesets/RejectedStatusReason15Code.cs`
-- [ ] `RejectionReason87Code` — `Codesets/RejectionReason87Code.cs`
-- [ ] `RejectionReason88Code` — `Codesets/RejectionReason88Code.cs`
-- [ ] `RejectionReason89Code` — `Codesets/RejectionReason89Code.cs`
-- [ ] `RejectionReason90Code` — `Codesets/RejectionReason90Code.cs`
-- [ ] `RejectionReason91Code` — `Codesets/RejectionReason91Code.cs`
+- [x] `ProrationBelowMinimumQuantity2Code` — `Codesets/ProrationBelowMinimumQuantity2Code.cs`
+- [x] `ProtectionMethod2Code` — `Codesets/ProtectionMethod2Code.cs`
+- [x] `PurchaseIdentifierType2Code` — `Codesets/PurchaseIdentifierType2Code.cs`
+- [x] `PurchaseIdentifierType3Code` — `Codesets/PurchaseIdentifierType3Code.cs`
+- [x] `QRCodePresentmentMode2Code` — `Codesets/QRCodePresentmentMode2Code.cs`
+- [x] `RateType14Code` — `Codesets/RateType14Code.cs`
+- [x] `RecommendedActionCode1` — `Codesets/RecommendedActionCode1.cs`
+- [x] `ReconciliationActivityType2Code` — `Codesets/ReconciliationActivityType2Code.cs`
+- [x] `ReconciliationCategory2Code` — `Codesets/ReconciliationCategory2Code.cs`
+- [x] `RedemptionAnnouncementNoticeType1Code` — `Codesets/RedemptionAnnouncementNoticeType1Code.cs`
+- [x] `RedemptionAnnouncementNoticeTypeCode` — `Codesets/RedemptionAnnouncementNoticeTypeCode.cs`
+- [x] `RejectedStatusReason14Code` — `Codesets/RejectedStatusReason14Code.cs`
+- [x] `RejectedStatusReason15Code` — `Codesets/RejectedStatusReason15Code.cs`
+- [x] `RejectionReason87Code` — `Codesets/RejectionReason87Code.cs`
+- [x] `RejectionReason88Code` — `Codesets/RejectionReason88Code.cs`
+- [x] `RejectionReason89Code` — `Codesets/RejectionReason89Code.cs`
+- [x] `RejectionReason90Code` — `Codesets/RejectionReason90Code.cs`
+- [x] `RejectionReason91Code` — `Codesets/RejectionReason91Code.cs`
 - [ ] `Response12Code` — `Codesets/Response12Code.cs`
 - [ ] `ResultDetail5Code` — `Codesets/ResultDetail5Code.cs`
 - [ ] `ReturnedStatus1Code` — `Codesets/ReturnedStatus1Code.cs`
@@ -356,11 +356,11 @@
 - [ ] `OptionFeaturesCode` — add: FCFS
 - [ ] `OriginatorRoleCode` — add: MSGM, RMQI
 - [ ] `PartyExceptionTypeCode` — add: INTC
-- [ ] `PartyTypeCode` — add: MKTP, PFAC
-- [ ] `PendingFailingReasonV2Code` — add: ECRD, WCTF
-- [ ] `ProrationBelowMinimumQuantityCode` — add: MILD, MILU
-- [ ] `RateTypeCode` — add: JLID
-- [ ] `RejectionReasonV3Code` — add: ADIM, CER0, DEFE, DEPO, DSNA, DUCK, DUEV, DUST, EFDM, FAS0, INSA, LOCK, MINC, NACD, NCON, NDEF, NMOD, NREF, ONCV, PR1K, PRIN, PUBD, REFR, REFU, SEEQ, UNDI, UNDM
+- [x] `PartyTypeCode` — add: MKTP, PFAC
+- [x] `PendingFailingReasonV2Code` — add: ECRD, WCTF
+- [x] `ProrationBelowMinimumQuantityCode` — add: MILD, MILU
+- [x] `RateTypeCode` — add: JLID
+- [x] `RejectionReasonV3Code` — add: ADIM, CER0, DEFE, DEPO, DSNA, DUCK, DUEV, DUST, EFDM, FAS0, INSA, LOCK, MINC, NACD, NCON, NDEF, NMOD, NREF, ONCV, PR1K, PRIN, PUBD, REFR, REFU, SEEQ, UNDI, UNDM
 - [ ] `SecuritiesTransactionTypeCode` — add: AUCT, PPLC
 - [ ] `SecurityStatusCode` — add: HALT, RMOV
 - [ ] `ServiceLevelCode` — add: SPSC

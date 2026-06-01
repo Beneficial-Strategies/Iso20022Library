@@ -17,7 +17,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ResultDetail1Code),
     typeof(ResultDetail2Code),
     typeof(ResultDetail3Code),
-    typeof(ResultDetail4Code)
+    typeof(ResultDetail4Code),
+    typeof(ResultDetail5Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ResultDetailCode>))]
 public enum ResultDetailCode
@@ -949,4 +950,49 @@ public enum ResultDetailCode
     [IsoId("_kTHXUK2AEeWMg5rOByfExw")]
     [Description(@"The requested service is not allowed.")]
     InvalidService,
+
+    /// <summary>
+    /// Cardholder agrees with the dynamic currency conversion.
+    /// Encoded/decoded by serializers as &quot;ADCC&quot;.
+    /// </summary>
+    [EnumMember(Value = "ADCC")]
+    [IsoId("_V5et4Jw2Ee--557UVrMuSQ")]
+    [Description(@"Cardholder agrees with the dynamic currency conversion.")]
+    AgreeDCC,
+
+    /// <summary>
+    /// Cardholder agrees with the fee.
+    /// Encoded/decoded by serializers as &quot;AGFE&quot;.
+    /// </summary>
+    [EnumMember(Value = "AGFE")]
+    [IsoId("_Nci90Jw2Ee--557UVrMuSQ")]
+    [Description(@"Cardholder agrees with the fee.")]
+    AgreeFee,
+
+    /// <summary>
+    /// Account matches multiple accounts.
+    /// Encoded/decoded by serializers as &quot;AMMA&quot;.
+    /// </summary>
+    [EnumMember(Value = "AMMA")]
+    [IsoId("_JR_B4Jw2Ee--557UVrMuSQ")]
+    [Description(@"Account matches multiple accounts.")]
+    AccountMatchesMultipleAccounts,
+
+    /// <summary>
+    /// Fee is missing.
+    /// Encoded/decoded by serializers as &quot;FEEM&quot;.
+    /// </summary>
+    [EnumMember(Value = "FEEM")]
+    [IsoId("_RDMoEKjyEe--FqfI7l8ySw")]
+    [Description(@"Fee is missing.")]
+    FeeMissing,
+
+    /// <summary>
+    /// Select account.
+    /// Encoded/decoded by serializers as &quot;SACT&quot;.
+    /// </summary>
+    [EnumMember(Value = "SACT")]
+    [IsoId("_RrAiUJw2Ee--557UVrMuSQ")]
+    [Description(@"Select account.")]
+    SelectAccount,
 }

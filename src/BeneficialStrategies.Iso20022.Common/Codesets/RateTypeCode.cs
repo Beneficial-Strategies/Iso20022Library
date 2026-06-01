@@ -24,7 +24,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RateValueType2Code),
     typeof(RateType12Code),
     typeof(RateType5Code),
-    typeof(RateType2Code)
+    typeof(RateType2Code),
+    typeof(RateType14Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<RateTypeCode>))]
 public enum RateTypeCode
@@ -307,4 +308,13 @@ public enum RateTypeCode
     [IsoId("_ZaMAhNp-Ed-ak6NoX_4Aeg_424605771")]
     [Description(@"Any and all rate is sought.")]
     AnyAndAll,
+
+    /// <summary>
+    /// Rate is at issuer discretion.
+    /// Encoded/decoded by serializers as &quot;JLID&quot;.
+    /// </summary>
+    [EnumMember(Value = "JLID")]
+    [IsoId("")]
+    [Description(@"Rate is at issuer discretion.")]
+    IssuerDiscretion,
 }

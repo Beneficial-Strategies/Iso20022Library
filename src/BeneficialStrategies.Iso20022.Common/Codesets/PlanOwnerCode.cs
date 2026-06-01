@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_799uQNuJEei2qvU6FBLZYA")]
 [Description(@"Contains list of plan owners")]
-[Derivations(typeof(PlanOwner1Code))]
+[Derivations(typeof(PlanOwner1Code), typeof(PlanOwner2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PlanOwnerCode>))]
 public enum PlanOwnerCode
 {

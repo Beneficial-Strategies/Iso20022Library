@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("__9T08IC_Ee-eGe8fbP3Zug")]
 [Description(@"Specifies the type of proration when below the minimum quantity to instruct.")]
-[Derivations(typeof(ProrationBelowMinimumQuantity1Code))]
+[Derivations(
+    typeof(ProrationBelowMinimumQuantity1Code),
+    typeof(ProrationBelowMinimumQuantity2Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ProrationBelowMinimumQuantityCode>))]
 public enum ProrationBelowMinimumQuantityCode
 {
@@ -49,6 +52,28 @@ public enum ProrationBelowMinimumQuantityCode
         @"Instructions will be accepted but rounded up or down to the specified minimum multiple quantity."
     )]
     MultipleQuantity,
+
+    /// <summary>
+    /// Instructions will be accepted but rounded down to the nearest minimum multiple quantity.
+    /// Encoded/decoded by serializers as &quot;MILD&quot;.
+    /// </summary>
+    [EnumMember(Value = "MILD")]
+    [IsoId("")]
+    [Description(
+        @"Instructions will be accepted but rounded down to the nearest minimum multiple quantity."
+    )]
+    RoundDown,
+
+    /// <summary>
+    /// Instructions will be accepted but rounded up to the nearest minimum multiple quantity.
+    /// Encoded/decoded by serializers as &quot;MILU&quot;.
+    /// </summary>
+    [EnumMember(Value = "MILU")]
+    [IsoId("")]
+    [Description(
+        @"Instructions will be accepted but rounded up to the nearest minimum multiple quantity."
+    )]
+    RoundUp,
 
     /// <summary>
     /// Instructions will be rejected.

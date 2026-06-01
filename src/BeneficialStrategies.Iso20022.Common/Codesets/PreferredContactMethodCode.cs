@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_6UHyCJqlEeGSON8vddiWzQ_1695397384")]
 [Description(@"Preferred method used to reach the individual contact within an organisation.")]
-[Derivations(typeof(PreferredContactMethod1Code))]
+[Derivations(typeof(PreferredContactMethod1Code), typeof(PreferredContactMethod2Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PreferredContactMethodCode>))]
 public enum PreferredContactMethodCode
 {
@@ -61,4 +61,13 @@ public enum PreferredContactMethodCode
     [IsoId("_6URjA5qlEeGSON8vddiWzQ_-2097794174")]
     [Description(@"Preferred method used to reach the contact is per mobile or cell phone.")]
     MobileOrCellPhone,
+
+    /// <summary>
+    /// Preferred method used to reach the contact is online.
+    /// Encoded/decoded by serializers as &quot;ONLI&quot;.
+    /// </summary>
+    [EnumMember(Value = "ONLI")]
+    [IsoId("_ysyK8DICEe6mzvR3CHiUhA")]
+    [Description(@"Preferred method used to reach the contact is online.")]
+    Online,
 }

@@ -19,7 +19,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ProcessedStatus3Code),
     typeof(ProcessedStatus5Code),
     typeof(ProcessedStatus1Code),
-    typeof(ProcessedStatus2Code)
+    typeof(ProcessedStatus2Code),
+    typeof(ProcessedStatus7Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<CorporateActionProcessedStatusCode>))]
 public enum CorporateActionProcessedStatusCode
@@ -88,4 +89,13 @@ public enum CorporateActionProcessedStatusCode
         @"The announcement has been accepted but another source has provided different information."
     )]
     AcceptedWithWarning,
+
+    /// <summary>
+    /// System is not available. Instruction is sent outside of business hours.
+    /// Encoded/decoded by serializers as &quot;SNAV&quot;.
+    /// </summary>
+    [EnumMember(Value = "SNAV")]
+    [IsoId("_9BpT4FutEe6gDOpEK7Q4ig")]
+    [Description(@"System is not available. Instruction is sent outside of business hours.")]
+    SystemNotAvailable,
 }

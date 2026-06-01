@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ikZkgCX_Eeym0KcvJF9aDQ")]
 [Description(@"Code to indicate the activity type to be reconciled")]
-[Derivations(typeof(ReconciliationActivityType1Code))]
+[Derivations(
+    typeof(ReconciliationActivityType1Code),
+    typeof(ReconciliationActivityType2Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationActivityTypeCode>))]
 public enum ReconciliationActivityTypeCode
 {

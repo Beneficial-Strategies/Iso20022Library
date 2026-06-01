@@ -13,7 +13,11 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_dsO7g_JOEeiJn9rM2Znz2w")]
 [Description(@"Identifies the type of identifier used in the Purchase Identifier field. ")]
-[Derivations(typeof(PurchaseIdentifierType1Code))]
+[Derivations(
+    typeof(PurchaseIdentifierType1Code),
+    typeof(PurchaseIdentifierType2Code),
+    typeof(PurchaseIdentifierType3Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PurchaseIdentifierTypeCode>))]
 public enum PurchaseIdentifierTypeCode
 {
@@ -180,6 +184,15 @@ public enum PurchaseIdentifierTypeCode
         @"Transaction Identification is a proprietary value provided by the card acceptor or acquirer to uniquely identify a given transaction. "
     )]
     TransactionIdentification,
+
+    /// <summary>
+    /// Transaction Reference
+    /// Encoded/decoded by serializers as &quot;TREF&quot;.
+    /// </summary>
+    [EnumMember(Value = "TREF")]
+    [IsoId("_6hqt4G6aEe6DxcrvCrq6hQ")]
+    [Description(@"Transaction Reference")]
+    TransactionReference,
 
     /// <summary>
     /// Tracking Number

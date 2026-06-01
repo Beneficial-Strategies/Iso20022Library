@@ -40,7 +40,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(PartyType25Code),
     typeof(PartyType32Code),
     typeof(PartyType14Code),
-    typeof(PartyType13Code)
+    typeof(PartyType13Code),
+    typeof(PartyType35Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PartyTypeCode>))]
 public enum PartyTypeCode
@@ -608,4 +609,22 @@ public enum PartyTypeCode
     [IsoId("_dY4eZXyKEemHsOqJOzMVfg")]
     [Description(@"Provider of an electronic wallet")]
     WalletProvider,
+
+    /// <summary>
+    /// Marketplace providing payment acceptance services on behalf of a merchant.
+    /// Encoded/decoded by serializers as &quot;MKTP&quot;.
+    /// </summary>
+    [EnumMember(Value = "MKTP")]
+    [IsoId("_zgN2cJ_2EfC4Q_xhaK1hdQ")]
+    [Description(@"Marketplace providing payment acceptance services on behalf of a merchant.")]
+    Marketplace,
+
+    /// <summary>
+    /// Payment facilitator providing payment acceptance services on behalf of a merchant.
+    /// Encoded/decoded by serializers as &quot;PFAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "PFAC")]
+    [IsoId("_0rXlgJ_3EfC4Q_xhaK1hdQ")]
+    [Description(@"Payment facilitator providing payment acceptance services on behalf of a merchant.")]
+    PaymentFacilitator,
 }

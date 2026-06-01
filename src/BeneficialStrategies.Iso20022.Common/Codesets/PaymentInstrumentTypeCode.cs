@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_MoMKoNxgEeioifFt1dhnJA")]
 [Description(@"Type of payment instrument.")]
-[Derivations(typeof(PaymentInstrumentType1Code))]
+[Derivations(
+    typeof(PaymentInstrumentType1Code),
+    typeof(PaymentInstrumentType2Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PaymentInstrumentTypeCode>))]
 public enum PaymentInstrumentTypeCode
 {
@@ -61,4 +64,37 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_ci9lQNxgEeioifFt1dhnJA")]
     [Description(@"Account using loyalty processing.")]
     LoyaltyAccount,
+
+    /// <summary>
+    /// Payment made by transferring an amount of money from a debtor to a creditor.
+    /// Encoded/decoded by serializers as &quot;CRTF&quot;.
+    /// </summary>
+    [EnumMember(Value = "CRTF")]
+    [IsoId("_Yi8f8Jw1Ee--557UVrMuSQ")]
+    [Description(
+        @"Payment made by transferring an amount of money from a debtor to a creditor. The payment flows through one or more financial institutions or systems."
+    )]
+    CreditTransfer,
+
+    /// <summary>
+    /// Payment, initiated by the creditor, to debit a debtor's account in favour of the creditor.
+    /// Encoded/decoded by serializers as &quot;DRDT&quot;.
+    /// </summary>
+    [EnumMember(Value = "DRDT")]
+    [IsoId("_UUjM4Jw1Ee--557UVrMuSQ")]
+    [Description(
+        @"Payment, initiated by the creditor, to debit a debtor's account in favour of the creditor. A direct debit can be pre-authorised or not. In most countries, authorisation is in the form of a mandate between the debtor and creditor."
+    )]
+    DirectDebit,
+
+    /// <summary>
+    /// Bond of the redeemable transaction type which is worth a certain monetary value and which may be spent only for specific reasons or on specific goods.
+    /// Encoded/decoded by serializers as &quot;VCHR&quot;.
+    /// </summary>
+    [EnumMember(Value = "VCHR")]
+    [IsoId("_cxargJw1Ee--557UVrMuSQ")]
+    [Description(
+        @"Bond of the redeemable transaction type which is worth a certain monetary value and which may be spent only for specific reasons or on specific goods."
+    )]
+    PaymentVoucher,
 }

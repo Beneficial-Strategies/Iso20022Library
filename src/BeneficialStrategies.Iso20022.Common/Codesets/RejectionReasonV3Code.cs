@@ -48,7 +48,14 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RejectionReason52Code),
     typeof(RejectionReason50Code),
     typeof(RejectionReason58Code),
-    typeof(RejectionReason57Code)
+    typeof(RejectionReason57Code),
+    typeof(PendingCancellationReason8Code),
+    typeof(PendingCancellationReason9Code),
+    typeof(RejectionReason87Code),
+    typeof(RejectionReason88Code),
+    typeof(RejectionReason89Code),
+    typeof(RejectionReason90Code),
+    typeof(RejectionReason91Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<RejectionReasonV3Code>))]
 public enum RejectionReasonV3Code
@@ -2616,4 +2623,292 @@ public enum RejectionReasonV3Code
     [IsoId("")]
     [Description(@"Proration rate is missing.")]
     MissingProrationRate,
+
+    /// <summary>
+    /// Received after the election to counterparty response market deadline.
+    /// Encoded/decoded by serializers as &quot;ECRD&quot;.
+    /// </summary>
+    [EnumMember(Value = "ECRD")]
+    [IsoId("_JhAaIBXsEfCxL6UOgkdrJg")]
+    [Description(@"Received after the election to counterparty response market deadline.")]
+    ElectionToCounterpartyResponseDeadlineMissed,
+
+    /// <summary>
+    /// Pending acceptance from the counterparty.
+    /// Encoded/decoded by serializers as &quot;PCAT&quot;.
+    /// </summary>
+    [EnumMember(Value = "PCAT")]
+    [IsoId("_LZmKkN8REe-NrtAAlrBEgQ")]
+    [Description(@"Pending acceptance from the counterparty.")]
+    PendingCounterpartyAcceptance,
+
+    /// <summary>
+    /// Instruction is not supported or not allowed.
+    /// Encoded/decoded by serializers as &quot;INSA&quot;.
+    /// </summary>
+    [EnumMember(Value = "INSA")]
+    [IsoId("_8OXx4K22EfCN-rGCydxGUA")]
+    [Description(@"Instruction is not supported or not allowed.")]
+    InstructionNotSupportedOrAllowed,
+
+    /// <summary>
+    /// Additional disclosure information is missing.
+    /// Encoded/decoded by serializers as &quot;ADIM&quot;.
+    /// </summary>
+    [EnumMember(Value = "ADIM")]
+    [IsoId("_5C3NQKjWEfCzuLlmLrhIvA")]
+    [Description(@"Additional disclosure information is missing.")]
+    AdditionalDisclosureInformationMissing,
+
+    /// <summary>
+    /// Missing or incorrect entitlement fixing date.
+    /// Encoded/decoded by serializers as &quot;EFDM&quot;.
+    /// </summary>
+    [EnumMember(Value = "EFDM")]
+    [IsoId("_hDTc0KjWEfCzuLlmLrhIvA")]
+    [Description(@"Missing or incorrect entitlement fixing date.")]
+    MissingOrIncorrectEntitlementFixingDate,
+
+    /// <summary>
+    /// Missing investor classification details.
+    /// Encoded/decoded by serializers as &quot;MINC&quot;.
+    /// </summary>
+    [EnumMember(Value = "MINC")]
+    [IsoId("_JsqREKjXEfCzuLlmLrhIvA")]
+    [Description(@"Missing investor classification details.")]
+    MissingInvestorClassificationDetails,
+
+    /// <summary>
+    /// Email address is missing or not accepted.
+    /// Encoded/decoded by serializers as &quot;NACD&quot;.
+    /// </summary>
+    [EnumMember(Value = "NACD")]
+    [IsoId("_wB9OcKjLEfCzuLlmLrhIvA")]
+    [Description(@"Email address is missing or not accepted.")]
+    NotAcceptedEmailAddressMissing,
+
+    /// <summary>
+    /// Certificate Amount must be greater than zero.
+    /// Encoded/decoded by serializers as &quot;CER0&quot;.
+    /// </summary>
+    [EnumMember(Value = "CER0")]
+    [IsoId("_TLa5wKUiEfCnE_wCEfCqTA")]
+    [Description(@"Certificate Amount must be greater than zero.")]
+    CertificateAmountGreaterZero,
+
+    /// <summary>
+    /// Invalid Defeased Security Identifier.
+    /// Encoded/decoded by serializers as &quot;DEFE&quot;.
+    /// </summary>
+    [EnumMember(Value = "DEFE")]
+    [IsoId("_BxqYoKUiEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Defeased Security Identifier.")]
+    InvalidDefeasedSecurityIdentifier,
+
+    /// <summary>
+    /// Depository Called Amount must be greater than zero and must be equal to Security Called Amount.
+    /// Encoded/decoded by serializers as &quot;DEPO&quot;.
+    /// </summary>
+    [EnumMember(Value = "DEPO")]
+    [IsoId("_Ck9BUKUjEfCnE_wCEfCqTA")]
+    [Description(@"Depository Called Amount must be greater than zero and must be equal to Security Called Amount.")]
+    DepositoryCalledAmountEqualSecurityCalledAmount,
+
+    /// <summary>
+    /// Underlying transaction type/status does not allow for a buyer protection.
+    /// Encoded/decoded by serializers as &quot;DSNA&quot;.
+    /// </summary>
+    [EnumMember(Value = "DSNA")]
+    [IsoId("_Z-LKYDPsEfCIZLORDJsr-g")]
+    [Description(@"Underlying transaction type/status does not allow for a buyer protection.")]
+    NoBuyerProtectionAllowed,
+
+    /// <summary>
+    /// Buyer Protection instruction rejected since underlying settlement transaction has been cancelled.
+    /// Encoded/decoded by serializers as &quot;DUCK&quot;.
+    /// </summary>
+    [EnumMember(Value = "DUCK")]
+    [IsoId("_-YFYIDPrEfCIZLORDJsr-g")]
+    [Description(@"Buyer Protection instruction rejected since underlying settlement transaction has been cancelled.")]
+    UnderlyingTransactionCancelled,
+
+    /// <summary>
+    /// Duplicate event exists.
+    /// Encoded/decoded by serializers as &quot;DUEV&quot;.
+    /// </summary>
+    [EnumMember(Value = "DUEV")]
+    [IsoId("_Q0nlAKUjEfCnE_wCEfCqTA")]
+    [Description(@"Duplicate event exists.")]
+    DuplicateEvent,
+
+    /// <summary>
+    /// Buyer Protection instruction was rejected, because the underlying settlement transaction has already been settled.
+    /// Encoded/decoded by serializers as &quot;DUST&quot;.
+    /// </summary>
+    [EnumMember(Value = "DUST")]
+    [IsoId("_sIDWUDPrEfCIZLORDJsr-g")]
+    [Description(@"Buyer Protection instruction was rejected, because the underlying settlement transaction has already been settled.")]
+    UnderlyingTransactionAlreadySettled,
+
+    /// <summary>
+    /// Received after the election to counterparty market deadline.
+    /// Encoded/decoded by serializers as &quot;ECMD&quot;.
+    /// </summary>
+    [EnumMember(Value = "ECMD")]
+    [IsoId("_bFIYMBXsEfCxL6UOgkdrJg")]
+    [Description(@"Received after the election to counterparty market deadline.")]
+    ElectionToCounterpartyMarketDeadlineMissed,
+
+    /// <summary>
+    /// Depository Called Amount must be greater than zero.
+    /// Encoded/decoded by serializers as &quot;FAS0&quot;.
+    /// </summary>
+    [EnumMember(Value = "FAS0")]
+    [IsoId("_prHZ8KUiEfCnE_wCEfCqTA")]
+    [Description(@"Depository Called Amount must be greater than zero.")]
+    DepositoryCalledAmountGreaterZero,
+
+    /// <summary>
+    /// Underlying Security has a global lock.
+    /// Encoded/decoded by serializers as &quot;LOCK&quot;.
+    /// </summary>
+    [EnumMember(Value = "LOCK")]
+    [IsoId("_ac8KIKUjEfCnE_wCEfCqTA")]
+    [Description(@"Underlying Security has a global lock.")]
+    GlobalLock,
+
+    /// <summary>
+    /// Convertible Security Not Supported.
+    /// Encoded/decoded by serializers as &quot;NCON&quot;.
+    /// </summary>
+    [EnumMember(Value = "NCON")]
+    [IsoId("_eRidIKUjEfCnE_wCEfCqTA")]
+    [Description(@"Convertible Security Not Supported.")]
+    ConvertibleSecurityNotSupported,
+
+    /// <summary>
+    /// Invalid Non-Defeased Security Identifier.
+    /// Encoded/decoded by serializers as &quot;NDEF&quot;.
+    /// </summary>
+    [EnumMember(Value = "NDEF")]
+    [IsoId("_ku7XUKUjEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Non-Defeased Security Identifier.")]
+    InvalidNonDefeasedSecurityIdentifier,
+
+    /// <summary>
+    /// Cancelled event cannot be modified.
+    /// Encoded/decoded by serializers as &quot;NMOD&quot;.
+    /// </summary>
+    [EnumMember(Value = "NMOD")]
+    [IsoId("_AHkjcKUkEfCnE_wCEfCqTA")]
+    [Description(@"Cancelled event cannot be modified.")]
+    CancelledEvent,
+
+    /// <summary>
+    /// Invalid Non-Refunded Security Identifier.
+    /// Encoded/decoded by serializers as &quot;NREF&quot;.
+    /// </summary>
+    [EnumMember(Value = "NREF")]
+    [IsoId("_FzeWUKUkEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Non-Refunded Security Identifier.")]
+    InvalidNonRefundedSecurityIdentifier,
+
+    /// <summary>
+    /// Ongoing Conversion Event Exists.
+    /// Encoded/decoded by serializers as &quot;ONCV&quot;.
+    /// </summary>
+    [EnumMember(Value = "ONCV")]
+    [IsoId("_UuZdgKUkEfCnE_wCEfCqTA")]
+    [Description(@"Ongoing Conversion Event Exists.")]
+    OngoingConversionEventExists,
+
+    /// <summary>
+    /// Zero Coupon Bond, Principal / Cash rate must be less than USD 1,000.00.
+    /// Encoded/decoded by serializers as &quot;PR1K&quot;.
+    /// </summary>
+    [EnumMember(Value = "PR1K")]
+    [IsoId("_YPFWAKUkEfCnE_wCEfCqTA")]
+    [Description(@"Zero Coupon Bond, Principal / Cash rate must be less than USD 1,000.00.")]
+    CashRateLessThanThousand,
+
+    /// <summary>
+    /// Invalid Principal Cash Rate.
+    /// Encoded/decoded by serializers as &quot;PRIN&quot;.
+    /// </summary>
+    [EnumMember(Value = "PRIN")]
+    [IsoId("_rUaBEKUkEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Principal Cash Rate.")]
+    InvalidPrincipalCashRate,
+
+    /// <summary>
+    /// Publication date must be earlier than payable date.
+    /// Encoded/decoded by serializers as &quot;PUBD&quot;.
+    /// </summary>
+    [EnumMember(Value = "PUBD")]
+    [IsoId("_uKVFUKUkEfCnE_wCEfCqTA")]
+    [Description(@"Publication date must be earlier than payable date.")]
+    PublicationDate,
+
+    /// <summary>
+    /// Invalid Notification Identification.
+    /// Encoded/decoded by serializers as &quot;REFR&quot;.
+    /// </summary>
+    [EnumMember(Value = "REFR")]
+    [IsoId("_41tp8KUkEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Notification Identification.")]
+    InvalidNotificationIdentification,
+
+    /// <summary>
+    /// Invalid Refunded Security Identifier.
+    /// Encoded/decoded by serializers as &quot;REFU&quot;.
+    /// </summary>
+    [EnumMember(Value = "REFU")]
+    [IsoId("_7ml2IKUkEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Refunded Security Identifier.")]
+    InvalidRefundedSecurityIdentifier,
+
+    /// <summary>
+    /// Invalid Equity Security Type.
+    /// Encoded/decoded by serializers as &quot;SEEQ&quot;.
+    /// </summary>
+    [EnumMember(Value = "SEEQ")]
+    [IsoId("_-pg0kKUkEfCnE_wCEfCqTA")]
+    [Description(@"Invalid Equity Security Type.")]
+    InvalidEquitySecurityType,
+
+    /// <summary>
+    /// Inactive Underlying Security.
+    /// Encoded/decoded by serializers as &quot;UNDI&quot;.
+    /// </summary>
+    [EnumMember(Value = "UNDI")]
+    [IsoId("_ujEc0KUhEfCnE_wCEfCqTA")]
+    [Description(@"Inactive Underlying Security.")]
+    InactiveUnderlyingSecurity,
+
+    /// <summary>
+    /// Underlying Security is not eligible at Depository.
+    /// Encoded/decoded by serializers as &quot;UNDM&quot;.
+    /// </summary>
+    [EnumMember(Value = "UNDM")]
+    [IsoId("_vFC2kKUjEfCnE_wCEfCqTA")]
+    [Description(@"Underlying Security is not eligible at Depository.")]
+    UnderlyingSecurityNotEligible,
+
+    /// <summary>
+    /// Counterparty disagreement on the chosen corporate action outturn.
+    /// Encoded/decoded by serializers as &quot;BUMM&quot;.
+    /// </summary>
+    [EnumMember(Value = "BUMM")]
+    [IsoId("_G-cnMd8MEe-NrtAAlrBEgQ")]
+    [Description(@"Counterparty disagreement on the chosen corporate action outturn.")]
+    BuyerProtectionMismatch,
+
+    /// <summary>
+    /// Transaction type is incorrect.
+    /// Encoded/decoded by serializers as &quot;TRTY&quot;.
+    /// </summary>
+    [EnumMember(Value = "TRTY")]
+    [IsoId("_T2tzwN8EEe-NrtAAlrBEgQ")]
+    [Description(@"Transaction type is incorrect.")]
+    IncorrectTransactionType,
 }

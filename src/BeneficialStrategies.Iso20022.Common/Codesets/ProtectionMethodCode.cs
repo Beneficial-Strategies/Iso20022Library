@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ar5eoJyAEeuo7tDc4CDHXg")]
 [Description(@"Method used to protect the sensitive data.")]
-[Derivations(typeof(ProtectionMethod1Code))]
+[Derivations(
+    typeof(ProtectionMethod1Code),
+    typeof(ProtectionMethod2Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ProtectionMethodCode>))]
 public enum ProtectionMethodCode
 {

@@ -24,7 +24,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(PendingReason20Code),
     typeof(PendingReason14Code),
     typeof(PendingReason22Code),
-    typeof(PendingFailingReason1Code)
+    typeof(PendingFailingReason1Code),
+    typeof(PendingReason30Code),
+    typeof(PendingReason31Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PendingFailingReasonV2Code>))]
 public enum PendingFailingReasonV2Code
@@ -1265,4 +1267,31 @@ public enum PendingFailingReasonV2Code
     [IsoId("")]
     [Description(@"Instruction was received prior to entitlement date.")]
     InstructionPriorToEntitlementDate,
+
+    /// <summary>
+    /// Counterparty disagreement on the chosen corporate action outturn.
+    /// Encoded/decoded by serializers as &quot;BUMM&quot;.
+    /// </summary>
+    [EnumMember(Value = "BUMM")]
+    [IsoId("_VV0x4N8LEe-NrtAAlrBEgQ")]
+    [Description(@"Counterparty disagreement on the chosen corporate action outturn.")]
+    BuyerProtectionMismatch,
+
+    /// <summary>
+    /// Received after the election to counterparty response market deadline.
+    /// Encoded/decoded by serializers as &quot;ECRD&quot;.
+    /// </summary>
+    [EnumMember(Value = "ECRD")]
+    [IsoId("_Kj1G0DPtEfCIZLORDJsr-g")]
+    [Description(@"Received after the election to counterparty response market deadline.")]
+    ElectionToCounterpartyResponseDeadlineMissed,
+
+    /// <summary>
+    /// Allegement has been sent out to counterparty. Waiting for the response.
+    /// Encoded/decoded by serializers as &quot;WCTF&quot;.
+    /// </summary>
+    [EnumMember(Value = "WCTF")]
+    [IsoId("__LumIDPsEfCIZLORDJsr-g")]
+    [Description(@"Allegement has been sent out to counterparty. Waiting for the response.")]
+    AwaitingCounterpartyResponse,
 }

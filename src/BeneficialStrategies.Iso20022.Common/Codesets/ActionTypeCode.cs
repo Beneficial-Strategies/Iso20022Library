@@ -26,7 +26,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(ActionType7Code),
     typeof(ActionType11Code),
     typeof(ActionType1Code),
-    typeof(ActionType10Code)
+    typeof(ActionType10Code),
+    typeof(RecommendedActionCode1)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ActionTypeCode>))]
 public enum ActionTypeCode

@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_tJKXo8yrEeiqqJhU2tqK8A")]
 [Description(@"Contains the reconciliation category")]
-[Derivations(typeof(ReconciliationCategory1Code))]
+[Derivations(
+    typeof(ReconciliationCategory1Code),
+    typeof(ReconciliationCategory2Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ReconciliationCategoryCode>))]
 public enum ReconciliationCategoryCode
 {

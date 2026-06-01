@@ -23,7 +23,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(Response2Code),
     typeof(Response1Code),
     typeof(Response8Code),
-    typeof(Response9Code)
+    typeof(Response9Code),
+    typeof(Response12Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<ResponseCode>))]
 public enum ResponseCode
@@ -215,4 +216,13 @@ public enum ResponseCode
         @"An additional Response Code, mainly a functional one, should be considered to identify the outcome of the request."
     )]
     Warning,
+
+    /// <summary>
+    /// Approval is suspended.
+    /// Encoded/decoded by serializers as &quot;ASUP&quot;.
+    /// </summary>
+    [EnumMember(Value = "ASUP")]
+    [IsoId("_SqzCoKDcEe-MRKYsaX6JDg")]
+    [Description(@"Approval is suspended.")]
+    ApprovalSuspended,
 }

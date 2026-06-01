@@ -15,7 +15,20 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Description(
     @"Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing."
 )]
-[Derivations(typeof(PendingCancellationReason10Code))]
+[Derivations(
+    typeof(PendingCancellationReason10Code),
+    typeof(PendingProcessingReason5Code),
+    typeof(PendingProcessingReason6Code),
+    typeof(PendingProcessingReason7Code),
+    typeof(PendingProcessingReason8Code),
+    typeof(PendingReason32Code),
+    typeof(PendingReason34Code),
+    typeof(PendingReason35Code),
+    typeof(PendingReason37Code),
+    typeof(PendingReason38Code),
+    typeof(PendingReason39Code),
+    typeof(PendingReason41Code)
+)]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<PendingFailingReasonV4Code>))]
 public enum PendingFailingReasonV4Code
 {

@@ -28,7 +28,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(RejectedStatusReason8Code),
     typeof(RejectedStatusReason10Code),
     typeof(RejectedStatusReason12Code),
-    typeof(RejectedStatusReason4Code)
+    typeof(RejectedStatusReason4Code),
+    typeof(RejectedStatusReason14Code),
+    typeof(RejectedStatusReason15Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<RejectedStatusReasonCode>))]
 public enum RejectedStatusReasonCode
