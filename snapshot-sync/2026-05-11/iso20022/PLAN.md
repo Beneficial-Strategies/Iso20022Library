@@ -234,26 +234,26 @@
 - [x] `PendingCancellationReason9Code` — `Codesets/PendingCancellationReason9Code.cs`
 - [x] `PendingFailingReasonV3Code` — `Codesets/PendingFailingReasonV3Code.cs`
 - [x] `PendingFailingReasonV4Code` — `Codesets/PendingFailingReasonV4Code.cs`
-- [ ] `PendingProcessingReason5Code` — `Codesets/PendingProcessingReason5Code.cs`
-- [ ] `PendingProcessingReason6Code` — `Codesets/PendingProcessingReason6Code.cs`
-- [ ] `PendingProcessingReason7Code` — `Codesets/PendingProcessingReason7Code.cs`
-- [ ] `PendingProcessingReason8Code` — `Codesets/PendingProcessingReason8Code.cs`
-- [ ] `PendingReason30Code` — `Codesets/PendingReason30Code.cs`
-- [ ] `PendingReason31Code` — `Codesets/PendingReason31Code.cs`
-- [ ] `PendingReason32Code` — `Codesets/PendingReason32Code.cs`
-- [ ] `PendingReason33Code` — `Codesets/PendingReason33Code.cs`
-- [ ] `PendingReason34Code` — `Codesets/PendingReason34Code.cs`
-- [ ] `PendingReason35Code` — `Codesets/PendingReason35Code.cs`
-- [ ] `PendingReason37Code` — `Codesets/PendingReason37Code.cs`
-- [ ] `PendingReason38Code` — `Codesets/PendingReason38Code.cs`
-- [ ] `PendingReason39Code` — `Codesets/PendingReason39Code.cs`
-- [ ] `PendingReason41Code` — `Codesets/PendingReason41Code.cs`
-- [ ] `PeriodUnit5Code` — `Codesets/PeriodUnit5Code.cs`
-- [ ] `PlanOwner2Code` — `Codesets/PlanOwner2Code.cs`
-- [ ] `PreferredContactMethod2Code` — `Codesets/PreferredContactMethod2Code.cs`
-- [ ] `PriceCalculationMethod1Code` — `Codesets/PriceCalculationMethod1Code.cs`
-- [ ] `PriceCalculationMethodCode` — `Codesets/PriceCalculationMethodCode.cs`
-- [ ] `ProcessedStatus7Code` — `Codesets/ProcessedStatus7Code.cs`
+- [x] `PendingProcessingReason5Code` — `Codesets/PendingProcessingReason5Code.cs`
+- [x] `PendingProcessingReason6Code` — `Codesets/PendingProcessingReason6Code.cs`
+- [x] `PendingProcessingReason7Code` — `Codesets/PendingProcessingReason7Code.cs`
+- [x] `PendingProcessingReason8Code` — `Codesets/PendingProcessingReason8Code.cs`
+- [x] `PendingReason30Code` — `Codesets/PendingReason30Code.cs`
+- [x] `PendingReason31Code` — `Codesets/PendingReason31Code.cs`
+- [x] `PendingReason32Code` — `Codesets/PendingReason32Code.cs`
+- [x] `PendingReason33Code` — `Codesets/PendingReason33Code.cs`
+- [x] `PendingReason34Code` — `Codesets/PendingReason34Code.cs`
+- [x] `PendingReason35Code` — `Codesets/PendingReason35Code.cs`
+- [x] `PendingReason37Code` — `Codesets/PendingReason37Code.cs`
+- [x] `PendingReason38Code` — `Codesets/PendingReason38Code.cs`
+- [x] `PendingReason39Code` — `Codesets/PendingReason39Code.cs`
+- [x] `PendingReason41Code` — `Codesets/PendingReason41Code.cs`
+- [x] `PeriodUnit5Code` — `Codesets/PeriodUnit5Code.cs`
+- [x] `PlanOwner2Code` — `Codesets/PlanOwner2Code.cs`
+- [x] `PreferredContactMethod2Code` — `Codesets/PreferredContactMethod2Code.cs`
+- [x] `PriceCalculationMethod1Code` — `Codesets/PriceCalculationMethod1Code.cs`
+- [x] `PriceCalculationMethodCode` — `Codesets/PriceCalculationMethodCode.cs`
+- [x] `ProcessedStatus7Code` — `Codesets/ProcessedStatus7Code.cs`
 - [ ] `ProrationBelowMinimumQuantity2Code` — `Codesets/ProrationBelowMinimumQuantity2Code.cs`
 - [ ] `ProtectionMethod2Code` — `Codesets/ProtectionMethod2Code.cs`
 - [ ] `PurchaseIdentifierType2Code` — `Codesets/PurchaseIdentifierType2Code.cs`
