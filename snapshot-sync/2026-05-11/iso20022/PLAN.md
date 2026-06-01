@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-05-29 (batch 3 complete)
+- **Last updated**: 2026-06-01 (batch 6 complete)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -73,64 +73,64 @@
 - [x] `ExternalInvestigationActionReasonCode` — `Codesets/ExternalInvestigationActionReasonCode.cs`
 - [x] `ExternalInvestigationInstrument1Code` — `Codesets/ExternalInvestigationInstrument1Code.cs`
 - [x] `ExternalInvestigationInstrumentCode` — `Codesets/ExternalInvestigationInstrumentCode.cs` (prerequisite base; added to plan)
-- [ ] `ExternalInvestigationInstrumentCode` — `Codesets/ExternalInvestigationInstrumentCode.cs`
-- [ ] `ExternalInvestigationReason1Code` — `Codesets/ExternalInvestigationReason1Code.cs`
-- [ ] `ExternalInvestigationReasonCode` — `Codesets/ExternalInvestigationReasonCode.cs`
-- [ ] `ExternalInvestigationReasonSubType1Code` — `Codesets/ExternalInvestigationReasonSubType1Code.cs`
-- [ ] `ExternalInvestigationReasonSubTypeCode` — `Codesets/ExternalInvestigationReasonSubTypeCode.cs`
-- [ ] `ExternalInvestigationServiceLevel1Code` — `Codesets/ExternalInvestigationServiceLevel1Code.cs`
-- [ ] `ExternalInvestigationServiceLevelCode` — `Codesets/ExternalInvestigationServiceLevelCode.cs`
-- [ ] `ExternalInvestigationStatus1Code` — `Codesets/ExternalInvestigationStatus1Code.cs`
-- [ ] `ExternalInvestigationStatusCode` — `Codesets/ExternalInvestigationStatusCode.cs`
-- [ ] `ExternalInvestigationStatusReason1Code` — `Codesets/ExternalInvestigationStatusReason1Code.cs`
-- [ ] `ExternalInvestigationStatusReasonCode` — `Codesets/ExternalInvestigationStatusReasonCode.cs`
-- [ ] `ExternalInvestigationSubType1Code` — `Codesets/ExternalInvestigationSubType1Code.cs`
-- [ ] `ExternalInvestigationSubTypeCode` — `Codesets/ExternalInvestigationSubTypeCode.cs`
-- [ ] `ExternalInvestigationType1Code` — `Codesets/ExternalInvestigationType1Code.cs`
-- [ ] `ExternalInvestigationTypeCode` — `Codesets/ExternalInvestigationTypeCode.cs`
-- [ ] `ExternalLegalFramework1Code` — `Codesets/ExternalLegalFramework1Code.cs`
-- [ ] `ExternalLegalFrameworkCode` — `Codesets/ExternalLegalFrameworkCode.cs`
-- [ ] `ExternalMessageFunction1Code` — `Codesets/ExternalMessageFunction1Code.cs`
-- [ ] `ExternalMessageFunctionCode` — `Codesets/ExternalMessageFunctionCode.cs`
-- [ ] `ExternalNotificationCancellationReason1Code` — `Codesets/ExternalNotificationCancellationReason1Code.cs`
-- [ ] `ExternalNotificationCancellationReasonCode` — `Codesets/ExternalNotificationCancellationReasonCode.cs`
-- [ ] `ExternalNotificationSubType1Code` — `Codesets/ExternalNotificationSubType1Code.cs`
-- [ ] `ExternalNotificationSubTypeCode` — `Codesets/ExternalNotificationSubTypeCode.cs`
-- [ ] `ExternalNotificationType1Code` — `Codesets/ExternalNotificationType1Code.cs`
-- [ ] `ExternalNotificationTypeCode` — `Codesets/ExternalNotificationTypeCode.cs`
-- [ ] `ExternalObligationSettlementMethod1Code` — `Codesets/ExternalObligationSettlementMethod1Code.cs`
-- [ ] `ExternalObligationSettlementMethodCode` — `Codesets/ExternalObligationSettlementMethodCode.cs`
-- [ ] `ExternalPartyRelationshipType1Code` — `Codesets/ExternalPartyRelationshipType1Code.cs`
-- [ ] `ExternalPartyRelationshipTypeCode` — `Codesets/ExternalPartyRelationshipTypeCode.cs`
-- [ ] `ExternalPaymentMethode1Code` — `Codesets/ExternalPaymentMethode1Code.cs`
-- [ ] `ExternalPaymentMethodeCode` — `Codesets/ExternalPaymentMethodeCode.cs`
-- [ ] `ExternalPenaltyPartyType1Code` — `Codesets/ExternalPenaltyPartyType1Code.cs`
-- [ ] `ExternalPenaltyPartyTypeCode` — `Codesets/ExternalPenaltyPartyTypeCode.cs`
-- [ ] `ExternalPostTradeEventType1Code` — `Codesets/ExternalPostTradeEventType1Code.cs`
-- [ ] `ExternalPostTradeEventTypeCode` — `Codesets/ExternalPostTradeEventTypeCode.cs`
-- [ ] `ExternalProductType1Code` — `Codesets/ExternalProductType1Code.cs`
-- [ ] `ExternalProductTypeCode` — `Codesets/ExternalProductTypeCode.cs`
-- [ ] `ExternalPurposeCode_Obsolete` — `Codesets/ExternalPurposeCode_Obsolete.cs`
-- [ ] `ExternalRegulatoryInformationType1Code` — `Codesets/ExternalRegulatoryInformationType1Code.cs`
-- [ ] `ExternalRegulatoryInformationTypeCode` — `Codesets/ExternalRegulatoryInformationTypeCode.cs`
-- [ ] `ExternalRegulatoryReportingType1Code` — `Codesets/ExternalRegulatoryReportingType1Code.cs`
-- [ ] `ExternalRegulatoryReportingTypeCode` — `Codesets/ExternalRegulatoryReportingTypeCode.cs`
-- [ ] `ExternalSecuritiesLendingType1Code` — `Codesets/ExternalSecuritiesLendingType1Code.cs`
-- [ ] `ExternalSecuritiesLendingTypeCode` — `Codesets/ExternalSecuritiesLendingTypeCode.cs`
-- [ ] `ExternalSecuritiesStatementType1Code` — `Codesets/ExternalSecuritiesStatementType1Code.cs`
-- [ ] `ExternalSecuritiesStatementTypeCode` — `Codesets/ExternalSecuritiesStatementTypeCode.cs`
-- [ ] `ExternalSecuritiesUpdateReason1Code` — `Codesets/ExternalSecuritiesUpdateReason1Code.cs`
-- [ ] `ExternalSecuritiesUpdateReasonCode` — `Codesets/ExternalSecuritiesUpdateReasonCode.cs`
-- [ ] `ExternalServiceCategory1Code` — `Codesets/ExternalServiceCategory1Code.cs`
-- [ ] `ExternalServiceCategoryCode` — `Codesets/ExternalServiceCategoryCode.cs`
-- [ ] `ExternalTrackerInvestigationStatus1Code` — `Codesets/ExternalTrackerInvestigationStatus1Code.cs`
-- [ ] `ExternalTrackerInvestigationStatusCode` — `Codesets/ExternalTrackerInvestigationStatusCode.cs`
-- [ ] `ExternalTrackerInvestigationStatusReason1Code` — `Codesets/ExternalTrackerInvestigationStatusReason1Code.cs`
-- [ ] `ExternalTrackerInvestigationStatusReasonCode` — `Codesets/ExternalTrackerInvestigationStatusReasonCode.cs`
-- [ ] `ExternalTrackerNotificationSubTypeCode` — `Codesets/ExternalTrackerNotificationSubTypeCode.cs`
-- [ ] `ExternalTrackerNotificationTypeCode` — `Codesets/ExternalTrackerNotificationTypeCode.cs`
-- [ ] `ExternalTransactorType1Code` — `Codesets/ExternalTransactorType1Code.cs`
-- [ ] `ExternalTransactorTypeCode` — `Codesets/ExternalTransactorTypeCode.cs`
+- [x] `ExternalInvestigationInstrumentCode` — `Codesets/ExternalInvestigationInstrumentCode.cs` (duplicate entry; file created in batch 3)
+- [x] `ExternalInvestigationReason1Code` — `Codesets/ExternalInvestigationReason1Code.cs` (62 members, derived)
+- [x] `ExternalInvestigationReasonCode` — `Codesets/ExternalInvestigationReasonCode.cs` (62 members, base)
+- [x] `ExternalInvestigationReasonSubType1Code` — `Codesets/ExternalInvestigationReasonSubType1Code.cs` (93 members, derived)
+- [x] `ExternalInvestigationReasonSubTypeCode` — `Codesets/ExternalInvestigationReasonSubTypeCode.cs` (93 members, base)
+- [x] `ExternalInvestigationServiceLevel1Code` — `Codesets/ExternalInvestigationServiceLevel1Code.cs` (5 members, derived)
+- [x] `ExternalInvestigationServiceLevelCode` — `Codesets/ExternalInvestigationServiceLevelCode.cs` (5 members, base)
+- [x] `ExternalInvestigationStatus1Code` — `Codesets/ExternalInvestigationStatus1Code.cs` (3 members, derived)
+- [x] `ExternalInvestigationStatusCode` — `Codesets/ExternalInvestigationStatusCode.cs` (3 members, base)
+- [x] `ExternalInvestigationStatusReason1Code` — `Codesets/ExternalInvestigationStatusReason1Code.cs` (21 members, derived)
+- [x] `ExternalInvestigationStatusReasonCode` — `Codesets/ExternalInvestigationStatusReasonCode.cs` (21 members, base)
+- [x] `ExternalInvestigationSubType1Code` — `Codesets/ExternalInvestigationSubType1Code.cs` (11 members, derived)
+- [x] `ExternalInvestigationSubTypeCode` — `Codesets/ExternalInvestigationSubTypeCode.cs` (11 members, base)
+- [x] `ExternalInvestigationType1Code` — `Codesets/ExternalInvestigationType1Code.cs` (12 members, derived)
+- [x] `ExternalInvestigationTypeCode` — `Codesets/ExternalInvestigationTypeCode.cs` (12 members, base)
+- [x] `ExternalLegalFramework1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalLegalFrameworkCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalMessageFunction1Code` — `Codesets/ExternalMessageFunction1Code.cs` (14 members, derived)
+- [x] `ExternalMessageFunctionCode` — `Codesets/ExternalMessageFunctionCode.cs` (14 members, base)
+- [x] `ExternalNotificationCancellationReason1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalNotificationCancellationReasonCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalNotificationSubType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalNotificationSubTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalNotificationType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalNotificationTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalObligationSettlementMethod1Code` — `Codesets/ExternalObligationSettlementMethod1Code.cs` (2 members, derived)
+- [x] `ExternalObligationSettlementMethodCode` — `Codesets/ExternalObligationSettlementMethodCode.cs` (2 members, base)
+- [x] `ExternalPartyRelationshipType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalPartyRelationshipTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalPaymentMethode1Code` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalPaymentMethodeCode` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalPenaltyPartyType1Code` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalPenaltyPartyTypeCode` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalPostTradeEventType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalPostTradeEventTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalProductType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalProductTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalPurposeCode_Obsolete` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalRegulatoryInformationType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalRegulatoryInformationTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalRegulatoryReportingType1Code` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalRegulatoryReportingTypeCode` — (0 codes — string alias added to GlobalUsings.cs)
+- [x] `ExternalSecuritiesLendingType1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalSecuritiesLendingTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalSecuritiesStatementType1Code` — `Codesets/ExternalSecuritiesStatementType1Code.cs`
+- [x] `ExternalSecuritiesStatementTypeCode` — `Codesets/ExternalSecuritiesStatementTypeCode.cs`
+- [x] `ExternalSecuritiesUpdateReason1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalSecuritiesUpdateReasonCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalServiceCategory1Code` — `Codesets/ExternalServiceCategory1Code.cs` (18 members, derived)
+- [x] `ExternalServiceCategoryCode` — `Codesets/ExternalServiceCategoryCode.cs`
+- [x] `ExternalTrackerInvestigationStatus1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTrackerInvestigationStatusCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTrackerInvestigationStatusReason1Code` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTrackerInvestigationStatusReasonCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTrackerNotificationSubTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTrackerNotificationTypeCode` — (0 codes — string alias in GlobalUsings.cs)
+- [x] `ExternalTransactorType1Code` — `Codesets/ExternalTransactorType1Code.cs` (8 members, derived)
+- [x] `ExternalTransactorTypeCode` — `Codesets/ExternalTransactorTypeCode.cs`
 - [ ] `FailingReason6Code` — `Codesets/FailingReason6Code.cs`
 - [ ] `FailureReason9Code` — `Codesets/FailureReason9Code.cs`
 - [ ] `FileActionType3Code` — `Codesets/FileActionType3Code.cs`
