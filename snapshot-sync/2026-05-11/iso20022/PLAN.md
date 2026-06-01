@@ -212,28 +212,28 @@
 - [x] `POIComponentType7Code` — `Codesets/POIComponentType7Code.cs` (25 members; added Probe to base first)
 - [x] `ParentCurrencyCode` — confirmed string alias (pattern-constrained, correct)
 - [x] `PartyExceptionType1Code` — `Codesets/PartyExceptionType1Code.cs` (2 members)
-- [ ] `PartyExceptionTypeCode` — `Codesets/PartyExceptionTypeCode.cs`
-- [ ] `PartyType35Code` — `Codesets/PartyType35Code.cs`
-- [ ] `PartyVerificationScopeCode` — `Codesets/PartyVerificationScopeCode.cs`
-- [ ] `PassiveOrAgressiveType1Code` — `Codesets/PassiveOrAgressiveType1Code.cs`
-- [ ] `PassiveOrAgressiveTypeCode` — `Codesets/PassiveOrAgressiveTypeCode.cs`
-- [ ] `PaymentInstrumentType2Code` — `Codesets/PaymentInstrumentType2Code.cs`
-- [ ] `PenaltyAmountType1Code` — `Codesets/PenaltyAmountType1Code.cs`
-- [ ] `PenaltyCalculationMethod1Code` — `Codesets/PenaltyCalculationMethod1Code.cs`
-- [ ] `PenaltyCalculationMethodCode` — `Codesets/PenaltyCalculationMethodCode.cs`
-- [ ] `PenaltyListType1Code` — `Codesets/PenaltyListType1Code.cs`
-- [ ] `PenaltyListTypeCode` — `Codesets/PenaltyListTypeCode.cs`
-- [ ] `PenaltyStatus2Code` — `Codesets/PenaltyStatus2Code.cs`
-- [ ] `PenaltyStatusCode` — `Codesets/PenaltyStatusCode.cs`
-- [ ] `PenaltyStatusReason2Code` — `Codesets/PenaltyStatusReason2Code.cs`
-- [ ] `PenaltyStatusReasonCode` — `Codesets/PenaltyStatusReasonCode.cs`
-- [ ] `PenaltyType1Code` — `Codesets/PenaltyType1Code.cs`
-- [ ] `PenaltyTypeCode` — `Codesets/PenaltyTypeCode.cs`
-- [ ] `PendingCancellationReason10Code` — `Codesets/PendingCancellationReason10Code.cs`
-- [ ] `PendingCancellationReason8Code` — `Codesets/PendingCancellationReason8Code.cs`
-- [ ] `PendingCancellationReason9Code` — `Codesets/PendingCancellationReason9Code.cs`
-- [ ] `PendingFailingReasonV3Code` — `Codesets/PendingFailingReasonV3Code.cs`
-- [ ] `PendingFailingReasonV4Code` — `Codesets/PendingFailingReasonV4Code.cs`
+- [x] `PartyExceptionTypeCode` — `Codesets/PartyExceptionTypeCode.cs` (NEW BASE, 4 members; created in batch 10)
+- [x] `PartyType35Code` — `Codesets/PartyType35Code.cs`
+- [x] `PartyVerificationScopeCode` — `Codesets/PartyVerificationScopeCode.cs`
+- [x] `PassiveOrAgressiveType1Code` — `Codesets/PassiveOrAgressiveType1Code.cs`
+- [x] `PassiveOrAgressiveTypeCode` — `Codesets/PassiveOrAgressiveTypeCode.cs`
+- [x] `PaymentInstrumentType2Code` — `Codesets/PaymentInstrumentType2Code.cs`
+- [x] `PenaltyAmountType1Code` — `Codesets/PenaltyAmountType1Code.cs`
+- [x] `PenaltyCalculationMethod1Code` — `Codesets/PenaltyCalculationMethod1Code.cs`
+- [x] `PenaltyCalculationMethodCode` — `Codesets/PenaltyCalculationMethodCode.cs`
+- [x] `PenaltyListType1Code` — `Codesets/PenaltyListType1Code.cs`
+- [x] `PenaltyListTypeCode` — `Codesets/PenaltyListTypeCode.cs`
+- [x] `PenaltyStatus2Code` — `Codesets/PenaltyStatus2Code.cs`
+- [x] `PenaltyStatusCode` — `Codesets/PenaltyStatusCode.cs`
+- [x] `PenaltyStatusReason2Code` — `Codesets/PenaltyStatusReason2Code.cs`
+- [x] `PenaltyStatusReasonCode` — `Codesets/PenaltyStatusReasonCode.cs`
+- [x] `PenaltyType1Code` — `Codesets/PenaltyType1Code.cs`
+- [x] `PenaltyTypeCode` — `Codesets/PenaltyTypeCode.cs`
+- [x] `PendingCancellationReason10Code` — `Codesets/PendingCancellationReason10Code.cs`
+- [x] `PendingCancellationReason8Code` — `Codesets/PendingCancellationReason8Code.cs`
+- [x] `PendingCancellationReason9Code` — `Codesets/PendingCancellationReason9Code.cs`
+- [x] `PendingFailingReasonV3Code` — `Codesets/PendingFailingReasonV3Code.cs`
+- [x] `PendingFailingReasonV4Code` — `Codesets/PendingFailingReasonV4Code.cs`
 - [ ] `PendingProcessingReason5Code` — `Codesets/PendingProcessingReason5Code.cs`
 - [ ] `PendingProcessingReason6Code` — `Codesets/PendingProcessingReason6Code.cs`
 - [ ] `PendingProcessingReason7Code` — `Codesets/PendingProcessingReason7Code.cs`
