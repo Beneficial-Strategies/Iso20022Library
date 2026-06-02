@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 9: 220 new components complete through DirectDebitTransactionInformation35)
+- **Last updated**: 2026-06-02 (Phase 2 batch 10: 260 new components complete through FinancialInstrumentIdentification11)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -604,46 +604,46 @@
 - [x] `DirectDebitMandate9` — `Components/DirectDebitMandate9.cs`
 - [x] `DirectDebitTransactionInformation34` — `Components/DirectDebitTransactionInformation34.cs`
 - [x] `DirectDebitTransactionInformation35` — `Components/DirectDebitTransactionInformation35.cs`
-- [ ] `DisplayCapabilities7` — `Components/DisplayCapabilities7.cs`
-- [ ] `DisputeData5` — `Components/DisputeData5.cs`
-- [ ] `DisputeDocumentation2` — `Components/DisputeDocumentation2.cs`
-- [ ] `DocumentIdentification57` — `Components/DocumentIdentification57.cs`
-- [ ] `DocumentNumber22` — `Components/DocumentNumber22.cs`
-- [ ] `Drawdown04` — `Components/Drawdown04.cs`
-- [ ] `DriverInParty4` — `Components/DriverInParty4.cs`
-- [ ] `DriverOrVehicleCardData1` — `Components/DriverOrVehicleCardData1.cs`
-- [ ] `EligibleCounterpart3` — `Components/EligibleCounterpart3.cs`
-- [ ] `EligibleSecurity5` — `Components/EligibleSecurity5.cs`
-- [ ] `EnableServiceRequest7` — `Components/EnableServiceRequest7.cs`
-- [ ] `EntryDetails16` — `Components/EntryDetails16.cs`
-- [ ] `EntryTransaction16` — `Components/EntryTransaction16.cs`
-- [ ] `ErrorDetails4` — `Components/ErrorDetails4.cs`
-- [ ] `EventContext8` — `Components/EventContext8.cs`
-- [ ] `EventNotificationData8` — `Components/EventNotificationData8.cs`
-- [ ] `ExpectedExecution6` — `Components/ExpectedExecution6.cs`
-- [ ] `ExpectedExecutionDetails5` — `Components/ExpectedExecutionDetails5.cs`
-- [ ] `FailingReason15` — `Components/FailingReason15.cs`
-- [ ] `Fee11` — `Components/Fee11.cs`
-- [ ] `Fee12` — `Components/Fee12.cs`
-- [ ] `Fee9` — `Components/Fee9.cs`
-- [ ] `FeeAndTax2` — `Components/FeeAndTax2.cs`
-- [ ] `FeeCollectionReference3` — `Components/FeeCollectionReference3.cs`
-- [ ] `FinancialInstitution10` — `Components/FinancialInstitution10.cs`
-- [ ] `FinancialInstitutionData1` — `Components/FinancialInstitutionData1.cs`
-- [ ] `FinancialInstitutionIdentification28` — `Components/FinancialInstitutionIdentification28.cs`
-- [ ] `FinancialInstrument106` — `Components/FinancialInstrument106.cs`
-- [ ] `FinancialInstrument107` — `Components/FinancialInstrument107.cs`
-- [ ] `FinancialInstrument108` — `Components/FinancialInstrument108.cs`
-- [ ] `FinancialInstrument109` — `Components/FinancialInstrument109.cs`
-- [ ] `FinancialInstrument110` — `Components/FinancialInstrument110.cs`
-- [ ] `FinancialInstrument111` — `Components/FinancialInstrument111.cs`
-- [ ] `FinancialInstrument112` — `Components/FinancialInstrument112.cs`
-- [ ] `FinancialInstrument116` — `Components/FinancialInstrument116.cs`
-- [ ] `FinancialInstrumentAttributes138` — `Components/FinancialInstrumentAttributes138.cs`
-- [ ] `FinancialInstrumentAttributes139` — `Components/FinancialInstrumentAttributes139.cs`
-- [ ] `FinancialInstrumentDetails48` — `Components/FinancialInstrumentDetails48.cs`
-- [ ] `FinancialInstrumentDetails49` — `Components/FinancialInstrumentDetails49.cs`
-- [ ] `FinancialInstrumentIdentification11` — `Components/FinancialInstrumentIdentification11.cs`
+- [x] `DisplayCapabilities7` — `Components/DisplayCapabilities7.cs`
+- [x] `DisputeData5` — `Components/DisputeData5.cs`
+- [x] `DisputeDocumentation2` — `Components/DisputeDocumentation2.cs`
+- [x] `DocumentIdentification57` — `Components/DocumentIdentification57.cs`
+- [x] `DocumentNumber22` — `Components/DocumentNumber22.cs`
+- [x] `Drawdown04` — `Components/Drawdown04.cs`
+- [x] `DriverInParty4` — `Components/DriverInParty4.cs`
+- [x] `DriverOrVehicleCardData1` — `Components/DriverOrVehicleCardData1.cs`
+- [x] `EligibleCounterpart3` — `Components/EligibleCounterpart3.cs`
+- [x] `EligibleSecurity5` — `Components/EligibleSecurity5.cs`
+- [x] `EnableServiceRequest7` — `Components/EnableServiceRequest7.cs`
+- [x] `EntryDetails16` — `Components/EntryDetails16.cs`
+- [x] `EntryTransaction16` — `Components/EntryTransaction16.cs`
+- [x] `ErrorDetails4` — `Components/ErrorDetails4.cs`
+- [x] `EventContext8` — `Components/EventContext8.cs`
+- [x] `EventNotificationData8` — `Components/EventNotificationData8.cs`
+- [x] `ExpectedExecution6` — `Components/ExpectedExecution6.cs`
+- [x] `ExpectedExecutionDetails5` — `Components/ExpectedExecutionDetails5.cs`
+- [x] `FailingReason15` — `Components/FailingReason15.cs`
+- [x] `Fee11` — `Components/Fee11.cs`
+- [x] `Fee12` — `Components/Fee12.cs`
+- [x] `Fee9` — `Components/Fee9.cs`
+- [x] `FeeAndTax2` — `Components/FeeAndTax2.cs`
+- [x] `FeeCollectionReference3` — `Components/FeeCollectionReference3.cs`
+- [x] `FinancialInstitution10` — `Components/FinancialInstitution10.cs`
+- [x] `FinancialInstitutionData1` — `Components/FinancialInstitutionData1.cs`
+- [x] `FinancialInstitutionIdentification28` — `Components/FinancialInstitutionIdentification28.cs`
+- [x] `FinancialInstrument106` — `Components/FinancialInstrument106.cs`
+- [x] `FinancialInstrument107` — `Components/FinancialInstrument107.cs`
+- [x] `FinancialInstrument108` — `Components/FinancialInstrument108.cs`
+- [x] `FinancialInstrument109` — `Components/FinancialInstrument109.cs`
+- [x] `FinancialInstrument110` — `Components/FinancialInstrument110.cs`
+- [x] `FinancialInstrument111` — `Components/FinancialInstrument111.cs`
+- [x] `FinancialInstrument112` — `Components/FinancialInstrument112.cs`
+- [x] `FinancialInstrument116` — `Components/FinancialInstrument116.cs`
+- [x] `FinancialInstrumentAttributes138` — `Components/FinancialInstrumentAttributes138.cs`
+- [x] `FinancialInstrumentAttributes139` — `Components/FinancialInstrumentAttributes139.cs`
+- [x] `FinancialInstrumentDetails48` — `Components/FinancialInstrumentDetails48.cs`
+- [x] `FinancialInstrumentDetails49` — `Components/FinancialInstrumentDetails49.cs`
+- [x] `FinancialInstrumentIdentification11` — `Components/FinancialInstrumentIdentification11.cs`
 - [ ] `FinancialInstrumentIdentification6` — `Components/FinancialInstrumentIdentification6.cs`
 - [ ] `FinancialInstrumentIdentification7` — `Components/FinancialInstrumentIdentification7.cs`
 - [ ] `FinancialInstrumentIdentification8` — `Components/FinancialInstrumentIdentification8.cs`
