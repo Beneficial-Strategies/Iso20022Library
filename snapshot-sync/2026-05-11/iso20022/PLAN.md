@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 11: 300 new components complete through Instalment8)
+- **Last updated**: 2026-06-02 (Phase 2 batch 12: 320 new components complete through IntraPositionType2)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -684,26 +684,26 @@
 - [x] `InputData7` — `Components/InputData7.cs`
 - [x] `Instalment7` — `Components/Instalment7.cs`
 - [x] `Instalment8` — `Components/Instalment8.cs`
-- [ ] `InstalmentAmountData1` — `Components/InstalmentAmountData1.cs`
-- [ ] `InstalmentPlan1` — `Components/InstalmentPlan1.cs`
-- [ ] `InstructedBalance22` — `Components/InstructedBalance22.cs`
-- [ ] `InstructedCorporateActionOption23` — `Components/InstructedCorporateActionOption23.cs`
-- [ ] `Instruction9` — `Components/Instruction9.cs`
-- [ ] `Intermediary50` — `Components/Intermediary50.cs`
-- [ ] `IntraPosition6` — `Components/IntraPosition6.cs`
-- [ ] `IntraPositionMovement10` — `Components/IntraPositionMovement10.cs`
-- [ ] `IntraPositionMovement8` — `Components/IntraPositionMovement8.cs`
-- [ ] `IntraPositionMovements6` — `Components/IntraPositionMovements6.cs`
-- [ ] `IntraPositionPending11` — `Components/IntraPositionPending11.cs`
-- [ ] `IntraPositionPending12` — `Components/IntraPositionPending12.cs`
-- [ ] `IntraPositionQueryCriteria8` — `Components/IntraPositionQueryCriteria8.cs`
-- [ ] `IntraPositionQueryDefinition8` — `Components/IntraPositionQueryDefinition8.cs`
-- [ ] `IntraPositionQueryStatus3` — `Components/IntraPositionQueryStatus3.cs`
-- [ ] `IntraPositionReport4` — `Components/IntraPositionReport4.cs`
-- [ ] `IntraPositionReport7` — `Components/IntraPositionReport7.cs`
-- [ ] `IntraPositionStatusAndReason4` — `Components/IntraPositionStatusAndReason4.cs`
-- [ ] `IntraPositionStatusType2` — `Components/IntraPositionStatusType2.cs`
-- [ ] `IntraPositionType2` — `Components/IntraPositionType2.cs`
+- [x] `InstalmentAmountData1` — `Components/InstalmentAmountData1.cs`
+- [x] `InstalmentPlan1` — `Components/InstalmentPlan1.cs`
+- [x] `InstructedBalance22` — `Components/InstructedBalance22.cs`
+- [x] `InstructedCorporateActionOption23` — `Components/InstructedCorporateActionOption23.cs`
+- [x] `Instruction9` — `Components/Instruction9.cs`
+- [x] `Intermediary50` — `Components/Intermediary50.cs`
+- [x] `IntraPosition6` — `Components/IntraPosition6.cs`
+- [x] `IntraPositionMovement10` — `Components/IntraPositionMovement10.cs`
+- [x] `IntraPositionMovement8` — `Components/IntraPositionMovement8.cs`
+- [x] `IntraPositionMovements6` — `Components/IntraPositionMovements6.cs`
+- [x] `IntraPositionPending11` — `Components/IntraPositionPending11.cs`
+- [x] `IntraPositionPending12` — `Components/IntraPositionPending12.cs`
+- [x] `IntraPositionQueryCriteria8` — `Components/IntraPositionQueryCriteria8.cs`
+- [x] `IntraPositionQueryDefinition8` — `Components/IntraPositionQueryDefinition8.cs`
+- [x] `IntraPositionQueryStatus3` — `Components/IntraPositionQueryStatus3.cs`
+- [x] `IntraPositionReport4` — `Components/IntraPositionReport4.cs`
+- [x] `IntraPositionReport7` — `Components/IntraPositionReport7.cs`
+- [x] `IntraPositionStatusAndReason4` — `Components/IntraPositionStatusAndReason4.cs`
+- [x] `IntraPositionStatusType2` — `Components/IntraPositionStatusType2.cs`
+- [x] `IntraPositionType2` — `Components/IntraPositionType2.cs`
 - [ ] `InvestigationData18` — `Components/InvestigationData18.cs`
 - [ ] `InvestigationRequest50` — `Components/InvestigationRequest50.cs`
 - [ ] `InvestigationRequest51` — `Components/InvestigationRequest51.cs`
