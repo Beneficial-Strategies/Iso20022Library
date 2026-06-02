@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 3: 60 new components complete through AggregateBalancePerSafekeepingPlace44)
+- **Last updated**: 2026-06-02 (Phase 2 batch 4: 80 new components complete through BillingSearchCriteria3)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -444,26 +444,26 @@
 - [x] `AgentNotificationIdentificationAndStatus2` — `Components/AgentNotificationIdentificationAndStatus2.cs`
 - [x] `AggregateBalanceInformation47` — `Components/AggregateBalanceInformation47.cs`
 - [x] `AggregateBalancePerSafekeepingPlace44` — `Components/AggregateBalancePerSafekeepingPlace44.cs`
-- [ ] `AggregatedPenaltyAmount1` — `Components/AggregatedPenaltyAmount1.cs`
-- [ ] `AggregatedPenaltyAmount2` — `Components/AggregatedPenaltyAmount2.cs`
-- [ ] `AlternatePartyIdentification12` — `Components/AlternatePartyIdentification12.cs`
-- [ ] `AmountAndDirection110` — `Components/AmountAndDirection110.cs`
-- [ ] `AmountAndForeignExchange1` — `Components/AmountAndForeignExchange1.cs`
-- [ ] `AmountAndTax1` — `Components/AmountAndTax1.cs`
-- [ ] `AncillaryPurchase4` — `Components/AncillaryPurchase4.cs`
-- [ ] `ApplicationSpecifics2` — `Components/ApplicationSpecifics2.cs`
-- [ ] `Balance30` — `Components/Balance30.cs`
-- [ ] `BalanceInquiryRequest9` — `Components/BalanceInquiryRequest9.cs`
-- [ ] `BalanceInquiryResponse7` — `Components/BalanceInquiryResponse7.cs`
-- [ ] `BalanceTransfer7` — `Components/BalanceTransfer7.cs`
-- [ ] `BatchRequest8` — `Components/BatchRequest8.cs`
-- [ ] `BatchResponse8` — `Components/BatchResponse8.cs`
-- [ ] `BeneficiaryDrawdown2` — `Components/BeneficiaryDrawdown2.cs`
-- [ ] `BenefitSupportingData1` — `Components/BenefitSupportingData1.cs`
-- [ ] `BillingCancellationReport3` — `Components/BillingCancellationReport3.cs`
-- [ ] `BillingFeeRecord1` — `Components/BillingFeeRecord1.cs`
-- [ ] `BillingReport6` — `Components/BillingReport6.cs`
-- [ ] `BillingSearchCriteria3` — `Components/BillingSearchCriteria3.cs`
+- [x] `AggregatedPenaltyAmount1` — `Components/AggregatedPenaltyAmount1.cs`
+- [x] `AggregatedPenaltyAmount2` — `Components/AggregatedPenaltyAmount2.cs`
+- [x] `AlternatePartyIdentification12` — `Components/AlternatePartyIdentification12.cs`
+- [x] `AmountAndDirection110` — `Components/AmountAndDirection110.cs`
+- [x] `AmountAndForeignExchange1` — `Components/AmountAndForeignExchange1.cs`
+- [x] `AmountAndTax1` — `Components/AmountAndTax1.cs`
+- [x] `AncillaryPurchase4` — `Components/AncillaryPurchase4.cs`
+- [x] `ApplicationSpecifics2` — `Components/ApplicationSpecifics2.cs`
+- [x] `Balance30` — `Components/Balance30.cs`
+- [x] `BalanceInquiryRequest9` — `Components/BalanceInquiryRequest9.cs`
+- [x] `BalanceInquiryResponse7` — `Components/BalanceInquiryResponse7.cs`
+- [x] `BalanceTransfer7` — `Components/BalanceTransfer7.cs`
+- [x] `BatchRequest8` — `Components/BatchRequest8.cs`
+- [x] `BatchResponse8` — `Components/BatchResponse8.cs`
+- [x] `BeneficiaryDrawdown2` — `Components/BeneficiaryDrawdown2.cs`
+- [x] `BenefitSupportingData1` — `Components/BenefitSupportingData1.cs`
+- [x] `BillingCancellationReport3` — `Components/BillingCancellationReport3.cs`
+- [x] `BillingFeeRecord1` — `Components/BillingFeeRecord1.cs`
+- [x] `BillingReport6` — `Components/BillingReport6.cs`
+- [x] `BillingSearchCriteria3` — `Components/BillingSearchCriteria3.cs`
 - [ ] `BillingTaxRecord2` — `Components/BillingTaxRecord2.cs`
 - [ ] `BlockChainAddressWallet14` — `Components/BlockChainAddressWallet14.cs`
 - [ ] `BookingConfirmation8` — `Components/BookingConfirmation8.cs`
