@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 1: 20 new components complete through AcceptorData1)
+- **Last updated**: 2026-06-02 (Phase 2 batch 2: 40 new components complete through AcknowledgementReason22)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -404,26 +404,26 @@
 - [x] `AcceptorCurrencyConversionRequest13` — `Components/AcceptorCurrencyConversionRequest13.cs`
 - [x] `AcceptorCurrencyConversionResponse13` — `Components/AcceptorCurrencyConversionResponse13.cs`
 - [x] `AcceptorData1` — `Components/AcceptorData1.cs`
-- [ ] `AcceptorData2` — `Components/AcceptorData2.cs`
-- [ ] `AcceptorData3` — `Components/AcceptorData3.cs`
-- [ ] `AcceptorData4` — `Components/AcceptorData4.cs`
-- [ ] `AcceptorDiagnosticRequest14` — `Components/AcceptorDiagnosticRequest14.cs`
-- [ ] `AcceptorDiagnosticResponse12` — `Components/AcceptorDiagnosticResponse12.cs`
-- [ ] `AcceptorReconciliationRequest14` — `Components/AcceptorReconciliationRequest14.cs`
-- [ ] `AcceptorReconciliationResponse12` — `Components/AcceptorReconciliationResponse12.cs`
-- [ ] `AcceptorToAcquirerFileBody3` — `Components/AcceptorToAcquirerFileBody3.cs`
-- [ ] `Account36` — `Components/Account36.cs`
-- [ ] `Account37` — `Components/Account37.cs`
-- [ ] `Account38` — `Components/Account38.cs`
-- [ ] `AccountBalance4` — `Components/AccountBalance4.cs`
-- [ ] `AccountIdentification77` — `Components/AccountIdentification77.cs`
-- [ ] `AccountIdentificationAndName8` — `Components/AccountIdentificationAndName8.cs`
-- [ ] `AccountIdentificationAndName9` — `Components/AccountIdentificationAndName9.cs`
-- [ ] `AccountNotification25` — `Components/AccountNotification25.cs`
-- [ ] `AccountNotification26` — `Components/AccountNotification26.cs`
-- [ ] `AccountReport38` — `Components/AccountReport38.cs`
-- [ ] `AccountStatement15` — `Components/AccountStatement15.cs`
-- [ ] `AcknowledgementReason22` — `Components/AcknowledgementReason22.cs`
+- [x] `AcceptorData2` — `Components/AcceptorData2.cs`
+- [x] `AcceptorData3` — `Components/AcceptorData3.cs`
+- [x] `AcceptorData4` — `Components/AcceptorData4.cs`
+- [x] `AcceptorDiagnosticRequest14` — `Components/AcceptorDiagnosticRequest14.cs`
+- [x] `AcceptorDiagnosticResponse12` — `Components/AcceptorDiagnosticResponse12.cs`
+- [x] `AcceptorReconciliationRequest14` — `Components/AcceptorReconciliationRequest14.cs`
+- [x] `AcceptorReconciliationResponse12` — `Components/AcceptorReconciliationResponse12.cs`
+- [x] `AcceptorToAcquirerFileBody3` — `Components/AcceptorToAcquirerFileBody3.cs`
+- [x] `Account36` — `Components/Account36.cs`
+- [x] `Account37` — `Components/Account37.cs`
+- [x] `Account38` — `Components/Account38.cs`
+- [x] `AccountBalance4` — `Components/AccountBalance4.cs`
+- [x] `AccountIdentification77` — `Components/AccountIdentification77.cs`
+- [x] `AccountIdentificationAndName8` — `Components/AccountIdentificationAndName8.cs`
+- [x] `AccountIdentificationAndName9` — `Components/AccountIdentificationAndName9.cs`
+- [x] `AccountNotification25` — `Components/AccountNotification25.cs`
+- [x] `AccountNotification26` — `Components/AccountNotification26.cs`
+- [x] `AccountReport38` — `Components/AccountReport38.cs`
+- [x] `AccountStatement15` — `Components/AccountStatement15.cs`
+- [x] `AcknowledgementReason22` — `Components/AcknowledgementReason22.cs`
 - [ ] `AcquirerData1` — `Components/AcquirerData1.cs`
 - [ ] `AcquirerHostConfiguration11` — `Components/AcquirerHostConfiguration11.cs`
 - [ ] `AcquirerProtocolParameters18` — `Components/AcquirerProtocolParameters18.cs`
