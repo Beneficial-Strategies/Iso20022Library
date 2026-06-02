@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 6: 120 new components complete through Charge33)
+- **Last updated**: 2026-06-02 (Phase 2 batch 7: 140 new components complete through CorporateAction88)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -504,26 +504,26 @@
 - [x] `CashOption118` — `Components/CashOption118.cs`
 - [x] `CertificateManagementRequest4` — `Components/CertificateManagementRequest4.cs`
 - [x] `Charge33` — `Components/Charge33.cs`
-- [ ] `ClearedProduct3` — `Components/ClearedProduct3.cs`
-- [ ] `Clearing8` — `Components/Clearing8.cs`
-- [ ] `ClearingBatchData4` — `Components/ClearingBatchData4.cs`
-- [ ] `CloseLink5` — `Components/CloseLink5.cs`
-- [ ] `CollateralStatusReason1` — `Components/CollateralStatusReason1.cs`
-- [ ] `CollateralStatusReason2` — `Components/CollateralStatusReason2.cs`
-- [ ] `CollateralValue5` — `Components/CollateralValue5.cs`
-- [ ] `CommonData15` — `Components/CommonData15.cs`
-- [ ] `ContactBusiness2` — `Components/ContactBusiness2.cs`
-- [ ] `ContactPersonal2` — `Components/ContactPersonal2.cs`
-- [ ] `Context25` — `Components/Context25.cs`
-- [ ] `Context26` — `Components/Context26.cs`
-- [ ] `Context27` — `Components/Context27.cs`
-- [ ] `Context28` — `Components/Context28.cs`
-- [ ] `Context29` — `Components/Context29.cs`
-- [ ] `Context30` — `Components/Context30.cs`
-- [ ] `Conversion4` — `Components/Conversion4.cs`
-- [ ] `Conversion5` — `Components/Conversion5.cs`
-- [ ] `Conversion6` — `Components/Conversion6.cs`
-- [ ] `CorporateAction88` — `Components/CorporateAction88.cs`
+- [x] `ClearedProduct3` — `Components/ClearedProduct3.cs`
+- [x] `Clearing8` — `Components/Clearing8.cs`
+- [x] `ClearingBatchData4` — `Components/ClearingBatchData4.cs`
+- [x] `CloseLink5` — `Components/CloseLink5.cs`
+- [x] `CollateralStatusReason1` — `Components/CollateralStatusReason1.cs`
+- [x] `CollateralStatusReason2` — `Components/CollateralStatusReason2.cs`
+- [x] `CollateralValue5` — `Components/CollateralValue5.cs`
+- [x] `CommonData15` — `Components/CommonData15.cs`
+- [x] `ContactBusiness2` — `Components/ContactBusiness2.cs`
+- [x] `ContactPersonal2` — `Components/ContactPersonal2.cs`
+- [x] `Context25` — `Components/Context25.cs`
+- [x] `Context26` — `Components/Context26.cs`
+- [x] `Context27` — `Components/Context27.cs`
+- [x] `Context28` — `Components/Context28.cs`
+- [x] `Context29` — `Components/Context29.cs`
+- [x] `Context30` — `Components/Context30.cs`
+- [x] `Conversion4` — `Components/Conversion4.cs`
+- [x] `Conversion5` — `Components/Conversion5.cs`
+- [x] `Conversion6` — `Components/Conversion6.cs`
+- [x] `CorporateAction88` — `Components/CorporateAction88.cs`
 - [ ] `CorporateAction91` — `Components/CorporateAction91.cs`
 - [ ] `CorporateAction92` — `Components/CorporateAction92.cs`
 - [ ] `CorporateAction93` — `Components/CorporateAction93.cs`
