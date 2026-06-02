@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 2: 40 new components complete through AcknowledgementReason22)
+- **Last updated**: 2026-06-02 (Phase 2 batch 3: 60 new components complete through AggregateBalancePerSafekeepingPlace44)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -424,26 +424,26 @@
 - [x] `AccountReport38` — `Components/AccountReport38.cs`
 - [x] `AccountStatement15` — `Components/AccountStatement15.cs`
 - [x] `AcknowledgementReason22` — `Components/AcknowledgementReason22.cs`
-- [ ] `AcquirerData1` — `Components/AcquirerData1.cs`
-- [ ] `AcquirerHostConfiguration11` — `Components/AcquirerHostConfiguration11.cs`
-- [ ] `AcquirerProtocolParameters18` — `Components/AcquirerProtocolParameters18.cs`
-- [ ] `AcquirerToAcceptorFileBody3` — `Components/AcquirerToAcceptorFileBody3.cs`
-- [ ] `Action18` — `Components/Action18.cs`
-- [ ] `ActionMessage12` — `Components/ActionMessage12.cs`
-- [ ] `AdditionalAmounts5` — `Components/AdditionalAmounts5.cs`
-- [ ] `AdditionalBalanceBreakdown1` — `Components/AdditionalBalanceBreakdown1.cs`
-- [ ] `AdditionalEnteredFleetData1` — `Components/AdditionalEnteredFleetData1.cs`
-- [ ] `AdditionalFee4` — `Components/AdditionalFee4.cs`
-- [ ] `AdditionalFeeReconciliation4` — `Components/AdditionalFeeReconciliation4.cs`
-- [ ] `AdditionalQueryParameters15` — `Components/AdditionalQueryParameters15.cs`
-- [ ] `AdditionalService3` — `Components/AdditionalService3.cs`
-- [ ] `Address4` — `Components/Address4.cs`
-- [ ] `AdministrativeRequest9` — `Components/AdministrativeRequest9.cs`
-- [ ] `AdministrativeResponse9` — `Components/AdministrativeResponse9.cs`
-- [ ] `AgentNotificationCancellationIdentificationAndStatus2` — `Components/AgentNotificationCancellationIdentificationAndStatus2.cs`
-- [ ] `AgentNotificationIdentificationAndStatus2` — `Components/AgentNotificationIdentificationAndStatus2.cs`
-- [ ] `AggregateBalanceInformation47` — `Components/AggregateBalanceInformation47.cs`
-- [ ] `AggregateBalancePerSafekeepingPlace44` — `Components/AggregateBalancePerSafekeepingPlace44.cs`
+- [x] `AcquirerData1` — `Components/AcquirerData1.cs`
+- [x] `AcquirerHostConfiguration11` — `Components/AcquirerHostConfiguration11.cs`
+- [x] `AcquirerProtocolParameters18` — `Components/AcquirerProtocolParameters18.cs`
+- [x] `AcquirerToAcceptorFileBody3` — `Components/AcquirerToAcceptorFileBody3.cs`
+- [x] `Action18` — `Components/Action18.cs`
+- [x] `ActionMessage12` — `Components/ActionMessage12.cs`
+- [x] `AdditionalAmounts5` — `Components/AdditionalAmounts5.cs`
+- [x] `AdditionalBalanceBreakdown1` — `Components/AdditionalBalanceBreakdown1.cs`
+- [x] `AdditionalEnteredFleetData1` — `Components/AdditionalEnteredFleetData1.cs`
+- [x] `AdditionalFee4` — `Components/AdditionalFee4.cs`
+- [x] `AdditionalFeeReconciliation4` — `Components/AdditionalFeeReconciliation4.cs`
+- [x] `AdditionalQueryParameters15` — `Components/AdditionalQueryParameters15.cs`
+- [x] `AdditionalService3` — `Components/AdditionalService3.cs`
+- [x] `Address4` — `Components/Address4.cs`
+- [x] `AdministrativeRequest9` — `Components/AdministrativeRequest9.cs`
+- [x] `AdministrativeResponse9` — `Components/AdministrativeResponse9.cs`
+- [x] `AgentNotificationCancellationIdentificationAndStatus2` — `Components/AgentNotificationCancellationIdentificationAndStatus2.cs`
+- [x] `AgentNotificationIdentificationAndStatus2` — `Components/AgentNotificationIdentificationAndStatus2.cs`
+- [x] `AggregateBalanceInformation47` — `Components/AggregateBalanceInformation47.cs`
+- [x] `AggregateBalancePerSafekeepingPlace44` — `Components/AggregateBalancePerSafekeepingPlace44.cs`
 - [ ] `AggregatedPenaltyAmount1` — `Components/AggregatedPenaltyAmount1.cs`
 - [ ] `AggregatedPenaltyAmount2` — `Components/AggregatedPenaltyAmount2.cs`
 - [ ] `AlternatePartyIdentification12` — `Components/AlternatePartyIdentification12.cs`
