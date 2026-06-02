@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 10: 260 new components complete through FinancialInstrumentIdentification11)
+- **Last updated**: 2026-06-02 (Phase 2 batch 11: 300 new components complete through Instalment8)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -644,46 +644,46 @@
 - [x] `FinancialInstrumentDetails48` — `Components/FinancialInstrumentDetails48.cs`
 - [x] `FinancialInstrumentDetails49` — `Components/FinancialInstrumentDetails49.cs`
 - [x] `FinancialInstrumentIdentification11` — `Components/FinancialInstrumentIdentification11.cs`
-- [ ] `FinancialInstrumentIdentification6` — `Components/FinancialInstrumentIdentification6.cs`
-- [ ] `FinancialInstrumentIdentification7` — `Components/FinancialInstrumentIdentification7.cs`
-- [ ] `FinancialInstrumentIdentification8` — `Components/FinancialInstrumentIdentification8.cs`
-- [ ] `FinancialInstrumentIdentification9` — `Components/FinancialInstrumentIdentification9.cs`
-- [ ] `FinancialInstrumentQuantitySearch2` — `Components/FinancialInstrumentQuantitySearch2.cs`
-- [ ] `FinancialReconciliation4` — `Components/FinancialReconciliation4.cs`
-- [ ] `FleetData7` — `Components/FleetData7.cs`
-- [ ] `FleetDriverData2` — `Components/FleetDriverData2.cs`
-- [ ] `FleetLineItem7` — `Components/FleetLineItem7.cs`
-- [ ] `FleetTransactionDetail2` — `Components/FleetTransactionDetail2.cs`
-- [ ] `FleetVehicleData1` — `Components/FleetVehicleData1.cs`
-- [ ] `ForeignExchangeRate3` — `Components/ForeignExchangeRate3.cs`
-- [ ] `ForeignExchangeTerms44` — `Components/ForeignExchangeTerms44.cs`
-- [ ] `ForwardedStatus1` — `Components/ForwardedStatus1.cs`
-- [ ] `FraudDispositionStatus3` — `Components/FraudDispositionStatus3.cs`
-- [ ] `FraudulentTransactionData4` — `Components/FraudulentTransactionData4.cs`
-- [ ] `Frequency2` — `Components/Frequency2.cs`
-- [ ] `FromToQuantityRange1` — `Components/FromToQuantityRange1.cs`
-- [ ] `FundOrderData7` — `Components/FundOrderData7.cs`
-- [ ] `FundSettlementParameters22` — `Components/FundSettlementParameters22.cs`
-- [ ] `FundSettlementParameters24` — `Components/FundSettlementParameters24.cs`
-- [ ] `FundSettlementParameters25` — `Components/FundSettlementParameters25.cs`
-- [ ] `FundSettlementParameters26` — `Components/FundSettlementParameters26.cs`
-- [ ] `FundSettlementParameters27` — `Components/FundSettlementParameters27.cs`
-- [ ] `FundSettlementParameters28` — `Components/FundSettlementParameters28.cs`
-- [ ] `FundingService4` — `Components/FundingService4.cs`
-- [ ] `FundingSource5` — `Components/FundingSource5.cs`
-- [ ] `GenericIdentification192` — `Components/GenericIdentification192.cs`
-- [ ] `Header72` — `Components/Header72.cs`
-- [ ] `HiredVehicle4` — `Components/HiredVehicle4.cs`
-- [ ] `HoldBackInformation4` — `Components/HoldBackInformation4.cs`
-- [ ] `HoldBackInformation5` — `Components/HoldBackInformation5.cs`
-- [ ] `HostCommunicationParameter8` — `Components/HostCommunicationParameter8.cs`
-- [ ] `Identification32` — `Components/Identification32.cs`
-- [ ] `IndividualOrderConfirmationStatusAndReason3` — `Components/IndividualOrderConfirmationStatusAndReason3.cs`
-- [ ] `IndividualOrderStatusAndReason10` — `Components/IndividualOrderStatusAndReason10.cs`
-- [ ] `IndividualOrderStatusAndReason9` — `Components/IndividualOrderStatusAndReason9.cs`
-- [ ] `InputData7` — `Components/InputData7.cs`
-- [ ] `Instalment7` — `Components/Instalment7.cs`
-- [ ] `Instalment8` — `Components/Instalment8.cs`
+- [x] `FinancialInstrumentIdentification6` — `Components/FinancialInstrumentIdentification6.cs`
+- [x] `FinancialInstrumentIdentification7` — `Components/FinancialInstrumentIdentification7.cs`
+- [x] `FinancialInstrumentIdentification8` — `Components/FinancialInstrumentIdentification8.cs`
+- [x] `FinancialInstrumentIdentification9` — `Components/FinancialInstrumentIdentification9.cs`
+- [x] `FinancialInstrumentQuantitySearch2` — `Components/FinancialInstrumentQuantitySearch2.cs`
+- [x] `FinancialReconciliation4` — `Components/FinancialReconciliation4.cs`
+- [x] `FleetData7` — `Components/FleetData7.cs`
+- [x] `FleetDriverData2` — `Components/FleetDriverData2.cs`
+- [x] `FleetLineItem7` — `Components/FleetLineItem7.cs`
+- [x] `FleetTransactionDetail2` — `Components/FleetTransactionDetail2.cs`
+- [x] `FleetVehicleData1` — `Components/FleetVehicleData1.cs`
+- [x] `ForeignExchangeRate3` — `Components/ForeignExchangeRate3.cs`
+- [x] `ForeignExchangeTerms44` — `Components/ForeignExchangeTerms44.cs`
+- [x] `ForwardedStatus1` — `Components/ForwardedStatus1.cs`
+- [x] `FraudDispositionStatus3` — `Components/FraudDispositionStatus3.cs`
+- [x] `FraudulentTransactionData4` — `Components/FraudulentTransactionData4.cs`
+- [x] `Frequency2` — `Components/Frequency2.cs`
+- [x] `FromToQuantityRange1` — `Components/FromToQuantityRange1.cs`
+- [x] `FundOrderData7` — `Components/FundOrderData7.cs`
+- [x] `FundSettlementParameters22` — `Components/FundSettlementParameters22.cs`
+- [x] `FundSettlementParameters24` — `Components/FundSettlementParameters24.cs`
+- [x] `FundSettlementParameters25` — `Components/FundSettlementParameters25.cs`
+- [x] `FundSettlementParameters26` — `Components/FundSettlementParameters26.cs`
+- [x] `FundSettlementParameters27` — `Components/FundSettlementParameters27.cs`
+- [x] `FundSettlementParameters28` — `Components/FundSettlementParameters28.cs`
+- [x] `FundingService4` — `Components/FundingService4.cs`
+- [x] `FundingSource5` — `Components/FundingSource5.cs`
+- [x] `GenericIdentification192` — `Components/GenericIdentification192.cs`
+- [x] `Header72` — `Components/Header72.cs`
+- [x] `HiredVehicle4` — `Components/HiredVehicle4.cs`
+- [x] `HoldBackInformation4` — `Components/HoldBackInformation4.cs`
+- [x] `HoldBackInformation5` — `Components/HoldBackInformation5.cs`
+- [x] `HostCommunicationParameter8` — `Components/HostCommunicationParameter8.cs`
+- [x] `Identification32` — `Components/Identification32.cs`
+- [x] `IndividualOrderConfirmationStatusAndReason3` — `Components/IndividualOrderConfirmationStatusAndReason3.cs`
+- [x] `IndividualOrderStatusAndReason10` — `Components/IndividualOrderStatusAndReason10.cs`
+- [x] `IndividualOrderStatusAndReason9` — `Components/IndividualOrderStatusAndReason9.cs`
+- [x] `InputData7` — `Components/InputData7.cs`
+- [x] `Instalment7` — `Components/Instalment7.cs`
+- [x] `Instalment8` — `Components/Instalment8.cs`
 - [ ] `InstalmentAmountData1` — `Components/InstalmentAmountData1.cs`
 - [ ] `InstalmentPlan1` — `Components/InstalmentPlan1.cs`
 - [ ] `InstructedBalance22` — `Components/InstructedBalance22.cs`
