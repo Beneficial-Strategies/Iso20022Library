@@ -80,4 +80,22 @@ public enum OriginatorRoleCode
         @"Party appointed by the fund management company. It updates records of investor accounts to reflect the daily investor purchases, redemptions, switches, transfers, and re-registrations. It ensures the timely settlement of transactions, and may provide tax information to the investor and/or to its intermediaries. It may calculate, collect, and rebate commissions. It prepares and distributes confirmations reflecting transactions, resulting in unit or cash account movements to the investor or the investor's intermediary. It responds to inquiries concerning account status, and processes the income distribution."
     )]
     TransfertAgent,
+
+    /// <summary>
+    /// Trading platform designated under MiFID II that facilites trading between buyers and sellers.
+    /// Encoded/decoded by serializers as &quot;MSGM&quot;.
+    /// </summary>
+    [EnumMember(Value = "MSGM")]
+    [IsoId("_3kDHUFBtEfCpNoeDQdjnVw")]
+    [Description(@"Trading platform designated under MiFID II that facilites trading between buyers and sellers.")]
+    SMEGrowthMarketMultilateralTradingFacility,
+
+    /// <summary>
+    /// Markert or platform that is restricted to a experienced investors designated as qualified.
+    /// Encoded/decoded by serializers as &quot;RMQI&quot;.
+    /// </summary>
+    [EnumMember(Value = "RMQI")]
+    [IsoId("_2TSqEFBtEfCpNoeDQdjnVw")]
+    [Description(@"Markert or platform that is restricted to a experienced investors designated as qualified.")]
+    RegulatedMarketOrSegmentLimitedToQualifiedInvestors,
 }

@@ -246,4 +246,13 @@ public enum ExternalBalanceSubTypeCode
         @"Balance representing the amount that will be destined for investment. Difference between available balance and threshold for investment limit."
     )]
     Threshold,
+
+    /// <summary>
+    /// Balance representing the unblocked funds.
+    /// Encoded/decoded by serializers as &quot;UNBL&quot;.
+    /// </summary>
+    [EnumMember(Value = "UNBL")]
+    [IsoId("_zYPgkBDQEfGq-eDWPqCtlw")]
+    [Description(@"Balance representing the unblocked funds.")]
+    UnblockedFunds,
 }

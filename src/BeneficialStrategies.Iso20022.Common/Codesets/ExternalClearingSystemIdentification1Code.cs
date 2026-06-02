@@ -312,4 +312,148 @@ public enum ExternalClearingSystemIdentification1Code
     [Description(@"Participant Institution code used by BOK-Wire+ in South Korea.")]
     SouthKoreaCentralBankIdentificationCode =
         ExternalClearingSystemIdentificationCode.SouthKoreaCentralBankIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// REPSS (regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) settlement account.
+    /// Encoded/decoded by serializers as &quot;CBHAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBHAC")]
+    [IsoId("_uApLwsntEfCY0M4eFzOwyQ")]
+    [Description(@"REPSS (regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) settlement account.")]
+    COMESAREPSSAccountIdentificationCode = ExternalClearingSystemIdentificationCode.COMESAREPSSAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// REPSS (Regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) participant identification code.
+    /// Encoded/decoded by serializers as &quot;CBHPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBHPA")]
+    [IsoId("_afb18sntEfCY0M4eFzOwyQ")]
+    [Description(@"REPSS (Regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) participant identification code.")]
+    COMESAREPSSParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.COMESAREPSSParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// COMESA SS settlement account.
+    /// Encoded/decoded by serializers as &quot;CBPAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBPAC")]
+    [IsoId("_aTiSgcnuEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA SS settlement account.")]
+    COMESASSAccountIdentificationCode = ExternalClearingSystemIdentificationCode.COMESASSAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// COMESA SS participant identification code.
+    /// Encoded/decoded by serializers as &quot;CBPPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBPPA")]
+    [IsoId("_MLMe0snuEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA SS participant identification code.")]
+    COMESASSParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.COMESASSParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Bank Of Central African States (BEAC) Participant Account Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants accounts in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.
+    /// Encoded/decoded by serializers as &quot;CEAAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CEAAC")]
+    [IsoId("_VYB-4YJ-EfCff8wf3dEAMw")]
+    [Description(@"Bank Of Central African States (BEAC) Participant Account Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants accounts in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.")]
+    BankOfCentralAfricanStateParticipantAccountIdentificationCode = ExternalClearingSystemIdentificationCode.BankOfCentralAfricanStateParticipantAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Bank Of Central African States (BEAC) Participant Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.
+    /// Encoded/decoded by serializers as &quot;CEAPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CEAPA")]
+    [IsoId("_Yt4V0YJ9EfCff8wf3dEAMw")]
+    [Description(@"Bank Of Central African States (BEAC) Participant Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.")]
+    BankOfCentralAfricanStateParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.BankOfCentralAfricanStateParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Account identification code used in the RTGS system of Algeria.
+    /// Encoded/decoded by serializers as &quot;DZRAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "DZRAC")]
+    [IsoId("_xyOxksnuEfCY0M4eFzOwyQ")]
+    [Description(@"Account identification code used in the RTGS system of Algeria.")]
+    AlgeriaAccountIdentificationCode = ExternalClearingSystemIdentificationCode.AlgeriaAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Agent identification code used in the RTGS system of Algeria.
+    /// Encoded/decoded by serializers as &quot;DZRPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "DZRPA")]
+    [IsoId("_nhs88cnuEfCY0M4eFzOwyQ")]
+    [Description(@"Agent identification code used in the RTGS system of Algeria.")]
+    AlgeriaAgentIdentificationCode = ExternalClearingSystemIdentificationCode.AlgeriaAgentIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// MACSS settlement account used in Mauritius.
+    /// Encoded/decoded by serializers as &quot;MUPAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "MUPAC")]
+    [IsoId("_DP9eosntEfCY0M4eFzOwyQ")]
+    [Description(@"MACSS settlement account used in Mauritius.")]
+    MauritiusRTGSAccountIdentificationCode = ExternalClearingSystemIdentificationCode.MauritiusRTGSAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// MACSS participant identification code used in Mauritus.
+    /// Encoded/decoded by serializers as &quot;MUPPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "MUPPA")]
+    [IsoId("_01Ty8cnsEfCY0M4eFzOwyQ")]
+    [Description(@"MACSS participant identification code used in Mauritus.")]
+    MauritiusRTGSParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.MauritiusRTGSParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// RTGS account identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSDAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSDAC")]
+    [IsoId("_VIf70oKDEfCff8wf3dEAMw")]
+    [Description(@"RTGS account identification code used in the Republic of Serbia.")]
+    SerbiaRTGSAccountIdentificationCode = ExternalClearingSystemIdentificationCode.SerbiaRTGSAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// RTGS participant identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSDPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSDPA")]
+    [IsoId("_BaUhAoKDEfCff8wf3dEAMw")]
+    [Description(@"RTGS participant identification code used in the Republic of Serbia.")]
+    SerbiaRTGSParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.SerbiaRTGSParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Interbank and International Clearing of FX Payments account identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSEAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSEAC")]
+    [IsoId("_1Qnu0YKDEfCff8wf3dEAMw")]
+    [Description(@"Interbank and International Clearing of FX Payments account identification code used in the Republic of Serbia.")]
+    SerbiaNationalClearingAccountIdentificationCode = ExternalClearingSystemIdentificationCode.SerbiaNationalClearingAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Interbank and International Clearing of FX Payments System participant identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSEPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSEPA")]
+    [IsoId("_oMl30YKDEfCff8wf3dEAMw")]
+    [Description(@"Interbank and International Clearing of FX Payments System participant identification code used in the Republic of Serbia.")]
+    SerbiaNationalClearingParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.SerbiaNationalClearingParticipantIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    ///  RTGS account identification code used in the Republic of Uganda.
+    /// Encoded/decoded by serializers as &quot;UGDAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "UGDAC")]
+    [IsoId("_iGT7MRDPEfGq-eDWPqCtlw")]
+    [Description(@" RTGS account identification code used in the Republic of Uganda.")]
+    UgandaRTGSAccountIdentificationCode = ExternalClearingSystemIdentificationCode.UgandaRTGSAccountIdentificationCode, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// RTGS participant identification code used in the Republic of Uganda.
+    /// Encoded/decoded by serializers as &quot;UGDPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "UGDPA")]
+    [IsoId("_Ut0QERDPEfGq-eDWPqCtlw")]
+    [Description(@"RTGS participant identification code used in the Republic of Uganda.")]
+    UgandaRTGSParticipantIdentificationCode = ExternalClearingSystemIdentificationCode.UgandaRTGSParticipantIdentificationCode, // same ordinal as derivation source for type conversions
 }

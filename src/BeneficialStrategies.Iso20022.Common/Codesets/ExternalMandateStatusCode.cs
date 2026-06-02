@@ -56,4 +56,31 @@ public enum ExternalMandateStatusCode
     [IsoId("_uY0ysPRYEeuLhpyIdtJzwg")]
     [Description(@"The mandate is put on hold.")]
     Suspended,
+
+    /// <summary>
+    /// The mandate initiation needs multiple authentications, where some but not yet all have been performed. Syntactical and semantical validations are successful.
+    /// Encoded/decoded by serializers as &quot;PATC&quot;.
+    /// </summary>
+    [EnumMember(Value = "PATC")]
+    [IsoId("_OrzskIKAEfCff8wf3dEAMw")]
+    [Description(@"The mandate initiation needs multiple authentications, where some but not yet all have been performed. Syntactical and semantical validations are successful.")]
+    PartiallyAcceptedTechnicalCorrect,
+
+    /// <summary>
+    /// The mandate data has been received by the related agent.
+    /// Encoded/decoded by serializers as &quot;RCVD&quot;.
+    /// </summary>
+    [EnumMember(Value = "RCVD")]
+    [IsoId("_5oQaQIJ_EfCff8wf3dEAMw")]
+    [Description(@"The mandate data has been received by the related agent.")]
+    Received,
+
+    /// <summary>
+    /// The mandate data has been rejected.
+    /// Encoded/decoded by serializers as &quot;RJCT&quot;.
+    /// </summary>
+    [EnumMember(Value = "RJCT")]
+    [IsoId("_GlUGkIKAEfCff8wf3dEAMw")]
+    [Description(@"The mandate data has been rejected.")]
+    Rejected,
 }

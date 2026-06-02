@@ -56,4 +56,31 @@ public enum ExternalMandateStatus1Code
     [IsoId("_uY0ysvRYEeuLhpyIdtJzwg")]
     [Description(@"The mandate is put on hold.")]
     Suspended = ExternalMandateStatusCode.Suspended, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// The mandate initiation needs multiple authentications, where some but not yet all have been performed. Syntactical and semantical validations are successful.
+    /// Encoded/decoded by serializers as &quot;PATC&quot;.
+    /// </summary>
+    [EnumMember(Value = "PATC")]
+    [IsoId("_OrzskoKAEfCff8wf3dEAMw")]
+    [Description(@"The mandate initiation needs multiple authentications, where some but not yet all have been performed. Syntactical and semantical validations are successful.")]
+    PartiallyAcceptedTechnicalCorrect = ExternalMandateStatusCode.PartiallyAcceptedTechnicalCorrect, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// The mandate data has been received by the related agent.
+    /// Encoded/decoded by serializers as &quot;RCVD&quot;.
+    /// </summary>
+    [EnumMember(Value = "RCVD")]
+    [IsoId("_5oQaQoJ_EfCff8wf3dEAMw")]
+    [Description(@"The mandate data has been received by the related agent.")]
+    Received = ExternalMandateStatusCode.Received, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// The mandate data has been rejected.
+    /// Encoded/decoded by serializers as &quot;RJCT&quot;.
+    /// </summary>
+    [EnumMember(Value = "RJCT")]
+    [IsoId("_GlUtoYKAEfCff8wf3dEAMw")]
+    [Description(@"The mandate data has been rejected.")]
+    Rejected = ExternalMandateStatusCode.Rejected, // same ordinal as derivation source for type conversions
 }

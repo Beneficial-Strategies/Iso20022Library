@@ -160,4 +160,31 @@ public enum CustomerDeviceTypeCode
     [IsoId("_Qai8wEQHEeyANrrBvBlqVg")]
     [Description(@"Device type unknown")]
     Unknown,
+
+    /// <summary>
+    /// Headless voice.
+    /// Encoded/decoded by serializers as &quot;HDST&quot;.
+    /// </summary>
+    [EnumMember(Value = "HDST")]
+    [IsoId("_deLhADJ5EfCLfeKcVPKw8g")]
+    [Description(@"Headless voice.")]
+    HeadlessVoice,
+
+    /// <summary>
+    /// Internet of things
+    /// Encoded/decoded by serializers as &quot;IOTS&quot;.
+    /// </summary>
+    [EnumMember(Value = "IOTS")]
+    [IsoId("_oP4wEDJ5EfCLfeKcVPKw8g")]
+    [Description(@"Internet of things")]
+    InternetOfThings,
+
+    /// <summary>
+    /// Television.
+    /// Encoded/decoded by serializers as &quot;TLVN&quot;.
+    /// </summary>
+    [EnumMember(Value = "TLVN")]
+    [IsoId("_HeyRgDJ5EfCLfeKcVPKw8g")]
+    [Description(@"Television.")]
+    Television,
 }

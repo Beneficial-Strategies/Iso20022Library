@@ -65,4 +65,22 @@ public enum IssuanceTypeCode
         @"Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking."
     )]
     CounterUndertakingRequestForCounterUndertaking,
+
+    /// <summary>
+    /// Bond issuance consisting of a base offer document and suite of master contracts, facilitating the issue of bonds through drawdowns.
+    /// Encoded/decoded by serializers as &quot;PROG&quot;.
+    /// </summary>
+    [EnumMember(Value = "PROG")]
+    [IsoId("_Yor0oFBoEfCpNoeDQdjnVw")]
+    [Description(@"Bond issuance consisting of a base offer document and suite of master contracts, facilitating the issue of bonds through drawdowns.")]
+    Programme,
+
+    /// <summary>
+    /// Primary bond offering not made under a programme.
+    /// Encoded/decoded by serializers as &quot;STND&quot;.
+    /// </summary>
+    [EnumMember(Value = "STND")]
+    [IsoId("_cEWqQFBoEfCpNoeDQdjnVw")]
+    [Description(@"Primary bond offering not made under a programme.")]
+    Standalone,
 }

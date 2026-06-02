@@ -2577,4 +2577,13 @@ public enum ExternalStatusReasonCode
     [IsoId("_79YjkOAbEey0k8vo1GQhqQ")]
     [Description(@"Rejection of a payment due to covering FI settlement not being received.")]
     SettlementNotReceived,
+
+    /// <summary>
+    /// Error code used for RTP-initiated CTR when the pacs.008 details are not aligned with the pain.013 request.
+    /// Encoded/decoded by serializers as &quot;PNRT&quot;.
+    /// </summary>
+    [EnumMember(Value = "PNRT")]
+    [IsoId("_XgSjEBCgEfGq-eDWPqCtlw")]
+    [Description(@"Error code used for RTP-initiated CTR when the pacs.008 details are not aligned with the pain.013 request.")]
+    PaymentNotAlignedWithRTPRequest,
 }

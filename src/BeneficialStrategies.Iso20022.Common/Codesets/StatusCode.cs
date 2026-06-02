@@ -154,4 +154,13 @@ public enum StatusCode
     [IsoId("_CRchELUsEem2T48lBgJbww")]
     [Description(@"Accepted and sent along the chain.")]
     Forwarded,
+
+    /// <summary>
+    /// Processing has been partially completed.
+    /// Encoded/decoded by serializers as &quot;PART&quot;.
+    /// </summary>
+    [EnumMember(Value = "PART")]
+    [IsoId("_fI7U4Sm5EfGfZ9PfK70MMg")]
+    [Description(@"Processing has been partially completed.")]
+    PartiallyCompleted,
 }

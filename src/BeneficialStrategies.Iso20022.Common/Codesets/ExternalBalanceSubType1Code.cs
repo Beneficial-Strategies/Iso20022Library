@@ -248,4 +248,13 @@ public enum ExternalBalanceSubType1Code
         @"Balance representing the amount that will be destined for investment. Difference between available balance and threshold for investment limit."
     )]
     Threshold = ExternalBalanceSubTypeCode.Threshold, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Balance representing the unblocked funds.
+    /// Encoded/decoded by serializers as &quot;UNBL&quot;.
+    /// </summary>
+    [EnumMember(Value = "UNBL")]
+    [IsoId("_zYPgkhDQEfGq-eDWPqCtlw")]
+    [Description(@"Balance representing the unblocked funds.")]
+    UnblockedFunds = ExternalBalanceSubTypeCode.UnblockedFunds, // same ordinal as derivation source for type conversions
 }

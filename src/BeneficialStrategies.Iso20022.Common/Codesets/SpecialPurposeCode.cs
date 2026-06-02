@@ -95,4 +95,13 @@ public enum SpecialPurposeCode
     [IsoId("_NSF4kOG8EeyjU5A7t8P1KA")]
     [Description(@"Negative indication.")]
     False,
+
+    /// <summary>
+    /// Applicable.
+    /// Encoded/decoded by serializers as &quot;APPL&quot;.
+    /// </summary>
+    [EnumMember(Value = "APPL")]
+    [IsoId("_-bbdUe1GEfCkhZmdO7PIeg")]
+    [Description(@"Applicable.")]
+    Applicable,
 }

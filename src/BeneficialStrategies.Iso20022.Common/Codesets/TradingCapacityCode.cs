@@ -19,8 +19,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(TradingCapacity6Code),
     typeof(TradingCapacity5Code),
     typeof(TradingCapacity7Code),
-    typeof(TradingCapacity8Code),
-    typeof(TradingCapacity9Code)
+    typeof(TradingCapacity8Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<TradingCapacityCode>))]
 public enum TradingCapacityCode

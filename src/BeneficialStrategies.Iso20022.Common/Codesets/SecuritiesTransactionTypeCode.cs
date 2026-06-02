@@ -426,4 +426,22 @@ public enum SecuritiesTransactionTypeCode
     [IsoId("_ZJWvNNp-Ed-ak6NoX_4Aeg_1135237830")]
     [Description(@"Relates to a corporate action.")]
     CorporateAction,
+
+    /// <summary>
+    /// Relates to a sale to a group based on price and size.
+    /// Encoded/decoded by serializers as &quot;AUCT&quot;.
+    /// </summary>
+    [EnumMember(Value = "AUCT")]
+    [IsoId("_Ix0lcFBvEfCpNoeDQdjnVw")]
+    [Description(@"Relates to a sale to a group based on price and size.")]
+    Auction,
+
+    /// <summary>
+    /// Relates to a sale only available to a limited group of investors determined by the dealer.
+    /// Encoded/decoded by serializers as &quot;PPLC&quot;.
+    /// </summary>
+    [EnumMember(Value = "PPLC")]
+    [IsoId("_K3w-QFBvEfCpNoeDQdjnVw")]
+    [Description(@"Relates to a sale only available to a limited group of investors determined by the dealer.")]
+    PrivatePlacement,
 }

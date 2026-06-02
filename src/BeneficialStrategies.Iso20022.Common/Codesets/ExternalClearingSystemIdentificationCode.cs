@@ -293,4 +293,148 @@ public enum ExternalClearingSystemIdentificationCode
     [IsoId("_BwCmYP7MEe2ORYPQEd-Clg")]
     [Description(@"Participant Institution code used by BOK-Wire+ in South Korea.")]
     SouthKoreaCentralBankIdentificationCode,
+
+    /// <summary>
+    /// REPSS (regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) settlement account.
+    /// Encoded/decoded by serializers as &quot;CBHAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBHAC")]
+    [IsoId("_uApLwMntEfCY0M4eFzOwyQ")]
+    [Description(@"REPSS (regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) settlement account.")]
+    COMESAREPSSAccountIdentificationCode,
+
+    /// <summary>
+    /// REPSS (Regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) participant identification code.
+    /// Encoded/decoded by serializers as &quot;CBHPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBHPA")]
+    [IsoId("_afb18MntEfCY0M4eFzOwyQ")]
+    [Description(@"REPSS (Regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA member states) participant identification code.")]
+    COMESAREPSSParticipantIdentificationCode,
+
+    /// <summary>
+    /// COMESA SS settlement account.
+    /// Encoded/decoded by serializers as &quot;CBPAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBPAC")]
+    [IsoId("_aThrcMnuEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA SS settlement account.")]
+    COMESASSAccountIdentificationCode,
+
+    /// <summary>
+    /// COMESA SS participant identification code.
+    /// Encoded/decoded by serializers as &quot;CBPPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBPPA")]
+    [IsoId("_MLMe0MnuEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA SS participant identification code.")]
+    COMESASSParticipantIdentificationCode,
+
+    /// <summary>
+    /// Bank Of Central African States (BEAC) Participant Account Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants accounts in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.
+    /// Encoded/decoded by serializers as &quot;CEAAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "CEAAC")]
+    [IsoId("_VYBX0IJ-EfCff8wf3dEAMw")]
+    [Description(@"Bank Of Central African States (BEAC) Participant Account Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants accounts in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.")]
+    BankOfCentralAfricanStateParticipantAccountIdentificationCode,
+
+    /// <summary>
+    /// Bank Of Central African States (BEAC) Participant Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.
+    /// Encoded/decoded by serializers as &quot;CEAPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "CEAPA")]
+    [IsoId("_Yt3HsIJ9EfCff8wf3dEAMw")]
+    [Description(@"Bank Of Central African States (BEAC) Participant Identification Code – Financial Institution Identification used in BEAC's SYGMA system for settlement between participants in Cameroon, Central Africa Republic, Chad, Equatorial Guinea, Gabon and Republic of the Congo. In this case, it is particular to the form of electronic payment of Real Time Gross Settlement.")]
+    BankOfCentralAfricanStateParticipantIdentificationCode,
+
+    /// <summary>
+    /// Account identification code used in the RTGS system of Algeria.
+    /// Encoded/decoded by serializers as &quot;DZRAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "DZRAC")]
+    [IsoId("_xyOxkMnuEfCY0M4eFzOwyQ")]
+    [Description(@"Account identification code used in the RTGS system of Algeria.")]
+    AlgeriaAccountIdentificationCode,
+
+    /// <summary>
+    /// Agent identification code used in the RTGS system of Algeria.
+    /// Encoded/decoded by serializers as &quot;DZRPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "DZRPA")]
+    [IsoId("_nhsV4MnuEfCY0M4eFzOwyQ")]
+    [Description(@"Agent identification code used in the RTGS system of Algeria.")]
+    AlgeriaAgentIdentificationCode,
+
+    /// <summary>
+    /// MACSS settlement account used in Mauritius.
+    /// Encoded/decoded by serializers as &quot;MUPAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "MUPAC")]
+    [IsoId("_DP9eoMntEfCY0M4eFzOwyQ")]
+    [Description(@"MACSS settlement account used in Mauritius.")]
+    MauritiusRTGSAccountIdentificationCode,
+
+    /// <summary>
+    /// MACSS participant identification code used in Mauritus.
+    /// Encoded/decoded by serializers as &quot;MUPPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "MUPPA")]
+    [IsoId("_01TL4MnsEfCY0M4eFzOwyQ")]
+    [Description(@"MACSS participant identification code used in Mauritus.")]
+    MauritiusRTGSParticipantIdentificationCode,
+
+    /// <summary>
+    /// RTGS account identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSDAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSDAC")]
+    [IsoId("_VIf70IKDEfCff8wf3dEAMw")]
+    [Description(@"RTGS account identification code used in the Republic of Serbia.")]
+    SerbiaRTGSAccountIdentificationCode,
+
+    /// <summary>
+    /// RTGS participant identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSDPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSDPA")]
+    [IsoId("_BaUhAIKDEfCff8wf3dEAMw")]
+    [Description(@"RTGS participant identification code used in the Republic of Serbia.")]
+    SerbiaRTGSParticipantIdentificationCode,
+
+    /// <summary>
+    /// Interbank and International Clearing of FX Payments account identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSEAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSEAC")]
+    [IsoId("_1QnHwIKDEfCff8wf3dEAMw")]
+    [Description(@"Interbank and International Clearing of FX Payments account identification code used in the Republic of Serbia.")]
+    SerbiaNationalClearingAccountIdentificationCode,
+
+    /// <summary>
+    /// Interbank and International Clearing of FX Payments System participant identification code used in the Republic of Serbia.
+    /// Encoded/decoded by serializers as &quot;RSEPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSEPA")]
+    [IsoId("_oMlQwIKDEfCff8wf3dEAMw")]
+    [Description(@"Interbank and International Clearing of FX Payments System participant identification code used in the Republic of Serbia.")]
+    SerbiaNationalClearingParticipantIdentificationCode,
+
+    /// <summary>
+    ///  RTGS account identification code used in the Republic of Uganda.
+    /// Encoded/decoded by serializers as &quot;UGDAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "UGDAC")]
+    [IsoId("_iGTUIBDPEfGq-eDWPqCtlw")]
+    [Description(@" RTGS account identification code used in the Republic of Uganda.")]
+    UgandaRTGSAccountIdentificationCode,
+
+    /// <summary>
+    /// RTGS participant identification code used in the Republic of Uganda.
+    /// Encoded/decoded by serializers as &quot;UGDPA&quot;.
+    /// </summary>
+    [EnumMember(Value = "UGDPA")]
+    [IsoId("_UtzpABDPEfGq-eDWPqCtlw")]
+    [Description(@"RTGS participant identification code used in the Republic of Uganda.")]
+    UgandaRTGSParticipantIdentificationCode,
 }

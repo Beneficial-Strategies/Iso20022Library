@@ -48,4 +48,13 @@ public enum ServiceLevelCode
     [IsoId("_ZKsL8Np-Ed-ak6NoX_4Aeg_1356003774")]
     [Description(@"Transaction must be processed according to the EBA|Priority Service.")]
     EBAPriorityService,
+
+    /// <summary>
+    /// Transaction must be processed according to the Swift payments scheme rulebook.
+    /// Encoded/decoded by serializers as &quot;SPSC&quot;.
+    /// </summary>
+    [EnumMember(Value = "SPSC")]
+    [IsoId("_9ysuYAzMEfG2Tfk5zRoZgA")]
+    [Description(@"Transaction must be processed according to the Swift payments scheme rulebook.")]
+    SwiftPaymentsScheme,
 }

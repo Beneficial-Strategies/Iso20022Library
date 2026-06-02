@@ -235,4 +235,40 @@ public enum ExternalCashAccountTypeCode
     [IsoId("_YbOMAGvbEe2F6NrIyOmXcA")]
     [Description(@"Non-Resident Individual / Entity Foreign Current held domestically.")]
     NonResidentForeignCurrencyAccount,
+
+    /// <summary>
+    /// Non-Resident domestic currency account.
+    /// Encoded/decoded by serializers as &quot;NLCY&quot;.
+    /// </summary>
+    [EnumMember(Value = "NLCY")]
+    [IsoId("_mhoKkMnvEfCY0M4eFzOwyQ")]
+    [Description(@"Non-Resident domestic currency account.")]
+    NonResidentLocalDomesticCurrencyAccount,
+
+    /// <summary>
+    /// Resident Entity Foreign Currency held domestically.
+    /// Encoded/decoded by serializers as &quot;REFC&quot;.
+    /// </summary>
+    [EnumMember(Value = "REFC")]
+    [IsoId("_gXlqMMnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident Entity Foreign Currency held domestically.")]
+    ResidentEntityForeignCurrency,
+
+    /// <summary>
+    /// Resident Individual Foreign Currency held domestically.
+    /// Encoded/decoded by serializers as &quot;RFCA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RFCA")]
+    [IsoId("_YVs3YMnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident Individual Foreign Currency held domestically.")]
+    ResidentIndividualForeignCurrencyAccount,
+
+    /// <summary>
+    /// Resident domestic currency account.
+    /// Encoded/decoded by serializers as &quot;RLCY&quot;.
+    /// </summary>
+    [EnumMember(Value = "RLCY")]
+    [IsoId("_tdoTYMnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident domestic currency account.")]
+    ResidentLocalDomesticCurrency,
 }

@@ -3207,4 +3207,31 @@ public enum ExternalPurpose1Code
     [IsoId("_b2dR0slnEe2OhfSCsNFang")]
     [Description(@"Retail payment including e-commerce and online shopping.")]
     RetailPayment = ExternalPurposeCode.RetailPayment, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Settlement of charges in response to a prior interbank charge request.
+    /// Encoded/decoded by serializers as &quot;INBC&quot;.
+    /// </summary>
+    [EnumMember(Value = "INBC")]
+    [IsoId("_YhnJgYJ_EfCff8wf3dEAMw")]
+    [Description(@"Settlement of charges in response to a prior interbank charge request.")]
+    InterbankCharges = ExternalPurposeCode.InterbankCharges, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Transaction is related to a cash transfer from an underlying fund to a holding collateralization account (ie. Longbox) for potential further use as collateral or back to the fund in case it is not required anymore.
+    /// Encoded/decoded by serializers as &quot;LBXX&quot;.
+    /// </summary>
+    [EnumMember(Value = "LBXX")]
+    [IsoId("_GHhQ4soJEfCY0M4eFzOwyQ")]
+    [Description(@"Transaction is related to a cash transfer from an underlying fund to a holding collateralization account (ie. Longbox) for potential further use as collateral or back to the fund in case it is not required anymore.")]
+    LongBoxTransfer = ExternalPurposeCode.LongBoxTransfer, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Payment related to shares settlement of a subscription or redemption order.
+    /// Encoded/decoded by serializers as &quot;MFSR&quot;.
+    /// </summary>
+    [EnumMember(Value = "MFSR")]
+    [IsoId("_ajDg8soJEfCY0M4eFzOwyQ")]
+    [Description(@"Payment related to shares settlement of a subscription or redemption order.")]
+    MutualFundSubscriptionRedemption = ExternalPurposeCode.MutualFundSubscriptionRedemption, // same ordinal as derivation source for type conversions
 }

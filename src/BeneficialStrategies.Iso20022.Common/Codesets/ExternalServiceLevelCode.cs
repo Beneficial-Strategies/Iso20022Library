@@ -245,4 +245,31 @@ public enum ExternalServiceLevelCode
     [IsoId("_9m6qUP7KEe2ORYPQEd-Clg")]
     [Description(@"Payment is executed following a Euro One-Leg Out Scheme.")]
     EuroOneLegOut,
+
+    /// <summary>
+    /// Identifies payments executed under the East African Payment System (EAPS), the regional cross-border settlement scheme operated by EAC central banks.
+    /// Encoded/decoded by serializers as &quot;EAPS&quot;.
+    /// </summary>
+    [EnumMember(Value = "EAPS")]
+    [IsoId("_2E_zAMoJEfCY0M4eFzOwyQ")]
+    [Description(@"Identifies payments executed under the East African Payment System (EAPS), the regional cross-border settlement scheme operated by EAC central banks.")]
+    EastAfricanPaymentSystem,
+
+    /// <summary>
+    /// Payment must be executed following the Icelandic Rulebook Council Area (IRCA) scheme.
+    /// Encoded/decoded by serializers as &quot;IRCA&quot;.
+    /// </summary>
+    [EnumMember(Value = "IRCA")]
+    [IsoId("_bnyosDowEfCAEqSMW_k_Rg")]
+    [Description(@"Payment must be executed following the Icelandic Rulebook Council Area (IRCA) scheme.")]
+    IcelandicRulebookCouncilArea,
+
+    /// <summary>
+    /// Transaction must be processed according to the Swift Scheme rulebook.
+    /// Encoded/decoded by serializers as &quot;SPSC&quot;.
+    /// </summary>
+    [EnumMember(Value = "SPSC")]
+    [IsoId("_CZ4wQBDQEfGq-eDWPqCtlw")]
+    [Description(@"Transaction must be processed according to the Swift Scheme rulebook.")]
+    SwiftScheme,
 }

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "iso20022": {
+      "type": "sse",
+      "url": "https://iso20022-mcp-v1.beneficialstrategies.com/sse"
+    }
+  }
+}

@@ -1141,4 +1141,76 @@ public enum ExternalCashClearingSystemCode
     [IsoId("_eNhwIP7LEe2ORYPQEd-Clg")]
     [Description(@"KR (South Korea) – Korean Won RTGS (BOK-Wire+).")]
     KoreaBOKWire,
+
+    /// <summary>
+    /// COMESA Clearing House Regional Payment and Settlement System, a regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA (Common Market for Eastern and Southern Africa) member states.
+    /// Encoded/decoded by serializers as &quot;CBH&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBH")]
+    [IsoId("_OmUk0MnrEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA Clearing House Regional Payment and Settlement System, a regional cross-border payment and settlement platform designed to facilitate efficient and secure intra-regional trade payments within COMESA (Common Market for Eastern and Southern Africa) member states.")]
+    COMESAREPSS,
+
+    /// <summary>
+    /// COMESA (Common Market for Eastern and Southern Africa) RTGS system.
+    /// Encoded/decoded by serializers as &quot;CBP&quot;.
+    /// </summary>
+    [EnumMember(Value = "CBP")]
+    [IsoId("_EDfp0MnsEfCY0M4eFzOwyQ")]
+    [Description(@"COMESA (Common Market for Eastern and Southern Africa) RTGS system.")]
+    COMESASS,
+
+    /// <summary>
+    /// Inter-Bank Payment System (IBPS), settlement of multi-currency, real-time and batch interbank payments in Vietnam.
+    /// Encoded/decoded by serializers as &quot;CIT&quot;.
+    /// </summary>
+    [EnumMember(Value = "CIT")]
+    [IsoId("_zNxJkDoyEfCAEqSMW_k_Rg")]
+    [Description(@"Inter-Bank Payment System (IBPS), settlement of multi-currency, real-time and batch interbank payments in Vietnam.")]
+    CITAD,
+
+    /// <summary>
+    /// Identification of the RTGS system of the Algeria.
+    /// Encoded/decoded by serializers as &quot;DZR&quot;.
+    /// </summary>
+    [EnumMember(Value = "DZR")]
+    [IsoId("_ZWIhAMnsEfCY0M4eFzOwyQ")]
+    [Description(@"Identification of the RTGS system of the Algeria.")]
+    AlgeriaRTGS,
+
+    /// <summary>
+    /// Instant Payment System for payments in VN Dong denomination.
+    /// Encoded/decoded by serializers as &quot;NAP&quot;.
+    /// </summary>
+    [EnumMember(Value = "NAP")]
+    [IsoId("_RJEDMDo0EfCAEqSMW_k_Rg")]
+    [Description(@"Instant Payment System for payments in VN Dong denomination.")]
+    NAPAS,
+
+    /// <summary>
+    /// RS (Republic of Serbia) – Serbian RTGS in Serbian Dinars.
+    /// Encoded/decoded by serializers as &quot;RSD&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSD")]
+    [IsoId("_g1x5kIS4EfCDSZNfKX_gAg")]
+    [Description(@"RS (Republic of Serbia) – Serbian RTGS in Serbian Dinars.")]
+    SerbiaRTGS,
+
+    /// <summary>
+    /// RS (Republic of Serbia) – Interbank and International Clearing of FX Payments in Euros.
+    /// Encoded/decoded by serializers as &quot;RSE&quot;.
+    /// </summary>
+    [EnumMember(Value = "RSE")]
+    [IsoId("_cVvncIS5EfCDSZNfKX_gAg")]
+    [Description(@"RS (Republic of Serbia) – Interbank and International Clearing of FX Payments in Euros.")]
+    SerbiaInterbankAndInternationalClearingOfFXPayments,
+
+    /// <summary>
+    /// UG (Uganda) – Uganda Domestic Automated Transfer System RTGS.
+    /// Encoded/decoded by serializers as &quot;UGD&quot;.
+    /// </summary>
+    [EnumMember(Value = "UGD")]
+    [IsoId("_-_iIEMnoEfCY0M4eFzOwyQ")]
+    [Description(@"UG (Uganda) – Uganda Domestic Automated Transfer System RTGS.")]
+    BankOfUgandaRTGS,
 }

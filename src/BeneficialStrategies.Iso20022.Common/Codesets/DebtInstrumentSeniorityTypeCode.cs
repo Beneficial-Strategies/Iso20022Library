@@ -69,4 +69,40 @@ public enum DebtInstrumentSeniorityTypeCode
     [IsoId("_VTTZsEEPEeWwF-kIleVYXQ")]
     [Description(@"Other type of debts.")]
     Other,
+
+    /// <summary>
+    /// Debt with a high payment priority above lower ranking junior and subordinated but below preferred.
+    /// Encoded/decoded by serializers as &quot;SNPR&quot;.
+    /// </summary>
+    [EnumMember(Value = "SNPR")]
+    [IsoId("_-3mhYFBVEfCpNoeDQdjnVw")]
+    [Description(@"Debt with a high payment priority above lower ranking junior and subordinated but below preferred.")]
+    SeniorNonPreferred,
+
+    /// <summary>
+    /// Debt with a high payment priority above non-preferred and other lower ranking junior and subordinated.
+    /// Encoded/decoded by serializers as &quot;SPRF&quot;.
+    /// </summary>
+    [EnumMember(Value = "SPRF")]
+    [IsoId("_8KxuwFBVEfCpNoeDQdjnVw")]
+    [Description(@"Debt with a high payment priority above non-preferred and other lower ranking junior and subordinated.")]
+    SeniorPreferred,
+
+    /// <summary>
+    /// Debt with a high payment priority above preferred and other lower ranking junior and subordinated.
+    /// Encoded/decoded by serializers as &quot;SSEC&quot;.
+    /// </summary>
+    [EnumMember(Value = "SSEC")]
+    [IsoId("_4lVSEFBVEfCpNoeDQdjnVw")]
+    [Description(@"Debt with a high payment priority above preferred and other lower ranking junior and subordinated.")]
+    SeniorSecured,
+
+    /// <summary>
+    /// Debt with a high payment priority above preferred and other lower ranking junior and subordinated but below secured debt.
+    /// Encoded/decoded by serializers as &quot;SUNS&quot;.
+    /// </summary>
+    [EnumMember(Value = "SUNS")]
+    [IsoId("_6a9-AFBVEfCpNoeDQdjnVw")]
+    [Description(@"Debt with a high payment priority above preferred and other lower ranking junior and subordinated but below secured debt.")]
+    SeniorUnsecured,
 }

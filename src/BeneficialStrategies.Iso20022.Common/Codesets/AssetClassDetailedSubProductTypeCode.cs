@@ -695,4 +695,76 @@ public enum AssetClassDetailedSubProductTypeCode
     [IsoId("_MwDFUGs3EeW9oI9ZdgWHPQ")]
     [Description(@"Commodity attribute of type off-peak.")]
     OffPeak,
+
+    /// <summary>
+    /// Commodity attribute of type capesize.
+    /// Encoded/decoded by serializers as &quot;CAPE&quot;.
+    /// </summary>
+    [EnumMember(Value = "CAPE")]
+    [IsoId("_1Z0JIBFbEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type capesize.")]
+    Capesize,
+
+    /// <summary>
+    /// Commodity attribute of type clean.
+    /// Encoded/decoded by serializers as &quot;CLAN&quot;.
+    /// </summary>
+    [EnumMember(Value = "CLAN")]
+    [IsoId("_uHANYBFcEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type clean.")]
+    Clean,
+
+    /// <summary>
+    /// Commodity attribute of type dirty.
+    /// Encoded/decoded by serializers as &quot;DRTY&quot;.
+    /// </summary>
+    [EnumMember(Value = "DRTY")]
+    [IsoId("_xofXIBFcEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type dirty.")]
+    Dirty,
+
+    /// <summary>
+    /// Commodity attribute of type handysize.
+    /// Encoded/decoded by serializers as &quot;HAND&quot;.
+    /// </summary>
+    [EnumMember(Value = "HAND")]
+    [IsoId("_LW9V4BFcEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type handysize.")]
+    Handysize,
+
+    /// <summary>
+    /// Commodity attribute of type hydrogen.
+    /// Encoded/decoded by serializers as &quot;HYDG&quot;.
+    /// </summary>
+    [EnumMember(Value = "HYDG")]
+    [IsoId("_ixcAIBFYEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type hydrogen.")]
+    Hydrogen,
+
+    /// <summary>
+    /// Commodity attribute of type natural gas.
+    /// Encoded/decoded by serializers as &quot;NGAS&quot;.
+    /// </summary>
+    [EnumMember(Value = "NGAS")]
+    [IsoId("_vSu9gBFYEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type natural gas.")]
+    NaturalGas,
+
+    /// <summary>
+    /// Commodity attribute of type panamax.
+    /// Encoded/decoded by serializers as &quot;PNMX&quot;.
+    /// </summary>
+    [EnumMember(Value = "PNMX")]
+    [IsoId("_5c3u4BFbEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type panamax.")]
+    Panamax,
+
+    /// <summary>
+    /// Commodity attribute of type supramax.
+    /// Encoded/decoded by serializers as &quot;SPMX&quot;.
+    /// </summary>
+    [EnumMember(Value = "SPMX")]
+    [IsoId("_9UjLEBFbEfCWron1K0BHXg")]
+    [Description(@"Commodity attribute of type supramax.")]
+    Supramax,
 }

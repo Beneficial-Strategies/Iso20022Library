@@ -897,4 +897,22 @@ public enum CalculationTypeCode
     [IsoId("_bXNt59p-Ed-ak6NoX_4Aeg_-153029049")]
     [Description(@"The lowest yield to all possible redemption date scenarios.")]
     ToWorstConvention,
+
+    /// <summary>
+    /// Interest is calculated on principal plus accrued interest up to and including the previous day.
+    /// Encoded/decoded by serializers as &quot;CDLY&quot;.
+    /// </summary>
+    [EnumMember(Value = "CDLY")]
+    [IsoId("_ScJ6kFBgEfCpNoeDQdjnVw")]
+    [Description(@"Interest is calculated on principal plus accrued interest up to and including the previous day.")]
+    CompoundDaily,
+
+    /// <summary>
+    /// Interest is calculated on a principal amount for each period divided by the total principal.
+    /// Encoded/decoded by serializers as &quot;WEAV&quot;.
+    /// </summary>
+    [EnumMember(Value = "WEAV")]
+    [IsoId("_Uj5DIFBgEfCpNoeDQdjnVw")]
+    [Description(@"Interest is calculated on a principal amount for each period divided by the total principal.")]
+    WeightedAverage,
 }

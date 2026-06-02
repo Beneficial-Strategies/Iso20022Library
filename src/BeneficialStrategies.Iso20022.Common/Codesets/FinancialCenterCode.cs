@@ -528,4 +528,22 @@ public enum FinancialCenterCode
     [IsoId("_ao3aKNp-Ed-ak6NoX_4Aeg_627416836")]
     [Description(@"Code for Zurich.")]
     Zurich,
+
+    /// <summary>
+    /// European real-time gross settlement that replaced TARGET.
+    /// Encoded/decoded by serializers as &quot;TRG2&quot;.
+    /// </summary>
+    [EnumMember(Value = "TRG2")]
+    [IsoId("_EpyE8FBiEfCpNoeDQdjnVw")]
+    [Description(@"European real-time gross settlement that replaced TARGET.")]
+    TARGET2,
+
+    /// <summary>
+    /// European real-time gross settlement.
+    /// Encoded/decoded by serializers as &quot;TRGT&quot;.
+    /// </summary>
+    [EnumMember(Value = "TRGT")]
+    [IsoId("_CaFTMFBiEfCpNoeDQdjnVw")]
+    [Description(@"European real-time gross settlement.")]
+    TARGET,
 }

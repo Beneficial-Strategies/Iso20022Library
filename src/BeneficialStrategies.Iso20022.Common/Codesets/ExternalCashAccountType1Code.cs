@@ -237,4 +237,40 @@ public enum ExternalCashAccountType1Code
     [Description(@"Non-Resident Individual / Entity Foreign Current held domestically.")]
     NonResidentForeignCurrencyAccount =
         ExternalCashAccountTypeCode.NonResidentForeignCurrencyAccount, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Non-Resident domestic currency account.
+    /// Encoded/decoded by serializers as &quot;NLCY&quot;.
+    /// </summary>
+    [EnumMember(Value = "NLCY")]
+    [IsoId("_mhoKksnvEfCY0M4eFzOwyQ")]
+    [Description(@"Non-Resident domestic currency account.")]
+    NonResidentLocalDomesticCurrencyAccount = ExternalCashAccountTypeCode.NonResidentLocalDomesticCurrencyAccount, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Resident Entity Foreign Currency held domestically.
+    /// Encoded/decoded by serializers as &quot;REFC&quot;.
+    /// </summary>
+    [EnumMember(Value = "REFC")]
+    [IsoId("_gXlqMsnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident Entity Foreign Currency held domestically.")]
+    ResidentEntityForeignCurrency = ExternalCashAccountTypeCode.ResidentEntityForeignCurrency, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Resident Individual Foreign Currency held domestically.
+    /// Encoded/decoded by serializers as &quot;RFCA&quot;.
+    /// </summary>
+    [EnumMember(Value = "RFCA")]
+    [IsoId("_YVteccnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident Individual Foreign Currency held domestically.")]
+    ResidentIndividualForeignCurrencyAccount = ExternalCashAccountTypeCode.ResidentIndividualForeignCurrencyAccount, // same ordinal as derivation source for type conversions
+
+    /// <summary>
+    /// Resident domestic currency account.
+    /// Encoded/decoded by serializers as &quot;RLCY&quot;.
+    /// </summary>
+    [EnumMember(Value = "RLCY")]
+    [IsoId("_tdo6ccnvEfCY0M4eFzOwyQ")]
+    [Description(@"Resident domestic currency account.")]
+    ResidentLocalDomesticCurrency = ExternalCashAccountTypeCode.ResidentLocalDomesticCurrency, // same ordinal as derivation source for type conversions
 }

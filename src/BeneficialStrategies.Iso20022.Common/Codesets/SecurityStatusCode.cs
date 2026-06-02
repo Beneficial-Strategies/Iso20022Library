@@ -88,4 +88,22 @@ public enum SecurityStatusCode
     [IsoId("_ZKPgAdp-Ed-ak6NoX_4Aeg_1295235874")]
     [Description(@"Annoucement by the regulator that the security has become worthless.")]
     Worthless,
+
+    /// <summary>
+    /// The status is subject to a trading halt.
+    /// Encoded/decoded by serializers as &quot;HALT&quot;.
+    /// </summary>
+    [EnumMember(Value = "HALT")]
+    [IsoId("_3SkM4GeyEfCydp-m0gJhgA")]
+    [Description(@"The status is subject to a trading halt.")]
+    Halted,
+
+    /// <summary>
+    /// The status is removed
+    /// Encoded/decoded by serializers as &quot;RMOV&quot;.
+    /// </summary>
+    [EnumMember(Value = "RMOV")]
+    [IsoId("_6Kbx4GeyEfCydp-m0gJhgA")]
+    [Description(@"The status is removed")]
+    Removed,
 }

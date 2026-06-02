@@ -388,4 +388,13 @@ public enum BenchmarkCurveNameCode
     [IsoId("_hjmQwCjFEeuKKc2MztSwPw")]
     [Description(@"Czech National Bank Reference Interest Rate")]
     Czeonia,
+
+    /// <summary>
+    /// Tokyo Overnight Average Rate (TONA rate or TONAR) or Japanese Yen Uncollateralized Overnight Call Rate.
+    /// Encoded/decoded by serializers as &quot;TONA&quot;.
+    /// </summary>
+    [EnumMember(Value = "TONA")]
+    [IsoId("_xftloCp2EfCKcpcCd6mq4w")]
+    [Description(@"Tokyo Overnight Average Rate (TONA rate or TONAR) or Japanese Yen Uncollateralized Overnight Call Rate.")]
+    TONAR,
 }
