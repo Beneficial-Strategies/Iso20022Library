@@ -934,4 +934,13 @@ public enum UnitOfMeasureCode
     [IsoId("_KyeMMFfpEeqfKIw9ojIoIw")]
     [Description(@"Critical precipitation day")]
     CriticalPrecipitationDay,
+
+    /// <summary>
+    /// EV Charging minutes.
+    /// Encoded/decoded by serializers as &quot;CHMT&quot;.
+    /// </summary>
+    [EnumMember(Value = "CHMT")]
+    [IsoId("22ffdd48-384e-4597-9fb1-37615343c85a")]
+    [Description(@"EV Charging minutes.")]
+    ChargingMinutes,
 }

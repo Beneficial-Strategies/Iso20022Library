@@ -26,7 +26,15 @@ namespace BeneficialStrategies.Iso20022.Codesets;
     typeof(SettlementTransactionCondition14Code),
     typeof(SettlementTransactionCondition3Code),
     typeof(SettlementTransactionCondition5Code),
-    typeof(SettlementTransactionCondition2Code)
+    typeof(SettlementTransactionCondition2Code),
+    typeof(SettlementTransactionCondition15Code),
+    typeof(SettlementTransactionCondition16Code),
+    typeof(SettlementTransactionCondition17Code),
+    typeof(SettlementTransactionCondition18Code),
+    typeof(SettlementTransactionCondition19Code),
+    typeof(SettlementTransactionCondition20Code),
+    typeof(SettlementTransactionCondition21Code),
+    typeof(SettlementTransactionCondition22Code)
 )]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<SettlementTransactionConditionCode>))]
 public enum SettlementTransactionConditionCode
@@ -337,4 +345,13 @@ public enum SettlementTransactionConditionCode
         @"Identification of settlement instructions created as a result of a partial successful buy-in."
     )]
     PartialSuccessfulBuyIn,
+
+    /// <summary>
+    /// Gating event participation. Hold until event start time.
+    /// Encoded/decoded by serializers as &quot;GATE&quot;.
+    /// </summary>
+    [EnumMember(Value = "GATE")]
+    [IsoId("_H0KYAfINEfCMaqDZ_tShqQ")]
+    [Description(@"Gating event participation. Hold until event start time.")]
+    GatingEventParticipation,
 }

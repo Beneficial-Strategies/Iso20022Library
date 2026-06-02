@@ -245,4 +245,13 @@ public enum UserInterfaceCode
     [IsoId("_6HCaD3yMEemHsOqJOzMVfg")]
     [Description(@"Credit information related to a top-up account.")]
     TopUpCredit,
+
+    /// <summary>
+    /// Cardholder bank statement.
+    /// Encoded/decoded by serializers as &quot;CSTM&quot;.
+    /// </summary>
+    [EnumMember(Value = "CSTM")]
+    [IsoId("_PKRJYZ_8EfC4Q_xhaK1hdQ")]
+    [Description(@"Cardholder bank statement.")]
+    CustomerStatement,
 }

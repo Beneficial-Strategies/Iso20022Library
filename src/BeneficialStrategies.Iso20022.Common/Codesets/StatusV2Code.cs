@@ -166,4 +166,22 @@ public enum StatusV2Code
     [IsoId("_k1I4dfNvEeqRfth943bvEA")]
     [Description(@"Rights holder has been registered to participate to the meeting.")]
     RegisteredToParticipateAtMeeting,
+
+    /// <summary>
+    /// Processing has been partially completed.
+    /// Encoded/decoded by serializers as &quot;PART&quot;.
+    /// </summary>
+    [EnumMember(Value = "PART")]
+    [IsoId("_kBGIRym6EfGfZ9PfK70MMg")]
+    [Description(@"Processing has been partially completed.")]
+    PartiallyCompleted,
+
+    /// <summary>
+    /// Rights holder has been deregistered from the meeting participants list.
+    /// Encoded/decoded by serializers as &quot;DREG&quot;.
+    /// </summary>
+    [EnumMember(Value = "DREG")]
+    [IsoId("_-7x7sYY_Ee-5eN4DwJpixA")]
+    [Description(@"Rights holder has been deregistered from the meeting participants list.")]
+    DeregistrationCompleted,
 }

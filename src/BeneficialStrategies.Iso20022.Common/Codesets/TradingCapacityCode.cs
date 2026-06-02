@@ -197,4 +197,13 @@ public enum TradingCapacityCode
     [IsoId("")]
     [Description(@"Trade executed through a broker. The confirmation is sent by a money broker.")]
     Broker,
+
+    /// <summary>
+    /// Trading as an agent on behalf of the customer and as a principal.
+    /// Encoded/decoded by serializers as &quot;MIXC&quot;.
+    /// </summary>
+    [EnumMember(Value = "MIXC")]
+    [IsoId("88415639-013c-4783-9210-9224480d153b")]
+    [Description(@"Trading as an agent on behalf of the customer and as a principal.")]
+    Mixed,
 }

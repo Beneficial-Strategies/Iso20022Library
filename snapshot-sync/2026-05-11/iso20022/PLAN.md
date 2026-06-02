@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 13 complete: through RejectionReason91Code)
+- **Last updated**: 2026-06-01 (batch 14 complete: all New codesets done through VerificationEntity3Code)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -272,46 +272,46 @@
 - [x] `RejectionReason89Code` — `Codesets/RejectionReason89Code.cs`
 - [x] `RejectionReason90Code` — `Codesets/RejectionReason90Code.cs`
 - [x] `RejectionReason91Code` — `Codesets/RejectionReason91Code.cs`
-- [ ] `Response12Code` — `Codesets/Response12Code.cs`
-- [ ] `ResultDetail5Code` — `Codesets/ResultDetail5Code.cs`
-- [ ] `ReturnedStatus1Code` — `Codesets/ReturnedStatus1Code.cs`
-- [ ] `ReturnedStatusCode` — `Codesets/ReturnedStatusCode.cs`
-- [ ] `SecurityCharacteristics2Code` — `Codesets/SecurityCharacteristics2Code.cs`
-- [ ] `SettlementDate8Code` — `Codesets/SettlementDate8Code.cs`
-- [ ] `SettlementDateV2Code` — `Codesets/SettlementDateV2Code.cs`
-- [ ] `SettlementReportType2Code` — `Codesets/SettlementReportType2Code.cs`
-- [ ] `SettlementTransactionCondition15Code` — `Codesets/SettlementTransactionCondition15Code.cs`
-- [ ] `SettlementTransactionCondition16Code` — `Codesets/SettlementTransactionCondition16Code.cs`
-- [ ] `SettlementTransactionCondition17Code` — `Codesets/SettlementTransactionCondition17Code.cs`
-- [ ] `SettlementTransactionCondition18Code` — `Codesets/SettlementTransactionCondition18Code.cs`
-- [ ] `SettlementTransactionCondition19Code` — `Codesets/SettlementTransactionCondition19Code.cs`
-- [ ] `SettlementTransactionCondition20Code` — `Codesets/SettlementTransactionCondition20Code.cs`
-- [ ] `SettlementTransactionCondition21Code` — `Codesets/SettlementTransactionCondition21Code.cs`
-- [ ] `SettlementTransactionCondition22Code` — `Codesets/SettlementTransactionCondition22Code.cs`
-- [ ] `Side6Code` — `Codesets/Side6Code.cs`
-- [ ] `SoftwareType1Code` — `Codesets/SoftwareType1Code.cs`
-- [ ] `SoftwareType2Code` — `Codesets/SoftwareType2Code.cs`
-- [ ] `SoftwareTypeCode` — `Codesets/SoftwareTypeCode.cs`
-- [ ] `Status10Code` — `Codesets/Status10Code.cs`
-- [ ] `Status11Code` — `Codesets/Status11Code.cs`
-- [ ] `StorageLocation2Code` — `Codesets/StorageLocation2Code.cs`
-- [ ] `TelephonyCallType2Code` — `Codesets/TelephonyCallType2Code.cs`
-- [ ] `TemporaryServicesCharge2Code` — `Codesets/TemporaryServicesCharge2Code.cs`
-- [ ] `TerminalType2Code` — `Codesets/TerminalType2Code.cs`
-- [ ] `TradingCapacity10Code` — `Codesets/TradingCapacity10Code.cs`
-- [ ] `TransactionAttribute3Code` — `Codesets/TransactionAttribute3Code.cs`
-- [ ] `TransferOfProceedsType1Code` — `Codesets/TransferOfProceedsType1Code.cs`
-- [ ] `TransferOfProceedsTypeCode` — `Codesets/TransferOfProceedsTypeCode.cs`
-- [ ] `TransportType2Code` — `Codesets/TransportType2Code.cs`
-- [ ] `TypeOfAmount24Code` — `Codesets/TypeOfAmount24Code.cs`
-- [ ] `TypeOfAmount25Code` — `Codesets/TypeOfAmount25Code.cs`
-- [ ] `UnicodeChartsCode` — `Codesets/UnicodeChartsCode.cs`
-- [ ] `UnitOfMeasure14Code` — `Codesets/UnitOfMeasure14Code.cs`
-- [ ] `UserInterface9Code` — `Codesets/UserInterface9Code.cs`
-- [ ] `ValidityPeriodType1Code` — `Codesets/ValidityPeriodType1Code.cs`
-- [ ] `ValidityPeriodTypeCode` — `Codesets/ValidityPeriodTypeCode.cs`
-- [ ] `Verification4Code` — `Codesets/Verification4Code.cs`
-- [ ] `VerificationEntity3Code` — `Codesets/VerificationEntity3Code.cs`
+- [x] `Response12Code` — `Codesets/Response12Code.cs`
+- [x] `ResultDetail5Code` — `Codesets/ResultDetail5Code.cs`
+- [x] `ReturnedStatus1Code` — `Codesets/ReturnedStatus1Code.cs`
+- [x] `ReturnedStatusCode` — `Codesets/ReturnedStatusCode.cs`
+- [x] `SecurityCharacteristics2Code` — `Codesets/SecurityCharacteristics2Code.cs`
+- [x] `SettlementDate8Code` — `Codesets/SettlementDate8Code.cs`
+- [x] `SettlementDateV2Code` — `Codesets/SettlementDateV2Code.cs`
+- [x] `SettlementReportType2Code` — `Codesets/SettlementReportType2Code.cs`
+- [x] `SettlementTransactionCondition15Code` — `Codesets/SettlementTransactionCondition15Code.cs`
+- [x] `SettlementTransactionCondition16Code` — `Codesets/SettlementTransactionCondition16Code.cs`
+- [x] `SettlementTransactionCondition17Code` — `Codesets/SettlementTransactionCondition17Code.cs`
+- [x] `SettlementTransactionCondition18Code` — `Codesets/SettlementTransactionCondition18Code.cs`
+- [x] `SettlementTransactionCondition19Code` — `Codesets/SettlementTransactionCondition19Code.cs`
+- [x] `SettlementTransactionCondition20Code` — `Codesets/SettlementTransactionCondition20Code.cs`
+- [x] `SettlementTransactionCondition21Code` — `Codesets/SettlementTransactionCondition21Code.cs`
+- [x] `SettlementTransactionCondition22Code` — `Codesets/SettlementTransactionCondition22Code.cs`
+- [x] `Side6Code` — `Codesets/Side6Code.cs`
+- [x] `SoftwareType1Code` — `Codesets/SoftwareType1Code.cs`
+- [x] `SoftwareType2Code` — `Codesets/SoftwareType2Code.cs`
+- [x] `SoftwareTypeCode` — `Codesets/SoftwareTypeCode.cs`
+- [x] `Status10Code` — `Codesets/Status10Code.cs`
+- [x] `Status11Code` — `Codesets/Status11Code.cs`
+- [x] `StorageLocation2Code` — `Codesets/StorageLocation2Code.cs`
+- [x] `TelephonyCallType2Code` — `Codesets/TelephonyCallType2Code.cs`
+- [x] `TemporaryServicesCharge2Code` — `Codesets/TemporaryServicesCharge2Code.cs`
+- [x] `TerminalType2Code` — `Codesets/TerminalType2Code.cs`
+- [x] `TradingCapacity10Code` — `Codesets/TradingCapacity10Code.cs`
+- [x] `TransactionAttribute3Code` — `Codesets/TransactionAttribute3Code.cs`
+- [x] `TransferOfProceedsType1Code` — `Codesets/TransferOfProceedsType1Code.cs`
+- [x] `TransferOfProceedsTypeCode` — `Codesets/TransferOfProceedsTypeCode.cs`
+- [x] `TransportType2Code` — `Codesets/TransportType2Code.cs`
+- [x] `TypeOfAmount24Code` — `Codesets/TypeOfAmount24Code.cs`
+- [x] `TypeOfAmount25Code` — `Codesets/TypeOfAmount25Code.cs`
+- [x] `UnicodeChartsCode` — `Codesets/UnicodeChartsCode.cs`
+- [x] `UnitOfMeasure14Code` — `Codesets/UnitOfMeasure14Code.cs`
+- [x] `UserInterface9Code` — `Codesets/UserInterface9Code.cs`
+- [x] `ValidityPeriodType1Code` — `Codesets/ValidityPeriodType1Code.cs`
+- [x] `ValidityPeriodTypeCode` — `Codesets/ValidityPeriodTypeCode.cs`
+- [x] `Verification4Code` — `Codesets/Verification4Code.cs`
+- [x] `VerificationEntity3Code` — `Codesets/VerificationEntity3Code.cs`
 ### Changed
 - [x] `AdditionalServiceTypeCode` — add: ADCA, ANIQ, CDTL, PVVS, REAC, SAVS, STIP, TXID
 - [ ] `AssetClassDetailedSubProductTypeCode` — add: CAPE, CLAN, DRTY, HAND, HYDG, NGAS, PNMX, SPMX
@@ -364,13 +364,13 @@
 - [ ] `SecuritiesTransactionTypeCode` — add: AUCT, PPLC
 - [ ] `SecurityStatusCode` — add: HALT, RMOV
 - [ ] `ServiceLevelCode` — add: SPSC
-- [ ] `SettlementTransactionConditionCode` — add: GATE
+- [x] `SettlementTransactionConditionCode` — add: GATE
 - [ ] `SpecialPurposeCode` — add: APPL
 - [ ] `StatusCode` — add: PART
-- [ ] `StatusV2Code` — add: PART
-- [ ] `TradingCapacityCode` — add: MIXC
-- [ ] `UnitOfMeasureCode` — add: CHMT
-- [ ] `UserInterfaceCode` — add: CSTM
+- [x] `StatusV2Code` — add: PART
+- [x] `TradingCapacityCode` — add: MIXC
+- [x] `UnitOfMeasureCode` — add: CHMT
+- [x] `UserInterfaceCode` — add: CSTM
 ### Obsolete
 - [x] `GoodAndServiceDeliveryScheduleCode` — add [Obsolete] (removal date: 2025-09-09)
 - [x] `MOTO1Code` — add [Obsolete] (removal date: 2025-09-09)
