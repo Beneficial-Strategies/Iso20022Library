@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 5: 100 new components complete through CardPaymentDataSetTransaction55)
+- **Last updated**: 2026-06-02 (Phase 2 batch 6: 120 new components complete through Charge33)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -484,26 +484,26 @@
 - [x] `CardPaymentDataSet43` — `Components/CardPaymentDataSet43.cs`
 - [x] `CardPaymentDataSetTransaction54` — `Components/CardPaymentDataSetTransaction54.cs`
 - [x] `CardPaymentDataSetTransaction55` — `Components/CardPaymentDataSetTransaction55.cs`
-- [ ] `CardPaymentDataSetTransaction56` — `Components/CardPaymentDataSetTransaction56.cs`
-- [ ] `CardPaymentDataSetTransaction57` — `Components/CardPaymentDataSetTransaction57.cs`
-- [ ] `CardPaymentEnvironment82` — `Components/CardPaymentEnvironment82.cs`
-- [ ] `CardPaymentTransaction146` — `Components/CardPaymentTransaction146.cs`
-- [ ] `CardPaymentTransaction147` — `Components/CardPaymentTransaction147.cs`
-- [ ] `CardPaymentTransaction148` — `Components/CardPaymentTransaction148.cs`
-- [ ] `CardPaymentTransaction149` — `Components/CardPaymentTransaction149.cs`
-- [ ] `CardPaymentTransaction150` — `Components/CardPaymentTransaction150.cs`
-- [ ] `CardPaymentTransaction151` — `Components/CardPaymentTransaction151.cs`
-- [ ] `CardPaymentTransaction152` — `Components/CardPaymentTransaction152.cs`
-- [ ] `CardPaymentTransaction153` — `Components/CardPaymentTransaction153.cs`
-- [ ] `CardPaymentTransaction154` — `Components/CardPaymentTransaction154.cs`
-- [ ] `CardPaymentTransactionDetails54` — `Components/CardPaymentTransactionDetails54.cs`
-- [ ] `Cardholder23` — `Components/Cardholder23.cs`
-- [ ] `CashOption115` — `Components/CashOption115.cs`
-- [ ] `CashOption116` — `Components/CashOption116.cs`
-- [ ] `CashOption117` — `Components/CashOption117.cs`
-- [ ] `CashOption118` — `Components/CashOption118.cs`
-- [ ] `CertificateManagementRequest4` — `Components/CertificateManagementRequest4.cs`
-- [ ] `Charge33` — `Components/Charge33.cs`
+- [x] `CardPaymentDataSetTransaction56` — `Components/CardPaymentDataSetTransaction56.cs`
+- [x] `CardPaymentDataSetTransaction57` — `Components/CardPaymentDataSetTransaction57.cs`
+- [x] `CardPaymentEnvironment82` — `Components/CardPaymentEnvironment82.cs`
+- [x] `CardPaymentTransaction146` — `Components/CardPaymentTransaction146.cs`
+- [x] `CardPaymentTransaction147` — `Components/CardPaymentTransaction147.cs`
+- [x] `CardPaymentTransaction148` — `Components/CardPaymentTransaction148.cs`
+- [x] `CardPaymentTransaction149` — `Components/CardPaymentTransaction149.cs`
+- [x] `CardPaymentTransaction150` — `Components/CardPaymentTransaction150.cs`
+- [x] `CardPaymentTransaction151` — `Components/CardPaymentTransaction151.cs`
+- [x] `CardPaymentTransaction152` — `Components/CardPaymentTransaction152.cs`
+- [x] `CardPaymentTransaction153` — `Components/CardPaymentTransaction153.cs`
+- [x] `CardPaymentTransaction154` — `Components/CardPaymentTransaction154.cs`
+- [x] `CardPaymentTransactionDetails54` — `Components/CardPaymentTransactionDetails54.cs`
+- [x] `Cardholder23` — `Components/Cardholder23.cs`
+- [x] `CashOption115` — `Components/CashOption115.cs`
+- [x] `CashOption116` — `Components/CashOption116.cs`
+- [x] `CashOption117` — `Components/CashOption117.cs`
+- [x] `CashOption118` — `Components/CashOption118.cs`
+- [x] `CertificateManagementRequest4` — `Components/CertificateManagementRequest4.cs`
+- [x] `Charge33` — `Components/Charge33.cs`
 - [ ] `ClearedProduct3` — `Components/ClearedProduct3.cs`
 - [ ] `Clearing8` — `Components/Clearing8.cs`
 - [ ] `ClearingBatchData4` — `Components/ClearingBatchData4.cs`
