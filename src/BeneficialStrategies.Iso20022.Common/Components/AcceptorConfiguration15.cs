@@ -30,7 +30,7 @@ public record AcceptorConfiguration15
     [IsoId("_0Br_27ZzEfCUZfsQO4rYeA")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    public IsoMax35Text? POIGroupIdentification { get; init; }
+    public SimpleValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
     /// Data set containing the acceptor parameters of a point of interaction (POI).
@@ -38,5 +38,6 @@ public record AcceptorConfiguration15
     [IsoId("_0Br_4bZzEfCUZfsQO4rYeA")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public required AcceptorConfigurationDataSet7 DataSet { get; init; }
+    [MinLength(1)]
+    public ValueList<AcceptorConfigurationDataSet7> DataSet { get; init; } = [];
 }

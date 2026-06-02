@@ -30,7 +30,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4rbZzEfCUZfsQO4rYeA")]
     [DisplayName("TMS Protocol Parameters")]
     [IsoXmlTag("TMSPrtcolParams")]
-    public TMSProtocolParameters8? TMSProtocolParameters { get; init; }
+    public ValueList<TMSProtocolParameters8> TMSProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to an acquirer protocol.
@@ -38,7 +38,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4s7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
-    public AcquirerProtocolParameters18? AcquirerProtocolParameters { get; init; }
+    public ValueList<AcquirerProtocolParameters18> AcquirerProtocolParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a service provider.
@@ -46,7 +46,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4ubZzEfCUZfsQO4rYeA")]
     [DisplayName("Service Provider Parameters")]
     [IsoXmlTag("SvcPrvdrParams")]
-    public ServiceProviderParameters5? ServiceProviderParameters { get; init; }
+    public ValueList<ServiceProviderParameters5> ServiceProviderParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the merchant.
@@ -54,7 +54,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4v7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    public MerchantConfigurationParameters6? MerchantParameters { get; init; }
+    public ValueList<MerchantConfigurationParameters6> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.
@@ -62,7 +62,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4xbZzEfCUZfsQO4rYeA")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
-    public PaymentTerminalParameters8? TerminalParameters { get; init; }
+    public ValueList<PaymentTerminalParameters8> TerminalParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.
@@ -70,7 +70,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4y7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Application Parameters")]
     [IsoXmlTag("ApplParams")]
-    public ApplicationParameters13? ApplicationParameters { get; init; }
+    public ValueList<ApplicationParameters13> ApplicationParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to the communication with an acquirer host or a terminal manager host.
@@ -78,7 +78,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy40bZzEfCUZfsQO4rYeA")]
     [DisplayName("Host Communication Parameters")]
     [IsoXmlTag("HstComParams")]
-    public HostCommunicationParameter8? HostCommunicationParameters { get; init; }
+    public ValueList<HostCommunicationParameter8> HostCommunicationParameters { get; init; } = [];
 
     /// <summary>
     /// Point of interaction parameters related to the security of software application and application protocol.
@@ -86,7 +86,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy417ZzEfCUZfsQO4rYeA")]
     [DisplayName("Security Parameters")]
     [IsoXmlTag("SctyParams")]
-    public SecurityParameters17? SecurityParameters { get; init; }
+    public ValueList<SecurityParameters17> SecurityParameters { get; init; } = [];
 
     /// <summary>
     /// Parameters dedicated to protocols between a sale system and the POI.
@@ -94,7 +94,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy43bZzEfCUZfsQO4rYeA")]
     [DisplayName("Sale To POI Parameters")]
     [IsoXmlTag("SaleToPOIParams")]
-    public SaleToPOIProtocolParameter4? SaleToPOIParameters { get; init; }
+    public ValueList<SaleToPOIProtocolParameter4> SaleToPOIParameters { get; init; } = [];
 
     /// <summary>
     /// Group of software packages to transfer to a group of POI.
@@ -102,5 +102,5 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy447ZzEfCUZfsQO4rYeA")]
     [DisplayName("Terminal Package")]
     [IsoXmlTag("TermnlPackg")]
-    public TerminalPackageType5? TerminalPackage { get; init; }
+    public ValueList<TerminalPackageType5> TerminalPackage { get; init; } = [];
 }
