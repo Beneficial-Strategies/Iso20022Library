@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-01 (batch 14 complete: all New codesets done through VerificationEntity3Code)
+- **Last updated**: 2026-06-02 (Phase 2 batch 1: 20 new components complete through AcceptorData1)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -384,26 +384,26 @@
 ## Phase 2: Components (773 new · 0 changed · 19 removed)
 <!-- /snapshot-sync-components works this section -->
 ### New
-- [ ] `ATMDeviceReport5` — `Components/ATMDeviceReport5.cs`
-- [ ] `ATMKeyDownloadRequest6` — `Components/ATMKeyDownloadRequest6.cs`
-- [ ] `ATMKeyDownloadResponse6` — `Components/ATMKeyDownloadResponse6.cs`
-- [ ] `ATMSecurityContext6` — `Components/ATMSecurityContext6.cs`
-- [ ] `AbortData7` — `Components/AbortData7.cs`
-- [ ] `AcceptorAuthorisationRequest15` — `Components/AcceptorAuthorisationRequest15.cs`
-- [ ] `AcceptorAuthorisationResponse15` — `Components/AcceptorAuthorisationResponse15.cs`
-- [ ] `AcceptorCancellationAdvice15` — `Components/AcceptorCancellationAdvice15.cs`
-- [ ] `AcceptorCancellationAdviceResponse14` — `Components/AcceptorCancellationAdviceResponse14.cs`
-- [ ] `AcceptorCancellationRequest15` — `Components/AcceptorCancellationRequest15.cs`
-- [ ] `AcceptorCancellationResponse14` — `Components/AcceptorCancellationResponse14.cs`
-- [ ] `AcceptorCompletionAdvice15` — `Components/AcceptorCompletionAdvice15.cs`
-- [ ] `AcceptorCompletionAdviceResponse14` — `Components/AcceptorCompletionAdviceResponse14.cs`
-- [ ] `AcceptorConfiguration15` — `Components/AcceptorConfiguration15.cs`
-- [ ] `AcceptorConfigurationContent15` — `Components/AcceptorConfigurationContent15.cs`
-- [ ] `AcceptorConfigurationDataSet7` — `Components/AcceptorConfigurationDataSet7.cs`
-- [ ] `AcceptorCurrencyConversionAdvice10` — `Components/AcceptorCurrencyConversionAdvice10.cs`
-- [ ] `AcceptorCurrencyConversionRequest13` — `Components/AcceptorCurrencyConversionRequest13.cs`
-- [ ] `AcceptorCurrencyConversionResponse13` — `Components/AcceptorCurrencyConversionResponse13.cs`
-- [ ] `AcceptorData1` — `Components/AcceptorData1.cs`
+- [x] `ATMDeviceReport5` — `Components/ATMDeviceReport5.cs`
+- [x] `ATMKeyDownloadRequest6` — `Components/ATMKeyDownloadRequest6.cs`
+- [x] `ATMKeyDownloadResponse6` — `Components/ATMKeyDownloadResponse6.cs`
+- [x] `ATMSecurityContext6` — `Components/ATMSecurityContext6.cs`
+- [x] `AbortData7` — `Components/AbortData7.cs`
+- [x] `AcceptorAuthorisationRequest15` — `Components/AcceptorAuthorisationRequest15.cs`
+- [x] `AcceptorAuthorisationResponse15` — `Components/AcceptorAuthorisationResponse15.cs`
+- [x] `AcceptorCancellationAdvice15` — `Components/AcceptorCancellationAdvice15.cs`
+- [x] `AcceptorCancellationAdviceResponse14` — `Components/AcceptorCancellationAdviceResponse14.cs`
+- [x] `AcceptorCancellationRequest15` — `Components/AcceptorCancellationRequest15.cs`
+- [x] `AcceptorCancellationResponse14` — `Components/AcceptorCancellationResponse14.cs`
+- [x] `AcceptorCompletionAdvice15` — `Components/AcceptorCompletionAdvice15.cs`
+- [x] `AcceptorCompletionAdviceResponse14` — `Components/AcceptorCompletionAdviceResponse14.cs`
+- [x] `AcceptorConfiguration15` — `Components/AcceptorConfiguration15.cs`
+- [x] `AcceptorConfigurationContent15` — `Components/AcceptorConfigurationContent15.cs`
+- [x] `AcceptorConfigurationDataSet7` — `Components/AcceptorConfigurationDataSet7.cs`
+- [x] `AcceptorCurrencyConversionAdvice10` — `Components/AcceptorCurrencyConversionAdvice10.cs`
+- [x] `AcceptorCurrencyConversionRequest13` — `Components/AcceptorCurrencyConversionRequest13.cs`
+- [x] `AcceptorCurrencyConversionResponse13` — `Components/AcceptorCurrencyConversionResponse13.cs`
+- [x] `AcceptorData1` — `Components/AcceptorData1.cs`
 - [ ] `AcceptorData2` — `Components/AcceptorData2.cs`
 - [ ] `AcceptorData3` — `Components/AcceptorData3.cs`
 - [ ] `AcceptorData4` — `Components/AcceptorData4.cs`
