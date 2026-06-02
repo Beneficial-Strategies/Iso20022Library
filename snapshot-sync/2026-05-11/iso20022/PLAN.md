@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 4: 80 new components complete through BillingSearchCriteria3)
+- **Last updated**: 2026-06-02 (Phase 2 batch 5: 100 new components complete through CardPaymentDataSetTransaction55)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -464,26 +464,26 @@
 - [x] `BillingFeeRecord1` — `Components/BillingFeeRecord1.cs`
 - [x] `BillingReport6` — `Components/BillingReport6.cs`
 - [x] `BillingSearchCriteria3` — `Components/BillingSearchCriteria3.cs`
-- [ ] `BillingTaxRecord2` — `Components/BillingTaxRecord2.cs`
-- [ ] `BlockChainAddressWallet14` — `Components/BlockChainAddressWallet14.cs`
-- [ ] `BookingConfirmation8` — `Components/BookingConfirmation8.cs`
-- [ ] `BusinessPayload1` — `Components/BusinessPayload1.cs`
-- [ ] `BuyIn1` — `Components/BuyIn1.cs`
-- [ ] `BuyerProtectionInstructionDetails1` — `Components/BuyerProtectionInstructionDetails1.cs`
-- [ ] `BuyerProtectionSelectionCriteria1` — `Components/BuyerProtectionSelectionCriteria1.cs`
-- [ ] `CardAccountBalance1` — `Components/CardAccountBalance1.cs`
-- [ ] `CardAuthenticationData1` — `Components/CardAuthenticationData1.cs`
-- [ ] `CardData16` — `Components/CardData16.cs`
-- [ ] `CardData17` — `Components/CardData17.cs`
-- [ ] `CardExchangeRate1` — `Components/CardExchangeRate1.cs`
-- [ ] `CardNotReceivedData1` — `Components/CardNotReceivedData1.cs`
-- [ ] `CardPaymentBatchTransfer14` — `Components/CardPaymentBatchTransfer14.cs`
-- [ ] `CardPaymentBatchTransferResponse13` — `Components/CardPaymentBatchTransferResponse13.cs`
-- [ ] `CardPaymentDataSet41` — `Components/CardPaymentDataSet41.cs`
-- [ ] `CardPaymentDataSet42` — `Components/CardPaymentDataSet42.cs`
-- [ ] `CardPaymentDataSet43` — `Components/CardPaymentDataSet43.cs`
-- [ ] `CardPaymentDataSetTransaction54` — `Components/CardPaymentDataSetTransaction54.cs`
-- [ ] `CardPaymentDataSetTransaction55` — `Components/CardPaymentDataSetTransaction55.cs`
+- [x] `BillingTaxRecord2` — `Components/BillingTaxRecord2.cs`
+- [x] `BlockChainAddressWallet14` — `Components/BlockChainAddressWallet14.cs`
+- [x] `BookingConfirmation8` — `Components/BookingConfirmation8.cs`
+- [x] `BusinessPayload1` — `Components/BusinessPayload1.cs`
+- [x] `BuyIn1` — `Components/BuyIn1.cs`
+- [x] `BuyerProtectionInstructionDetails1` — `Components/BuyerProtectionInstructionDetails1.cs`
+- [x] `BuyerProtectionSelectionCriteria1` — `Components/BuyerProtectionSelectionCriteria1.cs`
+- [x] `CardAccountBalance1` — `Components/CardAccountBalance1.cs`
+- [x] `CardAuthenticationData1` — `Components/CardAuthenticationData1.cs`
+- [x] `CardData16` — `Components/CardData16.cs`
+- [x] `CardData17` — `Components/CardData17.cs`
+- [x] `CardExchangeRate1` — `Components/CardExchangeRate1.cs`
+- [x] `CardNotReceivedData1` — `Components/CardNotReceivedData1.cs`
+- [x] `CardPaymentBatchTransfer14` — `Components/CardPaymentBatchTransfer14.cs`
+- [x] `CardPaymentBatchTransferResponse13` — `Components/CardPaymentBatchTransferResponse13.cs`
+- [x] `CardPaymentDataSet41` — `Components/CardPaymentDataSet41.cs`
+- [x] `CardPaymentDataSet42` — `Components/CardPaymentDataSet42.cs`
+- [x] `CardPaymentDataSet43` — `Components/CardPaymentDataSet43.cs`
+- [x] `CardPaymentDataSetTransaction54` — `Components/CardPaymentDataSetTransaction54.cs`
+- [x] `CardPaymentDataSetTransaction55` — `Components/CardPaymentDataSetTransaction55.cs`
 - [ ] `CardPaymentDataSetTransaction56` — `Components/CardPaymentDataSetTransaction56.cs`
 - [ ] `CardPaymentDataSetTransaction57` — `Components/CardPaymentDataSetTransaction57.cs`
 - [ ] `CardPaymentEnvironment82` — `Components/CardPaymentEnvironment82.cs`
