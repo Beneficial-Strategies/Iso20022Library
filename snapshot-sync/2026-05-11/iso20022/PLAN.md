@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 7: 140 new components complete through CorporateAction88)
+- **Last updated**: 2026-06-02 (Phase 2 batch 8: 180 new components complete through CreditTransferTransaction76)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -524,46 +524,46 @@
 - [x] `Conversion5` — `Components/Conversion5.cs`
 - [x] `Conversion6` — `Components/Conversion6.cs`
 - [x] `CorporateAction88` — `Components/CorporateAction88.cs`
-- [ ] `CorporateAction91` — `Components/CorporateAction91.cs`
-- [ ] `CorporateAction92` — `Components/CorporateAction92.cs`
-- [ ] `CorporateAction93` — `Components/CorporateAction93.cs`
-- [ ] `CorporateAction94` — `Components/CorporateAction94.cs`
-- [ ] `CorporateActionAmounts77` — `Components/CorporateActionAmounts77.cs`
-- [ ] `CorporateActionAmounts78` — `Components/CorporateActionAmounts78.cs`
-- [ ] `CorporateActionAmounts79` — `Components/CorporateActionAmounts79.cs`
-- [ ] `CorporateActionAmounts80` — `Components/CorporateActionAmounts80.cs`
-- [ ] `CorporateActionBalance52` — `Components/CorporateActionBalance52.cs`
-- [ ] `CorporateActionBalanceDetails48` — `Components/CorporateActionBalanceDetails48.cs`
-- [ ] `CorporateActionDate110` — `Components/CorporateActionDate110.cs`
-- [ ] `CorporateActionDetails1` — `Components/CorporateActionDetails1.cs`
-- [ ] `CorporateActionElection4` — `Components/CorporateActionElection4.cs`
-- [ ] `CorporateActionEventAndBalance28` — `Components/CorporateActionEventAndBalance28.cs`
-- [ ] `CorporateActionGeneralInformation195` — `Components/CorporateActionGeneralInformation195.cs`
-- [ ] `CorporateActionGeneralInformation196` — `Components/CorporateActionGeneralInformation196.cs`
-- [ ] `CorporateActionGeneralInformation197` — `Components/CorporateActionGeneralInformation197.cs`
-- [ ] `CorporateActionLotteryEvent1` — `Components/CorporateActionLotteryEvent1.cs`
-- [ ] `CorporateActionOption250` — `Components/CorporateActionOption250.cs`
-- [ ] `CorporateActionOption251` — `Components/CorporateActionOption251.cs`
-- [ ] `CorporateActionOption252` — `Components/CorporateActionOption252.cs`
-- [ ] `CorporateActionOption253` — `Components/CorporateActionOption253.cs`
-- [ ] `CorporateActionOptionStatement1` — `Components/CorporateActionOptionStatement1.cs`
-- [ ] `CorporateActionPeriod17` — `Components/CorporateActionPeriod17.cs`
-- [ ] `CorporateActionPeriod18` — `Components/CorporateActionPeriod18.cs`
-- [ ] `CorporateActionPrice99` — `Components/CorporateActionPrice99.cs`
-- [ ] `CorporateActionQuantity15` — `Components/CorporateActionQuantity15.cs`
-- [ ] `CorporateActionRate138` — `Components/CorporateActionRate138.cs`
-- [ ] `CorporateActionRate139` — `Components/CorporateActionRate139.cs`
-- [ ] `CorporateActionRate140` — `Components/CorporateActionRate140.cs`
-- [ ] `CorporateActionRate141` — `Components/CorporateActionRate141.cs`
-- [ ] `CorporateActionRateSD12` — `Components/CorporateActionRateSD12.cs`
-- [ ] `CorporateActionSD27` — `Components/CorporateActionSD27.cs`
-- [ ] `CorporateActionSupplementaryIndicators2` — `Components/CorporateActionSupplementaryIndicators2.cs`
-- [ ] `CreditTransfer12` — `Components/CreditTransfer12.cs`
-- [ ] `CreditTransfer13` — `Components/CreditTransfer13.cs`
-- [ ] `CreditTransferTransaction72` — `Components/CreditTransferTransaction72.cs`
-- [ ] `CreditTransferTransaction73` — `Components/CreditTransferTransaction73.cs`
-- [ ] `CreditTransferTransaction74` — `Components/CreditTransferTransaction74.cs`
-- [ ] `CreditTransferTransaction76` — `Components/CreditTransferTransaction76.cs`
+- [x] `CorporateAction91` — `Components/CorporateAction91.cs`
+- [x] `CorporateAction92` — `Components/CorporateAction92.cs`
+- [x] `CorporateAction93` — `Components/CorporateAction93.cs`
+- [x] `CorporateAction94` — `Components/CorporateAction94.cs`
+- [x] `CorporateActionAmounts77` — `Components/CorporateActionAmounts77.cs`
+- [x] `CorporateActionAmounts78` — `Components/CorporateActionAmounts78.cs`
+- [x] `CorporateActionAmounts79` — `Components/CorporateActionAmounts79.cs`
+- [x] `CorporateActionAmounts80` — `Components/CorporateActionAmounts80.cs`
+- [x] `CorporateActionBalance52` — `Components/CorporateActionBalance52.cs`
+- [x] `CorporateActionBalanceDetails48` — `Components/CorporateActionBalanceDetails48.cs`
+- [x] `CorporateActionDate110` — `Components/CorporateActionDate110.cs`
+- [x] `CorporateActionDetails1` — `Components/CorporateActionDetails1.cs`
+- [x] `CorporateActionElection4` — `Components/CorporateActionElection4.cs`
+- [x] `CorporateActionEventAndBalance28` — `Components/CorporateActionEventAndBalance28.cs`
+- [x] `CorporateActionGeneralInformation195` — `Components/CorporateActionGeneralInformation195.cs`
+- [x] `CorporateActionGeneralInformation196` — `Components/CorporateActionGeneralInformation196.cs`
+- [x] `CorporateActionGeneralInformation197` — `Components/CorporateActionGeneralInformation197.cs`
+- [x] `CorporateActionLotteryEvent1` — `Components/CorporateActionLotteryEvent1.cs`
+- [x] `CorporateActionOption250` — `Components/CorporateActionOption250.cs`
+- [x] `CorporateActionOption251` — `Components/CorporateActionOption251.cs`
+- [x] `CorporateActionOption252` — `Components/CorporateActionOption252.cs`
+- [x] `CorporateActionOption253` — `Components/CorporateActionOption253.cs`
+- [x] `CorporateActionOptionStatement1` — `Components/CorporateActionOptionStatement1.cs`
+- [x] `CorporateActionPeriod17` — `Components/CorporateActionPeriod17.cs`
+- [x] `CorporateActionPeriod18` — `Components/CorporateActionPeriod18.cs`
+- [x] `CorporateActionPrice99` — `Components/CorporateActionPrice99.cs`
+- [x] `CorporateActionQuantity15` — `Components/CorporateActionQuantity15.cs`
+- [x] `CorporateActionRate138` — `Components/CorporateActionRate138.cs`
+- [x] `CorporateActionRate139` — `Components/CorporateActionRate139.cs`
+- [x] `CorporateActionRate140` — `Components/CorporateActionRate140.cs`
+- [x] `CorporateActionRate141` — `Components/CorporateActionRate141.cs`
+- [x] `CorporateActionRateSD12` — `Components/CorporateActionRateSD12.cs`
+- [x] `CorporateActionSD27` — `Components/CorporateActionSD27.cs`
+- [x] `CorporateActionSupplementaryIndicators2` — `Components/CorporateActionSupplementaryIndicators2.cs`
+- [x] `CreditTransfer12` — `Components/CreditTransfer12.cs`
+- [x] `CreditTransfer13` — `Components/CreditTransfer13.cs`
+- [x] `CreditTransferTransaction72` — `Components/CreditTransferTransaction72.cs`
+- [x] `CreditTransferTransaction73` — `Components/CreditTransferTransaction73.cs`
+- [x] `CreditTransferTransaction74` — `Components/CreditTransferTransaction74.cs`
+- [x] `CreditTransferTransaction76` — `Components/CreditTransferTransaction76.cs`
 - [ ] `CreditTransferTransaction78` — `Components/CreditTransferTransaction78.cs`
 - [ ] `CreditTransferTransaction79` — `Components/CreditTransferTransaction79.cs`
 - [ ] `CreditTransferTransaction80` — `Components/CreditTransferTransaction80.cs`
