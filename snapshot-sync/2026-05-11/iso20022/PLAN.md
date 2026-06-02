@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 8: 180 new components complete through CreditTransferTransaction76)
+- **Last updated**: 2026-06-02 (Phase 2 batch 9: 220 new components complete through DirectDebitTransactionInformation35)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -564,46 +564,46 @@
 - [x] `CreditTransferTransaction73` — `Components/CreditTransferTransaction73.cs`
 - [x] `CreditTransferTransaction74` — `Components/CreditTransferTransaction74.cs`
 - [x] `CreditTransferTransaction76` — `Components/CreditTransferTransaction76.cs`
-- [ ] `CreditTransferTransaction78` — `Components/CreditTransferTransaction78.cs`
-- [ ] `CreditTransferTransaction79` — `Components/CreditTransferTransaction79.cs`
-- [ ] `CreditTransferTransaction80` — `Components/CreditTransferTransaction80.cs`
-- [ ] `CreditTransferTransaction82` — `Components/CreditTransferTransaction82.cs`
-- [ ] `CryptographicKey19` — `Components/CryptographicKey19.cs`
-- [ ] `CryptographicKey20` — `Components/CryptographicKey20.cs`
-- [ ] `CryptographicKey21` — `Components/CryptographicKey21.cs`
-- [ ] `CurrencyConversion34` — `Components/CurrencyConversion34.cs`
-- [ ] `CurrencyConversion35` — `Components/CurrencyConversion35.cs`
-- [ ] `CurrencyConversion36` — `Components/CurrencyConversion36.cs`
-- [ ] `Customer10` — `Components/Customer10.cs`
-- [ ] `CustomerDevice6` — `Components/CustomerDevice6.cs`
-- [ ] `DataSetRequest7` — `Components/DataSetRequest7.cs`
-- [ ] `DeliverInformation22` — `Components/DeliverInformation22.cs`
-- [ ] `DeliverInformation23` — `Components/DeliverInformation23.cs`
-- [ ] `DeliveringPartiesAndAccount24` — `Components/DeliveringPartiesAndAccount24.cs`
-- [ ] `DepositDetails4` — `Components/DepositDetails4.cs`
-- [ ] `DestinationData1` — `Components/DestinationData1.cs`
-- [ ] `DetailedAmount24` — `Components/DetailedAmount24.cs`
-- [ ] `DetailedInstructionCancellationStatus16` — `Components/DetailedInstructionCancellationStatus16.cs`
-- [ ] `DetailedInstructionStatus22` — `Components/DetailedInstructionStatus22.cs`
-- [ ] `DetailedInstructionStatus23` — `Components/DetailedInstructionStatus23.cs`
-- [ ] `DeviceDisplayRequest7` — `Components/DeviceDisplayRequest7.cs`
-- [ ] `DeviceDisplayResponse3` — `Components/DeviceDisplayResponse3.cs`
-- [ ] `DeviceIdentification2` — `Components/DeviceIdentification2.cs`
-- [ ] `DeviceInitialisationCardReaderRequest7` — `Components/DeviceInitialisationCardReaderRequest7.cs`
-- [ ] `DeviceInputNotification7` — `Components/DeviceInputNotification7.cs`
-- [ ] `DeviceInputRequest7` — `Components/DeviceInputRequest7.cs`
-- [ ] `DeviceInputResponse7` — `Components/DeviceInputResponse7.cs`
-- [ ] `DevicePoweroffCardReaderRequest7` — `Components/DevicePoweroffCardReaderRequest7.cs`
-- [ ] `DevicePrintRequest7` — `Components/DevicePrintRequest7.cs`
-- [ ] `DeviceRequest9` — `Components/DeviceRequest9.cs`
-- [ ] `DeviceResponse9` — `Components/DeviceResponse9.cs`
-- [ ] `DiagnosisResponse8` — `Components/DiagnosisResponse8.cs`
-- [ ] `DigitalPaymentSettlement1` — `Components/DigitalPaymentSettlement1.cs`
-- [ ] `DigitalPaymentSettlement2` — `Components/DigitalPaymentSettlement2.cs`
-- [ ] `DigitalPaymentSettlement3` — `Components/DigitalPaymentSettlement3.cs`
-- [ ] `DirectDebitMandate9` — `Components/DirectDebitMandate9.cs`
-- [ ] `DirectDebitTransactionInformation34` — `Components/DirectDebitTransactionInformation34.cs`
-- [ ] `DirectDebitTransactionInformation35` — `Components/DirectDebitTransactionInformation35.cs`
+- [x] `CreditTransferTransaction78` — `Components/CreditTransferTransaction78.cs`
+- [x] `CreditTransferTransaction79` — `Components/CreditTransferTransaction79.cs`
+- [x] `CreditTransferTransaction80` — `Components/CreditTransferTransaction80.cs`
+- [x] `CreditTransferTransaction82` — `Components/CreditTransferTransaction82.cs`
+- [x] `CryptographicKey19` — `Components/CryptographicKey19.cs`
+- [x] `CryptographicKey20` — `Components/CryptographicKey20.cs`
+- [x] `CryptographicKey21` — `Components/CryptographicKey21.cs`
+- [x] `CurrencyConversion34` — `Components/CurrencyConversion34.cs`
+- [x] `CurrencyConversion35` — `Components/CurrencyConversion35.cs`
+- [x] `CurrencyConversion36` — `Components/CurrencyConversion36.cs`
+- [x] `Customer10` — `Components/Customer10.cs`
+- [x] `CustomerDevice6` — `Components/CustomerDevice6.cs`
+- [x] `DataSetRequest7` — `Components/DataSetRequest7.cs`
+- [x] `DeliverInformation22` — `Components/DeliverInformation22.cs`
+- [x] `DeliverInformation23` — `Components/DeliverInformation23.cs`
+- [x] `DeliveringPartiesAndAccount24` — `Components/DeliveringPartiesAndAccount24.cs`
+- [x] `DepositDetails4` — `Components/DepositDetails4.cs`
+- [x] `DestinationData1` — `Components/DestinationData1.cs`
+- [x] `DetailedAmount24` — `Components/DetailedAmount24.cs`
+- [x] `DetailedInstructionCancellationStatus16` — `Components/DetailedInstructionCancellationStatus16.cs`
+- [x] `DetailedInstructionStatus22` — `Components/DetailedInstructionStatus22.cs`
+- [x] `DetailedInstructionStatus23` — `Components/DetailedInstructionStatus23.cs`
+- [x] `DeviceDisplayRequest7` — `Components/DeviceDisplayRequest7.cs`
+- [x] `DeviceDisplayResponse3` — `Components/DeviceDisplayResponse3.cs`
+- [x] `DeviceIdentification2` — `Components/DeviceIdentification2.cs`
+- [x] `DeviceInitialisationCardReaderRequest7` — `Components/DeviceInitialisationCardReaderRequest7.cs`
+- [x] `DeviceInputNotification7` — `Components/DeviceInputNotification7.cs`
+- [x] `DeviceInputRequest7` — `Components/DeviceInputRequest7.cs`
+- [x] `DeviceInputResponse7` — `Components/DeviceInputResponse7.cs`
+- [x] `DevicePoweroffCardReaderRequest7` — `Components/DevicePoweroffCardReaderRequest7.cs`
+- [x] `DevicePrintRequest7` — `Components/DevicePrintRequest7.cs`
+- [x] `DeviceRequest9` — `Components/DeviceRequest9.cs`
+- [x] `DeviceResponse9` — `Components/DeviceResponse9.cs`
+- [x] `DiagnosisResponse8` — `Components/DiagnosisResponse8.cs`
+- [x] `DigitalPaymentSettlement1` — `Components/DigitalPaymentSettlement1.cs`
+- [x] `DigitalPaymentSettlement2` — `Components/DigitalPaymentSettlement2.cs`
+- [x] `DigitalPaymentSettlement3` — `Components/DigitalPaymentSettlement3.cs`
+- [x] `DirectDebitMandate9` — `Components/DirectDebitMandate9.cs`
+- [x] `DirectDebitTransactionInformation34` — `Components/DirectDebitTransactionInformation34.cs`
+- [x] `DirectDebitTransactionInformation35` — `Components/DirectDebitTransactionInformation35.cs`
 - [ ] `DisplayCapabilities7` — `Components/DisplayCapabilities7.cs`
 - [ ] `DisputeData5` — `Components/DisputeData5.cs`
 - [ ] `DisputeDocumentation2` — `Components/DisputeDocumentation2.cs`
