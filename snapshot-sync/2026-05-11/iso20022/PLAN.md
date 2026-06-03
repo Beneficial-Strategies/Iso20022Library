@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 21: 501 new components complete through PriceValuation5)
+- **Last updated**: 2026-06-02 (Phase 2 batch 22: 521 new components complete through ReceivingPartiesAndAccount24)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -885,26 +885,26 @@
 - [x] `PriceInformation25` — `Components/PriceInformation25.cs`
 - [x] `PriceReport4` — `Components/PriceReport4.cs`
 - [x] `PriceValuation5` — `Components/PriceValuation5.cs`
-- [ ] `ProcessingResult28` — `Components/ProcessingResult28.cs`
-- [ ] `ProcessingResult29` — `Components/ProcessingResult29.cs`
-- [ ] `ProcessingResult30` — `Components/ProcessingResult30.cs`
-- [ ] `ProcessingResult31` — `Components/ProcessingResult31.cs`
-- [ ] `ProcessingResult32` — `Components/ProcessingResult32.cs`
-- [ ] `ProgrammeMode6` — `Components/ProgrammeMode6.cs`
-- [ ] `ProgrammeMode7` — `Components/ProgrammeMode7.cs`
-- [ ] `PromotionData1` — `Components/PromotionData1.cs`
-- [ ] `Quantity53` — `Components/Quantity53.cs`
-- [ ] `Quantity54` — `Components/Quantity54.cs`
-- [ ] `QuantityRangeBoundary1` — `Components/QuantityRangeBoundary1.cs`
-- [ ] `Rate48` — `Components/Rate48.cs`
-- [ ] `Rate49` — `Components/Rate49.cs`
-- [ ] `Rate50` — `Components/Rate50.cs`
-- [ ] `Rate51` — `Components/Rate51.cs`
-- [ ] `ReceiveInformation22` — `Components/ReceiveInformation22.cs`
-- [ ] `ReceiveInformation23` — `Components/ReceiveInformation23.cs`
-- [ ] `ReceivedByIssuerOrOfferorStatus1` — `Components/ReceivedByIssuerOrOfferorStatus1.cs`
-- [ ] `ReceiverData1` — `Components/ReceiverData1.cs`
-- [ ] `ReceivingPartiesAndAccount24` — `Components/ReceivingPartiesAndAccount24.cs`
+- [x] `ProcessingResult28` — `Components/ProcessingResult28.cs`
+- [x] `ProcessingResult29` — `Components/ProcessingResult29.cs`
+- [x] `ProcessingResult30` — `Components/ProcessingResult30.cs`
+- [x] `ProcessingResult31` — `Components/ProcessingResult31.cs`
+- [x] `ProcessingResult32` — `Components/ProcessingResult32.cs`
+- [x] `ProgrammeMode6` — `Components/ProgrammeMode6.cs`
+- [x] `ProgrammeMode7` — `Components/ProgrammeMode7.cs`
+- [x] `PromotionData1` — `Components/PromotionData1.cs`
+- [x] `Quantity53` — `Components/Quantity53.cs`
+- [x] `Quantity54` — `Components/Quantity54.cs`
+- [x] `QuantityRangeBoundary1` — `Components/QuantityRangeBoundary1.cs`
+- [x] `Rate48` — `Components/Rate48.cs`
+- [x] `Rate49` — `Components/Rate49.cs`
+- [x] `Rate50` — `Components/Rate50.cs`
+- [x] `Rate51` — `Components/Rate51.cs`
+- [x] `ReceiveInformation22` — `Components/ReceiveInformation22.cs`
+- [x] `ReceiveInformation23` — `Components/ReceiveInformation23.cs`
+- [x] `ReceivedByIssuerOrOfferorStatus1` — `Components/ReceivedByIssuerOrOfferorStatus1.cs`
+- [x] `ReceiverData1` — `Components/ReceiverData1.cs`
+- [x] `ReceivingPartiesAndAccount24` — `Components/ReceivingPartiesAndAccount24.cs`
 - [ ] `RecommendationAction2` — `Components/RecommendationAction2.cs`
 - [ ] `Reconciliation5` — `Components/Reconciliation5.cs`
 - [ ] `ReconciliationRequest9` — `Components/ReconciliationRequest9.cs`
