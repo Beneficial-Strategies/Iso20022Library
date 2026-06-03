@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 18: 441 new components complete through PaymentTransaction174)
+- **Last updated**: 2026-06-02 (Phase 2 batch 19: 461 new components complete through PenaltyReport1)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -825,26 +825,26 @@
 - [x] `PaymentTransaction171` — `Components/PaymentTransaction171.cs`
 - [x] `PaymentTransaction172` — `Components/PaymentTransaction172.cs`
 - [x] `PaymentTransaction174` — `Components/PaymentTransaction174.cs`
-- [ ] `PaymentTransaction175` — `Components/PaymentTransaction175.cs`
-- [ ] `PaymentTransaction176` — `Components/PaymentTransaction176.cs`
-- [ ] `PaymentTransaction177` — `Components/PaymentTransaction177.cs`
-- [ ] `PaymentTransaction178` — `Components/PaymentTransaction178.cs`
-- [ ] `PaymentTransaction180` — `Components/PaymentTransaction180.cs`
-- [ ] `PaymentTransaction181` — `Components/PaymentTransaction181.cs`
-- [ ] `PaymentTransaction182` — `Components/PaymentTransaction182.cs`
-- [ ] `PaymentTransaction183` — `Components/PaymentTransaction183.cs`
-- [ ] `Penalty4` — `Components/Penalty4.cs`
-- [ ] `PenaltyAmountBreakdown1` — `Components/PenaltyAmountBreakdown1.cs`
-- [ ] `PenaltyCalculationRecord1` — `Components/PenaltyCalculationRecord1.cs`
-- [ ] `PenaltyFinancialInstrumentIdentification1` — `Components/PenaltyFinancialInstrumentIdentification1.cs`
-- [ ] `PenaltyIdentification1` — `Components/PenaltyIdentification1.cs`
-- [ ] `PenaltyIdentification2` — `Components/PenaltyIdentification2.cs`
-- [ ] `PenaltyNetMovementRecord1` — `Components/PenaltyNetMovementRecord1.cs`
-- [ ] `PenaltyPartyIdentification1` — `Components/PenaltyPartyIdentification1.cs`
-- [ ] `PenaltyPerCounterparty4` — `Components/PenaltyPerCounterparty4.cs`
-- [ ] `PenaltyRate1` — `Components/PenaltyRate1.cs`
-- [ ] `PenaltyRecord4` — `Components/PenaltyRecord4.cs`
-- [ ] `PenaltyReport1` — `Components/PenaltyReport1.cs`
+- [x] `PaymentTransaction175` — `Components/PaymentTransaction175.cs`
+- [x] `PaymentTransaction176` — `Components/PaymentTransaction176.cs`
+- [x] `PaymentTransaction177` — `Components/PaymentTransaction177.cs`
+- [x] `PaymentTransaction178` — `Components/PaymentTransaction178.cs`
+- [x] `PaymentTransaction180` — `Components/PaymentTransaction180.cs`
+- [x] `PaymentTransaction181` — `Components/PaymentTransaction181.cs`
+- [x] `PaymentTransaction182` — `Components/PaymentTransaction182.cs`
+- [x] `PaymentTransaction183` — `Components/PaymentTransaction183.cs`
+- [x] `Penalty4` — `Components/Penalty4.cs`
+- [x] `PenaltyAmountBreakdown1` — `Components/PenaltyAmountBreakdown1.cs`
+- [x] `PenaltyCalculationRecord1` — `Components/PenaltyCalculationRecord1.cs`
+- [x] `PenaltyFinancialInstrumentIdentification1` — `Components/PenaltyFinancialInstrumentIdentification1.cs`
+- [x] `PenaltyIdentification1` — `Components/PenaltyIdentification1.cs`
+- [x] `PenaltyIdentification2` — `Components/PenaltyIdentification2.cs`
+- [x] `PenaltyNetMovementRecord1` — `Components/PenaltyNetMovementRecord1.cs`
+- [x] `PenaltyPartyIdentification1` — `Components/PenaltyPartyIdentification1.cs`
+- [x] `PenaltyPerCounterparty4` — `Components/PenaltyPerCounterparty4.cs`
+- [x] `PenaltyRate1` — `Components/PenaltyRate1.cs`
+- [x] `PenaltyRecord4` — `Components/PenaltyRecord4.cs`
+- [x] `PenaltyReport1` — `Components/PenaltyReport1.cs`
 - [ ] `PenaltyStatus2` — `Components/PenaltyStatus2.cs`
 - [ ] `PenaltyStatusReason2` — `Components/PenaltyStatusReason2.cs`
 - [ ] `PenaltyTransaction3` — `Components/PenaltyTransaction3.cs`
