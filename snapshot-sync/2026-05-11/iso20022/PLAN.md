@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 22: 521 new components complete through ReceivingPartiesAndAccount24)
+- **Last updated**: 2026-06-02 (Phase 2 batch 23: 541 new components complete through RejectedStatus14)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -905,26 +905,26 @@
 - [x] `ReceivedByIssuerOrOfferorStatus1` — `Components/ReceivedByIssuerOrOfferorStatus1.cs`
 - [x] `ReceiverData1` — `Components/ReceiverData1.cs`
 - [x] `ReceivingPartiesAndAccount24` — `Components/ReceivingPartiesAndAccount24.cs`
-- [ ] `RecommendationAction2` — `Components/RecommendationAction2.cs`
-- [ ] `Reconciliation5` — `Components/Reconciliation5.cs`
-- [ ] `ReconciliationRequest9` — `Components/ReconciliationRequest9.cs`
-- [ ] `ReconciliationResponse11` — `Components/ReconciliationResponse11.cs`
-- [ ] `Record4` — `Components/Record4.cs`
-- [ ] `RecurringPaymentData1` — `Components/RecurringPaymentData1.cs`
-- [ ] `RecurringTransaction7` — `Components/RecurringTransaction7.cs`
-- [ ] `RedemptionBulkExecution06` — `Components/RedemptionBulkExecution06.cs`
-- [ ] `RedemptionBulkOrder08` — `Components/RedemptionBulkOrder08.cs`
-- [ ] `RedemptionExecution18` — `Components/RedemptionExecution18.cs`
-- [ ] `RedemptionExecution19` — `Components/RedemptionExecution19.cs`
-- [ ] `RedemptionMultipleExecution07` — `Components/RedemptionMultipleExecution07.cs`
-- [ ] `RedemptionMultipleOrder07` — `Components/RedemptionMultipleOrder07.cs`
-- [ ] `RedemptionOrder17` — `Components/RedemptionOrder17.cs`
-- [ ] `RedemptionOrder18` — `Components/RedemptionOrder18.cs`
-- [ ] `References32` — `Components/References32.cs`
-- [ ] `References33` — `Components/References33.cs`
-- [ ] `RegulatoryReporting10` — `Components/RegulatoryReporting10.cs`
-- [ ] `RejectedStatus13` — `Components/RejectedStatus13.cs`
-- [ ] `RejectedStatus14` — `Components/RejectedStatus14.cs`
+- [x] `RecommendationAction2` — `Components/RecommendationAction2.cs`
+- [x] `Reconciliation5` — `Components/Reconciliation5.cs`
+- [x] `ReconciliationRequest9` — `Components/ReconciliationRequest9.cs`
+- [x] `ReconciliationResponse11` — `Components/ReconciliationResponse11.cs`
+- [x] `Record4` — `Components/Record4.cs`
+- [x] `RecurringPaymentData1` — `Components/RecurringPaymentData1.cs`
+- [x] `RecurringTransaction7` — `Components/RecurringTransaction7.cs`
+- [x] `RedemptionBulkExecution06` — `Components/RedemptionBulkExecution06.cs`
+- [x] `RedemptionBulkOrder08` — `Components/RedemptionBulkOrder08.cs`
+- [x] `RedemptionExecution18` — `Components/RedemptionExecution18.cs`
+- [x] `RedemptionExecution19` — `Components/RedemptionExecution19.cs`
+- [x] `RedemptionMultipleExecution07` — `Components/RedemptionMultipleExecution07.cs`
+- [x] `RedemptionMultipleOrder07` — `Components/RedemptionMultipleOrder07.cs`
+- [x] `RedemptionOrder17` — `Components/RedemptionOrder17.cs`
+- [x] `RedemptionOrder18` — `Components/RedemptionOrder18.cs`
+- [x] `References32` — `Components/References32.cs`
+- [x] `References33` — `Components/References33.cs`
+- [x] `RegulatoryReporting10` — `Components/RegulatoryReporting10.cs`
+- [x] `RejectedStatus13` — `Components/RejectedStatus13.cs`
+- [x] `RejectedStatus14` — `Components/RejectedStatus14.cs`
 - [ ] `RejectedStatus15` — `Components/RejectedStatus15.cs`
 - [ ] `RejectedStatusReason61` — `Components/RejectedStatusReason61.cs`
 - [ ] `RejectedStatusReason62` — `Components/RejectedStatusReason62.cs`
