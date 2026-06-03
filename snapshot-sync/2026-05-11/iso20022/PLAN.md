@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-03 (Phase 2 batch 32: 773 new components complete through Wallet4; 16 removed)
+- **Last updated**: 2026-06-03
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1185,15 +1185,15 @@
 <!-- /snapshot-sync-choices works this section -->
 ### New
 - [x] `ATMSignature3Choice` — `Choices/ATMSignature3Choice_.cs` + `Choices/ATMSignature3Choice/` directory
-- [ ] `AcceptedWithWarningStatus1Format1Choice` — `Choices/AcceptedWithWarningStatus1Format1Choice_.cs` + `Choices/AcceptedWithWarningStatus1Format1Choice/` directory
-- [ ] `AccountIdentification38Choice` — `Choices/AccountIdentification38Choice_.cs` + `Choices/AccountIdentification38Choice/` directory
-- [ ] `AccountIdentification82Choice` — `Choices/AccountIdentification82Choice_.cs` + `Choices/AccountIdentification82Choice/` directory
-- [ ] `AccountIdentification84Choice` — `Choices/AccountIdentification84Choice_.cs` + `Choices/AccountIdentification84Choice/` directory
-- [ ] `AcknowledgedAcceptedStatus34Choice` — `Choices/AcknowledgedAcceptedStatus34Choice_.cs` + `Choices/AcknowledgedAcceptedStatus34Choice/` directory
-- [ ] `AcknowledgementReason25Choice` — `Choices/AcknowledgementReason25Choice_.cs` + `Choices/AcknowledgementReason25Choice/` directory
-- [ ] `AdditionalBusinessProcessFormat25Choice` — `Choices/AdditionalBusinessProcessFormat25Choice_.cs` + `Choices/AdditionalBusinessProcessFormat25Choice/` directory
-- [ ] `AgentDocumentIdentificationAndStatus2Choice` — `Choices/AgentDocumentIdentificationAndStatus2Choice_.cs` + `Choices/AgentDocumentIdentificationAndStatus2Choice/` directory
-- [ ] `AmountOrCoefficientPrice2Choice` — `Choices/AmountOrCoefficientPrice2Choice_.cs` + `Choices/AmountOrCoefficientPrice2Choice/` directory
+- [x] `AcceptedWithWarningStatus1Format1Choice` — `Choices/AcceptedWithWarningStatus1Format1Choice_.cs` + `Choices/AcceptedWithWarningStatus1Format1Choice/` directory
+- [x] `AccountIdentification38Choice` — `Choices/AccountIdentification38Choice_.cs` + `Choices/AccountIdentification38Choice/` directory
+- [x] `AccountIdentification82Choice` — `Choices/AccountIdentification82Choice_.cs` + `Choices/AccountIdentification82Choice/` directory
+- [x] `AccountIdentification84Choice` — `Choices/AccountIdentification84Choice_.cs` + `Choices/AccountIdentification84Choice/` directory
+- [x] `AcknowledgedAcceptedStatus34Choice` — `Choices/AcknowledgedAcceptedStatus34Choice_.cs` + `Choices/AcknowledgedAcceptedStatus34Choice/` directory
+- [x] `AcknowledgementReason25Choice` — `Choices/AcknowledgementReason25Choice_.cs` + `Choices/AcknowledgementReason25Choice/` directory
+- [x] `AdditionalBusinessProcessFormat25Choice` — `Choices/AdditionalBusinessProcessFormat25Choice_.cs` + `Choices/AdditionalBusinessProcessFormat25Choice/` directory
+- [x] `AgentDocumentIdentificationAndStatus2Choice` — `Choices/AgentDocumentIdentificationAndStatus2Choice_.cs` + `Choices/AgentDocumentIdentificationAndStatus2Choice/` directory
+- [x] `AmountOrCoefficientPrice2Choice` — `Choices/AmountOrCoefficientPrice2Choice_.cs` + `Choices/AmountOrCoefficientPrice2Choice/` directory
 - [x] `BillingReportOrError6Choice` — `Choices/BillingReportOrError6Choice_.cs` + `Choices/BillingReportOrError6Choice/` directory
 - [x] `CalculationBasis2Choice` — `Choices/CalculationBasis2Choice_.cs` + `Choices/CalculationBasis2Choice/` directory
 - [x] `CancellationReason16Choice` — `Choices/CancellationReason16Choice_.cs` + `Choices/CancellationReason16Choice/` directory
@@ -1204,16 +1204,16 @@
 - [x] `CashInOrOut8Choice` — `Choices/CashInOrOut8Choice_.cs` + `Choices/CashInOrOut8Choice/` directory
 - [x] `CashSettlementSystem6Choice` — `Choices/CashSettlementSystem6Choice_.cs` + `Choices/CashSettlementSystem6Choice/` directory
 - [x] `CashSettlementSystemPlace1Choice` — `Choices/CashSettlementSystemPlace1Choice_.cs` + `Choices/CashSettlementSystemPlace1Choice/` directory
-- [ ] `ChargeType10Choice` — `Choices/ChargeType10Choice_.cs` + `Choices/ChargeType10Choice/` directory
-- [ ] `ChargeType11Choice` — `Choices/ChargeType11Choice_.cs` + `Choices/ChargeType11Choice/` directory
-- [ ] `CorporateActionEventType125Choice` — `Choices/CorporateActionEventType125Choice_.cs` + `Choices/CorporateActionEventType125Choice/` directory
-- [ ] `CorporateActionEventType126Choice` — `Choices/CorporateActionEventType126Choice_.cs` + `Choices/CorporateActionEventType126Choice/` directory
-- [ ] `CorporateActionEventType127Choice` — `Choices/CorporateActionEventType127Choice_.cs` + `Choices/CorporateActionEventType127Choice/` directory
-- [ ] `CorporateActionOption47Choice` — `Choices/CorporateActionOption47Choice_.cs` + `Choices/CorporateActionOption47Choice/` directory
-- [ ] `CorporateActionRateSD8Choice` — `Choices/CorporateActionRateSD8Choice_.cs` + `Choices/CorporateActionRateSD8Choice/` directory
-- [ ] `DateFormat73Choice` — `Choices/DateFormat73Choice_.cs` + `Choices/DateFormat73Choice/` directory
-- [ ] `DateOrDateTimePeriod4Choice` — `Choices/DateOrDateTimePeriod4Choice_.cs` + `Choices/DateOrDateTimePeriod4Choice/` directory
-- [ ] `EUCapitalGainType4Choice` — `Choices/EUCapitalGainType4Choice_.cs` + `Choices/EUCapitalGainType4Choice/` directory
+- [x] `ChargeType10Choice` — `Choices/ChargeType10Choice_.cs` + `Choices/ChargeType10Choice/` directory
+- [x] `ChargeType11Choice` — `Choices/ChargeType11Choice_.cs` + `Choices/ChargeType11Choice/` directory
+- [x] `CorporateActionEventType125Choice` — `Choices/CorporateActionEventType125Choice_.cs` + `Choices/CorporateActionEventType125Choice/` directory
+- [x] `CorporateActionEventType126Choice` — `Choices/CorporateActionEventType126Choice_.cs` + `Choices/CorporateActionEventType126Choice/` directory
+- [x] `CorporateActionEventType127Choice` — `Choices/CorporateActionEventType127Choice_.cs` + `Choices/CorporateActionEventType127Choice/` directory
+- [x] `CorporateActionOption47Choice` — `Choices/CorporateActionOption47Choice_.cs` + `Choices/CorporateActionOption47Choice/` directory
+- [x] `CorporateActionRateSD8Choice` — `Choices/CorporateActionRateSD8Choice_.cs` + `Choices/CorporateActionRateSD8Choice/` directory
+- [x] `DateFormat73Choice` — `Choices/DateFormat73Choice_.cs` + `Choices/DateFormat73Choice/` directory
+- [x] `DateOrDateTimePeriod4Choice` — `Choices/DateOrDateTimePeriod4Choice_.cs` + `Choices/DateOrDateTimePeriod4Choice/` directory
+- [x] `EUCapitalGainType4Choice` — `Choices/EUCapitalGainType4Choice_.cs` + `Choices/EUCapitalGainType4Choice/` directory
 - [ ] `EUDividendStatusType3Choice` — `Choices/EUDividendStatusType3Choice_.cs` + `Choices/EUDividendStatusType3Choice/` directory
 - [ ] `EligibilityIdentification3Choice` — `Choices/EligibilityIdentification3Choice_.cs` + `Choices/EligibilityIdentification3Choice/` directory
 - [ ] `EndPoint2Choice` — `Choices/EndPoint2Choice_.cs` + `Choices/EndPoint2Choice/` directory
