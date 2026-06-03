@@ -1284,26 +1284,26 @@
 - [x] `PendingProcessingReason20Choice` — `Choices/PendingProcessingReason20Choice_.cs` + `Choices/PendingProcessingReason20Choice/` directory
 - [x] `PendingProcessingReason21Choice` — `Choices/PendingProcessingReason21Choice_.cs` + `Choices/PendingProcessingReason21Choice/` directory
 - [x] `PendingProcessingReason22Choice` — `Choices/PendingProcessingReason22Choice_.cs` + `Choices/PendingProcessingReason22Choice/` directory
-- [ ] `PendingProcessingStatus20Choice` — `Choices/PendingProcessingStatus20Choice_.cs` + `Choices/PendingProcessingStatus20Choice/` directory
-- [ ] `PendingProcessingStatus21Choice` — `Choices/PendingProcessingStatus21Choice_.cs` + `Choices/PendingProcessingStatus21Choice/` directory
-- [ ] `PendingProcessingStatus22Choice` — `Choices/PendingProcessingStatus22Choice_.cs` + `Choices/PendingProcessingStatus22Choice/` directory
-- [ ] `PendingProcessingStatus23Choice` — `Choices/PendingProcessingStatus23Choice_.cs` + `Choices/PendingProcessingStatus23Choice/` directory
-- [ ] `PendingReason74Choice` — `Choices/PendingReason74Choice_.cs` + `Choices/PendingReason74Choice/` directory
-- [ ] `PendingReason75Choice` — `Choices/PendingReason75Choice_.cs` + `Choices/PendingReason75Choice/` directory
-- [ ] `PendingReason76Choice` — `Choices/PendingReason76Choice_.cs` + `Choices/PendingReason76Choice/` directory
-- [ ] `PendingReason77Choice` — `Choices/PendingReason77Choice_.cs` + `Choices/PendingReason77Choice/` directory
-- [ ] `PendingReason78Choice` — `Choices/PendingReason78Choice_.cs` + `Choices/PendingReason78Choice/` directory
-- [ ] `PendingReason79Choice` — `Choices/PendingReason79Choice_.cs` + `Choices/PendingReason79Choice/` directory
-- [ ] `PendingReason80Choice` — `Choices/PendingReason80Choice_.cs` + `Choices/PendingReason80Choice/` directory
-- [ ] `PendingReason81Choice` — `Choices/PendingReason81Choice_.cs` + `Choices/PendingReason81Choice/` directory
-- [ ] `PendingReason82Choice` — `Choices/PendingReason82Choice_.cs` + `Choices/PendingReason82Choice/` directory
-- [ ] `PendingReason83Choice` — `Choices/PendingReason83Choice_.cs` + `Choices/PendingReason83Choice/` directory
-- [ ] `PendingStatus1Format1Choice` — `Choices/PendingStatus1Format1Choice_.cs` + `Choices/PendingStatus1Format1Choice/` directory
-- [ ] `PendingStatus78Choice` — `Choices/PendingStatus78Choice_.cs` + `Choices/PendingStatus78Choice/` directory
-- [ ] `PendingStatus79Choice` — `Choices/PendingStatus79Choice_.cs` + `Choices/PendingStatus79Choice/` directory
-- [ ] `PendingStatus80Choice` — `Choices/PendingStatus80Choice_.cs` + `Choices/PendingStatus80Choice/` directory
-- [ ] `PendingStatus81Choice` — `Choices/PendingStatus81Choice_.cs` + `Choices/PendingStatus81Choice/` directory
-- [ ] `PendingStatus82Choice` — `Choices/PendingStatus82Choice_.cs` + `Choices/PendingStatus82Choice/` directory
+- [x] `PendingProcessingStatus20Choice` — `Choices/PendingProcessingStatus20Choice_.cs` + `Choices/PendingProcessingStatus20Choice/` directory
+- [x] `PendingProcessingStatus21Choice` — `Choices/PendingProcessingStatus21Choice_.cs` + `Choices/PendingProcessingStatus21Choice/` directory
+- [x] `PendingProcessingStatus22Choice` — `Choices/PendingProcessingStatus22Choice_.cs` + `Choices/PendingProcessingStatus22Choice/` directory
+- [x] `PendingProcessingStatus23Choice` — `Choices/PendingProcessingStatus23Choice_.cs` + `Choices/PendingProcessingStatus23Choice/` directory
+- [x] `PendingReason74Choice` — `Choices/PendingReason74Choice_.cs` + `Choices/PendingReason74Choice/` directory
+- [x] `PendingReason75Choice` — `Choices/PendingReason75Choice_.cs` + `Choices/PendingReason75Choice/` directory
+- [x] `PendingReason76Choice` — `Choices/PendingReason76Choice_.cs` + `Choices/PendingReason76Choice/` directory
+- [x] `PendingReason77Choice` — `Choices/PendingReason77Choice_.cs` + `Choices/PendingReason77Choice/` directory
+- [x] `PendingReason78Choice` — `Choices/PendingReason78Choice_.cs` + `Choices/PendingReason78Choice/` directory
+- [x] `PendingReason79Choice` — `Choices/PendingReason79Choice_.cs` + `Choices/PendingReason79Choice/` directory
+- [x] `PendingReason80Choice` — `Choices/PendingReason80Choice_.cs` + `Choices/PendingReason80Choice/` directory
+- [x] `PendingReason81Choice` — `Choices/PendingReason81Choice_.cs` + `Choices/PendingReason81Choice/` directory
+- [x] `PendingReason82Choice` — `Choices/PendingReason82Choice_.cs` + `Choices/PendingReason82Choice/` directory
+- [x] `PendingReason83Choice` — `Choices/PendingReason83Choice_.cs` + `Choices/PendingReason83Choice/` directory
+- [x] `PendingStatus1Format1Choice` — `Choices/PendingStatus1Format1Choice_.cs` + `Choices/PendingStatus1Format1Choice/` directory
+- [x] `PendingStatus78Choice` — `Choices/PendingStatus78Choice_.cs` + `Choices/PendingStatus78Choice/` directory
+- [x] `PendingStatus79Choice` — `Choices/PendingStatus79Choice_.cs` + `Choices/PendingStatus79Choice/` directory
+- [x] `PendingStatus80Choice` — `Choices/PendingStatus80Choice_.cs` + `Choices/PendingStatus80Choice/` directory
+- [x] `PendingStatus81Choice` — `Choices/PendingStatus81Choice_.cs` + `Choices/PendingStatus81Choice/` directory
+- [x] `PendingStatus82Choice` — `Choices/PendingStatus82Choice_.cs` + `Choices/PendingStatus82Choice/` directory
 - [ ] `PendingStatus83Choice` — `Choices/PendingStatus83Choice_.cs` + `Choices/PendingStatus83Choice/` directory
 - [ ] `PendingStatus84Choice` — `Choices/PendingStatus84Choice_.cs` + `Choices/PendingStatus84Choice/` directory
 - [ ] `PendingStatus85Choice` — `Choices/PendingStatus85Choice_.cs` + `Choices/PendingStatus85Choice/` directory
