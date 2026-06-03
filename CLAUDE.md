@@ -69,8 +69,11 @@ src/BeneficialStrategies.Iso20022.Common/
 - Rich XML documentation from ISO spec
 
 **Choice Types** (`Choices/[ChoiceName]/`):
-- Abstract base record with `[JsonDerivedType]` attributes
-- Concrete variant records for each option
+- Abstract base: `Choices/{ChoiceName}_.cs` — `public abstract record {ChoiceName}_` in namespace `BeneficialStrategies.Iso20022.Choices`, with `[KnownType]` and `[JsonDerivedType]` attributes referencing `{ChoiceName}.{VariantName}` (namespace-qualified, no underscore on the namespace)
+- Variants: `Choices/{ChoiceName}/{VariantName}.cs` — standalone (non-nested, non-partial) records in namespace `BeneficialStrategies.Iso20022.Choices.{ChoiceName}`, each inheriting `{ChoiceName}_`
+- The sub-namespace isolates common names (`Code`, `Other`, `IBAN`, etc.) that would otherwise clash across choice types
+- Single-value variants: `[IsoId]`+`[DisplayName]` on class, `[IsoXmlTag]` on `Value` property only
+- Multi-field variants: `[IsoId]`+`[DisplayName]`+`[IsoXmlTag]` on class, each property has its own attributes
 
 **Codesets** (`Codesets/[Name]Code.g.cs`):
 - Enums with `[EnumMember]` and `[IsoId]` attributes

@@ -82,31 +82,59 @@ namespace BeneficialStrategies.Iso20022.Choices
 }
 ```
 
-3. Create the directory `Choices/{ChoiceName}/` and one `.cs` file per variant:
+3. Create the directory `Choices/{ChoiceName}/` and one `.cs` file per variant.
+
+**CRITICAL: Do NOT use nested/partial records.** Each variant is a standalone top-level record in its own sub-namespace. The namespace is `BeneficialStrategies.Iso20022.Choices.{ChoiceName}` (no underscore) — this is what isolates name-clash-prone classes like `Code`, `Other`, or `IBAN` that appear in many choice types.
+
+**Single-value variant** (wraps one value — the common case):
+- `[IsoXmlTag]` goes on the `Value` property, NOT on the class.
+- Property must be named `Value`.
+- No `[IsoId]` or `[DisplayName]` on the property.
 
 ```csharp
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Components;
 
-namespace BeneficialStrategies.Iso20022.Choices
+namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
 {
-    public partial record {ChoiceName}_ 
+    /// <summary>{variant description}</summary>
+    [IsoId("{variant IsoId}")]
+    [DisplayName("{Variant Display Name}")]
+    public record {VariantName} : {ChoiceName}_
     {
-        /// <summary>
-        /// {variant description}
-        /// </summary>
-        [IsoId("{variant IsoId}")]
-        [DisplayName("{Variant Display Name}")]
+        /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("{XmlTag}")]
-        public record {VariantName} : {ChoiceName}_
-        {
-            /// <summary>{element description}</summary>
-            [IsoId("{element IsoId}")]
-            [DisplayName("{Element Display Name}")]
-            [IsoXmlTag("{XmlTag}")]
-            public required {ElementType} {PropertyName} { get; init; }
-        }
+        public required {ElementType} Value { get; init; }
+    }
+}
+```
+
+**Multi-field variant** (expands its own fields inline — less common, matches ISO component structure):
+- `[IsoXmlTag]` goes on the class (the wrapper element).
+- Each property has `[IsoId]`, `[DisplayName]`, and `[IsoXmlTag]`.
+- Properties are named semantically (not `Value`).
+
+```csharp
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
+{
+    /// <summary>{variant description}</summary>
+    [IsoId("{variant IsoId}")]
+    [DisplayName("{Variant Display Name}")]
+    [IsoXmlTag("{XmlTag}")]
+    public record {VariantName} : {ChoiceName}_
+    {
+        /// <summary>{field description}</summary>
+        [IsoId("{field IsoId}")]
+        [DisplayName("{Field Display Name}")]
+        [IsoXmlTag("{FieldXmlTag}")]
+        public required {FieldType} {FieldName} { get; init; }
+
+        // ... additional fields
     }
 }
 ```
