@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-03 (Phase 2 batch 31: 761 new components complete through Unit15)
+- **Last updated**: 2026-06-03 (Phase 2 batch 32: 773 new components complete through Wallet4; 16 removed)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1145,38 +1145,38 @@
 - [x] `UnderlyingTransaction37` — `Components/UnderlyingTransaction37.cs`
 - [x] `Unit14` — `Components/Unit14.cs`
 - [x] `Unit15` — `Components/Unit15.cs`
-- [ ] `UnitPrice24` — `Components/UnitPrice24.cs`
-- [ ] `ValuationStatistics4` — `Components/ValuationStatistics4.cs`
-- [ ] `VariationMargin2` — `Components/VariationMargin2.cs`
-- [ ] `VehicleRentalAdditionalAmount1` — `Components/VehicleRentalAdditionalAmount1.cs`
-- [ ] `VehicleRentalService4` — `Components/VehicleRentalService4.cs`
-- [ ] `Verification8` — `Components/Verification8.cs`
-- [ ] `Verification9` — `Components/Verification9.cs`
-- [ ] `Vote21` — `Components/Vote21.cs`
-- [ ] `Vote22` — `Components/Vote22.cs`
-- [ ] `VoteDetails7` — `Components/VoteDetails7.cs`
-- [ ] `VoteParameters10` — `Components/VoteParameters10.cs`
-- [ ] `Wallet4` — `Components/Wallet4.cs`
+- [x] `UnitPrice24` — `Components/UnitPrice24.cs`
+- [x] `ValuationStatistics4` — `Components/ValuationStatistics4.cs`
+- [x] `VariationMargin2` — `Components/VariationMargin2.cs`
+- [x] `VehicleRentalAdditionalAmount1` — `Components/VehicleRentalAdditionalAmount1.cs`
+- [x] `VehicleRentalService4` — `Components/VehicleRentalService4.cs`
+- [x] `Verification8` — `Components/Verification8.cs`
+- [x] `Verification9` — `Components/Verification9.cs`
+- [x] `Vote21` — `Components/Vote21.cs`
+- [x] `Vote22` — `Components/Vote22.cs`
+- [x] `VoteDetails7` — `Components/VoteDetails7.cs`
+- [x] `VoteParameters10` — `Components/VoteParameters10.cs`
+- [x] `Wallet4` — `Components/Wallet4.cs`
 ### Removed
-- [ ] `CaseAssignmentRejectionJustification2` — delete `Components/CaseAssignmentRejectionJustification2.cs`
-- [ ] `CaseForwardingNotification` — delete `Components/CaseForwardingNotification.cs`
-- [ ] `CaseForwardingNotification2` — delete `Components/CaseForwardingNotification2.cs`
-- [ ] `CorrectivePaymentInstructionExtract` — delete `Components/CorrectivePaymentInstructionExtract.cs`
-- [ ] `CurrencyExchange25` — delete `Components/CurrencyExchange25.cs`
-- [ ] `FixingCondition1` — delete `Components/FixingCondition1.cs`
+- [x] `CaseAssignmentRejectionJustification2` — delete `Components/CaseAssignmentRejectionJustification2.cs`
+- [x] `CaseForwardingNotification` — delete `Components/CaseForwardingNotification.cs`
+- [x] `CaseForwardingNotification2` — delete `Components/CaseForwardingNotification2.cs`
+- [x] `CorrectivePaymentInstructionExtract` — delete `Components/CorrectivePaymentInstructionExtract.cs`
+- [x] `CurrencyExchange25` — delete `Components/CurrencyExchange25.cs`
+- [x] `FixingCondition1` — delete `Components/FixingCondition1.cs`
 - [x] `ForeignExchangeTrade1` — delete `Components/ForeignExchangeTrade1.cs`
 - [x] `ForeignExchangeTradeConfirmation1` — delete `Components/ForeignExchangeTradeConfirmation1.cs`
-- [ ] `InvestigationStatus` — delete `Components/InvestigationStatus.cs`
+- [x] `InvestigationStatus` — delete `Components/InvestigationStatus.cs`
 - [x] `MissingOrIncorrectInformation1` — delete `Components/MissingOrIncorrectInformation1.cs`
-- [ ] `NonDeliverableTrade1` — delete `Components/NonDeliverableTrade1.cs`
-- [ ] `OrganisationIdentification43` — delete `Components/OrganisationIdentification43.cs`
-- [ ] `PartyIdentification290` — delete `Components/PartyIdentification290.cs`
-- [ ] `PaymentInstructionExtract2` — delete `Components/PaymentInstructionExtract2.cs`
-- [ ] `ProprietaryData` — delete `Components/ProprietaryData.cs`
-- [ ] `ReturnInformation1` — delete `Components/ReturnInformation1.cs`
-- [ ] `SettlementInstruction18` — delete `Components/SettlementInstruction18.cs`
-- [ ] `SettlementParty1` — delete `Components/SettlementParty1.cs`
-- [ ] `TradeParty7` — delete `Components/TradeParty7.cs`
+- [x] `NonDeliverableTrade1` — delete `Components/NonDeliverableTrade1.cs`
+- [x] `OrganisationIdentification43` — delete `Components/OrganisationIdentification43.cs`
+- [x] `PartyIdentification290` — delete `Components/PartyIdentification290.cs`
+- [x] `PaymentInstructionExtract2` — delete `Components/PaymentInstructionExtract2.cs`
+- [x] `ProprietaryData` — delete `Components/ProprietaryData.cs`
+- [x] `ReturnInformation1` — delete `Components/ReturnInformation1.cs`
+- [x] `SettlementInstruction18` — delete `Components/SettlementInstruction18.cs`
+- [x] `SettlementParty1` — delete `Components/SettlementParty1.cs`
+- [x] `TradeParty7` — delete `Components/TradeParty7.cs`
 
 ## Milestone 2: Build
 - [ ] Build passes after components
