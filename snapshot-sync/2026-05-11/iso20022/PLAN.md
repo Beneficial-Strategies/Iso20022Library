@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 24: 561 new components complete through ReportedFraud7)
+- **Last updated**: 2026-06-02 (Phase 2 batch 25: 581 new components complete through SecuritiesCancellationTransaction2)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -945,26 +945,26 @@
 - [x] `ReportTransactionResponse8` — `Components/ReportTransactionResponse8.cs`
 - [x] `ReportedFraud6` — `Components/ReportedFraud6.cs`
 - [x] `ReportedFraud7` — `Components/ReportedFraud7.cs`
-- [ ] `RequestDetails33` — `Components/RequestDetails33.cs`
-- [ ] `RetailerEvent8` — `Components/RetailerEvent8.cs`
-- [ ] `RetailerPaymentResult8` — `Components/RetailerPaymentResult8.cs`
-- [ ] `RetailerReversalResult8` — `Components/RetailerReversalResult8.cs`
-- [ ] `ReturnedStatus1` — `Components/ReturnedStatus1.cs`
-- [ ] `ReversalRequest8` — `Components/ReversalRequest8.cs`
-- [ ] `ReversalResponse10` — `Components/ReversalResponse10.cs`
-- [ ] `RiskAssessment4` — `Components/RiskAssessment4.cs`
-- [ ] `RiskContext4` — `Components/RiskContext4.cs`
-- [ ] `RiskInputData3` — `Components/RiskInputData3.cs`
-- [ ] `SafekeepingAccount20` — `Components/SafekeepingAccount20.cs`
-- [ ] `Sale4` — `Components/Sale4.cs`
-- [ ] `SaleItem5` — `Components/SaleItem5.cs`
-- [ ] `SaleToPOIProtocolParameter4` — `Components/SaleToPOIProtocolParameter4.cs`
-- [ ] `SecuritiesAccountRange2` — `Components/SecuritiesAccountRange2.cs`
-- [ ] `SecuritiesAttributes1` — `Components/SecuritiesAttributes1.cs`
-- [ ] `SecuritiesCancellation2` — `Components/SecuritiesCancellation2.cs`
-- [ ] `SecuritiesCancellationQueryCriteria1` — `Components/SecuritiesCancellationQueryCriteria1.cs`
-- [ ] `SecuritiesCancellationQueryDefinition1` — `Components/SecuritiesCancellationQueryDefinition1.cs`
-- [ ] `SecuritiesCancellationTransaction2` — `Components/SecuritiesCancellationTransaction2.cs`
+- [x] `RequestDetails33` — `Components/RequestDetails33.cs`
+- [x] `RetailerEvent8` — `Components/RetailerEvent8.cs`
+- [x] `RetailerPaymentResult8` — `Components/RetailerPaymentResult8.cs`
+- [x] `RetailerReversalResult8` — `Components/RetailerReversalResult8.cs`
+- [x] `ReturnedStatus1` — `Components/ReturnedStatus1.cs`
+- [x] `ReversalRequest8` — `Components/ReversalRequest8.cs`
+- [x] `ReversalResponse10` — `Components/ReversalResponse10.cs`
+- [x] `RiskAssessment4` — `Components/RiskAssessment4.cs`
+- [x] `RiskContext4` — `Components/RiskContext4.cs`
+- [x] `RiskInputData3` — `Components/RiskInputData3.cs`
+- [x] `SafekeepingAccount20` — `Components/SafekeepingAccount20.cs`
+- [x] `Sale4` — `Components/Sale4.cs`
+- [x] `SaleItem5` — `Components/SaleItem5.cs`
+- [x] `SaleToPOIProtocolParameter4` — `Components/SaleToPOIProtocolParameter4.cs`
+- [x] `SecuritiesAccountRange2` — `Components/SecuritiesAccountRange2.cs`
+- [x] `SecuritiesAttributes1` — `Components/SecuritiesAttributes1.cs`
+- [x] `SecuritiesCancellation2` — `Components/SecuritiesCancellation2.cs`
+- [x] `SecuritiesCancellationQueryCriteria1` — `Components/SecuritiesCancellationQueryCriteria1.cs`
+- [x] `SecuritiesCancellationQueryDefinition1` — `Components/SecuritiesCancellationQueryDefinition1.cs`
+- [x] `SecuritiesCancellationTransaction2` — `Components/SecuritiesCancellationTransaction2.cs`
 - [ ] `SecuritiesFinancingTransactionDetails59` — `Components/SecuritiesFinancingTransactionDetails59.cs`
 - [ ] `SecuritiesModification2` — `Components/SecuritiesModification2.cs`
 - [ ] `SecuritiesModificationQueryCriteria1` — `Components/SecuritiesModificationQueryCriteria1.cs`
