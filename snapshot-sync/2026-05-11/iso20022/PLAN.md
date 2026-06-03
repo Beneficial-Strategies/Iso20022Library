@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 23: 541 new components complete through RejectedStatus14)
+- **Last updated**: 2026-06-02 (Phase 2 batch 24: 561 new components complete through ReportedFraud7)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -925,26 +925,26 @@
 - [x] `RegulatoryReporting10` — `Components/RegulatoryReporting10.cs`
 - [x] `RejectedStatus13` — `Components/RejectedStatus13.cs`
 - [x] `RejectedStatus14` — `Components/RejectedStatus14.cs`
-- [ ] `RejectedStatus15` — `Components/RejectedStatus15.cs`
-- [ ] `RejectedStatusReason61` — `Components/RejectedStatusReason61.cs`
-- [ ] `RejectedStatusReason62` — `Components/RejectedStatusReason62.cs`
-- [ ] `RejectedStatusReason63` — `Components/RejectedStatusReason63.cs`
-- [ ] `RejectedStatusReason64` — `Components/RejectedStatusReason64.cs`
-- [ ] `RejectedStatusReason65` — `Components/RejectedStatusReason65.cs`
-- [ ] `RelatedSettlementInstruction3` — `Components/RelatedSettlementInstruction3.cs`
-- [ ] `RelatedSettlementInstruction4` — `Components/RelatedSettlementInstruction4.cs`
-- [ ] `RemittanceInformation26` — `Components/RemittanceInformation26.cs`
-- [ ] `RemittanceInformation27` — `Components/RemittanceInformation27.cs`
-- [ ] `RentalRate3` — `Components/RentalRate3.cs`
-- [ ] `ReportContent3` — `Components/ReportContent3.cs`
-- [ ] `ReportData1` — `Components/ReportData1.cs`
-- [ ] `ReportData8` — `Components/ReportData8.cs`
-- [ ] `ReportEntry16` — `Components/ReportEntry16.cs`
-- [ ] `ReportRequest9` — `Components/ReportRequest9.cs`
-- [ ] `ReportResponse9` — `Components/ReportResponse9.cs`
-- [ ] `ReportTransactionResponse8` — `Components/ReportTransactionResponse8.cs`
-- [ ] `ReportedFraud6` — `Components/ReportedFraud6.cs`
-- [ ] `ReportedFraud7` — `Components/ReportedFraud7.cs`
+- [x] `RejectedStatus15` — `Components/RejectedStatus15.cs`
+- [x] `RejectedStatusReason61` — `Components/RejectedStatusReason61.cs`
+- [x] `RejectedStatusReason62` — `Components/RejectedStatusReason62.cs`
+- [x] `RejectedStatusReason63` — `Components/RejectedStatusReason63.cs`
+- [x] `RejectedStatusReason64` — `Components/RejectedStatusReason64.cs`
+- [x] `RejectedStatusReason65` — `Components/RejectedStatusReason65.cs`
+- [x] `RelatedSettlementInstruction3` — `Components/RelatedSettlementInstruction3.cs`
+- [x] `RelatedSettlementInstruction4` — `Components/RelatedSettlementInstruction4.cs`
+- [x] `RemittanceInformation26` — `Components/RemittanceInformation26.cs`
+- [x] `RemittanceInformation27` — `Components/RemittanceInformation27.cs`
+- [x] `RentalRate3` — `Components/RentalRate3.cs`
+- [x] `ReportContent3` — `Components/ReportContent3.cs`
+- [x] `ReportData1` — `Components/ReportData1.cs`
+- [x] `ReportData8` — `Components/ReportData8.cs`
+- [x] `ReportEntry16` — `Components/ReportEntry16.cs`
+- [x] `ReportRequest9` — `Components/ReportRequest9.cs`
+- [x] `ReportResponse9` — `Components/ReportResponse9.cs`
+- [x] `ReportTransactionResponse8` — `Components/ReportTransactionResponse8.cs`
+- [x] `ReportedFraud6` — `Components/ReportedFraud6.cs`
+- [x] `ReportedFraud7` — `Components/ReportedFraud7.cs`
 - [ ] `RequestDetails33` — `Components/RequestDetails33.cs`
 - [ ] `RetailerEvent8` — `Components/RetailerEvent8.cs`
 - [ ] `RetailerPaymentResult8` — `Components/RetailerPaymentResult8.cs`
