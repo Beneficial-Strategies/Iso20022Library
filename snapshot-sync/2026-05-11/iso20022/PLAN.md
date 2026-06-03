@@ -1324,26 +1324,26 @@
 - [x] `ProrationBelowMinimumQuantity3Choice` — `Choices/ProrationBelowMinimumQuantity3Choice_.cs` + `Choices/ProrationBelowMinimumQuantity3Choice/` directory
 - [x] `Quantity82Choice` — `Choices/Quantity82Choice_.cs` + `Choices/Quantity82Choice/` directory
 - [x] `Quantity83Choice` — `Choices/Quantity83Choice_.cs` + `Choices/Quantity83Choice/` directory
-- [ ] `QuantityRange1Choice` — `Choices/QuantityRange1Choice_.cs` + `Choices/QuantityRange1Choice/` directory
-- [ ] `QuantitySearch2Choice` — `Choices/QuantitySearch2Choice_.cs` + `Choices/QuantitySearch2Choice/` directory
-- [ ] `RateFormat31Choice` — `Choices/RateFormat31Choice_.cs` + `Choices/RateFormat31Choice/` directory
-- [ ] `RateFormat32Choice` — `Choices/RateFormat32Choice_.cs` + `Choices/RateFormat32Choice/` directory
-- [ ] `Reason21Choice` — `Choices/Reason21Choice_.cs` + `Choices/Reason21Choice/` directory
-- [ ] `RecordMessage2Choice` — `Choices/RecordMessage2Choice_.cs` + `Choices/RecordMessage2Choice/` directory
-- [ ] `References82Choice` — `Choices/References82Choice_.cs` + `Choices/References82Choice/` directory
-- [ ] `References83Choice` — `Choices/References83Choice_.cs` + `Choices/References83Choice/` directory
-- [ ] `References86Choice` — `Choices/References86Choice_.cs` + `Choices/References86Choice/` directory
-- [ ] `References87Choice` — `Choices/References87Choice_.cs` + `Choices/References87Choice/` directory
-- [ ] `RegulatoryReportingType1Choice` — `Choices/RegulatoryReportingType1Choice_.cs` + `Choices/RegulatoryReportingType1Choice/` directory
-- [ ] `RejectedReason64Choice` — `Choices/RejectedReason64Choice_.cs` + `Choices/RejectedReason64Choice/` directory
-- [ ] `RejectedReason65Choice` — `Choices/RejectedReason65Choice_.cs` + `Choices/RejectedReason65Choice/` directory
-- [ ] `RejectedReason66Choice` — `Choices/RejectedReason66Choice_.cs` + `Choices/RejectedReason66Choice/` directory
-- [ ] `RejectedReason67Choice` — `Choices/RejectedReason67Choice_.cs` + `Choices/RejectedReason67Choice/` directory
-- [ ] `RejectedReason68Choice` — `Choices/RejectedReason68Choice_.cs` + `Choices/RejectedReason68Choice/` directory
-- [ ] `RejectedReason69Choice` — `Choices/RejectedReason69Choice_.cs` + `Choices/RejectedReason69Choice/` directory
-- [ ] `RejectedReason70Choice` — `Choices/RejectedReason70Choice_.cs` + `Choices/RejectedReason70Choice/` directory
-- [ ] `RejectedStatus62Choice` — `Choices/RejectedStatus62Choice_.cs` + `Choices/RejectedStatus62Choice/` directory
-- [ ] `RejectedStatus63Choice` — `Choices/RejectedStatus63Choice_.cs` + `Choices/RejectedStatus63Choice/` directory
+- [x] `QuantityRange1Choice` — `Choices/QuantityRange1Choice_.cs` + `Choices/QuantityRange1Choice/` directory
+- [x] `QuantitySearch2Choice` — `Choices/QuantitySearch2Choice_.cs` + `Choices/QuantitySearch2Choice/` directory
+- [x] `RateFormat31Choice` — `Choices/RateFormat31Choice_.cs` + `Choices/RateFormat31Choice/` directory
+- [x] `RateFormat32Choice` — `Choices/RateFormat32Choice_.cs` + `Choices/RateFormat32Choice/` directory
+- [x] `Reason21Choice` — `Choices/Reason21Choice_.cs` + `Choices/Reason21Choice/` directory
+- [x] `RecordMessage2Choice` — `Choices/RecordMessage2Choice_.cs` + `Choices/RecordMessage2Choice/` directory
+- [x] `References82Choice` — `Choices/References82Choice_.cs` + `Choices/References82Choice/` directory
+- [x] `References83Choice` — `Choices/References83Choice_.cs` + `Choices/References83Choice/` directory
+- [x] `References86Choice` — `Choices/References86Choice_.cs` + `Choices/References86Choice/` directory
+- [x] `References87Choice` — `Choices/References87Choice_.cs` + `Choices/References87Choice/` directory
+- [x] `RegulatoryReportingType1Choice` — `Choices/RegulatoryReportingType1Choice_.cs` + `Choices/RegulatoryReportingType1Choice/` directory
+- [x] `RejectedReason64Choice` — `Choices/RejectedReason64Choice_.cs` + `Choices/RejectedReason64Choice/` directory
+- [x] `RejectedReason65Choice` — `Choices/RejectedReason65Choice_.cs` + `Choices/RejectedReason65Choice/` directory
+- [x] `RejectedReason66Choice` — `Choices/RejectedReason66Choice_.cs` + `Choices/RejectedReason66Choice/` directory
+- [x] `RejectedReason67Choice` — `Choices/RejectedReason67Choice_.cs` + `Choices/RejectedReason67Choice/` directory
+- [x] `RejectedReason68Choice` — `Choices/RejectedReason68Choice_.cs` + `Choices/RejectedReason68Choice/` directory
+- [x] `RejectedReason69Choice` — `Choices/RejectedReason69Choice_.cs` + `Choices/RejectedReason69Choice/` directory
+- [x] `RejectedReason70Choice` — `Choices/RejectedReason70Choice_.cs` + `Choices/RejectedReason70Choice/` directory
+- [x] `RejectedStatus62Choice` — `Choices/RejectedStatus62Choice_.cs` + `Choices/RejectedStatus62Choice/` directory
+- [x] `RejectedStatus63Choice` — `Choices/RejectedStatus63Choice_.cs` + `Choices/RejectedStatus63Choice/` directory
 - [ ] `RejectedStatus64Choice` — `Choices/RejectedStatus64Choice_.cs` + `Choices/RejectedStatus64Choice/` directory
 - [ ] `RejectedStatus65Choice` — `Choices/RejectedStatus65Choice_.cs` + `Choices/RejectedStatus65Choice/` directory
 - [ ] `RejectedStatus66Choice` — `Choices/RejectedStatus66Choice_.cs` + `Choices/RejectedStatus66Choice/` directory
