@@ -1244,26 +1244,26 @@
 - [x] `KeyValue3Choice` — `Choices/KeyValue3Choice_.cs` + `Choices/KeyValue3Choice/` directory
 - [x] `MandateRelatedData4Choice` — `Choices/MandateRelatedData4Choice_.cs` + `Choices/MandateRelatedData4Choice/` directory
 - [x] `MandateRelatedData5Choice` — `Choices/MandateRelatedData5Choice_.cs` + `Choices/MandateRelatedData5Choice/` directory
-- [ ] `MarketClaimCancellationRequestStatus3Choice` — `Choices/MarketClaimCancellationRequestStatus3Choice_.cs` + `Choices/MarketClaimCancellationRequestStatus3Choice/` directory
-- [ ] `MarketClaimProcessingStatus2Choice` — `Choices/MarketClaimProcessingStatus2Choice_.cs` + `Choices/MarketClaimProcessingStatus2Choice/` directory
-- [ ] `ModificationProcessingStatus12Choice` — `Choices/ModificationProcessingStatus12Choice_.cs` + `Choices/ModificationProcessingStatus12Choice/` directory
-- [ ] `ModificationProcessingStatus13Choice` — `Choices/ModificationProcessingStatus13Choice_.cs` + `Choices/ModificationProcessingStatus13Choice/` directory
-- [ ] `ModificationStatus6Choice` — `Choices/ModificationStatus6Choice_.cs` + `Choices/ModificationStatus6Choice/` directory
-- [ ] `NotificationAdviceStatus4Choice` — `Choices/NotificationAdviceStatus4Choice_.cs` + `Choices/NotificationAdviceStatus4Choice/` directory
-- [ ] `OfferTypeFormat17Choice` — `Choices/OfferTypeFormat17Choice_.cs` + `Choices/OfferTypeFormat17Choice/` directory
-- [ ] `OfferTypeFormat18Choice` — `Choices/OfferTypeFormat18Choice_.cs` + `Choices/OfferTypeFormat18Choice/` directory
-- [ ] `OptionFeaturesFormat32Choice` — `Choices/OptionFeaturesFormat32Choice_.cs` + `Choices/OptionFeaturesFormat32Choice/` directory
-- [ ] `OrderStatus6Choice` — `Choices/OrderStatus6Choice_.cs` + `Choices/OrderStatus6Choice/` directory
-- [ ] `OrderStatus7Choice` — `Choices/OrderStatus7Choice_.cs` + `Choices/OrderStatus7Choice/` directory
-- [ ] `OrderStatus8Choice` — `Choices/OrderStatus8Choice_.cs` + `Choices/OrderStatus8Choice/` directory
-- [ ] `PairedOrTurnedQuantity7Choice` — `Choices/PairedOrTurnedQuantity7Choice_.cs` + `Choices/PairedOrTurnedQuantity7Choice/` directory
-- [ ] `PartyIdentification262Choice` — `Choices/PartyIdentification262Choice_.cs` + `Choices/PartyIdentification262Choice/` directory
-- [ ] `PartyIdentification263Choice` — `Choices/PartyIdentification263Choice_.cs` + `Choices/PartyIdentification263Choice/` directory
-- [ ] `PartyIdentification264Choice` — `Choices/PartyIdentification264Choice_.cs` + `Choices/PartyIdentification264Choice/` directory
-- [ ] `PartyIdentification335Choice` — `Choices/PartyIdentification335Choice_.cs` + `Choices/PartyIdentification335Choice/` directory
-- [ ] `PartyIdentification336Choice` — `Choices/PartyIdentification336Choice_.cs` + `Choices/PartyIdentification336Choice/` directory
-- [ ] `PaymentInstrument28Choice` — `Choices/PaymentInstrument28Choice_.cs` + `Choices/PaymentInstrument28Choice/` directory
-- [ ] `PaymentInstrument29Choice` — `Choices/PaymentInstrument29Choice_.cs` + `Choices/PaymentInstrument29Choice/` directory
+- [x] `MarketClaimCancellationRequestStatus3Choice` — `Choices/MarketClaimCancellationRequestStatus3Choice_.cs` + `Choices/MarketClaimCancellationRequestStatus3Choice/` directory
+- [x] `MarketClaimProcessingStatus2Choice` — `Choices/MarketClaimProcessingStatus2Choice_.cs` + `Choices/MarketClaimProcessingStatus2Choice/` directory
+- [x] `ModificationProcessingStatus12Choice` — `Choices/ModificationProcessingStatus12Choice_.cs` + `Choices/ModificationProcessingStatus12Choice/` directory
+- [x] `ModificationProcessingStatus13Choice` — `Choices/ModificationProcessingStatus13Choice_.cs` + `Choices/ModificationProcessingStatus13Choice/` directory
+- [x] `ModificationStatus6Choice` — `Choices/ModificationStatus6Choice_.cs` + `Choices/ModificationStatus6Choice/` directory
+- [x] `NotificationAdviceStatus4Choice` — `Choices/NotificationAdviceStatus4Choice_.cs` + `Choices/NotificationAdviceStatus4Choice/` directory
+- [x] `OfferTypeFormat17Choice` — `Choices/OfferTypeFormat17Choice_.cs` + `Choices/OfferTypeFormat17Choice/` directory
+- [x] `OfferTypeFormat18Choice` — `Choices/OfferTypeFormat18Choice_.cs` + `Choices/OfferTypeFormat18Choice/` directory
+- [x] `OptionFeaturesFormat32Choice` — `Choices/OptionFeaturesFormat32Choice_.cs` + `Choices/OptionFeaturesFormat32Choice/` directory
+- [x] `OrderStatus6Choice` — `Choices/OrderStatus6Choice_.cs` + `Choices/OrderStatus6Choice/` directory
+- [x] `OrderStatus7Choice` — `Choices/OrderStatus7Choice_.cs` + `Choices/OrderStatus7Choice/` directory
+- [x] `OrderStatus8Choice` — `Choices/OrderStatus8Choice_.cs` + `Choices/OrderStatus8Choice/` directory
+- [x] `PairedOrTurnedQuantity7Choice` — `Choices/PairedOrTurnedQuantity7Choice_.cs` + `Choices/PairedOrTurnedQuantity7Choice/` directory
+- [x] `PartyIdentification262Choice` — `Choices/PartyIdentification262Choice_.cs` + `Choices/PartyIdentification262Choice/` directory
+- [x] `PartyIdentification263Choice` — `Choices/PartyIdentification263Choice_.cs` + `Choices/PartyIdentification263Choice/` directory
+- [x] `PartyIdentification264Choice` — `Choices/PartyIdentification264Choice_.cs` + `Choices/PartyIdentification264Choice/` directory
+- [x] `PartyIdentification335Choice` — `Choices/PartyIdentification335Choice_.cs` + `Choices/PartyIdentification335Choice/` directory
+- [x] `PartyIdentification336Choice` — `Choices/PartyIdentification336Choice_.cs` + `Choices/PartyIdentification336Choice/` directory
+- [x] `PaymentInstrument28Choice` — `Choices/PaymentInstrument28Choice_.cs` + `Choices/PaymentInstrument28Choice/` directory
+- [x] `PaymentInstrument29Choice` — `Choices/PaymentInstrument29Choice_.cs` + `Choices/PaymentInstrument29Choice/` directory
 - [ ] `PaymentInstrument30Choice` — `Choices/PaymentInstrument30Choice_.cs` + `Choices/PaymentInstrument30Choice/` directory
 - [ ] `PaymentInstrument31Choice` — `Choices/PaymentInstrument31Choice_.cs` + `Choices/PaymentInstrument31Choice/` directory
 - [ ] `PaymentMethod3Choice` — `Choices/PaymentMethod3Choice_.cs` + `Choices/PaymentMethod3Choice/` directory
