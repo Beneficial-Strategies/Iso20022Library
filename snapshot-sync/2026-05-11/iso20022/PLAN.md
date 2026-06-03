@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 14: 361 new components complete through ManifestData4)
+- **Last updated**: 2026-06-02 (Phase 2 batch 15: 381 new components complete through NotificationRejectionReason3)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -745,26 +745,26 @@
 - [x] `ManagementPlan14` — `Components/ManagementPlan14.cs`
 - [x] `ManagementPlanContent14` — `Components/ManagementPlanContent14.cs`
 - [x] `ManifestData4` — `Components/ManifestData4.cs`
-- [ ] `Margin2` — `Components/Margin2.cs`
-- [ ] `MarginRatePortfolio1` — `Components/MarginRatePortfolio1.cs`
-- [ ] `MarginReport1` — `Components/MarginReport1.cs`
-- [ ] `MeetingNotice10` — `Components/MeetingNotice10.cs`
-- [ ] `MeetingReference11` — `Components/MeetingReference11.cs`
-- [ ] `MessageAndBusinessReference14` — `Components/MessageAndBusinessReference14.cs`
-- [ ] `MessageAndBusinessReference15` — `Components/MessageAndBusinessReference15.cs`
-- [ ] `MessageReconciliation4` — `Components/MessageReconciliation4.cs`
-- [ ] `MessageStatusRequest9` — `Components/MessageStatusRequest9.cs`
-- [ ] `MessageStatusResponse10` — `Components/MessageStatusResponse10.cs`
-- [ ] `MessageStatusResponseData10` — `Components/MessageStatusResponseData10.cs`
-- [ ] `NetObligation4` — `Components/NetObligation4.cs`
-- [ ] `NonFinancialRequestComponent6` — `Components/NonFinancialRequestComponent6.cs`
-- [ ] `NonFinancialRequestContentComponent6` — `Components/NonFinancialRequestContentComponent6.cs`
-- [ ] `NonFinancialResponseComponent6` — `Components/NonFinancialResponseComponent6.cs`
-- [ ] `NonFinancialResponseContentComponent6` — `Components/NonFinancialResponseContentComponent6.cs`
-- [ ] `NotificationAcceptedWithWarningStatus1` — `Components/NotificationAcceptedWithWarningStatus1.cs`
-- [ ] `NotificationItem10` — `Components/NotificationItem10.cs`
-- [ ] `NotificationPendingStatus1` — `Components/NotificationPendingStatus1.cs`
-- [ ] `NotificationRejectionReason3` — `Components/NotificationRejectionReason3.cs`
+- [x] `Margin2` — `Components/Margin2.cs`
+- [x] `MarginRatePortfolio1` — `Components/MarginRatePortfolio1.cs`
+- [x] `MarginReport1` — `Components/MarginReport1.cs`
+- [x] `MeetingNotice10` — `Components/MeetingNotice10.cs`
+- [x] `MeetingReference11` — `Components/MeetingReference11.cs`
+- [x] `MessageAndBusinessReference14` — `Components/MessageAndBusinessReference14.cs`
+- [x] `MessageAndBusinessReference15` — `Components/MessageAndBusinessReference15.cs`
+- [x] `MessageReconciliation4` — `Components/MessageReconciliation4.cs`
+- [x] `MessageStatusRequest9` — `Components/MessageStatusRequest9.cs`
+- [x] `MessageStatusResponse10` — `Components/MessageStatusResponse10.cs`
+- [x] `MessageStatusResponseData10` — `Components/MessageStatusResponseData10.cs`
+- [x] `NetObligation4` — `Components/NetObligation4.cs`
+- [x] `NonFinancialRequestComponent6` — `Components/NonFinancialRequestComponent6.cs`
+- [x] `NonFinancialRequestContentComponent6` — `Components/NonFinancialRequestContentComponent6.cs`
+- [x] `NonFinancialResponseComponent6` — `Components/NonFinancialResponseComponent6.cs`
+- [x] `NonFinancialResponseContentComponent6` — `Components/NonFinancialResponseContentComponent6.cs`
+- [x] `NotificationAcceptedWithWarningStatus1` — `Components/NotificationAcceptedWithWarningStatus1.cs`
+- [x] `NotificationItem10` — `Components/NotificationItem10.cs`
+- [x] `NotificationPendingStatus1` — `Components/NotificationPendingStatus1.cs`
+- [x] `NotificationRejectionReason3` — `Components/NotificationRejectionReason3.cs`
 - [ ] `OptionInstructionDetails13` — `Components/OptionInstructionDetails13.cs`
 - [ ] `OrderStatusAndReason11` — `Components/OrderStatusAndReason11.cs`
 - [ ] `OrderStatusAndReason12` — `Components/OrderStatusAndReason12.cs`
