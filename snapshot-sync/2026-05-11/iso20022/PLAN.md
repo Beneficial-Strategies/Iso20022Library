@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 13: 341 new components complete through LocalAddress2)
+- **Last updated**: 2026-06-02 (Phase 2 batch 14: 361 new components complete through ManifestData4)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -725,26 +725,26 @@
 - [x] `Linkages80` — `Components/Linkages80.cs`
 - [x] `Linkages81` — `Components/Linkages81.cs`
 - [x] `LocalAddress2` — `Components/LocalAddress2.cs`
-- [ ] `LocalAmenity2` — `Components/LocalAmenity2.cs`
-- [ ] `LocalData18` — `Components/LocalData18.cs`
-- [ ] `LocalData19` — `Components/LocalData19.cs`
-- [ ] `LocalData20` — `Components/LocalData20.cs`
-- [ ] `LocalData21` — `Components/LocalData21.cs`
-- [ ] `LocalData22` — `Components/LocalData22.cs`
-- [ ] `LocalData23` — `Components/LocalData23.cs`
-- [ ] `LocalData24` — `Components/LocalData24.cs`
-- [ ] `Lodging5` — `Components/Lodging5.cs`
-- [ ] `LodgingLineItem4` — `Components/LodgingLineItem4.cs`
-- [ ] `LoginRequest8` — `Components/LoginRequest8.cs`
-- [ ] `LoginResponse8` — `Components/LoginResponse8.cs`
-- [ ] `LoyaltyRequest8` — `Components/LoyaltyRequest8.cs`
-- [ ] `LoyaltyTransaction8` — `Components/LoyaltyTransaction8.cs`
-- [ ] `MaintenanceDelegateAction11` — `Components/MaintenanceDelegateAction11.cs`
-- [ ] `MaintenanceDelegation20` — `Components/MaintenanceDelegation20.cs`
-- [ ] `MaintenanceDelegationRequest12` — `Components/MaintenanceDelegationRequest12.cs`
-- [ ] `ManagementPlan14` — `Components/ManagementPlan14.cs`
-- [ ] `ManagementPlanContent14` — `Components/ManagementPlanContent14.cs`
-- [ ] `ManifestData4` — `Components/ManifestData4.cs`
+- [x] `LocalAmenity2` — `Components/LocalAmenity2.cs`
+- [x] `LocalData18` — `Components/LocalData18.cs`
+- [x] `LocalData19` — `Components/LocalData19.cs`
+- [x] `LocalData20` — `Components/LocalData20.cs`
+- [x] `LocalData21` — `Components/LocalData21.cs`
+- [x] `LocalData22` — `Components/LocalData22.cs`
+- [x] `LocalData23` — `Components/LocalData23.cs`
+- [x] `LocalData24` — `Components/LocalData24.cs`
+- [x] `Lodging5` — `Components/Lodging5.cs`
+- [x] `LodgingLineItem4` — `Components/LodgingLineItem4.cs`
+- [x] `LoginRequest8` — `Components/LoginRequest8.cs`
+- [x] `LoginResponse8` — `Components/LoginResponse8.cs`
+- [x] `LoyaltyRequest8` — `Components/LoyaltyRequest8.cs`
+- [x] `LoyaltyTransaction8` — `Components/LoyaltyTransaction8.cs`
+- [x] `MaintenanceDelegateAction11` — `Components/MaintenanceDelegateAction11.cs`
+- [x] `MaintenanceDelegation20` — `Components/MaintenanceDelegation20.cs`
+- [x] `MaintenanceDelegationRequest12` — `Components/MaintenanceDelegationRequest12.cs`
+- [x] `ManagementPlan14` — `Components/ManagementPlan14.cs`
+- [x] `ManagementPlanContent14` — `Components/ManagementPlanContent14.cs`
+- [x] `ManifestData4` — `Components/ManifestData4.cs`
 - [ ] `Margin2` — `Components/Margin2.cs`
 - [ ] `MarginRatePortfolio1` — `Components/MarginRatePortfolio1.cs`
 - [ ] `MarginReport1` — `Components/MarginReport1.cs`
