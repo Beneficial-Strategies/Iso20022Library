@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 20: 481 new components complete through PendingStatusReason32)
+- **Last updated**: 2026-06-02 (Phase 2 batch 21: 501 new components complete through PriceValuation5)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -865,26 +865,26 @@
 - [x] `PendingStatus3` — `Components/PendingStatus3.cs`
 - [x] `PendingStatusAndReason4` — `Components/PendingStatusAndReason4.cs`
 - [x] `PendingStatusReason32` — `Components/PendingStatusReason32.cs`
-- [ ] `PendingStatusReason33` — `Components/PendingStatusReason33.cs`
-- [ ] `PendingStatusReason34` — `Components/PendingStatusReason34.cs`
-- [ ] `PendingStatusReason35` — `Components/PendingStatusReason35.cs`
-- [ ] `PendingStatusReason36` — `Components/PendingStatusReason36.cs`
-- [ ] `PerformanceFactors5` — `Components/PerformanceFactors5.cs`
-- [ ] `PerformedTransaction8` — `Components/PerformedTransaction8.cs`
-- [ ] `Period18` — `Components/Period18.cs`
-- [ ] `PointOfInteraction16` — `Components/PointOfInteraction16.cs`
-- [ ] `PointOfInteractionCapabilities11` — `Components/PointOfInteractionCapabilities11.cs`
-- [ ] `PointOfInteractionComponent18` — `Components/PointOfInteractionComponent18.cs`
-- [ ] `PointOfInteractionComponentCharacteristics11` — `Components/PointOfInteractionComponentCharacteristics11.cs`
-- [ ] `PortfolioTransfer14` — `Components/PortfolioTransfer14.cs`
-- [ ] `PortfolioTransfer15` — `Components/PortfolioTransfer15.cs`
-- [ ] `PortfolioTransfer16` — `Components/PortfolioTransfer16.cs`
-- [ ] `PortfolioTransfer17` — `Components/PortfolioTransfer17.cs`
-- [ ] `PortfolioTransfer18` — `Components/PortfolioTransfer18.cs`
-- [ ] `PositionSearchCriteria4` — `Components/PositionSearchCriteria4.cs`
-- [ ] `PriceInformation25` — `Components/PriceInformation25.cs`
-- [ ] `PriceReport4` — `Components/PriceReport4.cs`
-- [ ] `PriceValuation5` — `Components/PriceValuation5.cs`
+- [x] `PendingStatusReason33` — `Components/PendingStatusReason33.cs`
+- [x] `PendingStatusReason34` — `Components/PendingStatusReason34.cs`
+- [x] `PendingStatusReason35` — `Components/PendingStatusReason35.cs`
+- [x] `PendingStatusReason36` — `Components/PendingStatusReason36.cs`
+- [x] `PerformanceFactors5` — `Components/PerformanceFactors5.cs`
+- [x] `PerformedTransaction8` — `Components/PerformedTransaction8.cs`
+- [x] `Period18` — `Components/Period18.cs`
+- [x] `PointOfInteraction16` — `Components/PointOfInteraction16.cs`
+- [x] `PointOfInteractionCapabilities11` — `Components/PointOfInteractionCapabilities11.cs`
+- [x] `PointOfInteractionComponent18` — `Components/PointOfInteractionComponent18.cs`
+- [x] `PointOfInteractionComponentCharacteristics11` — `Components/PointOfInteractionComponentCharacteristics11.cs`
+- [x] `PortfolioTransfer14` — `Components/PortfolioTransfer14.cs`
+- [x] `PortfolioTransfer15` — `Components/PortfolioTransfer15.cs`
+- [x] `PortfolioTransfer16` — `Components/PortfolioTransfer16.cs`
+- [x] `PortfolioTransfer17` — `Components/PortfolioTransfer17.cs`
+- [x] `PortfolioTransfer18` — `Components/PortfolioTransfer18.cs`
+- [x] `PositionSearchCriteria4` — `Components/PositionSearchCriteria4.cs`
+- [x] `PriceInformation25` — `Components/PriceInformation25.cs`
+- [x] `PriceReport4` — `Components/PriceReport4.cs`
+- [x] `PriceValuation5` — `Components/PriceValuation5.cs`
 - [ ] `ProcessingResult28` — `Components/ProcessingResult28.cs`
 - [ ] `ProcessingResult29` — `Components/ProcessingResult29.cs`
 - [ ] `ProcessingResult30` — `Components/ProcessingResult30.cs`

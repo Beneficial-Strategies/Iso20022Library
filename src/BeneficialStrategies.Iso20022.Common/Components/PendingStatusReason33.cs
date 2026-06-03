@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies reasons for the pending status.
+/// </summary>
+[IsoId("_78rCkaKtEfCHi7w3_0pcpw")]
+[DisplayName("Pending Status Reason33")]
+public record PendingStatusReason33
+{
+    /// <summary>
+    /// Specifies the reason why the instruction's processing is pending.
+    /// </summary>
+    [IsoId("_8CsLA6KtEfCHi7w3_0pcpw")]
+    [DisplayName("Reason Code")]
+    [IsoXmlTag("RsnCd")]
+    public required PendingReason76Choice ReasonCode { get; init; }
+
+    /// <summary>
+    /// Provides additional information about the processed instruction.
+    /// </summary>
+    [IsoId("_8CsLC6KtEfCHi7w3_0pcpw")]
+    [DisplayName("Additional Reason Information")]
+    [IsoXmlTag("AddtlRsnInf")]
+    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+}
