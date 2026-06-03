@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-03 (Phase 2 batch 30: 731 new components complete through TransactionDetails184)
+- **Last updated**: 2026-06-03 (Phase 2 batch 31: 761 new components complete through Unit15)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1115,36 +1115,36 @@
 - [x] `TransactionDetails182` — `Components/TransactionDetails182.cs`
 - [x] `TransactionDetails183` — `Components/TransactionDetails183.cs`
 - [x] `TransactionDetails184` — `Components/TransactionDetails184.cs`
-- [ ] `TransactionDetails185` — `Components/TransactionDetails185.cs`
-- [ ] `TransactionDetails186` — `Components/TransactionDetails186.cs`
-- [ ] `TransactionDetails187` — `Components/TransactionDetails187.cs`
-- [ ] `TransactionIdentification58` — `Components/TransactionIdentification58.cs`
-- [ ] `TransactionIdentification59` — `Components/TransactionIdentification59.cs`
-- [ ] `TransactionIdentification60` — `Components/TransactionIdentification60.cs`
-- [ ] `TransactionIdentification61` — `Components/TransactionIdentification61.cs`
-- [ ] `TransactionIdentification62` — `Components/TransactionIdentification62.cs`
-- [ ] `TransactionIdentifications55` — `Components/TransactionIdentifications55.cs`
-- [ ] `TransactionIdentifications56` — `Components/TransactionIdentifications56.cs`
-- [ ] `TransactionReferences10` — `Components/TransactionReferences10.cs`
-- [ ] `TransactionSpecificData1` — `Components/TransactionSpecificData1.cs`
-- [ ] `TransactionSpecificData2` — `Components/TransactionSpecificData2.cs`
-- [ ] `TransactionTotals15` — `Components/TransactionTotals15.cs`
-- [ ] `TransactorData1` — `Components/TransactorData1.cs`
-- [ ] `Transfer38` — `Components/Transfer38.cs`
-- [ ] `Transfer39` — `Components/Transfer39.cs`
-- [ ] `TransferStatusAndReason09` — `Components/TransferStatusAndReason09.cs`
-- [ ] `TransparencyDataReport22` — `Components/TransparencyDataReport22.cs`
-- [ ] `TravelAgency5` — `Components/TravelAgency5.cs`
-- [ ] `TravelDocument3` — `Components/TravelDocument3.cs`
-- [ ] `TripLeg4` — `Components/TripLeg4.cs`
-- [ ] `UnderlyingPaymentInstruction11` — `Components/UnderlyingPaymentInstruction11.cs`
-- [ ] `UnderlyingPaymentTransaction11` — `Components/UnderlyingPaymentTransaction11.cs`
-- [ ] `UnderlyingStatementEntry11` — `Components/UnderlyingStatementEntry11.cs`
-- [ ] `UnderlyingTransaction35` — `Components/UnderlyingTransaction35.cs`
-- [ ] `UnderlyingTransaction36` — `Components/UnderlyingTransaction36.cs`
-- [ ] `UnderlyingTransaction37` — `Components/UnderlyingTransaction37.cs`
-- [ ] `Unit14` — `Components/Unit14.cs`
-- [ ] `Unit15` — `Components/Unit15.cs`
+- [x] `TransactionDetails185` — `Components/TransactionDetails185.cs`
+- [x] `TransactionDetails186` — `Components/TransactionDetails186.cs`
+- [x] `TransactionDetails187` — `Components/TransactionDetails187.cs`
+- [x] `TransactionIdentification58` — `Components/TransactionIdentification58.cs`
+- [x] `TransactionIdentification59` — `Components/TransactionIdentification59.cs`
+- [x] `TransactionIdentification60` — `Components/TransactionIdentification60.cs`
+- [x] `TransactionIdentification61` — `Components/TransactionIdentification61.cs`
+- [x] `TransactionIdentification62` — `Components/TransactionIdentification62.cs`
+- [x] `TransactionIdentifications55` — `Components/TransactionIdentifications55.cs`
+- [x] `TransactionIdentifications56` — `Components/TransactionIdentifications56.cs`
+- [x] `TransactionReferences10` — `Components/TransactionReferences10.cs`
+- [x] `TransactionSpecificData1` — `Components/TransactionSpecificData1.cs`
+- [x] `TransactionSpecificData2` — `Components/TransactionSpecificData2.cs`
+- [x] `TransactionTotals15` — `Components/TransactionTotals15.cs`
+- [x] `TransactorData1` — `Components/TransactorData1.cs`
+- [x] `Transfer38` — `Components/Transfer38.cs`
+- [x] `Transfer39` — `Components/Transfer39.cs`
+- [x] `TransferStatusAndReason09` — `Components/TransferStatusAndReason09.cs`
+- [x] `TransparencyDataReport22` — `Components/TransparencyDataReport22.cs`
+- [x] `TravelAgency5` — `Components/TravelAgency5.cs`
+- [x] `TravelDocument3` — `Components/TravelDocument3.cs`
+- [x] `TripLeg4` — `Components/TripLeg4.cs`
+- [x] `UnderlyingPaymentInstruction11` — `Components/UnderlyingPaymentInstruction11.cs`
+- [x] `UnderlyingPaymentTransaction11` — `Components/UnderlyingPaymentTransaction11.cs`
+- [x] `UnderlyingStatementEntry11` — `Components/UnderlyingStatementEntry11.cs`
+- [x] `UnderlyingTransaction35` — `Components/UnderlyingTransaction35.cs`
+- [x] `UnderlyingTransaction36` — `Components/UnderlyingTransaction36.cs`
+- [x] `UnderlyingTransaction37` — `Components/UnderlyingTransaction37.cs`
+- [x] `Unit14` — `Components/Unit14.cs`
+- [x] `Unit15` — `Components/Unit15.cs`
 - [ ] `UnitPrice24` — `Components/UnitPrice24.cs`
 - [ ] `ValuationStatistics4` — `Components/ValuationStatistics4.cs`
 - [ ] `VariationMargin2` — `Components/VariationMargin2.cs`
