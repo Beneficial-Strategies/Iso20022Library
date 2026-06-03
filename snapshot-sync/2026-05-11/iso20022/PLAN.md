@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 19: 461 new components complete through PenaltyReport1)
+- **Last updated**: 2026-06-02 (Phase 2 batch 20: 481 new components complete through PendingStatusReason32)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -845,26 +845,26 @@
 - [x] `PenaltyRate1` — `Components/PenaltyRate1.cs`
 - [x] `PenaltyRecord4` — `Components/PenaltyRecord4.cs`
 - [x] `PenaltyReport1` — `Components/PenaltyReport1.cs`
-- [ ] `PenaltyStatus2` — `Components/PenaltyStatus2.cs`
-- [ ] `PenaltyStatusReason2` — `Components/PenaltyStatusReason2.cs`
-- [ ] `PenaltyTransaction3` — `Components/PenaltyTransaction3.cs`
-- [ ] `PenaltyTransactionRecord2` — `Components/PenaltyTransactionRecord2.cs`
-- [ ] `PendingCancellationStatusReason12` — `Components/PendingCancellationStatusReason12.cs`
-- [ ] `PendingCancellationStatusReason13` — `Components/PendingCancellationStatusReason13.cs`
-- [ ] `PendingCancellationStatusReason14` — `Components/PendingCancellationStatusReason14.cs`
-- [ ] `PendingCancellationStatusReason16` — `Components/PendingCancellationStatusReason16.cs`
-- [ ] `PendingCancellationStatusReason17` — `Components/PendingCancellationStatusReason17.cs`
-- [ ] `PendingProcessingReason17` — `Components/PendingProcessingReason17.cs`
-- [ ] `PendingProcessingReason18` — `Components/PendingProcessingReason18.cs`
-- [ ] `PendingProcessingReason19` — `Components/PendingProcessingReason19.cs`
-- [ ] `PendingProcessingReason20` — `Components/PendingProcessingReason20.cs`
-- [ ] `PendingReason34` — `Components/PendingReason34.cs`
-- [ ] `PendingReason35` — `Components/PendingReason35.cs`
-- [ ] `PendingReason36` — `Components/PendingReason36.cs`
-- [ ] `PendingReason37` — `Components/PendingReason37.cs`
-- [ ] `PendingStatus3` — `Components/PendingStatus3.cs`
-- [ ] `PendingStatusAndReason4` — `Components/PendingStatusAndReason4.cs`
-- [ ] `PendingStatusReason32` — `Components/PendingStatusReason32.cs`
+- [x] `PenaltyStatus2` — `Components/PenaltyStatus2.cs`
+- [x] `PenaltyStatusReason2` — `Components/PenaltyStatusReason2.cs`
+- [x] `PenaltyTransaction3` — `Components/PenaltyTransaction3.cs`
+- [x] `PenaltyTransactionRecord2` — `Components/PenaltyTransactionRecord2.cs`
+- [x] `PendingCancellationStatusReason12` — `Components/PendingCancellationStatusReason12.cs`
+- [x] `PendingCancellationStatusReason13` — `Components/PendingCancellationStatusReason13.cs`
+- [x] `PendingCancellationStatusReason14` — `Components/PendingCancellationStatusReason14.cs`
+- [x] `PendingCancellationStatusReason16` — `Components/PendingCancellationStatusReason16.cs`
+- [x] `PendingCancellationStatusReason17` — `Components/PendingCancellationStatusReason17.cs`
+- [x] `PendingProcessingReason17` — `Components/PendingProcessingReason17.cs`
+- [x] `PendingProcessingReason18` — `Components/PendingProcessingReason18.cs`
+- [x] `PendingProcessingReason19` — `Components/PendingProcessingReason19.cs`
+- [x] `PendingProcessingReason20` — `Components/PendingProcessingReason20.cs`
+- [x] `PendingReason34` — `Components/PendingReason34.cs`
+- [x] `PendingReason35` — `Components/PendingReason35.cs`
+- [x] `PendingReason36` — `Components/PendingReason36.cs`
+- [x] `PendingReason37` — `Components/PendingReason37.cs`
+- [x] `PendingStatus3` — `Components/PendingStatus3.cs`
+- [x] `PendingStatusAndReason4` — `Components/PendingStatusAndReason4.cs`
+- [x] `PendingStatusReason32` — `Components/PendingStatusReason32.cs`
 - [ ] `PendingStatusReason33` — `Components/PendingStatusReason33.cs`
 - [ ] `PendingStatusReason34` — `Components/PendingStatusReason34.cs`
 - [ ] `PendingStatusReason35` — `Components/PendingStatusReason35.cs`
