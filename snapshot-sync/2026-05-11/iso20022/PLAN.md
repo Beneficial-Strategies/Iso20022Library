@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 15: 381 new components complete through NotificationRejectionReason3)
+- **Last updated**: 2026-06-02 (Phase 2 batch 16: 401 new components complete through OriginalTransaction4)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -765,26 +765,26 @@
 - [x] `NotificationItem10` — `Components/NotificationItem10.cs`
 - [x] `NotificationPendingStatus1` — `Components/NotificationPendingStatus1.cs`
 - [x] `NotificationRejectionReason3` — `Components/NotificationRejectionReason3.cs`
-- [ ] `OptionInstructionDetails13` — `Components/OptionInstructionDetails13.cs`
-- [ ] `OrderStatusAndReason11` — `Components/OrderStatusAndReason11.cs`
-- [ ] `OrderStatusAndReason12` — `Components/OrderStatusAndReason12.cs`
-- [ ] `Organisation45` — `Components/Organisation45.cs`
-- [ ] `OriginalDataElements5` — `Components/OriginalDataElements5.cs`
-- [ ] `OriginalDataElements6` — `Components/OriginalDataElements6.cs`
-- [ ] `OriginalGroupInformation33` — `Components/OriginalGroupInformation33.cs`
-- [ ] `OriginalItem9` — `Components/OriginalItem9.cs`
-- [ ] `OriginalItemAndStatus9` — `Components/OriginalItemAndStatus9.cs`
-- [ ] `OriginalItemReference8` — `Components/OriginalItemReference8.cs`
-- [ ] `OriginalNotification17` — `Components/OriginalNotification17.cs`
-- [ ] `OriginalNotification18` — `Components/OriginalNotification18.cs`
-- [ ] `OriginalNotificationReference15` — `Components/OriginalNotificationReference15.cs`
-- [ ] `OriginalNotificationReference16` — `Components/OriginalNotificationReference16.cs`
-- [ ] `OriginalPaymentInstruction52` — `Components/OriginalPaymentInstruction52.cs`
-- [ ] `OriginalPaymentInstruction53` — `Components/OriginalPaymentInstruction53.cs`
-- [ ] `OriginalPaymentInstruction54` — `Components/OriginalPaymentInstruction54.cs`
-- [ ] `OriginalPaymentInstruction55` — `Components/OriginalPaymentInstruction55.cs`
-- [ ] `OriginalPaymentInstruction56` — `Components/OriginalPaymentInstruction56.cs`
-- [ ] `OriginalTransaction4` — `Components/OriginalTransaction4.cs`
+- [x] `OptionInstructionDetails13` — `Components/OptionInstructionDetails13.cs`
+- [x] `OrderStatusAndReason11` — `Components/OrderStatusAndReason11.cs`
+- [x] `OrderStatusAndReason12` — `Components/OrderStatusAndReason12.cs`
+- [x] `Organisation45` — `Components/Organisation45.cs`
+- [x] `OriginalDataElements5` — `Components/OriginalDataElements5.cs`
+- [x] `OriginalDataElements6` — `Components/OriginalDataElements6.cs`
+- [x] `OriginalGroupInformation33` — `Components/OriginalGroupInformation33.cs`
+- [x] `OriginalItem9` — `Components/OriginalItem9.cs`
+- [x] `OriginalItemAndStatus9` — `Components/OriginalItemAndStatus9.cs`
+- [x] `OriginalItemReference8` — `Components/OriginalItemReference8.cs`
+- [x] `OriginalNotification17` — `Components/OriginalNotification17.cs`
+- [x] `OriginalNotification18` — `Components/OriginalNotification18.cs`
+- [x] `OriginalNotificationReference15` — `Components/OriginalNotificationReference15.cs`
+- [x] `OriginalNotificationReference16` — `Components/OriginalNotificationReference16.cs`
+- [x] `OriginalPaymentInstruction52` — `Components/OriginalPaymentInstruction52.cs`
+- [x] `OriginalPaymentInstruction53` — `Components/OriginalPaymentInstruction53.cs`
+- [x] `OriginalPaymentInstruction54` — `Components/OriginalPaymentInstruction54.cs`
+- [x] `OriginalPaymentInstruction55` — `Components/OriginalPaymentInstruction55.cs`
+- [x] `OriginalPaymentInstruction56` — `Components/OriginalPaymentInstruction56.cs`
+- [x] `OriginalTransaction4` — `Components/OriginalTransaction4.cs`
 - [ ] `OriginalTransactionAmounts4` — `Components/OriginalTransactionAmounts4.cs`
 - [ ] `OriginalTransactionCharacteristics2` — `Components/OriginalTransactionCharacteristics2.cs`
 - [ ] `OriginalTransactionIdentification2` — `Components/OriginalTransactionIdentification2.cs`
