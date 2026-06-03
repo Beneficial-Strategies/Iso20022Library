@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 16: 401 new components complete through OriginalTransaction4)
+- **Last updated**: 2026-06-02 (Phase 2 batch 17: 421 new components complete through PayInScheduleItems)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -785,26 +785,26 @@
 - [x] `OriginalPaymentInstruction55` — `Components/OriginalPaymentInstruction55.cs`
 - [x] `OriginalPaymentInstruction56` — `Components/OriginalPaymentInstruction56.cs`
 - [x] `OriginalTransaction4` — `Components/OriginalTransaction4.cs`
-- [ ] `OriginalTransactionAmounts4` — `Components/OriginalTransactionAmounts4.cs`
-- [ ] `OriginalTransactionCharacteristics2` — `Components/OriginalTransactionCharacteristics2.cs`
-- [ ] `OriginalTransactionIdentification2` — `Components/OriginalTransactionIdentification2.cs`
-- [ ] `OriginalTransactionReference45` — `Components/OriginalTransactionReference45.cs`
-- [ ] `OriginalTransactionReference46` — `Components/OriginalTransactionReference46.cs`
-- [ ] `OriginalTransactionReference47` — `Components/OriginalTransactionReference47.cs`
-- [ ] `OriginalTransactionReference48` — `Components/OriginalTransactionReference48.cs`
-- [ ] `OriginatorData2` — `Components/OriginatorData2.cs`
-- [ ] `OtherIdentification8` — `Components/OtherIdentification8.cs`
-- [ ] `OtherParties46` — `Components/OtherParties46.cs`
-- [ ] `OutputResult3` — `Components/OutputResult3.cs`
-- [ ] `ParticipationMethod3` — `Components/ParticipationMethod3.cs`
-- [ ] `PartyIdentification338` — `Components/PartyIdentification338.cs`
-- [ ] `PartyIdentification339` — `Components/PartyIdentification339.cs`
-- [ ] `PartyIdentification340` — `Components/PartyIdentification340.cs`
-- [ ] `PartyIdentification341` — `Components/PartyIdentification341.cs`
-- [ ] `PartyIdentification342` — `Components/PartyIdentification342.cs`
-- [ ] `PartyIdentificationAndAccount235` — `Components/PartyIdentificationAndAccount235.cs`
-- [ ] `PassengerTransport4` — `Components/PassengerTransport4.cs`
-- [ ] `PayInScheduleItems` — `Components/PayInScheduleItems.cs`
+- [x] `OriginalTransactionAmounts4` — `Components/OriginalTransactionAmounts4.cs`
+- [x] `OriginalTransactionCharacteristics2` — `Components/OriginalTransactionCharacteristics2.cs`
+- [x] `OriginalTransactionIdentification2` — `Components/OriginalTransactionIdentification2.cs`
+- [x] `OriginalTransactionReference45` — `Components/OriginalTransactionReference45.cs`
+- [x] `OriginalTransactionReference46` — `Components/OriginalTransactionReference46.cs`
+- [x] `OriginalTransactionReference47` — `Components/OriginalTransactionReference47.cs`
+- [x] `OriginalTransactionReference48` — `Components/OriginalTransactionReference48.cs`
+- [x] `OriginatorData2` — `Components/OriginatorData2.cs`
+- [x] `OtherIdentification8` — `Components/OtherIdentification8.cs`
+- [x] `OtherParties46` — `Components/OtherParties46.cs`
+- [x] `OutputResult3` — `Components/OutputResult3.cs`
+- [x] `ParticipationMethod3` — `Components/ParticipationMethod3.cs`
+- [x] `PartyIdentification338` — `Components/PartyIdentification338.cs`
+- [x] `PartyIdentification339` — `Components/PartyIdentification339.cs`
+- [x] `PartyIdentification340` — `Components/PartyIdentification340.cs`
+- [x] `PartyIdentification341` — `Components/PartyIdentification341.cs`
+- [x] `PartyIdentification342` — `Components/PartyIdentification342.cs`
+- [x] `PartyIdentificationAndAccount235` — `Components/PartyIdentificationAndAccount235.cs`
+- [x] `PassengerTransport4` — `Components/PassengerTransport4.cs`
+- [x] `PayInScheduleItems` — `Components/PayInScheduleItems.cs`
 - [ ] `PayeeData1` — `Components/PayeeData1.cs`
 - [ ] `PayerData1` — `Components/PayerData1.cs`
 - [ ] `PayloadData3` — `Components/PayloadData3.cs`
