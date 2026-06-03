@@ -1,0 +1,63 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Characteristics of the report.
+/// </summary>
+[IsoId("_MxUsgWp-EemmaZLSPtWX5A")]
+[DisplayName("Securities Transaction Report5")]
+public record SecuritiesTransactionReport5
+{
+    [IsoId("_M8_xA2p-EemmaZLSPtWX5A")]
+    [DisplayName("Report Number")]
+    [IsoXmlTag("RptNb")]
+    public Number3Choice? ReportNumber { get; init; }
+
+    [IsoId("_M8_xC2p-EemmaZLSPtWX5A")]
+    [DisplayName("Query Reference")]
+    [IsoXmlTag("QryRef")]
+    public IsoMax35Text? QueryReference { get; init; }
+
+    [IsoId("_M8_xE2p-EemmaZLSPtWX5A")]
+    [DisplayName("Report Identification")]
+    [IsoXmlTag("RptId")]
+    public IsoMax35Text? ReportIdentification { get; init; }
+
+    [IsoId("_M8_xFWp-EemmaZLSPtWX5A")]
+    [DisplayName("Report Date Time")]
+    [IsoXmlTag("RptDtTm")]
+    public DateAndDateTime2Choice? ReportDateTime { get; init; }
+
+    [IsoId("_M8_xHWp-EemmaZLSPtWX5A")]
+    [DisplayName("Report Period")]
+    [IsoXmlTag("RptPrd")]
+    public Period7Choice? ReportPeriod { get; init; }
+
+    [IsoId("_M8_xJWp-EemmaZLSPtWX5A")]
+    [DisplayName("Query Type")]
+    [IsoXmlTag("QryTp")]
+    public MovementResponseType1Code? QueryType { get; init; }
+
+    [IsoId("_M8_xLWp-EemmaZLSPtWX5A")]
+    [DisplayName("Frequency")]
+    [IsoXmlTag("Frqcy")]
+    public Frequency22Choice? Frequency { get; init; }
+
+    [IsoId("_M8_xNWp-EemmaZLSPtWX5A")]
+    [DisplayName("Update Type")]
+    [IsoXmlTag("UpdTp")]
+    public required UpdateType15Choice UpdateType { get; init; }
+
+    [IsoId("_M8_xPWp-EemmaZLSPtWX5A")]
+    [DisplayName("Activity Indicator")]
+    [IsoXmlTag("ActvtyInd")]
+    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+}

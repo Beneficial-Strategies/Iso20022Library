@@ -1,0 +1,43 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Parameters related to the security of software application and application protocol.
+/// </summary>
+[IsoId("_WbiaUbZzEfCUZfsQO4rYeA")]
+[DisplayName("Security Parameters17")]
+public record SecurityParameters17
+{
+    [IsoId("_WcdAVbZzEfCUZfsQO4rYeA")]
+    [DisplayName("Action Type")]
+    [IsoXmlTag("ActnTp")]
+    public required TerminalManagementAction3Code ActionType { get; init; }
+
+    [IsoId("_WcdAW7ZzEfCUZfsQO4rYeA")]
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public required IsoMax256Text Version { get; init; }
+
+    [IsoId("_WcdAYbZzEfCUZfsQO4rYeA")]
+    [DisplayName("POI Challenge")]
+    [IsoXmlTag("POIChllng")]
+    public IsoMax140Binary? POIChallenge { get; init; }
+
+    [IsoId("_WcdAZ7ZzEfCUZfsQO4rYeA")]
+    [DisplayName("TM Challenge")]
+    [IsoXmlTag("TMChllng")]
+    public IsoMax140Binary? TMChallenge { get; init; }
+
+    [IsoId("_WcdAbbZzEfCUZfsQO4rYeA")]
+    [DisplayName("Security Element")]
+    [IsoXmlTag("SctyElmt")]
+    public ValueList<CryptographicKey19> SecurityElement { get; init; } = [];
+}

@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 25: 581 new components complete through SecuritiesCancellationTransaction2)
+- **Last updated**: 2026-06-02 (Phase 2 batch 26: 611 new components complete through ServiceItemTotals12)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -965,36 +965,36 @@
 - [x] `SecuritiesCancellationQueryCriteria1` — `Components/SecuritiesCancellationQueryCriteria1.cs`
 - [x] `SecuritiesCancellationQueryDefinition1` — `Components/SecuritiesCancellationQueryDefinition1.cs`
 - [x] `SecuritiesCancellationTransaction2` — `Components/SecuritiesCancellationTransaction2.cs`
-- [ ] `SecuritiesFinancingTransactionDetails59` — `Components/SecuritiesFinancingTransactionDetails59.cs`
-- [ ] `SecuritiesModification2` — `Components/SecuritiesModification2.cs`
-- [ ] `SecuritiesModificationQueryCriteria1` — `Components/SecuritiesModificationQueryCriteria1.cs`
-- [ ] `SecuritiesModificationQueryDefinition1` — `Components/SecuritiesModificationQueryDefinition1.cs`
-- [ ] `SecuritiesModificationTransaction2` — `Components/SecuritiesModificationTransaction2.cs`
-- [ ] `SecuritiesOption120` — `Components/SecuritiesOption120.cs`
-- [ ] `SecuritiesOption121` — `Components/SecuritiesOption121.cs`
-- [ ] `SecuritiesOption122` — `Components/SecuritiesOption122.cs`
-- [ ] `SecuritiesReport2` — `Components/SecuritiesReport2.cs`
-- [ ] `SecuritiesSettlementTransactionDetails59` — `Components/SecuritiesSettlementTransactionDetails59.cs`
-- [ ] `SecuritiesSettlementTransactionDetails60` — `Components/SecuritiesSettlementTransactionDetails60.cs`
-- [ ] `SecuritiesSettlementTransactionDetails61` — `Components/SecuritiesSettlementTransactionDetails61.cs`
-- [ ] `SecuritiesSettlementTransactions6` — `Components/SecuritiesSettlementTransactions6.cs`
-- [ ] `SecuritiesTradeDetails149` — `Components/SecuritiesTradeDetails149.cs`
-- [ ] `SecuritiesTradeDetails150` — `Components/SecuritiesTradeDetails150.cs`
-- [ ] `SecuritiesTradeDetails151` — `Components/SecuritiesTradeDetails151.cs`
-- [ ] `SecuritiesTradeDetails152` — `Components/SecuritiesTradeDetails152.cs`
-- [ ] `SecuritiesTradeDetails153` — `Components/SecuritiesTradeDetails153.cs`
-- [ ] `SecuritiesTradeDetails154` — `Components/SecuritiesTradeDetails154.cs`
-- [ ] `SecuritiesTransactionReport5` — `Components/SecuritiesTransactionReport5.cs`
-- [ ] `SecurityIdentification50` — `Components/SecurityIdentification50.cs`
-- [ ] `SecurityParameters17` — `Components/SecurityParameters17.cs`
-- [ ] `SecurityParameters18` — `Components/SecurityParameters18.cs`
-- [ ] `SecurityParameters19` — `Components/SecurityParameters19.cs`
-- [ ] `SenderData1` — `Components/SenderData1.cs`
-- [ ] `ServiceCategoryTotals7` — `Components/ServiceCategoryTotals7.cs`
-- [ ] `ServiceCategoryTotals8` — `Components/ServiceCategoryTotals8.cs`
-- [ ] `ServiceItemTotals10` — `Components/ServiceItemTotals10.cs`
-- [ ] `ServiceItemTotals11` — `Components/ServiceItemTotals11.cs`
-- [ ] `ServiceItemTotals12` — `Components/ServiceItemTotals12.cs`
+- [x] `SecuritiesFinancingTransactionDetails59` — `Components/SecuritiesFinancingTransactionDetails59.cs`
+- [x] `SecuritiesModification2` — `Components/SecuritiesModification2.cs`
+- [x] `SecuritiesModificationQueryCriteria1` — `Components/SecuritiesModificationQueryCriteria1.cs`
+- [x] `SecuritiesModificationQueryDefinition1` — `Components/SecuritiesModificationQueryDefinition1.cs`
+- [x] `SecuritiesModificationTransaction2` — `Components/SecuritiesModificationTransaction2.cs`
+- [x] `SecuritiesOption120` — `Components/SecuritiesOption120.cs`
+- [x] `SecuritiesOption121` — `Components/SecuritiesOption121.cs`
+- [x] `SecuritiesOption122` — `Components/SecuritiesOption122.cs`
+- [x] `SecuritiesReport2` — `Components/SecuritiesReport2.cs`
+- [x] `SecuritiesSettlementTransactionDetails59` — `Components/SecuritiesSettlementTransactionDetails59.cs`
+- [x] `SecuritiesSettlementTransactionDetails60` — `Components/SecuritiesSettlementTransactionDetails60.cs`
+- [x] `SecuritiesSettlementTransactionDetails61` — `Components/SecuritiesSettlementTransactionDetails61.cs`
+- [x] `SecuritiesSettlementTransactions6` — `Components/SecuritiesSettlementTransactions6.cs`
+- [x] `SecuritiesTradeDetails149` — `Components/SecuritiesTradeDetails149.cs`
+- [x] `SecuritiesTradeDetails150` — `Components/SecuritiesTradeDetails150.cs`
+- [x] `SecuritiesTradeDetails151` — `Components/SecuritiesTradeDetails151.cs`
+- [x] `SecuritiesTradeDetails152` — `Components/SecuritiesTradeDetails152.cs`
+- [x] `SecuritiesTradeDetails153` — `Components/SecuritiesTradeDetails153.cs`
+- [x] `SecuritiesTradeDetails154` — `Components/SecuritiesTradeDetails154.cs`
+- [x] `SecuritiesTransactionReport5` — `Components/SecuritiesTransactionReport5.cs`
+- [x] `SecurityIdentification50` — `Components/SecurityIdentification50.cs`
+- [x] `SecurityParameters17` — `Components/SecurityParameters17.cs`
+- [x] `SecurityParameters18` — `Components/SecurityParameters18.cs`
+- [x] `SecurityParameters19` — `Components/SecurityParameters19.cs`
+- [x] `SenderData1` — `Components/SenderData1.cs`
+- [x] `ServiceCategoryTotals7` — `Components/ServiceCategoryTotals7.cs`
+- [x] `ServiceCategoryTotals8` — `Components/ServiceCategoryTotals8.cs`
+- [x] `ServiceItemTotals10` — `Components/ServiceItemTotals10.cs`
+- [x] `ServiceItemTotals11` — `Components/ServiceItemTotals11.cs`
+- [x] `ServiceItemTotals12` — `Components/ServiceItemTotals12.cs`
 - [ ] `ServiceItemTotals13` — `Components/ServiceItemTotals13.cs`
 - [ ] `ServiceProviderParameters5` — `Components/ServiceProviderParameters5.cs`
 - [ ] `ServiceRequest9` — `Components/ServiceRequest9.cs`
