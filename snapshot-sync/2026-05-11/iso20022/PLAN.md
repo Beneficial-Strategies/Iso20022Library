@@ -1264,26 +1264,26 @@
 - [x] `PartyIdentification336Choice` — `Choices/PartyIdentification336Choice_.cs` + `Choices/PartyIdentification336Choice/` directory
 - [x] `PaymentInstrument28Choice` — `Choices/PaymentInstrument28Choice_.cs` + `Choices/PaymentInstrument28Choice/` directory
 - [x] `PaymentInstrument29Choice` — `Choices/PaymentInstrument29Choice_.cs` + `Choices/PaymentInstrument29Choice/` directory
-- [ ] `PaymentInstrument30Choice` — `Choices/PaymentInstrument30Choice_.cs` + `Choices/PaymentInstrument30Choice/` directory
-- [ ] `PaymentInstrument31Choice` — `Choices/PaymentInstrument31Choice_.cs` + `Choices/PaymentInstrument31Choice/` directory
-- [ ] `PaymentMethod3Choice` — `Choices/PaymentMethod3Choice_.cs` + `Choices/PaymentMethod3Choice/` directory
-- [ ] `PenaltyListType1Choice` — `Choices/PenaltyListType1Choice_.cs` + `Choices/PenaltyListType1Choice/` directory
-- [ ] `PenaltyPartyType2Choice` — `Choices/PenaltyPartyType2Choice_.cs` + `Choices/PenaltyPartyType2Choice/` directory
-- [ ] `PenaltyStatus2Choice` — `Choices/PenaltyStatus2Choice_.cs` + `Choices/PenaltyStatus2Choice/` directory
-- [ ] `PenaltyStatusReason2Choice` — `Choices/PenaltyStatusReason2Choice_.cs` + `Choices/PenaltyStatusReason2Choice/` directory
-- [ ] `PendingCancellationReason10Choice` — `Choices/PendingCancellationReason10Choice_.cs` + `Choices/PendingCancellationReason10Choice/` directory
-- [ ] `PendingCancellationReason13Choice` — `Choices/PendingCancellationReason13Choice_.cs` + `Choices/PendingCancellationReason13Choice/` directory
-- [ ] `PendingCancellationReason9Choice` — `Choices/PendingCancellationReason9Choice_.cs` + `Choices/PendingCancellationReason9Choice/` directory
-- [ ] `PendingCancellationReasons6Choice` — `Choices/PendingCancellationReasons6Choice_.cs` + `Choices/PendingCancellationReasons6Choice/` directory
-- [ ] `PendingCancellationStatus17Choice` — `Choices/PendingCancellationStatus17Choice_.cs` + `Choices/PendingCancellationStatus17Choice/` directory
-- [ ] `PendingCancellationStatus18Choice` — `Choices/PendingCancellationStatus18Choice_.cs` + `Choices/PendingCancellationStatus18Choice/` directory
-- [ ] `PendingCancellationStatus19Choice` — `Choices/PendingCancellationStatus19Choice_.cs` + `Choices/PendingCancellationStatus19Choice/` directory
-- [ ] `PendingCancellationStatus21Choice` — `Choices/PendingCancellationStatus21Choice_.cs` + `Choices/PendingCancellationStatus21Choice/` directory
-- [ ] `PendingCancellationStatus22Choice` — `Choices/PendingCancellationStatus22Choice_.cs` + `Choices/PendingCancellationStatus22Choice/` directory
-- [ ] `PendingProcessingReason19Choice` — `Choices/PendingProcessingReason19Choice_.cs` + `Choices/PendingProcessingReason19Choice/` directory
-- [ ] `PendingProcessingReason20Choice` — `Choices/PendingProcessingReason20Choice_.cs` + `Choices/PendingProcessingReason20Choice/` directory
-- [ ] `PendingProcessingReason21Choice` — `Choices/PendingProcessingReason21Choice_.cs` + `Choices/PendingProcessingReason21Choice/` directory
-- [ ] `PendingProcessingReason22Choice` — `Choices/PendingProcessingReason22Choice_.cs` + `Choices/PendingProcessingReason22Choice/` directory
+- [x] `PaymentInstrument30Choice` — `Choices/PaymentInstrument30Choice_.cs` + `Choices/PaymentInstrument30Choice/` directory
+- [x] `PaymentInstrument31Choice` — `Choices/PaymentInstrument31Choice_.cs` + `Choices/PaymentInstrument31Choice/` directory
+- [x] `PaymentMethod3Choice` — `Choices/PaymentMethod3Choice_.cs` + `Choices/PaymentMethod3Choice/` directory
+- [x] `PenaltyListType1Choice` — `Choices/PenaltyListType1Choice_.cs` + `Choices/PenaltyListType1Choice/` directory
+- [x] `PenaltyPartyType2Choice` — `Choices/PenaltyPartyType2Choice_.cs` + `Choices/PenaltyPartyType2Choice/` directory
+- [x] `PenaltyStatus2Choice` — `Choices/PenaltyStatus2Choice_.cs` + `Choices/PenaltyStatus2Choice/` directory
+- [x] `PenaltyStatusReason2Choice` — `Choices/PenaltyStatusReason2Choice_.cs` + `Choices/PenaltyStatusReason2Choice/` directory
+- [x] `PendingCancellationReason10Choice` — `Choices/PendingCancellationReason10Choice_.cs` + `Choices/PendingCancellationReason10Choice/` directory
+- [x] `PendingCancellationReason13Choice` — `Choices/PendingCancellationReason13Choice_.cs` + `Choices/PendingCancellationReason13Choice/` directory
+- [x] `PendingCancellationReason9Choice` — `Choices/PendingCancellationReason9Choice_.cs` + `Choices/PendingCancellationReason9Choice/` directory
+- [x] `PendingCancellationReasons6Choice` — `Choices/PendingCancellationReasons6Choice_.cs` + `Choices/PendingCancellationReasons6Choice/` directory
+- [x] `PendingCancellationStatus17Choice` — `Choices/PendingCancellationStatus17Choice_.cs` + `Choices/PendingCancellationStatus17Choice/` directory
+- [x] `PendingCancellationStatus18Choice` — `Choices/PendingCancellationStatus18Choice_.cs` + `Choices/PendingCancellationStatus18Choice/` directory
+- [x] `PendingCancellationStatus19Choice` — `Choices/PendingCancellationStatus19Choice_.cs` + `Choices/PendingCancellationStatus19Choice/` directory
+- [x] `PendingCancellationStatus21Choice` — `Choices/PendingCancellationStatus21Choice_.cs` + `Choices/PendingCancellationStatus21Choice/` directory
+- [x] `PendingCancellationStatus22Choice` — `Choices/PendingCancellationStatus22Choice_.cs` + `Choices/PendingCancellationStatus22Choice/` directory
+- [x] `PendingProcessingReason19Choice` — `Choices/PendingProcessingReason19Choice_.cs` + `Choices/PendingProcessingReason19Choice/` directory
+- [x] `PendingProcessingReason20Choice` — `Choices/PendingProcessingReason20Choice_.cs` + `Choices/PendingProcessingReason20Choice/` directory
+- [x] `PendingProcessingReason21Choice` — `Choices/PendingProcessingReason21Choice_.cs` + `Choices/PendingProcessingReason21Choice/` directory
+- [x] `PendingProcessingReason22Choice` — `Choices/PendingProcessingReason22Choice_.cs` + `Choices/PendingProcessingReason22Choice/` directory
 - [ ] `PendingProcessingStatus20Choice` — `Choices/PendingProcessingStatus20Choice_.cs` + `Choices/PendingProcessingStatus20Choice/` directory
 - [ ] `PendingProcessingStatus21Choice` — `Choices/PendingProcessingStatus21Choice_.cs` + `Choices/PendingProcessingStatus21Choice/` directory
 - [ ] `PendingProcessingStatus22Choice` — `Choices/PendingProcessingStatus22Choice_.cs` + `Choices/PendingProcessingStatus22Choice/` directory
