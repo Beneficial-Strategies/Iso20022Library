@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 27: 641 new components complete through ShippingData4)
+- **Last updated**: 2026-06-03 (Phase 2 batch 28: 671 new components complete through SubscriptionOrder16)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1025,36 +1025,36 @@
 - [x] `SettlementService7` — `Components/SettlementService7.cs`
 - [x] `SettlementTransactionStatusType2` — `Components/SettlementTransactionStatusType2.cs`
 - [x] `ShippingData4` — `Components/ShippingData4.cs`
-- [ ] `ShippingPackage4` — `Components/ShippingPackage4.cs`
-- [ ] `Software2` — `Components/Software2.cs`
-- [ ] `SplitObligationAttributes1` — `Components/SplitObligationAttributes1.cs`
-- [ ] `Statement58` — `Components/Statement58.cs`
-- [ ] `Statement87` — `Components/Statement87.cs`
-- [ ] `Statement89` — `Components/Statement89.cs`
-- [ ] `StatisticsByUserDefinedTimePeriod3` — `Components/StatisticsByUserDefinedTimePeriod3.cs`
-- [ ] `StatusAndReason49` — `Components/StatusAndReason49.cs`
-- [ ] `StatusAndReason50` — `Components/StatusAndReason50.cs`
-- [ ] `StatusAndReason52` — `Components/StatusAndReason52.cs`
-- [ ] `StatusReasonInformation13` — `Components/StatusReasonInformation13.cs`
-- [ ] `StatusReport15` — `Components/StatusReport15.cs`
-- [ ] `StatusReportContent15` — `Components/StatusReportContent15.cs`
-- [ ] `StatusReportDataSetRequest7` — `Components/StatusReportDataSetRequest7.cs`
-- [ ] `StatusTrail13` — `Components/StatusTrail13.cs`
-- [ ] `StoredValueData9` — `Components/StoredValueData9.cs`
-- [ ] `StoredValueRequest9` — `Components/StoredValueRequest9.cs`
-- [ ] `StoredValueResponse9` — `Components/StoredValueResponse9.cs`
-- [ ] `StructuredRegulatoryReporting5` — `Components/StructuredRegulatoryReporting5.cs`
-- [ ] `StructuredRemittanceInformation22` — `Components/StructuredRemittanceInformation22.cs`
-- [ ] `SubAccountIdentification74` — `Components/SubAccountIdentification74.cs`
-- [ ] `SubAccountIdentification75` — `Components/SubAccountIdentification75.cs`
-- [ ] `SubMerchant1` — `Components/SubMerchant1.cs`
-- [ ] `SubscriptionBulkExecution05` — `Components/SubscriptionBulkExecution05.cs`
-- [ ] `SubscriptionBulkOrder06` — `Components/SubscriptionBulkOrder06.cs`
-- [ ] `SubscriptionExecution15` — `Components/SubscriptionExecution15.cs`
-- [ ] `SubscriptionExecution16` — `Components/SubscriptionExecution16.cs`
-- [ ] `SubscriptionMultipleExecution7` — `Components/SubscriptionMultipleExecution7.cs`
-- [ ] `SubscriptionMultipleOrder7` — `Components/SubscriptionMultipleOrder7.cs`
-- [ ] `SubscriptionOrder16` — `Components/SubscriptionOrder16.cs`
+- [x] `ShippingPackage4` — `Components/ShippingPackage4.cs`
+- [x] `Software2` — `Components/Software2.cs`
+- [x] `SplitObligationAttributes1` — `Components/SplitObligationAttributes1.cs`
+- [x] `Statement58` — `Components/Statement58.cs`
+- [x] `Statement87` — `Components/Statement87.cs`
+- [x] `Statement89` — `Components/Statement89.cs`
+- [x] `StatisticsByUserDefinedTimePeriod3` — `Components/StatisticsByUserDefinedTimePeriod3.cs`
+- [x] `StatusAndReason49` — `Components/StatusAndReason49.cs`
+- [x] `StatusAndReason50` — `Components/StatusAndReason50.cs`
+- [x] `StatusAndReason52` — `Components/StatusAndReason52.cs`
+- [x] `StatusReasonInformation13` — `Components/StatusReasonInformation13.cs`
+- [x] `StatusReport15` — `Components/StatusReport15.cs`
+- [x] `StatusReportContent15` — `Components/StatusReportContent15.cs`
+- [x] `StatusReportDataSetRequest7` — `Components/StatusReportDataSetRequest7.cs`
+- [x] `StatusTrail13` — `Components/StatusTrail13.cs`
+- [x] `StoredValueData9` — `Components/StoredValueData9.cs`
+- [x] `StoredValueRequest9` — `Components/StoredValueRequest9.cs`
+- [x] `StoredValueResponse9` — `Components/StoredValueResponse9.cs`
+- [x] `StructuredRegulatoryReporting5` — `Components/StructuredRegulatoryReporting5.cs`
+- [x] `StructuredRemittanceInformation22` — `Components/StructuredRemittanceInformation22.cs`
+- [x] `SubAccountIdentification74` — `Components/SubAccountIdentification74.cs`
+- [x] `SubAccountIdentification75` — `Components/SubAccountIdentification75.cs`
+- [x] `SubMerchant1` — `Components/SubMerchant1.cs`
+- [x] `SubscriptionBulkExecution05` — `Components/SubscriptionBulkExecution05.cs`
+- [x] `SubscriptionBulkOrder06` — `Components/SubscriptionBulkOrder06.cs`
+- [x] `SubscriptionExecution15` — `Components/SubscriptionExecution15.cs`
+- [x] `SubscriptionExecution16` — `Components/SubscriptionExecution16.cs`
+- [x] `SubscriptionMultipleExecution7` — `Components/SubscriptionMultipleExecution7.cs`
+- [x] `SubscriptionMultipleOrder7` — `Components/SubscriptionMultipleOrder7.cs`
+- [x] `SubscriptionOrder16` — `Components/SubscriptionOrder16.cs`
 - [ ] `SubscriptionOrder17` — `Components/SubscriptionOrder17.cs`
 - [ ] `SwitchExecution8` — `Components/SwitchExecution8.cs`
 - [ ] `SwitchLegReferences3` — `Components/SwitchLegReferences3.cs`
