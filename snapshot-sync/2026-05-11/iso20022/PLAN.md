@@ -1224,26 +1224,26 @@
 - [x] `FinancialInstrument103Choice` — `Choices/FinancialInstrument103Choice_.cs` + `Choices/FinancialInstrument103Choice/` directory
 - [x] `FinancialInstrument104Choice` — `Choices/FinancialInstrument104Choice_.cs` + `Choices/FinancialInstrument104Choice/` directory
 - [x] `FinancialInstrumentQuantity48Choice` — `Choices/FinancialInstrumentQuantity48Choice_.cs` + `Choices/FinancialInstrumentQuantity48Choice/` directory
-- [ ] `FinancialInstrumentQuantity49Choice` — `Choices/FinancialInstrumentQuantity49Choice_.cs` + `Choices/FinancialInstrumentQuantity49Choice/` directory
-- [ ] `FinancialInstrumentQuantity50Choice` — `Choices/FinancialInstrumentQuantity50Choice_.cs` + `Choices/FinancialInstrumentQuantity50Choice/` directory
-- [ ] `FinancialInstrumentQuantity51Choice` — `Choices/FinancialInstrumentQuantity51Choice_.cs` + `Choices/FinancialInstrumentQuantity51Choice/` directory
-- [ ] `FinancialInstrumentQuantitySearch2Choice` — `Choices/FinancialInstrumentQuantitySearch2Choice_.cs` + `Choices/FinancialInstrumentQuantitySearch2Choice/` directory
-- [ ] `IdentificationSource6Choice` — `Choices/IdentificationSource6Choice_.cs` + `Choices/IdentificationSource6Choice/` directory
-- [ ] `InstructionCancellationRequestStatus20Choice` — `Choices/InstructionCancellationRequestStatus20Choice_.cs` + `Choices/InstructionCancellationRequestStatus20Choice/` directory
-- [ ] `InstructionCancellationRequestStatus21Choice` — `Choices/InstructionCancellationRequestStatus21Choice_.cs` + `Choices/InstructionCancellationRequestStatus21Choice/` directory
-- [ ] `InstructionProcessingStatus59Choice` — `Choices/InstructionProcessingStatus59Choice_.cs` + `Choices/InstructionProcessingStatus59Choice/` directory
-- [ ] `InstructionProcessingStatus60Choice` — `Choices/InstructionProcessingStatus60Choice_.cs` + `Choices/InstructionProcessingStatus60Choice/` directory
-- [ ] `InstructionProcessingStatus61Choice` — `Choices/InstructionProcessingStatus61Choice_.cs` + `Choices/InstructionProcessingStatus61Choice/` directory
-- [ ] `InstructionProcessingStatus62Choice` — `Choices/InstructionProcessingStatus62Choice_.cs` + `Choices/InstructionProcessingStatus62Choice/` directory
-- [ ] `InstructionProcessingStatus63Choice` — `Choices/InstructionProcessingStatus63Choice_.cs` + `Choices/InstructionProcessingStatus63Choice/` directory
-- [ ] `InstructionStatus14Choice` — `Choices/InstructionStatus14Choice_.cs` + `Choices/InstructionStatus14Choice/` directory
-- [ ] `InstructionTypeStatus8Choice` — `Choices/InstructionTypeStatus8Choice_.cs` + `Choices/InstructionTypeStatus8Choice/` directory
-- [ ] `IntermediateSecuritiesDistributionTypeFormat19Choice` — `Choices/IntermediateSecuritiesDistributionTypeFormat19Choice_.cs` + `Choices/IntermediateSecuritiesDistributionTypeFormat19Choice/` directory
-- [ ] `IntraPositionProcessingStatus11Choice` — `Choices/IntraPositionProcessingStatus11Choice_.cs` + `Choices/IntraPositionProcessingStatus11Choice/` directory
-- [ ] `InvestigationDataRecord12Choice` — `Choices/InvestigationDataRecord12Choice_.cs` + `Choices/InvestigationDataRecord12Choice/` directory
-- [ ] `KeyValue3Choice` — `Choices/KeyValue3Choice_.cs` + `Choices/KeyValue3Choice/` directory
-- [ ] `MandateRelatedData4Choice` — `Choices/MandateRelatedData4Choice_.cs` + `Choices/MandateRelatedData4Choice/` directory
-- [ ] `MandateRelatedData5Choice` — `Choices/MandateRelatedData5Choice_.cs` + `Choices/MandateRelatedData5Choice/` directory
+- [x] `FinancialInstrumentQuantity49Choice` — `Choices/FinancialInstrumentQuantity49Choice_.cs` + `Choices/FinancialInstrumentQuantity49Choice/` directory
+- [x] `FinancialInstrumentQuantity50Choice` — `Choices/FinancialInstrumentQuantity50Choice_.cs` + `Choices/FinancialInstrumentQuantity50Choice/` directory
+- [x] `FinancialInstrumentQuantity51Choice` — `Choices/FinancialInstrumentQuantity51Choice_.cs` + `Choices/FinancialInstrumentQuantity51Choice/` directory
+- [x] `FinancialInstrumentQuantitySearch2Choice` — `Choices/FinancialInstrumentQuantitySearch2Choice_.cs` + `Choices/FinancialInstrumentQuantitySearch2Choice/` directory
+- [x] `IdentificationSource6Choice` — `Choices/IdentificationSource6Choice_.cs` + `Choices/IdentificationSource6Choice/` directory
+- [x] `InstructionCancellationRequestStatus20Choice` — `Choices/InstructionCancellationRequestStatus20Choice_.cs` + `Choices/InstructionCancellationRequestStatus20Choice/` directory
+- [x] `InstructionCancellationRequestStatus21Choice` — `Choices/InstructionCancellationRequestStatus21Choice_.cs` + `Choices/InstructionCancellationRequestStatus21Choice/` directory
+- [x] `InstructionProcessingStatus59Choice` — `Choices/InstructionProcessingStatus59Choice_.cs` + `Choices/InstructionProcessingStatus59Choice/` directory
+- [x] `InstructionProcessingStatus60Choice` — `Choices/InstructionProcessingStatus60Choice_.cs` + `Choices/InstructionProcessingStatus60Choice/` directory
+- [x] `InstructionProcessingStatus61Choice` — `Choices/InstructionProcessingStatus61Choice_.cs` + `Choices/InstructionProcessingStatus61Choice/` directory
+- [x] `InstructionProcessingStatus62Choice` — `Choices/InstructionProcessingStatus62Choice_.cs` + `Choices/InstructionProcessingStatus62Choice/` directory
+- [x] `InstructionProcessingStatus63Choice` — `Choices/InstructionProcessingStatus63Choice_.cs` + `Choices/InstructionProcessingStatus63Choice/` directory
+- [x] `InstructionStatus14Choice` — `Choices/InstructionStatus14Choice_.cs` + `Choices/InstructionStatus14Choice/` directory
+- [x] `InstructionTypeStatus8Choice` — `Choices/InstructionTypeStatus8Choice_.cs` + `Choices/InstructionTypeStatus8Choice/` directory
+- [x] `IntermediateSecuritiesDistributionTypeFormat19Choice` — `Choices/IntermediateSecuritiesDistributionTypeFormat19Choice_.cs` + `Choices/IntermediateSecuritiesDistributionTypeFormat19Choice/` directory
+- [x] `IntraPositionProcessingStatus11Choice` — `Choices/IntraPositionProcessingStatus11Choice_.cs` + `Choices/IntraPositionProcessingStatus11Choice/` directory
+- [x] `InvestigationDataRecord12Choice` — `Choices/InvestigationDataRecord12Choice_.cs` + `Choices/InvestigationDataRecord12Choice/` directory
+- [x] `KeyValue3Choice` — `Choices/KeyValue3Choice_.cs` + `Choices/KeyValue3Choice/` directory
+- [x] `MandateRelatedData4Choice` — `Choices/MandateRelatedData4Choice_.cs` + `Choices/MandateRelatedData4Choice/` directory
+- [x] `MandateRelatedData5Choice` — `Choices/MandateRelatedData5Choice_.cs` + `Choices/MandateRelatedData5Choice/` directory
 - [ ] `MarketClaimCancellationRequestStatus3Choice` — `Choices/MarketClaimCancellationRequestStatus3Choice_.cs` + `Choices/MarketClaimCancellationRequestStatus3Choice/` directory
 - [ ] `MarketClaimProcessingStatus2Choice` — `Choices/MarketClaimProcessingStatus2Choice_.cs` + `Choices/MarketClaimProcessingStatus2Choice/` directory
 - [ ] `ModificationProcessingStatus12Choice` — `Choices/ModificationProcessingStatus12Choice_.cs` + `Choices/ModificationProcessingStatus12Choice/` directory
