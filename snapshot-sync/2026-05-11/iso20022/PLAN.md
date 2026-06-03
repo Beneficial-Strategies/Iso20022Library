@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 26: 611 new components complete through ServiceItemTotals12)
+- **Last updated**: 2026-06-02 (Phase 2 batch 27: 641 new components complete through ShippingData4)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -995,36 +995,36 @@
 - [x] `ServiceItemTotals10` — `Components/ServiceItemTotals10.cs`
 - [x] `ServiceItemTotals11` — `Components/ServiceItemTotals11.cs`
 - [x] `ServiceItemTotals12` — `Components/ServiceItemTotals12.cs`
-- [ ] `ServiceItemTotals13` — `Components/ServiceItemTotals13.cs`
-- [ ] `ServiceProviderParameters5` — `Components/ServiceProviderParameters5.cs`
-- [ ] `ServiceRequest9` — `Components/ServiceRequest9.cs`
-- [ ] `ServiceResponse10` — `Components/ServiceResponse10.cs`
-- [ ] `SessionManagementRequest9` — `Components/SessionManagementRequest9.cs`
-- [ ] `SessionManagementResponse9` — `Components/SessionManagementResponse9.cs`
-- [ ] `SettlementDetails220` — `Components/SettlementDetails220.cs`
-- [ ] `SettlementDetails221` — `Components/SettlementDetails221.cs`
-- [ ] `SettlementDetails222` — `Components/SettlementDetails222.cs`
-- [ ] `SettlementDetails223` — `Components/SettlementDetails223.cs`
-- [ ] `SettlementDetails224` — `Components/SettlementDetails224.cs`
-- [ ] `SettlementDetails225` — `Components/SettlementDetails225.cs`
-- [ ] `SettlementDetails226` — `Components/SettlementDetails226.cs`
-- [ ] `SettlementDetails227` — `Components/SettlementDetails227.cs`
-- [ ] `SettlementDetails228` — `Components/SettlementDetails228.cs`
-- [ ] `SettlementDetails230` — `Components/SettlementDetails230.cs`
-- [ ] `SettlementDetails231` — `Components/SettlementDetails231.cs`
-- [ ] `SettlementDetails232` — `Components/SettlementDetails232.cs`
-- [ ] `SettlementDetails234` — `Components/SettlementDetails234.cs`
-- [ ] `SettlementDetails235` — `Components/SettlementDetails235.cs`
-- [ ] `SettlementDetails236` — `Components/SettlementDetails236.cs`
-- [ ] `SettlementInstitutionData1` — `Components/SettlementInstitutionData1.cs`
-- [ ] `SettlementInstructionQueryCriteria4` — `Components/SettlementInstructionQueryCriteria4.cs`
-- [ ] `SettlementInstructionQueryDefinition4` — `Components/SettlementInstructionQueryDefinition4.cs`
-- [ ] `SettlementInstructionQueryStatus3` — `Components/SettlementInstructionQueryStatus3.cs`
-- [ ] `SettlementObligation6` — `Components/SettlementObligation6.cs`
-- [ ] `SettlementParties131` — `Components/SettlementParties131.cs`
-- [ ] `SettlementService7` — `Components/SettlementService7.cs`
-- [ ] `SettlementTransactionStatusType2` — `Components/SettlementTransactionStatusType2.cs`
-- [ ] `ShippingData4` — `Components/ShippingData4.cs`
+- [x] `ServiceItemTotals13` — `Components/ServiceItemTotals13.cs`
+- [x] `ServiceProviderParameters5` — `Components/ServiceProviderParameters5.cs`
+- [x] `ServiceRequest9` — `Components/ServiceRequest9.cs`
+- [x] `ServiceResponse10` — `Components/ServiceResponse10.cs`
+- [x] `SessionManagementRequest9` — `Components/SessionManagementRequest9.cs`
+- [x] `SessionManagementResponse9` — `Components/SessionManagementResponse9.cs`
+- [x] `SettlementDetails220` — `Components/SettlementDetails220.cs`
+- [x] `SettlementDetails221` — `Components/SettlementDetails221.cs`
+- [x] `SettlementDetails222` — `Components/SettlementDetails222.cs`
+- [x] `SettlementDetails223` — `Components/SettlementDetails223.cs`
+- [x] `SettlementDetails224` — `Components/SettlementDetails224.cs`
+- [x] `SettlementDetails225` — `Components/SettlementDetails225.cs`
+- [x] `SettlementDetails226` — `Components/SettlementDetails226.cs`
+- [x] `SettlementDetails227` — `Components/SettlementDetails227.cs`
+- [x] `SettlementDetails228` — `Components/SettlementDetails228.cs`
+- [x] `SettlementDetails230` — `Components/SettlementDetails230.cs`
+- [x] `SettlementDetails231` — `Components/SettlementDetails231.cs`
+- [x] `SettlementDetails232` — `Components/SettlementDetails232.cs`
+- [x] `SettlementDetails234` — `Components/SettlementDetails234.cs`
+- [x] `SettlementDetails235` — `Components/SettlementDetails235.cs`
+- [x] `SettlementDetails236` — `Components/SettlementDetails236.cs`
+- [x] `SettlementInstitutionData1` — `Components/SettlementInstitutionData1.cs`
+- [x] `SettlementInstructionQueryCriteria4` — `Components/SettlementInstructionQueryCriteria4.cs`
+- [x] `SettlementInstructionQueryDefinition4` — `Components/SettlementInstructionQueryDefinition4.cs`
+- [x] `SettlementInstructionQueryStatus3` — `Components/SettlementInstructionQueryStatus3.cs`
+- [x] `SettlementObligation6` — `Components/SettlementObligation6.cs`
+- [x] `SettlementParties131` — `Components/SettlementParties131.cs`
+- [x] `SettlementService7` — `Components/SettlementService7.cs`
+- [x] `SettlementTransactionStatusType2` — `Components/SettlementTransactionStatusType2.cs`
+- [x] `ShippingData4` — `Components/ShippingData4.cs`
 - [ ] `ShippingPackage4` — `Components/ShippingPackage4.cs`
 - [ ] `Software2` — `Components/Software2.cs`
 - [ ] `SplitObligationAttributes1` — `Components/SplitObligationAttributes1.cs`
