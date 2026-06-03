@@ -1184,7 +1184,7 @@
 ## Phase 3: Choices (194 new · 0 changed · 2 removed)
 <!-- /snapshot-sync-choices works this section -->
 ### New
-- [ ] `ATMSignature3Choice` — `Choices/ATMSignature3Choice_.cs` + `Choices/ATMSignature3Choice/` directory
+- [x] `ATMSignature3Choice` — `Choices/ATMSignature3Choice_.cs` + `Choices/ATMSignature3Choice/` directory
 - [ ] `AcceptedWithWarningStatus1Format1Choice` — `Choices/AcceptedWithWarningStatus1Format1Choice_.cs` + `Choices/AcceptedWithWarningStatus1Format1Choice/` directory
 - [ ] `AccountIdentification38Choice` — `Choices/AccountIdentification38Choice_.cs` + `Choices/AccountIdentification38Choice/` directory
 - [ ] `AccountIdentification82Choice` — `Choices/AccountIdentification82Choice_.cs` + `Choices/AccountIdentification82Choice/` directory
@@ -1194,16 +1194,16 @@
 - [ ] `AdditionalBusinessProcessFormat25Choice` — `Choices/AdditionalBusinessProcessFormat25Choice_.cs` + `Choices/AdditionalBusinessProcessFormat25Choice/` directory
 - [ ] `AgentDocumentIdentificationAndStatus2Choice` — `Choices/AgentDocumentIdentificationAndStatus2Choice_.cs` + `Choices/AgentDocumentIdentificationAndStatus2Choice/` directory
 - [ ] `AmountOrCoefficientPrice2Choice` — `Choices/AmountOrCoefficientPrice2Choice_.cs` + `Choices/AmountOrCoefficientPrice2Choice/` directory
-- [ ] `BillingReportOrError6Choice` — `Choices/BillingReportOrError6Choice_.cs` + `Choices/BillingReportOrError6Choice/` directory
-- [ ] `CalculationBasis2Choice` — `Choices/CalculationBasis2Choice_.cs` + `Choices/CalculationBasis2Choice/` directory
-- [ ] `CancellationReason16Choice` — `Choices/CancellationReason16Choice_.cs` + `Choices/CancellationReason16Choice/` directory
-- [ ] `CancellationStatus33Choice` — `Choices/CancellationStatus33Choice_.cs` + `Choices/CancellationStatus33Choice/` directory
-- [ ] `CancellationStatus34Choice` — `Choices/CancellationStatus34Choice_.cs` + `Choices/CancellationStatus34Choice/` directory
-- [ ] `CancellationStatus35Choice` — `Choices/CancellationStatus35Choice_.cs` + `Choices/CancellationStatus35Choice/` directory
-- [ ] `CardPaymentDataSetTransaction14Choice` — `Choices/CardPaymentDataSetTransaction14Choice_.cs` + `Choices/CardPaymentDataSetTransaction14Choice/` directory
-- [ ] `CashInOrOut8Choice` — `Choices/CashInOrOut8Choice_.cs` + `Choices/CashInOrOut8Choice/` directory
-- [ ] `CashSettlementSystem6Choice` — `Choices/CashSettlementSystem6Choice_.cs` + `Choices/CashSettlementSystem6Choice/` directory
-- [ ] `CashSettlementSystemPlace1Choice` — `Choices/CashSettlementSystemPlace1Choice_.cs` + `Choices/CashSettlementSystemPlace1Choice/` directory
+- [x] `BillingReportOrError6Choice` — `Choices/BillingReportOrError6Choice_.cs` + `Choices/BillingReportOrError6Choice/` directory
+- [x] `CalculationBasis2Choice` — `Choices/CalculationBasis2Choice_.cs` + `Choices/CalculationBasis2Choice/` directory
+- [x] `CancellationReason16Choice` — `Choices/CancellationReason16Choice_.cs` + `Choices/CancellationReason16Choice/` directory
+- [x] `CancellationStatus33Choice` — `Choices/CancellationStatus33Choice_.cs` + `Choices/CancellationStatus33Choice/` directory
+- [x] `CancellationStatus34Choice` — `Choices/CancellationStatus34Choice_.cs` + `Choices/CancellationStatus34Choice/` directory
+- [x] `CancellationStatus35Choice` — `Choices/CancellationStatus35Choice_.cs` + `Choices/CancellationStatus35Choice/` directory
+- [x] `CardPaymentDataSetTransaction14Choice` — `Choices/CardPaymentDataSetTransaction14Choice_.cs` + `Choices/CardPaymentDataSetTransaction14Choice/` directory
+- [x] `CashInOrOut8Choice` — `Choices/CashInOrOut8Choice_.cs` + `Choices/CashInOrOut8Choice/` directory
+- [x] `CashSettlementSystem6Choice` — `Choices/CashSettlementSystem6Choice_.cs` + `Choices/CashSettlementSystem6Choice/` directory
+- [x] `CashSettlementSystemPlace1Choice` — `Choices/CashSettlementSystemPlace1Choice_.cs` + `Choices/CashSettlementSystemPlace1Choice/` directory
 - [ ] `ChargeType10Choice` — `Choices/ChargeType10Choice_.cs` + `Choices/ChargeType10Choice/` directory
 - [ ] `ChargeType11Choice` — `Choices/ChargeType11Choice_.cs` + `Choices/ChargeType11Choice/` directory
 - [ ] `CorporateActionEventType125Choice` — `Choices/CorporateActionEventType125Choice_.cs` + `Choices/CorporateActionEventType125Choice/` directory
