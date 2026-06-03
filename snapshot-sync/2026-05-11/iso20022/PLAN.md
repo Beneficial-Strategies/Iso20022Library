@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 17: 421 new components complete through PayInScheduleItems)
+- **Last updated**: 2026-06-02 (Phase 2 batch 18: 441 new components complete through PaymentTransaction174)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -805,26 +805,26 @@
 - [x] `PartyIdentificationAndAccount235` — `Components/PartyIdentificationAndAccount235.cs`
 - [x] `PassengerTransport4` — `Components/PassengerTransport4.cs`
 - [x] `PayInScheduleItems` — `Components/PayInScheduleItems.cs`
-- [ ] `PayeeData1` — `Components/PayeeData1.cs`
-- [ ] `PayerData1` — `Components/PayerData1.cs`
-- [ ] `PayloadData3` — `Components/PayloadData3.cs`
-- [ ] `PaymentInstruction48` — `Components/PaymentInstruction48.cs`
-- [ ] `PaymentInstruction49` — `Components/PaymentInstruction49.cs`
-- [ ] `PaymentInstruction50` — `Components/PaymentInstruction50.cs`
-- [ ] `PaymentInstruction51` — `Components/PaymentInstruction51.cs`
-- [ ] `PaymentInstrument21` — `Components/PaymentInstrument21.cs`
-- [ ] `PaymentInstrument22` — `Components/PaymentInstrument22.cs`
-- [ ] `PaymentInstrument23` — `Components/PaymentInstrument23.cs`
-- [ ] `PaymentReceipt7` — `Components/PaymentReceipt7.cs`
-- [ ] `PaymentRequest8` — `Components/PaymentRequest8.cs`
-- [ ] `PaymentResponse8` — `Components/PaymentResponse8.cs`
-- [ ] `PaymentTransaction167` — `Components/PaymentTransaction167.cs`
-- [ ] `PaymentTransaction168` — `Components/PaymentTransaction168.cs`
-- [ ] `PaymentTransaction169` — `Components/PaymentTransaction169.cs`
-- [ ] `PaymentTransaction170` — `Components/PaymentTransaction170.cs`
-- [ ] `PaymentTransaction171` — `Components/PaymentTransaction171.cs`
-- [ ] `PaymentTransaction172` — `Components/PaymentTransaction172.cs`
-- [ ] `PaymentTransaction174` — `Components/PaymentTransaction174.cs`
+- [x] `PayeeData1` — `Components/PayeeData1.cs`
+- [x] `PayerData1` — `Components/PayerData1.cs`
+- [x] `PayloadData3` — `Components/PayloadData3.cs`
+- [x] `PaymentInstruction48` — `Components/PaymentInstruction48.cs`
+- [x] `PaymentInstruction49` — `Components/PaymentInstruction49.cs`
+- [x] `PaymentInstruction50` — `Components/PaymentInstruction50.cs`
+- [x] `PaymentInstruction51` — `Components/PaymentInstruction51.cs`
+- [x] `PaymentInstrument21` — `Components/PaymentInstrument21.cs`
+- [x] `PaymentInstrument22` — `Components/PaymentInstrument22.cs`
+- [x] `PaymentInstrument23` — `Components/PaymentInstrument23.cs`
+- [x] `PaymentReceipt7` — `Components/PaymentReceipt7.cs`
+- [x] `PaymentRequest8` — `Components/PaymentRequest8.cs`
+- [x] `PaymentResponse8` — `Components/PaymentResponse8.cs`
+- [x] `PaymentTransaction167` — `Components/PaymentTransaction167.cs`
+- [x] `PaymentTransaction168` — `Components/PaymentTransaction168.cs`
+- [x] `PaymentTransaction169` — `Components/PaymentTransaction169.cs`
+- [x] `PaymentTransaction170` — `Components/PaymentTransaction170.cs`
+- [x] `PaymentTransaction171` — `Components/PaymentTransaction171.cs`
+- [x] `PaymentTransaction172` — `Components/PaymentTransaction172.cs`
+- [x] `PaymentTransaction174` — `Components/PaymentTransaction174.cs`
 - [ ] `PaymentTransaction175` — `Components/PaymentTransaction175.cs`
 - [ ] `PaymentTransaction176` — `Components/PaymentTransaction176.cs`
 - [ ] `PaymentTransaction177` — `Components/PaymentTransaction177.cs`
