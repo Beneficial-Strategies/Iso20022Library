@@ -1,0 +1,29 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides detailed information on the transaction and its status to be updated in the tracker.
+/// </summary>
+[IsoId("_FcDigXeKEfCdoODv2ypKfw")]
+[DisplayName("Tracker Status And Transaction21")]
+public record TrackerStatusAndTransaction21
+{
+    [IsoId("_FpeTc3eKEfCdoODv2ypKfw")]
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public required TrackerStatus4 TransactionStatus { get; init; }
+
+    [IsoId("_FpeTdXeKEfCdoODv2ypKfw")]
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    [MinLength(1)]
+    public ValueList<TrackerPaymentTransaction15> Transaction { get; init; } = [];
+}

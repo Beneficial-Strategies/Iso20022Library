@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-03 (Phase 2 batch 29: 701 new components complete through TerminalManagementDataSet35)
+- **Last updated**: 2026-06-03 (Phase 2 batch 30: 731 new components complete through TransactionDetails184)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1085,36 +1085,36 @@
 - [x] `Terminal12` — `Components/Terminal12.cs`
 - [x] `Terminal13` — `Components/Terminal13.cs`
 - [x] `TerminalManagementDataSet35` — `Components/TerminalManagementDataSet35.cs`
-- [ ] `Token5` — `Components/Token5.cs`
-- [ ] `TokenRequestComponent6` — `Components/TokenRequestComponent6.cs`
-- [ ] `TotalFeesAndTaxes44` — `Components/TotalFeesAndTaxes44.cs`
-- [ ] `TotalFeesAndTaxes45` — `Components/TotalFeesAndTaxes45.cs`
-- [ ] `TrackerPaymentTransaction15` — `Components/TrackerPaymentTransaction15.cs`
-- [ ] `TrackerStatusAndTransaction21` — `Components/TrackerStatusAndTransaction21.cs`
-- [ ] `TrackerStatusAndTransaction22` — `Components/TrackerStatusAndTransaction22.cs`
-- [ ] `TradeLeg14` — `Components/TradeLeg14.cs`
-- [ ] `TradeLeg15` — `Components/TradeLeg15.cs`
-- [ ] `TradeLegStatement5` — `Components/TradeLegStatement5.cs`
-- [ ] `Transaction164` — `Components/Transaction164.cs`
-- [ ] `Transaction165` — `Components/Transaction165.cs`
-- [ ] `Transaction166` — `Components/Transaction166.cs`
-- [ ] `Transaction167` — `Components/Transaction167.cs`
-- [ ] `Transaction169` — `Components/Transaction169.cs`
-- [ ] `TransactionAllocation2` — `Components/TransactionAllocation2.cs`
-- [ ] `TransactionAmounts5` — `Components/TransactionAmounts5.cs`
-- [ ] `TransactionAmounts6` — `Components/TransactionAmounts6.cs`
-- [ ] `TransactionCharacteristics5` — `Components/TransactionCharacteristics5.cs`
-- [ ] `TransactionCharacteristics6` — `Components/TransactionCharacteristics6.cs`
-- [ ] `TransactionCharacteristics7` — `Components/TransactionCharacteristics7.cs`
-- [ ] `TransactionDetails126` — `Components/TransactionDetails126.cs`
-- [ ] `TransactionDetails177` — `Components/TransactionDetails177.cs`
-- [ ] `TransactionDetails178` — `Components/TransactionDetails178.cs`
-- [ ] `TransactionDetails179` — `Components/TransactionDetails179.cs`
-- [ ] `TransactionDetails180` — `Components/TransactionDetails180.cs`
-- [ ] `TransactionDetails181` — `Components/TransactionDetails181.cs`
-- [ ] `TransactionDetails182` — `Components/TransactionDetails182.cs`
-- [ ] `TransactionDetails183` — `Components/TransactionDetails183.cs`
-- [ ] `TransactionDetails184` — `Components/TransactionDetails184.cs`
+- [x] `Token5` — `Components/Token5.cs`
+- [x] `TokenRequestComponent6` — `Components/TokenRequestComponent6.cs`
+- [x] `TotalFeesAndTaxes44` — `Components/TotalFeesAndTaxes44.cs`
+- [x] `TotalFeesAndTaxes45` — `Components/TotalFeesAndTaxes45.cs`
+- [x] `TrackerPaymentTransaction15` — `Components/TrackerPaymentTransaction15.cs`
+- [x] `TrackerStatusAndTransaction21` — `Components/TrackerStatusAndTransaction21.cs`
+- [x] `TrackerStatusAndTransaction22` — `Components/TrackerStatusAndTransaction22.cs`
+- [x] `TradeLeg14` — `Components/TradeLeg14.cs`
+- [x] `TradeLeg15` — `Components/TradeLeg15.cs`
+- [x] `TradeLegStatement5` — `Components/TradeLegStatement5.cs`
+- [x] `Transaction164` — `Components/Transaction164.cs`
+- [x] `Transaction165` — `Components/Transaction165.cs`
+- [x] `Transaction166` — `Components/Transaction166.cs`
+- [x] `Transaction167` — `Components/Transaction167.cs`
+- [x] `Transaction169` — `Components/Transaction169.cs`
+- [x] `TransactionAllocation2` — `Components/TransactionAllocation2.cs`
+- [x] `TransactionAmounts5` — `Components/TransactionAmounts5.cs`
+- [x] `TransactionAmounts6` — `Components/TransactionAmounts6.cs`
+- [x] `TransactionCharacteristics5` — `Components/TransactionCharacteristics5.cs`
+- [x] `TransactionCharacteristics6` — `Components/TransactionCharacteristics6.cs`
+- [x] `TransactionCharacteristics7` — `Components/TransactionCharacteristics7.cs`
+- [x] `TransactionDetails126` — `Components/TransactionDetails126.cs`
+- [x] `TransactionDetails177` — `Components/TransactionDetails177.cs`
+- [x] `TransactionDetails178` — `Components/TransactionDetails178.cs`
+- [x] `TransactionDetails179` — `Components/TransactionDetails179.cs`
+- [x] `TransactionDetails180` — `Components/TransactionDetails180.cs`
+- [x] `TransactionDetails181` — `Components/TransactionDetails181.cs`
+- [x] `TransactionDetails182` — `Components/TransactionDetails182.cs`
+- [x] `TransactionDetails183` — `Components/TransactionDetails183.cs`
+- [x] `TransactionDetails184` — `Components/TransactionDetails184.cs`
 - [ ] `TransactionDetails185` — `Components/TransactionDetails185.cs`
 - [ ] `TransactionDetails186` — `Components/TransactionDetails186.cs`
 - [ ] `TransactionDetails187` — `Components/TransactionDetails187.cs`
