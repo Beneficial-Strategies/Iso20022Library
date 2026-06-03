@@ -1214,16 +1214,16 @@
 - [x] `DateFormat73Choice` — `Choices/DateFormat73Choice_.cs` + `Choices/DateFormat73Choice/` directory
 - [x] `DateOrDateTimePeriod4Choice` — `Choices/DateOrDateTimePeriod4Choice_.cs` + `Choices/DateOrDateTimePeriod4Choice/` directory
 - [x] `EUCapitalGainType4Choice` — `Choices/EUCapitalGainType4Choice_.cs` + `Choices/EUCapitalGainType4Choice/` directory
-- [ ] `EUDividendStatusType3Choice` — `Choices/EUDividendStatusType3Choice_.cs` + `Choices/EUDividendStatusType3Choice/` directory
-- [ ] `EligibilityIdentification3Choice` — `Choices/EligibilityIdentification3Choice_.cs` + `Choices/EligibilityIdentification3Choice/` directory
-- [ ] `EndPoint2Choice` — `Choices/EndPoint2Choice_.cs` + `Choices/EndPoint2Choice/` directory
-- [ ] `FailingReason20Choice` — `Choices/FailingReason20Choice_.cs` + `Choices/FailingReason20Choice/` directory
-- [ ] `FailingStatus17Choice` — `Choices/FailingStatus17Choice_.cs` + `Choices/FailingStatus17Choice/` directory
-- [ ] `FinancialInstrument101Choice` — `Choices/FinancialInstrument101Choice_.cs` + `Choices/FinancialInstrument101Choice/` directory
-- [ ] `FinancialInstrument102Choice` — `Choices/FinancialInstrument102Choice_.cs` + `Choices/FinancialInstrument102Choice/` directory
-- [ ] `FinancialInstrument103Choice` — `Choices/FinancialInstrument103Choice_.cs` + `Choices/FinancialInstrument103Choice/` directory
-- [ ] `FinancialInstrument104Choice` — `Choices/FinancialInstrument104Choice_.cs` + `Choices/FinancialInstrument104Choice/` directory
-- [ ] `FinancialInstrumentQuantity48Choice` — `Choices/FinancialInstrumentQuantity48Choice_.cs` + `Choices/FinancialInstrumentQuantity48Choice/` directory
+- [x] `EUDividendStatusType3Choice` — `Choices/EUDividendStatusType3Choice_.cs` + `Choices/EUDividendStatusType3Choice/` directory
+- [x] `EligibilityIdentification3Choice` — `Choices/EligibilityIdentification3Choice_.cs` + `Choices/EligibilityIdentification3Choice/` directory
+- [x] `EndPoint2Choice` — `Choices/EndPoint2Choice_.cs` + `Choices/EndPoint2Choice/` directory
+- [x] `FailingReason20Choice` — `Choices/FailingReason20Choice_.cs` + `Choices/FailingReason20Choice/` directory
+- [x] `FailingStatus17Choice` — `Choices/FailingStatus17Choice_.cs` + `Choices/FailingStatus17Choice/` directory
+- [x] `FinancialInstrument101Choice` — `Choices/FinancialInstrument101Choice_.cs` + `Choices/FinancialInstrument101Choice/` directory
+- [x] `FinancialInstrument102Choice` — `Choices/FinancialInstrument102Choice_.cs` + `Choices/FinancialInstrument102Choice/` directory
+- [x] `FinancialInstrument103Choice` — `Choices/FinancialInstrument103Choice_.cs` + `Choices/FinancialInstrument103Choice/` directory
+- [x] `FinancialInstrument104Choice` — `Choices/FinancialInstrument104Choice_.cs` + `Choices/FinancialInstrument104Choice/` directory
+- [x] `FinancialInstrumentQuantity48Choice` — `Choices/FinancialInstrumentQuantity48Choice_.cs` + `Choices/FinancialInstrumentQuantity48Choice/` directory
 - [ ] `FinancialInstrumentQuantity49Choice` — `Choices/FinancialInstrumentQuantity49Choice_.cs` + `Choices/FinancialInstrumentQuantity49Choice/` directory
 - [ ] `FinancialInstrumentQuantity50Choice` — `Choices/FinancialInstrumentQuantity50Choice_.cs` + `Choices/FinancialInstrumentQuantity50Choice/` directory
 - [ ] `FinancialInstrumentQuantity51Choice` — `Choices/FinancialInstrumentQuantity51Choice_.cs` + `Choices/FinancialInstrumentQuantity51Choice/` directory
