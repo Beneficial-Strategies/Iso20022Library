@@ -1304,26 +1304,26 @@
 - [x] `PendingStatus80Choice` — `Choices/PendingStatus80Choice_.cs` + `Choices/PendingStatus80Choice/` directory
 - [x] `PendingStatus81Choice` — `Choices/PendingStatus81Choice_.cs` + `Choices/PendingStatus81Choice/` directory
 - [x] `PendingStatus82Choice` — `Choices/PendingStatus82Choice_.cs` + `Choices/PendingStatus82Choice/` directory
-- [ ] `PendingStatus83Choice` — `Choices/PendingStatus83Choice_.cs` + `Choices/PendingStatus83Choice/` directory
-- [ ] `PendingStatus84Choice` — `Choices/PendingStatus84Choice_.cs` + `Choices/PendingStatus84Choice/` directory
-- [ ] `PendingStatus85Choice` — `Choices/PendingStatus85Choice_.cs` + `Choices/PendingStatus85Choice/` directory
-- [ ] `PendingStatus86Choice` — `Choices/PendingStatus86Choice_.cs` + `Choices/PendingStatus86Choice/` directory
-- [ ] `Period12Choice` — `Choices/Period12Choice_.cs` + `Choices/Period12Choice/` directory
-- [ ] `PriceRateOrAmount4Choice` — `Choices/PriceRateOrAmount4Choice_.cs` + `Choices/PriceRateOrAmount4Choice/` directory
-- [ ] `PriceRateOrAmount6Choice` — `Choices/PriceRateOrAmount6Choice_.cs` + `Choices/PriceRateOrAmount6Choice/` directory
-- [ ] `PriceType6Choice` — `Choices/PriceType6Choice_.cs` + `Choices/PriceType6Choice/` directory
-- [ ] `ProcessingStatus100Choice` — `Choices/ProcessingStatus100Choice_.cs` + `Choices/ProcessingStatus100Choice/` directory
-- [ ] `ProcessingStatus101Choice` — `Choices/ProcessingStatus101Choice_.cs` + `Choices/ProcessingStatus101Choice/` directory
-- [ ] `ProcessingStatus102Choice` — `Choices/ProcessingStatus102Choice_.cs` + `Choices/ProcessingStatus102Choice/` directory
-- [ ] `ProcessingStatus103Choice` — `Choices/ProcessingStatus103Choice_.cs` + `Choices/ProcessingStatus103Choice/` directory
-- [ ] `ProcessingStatus104Choice` — `Choices/ProcessingStatus104Choice_.cs` + `Choices/ProcessingStatus104Choice/` directory
-- [ ] `ProcessingStatus105Choice` — `Choices/ProcessingStatus105Choice_.cs` + `Choices/ProcessingStatus105Choice/` directory
-- [ ] `ProcessingStatus106Choice` — `Choices/ProcessingStatus106Choice_.cs` + `Choices/ProcessingStatus106Choice/` directory
-- [ ] `ProcessingStatus70Choice` — `Choices/ProcessingStatus70Choice_.cs` + `Choices/ProcessingStatus70Choice/` directory
-- [ ] `ProcessingStatus99Choice` — `Choices/ProcessingStatus99Choice_.cs` + `Choices/ProcessingStatus99Choice/` directory
-- [ ] `ProrationBelowMinimumQuantity3Choice` — `Choices/ProrationBelowMinimumQuantity3Choice_.cs` + `Choices/ProrationBelowMinimumQuantity3Choice/` directory
-- [ ] `Quantity82Choice` — `Choices/Quantity82Choice_.cs` + `Choices/Quantity82Choice/` directory
-- [ ] `Quantity83Choice` — `Choices/Quantity83Choice_.cs` + `Choices/Quantity83Choice/` directory
+- [x] `PendingStatus83Choice` — `Choices/PendingStatus83Choice_.cs` + `Choices/PendingStatus83Choice/` directory
+- [x] `PendingStatus84Choice` — `Choices/PendingStatus84Choice_.cs` + `Choices/PendingStatus84Choice/` directory
+- [x] `PendingStatus85Choice` — `Choices/PendingStatus85Choice_.cs` + `Choices/PendingStatus85Choice/` directory
+- [x] `PendingStatus86Choice` — `Choices/PendingStatus86Choice_.cs` + `Choices/PendingStatus86Choice/` directory
+- [x] `Period12Choice` — `Choices/Period12Choice_.cs` + `Choices/Period12Choice/` directory
+- [x] `PriceRateOrAmount4Choice` — `Choices/PriceRateOrAmount4Choice_.cs` + `Choices/PriceRateOrAmount4Choice/` directory
+- [x] `PriceRateOrAmount6Choice` — `Choices/PriceRateOrAmount6Choice_.cs` + `Choices/PriceRateOrAmount6Choice/` directory
+- [x] `PriceType6Choice` — `Choices/PriceType6Choice_.cs` + `Choices/PriceType6Choice/` directory
+- [x] `ProcessingStatus100Choice` — `Choices/ProcessingStatus100Choice_.cs` + `Choices/ProcessingStatus100Choice/` directory
+- [x] `ProcessingStatus101Choice` — `Choices/ProcessingStatus101Choice_.cs` + `Choices/ProcessingStatus101Choice/` directory
+- [x] `ProcessingStatus102Choice` — `Choices/ProcessingStatus102Choice_.cs` + `Choices/ProcessingStatus102Choice/` directory
+- [x] `ProcessingStatus103Choice` — `Choices/ProcessingStatus103Choice_.cs` + `Choices/ProcessingStatus103Choice/` directory
+- [x] `ProcessingStatus104Choice` — `Choices/ProcessingStatus104Choice_.cs` + `Choices/ProcessingStatus104Choice/` directory
+- [x] `ProcessingStatus105Choice` — `Choices/ProcessingStatus105Choice_.cs` + `Choices/ProcessingStatus105Choice/` directory
+- [x] `ProcessingStatus106Choice` — `Choices/ProcessingStatus106Choice_.cs` + `Choices/ProcessingStatus106Choice/` directory
+- [x] `ProcessingStatus70Choice` — `Choices/ProcessingStatus70Choice_.cs` + `Choices/ProcessingStatus70Choice/` directory
+- [x] `ProcessingStatus99Choice` — `Choices/ProcessingStatus99Choice_.cs` + `Choices/ProcessingStatus99Choice/` directory
+- [x] `ProrationBelowMinimumQuantity3Choice` — `Choices/ProrationBelowMinimumQuantity3Choice_.cs` + `Choices/ProrationBelowMinimumQuantity3Choice/` directory
+- [x] `Quantity82Choice` — `Choices/Quantity82Choice_.cs` + `Choices/Quantity82Choice/` directory
+- [x] `Quantity83Choice` — `Choices/Quantity83Choice_.cs` + `Choices/Quantity83Choice/` directory
 - [ ] `QuantityRange1Choice` — `Choices/QuantityRange1Choice_.cs` + `Choices/QuantityRange1Choice/` directory
 - [ ] `QuantitySearch2Choice` — `Choices/QuantitySearch2Choice_.cs` + `Choices/QuantitySearch2Choice/` directory
 - [ ] `RateFormat31Choice` — `Choices/RateFormat31Choice_.cs` + `Choices/RateFormat31Choice/` directory
