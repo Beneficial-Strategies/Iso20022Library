@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-02 (Phase 2 batch 12: 320 new components complete through IntraPositionType2)
+- **Last updated**: 2026-06-02 (Phase 2 batch 13: 341 new components complete through LocalAddress2)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -704,27 +704,27 @@
 - [x] `IntraPositionStatusAndReason4` — `Components/IntraPositionStatusAndReason4.cs`
 - [x] `IntraPositionStatusType2` — `Components/IntraPositionStatusType2.cs`
 - [x] `IntraPositionType2` — `Components/IntraPositionType2.cs`
-- [ ] `InvestigationData18` — `Components/InvestigationData18.cs`
-- [ ] `InvestigationRequest50` — `Components/InvestigationRequest50.cs`
-- [ ] `InvestigationRequest51` — `Components/InvestigationRequest51.cs`
-- [ ] `InvestigationResponse23` — `Components/InvestigationResponse23.cs`
-- [ ] `InvestmentAccount81` — `Components/InvestmentAccount81.cs`
-- [ ] `InvestmentAccount82` — `Components/InvestmentAccount82.cs`
-- [ ] `InvestmentAccount83` — `Components/InvestmentAccount83.cs`
-- [ ] `InvestmentFundOrder12` — `Components/InvestmentFundOrder12.cs`
-- [ ] `InvestmentFundOrder13` — `Components/InvestmentFundOrder13.cs`
-- [ ] `InvestmentFundOrder14` — `Components/InvestmentFundOrder14.cs`
-- [ ] `InvestorTypeIdentification1` — `Components/InvestorTypeIdentification1.cs`
-- [ ] `Invoice4` — `Components/Invoice4.cs`
-- [ ] `InvoiceLegalIssue5` — `Components/InvoiceLegalIssue5.cs`
-- [ ] `InvoiceLineItem4` — `Components/InvoiceLineItem4.cs`
-- [ ] `InvoiceTotals7` — `Components/InvoiceTotals7.cs`
-- [ ] `InvoiceTotals8` — `Components/InvoiceTotals8.cs`
-- [ ] `IssuerData1` — `Components/IssuerData1.cs`
-- [ ] `Linkages79` — `Components/Linkages79.cs`
-- [ ] `Linkages80` — `Components/Linkages80.cs`
-- [ ] `Linkages81` — `Components/Linkages81.cs`
-- [ ] `LocalAddress2` — `Components/LocalAddress2.cs`
+- [x] `InvestigationData18` — `Components/InvestigationData18.cs`
+- [x] `InvestigationRequest50` — `Components/InvestigationRequest50.cs`
+- [x] `InvestigationRequest51` — `Components/InvestigationRequest51.cs`
+- [x] `InvestigationResponse23` — `Components/InvestigationResponse23.cs`
+- [x] `InvestmentAccount81` — `Components/InvestmentAccount81.cs`
+- [x] `InvestmentAccount82` — `Components/InvestmentAccount82.cs`
+- [x] `InvestmentAccount83` — `Components/InvestmentAccount83.cs`
+- [x] `InvestmentFundOrder12` — `Components/InvestmentFundOrder12.cs`
+- [x] `InvestmentFundOrder13` — `Components/InvestmentFundOrder13.cs`
+- [x] `InvestmentFundOrder14` — `Components/InvestmentFundOrder14.cs`
+- [x] `InvestorTypeIdentification1` — `Components/InvestorTypeIdentification1.cs`
+- [x] `Invoice4` — `Components/Invoice4.cs`
+- [x] `InvoiceLegalIssue5` — `Components/InvoiceLegalIssue5.cs`
+- [x] `InvoiceLineItem4` — `Components/InvoiceLineItem4.cs`
+- [x] `InvoiceTotals7` — `Components/InvoiceTotals7.cs`
+- [x] `InvoiceTotals8` — `Components/InvoiceTotals8.cs`
+- [x] `IssuerData1` — `Components/IssuerData1.cs`
+- [x] `Linkages79` — `Components/Linkages79.cs`
+- [x] `Linkages80` — `Components/Linkages80.cs`
+- [x] `Linkages81` — `Components/Linkages81.cs`
+- [x] `LocalAddress2` — `Components/LocalAddress2.cs`
 - [ ] `LocalAmenity2` — `Components/LocalAmenity2.cs`
 - [ ] `LocalData18` — `Components/LocalData18.cs`
 - [ ] `LocalData19` — `Components/LocalData19.cs`
