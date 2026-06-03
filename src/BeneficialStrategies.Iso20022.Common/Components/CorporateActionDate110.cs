@@ -22,7 +22,7 @@ public record CorporateActionDate110
     [IsoId("_dVTY8aNjEfC9id413JK-Ig")]
     [DisplayName("Early Response Deadline")]
     [IsoXmlTag("EarlyRspnDdln")]
-    public DateFormat43Choice? EarlyResponseDeadline { get; init; }
+    public DateFormat43Choice_? EarlyResponseDeadline { get; init; }
 
     /// <summary>
     /// Last day a holder can deliver the securities that it had elected on and/or previously protected.
@@ -30,7 +30,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAAaNjEfC9id413JK-Ig")]
     [DisplayName("Cover Expiration Deadline")]
     [IsoXmlTag("CoverXprtnDdln")]
-    public DateFormat43Choice? CoverExpirationDeadline { get; init; }
+    public DateFormat43Choice_? CoverExpirationDeadline { get; init; }
 
     /// <summary>
     /// Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.
@@ -38,7 +38,7 @@ public record CorporateActionDate110
     [IsoId("_dVUACaNjEfC9id413JK-Ig")]
     [DisplayName("Protect Deadline")]
     [IsoXmlTag("PrtctDdln")]
-    public DateFormat43Choice? ProtectDeadline { get; init; }
+    public DateFormat43Choice_? ProtectDeadline { get; init; }
 
     /// <summary>
     /// Issuer or issuer's agent deadline to respond with an instruction to an outstanding offer or privilege.
@@ -46,7 +46,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAEaNjEfC9id413JK-Ig")]
     [DisplayName("Market Deadline")]
     [IsoXmlTag("MktDdln")]
-    public DateFormat43Choice? MarketDeadline { get; init; }
+    public DateFormat43Choice_? MarketDeadline { get; init; }
 
     /// <summary>
     /// Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event.
@@ -54,7 +54,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAGaNjEfC9id413JK-Ig")]
     [DisplayName("Response Deadline")]
     [IsoXmlTag("RspnDdln")]
-    public DateFormat44Choice? ResponseDeadline { get; init; }
+    public DateFormat44Choice_? ResponseDeadline { get; init; }
 
     /// <summary>
     /// Date/time at which an order expires or on which a privilege or offer terminates.
@@ -62,7 +62,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAIaNjEfC9id413JK-Ig")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public DateFormat43Choice? ExpiryDate { get; init; }
+    public DateFormat43Choice_? ExpiryDate { get; init; }
 
     /// <summary>
     /// Date/time by which cash must be in place in order to take part in the event.
@@ -70,7 +70,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAKaNjEfC9id413JK-Ig")]
     [DisplayName("Subscription Cost Debit Date")]
     [IsoXmlTag("SbcptCostDbtDt")]
-    public DateFormat43Choice? SubscriptionCostDebitDate { get; init; }
+    public DateFormat43Choice_? SubscriptionCostDebitDate { get; init; }
 
     /// <summary>
     /// Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.
@@ -78,7 +78,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAMaNjEfC9id413JK-Ig")]
     [DisplayName("Depository Cover Expiration Date")]
     [IsoXmlTag("DpstryCoverXprtnDt")]
-    public DateFormat43Choice? DepositoryCoverExpirationDate { get; init; }
+    public DateFormat43Choice_? DepositoryCoverExpirationDate { get; init; }
 
     /// <summary>
     /// Date/time set as the deadline to respond for which the underlying security is out on loan.
@@ -86,7 +86,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAOaNjEfC9id413JK-Ig")]
     [DisplayName("Stock Lending Deadline")]
     [IsoXmlTag("StockLndgDdln")]
-    public DateFormat43Choice? StockLendingDeadline { get; init; }
+    public DateFormat43Choice_? StockLendingDeadline { get; init; }
 
     /// <summary>
     /// Specifies the party borrowing stocks and the associated stock lending deadline assigned to the borrower.
@@ -102,7 +102,7 @@ public record CorporateActionDate110
     [IsoId("_dVUAPaNjEfC9id413JK-Ig")]
     [DisplayName("End Of Securities Blocking Period")]
     [IsoXmlTag("EndOfSctiesBlckgPrd")]
-    public DateFormat59Choice? EndOfSecuritiesBlockingPeriod { get; init; }
+    public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; init; }
 
     /// <summary>
     /// Date/Time by when the documentation must be provided.
@@ -110,5 +110,5 @@ public record CorporateActionDate110
     [IsoId("_dVUAP6NjEfC9id413JK-Ig")]
     [DisplayName("Documentation Deadline")]
     [IsoXmlTag("DcmnttnDdln")]
-    public DateFormat46Choice? DocumentationDeadline { get; init; }
+    public DateFormat46Choice_? DocumentationDeadline { get; init; }
 }

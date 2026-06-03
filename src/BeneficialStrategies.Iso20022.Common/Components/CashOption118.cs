@@ -38,7 +38,7 @@ public record CashOption118
     [IsoId("_6JQeP6LvEfCHi7w3_0pcpw")]
     [DisplayName("Issuer Offeror Taxability Indicator")]
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator2Choice? IssuerOfferorTaxabilityIndicator { get; init; }
+    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of income.
@@ -78,7 +78,7 @@ public record CashOption118
     [IsoId("_6JQeT6LvEfCHi7w3_0pcpw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public Account10Choice? Account { get; init; }
+    public Account10Choice_? Account { get; init; }
 
     /// <summary>
     /// Provides information about cash parties.

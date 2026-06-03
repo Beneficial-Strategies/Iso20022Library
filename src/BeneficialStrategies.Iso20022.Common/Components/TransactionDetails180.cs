@@ -24,17 +24,17 @@ public record TransactionDetails180
     [IsoId("_KhG3MZaLEfC2_67yGLymgC")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_KhG3MZaLEfC2_67yGLymgD")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     [IsoId("_KhG3MZaLEfC2_67yGLymgE")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice SettlementQuantity { get; init; }
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     [IsoId("_KhG3MZaLEfC2_67yGLymgF")]
     [DisplayName("Settlement Amount")]

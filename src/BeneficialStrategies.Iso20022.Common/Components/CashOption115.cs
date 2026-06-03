@@ -30,7 +30,7 @@ public record CashOption115
     [IsoId("_jWRo4aLfEfCHi7w3_0pcpw")]
     [DisplayName("Non Eligible Proceeds Indicator")]
     [IsoXmlTag("NonElgblPrcdsInd")]
-    public NonEligibleProceedsIndicator5Choice? NonEligibleProceedsIndicator { get; init; }
+    public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of income.
@@ -62,7 +62,7 @@ public record CashOption115
     [IsoId("_jWRo9aLfEfCHi7w3_0pcpw")]
     [DisplayName("Price Calculation Method")]
     [IsoXmlTag("PricClctnMtd")]
-    public PriceCalculationMethod2Choice? PriceCalculationMethod { get; init; }
+    public PriceCalculationMethod2Choice_? PriceCalculationMethod { get; init; }
 
     /// <summary>
     /// Indicates the country from which the income originates.

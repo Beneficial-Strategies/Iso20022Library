@@ -46,7 +46,7 @@ public record RedemptionOrder18
     [IsoId("cec75d05-1654-46e7-831a-0aeb7689fd08")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<FundOrderType4Choice> OrderType { get; init; } = [];
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class related to the order.
@@ -70,7 +70,7 @@ public record RedemptionOrder18
     [IsoId("3f2bfe5a-de7f-4c85-8c46-3339cae262b7")]
     [DisplayName("Amount Or Units Or Percentage")]
     [IsoXmlTag("AmtOrUnitsOrPctg")]
-    public required FinancialInstrumentQuantity48Choice AmountOrUnitsOrPercentage { get; init; }
+    public required FinancialInstrumentQuantity48Choice_ AmountOrUnitsOrPercentage { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -246,7 +246,7 @@ public record RedemptionOrder18
     [IsoId("ac5bde4b-b5f2-4f86-8ba0-6b48f2e45550")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     /// <summary>
     /// Means by which the investor or account owner submits the open account form.
@@ -254,7 +254,7 @@ public record RedemptionOrder18
     [IsoId("bf25c829-44ae-4f91-b381-a2eff17fb8da")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     /// <summary>
     /// Type of signature.
@@ -262,7 +262,7 @@ public record RedemptionOrder18
     [IsoId("9c9ba322-991c-480e-b8e0-d5c4bcb1703b")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     /// <summary>
     /// Information about a non-standard order.

@@ -22,7 +22,7 @@ public record FinancialInstrumentQuantitySearch2
     [IsoId("_nBVvwWqWEemz04WrKJaMEA")]
     [DisplayName("Face Amount")]
     [IsoXmlTag("FaceAmt")]
-    public required ImpliedCurrencyAmountRange1Choice FaceAmount { get; init; }
+    public required ImpliedCurrencyAmountRange1Choice_ FaceAmount { get; init; }
 
     /// <summary>
     /// Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond's principal amount.
@@ -30,5 +30,5 @@ public record FinancialInstrumentQuantitySearch2
     [IsoId("_nBVvw2qWEemz04WrKJaMEA")]
     [DisplayName("Amortised Value")]
     [IsoXmlTag("AmtsdVal")]
-    public required ImpliedCurrencyAmountRange1Choice AmortisedValue { get; init; }
+    public required ImpliedCurrencyAmountRange1Choice_ AmortisedValue { get; init; }
 }

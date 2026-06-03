@@ -46,5 +46,5 @@ public record ForeignExchangeRate3
     [IsoId("_D22jwTkZEem897H7zB2RJg")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public DateAndDateTime2Choice? QuotationDate { get; init; }
+    public DateAndDateTime2Choice_? QuotationDate { get; init; }
 }

@@ -39,7 +39,7 @@ public record Transfer39
     [IsoId("0f7c63b7-a996-425e-849f-8d63fe28f0ea")]
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
-    public DateFormat1Choice? RequestedTransferDate { get; init; }
+    public DateFormat1Choice_? RequestedTransferDate { get; init; }
 
     [IsoId("f97bd3c4-dea7-4187-87e9-c2cb0f1ace73")]
     [DisplayName("Requested Settlement Date")]
@@ -54,7 +54,7 @@ public record Transfer39
     [IsoId("4ae5775f-329b-4cd6-82c5-8ed3f0830170")]
     [DisplayName("Transfer Reason")]
     [IsoXmlTag("TrfRsn")]
-    public TransferReason1Choice? TransferReason { get; init; }
+    public TransferReason1Choice_? TransferReason { get; init; }
 
     [IsoId("ac5e600e-6c8e-4303-be6f-11e2e76ace9d")]
     [DisplayName("Holdings Plan Type")]
@@ -69,7 +69,7 @@ public record Transfer39
     [IsoId("f71fabd4-2b36-4974-8e45-0bce9bbe09a3")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required Quantity82Choice Quantity { get; init; }
+    public required Quantity82Choice_ Quantity { get; init; }
 
     [IsoId("a502ea91-e1f2-4bbb-a98e-8a8d33fe4d7a")]
     [DisplayName("Units Details")]
@@ -109,5 +109,5 @@ public record Transfer39
     [IsoId("e839c5a0-a7ef-432f-b018-5d46917bfc0c")]
     [DisplayName("Transfer Expenses Payment Type")]
     [IsoXmlTag("TrfExpnssPmtTp")]
-    public ChargePaymentMethod1Choice? TransferExpensesPaymentType { get; init; }
+    public ChargePaymentMethod1Choice_? TransferExpensesPaymentType { get; init; }
 }

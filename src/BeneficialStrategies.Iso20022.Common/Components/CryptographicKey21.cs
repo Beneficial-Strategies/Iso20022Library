@@ -118,5 +118,5 @@ public record CryptographicKey21
     [IsoId("_xvj9ibZ5EfCUZfsQO4rYeA")]
     [DisplayName("Key Choice Value")]
     [IsoXmlTag("KeyChcVal")]
-    public KeyValue3Choice? KeyChoiceValue { get; init; }
+    public KeyValue3Choice_? KeyChoiceValue { get; init; }
 }

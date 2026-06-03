@@ -94,7 +94,7 @@ public record ReceiveInformation23
     [IsoId("43b83619-2e99-4632-86a7-a453d4905abe")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid/to be paid or received in exchange for the financial instrument.

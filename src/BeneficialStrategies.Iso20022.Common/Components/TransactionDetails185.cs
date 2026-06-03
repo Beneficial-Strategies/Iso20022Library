@@ -19,12 +19,12 @@ public record TransactionDetails185
     [IsoId("_9hZQ05aQEfC2_67yGLymgA")]
     [DisplayName("Transaction Activity")]
     [IsoXmlTag("TxActvty")]
-    public required TransactionActivity3Choice TransactionActivity { get; init; }
+    public required TransactionActivity3Choice_ TransactionActivity { get; init; }
 
     [IsoId("_9hZQ25aQEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
     [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
-    public SettlementOrCorporateActionEvent34Choice? SettlementTransactionOrCorporateActionEventType { get; init; }
+    public SettlementOrCorporateActionEvent34Choice_? SettlementTransactionOrCorporateActionEventType { get; init; }
 
     [IsoId("_9hZQ45aQEfC2_67yGLymgA")]
     [DisplayName("Securities Movement Type")]
@@ -64,12 +64,12 @@ public record TransactionDetails185
     [IsoId("_9hZRG5aQEfC2_67yGLymgA")]
     [DisplayName("Posting Quantity")]
     [IsoXmlTag("PstngQty")]
-    public required Quantity51Choice PostingQuantity { get; init; }
+    public required Quantity51Choice_ PostingQuantity { get; init; }
 
     [IsoId("_9hZRI5aQEfC2_67yGLymgA")]
     [DisplayName("Partially Released Quantity")]
     [IsoXmlTag("PrtlyRlsdQty")]
-    public Quantity51Choice? PartiallyReleasedQuantity { get; init; }
+    public Quantity51Choice_? PartiallyReleasedQuantity { get; init; }
 
     [IsoId("_9hZRK5aQEfC2_67yGLymgA")]
     [DisplayName("Posting Amount")]
@@ -84,27 +84,27 @@ public record TransactionDetails185
     [IsoId("_9hZRM5aQEfC2_67yGLymgA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_9hZRO5aQEfC2_67yGLymgA")]
     [DisplayName("Expected Settlement Date")]
     [IsoXmlTag("XpctdSttlmDt")]
-    public DateAndDateTime2Choice? ExpectedSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedSettlementDate { get; init; }
 
     [IsoId("_9hZRQ5aQEfC2_67yGLymgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate19Choice SettlementDate { get; init; }
+    public required SettlementDate19Choice_ SettlementDate { get; init; }
 
     [IsoId("_9hZRS5aQEfC2_67yGLymgA")]
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
-    public DateAndDateTime2Choice? LateDeliveryDate { get; init; }
+    public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
 
     [IsoId("_9hZRU5aQEfC2_67yGLymgA")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateAndDateTime2Choice? ExpectedValueDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedValueDate { get; init; }
 
     [IsoId("_9hZRW5aQEfC2_67yGLymgA")]
     [DisplayName("Acknowledged Status Time Stamp")]

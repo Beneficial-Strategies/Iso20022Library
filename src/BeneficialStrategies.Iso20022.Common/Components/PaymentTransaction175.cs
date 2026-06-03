@@ -86,7 +86,7 @@ public record PaymentTransaction175
     [IsoId("fe90abdc-bd9b-473d-a515-0a03aee55f76")]
     [DisplayName("Original Requested Execution Date")]
     [IsoXmlTag("OrgnlReqdExctnDt")]
-    public DateAndDateTime2Choice? OriginalRequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date at which the creditor originally requested the collection of the amount of money from the debtor.

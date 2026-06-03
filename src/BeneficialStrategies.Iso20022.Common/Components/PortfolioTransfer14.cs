@@ -54,7 +54,7 @@ public record PortfolioTransfer14
     [IsoId("1aee86f8-fbd1-4317-b5a3-5b245972c50f")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public FundPortfolio8Choice? Portfolio { get; init; }
+    public FundPortfolio8Choice_? Portfolio { get; init; }
 
     /// <summary>
     /// Specifies whether all remaining assets in the portfolio not listed for transfer should be liquidated and transferred as cash.

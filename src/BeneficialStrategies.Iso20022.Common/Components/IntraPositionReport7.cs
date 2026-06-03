@@ -22,7 +22,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqk2dCEemvNLufWGIVOQ")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
-    public Number3Choice? ReportNumber { get; init; }
+    public Number3Choice_? ReportNumber { get; init; }
 
     /// <summary>
     /// Identification of the query message sent to request this statement.
@@ -46,7 +46,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqpWdCEemvNLufWGIVOQ")]
     [DisplayName("Report Date Time")]
     [IsoXmlTag("RptDtTm")]
-    public DateAndDateTime2Choice? ReportDateTime { get; init; }
+    public DateAndDateTime2Choice_? ReportDateTime { get; init; }
 
     /// <summary>
     /// Period for the statement.
@@ -54,7 +54,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqrWdCEemvNLufWGIVOQ")]
     [DisplayName("Report Period")]
     [IsoXmlTag("RptPrd")]
-    public Period7Choice? ReportPeriod { get; init; }
+    public Period7Choice_? ReportPeriod { get; init; }
 
     /// <summary>
     /// Frequency of the statement.
@@ -62,7 +62,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqtWdCEemvNLufWGIVOQ")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency22Choice? Frequency { get; init; }
+    public Frequency22Choice_? Frequency { get; init; }
 
     /// <summary>
     /// Indicates whether the statement is complete or contains changes only.
@@ -70,7 +70,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqvWdCEemvNLufWGIVOQ")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public required UpdateType15Choice UpdateType { get; init; }
+    public required UpdateType15Choice_ UpdateType { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.

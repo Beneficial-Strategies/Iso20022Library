@@ -44,17 +44,17 @@ public record SecuritiesTradeDetails153
     [IsoId("d8b0a7e1-1d06-4558-9903-2d281bc19eca")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("9f5ec979-e07f-4410-bb6b-6d26f72bf0bf")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     [IsoId("94a327c6-20e2-4347-8c44-1a2a804cbfff")]
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
-    public DateAndDateTime2Choice? LateDeliveryDate { get; init; }
+    public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
 
     [IsoId("47435c05-bb6b-49c4-971d-9fdcced363bf")]
     [DisplayName("Acknowledged Status Time Stamp")]
@@ -79,47 +79,47 @@ public record SecuritiesTradeDetails153
     [IsoId("5ad05750-bdb3-4790-af5f-f1fe2762331b")]
     [DisplayName("Opening Closing")]
     [IsoXmlTag("OpngClsg")]
-    public OpeningClosing3Choice? OpeningClosing { get; init; }
+    public OpeningClosing3Choice_? OpeningClosing { get; init; }
 
     [IsoId("f983e916-5d13-4977-a1d9-222c48aca5fb")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public ValueList<Reporting6Choice> Reporting { get; init; } = [];
+    public ValueList<Reporting6Choice_> Reporting { get; init; } = [];
 
     [IsoId("0a60f0ce-3861-4aa8-9847-757a63370367")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition5Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } = [];
 
     [IsoId("3563e54a-71d2-417c-8e87-b42b86015b9e")]
     [DisplayName("Investor Capacity")]
     [IsoXmlTag("InvstrCpcty")]
-    public InvestorCapacity4Choice? InvestorCapacity { get; init; }
+    public InvestorCapacity4Choice_? InvestorCapacity { get; init; }
 
     [IsoId("367694ae-b128-4cc8-bd88-bdd4cc17827a")]
     [DisplayName("Trade Originator Role")]
     [IsoXmlTag("TradOrgtrRole")]
-    public TradeOriginator3Choice? TradeOriginatorRole { get; init; }
+    public TradeOriginator3Choice_? TradeOriginatorRole { get; init; }
 
     [IsoId("6e2daff2-d59b-403a-b04c-34d1e3d5628b")]
     [DisplayName("Type Of Price")]
     [IsoXmlTag("TpOfPric")]
-    public TypeOfPrice29Choice? TypeOfPrice { get; init; }
+    public TypeOfPrice29Choice_? TypeOfPrice { get; init; }
 
     [IsoId("16e27f0d-5c7e-4e41-bdde-365a80f70f7a")]
     [DisplayName("Currency To Buy Or Sell")]
     [IsoXmlTag("CcyToBuyOrSell")]
-    public CurrencyToBuyOrSell1Choice? CurrencyToBuyOrSell { get; init; }
+    public CurrencyToBuyOrSell1Choice_? CurrencyToBuyOrSell { get; init; }
 
     [IsoId("9c4caa17-ab7a-4939-a22b-96dbe5775c51")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
-    public MatchingStatus27Choice? MatchingStatus { get; init; }
+    public MatchingStatus27Choice_? MatchingStatus { get; init; }
 
     [IsoId("b7ff82ab-ae85-4746-b605-2aff408b0e4a")]
     [DisplayName("Affirmation Status")]
     [IsoXmlTag("AffirmSts")]
-    public AffirmationStatus8Choice? AffirmationStatus { get; init; }
+    public AffirmationStatus8Choice_? AffirmationStatus { get; init; }
 
     [IsoId("dc4274a0-02f6-4dfd-8ac8-fb1dfd7aee4d")]
     [DisplayName("FX Additional Details")]

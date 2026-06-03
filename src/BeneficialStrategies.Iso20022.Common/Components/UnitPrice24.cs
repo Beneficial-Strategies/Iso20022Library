@@ -19,7 +19,7 @@ public record UnitPrice24
     [IsoId("_6Pw7gMXxEfCHqr1PtvL9kg")]
     [DisplayName("Price Type")]
     [IsoXmlTag("PricTp")]
-    public required PriceType6Choice PriceType { get; init; }
+    public required PriceType6Choice_ PriceType { get; init; }
 
     [IsoId("45d414d8-2074-4628-8275-72613b96ac30")]
     [DisplayName("Price Method")]
@@ -70,7 +70,7 @@ public record UnitPrice24
     [IsoId("e9d58338-1979-4568-bb9f-20da0a06f7bc")]
     [DisplayName("Taxable Income Per Share Calculated")]
     [IsoXmlTag("TaxblIncmPerShrClctd")]
-    public TaxableIncomePerShareCalculated3Choice? TaxableIncomePerShareCalculated { get; init; }
+    public TaxableIncomePerShareCalculated3Choice_? TaxableIncomePerShareCalculated { get; init; }
 
     [IsoId("ff06665e-2c26-4add-851c-1266592ea645")]
     [DisplayName("Taxable Income Per Dividend")]
@@ -80,7 +80,7 @@ public record UnitPrice24
     [IsoId("183861a3-a305-4783-99a8-4584aa8aad1a")]
     [DisplayName("EU Dividend Status")]
     [IsoXmlTag("EUDvddSts")]
-    public EUDividendStatusType3Choice? EUDividendStatus { get; init; }
+    public EUDividendStatusType3Choice_? EUDividendStatus { get; init; }
 
     [IsoId("78b4af1c-d518-476c-ad8f-903d221edde1")]
     [DisplayName("Charge Details")]

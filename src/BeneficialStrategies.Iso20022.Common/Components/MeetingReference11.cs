@@ -62,7 +62,7 @@ public record MeetingReference11
     [IsoId("_ZD4eSajNEfCzuLlmLrhIvA")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
-    public MeetingTypeClassification2Choice? Classification { get; init; }
+    public MeetingTypeClassification2Choice_? Classification { get; init; }
 
     /// <summary>
     /// Place of the company meeting for the scheduled meeting date.
@@ -78,5 +78,5 @@ public record MeetingReference11
     [IsoId("_ZD4eTajNEfCzuLlmLrhIvA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public PartyIdentification129Choice? Issuer { get; init; }
+    public PartyIdentification129Choice_? Issuer { get; init; }
 }

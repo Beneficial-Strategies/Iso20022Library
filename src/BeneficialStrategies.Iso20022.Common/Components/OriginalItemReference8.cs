@@ -30,7 +30,7 @@ public record OriginalItemReference8
     [IsoId("e88bc3de-09d5-41d8-b19b-3497cdf1798f")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public Party50Choice? AccountOwner { get; init; }
+    public Party50Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
@@ -54,7 +54,7 @@ public record OriginalItemReference8
     [IsoId("fae69213-7200-4fd9-ab78-2572ef52a1c6")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party50Choice? Debtor { get; init; }
+    public Party50Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the debtor.
@@ -78,7 +78,7 @@ public record OriginalItemReference8
     [IsoId("44390462-63d3-447d-b9dd-4c4bd2f1cd8c")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.

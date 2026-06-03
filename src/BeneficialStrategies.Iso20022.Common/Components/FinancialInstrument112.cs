@@ -30,7 +30,7 @@ public record FinancialInstrument112
     [IsoId("393d0124-7bc2-4c67-9a2a-727cd1bf9fd5")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public required FinancialInstrument103Choice Instrument { get; init; }
+    public required FinancialInstrument103Choice_ Instrument { get; init; }
 
     /// <summary>
     /// Quantity of asset transferred.
@@ -62,7 +62,7 @@ public record FinancialInstrument112
     [IsoId("95b21781-5699-41f8-abba-38a19eb706cc")]
     [DisplayName("Transfer Type")]
     [IsoXmlTag("TrfTp")]
-    public required TransferType2Choice TransferType { get; init; }
+    public required TransferType2Choice_ TransferType { get; init; }
 
     /// <summary>
     /// Indicates the asset is a new asset, not previously identified by the transferor party in the account holding discovery process.
@@ -206,7 +206,7 @@ public record FinancialInstrument112
     [IsoId("6f40f3e4-a6fe-4ead-8096-9658ca57bc39")]
     [DisplayName("Effective Transfer Date")]
     [IsoXmlTag("FctvTrfDt")]
-    public DateAndDateTime2Choice? EffectiveTransferDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveTransferDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities were exchanged at the ICSD or CSD.
@@ -214,7 +214,7 @@ public record FinancialInstrument112
     [IsoId("48ab88ad-3ced-47f8-b9a8-77cd1464759a")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

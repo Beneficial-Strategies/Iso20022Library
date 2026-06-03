@@ -54,7 +54,7 @@ public record ReportEntry16
     [IsoId("b08c126e-962e-489f-b0ec-a3910081c3ab")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required EntryStatus1Choice Status { get; init; }
+    public required EntryStatus1Choice_ Status { get; init; }
 
     /// <summary>
     /// Date and time when an entry is posted to an account on the account servicer's books.
@@ -62,7 +62,7 @@ public record ReportEntry16
     [IsoId("adc7c210-b4f3-4267-a47d-00d2ae4b4aea")]
     [DisplayName("Booking Date")]
     [IsoXmlTag("BookgDt")]
-    public DateAndDateTime2Choice? BookingDate { get; init; }
+    public DateAndDateTime2Choice_? BookingDate { get; init; }
 
     /// <summary>
     /// Date and time at which assets become available to the account owner.
@@ -70,7 +70,7 @@ public record ReportEntry16
     [IsoId("d6a80124-2ffe-498d-a24c-829fbbbf6627")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice? ValueDate { get; init; }
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     /// <summary>
     /// Unique reference as assigned by the account servicing institution to unambiguously identify the entry.
@@ -134,7 +134,7 @@ public record ReportEntry16
     [IsoId("7a15c93a-cf43-41ae-a422-ee90f4bdabb8")]
     [DisplayName("Technical Input Channel")]
     [IsoXmlTag("TechInptChanl")]
-    public TechnicalInputChannel1Choice? TechnicalInputChannel { get; init; }
+    public TechnicalInputChannel1Choice_? TechnicalInputChannel { get; init; }
 
     /// <summary>
     /// Provides details of the interest amount included in the entry amount.

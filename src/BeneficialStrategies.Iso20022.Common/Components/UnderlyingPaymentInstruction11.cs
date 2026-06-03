@@ -49,7 +49,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtEbvHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     [IsoId("_MBQtE7vHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Collection Date")]
@@ -64,5 +64,5 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtF7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original Service Level")]
     [IsoXmlTag("OrgnlSvcLvl")]
-    public ServiceLevel8Choice? OriginalServiceLevel { get; init; }
+    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
 }

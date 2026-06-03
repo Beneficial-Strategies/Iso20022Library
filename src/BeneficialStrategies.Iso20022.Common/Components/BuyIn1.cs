@@ -31,5 +31,5 @@ public record BuyIn1
     [IsoId("_UpAwgtp-Ed-ak6NoX_4Aeg_1187137430")]
     [DisplayName("Expected Buy In Date")]
     [IsoXmlTag("XpctdBuyInDt")]
-    public required DateFormat15Choice ExpectedBuyInDate { get; init; }
+    public required DateFormat15Choice_ ExpectedBuyInDate { get; init; }
 }

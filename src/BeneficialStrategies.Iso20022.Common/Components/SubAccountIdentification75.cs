@@ -19,7 +19,7 @@ public record SubAccountIdentification75
     [IsoId("_zHJH56g1EfCXwLUUylXgrQ")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification122Choice? AccountOwner { get; init; }
+    public PartyIdentification122Choice_? AccountOwner { get; init; }
 
     [IsoId("_zHJH6ag1EfCXwLUUylXgrQ")]
     [DisplayName("Safekeeping Account")]

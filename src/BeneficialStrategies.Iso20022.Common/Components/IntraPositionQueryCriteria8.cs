@@ -22,7 +22,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYAeSlEe-qVZLXW4RRBw")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public ValueList<References82Choice> References { get; init; } = [];
+    public ValueList<References82Choice_> References { get; init; } = [];
 
     /// <summary>
     /// Provides the status of settlement of a transaction.
@@ -78,7 +78,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYIeSlEe-qVZLXW4RRBw")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public QuantitySearch2Choice? SettlementQuantity { get; init; }
+    public QuantitySearch2Choice_? SettlementQuantity { get; init; }
 
     /// <summary>
     /// Quantity of financial instrument effectively settled.
@@ -86,7 +86,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYKeSlEe-qVZLXW4RRBw")]
     [DisplayName("Settled Quantity")]
     [IsoXmlTag("SttldQty")]
-    public QuantitySearch2Choice? SettledQuantity { get; init; }
+    public QuantitySearch2Choice_? SettledQuantity { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are intended to be moved.
@@ -94,7 +94,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYMeSlEe-qVZLXW4RRBw")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public DateAndDateTimeSearch5Choice? IntendedSettlementDate { get; init; }
+    public DateAndDateTimeSearch5Choice_? IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are moved.
@@ -102,7 +102,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYOeSlEe-qVZLXW4RRBw")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTimeSearch5Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTimeSearch5Choice_? EffectiveSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
@@ -110,7 +110,7 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYQeSlEe-qVZLXW4RRBw")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public ValueList<PriorityNumeric4Choice> Priority { get; init; } = [];
+    public ValueList<PriorityNumeric4Choice_> Priority { get; init; } = [];
 
     /// <summary>
     /// Primary market or country where a security is issued by the issuer or its agent.
@@ -134,5 +134,5 @@ public record IntraPositionQueryCriteria8
     [IsoId("_4KLYU-SlEe-qVZLXW4RRBw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice? CreationDateTime { get; init; }
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 }

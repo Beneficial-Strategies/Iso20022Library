@@ -22,7 +22,7 @@ public record InstructedBalance22
     [IsoId("_HpB1Aa8wEfCx2aBifPEdRg")]
     [DisplayName("Total Instructed Balance")]
     [IsoXmlTag("TtlInstdBal")]
-    public required BalanceFormat11Choice TotalInstructedBalance { get; init; }
+    public required BalanceFormat11Choice_ TotalInstructedBalance { get; init; }
 
     /// <summary>
     /// Daily total of all accepted instructions for given day. Cover protect instructions will be included in this total balance.

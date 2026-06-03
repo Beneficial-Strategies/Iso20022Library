@@ -38,7 +38,7 @@ public record AccountNotification26
     [IsoId("a41469e2-6e65-4dc2-bc90-ebf869a7fbcc")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public Party50Choice? AccountOwner { get; init; }
+    public Party50Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner.
@@ -78,7 +78,7 @@ public record AccountNotification26
     [IsoId("74bfe5dc-fe9a-4377-a9e9-1c2625a95556")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party50Choice? Debtor { get; init; }
+    public Party50Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the debtor.

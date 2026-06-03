@@ -30,7 +30,7 @@ public record PenaltyReport1
     [IsoId("_9BiXkvfMEeiJ1vId85LeLw")]
     [DisplayName("Report Date")]
     [IsoXmlTag("RptDt")]
-    public DateAndDateTime2Choice? ReportDate { get; init; }
+    public DateAndDateTime2Choice_? ReportDate { get; init; }
 
     /// <summary>
     /// Period covered by the report.
@@ -38,7 +38,7 @@ public record PenaltyReport1
     [IsoId("_9BiXk_fMEeiJ1vId85LeLw")]
     [DisplayName("Report Period")]
     [IsoXmlTag("RptPrd")]
-    public DatePeriod1Choice? ReportPeriod { get; init; }
+    public DatePeriod1Choice_? ReportPeriod { get; init; }
 
     /// <summary>
     /// Frequency of the report.
@@ -46,7 +46,7 @@ public record PenaltyReport1
     [IsoId("_9BiXlPfMEeiJ1vId85LeLw")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency22Choice? Frequency { get; init; }
+    public Frequency22Choice_? Frequency { get; init; }
 
     /// <summary>
     /// Type of the penalty list.
@@ -54,7 +54,7 @@ public record PenaltyReport1
     [IsoId("_9BiXlffMEeiJ1vId85LeLw")]
     [DisplayName("Penalty List Type")]
     [IsoXmlTag("PnltyListTp")]
-    public PenaltyListType1Choice? PenaltyListType { get; init; }
+    public PenaltyListType1Choice_? PenaltyListType { get; init; }
 
     /// <summary>
     /// Specifies the type of the update.
@@ -62,7 +62,7 @@ public record PenaltyReport1
     [IsoId("_9BiXlvfMEeiJ1vId85LeLw")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public UpdateType15Choice? UpdateType { get; init; }
+    public UpdateType15Choice_? UpdateType { get; init; }
 
     /// <summary>
     /// Indicates whether there is penalty activity.

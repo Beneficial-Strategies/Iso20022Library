@@ -19,7 +19,7 @@ public record Statement89
     [IsoId("_rlNiIQJ3EfGAP_FOfstLIw")]
     [DisplayName("Date Or Period")]
     [IsoXmlTag("DtOrPrd")]
-    public DateAndPeriod3Choice? DateOrPeriod { get; init; }
+    public DateAndPeriod3Choice_? DateOrPeriod { get; init; }
 
     [IsoId("_rlNiKQJ3EfGAP_FOfstLIw")]
     [DisplayName("Historic Data")]
@@ -29,5 +29,5 @@ public record Statement89
     [IsoId("_n1RFpgJ3EfGAP_FOfstLIw")]
     [DisplayName("Statement Type")]
     [IsoXmlTag("StmtTp")]
-    public StatementType7Choice? StatementType { get; init; }
+    public StatementType7Choice_? StatementType { get; init; }
 }

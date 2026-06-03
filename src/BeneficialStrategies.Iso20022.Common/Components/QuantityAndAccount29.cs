@@ -24,7 +24,7 @@ public record QuantityAndAccount29
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? DenominationChoice { get; init; }
+    public IsoMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

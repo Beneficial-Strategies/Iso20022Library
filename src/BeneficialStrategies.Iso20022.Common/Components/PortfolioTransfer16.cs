@@ -46,7 +46,7 @@ public record PortfolioTransfer16
     [IsoId("5f1bd2e7-ff5f-4c95-99a0-0e79f1c7e227")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public FundPortfolio7Choice? Portfolio { get; init; }
+    public FundPortfolio7Choice_? Portfolio { get; init; }
 
     /// <summary>
     /// Indicates that not all the assets in the holding/portfolio are specified and that some other kind of other communication is required.

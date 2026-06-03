@@ -79,7 +79,7 @@ public record SecuritiesTradeDetails152
     [IsoId("ff135652-606f-4def-8cbb-12dc7a061bfa")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public AllegementStatus3Choice? Status { get; init; }
+    public AllegementStatus3Choice_? Status { get; init; }
 
     [IsoId("6a2e2850-66c7-4ae0-8ebc-69bb012b0342")]
     [DisplayName("Place Of Trade")]
@@ -94,12 +94,12 @@ public record SecuritiesTradeDetails152
     [IsoId("e182fefe-99f7-43de-917d-4fdad8eae403")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("a6f125af-8266-4b05-bb81-31bb4cc322b1")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     [IsoId("6598f7e8-d3cb-4f38-ae33-611ab9acef94")]
     [DisplayName("Deal Price")]
@@ -124,12 +124,12 @@ public record SecuritiesTradeDetails152
     [IsoId("ee912099-9d5a-460d-829b-73fff22752fa")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition5Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } = [];
 
     [IsoId("7837d5f8-c8dc-4711-b78d-c025e2e715d1")]
     [DisplayName("Type Of Price")]
     [IsoXmlTag("TpOfPric")]
-    public TypeOfPrice29Choice? TypeOfPrice { get; init; }
+    public TypeOfPrice29Choice_? TypeOfPrice { get; init; }
 
     [IsoId("7cc60469-b62a-4165-9101-743a682f4ce6")]
     [DisplayName("Quantity And Account Details")]

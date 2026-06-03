@@ -19,7 +19,7 @@ public record TaxCalculationInformation12
     [IsoId("61b9a6d5-eucg-0001-0001-0ca6a9409801")]
     [DisplayName("EU Capital Gain")]
     [IsoXmlTag("EUCptlGn")]
-    public EUCapitalGainType4Choice? EUCapitalGain { get; init; }
+    public EUCapitalGainType4Choice_? EUCapitalGain { get; init; }
 
     [IsoId("61b9a6d5-pcdc-0001-0002-0ca6a9409801")]
     [DisplayName("Percentage Of Debt Claim")]
@@ -39,5 +39,5 @@ public record TaxCalculationInformation12
     [IsoId("61b9a6d5-euds-0001-0005-0ca6a9409801")]
     [DisplayName("EU Dividend Status")]
     [IsoXmlTag("EUDvddSts")]
-    public EUDividendStatusType3Choice? EUDividendStatus { get; init; }
+    public EUDividendStatusType3Choice_? EUDividendStatus { get; init; }
 }

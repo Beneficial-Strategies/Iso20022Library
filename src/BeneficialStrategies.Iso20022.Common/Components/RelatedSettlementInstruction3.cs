@@ -70,7 +70,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_KZVIcrblEe-NMoTZ6Byg6A")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
@@ -78,7 +78,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_Tz9P0rblEe-NMoTZ6Byg6A")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     /// <summary>
     /// Total quantity of securities to be settled.
@@ -86,7 +86,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_XLSYBLblEe-NMoTZ6Byg6A")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice SettlementQuantity { get; init; }
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Total amount of money to be paid or received in exchange for the securities.

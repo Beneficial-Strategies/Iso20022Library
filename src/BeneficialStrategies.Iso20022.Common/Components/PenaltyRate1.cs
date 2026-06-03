@@ -22,7 +22,7 @@ public record PenaltyRate1
     [IsoId("_DozrQDkaEem897H7zB2RJg")]
     [DisplayName("Market Identification")]
     [IsoXmlTag("MktId")]
-    public MarketIdentification1Choice? MarketIdentification { get; init; }
+    public MarketIdentification1Choice_? MarketIdentification { get; init; }
 
     /// <summary>
     /// Binary classification whether the security was traded in a SME Growth Market or not.

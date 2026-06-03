@@ -29,62 +29,62 @@ public record Vote21
     [IsoId("_oW4V9ajHEfCzuLlmLrhIvA")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
-    public QuantityOrCode1Choice? For { get; init; }
+    public QuantityOrCode1Choice_? For { get; init; }
 
     [IsoId("_oW4V96jHEfCzuLlmLrhIvA")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
-    public QuantityOrCode1Choice? Against { get; init; }
+    public QuantityOrCode1Choice_? Against { get; init; }
 
     [IsoId("_oW4V-ajHEfCzuLlmLrhIvA")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
-    public QuantityOrCode1Choice? Abstain { get; init; }
+    public QuantityOrCode1Choice_? Abstain { get; init; }
 
     [IsoId("_oW4V-6jHEfCzuLlmLrhIvA")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
-    public QuantityOrCode1Choice? Withhold { get; init; }
+    public QuantityOrCode1Choice_? Withhold { get; init; }
 
     [IsoId("_oW4V_ajHEfCzuLlmLrhIvA")]
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
-    public QuantityOrCode1Choice? WithManagement { get; init; }
+    public QuantityOrCode1Choice_? WithManagement { get; init; }
 
     [IsoId("_oW4V_6jHEfCzuLlmLrhIvA")]
     [DisplayName("Against Management")]
     [IsoXmlTag("AgnstMgmt")]
-    public QuantityOrCode1Choice? AgainstManagement { get; init; }
+    public QuantityOrCode1Choice_? AgainstManagement { get; init; }
 
     [IsoId("_oW4WAajHEfCzuLlmLrhIvA")]
     [DisplayName("Discretionary")]
     [IsoXmlTag("Dscrtnry")]
-    public QuantityOrCode1Choice? Discretionary { get; init; }
+    public QuantityOrCode1Choice_? Discretionary { get; init; }
 
     [IsoId("_oW4WA6jHEfCzuLlmLrhIvA")]
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
-    public QuantityOrCode1Choice? OneYear { get; init; }
+    public QuantityOrCode1Choice_? OneYear { get; init; }
 
     [IsoId("_oW4WBajHEfCzuLlmLrhIvA")]
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
-    public QuantityOrCode1Choice? TwoYears { get; init; }
+    public QuantityOrCode1Choice_? TwoYears { get; init; }
 
     [IsoId("_oW4WB6jHEfCzuLlmLrhIvA")]
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
-    public QuantityOrCode1Choice? ThreeYears { get; init; }
+    public QuantityOrCode1Choice_? ThreeYears { get; init; }
 
     [IsoId("_oW4WCajHEfCzuLlmLrhIvA")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
-    public QuantityOrCode1Choice? NoAction { get; init; }
+    public QuantityOrCode1Choice_? NoAction { get; init; }
 
     [IsoId("_oW4WC6jHEfCzuLlmLrhIvA")]
     [DisplayName("Blank")]
     [IsoXmlTag("Blnk")]
-    public QuantityOrCode1Choice? Blank { get; init; }
+    public QuantityOrCode1Choice_? Blank { get; init; }
 
     [IsoId("_oW4WDajHEfCzuLlmLrhIvA")]
     [DisplayName("Proprietary")]

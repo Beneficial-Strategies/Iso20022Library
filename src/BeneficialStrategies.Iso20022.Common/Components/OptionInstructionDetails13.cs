@@ -46,7 +46,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX168wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Quantity")]
     [IsoXmlTag("InstrQty")]
-    public required FinancialInstrumentQuantity33Choice InstructionQuantity { get; init; }
+    public required FinancialInstrumentQuantity33Choice_ InstructionQuantity { get; init; }
 
     /// <summary>
     /// Date of the instruction.
@@ -78,7 +78,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX368wEfCx2aBifPEdRg")]
     [DisplayName("Bid Price")]
     [IsoXmlTag("BidPric")]
-    public PriceFormat74Choice? BidPrice { get; init; }
+    public PriceFormat74Choice_? BidPrice { get; init; }
 
     /// <summary>
     /// Conditional quantity of the instruction.
@@ -86,7 +86,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX4a8wEfCx2aBifPEdRg")]
     [DisplayName("Conditional Quantity")]
     [IsoXmlTag("CondlQty")]
-    public FinancialInstrumentQuantity33Choice? ConditionalQuantity { get; init; }
+    public FinancialInstrumentQuantity33Choice_? ConditionalQuantity { get; init; }
 
     /// <summary>
     /// Customer related narrative information.
@@ -110,5 +110,5 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX568wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Status")]
     [IsoXmlTag("InstrSts")]
-    public required InstructionProcessingStatus62Choice InstructionStatus { get; init; }
+    public required InstructionProcessingStatus62Choice_ InstructionStatus { get; init; }
 }

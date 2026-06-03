@@ -38,7 +38,7 @@ public record CreditTransferTransaction76
     [IsoId("c1b2745a-0003-0003-0003-89794069a0c7")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required AmountType4Choice Amount { get; init; }
+    public required AmountType4Choice_ Amount { get; init; }
 
     /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.

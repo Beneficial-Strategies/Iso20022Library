@@ -19,12 +19,12 @@ public record TransactionDetails187
     [IsoId("_hl1Buag_EfCXwLUUylXgrQ")]
     [DisplayName("Transaction Activity")]
     [IsoXmlTag("TxActvty")]
-    public required TransactionActivity3Choice TransactionActivity { get; init; }
+    public required TransactionActivity3Choice_ TransactionActivity { get; init; }
 
     [IsoId("_hl1Bwag_EfCXwLUUylXgrQ")]
     [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
     [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
-    public SettlementOrCorporateActionEvent26Choice? SettlementTransactionOrCorporateActionEventType { get; init; }
+    public SettlementOrCorporateActionEvent26Choice_? SettlementTransactionOrCorporateActionEventType { get; init; }
 
     [IsoId("_hl1Byag_EfCXwLUUylXgrQ")]
     [DisplayName("Securities Movement Type")]
@@ -74,22 +74,22 @@ public record TransactionDetails187
     [IsoId("_hl1B_6g_EfCXwLUUylXgrQ")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity1Choice SettlementQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; }
 
     [IsoId("_hl1CAag_EfCXwLUUylXgrQ")]
     [DisplayName("Settled Quantity")]
     [IsoXmlTag("SttldQty")]
-    public FinancialInstrumentQuantity1Choice? SettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? SettledQuantity { get; init; }
 
     [IsoId("_hl1CA6g_EfCXwLUUylXgrQ")]
     [DisplayName("Previously Settled Quantity")]
     [IsoXmlTag("PrevslySttldQty")]
-    public FinancialInstrumentQuantity1Choice? PreviouslySettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? PreviouslySettledQuantity { get; init; }
 
     [IsoId("_hl1CBag_EfCXwLUUylXgrQ")]
     [DisplayName("Remaining To Be Settled Quantity")]
     [IsoXmlTag("RmngToBeSttldQty")]
-    public FinancialInstrumentQuantity1Choice? RemainingToBeSettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? RemainingToBeSettledQuantity { get; init; }
 
     [IsoId("_hl1CB6g_EfCXwLUUylXgrQ")]
     [DisplayName("Number Of Days Accrued")]
@@ -124,22 +124,22 @@ public record TransactionDetails187
     [IsoId("_hl1CH6g_EfCXwLUUylXgrQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_hl1CJ6g_EfCXwLUUylXgrQ")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public required SettlementDate19Choice IntendedSettlementDate { get; init; }
+    public required SettlementDate19Choice_ IntendedSettlementDate { get; init; }
 
     [IsoId("_hl1CL6g_EfCXwLUUylXgrQ")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
 
     [IsoId("_hl1CN6g_EfCXwLUUylXgrQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice? ValueDate { get; init; }
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     [IsoId("_hl1CP6g_EfCXwLUUylXgrQ")]
     [DisplayName("Status Date")]
@@ -164,7 +164,7 @@ public record TransactionDetails187
     [IsoId("_hl1CTag_EfCXwLUUylXgrQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     [IsoId("_hl1CVag_EfCXwLUUylXgrQ")]
     [DisplayName("Delivering Settlement Parties")]

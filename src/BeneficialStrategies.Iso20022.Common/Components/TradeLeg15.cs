@@ -64,7 +64,7 @@ public record TradeLeg15
     [IsoId("_2r9um6o2EfCG2_q2WT-90w")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public required DateAndDateTime2Choice TradeDate { get; init; }
+    public required DateAndDateTime2Choice_ TradeDate { get; init; }
 
     [IsoId("_2r9uoao2EfCG2_q2WT-90w")]
     [DisplayName("Transaction Date And Time")]
@@ -74,7 +74,7 @@ public record TradeLeg15
     [IsoId("_2r9up6o2EfCG2_q2WT-90w")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public DateFormat66Choice? SettlementDate { get; init; }
+    public DateFormat66Choice_? SettlementDate { get; init; }
 
     [IsoId("_2r9urao2EfCG2_q2WT-90w")]
     [DisplayName("Financial Instrument Identification")]
@@ -94,7 +94,7 @@ public record TradeLeg15
     [IsoId("_2r9uv6o2EfCG2_q2WT-90w")]
     [DisplayName("Trade Quantity")]
     [IsoXmlTag("TradQty")]
-    public required FinancialInstrumentQuantity1Choice TradeQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ TradeQuantity { get; init; }
 
     [IsoId("_2r9uxao2EfCG2_q2WT-90w")]
     [DisplayName("Deal Price")]
@@ -124,7 +124,7 @@ public record TradeLeg15
     [IsoId("_TswSIao5EfCG2_q2WT-90w")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition5Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } = [];
 
     [IsoId("_2r9u46o2EfCG2_q2WT-90w")]
     [DisplayName("Derivative Related Trade")]
@@ -139,7 +139,7 @@ public record TradeLeg15
     [IsoId("_2r9u76o2EfCG2_q2WT-90w")]
     [DisplayName("Trading Party")]
     [IsoXmlTag("TradgPty")]
-    public required PartyIdentification253Choice TradingParty { get; init; }
+    public required PartyIdentification253Choice_ TradingParty { get; init; }
 
     [IsoId("_2r9u9ao2EfCG2_q2WT-90w")]
     [DisplayName("Trade Registration Origin")]
@@ -164,7 +164,7 @@ public record TradeLeg15
     [IsoId("_2r9vDao2EfCG2_q2WT-90w")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat43Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat43Choice_? SafekeepingPlace { get; init; }
 
     [IsoId("_2r9vE6o2EfCG2_q2WT-90w")]
     [DisplayName("Safekeeping Account")]

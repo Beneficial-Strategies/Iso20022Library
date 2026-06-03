@@ -24,17 +24,17 @@ public record SettlementDetails226
     [IsoId("_mItJk5aEEfC2_67yGLymgA")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     [IsoId("_mItJm5aEEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition45Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition45Choice_> SettlementTransactionCondition { get; init; } = [];
 
     [IsoId("_mItJo5aEEfC2_67yGLymgA")]
     [DisplayName("Settling Capacity")]
     [IsoXmlTag("SttlgCpcty")]
-    public SettlingCapacity7Choice? SettlingCapacity { get; init; }
+    public SettlingCapacity7Choice_? SettlingCapacity { get; init; }
 
     [IsoId("_mItJq5aEEfC2_67yGLymgA")]
     [DisplayName("Stamp Duty Tax Basis")]
@@ -44,67 +44,67 @@ public record SettlementDetails226
     [IsoId("_mItJs5aEEfC2_67yGLymgA")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice? SecuritiesRTGS { get; init; }
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     [IsoId("_mItJu5aEEfC2_67yGLymgA")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership4Choice? BeneficialOwnership { get; init; }
+    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
 
     [IsoId("_mItJw5aEEfC2_67yGLymgA")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem6Choice? CashClearingSystem { get; init; }
+    public CashSettlementSystem6Choice_? CashClearingSystem { get; init; }
 
     [IsoId("_mItJy5aEEfC2_67yGLymgA")]
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
-    public TaxCapacityParty4Choice? TaxCapacity { get; init; }
+    public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
 
     [IsoId("_mItJ05aEEfC2_67yGLymgA")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
-    public MarketClientSide6Choice? MarketClientSide { get; init; }
+    public MarketClientSide6Choice_? MarketClientSide { get; init; }
 
     [IsoId("_mItJ25aEEfC2_67yGLymgA")]
     [DisplayName("FX Standing Instruction")]
     [IsoXmlTag("FxStgInstr")]
-    public FXStandingInstruction4Choice? FXStandingInstruction { get; init; }
+    public FXStandingInstruction4Choice_? FXStandingInstruction { get; init; }
 
     [IsoId("_mItJ45aEEfC2_67yGLymgA")]
     [DisplayName("Block Trade")]
     [IsoXmlTag("BlckTrad")]
-    public BlockTrade4Choice? BlockTrade { get; init; }
+    public BlockTrade4Choice_? BlockTrade { get; init; }
 
     [IsoId("_mItJ65aEEfC2_67yGLymgA")]
     [DisplayName("Legal Restrictions")]
     [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice? LegalRestrictions { get; init; }
+    public Restriction5Choice_? LegalRestrictions { get; init; }
 
     [IsoId("_mItwlpaEEfC2_67yGLymgA")]
     [DisplayName("Settlement System Method")]
     [IsoXmlTag("SttlmSysMtd")]
-    public SettlementSystemMethod4Choice? SettlementSystemMethod { get; init; }
+    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
     [IsoId("_mItwnpaEEfC2_67yGLymgA")]
     [DisplayName("Netting Eligibility")]
     [IsoXmlTag("NetgElgblty")]
-    public NettingEligibility4Choice? NettingEligibility { get; init; }
+    public NettingEligibility4Choice_? NettingEligibility { get; init; }
 
     [IsoId("_mItwppaEEfC2_67yGLymgA")]
     [DisplayName("CCP Eligibility")]
     [IsoXmlTag("CCPElgblty")]
-    public CentralCounterPartyEligibility4Choice? CCPEligibility { get; init; }
+    public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
 
     [IsoId("_mItwrpaEEfC2_67yGLymgA")]
     [DisplayName("Tracking")]
     [IsoXmlTag("Trckg")]
-    public Tracking4Choice? Tracking { get; init; }
+    public Tracking4Choice_? Tracking { get; init; }
 
     [IsoId("_mItwtpaEEfC2_67yGLymgA")]
     [DisplayName("Automatic Borrowing")]
     [IsoXmlTag("AutomtcBrrwg")]
-    public AutomaticBorrowing6Choice? AutomaticBorrowing { get; init; }
+    public AutomaticBorrowing6Choice_? AutomaticBorrowing { get; init; }
 
     [IsoId("_mItwvpaEEfC2_67yGLymgA")]
     [DisplayName("Partial Settlement Indicator")]

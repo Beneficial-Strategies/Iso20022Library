@@ -35,7 +35,7 @@ public record QuantityAndAccount118
     /// </summary>
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
-    public IsoMax210Text? DenominationChoice { get; init; }
+    public IsoMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Quantity Breakdown.

@@ -30,7 +30,7 @@ public record FinancialInstrument110
     [IsoId("19b951e9-1943-40a3-96f4-7685bd704538")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public required FinancialInstrument102Choice Instrument { get; init; }
+    public required FinancialInstrument102Choice_ Instrument { get; init; }
 
     /// <summary>
     /// Specifies the quantity of assets to be transferred in units or in a percentage rate.

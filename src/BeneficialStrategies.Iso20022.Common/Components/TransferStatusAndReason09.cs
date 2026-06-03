@@ -39,17 +39,17 @@ public record TransferStatusAndReason09
     [IsoId("30f1743b-3abf-47b0-81fa-0e8629dceacf")]
     [DisplayName("Transfer Event Type")]
     [IsoXmlTag("TrfEvtTp")]
-    public ValueList<TransferStatusType3Choice> TransferEventType { get; init; } = [];
+    public ValueList<TransferStatusType3Choice_> TransferEventType { get; init; } = [];
 
     [IsoId("205ca276-b198-47db-9d31-3fc28d751a84")]
     [DisplayName("Transfer Status")]
     [IsoXmlTag("TrfSts")]
-    public required TransferStatus5Choice TransferStatus { get; init; }
+    public required TransferStatus5Choice_ TransferStatus { get; init; }
 
     [IsoId("3b331438-c22e-40af-a2b1-e16258e86269")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public FinancialInstrument101Choice? Instrument { get; init; }
+    public FinancialInstrument101Choice_? Instrument { get; init; }
 
     [IsoId("4fc7e525-b771-4487-bd1c-f75988a389d7")]
     [DisplayName("Investment Account Details")]

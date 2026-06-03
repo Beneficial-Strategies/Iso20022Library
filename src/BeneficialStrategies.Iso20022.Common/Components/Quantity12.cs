@@ -32,7 +32,7 @@ public record Quantity12
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoRestrictedFINXMax210Text? DenominationChoice { get; init; }
+    public IsoRestrictedFINXMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.

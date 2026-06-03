@@ -54,7 +54,7 @@ public record RedemptionExecution19
     [IsoId("972bc70d-ca43-4135-86ab-aef6371f2b30")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<FundOrderType4Choice> OrderType { get; init; } = [];
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     /// <summary>
     /// Investment fund class to which the investment fund order execution is related.
@@ -78,7 +78,7 @@ public record RedemptionExecution19
     [IsoId("277f1082-183b-48e6-8b32-1cc8caace560")]
     [DisplayName("Units")]
     [IsoXmlTag("Units")]
-    public required Unit1Choice Units { get; init; }
+    public required Unit1Choice_ Units { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -118,7 +118,7 @@ public record RedemptionExecution19
     [IsoId("0d4a0727-1ed3-4caa-97df-8d6e42cb2190")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
-    public required DateAndDateTime2Choice TradeDateTime { get; init; }
+    public required DateAndDateTime2Choice_ TradeDateTime { get; init; }
 
     /// <summary>
     /// Price at which the order was executed.
@@ -190,7 +190,7 @@ public record RedemptionExecution19
     [IsoId("3176fdc2-cd5f-460c-9aea-a34f50d16c91")]
     [DisplayName("Interim Profit Amount")]
     [IsoXmlTag("IntrmPrftAmt")]
-    public ProfitAndLoss2Choice? InterimProfitAmount { get; init; }
+    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; }
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
@@ -374,7 +374,7 @@ public record RedemptionExecution19
     [IsoId("0c6b1198-af40-4a83-b429-e75a5bcfd673")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     /// <summary>
     /// Means by which the investor or account owner submits the open account form.
@@ -382,7 +382,7 @@ public record RedemptionExecution19
     [IsoId("242fc737-12d3-4388-9e52-527d61a881c0")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     /// <summary>
     /// Type of signature.
@@ -390,7 +390,7 @@ public record RedemptionExecution19
     [IsoId("b669568b-e9c5-4a13-a503-4c687cf26bf0")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     /// <summary>
     /// Information about a non-standard order.

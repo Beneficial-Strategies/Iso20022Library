@@ -22,5 +22,5 @@ public record PaymentTransaction167
     [IsoId("ba4697d6-4517-452b-9caf-40406bf916c9")]
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
-    public required PaymentInstrument28Choice PaymentInstrument { get; init; }
+    public required PaymentInstrument28Choice_ PaymentInstrument { get; init; }
 }

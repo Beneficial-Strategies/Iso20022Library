@@ -46,7 +46,7 @@ public record AccountStatement15
     [IsoId("5d16a146-9a8e-4b78-9ec4-e5f01bb83f61")]
     [DisplayName("Reporting Sequence")]
     [IsoXmlTag("RptgSeq")]
-    public SequenceRange1Choice? ReportingSequence { get; init; }
+    public SequenceRange1Choice_? ReportingSequence { get; init; }
 
     /// <summary>
     /// Legal sequential number of the statement, as assigned by the account servicer.
@@ -86,7 +86,7 @@ public record AccountStatement15
     [IsoId("c777fbd9-ef07-4c36-a124-6d852f0d856b")]
     [DisplayName("Reporting Source")]
     [IsoXmlTag("RptgSrc")]
-    public ReportingSource1Choice? ReportingSource { get; init; }
+    public ReportingSource1Choice_? ReportingSource { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which credit and debit entries are made.

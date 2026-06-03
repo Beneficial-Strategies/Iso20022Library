@@ -49,5 +49,5 @@ public record UnderlyingStatementEntry11
     [IsoId("cc665a1b-245b-4920-aca1-8640795a8822")]
     [DisplayName("Original Entry Value Date")]
     [IsoXmlTag("OrgnlNtryValDt")]
-    public DateAndDateTime2Choice? OriginalEntryValueDate { get; init; }
+    public DateAndDateTime2Choice_? OriginalEntryValueDate { get; init; }
 }

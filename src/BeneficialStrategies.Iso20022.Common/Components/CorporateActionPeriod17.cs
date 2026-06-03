@@ -22,7 +22,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqEatmEfCqjuqNaaNXgw")]
     [DisplayName("Interest Period")]
     [IsoXmlTag("IntrstPrd")]
-    public Period12Choice? InterestPeriod { get; init; }
+    public Period12Choice_? InterestPeriod { get; init; }
 
     /// <summary>
     /// Period during which the offeror can purchase the shares from the holders.
@@ -30,7 +30,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqEqtmEfCqjuqNaaNXgw")]
     [DisplayName("Compulsory Purchase Period")]
     [IsoXmlTag("CmplsryPurchsPrd")]
-    public Period12Choice? CompulsoryPurchasePeriod { get; init; }
+    public Period12Choice_? CompulsoryPurchasePeriod { get; init; }
 
     /// <summary>
     /// Period assigned for the purpose of claiming entitlements.
@@ -38,7 +38,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqE6tmEfCqjuqNaaNXgw")]
     [DisplayName("Claim Period")]
     [IsoXmlTag("ClmPrd")]
-    public Period12Choice? ClaimPeriod { get; init; }
+    public Period12Choice_? ClaimPeriod { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends the book entry transfer of a security.
@@ -46,7 +46,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqFKtmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Book Entry Transfer")]
     [IsoXmlTag("DpstrySspnsnPrdForBookNtryTrf")]
-    public Period12Choice? DepositorySuspensionPeriodForBookEntryTransfer { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForBookEntryTransfer { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends deposit of a security at the agent.
@@ -54,7 +54,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqFatmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Deposit At Agent")]
     [IsoXmlTag("DpstrySspnsnPrdForDpstAtAgt")]
-    public Period12Choice? DepositorySuspensionPeriodForDepositAtAgent { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForDepositAtAgent { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends deposit of a security.
@@ -62,7 +62,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqFqtmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Deposit")]
     [IsoXmlTag("DpstrySspnsnPrdForDpst")]
-    public Period12Choice? DepositorySuspensionPeriodForDeposit { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForDeposit { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends pledge of a security.
@@ -70,7 +70,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqF6tmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Pledge")]
     [IsoXmlTag("DpstrySspnsnPrdForPldg")]
-    public Period12Choice? DepositorySuspensionPeriodForPledge { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForPledge { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends segregation of a security.
@@ -78,7 +78,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqGKtmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Segregation")]
     [IsoXmlTag("DpstrySspnsnPrdForSgrtn")]
-    public Period12Choice? DepositorySuspensionPeriodForSegregation { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForSegregation { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends withdrawal of a security at agent.
@@ -86,7 +86,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqGatmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Withdrawal At Agent")]
     [IsoXmlTag("DpstrySspnsnPrdForWdrwlAtAgt")]
-    public Period12Choice? DepositorySuspensionPeriodForWithdrawalAtAgent { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForWithdrawalAtAgent { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends withdrawal of a security in nominee name.
@@ -94,7 +94,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqGqtmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Withdrawal In Nominee Name")]
     [IsoXmlTag("DpstrySspnsnPrdForWdrwlInNmneeNm")]
-    public Period12Choice? DepositorySuspensionPeriodForWithdrawalInNomineeName { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForWithdrawalInNomineeName { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends withdrawal of a security in street name.
@@ -102,7 +102,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqG6tmEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Withdrawal In Street Name")]
     [IsoXmlTag("DpstrySspnsnPrdForWdrwlInStrtNm")]
-    public Period12Choice? DepositorySuspensionPeriodForWithdrawalInStreetName { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForWithdrawalInStreetName { get; init; }
 
     /// <summary>
     /// Period during which the books of the issuer are closed.
@@ -110,7 +110,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqHKtmEfCqjuqNaaNXgw")]
     [DisplayName("Book Closure Period")]
     [IsoXmlTag("BookClsrPrd")]
-    public Period12Choice? BookClosurePeriod { get; init; }
+    public Period12Choice_? BookClosurePeriod { get; init; }
 
     /// <summary>
     /// Period during which co-depositories suspend the transfer of a security.
@@ -118,7 +118,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqHatmEfCqjuqNaaNXgw")]
     [DisplayName("Co Depositories Suspension Period")]
     [IsoXmlTag("CoDpstriesSspnsnPrd")]
-    public Period12Choice? CoDepositoriesSuspensionPeriod { get; init; }
+    public Period12Choice_? CoDepositoriesSuspensionPeriod { get; init; }
 
     /// <summary>
     /// Period during which the security is to be split.
@@ -126,7 +126,7 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqHqtmEfCqjuqNaaNXgw")]
     [DisplayName("Split Period")]
     [IsoXmlTag("SpltPrd")]
-    public Period12Choice? SplitPeriod { get; init; }
+    public Period12Choice_? SplitPeriod { get; init; }
 
     /// <summary>
     /// Fiscal year of the income to be distributed.
@@ -134,5 +134,5 @@ public record CorporateActionPeriod17
     [IsoId("_yFQqH6tmEfCqjuqNaaNXgw")]
     [DisplayName("Fiscal Year Period")]
     [IsoXmlTag("FsclYrPrd")]
-    public Period12Choice? FiscalYearPeriod { get; init; }
+    public Period12Choice_? FiscalYearPeriod { get; init; }
 }

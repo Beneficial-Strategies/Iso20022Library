@@ -54,5 +54,5 @@ public record CorporateActionGeneralInformation197
     [IsoId("_iPvbPakgEfCG_LQaXOxwew")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public required CorporateActionEventType112Choice EventType { get; init; }
+    public required CorporateActionEventType112Choice_ EventType { get; init; }
 }

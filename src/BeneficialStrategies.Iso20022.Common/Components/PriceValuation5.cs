@@ -30,7 +30,7 @@ public record PriceValuation5
     [IsoId("1097744d-3cfe-4bd9-98dc-5829dd7aac8a")]
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
-    public DateAndDateTime2Choice? ValuationDateTime { get; init; }
+    public DateAndDateTime2Choice_? ValuationDateTime { get; init; }
 
     /// <summary>
     /// Date and time at which a price is applied, according to the terms stated in the prospectus.
@@ -38,7 +38,7 @@ public record PriceValuation5
     [IsoId("69bd7606-11c3-4cb6-a94b-f785c40aa615")]
     [DisplayName("NAV Date Time")]
     [IsoXmlTag("NAVDtTm")]
-    public required DateAndDateTime2Choice NAVDateTime { get; init; }
+    public required DateAndDateTime2Choice_ NAVDateTime { get; init; }
 
     /// <summary>
     /// Investment fund class for which the net asset value is calculated.
@@ -54,7 +54,7 @@ public record PriceValuation5
     [IsoId("9516b535-817d-4cba-8d0a-c82ef1e724f7")]
     [DisplayName("Fund Management Company")]
     [IsoXmlTag("FndMgmtCpny")]
-    public PartyIdentification125Choice? FundManagementCompany { get; init; }
+    public PartyIdentification125Choice_? FundManagementCompany { get; init; }
 
     /// <summary>
     /// Value of all the holdings, less the fund's liabilities, attributable to a specific investment fund class.
@@ -78,7 +78,7 @@ public record PriceValuation5
     [IsoId("1d09731f-4140-4f1c-9dda-8e83881c9d27")]
     [DisplayName("Next Valuation Date Time")]
     [IsoXmlTag("NxtValtnDtTm")]
-    public DateAndDateTime2Choice? NextValuationDateTime { get; init; }
+    public DateAndDateTime2Choice_? NextValuationDateTime { get; init; }
 
     /// <summary>
     /// Date and time of the previous price valuation for the investment fund/fund class.
@@ -86,7 +86,7 @@ public record PriceValuation5
     [IsoId("d0aaaae0-156f-49eb-aca1-0acd6c148e39")]
     [DisplayName("Previous Valuation Date Time")]
     [IsoXmlTag("PrvsValtnDtTm")]
-    public DateAndDateTime2Choice? PreviousValuationDateTime { get; init; }
+    public DateAndDateTime2Choice_? PreviousValuationDateTime { get; init; }
 
     /// <summary>
     /// Specifies how the valuation is done, based on the schedule stated in the prospectus.

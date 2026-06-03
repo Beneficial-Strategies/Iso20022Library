@@ -34,7 +34,7 @@ public record SwitchSubscriptionLegExecution5
     [IsoId("ec413d6f-unit-0001-0004-b9bb7bb30358")]
     [DisplayName("Units")]
     [IsoXmlTag("Unts")]
-    public required Unit1Choice Units { get; init; }
+    public required Unit1Choice_ Units { get; init; }
 
     [IsoId("ec413d6f-neta-0001-0005-b9bb7bb30358")]
     [DisplayName("Net Amount")]
@@ -54,7 +54,7 @@ public record SwitchSubscriptionLegExecution5
     [IsoId("ec413d6f-trad-0001-0008-b9bb7bb30358")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
-    public required DateAndDateTime2Choice TradeDateTime { get; init; }
+    public required DateAndDateTime2Choice_ TradeDateTime { get; init; }
 
     [IsoId("ec413d6f-prcd-0001-0009-b9bb7bb30358")]
     [DisplayName("Price Details")]
@@ -74,7 +74,7 @@ public record SwitchSubscriptionLegExecution5
     [IsoId("ec413d6f-intp-0001-0012-b9bb7bb30358")]
     [DisplayName("Interim Profit Amount")]
     [IsoXmlTag("IntrmPrftAmt")]
-    public ProfitAndLoss2Choice? InterimProfitAmount { get; init; }
+    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; }
 
     [IsoId("ec413d6f-incp-0001-0013-b9bb7bb30358")]
     [DisplayName("Income Preference")]

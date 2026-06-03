@@ -22,7 +22,7 @@ public record PenaltyStatus2
     [IsoId("_u3iR8R-DEeuwwezkzufkMw")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required PenaltyStatus2Choice Status { get; init; }
+    public required PenaltyStatus2Choice_ Status { get; init; }
 
     /// <summary>
     /// Reason for the penalty status.

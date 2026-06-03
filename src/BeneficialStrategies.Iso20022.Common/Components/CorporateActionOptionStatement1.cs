@@ -30,7 +30,7 @@ public record CorporateActionOptionStatement1
     [IsoId("_-X82_d_FEe-Ned3-G07x_A")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption47Choice OptionType { get; init; }
+    public required CorporateActionOption47Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Buyer protection instruction information.

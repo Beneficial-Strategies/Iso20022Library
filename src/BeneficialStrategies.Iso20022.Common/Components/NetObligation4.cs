@@ -46,7 +46,7 @@ public record NetObligation4
     [IsoId("747e3953-9e48-4643-b3b6-43399842a608")]
     [DisplayName("Participant Netting Identification")]
     [IsoXmlTag("PtcptNetgId")]
-    public required NettingIdentification2Choice ParticipantNettingIdentification { get; init; }
+    public required NettingIdentification2Choice_ ParticipantNettingIdentification { get; init; }
 
     /// <summary>
     /// Specifies the direction of the obligation.
@@ -62,7 +62,7 @@ public record NetObligation4
     [IsoId("e9bee192-7b18-4902-9650-5ab9f80fa759")]
     [DisplayName("Counterparty Netting Identification")]
     [IsoXmlTag("CtrPtyNetgId")]
-    public required NettingIdentification2Choice CounterpartyNettingIdentification { get; init; }
+    public required NettingIdentification2Choice_ CounterpartyNettingIdentification { get; init; }
 
     /// <summary>
     /// Describes the counterparty participant involved in the obligation.
@@ -70,7 +70,7 @@ public record NetObligation4
     [IsoId("a0940013-0e26-4c0a-9e83-19d95dd52efc")]
     [DisplayName("Net Service Counterparty Identification")]
     [IsoXmlTag("NetSvcCtrPtyId")]
-    public PartyIdentification242Choice? NetServiceCounterpartyIdentification { get; init; }
+    public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; }
 
     /// <summary>
     /// Specifies the standard settlement instructions used to issue a payment to the counterparty in order to settle the obligation.

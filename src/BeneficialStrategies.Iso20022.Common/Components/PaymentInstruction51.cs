@@ -78,7 +78,7 @@ public record PaymentInstruction51
     [IsoId("fabfdc67-f1b0-4093-9749-ae4a9a37d218")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public required DateAndDateTime2Choice RequestedExecutionDate { get; init; }
+    public required DateAndDateTime2Choice_ RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.

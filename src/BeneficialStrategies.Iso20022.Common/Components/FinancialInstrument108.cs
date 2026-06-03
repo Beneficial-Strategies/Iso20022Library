@@ -30,7 +30,7 @@ public record FinancialInstrument108
     [IsoId("8ad0720c-49ab-408a-8c41-2a619e3b6736")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public required FinancialInstrument101Choice Instrument { get; init; }
+    public required FinancialInstrument101Choice_ Instrument { get; init; }
 
     /// <summary>
     /// Quantity of asset to be transferred.
@@ -54,7 +54,7 @@ public record FinancialInstrument108
     [IsoId("7ebc921e-8415-4a46-916a-24ed6428221d")]
     [DisplayName("Transfer Type")]
     [IsoXmlTag("TrfTp")]
-    public required TransferType2Choice TransferType { get; init; }
+    public required TransferType2Choice_ TransferType { get; init; }
 
     /// <summary>
     /// Indicates the asset is a new asset, not previously identified by the transferor party in the account holding discovery process.

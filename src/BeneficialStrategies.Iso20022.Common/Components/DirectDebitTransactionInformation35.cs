@@ -270,7 +270,7 @@ public record DirectDebitTransactionInformation35
     [IsoId("71c50c41-5078-4f08-964e-ccccc425559b")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Information needed due to regulatory and statutory requirements.

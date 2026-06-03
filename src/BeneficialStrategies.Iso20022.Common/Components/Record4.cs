@@ -206,5 +206,5 @@ public record Record4
     [IsoId("_dqd1sW7-EfC68Y4jZPNEug")]
     [DisplayName("Record Message")]
     [IsoXmlTag("RcrdMsg")]
-    public required RecordMessage2Choice RecordMessage { get; init; }
+    public required RecordMessage2Choice_ RecordMessage { get; init; }
 }

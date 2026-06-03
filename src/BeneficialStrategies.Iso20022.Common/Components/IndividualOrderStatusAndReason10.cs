@@ -62,7 +62,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("8cc61f9a-09b9-4224-8a17-8d1c7c2dd0a8")]
     [DisplayName("Cancellation Status")]
     [IsoXmlTag("CxlSts")]
-    public required CancellationStatus33Choice CancellationStatus { get; init; }
+    public required CancellationStatus33Choice_ CancellationStatus { get; init; }
 
     /// <summary>
     /// Party that initiates the status of the individual order cancellation.

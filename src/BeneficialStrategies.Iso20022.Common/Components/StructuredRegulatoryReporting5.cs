@@ -19,7 +19,7 @@ public record StructuredRegulatoryReporting5
     [IsoId("_GC8jYXeKEfCdoODv2ypKfw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public RegulatoryReportingType1Choice? Type { get; init; }
+    public RegulatoryReportingType1Choice_? Type { get; init; }
 
     [IsoId("_GC8jY3eKEfCdoODv2ypKfw")]
     [DisplayName("Date")]

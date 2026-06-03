@@ -30,5 +30,5 @@ public record SignedQuantityFormat12
     [IsoId("_peYOTTi7Eeydid5dcNPKvg")]
     [DisplayName("Quantity Choice")]
     [IsoXmlTag("QtyChc")]
-    public required Quantity53Choice_ QuantityChoice { get; init; }
+    public required Quantity53Choice_ QuantityChoice_ { get; init; }
 }

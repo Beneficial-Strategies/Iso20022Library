@@ -54,5 +54,5 @@ public record InvestmentFundOrder13
     [IsoId("29d3046e-8838-4bb4-8486-753428ead0af")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
-    public CancellationReason32Choice? CancellationReason { get; init; }
+    public CancellationReason32Choice_? CancellationReason { get; init; }
 }

@@ -30,5 +30,5 @@ public record IntraPositionQueryStatus3
     [IsoId("_dZSPQ2dHEemVjsmmE4lqKA")]
     [DisplayName("Date Period")]
     [IsoXmlTag("DtPrd")]
-    public DateAndDateTimeSearch5Choice? DatePeriod { get; init; }
+    public DateAndDateTimeSearch5Choice_? DatePeriod { get; init; }
 }

@@ -22,7 +22,7 @@ public record AcknowledgementReason22
     [IsoId("_XLS0QY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required AcknowledgementReason25Choice Code { get; init; }
+    public required AcknowledgementReason25Choice_ Code { get; init; }
 
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.

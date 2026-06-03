@@ -38,7 +38,7 @@ public record CorporateActionGeneralInformation195
     [IsoId("_hlgRE7bhEe-NMoTZ6Byg6A")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public required CorporateActionEventType125Choice EventType { get; init; }
+    public required CorporateActionEventType125Choice_ EventType { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.

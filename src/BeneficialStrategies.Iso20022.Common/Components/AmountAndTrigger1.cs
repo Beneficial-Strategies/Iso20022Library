@@ -32,7 +32,7 @@ public record AmountAndTrigger1
     [IsoId("_-GTXaHltEeG7BsjMvd1mEw_-1720196234")]
     [DisplayName("Amount Details Choice")]
     [IsoXmlTag("AmtDtlsChc")]
-    public required AmountOrPercentage1Choice_ AmountDetailsChoice { get; init; }
+    public required AmountOrPercentage1Choice_ AmountDetailsChoice_ { get; init; }
 
     /// <summary>
     /// Trigger that causes the variation to come into effect.

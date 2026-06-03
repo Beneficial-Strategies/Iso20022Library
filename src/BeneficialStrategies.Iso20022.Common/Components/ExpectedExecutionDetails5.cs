@@ -22,7 +22,7 @@ public record ExpectedExecutionDetails5
     [IsoId("7b2e5310-54a0-4406-bfec-07f6ff34030d")]
     [DisplayName("Expected Trade Date Time")]
     [IsoXmlTag("XpctdTradDtTm")]
-    public DateAndDateTime2Choice? ExpectedTradeDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpectedTradeDateTime { get; init; }
 
     /// <summary>
     /// Date of a payment, for example, a prepayment date.

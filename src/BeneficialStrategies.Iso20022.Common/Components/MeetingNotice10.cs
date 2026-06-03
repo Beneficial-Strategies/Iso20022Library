@@ -46,7 +46,7 @@ public record MeetingNotice10
     [IsoId("_WPfn56jJEfCzuLlmLrhIvA")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
-    public MeetingTypeClassification2Choice? Classification { get; init; }
+    public MeetingTypeClassification2Choice_? Classification { get; init; }
 
     /// <summary>
     /// Official meeting announcement date.
@@ -54,7 +54,7 @@ public record MeetingNotice10
     [IsoId("_WPfn6ajJEfCzuLlmLrhIvA")]
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
-    public DateAndDateTime2Choice? AnnouncementDate { get; init; }
+    public DateAndDateTime2Choice_? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Indicates whether the meeting vote is held under the "one-man-one-vote" principle.
@@ -110,7 +110,7 @@ public record MeetingNotice10
     [IsoId("_WPfn96jJEfCzuLlmLrhIvA")]
     [DisplayName("Total Number Of Securities Outstanding")]
     [IsoXmlTag("TtlNbOfSctiesOutsdng")]
-    public FinancialInstrumentQuantity18Choice? TotalNumberOfSecuritiesOutstanding { get; init; }
+    public FinancialInstrumentQuantity18Choice_? TotalNumberOfSecuritiesOutstanding { get; init; }
 
     /// <summary>
     /// Number of rights admitted to the vote.
@@ -134,7 +134,7 @@ public record MeetingNotice10
     [IsoId("_WPfn_ajJEfCzuLlmLrhIvA")]
     [DisplayName("Proxy Choice")]
     [IsoXmlTag("PrxyChc")]
-    public Proxy5Choice? ProxyChoice { get; init; }
+    public Proxy5Choice_? ProxyChoice_ { get; init; }
 
     /// <summary>
     /// Contact person at the party organising the meeting, at the issuer or at an intermediary.
@@ -150,7 +150,7 @@ public record MeetingNotice10
     [IsoId("_WPfoAajJEfCzuLlmLrhIvA")]
     [DisplayName("Result Publication Date")]
     [IsoXmlTag("RsltPblctnDt")]
-    public DateFormat3Choice? ResultPublicationDate { get; init; }
+    public DateFormat3Choice_? ResultPublicationDate { get; init; }
 
     /// <summary>
     /// Date by which the blocking period for the securities should end.
@@ -158,7 +158,7 @@ public record MeetingNotice10
     [IsoId("_WPfoA6jJEfCzuLlmLrhIvA")]
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
-    public DateFormat60Choice? SecuritiesBlockingPeriodEndDate { get; init; }
+    public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; init; }
 
     /// <summary>
     /// Date at which the positions are struck to record which parties will receive the entitlement.
@@ -174,7 +174,7 @@ public record MeetingNotice10
     [IsoId("_WPfoB6jJEfCzuLlmLrhIvA")]
     [DisplayName("Registration Securities Deadline")]
     [IsoXmlTag("RegnSctiesDdln")]
-    public DateFormat58Choice? RegistrationSecuritiesDeadline { get; init; }
+    public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; init; }
 
     /// <summary>
     /// Date by which the securities have to be registered, set by the issuer.
@@ -182,7 +182,7 @@ public record MeetingNotice10
     [IsoId("_WPfoCajJEfCzuLlmLrhIvA")]
     [DisplayName("Registration Securities Market Deadline")]
     [IsoXmlTag("RegnSctiesMktDdln")]
-    public DateFormat58Choice? RegistrationSecuritiesMarketDeadline { get; init; }
+    public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; init; }
 
     /// <summary>
     /// Date by which enrolment for participation must be instructed, set by the issuer.
@@ -190,7 +190,7 @@ public record MeetingNotice10
     [IsoId("_WPfoC6jJEfCzuLlmLrhIvA")]
     [DisplayName("Enrolment Market Deadline")]
     [IsoXmlTag("EnrlmntMktDdln")]
-    public DateFormat58Choice? EnrolmentMarketDeadline { get; init; }
+    public DateFormat58Choice_? EnrolmentMarketDeadline { get; init; }
 
     /// <summary>
     /// Date by which enrolment for participation must be instructed, set by the intermediary.
@@ -198,5 +198,5 @@ public record MeetingNotice10
     [IsoId("_WPfoDajJEfCzuLlmLrhIvA")]
     [DisplayName("Enrolment Deadline")]
     [IsoXmlTag("EnrlmntDdln")]
-    public DateFormat58Choice? EnrolmentDeadline { get; init; }
+    public DateFormat58Choice_? EnrolmentDeadline { get; init; }
 }

@@ -29,17 +29,17 @@ public record Statement87
     [IsoId("_sU_uNN_NEe-Ned3-G07x_A")]
     [DisplayName("Statement Date Time")]
     [IsoXmlTag("StmtDtTm")]
-    public required DateAndDateTime2Choice StatementDateTime { get; init; }
+    public required DateAndDateTime2Choice_ StatementDateTime { get; init; }
 
     [IsoId("_Ht09Hd_NEe-Ned3-G07x_A")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency25Choice? Frequency { get; init; }
+    public Frequency25Choice_? Frequency { get; init; }
 
     [IsoId("_DQ9WpFdOEfCb5MzBL2XS4A")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public required UpdateType16Choice UpdateType { get; init; }
+    public required UpdateType16Choice_ UpdateType { get; init; }
 
     [IsoId("_Ht09Nd_NEe-Ned3-G07x_A")]
     [DisplayName("Activity Indicator")]

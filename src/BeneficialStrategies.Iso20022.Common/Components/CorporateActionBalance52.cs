@@ -22,7 +22,7 @@ public record CorporateActionBalance52
     [IsoId("_HiXMUa8wEfCx2aBifPEdRg")]
     [DisplayName("Total Eligible Balance")]
     [IsoXmlTag("TtlElgblBal")]
-    public required Quantity49Choice TotalEligibleBalance { get; init; }
+    public required Quantity49Choice_ TotalEligibleBalance { get; init; }
 
     /// <summary>
     /// Quantity of securities in the sub-balance.
@@ -30,7 +30,7 @@ public record CorporateActionBalance52
     [IsoId("_HiXMWa8wEfCx2aBifPEdRg")]
     [DisplayName("Uninstructed Balance")]
     [IsoXmlTag("UinstdBal")]
-    public required BalanceFormat11Choice UninstructedBalance { get; init; }
+    public required BalanceFormat11Choice_ UninstructedBalance { get; init; }
 
     /// <summary>
     /// Provides information about the total instructed balance.

@@ -22,7 +22,7 @@ public record AdditionalBalanceBreakdown1
     [IsoId("_kHopaag6EfCXwLUUylXgrQ")]
     [DisplayName("Sub Balance Type")]
     [IsoXmlTag("SubBalTp")]
-    public required SubBalanceType12Choice SubBalanceType { get; init; }
+    public required SubBalanceType12Choice_ SubBalanceType { get; init; }
 
     /// <summary>
     /// Quantity of securities in the sub-balance.

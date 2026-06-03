@@ -158,7 +158,7 @@ public record CreditTransferTransaction78
     [IsoId("_GLolYXeKEfCdoODv2ypKfw")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Information needed due to regulatory and statutory requirements.

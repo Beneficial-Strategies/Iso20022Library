@@ -118,7 +118,7 @@ public record InvestmentAccount82
     [IsoId("c5a5e51e-bfb4-448a-b853-b295502ace99")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat42Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Chain of parties involved in the settlement of the transaction.

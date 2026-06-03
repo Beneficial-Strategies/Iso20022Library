@@ -46,7 +46,7 @@ public record AccountNotification25
     [IsoId("3258cee4-a0e0-4b42-ad35-c38e14dd4a78")]
     [DisplayName("Reporting Sequence")]
     [IsoXmlTag("RptgSeq")]
-    public SequenceRange1Choice? ReportingSequence { get; init; }
+    public SequenceRange1Choice_? ReportingSequence { get; init; }
 
     /// <summary>
     /// Legal sequential number of the notification, as assigned by the account servicer.
@@ -86,7 +86,7 @@ public record AccountNotification25
     [IsoId("3506cfa2-e8aa-43a3-80fd-5aa0145b29a3")]
     [DisplayName("Reporting Source")]
     [IsoXmlTag("RptgSrc")]
-    public ReportingSource1Choice? ReportingSource { get; init; }
+    public ReportingSource1Choice_? ReportingSource { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which credit and debit entries are made.

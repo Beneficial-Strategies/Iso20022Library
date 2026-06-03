@@ -22,7 +22,7 @@ public record PendingProcessingReason17
     [IsoId("83817613-2602-4b64-a849-f8eac75f6f5d")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required PendingProcessingReason19Choice Code { get; init; }
+    public required PendingProcessingReason19Choice_ Code { get; init; }
 
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.

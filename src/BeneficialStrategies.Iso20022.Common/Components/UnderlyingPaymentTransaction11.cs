@@ -59,5 +59,5 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78k7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original Service Level")]
     [IsoXmlTag("OrgnlSvcLvl")]
-    public ServiceLevel8Choice? OriginalServiceLevel { get; init; }
+    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
 }

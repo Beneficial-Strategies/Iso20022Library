@@ -30,7 +30,7 @@ public record PenaltyNetMovementRecord1
     [IsoId("_OHxcpQAcEeqxkL65N306OA")]
     [DisplayName("Securities Shortfall")]
     [IsoXmlTag("SctiesShrtfll")]
-    public FinancialInstrumentQuantity1Choice? SecuritiesShortfall { get; init; }
+    public FinancialInstrumentQuantity1Choice_? SecuritiesShortfall { get; init; }
 
     /// <summary>
     /// Valuation of securities which failed to settle.
@@ -46,7 +46,7 @@ public record PenaltyNetMovementRecord1
     [IsoId("_OHxcpAAcEeqxkL65N306OA")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition5Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } = [];
 
     /// <summary>
     /// Number of entries related to the net position.

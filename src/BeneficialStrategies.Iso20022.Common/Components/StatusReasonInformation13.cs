@@ -19,7 +19,7 @@ public record StatusReasonInformation13
     [IsoId("_zyR4CaX_EeynsLtPxJMJTQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public required StatusReason7Choice Reason { get; init; }
+    public required StatusReason7Choice_ Reason { get; init; }
 
     [IsoId("_A8MUkKYAEeynsLtPxJMJTQ")]
     [DisplayName("Financial Instrument")]

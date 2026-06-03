@@ -22,7 +22,7 @@ public record PartyIdentification338
     [IsoId("__m-jManWEfC5VNwixU6YfQ")]
     [DisplayName("Legal Person")]
     [IsoXmlTag("LglPrsn")]
-    public PartyIdentification335Choice? LegalPerson { get; init; }
+    public PartyIdentification335Choice_? LegalPerson { get; init; }
 
     /// <summary>
     /// Instruction blocking reference allocated by the ICSD to be transmitted to the issuer.

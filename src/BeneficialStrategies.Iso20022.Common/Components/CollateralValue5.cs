@@ -46,7 +46,7 @@ public record CollateralValue5
     [IsoId("_1WMMt6X9EeynsLtPxJMJTQ")]
     [DisplayName("Valuation Price")]
     [IsoXmlTag("ValtnPric")]
-    public required AmountOrCoefficientPrice2Choice ValuationPrice { get; init; }
+    public required AmountOrCoefficientPrice2Choice_ ValuationPrice { get; init; }
 
     /// <summary>
     /// Price of the security as of the valuation date in the collateral valuation currency where there is a close link between the credit consumer and the security provided as collateral.
@@ -54,7 +54,7 @@ public record CollateralValue5
     [IsoId("_1WMMuaX9EeynsLtPxJMJTQ")]
     [DisplayName("Valuation Close Link Price")]
     [IsoXmlTag("ValtnClsLkPric")]
-    public AmountOrCoefficientPrice2Choice? ValuationCloseLinkPrice { get; init; }
+    public AmountOrCoefficientPrice2Choice_? ValuationCloseLinkPrice { get; init; }
 
     /// <summary>
     /// Price excluding the accrued interest.
@@ -62,7 +62,7 @@ public record CollateralValue5
     [IsoId("_1WMMu6X9EeynsLtPxJMJTQ")]
     [DisplayName("Clean Price")]
     [IsoXmlTag("CleanPric")]
-    public PriceRateOrAmount6Choice? CleanPrice { get; init; }
+    public PriceRateOrAmount6Choice_? CleanPrice { get; init; }
 
     /// <summary>
     /// Amount of money or rate accrued interest computed in the case of interest bearing financial instruments.
@@ -70,7 +70,7 @@ public record CollateralValue5
     [IsoId("_1WMMvaX9EeynsLtPxJMJTQ")]
     [DisplayName("Accrued Interest")]
     [IsoXmlTag("AcrdIntrst")]
-    public PriceRateOrAmount6Choice? AccruedInterest { get; init; }
+    public PriceRateOrAmount6Choice_? AccruedInterest { get; init; }
 
     /// <summary>
     /// Haircut or valuation factor on the security expressed as a percentage.

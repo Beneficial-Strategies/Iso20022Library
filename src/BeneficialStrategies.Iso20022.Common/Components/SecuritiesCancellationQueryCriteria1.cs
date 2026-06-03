@@ -38,7 +38,7 @@ public record SecuritiesCancellationQueryCriteria1
     [IsoId("_YpFpK2dnEemMLeaDfmIfIA")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ValueList<CancellationProcessingStatus9Choice> ProcessingStatus { get; init; } = [];
+    public ValueList<CancellationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -70,5 +70,5 @@ public record SecuritiesCancellationQueryCriteria1
     [IsoId("_YpFpM2dnEemMLeaDfmIfIA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice? CreationDateTime { get; init; }
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 }

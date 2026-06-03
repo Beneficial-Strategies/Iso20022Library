@@ -47,5 +47,5 @@ public record EligibleSecurity5
     [IsoId("_vMPFh7DEEe-g3p7goNrabg")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public required SystemPartyIdentification2Choice PartyIdentification { get; init; }
+    public required SystemPartyIdentification2Choice_ PartyIdentification { get; init; }
 }

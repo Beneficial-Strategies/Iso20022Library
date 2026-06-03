@@ -22,7 +22,7 @@ public record Charge33
     [IsoId("beeaad6d-ef37-44ac-8e24-cc9361fd5fa2")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ChargeType11Choice Type { get; init; }
+    public required ChargeType11Choice_ Type { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid for the charge.
@@ -30,7 +30,7 @@ public record Charge33
     [IsoId("86436412-ec30-4811-a092-3a01d23568cd")]
     [DisplayName("Charges Fees")]
     [IsoXmlTag("ChrgsFees")]
-    public required PriceRateOrAmount3Choice ChargesFees { get; init; }
+    public required PriceRateOrAmount3Choice_ ChargesFees { get; init; }
 
     /// <summary>
     /// Calculation basis for the charge or fee.
@@ -38,5 +38,5 @@ public record Charge33
     [IsoId("eca67237-3e1a-4655-9028-d2e8997b693b")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
-    public CalculationBasis2Choice? CalculationBasis { get; init; }
+    public CalculationBasis2Choice_? CalculationBasis { get; init; }
 }

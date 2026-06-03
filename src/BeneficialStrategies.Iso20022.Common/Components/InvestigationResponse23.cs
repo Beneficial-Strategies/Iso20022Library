@@ -46,7 +46,7 @@ public record InvestigationResponse23
     [IsoId("ecfb3f49-6c88-4363-8775-5ae7344e83c8")]
     [DisplayName("Next Responder")]
     [IsoXmlTag("NxtRspndr")]
-    public Party40Choice? NextResponder { get; init; }
+    public Party40Choice_? NextResponder { get; init; }
 
     /// <summary>
     /// Provides the response to the request.

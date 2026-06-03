@@ -102,7 +102,7 @@ public record EntryTransaction16
     [IsoId("83c4d65b-0a36-4a96-8f53-bfd50c5c447d")]
     [DisplayName("Local Instrument")]
     [IsoXmlTag("LclInstrm")]
-    public LocalInstrument2Choice? LocalInstrument { get; init; }
+    public LocalInstrument2Choice_? LocalInstrument { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -118,7 +118,7 @@ public record EntryTransaction16
     [IsoId("41de215b-fe2b-400c-91be-6a2c6b70e24c")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.
@@ -150,7 +150,7 @@ public record EntryTransaction16
     [IsoId("da7586b1-51e6-4fcd-9195-4b871566640d")]
     [DisplayName("Related Price")]
     [IsoXmlTag("RltdPric")]
-    public TransactionPrice4Choice? RelatedPrice { get; init; }
+    public TransactionPrice4Choice_? RelatedPrice { get; init; }
 
     /// <summary>
     /// Set of elements used to identify the related quantities, such as securities, in the underlying transaction.
@@ -158,7 +158,7 @@ public record EntryTransaction16
     [IsoId("c730fd35-0dcf-4c5d-84c7-ac0e45ba5e1b")]
     [DisplayName("Related Quantities")]
     [IsoXmlTag("RltdQties")]
-    public ValueList<TransactionQuantities4Choice> RelatedQuantities { get; init; } = [];
+    public ValueList<TransactionQuantities4Choice_> RelatedQuantities { get; init; } = [];
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.

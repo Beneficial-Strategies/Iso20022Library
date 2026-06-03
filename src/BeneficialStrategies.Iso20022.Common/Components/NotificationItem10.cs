@@ -54,7 +54,7 @@ public record NotificationItem10
     [IsoId("02ba562a-6451-415d-a5c6-9b13a1cac06c")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public Party50Choice? AccountOwner { get; init; }
+    public Party50Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner.
@@ -94,7 +94,7 @@ public record NotificationItem10
     [IsoId("a66147a5-5e62-4307-b8bd-512f902dd920")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party50Choice? Debtor { get; init; }
+    public Party50Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the debtor.
@@ -118,7 +118,7 @@ public record NotificationItem10
     [IsoId("846fceff-568a-449d-be07-1f094b0d9c6c")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.

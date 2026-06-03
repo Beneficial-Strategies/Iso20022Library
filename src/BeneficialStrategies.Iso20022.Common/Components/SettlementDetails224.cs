@@ -24,12 +24,12 @@ public record SettlementDetails224
     [IsoId("_xAFqLZaBEfC2_67yGLymgA")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
-    public required SecuritiesTransactionType45Choice SecuritiesTransactionType { get; init; }
+    public required SecuritiesTransactionType45Choice_ SecuritiesTransactionType { get; init; }
 
     [IsoId("_xAFqNZaBEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition43Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition43Choice_> SettlementTransactionCondition { get; init; } = [];
 
     [IsoId("_xAFqPZaBEfC2_67yGLymgA")]
     [DisplayName("Partial Settlement Indicator")]
@@ -39,32 +39,32 @@ public record SettlementDetails224
     [IsoId("_xAFqRZaBEfC2_67yGLymgA")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership4Choice? BeneficialOwnership { get; init; }
+    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
 
     [IsoId("_xAFqTZaBEfC2_67yGLymgA")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem6Choice? CashClearingSystem { get; init; }
+    public CashSettlementSystem6Choice_? CashClearingSystem { get; init; }
 
     [IsoId("_xAFqVZaBEfC2_67yGLymgA")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
-    public MarketClientSide6Choice? MarketClientSide { get; init; }
+    public MarketClientSide6Choice_? MarketClientSide { get; init; }
 
     [IsoId("_xAFqXZaBEfC2_67yGLymgA")]
     [DisplayName("Registration")]
     [IsoXmlTag("Regn")]
-    public Registration9Choice? Registration { get; init; }
+    public Registration9Choice_? Registration { get; init; }
 
     [IsoId("_xAFqZZaBEfC2_67yGLymgA")]
     [DisplayName("Repurchase Type")]
     [IsoXmlTag("RpTp")]
-    public RepurchaseType13Choice? RepurchaseType { get; init; }
+    public RepurchaseType13Choice_? RepurchaseType { get; init; }
 
     [IsoId("_xAFqbZaBEfC2_67yGLymgA")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice? SecuritiesRTGS { get; init; }
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     [IsoId("_xAFqdZaBEfC2_67yGLymgA")]
     [DisplayName("Stamp Duty Tax Basis")]

@@ -34,7 +34,7 @@ public record ServiceCategoryTotals7
     [IsoId("_xSxKwUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Category")]
     [IsoXmlTag("SvcCtgy")]
-    public required ServiceCategory1Choice ServiceCategory { get; init; }
+    public required ServiceCategory1Choice_ ServiceCategory { get; init; }
 
     [IsoId("_xSxKxUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Totals")]

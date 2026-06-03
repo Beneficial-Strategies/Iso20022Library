@@ -19,7 +19,7 @@ public record SwitchLegReferences3
     [IsoId("26ce5ad0-lgid-0001-0001-e3e0bec8798b")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
-    public required LegIdentification1Choice LegIdentification { get; init; }
+    public required LegIdentification1Choice_ LegIdentification { get; init; }
 
     [IsoId("26ce5ad0-lgrj-0001-0002-e3e0bec8798b")]
     [DisplayName("Leg Rejection Reason")]

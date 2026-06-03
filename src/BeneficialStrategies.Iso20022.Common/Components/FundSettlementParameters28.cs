@@ -38,7 +38,7 @@ public record FundSettlementParameters28
     [IsoId("51d7030e-1c10-4bf7-90ab-96384ebd4857")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat42Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Identification of a specific system or set of rules and/or processes to be applied at the settlement place.
@@ -54,7 +54,7 @@ public record FundSettlementParameters28
     [IsoId("3e2528d2-bb10-4509-9328-30d91b148d64")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition8Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } = [];
 
     /// <summary>
     /// Condition under which the order/trade is to be settled.
@@ -62,7 +62,7 @@ public record FundSettlementParameters28
     [IsoId("93601699-2241-47bc-b919-50d6f4329bd9")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition30Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition30Choice_> SettlementTransactionCondition { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.

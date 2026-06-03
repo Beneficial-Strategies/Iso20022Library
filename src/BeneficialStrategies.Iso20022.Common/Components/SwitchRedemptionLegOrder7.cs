@@ -29,7 +29,7 @@ public record SwitchRedemptionLegOrder7
     [IsoId("fc3f78a9-fiqc-0001-0003-df34d88caf54")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]
-    public FinancialInstrumentQuantity50Choice? FinancialInstrumentQuantityChoice { get; init; }
+    public FinancialInstrumentQuantity50Choice_? FinancialInstrumentQuantityChoice_ { get; init; }
 
     [IsoId("fc3f78a9-invs-0001-0004-df34d88caf54")]
     [DisplayName("Investment Account Details")]

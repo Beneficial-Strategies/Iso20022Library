@@ -22,7 +22,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnskgKhKEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
     [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
-    public required SettlementOrCorporateActionEvent27Choice SettlementTransactionOrCorporateActionEventType { get; init; }
+    public required SettlementOrCorporateActionEvent27Choice_ SettlementTransactionOrCorporateActionEventType { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
@@ -30,7 +30,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnskiKhKEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     /// <summary>
     /// Date related to a corporate action event.
@@ -38,7 +38,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnskjKhKEfCXwLUUylXgrQ")]
     [DisplayName("Corporate Action Related Date")]
     [IsoXmlTag("CorpActnRltdDt")]
-    public DateAndDateTime2Choice? CorporateActionRelatedDate { get; init; }
+    public DateAndDateTime2Choice_? CorporateActionRelatedDate { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -78,7 +78,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnskuqhKEfCXwLUUylXgrQ")]
     [DisplayName("Posting Quantity")]
     [IsoXmlTag("PstngQty")]
-    public required FinancialInstrumentQuantity1Choice PostingQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ PostingQuantity { get; init; }
 
     /// <summary>
     /// Account to or from which a cash entry is made.
@@ -86,7 +86,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnskwqhKEfCXwLUUylXgrQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public CashAccountIdentification5Choice? CashAccount { get; init; }
+    public CashAccountIdentification5Choice_? CashAccount { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
@@ -126,7 +126,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnsk7KhKEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Status Failing")]
     [IsoXmlTag("SttlmStsFlng")]
-    public FailingStatus15Choice? SettlementStatusFailing { get; init; }
+    public FailingStatus15Choice_? SettlementStatusFailing { get; init; }
 
     /// <summary>
     /// System event relevant to the computation of the penalty.

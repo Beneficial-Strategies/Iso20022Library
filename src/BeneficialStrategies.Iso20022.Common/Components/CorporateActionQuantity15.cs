@@ -22,7 +22,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUOxaj7EfCG_LQaXOxwew")]
     [DisplayName("Maximum Quantity")]
     [IsoXmlTag("MaxQty")]
-    public FinancialInstrumentQuantity34Choice? MaximumQuantity { get; init; }
+    public FinancialInstrumentQuantity34Choice_? MaximumQuantity { get; init; }
 
     /// <summary>
     /// Minimum number of securities that must be instructed.
@@ -30,7 +30,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUOyaj7EfCG_LQaXOxwew")]
     [DisplayName("Minimum Quantity Sought")]
     [IsoXmlTag("MinQtySght")]
-    public FinancialInstrumentQuantity34Choice? MinimumQuantitySought { get; init; }
+    public FinancialInstrumentQuantity34Choice_? MinimumQuantitySought { get; init; }
 
     /// <summary>
     /// New board lot quantity of shares.
@@ -38,7 +38,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUOzaj7EfCG_LQaXOxwew")]
     [DisplayName("New Board Lot Quantity")]
     [IsoXmlTag("NewBrdLotQty")]
-    public FinancialInstrumentQuantity35Choice? NewBoardLotQuantity { get; init; }
+    public FinancialInstrumentQuantity35Choice_? NewBoardLotQuantity { get; init; }
 
     /// <summary>
     /// New denomination quantity of shares.
@@ -46,7 +46,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO0aj7EfCG_LQaXOxwew")]
     [DisplayName("New Denomination Quantity")]
     [IsoXmlTag("NewDnmtnQty")]
-    public FinancialInstrumentQuantity35Choice? NewDenominationQuantity { get; init; }
+    public FinancialInstrumentQuantity35Choice_? NewDenominationQuantity { get; init; }
 
     /// <summary>
     /// Base denomination of securities.
@@ -54,7 +54,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO1aj7EfCG_LQaXOxwew")]
     [DisplayName("Base Denomination")]
     [IsoXmlTag("BaseDnmtn")]
-    public FinancialInstrumentQuantity35Choice? BaseDenomination { get; init; }
+    public FinancialInstrumentQuantity35Choice_? BaseDenomination { get; init; }
 
     /// <summary>
     /// Incremental denomination of securities.
@@ -62,7 +62,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO2aj7EfCG_LQaXOxwew")]
     [DisplayName("Incremental Denomination")]
     [IsoXmlTag("IncrmtlDnmtn")]
-    public FinancialInstrumentQuantity35Choice? IncrementalDenomination { get; init; }
+    public FinancialInstrumentQuantity35Choice_? IncrementalDenomination { get; init; }
 
     /// <summary>
     /// Quantity of securities called.
@@ -70,7 +70,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO3aj7EfCG_LQaXOxwew")]
     [DisplayName("Security Called Quantity")]
     [IsoXmlTag("SctyClldQty")]
-    public FinancialInstrumentQuantity35Choice? SecurityCalledQuantity { get; init; }
+    public FinancialInstrumentQuantity35Choice_? SecurityCalledQuantity { get; init; }
 
     /// <summary>
     /// New quantity of securities outstanding after the event.
@@ -78,7 +78,7 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO4aj7EfCG_LQaXOxwew")]
     [DisplayName("New Outstanding Quantity")]
     [IsoXmlTag("NewOutsdngQty")]
-    public FinancialInstrumentQuantity35Choice? NewOutstandingQuantity { get; init; }
+    public FinancialInstrumentQuantity35Choice_? NewOutstandingQuantity { get; init; }
 
     /// <summary>
     /// Total quantity of securities outstanding.
@@ -86,5 +86,5 @@ public record CorporateActionQuantity15
     [IsoId("_JDUO5aj7EfCG_LQaXOxwew")]
     [DisplayName("Total Outstanding Quantity")]
     [IsoXmlTag("TtlOutsdngQty")]
-    public FinancialInstrumentQuantity35Choice? TotalOutstandingQuantity { get; init; }
+    public FinancialInstrumentQuantity35Choice_? TotalOutstandingQuantity { get; init; }
 }

@@ -22,7 +22,7 @@ public record ParticipationMethod3
     [IsoId("_hKYBEajJEfCzuLlmLrhIvA")]
     [DisplayName("Participation Method")]
     [IsoXmlTag("PrtcptnMtd")]
-    public required ParticipationMethod3Choice ParticipationMethod { get; init; }
+    public required ParticipationMethod3Choice_ ParticipationMethod { get; init; }
 
     /// <summary>
     /// Indicates whether the email address of the party who will attend the virtual meeting must be provided in the Meeting Instruction.
@@ -38,7 +38,7 @@ public record ParticipationMethod3
     [IsoId("_hKYBE6jJEfCzuLlmLrhIvA")]
     [DisplayName("Issuer Deadline For Voting")]
     [IsoXmlTag("IssrDdlnForVtng")]
-    public required DateFormat58Choice IssuerDeadlineForVoting { get; init; }
+    public required DateFormat58Choice_ IssuerDeadlineForVoting { get; init; }
 
     /// <summary>
     /// Indicates whether the specific participation method proposed by the issuer is supported by the account servicer.
@@ -54,7 +54,7 @@ public record ParticipationMethod3
     [IsoId("_hKYBF6jJEfCzuLlmLrhIvA")]
     [DisplayName("Response Deadline For Voting")]
     [IsoXmlTag("RspnDdlnForVtng")]
-    public DateFormat58Choice? ResponseDeadlineForVoting { get; init; }
+    public DateFormat58Choice_? ResponseDeadlineForVoting { get; init; }
 
     /// <summary>
     /// Investor types that may or may not participate in the event.

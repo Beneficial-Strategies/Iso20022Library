@@ -29,7 +29,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-plac-0001-0003-cbedd3f4632d")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     [IsoId("b567fa88-ordr-0001-0004-cbedd3f4632d")]
     [DisplayName("Order Date Time")]
@@ -74,7 +74,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-cxlr-0001-0012-cbedd3f4632d")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     [IsoId("b567fa88-reqd-0001-0013-cbedd3f4632d")]
     [DisplayName("Requested Future Trade Date")]
@@ -99,7 +99,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-addl-0001-0017-cbedd3f4632d")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmount1Choice? AdditionalAmount { get; init; }
+    public AdditionalAmount1Choice_? AdditionalAmount { get; init; }
 
     [IsoId("b567fa88-best-0001-0018-cbedd3f4632d")]
     [DisplayName("Best Execution")]
@@ -146,17 +146,17 @@ public record SwitchExecution8
     [IsoId("b567fa88-cstm-0001-0026-cbedd3f4632d")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     [IsoId("b567fa88-txch-0001-0027-cbedd3f4632d")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     [IsoId("b567fa88-sgnr-0001-0028-cbedd3f4632d")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     [IsoId("b567fa88-orwd-0001-0029-cbedd3f4632d")]
     [DisplayName("Order Waiver Details")]

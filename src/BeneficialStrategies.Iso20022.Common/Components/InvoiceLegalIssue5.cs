@@ -46,5 +46,5 @@ public record InvoiceLegalIssue5
     [IsoId("_2s3LtzEyEe6g-ffJsqGiSA")]
     [DisplayName("Payment Method")]
     [IsoXmlTag("PmtMtd")]
-    public PaymentMethod3Choice? PaymentMethod { get; init; }
+    public PaymentMethod3Choice_? PaymentMethod { get; init; }
 }

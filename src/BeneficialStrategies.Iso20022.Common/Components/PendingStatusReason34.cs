@@ -22,7 +22,7 @@ public record PendingStatusReason34
     [IsoId("_RsZuY7MVEfCEXew4g5B5oA")]
     [DisplayName("Reason Code")]
     [IsoXmlTag("RsnCd")]
-    public required PendingReason81Choice ReasonCode { get; init; }
+    public required PendingReason81Choice_ ReasonCode { get; init; }
 
     /// <summary>
     /// Additional information about the pending status.

@@ -94,5 +94,5 @@ public record Transaction164
     [IsoId("7c8bd021-b82c-47a8-baae-0600de276884")]
     [DisplayName("Status And Reason")]
     [IsoXmlTag("StsAndRsn")]
-    public ValueList<Status43Choice> StatusAndReason { get; init; } = [];
+    public ValueList<Status43Choice_> StatusAndReason { get; init; } = [];
 }

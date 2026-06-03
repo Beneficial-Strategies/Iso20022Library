@@ -38,7 +38,7 @@ public record PenaltyFinancialInstrumentIdentification1
     [IsoId("_lOFVkDkWEem897H7zB2RJg")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType1Choice? ClassificationType { get; init; }
+    public ClassificationType1Choice_? ClassificationType { get; init; }
 
     /// <summary>
     /// Specifies whether the security is liquid or illiquid.

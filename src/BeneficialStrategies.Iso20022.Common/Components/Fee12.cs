@@ -22,7 +22,7 @@ public record Fee12
     [IsoId("bfdadc3a-f458-4be1-98af-cc23080f84bb")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public ChargeType10Choice? Type { get; init; }
+    public ChargeType10Choice_? Type { get; init; }
 
     /// <summary>
     /// Modified value of the standard fee (charge/commission) amount applied on the order.

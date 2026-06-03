@@ -38,5 +38,5 @@ public record OtherIdentification8
     [IsoId("fbc93622-6c51-4911-946b-13eb8b6620f9")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required IdentificationSource6Choice Type { get; init; }
+    public required IdentificationSource6Choice_ Type { get; init; }
 }

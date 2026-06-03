@@ -46,7 +46,7 @@ public record PartyIdentification341
     [IsoId("_9GWjta5vEfCUHaCK5HWOhg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public PartyIdentification198Choice? Identification { get; init; }
+    public PartyIdentification198Choice_? Identification { get; init; }
 
     /// <summary>
     /// Identification of the shareholder in the company share register.

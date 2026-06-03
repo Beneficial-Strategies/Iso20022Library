@@ -30,7 +30,7 @@ public record RedemptionBulkOrder08
     [IsoId("a667531c-46f6-4ebe-a99f-f1ec57cc9490")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     /// <summary>
     /// Date and time the order is placed by the investor or its agent.
@@ -46,7 +46,7 @@ public record RedemptionBulkOrder08
     [IsoId("31a0dcc3-2da0-49ed-9cd5-8642e606bb77")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public DateAndDateTime2Choice? ExpiryDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDateTime { get; init; }
 
     /// <summary>
     /// Future date at which the investor requests the order to be executed.
@@ -62,7 +62,7 @@ public record RedemptionBulkOrder08
     [IsoId("ca2e2c49-434e-431e-85b5-333ec215502e")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     /// <summary>
     /// Investment fund class related to the order.

@@ -38,7 +38,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWccatzEfCqjuqNaaNXgw")]
     [DisplayName("Renounceable Entitlement Status Type")]
     [IsoXmlTag("RnncblEntitlmntStsTp")]
-    public RenounceableEntitlementStatusTypeFormat3Choice? RenounceableEntitlementStatusType { get; init; }
+    public RenounceableEntitlementStatusTypeFormat3Choice_? RenounceableEntitlementStatusType { get; init; }
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding.
@@ -46,7 +46,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWceatzEfCqjuqNaaNXgw")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType25Choice? FractionDisposition { get; init; }
+    public FractionDispositionType25Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Quantity of intermediate securities awarded for a given quantity of underlying security.
@@ -70,7 +70,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWckatzEfCqjuqNaaNXgw")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public required DateFormat30Choice ExpiryDate { get; init; }
+    public required DateFormat30Choice_ ExpiryDate { get; init; }
 
     /// <summary>
     /// Date of the posting (credit or debit) to the account.
@@ -78,7 +78,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWcmatzEfCqjuqNaaNXgw")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
-    public required DateFormat30Choice PostingDate { get; init; }
+    public required DateFormat30Choice_ PostingDate { get; init; }
 
     /// <summary>
     /// Period during which intermediate or outturn securities are tradable in a secondary market.
@@ -94,7 +94,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWcqatzEfCqjuqNaaNXgw")]
     [DisplayName("Uninstructed Balance")]
     [IsoXmlTag("UinstdBal")]
-    public BalanceFormat11Choice? UninstructedBalance { get; init; }
+    public BalanceFormat11Choice_? UninstructedBalance { get; init; }
 
     /// <summary>
     /// Balance of instructed position.
@@ -102,5 +102,5 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWcsatzEfCqjuqNaaNXgw")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
-    public BalanceFormat11Choice? InstructedBalance { get; init; }
+    public BalanceFormat11Choice_? InstructedBalance { get; init; }
 }

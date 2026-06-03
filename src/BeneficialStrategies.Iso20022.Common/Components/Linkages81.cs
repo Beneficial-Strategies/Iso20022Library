@@ -22,7 +22,7 @@ public record Linkages81
     [IsoId("600415bd-9e13-48ba-a5aa-3f7871078b17")]
     [DisplayName("Processing Position")]
     [IsoXmlTag("PrcgPos")]
-    public ProcessingPosition7Choice? ProcessingPosition { get; init; }
+    public ProcessingPosition7Choice_? ProcessingPosition { get; init; }
 
     /// <summary>
     /// Message type number/message identifier of the message referenced in the linkage sequence.
@@ -30,7 +30,7 @@ public record Linkages81
     [IsoId("ea77665f-cc32-47e2-ac5b-0bdcbdb1aea2")]
     [DisplayName("Message Number")]
     [IsoXmlTag("MsgNb")]
-    public DocumentNumber5Choice? MessageNumber { get; init; }
+    public DocumentNumber5Choice_? MessageNumber { get; init; }
 
     /// <summary>
     /// Reference to the linked transaction.
@@ -38,7 +38,7 @@ public record Linkages81
     [IsoId("2446a33e-55a7-4007-aa21-8d547203430a")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required References86Choice Reference { get; init; }
+    public required References86Choice_ Reference { get; init; }
 
     /// <summary>
     /// Quantity of financial instruments of the linked transaction to be paired-off or turned.
@@ -46,7 +46,7 @@ public record Linkages81
     [IsoId("e98c264c-84aa-48c9-a714-f6baf7364a21")]
     [DisplayName("Linked Quantity")]
     [IsoXmlTag("LkdQty")]
-    public PairedOrTurnedQuantity7Choice? LinkedQuantity { get; init; }
+    public PairedOrTurnedQuantity7Choice_? LinkedQuantity { get; init; }
 
     /// <summary>
     /// Party that generates the reference.
@@ -54,5 +54,5 @@ public record Linkages81
     [IsoId("7e4bd123-9a81-4085-9b51-3e85fe50b403")]
     [DisplayName("Reference Owner")]
     [IsoXmlTag("RefOwnr")]
-    public PartyIdentification127Choice? ReferenceOwner { get; init; }
+    public PartyIdentification127Choice_? ReferenceOwner { get; init; }
 }

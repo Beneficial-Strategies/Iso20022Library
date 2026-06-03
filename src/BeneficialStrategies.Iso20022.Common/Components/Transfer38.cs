@@ -49,17 +49,17 @@ public record Transfer38
     [IsoId("d517ac33-b6d0-40aa-95be-dc795138e9ed")]
     [DisplayName("Effective Transfer Date")]
     [IsoXmlTag("FctvTrfDt")]
-    public required DateAndDateTime2Choice EffectiveTransferDate { get; init; }
+    public required DateAndDateTime2Choice_ EffectiveTransferDate { get; init; }
 
     [IsoId("aa9834e9-cb3c-4712-a00d-91583be8afd6")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
 
     [IsoId("40fadbae-0193-48b4-ad68-91de921ce621")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public DateAndDateTime2Choice? TradeDate { get; init; }
+    public DateAndDateTime2Choice_? TradeDate { get; init; }
 
     [IsoId("fd6f3b1e-58ed-4682-aeb8-49149d583d4e")]
     [DisplayName("Transfer Order Date Form")]
@@ -69,7 +69,7 @@ public record Transfer38
     [IsoId("ce59dff8-8526-46c2-8335-0eec93e046b8")]
     [DisplayName("Transfer Reason")]
     [IsoXmlTag("TrfRsn")]
-    public TransferReason1Choice? TransferReason { get; init; }
+    public TransferReason1Choice_? TransferReason { get; init; }
 
     [IsoId("dce7c29a-d110-49b8-826d-c8feb67357c7")]
     [DisplayName("Holdings Plan Type")]
@@ -84,7 +84,7 @@ public record Transfer38
     [IsoId("64874970-e38f-46b8-bb10-c6660009f9ea")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
-    public required Unit1Choice TotalUnitsNumber { get; init; }
+    public required Unit1Choice_ TotalUnitsNumber { get; init; }
 
     [IsoId("570ee1b9-d9c7-4b90-87cb-d4b84f2c433e")]
     [DisplayName("Transfer Rate")]
@@ -144,5 +144,5 @@ public record Transfer38
     [IsoId("3891364d-3b2e-4dad-a004-b56162afa146")]
     [DisplayName("Transfer Expenses Payment Type")]
     [IsoXmlTag("TrfExpnssPmtTp")]
-    public ChargePaymentMethod1Choice? TransferExpensesPaymentType { get; init; }
+    public ChargePaymentMethod1Choice_? TransferExpensesPaymentType { get; init; }
 }

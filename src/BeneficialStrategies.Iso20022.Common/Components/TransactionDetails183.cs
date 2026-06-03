@@ -34,7 +34,7 @@ public record TransactionDetails183
     [IsoId("_hCAw8ZaOEfC2_67yGLymgE")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice SettlementQuantity { get; init; }
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     [IsoId("_hCAw8ZaOEfC2_67yGLymgF")]
     [DisplayName("Safekeeping Account")]
@@ -59,12 +59,12 @@ public record TransactionDetails183
     [IsoId("_hCAw8ZaOEfC2_67yGLymgJ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate19Choice SettlementDate { get; init; }
+    public required SettlementDate19Choice_ SettlementDate { get; init; }
 
     [IsoId("_hCAw8ZaOEfC2_67yGLymgK")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_hCAw8ZaOEfC2_67yGLymgL")]
     [DisplayName("Delivering Settlement Parties")]

@@ -302,7 +302,7 @@ public record CreditTransferTransaction73
     [IsoId("d64d5a68-0036-0036-0036-12844122abcc")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Information provided for regulatory and statutory requirements.

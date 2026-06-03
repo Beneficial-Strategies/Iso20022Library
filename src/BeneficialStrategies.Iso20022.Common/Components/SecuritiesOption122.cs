@@ -29,17 +29,17 @@ public record SecuritiesOption122
     [IsoId("_ziQq6aucEfCqjuqNaaNXgw")]
     [DisplayName("Temporary Financial Instrument Indicator")]
     [IsoXmlTag("TempFinInstrmInd")]
-    public TemporaryFinancialInstrumentIndicator3Choice? TemporaryFinancialInstrumentIndicator { get; init; }
+    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; }
 
     [IsoId("_ziQq8aucEfCqjuqNaaNXgw")]
     [DisplayName("Non Eligible Proceeds Indicator")]
     [IsoXmlTag("NonElgblPrcdsInd")]
-    public NonEligibleProceedsIndicator5Choice? NonEligibleProceedsIndicator { get; init; }
+    public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     [IsoId("_ziQq-aucEfCqjuqNaaNXgw")]
     [DisplayName("Issuer Offeror Taxability Indicator")]
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator2Choice? IssuerOfferorTaxabilityIndicator { get; init; }
+    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     [IsoId("_ziQq-6ucEfCqjuqNaaNXgw")]
     [DisplayName("New Securities Issuance Indicator")]
@@ -64,12 +64,12 @@ public record SecuritiesOption122
     [IsoId("_ziQrCaucEfCqjuqNaaNXgw")]
     [DisplayName("Entitled Quantity")]
     [IsoXmlTag("EntitldQty")]
-    public Quantity51Choice? EntitledQuantity { get; init; }
+    public Quantity51Choice_? EntitledQuantity { get; init; }
 
     [IsoId("_ziQrEaucEfCqjuqNaaNXgw")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat41Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 
     [IsoId("_ziQrGaucEfCqjuqNaaNXgw")]
     [DisplayName("Country Of Income Source")]
@@ -79,7 +79,7 @@ public record SecuritiesOption122
     [IsoId("_ziQrG6ucEfCqjuqNaaNXgw")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice? FractionDisposition { get; init; }
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
 
     [IsoId("_ziQrI6ucEfCqjuqNaaNXgw")]
     [DisplayName("Currency Option")]
@@ -89,7 +89,7 @@ public record SecuritiesOption122
     [IsoId("_ziQrK6ucEfCqjuqNaaNXgw")]
     [DisplayName("Trading Period")]
     [IsoXmlTag("TradgPrd")]
-    public Period12Choice? TradingPeriod { get; init; }
+    public Period12Choice_? TradingPeriod { get; init; }
 
     [IsoId("_ziQrM6ucEfCqjuqNaaNXgw")]
     [DisplayName("Date Details")]

@@ -22,7 +22,7 @@ public record EligibleCounterpart3
     [IsoId("_wwg4wWc-EemvNLufWGIVOQ")]
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
-    public required SystemPartyIdentification2Choice IssuerIdentification { get; init; }
+    public required SystemPartyIdentification2Choice_ IssuerIdentification { get; init; }
 
     /// <summary>
     /// Unique business identifier code used to identify the central securities depository to be defined as eligible.
@@ -30,7 +30,7 @@ public record EligibleCounterpart3
     [IsoId("_wwg4w2c-EemvNLufWGIVOQ")]
     [DisplayName("Eligible Counterpart Identification")]
     [IsoXmlTag("ElgblCntrptId")]
-    public required SystemPartyIdentification2Choice EligibleCounterpartIdentification { get; init; }
+    public required SystemPartyIdentification2Choice_ EligibleCounterpartIdentification { get; init; }
 
     /// <summary>
     /// Date from when the eligible counterpart is valid.
@@ -62,5 +62,5 @@ public record EligibleCounterpart3
     [IsoId("_wwg4y2c-EemvNLufWGIVOQ")]
     [DisplayName("Eligibility Identification")]
     [IsoXmlTag("ElgbltyId")]
-    public required EligibilityIdentification3Choice EligibilityIdentification { get; init; }
+    public required EligibilityIdentification3Choice_ EligibilityIdentification { get; init; }
 }

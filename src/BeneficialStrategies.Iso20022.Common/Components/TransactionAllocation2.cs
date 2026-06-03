@@ -34,7 +34,7 @@ public record TransactionAllocation2
     [IsoId("_eP7wKbpXEfCPZvweyV2nEg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public required Purpose2Choice Purpose { get; init; }
+    public required Purpose2Choice_ Purpose { get; init; }
 
     [IsoId("_eP7wK7pXEfCPZvweyV2nEg")]
     [DisplayName("Reference")]
@@ -44,5 +44,5 @@ public record TransactionAllocation2
     [IsoId("_eP7wLbpXEfCPZvweyV2nEg")]
     [DisplayName("Related References")]
     [IsoXmlTag("RltdRefs")]
-    public ValueList<References80Choice> RelatedReferences { get; init; } = [];
+    public ValueList<References80Choice_> RelatedReferences { get; init; } = [];
 }

@@ -30,7 +30,7 @@ public record DigitalPaymentSettlement1
     [IsoId("_ghFEYJZdEfCShM_qO0U4ig")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required Quantity83Choice Quantity { get; init; }
+    public required Quantity83Choice_ Quantity { get; init; }
 
     /// <summary>
     /// Location where the payment is/will be taking place.
@@ -38,5 +38,5 @@ public record DigitalPaymentSettlement1
     [IsoId("_DndtYZZgEfCShM_qO0U4ig")]
     [DisplayName("Cash Settlement System Place")]
     [IsoXmlTag("CshSttlmSysPlc")]
-    public CashSettlementSystemPlace1Choice? CashSettlementSystemPlace { get; init; }
+    public CashSettlementSystemPlace1Choice_? CashSettlementSystemPlace { get; init; }
 }

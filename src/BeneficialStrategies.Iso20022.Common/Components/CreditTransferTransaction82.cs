@@ -86,7 +86,7 @@ public record CreditTransferTransaction82
     [IsoId("_eeABgbpXEfCPZvweyV2nEg")]
     [DisplayName("Payment Signature")]
     [IsoXmlTag("PmtSgntr")]
-    public CryptographicKey1Choice? PaymentSignature { get; init; }
+    public CryptographicKey1Choice_? PaymentSignature { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the instructing agent (previous instructing agent 1).
@@ -302,7 +302,7 @@ public record CreditTransferTransaction82
     [IsoId("_eeABt7pXEfCPZvweyV2nEg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.

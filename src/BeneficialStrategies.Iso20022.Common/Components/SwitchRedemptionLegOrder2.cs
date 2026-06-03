@@ -40,7 +40,7 @@ public record SwitchRedemptionLegOrder2
     [IsoId("_VXzwMtp-Ed-ak6NoX_4Aeg_942133115")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]
-    public FinancialInstrumentQuantity3Choice_? FinancialInstrumentQuantityChoice { get; init; }
+    public FinancialInstrumentQuantity3Choice_? FinancialInstrumentQuantityChoice_ { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

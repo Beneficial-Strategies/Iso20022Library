@@ -29,7 +29,7 @@ public record SecuritiesModification2
     [IsoId("_EmOB9eSmEe-qVZLXW4RRBw")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus71Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus71Choice_? ProcessingStatus { get; init; }
 
     [IsoId("_EmOB9-SmEe-qVZLXW4RRBw")]
     [DisplayName("Modification")]

@@ -22,7 +22,7 @@ public record AggregateBalanceInformation47
     [IsoId("_zJhth6g1EfCXwLUUylXgrQ")]
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
-    public required DateAndDateTime1Choice BalanceDate { get; init; }
+    public required DateAndDateTime1Choice_ BalanceDate { get; init; }
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
@@ -78,7 +78,7 @@ public record AggregateBalanceInformation47
     [IsoId("_zJhts6g1EfCXwLUUylXgrQ")]
     [DisplayName("Not Available Balance")]
     [IsoXmlTag("NotAvlblBal")]
-    public BalanceQuantity8Choice? NotAvailableBalance { get; init; }
+    public BalanceQuantity8Choice_? NotAvailableBalance { get; init; }
 
     /// <summary>
     /// Place where the securities are kept safe physically or notionally.

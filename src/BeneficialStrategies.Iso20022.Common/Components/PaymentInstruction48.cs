@@ -54,7 +54,7 @@ public record PaymentInstruction48
     [IsoId("5230153b-c55e-49a2-ae5e-8c13139f4d3f")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date by which the debtor must have accepted or rejected the request.
@@ -62,7 +62,7 @@ public record PaymentInstruction48
     [IsoId("7ff1e358-962d-4718-b59c-03656321f1c4")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public DateAndDateTime2Choice? ExpiryDate { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
 
     /// <summary>
     /// Conditions for the execution of the payment.

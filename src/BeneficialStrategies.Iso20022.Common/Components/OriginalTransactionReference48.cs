@@ -30,7 +30,7 @@ public record OriginalTransactionReference48
     [IsoId("_MITwM7vHEfCYYbmqNrQFSg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public AmountType4Choice? Amount { get; init; }
+    public AmountType4Choice_? Amount { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -54,7 +54,7 @@ public record OriginalTransactionReference48
     [IsoId("_MITwObvHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Credit party that signs the mandate.
@@ -94,7 +94,7 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXSbvHEfCYYbmqNrQFSg")]
     [DisplayName("Mandate Related Information")]
     [IsoXmlTag("MndtRltdInf")]
-    public MandateRelatedData4Choice? MandateRelatedInformation { get; init; }
+    public MandateRelatedData4Choice_? MandateRelatedInformation { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
@@ -110,7 +110,7 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXTbvHEfCYYbmqNrQFSg")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
-    public Party40Choice? UltimateDebtor { get; init; }
+    public Party40Choice_? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
@@ -118,7 +118,7 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXT7vHEfCYYbmqNrQFSg")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party40Choice? Debtor { get; init; }
+    public Party40Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
@@ -166,7 +166,7 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXW7vHEfCYYbmqNrQFSg")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
-    public Party40Choice? Creditor { get; init; }
+    public Party40Choice_? Creditor { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
@@ -182,7 +182,7 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXX7vHEfCYYbmqNrQFSg")]
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
-    public Party40Choice? UltimateCreditor { get; init; }
+    public Party40Choice_? UltimateCreditor { get; init; }
 
     /// <summary>
     /// Underlying reason for the payment transaction.
@@ -190,5 +190,5 @@ public record OriginalTransactionReference48
     [IsoId("_MIUXYbvHEfCYYbmqNrQFSg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 }

@@ -38,7 +38,7 @@ public record SecuritiesCancellation2
     [IsoId("_pX6BG-SmEe-qVZLXW4RRBw")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus69Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus69Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
     /// Identifies the individual transaction.

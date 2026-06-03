@@ -62,5 +62,5 @@ public record BillingSearchCriteria3
     [IsoId("_VDLwuQzWEemZov7BpFCU4Q")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentification38Choice? AccountIdentification { get; init; }
+    public AccountIdentification38Choice_? AccountIdentification { get; init; }
 }

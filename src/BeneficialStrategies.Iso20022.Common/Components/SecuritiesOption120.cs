@@ -29,12 +29,12 @@ public record SecuritiesOption120
     [IsoId("_qjWz16toEfCqjuqNaaNXgw")]
     [DisplayName("Temporary Financial Instrument Indicator")]
     [IsoXmlTag("TempFinInstrmInd")]
-    public TemporaryFinancialInstrumentIndicator3Choice? TemporaryFinancialInstrumentIndicator { get; init; }
+    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; }
 
     [IsoId("_qjWz36toEfCqjuqNaaNXgw")]
     [DisplayName("Non Eligible Proceeds Indicator")]
     [IsoXmlTag("NonElgblPrcdsInd")]
-    public NonEligibleProceedsIndicator5Choice? NonEligibleProceedsIndicator { get; init; }
+    public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     [IsoId("_qjWz56toEfCqjuqNaaNXgw")]
     [DisplayName("New Securities Issuance Indicator")]
@@ -59,12 +59,12 @@ public record SecuritiesOption120
     [IsoId("_qjXa3atoEfCqjuqNaaNXgw")]
     [DisplayName("Entitled Quantity")]
     [IsoXmlTag("EntitldQty")]
-    public Quantity51Choice? EntitledQuantity { get; init; }
+    public Quantity51Choice_? EntitledQuantity { get; init; }
 
     [IsoId("_qjXa5atoEfCqjuqNaaNXgw")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat41Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 
     [IsoId("_qjXa7atoEfCqjuqNaaNXgw")]
     [DisplayName("Country Of Income Source")]
@@ -74,7 +74,7 @@ public record SecuritiesOption120
     [IsoId("_qjXa76toEfCqjuqNaaNXgw")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice? FractionDisposition { get; init; }
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
 
     [IsoId("_qjXa96toEfCqjuqNaaNXgw")]
     [DisplayName("Currency Option")]
@@ -84,7 +84,7 @@ public record SecuritiesOption120
     [IsoId("_qjXa_6toEfCqjuqNaaNXgw")]
     [DisplayName("Trading Period")]
     [IsoXmlTag("TradgPrd")]
-    public Period12Choice? TradingPeriod { get; init; }
+    public Period12Choice_? TradingPeriod { get; init; }
 
     [IsoId("_qjXbB6toEfCqjuqNaaNXgw")]
     [DisplayName("Date Details")]

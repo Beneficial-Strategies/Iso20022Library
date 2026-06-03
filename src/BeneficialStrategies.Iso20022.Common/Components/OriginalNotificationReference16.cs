@@ -30,7 +30,7 @@ public record OriginalNotificationReference16
     [IsoId("4f6f198c-76cc-4919-967c-aa5f982bb642")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public Party50Choice? AccountOwner { get; init; }
+    public Party50Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
@@ -70,7 +70,7 @@ public record OriginalNotificationReference16
     [IsoId("b305ea63-14e6-499c-a94c-aa68892045d4")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party50Choice? Debtor { get; init; }
+    public Party50Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the debtor.

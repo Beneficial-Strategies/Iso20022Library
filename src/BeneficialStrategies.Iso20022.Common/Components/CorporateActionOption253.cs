@@ -22,7 +22,7 @@ public record CorporateActionOption253
     [IsoId("_FG5QcaLwEfCHi7w3_0pcpw")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required OptionNumber1Choice OptionNumber { get; init; }
+    public required OptionNumber1Choice_ OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -30,7 +30,7 @@ public record CorporateActionOption253
     [IsoId("_FG5QeaLwEfCHi7w3_0pcpw")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption33Choice OptionType { get; init; }
+    public required CorporateActionOption33Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Specifies the features that may apply to a corporate action option.
@@ -38,7 +38,7 @@ public record CorporateActionOption253
     [IsoId("_FG5QgaLwEfCHi7w3_0pcpw")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public ValueList<OptionFeaturesFormat29Choice> OptionFeatures { get; init; } = [];
+    public ValueList<OptionFeaturesFormat29Choice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounded.
@@ -46,7 +46,7 @@ public record CorporateActionOption253
     [IsoId("_FG5QiaLwEfCHi7w3_0pcpw")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType27Choice? FractionDisposition { get; init; }
+    public FractionDispositionType27Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Currency in which cash proceeds are to be credited or debited.

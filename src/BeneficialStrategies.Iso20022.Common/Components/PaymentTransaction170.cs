@@ -126,7 +126,7 @@ public record PaymentTransaction170
     [IsoId("c9846b8b-3359-4c44-894b-73cbd929969e")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public Party50Choice? Assigner { get; init; }
+    public Party50Choice_? Assigner { get; init; }
 
     /// <summary>
     /// Party to which the case is assigned.
@@ -134,7 +134,7 @@ public record PaymentTransaction170
     [IsoId("42451038-5276-4ef4-bd11-b210a4f67424")]
     [DisplayName("Assignee")]
     [IsoXmlTag("Assgne")]
-    public Party50Choice? Assignee { get; init; }
+    public Party50Choice_? Assignee { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

@@ -222,7 +222,7 @@ public record CreditTransferTransaction72
     [IsoId("83c0d23e-0026-0026-0026-26b345a59881")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Further instructions concerning the processing of the payment instruction.

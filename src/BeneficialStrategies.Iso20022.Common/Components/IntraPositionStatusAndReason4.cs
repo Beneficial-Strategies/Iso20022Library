@@ -22,7 +22,7 @@ public record IntraPositionStatusAndReason4
     [IsoId("_Xhm_0eSkEe-qVZLXW4RRBw")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ValueList<ProcessingStatus99Choice> ProcessingStatus { get; init; } = [];
+    public ValueList<ProcessingStatus99Choice_> ProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Provides the settlement status of a transaction.
@@ -30,7 +30,7 @@ public record IntraPositionStatusAndReason4
     [IsoId("_Xhm_0-SkEe-qVZLXW4RRBw")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public ValueList<SettlementStatus34Choice> SettlementStatus { get; init; } = [];
+    public ValueList<SettlementStatus34Choice_> SettlementStatus { get; init; } = [];
 
     /// <summary>
     /// Specifies the state or the condition.

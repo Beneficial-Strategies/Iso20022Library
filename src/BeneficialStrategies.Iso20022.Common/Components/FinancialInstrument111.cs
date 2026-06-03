@@ -30,7 +30,7 @@ public record FinancialInstrument111
     [IsoId("a2aa7468-cfca-4390-9f60-8f83a497f75d")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public required FinancialInstrument104Choice Instrument { get; init; }
+    public required FinancialInstrument104Choice_ Instrument { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the transfer.

@@ -54,5 +54,5 @@ public record InvoiceTotals7
     [IsoId("_xItPyUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public AccountIdentification4Choice? CashAccount { get; init; }
+    public AccountIdentification4Choice_? CashAccount { get; init; }
 }

@@ -22,7 +22,7 @@ public record ForwardedStatus1
     [IsoId("_p-eGhI73EfCbNJ3GwkFTcw")]
     [DisplayName("Forwarded Quantity")]
     [IsoXmlTag("FwddQty")]
-    public Quantity51Choice? ForwardedQuantity { get; init; }
+    public Quantity51Choice_? ForwardedQuantity { get; init; }
 
     /// <summary>
     /// Reason for the forwarded status.

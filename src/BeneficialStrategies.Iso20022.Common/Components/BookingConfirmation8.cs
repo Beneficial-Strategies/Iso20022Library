@@ -54,7 +54,7 @@ public record BookingConfirmation8
     [IsoId("912536fb-072c-46b9-a5eb-0f78f6b73536")]
     [DisplayName("Booking Date")]
     [IsoXmlTag("BookgDt")]
-    public DateAndDateTime2Choice? BookingDate { get; init; }
+    public DateAndDateTime2Choice_? BookingDate { get; init; }
 
     /// <summary>
     /// Date and time at which assets become available to the account owner in case of a credit entry, or cease to be available to the account owner in case of a debit entry.
@@ -62,7 +62,7 @@ public record BookingConfirmation8
     [IsoId("b4aa43cc-2ce9-4bce-a8a6-36b5fd1bf26d")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public required DateAndDateTime2Choice ValueDate { get; init; }
+    public required DateAndDateTime2Choice_ ValueDate { get; init; }
 
     /// <summary>
     /// Provides identification of the transaction or entry.

@@ -22,7 +22,7 @@ public record ReceivedByIssuerOrOfferorStatus1
     [IsoId("_R_R3lI75EfCbNJ3GwkFTcw")]
     [DisplayName("Accepted By Issuer Quantity")]
     [IsoXmlTag("AccptdByIssrQty")]
-    public Quantity51Choice? AcceptedByIssuerQuantity { get; init; }
+    public Quantity51Choice_? AcceptedByIssuerQuantity { get; init; }
 
     /// <summary>
     /// Reason for the pending status.

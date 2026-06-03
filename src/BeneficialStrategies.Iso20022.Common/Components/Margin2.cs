@@ -86,5 +86,5 @@ public record Margin2
     [IsoId("_UksRN9p-Ed-ak6NoX_4Aeg_1717019535")]
     [DisplayName("Margin Result")]
     [IsoXmlTag("MrgnRslt")]
-    public MarginResult1Choice? MarginResult { get; init; }
+    public MarginResult1Choice_? MarginResult { get; init; }
 }

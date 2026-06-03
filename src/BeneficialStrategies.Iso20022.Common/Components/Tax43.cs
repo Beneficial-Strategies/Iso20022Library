@@ -19,7 +19,7 @@ public record Tax43
     [IsoId("84a3ce1c-type-0001-0001-5b77709f3523")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TaxType4Choice Type { get; init; }
+    public required TaxType4Choice_ Type { get; init; }
 
     [IsoId("84a3ce1c-amnt-0001-0002-5b77709f3523")]
     [DisplayName("Amount")]

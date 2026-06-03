@@ -23,7 +23,7 @@ public record FinancialInstrument106
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [MinLength(1)]
-    public ValueList<SecurityIdentification46Choice> Identification { get; init; } = [];
+    public ValueList<SecurityIdentification46Choice_> Identification { get; init; } = [];
 
     /// <summary>
     /// Name of the financial instrument in free format text.

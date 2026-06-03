@@ -46,7 +46,7 @@ public record HoldBackInformation5
     [IsoId("3f1bba4d-b562-4609-9be1-689cab5a214c")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification46Choice? FinancialInstrumentIdentification { get; init; }
+    public SecurityIdentification46Choice_? FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// New name of the security.

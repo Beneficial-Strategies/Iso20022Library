@@ -22,7 +22,7 @@ public record PendingCancellationStatusReason12
     [IsoId("_ddqCZd8QEe-NrtAAlrBEgQ")]
     [DisplayName("Reason Code")]
     [IsoXmlTag("RsnCd")]
-    public required PendingCancellationReason9Choice ReasonCode { get; init; }
+    public required PendingCancellationReason9Choice_ ReasonCode { get; init; }
 
     /// <summary>
     /// Provides additional information about the processed instruction.

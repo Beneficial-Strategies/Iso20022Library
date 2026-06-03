@@ -30,7 +30,7 @@ public record DigitalPaymentSettlement3
     [IsoId("1914951e-2848-4767-a200-fc133e7c48fd")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required Quantity48Choice Quantity { get; init; }
+    public required Quantity48Choice_ Quantity { get; init; }
 
     /// <summary>
     /// Place of settlement expressed with a Digital Ledger Identifier.

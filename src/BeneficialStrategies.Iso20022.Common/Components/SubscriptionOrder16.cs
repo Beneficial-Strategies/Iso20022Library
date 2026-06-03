@@ -34,12 +34,12 @@ public record SubscriptionOrder16
     [IsoId("e56b02e4-f6ce-49da-9a7e-1823bc59c6a0")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<FundOrderType4Choice> OrderType { get; init; } = [];
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     [IsoId("e8bd13f0-f86b-4b7e-8913-0eba2f3efc82")]
     [DisplayName("Amount Or Units")]
     [IsoXmlTag("AmtOrUnits")]
-    public required FinancialInstrumentQuantity49Choice AmountOrUnits { get; init; }
+    public required FinancialInstrumentQuantity49Choice_ AmountOrUnits { get; init; }
 
     [IsoId("b6710d74-fdac-4f64-9794-8d9af8ce7ae9")]
     [DisplayName("Rounding")]
@@ -154,22 +154,22 @@ public record SubscriptionOrder16
     [IsoId("24f4b615-eea7-411f-b540-1dab117f0d7f")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public ValueList<SourceOfCash1Choice> SourceOfCash { get; init; } = [];
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     [IsoId("6986f3bb-ab4f-4eb9-91cb-37024c532513")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     [IsoId("f806f0d8-2981-41ca-b381-5a20f23c7fb7")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     [IsoId("c958b839-4f9b-4494-8e0c-7347c0f2a4ae")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     [IsoId("342ba918-eb10-4fa6-b41a-bbcaa3975bcc")]
     [DisplayName("Order Waiver Details")]

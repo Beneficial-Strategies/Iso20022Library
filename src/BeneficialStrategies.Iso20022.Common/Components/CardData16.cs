@@ -78,7 +78,7 @@ public record CardData16
     [IsoId("_UOv7Ax7iEfCkq6-p7S3J1Q")]
     [DisplayName("Track2")]
     [IsoXmlTag("Trck2")]
-    public Track2Data1Choice? Track2 { get; init; }
+    public Track2Data1Choice_? Track2 { get; init; }
 
     /// <summary>
     /// ISO track 3 issued from the magnetic stripe card or from the ICC.

@@ -22,7 +22,7 @@ public record MessageAndBusinessReference14
     [IsoId("873b73b2-6c13-4d30-b9e2-b460b24bf434")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public References68Choice? Reference { get; init; }
+    public References68Choice_? Reference { get; init; }
 
     /// <summary>
     /// Type of request required.
@@ -30,7 +30,7 @@ public record MessageAndBusinessReference14
     [IsoId("27f56b38-468a-4053-a5e5-5ff21f292ccf")]
     [DisplayName("Type Of Request")]
     [IsoXmlTag("TpOfReq")]
-    public TypeOfRequest1Choice? TypeOfRequest { get; init; }
+    public TypeOfRequest1Choice_? TypeOfRequest { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party.
@@ -70,7 +70,7 @@ public record MessageAndBusinessReference14
     [IsoId("cdc47833-320e-458f-9a9a-d584e46dffa7")]
     [DisplayName("Instrument")]
     [IsoXmlTag("Instrm")]
-    public FinancialInstrument101Choice? Instrument { get; init; }
+    public FinancialInstrument101Choice_? Instrument { get; init; }
 
     /// <summary>
     /// Investment account information of the transfer for which the status or information is requested.

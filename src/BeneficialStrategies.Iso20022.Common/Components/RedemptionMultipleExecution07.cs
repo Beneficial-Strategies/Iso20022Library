@@ -38,7 +38,7 @@ public record RedemptionMultipleExecution07
     [IsoId("6ba2fb30-736b-4b4b-bab7-d39744ec61d1")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     /// <summary>
     /// Date and time at which the order was placed by the investor or its agent.
@@ -70,7 +70,7 @@ public record RedemptionMultipleExecution07
     [IsoId("3e7cc95e-6a8b-4e31-9dba-740fc28a5aef")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order execution.

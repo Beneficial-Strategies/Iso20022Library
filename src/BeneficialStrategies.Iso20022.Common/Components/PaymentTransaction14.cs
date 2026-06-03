@@ -39,5 +39,5 @@ public record PaymentTransaction14
     [IsoId("_VY2SA9p-Ed-ak6NoX_4Aeg_1640076311")]
     [DisplayName("Cash In Or Out Choice")]
     [IsoXmlTag("CshInOrOutChc")]
-    public CashInOrOut3Choice_? CashInOrOutChoice { get; init; }
+    public CashInOrOut3Choice_? CashInOrOutChoice_ { get; init; }
 }

@@ -110,7 +110,7 @@ public record IntraPositionPending12
     [IsoId("_jcirn-SlEe-qVZLXW4RRBw")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity1Choice SettlementQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are intended to be moved.
@@ -118,7 +118,7 @@ public record IntraPositionPending12
     [IsoId("_jciroeSlEe-qVZLXW4RRBw")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public required DateAndDateTime2Choice IntendedSettlementDate { get; init; }
+    public required DateAndDateTime2Choice_ IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the status was assigned.
@@ -158,7 +158,7 @@ public record IntraPositionPending12
     [IsoId("_jcjSa-SlEe-qVZLXW4RRBw")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     /// <summary>
     /// Specifies the type of corporate event.
@@ -166,7 +166,7 @@ public record IntraPositionPending12
     [IsoId("_jcjSc-SlEe-qVZLXW4RRBw")]
     [DisplayName("Corporate Action Event Type")]
     [IsoXmlTag("CorpActnEvtTp")]
-    public CorporateActionEventType56Choice? CorporateActionEventType { get; init; }
+    public CorporateActionEventType56Choice_? CorporateActionEventType { get; init; }
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

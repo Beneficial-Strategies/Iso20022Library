@@ -38,5 +38,5 @@ public record AgentNotificationCancellationIdentificationAndStatus2
     [IsoId("0e7dd7a2-d588-49b7-9606-aa52b6ffad8a")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required NotificationCancellationRequestStatus2Choice Status { get; init; }
+    public required NotificationCancellationRequestStatus2Choice_ Status { get; init; }
 }

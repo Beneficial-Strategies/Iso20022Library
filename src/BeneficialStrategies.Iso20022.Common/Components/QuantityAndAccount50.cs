@@ -32,7 +32,7 @@ public record QuantityAndAccount50
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoRestrictedFINXMax210Text? DenominationChoice { get; init; }
+    public IsoRestrictedFINXMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Account to or from which a cash entry is made.

@@ -22,7 +22,7 @@ public record FinancialInstrumentIdentification11
     [IsoId("818fb830-c63e-4244-94e8-15e05f0b9569")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required SecurityIdentification46Choice Identification { get; init; }
+    public required SecurityIdentification46Choice_ Identification { get; init; }
 
     /// <summary>
     /// Name of the financial instrument in free format text.
@@ -46,5 +46,5 @@ public record FinancialInstrumentIdentification11
     [IsoId("23f45476-1a17-4e6f-b010-edef36452557")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType32Choice? ClassificationType { get; init; }
+    public ClassificationType32Choice_? ClassificationType { get; init; }
 }

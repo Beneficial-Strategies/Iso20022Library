@@ -46,5 +46,5 @@ public record DetailedInstructionStatus23
     [IsoId("_D98FqajVEfCzuLlmLrhIvA")]
     [DisplayName("Instruction Status")]
     [IsoXmlTag("InstrSts")]
-    public required InstructionStatus14Choice InstructionStatus { get; init; }
+    public required InstructionStatus14Choice_ InstructionStatus { get; init; }
 }

@@ -126,7 +126,7 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Proxy Choice")]
     [IsoXmlTag("PrxyChc")]
-    public Proxy5Choice_? ProxyChoice { get; init; }
+    public Proxy5Choice_? ProxyChoice_ { get; init; }
 
     /// <summary>
     /// Registration Securities Deadline.

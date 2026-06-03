@@ -19,7 +19,7 @@ public record Unit15
     [IsoId("361f143c-8b16-4773-8b22-ffc1a2824c84")]
     [DisplayName("Units")]
     [IsoXmlTag("Units")]
-    public required Unit1Choice Units { get; init; }
+    public required Unit1Choice_ Units { get; init; }
 
     [IsoId("f203d74c-333f-479a-981d-32bf141e3454")]
     [DisplayName("Order Date")]

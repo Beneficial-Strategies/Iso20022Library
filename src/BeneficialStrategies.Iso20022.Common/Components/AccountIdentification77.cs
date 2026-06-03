@@ -38,7 +38,7 @@ public record AccountIdentification77
     [IsoId("_HUkA868wEfCx2aBifPEdRg")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification127Choice? AccountOwner { get; init; }
+    public PartyIdentification127Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Location where the financial instruments are/will be safekept.
@@ -46,7 +46,7 @@ public record AccountIdentification77
     [IsoId("_HUkA-68wEfCx2aBifPEdRg")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat42Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Detailed account holdings information report for a corporate action event.

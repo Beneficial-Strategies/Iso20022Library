@@ -22,7 +22,7 @@ public record Quantity54
     [IsoId("0adb884d-1b70-4a08-b774-8d8563810ba8")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public Unit1Choice? Unit { get; init; }
+    public Unit1Choice_? Unit { get; init; }
 
     /// <summary>
     /// Percentage rate of assets transferred.

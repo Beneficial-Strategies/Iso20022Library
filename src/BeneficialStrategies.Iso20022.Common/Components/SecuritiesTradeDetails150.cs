@@ -44,17 +44,17 @@ public record SecuritiesTradeDetails150
     [IsoId("efc857c6-d51c-4c70-8859-1a9e4fdf3c5f")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("c2ebe749-1060-495d-bb53-639244830091")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SettlementDate17Choice? SettlementDate { get; init; }
+    public SettlementDate17Choice_? SettlementDate { get; init; }
 
     [IsoId("28a023eb-c027-4ac0-98f5-8b5e26981076")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public required SettlementDate18Choice EffectiveSettlementDate { get; init; }
+    public required SettlementDate18Choice_ EffectiveSettlementDate { get; init; }
 
     [IsoId("8e67a56c-dbcf-4556-baba-9917d84cc4f1")]
     [DisplayName("Deal Price")]
@@ -69,32 +69,32 @@ public record SecuritiesTradeDetails150
     [IsoId("d18cd633-3307-41ea-9838-37d43da1803f")]
     [DisplayName("Opening Closing")]
     [IsoXmlTag("OpngClsg")]
-    public OpeningClosing3Choice? OpeningClosing { get; init; }
+    public OpeningClosing3Choice_? OpeningClosing { get; init; }
 
     [IsoId("73c832c0-6680-4c72-b413-902562ecc427")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public ValueList<Reporting6Choice> Reporting { get; init; } = [];
+    public ValueList<Reporting6Choice_> Reporting { get; init; } = [];
 
     [IsoId("2edef64e-7da5-422b-b41f-9bbf83974d9f")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition5Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition5Choice_> TradeTransactionCondition { get; init; } = [];
 
     [IsoId("e941b987-d39d-4dfa-8d25-acd960d2ffb4")]
     [DisplayName("Investor Capacity")]
     [IsoXmlTag("InvstrCpcty")]
-    public InvestorCapacity4Choice? InvestorCapacity { get; init; }
+    public InvestorCapacity4Choice_? InvestorCapacity { get; init; }
 
     [IsoId("3c67df80-95ae-4991-84e8-c7a2cdb85f17")]
     [DisplayName("Trade Originator Role")]
     [IsoXmlTag("TradOrgtrRole")]
-    public TradeOriginator3Choice? TradeOriginatorRole { get; init; }
+    public TradeOriginator3Choice_? TradeOriginatorRole { get; init; }
 
     [IsoId("4ac6a414-8b76-46a3-9931-a9371e8a0453")]
     [DisplayName("Type Of Price")]
     [IsoXmlTag("TpOfPric")]
-    public TypeOfPrice29Choice? TypeOfPrice { get; init; }
+    public TypeOfPrice29Choice_? TypeOfPrice { get; init; }
 
     [IsoId("ef68e74f-7120-4293-b317-a87e1bbb4872")]
     [DisplayName("FX Additional Details")]

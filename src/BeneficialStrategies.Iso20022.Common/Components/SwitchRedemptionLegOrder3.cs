@@ -40,7 +40,7 @@ public record SwitchRedemptionLegOrder3
     [IsoId("_SK6WY9p-Ed-ak6NoX_4Aeg_-1708948894")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]
-    public FinancialInstrumentQuantity5Choice_? FinancialInstrumentQuantityChoice { get; init; }
+    public FinancialInstrumentQuantity5Choice_? FinancialInstrumentQuantityChoice_ { get; init; }
 
     /// <summary>
     /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.

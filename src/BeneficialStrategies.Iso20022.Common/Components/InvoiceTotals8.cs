@@ -22,7 +22,7 @@ public record InvoiceTotals8
     [IsoId("_xSwjoUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required AccountIdentification38Choice AccountIdentification { get; init; }
+    public required AccountIdentification38Choice_ AccountIdentification { get; init; }
 
     /// <summary>
     /// Specifies totals related to the invoice.

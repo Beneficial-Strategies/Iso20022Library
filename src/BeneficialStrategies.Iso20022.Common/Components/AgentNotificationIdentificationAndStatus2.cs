@@ -38,5 +38,5 @@ public record AgentNotificationIdentificationAndStatus2
     [IsoId("_VbdxI6UfEfCnE_wCEfCqTA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required NotificationAdviceStatus4Choice Status { get; init; }
+    public required NotificationAdviceStatus4Choice_ Status { get; init; }
 }

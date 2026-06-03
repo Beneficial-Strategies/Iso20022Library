@@ -30,7 +30,7 @@ public record OrderStatusAndReason11
     [IsoId("d7834134-e7b8-4142-9225-616d1a15d35a")]
     [DisplayName("Order Status")]
     [IsoXmlTag("OrdrSts")]
-    public required OrderStatus8Choice OrderStatus { get; init; }
+    public required OrderStatus8Choice_ OrderStatus { get; init; }
 
     /// <summary>
     /// Party that initiates the status of the order.

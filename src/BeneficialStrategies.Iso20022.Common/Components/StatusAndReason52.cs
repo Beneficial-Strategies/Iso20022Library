@@ -19,22 +19,22 @@ public record StatusAndReason52
     [IsoId("_9BRvhQNrEfG_3cM8uyJ20w")]
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
-    public MatchingStatus24Choice? InferredMatchingStatus { get; init; }
+    public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
 
     [IsoId("_9BRvjQNrEfG_3cM8uyJ20w")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
-    public MatchingStatus24Choice? MatchingStatus { get; init; }
+    public MatchingStatus24Choice_? MatchingStatus { get; init; }
 
     [IsoId("_9BRvlQNrEfG_3cM8uyJ20w")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public SettlementStatus32Choice? SettlementStatus { get; init; }
+    public SettlementStatus32Choice_? SettlementStatus { get; init; }
 
     [IsoId("_9BRvnQNrEfG_3cM8uyJ20w")]
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
-    public InstructionProcessingStatus63Choice? InstructionProcessingStatus { get; init; }
+    public InstructionProcessingStatus63Choice_? InstructionProcessingStatus { get; init; }
 
     [IsoId("_9BSWlQNrEfG_3cM8uyJ20w")]
     [DisplayName("Settled")]

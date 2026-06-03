@@ -22,7 +22,7 @@ public record PenaltyStatusReason2
     [IsoId("_vEVX0R-DEeuwwezkzufkMw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public required PenaltyStatusReason2Choice Reason { get; init; }
+    public required PenaltyStatusReason2Choice_ Reason { get; init; }
 
     /// <summary>
     /// Further details on the penalty status reason.

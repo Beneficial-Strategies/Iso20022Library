@@ -24,12 +24,12 @@ public record SettlementDetails227
     [IsoId("_Qsr3cZaFEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition45Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition45Choice_> SettlementTransactionCondition { get; init; } = [];
 
     [IsoId("_Qsr3eZaFEfC2_67yGLymgA")]
     [DisplayName("Settling Capacity")]
     [IsoXmlTag("SttlgCpcty")]
-    public SettlingCapacity7Choice? SettlingCapacity { get; init; }
+    public SettlingCapacity7Choice_? SettlingCapacity { get; init; }
 
     [IsoId("_Qsr3gZaFEfC2_67yGLymgA")]
     [DisplayName("Stamp Duty Tax Basis")]
@@ -39,52 +39,52 @@ public record SettlementDetails227
     [IsoId("_Qsr3iZaFEfC2_67yGLymgA")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice? SecuritiesRTGS { get; init; }
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     [IsoId("_Qsr3kZaFEfC2_67yGLymgA")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership4Choice? BeneficialOwnership { get; init; }
+    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
 
     [IsoId("_Qsr3mZaFEfC2_67yGLymgA")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem6Choice? CashClearingSystem { get; init; }
+    public CashSettlementSystem6Choice_? CashClearingSystem { get; init; }
 
     [IsoId("_QssecZaFEfC2_67yGLymgA")]
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
-    public TaxCapacityParty4Choice? TaxCapacity { get; init; }
+    public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
 
     [IsoId("_QsseeZaFEfC2_67yGLymgA")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
-    public MarketClientSide6Choice? MarketClientSide { get; init; }
+    public MarketClientSide6Choice_? MarketClientSide { get; init; }
 
     [IsoId("_QssegZaFEfC2_67yGLymgA")]
     [DisplayName("Block Trade")]
     [IsoXmlTag("BlckTrad")]
-    public BlockTrade4Choice? BlockTrade { get; init; }
+    public BlockTrade4Choice_? BlockTrade { get; init; }
 
     [IsoId("_QsseiZaFEfC2_67yGLymgA")]
     [DisplayName("Legal Restrictions")]
     [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice? LegalRestrictions { get; init; }
+    public Restriction5Choice_? LegalRestrictions { get; init; }
 
     [IsoId("_QssekZaFEfC2_67yGLymgA")]
     [DisplayName("Settlement System Method")]
     [IsoXmlTag("SttlmSysMtd")]
-    public SettlementSystemMethod4Choice? SettlementSystemMethod { get; init; }
+    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
     [IsoId("_QssemZaFEfC2_67yGLymgA")]
     [DisplayName("Netting Eligibility")]
     [IsoXmlTag("NetgElgblty")]
-    public NettingEligibility4Choice? NettingEligibility { get; init; }
+    public NettingEligibility4Choice_? NettingEligibility { get; init; }
 
     [IsoId("_QsseoZaFEfC2_67yGLymgA")]
     [DisplayName("CCP Eligibility")]
     [IsoXmlTag("CCPElgblty")]
-    public CentralCounterPartyEligibility4Choice? CCPEligibility { get; init; }
+    public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
 
     [IsoId("_QsseqZaFEfC2_67yGLymgA")]
     [DisplayName("Partial Settlement Indicator")]

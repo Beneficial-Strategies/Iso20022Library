@@ -30,7 +30,7 @@ public record CorporateAction92
     [IsoId("_1t3aM6ReEfC9EJoPPbbyNQ")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat14Choice? EventStage { get; init; }
+    public CorporateActionEventStageFormat14Choice_? EventStage { get; init; }
 
     /// <summary>
     /// Indicates that the additional business process relates to a claim on the associated corporate action event.
@@ -38,7 +38,7 @@ public record CorporateAction92
     [IsoId("_1t3aNaReEfC9EJoPPbbyNQ")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public ValueList<AdditionalBusinessProcessFormat23Choice> AdditionalBusinessProcessIndicator { get; init; } = [];
+    public ValueList<AdditionalBusinessProcessFormat23Choice_> AdditionalBusinessProcessIndicator { get; init; } = [];
 
     /// <summary>
     /// Specifies the event type of the following event.
@@ -46,7 +46,7 @@ public record CorporateAction92
     [IsoId("_1t3aPaReEfC9EJoPPbbyNQ")]
     [DisplayName("Following Event Type Indicator")]
     [IsoXmlTag("FllwngEvtTpInd")]
-    public IntermediateSecuritiesDistributionTypeFormat19Choice? FollowingEventTypeIndicator { get; init; }
+    public IntermediateSecuritiesDistributionTypeFormat19Choice_? FollowingEventTypeIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of lottery announced.
@@ -54,5 +54,5 @@ public record CorporateAction92
     [IsoId("_1t3aP6ReEfC9EJoPPbbyNQ")]
     [DisplayName("Lottery Type")]
     [IsoXmlTag("LtryTp")]
-    public LotteryTypeFormat4Choice? LotteryType { get; init; }
+    public LotteryTypeFormat4Choice_? LotteryType { get; init; }
 }

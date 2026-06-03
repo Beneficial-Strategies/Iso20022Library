@@ -70,7 +70,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("f01cb2db-743d-4044-b6fb-cbff6e1dd959")]
     [DisplayName("Order Status")]
     [IsoXmlTag("OrdrSts")]
-    public required OrderStatus6Choice OrderStatus { get; init; }
+    public required OrderStatus6Choice_ OrderStatus { get; init; }
 
     /// <summary>
     /// Elements from the original individual order that have been repaired so that the order can be accepted.

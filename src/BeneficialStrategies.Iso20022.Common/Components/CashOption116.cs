@@ -38,7 +38,7 @@ public record CashOption116
     [IsoId("_Zcyl16LgEfCHi7w3_0pcpw")]
     [DisplayName("Non Eligible Proceeds Indicator")]
     [IsoXmlTag("NonElgblPrcdsInd")]
-    public NonEligibleProceedsIndicator5Choice? NonEligibleProceedsIndicator { get; init; }
+    public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     /// <summary>
     /// Proceeds are taxable according to the information provided by the issuer / offeror.
@@ -46,7 +46,7 @@ public record CashOption116
     [IsoId("_Zcyl36LgEfCHi7w3_0pcpw")]
     [DisplayName("Issuer Offeror Taxability Indicator")]
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator2Choice? IssuerOfferorTaxabilityIndicator { get; init; }
+    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of income.
@@ -78,7 +78,7 @@ public record CashOption116
     [IsoId("_Zcyl7aLgEfCHi7w3_0pcpw")]
     [DisplayName("Price Calculation Method")]
     [IsoXmlTag("PricClctnMtd")]
-    public PriceCalculationMethod2Choice? PriceCalculationMethod { get; init; }
+    public PriceCalculationMethod2Choice_? PriceCalculationMethod { get; init; }
 
     /// <summary>
     /// Indicates the country from which the income originates.
@@ -94,7 +94,7 @@ public record CashOption116
     [IsoId("_Zcyl8aLgEfCHi7w3_0pcpw")]
     [DisplayName("Cash Account Identification")]
     [IsoXmlTag("CshAcctId")]
-    public CashAccountIdentification9Choice? CashAccountIdentification { get; init; }
+    public CashAccountIdentification9Choice_? CashAccountIdentification { get; init; }
 
     /// <summary>
     /// Provides information about the amounts related to a cash movement.

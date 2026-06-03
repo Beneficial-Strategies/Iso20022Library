@@ -62,7 +62,7 @@ public record InvestigationRequest50
     [IsoId("a32ce0e0-6047-4dd2-8035-1e44b92d58de")]
     [DisplayName("Investigation Type")]
     [IsoXmlTag("InvstgtnTp")]
-    public required InvestigationType1Choice InvestigationType { get; init; }
+    public required InvestigationType1Choice_ InvestigationType { get; init; }
 
     /// <summary>
     /// Sub type of an investigation.
@@ -70,7 +70,7 @@ public record InvestigationRequest50
     [IsoId("293d2ff4-d3c6-4ec3-a362-08d008ab6ce6")]
     [DisplayName("Investigation Sub Type")]
     [IsoXmlTag("InvstgtnSubTp")]
-    public InvestigationSubType1Choice? InvestigationSubType { get; init; }
+    public InvestigationSubType1Choice_? InvestigationSubType { get; init; }
 
     /// <summary>
     /// Specifies the instrument or product to which the investigation refers.
@@ -78,7 +78,7 @@ public record InvestigationRequest50
     [IsoId("80930f31-42dd-4e52-ac6c-8c95f6dfd41b")]
     [DisplayName("Underlying Instrument")]
     [IsoXmlTag("UndrlygInstrm")]
-    public UnderlyingInvestigationInstrument1Choice? UnderlyingInstrument { get; init; }
+    public UnderlyingInvestigationInstrument1Choice_? UnderlyingInstrument { get; init; }
 
     /// <summary>
     /// Provides details on the subject to which the investigation refers, for example a payment or statement entry.
@@ -86,7 +86,7 @@ public record InvestigationRequest50
     [IsoId("31e8dec9-3655-4869-a47d-58722f1fc00a")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public UnderlyingData13Choice? Underlying { get; init; }
+    public UnderlyingData13Choice_? Underlying { get; init; }
 
     /// <summary>
     /// Identification of the agent or party requesting a new investigation is opened or status update for an existing investigation.
@@ -94,7 +94,7 @@ public record InvestigationRequest50
     [IsoId("dfa41900-70c7-42af-acd4-43a6b8322f31")]
     [DisplayName("Requestor")]
     [IsoXmlTag("Rqstr")]
-    public required Party40Choice Requestor { get; init; }
+    public required Party40Choice_ Requestor { get; init; }
 
     /// <summary>
     /// Identification of the agent or party expected to open a new investigation or provide a status update for an existing investigation.
@@ -102,7 +102,7 @@ public record InvestigationRequest50
     [IsoId("9185cdfd-f816-4fc6-8edc-36e43f144072")]
     [DisplayName("Responder")]
     [IsoXmlTag("Rspndr")]
-    public required Party40Choice Responder { get; init; }
+    public required Party40Choice_ Responder { get; init; }
 
     /// <summary>
     /// Identification of the agent or party who has originated the request.
@@ -110,7 +110,7 @@ public record InvestigationRequest50
     [IsoId("14772b7c-0c5c-47a5-82c1-a35783d0f431")]
     [DisplayName("Request Originator")]
     [IsoXmlTag("ReqOrgtr")]
-    public Party40Choice? RequestOriginator { get; init; }
+    public Party40Choice_? RequestOriginator { get; init; }
 
     /// <summary>
     /// Identification of the agent or party who the requestor of the investigation expects the responder to contact in relation to the investigation request.
@@ -118,7 +118,7 @@ public record InvestigationRequest50
     [IsoId("be09f0b2-bce8-43fb-af1d-f825e1e88ef6")]
     [DisplayName("Expected Responder")]
     [IsoXmlTag("XpctdRspndr")]
-    public Party40Choice? ExpectedResponder { get; init; }
+    public Party40Choice_? ExpectedResponder { get; init; }
 
     /// <summary>
     /// Specifies a pre-agreed service or level of service between the requestor and responder.
@@ -126,5 +126,5 @@ public record InvestigationRequest50
     [IsoId("a3bb4cf5-4a5c-4f12-9410-f71ff554045a")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
-    public ValueList<InvestigationServiceLevel1Choice> ServiceLevel { get; init; } = [];
+    public ValueList<InvestigationServiceLevel1Choice_> ServiceLevel { get; init; } = [];
 }

@@ -19,20 +19,20 @@ public record StatusAndReason50
     [IsoId("b3db753e-c8c5-4b77-805d-c58027430885")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus104Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus104Choice_? ProcessingStatus { get; init; }
 
     [IsoId("d3a15f13-237c-4a63-bfc3-f20b1d6de99c")]
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
-    public MatchingStatus24Choice? InferredMatchingStatus { get; init; }
+    public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
 
     [IsoId("5379570e-ab0d-48c9-9de1-ca80a755df94")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
-    public MatchingStatus24Choice? MatchingStatus { get; init; }
+    public MatchingStatus24Choice_? MatchingStatus { get; init; }
 
     [IsoId("0abb2dd5-4608-4400-9ce3-89f8889fd048")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public SettlementStatus32Choice? SettlementStatus { get; init; }
+    public SettlementStatus32Choice_? SettlementStatus { get; init; }
 }

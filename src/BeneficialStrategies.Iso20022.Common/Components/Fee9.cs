@@ -22,7 +22,7 @@ public record Fee9
     [IsoId("bc041f91-69dc-4e85-93f4-c49628c9dcf4")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ChargeType10Choice Type { get; init; }
+    public required ChargeType10Choice_ Type { get; init; }
 
     /// <summary>
     /// Method used to calculate the fee (charge/commission).
@@ -30,7 +30,7 @@ public record Fee9
     [IsoId("603ff013-14e0-4592-adf7-6a1eaa0e4d36")]
     [DisplayName("Basis")]
     [IsoXmlTag("Bsis")]
-    public ChargeBasis2Choice? Basis { get; init; }
+    public ChargeBasis2Choice_? Basis { get; init; }
 
     /// <summary>
     /// Standard fee (charge/commission) amount as specified in the fund prospectus or agreed for the account.

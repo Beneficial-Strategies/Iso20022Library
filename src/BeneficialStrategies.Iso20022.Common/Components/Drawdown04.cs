@@ -30,7 +30,7 @@ public record Drawdown04
     [IsoId("8f3046d4-16bf-4bf9-a186-6fcca0b86750")]
     [DisplayName("Tranche Type")]
     [IsoXmlTag("TrchTp")]
-    public required DrawdownType2Choice TrancheType { get; init; }
+    public required DrawdownType2Choice_ TrancheType { get; init; }
 
     /// <summary>
     /// Specifies the rules that are applicable to the drawdown.
@@ -38,7 +38,7 @@ public record Drawdown04
     [IsoId("4eb54b10-8e95-4903-9bfb-eb60b355dc3c")]
     [DisplayName("Applicable Rules")]
     [IsoXmlTag("AplblRules")]
-    public ApplicableRules1Choice? ApplicableRules { get; init; }
+    public ApplicableRules1Choice_? ApplicableRules { get; init; }
 
     /// <summary>
     /// Identification of the investor as assigned by a tax authority.

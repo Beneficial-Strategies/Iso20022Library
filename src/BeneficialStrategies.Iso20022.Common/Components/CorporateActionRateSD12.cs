@@ -30,7 +30,7 @@ public record CorporateActionRateSD12
     [IsoId("_mX1VOLskEfCWCehgFzyN4w")]
     [DisplayName("Declared Security Rate")]
     [IsoXmlTag("DclrdSctyRate")]
-    public CorporateActionRateSD8Choice? DeclaredSecurityRate { get; init; }
+    public CorporateActionRateSD8Choice_? DeclaredSecurityRate { get; init; }
 
     /// <summary>
     /// Indicates whether the rate is estimated.
@@ -46,5 +46,5 @@ public record CorporateActionRateSD12
     [IsoId("_mX1VQLskEfCWCehgFzyN4w")]
     [DisplayName("Declared Fee Rate")]
     [IsoXmlTag("DclrdFeeRate")]
-    public PriceFormatSD3Choice? DeclaredFeeRate { get; init; }
+    public PriceFormatSD3Choice_? DeclaredFeeRate { get; init; }
 }

@@ -134,7 +134,7 @@ public record CorporateAction88
     [IsoId("15b2e88d-8c3d-431f-86c6-eff329f3ff0d")]
     [DisplayName("Dividend Type")]
     [IsoXmlTag("DvddTp")]
-    public DividendTypeFormat9Choice? DividendType { get; init; }
+    public DividendTypeFormat9Choice_? DividendType { get; init; }
 
     /// <summary>
     /// Specifies the conditions in which the instructions and/or payment of the proceeds occurs.
@@ -142,7 +142,7 @@ public record CorporateAction88
     [IsoId("c19c21eb-074c-4faf-aa12-719d62f1710f")]
     [DisplayName("Occurrence Type")]
     [IsoXmlTag("OcrncTp")]
-    public DistributionTypeFormat7Choice? OccurrenceType { get; init; }
+    public DistributionTypeFormat7Choice_? OccurrenceType { get; init; }
 
     /// <summary>
     /// Specifies the conditions that apply to the offer.
@@ -150,7 +150,7 @@ public record CorporateAction88
     [IsoId("2777773b-21a1-4a42-bf4c-4cbe96497f0b")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public ValueList<OfferTypeFormat18Choice> OfferType { get; init; } = [];
+    public ValueList<OfferTypeFormat18Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -158,7 +158,7 @@ public record CorporateAction88
     [IsoId("17aa637b-a0c1-4fc2-8da6-482780c159a7")]
     [DisplayName("Renounceable Entitlement Status Type")]
     [IsoXmlTag("RnncblEntitlmntStsTp")]
-    public RenounceableEntitlementStatusTypeFormat3Choice? RenounceableEntitlementStatusType { get; init; }
+    public RenounceableEntitlementStatusTypeFormat3Choice_? RenounceableEntitlementStatusType { get; init; }
 
     /// <summary>
     /// Stage in the corporate action event life cycle.
@@ -166,7 +166,7 @@ public record CorporateAction88
     [IsoId("b4f7b24c-4c3c-4693-a11b-f92bc85f70b0")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public ValueList<CorporateActionEventStageFormat13Choice> EventStage { get; init; } = [];
+    public ValueList<CorporateActionEventStageFormat13Choice_> EventStage { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of the additional business process linked to the corporate action event.
@@ -174,7 +174,7 @@ public record CorporateAction88
     [IsoId("34fbf6b0-f588-42b6-9418-f86600cb7488")]
     [DisplayName("Additional Business Process Indicator")]
     [IsoXmlTag("AddtlBizPrcInd")]
-    public ValueList<AdditionalBusinessProcessFormat25Choice> AdditionalBusinessProcessIndicator { get; init; } = [];
+    public ValueList<AdditionalBusinessProcessFormat25Choice_> AdditionalBusinessProcessIndicator { get; init; } = [];
 
     /// <summary>
     /// Specifies the type of change announced.
@@ -182,7 +182,7 @@ public record CorporateAction88
     [IsoId("461bbda8-13f2-497e-881d-ad4f0c71e00a")]
     [DisplayName("Change Type")]
     [IsoXmlTag("ChngTp")]
-    public ValueList<CorporateActionChangeTypeFormat5Choice> ChangeType { get; init; } = [];
+    public ValueList<CorporateActionChangeTypeFormat5Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
     /// Specifies the event type of the following event.
@@ -190,7 +190,7 @@ public record CorporateAction88
     [IsoId("43d24008-82ad-483c-9e31-2bcd0cd82842")]
     [DisplayName("Following Event Type Indicator")]
     [IsoXmlTag("FllwngEvtTpInd")]
-    public IntermediateSecuritiesDistributionTypeFormat19Choice? FollowingEventTypeIndicator { get; init; }
+    public IntermediateSecuritiesDistributionTypeFormat19Choice_? FollowingEventTypeIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the capital gain is in the scope of the EU Savings directive.
@@ -198,7 +198,7 @@ public record CorporateAction88
     [IsoId("1c098bb3-7ede-458b-ab62-82665484b3d1")]
     [DisplayName("Capital Gain In Out Indicator")]
     [IsoXmlTag("CptlGnInOutInd")]
-    public CapitalGainFormat3Choice? CapitalGainInOutIndicator { get; init; }
+    public CapitalGainFormat3Choice_? CapitalGainInOutIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the financial instrument calculates the taxable income per dividend/taxable income per share.
@@ -206,7 +206,7 @@ public record CorporateAction88
     [IsoId("4d1a33cb-3706-4ae5-a071-67188c42aa2e")]
     [DisplayName("Taxable Income Per Share Calculated")]
     [IsoXmlTag("TaxblIncmPerShrClctd")]
-    public TaxableIncomePerShareCalculatedFormat3Choice? TaxableIncomePerShareCalculated { get; init; }
+    public TaxableIncomePerShareCalculatedFormat3Choice_? TaxableIncomePerShareCalculated { get; init; }
 
     /// <summary>
     /// Specifies the details of a lottery.
@@ -222,7 +222,7 @@ public record CorporateAction88
     [IsoId("61c75ae1-fc41-431d-8d26-1ab14c293d7b")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public CertificationTypeFormat3Choice? CertificationType { get; init; }
+    public CertificationTypeFormat3Choice_? CertificationType { get; init; }
 
     /// <summary>
     /// Specifies the type of consent announced.
@@ -230,7 +230,7 @@ public record CorporateAction88
     [IsoId("b33767f6-4a7d-42ec-a766-dde4f80f3fbb")]
     [DisplayName("Consent Type")]
     [IsoXmlTag("CnsntTp")]
-    public ConsentTypeFormat4Choice? ConsentType { get; init; }
+    public ConsentTypeFormat4Choice_? ConsentType { get; init; }
 
     /// <summary>
     /// Specifies the type of information event.
@@ -238,7 +238,7 @@ public record CorporateAction88
     [IsoId("6e0499fb-7bf3-4f46-9847-7b744eda8d6e")]
     [DisplayName("Information Type")]
     [IsoXmlTag("InfTp")]
-    public InformationTypeFormat4Choice? InformationType { get; init; }
+    public InformationTypeFormat4Choice_? InformationType { get; init; }
 
     /// <summary>
     /// Specifies the tax regulation being attributed to the non-distributed proceeds event or to any other event.
@@ -254,7 +254,7 @@ public record CorporateAction88
     [IsoId("c938a200-0cd7-4a74-a4fc-f6ea41f8c1c7")]
     [DisplayName("Dutch Auction Type")]
     [IsoXmlTag("DtchAuctnTp")]
-    public DutchAuctionTypeFormat1Choice? DutchAuctionType { get; init; }
+    public DutchAuctionTypeFormat1Choice_? DutchAuctionType { get; init; }
 
     /// <summary>
     /// Indicates that the Dutch Auction event is a Reverse Dutch Auction.

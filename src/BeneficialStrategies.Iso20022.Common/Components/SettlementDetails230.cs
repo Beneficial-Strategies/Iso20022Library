@@ -19,72 +19,72 @@ public record SettlementDetails230
     [IsoId("_gEUrm5aMEfC2_67yGLymgA")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
-    public SecuritiesTransactionType59Choice? SecuritiesTransactionType { get; init; }
+    public SecuritiesTransactionType59Choice_? SecuritiesTransactionType { get; init; }
 
     [IsoId("_gEUro5aMEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition42Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition42Choice_> SettlementTransactionCondition { get; init; } = [];
 
     [IsoId("_gEUrq5aMEfC2_67yGLymgA")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership4Choice? BeneficialOwnership { get; init; }
+    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
 
     [IsoId("_gEUrs5aMEfC2_67yGLymgA")]
     [DisplayName("CCP Eligibility")]
     [IsoXmlTag("CCPElgblty")]
-    public CentralCounterPartyEligibility4Choice? CCPEligibility { get; init; }
+    public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
 
     [IsoId("_gEUru5aMEfC2_67yGLymgA")]
     [DisplayName("Delivery Return Reason")]
     [IsoXmlTag("DlvryRtrRsn")]
-    public DeliveryReturn3Choice? DeliveryReturnReason { get; init; }
+    public DeliveryReturn3Choice_? DeliveryReturnReason { get; init; }
 
     [IsoId("_gEUrw5aMEfC2_67yGLymgA")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem6Choice? CashClearingSystem { get; init; }
+    public CashSettlementSystem6Choice_? CashClearingSystem { get; init; }
 
     [IsoId("_gEUry5aMEfC2_67yGLymgA")]
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
-    public ExposureType25Choice? ExposureType { get; init; }
+    public ExposureType25Choice_? ExposureType { get; init; }
 
     [IsoId("_gEUr05aMEfC2_67yGLymgA")]
     [DisplayName("FX Standing Instruction")]
     [IsoXmlTag("FxStgInstr")]
-    public FXStandingInstruction4Choice? FXStandingInstruction { get; init; }
+    public FXStandingInstruction4Choice_? FXStandingInstruction { get; init; }
 
     [IsoId("_gEUr25aMEfC2_67yGLymgA")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
-    public MarketClientSide6Choice? MarketClientSide { get; init; }
+    public MarketClientSide6Choice_? MarketClientSide { get; init; }
 
     [IsoId("_gEUr45aMEfC2_67yGLymgA")]
     [DisplayName("Netting Eligibility")]
     [IsoXmlTag("NetgElgblty")]
-    public NettingEligibility4Choice? NettingEligibility { get; init; }
+    public NettingEligibility4Choice_? NettingEligibility { get; init; }
 
     [IsoId("_gEUr65aMEfC2_67yGLymgA")]
     [DisplayName("Registration")]
     [IsoXmlTag("Regn")]
-    public Registration9Choice? Registration { get; init; }
+    public Registration9Choice_? Registration { get; init; }
 
     [IsoId("_gEUr85aMEfC2_67yGLymgA")]
     [DisplayName("Legal Restrictions")]
     [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice? LegalRestrictions { get; init; }
+    public Restriction5Choice_? LegalRestrictions { get; init; }
 
     [IsoId("_gEUr-5aMEfC2_67yGLymgA")]
     [DisplayName("Settling Capacity")]
     [IsoXmlTag("SttlgCpcty")]
-    public SettlingCapacity7Choice? SettlingCapacity { get; init; }
+    public SettlingCapacity7Choice_? SettlingCapacity { get; init; }
 
     [IsoId("_gEUsA5aMEfC2_67yGLymgA")]
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
-    public TaxCapacityParty4Choice? TaxCapacity { get; init; }
+    public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
 
     [IsoId("_gEUsC5aMEfC2_67yGLymgA")]
     [DisplayName("Stamp Duty Tax Basis")]
@@ -94,12 +94,12 @@ public record SettlementDetails230
     [IsoId("_gEUsE5aMEfC2_67yGLymgA")]
     [DisplayName("Tracking")]
     [IsoXmlTag("Trckg")]
-    public Tracking4Choice? Tracking { get; init; }
+    public Tracking4Choice_? Tracking { get; init; }
 
     [IsoId("_gEVSpJaMEfC2_67yGLymgA")]
     [DisplayName("Letter Of Guarantee")]
     [IsoXmlTag("LttrOfGrnt")]
-    public LetterOfGuarantee4Choice? LetterOfGuarantee { get; init; }
+    public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
 
     [IsoId("_gEVSrJaMEfC2_67yGLymgA")]
     [DisplayName("Return Leg")]
@@ -109,7 +109,7 @@ public record SettlementDetails230
     [IsoId("_gEVStJaMEfC2_67yGLymgA")]
     [DisplayName("Modification Cancellation Allowed")]
     [IsoXmlTag("ModCxlAllwd")]
-    public ModificationCancellationAllowed4Choice? ModificationCancellationAllowed { get; init; }
+    public ModificationCancellationAllowed4Choice_? ModificationCancellationAllowed { get; init; }
 
     [IsoId("_gEVSvJaMEfC2_67yGLymgA")]
     [DisplayName("Eligible For Collateral")]

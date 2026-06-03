@@ -30,7 +30,7 @@ public record Penalty4
     [IsoId("_xQ9URagzEfCXwLUUylXgrQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateAndDateTime2Choice? Date { get; init; }
+    public DateAndDateTime2Choice_? Date { get; init; }
 
     /// <summary>
     /// Unique identification of the party within the system.
@@ -70,7 +70,7 @@ public record Penalty4
     [IsoId("_xQ9UVagzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public AccountIdentification4Choice? CashAccount { get; init; }
+    public AccountIdentification4Choice_? CashAccount { get; init; }
 
     /// <summary>
     /// Date on which the payment of the penalty is due.

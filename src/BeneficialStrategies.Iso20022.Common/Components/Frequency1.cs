@@ -40,7 +40,7 @@ public record Frequency1
     [IsoId("_2-aEwA2lEeSNWNtJlXOAhg")]
     [DisplayName("End Point Choice")]
     [IsoXmlTag("EndPtChc")]
-    public required EndPoint1Choice_ EndPointChoice { get; init; }
+    public required EndPoint1Choice_ EndPointChoice_ { get; init; }
 
     /// <summary>
     /// Payment schedule frequency pattern which indicates how frequently a payment is made.

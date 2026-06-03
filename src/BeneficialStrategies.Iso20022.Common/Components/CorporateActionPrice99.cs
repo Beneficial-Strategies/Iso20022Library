@@ -22,7 +22,7 @@ public record CorporateActionPrice99
     [IsoId("_lhD-Ut7zEe-NrtAAlrBEgQ")]
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    public PriceFormat66Choice? GenericCashPriceReceivedPerProduct { get; init; }
+    public PriceFormat66Choice_? GenericCashPriceReceivedPerProduct { get; init; }
 
     /// <summary>
     /// Generic cash price paid per product by the underlying security holder either as a percentage or an amount, for example, when the underlying security is a listed bond.
@@ -30,5 +30,5 @@ public record CorporateActionPrice99
     [IsoId("_lhD-U97zEe-NrtAAlrBEgQ")]
     [DisplayName("Generic Cash Price Paid Per Product")]
     [IsoXmlTag("GncCshPricPdPerPdct")]
-    public PriceFormat50Choice? GenericCashPricePaidPerProduct { get; init; }
+    public PriceFormat50Choice_? GenericCashPricePaidPerProduct { get; init; }
 }

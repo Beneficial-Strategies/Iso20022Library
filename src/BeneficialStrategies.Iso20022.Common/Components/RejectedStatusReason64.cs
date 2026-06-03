@@ -22,7 +22,7 @@ public record RejectedStatusReason64
     [IsoId("_NSDkk6KvEfCHi7w3_0pcpw")]
     [DisplayName("Reason Code")]
     [IsoXmlTag("RsnCd")]
-    public required RejectedReason69Choice ReasonCode { get; init; }
+    public required RejectedReason69Choice_ ReasonCode { get; init; }
 
     /// <summary>
     /// Provides additional information about the processed instruction.

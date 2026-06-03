@@ -22,7 +22,7 @@ public record CorporateActionLotteryEvent1
     [IsoId("_FCtawJScEfCQbtmJ-bHX4Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public LotteryTypeFormat4Choice? Type { get; init; }
+    public LotteryTypeFormat4Choice_? Type { get; init; }
 
     /// <summary>
     /// Details the lottery feature.

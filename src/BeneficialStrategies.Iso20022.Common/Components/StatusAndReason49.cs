@@ -19,7 +19,7 @@ public record StatusAndReason49
     [IsoId("4c897021-42d8-4b60-b3c2-3571bfa982ca")]
     [DisplayName("Status And Reason")]
     [IsoXmlTag("StsAndRsn")]
-    public required Status43Choice StatusAndReason { get; init; }
+    public required Status43Choice_ StatusAndReason { get; init; }
 
     [IsoId("dfdee925-0cea-4af4-989c-659ef3babd27")]
     [DisplayName("Transaction")]

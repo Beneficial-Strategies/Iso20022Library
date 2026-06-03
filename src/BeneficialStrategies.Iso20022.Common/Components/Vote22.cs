@@ -34,62 +34,62 @@ public record Vote22
     [IsoId("_NDMF16jIEfCzuLlmLrhIvA")]
     [DisplayName("For")]
     [IsoXmlTag("For")]
-    public FinancialInstrumentQuantity18Choice? For { get; init; }
+    public FinancialInstrumentQuantity18Choice_? For { get; init; }
 
     [IsoId("_NDMF2ajIEfCzuLlmLrhIvA")]
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
-    public FinancialInstrumentQuantity18Choice? Against { get; init; }
+    public FinancialInstrumentQuantity18Choice_? Against { get; init; }
 
     [IsoId("_NDMF26jIEfCzuLlmLrhIvA")]
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
-    public FinancialInstrumentQuantity18Choice? Abstain { get; init; }
+    public FinancialInstrumentQuantity18Choice_? Abstain { get; init; }
 
     [IsoId("_NDMF3ajIEfCzuLlmLrhIvA")]
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
-    public FinancialInstrumentQuantity18Choice? Withhold { get; init; }
+    public FinancialInstrumentQuantity18Choice_? Withhold { get; init; }
 
     [IsoId("_NDMF36jIEfCzuLlmLrhIvA")]
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
-    public FinancialInstrumentQuantity18Choice? WithManagement { get; init; }
+    public FinancialInstrumentQuantity18Choice_? WithManagement { get; init; }
 
     [IsoId("_NDMF4ajIEfCzuLlmLrhIvA")]
     [DisplayName("Against Management")]
     [IsoXmlTag("AgnstMgmt")]
-    public FinancialInstrumentQuantity18Choice? AgainstManagement { get; init; }
+    public FinancialInstrumentQuantity18Choice_? AgainstManagement { get; init; }
 
     [IsoId("_NDMF46jIEfCzuLlmLrhIvA")]
     [DisplayName("Discretionary")]
     [IsoXmlTag("Dscrtnry")]
-    public FinancialInstrumentQuantity18Choice? Discretionary { get; init; }
+    public FinancialInstrumentQuantity18Choice_? Discretionary { get; init; }
 
     [IsoId("_NDMF5ajIEfCzuLlmLrhIvA")]
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
-    public FinancialInstrumentQuantity18Choice? OneYear { get; init; }
+    public FinancialInstrumentQuantity18Choice_? OneYear { get; init; }
 
     [IsoId("_NDMF56jIEfCzuLlmLrhIvA")]
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
-    public FinancialInstrumentQuantity18Choice? TwoYears { get; init; }
+    public FinancialInstrumentQuantity18Choice_? TwoYears { get; init; }
 
     [IsoId("_NDMF6ajIEfCzuLlmLrhIvA")]
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
-    public FinancialInstrumentQuantity18Choice? ThreeYears { get; init; }
+    public FinancialInstrumentQuantity18Choice_? ThreeYears { get; init; }
 
     [IsoId("_NDMF66jIEfCzuLlmLrhIvA")]
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
-    public FinancialInstrumentQuantity18Choice? NoAction { get; init; }
+    public FinancialInstrumentQuantity18Choice_? NoAction { get; init; }
 
     [IsoId("_NDMF7ajIEfCzuLlmLrhIvA")]
     [DisplayName("Blank")]
     [IsoXmlTag("Blnk")]
-    public FinancialInstrumentQuantity18Choice? Blank { get; init; }
+    public FinancialInstrumentQuantity18Choice_? Blank { get; init; }
 
     [IsoId("_NDMF76jIEfCzuLlmLrhIvA")]
     [DisplayName("Proprietary")]

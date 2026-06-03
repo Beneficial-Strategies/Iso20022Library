@@ -40,7 +40,7 @@ public record SettlementObligation6
     [IsoId("_-fGG46MOEeCojJW5vEuTEQ_-1427673033")]
     [DisplayName("Clearing Segment")]
     [IsoXmlTag("ClrSgmt")]
-    public PartyIdentification35Choice? ClearingSegment { get; init; }
+    public PartyIdentification35Choice_? ClearingSegment { get; init; }
 
     [IsoId("_-fGG5KMOEeCojJW5vEuTEQ_1870221910")]
     [DisplayName("Non Clearing Member")]
@@ -70,17 +70,17 @@ public record SettlementObligation6
     [IsoId("_-fP34KMOEeCojJW5vEuTEQ_1179827441")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required FinancialInstrumentQuantity1Choice Quantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ Quantity { get; init; }
 
     [IsoId("_-fP34aMOEeCojJW5vEuTEQ_182755088")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
-    public PartyIdentification34Choice? Depository { get; init; }
+    public PartyIdentification34Choice_? Depository { get; init; }
 
     [IsoId("_-fP34qMOEeCojJW5vEuTEQ_-814317265")]
     [DisplayName("Remaining Quantity To Be Settled")]
     [IsoXmlTag("RmngQtyToBeSttld")]
-    public FinancialInstrumentQuantity1Choice? RemainingQuantityToBeSettled { get; init; }
+    public FinancialInstrumentQuantity1Choice_? RemainingQuantityToBeSettled { get; init; }
 
     [IsoId("_-fP346MOEeCojJW5vEuTEQ_-1811389618")]
     [DisplayName("Settlement Amount")]

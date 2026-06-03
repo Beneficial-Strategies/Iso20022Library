@@ -30,7 +30,7 @@ public record BalanceTransfer7
     [IsoId("_GT0Q83eKEfCdoODv2ypKfw")]
     [DisplayName("Balance Transfer Method")]
     [IsoXmlTag("BalTrfMtd")]
-    public SettlementMethod7Choice? BalanceTransferMethod { get; init; }
+    public SettlementMethod7Choice_? BalanceTransferMethod { get; init; }
 
     /// <summary>
     /// Maximum value that the new account servicer will pay to the old account servicer when the closing balance on the old account is negative.

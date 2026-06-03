@@ -19,12 +19,12 @@ public record VoteDetails7
     [IsoId("_w-jL0ajGEfCzuLlmLrhIvA")]
     [DisplayName("Vote Instruction For Agenda Resolution")]
     [IsoXmlTag("VoteInstrForAgndRsltn")]
-    public required Vote17Choice VoteInstructionForAgendaResolution { get; init; }
+    public required Vote17Choice_ VoteInstructionForAgendaResolution { get; init; }
 
     [IsoId("_w-jL06jGEfCzuLlmLrhIvA")]
     [DisplayName("Vote Instruction For Meeting Resolution")]
     [IsoXmlTag("VoteInstrForMtgRsltn")]
-    public VoteInstructionForMeetingResolution3Choice? VoteInstructionForMeetingResolution { get; init; }
+    public VoteInstructionForMeetingResolution3Choice_? VoteInstructionForMeetingResolution { get; init; }
 
     [IsoId("_HO3c4fUeEfCnzd_iHo4pAQ")]
     [DisplayName("Investor Type Identification")]

@@ -19,7 +19,7 @@ public record StatisticsByUserDefinedTimePeriod3
     [IsoId("3cc5efe9-fd6d-4028-b906-da7e9073b9a8")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public required DateOrDateTimePeriod4Choice Period { get; init; }
+    public required DateOrDateTimePeriod4Choice_ Period { get; init; }
 
     [IsoId("f43e8e3e-23cc-4d38-9ced-2bf8404df528")]
     [DisplayName("Highest Price Value")]

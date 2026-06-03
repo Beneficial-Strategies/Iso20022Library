@@ -22,7 +22,7 @@ public record DocumentNumber22
     [IsoId("_dEWfN6ovEfCG2_q2WT-90w")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public required DocumentNumber5Choice Number { get; init; }
+    public required DocumentNumber5Choice_ Number { get; init; }
 
     /// <summary>
     /// References of transaction for which the status is requested.

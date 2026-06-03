@@ -62,5 +62,5 @@ public record BillingCancellationReport3
     [IsoId("_2qnwCzEyEe6g-ffJsqGiSA")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
-    public required CancellationReason16Choice CancellationReason { get; init; }
+    public required CancellationReason16Choice_ CancellationReason { get; init; }
 }

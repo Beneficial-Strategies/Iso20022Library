@@ -22,7 +22,7 @@ public record Rate51
     [IsoId("_J-iZl63gEfCN-rGCydxGUA")]
     [DisplayName("Additional Tax")]
     [IsoXmlTag("AddtlTax")]
-    public RateAndAmountFormat59Choice? AdditionalTax { get; init; }
+    public RateAndAmountFormat59Choice_? AdditionalTax { get; init; }
 
     /// <summary>
     /// Rate used to calculate the amount of the charges/fees that cannot be categorised.
@@ -30,7 +30,7 @@ public record Rate51
     [IsoId("_J-iZma3gEfCN-rGCydxGUA")]
     [DisplayName("Charges Fees")]
     [IsoXmlTag("ChrgsFees")]
-    public RateAndAmountFormat59Choice? ChargesFees { get; init; }
+    public RateAndAmountFormat59Choice_? ChargesFees { get; init; }
 
     /// <summary>
     /// Percentage of fiscal tax to apply.
@@ -46,7 +46,7 @@ public record Rate51
     [IsoId("_J-iZna3gEfCN-rGCydxGUA")]
     [DisplayName("Gross Distribution Rate")]
     [IsoXmlTag("GrssDstrbtnRate")]
-    public ValueList<GrossDividendRateFormat37Choice> GrossDistributionRate { get; init; } = [];
+    public ValueList<GrossDividendRateFormat37Choice_> GrossDistributionRate { get; init; } = [];
 
     /// <summary>
     /// Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.
@@ -54,7 +54,7 @@ public record Rate51
     [IsoId("_J-iZn63gEfCN-rGCydxGUA")]
     [DisplayName("Early Solicitation Fee Rate")]
     [IsoXmlTag("EarlySlctnFeeRate")]
-    public SolicitationFeeRateFormat12Choice? EarlySolicitationFeeRate { get; init; }
+    public SolicitationFeeRateFormat12Choice_? EarlySolicitationFeeRate { get; init; }
 
     /// <summary>
     /// Cash rate made available in an event in order to encourage participation in the offer.
@@ -62,7 +62,7 @@ public record Rate51
     [IsoId("_J-iZoa3gEfCN-rGCydxGUA")]
     [DisplayName("Third Party Incentive Rate")]
     [IsoXmlTag("ThrdPtyIncntivRate")]
-    public RateAndAmountFormat59Choice? ThirdPartyIncentiveRate { get; init; }
+    public RateAndAmountFormat59Choice_? ThirdPartyIncentiveRate { get; init; }
 
     /// <summary>
     /// Actual interest rate before tax used for the payment of the interest for the specified interest period.
@@ -70,7 +70,7 @@ public record Rate51
     [IsoId("_J-iZo63gEfCN-rGCydxGUA")]
     [DisplayName("Gross Interest Rate Used For Payment")]
     [IsoXmlTag("GrssIntrstRateUsdForPmt")]
-    public ValueList<InterestRateUsedForPaymentFormat12Choice> GrossInterestRateUsedForPayment { get; init; } = [];
+    public ValueList<InterestRateUsedForPaymentFormat12Choice_> GrossInterestRateUsedForPayment { get; init; } = [];
 
     /// <summary>
     /// Distribution rate after tax has been deducted.
@@ -78,7 +78,7 @@ public record Rate51
     [IsoId("_J-iZpa3gEfCN-rGCydxGUA")]
     [DisplayName("Net Distribution Rate")]
     [IsoXmlTag("NetDstrbtnRate")]
-    public ValueList<NetDividendRateFormat40Choice> NetDistributionRate { get; init; } = [];
+    public ValueList<NetDividendRateFormat40Choice_> NetDistributionRate { get; init; } = [];
 
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.
@@ -86,7 +86,7 @@ public record Rate51
     [IsoId("_J-iZp63gEfCN-rGCydxGUA")]
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
-    public RateFormat31Choice? ApplicableRate { get; init; }
+    public RateFormat31Choice_? ApplicableRate { get; init; }
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event.
@@ -94,7 +94,7 @@ public record Rate51
     [IsoId("_J-iZqa3gEfCN-rGCydxGUA")]
     [DisplayName("Solicitation Fee Rate")]
     [IsoXmlTag("SlctnFeeRate")]
-    public SolicitationFeeRateFormat12Choice? SolicitationFeeRate { get; init; }
+    public SolicitationFeeRateFormat12Choice_? SolicitationFeeRate { get; init; }
 
     /// <summary>
     /// Amount of money per equity allocated as the result of a tax credit.
@@ -102,7 +102,7 @@ public record Rate51
     [IsoId("_J-iZq63gEfCN-rGCydxGUA")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public RateFormat27Choice? TaxCreditRate { get; init; }
+    public RateFormat27Choice_? TaxCreditRate { get; init; }
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer.
@@ -110,7 +110,7 @@ public record Rate51
     [IsoId("_J-iZra3gEfCN-rGCydxGUA")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat55Choice> WithholdingTaxRate { get; init; } = [];
+    public ValueList<RateAndAmountFormat55Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer's country of tax incorporation.
@@ -118,7 +118,7 @@ public record Rate51
     [IsoId("_J-iZr63gEfCN-rGCydxGUA")]
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
-    public ValueList<RateAndAmountFormat55Choice> SecondLevelTax { get; init; } = [];
+    public ValueList<RateAndAmountFormat55Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.
@@ -126,7 +126,7 @@ public record Rate51
     [IsoId("_J-iZsa3gEfCN-rGCydxGUA")]
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
-    public RateAndAmountFormat59Choice? TaxOnIncome { get; init; }
+    public RateAndAmountFormat59Choice_? TaxOnIncome { get; init; }
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as capital profits, capital gains.
@@ -158,5 +158,5 @@ public record Rate51
     [IsoId("_J-iZua3gEfCN-rGCydxGUA")]
     [DisplayName("Deemed Rate")]
     [IsoXmlTag("DmdRate")]
-    public ValueList<RateAndAmountFormat62Choice> DeemedRate { get; init; } = [];
+    public ValueList<RateAndAmountFormat62Choice_> DeemedRate { get; init; } = [];
 }

@@ -46,5 +46,5 @@ public record PaymentInstrument23
     [IsoId("d7640a41-2811-4d88-9a0d-8e8a52a69b9b")]
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
-    public PaymentInstrument31Choice? CashSettlementDetails { get; init; }
+    public PaymentInstrument31Choice_? CashSettlementDetails { get; init; }
 }

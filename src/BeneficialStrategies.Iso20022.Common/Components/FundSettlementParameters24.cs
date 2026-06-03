@@ -22,7 +22,7 @@ public record FundSettlementParameters24
     [IsoId("3d4c8cc0-d5f4-49b6-b428-113344078733")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat42Choice? SafekeepingPlace { get; init; }
+    public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Condition under which the order/trade is to be/was executed.
@@ -30,7 +30,7 @@ public record FundSettlementParameters24
     [IsoId("7fb13304-275b-4649-8f30-c050e5a10549")]
     [DisplayName("Trade Transaction Condition")]
     [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition8Choice> TradeTransactionCondition { get; init; } = [];
+    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } = [];
 
     /// <summary>
     /// Condition under which the order/trade is to be settled.
@@ -38,7 +38,7 @@ public record FundSettlementParameters24
     [IsoId("d29176da-d775-48e3-a220-4e883826c589")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition30Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition30Choice_> SettlementTransactionCondition { get; init; } = [];
 
     /// <summary>
     /// Identification of a specific system or set of rules and/or processes to be applied at the settlement place.

@@ -22,7 +22,7 @@ public record ExpectedExecution6
     [IsoId("bbcb1ca5-82f2-4751-840e-ff1082ed3549")]
     [DisplayName("Expected Trade Date Time")]
     [IsoXmlTag("XpctdTradDtTm")]
-    public DateAndDateTime2Choice? ExpectedTradeDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpectedTradeDateTime { get; init; }
 
     /// <summary>
     /// Expected date at which the financial instruments will be exchanged against cash.

@@ -86,7 +86,7 @@ public record CreditTransferTransaction80
     [IsoId("_e613wHePEfCdoODv2ypKfw")]
     [DisplayName("Payment Signature")]
     [IsoXmlTag("PmtSgntr")]
-    public CryptographicKey1Choice? PaymentSignature { get; init; }
+    public CryptographicKey1Choice_? PaymentSignature { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the instructing agent (previous instructing agent 1).
@@ -302,7 +302,7 @@ public record CreditTransferTransaction80
     [IsoId("_e6139nePEfCdoODv2ypKfw")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Information needed due to regulatory and statutory requirements.

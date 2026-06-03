@@ -38,5 +38,5 @@ public record DigitalPaymentSettlement2
     [IsoId("_7DmapZZ6EfC2_67yGLymgA")]
     [DisplayName("Cash Settlement System Place")]
     [IsoXmlTag("CshSttlmSysPlc")]
-    public CashSettlementSystemPlace1Choice? CashSettlementSystemPlace { get; init; }
+    public CashSettlementSystemPlace1Choice_? CashSettlementSystemPlace { get; init; }
 }

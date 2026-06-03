@@ -22,7 +22,7 @@ public record Trigger1
     [IsoId("_99Ns13ltEeG7BsjMvd1mEw_-1029546391")]
     [DisplayName("Date Choice")]
     [IsoXmlTag("DtChc")]
-    public FixedOrRecurrentDate1Choice_? DateChoice { get; init; }
+    public FixedOrRecurrentDate1Choice_? DateChoice_ { get; init; }
 
     /// <summary>
     /// Details related to the documentary event on which a variation is triggered.

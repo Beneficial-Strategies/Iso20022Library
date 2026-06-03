@@ -29,7 +29,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-plac-0001-0003-44d8780df86b")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     [IsoId("906f2c3f-orrf-0001-0004-44d8780df86b")]
     [DisplayName("Order Reference")]
@@ -79,17 +79,17 @@ public record SwitchOrder8
     [IsoId("906f2c3f-addl-0001-0013-44d8780df86b")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmount1Choice? AdditionalAmount { get; init; }
+    public AdditionalAmount1Choice_? AdditionalAmount { get; init; }
 
     [IsoId("906f2c3f-xpry-0001-0014-44d8780df86b")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public DateAndDateTime2Choice? ExpiryDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDateTime { get; init; }
 
     [IsoId("906f2c3f-cxlr-0001-0015-44d8780df86b")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     [IsoId("906f2c3f-rdmp-0001-0016-44d8780df86b")]
     [DisplayName("Redemption Leg Details")]
@@ -126,17 +126,17 @@ public record SwitchOrder8
     [IsoId("906f2c3f-cstm-0001-0022-44d8780df86b")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     [IsoId("906f2c3f-txch-0001-0023-44d8780df86b")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     [IsoId("906f2c3f-sgnr-0001-0024-44d8780df86b")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     [IsoId("906f2c3f-orwd-0001-0025-44d8780df86b")]
     [DisplayName("Order Waiver Details")]

@@ -30,5 +30,5 @@ public record PenaltyPartyIdentification1
     [IsoId("_-EPy0wAUEeqOHNEXayM0Mg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public PenaltyPartyType2Choice? Type { get; init; }
+    public PenaltyPartyType2Choice_? Type { get; init; }
 }

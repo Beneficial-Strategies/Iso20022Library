@@ -38,7 +38,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("a7d984c1-4ad3-4dbd-b1a0-de8e28ef3b40")]
     [DisplayName("Confirmation")]
     [IsoXmlTag("Conf")]
-    public required ConfirmationStatus1Choice Confirmation { get; init; }
+    public required ConfirmationStatus1Choice_ Confirmation { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of an order.

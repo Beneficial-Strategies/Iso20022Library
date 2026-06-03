@@ -19,12 +19,12 @@ public record Tax42
     [IsoId("c1c36ba1-type-0001-0001-b6e05bdf3942")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TaxType3Choice Type { get; init; }
+    public required TaxType3Choice_ Type { get; init; }
 
     [IsoId("c1c36ba1-tax0-0001-0002-b6e05bdf3942")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public TaxAmountOrRate4Choice? Tax { get; init; }
+    public TaxAmountOrRate4Choice_? Tax { get; init; }
 
     [IsoId("c1c36ba1-ctry-0001-0003-b6e05bdf3942")]
     [DisplayName("Country")]
@@ -39,7 +39,7 @@ public record Tax42
     [IsoId("c1c36ba1-exrs-0001-0005-b6e05bdf3942")]
     [DisplayName("Exemption Reason")]
     [IsoXmlTag("XmptnRsn")]
-    public ExemptionReason1Choice? ExemptionReason { get; init; }
+    public ExemptionReason1Choice_? ExemptionReason { get; init; }
 
     [IsoId("c1c36ba1-rcid-0001-0006-b6e05bdf3942")]
     [DisplayName("Recipient Identification")]

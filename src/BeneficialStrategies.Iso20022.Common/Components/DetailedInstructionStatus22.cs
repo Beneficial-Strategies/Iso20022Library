@@ -38,7 +38,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt-ajIEfCzuLlmLrhIvA")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification231Choice? AccountOwner { get; init; }
+    public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Identification of the subaccount within the safekeeping account.
@@ -54,7 +54,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt_ajIEfCzuLlmLrhIvA")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public ValueList<PartyIdentification246Choice> RightsHolder { get; init; } = [];
+    public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
     /// Identification of the person appointed by the security holder as the proxy.
@@ -62,7 +62,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt_6jIEfCzuLlmLrhIvA")]
     [DisplayName("Proxy")]
     [IsoXmlTag("Prxy")]
-    public PartyIdentification232Choice? Proxy { get; init; }
+    public PartyIdentification232Choice_? Proxy { get; init; }
 
     /// <summary>
     /// Indicates whether standing instructions have been applied or not.
@@ -78,7 +78,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kuA6jIEfCzuLlmLrhIvA")]
     [DisplayName("Modality Of Counting")]
     [IsoXmlTag("ModltyOfCntg")]
-    public required ModalityOfCounting1Choice ModalityOfCounting { get; init; }
+    public required ModalityOfCounting1Choice_ ModalityOfCounting { get; init; }
 
     /// <summary>
     /// Date or date and time at which the votes that have been recorded and counted were received.
@@ -86,7 +86,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kuBajIEfCzuLlmLrhIvA")]
     [DisplayName("Vote Receipt Date Time")]
     [IsoXmlTag("VoteRctDtTm")]
-    public DateAndDateTime1Choice? VoteReceiptDateTime { get; init; }
+    public DateAndDateTime1Choice_? VoteReceiptDateTime { get; init; }
 
     /// <summary>
     /// Details of the vote.

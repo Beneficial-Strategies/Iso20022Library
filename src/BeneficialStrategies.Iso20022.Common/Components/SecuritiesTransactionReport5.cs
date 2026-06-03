@@ -19,7 +19,7 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xA2p-EemmaZLSPtWX5A")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
-    public Number3Choice? ReportNumber { get; init; }
+    public Number3Choice_? ReportNumber { get; init; }
 
     [IsoId("_M8_xC2p-EemmaZLSPtWX5A")]
     [DisplayName("Query Reference")]
@@ -34,12 +34,12 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xFWp-EemmaZLSPtWX5A")]
     [DisplayName("Report Date Time")]
     [IsoXmlTag("RptDtTm")]
-    public DateAndDateTime2Choice? ReportDateTime { get; init; }
+    public DateAndDateTime2Choice_? ReportDateTime { get; init; }
 
     [IsoId("_M8_xHWp-EemmaZLSPtWX5A")]
     [DisplayName("Report Period")]
     [IsoXmlTag("RptPrd")]
-    public Period7Choice? ReportPeriod { get; init; }
+    public Period7Choice_? ReportPeriod { get; init; }
 
     [IsoId("_M8_xJWp-EemmaZLSPtWX5A")]
     [DisplayName("Query Type")]
@@ -49,12 +49,12 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xLWp-EemmaZLSPtWX5A")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency22Choice? Frequency { get; init; }
+    public Frequency22Choice_? Frequency { get; init; }
 
     [IsoId("_M8_xNWp-EemmaZLSPtWX5A")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public required UpdateType15Choice UpdateType { get; init; }
+    public required UpdateType15Choice_ UpdateType { get; init; }
 
     [IsoId("_M8_xPWp-EemmaZLSPtWX5A")]
     [DisplayName("Activity Indicator")]

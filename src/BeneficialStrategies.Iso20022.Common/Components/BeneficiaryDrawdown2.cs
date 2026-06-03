@@ -22,7 +22,7 @@ public record BeneficiaryDrawdown2
     [IsoId("cb9eed79-2346-4bac-a3e5-b53616211789")]
     [DisplayName("Beneficiary Type")]
     [IsoXmlTag("BnfcryTp")]
-    public BeneficiaryType1Choice? BeneficiaryType { get; init; }
+    public BeneficiaryType1Choice_? BeneficiaryType { get; init; }
 
     /// <summary>
     /// Indicates whether the original pension holder was under the age limit when deceased.

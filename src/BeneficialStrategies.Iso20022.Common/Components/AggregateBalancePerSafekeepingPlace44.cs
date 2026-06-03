@@ -30,7 +30,7 @@ public record AggregateBalancePerSafekeepingPlace44
     [IsoId("_P50CFag2EfCXwLUUylXgrQ")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification3Choice? PlaceOfListing { get; init; }
+    public MarketIdentification3Choice_? PlaceOfListing { get; init; }
 
     /// <summary>
     /// Specify the entity to which the financial instruments are pledged.
@@ -62,7 +62,7 @@ public record AggregateBalancePerSafekeepingPlace44
     [IsoId("_P50CP6g2EfCXwLUUylXgrQ")]
     [DisplayName("Not Available Balance")]
     [IsoXmlTag("NotAvlblBal")]
-    public BalanceQuantity8Choice? NotAvailableBalance { get; init; }
+    public BalanceQuantity8Choice_? NotAvailableBalance { get; init; }
 
     /// <summary>
     /// Price of the financial instrument in one or more currencies.
@@ -118,7 +118,7 @@ public record AggregateBalancePerSafekeepingPlace44
     [IsoId("_P50Ck6g2EfCXwLUUylXgrQ")]
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
-    public ExposureType25Choice? ExposureType { get; init; }
+    public ExposureType25Choice_? ExposureType { get; init; }
 
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.

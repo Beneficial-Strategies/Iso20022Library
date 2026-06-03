@@ -24,5 +24,5 @@ public record SettlementInstructionQueryStatus3
     [IsoId("_YKBukWdnEemMLeaDfmIfIA")]
     [DisplayName("Date Period")]
     [IsoXmlTag("DtPrd")]
-    public DateAndDateTimeSearch5Choice? DatePeriod { get; init; }
+    public DateAndDateTimeSearch5Choice_? DatePeriod { get; init; }
 }

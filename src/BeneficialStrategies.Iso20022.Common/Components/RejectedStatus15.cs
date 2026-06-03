@@ -22,7 +22,7 @@ public record RejectedStatus15
     [IsoId("_BqR7EaKtEfCHi7w3_0pcpw")]
     [DisplayName("Rejected Quantity")]
     [IsoXmlTag("RjctdQty")]
-    public Quantity51Choice? RejectedQuantity { get; init; }
+    public Quantity51Choice_? RejectedQuantity { get; init; }
 
     /// <summary>
     /// Reason for the rejected status.
@@ -30,5 +30,5 @@ public record RejectedStatus15
     [IsoId("_BqR7E6KtEfCHi7w3_0pcpw")]
     [DisplayName("Rejected Reason")]
     [IsoXmlTag("RjctdRsn")]
-    public required RejectedStatus64Choice RejectedReason { get; init; }
+    public required RejectedStatus64Choice_ RejectedReason { get; init; }
 }

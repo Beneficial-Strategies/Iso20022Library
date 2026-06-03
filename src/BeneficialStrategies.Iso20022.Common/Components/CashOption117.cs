@@ -38,7 +38,7 @@ public record CashOption117
     [IsoId("_YmCuqaLhEfCHi7w3_0pcpw")]
     [DisplayName("Non Eligible Proceeds Indicator")]
     [IsoXmlTag("NonElgblPrcdsInd")]
-    public NonEligibleProceedsIndicator3Choice? NonEligibleProceedsIndicator { get; init; }
+    public NonEligibleProceedsIndicator3Choice_? NonEligibleProceedsIndicator { get; init; }
 
     /// <summary>
     /// Proceeds are taxable according to the information provided by the issuer / offeror.
@@ -46,7 +46,7 @@ public record CashOption117
     [IsoId("_YmCusaLhEfCHi7w3_0pcpw")]
     [DisplayName("Issuer Offeror Taxability Indicator")]
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator2Choice? IssuerOfferorTaxabilityIndicator { get; init; }
+    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of income.
@@ -86,7 +86,7 @@ public record CashOption117
     [IsoId("_YmCuwaLhEfCHi7w3_0pcpw")]
     [DisplayName("Cash Account Identification")]
     [IsoXmlTag("CshAcctId")]
-    public CashAccountIdentification9Choice? CashAccountIdentification { get; init; }
+    public CashAccountIdentification9Choice_? CashAccountIdentification { get; init; }
 
     /// <summary>
     /// Provides information about the amounts related to a cash movement.

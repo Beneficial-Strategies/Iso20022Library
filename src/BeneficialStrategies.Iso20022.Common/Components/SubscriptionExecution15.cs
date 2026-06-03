@@ -39,7 +39,7 @@ public record SubscriptionExecution15
     [IsoId("bfe84050-c372-44ae-82b3-5052ff8e64d0")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<FundOrderType4Choice> OrderType { get; init; } = [];
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     [IsoId("ea1627e3-c408-4d56-9369-d379f4e787cc")]
     [DisplayName("Investment Account Details")]
@@ -54,7 +54,7 @@ public record SubscriptionExecution15
     [IsoId("0f5627e2-5f0c-4bd1-9a8f-7eb9b539aeff")]
     [DisplayName("Units")]
     [IsoXmlTag("Units")]
-    public required Unit1Choice Units { get; init; }
+    public required Unit1Choice_ Units { get; init; }
 
     [IsoId("88c00919-d74a-46f6-8396-8304ef443674")]
     [DisplayName("Rounding")]
@@ -74,7 +74,7 @@ public record SubscriptionExecution15
     [IsoId("5cefe8eb-7fc3-4b17-9df6-35d348e2df49")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
-    public required DateAndDateTime2Choice TradeDateTime { get; init; }
+    public required DateAndDateTime2Choice_ TradeDateTime { get; init; }
 
     [IsoId("2e684c5e-7c03-453f-a8f7-f62f449136f0")]
     [DisplayName("Dealing Price Details")]
@@ -119,7 +119,7 @@ public record SubscriptionExecution15
     [IsoId("6362071d-438b-4920-83a7-abd7936d0c3e")]
     [DisplayName("Interim Profit Amount")]
     [IsoXmlTag("IntrmPrftAmt")]
-    public ProfitAndLoss2Choice? InterimProfitAmount { get; init; }
+    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; }
 
     [IsoId("eb5e739b-8343-4811-86c7-3a756a109c1e")]
     [DisplayName("Foreign Exchange Details")]
@@ -234,22 +234,22 @@ public record SubscriptionExecution15
     [IsoId("aab5e83f-90d2-497e-90a8-66ee38e0fe56")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public ValueList<SourceOfCash1Choice> SourceOfCash { get; init; } = [];
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     [IsoId("1447ff65-d835-440c-8183-87e69e54853a")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     [IsoId("88f634be-05c3-40b2-88cc-48eb89e80924")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     [IsoId("e6e96ade-4e9b-4161-bd09-b389e7a5fe4f")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     [IsoId("16732378-05c6-48df-a0ca-fb45cc98a964")]
     [DisplayName("Order Waiver Details")]

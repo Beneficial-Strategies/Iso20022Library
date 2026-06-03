@@ -22,7 +22,7 @@ public record ReturnedStatus1
     [IsoId("_r9uohY73EfCbNJ3GwkFTcw")]
     [DisplayName("Returned Quantity")]
     [IsoXmlTag("RtrdQty")]
-    public Quantity51Choice? ReturnedQuantity { get; init; }
+    public Quantity51Choice_? ReturnedQuantity { get; init; }
 
     /// <summary>
     /// Reason for the pending status.
@@ -30,5 +30,5 @@ public record ReturnedStatus1
     [IsoId("_r9uohI73EfCbNJ3GwkFTcw")]
     [DisplayName("Returned Reason")]
     [IsoXmlTag("RtrdRsn")]
-    public required ReturnedStatus2Choice ReturnedReason { get; init; }
+    public required ReturnedStatus2Choice_ ReturnedReason { get; init; }
 }

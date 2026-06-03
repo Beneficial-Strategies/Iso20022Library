@@ -44,12 +44,12 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x3_p2Ee-b4ekxD4W-5g")]
     [DisplayName("Reporting Period")]
     [IsoXmlTag("RptgPrd")]
-    public Period4Choice? ReportingPeriod { get; init; }
+    public Period4Choice_? ReportingPeriod { get; init; }
 
     [IsoId("_lbPT0Pp2Ee-b4ekxD4W-5g")]
     [DisplayName("Application Period")]
     [IsoXmlTag("ApplPrd")]
-    public Period4Choice? ApplicationPeriod { get; init; }
+    public Period4Choice_? ApplicationPeriod { get; init; }
 
     [IsoId("_ZD6x4fp2Ee-b4ekxD4W-5g")]
     [DisplayName("Liquidity")]

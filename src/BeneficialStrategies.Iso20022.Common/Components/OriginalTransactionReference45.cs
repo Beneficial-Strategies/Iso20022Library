@@ -30,7 +30,7 @@ public record OriginalTransactionReference45
     [IsoId("c61bad68-a8e8-46ee-a2e7-a05cb8b38152")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public AmountType4Choice? Amount { get; init; }
+    public AmountType4Choice_? Amount { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -54,7 +54,7 @@ public record OriginalTransactionReference45
     [IsoId("183f2e61-e0a8-4b6b-89de-855ae079406f")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Credit party that signs the mandate.
@@ -94,7 +94,7 @@ public record OriginalTransactionReference45
     [IsoId("50d95ab1-d9a2-42b8-b399-92425a5b7015")]
     [DisplayName("Mandate Related Information")]
     [IsoXmlTag("MndtRltdInf")]
-    public MandateRelatedData5Choice? MandateRelatedInformation { get; init; }
+    public MandateRelatedData5Choice_? MandateRelatedInformation { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
@@ -110,7 +110,7 @@ public record OriginalTransactionReference45
     [IsoId("17e1d439-c212-4078-9f28-fab70791bb0e")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
-    public Party50Choice? UltimateDebtor { get; init; }
+    public Party50Choice_? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
@@ -118,7 +118,7 @@ public record OriginalTransactionReference45
     [IsoId("f9af9f47-598b-4324-a709-a0d1782d925c")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party50Choice? Debtor { get; init; }
+    public Party50Choice_? Debtor { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
@@ -166,7 +166,7 @@ public record OriginalTransactionReference45
     [IsoId("b4ebd8d1-cbda-4401-948c-21a8ee154811")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
-    public Party50Choice? Creditor { get; init; }
+    public Party50Choice_? Creditor { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
@@ -182,7 +182,7 @@ public record OriginalTransactionReference45
     [IsoId("24b5121b-8d87-4adb-a16a-6a40711f2a5f")]
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
-    public Party50Choice? UltimateCreditor { get; init; }
+    public Party50Choice_? UltimateCreditor { get; init; }
 
     /// <summary>
     /// Underlying reason for the payment transaction.
@@ -190,7 +190,7 @@ public record OriginalTransactionReference45
     [IsoId("84d66152-1b10-4cc1-812a-8b1ece617c12")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Provides information on the underlying customer credit transfer for which cover is provided.

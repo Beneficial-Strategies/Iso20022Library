@@ -34,32 +34,32 @@ public record StatusTrail13
     [IsoId("38718fea-addd-4aa5-9fd0-1e56a67ae958")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus103Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus103Choice_? ProcessingStatus { get; init; }
 
     [IsoId("e3deab8a-e27b-4ed6-97fa-cf14f1254bf8")]
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
-    public MatchingStatus25Choice? InferredMatchingStatus { get; init; }
+    public MatchingStatus25Choice_? InferredMatchingStatus { get; init; }
 
     [IsoId("cf3b5414-3a7e-4633-beba-7d08cb6de069")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
-    public MatchingStatus25Choice? MatchingStatus { get; init; }
+    public MatchingStatus25Choice_? MatchingStatus { get; init; }
 
     [IsoId("86eb1da1-c943-4d9a-9e18-d7b3f2a718f7")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
-    public SettlementStatus32Choice? SettlementStatus { get; init; }
+    public SettlementStatus32Choice_? SettlementStatus { get; init; }
 
     [IsoId("ed3e8ffc-8d90-4f8f-8311-25aa7b1bce8b")]
     [DisplayName("Modification Processing Status")]
     [IsoXmlTag("ModPrcgSts")]
-    public ModificationProcessingStatus13Choice? ModificationProcessingStatus { get; init; }
+    public ModificationProcessingStatus13Choice_? ModificationProcessingStatus { get; init; }
 
     [IsoId("91b175a3-e828-4c4a-922e-6896c7e2ec1e")]
     [DisplayName("Cancellation Status")]
     [IsoXmlTag("CxlSts")]
-    public ProcessingStatus86Choice? CancellationStatus { get; init; }
+    public ProcessingStatus86Choice_? CancellationStatus { get; init; }
 
     [IsoId("6a77b065-4f20-47f7-9338-c42107c7886c")]
     [DisplayName("Settled")]

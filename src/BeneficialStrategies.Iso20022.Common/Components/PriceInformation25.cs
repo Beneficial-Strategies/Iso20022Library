@@ -22,7 +22,7 @@ public record PriceInformation25
     [IsoId("_-t7-szkXEem897H7zB2RJg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required PriceRateOrAmount4Choice Value { get; init; }
+    public required PriceRateOrAmount4Choice_ Value { get; init; }
 
     /// <summary>
     /// Place from which the price was obtained.
@@ -38,5 +38,5 @@ public record PriceInformation25
     [IsoId("_-t7-wzkXEem897H7zB2RJg")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public DateAndDateTime2Choice? QuotationDate { get; init; }
+    public DateAndDateTime2Choice_? QuotationDate { get; init; }
 }

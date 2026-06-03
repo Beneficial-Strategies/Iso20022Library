@@ -38,5 +38,5 @@ public record BatchRequest8
     [IsoId("_QYpNMbZaEfCUZfsQO4rYeA")]
     [DisplayName("Transaction To Perform")]
     [IsoXmlTag("TxToPrfrm")]
-    public ValueList<TransactionToPerform8Choice> TransactionToPerform { get; init; } = [];
+    public ValueList<TransactionToPerform8Choice_> TransactionToPerform { get; init; } = [];
 }

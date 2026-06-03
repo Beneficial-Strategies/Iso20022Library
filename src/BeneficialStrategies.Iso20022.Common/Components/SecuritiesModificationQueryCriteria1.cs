@@ -29,7 +29,7 @@ public record SecuritiesModificationQueryCriteria1
     [IsoId("_XB0wa2dnEemMLeaDfmIfIA")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ValueList<ModificationProcessingStatus9Choice> ProcessingStatus { get; init; } = [];
+    public ValueList<ModificationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
 
     [IsoId("_XB0wbWdnEemMLeaDfmIfIA")]
     [DisplayName("Safekeeping Account")]
@@ -49,5 +49,5 @@ public record SecuritiesModificationQueryCriteria1
     [IsoId("_XB0wc2dnEemMLeaDfmIfIA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice? CreationDateTime { get; init; }
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 }

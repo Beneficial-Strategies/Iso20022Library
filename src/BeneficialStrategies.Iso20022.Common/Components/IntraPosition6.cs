@@ -30,7 +30,7 @@ public record IntraPosition6
     [IsoId("_TryZuWp9EemmaZLSPtWX5A")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity1Choice SettlementQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be moved.
@@ -38,7 +38,7 @@ public record IntraPosition6
     [IsoId("_TryZu2p9EemmaZLSPtWX5A")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required DateAndDateTime2Choice SettlementDate { get; init; }
+    public required DateAndDateTime2Choice_ SettlementDate { get; init; }
 
     /// <summary>
     /// Balance from which the securities are moving.
@@ -70,5 +70,5 @@ public record IntraPosition6
     [IsoId("_TryZ1Wp9EemmaZLSPtWX5A")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 }

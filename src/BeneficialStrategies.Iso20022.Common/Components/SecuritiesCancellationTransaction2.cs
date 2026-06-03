@@ -38,7 +38,7 @@ public record SecuritiesCancellationTransaction2
     [IsoId("_pf1OBeSmEe-qVZLXW4RRBw")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus69Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus69Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the cancellation request.
@@ -70,5 +70,5 @@ public record SecuritiesCancellationTransaction2
     [IsoId("_pf1OH-SmEe-qVZLXW4RRBw")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public SettlementOrIntraPosition3Choice? Underlying { get; init; }
+    public SettlementOrIntraPosition3Choice_? Underlying { get; init; }
 }

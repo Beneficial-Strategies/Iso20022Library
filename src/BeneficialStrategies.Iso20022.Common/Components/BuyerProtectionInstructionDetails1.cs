@@ -46,7 +46,7 @@ public record BuyerProtectionInstructionDetails1
     [IsoId("_83Zi0d_IEe-Ned3-G07x_A")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required SecuritiesAccountIdentification1Choice AccountIdentification { get; init; }
+    public required SecuritiesAccountIdentification1Choice_ AccountIdentification { get; init; }
 
     /// <summary>
     /// Information about the processing status of the instruction.
@@ -54,5 +54,5 @@ public record BuyerProtectionInstructionDetails1
     [IsoId("_U9Qvkd_JEe-Ned3-G07x_A")]
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
-    public required InstructionProcessingStatus59Choice InstructionProcessingStatus { get; init; }
+    public required InstructionProcessingStatus59Choice_ InstructionProcessingStatus { get; init; }
 }

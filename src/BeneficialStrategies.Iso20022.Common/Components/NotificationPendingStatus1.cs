@@ -22,7 +22,7 @@ public record NotificationPendingStatus1
     [IsoId("_c_AQgaUeEfCnE_wCEfCqTA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required PendingStatus1Format1Choice Status { get; init; }
+    public required PendingStatus1Format1Choice_ Status { get; init; }
 
     /// <summary>
     /// Additional information about the status.

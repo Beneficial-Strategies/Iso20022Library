@@ -30,7 +30,7 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_GueI4N-5Ee-Ned3-G07x_A")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public SecuritiesAccountIdentification1Choice? AccountIdentification { get; init; }
+    public SecuritiesAccountIdentification1Choice_? AccountIdentification { get; init; }
 
     /// <summary>
     /// International Securities Identification Number (ISIN).

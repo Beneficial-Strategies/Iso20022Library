@@ -47,7 +47,7 @@ public record ClearedProduct3
     [IsoId("_AHfY19DzEfCCRJ-TKQa7sQ")]
     [DisplayName("Product")]
     [IsoXmlTag("Pdct")]
-    public required Product1Choice Product { get; init; }
+    public required Product1Choice_ Product { get; init; }
 
     /// <summary>
     /// Measure of the current stock of a financial instrument that has been traded on an exchange or cleared via a central counterparty.

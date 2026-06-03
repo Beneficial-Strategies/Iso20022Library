@@ -39,7 +39,7 @@ public record MarginReport1
     [DisplayName("Margin Product")]
     [IsoXmlTag("MrgnPdct")]
     [MinLength(1)]
-    public ValueList<MarginProductType1Choice> MarginProduct { get; init; } = [];
+    public ValueList<MarginProductType1Choice_> MarginProduct { get; init; } = [];
 
     /// <summary>
     /// Provides the margin details such as the exposure amount and the initial margin.

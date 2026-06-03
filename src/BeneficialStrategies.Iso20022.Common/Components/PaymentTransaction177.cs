@@ -102,7 +102,7 @@ public record PaymentTransaction177
     [IsoId("d01f4232-da80-46a6-abfa-59894948c3b5")]
     [DisplayName("Processing Date")]
     [IsoXmlTag("PrcgDt")]
-    public DateAndDateTime2Choice? ProcessingDate { get; init; }
+    public DateAndDateTime2Choice_? ProcessingDate { get; init; }
 
     /// <summary>
     /// Date and time at which a transaction is completed and cleared, that is, payment is effected.
@@ -110,7 +110,7 @@ public record PaymentTransaction177
     [IsoId("ebe95271-f80a-4ad9-8717-2e65ff705002")]
     [DisplayName("Effective Interbank Settlement Date")]
     [IsoXmlTag("FctvIntrBkSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveInterbankSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.

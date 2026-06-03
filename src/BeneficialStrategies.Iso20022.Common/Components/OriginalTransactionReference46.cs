@@ -22,7 +22,7 @@ public record OriginalTransactionReference46
     [IsoId("d5b37171-37e6-4bdb-b441-28e29044a902")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public AmountType4Choice? Amount { get; init; }
+    public AmountType4Choice_? Amount { get; init; }
 
     /// <summary>
     /// Date at which the initiating party requests the clearing agent to process the payment.
@@ -30,7 +30,7 @@ public record OriginalTransactionReference46
     [IsoId("2da36558-72f6-4554-9958-2d612fc373ce")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date by which the debtor must have accepted or rejected the request.
@@ -38,7 +38,7 @@ public record OriginalTransactionReference46
     [IsoId("01497799-9d9d-44b3-8c74-9c2badb6277c")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public DateAndDateTime2Choice? ExpiryDate { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
 
     /// <summary>
     /// Conditions for the execution of the payment.

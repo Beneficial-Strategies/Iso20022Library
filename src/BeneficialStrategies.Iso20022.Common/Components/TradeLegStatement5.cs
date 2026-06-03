@@ -24,7 +24,7 @@ public record TradeLegStatement5
     [IsoId("_2q6li6o2EfCG2_q2WT-90w")]
     [DisplayName("Clearing Segment")]
     [IsoXmlTag("ClrSgmt")]
-    public PartyIdentification253Choice? ClearingSegment { get; init; }
+    public PartyIdentification253Choice_? ClearingSegment { get; init; }
 
     [IsoId("_2q6lkao2EfCG2_q2WT-90w")]
     [DisplayName("Non Clearing Member")]

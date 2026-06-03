@@ -22,7 +22,7 @@ public record AlternatePartyIdentification12
     [IsoId("_OYnpFa3pEfCN-rGCydxGUA")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]
-    public required IdentificationType42Choice IdentificationType { get; init; }
+    public required IdentificationType42Choice_ IdentificationType { get; init; }
 
     /// <summary>
     /// Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.

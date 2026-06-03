@@ -19,12 +19,12 @@ public record ServiceCategoryTotals8
     [IsoId("_xLEANUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentification38Choice? AccountIdentification { get; init; }
+    public AccountIdentification38Choice_? AccountIdentification { get; init; }
 
     [IsoId("_xLEAOUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Parent Account Identification")]
     [IsoXmlTag("PrntAcctId")]
-    public AccountIdentification38Choice? ParentAccountIdentification { get; init; }
+    public AccountIdentification38Choice_? ParentAccountIdentification { get; init; }
 
     [IsoId("_xLEAPUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Billed Customer Identification")]
@@ -44,7 +44,7 @@ public record ServiceCategoryTotals8
     [IsoId("_xLEASUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Category")]
     [IsoXmlTag("SvcCtgy")]
-    public required ServiceCategory1Choice ServiceCategory { get; init; }
+    public required ServiceCategory1Choice_ ServiceCategory { get; init; }
 
     [IsoId("_xLEATUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Totals")]

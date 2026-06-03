@@ -34,7 +34,7 @@ public record SubscriptionOrder17
     [IsoId("71a2569f-f0ea-4d83-8bf8-aad6c88e7190")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<FundOrderType4Choice> OrderType { get; init; } = [];
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     [IsoId("c9b93cc6-b60b-4cef-abce-58c1fcbb4049")]
     [DisplayName("Financial Instrument Details")]
@@ -49,7 +49,7 @@ public record SubscriptionOrder17
     [IsoId("e6cd3008-8e4a-4cc6-9449-25bf4bf9ff24")]
     [DisplayName("Amount Or Units")]
     [IsoXmlTag("AmtOrUnits")]
-    public required FinancialInstrumentQuantity49Choice AmountOrUnits { get; init; }
+    public required FinancialInstrumentQuantity49Choice_ AmountOrUnits { get; init; }
 
     [IsoId("ef45c5e3-efc2-4aa2-aa48-bcd362c92571")]
     [DisplayName("Rounding")]
@@ -164,22 +164,22 @@ public record SubscriptionOrder17
     [IsoId("fa275d26-9c79-45e0-8604-be42f408ff6b")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public ValueList<SourceOfCash1Choice> SourceOfCash { get; init; } = [];
+    public ValueList<SourceOfCash1Choice_> SourceOfCash { get; init; } = [];
 
     [IsoId("1c22c54d-c676-4fab-a2cd-9db253e43dc8")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice? CustomerConductClassification { get; init; }
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
 
     [IsoId("14dae140-42c6-4b96-be6d-efed8051f0cb")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice? TransactionChannelType { get; init; }
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
 
     [IsoId("1c9858dc-3a96-4f71-96ca-8fa427c46cac")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice? SignatureType { get; init; }
+    public SignatureType1Choice_? SignatureType { get; init; }
 
     [IsoId("fb797c7b-6511-4f6c-8d58-95e9bc72bf03")]
     [DisplayName("Order Waiver Details")]

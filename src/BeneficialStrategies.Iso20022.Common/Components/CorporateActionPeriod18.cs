@@ -22,7 +22,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU4qtnEfCqjuqNaaNXgw")]
     [DisplayName("Price Calculation Period")]
     [IsoXmlTag("PricClctnPrd")]
-    public Period12Choice? PriceCalculationPeriod { get; init; }
+    public Period12Choice_? PriceCalculationPeriod { get; init; }
 
     /// <summary>
     /// Period during which the security is traded in parallel on the exchange.
@@ -30,7 +30,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU46tnEfCqjuqNaaNXgw")]
     [DisplayName("Parallel Trading Period")]
     [IsoXmlTag("ParllTradgPrd")]
-    public Period12Choice? ParallelTradingPeriod { get; init; }
+    public Period12Choice_? ParallelTradingPeriod { get; init; }
 
     /// <summary>
     /// Period during which the corporate action is valid.
@@ -38,7 +38,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU5KtnEfCqjuqNaaNXgw")]
     [DisplayName("Action Period")]
     [IsoXmlTag("ActnPrd")]
-    public Period6Choice? ActionPeriod { get; init; }
+    public Period6Choice_? ActionPeriod { get; init; }
 
     /// <summary>
     /// Period during which the instruction can be revoked.
@@ -46,7 +46,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU5atnEfCqjuqNaaNXgw")]
     [DisplayName("Revocability Period")]
     [IsoXmlTag("RvcbltyPrd")]
-    public Period6Choice? RevocabilityPeriod { get; init; }
+    public Period6Choice_? RevocabilityPeriod { get; init; }
 
     /// <summary>
     /// Period during which the privilege is suspended.
@@ -54,7 +54,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU5qtnEfCqjuqNaaNXgw")]
     [DisplayName("Privilege Suspension Period")]
     [IsoXmlTag("PrvlgSspnsnPrd")]
-    public Period6Choice? PrivilegeSuspensionPeriod { get; init; }
+    public Period6Choice_? PrivilegeSuspensionPeriod { get; init; }
 
     /// <summary>
     /// Period during which the account servicer can revoke the instruction.
@@ -62,7 +62,7 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU56tnEfCqjuqNaaNXgw")]
     [DisplayName("Account Servicer Revocability Period")]
     [IsoXmlTag("AcctSvcrRvcbltyPrd")]
-    public Period6Choice? AccountServicerRevocabilityPeriod { get; init; }
+    public Period6Choice_? AccountServicerRevocabilityPeriod { get; init; }
 
     /// <summary>
     /// Period during which the depository suspends withdrawal of a security.
@@ -70,5 +70,5 @@ public record CorporateActionPeriod18
     [IsoId("_8yJU6KtnEfCqjuqNaaNXgw")]
     [DisplayName("Depository Suspension Period For Withdrawal")]
     [IsoXmlTag("DpstrySspnsnPrdForWdrwl")]
-    public Period12Choice? DepositorySuspensionPeriodForWithdrawal { get; init; }
+    public Period12Choice_? DepositorySuspensionPeriodForWithdrawal { get; init; }
 }

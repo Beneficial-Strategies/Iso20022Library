@@ -40,7 +40,7 @@ public record SwitchRedemptionLegOrder6
     [IsoId("_48wICTbsEead9bDRE_1DAQ")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]
-    public FinancialInstrumentQuantity29Choice_? FinancialInstrumentQuantityChoice { get; init; }
+    public FinancialInstrumentQuantity29Choice_? FinancialInstrumentQuantityChoice_ { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order.

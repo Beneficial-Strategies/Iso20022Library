@@ -34,7 +34,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-unit-0001-0004-1c60f6402f94")]
     [DisplayName("Units")]
     [IsoXmlTag("Unts")]
-    public required Unit1Choice Units { get; init; }
+    public required Unit1Choice_ Units { get; init; }
 
     [IsoId("f3cc386a-hldr-0001-0005-1c60f6402f94")]
     [DisplayName("Holdings Redemption Rate")]
@@ -59,7 +59,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-trad-0001-0009-1c60f6402f94")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
-    public required DateAndDateTime2Choice TradeDateTime { get; init; }
+    public required DateAndDateTime2Choice_ TradeDateTime { get; init; }
 
     [IsoId("f3cc386a-prcd-0001-0010-1c60f6402f94")]
     [DisplayName("Price Details")]
@@ -79,7 +79,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-intp-0001-0013-1c60f6402f94")]
     [DisplayName("Interim Profit Amount")]
     [IsoXmlTag("IntrmPrftAmt")]
-    public ProfitAndLoss2Choice? InterimProfitAmount { get; init; }
+    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; }
 
     [IsoId("f3cc386a-incp-0001-0014-1c60f6402f94")]
     [DisplayName("Income Preference")]

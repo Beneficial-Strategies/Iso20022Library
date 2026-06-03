@@ -49,7 +49,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-orst-0001-0007-871593f70002")]
     [DisplayName("Order Status")]
     [IsoXmlTag("OrdrSts")]
-    public required OrderStatus7Choice OrderStatus { get; init; }
+    public required OrderStatus7Choice_ OrderStatus { get; init; }
 
     [IsoId("33efad92-legi-0001-0008-871593f70002")]
     [DisplayName("Leg Information")]

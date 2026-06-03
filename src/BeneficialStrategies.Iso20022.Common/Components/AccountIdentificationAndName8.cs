@@ -22,7 +22,7 @@ public record AccountIdentificationAndName8
     [IsoId("119d1111-6777-4ffd-9df4-1a61ad959a9a")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required AccountIdentification82Choice Identification { get; init; }
+    public required AccountIdentification82Choice_ Identification { get; init; }
 
     /// <summary>
     /// Name of the account.

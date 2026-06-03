@@ -46,5 +46,5 @@ public record DetailedInstructionCancellationStatus16
     [IsoId("_hjmLia8uEfCx2aBifPEdRg")]
     [DisplayName("Instruction Cancellation Status")]
     [IsoXmlTag("InstrCxlSts")]
-    public required CancellationStatus35Choice InstructionCancellationStatus { get; init; }
+    public required CancellationStatus35Choice_ InstructionCancellationStatus { get; init; }
 }

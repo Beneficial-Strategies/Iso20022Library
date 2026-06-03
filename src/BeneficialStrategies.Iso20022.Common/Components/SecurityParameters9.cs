@@ -30,7 +30,7 @@ public record SecurityParameters9
     [IsoId("_doTag7ToEeeQy4o2AayYHg")]
     [DisplayName("Signature Choice")]
     [IsoXmlTag("SgntrChc")]
-    public ATMSignature2Choice_? SignatureChoice { get; init; }
+    public ATMSignature2Choice_? SignatureChoice_ { get; init; }
 
     /// <summary>
     /// Ordered certificate chain of the asymmetric key encryption key, starting with the ATM certificate.

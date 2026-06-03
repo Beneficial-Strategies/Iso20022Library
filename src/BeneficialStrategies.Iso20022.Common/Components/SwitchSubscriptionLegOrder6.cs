@@ -40,7 +40,7 @@ public record SwitchSubscriptionLegOrder6
     [IsoId("_4kpxGTbsEead9bDRE_1DAQ")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]
-    public FinancialInstrumentQuantity26Choice_? FinancialInstrumentQuantityChoice { get; init; }
+    public FinancialInstrumentQuantity26Choice_? FinancialInstrumentQuantityChoice_ { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order.

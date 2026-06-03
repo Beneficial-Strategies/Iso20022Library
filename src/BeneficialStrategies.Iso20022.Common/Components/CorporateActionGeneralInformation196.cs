@@ -54,7 +54,7 @@ public record CorporateActionGeneralInformation196
     [IsoId("_JBLHo6NaEfC9id413JK-Ig")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public required CorporateActionEventType127Choice EventType { get; init; }
+    public required CorporateActionEventType127Choice_ EventType { get; init; }
 
     /// <summary>
     /// DTCC (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type.
@@ -70,7 +70,7 @@ public record CorporateActionGeneralInformation196
     [IsoId("_JBLHs6NaEfC9id413JK-Ig")]
     [DisplayName("Mandatory Voluntary Event Type")]
     [IsoXmlTag("MndtryVlntryEvtTp")]
-    public required CorporateActionMandatoryVoluntary3Choice MandatoryVoluntaryEventType { get; init; }
+    public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
 
     /// <summary>
     /// Security concerned by the corporate action.

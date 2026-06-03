@@ -24,7 +24,7 @@ public record SubscriptionMultipleOrder7
     [IsoId("225ac8c2-0eb6-4f75-9ea5-542f8b74617b")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     [IsoId("79872c3b-16d2-4e63-a377-4bfe1e61d945")]
     [DisplayName("Order Date Time")]
@@ -34,7 +34,7 @@ public record SubscriptionMultipleOrder7
     [IsoId("6f5eabcc-be3b-43d0-8dec-ffb18b6206d7")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public DateAndDateTime2Choice? ExpiryDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDateTime { get; init; }
 
     [IsoId("efca429b-a481-4ace-93b3-5b523911c923")]
     [DisplayName("Requested Future Trade Date")]
@@ -44,7 +44,7 @@ public record SubscriptionMultipleOrder7
     [IsoId("5dacb04c-da03-456a-ab0e-ff298090fd90")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     [IsoId("52878e33-2251-498d-a770-802c28987b6c")]
     [DisplayName("Investment Account Details")]

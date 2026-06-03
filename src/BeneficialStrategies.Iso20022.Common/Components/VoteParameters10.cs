@@ -19,7 +19,7 @@ public record VoteParameters10
     [IsoId("_5i-78ajPEfCzuLlmLrhIvA")]
     [DisplayName("Securities Quantity Required To Vote")]
     [IsoXmlTag("SctiesQtyReqrdToVote")]
-    public FinancialInstrumentQuantity18Choice? SecuritiesQuantityRequiredToVote { get; init; }
+    public FinancialInstrumentQuantity18Choice_? SecuritiesQuantityRequiredToVote { get; init; }
 
     [IsoId("_5i-786jPEfCzuLlmLrhIvA")]
     [DisplayName("Partial Vote Allowed")]
@@ -34,12 +34,12 @@ public record VoteParameters10
     [IsoId("_5i-796jPEfCzuLlmLrhIvA")]
     [DisplayName("Vote Deadline")]
     [IsoXmlTag("VoteDdln")]
-    public DateFormat58Choice? VoteDeadline { get; init; }
+    public DateFormat58Choice_? VoteDeadline { get; init; }
 
     [IsoId("_5i-7-ajPEfCzuLlmLrhIvA")]
     [DisplayName("Vote Market Deadline")]
     [IsoXmlTag("VoteMktDdln")]
-    public DateFormat58Choice? VoteMarketDeadline { get; init; }
+    public DateFormat58Choice_? VoteMarketDeadline { get; init; }
 
     [IsoId("_5i-7-6jPEfCzuLlmLrhIvA")]
     [DisplayName("Vote Methods")]
@@ -59,12 +59,12 @@ public record VoteParameters10
     [IsoId("_5i-8AajPEfCzuLlmLrhIvA")]
     [DisplayName("Revocability Deadline")]
     [IsoXmlTag("RvcbltyDdln")]
-    public DateFormat58Choice? RevocabilityDeadline { get; init; }
+    public DateFormat58Choice_? RevocabilityDeadline { get; init; }
 
     [IsoId("_5i-8A6jPEfCzuLlmLrhIvA")]
     [DisplayName("Revocability Market Deadline")]
     [IsoXmlTag("RvcbltyMktDdln")]
-    public DateFormat58Choice? RevocabilityMarketDeadline { get; init; }
+    public DateFormat58Choice_? RevocabilityMarketDeadline { get; init; }
 
     [IsoId("_5i-8BajPEfCzuLlmLrhIvA")]
     [DisplayName("Beneficial Owner Disclosure")]
@@ -84,17 +84,17 @@ public record VoteParameters10
     [IsoId("_5i-8C6jPEfCzuLlmLrhIvA")]
     [DisplayName("Early Vote With Premium Deadline")]
     [IsoXmlTag("EarlyVoteWthPrmDdln")]
-    public DateFormat58Choice? EarlyVoteWithPremiumDeadline { get; init; }
+    public DateFormat58Choice_? EarlyVoteWithPremiumDeadline { get; init; }
 
     [IsoId("_5i-8DajPEfCzuLlmLrhIvA")]
     [DisplayName("Vote With Premium Deadline")]
     [IsoXmlTag("VoteWthPrmDdln")]
-    public DateFormat58Choice? VoteWithPremiumDeadline { get; init; }
+    public DateFormat58Choice_? VoteWithPremiumDeadline { get; init; }
 
     [IsoId("_5i-8D6jPEfCzuLlmLrhIvA")]
     [DisplayName("Vote With Premium Market Deadline")]
     [IsoXmlTag("VoteWthPrmMktDdln")]
-    public DateFormat58Choice? VoteWithPremiumMarketDeadline { get; init; }
+    public DateFormat58Choice_? VoteWithPremiumMarketDeadline { get; init; }
 
     [IsoId("_5i-8EajPEfCzuLlmLrhIvA")]
     [DisplayName("Additional Voting Requirements")]

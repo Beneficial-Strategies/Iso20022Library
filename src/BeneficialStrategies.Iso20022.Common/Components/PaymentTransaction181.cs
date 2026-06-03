@@ -22,5 +22,5 @@ public record PaymentTransaction181
     [IsoId("3762239f-2a3a-45d1-aefb-34b6c077c259")]
     [DisplayName("Cash In Or Out")]
     [IsoXmlTag("CshInOrOut")]
-    public required CashInOrOut8Choice CashInOrOut { get; init; }
+    public required CashInOrOut8Choice_ CashInOrOut { get; init; }
 }

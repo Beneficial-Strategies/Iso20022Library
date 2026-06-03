@@ -64,7 +64,7 @@ public record QuantityAndAccount57
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoRestrictedFINXMax210Text? DenominationChoice { get; init; }
+    public IsoRestrictedFINXMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

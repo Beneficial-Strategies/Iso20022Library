@@ -22,7 +22,7 @@ public record PartyIdentification339
     [IsoId("c61857a7-d86c-4cd0-872e-3b0bb3b16bb4")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public required PartyIdentification262Choice Party { get; init; }
+    public required PartyIdentification262Choice_ Party { get; init; }
 
     /// <summary>
     /// Legal entity identification as an alternate identification for the party.

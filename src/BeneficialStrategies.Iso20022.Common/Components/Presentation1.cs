@@ -30,7 +30,7 @@ public record Presentation1
     [IsoId("_97IpMXltEeG7BsjMvd1mEw_-2054994062")]
     [DisplayName("Place Of Presentation Or Under Confirmation Choice")]
     [IsoXmlTag("PlcOfPresntnOrUdrConfChc")]
-    public PlaceOrUnderConfirmationChoice1_? PlaceOfPresentationOrUnderConfirmationChoice { get; init; }
+    public PlaceOrUnderConfirmationChoice1_? PlaceOfPresentationOrUnderConfirmationChoice_ { get; init; }
 
     /// <summary>
     /// Document required to be presented.

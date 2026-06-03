@@ -46,5 +46,5 @@ public record Intermediary50
     [IsoId("c5ce2232-7389-424c-bfdc-9ff5e3d1a36e")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
-    public InvestmentFundRole2Choice? Role { get; init; }
+    public InvestmentFundRole2Choice_? Role { get; init; }
 }

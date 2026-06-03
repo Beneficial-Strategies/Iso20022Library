@@ -69,7 +69,7 @@ public record TrackerPaymentTransaction15
     [IsoId("_Fx-vRXeKEfCdoODv2ypKfw")]
     [DisplayName("Payment Scenario")]
     [IsoXmlTag("PmtScnro")]
-    public PaymentScenario1Choice? PaymentScenario { get; init; }
+    public PaymentScenario1Choice_? PaymentScenario { get; init; }
 
     [IsoId("_Fx-vR3eKEfCdoODv2ypKfw")]
     [DisplayName("Settlement Information")]
@@ -104,7 +104,7 @@ public record TrackerPaymentTransaction15
     [IsoId("_Fx-vU3eKEfCdoODv2ypKfw")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice? RequestedExecutionDate { get; init; }
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     [IsoId("_Fx-vVXeKEfCdoODv2ypKfw")]
     [DisplayName("Settlement Priority")]
@@ -254,7 +254,7 @@ public record TrackerPaymentTransaction15
     [IsoId("_Fx_WZXeKEfCdoODv2ypKfw")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
-    public Party40Choice? Debtor { get; init; }
+    public Party40Choice_? Debtor { get; init; }
 
     [IsoId("_Fx_WZ3eKEfCdoODv2ypKfw")]
     [DisplayName("Debtor Account")]
@@ -284,7 +284,7 @@ public record TrackerPaymentTransaction15
     [IsoId("_Fx_WcXeKEfCdoODv2ypKfw")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
-    public Party40Choice? Creditor { get; init; }
+    public Party40Choice_? Creditor { get; init; }
 
     [IsoId("_Fx_Wc3eKEfCdoODv2ypKfw")]
     [DisplayName("Creditor Account")]
@@ -309,7 +309,7 @@ public record TrackerPaymentTransaction15
     [IsoId("_Fx_We3eKEfCdoODv2ypKfw")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public Purpose2Choice? Purpose { get; init; }
+    public Purpose2Choice_? Purpose { get; init; }
 
     [IsoId("_Fx_WfXeKEfCdoODv2ypKfw")]
     [DisplayName("Regulatory Reporting")]

@@ -22,7 +22,7 @@ public record FinancialInstrumentIdentification7
     [IsoId("9d360b17-0522-40e7-9759-7b1e182b8895")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required SecurityIdentification46Choice Identification { get; init; }
+    public required SecurityIdentification46Choice_ Identification { get; init; }
 
     /// <summary>
     /// Name of the financial instrument in free format text.

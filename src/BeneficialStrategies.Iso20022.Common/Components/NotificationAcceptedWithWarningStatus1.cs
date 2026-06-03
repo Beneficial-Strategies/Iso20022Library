@@ -22,7 +22,7 @@ public record NotificationAcceptedWithWarningStatus1
     [IsoId("_rgwpwaUeEfCnE_wCEfCqTA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required AcceptedWithWarningStatus1Format1Choice Status { get; init; }
+    public required AcceptedWithWarningStatus1Format1Choice_ Status { get; init; }
 
     /// <summary>
     /// Additional information about the status.

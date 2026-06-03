@@ -19,7 +19,7 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp7LQagzEfCXwLUUylXgrQ")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public ValueList<References83Choice> References { get; init; } = [];
+    public ValueList<References83Choice_> References { get; init; } = [];
 
     [IsoId("_Wp7LSagzEfCXwLUUylXgrQ")]
     [DisplayName("Status")]
@@ -39,7 +39,7 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp7yU6gzEfCXwLUUylXgrQ")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
-    public ValueList<SecuritiesTransactionType48Choice> SecuritiesTransactionType { get; init; } = [];
+    public ValueList<SecuritiesTransactionType48Choice_> SecuritiesTransactionType { get; init; } = [];
 
     [IsoId("_Wp7yW6gzEfCXwLUUylXgrQ")]
     [DisplayName("Financial Instrument Identification")]
@@ -49,7 +49,7 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp7yY6gzEfCXwLUUylXgrQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public ValueList<PriorityNumeric4Choice> Priority { get; init; } = [];
+    public ValueList<PriorityNumeric4Choice_> Priority { get; init; } = [];
 
     [IsoId("_Wp7ya6gzEfCXwLUUylXgrQ")]
     [DisplayName("Safekeeping Account")]
@@ -59,22 +59,22 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp7ybagzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public ValueList<AccountIdentificationSearchCriteria2Choice> CashAccount { get; init; } = [];
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> CashAccount { get; init; } = [];
 
     [IsoId("_Wp7yb6gzEfCXwLUUylXgrQ")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public DateAndDateTimeSearch5Choice? TradeDate { get; init; }
+    public DateAndDateTimeSearch5Choice_? TradeDate { get; init; }
 
     [IsoId("_Wp7yd6gzEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public QuantitySearch2Choice? SettlementQuantity { get; init; }
+    public QuantitySearch2Choice_? SettlementQuantity { get; init; }
 
     [IsoId("_Wp7yf6gzEfCXwLUUylXgrQ")]
     [DisplayName("Settled Quantity")]
     [IsoXmlTag("SttldQty")]
-    public QuantitySearch2Choice? SettledQuantity { get; init; }
+    public QuantitySearch2Choice_? SettledQuantity { get; init; }
 
     [IsoId("_Wp7yh6gzEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Amount")]
@@ -89,12 +89,12 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp7yl6gzEfCXwLUUylXgrQ")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public DateAndDateTimeSearch5Choice? IntendedSettlementDate { get; init; }
+    public DateAndDateTimeSearch5Choice_? IntendedSettlementDate { get; init; }
 
     [IsoId("_Wp8ZYagzEfCXwLUUylXgrQ")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTimeSearch5Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTimeSearch5Choice_? EffectiveSettlementDate { get; init; }
 
     [IsoId("_Wp8ZaagzEfCXwLUUylXgrQ")]
     [DisplayName("Settlement Currency")]
@@ -134,7 +134,7 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp8Zg6gzEfCXwLUUylXgrQ")]
     [DisplayName("Securities Transaction Condition")]
     [IsoXmlTag("SctiesTxCond")]
-    public ValueList<SettlementTransactionCondition34Choice> SecuritiesTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition34Choice_> SecuritiesTransactionCondition { get; init; } = [];
 
     [IsoId("_Wp8ZhagzEfCXwLUUylXgrQ")]
     [DisplayName("Partial Settlement Indicator")]
@@ -159,5 +159,5 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp8Zk6gzEfCXwLUUylXgrQ")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
-    public ValueList<Registration10Choice> HoldIndicator { get; init; } = [];
+    public ValueList<Registration10Choice_> HoldIndicator { get; init; } = [];
 }

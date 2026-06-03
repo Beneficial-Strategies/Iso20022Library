@@ -22,7 +22,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMC6ag6EfCXwLUUylXgrQ")]
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification3Choice? PlaceOfListing { get; init; }
+    public MarketIdentification3Choice_? PlaceOfListing { get; init; }
 
     /// <summary>
     /// Specifies the computation method of (accrued) interest of the security.
@@ -30,7 +30,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMC9ag6EfCXwLUUylXgrQ")]
     [DisplayName("Day Count Basis")]
     [IsoXmlTag("DayCntBsis")]
-    public InterestComputationMethodFormat4Choice? DayCountBasis { get; init; }
+    public InterestComputationMethodFormat4Choice_? DayCountBasis { get; init; }
 
     /// <summary>
     /// Specifies the form, this is, ownership, of the security.
@@ -38,7 +38,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDAag6EfCXwLUUylXgrQ")]
     [DisplayName("Registration Form")]
     [IsoXmlTag("RegnForm")]
-    public FormOfSecurity6Choice? RegistrationForm { get; init; }
+    public FormOfSecurity6Choice_? RegistrationForm { get; init; }
 
     /// <summary>
     /// Specifies the frequency of an interest payment.
@@ -46,7 +46,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDDag6EfCXwLUUylXgrQ")]
     [DisplayName("Payment Frequency")]
     [IsoXmlTag("PmtFrqcy")]
-    public Frequency23Choice? PaymentFrequency { get; init; }
+    public Frequency23Choice_? PaymentFrequency { get; init; }
 
     /// <summary>
     /// Status of payment of a security at a particular time.
@@ -54,7 +54,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDGag6EfCXwLUUylXgrQ")]
     [DisplayName("Payment Status")]
     [IsoXmlTag("PmtSts")]
-    public SecuritiesPaymentStatus5Choice? PaymentStatus { get; init; }
+    public SecuritiesPaymentStatus5Choice_? PaymentStatus { get; init; }
 
     /// <summary>
     /// Specifies the frequency of change to the variable rate of an interest bearing instrument.
@@ -62,7 +62,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDJag6EfCXwLUUylXgrQ")]
     [DisplayName("Variable Rate Change Frequency")]
     [IsoXmlTag("VarblRateChngFrqcy")]
-    public Frequency23Choice? VariableRateChangeFrequency { get; init; }
+    public Frequency23Choice_? VariableRateChangeFrequency { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification.
@@ -70,7 +70,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDMag6EfCXwLUUylXgrQ")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType32Choice? ClassificationType { get; init; }
+    public ClassificationType32Choice_? ClassificationType { get; init; }
 
     /// <summary>
     /// Specifies how an option can be exercised (American, European, Bermudan).
@@ -78,7 +78,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDPag6EfCXwLUUylXgrQ")]
     [DisplayName("Option Style")]
     [IsoXmlTag("OptnStyle")]
-    public OptionStyle8Choice? OptionStyle { get; init; }
+    public OptionStyle8Choice_? OptionStyle { get; init; }
 
     /// <summary>
     /// Specifies whether it is a Call option or a Put option.
@@ -86,7 +86,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDSag6EfCXwLUUylXgrQ")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public OptionType6Choice? OptionType { get; init; }
+    public OptionType6Choice_? OptionType { get; init; }
 
     /// <summary>
     /// Currency in which a security is issued or redenominated.
@@ -230,7 +230,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEG6g6EfCXwLUUylXgrQ")]
     [DisplayName("Coupon Attached Number")]
     [IsoXmlTag("CpnAttchdNb")]
-    public Number22Choice? CouponAttachedNumber { get; init; }
+    public Number22Choice_? CouponAttachedNumber { get; init; }
 
     /// <summary>
     /// Number identifying a group of underlying assets assigned by the issuer of a factored security.
@@ -270,7 +270,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEV6g6EfCXwLUUylXgrQ")]
     [DisplayName("Market Or Indicative Price")]
     [IsoXmlTag("MktOrIndctvPric")]
-    public PriceType4Choice? MarketOrIndicativePrice { get; init; }
+    public PriceType4Choice_? MarketOrIndicativePrice { get; init; }
 
     /// <summary>
     /// Predetermined price at which the holder of a derivative will buy or sell the underlying instrument.
@@ -310,7 +310,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEk6g6EfCXwLUUylXgrQ")]
     [DisplayName("Minimum Nominal Quantity")]
     [IsoXmlTag("MinNmnlQty")]
-    public FinancialInstrumentQuantity1Choice? MinimumNominalQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? MinimumNominalQuantity { get; init; }
 
     /// <summary>
     /// Ratio or multiplying factor used to convert one contract into a quantity.
@@ -318,7 +318,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEn6g6EfCXwLUUylXgrQ")]
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
-    public FinancialInstrumentQuantity1Choice? ContractSize { get; init; }
+    public FinancialInstrumentQuantity1Choice_? ContractSize { get; init; }
 
     /// <summary>
     /// Identification of the underlying security.

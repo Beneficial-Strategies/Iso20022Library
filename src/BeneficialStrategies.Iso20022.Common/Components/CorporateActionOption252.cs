@@ -30,7 +30,7 @@ public record CorporateActionOption252
     [IsoId("_2w9ajY5bEfCNdMvBaLxujg")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption37Choice OptionType { get; init; }
+    public required CorporateActionOption37Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounded.
@@ -38,7 +38,7 @@ public record CorporateActionOption252
     [IsoId("_2w9alY5bEfCNdMvBaLxujg")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice? FractionDisposition { get; init; }
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Specifies the conditions that apply to the offer.
@@ -46,7 +46,7 @@ public record CorporateActionOption252
     [IsoId("_2w9anY5bEfCNdMvBaLxujg")]
     [DisplayName("Offer Type")]
     [IsoXmlTag("OfferTp")]
-    public ValueList<OfferTypeFormat17Choice> OfferType { get; init; } = [];
+    public ValueList<OfferTypeFormat17Choice_> OfferType { get; init; } = [];
 
     /// <summary>
     /// Specifies the features that may apply to a corporate action option.
@@ -54,7 +54,7 @@ public record CorporateActionOption252
     [IsoId("_2w-Bg45bEfCNdMvBaLxujg")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public ValueList<OptionFeaturesFormat32Choice> OptionFeatures { get; init; } = [];
+    public ValueList<OptionFeaturesFormat32Choice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Specifies the status of the option.
@@ -62,7 +62,7 @@ public record CorporateActionOption252
     [IsoId("_2w-Bi45bEfCNdMvBaLxujg")]
     [DisplayName("Option Availability Status")]
     [IsoXmlTag("OptnAvlbtySts")]
-    public OptionAvailabilityStatus3Choice? OptionAvailabilityStatus { get; init; }
+    public OptionAvailabilityStatus3Choice_? OptionAvailabilityStatus { get; init; }
 
     /// <summary>
     /// Type of certification/breakdown.
@@ -70,7 +70,7 @@ public record CorporateActionOption252
     [IsoId("_2w-Bk45bEfCNdMvBaLxujg")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
-    public ValueList<BeneficiaryCertificationType13Choice> CertificationBreakdownType { get; init; } = [];
+    public ValueList<BeneficiaryCertificationType13Choice_> CertificationBreakdownType { get; init; } = [];
 
     /// <summary>
     /// Holder of the security has to certify that it is not domiciled in the country indicated.
@@ -102,7 +102,7 @@ public record CorporateActionOption252
     [IsoId("_2w-Bs45bEfCNdMvBaLxujg")]
     [DisplayName("Default Processing Or Standing Instruction")]
     [IsoXmlTag("DfltPrcgOrStgInstr")]
-    public required DefaultProcessingOrStandingInstruction2Choice DefaultProcessingOrStandingInstruction { get; init; }
+    public required DefaultProcessingOrStandingInstruction2Choice_ DefaultProcessingOrStandingInstruction { get; init; }
 
     /// <summary>
     /// Indicates whether redemption charges apply.

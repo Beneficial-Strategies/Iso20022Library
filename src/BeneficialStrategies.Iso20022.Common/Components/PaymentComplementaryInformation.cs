@@ -22,7 +22,7 @@ public record PaymentComplementaryInformation
     [IsoId("_PgmFMtp-Ed-ak6NoX_4Aeg_143459089")]
     [DisplayName("Remittance Choice")]
     [IsoXmlTag("RmtChc")]
-    public RemittanceInformation3Choice_? RemittanceChoice { get; init; }
+    public RemittanceInformation3Choice_? RemittanceChoice_ { get; init; }
 
     /// <summary>
     /// Debtor or Ordering customer of the payment instruction.

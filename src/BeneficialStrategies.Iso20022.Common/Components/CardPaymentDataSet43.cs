@@ -64,5 +64,5 @@ public record CardPaymentDataSet43
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     [MinLength(1)]
-    public ValueList<CardPaymentDataSetTransaction14Choice> Transaction { get; init; } = [];
+    public ValueList<CardPaymentDataSetTransaction14Choice_> Transaction { get; init; } = [];
 }

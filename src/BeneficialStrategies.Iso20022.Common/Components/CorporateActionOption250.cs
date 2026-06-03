@@ -30,7 +30,7 @@ public record CorporateActionOption250
     [IsoId("37a69d3d-921b-4a89-b5c4-201352ab1f0c")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption37Choice OptionType { get; init; }
+    public required CorporateActionOption37Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounded.
@@ -38,7 +38,7 @@ public record CorporateActionOption250
     [IsoId("43b76e75-43d0-4acd-8d38-15e3af6f1117")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice? FractionDisposition { get; init; }
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Specifies the features that may apply to a corporate action option.
@@ -46,7 +46,7 @@ public record CorporateActionOption250
     [IsoId("4ce599f8-32f1-4f5d-9fd3-b8e4a4dec59f")]
     [DisplayName("Option Features")]
     [IsoXmlTag("OptnFeatrs")]
-    public ValueList<OptionFeaturesFormat32Choice> OptionFeatures { get; init; } = [];
+    public ValueList<OptionFeaturesFormat32Choice_> OptionFeatures { get; init; } = [];
 
     /// <summary>
     /// Used for options that have particular proprietary features.
@@ -62,7 +62,7 @@ public record CorporateActionOption250
     [IsoId("900b79e2-4acc-45bd-8db2-32798950043b")]
     [DisplayName("Option Availability Status")]
     [IsoXmlTag("OptnAvlbtySts")]
-    public OptionAvailabilityStatus3Choice? OptionAvailabilityStatus { get; init; }
+    public OptionAvailabilityStatus3Choice_? OptionAvailabilityStatus { get; init; }
 
     /// <summary>
     /// Type of certification/breakdown.
@@ -70,7 +70,7 @@ public record CorporateActionOption250
     [IsoId("16eb231b-a305-4ef3-839c-b5de0f73fb8f")]
     [DisplayName("Certification Breakdown Type")]
     [IsoXmlTag("CertfctnBrkdwnTp")]
-    public ValueList<BeneficiaryCertificationType13Choice> CertificationBreakdownType { get; init; } = [];
+    public ValueList<BeneficiaryCertificationType13Choice_> CertificationBreakdownType { get; init; } = [];
 
     /// <summary>
     /// Currency in which cash proceeds are to be credited/debited.
@@ -198,7 +198,7 @@ public record CorporateActionOption250
     [IsoId("8a7e04a4-23a0-4dde-9ecb-75645adaae1c")]
     [DisplayName("Proration Below Minimum Quantity")]
     [IsoXmlTag("PrratnBlwMinQty")]
-    public ProrationBelowMinimumQuantity3Choice? ProrationBelowMinimumQuantity { get; init; }
+    public ProrationBelowMinimumQuantity3Choice_? ProrationBelowMinimumQuantity { get; init; }
 
     /// <summary>
     /// Indicates how fractional positions will be handled for events with prorated options.

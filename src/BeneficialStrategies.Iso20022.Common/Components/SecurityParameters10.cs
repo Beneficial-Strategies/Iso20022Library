@@ -39,5 +39,5 @@ public record SecurityParameters10
     [IsoId("_u1uZtbTxEeeQy4o2AayYHg")]
     [DisplayName("Signature Choice")]
     [IsoXmlTag("SgntrChc")]
-    public ATMSignature2Choice_? SignatureChoice { get; init; }
+    public ATMSignature2Choice_? SignatureChoice_ { get; init; }
 }

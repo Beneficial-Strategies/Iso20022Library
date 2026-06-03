@@ -22,7 +22,7 @@ public record AdditionalQueryParameters15
     [IsoId("f3039ae7-8b41-4ac6-b22b-5732192782ab")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public Status19Choice? Status { get; init; }
+    public Status19Choice_? Status { get; init; }
 
     /// <summary>
     /// Request to obtain a Securities Transaction Pending Report for transactions with the specified status reason.
@@ -30,7 +30,7 @@ public record AdditionalQueryParameters15
     [IsoId("1da9214b-38ba-4eb9-9c5e-3fd8aa672ff5")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<Reason21Choice> Reason { get; init; } = [];
+    public ValueList<Reason21Choice_> Reason { get; init; } = [];
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

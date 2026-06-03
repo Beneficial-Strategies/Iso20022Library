@@ -38,7 +38,7 @@ public record SafekeepingAccount20
     [IsoId("_gFPIfa5wEfCUHaCK5HWOhg")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification231Choice? AccountOwner { get; init; }
+    public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Identification of a subaccount within the safekeeping account.
@@ -63,7 +63,7 @@ public record SafekeepingAccount20
     [IsoId("_gFPIg65wEfCUHaCK5HWOhg")]
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public ValueList<PartyIdentification264Choice> RightsHolder { get; init; } = [];
+    public ValueList<PartyIdentification264Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
     /// Detailed information about the pledge.

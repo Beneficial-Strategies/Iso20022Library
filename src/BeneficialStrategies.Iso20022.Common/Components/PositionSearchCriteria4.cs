@@ -38,7 +38,7 @@ public record PositionSearchCriteria4
     [IsoId("_Esj8tQweEfG65oVFfOF9vw")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount2Choice? SafekeepingAccount { get; init; }
+    public SecuritiesAccount2Choice_? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Financial instrument representing a sum of rights of the investor vis-à-vis the issuer.
@@ -62,7 +62,7 @@ public record PositionSearchCriteria4
     [IsoId("_Esj8uwweEfG65oVFfOF9vw")]
     [DisplayName("Sub Balance Type")]
     [IsoXmlTag("SubBalTp")]
-    public SecuritiesBalanceType7Choice? SubBalanceType { get; init; }
+    public SecuritiesBalanceType7Choice_? SubBalanceType { get; init; }
 
     /// <summary>
     /// Option to provide output zero position in the results.

@@ -22,7 +22,7 @@ public record PendingStatus3
     [IsoId("_JcT3gaKuEfCHi7w3_0pcpw")]
     [DisplayName("Pending Quantity")]
     [IsoXmlTag("PdgQty")]
-    public Quantity51Choice? PendingQuantity { get; init; }
+    public Quantity51Choice_? PendingQuantity { get; init; }
 
     /// <summary>
     /// Reason for the pending status.
@@ -30,5 +30,5 @@ public record PendingStatus3
     [IsoId("_JcT3g6KuEfCHi7w3_0pcpw")]
     [DisplayName("Pending Reason")]
     [IsoXmlTag("PdgRsn")]
-    public required PendingStatus80Choice PendingReason { get; init; }
+    public required PendingStatus80Choice_ PendingReason { get; init; }
 }

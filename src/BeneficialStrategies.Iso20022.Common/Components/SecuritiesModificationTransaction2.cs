@@ -29,7 +29,7 @@ public record SecuritiesModificationTransaction2
     [IsoId("_Ev6wheSmEe-qVZLXW4RRBw")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus71Choice? ProcessingStatus { get; init; }
+    public ProcessingStatus71Choice_? ProcessingStatus { get; init; }
 
     [IsoId("_Ev6wjeSmEe-qVZLXW4RRBw")]
     [DisplayName("Request Reference")]
@@ -49,5 +49,5 @@ public record SecuritiesModificationTransaction2
     [IsoId("_Ev6wmeSmEe-qVZLXW4RRBw")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public SettlementOrIntraPosition3Choice? Underlying { get; init; }
+    public SettlementOrIntraPosition3Choice_? Underlying { get; init; }
 }

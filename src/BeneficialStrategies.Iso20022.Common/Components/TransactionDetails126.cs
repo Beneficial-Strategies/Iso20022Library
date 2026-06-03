@@ -24,7 +24,7 @@ public record TransactionDetails126
     [IsoId("_kj0GwGp9EemmaZLSPtWX5B")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity6Choice SettlementQuantity { get; init; }
+    public required Quantity6Choice_ SettlementQuantity { get; init; }
 
     [IsoId("_kj0GwGp9EemmaZLSPtWX5C")]
     [DisplayName("Settlement Amount")]
@@ -34,12 +34,12 @@ public record TransactionDetails126
     [IsoId("_kj0GwGp9EemmaZLSPtWX5D")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_kj0GwGp9EemmaZLSPtWX5E")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     [IsoId("_kj0GwGp9EemmaZLSPtWX5F")]
     [DisplayName("Delivering Settlement Parties")]

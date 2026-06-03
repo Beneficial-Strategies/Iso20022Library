@@ -24,7 +24,7 @@ public record SubscriptionBulkOrder06
     [IsoId("36072695-e47e-4ac5-a5f1-17b973e3353a")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification4Choice? PlaceOfTrade { get; init; }
+    public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
     [IsoId("f19a8eaa-3b6e-4760-b87f-7db32cbfcdfc")]
     [DisplayName("Order Date Time")]
@@ -34,7 +34,7 @@ public record SubscriptionBulkOrder06
     [IsoId("dd896ca9-93b6-4589-8589-ad0a69ebebc7")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public DateAndDateTime2Choice? ExpiryDateTime { get; init; }
+    public DateAndDateTime2Choice_? ExpiryDateTime { get; init; }
 
     [IsoId("713ddfb0-9437-4e97-aa78-bdc18b25f3a8")]
     [DisplayName("Requested Future Trade Date")]
@@ -44,7 +44,7 @@ public record SubscriptionBulkOrder06
     [IsoId("ebe3b1d9-f4ae-4148-a1ca-5830de7e1014")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice? CancellationRight { get; init; }
+    public CancellationRight1Choice_? CancellationRight { get; init; }
 
     [IsoId("9e14fbf2-ddde-42c6-bd2a-9ec795540ce6")]
     [DisplayName("Financial Instrument Details")]

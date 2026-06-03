@@ -84,7 +84,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGquD5aFEfC2_67yGLymgA")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice SettlementQuantity { get; init; }
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     [IsoId("_DGquF5aFEfC2_67yGLymgA")]
     [DisplayName("Opening Settlement Amount")]
@@ -104,37 +104,37 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGquJ5aFEfC2_67yGLymgA")]
     [DisplayName("Opening Settlement Date")]
     [IsoXmlTag("OpngSttlmDt")]
-    public required SettlementDate19Choice OpeningSettlementDate { get; init; }
+    public required SettlementDate19Choice_ OpeningSettlementDate { get; init; }
 
     [IsoId("_DGquL5aFEfC2_67yGLymgA")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
-    public TerminationDate6Choice? TerminationDate { get; init; }
+    public TerminationDate6Choice_? TerminationDate { get; init; }
 
     [IsoId("_DGquN5aFEfC2_67yGLymgA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_DGquP5aFEfC2_67yGLymgA")]
     [DisplayName("Expected Settlement Date")]
     [IsoXmlTag("XpctdSttlmDt")]
-    public DateAndDateTime2Choice? ExpectedSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedSettlementDate { get; init; }
 
     [IsoId("_DGquR5aFEfC2_67yGLymgA")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateAndDateTime2Choice? ExpectedValueDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedValueDate { get; init; }
 
     [IsoId("_DGquT5aFEfC2_67yGLymgA")]
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
-    public DateAndDateTime2Choice? LateDeliveryDate { get; init; }
+    public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
 
     [IsoId("_DGquV5aFEfC2_67yGLymgA")]
     [DisplayName("Rate Change Date")]
     [IsoXmlTag("RateChngDt")]
-    public DateAndDateTime2Choice? RateChangeDate { get; init; }
+    public DateAndDateTime2Choice_? RateChangeDate { get; init; }
 
     [IsoId("_DGquX5aFEfC2_67yGLymgA")]
     [DisplayName("Securities Financing Transaction Type")]
@@ -159,7 +159,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGquf5aFEfC2_67yGLymgA")]
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
-    public RateType35Choice? RateType { get; init; }
+    public RateType35Choice_? RateType { get; init; }
 
     [IsoId("_DGquh5aFEfC2_67yGLymgA")]
     [DisplayName("Variable Rate Support")]
@@ -184,7 +184,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGrUz5aFEfC2_67yGLymgA")]
     [DisplayName("Pricing Rate")]
     [IsoXmlTag("PricgRate")]
-    public RateOrName1Choice? PricingRate { get; init; }
+    public RateOrName1Choice_? PricingRate { get; init; }
 
     [IsoId("_DGrU15aFEfC2_67yGLymgA")]
     [DisplayName("Spread")]

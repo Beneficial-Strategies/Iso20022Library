@@ -38,7 +38,7 @@ public record Frequency2
     [IsoId("_a2kShbpVEfCPZvweyV2nEg")]
     [DisplayName("End Point Choice")]
     [IsoXmlTag("EndPtChc")]
-    public required EndPoint2Choice EndPointChoice { get; init; }
+    public required EndPoint2Choice_ EndPointChoice_ { get; init; }
 
     /// <summary>
     /// Payment schedule frequency pattern which indicates how frequently a payment is made.
@@ -46,7 +46,7 @@ public record Frequency2
     [IsoId("_a2kSh7pVEfCPZvweyV2nEg")]
     [DisplayName("Requested Frequency Pattern")]
     [IsoXmlTag("ReqdFrqcyPttrn")]
-    public Frequency37Choice? RequestedFrequencyPattern { get; init; }
+    public Frequency37Choice_? RequestedFrequencyPattern { get; init; }
 
     /// <summary>
     /// Adjustment indicator for a non-working day to enable payment to be made on the next working day.

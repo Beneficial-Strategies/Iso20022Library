@@ -44,17 +44,17 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTkGZaHEfC2_67yGLymgA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public PortfolioTransferStatus2Choice? Status { get; init; }
+    public PortfolioTransferStatus2Choice_? Status { get; init; }
 
     [IsoId("_1hTkH5aHEfC2_67yGLymgA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_1hTkK5aHEfC2_67yGLymgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice SettlementDate { get; init; }
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     [IsoId("_1hTkN5aHEfC2_67yGLymgA")]
     [DisplayName("Number Of Days Accrued")]
@@ -74,7 +74,7 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTkW5aHEfC2_67yGLymgA")]
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
-    public ValueList<Reporting7Choice> Reporting { get; init; } = [];
+    public ValueList<Reporting7Choice_> Reporting { get; init; } = [];
 
     [IsoId("_1hTkZ5aHEfC2_67yGLymgA")]
     [DisplayName("Quantity Details")]

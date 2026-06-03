@@ -99,12 +99,12 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b17")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice SettlementQuantity { get; init; }
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b18")]
     [DisplayName("Partially Released Quantity")]
     [IsoXmlTag("PrtlyRlsdQty")]
-    public Quantity51Choice? PartiallyReleasedQuantity { get; init; }
+    public Quantity51Choice_? PartiallyReleasedQuantity { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b19")]
     [DisplayName("Settlement Amount")]
@@ -119,27 +119,27 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b21")]
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
-    public DateAndDateTime2Choice? LateDeliveryDate { get; init; }
+    public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b22")]
     [DisplayName("Expected Settlement Date")]
     [IsoXmlTag("XpctdSttlmDt")]
-    public DateAndDateTime2Choice? ExpectedSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedSettlementDate { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b23")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateAndDateTime2Choice? ExpectedValueDate { get; init; }
+    public DateAndDateTime2Choice_? ExpectedValueDate { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b24")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required SettlementDate19Choice SettlementDate { get; init; }
+    public required SettlementDate19Choice_ SettlementDate { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b25")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b26")]
     [DisplayName("Acknowledged Status Time Stamp")]

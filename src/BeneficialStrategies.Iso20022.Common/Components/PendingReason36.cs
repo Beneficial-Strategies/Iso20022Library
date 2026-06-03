@@ -22,7 +22,7 @@ public record PendingReason36
     [IsoId("_vBCzdaodEfCG2_q2WT-90w")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required PendingReason79Choice Code { get; init; }
+    public required PendingReason79Choice_ Code { get; init; }
 
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.

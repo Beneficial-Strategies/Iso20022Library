@@ -22,7 +22,7 @@ public record FailingReason15
     [IsoId("_0w8AweSkEe-qVZLXW4RRBw")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required FailingReason20Choice Code { get; init; }
+    public required FailingReason20Choice_ Code { get; init; }
 
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.

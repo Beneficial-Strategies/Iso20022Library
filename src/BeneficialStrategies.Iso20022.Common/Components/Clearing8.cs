@@ -30,7 +30,7 @@ public record Clearing8
     [IsoId("_OCi93ao4EfCG2_q2WT-90w")]
     [DisplayName("Clearing Segment")]
     [IsoXmlTag("ClrSgmt")]
-    public PartyIdentification253Choice? ClearingSegment { get; init; }
+    public PartyIdentification253Choice_? ClearingSegment { get; init; }
 
     /// <summary>
     /// Indicates if the position is guaranteed or non-guaranteed by the central counterparty.

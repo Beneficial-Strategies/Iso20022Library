@@ -54,7 +54,7 @@ public record IntraPositionMovement8
     [IsoId("_L2ayW2dDEemvNLufWGIVOQ")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity1Choice SettlementQuantity { get; init; }
+    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Quantity of financial instrument effectively settled.
@@ -62,7 +62,7 @@ public record IntraPositionMovement8
     [IsoId("_L2ayXWdDEemvNLufWGIVOQ")]
     [DisplayName("Settled Quantity")]
     [IsoXmlTag("SttldQty")]
-    public FinancialInstrumentQuantity1Choice? SettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? SettledQuantity { get; init; }
 
     /// <summary>
     /// Quantity of financial instrument previously settled.
@@ -70,7 +70,7 @@ public record IntraPositionMovement8
     [IsoId("_L2ayX2dDEemvNLufWGIVOQ")]
     [DisplayName("Previously Settled Quantity")]
     [IsoXmlTag("PrevslySttldQty")]
-    public FinancialInstrumentQuantity1Choice? PreviouslySettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? PreviouslySettledQuantity { get; init; }
 
     /// <summary>
     /// Quantity of financial instrument remaining to be settled.
@@ -78,7 +78,7 @@ public record IntraPositionMovement8
     [IsoId("_L2ayYWdDEemvNLufWGIVOQ")]
     [DisplayName("Remaining To Be Settled Quantity")]
     [IsoXmlTag("RmngToBeSttldQty")]
-    public FinancialInstrumentQuantity1Choice? RemainingToBeSettledQuantity { get; init; }
+    public FinancialInstrumentQuantity1Choice_? RemainingToBeSettledQuantity { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are intended to be moved.
@@ -86,7 +86,7 @@ public record IntraPositionMovement8
     [IsoId("_L2ayY2dDEemvNLufWGIVOQ")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public required DateAndDateTime2Choice IntendedSettlementDate { get; init; }
+    public required DateAndDateTime2Choice_ IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are moved.
@@ -94,7 +94,7 @@ public record IntraPositionMovement8
     [IsoId("_L2aya2dDEemvNLufWGIVOQ")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice? EffectiveSettlementDate { get; init; }
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the status was assigned.
@@ -134,7 +134,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZY2dDEemvNLufWGIVOQ")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     /// <summary>
     /// Specifies the type of corporate event.
@@ -142,7 +142,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZa2dDEemvNLufWGIVOQ")]
     [DisplayName("Corporate Action Event Type")]
     [IsoXmlTag("CorpActnEvtTp")]
-    public CorporateActionEventType56Choice? CorporateActionEventType { get; init; }
+    public CorporateActionEventType56Choice_? CorporateActionEventType { get; init; }
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

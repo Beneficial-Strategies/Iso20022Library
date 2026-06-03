@@ -22,7 +22,7 @@ public record FinancialInstrumentIdentification9
     [IsoId("546bfa92-ec5c-4db4-8c5c-221507557a17")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required SecurityIdentification46Choice Identification { get; init; }
+    public required SecurityIdentification46Choice_ Identification { get; init; }
 
     /// <summary>
     /// Name of the financial instrument in free format text.
@@ -46,7 +46,7 @@ public record FinancialInstrumentIdentification9
     [IsoId("41d04162-3b8d-42d1-a736-b7d13bc038ad")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType32Choice? ClassificationType { get; init; }
+    public ClassificationType32Choice_? ClassificationType { get; init; }
 
     /// <summary>
     /// Type of security offered in place of a restricted security, for example, common.

@@ -30,7 +30,7 @@ public record CorporateActionElection4
     [IsoId("_HAL7ArboEe-NMoTZ6Byg6A")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption47Choice OptionType { get; init; }
+    public required CorporateActionOption47Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Currency in which cash proceeds are to be credited or debited.

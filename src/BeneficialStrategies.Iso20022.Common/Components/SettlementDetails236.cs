@@ -19,32 +19,32 @@ public record SettlementDetails236
     [IsoId("_mzFkl_HcEfChCaiL9q1LKg")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition47Choice> SettlementTransactionCondition { get; init; } = [];
+    public ValueList<SettlementTransactionCondition47Choice_> SettlementTransactionCondition { get; init; } = [];
 
     [IsoId("_mzFko_HcEfChCaiL9q1LKg")]
     [DisplayName("Registration")]
     [IsoXmlTag("Regn")]
-    public Registration9Choice? Registration { get; init; }
+    public Registration9Choice_? Registration { get; init; }
 
     [IsoId("_mzFkr_HcEfChCaiL9q1LKg")]
     [DisplayName("Legal Restrictions")]
     [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice? LegalRestrictions { get; init; }
+    public Restriction5Choice_? LegalRestrictions { get; init; }
 
     [IsoId("_mzFku_HcEfChCaiL9q1LKg")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice? SecuritiesRTGS { get; init; }
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     [IsoId("_mzFkx_HcEfChCaiL9q1LKg")]
     [DisplayName("Settlement System Method")]
     [IsoXmlTag("SttlmSysMtd")]
-    public SettlementSystemMethod4Choice? SettlementSystemMethod { get; init; }
+    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
     [IsoId("_mzFk0_HcEfChCaiL9q1LKg")]
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
-    public TaxCapacityParty4Choice? TaxCapacity { get; init; }
+    public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
 
     [IsoId("_mzFk3_HcEfChCaiL9q1LKg")]
     [DisplayName("Stamp Duty Tax Basis")]

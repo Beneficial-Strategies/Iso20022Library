@@ -22,7 +22,7 @@ public record Period18
     [IsoId("_fXC-RatmEfCqjuqNaaNXgw")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public required DateFormat73Choice StartDate { get; init; }
+    public required DateFormat73Choice_ StartDate { get; init; }
 
     /// <summary>
     /// Date and time at which the range ends.
@@ -30,5 +30,5 @@ public record Period18
     [IsoId("_fXC-S6tmEfCqjuqNaaNXgw")]
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
-    public required DateFormat73Choice EndDate { get; init; }
+    public required DateFormat73Choice_ EndDate { get; init; }
 }

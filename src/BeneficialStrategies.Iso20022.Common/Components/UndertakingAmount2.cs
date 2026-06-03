@@ -22,7 +22,7 @@ public record UndertakingAmount2
     [IsoId("_95C-gnltEeG7BsjMvd1mEw_973191229")]
     [DisplayName("Amount Choice")]
     [IsoXmlTag("AmtChc")]
-    public required Amount1Choice_ AmountChoice { get; init; }
+    public required Amount1Choice_ AmountChoice_ { get; init; }
 
     /// <summary>
     /// Additional information concerning the amended amount.

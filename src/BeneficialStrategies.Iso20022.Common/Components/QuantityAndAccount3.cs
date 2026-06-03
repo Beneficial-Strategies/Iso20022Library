@@ -32,7 +32,7 @@ public record QuantityAndAccount3
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? DenominationChoice { get; init; }
+    public IsoMax210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.

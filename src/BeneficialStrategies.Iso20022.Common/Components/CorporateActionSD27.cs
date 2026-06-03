@@ -206,5 +206,5 @@ public record CorporateActionSD27
     [IsoId("_r_kLUaOEEfCHhuKwuscqyg")]
     [DisplayName("DTC Total Called Quantity")]
     [IsoXmlTag("DTCTtlClldQty")]
-    public FinancialInstrumentQuantity34Choice? DTCTotalCalledQuantity { get; init; }
+    public FinancialInstrumentQuantity34Choice_? DTCTotalCalledQuantity { get; init; }
 }

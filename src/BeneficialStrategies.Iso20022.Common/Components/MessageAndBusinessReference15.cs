@@ -22,7 +22,7 @@ public record MessageAndBusinessReference15
     [IsoId("68fea2f0-bd0e-4cd6-83d2-435b5ae7cce6")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public References87Choice? Reference { get; init; }
+    public References87Choice_? Reference { get; init; }
 
     /// <summary>
     /// Reference to a linked message that was previously received.

@@ -22,7 +22,7 @@ public record PartyIdentification340
     [IsoId("_CiJKUa3pEfCN-rGCydxGUA")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public required PartyIdentification263Choice OwnerIdentification { get; init; }
+    public required PartyIdentification263Choice_ OwnerIdentification { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.
@@ -54,7 +54,7 @@ public record PartyIdentification340
     [IsoId("_CiJxga3pEfCN-rGCydxGUA")]
     [DisplayName("Owned Securities Quantity")]
     [IsoXmlTag("OwndSctiesQty")]
-    public required FinancialInstrumentQuantity33Choice OwnedSecuritiesQuantity { get; init; }
+    public required FinancialInstrumentQuantity33Choice_ OwnedSecuritiesQuantity { get; init; }
 
     /// <summary>
     /// Type of certification which is required.
@@ -62,7 +62,7 @@ public record PartyIdentification340
     [IsoId("_CiJxia3pEfCN-rGCydxGUA")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public ValueList<BeneficiaryCertificationType10Choice> CertificationType { get; init; } = [];
+    public ValueList<BeneficiaryCertificationType10Choice_> CertificationType { get; init; } = [];
 
     /// <summary>
     /// Requested percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer.
@@ -70,7 +70,7 @@ public record PartyIdentification340
     [IsoId("_CiJxka3pEfCN-rGCydxGUA")]
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
-    public RateAndAmountFormat57Choice? WithholdingTaxRate { get; init; }
+    public RateAndAmountFormat57Choice_? WithholdingTaxRate { get; init; }
 
     /// <summary>
     /// Provides additional information about the type of certification/breakdown required.

@@ -46,7 +46,7 @@ public record PenaltyCalculationRecord1
     [IsoId("_BDxtQDkbEem897H7zB2RJg")]
     [DisplayName("Discount Rate")]
     [IsoXmlTag("DscntRate")]
-    public PriceRateOrAmount4Choice? DiscountRate { get; init; }
+    public PriceRateOrAmount4Choice_? DiscountRate { get; init; }
 
     /// <summary>
     /// Further details on the foreign exchange rate.

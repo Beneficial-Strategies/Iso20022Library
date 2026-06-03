@@ -22,7 +22,7 @@ public record RejectedStatus13
     [IsoId("71f7606a-350b-4165-bee8-d59906bed7d3")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public RejectedReason66Choice? Reason { get; init; }
+    public RejectedReason66Choice_? Reason { get; init; }
 
     /// <summary>
     /// Additional information about the rejected reason.

@@ -126,7 +126,7 @@ public record MeetingNotice5
     [IsoId("_j6414a09EemDtrWpq90Ckg")]
     [DisplayName("Proxy Choice")]
     [IsoXmlTag("PrxyChc")]
-    public Proxy3Choice_? ProxyChoice { get; init; }
+    public Proxy3Choice_? ProxyChoice_ { get; init; }
 
     /// <summary>
     /// Contact person at the party organising the meeting, at the issuer or at an intermediary.

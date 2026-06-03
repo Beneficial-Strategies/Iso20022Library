@@ -31,7 +31,7 @@ public record CloseLink5
     [IsoId("_J-LH46X_EeynsLtPxJMJTQ")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public required SystemPartyIdentification2Choice PartyIdentification { get; init; }
+    public required SystemPartyIdentification2Choice_ PartyIdentification { get; init; }
 
     /// <summary>
     /// Identifies the credit provider party for which the close link information is provided.
@@ -39,5 +39,5 @@ public record CloseLink5
     [IsoId("_J-LH5aX_EeynsLtPxJMJTQ")]
     [DisplayName("Credit Provider Identification")]
     [IsoXmlTag("CdtPrvdrId")]
-    public SystemPartyIdentification2Choice? CreditProviderIdentification { get; init; }
+    public SystemPartyIdentification2Choice_? CreditProviderIdentification { get; init; }
 }

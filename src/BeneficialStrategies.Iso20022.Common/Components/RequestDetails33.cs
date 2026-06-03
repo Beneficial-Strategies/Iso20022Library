@@ -38,7 +38,7 @@ public record RequestDetails33
     [IsoId("_E4alQeSmEe-qVZLXW4RRBw")]
     [DisplayName("Automatic Borrowing")]
     [IsoXmlTag("AutomtcBrrwg")]
-    public AutomaticBorrowing7Choice? AutomaticBorrowing { get; init; }
+    public AutomaticBorrowing7Choice_? AutomaticBorrowing { get; init; }
 
     /// <summary>
     /// Specifies whether the instruction due to expire is confirmed for settlement.
@@ -54,7 +54,7 @@ public record RequestDetails33
     [IsoId("_E4alUeSmEe-qVZLXW4RRBw")]
     [DisplayName("Linkage")]
     [IsoXmlTag("Lkg")]
-    public LinkageType3Choice? Linkage { get; init; }
+    public LinkageType3Choice_? Linkage { get; init; }
 
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
@@ -62,7 +62,7 @@ public record RequestDetails33
     [IsoId("_E4alWeSmEe-qVZLXW4RRBw")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice? Priority { get; init; }
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     /// <summary>
     /// Specifies another type of processing change request.
@@ -86,7 +86,7 @@ public record RequestDetails33
     [IsoId("_E4alceSmEe-qVZLXW4RRBw")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice? SecuritiesRTGS { get; init; }
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     /// <summary>
     /// Specifies whether the transaction is on hold/blocked/frozen.
@@ -102,7 +102,7 @@ public record RequestDetails33
     [IsoId("_E4algeSmEe-qVZLXW4RRBw")]
     [DisplayName("Matching Denial")]
     [IsoXmlTag("MtchgDnl")]
-    public MatchingDenied3Choice? MatchingDenial { get; init; }
+    public MatchingDenied3Choice_? MatchingDenial { get; init; }
 
     /// <summary>
     /// Specifies that the transaction is requested to be unilaterally split.
@@ -110,7 +110,7 @@ public record RequestDetails33
     [IsoId("_E4alieSmEe-qVZLXW4RRBw")]
     [DisplayName("Unilateral Split")]
     [IsoXmlTag("UnltrlSplt")]
-    public UnilateralSplit3Choice? UnilateralSplit { get; init; }
+    public UnilateralSplit3Choice_? UnilateralSplit { get; init; }
 
     /// <summary>
     /// Information regarding the linkage requested.

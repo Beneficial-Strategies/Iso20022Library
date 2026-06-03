@@ -23,7 +23,7 @@ public record NotificationRejectionReason3
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     [MinLength(1)]
-    public ValueList<RejectionReason6Format2Choice> Reason { get; init; } = [];
+    public ValueList<RejectionReason6Format2Choice_> Reason { get; init; } = [];
 
     /// <summary>
     /// Additional information about the status.

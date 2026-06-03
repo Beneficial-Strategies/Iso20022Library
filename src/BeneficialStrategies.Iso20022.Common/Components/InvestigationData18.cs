@@ -30,7 +30,7 @@ public record InvestigationData18
     [IsoId("bc9ecd45-906c-4a4d-b943-d3ea54c70f59")]
     [DisplayName("Original Investigation Reason")]
     [IsoXmlTag("OrgnlInvstgtnRsn")]
-    public InvestigationReason1Choice? OriginalInvestigationReason { get; init; }
+    public InvestigationReason1Choice_? OriginalInvestigationReason { get; init; }
 
     /// <summary>
     /// Original investigation reason sub type as provided in the investigation request.
@@ -38,7 +38,7 @@ public record InvestigationData18
     [IsoId("17dc79e6-5a8b-41fc-a004-164f9723bf8a")]
     [DisplayName("Original Investigation Reason Sub Type")]
     [IsoXmlTag("OrgnlInvstgtnRsnSubTp")]
-    public InvestigationReasonSubType1Choice? OriginalInvestigationReasonSubType { get; init; }
+    public InvestigationReasonSubType1Choice_? OriginalInvestigationReasonSubType { get; init; }
 
     /// <summary>
     /// Response to the investigation, as provided by the responder.
@@ -46,7 +46,7 @@ public record InvestigationData18
     [IsoId("85c8b22f-8c30-48a9-881d-1854c5af04dd")]
     [DisplayName("Response Data")]
     [IsoXmlTag("RspnData")]
-    public required InvestigationDataRecord12Choice ResponseData { get; init; }
+    public required InvestigationDataRecord12Choice_ ResponseData { get; init; }
 
     /// <summary>
     /// Additional information that will be sent separately to the message such as a copy of a passport.
@@ -78,5 +78,5 @@ public record InvestigationData18
     [IsoId("e9a5ac62-365c-44fc-af1a-5a08dfa7ba61")]
     [DisplayName("Response Originator")]
     [IsoXmlTag("RspnOrgtr")]
-    public Party40Choice? ResponseOriginator { get; init; }
+    public Party40Choice_? ResponseOriginator { get; init; }
 }

@@ -30,7 +30,7 @@ public record InstructedCorporateActionOption23
     [IsoId("_Hvsdua8wEfCx2aBifPEdRg")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption30Choice OptionType { get; init; }
+    public required CorporateActionOption30Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Balance of instructed position.
@@ -38,7 +38,7 @@ public record InstructedCorporateActionOption23
     [IsoId("_Hvsdwa8wEfCx2aBifPEdRg")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
-    public required BalanceFormat11Choice InstructedBalance { get; init; }
+    public required BalanceFormat11Choice_ InstructedBalance { get; init; }
 
     /// <summary>
     /// Indicates the default action related to a corporate action event.
@@ -46,7 +46,7 @@ public record InstructedCorporateActionOption23
     [IsoId("_Hvsdya8wEfCx2aBifPEdRg")]
     [DisplayName("Default Action")]
     [IsoXmlTag("DfltActn")]
-    public DefaultProcessingOrStandingInstruction2Choice? DefaultAction { get; init; }
+    public DefaultProcessingOrStandingInstruction2Choice_? DefaultAction { get; init; }
 
     /// <summary>
     /// Daily total of accepted instructions received for a given option.

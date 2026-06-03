@@ -38,7 +38,7 @@ public record PortfolioTransfer17
     [IsoId("2807b0a3-e53f-418c-b665-fe873970d1ad")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public FundPortfolio9Choice? Portfolio { get; init; }
+    public FundPortfolio9Choice_? Portfolio { get; init; }
 
     /// <summary>
     /// Asset to be transferred.

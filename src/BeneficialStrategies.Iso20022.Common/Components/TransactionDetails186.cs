@@ -19,12 +19,12 @@ public record TransactionDetails186
     [IsoId("_qgfO3ZaUEfC2_67yGLymgA")]
     [DisplayName("Transaction Activity")]
     [IsoXmlTag("TxActvty")]
-    public required TransactionActivity3Choice TransactionActivity { get; init; }
+    public required TransactionActivity3Choice_ TransactionActivity { get; init; }
 
     [IsoId("_qgfO5ZaUEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
     [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
-    public SettlementOrCorporateActionEvent35Choice? SettlementTransactionOrCorporateActionEventType { get; init; }
+    public SettlementOrCorporateActionEvent35Choice_? SettlementTransactionOrCorporateActionEventType { get; init; }
 
     [IsoId("_qgfO7ZaUEfC2_67yGLymgA")]
     [DisplayName("Securities Movement Type")]
@@ -59,7 +59,7 @@ public record TransactionDetails186
     [IsoId("_qgfPHZaUEfC2_67yGLymgA")]
     [DisplayName("Posting Quantity")]
     [IsoXmlTag("PstngQty")]
-    public required Quantity51Choice PostingQuantity { get; init; }
+    public required Quantity51Choice_ PostingQuantity { get; init; }
 
     [IsoId("_qgfPJZaUEfC2_67yGLymgA")]
     [DisplayName("Number Of Days Accrued")]
@@ -84,22 +84,22 @@ public record TransactionDetails186
     [IsoId("_qgfPPZaUEfC2_67yGLymgA")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate8Choice? TradeDate { get; init; }
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     [IsoId("_qgfPRZaUEfC2_67yGLymgA")]
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public required DateAndDateTime2Choice EffectiveSettlementDate { get; init; }
+    public required DateAndDateTime2Choice_ EffectiveSettlementDate { get; init; }
 
     [IsoId("_qgfPTZaUEfC2_67yGLymgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SettlementDate17Choice? SettlementDate { get; init; }
+    public SettlementDate17Choice_? SettlementDate { get; init; }
 
     [IsoId("_qgfPVZaUEfC2_67yGLymgA")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice? ValueDate { get; init; }
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     [IsoId("_qgfPXZaUEfC2_67yGLymgA")]
     [DisplayName("Acknowledged Status Time Stamp")]
