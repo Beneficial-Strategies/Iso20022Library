@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2025-04-24
 - **Branch**: snapshot/2026
 - **Plan created**: 2026-05-28
-- **Last updated**: 2026-06-03 (Phase 2 batch 28: 671 new components complete through SubscriptionOrder16)
+- **Last updated**: 2026-06-03 (Phase 2 batch 29: 701 new components complete through TerminalManagementDataSet35)
 
 ## Phase 1: Codesets (299 new · 58 changed · 2 removed)
 <!-- /snapshot-sync-codesets works this section -->
@@ -1055,36 +1055,36 @@
 - [x] `SubscriptionMultipleExecution7` — `Components/SubscriptionMultipleExecution7.cs`
 - [x] `SubscriptionMultipleOrder7` — `Components/SubscriptionMultipleOrder7.cs`
 - [x] `SubscriptionOrder16` — `Components/SubscriptionOrder16.cs`
-- [ ] `SubscriptionOrder17` — `Components/SubscriptionOrder17.cs`
-- [ ] `SwitchExecution8` — `Components/SwitchExecution8.cs`
-- [ ] `SwitchLegReferences3` — `Components/SwitchLegReferences3.cs`
-- [ ] `SwitchOrder8` — `Components/SwitchOrder8.cs`
-- [ ] `SwitchOrderStatusAndReason3` — `Components/SwitchOrderStatusAndReason3.cs`
-- [ ] `SwitchRedemptionLegExecution5` — `Components/SwitchRedemptionLegExecution5.cs`
-- [ ] `SwitchRedemptionLegOrder7` — `Components/SwitchRedemptionLegOrder7.cs`
-- [ ] `SwitchSubscriptionLegExecution5` — `Components/SwitchSubscriptionLegExecution5.cs`
-- [ ] `SwitchSubscriptionLegOrder7` — `Components/SwitchSubscriptionLegOrder7.cs`
-- [ ] `SystemAbort9` — `Components/SystemAbort9.cs`
-- [ ] `SystemEventNotification9` — `Components/SystemEventNotification9.cs`
-- [ ] `TMSAction14` — `Components/TMSAction14.cs`
-- [ ] `TMSEvent13` — `Components/TMSEvent13.cs`
-- [ ] `TMSProtocolParameters8` — `Components/TMSProtocolParameters8.cs`
-- [ ] `Tax42` — `Components/Tax42.cs`
-- [ ] `Tax43` — `Components/Tax43.cs`
-- [ ] `Tax44` — `Components/Tax44.cs`
-- [ ] `TaxCalculationInformation12` — `Components/TaxCalculationInformation12.cs`
-- [ ] `TaxExemption1` — `Components/TaxExemption1.cs`
-- [ ] `TaxVoucher6` — `Components/TaxVoucher6.cs`
-- [ ] `TelecomBillingEventAmount1` — `Components/TelecomBillingEventAmount1.cs`
-- [ ] `TelecomLineItemAmount1` — `Components/TelecomLineItemAmount1.cs`
-- [ ] `TelecomServices4` — `Components/TelecomServices4.cs`
-- [ ] `TelecomServicesLineItem4` — `Components/TelecomServicesLineItem4.cs`
-- [ ] `TemporaryServiceChargeRate1` — `Components/TemporaryServiceChargeRate1.cs`
-- [ ] `TemporaryServices4` — `Components/TemporaryServices4.cs`
-- [ ] `Terminal10` — `Components/Terminal10.cs`
-- [ ] `Terminal12` — `Components/Terminal12.cs`
-- [ ] `Terminal13` — `Components/Terminal13.cs`
-- [ ] `TerminalManagementDataSet35` — `Components/TerminalManagementDataSet35.cs`
+- [x] `SubscriptionOrder17` — `Components/SubscriptionOrder17.cs`
+- [x] `SwitchExecution8` — `Components/SwitchExecution8.cs`
+- [x] `SwitchLegReferences3` — `Components/SwitchLegReferences3.cs`
+- [x] `SwitchOrder8` — `Components/SwitchOrder8.cs`
+- [x] `SwitchOrderStatusAndReason3` — `Components/SwitchOrderStatusAndReason3.cs`
+- [x] `SwitchRedemptionLegExecution5` — `Components/SwitchRedemptionLegExecution5.cs`
+- [x] `SwitchRedemptionLegOrder7` — `Components/SwitchRedemptionLegOrder7.cs`
+- [x] `SwitchSubscriptionLegExecution5` — `Components/SwitchSubscriptionLegExecution5.cs`
+- [x] `SwitchSubscriptionLegOrder7` — `Components/SwitchSubscriptionLegOrder7.cs`
+- [x] `SystemAbort9` — `Components/SystemAbort9.cs`
+- [x] `SystemEventNotification9` — `Components/SystemEventNotification9.cs`
+- [x] `TMSAction14` — `Components/TMSAction14.cs`
+- [x] `TMSEvent13` — `Components/TMSEvent13.cs`
+- [x] `TMSProtocolParameters8` — `Components/TMSProtocolParameters8.cs`
+- [x] `Tax42` — `Components/Tax42.cs`
+- [x] `Tax43` — `Components/Tax43.cs`
+- [x] `Tax44` — `Components/Tax44.cs`
+- [x] `TaxCalculationInformation12` — `Components/TaxCalculationInformation12.cs`
+- [x] `TaxExemption1` — `Components/TaxExemption1.cs`
+- [x] `TaxVoucher6` — `Components/TaxVoucher6.cs`
+- [x] `TelecomBillingEventAmount1` — `Components/TelecomBillingEventAmount1.cs`
+- [x] `TelecomLineItemAmount1` — `Components/TelecomLineItemAmount1.cs`
+- [x] `TelecomServices4` — `Components/TelecomServices4.cs`
+- [x] `TelecomServicesLineItem4` — `Components/TelecomServicesLineItem4.cs`
+- [x] `TemporaryServiceChargeRate1` — `Components/TemporaryServiceChargeRate1.cs`
+- [x] `TemporaryServices4` — `Components/TemporaryServices4.cs`
+- [x] `Terminal10` — `Components/Terminal10.cs`
+- [x] `Terminal12` — `Components/Terminal12.cs`
+- [x] `Terminal13` — `Components/Terminal13.cs`
+- [x] `TerminalManagementDataSet35` — `Components/TerminalManagementDataSet35.cs`
 - [ ] `Token5` — `Components/Token5.cs`
 - [ ] `TokenRequestComponent6` — `Components/TokenRequestComponent6.cs`
 - [ ] `TotalFeesAndTaxes44` — `Components/TotalFeesAndTaxes44.cs`
