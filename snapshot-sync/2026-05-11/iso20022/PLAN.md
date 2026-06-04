@@ -1439,36 +1439,36 @@
 - [x] `AcceptorNonFinancialResponseV06` — new: `MessageDefinitions/caaa/AcceptorNonFinancialResponseV06.cs`
 - [x] `AcceptorReconciliationRequestV14` — new: `MessageDefinitions/caaa/AcceptorReconciliationRequestV14.cs`
 - [x] `AcceptorReconciliationResponseV13` — new: `MessageDefinitions/caaa/AcceptorReconciliationResponseV13.cs`
-- [ ] `AcceptorToAcquirerBatchFileExchangeV03` — new: `MessageDefinitions/caaa/AcceptorToAcquirerBatchFileExchangeV03.cs`
-- [ ] `AcceptorTransactionLogReportRequestV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportRequestV06.cs`
-- [ ] `AcceptorTransactionLogReportResponseV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportResponseV06.cs`
-- [ ] `AcquirerToAcceptorBatchFileExchangeV03` — new: `MessageDefinitions/caaa/AcquirerToAcceptorBatchFileExchangeV03.cs`
-- [ ] `TransactionAdviceResponseV07` — new: `MessageDefinitions/caaa/TransactionAdviceResponseV07.cs`
-- [ ] `TransactionAdviceV07` — new: `MessageDefinitions/caaa/TransactionAdviceV07.cs`
+- [x] `AcceptorToAcquirerBatchFileExchangeV03` — new: `MessageDefinitions/caaa/AcceptorToAcquirerBatchFileExchangeV03.cs`
+- [x] `AcceptorTransactionLogReportRequestV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportRequestV06.cs`
+- [x] `AcceptorTransactionLogReportResponseV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportResponseV06.cs`
+- [x] `AcquirerToAcceptorBatchFileExchangeV03` — new: `MessageDefinitions/caaa/AcquirerToAcceptorBatchFileExchangeV03.cs`
+- [x] `TransactionAdviceResponseV07` — new: `MessageDefinitions/caaa/TransactionAdviceResponseV07.cs`
+- [x] `TransactionAdviceV07` — new: `MessageDefinitions/caaa/TransactionAdviceV07.cs`
 
 ### caad (20)
 #### New
-- [ ] `AdministrativeInitiationV03` — new: `MessageDefinitions/caad/AdministrativeInitiationV03.cs`
-- [ ] `AdministrativeResponseV03` — new: `MessageDefinitions/caad/AdministrativeResponseV03.cs`
-- [ ] `BatchManagementInitiationV04` — new: `MessageDefinitions/caad/BatchManagementInitiationV04.cs`
-- [ ] `BatchManagementResponseV04` — new: `MessageDefinitions/caad/BatchManagementResponseV04.cs`
-- [ ] `BatchTransferInitiationV04` — new: `MessageDefinitions/caad/BatchTransferInitiationV04.cs`
-- [ ] `BatchTransferResponseV04` — new: `MessageDefinitions/caad/BatchTransferResponseV04.cs`
-- [ ] `CustomReportV03` — new: `MessageDefinitions/caad/CustomReportV03.cs`
-- [ ] `ErrorV05` — new: `MessageDefinitions/caad/ErrorV05.cs`
-- [ ] `ReconciliationInitiationV05` — new: `MessageDefinitions/caad/ReconciliationInitiationV05.cs`
-- [ ] `ReconciliationResponseV05` — new: `MessageDefinitions/caad/ReconciliationResponseV05.cs`
+- [x] `AdministrativeInitiationV03` — new: `MessageDefinitions/caad/AdministrativeInitiationV03.cs`
+- [x] `AdministrativeResponseV03` — new: `MessageDefinitions/caad/AdministrativeResponseV03.cs`
+- [x] `BatchManagementInitiationV04` — new: `MessageDefinitions/caad/BatchManagementInitiationV04.cs`
+- [x] `BatchManagementResponseV04` — new: `MessageDefinitions/caad/BatchManagementResponseV04.cs`
+- [x] `BatchTransferInitiationV04` — new: `MessageDefinitions/caad/BatchTransferInitiationV04.cs`
+- [x] `BatchTransferResponseV04` — new: `MessageDefinitions/caad/BatchTransferResponseV04.cs`
+- [x] `CustomReportV03` — new: `MessageDefinitions/caad/CustomReportV03.cs`
+- [x] `ErrorV05` — new: `MessageDefinitions/caad/ErrorV05.cs`
+- [x] `ReconciliationInitiationV05` — new: `MessageDefinitions/caad/ReconciliationInitiationV05.cs`
+- [x] `ReconciliationResponseV05` — new: `MessageDefinitions/caad/ReconciliationResponseV05.cs`
 #### Removed
-- [ ] `AdministrativeInitiationV01` — delete: `MessageDefinitions/caad/AdministrativeInitiationV01.cs`
-- [ ] `AdministrativeResponseV01` — delete: `MessageDefinitions/caad/AdministrativeResponseV01.cs`
-- [ ] `BatchManagementInitiationV02` — delete: `MessageDefinitions/caad/BatchManagementInitiationV02.cs`
-- [ ] `BatchManagementResponseV02` — delete: `MessageDefinitions/caad/BatchManagementResponseV02.cs`
-- [ ] `BatchTransferInitiationV02` — delete: `MessageDefinitions/caad/BatchTransferInitiationV02.cs`
-- [ ] `BatchTransferResponseV02` — delete: `MessageDefinitions/caad/BatchTransferResponseV02.cs`
-- [ ] `CustomReportV01` — delete: `MessageDefinitions/caad/CustomReportV01.cs`
-- [ ] `ErrorV03` — delete: `MessageDefinitions/caad/ErrorV03.cs`
-- [ ] `ReconciliationInitiationV03` — delete: `MessageDefinitions/caad/ReconciliationInitiationV03.cs`
-- [ ] `ReconciliationResponseV03` — delete: `MessageDefinitions/caad/ReconciliationResponseV03.cs`
+- [x] `AdministrativeInitiationV01` — delete: `MessageDefinitions/caad/AdministrativeInitiationV01.cs`
+- [x] `AdministrativeResponseV01` — delete: `MessageDefinitions/caad/AdministrativeResponseV01.cs`
+- [x] `BatchManagementInitiationV02` — delete: `MessageDefinitions/caad/BatchManagementInitiationV02.cs`
+- [x] `BatchManagementResponseV02` — delete: `MessageDefinitions/caad/BatchManagementResponseV02.cs`
+- [x] `BatchTransferInitiationV02` — delete: `MessageDefinitions/caad/BatchTransferInitiationV02.cs`
+- [x] `BatchTransferResponseV02` — delete: `MessageDefinitions/caad/BatchTransferResponseV02.cs`
+- [x] `CustomReportV01` — delete: `MessageDefinitions/caad/CustomReportV01.cs`
+- [x] `ErrorV03` — delete: `MessageDefinitions/caad/ErrorV03.cs`
+- [x] `ReconciliationInitiationV03` — delete: `MessageDefinitions/caad/ReconciliationInitiationV03.cs`
+- [x] `ReconciliationResponseV03` — delete: `MessageDefinitions/caad/ReconciliationResponseV03.cs`
 
 ### caam (3)
 #### New

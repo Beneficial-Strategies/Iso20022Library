@@ -10,36 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.010.001.01 ISO standard message type.
+/// This record is an implementation of the caaa.024.001.06 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The Custom Report message can be initiated by any party and received by any party (acquirer, agent, issuer or other party) connected to a network.
-///
-/// This message provides the capability to convey customized reports that are defined by bi-lateral agreement.
 /// </summary>
-[Description(
-    @"The Custom Report message can be initiated by any party and received by any party (acquirer, agent, issuer or other party) connected to a network.||This message provides the capability to convey customized reports that are defined by bi-lateral agreement."
-)]
-[IsoId("_4z6yUMlHEeuJ35KoBRZFOg")]
-[DisplayName("Custom Report V")]
-public record CustomReportV01 : IOuterRecord
+[IsoId("_M_CMcZ_yEfC4Q_xhaK1hdQ")]
+[DisplayName("Acceptor Transaction Log Report Request V06")]
+public record AcceptorTransactionLogReportRequestV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.010.001.01";
+    public const string IsoIdentifier = "caaa.024.001.06";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "CstmRpt";
+    public const string XmlTag = "AccptrTxLgRptReq";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.010.001.01";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.024.001.06";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -52,30 +46,27 @@ public record CustomReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to protocol management.
+    /// Header.
     /// </summary>
-    [IsoId("_gLegIMlLEeuJ35KoBRZFOg")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header65 Header { get; init; }
+    public required Header70 Header { get; init; }
 
     /// <summary>
-    /// Information related to the customer report.
+    /// Report Request.
     /// </summary>
-    [IsoId("_rJnosMlLEeuJ35KoBRZFOg")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required CustomReport1 Body { get; init; }
+    [DisplayName("Report Request")]
+    [IsoXmlTag("RptReq")]
+    public required ReportRequest9 ReportRequest { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_t0su4clLEeuJ35KoBRZFOg")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType37? SecurityTrailer { get; init; }
 }
 
-// Since CustomReportV01Document is not really part of the logical business domain model,
+// Since AcceptorTransactionLogReportRequestV06Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CustomReportV01.
+// Some of the constants previously declared there have been relocated to AcceptorTransactionLogReportRequestV06.

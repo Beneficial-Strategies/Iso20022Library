@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.006.001.03 ISO standard message type.
+/// This record is an implementation of the caaa.020.001.07 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The ReconciliationResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a ReconciliationInitiation message.
 /// </summary>
-[Description(
-    @"The ReconciliationResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a ReconciliationInitiation message."
-)]
-[IsoId("_CFmNIYv_EeuC5632vxUfGg")]
-[DisplayName("Reconciliation Response V")]
-public record ReconciliationResponseV03 : IOuterRecord
+[IsoId("_f_3D8Z_wEfC4Q_xhaK1hdQ")]
+[DisplayName("Transaction Advice V07")]
+public record TransactionAdviceV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.006.001.03";
+    public const string IsoIdentifier = "caaa.020.001.07";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "RcncltnRspn";
+    public const string XmlTag = "TxAdvc";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.006.001.03";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.020.001.07";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,30 +46,27 @@ public record ReconciliationResponseV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Header.
     /// </summary>
-    [IsoId("_CFmNI4v_EeuC5632vxUfGg")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header60 Header { get; init; }
+    public required Header70 Header { get; init; }
 
     /// <summary>
-    /// Information related to the reconciliation response.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_CFmNJYv_EeuC5632vxUfGg")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required ReconciliationResponse7 Body { get; init; }
-
-    /// <summary>
-    /// Trailer of the message containing a MAC
-    /// </summary>
-    [IsoId("_CFmNJ4v_EeuC5632vxUfGg")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType37? SecurityTrailer { get; init; }
+
+    /// <summary>
+    /// Transaction Advice.
+    /// </summary>
+    [DisplayName("Transaction Advice")]
+    [IsoXmlTag("TxAdvc")]
+    public required AcceptorCompletionAdvice15 TransactionAdvice { get; init; }
 }
 
-// Since ReconciliationResponseV03Document is not really part of the logical business domain model,
+// Since TransactionAdviceV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ReconciliationResponseV03.
+// Some of the constants previously declared there have been relocated to TransactionAdviceV07.

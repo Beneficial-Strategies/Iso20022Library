@@ -10,36 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.005.001.03 ISO standard message type.
+/// This record is an implementation of the caaa.027.001.03 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The ReconciliationInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).
-///
-/// Reconciliation is the exchange between two interchanging parties (Acquirer, Issuer or Agent) of totals and/or counts of messages within a specific session.
 /// </summary>
-[Description(
-    @"The ReconciliationInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).||Reconciliation is the exchange between two interchanging parties (Acquirer, Issuer or Agent) of totals and/or counts of messages within a specific session."
-)]
-[IsoId("_--ZoIYv9EeuC5632vxUfGg")]
-[DisplayName("Reconciliation Initiation V")]
-public record ReconciliationInitiationV03 : IOuterRecord
+[IsoId("_QVCe8Z_yEfC4Q_xhaK1hdQ")]
+[DisplayName("Acquirer To Acceptor Batch File Exchange V03")]
+public record AcquirerToAcceptorBatchFileExchangeV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.005.001.03";
+    public const string IsoIdentifier = "caaa.027.001.03";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "RcncltnInitn";
+    public const string XmlTag = "AcqrrToAccptrBtchFileXchg";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.005.001.03";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.027.001.03";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -52,30 +46,34 @@ public record ReconciliationInitiationV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Body Element.
     /// </summary>
-    [IsoId("_--ZoI4v9EeuC5632vxUfGg")]
+    [DisplayName("Body Element")]
+    [IsoXmlTag("BodyElmt")]
+    public ValueList<AcquirerToAcceptorFileBody3> BodyElement { get; init; } = [];
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header60 Header { get; init; }
+    public required Header56 Header { get; init; }
 
     /// <summary>
-    /// Information related to the reconciliation.
+    /// Response.
     /// </summary>
-    [IsoId("_--ZoJYv9EeuC5632vxUfGg")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required ReconciliationInitiation2 Body { get; init; }
+    [DisplayName("Response")]
+    [IsoXmlTag("Rspn")]
+    public required ResponseType11 Response { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_--ZoJ4v9EeuC5632vxUfGg")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }
 
-// Since ReconciliationInitiationV03Document is not really part of the logical business domain model,
+// Since AcquirerToAcceptorBatchFileExchangeV03Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ReconciliationInitiationV03.
+// Some of the constants previously declared there have been relocated to AcquirerToAcceptorBatchFileExchangeV03.

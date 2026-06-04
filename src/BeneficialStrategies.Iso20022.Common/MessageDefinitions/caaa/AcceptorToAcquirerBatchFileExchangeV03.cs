@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.009.001.01 ISO standard message type.
+/// This record is an implementation of the caaa.026.001.03 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The AdministrativeResponse message is usually sent by any party (processor, clearing or settlement agent) to any party in response to a AdministrativeInitiation Message.
 /// </summary>
-[Description(
-    @"The AdministrativeResponse message is usually sent by any party (processor, clearing or settlement agent) to any party in response to a AdministrativeInitiation Message."
-)]
-[IsoId("_4xvBUDNQEeylu6lH-gut-A")]
-[DisplayName("Administrative Response V")]
-public record AdministrativeResponseV01 : IOuterRecord
+[IsoId("_qfjV8Z_wEfC4Q_xhaK1hdQ")]
+[DisplayName("Acceptor To Acquirer Batch File Exchange V03")]
+public record AcceptorToAcquirerBatchFileExchangeV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.009.001.01";
+    public const string IsoIdentifier = "caaa.026.001.03";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "AdmstvRspn";
+    public const string XmlTag = "AccptrToAcqrrBtchFileXchg";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.009.001.01";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.026.001.03";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,30 +46,27 @@ public record AdministrativeResponseV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Body Element.
     /// </summary>
-    [IsoId("_ijx78TNREeylu6lH-gut-A")]
+    [DisplayName("Body Element")]
+    [IsoXmlTag("BodyElmt")]
+    public ValueList<AcceptorToAcquirerFileBody3> BodyElement { get; init; } = [];
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header66 Header { get; init; }
+    public required Header56 Header { get; init; }
 
     /// <summary>
-    /// Information related to the Administrative Response.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_KMg-cDZ4EeysP8L3U1Ot-g")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required AdministrativeResponse1 Body { get; init; }
-
-    /// <summary>
-    /// Trailer of the message containing a MAC
-    /// </summary>
-    [IsoId("_jWqxcTNREeylu6lH-gut-A")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }
 
-// Since AdministrativeResponseV01Document is not really part of the logical business domain model,
+// Since AcceptorToAcquirerBatchFileExchangeV03Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AdministrativeResponseV01.
+// Some of the constants previously declared there have been relocated to AcceptorToAcquirerBatchFileExchangeV03.

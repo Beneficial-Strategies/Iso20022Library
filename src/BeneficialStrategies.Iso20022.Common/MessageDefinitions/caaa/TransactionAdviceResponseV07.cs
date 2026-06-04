@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.007.001.03 ISO standard message type.
+/// This record is an implementation of the caaa.021.001.07 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The Error message is sent by any party to any party (acquirer, agent or issuer) to indicate a message error.
 /// </summary>
-[Description(
-    @"The Error message is sent by any party to any party (acquirer, agent or issuer) to indicate a message error. "
-)]
-[IsoId("_27ZQwYgoEeu8-LhY4KPfWg")]
-[DisplayName("Error V")]
-public record ErrorV03 : IOuterRecord
+[IsoId("_GJ_AMZ_yEfC4Q_xhaK1hdQ")]
+[DisplayName("Transaction Advice Response V07")]
+public record TransactionAdviceResponseV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.007.001.03";
+    public const string IsoIdentifier = "caaa.021.001.07";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "Err";
+    public const string XmlTag = "TxAdvcRspn";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.007.001.03";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.021.001.07";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,30 +46,27 @@ public record ErrorV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Header.
     /// </summary>
-    [IsoId("_27ZQw4goEeu8-LhY4KPfWg")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header64 Header { get; init; }
+    public required Header70 Header { get; init; }
 
     /// <summary>
-    /// Details of the rejection or message errors.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_27Z30YgoEeu8-LhY4KPfWg")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required Error2 Body { get; init; }
-
-    /// <summary>
-    /// Trailer of the message containing a MAC.
-    /// </summary>
-    [IsoId("_27Z304goEeu8-LhY4KPfWg")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType37? SecurityTrailer { get; init; }
+
+    /// <summary>
+    /// Transaction Advice Response.
+    /// </summary>
+    [DisplayName("Transaction Advice Response")]
+    [IsoXmlTag("TxAdvcRspn")]
+    public required AcceptorCompletionAdviceResponse14 TransactionAdviceResponse { get; init; }
 }
 
-// Since ErrorV03Document is not really part of the logical business domain model,
+// Since TransactionAdviceResponseV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ErrorV03.
+// Some of the constants previously declared there have been relocated to TransactionAdviceResponseV07.

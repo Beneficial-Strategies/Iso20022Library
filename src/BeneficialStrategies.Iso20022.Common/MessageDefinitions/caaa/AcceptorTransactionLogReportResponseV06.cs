@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.caad;
+namespace BeneficialStrategies.Iso20022.caaa;
 
 /// <summary>
-/// This record is an implementation of the caad.003.001.02 ISO standard message type.
+/// This record is an implementation of the caaa.025.001.06 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The BatchTransferInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer). This message is used to transfer a series of transactions or administrative information in a single exchange.
 /// </summary>
-[Description(
-    @"The BatchTransferInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer). This message is used to transfer a series of transactions or administrative information in a single exchange."
-)]
-[IsoId("_oMldAZMrEeuleeHpFMMhmQ")]
-[DisplayName("Batch Transfer Initiation V")]
-public record BatchTransferInitiationV02 : IOuterRecord
+[IsoId("_m6AyoZ_wEfC4Q_xhaK1hdQ")]
+[DisplayName("Acceptor Transaction Log Report Response V06")]
+public record AcceptorTransactionLogReportResponseV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "caad.003.001.02";
+    public const string IsoIdentifier = "caaa.025.001.06";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "BtchTrfInitn";
+    public const string XmlTag = "AccptrTxLgRptRspn";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caad.003.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.025.001.06";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,30 +46,27 @@ public record BatchTransferInitiationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Header.
     /// </summary>
-    [IsoId("_oMmEEZMrEeuleeHpFMMhmQ")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header60 Header { get; init; }
+    public required Header70 Header { get; init; }
 
     /// <summary>
-    /// Information related to the batch transfer.
+    /// Report Response.
     /// </summary>
-    [IsoId("_oMmEE5MrEeuleeHpFMMhmQ")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required BatchTransferInitiation2 Body { get; init; }
+    [DisplayName("Report Response")]
+    [IsoXmlTag("RptRspn")]
+    public required ReportResponse9 ReportResponse { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_oMmEFZMrEeuleeHpFMMhmQ")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType37? SecurityTrailer { get; init; }
 }
 
-// Since BatchTransferInitiationV02Document is not really part of the logical business domain model,
+// Since AcceptorTransactionLogReportResponseV06Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to BatchTransferInitiationV02.
+// Some of the constants previously declared there have been relocated to AcceptorTransactionLogReportResponseV06.
