@@ -10,35 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.casr;
+namespace BeneficialStrategies.Iso20022.casp;
 
 /// <summary>
-/// This record is an implementation of the casr.002.001.02 ISO standard message type.
+/// This record is an implementation of the casp.012.001.08 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The SettlementReportingResponse message is sent by any party (acquirer, agent or issuer) to an agent in response to a SettlementReportingInitiation message.
-///
 /// </summary>
-[Description(
-    @"The SettlementReportingResponse message is sent by any party (acquirer, agent or issuer) to an agent in response to a SettlementReportingInitiation message.|"
-)]
-[IsoId("_VxHn5Mr9EeuNe7RtB4qFHw")]
-[DisplayName("Settlement Reporting Response V")]
-public record SettlementReportingResponseV02 : IOuterRecord
+[IsoId("_lkcb8Z_yEfC4Q_xhaK1hdQ")]
+[DisplayName("Sale To POI Event Notification V08")]
+public record SaleToPOIEventNotificationV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "casr.002.001.02";
+    public const string IsoIdentifier = "casp.012.001.08";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "SttlmRptgRspn";
+    public const string XmlTag = "SaleToPOIEvtNtfctn";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:casr.002.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:casp.012.001.08";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -51,33 +46,27 @@ public record SettlementReportingResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Event Notification.
     /// </summary>
-    [IsoId("_VxHn5cr9EeuNe7RtB4qFHw")]
+    [DisplayName("Event Notification")]
+    [IsoXmlTag("EvtNtfctn")]
+    public required SystemEventNotification9 EventNotification { get; init; }
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header66 Header { get; init; }
+    public required Header41 Header { get; init; }
 
     /// <summary>
-    /// Information related to the response to the settlement initiation.
-    /// ISO 8583:87 bit 110
-    /// ISO 8583:93 bit 111
-    /// ISO 8583:2003 bit 50
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_VxHn5sr9EeuNe7RtB4qFHw")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required SettlementReportingResponse2 Body { get; init; }
-
-    /// <summary>
-    /// Trailer of the message containing a MAC
-    /// </summary>
-    [IsoId("_VxHn58r9EeuNe7RtB4qFHw")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }
 
-// Since SettlementReportingResponseV02Document is not really part of the logical business domain model,
+// Since SaleToPOIEventNotificationV08Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SettlementReportingResponseV02.
+// Some of the constants previously declared there have been relocated to SaleToPOIEventNotificationV08.

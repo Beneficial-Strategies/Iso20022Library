@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.casr;
+namespace BeneficialStrategies.Iso20022.casp;
 
 /// <summary>
-/// This record is an implementation of the casr.001.001.02 ISO standard message type.
+/// This record is an implementation of the casp.003.001.08 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The SettlementReportingInitiation message is usually sent by an agent (processor, clearing or settlement agent) to an acquirer, agent or issuer to inform about financial totals already settled or to be settled issued as an outcome of the clearing process.
 /// </summary>
-[Description(
-    @"The SettlementReportingInitiation message is usually sent by an agent (processor, clearing or settlement agent) to an acquirer, agent or issuer to inform about financial totals already settled or to be settled issued as an outcome of the clearing process."
-)]
-[IsoId("_UMfMZMr9EeuNe7RtB4qFHw")]
-[DisplayName("Settlement Reporting Initiation V")]
-public record SettlementReportingInitiationV02 : IOuterRecord
+[IsoId("_VY2-IZ_yEfC4Q_xhaK1hdQ")]
+[DisplayName("Sale To POI Reconciliation Request V08")]
+public record SaleToPOIReconciliationRequestV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "casr.001.001.02";
+    public const string IsoIdentifier = "casp.003.001.08";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "SttlmRptgInitn";
+    public const string XmlTag = "SaleToPOIRcncltnReq";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:casr.001.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:casp.003.001.08";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,30 +46,27 @@ public record SettlementReportingInitiationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the management of the protocol.
+    /// Header.
     /// </summary>
-    [IsoId("_UMfMZsr9EeuNe7RtB4qFHw")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header66 Header { get; init; }
+    public required Header41 Header { get; init; }
 
     /// <summary>
-    /// Information related to the initiation of the settlement.
+    /// Reconciliation Request.
     /// </summary>
-    [IsoId("_UMfMZ8r9EeuNe7RtB4qFHw")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required SettlementReportingInitiation2 Body { get; init; }
+    [DisplayName("Reconciliation Request")]
+    [IsoXmlTag("RcncltnReq")]
+    public required ReconciliationRequest9 ReconciliationRequest { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_UMfMZcr9EeuNe7RtB4qFHw")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }
 
-// Since SettlementReportingInitiationV02Document is not really part of the logical business domain model,
+// Since SaleToPOIReconciliationRequestV08Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SettlementReportingInitiationV02.
+// Some of the constants previously declared there have been relocated to SaleToPOIReconciliationRequestV08.

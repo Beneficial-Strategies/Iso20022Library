@@ -1598,30 +1598,30 @@
 
 ### casp (16)
 #### New
-- [ ] `SaleToPOIAbortV08` — new: `MessageDefinitions/casp/SaleToPOIAbortV08.cs`
-- [ ] `SaleToPOIAdministrativeRequestV08` — new: `MessageDefinitions/casp/SaleToPOIAdministrativeRequestV08.cs`
-- [ ] `SaleToPOIAdministrativeResponseV08` — new: `MessageDefinitions/casp/SaleToPOIAdministrativeResponseV08.cs`
-- [ ] `SaleToPOIDeviceRequestV08` — new: `MessageDefinitions/casp/SaleToPOIDeviceRequestV08.cs`
-- [ ] `SaleToPOIDeviceResponseV08` — new: `MessageDefinitions/casp/SaleToPOIDeviceResponseV08.cs`
-- [ ] `SaleToPOIEventNotificationV08` — new: `MessageDefinitions/casp/SaleToPOIEventNotificationV08.cs`
-- [ ] `SaleToPOIMessageStatusRequestV08` — new: `MessageDefinitions/casp/SaleToPOIMessageStatusRequestV08.cs`
-- [ ] `SaleToPOIMessageStatusResponseV08` — new: `MessageDefinitions/casp/SaleToPOIMessageStatusResponseV08.cs`
-- [ ] `SaleToPOIReconciliationRequestV08` — new: `MessageDefinitions/casp/SaleToPOIReconciliationRequestV08.cs`
-- [ ] `SaleToPOIReconciliationResponseV08` — new: `MessageDefinitions/casp/SaleToPOIReconciliationResponseV08.cs`
-- [ ] `SaleToPOIReportRequestV08` — new: `MessageDefinitions/casp/SaleToPOIReportRequestV08.cs`
-- [ ] `SaleToPOIReportResponseV08` — new: `MessageDefinitions/casp/SaleToPOIReportResponseV08.cs`
-- [ ] `SaleToPOIServiceRequestV08` — new: `MessageDefinitions/casp/SaleToPOIServiceRequestV08.cs`
-- [ ] `SaleToPOIServiceResponseV08` — new: `MessageDefinitions/casp/SaleToPOIServiceResponseV08.cs`
-- [ ] `SaleToPOISessionManagementRequestV08` — new: `MessageDefinitions/casp/SaleToPOISessionManagementRequestV08.cs`
-- [ ] `SaleToPOISessionManagementResponseV08` — new: `MessageDefinitions/casp/SaleToPOISessionManagementResponseV08.cs`
+- [x] `SaleToPOIAbortV08` — new: `MessageDefinitions/casp/SaleToPOIAbortV08.cs`
+- [x] `SaleToPOIAdministrativeRequestV08` — new: `MessageDefinitions/casp/SaleToPOIAdministrativeRequestV08.cs`
+- [x] `SaleToPOIAdministrativeResponseV08` — new: `MessageDefinitions/casp/SaleToPOIAdministrativeResponseV08.cs`
+- [x] `SaleToPOIDeviceRequestV08` — new: `MessageDefinitions/casp/SaleToPOIDeviceRequestV08.cs`
+- [x] `SaleToPOIDeviceResponseV08` — new: `MessageDefinitions/casp/SaleToPOIDeviceResponseV08.cs`
+- [x] `SaleToPOIEventNotificationV08` — new: `MessageDefinitions/casp/SaleToPOIEventNotificationV08.cs`
+- [x] `SaleToPOIMessageStatusRequestV08` — new: `MessageDefinitions/casp/SaleToPOIMessageStatusRequestV08.cs`
+- [x] `SaleToPOIMessageStatusResponseV08` — new: `MessageDefinitions/casp/SaleToPOIMessageStatusResponseV08.cs`
+- [x] `SaleToPOIReconciliationRequestV08` — new: `MessageDefinitions/casp/SaleToPOIReconciliationRequestV08.cs`
+- [x] `SaleToPOIReconciliationResponseV08` — new: `MessageDefinitions/casp/SaleToPOIReconciliationResponseV08.cs`
+- [x] `SaleToPOIReportRequestV08` — new: `MessageDefinitions/casp/SaleToPOIReportRequestV08.cs`
+- [x] `SaleToPOIReportResponseV08` — new: `MessageDefinitions/casp/SaleToPOIReportResponseV08.cs`
+- [x] `SaleToPOIServiceRequestV08` — new: `MessageDefinitions/casp/SaleToPOIServiceRequestV08.cs`
+- [x] `SaleToPOIServiceResponseV08` — new: `MessageDefinitions/casp/SaleToPOIServiceResponseV08.cs`
+- [x] `SaleToPOISessionManagementRequestV08` — new: `MessageDefinitions/casp/SaleToPOISessionManagementRequestV08.cs`
+- [x] `SaleToPOISessionManagementResponseV08` — new: `MessageDefinitions/casp/SaleToPOISessionManagementResponseV08.cs`
 
 ### casr (4)
 #### New
-- [ ] `SettlementReportingInitiationV04` — new: `MessageDefinitions/casr/SettlementReportingInitiationV04.cs`
-- [ ] `SettlementReportingResponseV04` — new: `MessageDefinitions/casr/SettlementReportingResponseV04.cs`
+- [x] `SettlementReportingInitiationV04` — new: `MessageDefinitions/casr/SettlementReportingInitiationV04.cs`
+- [x] `SettlementReportingResponseV04` — new: `MessageDefinitions/casr/SettlementReportingResponseV04.cs`
 #### Removed
-- [ ] `SettlementReportingInitiationV02` — delete: `MessageDefinitions/casr/SettlementReportingInitiationV02.cs`
-- [ ] `SettlementReportingResponseV02` — delete: `MessageDefinitions/casr/SettlementReportingResponseV02.cs`
+- [x] `SettlementReportingInitiationV02` — delete: `MessageDefinitions/casr/SettlementReportingInitiationV02.cs`
+- [x] `SettlementReportingResponseV02` — delete: `MessageDefinitions/casr/SettlementReportingResponseV02.cs`
 
 ### catm (5)
 #### New
