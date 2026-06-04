@@ -1586,15 +1586,15 @@
 
 ### canm (8)
 #### New
-- [ ] `KeyExchangeInitiationV05` — new: `MessageDefinitions/canm/KeyExchangeInitiationV05.cs`
-- [ ] `KeyExchangeResponseV05` — new: `MessageDefinitions/canm/KeyExchangeResponseV05.cs`
-- [ ] `NetworkManagementInitiationV05` — new: `MessageDefinitions/canm/NetworkManagementInitiationV05.cs`
-- [ ] `NetworkManagementResponseV05` — new: `MessageDefinitions/canm/NetworkManagementResponseV05.cs`
+- [x] `KeyExchangeInitiationV05` — new: `MessageDefinitions/canm/KeyExchangeInitiationV05.cs`
+- [x] `KeyExchangeResponseV05` — new: `MessageDefinitions/canm/KeyExchangeResponseV05.cs`
+- [x] `NetworkManagementInitiationV05` — new: `MessageDefinitions/canm/NetworkManagementInitiationV05.cs`
+- [x] `NetworkManagementResponseV05` — new: `MessageDefinitions/canm/NetworkManagementResponseV05.cs`
 #### Removed
-- [ ] `KeyExchangeInitiationV03` — delete: `MessageDefinitions/canm/KeyExchangeInitiationV03.cs`
-- [ ] `KeyExchangeResponseV03` — delete: `MessageDefinitions/canm/KeyExchangeResponseV03.cs`
-- [ ] `NetworkManagementInitiationV03` — delete: `MessageDefinitions/canm/NetworkManagementInitiationV03.cs`
-- [ ] `NetworkManagementResponseV03` — delete: `MessageDefinitions/canm/NetworkManagementResponseV03.cs`
+- [x] `KeyExchangeInitiationV03` — delete: `MessageDefinitions/canm/KeyExchangeInitiationV03.cs`
+- [x] `KeyExchangeResponseV03` — delete: `MessageDefinitions/canm/KeyExchangeResponseV03.cs`
+- [x] `NetworkManagementInitiationV03` — delete: `MessageDefinitions/canm/NetworkManagementInitiationV03.cs`
+- [x] `NetworkManagementResponseV03` — delete: `MessageDefinitions/canm/NetworkManagementResponseV03.cs`
 
 ### casp (16)
 #### New
