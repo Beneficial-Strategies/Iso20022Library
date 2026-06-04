@@ -1344,26 +1344,26 @@
 - [x] `RejectedReason70Choice` — `Choices/RejectedReason70Choice_.cs` + `Choices/RejectedReason70Choice/` directory
 - [x] `RejectedStatus62Choice` — `Choices/RejectedStatus62Choice_.cs` + `Choices/RejectedStatus62Choice/` directory
 - [x] `RejectedStatus63Choice` — `Choices/RejectedStatus63Choice_.cs` + `Choices/RejectedStatus63Choice/` directory
-- [ ] `RejectedStatus64Choice` — `Choices/RejectedStatus64Choice_.cs` + `Choices/RejectedStatus64Choice/` directory
-- [ ] `RejectedStatus65Choice` — `Choices/RejectedStatus65Choice_.cs` + `Choices/RejectedStatus65Choice/` directory
-- [ ] `RejectedStatus66Choice` — `Choices/RejectedStatus66Choice_.cs` + `Choices/RejectedStatus66Choice/` directory
-- [ ] `RejectionReason6Format2Choice` — `Choices/RejectionReason6Format2Choice_.cs` + `Choices/RejectionReason6Format2Choice/` directory
-- [ ] `SecuritiesAccount2Choice` — `Choices/SecuritiesAccount2Choice_.cs` + `Choices/SecuritiesAccount2Choice/` directory
-- [ ] `SecuritiesAccountIdentification1Choice` — `Choices/SecuritiesAccountIdentification1Choice_.cs` + `Choices/SecuritiesAccountIdentification1Choice/` directory
-- [ ] `SecurityIdentification46Choice` — `Choices/SecurityIdentification46Choice_.cs` + `Choices/SecurityIdentification46Choice/` directory
-- [ ] `ServiceCategory1Choice` — `Choices/ServiceCategory1Choice_.cs` + `Choices/ServiceCategory1Choice/` directory
-- [ ] `SettlementMethod7Choice` — `Choices/SettlementMethod7Choice_.cs` + `Choices/SettlementMethod7Choice/` directory
-- [ ] `SettlementOrIntraPosition3Choice` — `Choices/SettlementOrIntraPosition3Choice_.cs` + `Choices/SettlementOrIntraPosition3Choice/` directory
-- [ ] `SettlementStatus34Choice` — `Choices/SettlementStatus34Choice_.cs` + `Choices/SettlementStatus34Choice/` directory
-- [ ] `SettlementTransactionCondition40Choice` — `Choices/SettlementTransactionCondition40Choice_.cs` + `Choices/SettlementTransactionCondition40Choice/` directory
-- [ ] `SettlementTransactionCondition41Choice` — `Choices/SettlementTransactionCondition41Choice_.cs` + `Choices/SettlementTransactionCondition41Choice/` directory
-- [ ] `SettlementTransactionCondition42Choice` — `Choices/SettlementTransactionCondition42Choice_.cs` + `Choices/SettlementTransactionCondition42Choice/` directory
-- [ ] `SettlementTransactionCondition43Choice` — `Choices/SettlementTransactionCondition43Choice_.cs` + `Choices/SettlementTransactionCondition43Choice/` directory
-- [ ] `SettlementTransactionCondition44Choice` — `Choices/SettlementTransactionCondition44Choice_.cs` + `Choices/SettlementTransactionCondition44Choice/` directory
-- [ ] `SettlementTransactionCondition45Choice` — `Choices/SettlementTransactionCondition45Choice_.cs` + `Choices/SettlementTransactionCondition45Choice/` directory
-- [ ] `SettlementTransactionCondition46Choice` — `Choices/SettlementTransactionCondition46Choice_.cs` + `Choices/SettlementTransactionCondition46Choice/` directory
-- [ ] `SettlementTransactionCondition47Choice` — `Choices/SettlementTransactionCondition47Choice_.cs` + `Choices/SettlementTransactionCondition47Choice/` directory
-- [ ] `StatementType7Choice` — `Choices/StatementType7Choice_.cs` + `Choices/StatementType7Choice/` directory
+- [x] `RejectedStatus64Choice` — `Choices/RejectedStatus64Choice_.cs` + `Choices/RejectedStatus64Choice/` directory
+- [x] `RejectedStatus65Choice` — `Choices/RejectedStatus65Choice_.cs` + `Choices/RejectedStatus65Choice/` directory
+- [x] `RejectedStatus66Choice` — `Choices/RejectedStatus66Choice_.cs` + `Choices/RejectedStatus66Choice/` directory
+- [x] `RejectionReason6Format2Choice` — `Choices/RejectionReason6Format2Choice_.cs` + `Choices/RejectionReason6Format2Choice/` directory
+- [x] `SecuritiesAccount2Choice` — `Choices/SecuritiesAccount2Choice_.cs` + `Choices/SecuritiesAccount2Choice/` directory
+- [x] `SecuritiesAccountIdentification1Choice` — `Choices/SecuritiesAccountIdentification1Choice_.cs` + `Choices/SecuritiesAccountIdentification1Choice/` directory
+- [x] `SecurityIdentification46Choice` — `Choices/SecurityIdentification46Choice_.cs` + `Choices/SecurityIdentification46Choice/` directory
+- [x] `ServiceCategory1Choice` — `Choices/ServiceCategory1Choice_.cs` + `Choices/ServiceCategory1Choice/` directory
+- [x] `SettlementMethod7Choice` — `Choices/SettlementMethod7Choice_.cs` + `Choices/SettlementMethod7Choice/` directory
+- [x] `SettlementOrIntraPosition3Choice` — `Choices/SettlementOrIntraPosition3Choice_.cs` + `Choices/SettlementOrIntraPosition3Choice/` directory
+- [x] `SettlementStatus34Choice` — `Choices/SettlementStatus34Choice_.cs` + `Choices/SettlementStatus34Choice/` directory
+- [x] `SettlementTransactionCondition40Choice` — `Choices/SettlementTransactionCondition40Choice_.cs` + `Choices/SettlementTransactionCondition40Choice/` directory
+- [x] `SettlementTransactionCondition41Choice` — `Choices/SettlementTransactionCondition41Choice_.cs` + `Choices/SettlementTransactionCondition41Choice/` directory
+- [x] `SettlementTransactionCondition42Choice` — `Choices/SettlementTransactionCondition42Choice_.cs` + `Choices/SettlementTransactionCondition42Choice/` directory
+- [x] `SettlementTransactionCondition43Choice` — `Choices/SettlementTransactionCondition43Choice_.cs` + `Choices/SettlementTransactionCondition43Choice/` directory
+- [x] `SettlementTransactionCondition44Choice` — `Choices/SettlementTransactionCondition44Choice_.cs` + `Choices/SettlementTransactionCondition44Choice/` directory
+- [x] `SettlementTransactionCondition45Choice` — `Choices/SettlementTransactionCondition45Choice_.cs` + `Choices/SettlementTransactionCondition45Choice/` directory
+- [x] `SettlementTransactionCondition46Choice` — `Choices/SettlementTransactionCondition46Choice_.cs` + `Choices/SettlementTransactionCondition46Choice/` directory
+- [x] `SettlementTransactionCondition47Choice` — `Choices/SettlementTransactionCondition47Choice_.cs` + `Choices/SettlementTransactionCondition47Choice/` directory
+- [x] `StatementType7Choice` — `Choices/StatementType7Choice_.cs` + `Choices/StatementType7Choice/` directory
 - [ ] `Status40Choice` — `Choices/Status40Choice_.cs` + `Choices/Status40Choice/` directory
 - [ ] `Status42Choice` — `Choices/Status42Choice_.cs` + `Choices/Status42Choice/` directory
 - [ ] `Status43Choice` — `Choices/Status43Choice_.cs` + `Choices/Status43Choice/` directory
