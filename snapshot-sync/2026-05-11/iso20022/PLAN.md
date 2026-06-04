@@ -1409,13 +1409,13 @@
 
 ### admi (2)
 #### New
-- [ ] `StaticDataReportV01` — new: `MessageDefinitions/admi/StaticDataReportV01.cs`
-- [ ] `StaticDataRequestV01` — new: `MessageDefinitions/admi/StaticDataRequestV01.cs`
+- [x] `StaticDataReportV01` — new: `MessageDefinitions/admi/StaticDataReportV01.cs`
+- [x] `StaticDataRequestV01` — new: `MessageDefinitions/admi/StaticDataRequestV01.cs`
 
 ### auth (2)
 #### New
-- [ ] `CCPClearedProductReportV03` — new: `MessageDefinitions/auth/CCPClearedProductReportV03.cs`
-- [ ] `FinancialInstrumentReportingEquityTradingActivityResultV03` — new: `MessageDefinitions/auth/FinancialInstrumentReportingEquityTradingActivityResultV03.cs`
+- [x] `CCPClearedProductReportV03` — new: `MessageDefinitions/auth/CCPClearedProductReportV03.cs`
+- [x] `FinancialInstrumentReportingEquityTradingActivityResultV03` — new: `MessageDefinitions/auth/FinancialInstrumentReportingEquityTradingActivityResultV03.cs`
 
 ### caaa (26)
 #### New
