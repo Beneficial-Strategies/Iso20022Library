@@ -1179,7 +1179,7 @@
 - [x] `TradeParty7` — delete `Components/TradeParty7.cs`
 
 ## Milestone 2: Build
-- [ ] Build passes after components
+- [x] Build passes after components
 
 ## Phase 3: Choices (194 new · 0 changed · 2 removed)
 <!-- /snapshot-sync-choices works this section -->
@@ -1389,23 +1389,23 @@
 <!-- /snapshot-sync-messages [area] works this section -->
 ### acmt (16)
 #### New
-- [ ] `AccountExcludedMandateMaintenanceAmendmentRequestV05` — new: `MessageDefinitions/acmt/AccountExcludedMandateMaintenanceAmendmentRequestV05.cs`
-- [ ] `AccountExcludedMandateMaintenanceRequestV05` — new: `MessageDefinitions/acmt/AccountExcludedMandateMaintenanceRequestV05.cs`
-- [ ] `AccountMandateMaintenanceAmendmentRequestV05` — new: `MessageDefinitions/acmt/AccountMandateMaintenanceAmendmentRequestV05.cs`
-- [ ] `AccountMandateMaintenanceRequestV05` — new: `MessageDefinitions/acmt/AccountMandateMaintenanceRequestV05.cs`
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV06` — new: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV06.cs`
-- [ ] `AccountSwitchCancelExistingPaymentV06` — new: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV06.cs`
-- [ ] `AccountSwitchInformationRequestV06` — new: `MessageDefinitions/acmt/AccountSwitchInformationRequestV06.cs`
-- [ ] `AccountSwitchInformationResponseV06` — new: `MessageDefinitions/acmt/AccountSwitchInformationResponseV06.cs`
-- [ ] `AccountSwitchRequestBalanceTransferV06` — new: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV06.cs`
-- [ ] `AccountSwitchRequestPaymentV06` — new: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV06.cs`
+- [x] `AccountExcludedMandateMaintenanceAmendmentRequestV05` — new: `MessageDefinitions/acmt/AccountExcludedMandateMaintenanceAmendmentRequestV05.cs`
+- [x] `AccountExcludedMandateMaintenanceRequestV05` — new: `MessageDefinitions/acmt/AccountExcludedMandateMaintenanceRequestV05.cs`
+- [x] `AccountMandateMaintenanceAmendmentRequestV05` — new: `MessageDefinitions/acmt/AccountMandateMaintenanceAmendmentRequestV05.cs`
+- [x] `AccountMandateMaintenanceRequestV05` — new: `MessageDefinitions/acmt/AccountMandateMaintenanceRequestV05.cs`
+- [x] `AccountSwitchBalanceTransferAcknowledgementV06` — new: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV06.cs`
+- [x] `AccountSwitchCancelExistingPaymentV06` — new: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV06.cs`
+- [x] `AccountSwitchInformationRequestV06` — new: `MessageDefinitions/acmt/AccountSwitchInformationRequestV06.cs`
+- [x] `AccountSwitchInformationResponseV06` — new: `MessageDefinitions/acmt/AccountSwitchInformationResponseV06.cs`
+- [x] `AccountSwitchRequestBalanceTransferV06` — new: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV06.cs`
+- [x] `AccountSwitchRequestPaymentV06` — new: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV06.cs`
 #### Removed
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV04` — delete: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV04.cs`
-- [ ] `AccountSwitchCancelExistingPaymentV04` — delete: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV04.cs`
-- [ ] `AccountSwitchInformationRequestV04` — delete: `MessageDefinitions/acmt/AccountSwitchInformationRequestV04.cs`
-- [ ] `AccountSwitchInformationResponseV04` — delete: `MessageDefinitions/acmt/AccountSwitchInformationResponseV04.cs`
-- [ ] `AccountSwitchRequestBalanceTransferV04` — delete: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV04.cs`
-- [ ] `AccountSwitchRequestPaymentV04` — delete: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV04.cs`
+- [x] `AccountSwitchBalanceTransferAcknowledgementV04` — delete: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV04.cs`
+- [x] `AccountSwitchCancelExistingPaymentV04` — delete: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV04.cs`
+- [x] `AccountSwitchInformationRequestV04` — delete: `MessageDefinitions/acmt/AccountSwitchInformationRequestV04.cs`
+- [x] `AccountSwitchInformationResponseV04` — delete: `MessageDefinitions/acmt/AccountSwitchInformationResponseV04.cs`
+- [x] `AccountSwitchRequestBalanceTransferV04` — delete: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV04.cs`
+- [x] `AccountSwitchRequestPaymentV04` — delete: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV04.cs`
 
 ### admi (2)
 #### New
