@@ -1660,16 +1660,16 @@
 
 ### reda (10)
 #### New
-- [ ] `CloseLinkCreationRequestV01` — new: `MessageDefinitions/reda/CloseLinkCreationRequestV01.cs`
-- [ ] `CloseLinkDeletionRequestV01` — new: `MessageDefinitions/reda/CloseLinkDeletionRequestV01.cs`
-- [ ] `CollateralDataStatusAdviceV01` — new: `MessageDefinitions/reda/CollateralDataStatusAdviceV01.cs`
-- [ ] `CollateralValueCreationRequestV01` — new: `MessageDefinitions/reda/CollateralValueCreationRequestV01.cs`
-- [ ] `EligibleCounterpartCSDCreationRequestV01` — new: `MessageDefinitions/reda/EligibleCounterpartCSDCreationRequestV01.cs`
-- [ ] `EligibleCounterpartCSDStatusAdviceV01` — new: `MessageDefinitions/reda/EligibleCounterpartCSDStatusAdviceV01.cs`
-- [ ] `EligibleSecuritiesCreationRequestV01` — new: `MessageDefinitions/reda/EligibleSecuritiesCreationRequestV01.cs`
-- [ ] `EligibleSecuritiesDeletionRequestV01` — new: `MessageDefinitions/reda/EligibleSecuritiesDeletionRequestV01.cs`
-- [ ] `PriceReportCancellationV05` — new: `MessageDefinitions/reda/PriceReportCancellationV05.cs`
-- [ ] `PriceReportV05` — new: `MessageDefinitions/reda/PriceReportV05.cs`
+- [x] `CloseLinkCreationRequestV01` — new: `MessageDefinitions/reda/CloseLinkCreationRequestV01.cs`
+- [x] `CloseLinkDeletionRequestV01` — new: `MessageDefinitions/reda/CloseLinkDeletionRequestV01.cs`
+- [x] `CollateralDataStatusAdviceV01` — new: `MessageDefinitions/reda/CollateralDataStatusAdviceV01.cs`
+- [x] `CollateralValueCreationRequestV01` — new: `MessageDefinitions/reda/CollateralValueCreationRequestV01.cs`
+- [x] `EligibleCounterpartCSDCreationRequestV01` — new: `MessageDefinitions/reda/EligibleCounterpartCSDCreationRequestV01.cs`
+- [x] `EligibleCounterpartCSDStatusAdviceV01` — new: `MessageDefinitions/reda/EligibleCounterpartCSDStatusAdviceV01.cs`
+- [x] `EligibleSecuritiesCreationRequestV01` — new: `MessageDefinitions/reda/EligibleSecuritiesCreationRequestV01.cs`
+- [x] `EligibleSecuritiesDeletionRequestV01` — new: `MessageDefinitions/reda/EligibleSecuritiesDeletionRequestV01.cs`
+- [x] `PriceReportCancellationV05` — new: `MessageDefinitions/reda/PriceReportCancellationV05.cs`
+- [x] `PriceReportV05` — new: `MessageDefinitions/reda/PriceReportV05.cs`
 
 ### remt (2)
 #### New
