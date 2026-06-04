@@ -1383,7 +1383,7 @@
 - [x] `UnableToApplyJustification1Choice` — delete `Choices/UnableToApplyJustification1Choice_.cs` and `Choices/UnableToApplyJustification1Choice/`
 
 ## Milestone 3: Build
-- [ ] Build passes after choices
+- [x] Build passes after choices
 
 ## Phase 4: Messages (262 new · 0 changed · 70 removed)
 <!-- /snapshot-sync-messages [area] works this section -->

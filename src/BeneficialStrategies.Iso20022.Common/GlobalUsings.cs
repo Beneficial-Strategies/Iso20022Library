@@ -6,6 +6,7 @@
 // Global namespace usings required by generated code
 global using System.ComponentModel;
 global using System.Runtime.Serialization;
+global using System.Text.Json.Serialization;
 global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.Codesets;
 global using BeneficialStrategies.Iso20022.Framework;
