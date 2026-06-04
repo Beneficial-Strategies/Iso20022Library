@@ -1364,22 +1364,22 @@
 - [x] `SettlementTransactionCondition46Choice` — `Choices/SettlementTransactionCondition46Choice_.cs` + `Choices/SettlementTransactionCondition46Choice/` directory
 - [x] `SettlementTransactionCondition47Choice` — `Choices/SettlementTransactionCondition47Choice_.cs` + `Choices/SettlementTransactionCondition47Choice/` directory
 - [x] `StatementType7Choice` — `Choices/StatementType7Choice_.cs` + `Choices/StatementType7Choice/` directory
-- [ ] `Status40Choice` — `Choices/Status40Choice_.cs` + `Choices/Status40Choice/` directory
-- [ ] `Status42Choice` — `Choices/Status42Choice_.cs` + `Choices/Status42Choice/` directory
-- [ ] `Status43Choice` — `Choices/Status43Choice_.cs` + `Choices/Status43Choice/` directory
-- [ ] `StatusOrStatement14Choice` — `Choices/StatusOrStatement14Choice_.cs` + `Choices/StatusOrStatement14Choice/` directory
-- [ ] `StatusReason7Choice` — `Choices/StatusReason7Choice_.cs` + `Choices/StatusReason7Choice/` directory
-- [ ] `TaxType4Choice` — `Choices/TaxType4Choice_.cs` + `Choices/TaxType4Choice/` directory
-- [ ] `TaxableIncomePerShareCalculated3Choice` — `Choices/TaxableIncomePerShareCalculated3Choice_.cs` + `Choices/TaxableIncomePerShareCalculated3Choice/` directory
-- [ ] `TransactionToPerform8Choice` — `Choices/TransactionToPerform8Choice_.cs` + `Choices/TransactionToPerform8Choice/` directory
-- [ ] `UnderlyingData13Choice` — `Choices/UnderlyingData13Choice_.cs` + `Choices/UnderlyingData13Choice/` directory
-- [ ] `Unit1Choice` — `Choices/Unit1Choice_.cs` + `Choices/Unit1Choice/` directory
-- [ ] `UpdateType40Choice` — `Choices/UpdateType40Choice_.cs` + `Choices/UpdateType40Choice/` directory
-- [ ] `Vote17Choice` — `Choices/Vote17Choice_.cs` + `Choices/Vote17Choice/` directory
-- [ ] `Vote18Choice` — `Choices/Vote18Choice_.cs` + `Choices/Vote18Choice/` directory
-- [ ] `VoteInstructionType3Choice` — `Choices/VoteInstructionType3Choice_.cs` + `Choices/VoteInstructionType3Choice/` directory
+- [x] `Status40Choice` — `Choices/Status40Choice_.cs` + `Choices/Status40Choice/` directory
+- [x] `Status42Choice` — `Choices/Status42Choice_.cs` + `Choices/Status42Choice/` directory
+- [x] `Status43Choice` — `Choices/Status43Choice_.cs` + `Choices/Status43Choice/` directory
+- [x] `StatusOrStatement14Choice` — `Choices/StatusOrStatement14Choice_.cs` + `Choices/StatusOrStatement14Choice/` directory
+- [x] `StatusReason7Choice` — `Choices/StatusReason7Choice_.cs` + `Choices/StatusReason7Choice/` directory
+- [x] `TaxType4Choice` — `Choices/TaxType4Choice_.cs` + `Choices/TaxType4Choice/` directory
+- [x] `TaxableIncomePerShareCalculated3Choice` — `Choices/TaxableIncomePerShareCalculated3Choice_.cs` + `Choices/TaxableIncomePerShareCalculated3Choice/` directory
+- [x] `TransactionToPerform8Choice` — `Choices/TransactionToPerform8Choice_.cs` + `Choices/TransactionToPerform8Choice/` directory
+- [x] `UnderlyingData13Choice` — `Choices/UnderlyingData13Choice_.cs` + `Choices/UnderlyingData13Choice/` directory
+- [x] `Unit1Choice` — `Choices/Unit1Choice_.cs` + `Choices/Unit1Choice/` directory
+- [x] `UpdateType40Choice` — `Choices/UpdateType40Choice_.cs` + `Choices/UpdateType40Choice/` directory
+- [x] `Vote17Choice` — `Choices/Vote17Choice_.cs` + `Choices/Vote17Choice/` directory
+- [x] `Vote18Choice` — `Choices/Vote18Choice_.cs` + `Choices/Vote18Choice/` directory
+- [x] `VoteInstructionType3Choice` — `Choices/VoteInstructionType3Choice_.cs` + `Choices/VoteInstructionType3Choice/` directory
 ### Removed
-- [ ] `Party58Choice` — delete `Choices/Party58Choice_.cs` and `Choices/Party58Choice/`
+- [x] `Party58Choice` — delete `Choices/Party58Choice_.cs` and `Choices/Party58Choice/`
 - [x] `UnableToApplyJustification1Choice` — delete `Choices/UnableToApplyJustification1Choice_.cs` and `Choices/UnableToApplyJustification1Choice/`
 
 ## Milestone 3: Build
