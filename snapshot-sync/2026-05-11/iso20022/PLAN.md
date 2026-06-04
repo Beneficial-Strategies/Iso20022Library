@@ -1673,9 +1673,9 @@
 
 ### remt (2)
 #### New
-- [ ] `RemittanceAdviceV07` — new: `MessageDefinitions/remt/RemittanceAdviceV07.cs`
+- [x] `RemittanceAdviceV07` — new: `MessageDefinitions/remt/RemittanceAdviceV07.cs`
 #### Removed
-- [ ] `RemittanceAdviceV05` — delete: `MessageDefinitions/remt/RemittanceAdviceV05.cs`
+- [x] `RemittanceAdviceV05` — delete: `MessageDefinitions/remt/RemittanceAdviceV05.cs`
 
 ### secl (8)
 #### New
