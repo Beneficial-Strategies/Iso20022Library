@@ -1494,15 +1494,15 @@
 
 ### cafr (8)
 #### New
-- [ ] `FraudDispositionInitiationV04` — new: `MessageDefinitions/cafr/FraudDispositionInitiationV04.cs`
-- [ ] `FraudDispositionResponseV04` — new: `MessageDefinitions/cafr/FraudDispositionResponseV04.cs`
-- [ ] `FraudReportingInitiationV04` — new: `MessageDefinitions/cafr/FraudReportingInitiationV04.cs`
-- [ ] `FraudReportingResponseV04` — new: `MessageDefinitions/cafr/FraudReportingResponseV04.cs`
+- [x] `FraudDispositionInitiationV04` — new: `MessageDefinitions/cafr/FraudDispositionInitiationV04.cs`
+- [x] `FraudDispositionResponseV04` — new: `MessageDefinitions/cafr/FraudDispositionResponseV04.cs`
+- [x] `FraudReportingInitiationV04` — new: `MessageDefinitions/cafr/FraudReportingInitiationV04.cs`
+- [x] `FraudReportingResponseV04` — new: `MessageDefinitions/cafr/FraudReportingResponseV04.cs`
 #### Removed
-- [ ] `FraudDispositionInitiationV02` — delete: `MessageDefinitions/cafr/FraudDispositionInitiationV02.cs`
-- [ ] `FraudDispositionResponseV02` — delete: `MessageDefinitions/cafr/FraudDispositionResponseV02.cs`
-- [ ] `FraudReportingInitiationV02` — delete: `MessageDefinitions/cafr/FraudReportingInitiationV02.cs`
-- [ ] `FraudReportingResponseV02` — delete: `MessageDefinitions/cafr/FraudReportingResponseV02.cs`
+- [x] `FraudDispositionInitiationV02` — delete: `MessageDefinitions/cafr/FraudDispositionInitiationV02.cs`
+- [x] `FraudDispositionResponseV02` — delete: `MessageDefinitions/cafr/FraudDispositionResponseV02.cs`
+- [x] `FraudReportingInitiationV02` — delete: `MessageDefinitions/cafr/FraudReportingInitiationV02.cs`
+- [x] `FraudReportingResponseV02` — delete: `MessageDefinitions/cafr/FraudReportingResponseV02.cs`
 
 ### cain (38)
 #### New
