@@ -1679,14 +1679,14 @@
 
 ### secl (8)
 #### New
-- [ ] `BuyInConfirmationV02` — new: `MessageDefinitions/secl/BuyInConfirmationV02.cs`
-- [ ] `BuyInNotificationV02` — new: `MessageDefinitions/secl/BuyInNotificationV02.cs`
-- [ ] `BuyInResponseV02` — new: `MessageDefinitions/secl/BuyInResponseV02.cs`
-- [ ] `DefaultFundContributionReportV01` — new: `MessageDefinitions/secl/DefaultFundContributionReportV01.cs`
-- [ ] `MarginReportV01` — new: `MessageDefinitions/secl/MarginReportV01.cs`
-- [ ] `TradeLegNotificationCancellationV05` — new: `MessageDefinitions/secl/TradeLegNotificationCancellationV05.cs`
-- [ ] `TradeLegNotificationV05` — new: `MessageDefinitions/secl/TradeLegNotificationV05.cs`
-- [ ] `TradeLegStatementV05` — new: `MessageDefinitions/secl/TradeLegStatementV05.cs`
+- [x] `BuyInConfirmationV02` — new: `MessageDefinitions/secl/BuyInConfirmationV02.cs`
+- [x] `BuyInNotificationV02` — new: `MessageDefinitions/secl/BuyInNotificationV02.cs`
+- [x] `BuyInResponseV02` — new: `MessageDefinitions/secl/BuyInResponseV02.cs`
+- [x] `DefaultFundContributionReportV01` — new: `MessageDefinitions/secl/DefaultFundContributionReportV01.cs`
+- [x] `MarginReportV01` — new: `MessageDefinitions/secl/MarginReportV01.cs`
+- [x] `TradeLegNotificationCancellationV05` — new: `MessageDefinitions/secl/TradeLegNotificationCancellationV05.cs`
+- [x] `TradeLegNotificationV05` — new: `MessageDefinitions/secl/TradeLegNotificationV05.cs`
+- [x] `TradeLegStatementV05` — new: `MessageDefinitions/secl/TradeLegStatementV05.cs`
 
 ### seev (25)
 #### New
