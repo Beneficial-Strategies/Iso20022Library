@@ -1625,11 +1625,11 @@
 
 ### catm (5)
 #### New
-- [ ] `AcceptorConfigurationUpdateV15` — new: `MessageDefinitions/catm/AcceptorConfigurationUpdateV15.cs`
-- [ ] `CertificateManagementRequestV08` — new: `MessageDefinitions/catm/CertificateManagementRequestV08.cs`
-- [ ] `MaintenanceDelegationRequestV12` — new: `MessageDefinitions/catm/MaintenanceDelegationRequestV12.cs`
-- [ ] `ManagementPlanReplacementV14` — new: `MessageDefinitions/catm/ManagementPlanReplacementV14.cs`
-- [ ] `StatusReportV15` — new: `MessageDefinitions/catm/StatusReportV15.cs`
+- [x] `AcceptorConfigurationUpdateV15` — new: `MessageDefinitions/catm/AcceptorConfigurationUpdateV15.cs`
+- [x] `CertificateManagementRequestV08` — new: `MessageDefinitions/catm/CertificateManagementRequestV08.cs`
+- [x] `MaintenanceDelegationRequestV12` — new: `MessageDefinitions/catm/MaintenanceDelegationRequestV12.cs`
+- [x] `ManagementPlanReplacementV14` — new: `MessageDefinitions/catm/ManagementPlanReplacementV14.cs`
+- [x] `StatusReportV15` — new: `MessageDefinitions/catm/StatusReportV15.cs`
 
 ### fxtr (1)
 #### New
