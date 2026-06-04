@@ -1633,11 +1633,11 @@
 
 ### fxtr (1)
 #### New
-- [ ] `WithdrawalNotificationV02` — new: `MessageDefinitions/fxtr/WithdrawalNotificationV02.cs`
+- [x] `WithdrawalNotificationV02` — new: `MessageDefinitions/fxtr/WithdrawalNotificationV02.cs`
 
 ### nvlp (1)
 #### New
-- [ ] `BusinessFileEnvelopeV02` — new: `MessageDefinitions/nvlp/BusinessFileEnvelopeV02.cs`
+- [x] `BusinessFileEnvelopeV02` — new: `MessageDefinitions/nvlp/BusinessFileEnvelopeV02.cs`
 
 ### pacs (7)
 #### New
