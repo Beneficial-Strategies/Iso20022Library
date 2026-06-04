@@ -13,27 +13,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.camt;
 
 /// <summary>
-/// This record is an implementation of the camt.033.001.02 ISO standard message type.
+/// This record is an implementation of the camt.090.001.01 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
-[IsoId("_Rs6xaNE_Ed-BzquC8wXy7w_-1552896863")]
-[DisplayName("Request For Duplicate V02")]
-public record RequestForDuplicateV02 : IOuterRecord
+[IsoId("_R3Cc0TEZEe6kQ-WGAhcVPQ")]
+[DisplayName("Billing Report V01")]
+public record BillingReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "camt.033.001.02";
+    public const string IsoIdentifier = "camt.090.001.01";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "ReqForDplct";
+    public const string XmlTag = "BllgRpt";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.033.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.090.001.01";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -46,20 +46,27 @@ public record RequestForDuplicateV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Assignment.
+    /// Billing Report Or Error.
     /// </summary>
-    [DisplayName("Assignment")]
-    [IsoXmlTag("Assgnmt")]
-    public required CaseAssignment Assignment { get; init; }
+    [DisplayName("Billing Report Or Error")]
+    [IsoXmlTag("BllgRptOrErr")]
+    public required BillingReportOrError6Choice_ BillingReportOrError { get; init; }
 
     /// <summary>
-    /// Case.
+    /// Message Header.
     /// </summary>
-    [DisplayName("Case")]
-    [IsoXmlTag("Case")]
-    public required Case Case { get; init; }
+    [DisplayName("Message Header")]
+    [IsoXmlTag("MsgHdr")]
+    public required MessageHeader11 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }
 
-// Since RequestForDuplicateV02Document is not really part of the logical business domain model,
+// Since BillingReportV01Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to RequestForDuplicateV02.
+// Some of the constants previously declared there have been relocated to BillingReportV01.

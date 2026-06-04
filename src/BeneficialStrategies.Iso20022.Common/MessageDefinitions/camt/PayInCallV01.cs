@@ -13,27 +13,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.camt;
 
 /// <summary>
-/// This record is an implementation of the camt.039.001.02 ISO standard message type.
+/// This record is an implementation of the camt.061.001.01 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
-[IsoId("_PUcTmNE-Ed-BzquC8wXy7w_1587181518")]
-[DisplayName("Case Status Report V02")]
-public record CaseStatusReportV02 : IOuterRecord
+[IsoId("_M2OIONE_Ed-BzquC8wXy7w_1304956917")]
+[DisplayName("Pay In Call V01")]
+public record PayInCallV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "camt.039.001.02";
+    public const string IsoIdentifier = "camt.061.001.01";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "CaseStsRpt";
+    public const string XmlTag = "PayInCall";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.061.001.01";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -46,34 +46,20 @@ public record CaseStatusReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Case.
+    /// Party Identification.
     /// </summary>
-    [DisplayName("Case")]
-    [IsoXmlTag("Case")]
-    public required Case Case { get; init; }
+    [DisplayName("Party Identification")]
+    [IsoXmlTag("PtyId")]
+    public required PartyIdentification8Choice_ PartyIdentification { get; init; }
 
     /// <summary>
-    /// Header.
+    /// Report Data.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required ReportHeader Header { get; init; }
-
-    /// <summary>
-    /// New Assignment.
-    /// </summary>
-    [DisplayName("New Assignment")]
-    [IsoXmlTag("NewAssgnmt")]
-    public CaseAssignment? NewAssignment { get; init; }
-
-    /// <summary>
-    /// Status.
-    /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public required CaseStatus2 Status { get; init; }
+    [DisplayName("Report Data")]
+    [IsoXmlTag("RptData")]
+    public required ReportData1 ReportData { get; init; }
 }
 
-// Since CaseStatusReportV02Document is not really part of the logical business domain model,
+// Since PayInCallV01Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CaseStatusReportV02.
+// Some of the constants previously declared there have been relocated to PayInCallV01.

@@ -1548,40 +1548,40 @@
 
 ### camt (34)
 #### New
-- [ ] `BankToCustomerAccountReportV14` — new: `MessageDefinitions/camt/BankToCustomerAccountReportV14.cs`
-- [ ] `BankToCustomerDebitCreditNotificationV14` — new: `MessageDefinitions/camt/BankToCustomerDebitCreditNotificationV14.cs`
-- [ ] `BankToCustomerStatementV14` — new: `MessageDefinitions/camt/BankToCustomerStatementV14.cs`
-- [ ] `BillingReportRequestV01` — new: `MessageDefinitions/camt/BillingReportRequestV01.cs`
-- [ ] `BillingReportV01` — new: `MessageDefinitions/camt/BillingReportV01.cs`
-- [ ] `CustomerPaymentCancellationRequestV13` — new: `MessageDefinitions/camt/CustomerPaymentCancellationRequestV13.cs`
-- [ ] `FIToFIPaymentCancellationRequestV12` — new: `MessageDefinitions/camt/FIToFIPaymentCancellationRequestV12.cs`
-- [ ] `InvestigationRequestV02` — new: `MessageDefinitions/camt/InvestigationRequestV02.cs`
-- [ ] `InvestigationResponseV03` — new: `MessageDefinitions/camt/InvestigationResponseV03.cs`
-- [ ] `NetReportV04` — new: `MessageDefinitions/camt/NetReportV04.cs`
-- [ ] `NotificationToReceiveCancellationAdviceV10` — new: `MessageDefinitions/camt/NotificationToReceiveCancellationAdviceV10.cs`
-- [ ] `NotificationToReceiveStatusReportV09` — new: `MessageDefinitions/camt/NotificationToReceiveStatusReportV09.cs`
-- [ ] `NotificationToReceiveV09` — new: `MessageDefinitions/camt/NotificationToReceiveV09.cs`
-- [ ] `PayInCallV01` — new: `MessageDefinitions/camt/PayInCallV01.cs`
-- [ ] `PayInScheduleConfirmationV01` — new: `MessageDefinitions/camt/PayInScheduleConfirmationV01.cs`
-- [ ] `PayInScheduleV02` — new: `MessageDefinitions/camt/PayInScheduleV02.cs`
-- [ ] `RequestToModifyPaymentV03` — new: `MessageDefinitions/camt/RequestToModifyPaymentV03.cs`
-- [ ] `ResolutionOfInvestigationV14` — new: `MessageDefinitions/camt/ResolutionOfInvestigationV14.cs`
+- [x] `BankToCustomerAccountReportV14` — new: `MessageDefinitions/camt/BankToCustomerAccountReportV14.cs`
+- [x] `BankToCustomerDebitCreditNotificationV14` — new: `MessageDefinitions/camt/BankToCustomerDebitCreditNotificationV14.cs`
+- [x] `BankToCustomerStatementV14` — new: `MessageDefinitions/camt/BankToCustomerStatementV14.cs`
+- [x] `BillingReportRequestV01` — new: `MessageDefinitions/camt/BillingReportRequestV01.cs`
+- [x] `BillingReportV01` — new: `MessageDefinitions/camt/BillingReportV01.cs`
+- [x] `CustomerPaymentCancellationRequestV13` — new: `MessageDefinitions/camt/CustomerPaymentCancellationRequestV13.cs`
+- [x] `FIToFIPaymentCancellationRequestV12` — new: `MessageDefinitions/camt/FIToFIPaymentCancellationRequestV12.cs`
+- [x] `InvestigationRequestV02` — new: `MessageDefinitions/camt/InvestigationRequestV02.cs`
+- [x] `InvestigationResponseV03` — new: `MessageDefinitions/camt/InvestigationResponseV03.cs`
+- [x] `NetReportV04` — new: `MessageDefinitions/camt/NetReportV04.cs`
+- [x] `NotificationToReceiveCancellationAdviceV10` — new: `MessageDefinitions/camt/NotificationToReceiveCancellationAdviceV10.cs`
+- [x] `NotificationToReceiveStatusReportV09` — new: `MessageDefinitions/camt/NotificationToReceiveStatusReportV09.cs`
+- [x] `NotificationToReceiveV09` — new: `MessageDefinitions/camt/NotificationToReceiveV09.cs`
+- [x] `PayInCallV01` — new: `MessageDefinitions/camt/PayInCallV01.cs`
+- [x] `PayInScheduleConfirmationV01` — new: `MessageDefinitions/camt/PayInScheduleConfirmationV01.cs`
+- [x] `PayInScheduleV02` — new: `MessageDefinitions/camt/PayInScheduleV02.cs`
+- [x] `RequestToModifyPaymentV03` — new: `MessageDefinitions/camt/RequestToModifyPaymentV03.cs` (file already existed)
+- [x] `ResolutionOfInvestigationV14` — new: `MessageDefinitions/camt/ResolutionOfInvestigationV14.cs`
 #### Removed
-- [ ] `AdditionalPaymentInformationV02` — delete: `MessageDefinitions/camt/AdditionalPaymentInformationV02.cs`
-- [ ] `CancelCaseAssignment` — delete: `MessageDefinitions/camt/CancelCaseAssignment.cs`
-- [ ] `CaseStatusReportV02` — delete: `MessageDefinitions/camt/CaseStatusReportV02.cs`
-- [ ] `ClaimNonReceiptV02` — delete: `MessageDefinitions/camt/ClaimNonReceiptV02.cs`
-- [ ] `DebitAuthorisationRequest` — delete: `MessageDefinitions/camt/DebitAuthorisationRequest.cs`
-- [ ] `DebitAuthorisationRequestV02` — delete: `MessageDefinitions/camt/DebitAuthorisationRequestV02.cs`
-- [ ] `DebitAuthorisationResponse` — delete: `MessageDefinitions/camt/DebitAuthorisationResponse.cs`
-- [ ] `DuplicateInstruction` — delete: `MessageDefinitions/camt/DuplicateInstruction.cs`
-- [ ] `DuplicateV02` — delete: `MessageDefinitions/camt/DuplicateV02.cs`
-- [ ] `NotificationOfCaseAssignment` — delete: `MessageDefinitions/camt/NotificationOfCaseAssignment.cs`
-- [ ] `NotificationOfCaseAssignmentV02` — delete: `MessageDefinitions/camt/NotificationOfCaseAssignmentV02.cs`
-- [ ] `ProprietaryFormatInvestigation` — delete: `MessageDefinitions/camt/ProprietaryFormatInvestigation.cs`
-- [ ] `RejectCaseAssignmentV02` — delete: `MessageDefinitions/camt/RejectCaseAssignmentV02.cs`
-- [ ] `RequestForDuplicateV02` — delete: `MessageDefinitions/camt/RequestForDuplicateV02.cs`
-- [ ] `ResolutionOfInvestigationV02` — delete: `MessageDefinitions/camt/ResolutionOfInvestigationV02.cs`
+- [x] `AdditionalPaymentInformationV02` — delete: `MessageDefinitions/camt/AdditionalPaymentInformationV02.cs` (file not present)
+- [x] `CancelCaseAssignment` — delete: `MessageDefinitions/camt/CancelCaseAssignment.cs`
+- [x] `CaseStatusReportV02` — delete: `MessageDefinitions/camt/CaseStatusReportV02.cs`
+- [x] `ClaimNonReceiptV02` — delete: `MessageDefinitions/camt/ClaimNonReceiptV02.cs` (file not present)
+- [x] `DebitAuthorisationRequest` — delete: `MessageDefinitions/camt/DebitAuthorisationRequest.cs`
+- [x] `DebitAuthorisationRequestV02` — delete: `MessageDefinitions/camt/DebitAuthorisationRequestV02.cs` (file not present)
+- [x] `DebitAuthorisationResponse` — delete: `MessageDefinitions/camt/DebitAuthorisationResponse.cs`
+- [x] `DuplicateInstruction` — delete: `MessageDefinitions/camt/DuplicateInstruction.cs` (file not present)
+- [x] `DuplicateV02` — delete: `MessageDefinitions/camt/DuplicateV02.cs` (file not present)
+- [x] `NotificationOfCaseAssignment` — delete: `MessageDefinitions/camt/NotificationOfCaseAssignment.cs` (file not present)
+- [x] `NotificationOfCaseAssignmentV02` — delete: `MessageDefinitions/camt/NotificationOfCaseAssignmentV02.cs` (file not present)
+- [x] `ProprietaryFormatInvestigation` — delete: `MessageDefinitions/camt/ProprietaryFormatInvestigation.cs` (file not present)
+- [x] `RejectCaseAssignmentV02` — delete: `MessageDefinitions/camt/RejectCaseAssignmentV02.cs` (file not present)
+- [x] `RequestForDuplicateV02` — delete: `MessageDefinitions/camt/RequestForDuplicateV02.cs`
+- [x] `ResolutionOfInvestigationV02` — delete: `MessageDefinitions/camt/ResolutionOfInvestigationV02.cs` (file not present)
 - [x] `UnableToApplyV02` — delete: `MessageDefinitions/camt/UnableToApplyV02.cs`
 
 ### canm (8)
