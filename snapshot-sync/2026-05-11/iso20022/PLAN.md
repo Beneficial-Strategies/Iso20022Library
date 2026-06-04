@@ -1641,13 +1641,13 @@
 
 ### pacs (7)
 #### New
-- [ ] `FIToFICustomerCreditTransferV14` — new: `MessageDefinitions/pacs/FIToFICustomerCreditTransferV14.cs`
-- [ ] `FIToFICustomerDirectDebitV12` — new: `MessageDefinitions/pacs/FIToFICustomerDirectDebitV12.cs`
-- [ ] `FIToFIPaymentReversalV14` — new: `MessageDefinitions/pacs/FIToFIPaymentReversalV14.cs`
-- [ ] `FIToFIPaymentStatusReportV16` — new: `MessageDefinitions/pacs/FIToFIPaymentStatusReportV16.cs`
-- [ ] `FIToFIPaymentStatusRequestV07` — new: `MessageDefinitions/pacs/FIToFIPaymentStatusRequestV07.cs`
-- [ ] `FinancialInstitutionCreditTransferV13` — new: `MessageDefinitions/pacs/FinancialInstitutionCreditTransferV13.cs`
-- [ ] `PaymentReturnV15` — new: `MessageDefinitions/pacs/PaymentReturnV15.cs`
+- [x] `FIToFICustomerCreditTransferV14` — new: `MessageDefinitions/pacs/FIToFICustomerCreditTransferV14.cs`
+- [x] `FIToFICustomerDirectDebitV12` — new: `MessageDefinitions/pacs/FIToFICustomerDirectDebitV12.cs`
+- [x] `FIToFIPaymentReversalV14` — new: `MessageDefinitions/pacs/FIToFIPaymentReversalV14.cs`
+- [x] `FIToFIPaymentStatusReportV16` — new: `MessageDefinitions/pacs/FIToFIPaymentStatusReportV16.cs`
+- [x] `FIToFIPaymentStatusRequestV07` — new: `MessageDefinitions/pacs/FIToFIPaymentStatusRequestV07.cs`
+- [x] `FinancialInstitutionCreditTransferV13` — new: `MessageDefinitions/pacs/FinancialInstitutionCreditTransferV13.cs`
+- [x] `PaymentReturnV15` — new: `MessageDefinitions/pacs/PaymentReturnV15.cs`
 
 ### pain (6)
 #### New
