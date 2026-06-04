@@ -1690,31 +1690,31 @@
 
 ### seev (25)
 #### New
-- [ ] `AgentCANotificationAdviceV03` — new: `MessageDefinitions/seev/AgentCANotificationAdviceV03.cs`
-- [ ] `AgentCANotificationStatusAdviceV04` — new: `MessageDefinitions/seev/AgentCANotificationStatusAdviceV04.cs`
-- [ ] `BuyerProtectionInstructionAllegementNotificationV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionAllegementNotificationV01.cs`
-- [ ] `BuyerProtectionInstructionAllegementRemovalAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionAllegementRemovalAdviceV01.cs`
-- [ ] `BuyerProtectionInstructionCancellationRequestStatusAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionCancellationRequestStatusAdviceV01.cs`
-- [ ] `BuyerProtectionInstructionCancellationRequestV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionCancellationRequestV01.cs`
-- [ ] `BuyerProtectionInstructionReportRequestV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionReportRequestV01.cs`
-- [ ] `BuyerProtectionInstructionReportV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionReportV01.cs`
-- [ ] `BuyerProtectionInstructionStatusAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionStatusAdviceV01.cs`
-- [ ] `BuyerProtectionInstructionV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionV01.cs`
-- [ ] `CorporateActionInstructionCancellationRequestStatusAdviceV15` — new: `MessageDefinitions/seev/CorporateActionInstructionCancellationRequestStatusAdviceV15.cs`
-- [ ] `CorporateActionInstructionStatementReportV14` — new: `MessageDefinitions/seev/CorporateActionInstructionStatementReportV14.cs`
-- [ ] `CorporateActionInstructionStatusAdviceV16` — new: `MessageDefinitions/seev/CorporateActionInstructionStatusAdviceV16.cs`
-- [ ] `CorporateActionInstructionV14` — new: `MessageDefinitions/seev/CorporateActionInstructionV14.cs`
-- [ ] `CorporateActionMovementConfirmationV17` — new: `MessageDefinitions/seev/CorporateActionMovementConfirmationV17.cs`
-- [ ] `CorporateActionMovementPreliminaryAdviceV17` — new: `MessageDefinitions/seev/CorporateActionMovementPreliminaryAdviceV17.cs`
-- [ ] `CorporateActionMovementReversalAdviceV17` — new: `MessageDefinitions/seev/CorporateActionMovementReversalAdviceV17.cs`
-- [ ] `CorporateActionNotificationV16` — new: `MessageDefinitions/seev/CorporateActionNotificationV16.cs`
-- [ ] `MarketClaimCancellationRequestStatusAdviceV04` — new: `MessageDefinitions/seev/MarketClaimCancellationRequestStatusAdviceV04.cs`
-- [ ] `MarketClaimCreationV04` — new: `MessageDefinitions/seev/MarketClaimCreationV04.cs`
-- [ ] `MarketClaimStatusAdviceV04` — new: `MessageDefinitions/seev/MarketClaimStatusAdviceV04.cs`
-- [ ] `MeetingInstructionStatusV12` — new: `MessageDefinitions/seev/MeetingInstructionStatusV12.cs`
-- [ ] `MeetingInstructionV11` — new: `MessageDefinitions/seev/MeetingInstructionV11.cs`
-- [ ] `MeetingNotificationV13` — new: `MessageDefinitions/seev/MeetingNotificationV13.cs`
-- [ ] `MeetingVoteExecutionConfirmationV12` — new: `MessageDefinitions/seev/MeetingVoteExecutionConfirmationV12.cs`
+- [x] `AgentCANotificationAdviceV03` — new: `MessageDefinitions/seev/AgentCANotificationAdviceV03.cs`
+- [x] `AgentCANotificationStatusAdviceV04` — new: `MessageDefinitions/seev/AgentCANotificationStatusAdviceV04.cs`
+- [x] `BuyerProtectionInstructionAllegementNotificationV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionAllegementNotificationV01.cs`
+- [x] `BuyerProtectionInstructionAllegementRemovalAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionAllegementRemovalAdviceV01.cs`
+- [x] `BuyerProtectionInstructionCancellationRequestStatusAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionCancellationRequestStatusAdviceV01.cs`
+- [x] `BuyerProtectionInstructionCancellationRequestV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionCancellationRequestV01.cs`
+- [x] `BuyerProtectionInstructionReportRequestV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionReportRequestV01.cs`
+- [x] `BuyerProtectionInstructionReportV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionReportV01.cs`
+- [x] `BuyerProtectionInstructionStatusAdviceV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionStatusAdviceV01.cs`
+- [x] `BuyerProtectionInstructionV01` — new: `MessageDefinitions/seev/BuyerProtectionInstructionV01.cs`
+- [x] `CorporateActionInstructionCancellationRequestStatusAdviceV15` — new: `MessageDefinitions/seev/CorporateActionInstructionCancellationRequestStatusAdviceV15.cs`
+- [x] `CorporateActionInstructionStatementReportV14` — new: `MessageDefinitions/seev/CorporateActionInstructionStatementReportV14.cs`
+- [x] `CorporateActionInstructionStatusAdviceV16` — new: `MessageDefinitions/seev/CorporateActionInstructionStatusAdviceV16.cs`
+- [x] `CorporateActionInstructionV14` — new: `MessageDefinitions/seev/CorporateActionInstructionV14.cs`
+- [x] `CorporateActionMovementConfirmationV17` — new: `MessageDefinitions/seev/CorporateActionMovementConfirmationV17.cs`
+- [x] `CorporateActionMovementPreliminaryAdviceV17` — new: `MessageDefinitions/seev/CorporateActionMovementPreliminaryAdviceV17.cs`
+- [x] `CorporateActionMovementReversalAdviceV17` — new: `MessageDefinitions/seev/CorporateActionMovementReversalAdviceV17.cs`
+- [x] `CorporateActionNotificationV16` — new: `MessageDefinitions/seev/CorporateActionNotificationV16.cs`
+- [x] `MarketClaimCancellationRequestStatusAdviceV04` — new: `MessageDefinitions/seev/MarketClaimCancellationRequestStatusAdviceV04.cs`
+- [x] `MarketClaimCreationV04` — new: `MessageDefinitions/seev/MarketClaimCreationV04.cs`
+- [x] `MarketClaimStatusAdviceV04` — new: `MessageDefinitions/seev/MarketClaimStatusAdviceV04.cs`
+- [x] `MeetingInstructionStatusV12` — new: `MessageDefinitions/seev/MeetingInstructionStatusV12.cs`
+- [x] `MeetingInstructionV11` — new: `MessageDefinitions/seev/MeetingInstructionV11.cs`
+- [x] `MeetingNotificationV13` — new: `MessageDefinitions/seev/MeetingNotificationV13.cs`
+- [x] `MeetingVoteExecutionConfirmationV12` — new: `MessageDefinitions/seev/MeetingVoteExecutionConfirmationV12.cs`
 
 ### semt (18)
 #### New
