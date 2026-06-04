@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.cafc;
+namespace BeneficialStrategies.Iso20022.caam;
 
 /// <summary>
-/// This record is an implementation of the cafc.002.001.02 ISO standard message type.
+/// This record is an implementation of the caam.004.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The FeeCollectionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FeeCollectionInitiation message.
 /// </summary>
-[Description(
-    @"The FeeCollectionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FeeCollectionInitiation message."
-)]
-[IsoId("_6oy9QYaAEeuSbct6WWD-Ng")]
-[DisplayName("Fee Collection Response V")]
-public record FeeCollectionResponseV02 : IOuterRecord
+[IsoId("_ilIq0bXuEfCUZfsQO4rYeA")]
+[DisplayName("ATM Key Download Response V05")]
+public record ATMKeyDownloadResponseV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "cafc.002.001.02";
+    public const string IsoIdentifier = "caam.004.001.05";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "FeeColltnRspn";
+    public const string XmlTag = "ATMKeyDwnldRspn";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:cafc.002.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caam.004.001.05";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,32 +46,34 @@ public record FeeCollectionResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the protocol management.
-    /// ISO 8583 MTI
+    /// ATM Key Download Response.
     /// </summary>
-    [IsoId("_6oy9Q4aAEeuSbct6WWD-Ng")]
+    [DisplayName("ATM Key Download Response")]
+    [IsoXmlTag("ATMKeyDwnldRspn")]
+    public ATMKeyDownloadResponse6? ATMKeyDownloadResponse { get; init; }
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header66 Header { get; init; }
+    public required Header31 Header { get; init; }
 
     /// <summary>
-    /// Information related to the response of a fee collection initiation message..
+    /// Protected ATM Key Download Response.
     /// </summary>
-    [IsoId("_6oy9RYaAEeuSbct6WWD-Ng")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required FeeCollectionResponse2 Body { get; init; }
+    [DisplayName("Protected ATM Key Download Response")]
+    [IsoXmlTag("PrtctdATMKeyDwnldRspn")]
+    public ContentInformationType10? ProtectedATMKeyDownloadResponse { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC.
-    /// It corresponds partially to ISO 8583 field number 53, completed by the field number 64 or 128.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_6oy9R4aAEeuSbct6WWD-Ng")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType13? SecurityTrailer { get; init; }
 }
 
-// Since FeeCollectionResponseV02Document is not really part of the logical business domain model,
+// Since ATMKeyDownloadResponseV05Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FeeCollectionResponseV02.
+// Some of the constants previously declared there have been relocated to ATMKeyDownloadResponseV05.

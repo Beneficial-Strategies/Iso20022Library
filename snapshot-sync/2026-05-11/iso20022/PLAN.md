@@ -1472,25 +1472,25 @@
 
 ### caam (3)
 #### New
-- [ ] `ATMDeviceReportV05` — new: `MessageDefinitions/caam/ATMDeviceReportV05.cs`
-- [ ] `ATMKeyDownloadRequestV05` — new: `MessageDefinitions/caam/ATMKeyDownloadRequestV05.cs`
-- [ ] `ATMKeyDownloadResponseV05` — new: `MessageDefinitions/caam/ATMKeyDownloadResponseV05.cs`
+- [x] `ATMDeviceReportV05` — new: `MessageDefinitions/caam/ATMDeviceReportV05.cs`
+- [x] `ATMKeyDownloadRequestV05` — new: `MessageDefinitions/caam/ATMKeyDownloadRequestV05.cs`
+- [x] `ATMKeyDownloadResponseV05` — new: `MessageDefinitions/caam/ATMKeyDownloadResponseV05.cs`
 
 ### cafc (4)
 #### New
-- [ ] `FeeCollectionInitiationV04` — new: `MessageDefinitions/cafc/FeeCollectionInitiationV04.cs`
-- [ ] `FeeCollectionResponseV04` — new: `MessageDefinitions/cafc/FeeCollectionResponseV04.cs`
+- [x] `FeeCollectionInitiationV04` — new: `MessageDefinitions/cafc/FeeCollectionInitiationV04.cs`
+- [x] `FeeCollectionResponseV04` — new: `MessageDefinitions/cafc/FeeCollectionResponseV04.cs`
 #### Removed
-- [ ] `FeeCollectionInitiationV02` — delete: `MessageDefinitions/cafc/FeeCollectionInitiationV02.cs`
-- [ ] `FeeCollectionResponseV02` — delete: `MessageDefinitions/cafc/FeeCollectionResponseV02.cs`
+- [x] `FeeCollectionInitiationV02` — delete: `MessageDefinitions/cafc/FeeCollectionInitiationV02.cs`
+- [x] `FeeCollectionResponseV02` — delete: `MessageDefinitions/cafc/FeeCollectionResponseV02.cs`
 
 ### cafm (4)
 #### New
-- [ ] `FileActionInitiationV04` — new: `MessageDefinitions/cafm/FileActionInitiationV04.cs`
-- [ ] `FileActionResponseV04` — new: `MessageDefinitions/cafm/FileActionResponseV04.cs`
+- [x] `FileActionInitiationV04` — new: `MessageDefinitions/cafm/FileActionInitiationV04.cs`
+- [x] `FileActionResponseV04` — new: `MessageDefinitions/cafm/FileActionResponseV04.cs`
 #### Removed
-- [ ] `FileActionInitiationV02` — delete: `MessageDefinitions/cafm/FileActionInitiationV02.cs`
-- [ ] `FileActionResponseV02` — delete: `MessageDefinitions/cafm/FileActionResponseV02.cs`
+- [x] `FileActionInitiationV02` — delete: `MessageDefinitions/cafm/FileActionInitiationV02.cs`
+- [x] `FileActionResponseV02` — delete: `MessageDefinitions/cafm/FileActionResponseV02.cs`
 
 ### cafr (8)
 #### New

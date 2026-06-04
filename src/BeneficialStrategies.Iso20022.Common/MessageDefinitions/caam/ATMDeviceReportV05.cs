@@ -10,36 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.cafm;
+namespace BeneficialStrategies.Iso20022.caam;
 
 /// <summary>
-/// This record is an implementation of the cafm.001.001.02 ISO standard message type.
+/// This record is an implementation of the caam.001.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The FileActionInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).
-///
-/// This message is used to inquire, add, change, delete or replace a file or a record.
 /// </summary>
-[Description(
-    @"The FileActionInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).||This message is used to inquire, add, change, delete or replace a file or a record."
-)]
-[IsoId("_LQXFYIKwEeu4svNQ5N-l6w")]
-[DisplayName("File Action Initiation V")]
-public record FileActionInitiationV02 : IOuterRecord
+[IsoId("_ab22kbXuEfCUZfsQO4rYeA")]
+[DisplayName("ATM Device Report V05")]
+public record ATMDeviceReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "cafm.001.001.02";
+    public const string IsoIdentifier = "caam.001.001.05";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "FileActnInitn";
+    public const string XmlTag = "ATMDvcRpt";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:cafm.001.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caam.001.001.05";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -52,31 +46,34 @@ public record FileActionInitiationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the protocol management.
+    /// ATM Device Report.
     /// </summary>
-    [IsoId("_LQXFYoKwEeu4svNQ5N-l6w")]
+    [DisplayName("ATM Device Report")]
+    [IsoXmlTag("ATMDvcRpt")]
+    public ATMDeviceReport5? ATMDeviceReport { get; init; }
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header68 Header { get; init; }
+    public required Header31 Header { get; init; }
 
     /// <summary>
-    /// Information related to the initiation of a file action.
+    /// Protected ATM Device Report.
     /// </summary>
-    [IsoId("_LQXFZIKwEeu4svNQ5N-l6w")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required FileActionInitiation2 Body { get; init; }
+    [DisplayName("Protected ATM Device Report")]
+    [IsoXmlTag("PrtctdATMDvcRpt")]
+    public ContentInformationType10? ProtectedATMDeviceReport { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC.
-    /// It corresponds partially to ISO 8583 field number 53, completed by the field number 64 or 128.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_LQXFZoKwEeu4svNQ5N-l6w")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType13? SecurityTrailer { get; init; }
 }
 
-// Since FileActionInitiationV02Document is not really part of the logical business domain model,
+// Since ATMDeviceReportV05Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FileActionInitiationV02.
+// Some of the constants previously declared there have been relocated to ATMDeviceReportV05.

@@ -10,34 +10,30 @@ using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.ExternalSchema;
 using BeneficialStrategies.Iso20022.UserDefined;
 
-namespace BeneficialStrategies.Iso20022.cafm;
+namespace BeneficialStrategies.Iso20022.caam;
 
 /// <summary>
-/// This record is an implementation of the cafm.002.001.02 ISO standard message type.
+/// This record is an implementation of the caam.003.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// A FileActionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FileActionInitiation message.
 /// </summary>
-[Description(
-    @"A FileActionResponse message is sent by any party to any party (acquirer, agent or issuer) in response to a FileActionInitiation message."
-)]
-[IsoId("_1ejJcYKwEeu4svNQ5N-l6w")]
-[DisplayName("File Action Response V")]
-public record FileActionResponseV02 : IOuterRecord
+[IsoId("_e_hPAbXuEfCUZfsQO4rYeA")]
+[DisplayName("ATM Key Download Request V05")]
+public record ATMKeyDownloadRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "cafm.002.001.02";
+    public const string IsoIdentifier = "caam.003.001.05";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "FileActnRspn";
+    public const string XmlTag = "ATMKeyDwnldReq";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:cafm.002.001.02";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caam.003.001.05";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,31 +46,34 @@ public record FileActionResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the protocol management.
+    /// ATM Key Download Request.
     /// </summary>
-    [IsoId("_1ejJc4KwEeu4svNQ5N-l6w")]
+    [DisplayName("ATM Key Download Request")]
+    [IsoXmlTag("ATMKeyDwnldReq")]
+    public ATMKeyDownloadRequest6? ATMKeyDownloadRequest { get; init; }
+
+    /// <summary>
+    /// Header.
+    /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header60 Header { get; init; }
+    public required Header31 Header { get; init; }
 
     /// <summary>
-    /// Information related to the response to of a file action.
+    /// Protected ATM Key Download Request.
     /// </summary>
-    [IsoId("_1ejJdYKwEeu4svNQ5N-l6w")]
-    [DisplayName("Body")]
-    [IsoXmlTag("Body")]
-    public required FileActionResponse2 Body { get; init; }
+    [DisplayName("Protected ATM Key Download Request")]
+    [IsoXmlTag("PrtctdATMKeyDwnldReq")]
+    public ContentInformationType10? ProtectedATMKeyDownloadRequest { get; init; }
 
     /// <summary>
-    /// Trailer of the message containing a MAC.
-    /// It corresponds partially to ISO 8583 field number 53, completed by the field number 64 or 128.
+    /// Security Trailer.
     /// </summary>
-    [IsoId("_1ejJd4KwEeu4svNQ5N-l6w")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType20? SecurityTrailer { get; init; }
+    public ContentInformationType13? SecurityTrailer { get; init; }
 }
 
-// Since FileActionResponseV02Document is not really part of the logical business domain model,
+// Since ATMKeyDownloadRequestV05Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FileActionResponseV02.
+// Some of the constants previously declared there have been relocated to ATMKeyDownloadRequestV05.
