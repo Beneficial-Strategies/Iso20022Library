@@ -1419,26 +1419,26 @@
 
 ### caaa (26)
 #### New
-- [ ] `AcceptorAuthorisationRequestV15` — new: `MessageDefinitions/caaa/AcceptorAuthorisationRequestV15.cs`
-- [ ] `AcceptorAuthorisationResponseV15` — new: `MessageDefinitions/caaa/AcceptorAuthorisationResponseV15.cs`
-- [ ] `AcceptorBatchTransferResponseV14` — new: `MessageDefinitions/caaa/AcceptorBatchTransferResponseV14.cs`
-- [ ] `AcceptorBatchTransferV15` — new: `MessageDefinitions/caaa/AcceptorBatchTransferV15.cs`
-- [ ] `AcceptorCancellationAdviceResponseV14` — new: `MessageDefinitions/caaa/AcceptorCancellationAdviceResponseV14.cs`
-- [ ] `AcceptorCancellationAdviceV15` — new: `MessageDefinitions/caaa/AcceptorCancellationAdviceV15.cs`
-- [ ] `AcceptorCancellationRequestV15` — new: `MessageDefinitions/caaa/AcceptorCancellationRequestV15.cs`
-- [ ] `AcceptorCancellationResponseV14` — new: `MessageDefinitions/caaa/AcceptorCancellationResponseV14.cs`
-- [ ] `AcceptorCompletionAdviceResponseV14` — new: `MessageDefinitions/caaa/AcceptorCompletionAdviceResponseV14.cs`
-- [ ] `AcceptorCompletionAdviceV15` — new: `MessageDefinitions/caaa/AcceptorCompletionAdviceV15.cs`
-- [ ] `AcceptorCurrencyConversionAdviceResponseV09` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionAdviceResponseV09.cs`
-- [ ] `AcceptorCurrencyConversionAdviceV10` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionAdviceV10.cs`
-- [ ] `AcceptorCurrencyConversionRequestV13` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionRequestV13.cs`
-- [ ] `AcceptorCurrencyConversionResponseV13` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionResponseV13.cs`
-- [ ] `AcceptorDiagnosticRequestV14` — new: `MessageDefinitions/caaa/AcceptorDiagnosticRequestV14.cs`
-- [ ] `AcceptorDiagnosticResponseV13` — new: `MessageDefinitions/caaa/AcceptorDiagnosticResponseV13.cs`
-- [ ] `AcceptorNonFinancialRequestV06` — new: `MessageDefinitions/caaa/AcceptorNonFinancialRequestV06.cs`
-- [ ] `AcceptorNonFinancialResponseV06` — new: `MessageDefinitions/caaa/AcceptorNonFinancialResponseV06.cs`
-- [ ] `AcceptorReconciliationRequestV14` — new: `MessageDefinitions/caaa/AcceptorReconciliationRequestV14.cs`
-- [ ] `AcceptorReconciliationResponseV13` — new: `MessageDefinitions/caaa/AcceptorReconciliationResponseV13.cs`
+- [x] `AcceptorAuthorisationRequestV15` — new: `MessageDefinitions/caaa/AcceptorAuthorisationRequestV15.cs`
+- [x] `AcceptorAuthorisationResponseV15` — new: `MessageDefinitions/caaa/AcceptorAuthorisationResponseV15.cs`
+- [x] `AcceptorBatchTransferResponseV14` — new: `MessageDefinitions/caaa/AcceptorBatchTransferResponseV14.cs`
+- [x] `AcceptorBatchTransferV15` — new: `MessageDefinitions/caaa/AcceptorBatchTransferV15.cs`
+- [x] `AcceptorCancellationAdviceResponseV14` — new: `MessageDefinitions/caaa/AcceptorCancellationAdviceResponseV14.cs`
+- [x] `AcceptorCancellationAdviceV15` — new: `MessageDefinitions/caaa/AcceptorCancellationAdviceV15.cs`
+- [x] `AcceptorCancellationRequestV15` — new: `MessageDefinitions/caaa/AcceptorCancellationRequestV15.cs`
+- [x] `AcceptorCancellationResponseV14` — new: `MessageDefinitions/caaa/AcceptorCancellationResponseV14.cs`
+- [x] `AcceptorCompletionAdviceResponseV14` — new: `MessageDefinitions/caaa/AcceptorCompletionAdviceResponseV14.cs`
+- [x] `AcceptorCompletionAdviceV15` — new: `MessageDefinitions/caaa/AcceptorCompletionAdviceV15.cs`
+- [x] `AcceptorCurrencyConversionAdviceResponseV09` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionAdviceResponseV09.cs`
+- [x] `AcceptorCurrencyConversionAdviceV10` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionAdviceV10.cs`
+- [x] `AcceptorCurrencyConversionRequestV13` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionRequestV13.cs`
+- [x] `AcceptorCurrencyConversionResponseV13` — new: `MessageDefinitions/caaa/AcceptorCurrencyConversionResponseV13.cs`
+- [x] `AcceptorDiagnosticRequestV14` — new: `MessageDefinitions/caaa/AcceptorDiagnosticRequestV14.cs`
+- [x] `AcceptorDiagnosticResponseV13` — new: `MessageDefinitions/caaa/AcceptorDiagnosticResponseV13.cs`
+- [x] `AcceptorNonFinancialRequestV06` — new: `MessageDefinitions/caaa/AcceptorNonFinancialRequestV06.cs`
+- [x] `AcceptorNonFinancialResponseV06` — new: `MessageDefinitions/caaa/AcceptorNonFinancialResponseV06.cs`
+- [x] `AcceptorReconciliationRequestV14` — new: `MessageDefinitions/caaa/AcceptorReconciliationRequestV14.cs`
+- [x] `AcceptorReconciliationResponseV13` — new: `MessageDefinitions/caaa/AcceptorReconciliationResponseV13.cs`
 - [ ] `AcceptorToAcquirerBatchFileExchangeV03` — new: `MessageDefinitions/caaa/AcceptorToAcquirerBatchFileExchangeV03.cs`
 - [ ] `AcceptorTransactionLogReportRequestV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportRequestV06.cs`
 - [ ] `AcceptorTransactionLogReportResponseV06` — new: `MessageDefinitions/caaa/AcceptorTransactionLogReportResponseV06.cs`
