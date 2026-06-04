@@ -1506,45 +1506,45 @@
 
 ### cain (38)
 #### New
-- [ ] `AddendumInitiationV04` — new: `MessageDefinitions/cain/AddendumInitiationV04.cs`
-- [ ] `AddendumResponseV04` — new: `MessageDefinitions/cain/AddendumResponseV04.cs`
-- [ ] `AmendmentV04` — new: `MessageDefinitions/cain/AmendmentV04.cs`
-- [ ] `AuthorisationInitiationV05` — new: `MessageDefinitions/cain/AuthorisationInitiationV05.cs`
-- [ ] `AuthorisationResponseV05` — new: `MessageDefinitions/cain/AuthorisationResponseV05.cs`
-- [ ] `CardManagementInitiationV04` — new: `MessageDefinitions/cain/CardManagementInitiationV04.cs`
-- [ ] `CardManagementResponseV04` — new: `MessageDefinitions/cain/CardManagementResponseV04.cs`
-- [ ] `ChargeBackInitiationV04` — new: `MessageDefinitions/cain/ChargeBackInitiationV04.cs`
-- [ ] `ChargeBackResponseV04` — new: `MessageDefinitions/cain/ChargeBackResponseV04.cs`
-- [ ] `FinancialInitiationV05` — new: `MessageDefinitions/cain/FinancialInitiationV05.cs`
-- [ ] `FinancialResponseV05` — new: `MessageDefinitions/cain/FinancialResponseV05.cs`
-- [ ] `InquiryVerificationInitiationV04` — new: `MessageDefinitions/cain/InquiryVerificationInitiationV04.cs`
-- [ ] `InquiryVerificationResponseV04` — new: `MessageDefinitions/cain/InquiryVerificationResponseV04.cs`
-- [ ] `RetrievalFulfilmentInitiationV04` — new: `MessageDefinitions/cain/RetrievalFulfilmentInitiationV04.cs`
-- [ ] `RetrievalFulfilmentResponseV04` — new: `MessageDefinitions/cain/RetrievalFulfilmentResponseV04.cs`
-- [ ] `RetrievalInitiationV04` — new: `MessageDefinitions/cain/RetrievalInitiationV04.cs`
-- [ ] `RetrievalResponseV04` — new: `MessageDefinitions/cain/RetrievalResponseV04.cs`
-- [ ] `ReversalInitiationV05` — new: `MessageDefinitions/cain/ReversalInitiationV05.cs`
-- [ ] `ReversalResponseV05` — new: `MessageDefinitions/cain/ReversalResponseV05.cs`
+- [x] `AddendumInitiationV04` — new: `MessageDefinitions/cain/AddendumInitiationV04.cs`
+- [x] `AddendumResponseV04` — new: `MessageDefinitions/cain/AddendumResponseV04.cs`
+- [x] `AmendmentV04` — new: `MessageDefinitions/cain/AmendmentV04.cs`
+- [x] `AuthorisationInitiationV05` — new: `MessageDefinitions/cain/AuthorisationInitiationV05.cs`
+- [x] `AuthorisationResponseV05` — new: `MessageDefinitions/cain/AuthorisationResponseV05.cs`
+- [x] `CardManagementInitiationV04` — new: `MessageDefinitions/cain/CardManagementInitiationV04.cs`
+- [x] `CardManagementResponseV04` — new: `MessageDefinitions/cain/CardManagementResponseV04.cs`
+- [x] `ChargeBackInitiationV04` — new: `MessageDefinitions/cain/ChargeBackInitiationV04.cs`
+- [x] `ChargeBackResponseV04` — new: `MessageDefinitions/cain/ChargeBackResponseV04.cs`
+- [x] `FinancialInitiationV05` — new: `MessageDefinitions/cain/FinancialInitiationV05.cs`
+- [x] `FinancialResponseV05` — new: `MessageDefinitions/cain/FinancialResponseV05.cs`
+- [x] `InquiryVerificationInitiationV04` — new: `MessageDefinitions/cain/InquiryVerificationInitiationV04.cs`
+- [x] `InquiryVerificationResponseV04` — new: `MessageDefinitions/cain/InquiryVerificationResponseV04.cs`
+- [x] `RetrievalFulfilmentInitiationV04` — new: `MessageDefinitions/cain/RetrievalFulfilmentInitiationV04.cs`
+- [x] `RetrievalFulfilmentResponseV04` — new: `MessageDefinitions/cain/RetrievalFulfilmentResponseV04.cs`
+- [x] `RetrievalInitiationV04` — new: `MessageDefinitions/cain/RetrievalInitiationV04.cs`
+- [x] `RetrievalResponseV04` — new: `MessageDefinitions/cain/RetrievalResponseV04.cs`
+- [x] `ReversalInitiationV05` — new: `MessageDefinitions/cain/ReversalInitiationV05.cs`
+- [x] `ReversalResponseV05` — new: `MessageDefinitions/cain/ReversalResponseV05.cs`
 #### Removed
-- [ ] `AddendumInitiationV02` — delete: `MessageDefinitions/cain/AddendumInitiationV02.cs`
-- [ ] `AddendumResponseV02` — delete: `MessageDefinitions/cain/AddendumResponseV02.cs`
-- [ ] `AmendmentV02` — delete: `MessageDefinitions/cain/AmendmentV02.cs`
-- [ ] `AuthorisationInitiationV03` — delete: `MessageDefinitions/cain/AuthorisationInitiationV03.cs`
-- [ ] `AuthorisationResponseV03` — delete: `MessageDefinitions/cain/AuthorisationResponseV03.cs`
-- [ ] `CardManagementInitiationV02` — delete: `MessageDefinitions/cain/CardManagementInitiationV02.cs`
-- [ ] `CardManagementResponseV02` — delete: `MessageDefinitions/cain/CardManagementResponseV02.cs`
-- [ ] `ChargeBackInitiationV02` — delete: `MessageDefinitions/cain/ChargeBackInitiationV02.cs`
-- [ ] `ChargeBackResponseV02` — delete: `MessageDefinitions/cain/ChargeBackResponseV02.cs`
-- [ ] `FinancialInitiationV03` — delete: `MessageDefinitions/cain/FinancialInitiationV03.cs`
-- [ ] `FinancialResponseV03` — delete: `MessageDefinitions/cain/FinancialResponseV03.cs`
-- [ ] `InquiryInitiationV02` — delete: `MessageDefinitions/cain/InquiryInitiationV02.cs`
-- [ ] `InquiryResponseV02` — delete: `MessageDefinitions/cain/InquiryResponseV02.cs`
-- [ ] `RetrievalFulfilmentInitiationV02` — delete: `MessageDefinitions/cain/RetrievalFulfilmentInitiationV02.cs`
-- [ ] `RetrievalFulfilmentResponseV02` — delete: `MessageDefinitions/cain/RetrievalFulfilmentResponseV02.cs`
-- [ ] `RetrievalInitiationV02` — delete: `MessageDefinitions/cain/RetrievalInitiationV02.cs`
-- [ ] `RetrievalResponseV02` — delete: `MessageDefinitions/cain/RetrievalResponseV02.cs`
-- [ ] `ReversalInitiationV03` — delete: `MessageDefinitions/cain/ReversalInitiationV03.cs`
-- [ ] `ReversalResponseV03` — delete: `MessageDefinitions/cain/ReversalResponseV03.cs`
+- [x] `AddendumInitiationV02` — delete: `MessageDefinitions/cain/AddendumInitiationV02.cs`
+- [x] `AddendumResponseV02` — delete: `MessageDefinitions/cain/AddendumResponseV02.cs`
+- [x] `AmendmentV02` — delete: `MessageDefinitions/cain/AmendmentV02.cs`
+- [x] `AuthorisationInitiationV03` — delete: `MessageDefinitions/cain/AuthorisationInitiationV03.cs`
+- [x] `AuthorisationResponseV03` — delete: `MessageDefinitions/cain/AuthorisationResponseV03.cs`
+- [x] `CardManagementInitiationV02` — delete: `MessageDefinitions/cain/CardManagementInitiationV02.cs`
+- [x] `CardManagementResponseV02` — delete: `MessageDefinitions/cain/CardManagementResponseV02.cs`
+- [x] `ChargeBackInitiationV02` — delete: `MessageDefinitions/cain/ChargeBackInitiationV02.cs`
+- [x] `ChargeBackResponseV02` — delete: `MessageDefinitions/cain/ChargeBackResponseV02.cs`
+- [x] `FinancialInitiationV03` — delete: `MessageDefinitions/cain/FinancialInitiationV03.cs`
+- [x] `FinancialResponseV03` — delete: `MessageDefinitions/cain/FinancialResponseV03.cs`
+- [x] `InquiryInitiationV02` — delete: `MessageDefinitions/cain/InquiryInitiationV02.cs`
+- [x] `InquiryResponseV02` — delete: `MessageDefinitions/cain/InquiryResponseV02.cs`
+- [x] `RetrievalFulfilmentInitiationV02` — delete: `MessageDefinitions/cain/RetrievalFulfilmentInitiationV02.cs`
+- [x] `RetrievalFulfilmentResponseV02` — delete: `MessageDefinitions/cain/RetrievalFulfilmentResponseV02.cs`
+- [x] `RetrievalInitiationV02` — delete: `MessageDefinitions/cain/RetrievalInitiationV02.cs`
+- [x] `RetrievalResponseV02` — delete: `MessageDefinitions/cain/RetrievalResponseV02.cs`
+- [x] `ReversalInitiationV03` — delete: `MessageDefinitions/cain/ReversalInitiationV03.cs`
+- [x] `ReversalResponseV03` — delete: `MessageDefinitions/cain/ReversalResponseV03.cs`
 
 ### camt (34)
 #### New
