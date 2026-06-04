@@ -1651,12 +1651,12 @@
 
 ### pain (6)
 #### New
-- [ ] `CreditorPaymentActivationRequestStatusReportV12` — new: `MessageDefinitions/pain/CreditorPaymentActivationRequestStatusReportV12.cs`
-- [ ] `CreditorPaymentActivationRequestV12` — new: `MessageDefinitions/pain/CreditorPaymentActivationRequestV12.cs`
-- [ ] `CustomerCreditTransferInitiationV13` — new: `MessageDefinitions/pain/CustomerCreditTransferInitiationV13.cs`
-- [ ] `CustomerDirectDebitInitiationV12` — new: `MessageDefinitions/pain/CustomerDirectDebitInitiationV12.cs`
-- [ ] `CustomerPaymentReversalV13` — new: `MessageDefinitions/pain/CustomerPaymentReversalV13.cs`
-- [ ] `CustomerPaymentStatusReportV15` — new: `MessageDefinitions/pain/CustomerPaymentStatusReportV15.cs`
+- [x] `CreditorPaymentActivationRequestStatusReportV12` — new: `MessageDefinitions/pain/CreditorPaymentActivationRequestStatusReportV12.cs`
+- [x] `CreditorPaymentActivationRequestV12` — new: `MessageDefinitions/pain/CreditorPaymentActivationRequestV12.cs`
+- [x] `CustomerCreditTransferInitiationV13` — new: `MessageDefinitions/pain/CustomerCreditTransferInitiationV13.cs`
+- [x] `CustomerDirectDebitInitiationV12` — new: `MessageDefinitions/pain/CustomerDirectDebitInitiationV12.cs`
+- [x] `CustomerPaymentReversalV13` — new: `MessageDefinitions/pain/CustomerPaymentReversalV13.cs`
+- [x] `CustomerPaymentStatusReportV15` — new: `MessageDefinitions/pain/CustomerPaymentStatusReportV15.cs`
 
 ### reda (10)
 #### New
