@@ -1718,24 +1718,24 @@
 
 ### semt (18)
 #### New
-- [ ] `IntraPositionMovementPendingReportV01` — new: `MessageDefinitions/semt/IntraPositionMovementPendingReportV01.cs`
-- [ ] `IntraPositionMovementQueryResponseV01` — new: `MessageDefinitions/semt/IntraPositionMovementQueryResponseV01.cs`
-- [ ] `IntraPositionMovementQueryV01` — new: `MessageDefinitions/semt/IntraPositionMovementQueryV01.cs`
-- [ ] `IntraPositionMovementStatusAdviceV09` — new: `MessageDefinitions/semt/IntraPositionMovementStatusAdviceV09.cs`
-- [ ] `SecuritiesAccountPositionQueryV01` — new: `MessageDefinitions/semt/SecuritiesAccountPositionQueryV01.cs`
-- [ ] `SecuritiesAccountPositionResponseV01` — new: `MessageDefinitions/semt/SecuritiesAccountPositionResponseV01.cs`
-- [ ] `SecuritiesSettlementConditionsModificationRequestQueryV01` — new: `MessageDefinitions/semt/SecuritiesSettlementConditionsModificationRequestQueryV01.cs`
-- [ ] `SecuritiesSettlementConditionsModificationRequestReportV01` — new: `MessageDefinitions/semt/SecuritiesSettlementConditionsModificationRequestReportV01.cs`
-- [ ] `SecuritiesSettlementTransactionAllegementReportV12` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionAllegementReportV12.cs`
-- [ ] `SecuritiesSettlementTransactionAuditTrailReportV07` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionAuditTrailReportV07.cs`
-- [ ] `SecuritiesSettlementTransactionQueryResponseV01` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionQueryResponseV01.cs`
-- [ ] `SecuritiesSettlementTransactionQueryV01` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionQueryV01.cs`
-- [ ] `SecuritiesStatementQueryV09` — new: `MessageDefinitions/semt/SecuritiesStatementQueryV09.cs`
-- [ ] `SecuritiesTransactionCancellationRequestQueryV01` — new: `MessageDefinitions/semt/SecuritiesTransactionCancellationRequestQueryV01.cs`
-- [ ] `SecuritiesTransactionCancellationRequestReportV01` — new: `MessageDefinitions/semt/SecuritiesTransactionCancellationRequestReportV01.cs`
-- [ ] `SecuritiesTransactionPenaltiesReportV01` — new: `MessageDefinitions/semt/SecuritiesTransactionPenaltiesReportV01.cs`
-- [ ] `SecuritiesTransactionPendingReportV15` — new: `MessageDefinitions/semt/SecuritiesTransactionPendingReportV15.cs`
-- [ ] `SecuritiesTransactionPostingReportV14` — new: `MessageDefinitions/semt/SecuritiesTransactionPostingReportV14.cs`
+- [x] `IntraPositionMovementPendingReportV01` — new: `MessageDefinitions/semt/IntraPositionMovementPendingReportV01.cs`
+- [x] `IntraPositionMovementQueryResponseV01` — new: `MessageDefinitions/semt/IntraPositionMovementQueryResponseV01.cs`
+- [x] `IntraPositionMovementQueryV01` — new: `MessageDefinitions/semt/IntraPositionMovementQueryV01.cs`
+- [x] `IntraPositionMovementStatusAdviceV09` — new: `MessageDefinitions/semt/IntraPositionMovementStatusAdviceV09.cs`
+- [x] `SecuritiesAccountPositionQueryV01` — new: `MessageDefinitions/semt/SecuritiesAccountPositionQueryV01.cs`
+- [x] `SecuritiesAccountPositionResponseV01` — new: `MessageDefinitions/semt/SecuritiesAccountPositionResponseV01.cs`
+- [x] `SecuritiesSettlementConditionsModificationRequestQueryV01` — new: `MessageDefinitions/semt/SecuritiesSettlementConditionsModificationRequestQueryV01.cs`
+- [x] `SecuritiesSettlementConditionsModificationRequestReportV01` — new: `MessageDefinitions/semt/SecuritiesSettlementConditionsModificationRequestReportV01.cs`
+- [x] `SecuritiesSettlementTransactionAllegementReportV12` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionAllegementReportV12.cs`
+- [x] `SecuritiesSettlementTransactionAuditTrailReportV07` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionAuditTrailReportV07.cs`
+- [x] `SecuritiesSettlementTransactionQueryResponseV01` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionQueryResponseV01.cs`
+- [x] `SecuritiesSettlementTransactionQueryV01` — new: `MessageDefinitions/semt/SecuritiesSettlementTransactionQueryV01.cs`
+- [x] `SecuritiesStatementQueryV09` — new: `MessageDefinitions/semt/SecuritiesStatementQueryV09.cs`
+- [x] `SecuritiesTransactionCancellationRequestQueryV01` — new: `MessageDefinitions/semt/SecuritiesTransactionCancellationRequestQueryV01.cs`
+- [x] `SecuritiesTransactionCancellationRequestReportV01` — new: `MessageDefinitions/semt/SecuritiesTransactionCancellationRequestReportV01.cs`
+- [x] `SecuritiesTransactionPenaltiesReportV01` — new: `MessageDefinitions/semt/SecuritiesTransactionPenaltiesReportV01.cs`
+- [x] `SecuritiesTransactionPendingReportV15` — new: `MessageDefinitions/semt/SecuritiesTransactionPendingReportV15.cs`
+- [x] `SecuritiesTransactionPostingReportV14` — new: `MessageDefinitions/semt/SecuritiesTransactionPostingReportV14.cs`
 
 ### sese (31)
 #### New
