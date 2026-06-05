@@ -1739,37 +1739,37 @@
 
 ### sese (31)
 #### New
-- [ ] `AccountHoldingInformationRequestV09` — new: `MessageDefinitions/sese/AccountHoldingInformationRequestV09.cs`
-- [ ] `AccountHoldingInformationV10` — new: `MessageDefinitions/sese/AccountHoldingInformationV10.cs`
-- [ ] `PortfolioTransferCompletionV02` — new: `MessageDefinitions/sese/PortfolioTransferCompletionV02.cs`
-- [ ] `PortfolioTransferConfirmationV12` — new: `MessageDefinitions/sese/PortfolioTransferConfirmationV12.cs`
-- [ ] `PortfolioTransferInstructionV12` — new: `MessageDefinitions/sese/PortfolioTransferInstructionV12.cs`
-- [ ] `PortfolioTransferNotificationV09` — new: `MessageDefinitions/sese/PortfolioTransferNotificationV09.cs`
-- [ ] `RequestForTransferStatusReportV09` — new: `MessageDefinitions/sese/RequestForTransferStatusReportV09.cs`
-- [ ] `SecuritiesFinancingConfirmationV13` — new: `MessageDefinitions/sese/SecuritiesFinancingConfirmationV13.cs`
-- [ ] `SecuritiesFinancingInstructionV13` — new: `MessageDefinitions/sese/SecuritiesFinancingInstructionV13.cs`
-- [ ] `SecuritiesFinancingModificationInstructionV10` — new: `MessageDefinitions/sese/SecuritiesFinancingModificationInstructionV10.cs`
-- [ ] `SecuritiesFinancingStatusAdviceV11` — new: `MessageDefinitions/sese/SecuritiesFinancingStatusAdviceV11.cs`
-- [ ] `SecuritiesSettlementAllegementRemovalAdviceV08` — new: `MessageDefinitions/sese/SecuritiesSettlementAllegementRemovalAdviceV08.cs`
-- [ ] `SecuritiesSettlementConditionModificationStatusAdviceV11` — new: `MessageDefinitions/sese/SecuritiesSettlementConditionModificationStatusAdviceV11.cs`
-- [ ] `SecuritiesSettlementTransactionAllegementNotificationV12` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionAllegementNotificationV12.cs`
-- [ ] `SecuritiesSettlementTransactionConfirmationV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionConfirmationV13.cs`
-- [ ] `SecuritiesSettlementTransactionCounterpartyResponseV06` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionCounterpartyResponseV06.cs`
-- [ ] `SecuritiesSettlementTransactionGenerationNotificationV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionGenerationNotificationV13.cs`
-- [ ] `SecuritiesSettlementTransactionInstructionV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionInstructionV13.cs`
-- [ ] `SecuritiesSettlementTransactionModificationRequestStatusAdviceV08` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionModificationRequestStatusAdviceV08.cs`
-- [ ] `SecuritiesSettlementTransactionModificationRequestV11` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionModificationRequestV11.cs`
-- [ ] `SecuritiesSettlementTransactionReversalAdviceV12` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionReversalAdviceV12.cs`
-- [ ] `SecuritiesSettlementTransactionStatusAdviceV14` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionStatusAdviceV14.cs`
-- [ ] `SecuritiesStatusOrStatementQueryStatusAdviceV08` — new: `MessageDefinitions/sese/SecuritiesStatusOrStatementQueryStatusAdviceV08.cs`
-- [ ] `SecuritiesTransactionCancellationRequestStatusAdviceV09` — new: `MessageDefinitions/sese/SecuritiesTransactionCancellationRequestStatusAdviceV09.cs`
-- [ ] `SecuritiesTransactionCancellationRequestV09` — new: `MessageDefinitions/sese/SecuritiesTransactionCancellationRequestV09.cs`
-- [ ] `SecuritiesTransactionStatusQueryV08` — new: `MessageDefinitions/sese/SecuritiesTransactionStatusQueryV08.cs`
-- [ ] `TransferInConfirmationV10` — new: `MessageDefinitions/sese/TransferInConfirmationV10.cs`
-- [ ] `TransferInInstructionV10` — new: `MessageDefinitions/sese/TransferInInstructionV10.cs`
-- [ ] `TransferInstructionStatusReportV10` — new: `MessageDefinitions/sese/TransferInstructionStatusReportV10.cs`
-- [ ] `TransferOutConfirmationV10` — new: `MessageDefinitions/sese/TransferOutConfirmationV10.cs`
-- [ ] `TransferOutInstructionV10` — new: `MessageDefinitions/sese/TransferOutInstructionV10.cs`
+- [x] `AccountHoldingInformationRequestV09` — new: `MessageDefinitions/sese/AccountHoldingInformationRequestV09.cs`
+- [x] `AccountHoldingInformationV10` — new: `MessageDefinitions/sese/AccountHoldingInformationV10.cs`
+- [x] `PortfolioTransferCompletionV02` — new: `MessageDefinitions/sese/PortfolioTransferCompletionV02.cs`
+- [x] `PortfolioTransferConfirmationV12` — new: `MessageDefinitions/sese/PortfolioTransferConfirmationV12.cs`
+- [x] `PortfolioTransferInstructionV12` — new: `MessageDefinitions/sese/PortfolioTransferInstructionV12.cs`
+- [x] `PortfolioTransferNotificationV09` — new: `MessageDefinitions/sese/PortfolioTransferNotificationV09.cs`
+- [x] `RequestForTransferStatusReportV09` — new: `MessageDefinitions/sese/RequestForTransferStatusReportV09.cs`
+- [x] `SecuritiesFinancingConfirmationV13` — new: `MessageDefinitions/sese/SecuritiesFinancingConfirmationV13.cs`
+- [x] `SecuritiesFinancingInstructionV13` — new: `MessageDefinitions/sese/SecuritiesFinancingInstructionV13.cs`
+- [x] `SecuritiesFinancingModificationInstructionV10` — new: `MessageDefinitions/sese/SecuritiesFinancingModificationInstructionV10.cs`
+- [x] `SecuritiesFinancingStatusAdviceV11` — new: `MessageDefinitions/sese/SecuritiesFinancingStatusAdviceV11.cs`
+- [x] `SecuritiesSettlementAllegementRemovalAdviceV08` — new: `MessageDefinitions/sese/SecuritiesSettlementAllegementRemovalAdviceV08.cs`
+- [x] `SecuritiesSettlementConditionModificationStatusAdviceV11` — new: `MessageDefinitions/sese/SecuritiesSettlementConditionModificationStatusAdviceV11.cs`
+- [x] `SecuritiesSettlementTransactionAllegementNotificationV12` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionAllegementNotificationV12.cs`
+- [x] `SecuritiesSettlementTransactionConfirmationV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionConfirmationV13.cs`
+- [x] `SecuritiesSettlementTransactionCounterpartyResponseV06` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionCounterpartyResponseV06.cs`
+- [x] `SecuritiesSettlementTransactionGenerationNotificationV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionGenerationNotificationV13.cs`
+- [x] `SecuritiesSettlementTransactionInstructionV13` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionInstructionV13.cs`
+- [x] `SecuritiesSettlementTransactionModificationRequestStatusAdviceV08` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionModificationRequestStatusAdviceV08.cs`
+- [x] `SecuritiesSettlementTransactionModificationRequestV11` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionModificationRequestV11.cs`
+- [x] `SecuritiesSettlementTransactionReversalAdviceV12` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionReversalAdviceV12.cs`
+- [x] `SecuritiesSettlementTransactionStatusAdviceV14` — new: `MessageDefinitions/sese/SecuritiesSettlementTransactionStatusAdviceV14.cs`
+- [x] `SecuritiesStatusOrStatementQueryStatusAdviceV08` — new: `MessageDefinitions/sese/SecuritiesStatusOrStatementQueryStatusAdviceV08.cs`
+- [x] `SecuritiesTransactionCancellationRequestStatusAdviceV09` — new: `MessageDefinitions/sese/SecuritiesTransactionCancellationRequestStatusAdviceV09.cs`
+- [x] `SecuritiesTransactionCancellationRequestV09` — new: `MessageDefinitions/sese/SecuritiesTransactionCancellationRequestV09.cs`
+- [x] `SecuritiesTransactionStatusQueryV08` — new: `MessageDefinitions/sese/SecuritiesTransactionStatusQueryV08.cs`
+- [x] `TransferInConfirmationV10` — new: `MessageDefinitions/sese/TransferInConfirmationV10.cs`
+- [x] `TransferInInstructionV10` — new: `MessageDefinitions/sese/TransferInInstructionV10.cs`
+- [x] `TransferInstructionStatusReportV10` — new: `MessageDefinitions/sese/TransferInstructionStatusReportV10.cs`
+- [x] `TransferOutConfirmationV10` — new: `MessageDefinitions/sese/TransferOutConfirmationV10.cs`
+- [x] `TransferOutInstructionV10` — new: `MessageDefinitions/sese/TransferOutInstructionV10.cs`
 
 ### setr (25)
 #### New
