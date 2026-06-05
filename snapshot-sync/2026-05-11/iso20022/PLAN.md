@@ -1816,9 +1816,9 @@
 - [x] `PaymentStatusTrackerUpdateV04` — delete: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV04.cs`
 
 ## Milestone 4: Full Build + Tests
-- [ ] Build passes
-- [ ] All tests pass
+- [x] Build passes
+- [x] All tests pass
 
 ## Completion
-- [ ] All phases and milestones verified
-- [ ] Changes committed and branch ready for review
+- [x] All phases and milestones verified
+- [x] Changes committed and branch ready for review
