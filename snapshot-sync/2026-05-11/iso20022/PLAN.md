@@ -1773,31 +1773,31 @@
 
 ### setr (25)
 #### New
-- [ ] `OrderCancellationStatusReportV05` — new: `MessageDefinitions/setr/OrderCancellationStatusReportV05.cs`
-- [ ] `OrderConfirmationStatusReportV03` — new: `MessageDefinitions/setr/OrderConfirmationStatusReportV03.cs`
-- [ ] `OrderInstructionStatusReportV05` — new: `MessageDefinitions/setr/OrderInstructionStatusReportV05.cs`
-- [ ] `RedemptionBulkOrderCancellationRequestV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderCancellationRequestV05.cs`
-- [ ] `RedemptionBulkOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/RedemptionBulkOrderConfirmationCancellationInstructionV03.cs`
-- [ ] `RedemptionBulkOrderConfirmationV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderConfirmationV05.cs`
-- [ ] `RedemptionBulkOrderV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderV05.cs`
-- [ ] `RedemptionOrderCancellationRequestV05` — new: `MessageDefinitions/setr/RedemptionOrderCancellationRequestV05.cs`
-- [ ] `RedemptionOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/RedemptionOrderConfirmationCancellationInstructionV03.cs`
-- [ ] `RedemptionOrderConfirmationV06` — new: `MessageDefinitions/setr/RedemptionOrderConfirmationV06.cs`
-- [ ] `RedemptionOrderV05` — new: `MessageDefinitions/setr/RedemptionOrderV05.cs`
-- [ ] `RequestForOrderConfirmationStatusReportV03` — new: `MessageDefinitions/setr/RequestForOrderConfirmationStatusReportV03.cs`
-- [ ] `RequestForOrderStatusReportV05` — new: `MessageDefinitions/setr/RequestForOrderStatusReportV05.cs`
-- [ ] `SubscriptionBulkOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderCancellationRequestV05.cs`
-- [ ] `SubscriptionBulkOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SubscriptionBulkOrderConfirmationCancellationInstructionV03.cs`
-- [ ] `SubscriptionBulkOrderConfirmationV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderConfirmationV05.cs`
-- [ ] `SubscriptionBulkOrderV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderV05.cs`
-- [ ] `SubscriptionOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SubscriptionOrderCancellationRequestV05.cs`
-- [ ] `SubscriptionOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SubscriptionOrderConfirmationCancellationInstructionV03.cs`
-- [ ] `SubscriptionOrderConfirmationV06` — new: `MessageDefinitions/setr/SubscriptionOrderConfirmationV06.cs`
-- [ ] `SubscriptionOrderV05` — new: `MessageDefinitions/setr/SubscriptionOrderV05.cs`
-- [ ] `SwitchOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SwitchOrderCancellationRequestV05.cs`
-- [ ] `SwitchOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SwitchOrderConfirmationCancellationInstructionV03.cs`
-- [ ] `SwitchOrderConfirmationV05` — new: `MessageDefinitions/setr/SwitchOrderConfirmationV05.cs`
-- [ ] `SwitchOrderV05` — new: `MessageDefinitions/setr/SwitchOrderV05.cs`
+- [x] `OrderCancellationStatusReportV05` — new: `MessageDefinitions/setr/OrderCancellationStatusReportV05.cs`
+- [x] `OrderConfirmationStatusReportV03` — new: `MessageDefinitions/setr/OrderConfirmationStatusReportV03.cs`
+- [x] `OrderInstructionStatusReportV05` — new: `MessageDefinitions/setr/OrderInstructionStatusReportV05.cs`
+- [x] `RedemptionBulkOrderCancellationRequestV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderCancellationRequestV05.cs`
+- [x] `RedemptionBulkOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/RedemptionBulkOrderConfirmationCancellationInstructionV03.cs`
+- [x] `RedemptionBulkOrderConfirmationV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderConfirmationV05.cs`
+- [x] `RedemptionBulkOrderV05` — new: `MessageDefinitions/setr/RedemptionBulkOrderV05.cs`
+- [x] `RedemptionOrderCancellationRequestV05` — new: `MessageDefinitions/setr/RedemptionOrderCancellationRequestV05.cs`
+- [x] `RedemptionOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/RedemptionOrderConfirmationCancellationInstructionV03.cs`
+- [x] `RedemptionOrderConfirmationV06` — new: `MessageDefinitions/setr/RedemptionOrderConfirmationV06.cs`
+- [x] `RedemptionOrderV05` — new: `MessageDefinitions/setr/RedemptionOrderV05.cs`
+- [x] `RequestForOrderConfirmationStatusReportV03` — new: `MessageDefinitions/setr/RequestForOrderConfirmationStatusReportV03.cs`
+- [x] `RequestForOrderStatusReportV05` — new: `MessageDefinitions/setr/RequestForOrderStatusReportV05.cs`
+- [x] `SubscriptionBulkOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderCancellationRequestV05.cs`
+- [x] `SubscriptionBulkOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SubscriptionBulkOrderConfirmationCancellationInstructionV03.cs`
+- [x] `SubscriptionBulkOrderConfirmationV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderConfirmationV05.cs`
+- [x] `SubscriptionBulkOrderV05` — new: `MessageDefinitions/setr/SubscriptionBulkOrderV05.cs`
+- [x] `SubscriptionOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SubscriptionOrderCancellationRequestV05.cs`
+- [x] `SubscriptionOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SubscriptionOrderConfirmationCancellationInstructionV03.cs`
+- [x] `SubscriptionOrderConfirmationV06` — new: `MessageDefinitions/setr/SubscriptionOrderConfirmationV06.cs`
+- [x] `SubscriptionOrderV05` — new: `MessageDefinitions/setr/SubscriptionOrderV05.cs`
+- [x] `SwitchOrderCancellationRequestV05` — new: `MessageDefinitions/setr/SwitchOrderCancellationRequestV05.cs`
+- [x] `SwitchOrderConfirmationCancellationInstructionV03` — new: `MessageDefinitions/setr/SwitchOrderConfirmationCancellationInstructionV03.cs`
+- [x] `SwitchOrderConfirmationV05` — new: `MessageDefinitions/setr/SwitchOrderConfirmationV05.cs`
+- [x] `SwitchOrderV05` — new: `MessageDefinitions/setr/SwitchOrderV05.cs`
 
 ### supl (2)
 #### New
