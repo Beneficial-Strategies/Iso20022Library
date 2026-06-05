@@ -1801,19 +1801,19 @@
 
 ### supl (2)
 #### New
-- [ ] `DTCCCANOCSDDataSD1V18` — new: `MessageDefinitions/supl/DTCCCANOCSDDataSD1V18.cs`
+- [x] `DTCCCANOCSDDataSD1V18` — new: `MessageDefinitions/supl/DTCCCANOCSDDataSD1V18.cs`
 #### Removed
-- [ ] `DTCCCANOCSDDataSD1V17` — delete: `MessageDefinitions/supl/DTCCCANOCSDDataSD1V17.cs`
+- [x] `DTCCCANOCSDDataSD1V17` — delete: `MessageDefinitions/supl/DTCCCANOCSDDataSD1V17.cs`
 
 ### trck (6)
 #### New
-- [ ] `PaymentStatusCustomerTrackerReportV04` — new: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV04.cs`
-- [ ] `PaymentStatusTrackerReportV04` — new: `MessageDefinitions/trck/PaymentStatusTrackerReportV04.cs`
-- [ ] `PaymentStatusTrackerUpdateV05` — new: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV05.cs`
+- [x] `PaymentStatusCustomerTrackerReportV04` — new: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV04.cs`
+- [x] `PaymentStatusTrackerReportV04` — new: `MessageDefinitions/trck/PaymentStatusTrackerReportV04.cs`
+- [x] `PaymentStatusTrackerUpdateV05` — new: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV05.cs`
 #### Removed
-- [ ] `PaymentStatusCustomerTrackerReportV03` — delete: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV03.cs`
-- [ ] `PaymentStatusTrackerReportV03` — delete: `MessageDefinitions/trck/PaymentStatusTrackerReportV03.cs`
-- [ ] `PaymentStatusTrackerUpdateV04` — delete: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV04.cs`
+- [x] `PaymentStatusCustomerTrackerReportV03` — delete: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV03.cs`
+- [x] `PaymentStatusTrackerReportV03` — delete: `MessageDefinitions/trck/PaymentStatusTrackerReportV03.cs`
+- [x] `PaymentStatusTrackerUpdateV04` — delete: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV04.cs`
 
 ## Milestone 4: Full Build + Tests
 - [ ] Build passes

@@ -13,17 +13,17 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.supl;
 
 /// <summary>
-/// This record is an implementation of the supl.001.001.17 ISO standard message type.
+/// This record is an implementation of the supl.001.001.18 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
-[IsoId("_xVv_EYboEe--EK81FcmyRA")]
-[DisplayName("DTCCCANOCSD Data SD1V17")]
-public record DTCCCANOCSDDataSD1V17 : IOuterRecord
+[IsoId("_heZSQaOEEfCHhuKwuscqyg")]
+[DisplayName("DTCCCANOCSDDataSD1V18")]
+public record DTCCCANOCSDDataSD1V18 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "supl.001.001.17";
+    public const string IsoIdentifier = "supl.001.001.18";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
@@ -33,7 +33,7 @@ public record DTCCCANOCSDDataSD1V17 : IOuterRecord
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:supl.001.001.17";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:supl.001.001.18";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -71,7 +71,7 @@ public record DTCCCANOCSDDataSD1V17 : IOuterRecord
     /// </summary>
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD25? CorporateActionDetails { get; init; }
+    public CorporateActionSD27? CorporateActionDetails { get; init; }
 
     /// <summary>
     /// Corporate Action General Information.
@@ -141,8 +141,7 @@ public record DTCCCANOCSDDataSD1V17 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Cash In Lieu Details")]
     [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
-    public ValueList<CorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; init; } =
-        [];
+    public ValueList<CorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; init; } = [];
 
     /// <summary>
     /// Securities Movement Details.
@@ -156,23 +155,21 @@ public record DTCCCANOCSDDataSD1V17 : IOuterRecord
     /// </summary>
     [DisplayName("Securities Movement Fraction Disposition")]
     [IsoXmlTag("SctiesMvmntFrctnDspstn")]
-    public ValueList<FractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; init; } =
-        [];
+    public ValueList<FractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; init; } = [];
 
     /// <summary>
     /// Securities Movement Rate Details.
     /// </summary>
     [DisplayName("Securities Movement Rate Details")]
     [IsoXmlTag("SctiesMvmntRateDtls")]
-    public ValueList<CorporateActionRateSD10> SecuritiesMovementRateDetails { get; init; } = [];
+    public ValueList<CorporateActionRateSD12> SecuritiesMovementRateDetails { get; init; } = [];
 
     /// <summary>
     /// Securities Movement Security Details.
     /// </summary>
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
-    public ValueList<FinancialInstrumentAttributesSD16> SecuritiesMovementSecurityDetails { get; init; } =
-        [];
+    public ValueList<FinancialInstrumentAttributesSD16> SecuritiesMovementSecurityDetails { get; init; } = [];
 
     /// <summary>
     /// Underlying Security.
@@ -182,6 +179,6 @@ public record DTCCCANOCSDDataSD1V17 : IOuterRecord
     public FinancialInstrumentAttributesSD19? UnderlyingSecurity { get; init; }
 }
 
-// Since DTCCCANOCSDDataSD1V17Document is not really part of the logical business domain model,
+// Since DTCCCANOCSDDataSD1V18Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCANOCSDDataSD1V17.
+// Some of the constants previously declared there have been relocated to DTCCCANOCSDDataSD1V18.

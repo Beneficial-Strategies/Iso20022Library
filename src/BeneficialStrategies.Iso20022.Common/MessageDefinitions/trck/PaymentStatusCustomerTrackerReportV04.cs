@@ -13,27 +13,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.trck;
 
 /// <summary>
-/// This record is an implementation of the trck.001.001.04 ISO standard message type.
+/// This record is an implementation of the trck.004.001.04 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
-[IsoId("_9WJnQUN7Ee-QZYT2pcGFZw")]
-[DisplayName("Payment Status Tracker Update V04")]
-public record PaymentStatusTrackerUpdateV04 : IOuterRecord
+[IsoId("6f6b674e-5470-4dce-b707-7e12088eaf28")]
+[DisplayName("Payment Status Customer Tracker Report V04")]
+public record PaymentStatusCustomerTrackerReportV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "trck.001.001.04";
+    public const string IsoIdentifier = "trck.004.001.04";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "PmtStsTrackerUpdt";
+    public const string XmlTag = "PmtStsCustomerTrackerRpt";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:trck.001.001.04";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:trck.004.001.04";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -50,7 +50,7 @@ public record PaymentStatusTrackerUpdateV04 : IOuterRecord
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
-    public required TrackerHeader6 GroupHeader { get; init; }
+    public required TrackerHeader5 GroupHeader { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -64,9 +64,9 @@ public record PaymentStatusTrackerUpdateV04 : IOuterRecord
     /// </summary>
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]
-    public ValueList<TrackerStatusAndTransaction19> TrackerStatusAndTransaction { get; init; } = [];
+    public ValueList<TrackerStatusAndTransaction21> TrackerStatusAndTransaction { get; init; } = [];
 }
 
-// Since PaymentStatusTrackerUpdateV04Document is not really part of the logical business domain model,
+// Since PaymentStatusCustomerTrackerReportV04Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PaymentStatusTrackerUpdateV04.
+// Some of the constants previously declared there have been relocated to PaymentStatusCustomerTrackerReportV04.

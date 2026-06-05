@@ -13,17 +13,17 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.trck;
 
 /// <summary>
-/// This record is an implementation of the trck.002.001.03 ISO standard message type.
+/// This record is an implementation of the trck.002.001.04 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// </summary>
-[IsoId("_9-O68UN7Ee-QZYT2pcGFZw")]
-[DisplayName("Payment Status Tracker Report V03")]
-public record PaymentStatusTrackerReportV03 : IOuterRecord
+[IsoId("a3a36189-234f-4ed4-9038-c5b7de971443")]
+[DisplayName("Payment Status Tracker Report V04")]
+public record PaymentStatusTrackerReportV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "trck.002.001.03";
+    public const string IsoIdentifier = "trck.002.001.04";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
@@ -33,7 +33,7 @@ public record PaymentStatusTrackerReportV03 : IOuterRecord
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:trck.002.001.03";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:trck.002.001.04";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
@@ -64,9 +64,9 @@ public record PaymentStatusTrackerReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]
-    public ValueList<TrackerStatusAndTransaction18> TrackerStatusAndTransaction { get; init; } = [];
+    public ValueList<TrackerStatusAndTransaction21> TrackerStatusAndTransaction { get; init; } = [];
 }
 
-// Since PaymentStatusTrackerReportV03Document is not really part of the logical business domain model,
+// Since PaymentStatusTrackerReportV04Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PaymentStatusTrackerReportV03.
+// Some of the constants previously declared there have been relocated to PaymentStatusTrackerReportV04.
