@@ -109,7 +109,3 @@ public record SecuritiesSettlementConditionModificationStatusAdvice002V08 : IOut
     [IsoXmlTag("SplmtryData")]
     public SupplementaryData1? SupplementaryData { get; init; }
 }
-
-// Since SecuritiesSettlementConditionModificationStatusAdvice002V08Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesSettlementConditionModificationStatusAdvice002V08.

@@ -71,7 +71,3 @@ public record BankServicesBillingStatementV01 : IOuterRecord
     [IsoXmlTag("BllgStmtGrp")]
     public required StatementGroup1 BillingStatementGroup { get; init; }
 }
-
-// Since BankServicesBillingStatementV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to BankServicesBillingStatementV01.

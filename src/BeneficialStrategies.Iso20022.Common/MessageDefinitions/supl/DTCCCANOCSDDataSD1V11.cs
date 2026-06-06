@@ -201,7 +201,3 @@ public record DTCCCANOCSDDataSD1V11 : IOuterRecord
     [IsoXmlTag("Agt")]
     public PartyIdentificationSD6? Agent { get; init; }
 }
-
-// Since DTCCCANOCSDDataSD1V11Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCANOCSDDataSD1V11.

@@ -80,7 +80,3 @@ public record FIToFIPaymentCancellationRequestV12 : IOuterRecord
     [IsoXmlTag("Undrlyg")]
     public ValueList<UnderlyingTransaction36> Underlying { get; init; } = [];
 }
-
-// Since FIToFIPaymentCancellationRequestV12Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FIToFIPaymentCancellationRequestV12.

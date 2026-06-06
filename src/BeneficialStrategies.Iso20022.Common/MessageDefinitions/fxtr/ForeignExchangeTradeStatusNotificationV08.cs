@@ -66,7 +66,3 @@ public record ForeignExchangeTradeStatusNotificationV08 : IOuterRecord
     [IsoXmlTag("TradData")]
     public required TradeData15 TradeData { get; init; }
 }
-
-// Since ForeignExchangeTradeStatusNotificationV08Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ForeignExchangeTradeStatusNotificationV08.

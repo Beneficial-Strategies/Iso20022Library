@@ -122,7 +122,3 @@ public record AgentCANotificationAdviceV01 : IOuterRecord
     [IsoXmlTag("AddtlInf")]
     public CorporateActionNarrative2? AdditionalInformation { get; init; }
 }
-
-// Since AgentCANotificationAdviceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCANotificationAdviceV01.

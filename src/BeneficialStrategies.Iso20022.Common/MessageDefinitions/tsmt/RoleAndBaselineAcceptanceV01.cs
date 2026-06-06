@@ -76,7 +76,3 @@ public record RoleAndBaselineAcceptanceV01 : IOuterRecord
     [IsoXmlTag("TxId")]
     public required SimpleIdentificationInformation TransactionIdentification { get; init; }
 }
-
-// Since RoleAndBaselineAcceptanceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to RoleAndBaselineAcceptanceV01.

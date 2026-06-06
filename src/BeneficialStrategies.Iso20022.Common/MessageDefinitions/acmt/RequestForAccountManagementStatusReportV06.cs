@@ -68,7 +68,3 @@ public record RequestForAccountManagementStatusReportV06 : IOuterRecord
     [IsoXmlTag("ReqDtls")]
     public required AccountManagementMessageReference5 RequestDetails { get; init; }
 }
-
-// Since RequestForAccountManagementStatusReportV06Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to RequestForAccountManagementStatusReportV06.

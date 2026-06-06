@@ -85,7 +85,3 @@ public record InvestmentFundReportRequestV03 : IOuterRecord
     [IsoXmlTag("RptReq")]
     public required FundParameters4Choice_ ReportRequest { get; init; }
 }
-
-// Since InvestmentFundReportRequestV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to InvestmentFundReportRequestV03.

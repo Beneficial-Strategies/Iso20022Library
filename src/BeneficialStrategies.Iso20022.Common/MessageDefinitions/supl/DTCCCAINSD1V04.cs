@@ -84,7 +84,3 @@ public record DTCCCAINSD1V04 : IOuterRecord
     public ValueList<ReorganisationInstructionDetailsSD1> ReorganisationInstructionDetails { get; init; } =
         [];
 }
-
-// Since DTCCCAINSD1V04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCAINSD1V04.

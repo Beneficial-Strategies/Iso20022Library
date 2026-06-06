@@ -101,7 +101,3 @@ public record SecuritiesTransactionPostingReportV13 : IOuterRecord
     [IsoXmlTag("SubAcctDtls")]
     public ValueList<SubAccountIdentification73> SubAccountDetails { get; init; } = [];
 }
-
-// Since SecuritiesTransactionPostingReportV13Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesTransactionPostingReportV13.

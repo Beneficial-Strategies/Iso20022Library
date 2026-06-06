@@ -93,7 +93,3 @@ public record CustodyStatementOfHoldingsCancellationV02 : IOuterRecord
     [IsoXmlTag("StmtToBeCanc")]
     public CustodyStatementOfHoldings2? StatementToBeCancelled { get; init; }
 }
-
-// Since CustodyStatementOfHoldingsCancellationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CustodyStatementOfHoldingsCancellationV02.

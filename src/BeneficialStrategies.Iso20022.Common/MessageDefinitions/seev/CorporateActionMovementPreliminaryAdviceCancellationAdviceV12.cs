@@ -167,7 +167,3 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV12 : IO
     [IsoXmlTag("SplmtryData")]
     public SupplementaryData1? SupplementaryData { get; init; }
 }
-
-// Since CorporateActionMovementPreliminaryAdviceCancellationAdviceV12Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CorporateActionMovementPreliminaryAdviceCancellationAdviceV12.

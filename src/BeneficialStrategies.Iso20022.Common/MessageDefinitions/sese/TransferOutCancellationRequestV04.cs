@@ -87,7 +87,3 @@ public record TransferOutCancellationRequestV04 : IOuterRecord
     [IsoXmlTag("CpyDtls")]
     public CopyInformation2? CopyDetails { get; init; }
 }
-
-// Since TransferOutCancellationRequestV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to TransferOutCancellationRequestV04.

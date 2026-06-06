@@ -86,7 +86,3 @@ public record FundDetailedConfirmedCashForecastReportCancellationV01 : IOuterRec
     [IsoXmlTag("CshFcstRptToBeCanc")]
     public FundDetailedConfirmedCashForecastReport1? CashForecastReportToBeCancelled { get; init; }
 }
-
-// Since FundDetailedConfirmedCashForecastReportCancellationV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FundDetailedConfirmedCashForecastReportCancellationV01.

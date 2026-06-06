@@ -66,7 +66,3 @@ public record SaleToPOISessionManagementRequestV07 : IOuterRecord
     [IsoXmlTag("SsnMgmtReq")]
     public required SessionManagementRequest8 SessionManagementRequest { get; init; }
 }
-
-// Since SaleToPOISessionManagementRequestV07Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SaleToPOISessionManagementRequestV07.

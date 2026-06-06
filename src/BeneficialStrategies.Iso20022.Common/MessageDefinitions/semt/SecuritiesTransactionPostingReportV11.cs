@@ -119,7 +119,3 @@ public record SecuritiesTransactionPostingReportV11 : IOuterRecord
     [IsoXmlTag("SubAcctDtls")]
     public SubAccountIdentification62? SubAccountDetails { get; init; }
 }
-
-// Since SecuritiesTransactionPostingReportV11Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesTransactionPostingReportV11.

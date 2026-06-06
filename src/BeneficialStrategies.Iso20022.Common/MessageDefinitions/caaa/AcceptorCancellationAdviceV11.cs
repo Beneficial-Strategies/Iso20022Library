@@ -73,7 +73,3 @@ public record AcceptorCancellationAdviceV11 : IOuterRecord
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType31? SecurityTrailer { get; init; }
 }
-
-// Since AcceptorCancellationAdviceV11Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AcceptorCancellationAdviceV11.

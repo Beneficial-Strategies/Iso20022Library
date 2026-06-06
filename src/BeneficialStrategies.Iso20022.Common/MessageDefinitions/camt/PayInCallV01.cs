@@ -59,7 +59,3 @@ public record PayInCallV01 : IOuterRecord
     [IsoXmlTag("RptData")]
     public required ReportData1 ReportData { get; init; }
 }
-
-// Since PayInCallV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PayInCallV01.

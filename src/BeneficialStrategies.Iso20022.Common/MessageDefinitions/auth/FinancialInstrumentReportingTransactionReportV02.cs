@@ -59,7 +59,3 @@ public record FinancialInstrumentReportingTransactionReportV02 : IOuterRecord
     [IsoXmlTag("Tx")]
     public ValueList<ReportingTransactionType2Choice_> Transaction { get; init; } = [];
 }
-
-// Since FinancialInstrumentReportingTransactionReportV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FinancialInstrumentReportingTransactionReportV02.

@@ -96,7 +96,3 @@ public record AgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
     [IsoXmlTag("IndvMvmntSts")]
     public required IndividualMovementStatus1 IndividualMovementStatus { get; init; }
 }
-
-// Since AgentCAGlobalDistributionStatusAdviceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAGlobalDistributionStatusAdviceV01.

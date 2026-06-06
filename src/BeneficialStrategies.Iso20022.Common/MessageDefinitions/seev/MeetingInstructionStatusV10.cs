@@ -108,7 +108,3 @@ public record MeetingInstructionStatusV10 : IOuterRecord
     [IsoXmlTag("VoteCstgPty")]
     public required PartyIdentification226Choice_ VoteCastingParty { get; init; }
 }
-
-// Since MeetingInstructionStatusV10Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingInstructionStatusV10.

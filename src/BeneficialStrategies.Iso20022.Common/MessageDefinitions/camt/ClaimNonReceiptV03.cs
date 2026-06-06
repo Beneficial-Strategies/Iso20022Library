@@ -94,7 +94,3 @@ public record ClaimNonReceiptV03 : IOuterRecord
     [IsoXmlTag("CoverDtls")]
     public MissingCover2? CoverDetails { get; init; }
 }
-
-// Since ClaimNonReceiptV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ClaimNonReceiptV03.

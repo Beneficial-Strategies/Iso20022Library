@@ -77,7 +77,3 @@ public record SecuritiesSettlementTransactionModificationRequestV10 : IOuterReco
     [IsoXmlTag("UpdTp")]
     public required UpdateType39Choice_ UpdateType { get; init; }
 }
-
-// Since SecuritiesSettlementTransactionModificationRequestV10Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesSettlementTransactionModificationRequestV10.

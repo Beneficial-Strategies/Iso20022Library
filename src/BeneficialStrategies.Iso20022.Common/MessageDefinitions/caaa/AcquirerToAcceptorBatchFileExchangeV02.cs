@@ -73,7 +73,3 @@ public record AcquirerToAcceptorBatchFileExchangeV02 : IOuterRecord
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType38? SecurityTrailer { get; init; }
 }
-
-// Since AcquirerToAcceptorBatchFileExchangeV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AcquirerToAcceptorBatchFileExchangeV02.

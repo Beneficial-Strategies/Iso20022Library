@@ -181,7 +181,3 @@ public record SecuritiesFinancingConfirmationV12 : IOuterRecord
     [IsoXmlTag("TxIdDtls")]
     public required TransactionTypeAndAdditionalParameters22 TransactionIdentificationDetails { get; init; }
 }
-
-// Since SecuritiesFinancingConfirmationV12Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesFinancingConfirmationV12.

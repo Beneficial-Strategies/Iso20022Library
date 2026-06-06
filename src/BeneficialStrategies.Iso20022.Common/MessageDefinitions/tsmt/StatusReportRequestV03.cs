@@ -70,7 +70,3 @@ public record StatusReportRequestV03 : IOuterRecord
     [IsoXmlTag("NttiesToBeRptd")]
     public BICIdentification1? EntitiesToBeReported { get; init; }
 }
-
-// Since StatusReportRequestV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to StatusReportRequestV03.

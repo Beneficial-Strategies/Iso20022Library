@@ -68,7 +68,3 @@ public record AccountReportingRequestV02 : IOuterRecord
     [IsoXmlTag("RptgReq")]
     public required ReportingRequest2 ReportingRequest { get; init; }
 }
-
-// Since AccountReportingRequestV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AccountReportingRequestV02.

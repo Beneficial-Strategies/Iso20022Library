@@ -121,7 +121,3 @@ public record MeetingResultDisseminationV03 : IOuterRecord
     [IsoXmlTag("AddtlInf")]
     public CommunicationAddress4? AdditionalInformation { get; init; }
 }
-
-// Since MeetingResultDisseminationV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingResultDisseminationV03.

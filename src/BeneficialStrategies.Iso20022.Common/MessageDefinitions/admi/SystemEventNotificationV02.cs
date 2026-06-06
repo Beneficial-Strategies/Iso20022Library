@@ -60,7 +60,3 @@ public record SystemEventNotificationV02 : IOuterRecord
     [IsoXmlTag("EvtInf")]
     public required Event2 EventInformation { get; init; }
 }
-
-// Since SystemEventNotificationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SystemEventNotificationV02.

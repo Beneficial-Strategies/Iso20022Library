@@ -91,7 +91,3 @@ public record AdditionalPaymentInformation : IOuterRecord
     [IsoXmlTag("Inf")]
     public required PaymentComplementaryInformation Information { get; init; }
 }
-
-// Since AdditionalPaymentInformationDocument is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AdditionalPaymentInformation.

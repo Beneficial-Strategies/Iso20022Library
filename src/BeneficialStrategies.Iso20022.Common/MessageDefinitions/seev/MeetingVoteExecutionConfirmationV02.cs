@@ -101,7 +101,3 @@ public record MeetingVoteExecutionConfirmationV02 : IOuterRecord
     [IsoXmlTag("VoteInstr")]
     public required DetailedInstructionStatus2 VoteInstruction { get; init; }
 }
-
-// Since MeetingVoteExecutionConfirmationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingVoteExecutionConfirmationV02.

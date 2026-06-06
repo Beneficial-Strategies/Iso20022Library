@@ -66,7 +66,3 @@ public record SaleToPOIServiceResponseV08 : IOuterRecord
     [IsoXmlTag("SvcRspn")]
     public required ServiceResponse10 ServiceResponse { get; init; }
 }
-
-// Since SaleToPOIServiceResponseV08Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SaleToPOIServiceResponseV08.

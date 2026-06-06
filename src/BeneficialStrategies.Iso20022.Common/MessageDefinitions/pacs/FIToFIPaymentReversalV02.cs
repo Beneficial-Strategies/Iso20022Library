@@ -79,7 +79,3 @@ public record FIToFIPaymentReversalV02 : IOuterRecord
     [IsoXmlTag("TxInf")]
     public PaymentTransactionInformation29? TransactionInformation { get; init; }
 }
-
-// Since FIToFIPaymentReversalV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FIToFIPaymentReversalV02.

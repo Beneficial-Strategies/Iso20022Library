@@ -164,7 +164,3 @@ public record CorporateActionMovementConfirmation002V16 : IOuterRecord
     [IsoXmlTag("TxId")]
     public TransactionIdentification1? TransactionIdentification { get; init; }
 }
-
-// Since CorporateActionMovementConfirmation002V16Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CorporateActionMovementConfirmation002V16.

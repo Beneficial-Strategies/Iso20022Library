@@ -78,7 +78,3 @@ public record ProprietaryFormatInvestigationV02 : IOuterRecord
     [IsoXmlTag("PrtryData")]
     public required ProprietaryData4 ProprietaryData { get; init; }
 }
-
-// Since ProprietaryFormatInvestigationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ProprietaryFormatInvestigationV02.

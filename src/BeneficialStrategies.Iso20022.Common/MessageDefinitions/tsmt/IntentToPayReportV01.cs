@@ -69,7 +69,3 @@ public record IntentToPayReportV01 : IOuterRecord
     [IsoXmlTag("RptdItms")]
     public ReportLine1? ReportedItems { get; init; }
 }
-
-// Since IntentToPayReportV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to IntentToPayReportV01.

@@ -81,7 +81,3 @@ public record DTCCCASTSD1V05 : IOuterRecord
     [IsoXmlTag("TtlInstdBalOptnPrtctInstrDtls")]
     public CorporateActionInstructedBalanceOptionProtectInstructionSD4? TotalInstructedBalanceOptionProtectInstructionDetails { get; init; }
 }
-
-// Since DTCCCASTSD1V05Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCASTSD1V05.

@@ -197,7 +197,3 @@ public record SecuritiesSettlementTransactionConfirmation002V06 : IOuterRecord
     [IsoXmlTag("SplmtryData")]
     public SupplementaryData1? SupplementaryData { get; init; }
 }
-
-// Since SecuritiesSettlementTransactionConfirmation002V06Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesSettlementTransactionConfirmation002V06.

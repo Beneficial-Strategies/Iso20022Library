@@ -107,7 +107,3 @@ public record MeetingVoteExecutionConfirmationV12 : IOuterRecord
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
     public IsoMax2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
 }
-
-// Since MeetingVoteExecutionConfirmationV12Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingVoteExecutionConfirmationV12.

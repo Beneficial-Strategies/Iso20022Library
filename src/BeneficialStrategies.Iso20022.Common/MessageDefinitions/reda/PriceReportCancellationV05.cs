@@ -129,7 +129,3 @@ public record PriceReportCancellationV05 : IOuterRecord
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text PriceReportIdentification { get; init; }
 }
-
-// Since PriceReportCancellationV05Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PriceReportCancellationV05.

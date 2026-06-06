@@ -100,7 +100,3 @@ public record SecuritiesSettlementTransactionAllegementReportV09 : IOuterRecord
     [IsoXmlTag("AllgmtDtls")]
     public SecuritiesTradeDetails122? AllegementDetails { get; init; }
 }
-
-// Since SecuritiesSettlementTransactionAllegementReportV09Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesSettlementTransactionAllegementReportV09.

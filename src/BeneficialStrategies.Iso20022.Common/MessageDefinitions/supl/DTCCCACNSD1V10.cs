@@ -97,7 +97,3 @@ public record DTCCCACNSD1V10 : IOuterRecord
     [IsoXmlTag("XtrnlCmnts")]
     public CorporateActionCancellationSD4? ExternalComments { get; init; }
 }
-
-// Since DTCCCACNSD1V10Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCACNSD1V10.

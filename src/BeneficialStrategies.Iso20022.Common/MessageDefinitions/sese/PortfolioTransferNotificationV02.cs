@@ -92,7 +92,3 @@ public record PortfolioTransferNotificationV02 : IOuterRecord
     [IsoXmlTag("TrfNtfctnDtls")]
     public SecuritiesTradeDetails19? TransferNotificationDetails { get; init; }
 }
-
-// Since PortfolioTransferNotificationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PortfolioTransferNotificationV02.

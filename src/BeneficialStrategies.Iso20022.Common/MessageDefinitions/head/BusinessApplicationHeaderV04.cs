@@ -143,7 +143,3 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     [IsoXmlTag("To")]
     public required Party51Choice_ To { get; init; }
 }
-
-// Since BusinessApplicationHeaderV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to BusinessApplicationHeaderV04.

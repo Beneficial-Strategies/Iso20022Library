@@ -65,7 +65,3 @@ public record DTCCCAPCSD1V04 : IOuterRecord
     [IsoXmlTag("UndrlygScty")]
     public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; }
 }
-
-// Since DTCCCAPCSD1V04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCAPCSD1V04.

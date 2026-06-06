@@ -111,7 +111,3 @@ public record SwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
 }
-
-// Since SwitchOrderConfirmationCancellationInstructionV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SwitchOrderConfirmationCancellationInstructionV03.

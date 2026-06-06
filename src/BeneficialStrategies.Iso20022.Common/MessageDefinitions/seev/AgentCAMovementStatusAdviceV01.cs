@@ -126,7 +126,3 @@ public record AgentCAMovementStatusAdviceV01 : IOuterRecord
     [IsoXmlTag("MvmntCxlStsDtls")]
     public required CorporateMovementStatus2 MovementCancellationStatusDetails { get; init; }
 }
-
-// Since AgentCAMovementStatusAdviceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAMovementStatusAdviceV01.

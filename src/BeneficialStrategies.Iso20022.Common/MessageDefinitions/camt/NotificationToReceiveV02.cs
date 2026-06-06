@@ -68,7 +68,3 @@ public record NotificationToReceiveV02 : IOuterRecord
     [IsoXmlTag("Ntfctn")]
     public required AccountNotification4 Notification { get; init; }
 }
-
-// Since NotificationToReceiveV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to NotificationToReceiveV02.

@@ -112,7 +112,3 @@ public record AgentCAMovementConfirmationV01 : IOuterRecord
     [IsoXmlTag("CshMvmntDtls")]
     public CashMovement3? CashMovementDetails { get; init; }
 }
-
-// Since AgentCAMovementConfirmationV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAMovementConfirmationV01.

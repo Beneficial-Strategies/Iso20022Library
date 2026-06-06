@@ -94,7 +94,3 @@ public record FinancialInvoiceV01 : IOuterRecord
     [IsoXmlTag("LineItm")]
     public LineItem10? LineItem { get; init; }
 }
-
-// Since FinancialInvoiceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FinancialInvoiceV01.

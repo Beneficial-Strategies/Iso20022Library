@@ -87,7 +87,3 @@ public record StatusExtensionRequestAcceptanceV03 : IOuterRecord
     [IsoXmlTag("XtndedSts")]
     public required TransactionStatus4 ExtendedStatus { get; init; }
 }
-
-// Since StatusExtensionRequestAcceptanceV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to StatusExtensionRequestAcceptanceV03.

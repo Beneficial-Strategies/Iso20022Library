@@ -82,7 +82,3 @@ public record InformationResponseSD1V01 : IOuterRecord
     [IsoXmlTag("AcctAndPties")]
     public required AccountAndParties2 AccountAndParties { get; init; }
 }
-
-// Since InformationResponseSD1V01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to InformationResponseSD1V01.

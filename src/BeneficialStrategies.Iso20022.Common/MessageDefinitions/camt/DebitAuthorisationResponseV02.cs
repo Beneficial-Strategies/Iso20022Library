@@ -79,7 +79,3 @@ public record DebitAuthorisationResponseV02 : IOuterRecord
     [IsoXmlTag("Conf")]
     public required DebitAuthorisationConfirmation2 Confirmation { get; init; }
 }
-
-// Since DebitAuthorisationResponseV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DebitAuthorisationResponseV02.

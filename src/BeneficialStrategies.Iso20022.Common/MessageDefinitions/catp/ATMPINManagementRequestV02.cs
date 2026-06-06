@@ -81,7 +81,3 @@ public record ATMPINManagementRequestV02 : IOuterRecord
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType15? SecurityTrailer { get; init; }
 }
-
-// Since ATMPINManagementRequestV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to ATMPINManagementRequestV02.

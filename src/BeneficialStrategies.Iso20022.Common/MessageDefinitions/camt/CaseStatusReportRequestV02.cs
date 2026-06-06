@@ -77,7 +77,3 @@ public record CaseStatusReportRequestV02 : IOuterRecord
     [IsoXmlTag("Case")]
     public required Case2 Case { get; init; }
 }
-
-// Since CaseStatusReportRequestV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CaseStatusReportRequestV02.

@@ -87,7 +87,3 @@ public record IntraPositionMovementPostingReportV10 : IOuterRecord
     [IsoXmlTag("StmtGnlDtls")]
     public required Statement80 StatementGeneralDetails { get; init; }
 }
-
-// Since IntraPositionMovementPostingReportV10Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to IntraPositionMovementPostingReportV10.

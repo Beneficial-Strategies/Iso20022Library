@@ -161,7 +161,3 @@ public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
     [IsoXmlTag("TxDtls")]
     public TransactionDetails180? TransactionDetails { get; init; }
 }
-
-// Since SecuritiesTransactionCancellationRequestV09Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesTransactionCancellationRequestV09.

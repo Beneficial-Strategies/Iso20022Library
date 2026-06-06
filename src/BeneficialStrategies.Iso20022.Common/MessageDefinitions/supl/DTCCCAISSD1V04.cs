@@ -57,7 +57,3 @@ public record DTCCCAISSD1V04 : IOuterRecord
     [IsoXmlTag("ReorgInstrDtls")]
     public ReorganisationInstructionSD9? ReorganisationInstructionDetails { get; init; }
 }
-
-// Since DTCCCAISSD1V04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to DTCCCAISSD1V04.

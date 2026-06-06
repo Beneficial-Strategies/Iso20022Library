@@ -97,7 +97,3 @@ public record SecuritiesSettlementTransactionAuditTrailReportV02 : IOuterRecord
     [IsoXmlTag("StsTrl")]
     public StatusTrail4? StatusTrail { get; init; }
 }
-
-// Since SecuritiesSettlementTransactionAuditTrailReportV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesSettlementTransactionAuditTrailReportV02.

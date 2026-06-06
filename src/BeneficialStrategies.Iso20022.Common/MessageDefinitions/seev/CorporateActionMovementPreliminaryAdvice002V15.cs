@@ -234,7 +234,3 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     [IsoXmlTag("TrfAgt")]
     public PartyIdentification151Choice_? TransferAgent { get; init; }
 }
-
-// Since CorporateActionMovementPreliminaryAdvice002V15Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CorporateActionMovementPreliminaryAdvice002V15.

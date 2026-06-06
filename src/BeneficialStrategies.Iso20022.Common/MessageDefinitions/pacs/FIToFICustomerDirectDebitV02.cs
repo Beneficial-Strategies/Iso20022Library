@@ -72,7 +72,3 @@ public record FIToFICustomerDirectDebitV02 : IOuterRecord
     [IsoXmlTag("DrctDbtTxInf")]
     public required DirectDebitTransactionInformation10 DirectDebitTransactionInformation { get; init; }
 }
-
-// Since FIToFICustomerDirectDebitV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FIToFICustomerDirectDebitV02.

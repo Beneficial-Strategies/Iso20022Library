@@ -66,7 +66,3 @@ public record MandateAmendmentRequestV08 : IOuterRecord
     [IsoXmlTag("UndrlygAmdmntDtls")]
     public ValueList<MandateAmendment8> UnderlyingAmendmentDetails { get; init; } = [];
 }
-
-// Since MandateAmendmentRequestV08Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MandateAmendmentRequestV08.

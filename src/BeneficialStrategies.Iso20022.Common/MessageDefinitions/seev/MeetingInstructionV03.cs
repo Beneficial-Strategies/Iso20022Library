@@ -94,7 +94,3 @@ public record MeetingInstructionV03 : IOuterRecord
     [IsoXmlTag("Instr")]
     public required Instruction2 Instruction { get; init; }
 }
-
-// Since MeetingInstructionV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingInstructionV03.

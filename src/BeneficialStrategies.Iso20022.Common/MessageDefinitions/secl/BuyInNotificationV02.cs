@@ -82,7 +82,3 @@ public record BuyInNotificationV02 : IOuterRecord
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? TransactionIdentification { get; init; }
 }
-
-// Since BuyInNotificationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to BuyInNotificationV02.

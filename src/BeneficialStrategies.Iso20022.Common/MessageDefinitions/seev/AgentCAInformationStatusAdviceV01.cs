@@ -85,7 +85,3 @@ public record AgentCAInformationStatusAdviceV01 : IOuterRecord
     [IsoXmlTag("InfStsDtls")]
     public required CorporateActionInformationStatus1Choice_ InformationStatusDetails { get; init; }
 }
-
-// Since AgentCAInformationStatusAdviceV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAInformationStatusAdviceV01.

@@ -66,7 +66,3 @@ public record CurrencyControlSupportingDocumentDeliveryV04 : IOuterRecord
     [IsoXmlTag("SpprtgDoc")]
     public ValueList<SupportingDocument4> SupportingDocument { get; init; } = [];
 }
-
-// Since CurrencyControlSupportingDocumentDeliveryV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CurrencyControlSupportingDocumentDeliveryV04.

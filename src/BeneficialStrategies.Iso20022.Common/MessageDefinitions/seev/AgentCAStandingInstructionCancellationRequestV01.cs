@@ -85,7 +85,3 @@ public record AgentCAStandingInstructionCancellationRequestV01 : IOuterRecord
     [IsoXmlTag("StgInstrDtls")]
     public CorporateActionStandingInstruction1? StandingInstructionDetails { get; init; }
 }
-
-// Since AgentCAStandingInstructionCancellationRequestV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAStandingInstructionCancellationRequestV01.

@@ -80,7 +80,3 @@ public record MarketClaimCancellationRequestV02 : IOuterRecord
     [IsoXmlTag("TxRef")]
     public required References26 TransactionReference { get; init; }
 }
-
-// Since MarketClaimCancellationRequestV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MarketClaimCancellationRequestV02.

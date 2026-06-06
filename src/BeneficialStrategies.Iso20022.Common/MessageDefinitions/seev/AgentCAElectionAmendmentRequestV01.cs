@@ -110,7 +110,3 @@ public record AgentCAElectionAmendmentRequestV01 : IOuterRecord
     [IsoXmlTag("CtctDtls")]
     public ContactPerson1? ContactDetails { get; init; }
 }
-
-// Since AgentCAElectionAmendmentRequestV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCAElectionAmendmentRequestV01.

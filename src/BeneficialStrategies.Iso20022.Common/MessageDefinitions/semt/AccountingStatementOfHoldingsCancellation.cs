@@ -86,7 +86,3 @@ public record AccountingStatementOfHoldingsCancellation : IOuterRecord
     [IsoXmlTag("StmtToBeCanc")]
     public AccountingStatementOfHoldings1? StatementToBeCancelled { get; init; }
 }
-
-// Since AccountingStatementOfHoldingsCancellationDocument is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AccountingStatementOfHoldingsCancellation.

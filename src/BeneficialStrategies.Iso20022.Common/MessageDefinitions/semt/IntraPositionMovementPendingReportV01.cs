@@ -80,7 +80,3 @@ public record IntraPositionMovementPendingReportV01 : IOuterRecord
     [IsoXmlTag("SfkpgAcct")]
     public required SecuritiesAccount19 SafekeepingAccount { get; init; }
 }
-
-// Since IntraPositionMovementPendingReportV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to IntraPositionMovementPendingReportV01.

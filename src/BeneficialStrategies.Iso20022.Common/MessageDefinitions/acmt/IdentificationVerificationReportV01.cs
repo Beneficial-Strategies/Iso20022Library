@@ -79,7 +79,3 @@ public record IdentificationVerificationReportV01 : IOuterRecord
     [IsoXmlTag("Rpt")]
     public required VerificationReport1 Report { get; init; }
 }
-
-// Since IdentificationVerificationReportV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to IdentificationVerificationReportV01.

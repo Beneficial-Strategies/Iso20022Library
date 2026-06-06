@@ -84,7 +84,3 @@ public record RequestForTransferStatusReportV09 : IOuterRecord
     [IsoXmlTag("ReqDtls")]
     public ValueList<MessageAndBusinessReference14> RequestDetails { get; init; } = [];
 }
-
-// Since RequestForTransferStatusReportV09Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to RequestForTransferStatusReportV09.

@@ -80,7 +80,3 @@ public record CorporateActionNarrative002V09 : IOuterRecord
     [IsoXmlTag("UndrlygScty")]
     public SecurityIdentification20? UnderlyingSecurity { get; init; }
 }
-
-// Since CorporateActionNarrative002V09Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CorporateActionNarrative002V09.

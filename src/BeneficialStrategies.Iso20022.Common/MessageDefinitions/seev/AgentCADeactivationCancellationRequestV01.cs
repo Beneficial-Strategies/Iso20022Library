@@ -86,7 +86,3 @@ public record AgentCADeactivationCancellationRequestV01 : IOuterRecord
     [IsoXmlTag("DeactvtnInstrDtls")]
     public CorporateActionDeactivationInstruction1? DeactivationInstructionDetails { get; init; }
 }
-
-// Since AgentCADeactivationCancellationRequestV01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AgentCADeactivationCancellationRequestV01.

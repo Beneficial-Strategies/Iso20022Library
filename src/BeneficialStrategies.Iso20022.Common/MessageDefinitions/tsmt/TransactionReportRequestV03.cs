@@ -69,7 +69,3 @@ public record TransactionReportRequestV03 : IOuterRecord
     [IsoXmlTag("RptSpcfctn")]
     public required ReportSpecification4 ReportSpecification { get; init; }
 }
-
-// Since TransactionReportRequestV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to TransactionReportRequestV03.

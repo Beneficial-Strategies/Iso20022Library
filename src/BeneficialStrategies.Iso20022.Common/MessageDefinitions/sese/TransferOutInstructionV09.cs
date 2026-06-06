@@ -143,7 +143,3 @@ public record TransferOutInstructionV09 : IOuterRecord
     [IsoXmlTag("Xtnsn")]
     public Extension1? Extension { get; init; }
 }
-
-// Since TransferOutInstructionV09Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to TransferOutInstructionV09.

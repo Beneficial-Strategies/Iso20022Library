@@ -382,7 +382,3 @@ public record AdministrativeInitiationV03 : IOuterRecord
     [IsoXmlTag("Wllt")]
     public Wallet3? Wallet { get; init; }
 }
-
-// Since AdministrativeInitiationV03Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AdministrativeInitiationV03.

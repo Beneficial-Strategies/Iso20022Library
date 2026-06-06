@@ -73,7 +73,3 @@ public record FundProcessingPassportReportV02 : IOuterRecord
     [IsoXmlTag("FPP")]
     public required FundProcessingPassport1 FundProcessingPassport { get; init; }
 }
-
-// Since FundProcessingPassportReportV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FundProcessingPassportReportV02.

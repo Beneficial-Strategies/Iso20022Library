@@ -78,7 +78,3 @@ public record PriceReportCancellationV02 : IOuterRecord
     [IsoXmlTag("PricRptToBeCanc")]
     public PriceReport1? PriceReportToBeCancelled { get; init; }
 }
-
-// Since PriceReportCancellationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to PriceReportCancellationV02.

@@ -216,7 +216,3 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public ValueList<UnderlyingFinancialInstrument7> UnderlyingFinancialInstrument { get; init; } =
         [];
 }
-
-// Since SecuritiesTradeConfirmationV05Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SecuritiesTradeConfirmationV05.

@@ -56,7 +56,3 @@ public record MultipleForeignExchangeSD1V01 : IOuterRecord
     [IsoXmlTag("FXSplmtryData")]
     public ValueList<FXSupplementaryData1> ForeignExchangeSupplementaryData { get; init; } = [];
 }
-
-// Since MultipleForeignExchangeSD1V01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MultipleForeignExchangeSD1V01.

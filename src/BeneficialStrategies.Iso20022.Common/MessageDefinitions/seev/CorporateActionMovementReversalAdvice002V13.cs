@@ -167,7 +167,3 @@ public record CorporateActionMovementReversalAdvice002V13 : IOuterRecord
     [IsoXmlTag("SplmtryData")]
     public SupplementaryData1? SupplementaryData { get; init; }
 }
-
-// Since CorporateActionMovementReversalAdvice002V13Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to CorporateActionMovementReversalAdvice002V13.

@@ -95,7 +95,3 @@ public record AmendmentAcceptanceV02 : IOuterRecord
     [IsoXmlTag("AccptdAmdmntNb")]
     public required Count1 AcceptedAmendmentNumber { get; init; }
 }
-
-// Since AmendmentAcceptanceV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to AmendmentAcceptanceV02.

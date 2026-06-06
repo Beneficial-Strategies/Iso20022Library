@@ -56,7 +56,3 @@ public record MultipleDebitAccountsSD1V01 : IOuterRecord
     [IsoXmlTag("FXSplmtryData")]
     public ValueList<FXSupplementaryData2> ForeignExchangeSupplementaryData { get; init; } = [];
 }
-
-// Since MultipleDebitAccountsSD1V01Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MultipleDebitAccountsSD1V01.

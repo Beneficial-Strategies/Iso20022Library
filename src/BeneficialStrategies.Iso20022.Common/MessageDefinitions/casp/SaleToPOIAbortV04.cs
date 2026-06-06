@@ -71,7 +71,3 @@ public record SaleToPOIAbortV04 : IOuterRecord
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType29? SecurityTrailer { get; init; }
 }
-
-// Since SaleToPOIAbortV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SaleToPOIAbortV04.

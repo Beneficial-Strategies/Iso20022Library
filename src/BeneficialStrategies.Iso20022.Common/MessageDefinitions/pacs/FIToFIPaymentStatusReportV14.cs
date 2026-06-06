@@ -73,7 +73,3 @@ public record FIToFIPaymentStatusReportV14 : IOuterRecord
     [IsoXmlTag("TxInfAndSts")]
     public ValueList<PaymentTransaction161> TransactionInformationAndStatus { get; init; } = [];
 }
-
-// Since FIToFIPaymentStatusReportV14Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to FIToFIPaymentStatusReportV14.

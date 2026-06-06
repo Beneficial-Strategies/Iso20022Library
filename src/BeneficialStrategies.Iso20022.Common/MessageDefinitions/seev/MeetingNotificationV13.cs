@@ -143,7 +143,3 @@ public record MeetingNotificationV13 : IOuterRecord
     [IsoXmlTag("Vote")]
     public VoteParameters10? Vote { get; init; }
 }
-
-// Since MeetingNotificationV13Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to MeetingNotificationV13.

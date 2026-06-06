@@ -73,7 +73,3 @@ public record SaleToPOISessionManagementRequestV05 : IOuterRecord
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType33? SecurityTrailer { get; init; }
 }
-
-// Since SaleToPOISessionManagementRequestV05Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to SaleToPOISessionManagementRequestV05.

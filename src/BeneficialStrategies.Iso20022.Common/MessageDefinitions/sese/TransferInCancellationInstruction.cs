@@ -86,7 +86,3 @@ public record TransferInCancellationInstruction : IOuterRecord
     [IsoXmlTag("TrfInToBeCanc")]
     public TransferIn2? TransferInToBeCancelled { get; init; }
 }
-
-// Since TransferInCancellationInstructionDocument is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to TransferInCancellationInstruction.

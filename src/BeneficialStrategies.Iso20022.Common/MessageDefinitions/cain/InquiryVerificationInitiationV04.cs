@@ -381,7 +381,3 @@ public record InquiryVerificationInitiationV04 : IOuterRecord
     [IsoXmlTag("Wllt")]
     public Wallet4? Wallet { get; init; }
 }
-
-// Since InquiryVerificationInitiationV04Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to InquiryVerificationInitiationV04.

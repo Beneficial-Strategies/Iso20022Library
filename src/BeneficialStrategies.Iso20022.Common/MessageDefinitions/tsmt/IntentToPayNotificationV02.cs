@@ -102,7 +102,3 @@ public record IntentToPayNotificationV02 : IOuterRecord
     [IsoXmlTag("InttToPay")]
     public required IntentToPay2 IntentToPay { get; init; }
 }
-
-// Since IntentToPayNotificationV02Document is not really part of the logical business domain model,
-// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
-// Some of the constants previously declared there have been relocated to IntentToPayNotificationV02.
