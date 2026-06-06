@@ -16,62 +16,98 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Subscription Multiple Execution7")]
 public record SubscriptionMultipleExecution7
 {
+    /// <summary>
+    /// Indicates whether the confirmation is an amendment of a previous confirmation.
+    /// </summary>
     [IsoId("323a0eb6-e15b-4de9-9ec7-48e975229e5d")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     public IsoYesNoIndicator? AmendmentIndicator { get; init; }
 
+    /// <summary>
+    /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.
+    /// </summary>
     [IsoId("1b078b69-8cde-463d-9e20-b0d5cc554dc4")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
     public IsoMax35Text? MasterReference { get; init; }
 
+    /// <summary>
+    /// Market in which the advised trade transaction was executed.
+    /// </summary>
     [IsoId("47e9afbc-8374-42db-8aba-61b88c05066f")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
     public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
 
+    /// <summary>
+    /// Date and time at which the order was placed by the investor or its agent.
+    /// </summary>
     [IsoId("fe68da0b-4e77-4149-962d-2bab7480aaa2")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     public IsoISODateTime? OrderDateTime { get; init; }
 
+    /// <summary>
+    /// Date and time the order was received by the executing party, for example, the transfer agent.
+    /// </summary>
     [IsoId("497dbd82-2a4d-40cf-a58e-d4029c951253")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
     public IsoISODateTime? ReceivedDateTime { get; init; }
 
+    /// <summary>
+    /// Future date at which the investor requests the order to be executed.
+    /// </summary>
     [IsoId("3fb689c1-83d0-4784-b08d-66674cac399f")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
     public IsoISODate? RequestedFutureTradeDate { get; init; }
 
+    /// <summary>
+    /// Cancellation right of the investor with respect to the investment fund order.
+    /// </summary>
     [IsoId("489e5a78-be92-4c71-9060-cf0784cc3977")]
     [DisplayName("Cancellation Right")]
     [IsoXmlTag("CxlRght")]
     public CancellationRight1Choice_? CancellationRight { get; init; }
 
+    /// <summary>
+    /// Account impacted by the investment fund order execution.
+    /// </summary>
     [IsoId("67fefbfc-9a94-481e-88d1-7922322a81ad")]
     [DisplayName("Investment Account Details")]
     [IsoXmlTag("InvstmtAcctDtls")]
     public required InvestmentAccount81 InvestmentAccountDetails { get; init; }
 
+    /// <summary>
+    /// Additional information about the investor.
+    /// </summary>
     [IsoId("6f1ef1af-35ab-4b31-b456-947ce486996c")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
     public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
 
+    /// <summary>
+    /// Execution of a subscription order.
+    /// </summary>
     [IsoId("de795a98-5878-46f1-bce9-e06a8076e6cb")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
     [MinLength(1)]
     public ValueList<SubscriptionExecution16> IndividualExecutionDetails { get; init; } = [];
 
+    /// <summary>
+    /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the multiple order.
+    /// </summary>
     [IsoId("ad8df7ac-20f4-44d0-b532-18697ab8ecfa")]
     [DisplayName("Total Settlement Amount")]
     [IsoXmlTag("TtlSttlmAmt")]
     public ActiveCurrencyAndAmount? TotalSettlementAmount { get; init; }
 
+    /// <summary>
+    /// Payment process for the transfer of cash from the debtor to the creditor.
+    /// </summary>
     [IsoId("5b932be1-5e79-48d1-81f4-b6b55a3d181f")]
     [DisplayName("Bulk Cash Settlement Details")]
     [IsoXmlTag("BlkCshSttlmDtls")]

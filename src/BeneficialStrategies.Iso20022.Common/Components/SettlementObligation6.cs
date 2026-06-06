@@ -17,76 +17,121 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Obsolete]
 public record SettlementObligation6
 {
+    /// <summary>
+    /// Last reference given by the settlement platform (this is the central securities depository) to the transaction (non settled instruction).
+    /// </summary>
     [IsoId("_-e8896MOEeCojJW5vEuTEQ_794633936")]
     [DisplayName("CSD Transaction Identification")]
     [IsoXmlTag("CSDTxId")]
     public IsoMax35Text? CSDTransactionIdentification { get; init; }
 
+    /// <summary>
+    /// Reference of the transaction (non settled instruction) given by the central counterparty.
+    /// </summary>
     [IsoId("_-fGG4KMOEeCojJW5vEuTEQ_-202438417")]
     [DisplayName("Central Counterparty Transaction Identification")]
     [IsoXmlTag("CntrlCtrPtyTxId")]
     public IsoMax35Text? CentralCounterpartyTransactionIdentification { get; init; }
 
+    /// <summary>
+    /// An account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).
+    /// </summary>
     [IsoId("_-fGG4aMOEeCojJW5vEuTEQ_-1199510770")]
     [DisplayName("Delivery Account")]
     [IsoXmlTag("DlvryAcct")]
     public SecuritiesAccount19? DeliveryAccount { get; init; }
 
+    /// <summary>
+    /// Clearing member account at the central securities depository.
+    /// </summary>
     [IsoId("_-fGG4qMOEeCojJW5vEuTEQ_2098384173")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
+    /// <summary>
+    /// Clearing organisation that will clear the trade.||Note: This field allows clearing member firm to segregate flows coming from clearing counterparty's clearing system. Indeed, clearing member firms receive messages from the same system (same sender) and this field allows them to know if the message is related to equities or derivatives.
+    /// </summary>
     [IsoId("_-fGG46MOEeCojJW5vEuTEQ_-1427673033")]
     [DisplayName("Clearing Segment")]
     [IsoXmlTag("ClrSgmt")]
     public PartyIdentification35Choice_? ClearingSegment { get; init; }
 
+    /// <summary>
+    /// Provides the identification for the non-clearing member and account.
+    /// </summary>
     [IsoId("_-fGG5KMOEeCojJW5vEuTEQ_1870221910")]
     [DisplayName("Non Clearing Member")]
     [IsoXmlTag("NonClrMmb")]
     public PartyIdentificationAndAccount31? NonClearingMember { get; init; }
 
+    /// <summary>
+    /// Provides the intended settlement date of the position.
+    /// </summary>
     [IsoId("_-fGG5aMOEeCojJW5vEuTEQ_873149557")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
     public IsoISODate? IntendedSettlementDate { get; init; }
 
+    /// <summary>
+    /// Provides details about the security identification.
+    /// </summary>
     [IsoId("_-fGG5qMOEeCojJW5vEuTEQ_-123922796")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification14 FinancialInstrumentIdentification { get; init; }
 
+    /// <summary>
+    /// Provides the trade date.
+    /// </summary>
     [IsoId("_-fGG56MOEeCojJW5vEuTEQ_-1120995149")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     public IsoISODate? TradeDate { get; init; }
 
+    /// <summary>
+    /// Provides the price of the trade.
+    /// </summary>
     [IsoId("_-fGG6KMOEeCojJW5vEuTEQ_-2118067502")]
     [DisplayName("Deal Price")]
     [IsoXmlTag("DealPric")]
     public Price4? DealPrice { get; init; }
 
+    /// <summary>
+    /// Provides the quantity of the trade.
+    /// </summary>
     [IsoId("_-fP34KMOEeCojJW5vEuTEQ_1179827441")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     public required FinancialInstrumentQuantity1Choice_ Quantity { get; init; }
 
+    /// <summary>
+    /// Place where settlement of the securities takes place.
+    /// </summary>
     [IsoId("_-fP34aMOEeCojJW5vEuTEQ_182755088")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
     public PartyIdentification34Choice_? Depository { get; init; }
 
+    /// <summary>
+    /// Provides the remaining quantity to be settled.
+    /// </summary>
     [IsoId("_-fP34qMOEeCojJW5vEuTEQ_-814317265")]
     [DisplayName("Remaining Quantity To Be Settled")]
     [IsoXmlTag("RmngQtyToBeSttld")]
     public FinancialInstrumentQuantity1Choice_? RemainingQuantityToBeSettled { get; init; }
 
+    /// <summary>
+    /// Provides the amount to be settled.
+    /// </summary>
     [IsoId("_-fP346MOEeCojJW5vEuTEQ_-1811389618")]
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
     public required AmountAndDirection27 SettlementAmount { get; init; }
 
+    /// <summary>
+    /// Provides the remaining amount to be settled.
+    /// </summary>
     [IsoId("_-fP35KMOEeCojJW5vEuTEQ_1563544026")]
     [DisplayName("Remaining Amount To Be Settled")]
     [IsoXmlTag("RmngAmtToBeSttld")]

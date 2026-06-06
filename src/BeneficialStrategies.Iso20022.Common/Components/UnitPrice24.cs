@@ -16,82 +16,130 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Unit Price24")]
 public record UnitPrice24
 {
+    /// <summary>
+    /// Type and information about a price.
+    /// </summary>
     [IsoId("_6Pw7gMXxEfCHqr1PtvL9kg")]
     [DisplayName("Price Type")]
     [IsoXmlTag("PricTp")]
     public required PriceType6Choice_ PriceType { get; init; }
 
+    /// <summary>
+    /// Type of pricing calculation method.
+    /// </summary>
     [IsoId("45d414d8-2074-4628-8275-72613b96ac30")]
     [DisplayName("Price Method")]
     [IsoXmlTag("PricMtd")]
     public PriceMethod1Code? PriceMethod { get; init; }
 
+    /// <summary>
+    /// Value of the price, eg, as a currency and value.
+    /// </summary>
     [IsoId("a866a433-7c0e-4d6f-834c-833cb8b4c6a8")]
     [DisplayName("Value In Investment Currency")]
     [IsoXmlTag("ValInInvstmtCcy")]
     [MinLength(1)]
     public ValueList<PriceValue1> ValueInInvestmentCurrency { get; init; } = [];
 
+    /// <summary>
+    /// Value of the price, eg, as a currency and value.
+    /// </summary>
     [IsoId("1b447b2f-5e09-4bf9-a8be-b05cd035be70")]
     [DisplayName("Value In Alternative Currency")]
     [IsoXmlTag("ValInAltrntvCcy")]
     public ValueList<PriceValue1> ValueInAlternativeCurrency { get; init; } = [];
 
+    /// <summary>
+    /// Indicates whether the price information can be used for the execution of a transaction.
+    /// </summary>
     [IsoId("0c8cadf8-6b42-4681-b14a-f1e76b80b6bc")]
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
     public required IsoYesNoIndicator ForExecutionIndicator { get; init; }
 
+    /// <summary>
+    /// Indicates whether the dividend is included, ie, cum-dividend, in the price. When the dividend is not included, the price will be ex-dividend.
+    /// </summary>
     [IsoId("1939a559-a2ea-48b1-b43f-a4a90bc336b6")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     public required IsoYesNoIndicator CumDividendIndicator { get; init; }
 
+    /// <summary>
+    /// Ratio applied on the non-adjusted price.
+    /// </summary>
     [IsoId("95c060bd-230b-4d3d-bc6f-68c7e114434c")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
     public IsoPercentageRate? CalculationBasis { get; init; }
 
+    /// <summary>
+    /// Indicates whether the price is an estimated price.
+    /// </summary>
     [IsoId("2dec4b60-abf6-4848-9288-c99b374f596a")]
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
     public required IsoYesNoIndicator EstimatedPriceIndicator { get; init; }
 
+    /// <summary>
+    /// Specifies the number of days from trade date that the counterparty on the other side of the trade should "given up" or divulged.
+    /// </summary>
     [IsoId("124b3f54-e1c6-407e-832e-36c52cc80a7f")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     public IsoNumber? NumberOfDaysAccrued { get; init; }
 
+    /// <summary>
+    /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
+    /// </summary>
     [IsoId("2355114d-c331-49ad-a243-cc374dfbed02")]
     [DisplayName("Taxable Income Per Share")]
     [IsoXmlTag("TaxblIncmPerShr")]
     public ActiveOrHistoricCurrencyAnd13DecimalAmount? TaxableIncomePerShare { get; init; }
 
+    /// <summary>
+    /// Specifies whether the fund calculates a taxable interest per share (TIS).
+    /// </summary>
     [IsoId("e9d58338-1979-4568-bb9f-20da0a06f7bc")]
     [DisplayName("Taxable Income Per Share Calculated")]
     [IsoXmlTag("TaxblIncmPerShrClctd")]
     public TaxableIncomePerShareCalculated3Choice_? TaxableIncomePerShareCalculated { get; init; }
 
+    /// <summary>
+    /// Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
+    /// </summary>
     [IsoId("ff06665e-2c26-4add-851c-1266592ea645")]
     [DisplayName("Taxable Income Per Dividend")]
     [IsoXmlTag("TaxblIncmPerDvdd")]
     public ActiveOrHistoricCurrencyAnd13DecimalAmount? TaxableIncomePerDividend { get; init; }
 
+    /// <summary>
+    /// Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.
+    /// </summary>
     [IsoId("183861a3-a305-4783-99a8-4584aa8aad1a")]
     [DisplayName("EU Dividend Status")]
     [IsoXmlTag("EUDvddSts")]
     public EUDividendStatusType3Choice_? EUDividendStatus { get; init; }
 
+    /// <summary>
+    /// Amount of money associated with a service.
+    /// </summary>
     [IsoId("78b4af1c-d518-476c-ad8f-903d221edde1")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
     public ValueList<Charge33> ChargeDetails { get; init; } = [];
 
+    /// <summary>
+    /// Information related to taxes that are due.
+    /// </summary>
     [IsoId("d22f22f4-4d27-4d1e-83af-94a2d0b239c1")]
     [DisplayName("Tax Liability Details")]
     [IsoXmlTag("TaxLbltyDtls")]
     public ValueList<Tax43> TaxLiabilityDetails { get; init; } = [];
 
+    /// <summary>
+    /// Information related to taxes that are paid back.
+    /// </summary>
     [IsoId("af010d17-5a30-428a-9b50-d6a90a8471c0")]
     [DisplayName("Tax Refund Details")]
     [IsoXmlTag("TaxRfndDtls")]
