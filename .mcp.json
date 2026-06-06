@@ -1,6 +1,0 @@
-{
-  "iso20022": {
-      "type": "http",
-      "url": "https://iso20022-mcp-v1.beneficialstrategies.com/mcp"
-    }
-}
