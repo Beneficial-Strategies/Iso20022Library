@@ -16,121 +16,193 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Settlement Details223")]
 public record SettlementDetails223
 {
+    /// <summary>
+    /// Specifies whether the transaction was executed with a high priority.
+    /// </summary>
     [IsoId("_yH0juZaAEfC2_67yGLymgA")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
     public PriorityNumeric4Choice_? Priority { get; init; }
 
+    /// <summary>
+    /// Identifies the type of securities transaction.
+    /// </summary>
     [IsoId("_yH0jwZaAEfC2_67yGLymgA")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
     public required SecuritiesTransactionType46Choice_ SecuritiesTransactionType { get; init; }
 
+    /// <summary>
+    /// Conditions under which the order/trade was to be settled.
+    /// </summary>
     [IsoId("_yH0jyZaAEfC2_67yGLymgA")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
     public ValueList<SettlementTransactionCondition42Choice_> SettlementTransactionCondition { get; init; } = [];
 
+    /// <summary>
+    /// Specifies whether partial settlement was allowed.
+    /// </summary>
     [IsoId("_yH0j0ZaAEfC2_67yGLymgA")]
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
 
+    /// <summary>
+    /// Specifies whether there was change of beneficial ownership.
+    /// </summary>
     [IsoId("_yH0j2ZaAEfC2_67yGLymgA")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
     public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
 
+    /// <summary>
+    /// Specifies whether the settlement instruction was a block parent or child.
+    /// </summary>
     [IsoId("_yH0j4ZaAEfC2_67yGLymgA")]
     [DisplayName("Block Trade")]
     [IsoXmlTag("BlckTrad")]
     public BlockTrade4Choice_? BlockTrade { get; init; }
 
+    /// <summary>
+    /// Specifies whether the settlement transaction was CCP (Central Counterparty) eligible.
+    /// </summary>
     [IsoId("_yH0j6ZaAEfC2_67yGLymgA")]
     [DisplayName("CCP Eligibility")]
     [IsoXmlTag("CCPElgblty")]
     public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
 
+    /// <summary>
+    /// Specifies the category of cash clearing system, for example, cheque clearing.
+    /// </summary>
     [IsoId("_yH0j8ZaAEfC2_67yGLymgA")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
     public CashSettlementSystem6Choice_? CashClearingSystem { get; init; }
 
+    /// <summary>
+    /// Specifies the underlying business area/type of trade having caused the collateral movement.
+    /// </summary>
     [IsoId("_yH0j-ZaAEfC2_67yGLymgA")]
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
     public ExposureType25Choice_? ExposureType { get; init; }
 
+    /// <summary>
+    /// Specifies if an instruction was for a market side or a client side transaction.
+    /// </summary>
     [IsoId("_yH0kAZaAEfC2_67yGLymgA")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
     public MarketClientSide6Choice_? MarketClientSide { get; init; }
 
+    /// <summary>
+    /// Specifies whether the settlement transaction was eligible for netting.
+    /// </summary>
     [IsoId("_yH0kCZaAEfC2_67yGLymgA")]
     [DisplayName("Netting Eligibility")]
     [IsoXmlTag("NetgElgblty")]
     public NettingEligibility4Choice_? NettingEligibility { get; init; }
 
+    /// <summary>
+    /// Specifies whether registration was to occur upon receipt.
+    /// </summary>
     [IsoId("_yH0kEZaAEfC2_67yGLymgA")]
     [DisplayName("Registration")]
     [IsoXmlTag("Regn")]
     public Registration9Choice_? Registration { get; init; }
 
+    /// <summary>
+    /// Specifies the type of repurchase transaction.
+    /// </summary>
     [IsoId("_yH0kGZaAEfC2_67yGLymgA")]
     [DisplayName("Repurchase Type")]
     [IsoXmlTag("RpTp")]
     public RepurchaseType22Choice_? RepurchaseType { get; init; }
 
+    /// <summary>
+    /// Regulatory restrictions applicable to a security.
+    /// </summary>
     [IsoId("_yH0kIZaAEfC2_67yGLymgA")]
     [DisplayName("Legal Restrictions")]
     [IsoXmlTag("LglRstrctns")]
     public Restriction5Choice_? LegalRestrictions { get; init; }
 
+    /// <summary>
+    /// Specifies whether the settlement transaction was to be settled through an RTGS or a non RTGS system.
+    /// </summary>
     [IsoId("_yH0kKZaAEfC2_67yGLymgA")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
     public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
+    /// <summary>
+    /// Role of a party in the settlement of the transaction.
+    /// </summary>
     [IsoId("_yH0kMZaAEfC2_67yGLymgA")]
     [DisplayName("Settling Capacity")]
     [IsoXmlTag("SttlgCpcty")]
     public SettlingCapacity7Choice_? SettlingCapacity { get; init; }
 
+    /// <summary>
+    /// Specifies whether the settlement instruction was to be settled through the default or the alternate settlement system.
+    /// </summary>
     [IsoId("_yH0kOZaAEfC2_67yGLymgA")]
     [DisplayName("Settlement System Method")]
     [IsoXmlTag("SttlmSysMtd")]
     public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
+    /// <summary>
+    /// Tax role capacity of the instructing party.
+    /// </summary>
     [IsoId("_yH0kQZaAEfC2_67yGLymgA")]
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
     public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
 
+    /// <summary>
+    /// Specifies the stamp duty type or exemption reason applicable to the settlement transaction.
+    /// </summary>
     [IsoId("_yH0kSZaAEfC2_67yGLymgA")]
     [DisplayName("Stamp Duty Tax Basis")]
     [IsoXmlTag("StmpDtyTaxBsis")]
     public GenericIdentification30? StampDutyTaxBasis { get; init; }
 
+    /// <summary>
+    /// Condition for automatic borrowing.
+    /// </summary>
     [IsoId("_yH0kUZaAEfC2_67yGLymgA")]
     [DisplayName("Automatic Borrowing")]
     [IsoXmlTag("AutomtcBrrwg")]
     public AutomaticBorrowing6Choice_? AutomaticBorrowing { get; init; }
 
+    /// <summary>
+    /// Specifies whether physical settlement was executed using a letter of guarantee or if the physical certificates were used.
+    /// </summary>
     [IsoId("_yH0kWZaAEfC2_67yGLymgA")]
     [DisplayName("Letter Of Guarantee")]
     [IsoXmlTag("LttrOfGrnt")]
     public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
 
+    /// <summary>
+    /// Specifies whether securities were requested to be included in the pool of securities eligible for collateral purposes.
+    /// </summary>
     [IsoId("_yH0kYZaAEfC2_67yGLymgA")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     public IsoYesNoIndicator? EligibleForCollateral { get; init; }
 
+    /// <summary>
+    /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).
+    /// </summary>
     [IsoId("_yH0kaZaAEfC2_67yGLymgA")]
     [DisplayName("Securities Sub Balance Type")]
     [IsoXmlTag("SctiesSubBalTp")]
     public GenericIdentification30? SecuritiesSubBalanceType { get; init; }
 
+    /// <summary>
+    /// Specifies the cash sub balance type indicator, for example, the restriction type for a market infrastructure.
+    /// </summary>
     [IsoId("_yH0kb5aAEfC2_67yGLymgA")]
     [DisplayName("Cash Sub Balance Type")]
     [IsoXmlTag("CshSubBalTp")]
