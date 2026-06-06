@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022;
 /// <para>
 /// Standard .NET collection types (<see cref="List{T}"/>, arrays, <see cref="IReadOnlyList{T}"/>)
 /// all use reference equality, which silently breaks auto-generated record equality when a record
-/// contains collection properties. This type fixes that by overriding <see cref="Equals"/> with
+/// contains collection properties. This type fixes that by overriding <see cref="Equals(ImmutableValueList{T}?)"/> with
 /// <see cref="Enumerable.SequenceEqual{T}(IEnumerable{T}, IEnumerable{T})"/>.
 /// </para>
 /// <para>

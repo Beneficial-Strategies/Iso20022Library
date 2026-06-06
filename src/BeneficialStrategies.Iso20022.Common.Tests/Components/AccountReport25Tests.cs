@@ -138,9 +138,9 @@ public class AccountReport25Tests
         var report = CreateAccountReport();
 
         // Assert - All collections have Count property (single values wouldn't)
-        Assert.Equal(0, report.Balance.Count);
-        Assert.Equal(0, report.Entry.Count);
-        Assert.Equal(0, report.Interest.Count);
+        Assert.Empty(report.Balance);
+        Assert.Empty(report.Entry);
+        Assert.Empty(report.Interest);
     }
 
     /// <summary>

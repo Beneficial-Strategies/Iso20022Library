@@ -69,8 +69,10 @@ grep -c "warning CS1591" /tmp/build-output.txt || echo "0"
 - Add FOLLOW-UP items in PLAN.md for each affected phase.
 - Stop. The milestone is not complete until CS1591 count is zero.
 
-**If build passes and CS1591 = 0:**
-- Report build success and zero documentation warnings.
+**Zero-warning gate:** The normal build must produce **0 warnings** of any kind. CS0618/CS0612 (obsolete member usage) are suppressed in normal builds via `<NoWarn>` in the project file — that suppression is intentional and not a gate failure. All other warnings are failures.
+
+**If build passes and CS1591 = 0 and total warnings = 0:**
+- Report build success.
 - Continue to Step 4 only if this is Milestone 4.
 - Otherwise skip to Step 5.
 
@@ -105,9 +107,26 @@ git add snapshot-sync/{date}/{library}/PLAN.md
 git commit -m "Snapshot sync {date} ({library}): Milestone {N} passed — build {and tests} green"
 ```
 
-### 6. Report
+### 6. Annual obsolete-warning audit (Milestone 4 only, once per year)
+
+At Milestone 4 of each sync, run the build with obsolete warnings re-enabled to audit the tangle:
+
+```bash
+cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release --no-incremental \
+  -p:EnableObsoleteWarnings=true 2>&1 | grep "CS0618\|CS0612" | wc -l
+```
+
+For each type flagged:
+- If it was marked obsolete in the **current snapshot** → keep (one-snapshot grace period for consumers).
+- If it was marked obsolete in an **earlier snapshot** AND all its references are also obsolete → it is safe to delete now.
+- If it was marked obsolete in an **earlier snapshot** but has non-obsolete references → blocked; leave for a future sync when the referencing types are also retired.
+
+Document any safe deletions as FOLLOW-UP items in PLAN.md. This audit does not block the milestone; it is informational only unless safe deletions are found.
+
+### 7. Report
 
 - Which milestone was verified
-- Build status (pass/fail, error count if fail)
+- Build status (pass/fail, warning count)
 - Test status if applicable (pass count / fail count)
+- Obsolete-warning audit results (Milestone 4 only): count of CS0618/CS0612 with `-p:EnableObsoleteWarnings=true`, and any safe-to-delete types found
 - What comes next: the next phase to work on, or if all milestones are done, instructions for the Completion step (review, final commit, PR)

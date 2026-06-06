@@ -181,6 +181,6 @@ public class Pain002XmlTests
         );
         Assert.Equal(2, pmtInf.StatusReasonInformation.Count);
         Assert.Equal(2, pmtInf.StatusReasonInformation[0].AdditionalInformation.Count);
-        Assert.Equal(1, pmtInf.StatusReasonInformation[1].AdditionalInformation.Count);
+        Assert.Single(pmtInf.StatusReasonInformation[1].AdditionalInformation);
     }
 }

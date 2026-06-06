@@ -8,6 +8,17 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <!--
+    CS0618/CS0612: obsolete-member-usage warnings. Suppressed in normal builds because the
+    ISO 20022 spec retires types slowly — active types legitimately reference obsolete parents
+    for years (e.g. derived codesets that inherit enum ordinals from an obsolete base codeset).
+    Run annually during snapshot-sync-verify with -p:EnableObsoleteWarnings=true to audit the
+    tangle and decide what can be removed.
+  -->
+  <PropertyGroup Condition="'$(EnableObsoleteWarnings)' != 'true'">
+    <NoWarn>$(NoWarn);CS0618;CS0612</NoWarn>
+  </PropertyGroup>
+
   <PropertyGroup>
     <PackageId>BeneficialStrategies.Iso20022</PackageId>
     <PackageDescription>The entirety of the ISO20022 message domain model. 2,665 B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
