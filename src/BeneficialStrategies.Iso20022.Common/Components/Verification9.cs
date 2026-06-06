@@ -16,31 +16,49 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Verification9")]
 public record Verification9
 {
+    /// <summary>
+    /// Type of authentication or verification. P000-P999 reserved for private use, N000-N999 reserved for national use.
+    /// </summary>
     [IsoId("_W9QE8Wl_EfCyxsm1jzUNug")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public ExternalAuthenticationMethod1Code? Type { get; init; }
 
+    /// <summary>
+    /// Type of authentication for a given method (for example, three domain authentication, scheme proprietary solution, type of cryptogram, etc.).
+    /// </summary>
     [IsoId("_W9QE9Wl_EfCyxsm1jzUNug")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
     public IsoMax35Text? SubType { get; init; }
 
+    /// <summary>
+    /// Entity who actually performed the verification. P000-P999 reserved for private use, N000-N999 reserved for national use.
+    /// </summary>
     [IsoId("_W9QE92l_EfCyxsm1jzUNug")]
     [DisplayName("Entity")]
     [IsoXmlTag("Ntty")]
     public VerificationEntity3Code? Entity { get; init; }
 
+    /// <summary>
+    /// Result of the verification. P000-P999 reserved for private use, N000-N999 reserved for national use.
+    /// </summary>
     [IsoId("_W9QE-2l_EfCyxsm1jzUNug")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
     public Verification4Code? Result { get; init; }
 
+    /// <summary>
+    /// Details of the result.
+    /// </summary>
     [IsoId("_W9QE_2l_EfCyxsm1jzUNug")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
     public SimpleValueList<IsoATICALaxProcessing> ResultDetails { get; init; } = [];
 
+    /// <summary>
+    /// Additional information about the verification.
+    /// </summary>
     [IsoId("_W9QFAWl_EfCyxsm1jzUNug")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

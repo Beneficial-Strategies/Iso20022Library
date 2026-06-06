@@ -16,26 +16,41 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Statistics By User Defined Time Period3")]
 public record StatisticsByUserDefinedTimePeriod3
 {
+    /// <summary>
+    /// Reference period for the valuation.
+    /// </summary>
     [IsoId("3cc5efe9-fd6d-4028-b906-da7e9073b9a8")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     public required DateOrDateTimePeriod4Choice_ Period { get; init; }
 
+    /// <summary>
+    /// Highest price for the referenced period.
+    /// </summary>
     [IsoId("f43e8e3e-23cc-4d38-9ced-2bf8404df528")]
     [DisplayName("Highest Price Value")]
     [IsoXmlTag("HghstPricVal")]
     public PriceValue5? HighestPriceValue { get; init; }
 
+    /// <summary>
+    /// Lowest price for the referenced period.
+    /// </summary>
     [IsoId("eb8655cc-3836-424e-9858-69e21356ab01")]
     [DisplayName("Lowest Price Value")]
     [IsoXmlTag("LwstPricVal")]
     public PriceValue5? LowestPriceValue { get; init; }
 
+    /// <summary>
+    /// Change in price since the previous valuation date.
+    /// </summary>
     [IsoId("394136b8-7999-4628-a534-10d003483550")]
     [DisplayName("Price Change")]
     [IsoXmlTag("PricChng")]
     public PriceValueChange1? PriceChange { get; init; }
 
+    /// <summary>
+    /// Rate of income from the financial instrument, usually calculated as total dividends or coupon interest available to investors in the last year, divided by the current price.
+    /// </summary>
     [IsoId("827722bb-eb5d-48b0-afa1-bfc242dab654")]
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]

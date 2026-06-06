@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Stored Value Response9")]
 public record StoredValueResponse9
 {
+    /// <summary>
+    /// Sale System identification of the transaction in an unambiguous way.
+    /// </summary>
     [IsoId("_0qOI1bZaEfCUZfsQO4rYeA")]
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
     public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 
+    /// <summary>
+    /// Unique identification of a POI transaction.
+    /// </summary>
     [IsoId("_0qOI27ZaEfCUZfsQO4rYeA")]
     [DisplayName("POI Transaction Identification")]
     [IsoXmlTag("POITxId")]
     public required TransactionIdentifier1 POITransactionIdentification { get; init; }
 
+    /// <summary>
+    /// Result of loading/reloading a stored value card.
+    /// </summary>
     [IsoId("_0qOI4bZaEfCUZfsQO4rYeA")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
     public ValueList<StoredValueData9> Result { get; init; } = [];
 
+    /// <summary>
+    /// Customer or Merchant payment receipt.
+    /// </summary>
     [IsoId("_0qOI57ZaEfCUZfsQO4rYeA")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]

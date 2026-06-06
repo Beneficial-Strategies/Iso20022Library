@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Software2")]
 public record Software2
 {
+    /// <summary>
+    /// Software type code. P000-P999 reserved for private use, N000-N999 reserved for national use.
+    /// </summary>
     [IsoId("_kmgQgXn0EfCmC4yYaU27Kg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public SoftwareType2Code? Type { get; init; }
 
+    /// <summary>
+    /// Software Subtype.
+    /// </summary>
     [IsoId("_kmgQhXn0EfCmC4yYaU27Kg")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
     public IsoMax35Text? SubType { get; init; }
 
+    /// <summary>
+    /// Software version.
+    /// </summary>
     [IsoId("_kmgQh3n0EfCmC4yYaU27Kg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]

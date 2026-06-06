@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Status Report Data Set Request7")]
 public record StatusReportDataSetRequest7
 {
+    /// <summary>
+    /// Identification of the data set containing the status report.
+    /// </summary>
     [IsoId("_f-RURbYEEfCUZfsQO4rYeA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required DataSetIdentification11 Identification { get; init; }
 
+    /// <summary>
+    /// Counter to identify a single data set within the whole transfer.
+    /// </summary>
     [IsoId("_f-RUS7YEEfCUZfsQO4rYeA")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
     public IsoMax9NumericText? SequenceCounter { get; init; }
 
+    /// <summary>
+    /// Indication of the last sequence in case of split messages.
+    /// </summary>
     [IsoId("_f-RUUbYEEfCUZfsQO4rYeA")]
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
     public IsoTrueFalseIndicator? LastSequence { get; init; }
 
+    /// <summary>
+    /// Content of the status report.
+    /// </summary>
     [IsoId("_f-RUV7YEEfCUZfsQO4rYeA")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]

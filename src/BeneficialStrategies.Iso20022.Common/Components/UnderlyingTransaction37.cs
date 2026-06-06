@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Underlying Transaction37")]
 public record UnderlyingTransaction37
 {
+    /// <summary>
+    /// Provides information on the original message, to which the cancellation refers.
+    /// </summary>
     [IsoId("c631af28-7027-46d0-9a5d-978eb675126f")]
     [DisplayName("Original Group Information And Cancellation")]
     [IsoXmlTag("OrgnlGrpInfAndCxl")]
     public OriginalGroupHeader21? OriginalGroupInformationAndCancellation { get; init; }
 
+    /// <summary>
+    /// Provides information on the original (group of) transactions, to which the cancellation request refers.
+    /// </summary>
     [IsoId("2820f4ae-72a0-4851-adf8-d66d2ddfc960")]
     [DisplayName("Original Payment Information And Cancellation")]
     [IsoXmlTag("OrgnlPmtInfAndCxl")]

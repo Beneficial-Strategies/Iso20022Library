@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Status And Reason50")]
 public record StatusAndReason50
 {
+    /// <summary>
+    /// Provides the status of an instruction.
+    /// </summary>
     [IsoId("b3db753e-c8c5-4b77-805d-c58027430885")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus104Choice_? ProcessingStatus { get; init; }
 
+    /// <summary>
+    /// Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
+    /// </summary>
     [IsoId("d3a15f13-237c-4a63-bfc3-f20b1d6de99c")]
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
     public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
 
+    /// <summary>
+    /// Provides the matching status of the instruction.
+    /// </summary>
     [IsoId("5379570e-ab0d-48c9-9de1-ca80a755df94")]
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
     public MatchingStatus24Choice_? MatchingStatus { get; init; }
 
+    /// <summary>
+    /// Provides the status of settlement of a transaction.
+    /// </summary>
     [IsoId("0abb2dd5-4608-4400-9ce3-89f8889fd048")]
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]

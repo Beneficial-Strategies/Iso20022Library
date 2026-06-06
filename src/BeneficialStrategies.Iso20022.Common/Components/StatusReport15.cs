@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Status Report15")]
 public record StatusReport15
 {
+    /// <summary>
+    /// Identification of the point of interaction for terminal management.
+    /// </summary>
     [IsoId("_r1TMpbYEEfCUZfsQO4rYeA")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
     public required GenericIdentification176 POIIdentification { get; init; }
 
+    /// <summary>
+    /// Identification of the requestor.
+    /// </summary>
     [IsoId("_r1TMq7YEEfCUZfsQO4rYeA")]
     [DisplayName("Initiating Trigger")]
     [IsoXmlTag("InitgTrggr")]
     public TriggerInformation2? InitiatingTrigger { get; init; }
 
+    /// <summary>
+    /// Identification of the terminal management system (TMS) to contact for the maintenance.
+    /// </summary>
     [IsoId("_r1TMsbYEEfCUZfsQO4rYeA")]
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
     public required GenericIdentification176 TerminalManagerIdentification { get; init; }
 
+    /// <summary>
+    /// Data related to a status report of a point of interaction (POI).
+    /// </summary>
     [IsoId("_r1TMt7YEEfCUZfsQO4rYeA")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]

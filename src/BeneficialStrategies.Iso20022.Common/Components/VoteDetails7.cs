@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Vote Details7")]
 public record VoteDetails7
 {
+    /// <summary>
+    /// Vote instructions for the resolutions that are announced via the meeting agenda in advance of the meeting.
+    /// </summary>
     [IsoId("_w-jL0ajGEfCzuLlmLrhIvA")]
     [DisplayName("Vote Instruction For Agenda Resolution")]
     [IsoXmlTag("VoteInstrForAgndRsltn")]
     public required Vote17Choice_ VoteInstructionForAgendaResolution { get; init; }
 
+    /// <summary>
+    /// Vote instructions for the resolutions that may arise or may be amended at the meeting but were not previously provided in the agenda.
+    /// </summary>
     [IsoId("_w-jL06jGEfCzuLlmLrhIvA")]
     [DisplayName("Vote Instruction For Meeting Resolution")]
     [IsoXmlTag("VoteInstrForMtgRsltn")]
     public VoteInstructionForMeetingResolution3Choice_? VoteInstructionForMeetingResolution { get; init; }
 
+    /// <summary>
+    /// Investor types that may or may not participate in the event.
+    /// </summary>
     [IsoId("_HO3c4fUeEfCnzd_iHo4pAQ")]
     [DisplayName("Investor Type Identification")]
     [IsoXmlTag("InvstrTpId")]

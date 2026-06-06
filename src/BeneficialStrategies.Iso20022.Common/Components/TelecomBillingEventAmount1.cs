@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Telecom Billing Event Amount1")]
 public record TelecomBillingEventAmount1
 {
+    /// <summary>
+    /// Description of the amount details.
+    /// </summary>
     [IsoId("_Av2xUVXZEfC0lMwgjvMClw-dsc")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     public IsoMax35Text? Description { get; init; }
 
+    /// <summary>
+    /// Contains the amount.
+    /// </summary>
     [IsoId("_Av2xUVXZEfC0lMwgjvMClw-amt")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ImpliedCurrencyAndAmount Amount { get; init; }
 
+    /// <summary>
+    /// A code to indicate the tax amount is credit or debit.
+    /// </summary>
     [IsoId("_Av2xUVXZEfC0lMwgjvMClw-crdb")]
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]

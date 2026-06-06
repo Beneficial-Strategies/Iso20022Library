@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Terminal12")]
 public record Terminal12
 {
+    /// <summary>
+    /// Identification of the terminal.
+    /// </summary>
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-id")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required IsoMax16Text Identification { get; init; }
 
+    /// <summary>
+    /// Reserved for private data. The use of this data element is determined by bilateral agreement.
+    /// </summary>
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
     public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
 
+    /// <summary>
+    /// Reserved to define data unique to the country applications.
+    /// </summary>
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]

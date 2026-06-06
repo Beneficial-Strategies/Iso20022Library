@@ -16,26 +16,41 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Switch Leg References3")]
 public record SwitchLegReferences3
 {
+    /// <summary>
+    /// Identification of a switch leg.
+    /// </summary>
     [IsoId("26ce5ad0-lgid-0001-0001-e3e0bec8798b")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
     public required LegIdentification1Choice_ LegIdentification { get; init; }
 
+    /// <summary>
+    /// Additional information about the reason for the rejection of the leg.
+    /// </summary>
     [IsoId("26ce5ad0-lgrj-0001-0002-e3e0bec8798b")]
     [DisplayName("Leg Rejection Reason")]
     [IsoXmlTag("LegRjctnRsn")]
     public IsoMax350Text? LegRejectionReason { get; init; }
 
+    /// <summary>
+    /// Elements from the original individual order that have been repaired so that the order can be accepted.
+    /// </summary>
     [IsoId("26ce5ad0-rprd-0001-0003-e3e0bec8798b")]
     [DisplayName("Repaired Fee")]
     [IsoXmlTag("RepairdFee")]
     public ValueList<Fee12> RepairedFee { get; init; } = [];
 
+    /// <summary>
+    /// Account identification of the switch leg that is rejected or repaired.
+    /// </summary>
     [IsoId("26ce5ad0-invs-0001-0004-e3e0bec8798b")]
     [DisplayName("Investment Account Details")]
     [IsoXmlTag("InvstmtAcctDtls")]
     public InvestmentAccount81? InvestmentAccountDetails { get; init; }
 
+    /// <summary>
+    /// Financial instrument identification of the switch leg that is rejected or repaired.
+    /// </summary>
     [IsoId("26ce5ad0-fiin-0001-0005-e3e0bec8798b")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]

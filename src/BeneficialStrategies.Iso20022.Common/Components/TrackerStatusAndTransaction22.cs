@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Tracker Status And Transaction22")]
 public record TrackerStatusAndTransaction22
 {
+    /// <summary>
+    /// Provides detailed information on the transaction status to be updated in the tracker.
+    /// </summary>
     [IsoId("_GkWAQ3eKEfCdoODv2ypKfw")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
     public required TrackerStatus1 TransactionStatus { get; init; }
 
+    /// <summary>
+    /// Key elements used to identify the original transaction(s) that is being referred to.
+    /// </summary>
     [IsoId("_GkWARXeKEfCdoODv2ypKfw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]

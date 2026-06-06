@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Settlement Instruction Query Definition4")]
 public record SettlementInstructionQueryDefinition4
 {
+    /// <summary>
+    /// Defines the type of query.
+    /// </summary>
     [IsoId("_WmMh0agzEfCXwLUUylXgrQ")]
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
     public required SettlementQueryType1Code QueryType { get; init; }
 
+    /// <summary>
+    /// Defines the criteria to extract the securities settlement instruction information.
+    /// </summary>
     [IsoId("_WmMh06gzEfCXwLUUylXgrQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]

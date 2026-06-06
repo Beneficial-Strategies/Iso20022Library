@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Status And Reason49")]
 public record StatusAndReason49
 {
+    /// <summary>
+    /// Status and reason for the transaction.
+    /// </summary>
     [IsoId("4c897021-42d8-4b60-b3c2-3571bfa982ca")]
     [DisplayName("Status And Reason")]
     [IsoXmlTag("StsAndRsn")]
     public required Status43Choice_ StatusAndReason { get; init; }
 
+    /// <summary>
+    /// Details of the transactions reported.
+    /// </summary>
     [IsoId("dfdee925-0cea-4af4-989c-659ef3babd27")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]

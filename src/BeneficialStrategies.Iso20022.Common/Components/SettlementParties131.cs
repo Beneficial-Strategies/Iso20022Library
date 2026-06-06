@@ -16,31 +16,49 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Settlement Parties131")]
 public record SettlementParties131
 {
+    /// <summary>
+    /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments. This party may be a transfer agent.
+    /// </summary>
     [IsoId("1d3e3083-b7e3-4378-bf03-11ca984b3704")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
     public PartyIdentification315? Depository { get; init; }
 
+    /// <summary>
+    /// Party that, in a settlement chain, interacts with the depository.
+    /// </summary>
     [IsoId("fb3cd446-3228-434b-9322-7ddaa5351745")]
     [DisplayName("Party1")]
     [IsoXmlTag("Pty1")]
     public PartyIdentificationAndAccount194? Party1 { get; init; }
 
+    /// <summary>
+    /// Party that, in a settlement chain, interacts with the party 1.
+    /// </summary>
     [IsoId("a2ef6ec5-bb0c-4b59-bce8-ebf9f4442a48")]
     [DisplayName("Party2")]
     [IsoXmlTag("Pty2")]
     public PartyIdentificationAndAccount194? Party2 { get; init; }
 
+    /// <summary>
+    /// Party that, in a settlement chain, interacts with the party 2.
+    /// </summary>
     [IsoId("d9812d70-d449-4312-953b-4aaeec78748e")]
     [DisplayName("Party3")]
     [IsoXmlTag("Pty3")]
     public PartyIdentificationAndAccount194? Party3 { get; init; }
 
+    /// <summary>
+    /// Party that, in a settlement chain, interacts with the party 3.
+    /// </summary>
     [IsoId("46b08562-11d7-4508-b1fa-13d859ff8186")]
     [DisplayName("Party4")]
     [IsoXmlTag("Pty4")]
     public PartyIdentificationAndAccount194? Party4 { get; init; }
 
+    /// <summary>
+    /// Party that, in a settlement chain, interacts with the party 4.
+    /// </summary>
     [IsoId("24b54d51-923a-447a-9d66-a96abb64da36")]
     [DisplayName("Party5")]
     [IsoXmlTag("Pty5")]

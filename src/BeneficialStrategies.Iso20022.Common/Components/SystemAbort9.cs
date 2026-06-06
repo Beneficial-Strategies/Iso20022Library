@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("System Abort9")]
 public record SystemAbort9
 {
+    /// <summary>
+    /// Environment of the transaction.
+    /// </summary>
     [IsoId("_DR-kYbYDEfCUZfsQO4rYeA-env")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment82 Environment { get; init; }
 
+    /// <summary>
+    /// Context in which the transaction is performed (payment and sale).
+    /// </summary>
     [IsoId("_DR-kYbYDEfCUZfsQO4rYeA-ctx")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
     public required PaymentContext30 Context { get; init; }
 
+    /// <summary>
+    /// Body of the Abort Request message.
+    /// </summary>
     [IsoId("_DR-kYbYDEfCUZfsQO4rYeA-abt")]
     [DisplayName("System Abort")]
     [IsoXmlTag("SysAbrt")]
     public required AbortData7 SystemAbort { get; init; }
 
+    /// <summary>
+    /// Additional information incorporated as an extension to the message.
+    /// </summary>
     [IsoId("_DR-kYbYDEfCUZfsQO4rYeA-sup")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

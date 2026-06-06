@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Token Request Component6")]
 public record TokenRequestComponent6
 {
+    /// <summary>
+    /// Identification of an element in a sequence.
+    /// </summary>
     [IsoId("_El2q1bZ2EfCUZfsQO4rYeA")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
     public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
 
+    /// <summary>
+    /// Environment of the transaction.
+    /// </summary>
     [IsoId("_El2q27Z2EfCUZfsQO4rYeA")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]

@@ -32,6 +32,9 @@ public record SwitchSubscriptionLegOrder7
     [IsoXmlTag("FinInstrmDtls")]
     public required FinancialInstrument107 FinancialInstrumentDetails { get; init; }
 
+    /// <summary>
+    /// Amount of money, number of units or percentage for the redemption leg of the switch order.
+    /// </summary>
     [IsoId("696a1285-fiqc-0001-0003-073e778482f8")]
     [DisplayName("Financial Instrument Quantity Choice")]
     [IsoXmlTag("FinInstrmQtyChc")]

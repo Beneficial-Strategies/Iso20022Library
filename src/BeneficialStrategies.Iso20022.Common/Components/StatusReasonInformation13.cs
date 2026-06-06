@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Status Reason Information13")]
 public record StatusReasonInformation13
 {
+    /// <summary>
+    /// Specifies the reason for the status report.
+    /// </summary>
     [IsoId("_zyR4CaX_EeynsLtPxJMJTQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required StatusReason7Choice_ Reason { get; init; }
 
+    /// <summary>
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
+    /// </summary>
     [IsoId("_A8MUkKYAEeynsLtPxJMJTQ")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
     public SecurityIdentification19? FinancialInstrument { get; init; }
 
+    /// <summary>
+    /// Further details on the status reason.
+    /// </summary>
     [IsoId("_zyR4CKX_EeynsLtPxJMJTQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

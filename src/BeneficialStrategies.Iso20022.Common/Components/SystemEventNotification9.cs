@@ -16,21 +16,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("System Event Notification9")]
 public record SystemEventNotification9
 {
+    /// <summary>
+    /// Environment of the transaction.
+    /// </summary>
     [IsoId("_MUIhYbYDEfCUZfsQO4rYeA-env")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment82 Environment { get; init; }
 
+    /// <summary>
+    /// Context in which the transaction is performed (payment and sale).
+    /// </summary>
     [IsoId("_MUIhYbYDEfCUZfsQO4rYeA-ctx")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
     public required PaymentContext30 Context { get; init; }
 
+    /// <summary>
+    /// Content of the EventNotification message.
+    /// </summary>
     [IsoId("_MUIhYbYDEfCUZfsQO4rYeA-ntf")]
     [DisplayName("Event Notification")]
     [IsoXmlTag("EvtNtfctn")]
     public required EventNotificationData8 EventNotification { get; init; }
 
+    /// <summary>
+    /// Additional information incorporated as an extension to the message.
+    /// </summary>
     [IsoId("_MUIhYbYDEfCUZfsQO4rYeA-sup")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Tax Voucher6")]
 public record TaxVoucher6
 {
+    /// <summary>
+    /// Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated.
+    /// </summary>
     [IsoId("_VWACAajzEfCG_LQaXOxwew-tvrf")]
     [DisplayName("Tax Voucher Reference")]
     [IsoXmlTag("TaxVchrRef")]
     public IsoMax35Text? TaxVoucherReference { get; init; }
 
+    /// <summary>
+    /// Unique reference assigned by the account owner to the tax documentation sent to the account servicer for processing.
+    /// </summary>
     [IsoId("_VWACAajzEfCG_LQaXOxwew-trdr")]
     [DisplayName("Tax Reclaim Documentation Reference")]
     [IsoXmlTag("TaxRclmDocRef")]
     public IsoMax35Text? TaxReclaimDocumentationReference { get; init; }
 
+    /// <summary>
+    /// Unique reference identifying the beneficial owner the refund applies to, as assigned by the account owner to the tax documentation sent to the account servicer for processing.
+    /// </summary>
     [IsoId("_VWACAajzEfCG_LQaXOxwew-borf")]
     [DisplayName("Beneficial Owner Reference")]
     [IsoXmlTag("BnfclOwnrRef")]

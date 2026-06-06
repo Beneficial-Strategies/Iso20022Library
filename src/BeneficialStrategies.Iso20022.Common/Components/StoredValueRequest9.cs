@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Stored Value Request9")]
 public record StoredValueRequest9
 {
+    /// <summary>
+    /// Sale System identification of the transaction in an unambiguous way.
+    /// </summary>
     [IsoId("_AtnUJbZZEfCUZfsQO4rYeA")]
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
     public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 
+    /// <summary>
+    /// Data related to the stored value card.
+    /// </summary>
     [IsoId("_AtnUK7ZZEfCUZfsQO4rYeA")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]

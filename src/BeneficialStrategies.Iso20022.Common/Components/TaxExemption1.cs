@@ -16,11 +16,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Tax Exemption1")]
 public record TaxExemption1
 {
+    /// <summary>
+    /// Amount exempted from tax.
+    /// </summary>
     [IsoId("_enNREPsaEemYNq6Sxm5nlg-exmt")]
     [DisplayName("Exempted Amount")]
     [IsoXmlTag("XmptdAmt")]
     public required ActiveCurrencyAndAmount ExemptedAmount { get; init; }
 
+    /// <summary>
+    /// Reason for the tax exemption.
+    /// </summary>
     [IsoId("_enNREPsaEemYNq6Sxm5nlg-rsn")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]

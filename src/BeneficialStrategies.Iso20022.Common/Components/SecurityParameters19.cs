@@ -16,16 +16,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Security Parameters19")]
 public record SecurityParameters19
 {
+    /// <summary>
+    /// Random value from the host.
+    /// </summary>
     [IsoId("_ObBcVbZ6EfCUZfsQO4rYeA")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
     public IsoMax140Binary? HostChallenge { get; init; }
 
+    /// <summary>
+    /// Cryptographic key used to store in the ATM.
+    /// </summary>
     [IsoId("_ObBcWbZ6EfCUZfsQO4rYeA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
     public ValueList<CryptographicKey21> Key { get; init; } = [];
 
+    /// <summary>
+    /// Element containing the signature.
+    /// </summary>
     [IsoId("_ObBcXbZ6EfCUZfsQO4rYeA")]
     [DisplayName("Signature Choice")]
     [IsoXmlTag("SgntrChc")]

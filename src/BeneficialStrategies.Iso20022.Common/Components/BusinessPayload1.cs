@@ -9,6 +9,9 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
+/// <summary>
+/// Wrapper structure for encapsulating individual business messages within a file structure, together with a manifest describing the enclosed items.
+/// </summary>
 [IsoId("_XT0h88PAEfCvjKJD91zEUA")]
 [DisplayName("Business Payload1")]
 public record BusinessPayload1

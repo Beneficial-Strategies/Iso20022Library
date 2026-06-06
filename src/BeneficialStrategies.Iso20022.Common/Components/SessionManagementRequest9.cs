@@ -16,36 +16,57 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Session Management Request9")]
 public record SessionManagementRequest9
 {
+    /// <summary>
+    /// Environment of the transaction.
+    /// </summary>
     [IsoId("_V9IRZbYCEfCUZfsQO4rYeA")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment82 Environment { get; init; }
 
+    /// <summary>
+    /// Context in which the transaction is performed (payment and sale).
+    /// </summary>
     [IsoId("_V9IRa7YCEfCUZfsQO4rYeA")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
     public required PaymentContext30 Context { get; init; }
 
+    /// <summary>
+    /// Define the type of service requested.
+    /// </summary>
     [IsoId("_V9IRcbYCEfCUZfsQO4rYeA")]
     [DisplayName("Service Content")]
     [IsoXmlTag("SvcCntt")]
     public required RetailerService4Code ServiceContent { get; init; }
 
+    /// <summary>
+    /// Content of the Login Request message.
+    /// </summary>
     [IsoId("_V9IRd7YCEfCUZfsQO4rYeA")]
     [DisplayName("Login Request")]
     [IsoXmlTag("LgnReq")]
     public LoginRequest8? LoginRequest { get; init; }
 
+    /// <summary>
+    /// Content of the Logout Request message.
+    /// </summary>
     [IsoId("_V9IRfbYCEfCUZfsQO4rYeA")]
     [DisplayName("Logout Request")]
     [IsoXmlTag("LgtReq")]
     public LogoutRequest1? LogoutRequest { get; init; }
 
+    /// <summary>
+    /// Content of the Diagnosis Request message.
+    /// </summary>
     [IsoId("_V9IRg7YCEfCUZfsQO4rYeA")]
     [DisplayName("Diagnosis Request")]
     [IsoXmlTag("DgnssReq")]
     public DiagnosisRequest1? DiagnosisRequest { get; init; }
 
+    /// <summary>
+    /// Additional information incorporated as an extension to the message.
+    /// </summary>
     [IsoId("_V9IRibYCEfCUZfsQO4rYeA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
