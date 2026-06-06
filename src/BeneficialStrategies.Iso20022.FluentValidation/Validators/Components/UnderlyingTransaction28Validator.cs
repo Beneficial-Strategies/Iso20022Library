@@ -57,7 +57,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
         RuleFor(x => x)
             .Must(x =>
                 x.OriginalGroupInformationAndCancellation is not null
-                || x.TransactionInformation is not null
+                || x.TransactionInformation.Count > 0
             )
             .WithName("UnderlyingTransaction28")
             .WithMessage(
@@ -73,8 +73,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
                     return true;
                 return x.OriginalGroupInformationAndCancellation
                     .CancellationReasonInformation
-                    ?.Reason
-                    is not null;
+                    .Any(r => r.Reason is not null);
             })
             .WithName("GroupCancellationAndReasonRule")
             .WithMessage(
@@ -93,7 +92,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
                     return true; // NumberOfTransactions is optional — skip if absent
                 if (!int.TryParse(nbStr, out int nb))
                     return false;
-                int txCount = x.TransactionInformation is null ? 0 : 1;
+                int txCount = x.TransactionInformation.Count;
                 return nb == txCount;
             })
             .WithName("GroupCancellationAndNumberOfTransactionsRule")
@@ -107,7 +106,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
             .Must(x =>
                 !(
                     x.OriginalGroupInformationAndCancellation?.GroupCancellation == "true"
-                    && x.TransactionInformation is not null
+                    && x.TransactionInformation.Count > 0
                 )
             )
             .WithName("GroupCancellationTrueAndTransactionInformationRule")
@@ -121,7 +120,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
             .Must(x =>
                 !(
                     x.OriginalGroupInformationAndCancellation?.GroupCancellation == "false"
-                    && x.TransactionInformation is null
+                    && x.TransactionInformation.Count == 0
                 )
             )
             .WithName("GroupCancellationFalseAndTransactionInformationRule")
@@ -135,7 +134,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
             .Must(x =>
                 !(
                     x.OriginalGroupInformationAndCancellation?.Case is not null
-                    && x.TransactionInformation?.Case is not null
+                    && x.TransactionInformation.Any(t => t.Case is not null)
                 )
             )
             .WithName("GroupOrTransactionCaseRule")
@@ -152,11 +151,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
                     .SetValidator(new OriginalGroupHeader15Validator()!)
         );
 
-        When(
-            x => x.TransactionInformation is not null,
-            () =>
-                RuleFor(x => x.TransactionInformation)
-                    .SetValidator(new PaymentTransaction137Validator()!)
-        );
+        RuleForEach(x => x.TransactionInformation)
+            .SetValidator(new PaymentTransaction137Validator());
     }
 }

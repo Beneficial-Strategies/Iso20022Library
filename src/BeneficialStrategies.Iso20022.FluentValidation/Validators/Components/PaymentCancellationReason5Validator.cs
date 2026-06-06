@@ -21,13 +21,12 @@ public sealed class PaymentCancellationReason5Validator
 {
     public PaymentCancellationReason5Validator()
     {
-        // AdditionalInformation: Max105Text — MinLength=1, MaxLength=105 when present
-        RuleFor(x => x.AdditionalInformation)
+        // AdditionalInformation: Max105Text (0..∞) — validate each element when any are present
+        RuleForEach(x => x.AdditionalInformation)
             .MinimumLength(1)
             .MaximumLength(105)
             .WithMessage(
-                "PaymentCancellationReason5.AdditionalInformation must not exceed 105 characters (Max105Text)."
-            )
-            .When(x => x.AdditionalInformation is not null);
+                "PaymentCancellationReason5.AdditionalInformation item must not exceed 105 characters (Max105Text)."
+            );
     }
 }

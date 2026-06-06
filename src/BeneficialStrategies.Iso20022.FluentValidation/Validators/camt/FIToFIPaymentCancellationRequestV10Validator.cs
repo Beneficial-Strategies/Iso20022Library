@@ -93,7 +93,7 @@ public sealed class FIToFIPaymentCancellationRequestV10Validator
             count++;
         if (msg.Underlying?.OriginalGroupInformationAndCancellation?.Case is not null)
             count++;
-        if (msg.Underlying?.TransactionInformation?.Case is not null)
+        if (msg.Underlying?.TransactionInformation?.Any(t => t.Case is not null) == true)
             count++;
         return count <= 1;
     }

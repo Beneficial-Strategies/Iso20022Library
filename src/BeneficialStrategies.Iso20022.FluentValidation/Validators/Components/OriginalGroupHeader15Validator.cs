@@ -68,11 +68,7 @@ public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalG
             () => RuleFor(x => x.Case).SetValidator(new Case5Validator()!)
         );
 
-        When(
-            x => x.CancellationReasonInformation is not null,
-            () =>
-                RuleFor(x => x.CancellationReasonInformation)
-                    .SetValidator(new PaymentCancellationReason5Validator()!)
-        );
+        RuleForEach(x => x.CancellationReasonInformation)
+            .SetValidator(new PaymentCancellationReason5Validator());
     }
 }

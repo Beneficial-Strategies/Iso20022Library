@@ -37,11 +37,11 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     private static UnderlyingTransaction28 ValidUnderlying() =>
         new()
         {
-            TransactionInformation = new PaymentTransaction137
+            TransactionInformation = [new PaymentTransaction137
             {
                 OriginalEndToEndIdentification = "E2E-001",
                 OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
-            },
+            }],
         };
 
     private static PaymentCancellationReason5 ValidCancellationReason() =>
@@ -93,7 +93,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     OriginalMessageIdentification = "ORIG-MSG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     GroupCancellation = "true",
-                    CancellationReasonInformation = ValidCancellationReason(),
+                    CancellationReasonInformation = [ValidCancellationReason()],
                 },
             },
         };
@@ -226,14 +226,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalUETR = "not-a-valid-uuid",
-                },
+                }],
             },
         };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.Underlying.TransactionInformation!.OriginalUETR);
+        var result1 = _sut.Validate(msg);
+        Assert.Contains(result1.Errors, e => e.PropertyName.EndsWith(".OriginalUETR"));
     }
 
     [Fact]
@@ -243,16 +243,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
-                },
+                }],
             },
         };
-        _sut.TestValidate(msg)
-            .ShouldNotHaveValidationErrorFor(x =>
-                x.Underlying.TransactionInformation!.OriginalUETR
-            );
+        var result2 = _sut.Validate(msg);
+        Assert.DoesNotContain(result2.Errors, e => e.PropertyName.EndsWith(".OriginalUETR"));
     }
 
     // ── PaymentTransaction137: OriginalEndToEndIdentification length ──────────
@@ -264,16 +262,14 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalEndToEndIdentification = new string('X', 36),
-                },
+                }],
             },
         };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                x.Underlying.TransactionInformation!.OriginalEndToEndIdentification
-            );
+        var result3 = _sut.Validate(msg);
+        Assert.Contains(result3.Errors, e => e.PropertyName.EndsWith(".OriginalEndToEndIdentification"));
     }
 
     // ── UnderlyingTransaction28: empty underlying ─────────────────────────────
@@ -286,7 +282,6 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             Underlying = new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = null,
-                TransactionInformation = null,
             },
         };
         var result = _sut.Validate(msg);
@@ -304,7 +299,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             Case = new Case5 { Identification = "CASE-MSG", Creator = MakeAgent("DEUTDEFFXXX") },
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     Case = new Case5
                     {
@@ -312,7 +307,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -353,7 +348,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             // No message-level Case
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     Case = new Case5
                     {
@@ -361,7 +356,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor("MessageOrGroupCaseRule");
@@ -427,7 +422,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     OriginalMessageIdentification = "ORIG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     GroupCancellation = "true",
-                    CancellationReasonInformation = ValidCancellationReason(),
+                    CancellationReasonInformation = [ValidCancellationReason()],
                 },
             },
         };
@@ -452,12 +447,12 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     OriginalMessageIdentification = "ORIG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     GroupCancellation = "true",
-                    CancellationReasonInformation = ValidCancellationReason(),
+                    CancellationReasonInformation = [ValidCancellationReason()],
                 },
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -505,10 +500,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     GroupCancellation = "false",
                 },
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -534,10 +529,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "false",
                     NumberOfTransactions = "5", // claims 5, but only 1 present
                 },
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -561,10 +556,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "false",
                     NumberOfTransactions = "1",
                 },
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -593,7 +588,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                 },
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     Case = new Case5
                     {
@@ -601,7 +596,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
@@ -615,7 +610,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Underlying = new UnderlyingTransaction28
             {
-                TransactionInformation = new PaymentTransaction137
+                TransactionInformation = [new PaymentTransaction137
                 {
                     Case = new Case5
                     {
@@ -623,7 +618,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                     OriginalEndToEndIdentification = "E2E-001",
-                },
+                }],
             },
         };
         var result = _sut.Validate(msg);
