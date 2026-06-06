@@ -16,41 +16,65 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Service Category Totals8")]
 public record ServiceCategoryTotals8
 {
+    /// <summary>
+    /// Unique identification of a securities account or cash account belonging to billed customer.
+    /// </summary>
     [IsoId("_xLEANUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     public AccountIdentification38Choice_? AccountIdentification { get; init; }
 
+    /// <summary>
+    /// Unique identification of a securities parent account or cash parent account belonging to billed customer, when reporting on sub-accounts.
+    /// </summary>
     [IsoId("_xLEAOUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Parent Account Identification")]
     [IsoXmlTag("PrntAcctId")]
     public AccountIdentification38Choice_? ParentAccountIdentification { get; init; }
 
+    /// <summary>
+    /// Identification of the customer which is invoiced.
+    /// </summary>
     [IsoId("_xLEAPUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Billed Customer Identification")]
     [IsoXmlTag("BllgCstmrId")]
     public PartyIdentification136? BilledCustomerIdentification { get; init; }
 
+    /// <summary>
+    /// Detailed information on tax applied.
+    /// </summary>
     [IsoId("_xLEAQUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public ValueList<BillingTaxRecord2> Tax { get; init; } = [];
 
+    /// <summary>
+    /// Total amount of the invoice.
+    /// </summary>
     [IsoId("_xLEARUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Total Invoice Amount")]
     [IsoXmlTag("TtlInvcAmt")]
     public required AmountAndForeignExchange1 TotalInvoiceAmount { get; init; }
 
+    /// <summary>
+    /// Agreement under which or rules under which the transaction should be processed.
+    /// </summary>
     [IsoId("_xLEASUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Category")]
     [IsoXmlTag("SvcCtgy")]
     public required ServiceCategory1Choice_ ServiceCategory { get; init; }
 
+    /// <summary>
+    /// Totals related to the invoice.
+    /// </summary>
     [IsoId("_xLEATUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Totals")]
     [IsoXmlTag("SvcItmTtls")]
     public ValueList<ServiceItemTotals12> ServiceItemTotals { get; init; } = [];
 
+    /// <summary>
+    /// Correction applied to the invoice.
+    /// </summary>
     [IsoId("_xLEAUUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Service Item Correction")]
     [IsoXmlTag("SvcItmCrrctn")]

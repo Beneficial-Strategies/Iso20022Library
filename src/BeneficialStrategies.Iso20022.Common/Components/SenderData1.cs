@@ -16,46 +16,73 @@ namespace BeneficialStrategies.Iso20022.Components;
 [DisplayName("Sender Data1")]
 public record SenderData1
 {
+    /// <summary>
+    /// Identification of the sender.
+    /// </summary>
     [IsoId("_g-kHRR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required IsoMax11NumericText Identification { get; init; }
 
+    /// <summary>
+    /// Business or client identification for the sender.
+    /// </summary>
     [IsoId("_g-kHSR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Business Identification")]
     [IsoXmlTag("BizId")]
     public IsoMax15AlphaNumericText? BusinessIdentification { get; init; }
 
+    /// <summary>
+    /// Country of the sender.
+    /// </summary>
     [IsoId("_g-kHTR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     public ISO3NumericCountryCode? Country { get; init; }
 
+    /// <summary>
+    /// Business name of the sender.
+    /// </summary>
     [IsoId("_g-kHUR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
     public IsoMax35Text? BusinessName { get; init; }
 
+    /// <summary>
+    /// Legal Corporate Name of the sender.
+    /// </summary>
     [IsoId("_g-kHVR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
     public IsoMax99Text? LegalCorporateName { get; init; }
 
+    /// <summary>
+    /// Address of the sender.
+    /// </summary>
     [IsoId("_g-kHWR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     public Address4? Address { get; init; }
 
+    /// <summary>
+    /// Reserved for private data. The use of this data element is determined by bilateral agreement.
+    /// </summary>
     [IsoId("_g-kHXR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
     public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
 
+    /// <summary>
+    /// Reserved to define data unique to the country applications.
+    /// </summary>
     [IsoId("_g-kHYR7gEfCkq6-p7S3J1Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
     public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
 
+    /// <summary>
+    /// Contains local language equivalent(s) of data in the current component.
+    /// </summary>
     [IsoId("_g-kHZR7gEfCkq6-p7S3J1Q")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
