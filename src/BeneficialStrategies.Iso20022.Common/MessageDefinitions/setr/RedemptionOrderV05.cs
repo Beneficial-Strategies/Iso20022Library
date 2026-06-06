@@ -15,7 +15,16 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.004.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The RedemptionOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the redemption of one or more financial instruments for one investment fund account.
+/// Usage
+/// The RedemptionOrder message is used to instruct single redemption orders, that is, a message containing one order for one financial instrument and related to one investment account. The RedemptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.
+/// For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.
+/// If there are redemption orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the RedemptionBulkOrder message must be used.
 /// </summary>
+[Description(
+    @"Scope|The RedemptionOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the redemption of one or more financial instruments for one investment fund account.|Usage|The RedemptionOrder message is used to instruct single redemption orders, that is, a message containing one order for one financial instrument and related to one investment account. The RedemptionOrder message may also be used for multiple orders, that is, a message containing several orders related to the same investment account for different financial instruments.|For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for the same financial instrument but for different accounts that are to be communicated in a single message, then the RedemptionBulkOrder message must be used."
+)]
 [IsoId("55e2ca53-a1ac-4cc7-864b-523be1261957")]
 [DisplayName("Redemption Order V05")]
 public record RedemptionOrderV05 : IOuterRecord
@@ -46,42 +55,42 @@ public record RedemptionOrderV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Multiple Order Details.
+    /// General information related to the orders.
     /// </summary>
     [DisplayName("Multiple Order Details")]
     [IsoXmlTag("MltplOrdrDtls")]
     public required RedemptionMultipleOrder07 MultipleOrderDetails { get; init; }
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]

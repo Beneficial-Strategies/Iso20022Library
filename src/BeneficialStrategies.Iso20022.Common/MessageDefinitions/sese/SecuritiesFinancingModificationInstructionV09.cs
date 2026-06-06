@@ -15,7 +15,29 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.036.001.09 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account owner sends a SecuritiesFinancingModificationInstruction to a securities financing transaction account servicer to notify the securities financing transaction account servicer of an update in the details of a repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing transaction that does not impact the original transaction securities quantity.
+/// Such a change may be:
+/// - the providing of closing details not available at the time of the sending of the Securities Financing Instruction, for example, termination date for an open repo,
+/// - the providing of a new rate, for example, a repo rate,
+/// - the rollover of a position extending the closing or maturity date.
+/// The account owner/servicer relationship may be:
+/// - a global custodian which has an account with a local custodian, or
+/// - an investment management institution which manage a fund account opened at a custodian, or
+/// - a broker which has an account with a custodian, or
+/// - a central securities depository participant which has an account with a central securities depository, or
+/// - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
+/// - a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account owner sends a SecuritiesFinancingModificationInstruction to a securities financing transaction account servicer to notify the securities financing transaction account servicer of an update in the details of a repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing transaction that does not impact the original transaction securities quantity.|Such a change may be:|- the providing of closing details not available at the time of the sending of the Securities Financing Instruction, for example, termination date for an open repo,|- the providing of a new rate, for example, a repo rate,|- the rollover of a position extending the closing or maturity date.|The account owner/servicer relationship may be:|- a global custodian which has an account with a local custodian, or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository participant which has an account with a central securities depository, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or|- a central counterparty or a stock exchange or a trade matching utility which need to instruct the settlement of securities financing transactions to a central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_78RbgYVsEe-Pv9KR9bv9IA")]
 [DisplayName("Securities Financing Modification Instruction V09")]
 public record SecuritiesFinancingModificationInstructionV09 : IOuterRecord
@@ -46,70 +68,70 @@ public record SecuritiesFinancingModificationInstructionV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Identifies the chain of delivering settlement parties.
     /// </summary>
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
     public SettlementParties127? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Opening Settlement Amount.
+    /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
     /// </summary>
     [DisplayName("Opening Settlement Amount")]
     [IsoXmlTag("OpngSttlmAmt")]
     public AmountAndDirection49? OpeningSettlementAmount { get; init; }
 
     /// <summary>
-    /// Quantity And Account Details.
+    /// Details related to the account and quantity involved in the transaction.
     /// </summary>
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
     public required QuantityAndAccount119 QuantityAndAccountDetails { get; init; }
 
     /// <summary>
-    /// Receiving Settlement Parties.
+    /// Identifies the chain of receiving settlement parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
     public SettlementParties127? ReceivingSettlementParties { get; init; }
 
     /// <summary>
-    /// Securities Financing Additional Details.
+    /// Details of the closing of the securities financing transaction.
     /// </summary>
     [DisplayName("Securities Financing Additional Details")]
     [IsoXmlTag("SctiesFincgAddtlDtls")]
     public required SecuritiesFinancingTransactionDetails58 SecuritiesFinancingAdditionalDetails { get; init; }
 
     /// <summary>
-    /// Settlement Parameters.
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
     /// </summary>
     [DisplayName("Settlement Parameters")]
     [IsoXmlTag("SttlmParams")]
     public SettlementDetails148? SettlementParameters { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Trade Details.
+    /// Details of the securities financing deal.
     /// </summary>
     [DisplayName("Trade Details")]
     [IsoXmlTag("TradDtls")]
     public required SecuritiesTradeDetails100 TradeDetails { get; init; }
 
     /// <summary>
-    /// Transaction Type And Modification Additional Parameters.
+    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing), modification information and other parameters.
     /// </summary>
     [DisplayName("Transaction Type And Modification Additional Parameters")]
     [IsoXmlTag("TxTpAndModAddtlParams")]

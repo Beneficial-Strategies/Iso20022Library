@@ -15,7 +15,18 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.008.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The SubscriptionBulkOrderCancellationRequest message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent SubscriptionBulkOrder.
+/// Usage
+/// The SubscriptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders.
+/// There is no amendment, but a cancellation and re-instruct policy.
+/// To request the cancellation of one or more individual orders, the order reference of each individual order listed in the original SubscriptionBulkOrder message is specified in the order reference element. The message identification of the SubscriptionBulkOrder message which contains the individual orders to be cancelled may also be quoted in PreviousReference but this is not recommended.
+/// The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.
+/// The rejection or acceptance of a SubscriptionBulkOrderCancellationRequest is made using an OrderCancellationStatusReport message.
 /// </summary>
+[Description(
+    @"Scope|The SubscriptionBulkOrderCancellationRequest message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent SubscriptionBulkOrder.|Usage|The SubscriptionBulkOrderCancellationRequest message is used to request the cancellation of one or more individual orders.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of one or more individual orders, the order reference of each individual order listed in the original SubscriptionBulkOrder message is specified in the order reference element. The message identification of the SubscriptionBulkOrder message which contains the individual orders to be cancelled may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a SubscriptionBulkOrderCancellationRequest is made using an OrderCancellationStatusReport message."
+)]
 [IsoId("86d14558-7685-4284-a51d-248dc36cb7c5")]
 [DisplayName("Subscription Bulk Order Cancellation Request V05")]
 public record SubscriptionBulkOrderCancellationRequestV05 : IOuterRecord
@@ -46,14 +57,14 @@ public record SubscriptionBulkOrderCancellationRequestV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Master Reference.
+    /// Reference assigned to a set of orders or trades in order to link them together.
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
@@ -62,28 +73,28 @@ public record SubscriptionBulkOrderCancellationRequestV05 : IOuterRecord
     public IsoMax35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Order References.
+    /// Identification of the individual order to be cancelled.
     /// </summary>
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
     public ValueList<InvestmentFundOrder13> OrderReferences { get; init; } = [];
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]

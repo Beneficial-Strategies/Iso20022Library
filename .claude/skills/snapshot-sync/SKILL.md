@@ -21,6 +21,34 @@ ToolSearch: select:mcp__iso20022__get_repository_statistics
 
 Call `mcp__iso20022__get_repository_statistics` to retrieve the current snapshot date from the MCP server. Format it as `YYYY-MM-DD`. This becomes the **date key** used in all folder paths.
 
+### 1a. Download the spec snapshot (required underlayment — do this once per sync)
+
+Check whether `snapshot-sync/{date}/spec-snapshot.tsv` already exists. If not, download it now before any phase work begins.
+
+Load the tool schema:
+```
+ToolSearch: select:mcp__iso20022__get_spec_snapshot
+```
+
+Call `get_spec_snapshot` once for each artifact type and **append** each response to `snapshot-sync/{date}/spec-snapshot.tsv`:
+
+```
+get_spec_snapshot('messages')        → write   spec-snapshot.tsv
+get_spec_snapshot('components', 1)   → append  (repeat until Page X of X)
+get_spec_snapshot('choices')         → append
+get_spec_snapshot('codesets', 1)     → append  (repeat until Page X of X)
+get_spec_snapshot('business')        → append
+get_spec_snapshot('types')           → append
+```
+
+This file is the **single source of truth for all ISO descriptions** used throughout all four phases. Every entity and every child property in the spec has an `id` and a `definition` field in this file — descriptions are read from here by grepping for the entity's IsoId, with `universal_lookup` used only as a fallback when a specific entry is missing or ambiguous.
+
+> **Note on server maturity**: The `definition` field is fully populated on MSGDEF records. As
+> the server evolves, `definition` will be added to MSGBLOCK, MSGELEMENT, CODE, EXTCODE,
+> VARIANT, and other child record types (tracked in `MCP-FEEDBACK.md`). Until those fields land,
+> `universal_lookup` remains the fallback for child-level descriptions. The workflow is the same
+> either way — prefer the snapshot, fall back to lookup.
+
 ### 2. Locate the active plan
 
 Work through the library list in dependency order: `["iso20022", "fluentvalidation"]`.

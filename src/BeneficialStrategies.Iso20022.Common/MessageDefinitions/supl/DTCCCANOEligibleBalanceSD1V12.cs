@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// <summary>
 /// This record is an implementation of the supl.007.001.12 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The DTCCCANOEligibleBalanceSD1 message extends ISO corporate action notification (Eligible Balance market practice) message with DTCC corporate action eligible balance elements not covered in the standard message.
 /// </summary>
+[Description(
+    @"The DTCCCANOEligibleBalanceSD1 message extends ISO corporate action notification (Eligible Balance market practice) message with DTCC corporate action eligible balance elements not covered in the standard message."
+)]
 [IsoId("_NiVMf6MrEe-4O7NbwmwJkQ")]
 [DisplayName("DTCCCANO Eligible Balance SD1V12")]
 public record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
@@ -46,35 +50,35 @@ public record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Corporate Action General Information.
+    /// Information to be extended as supplementary data to general information.
     /// </summary>
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
     public CorporateActionGeneralInformationSD57? CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
-    /// Distribution Account Balance.
+    /// Information to be extended as supplementary data to account balance for distribution events.
     /// </summary>
     [DisplayName("Distribution Account Balance")]
     [IsoXmlTag("DstrbtnAcctBal")]
     public ValueList<AccountBalanceSD10> DistributionAccountBalance { get; init; } = [];
 
     /// <summary>
-    /// Redemption Account Balance.
+    /// Information to be extended as supplementary data to account balance for redemptions events.
     /// </summary>
     [DisplayName("Redemption Account Balance")]
     [IsoXmlTag("RedAcctBal")]
     public AccountBalanceSD11? RedemptionAccountBalance { get; init; }
 
     /// <summary>
-    /// Reorganisation Account Balance.
+    /// Information to be extended as supplementary data to account balance for reorganisation events.
     /// </summary>
     [DisplayName("Reorganisation Account Balance")]
     [IsoXmlTag("ReorgAcctBal")]
     public AccountBalanceSD12? ReorganisationAccountBalance { get; init; }
 
     /// <summary>
-    /// Underlying Security.
+    /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]

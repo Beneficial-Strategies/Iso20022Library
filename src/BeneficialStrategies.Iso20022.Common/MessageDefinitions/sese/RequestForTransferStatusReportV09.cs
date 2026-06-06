@@ -15,7 +15,18 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.009.001.09 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The RequestForTransferStatusReport is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.
+/// The RequestForTransferStatusReport may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to request information relevant for the settlement of a transfer transaction.
+/// Usage
+/// The RequestForTransferStatusReport is used to request either:
+/// - the status of one or several information requests or transfer instructions or,
+/// - the status of one or several transfer cancellation instructions, or
+/// - information relevant to one or more transfer instructions.
 /// </summary>
+[Description(
+    @"Scope|The RequestForTransferStatusReport is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.|The RequestForTransferStatusReport may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to request information relevant for the settlement of a transfer transaction.|Usage|The RequestForTransferStatusReport is used to request either:|- the status of one or several information requests or transfer instructions or,|- the status of one or several transfer cancellation instructions, or|- information relevant to one or more transfer instructions."
+)]
 [IsoId("94d317c4-9d3e-437f-b76c-5cb52917d23e")]
 [DisplayName("Request For Transfer Status Report V09")]
 public record RequestForTransferStatusReportV09 : IOuterRecord
@@ -46,28 +57,28 @@ public record RequestForTransferStatusReportV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Market Practice Version.
+    /// Identifies the market practice to which the message conforms.
     /// </summary>
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Request Details.
+    /// Information to identify the transfer for which the status is requested.
     /// </summary>
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]

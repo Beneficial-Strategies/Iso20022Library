@@ -15,7 +15,26 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.021.001.08 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account owner sends a SecuritiesTransactionStatusQuery to an account servicer to request a status on a securities transaction.
+/// The account owner/servicer relationship may be:
+/// - a global custodian which has an account with a local custodian, or
+/// - an investment management institution which manage a fund account opened at a custodian, or
+/// - a broker which has an account with a custodian, or
+/// - a central securities depository participant which has an account with a central securities depository, or
+/// - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
+/// - a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
+///
 /// </summary>
+[Description(
+    @"Scope|An account owner sends a SecuritiesTransactionStatusQuery to an account servicer to request a status on a securities transaction.|The account owner/servicer relationship may be:|- a global custodian which has an account with a local custodian, or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository participant which has an account with a central securities depository, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or|- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.|"
+)]
 [IsoId("_3ailQaouEfCG2_q2WT-90w")]
 [DisplayName("Securities Transaction Status Query V08")]
 public record SecuritiesTransactionStatusQueryV08 : IOuterRecord
@@ -46,35 +65,35 @@ public record SecuritiesTransactionStatusQueryV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount22? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Status Advice Requested.
+    /// Description of the status advice requested.
     /// </summary>
     [DisplayName("Status Advice Requested")]
     [IsoXmlTag("StsAdvcReqd")]
     public required DocumentNumber22 StatusAdviceRequested { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

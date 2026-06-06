@@ -15,7 +15,22 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.042.001.02 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// |An account servicer sends a BuyInRegulatoryAdviceResponse to an account owner to advise the status of a buy-in report previously instructed by the account owner.
+/// |The account servicer/owner relationship may be:|
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants|
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or|
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.||
+///
+/// Usage
+/// |A BuyInRegulatpryReport may contain reports on multiple transactions. However, one BuyInRegulatoryReportStatusAdvice must be sent per transaction reported  unless the BuyInRegulatoryReport is rejected as a whole.||
+/// The message may also be used to:|- re-send a message previously sent,
+/// |- provide a third party with a copy of a message for information,|
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope||An account servicer sends a BuyInRegulatoryAdviceResponse to an account owner to advise the status of a buy-in report previously instructed by the account owner.||The account servicer/owner relationship may be:||- a central securities depository or another settlement market infrastructure acting on behalf of their participants||- an agent (sub-custodian) acting on behalf of their global custodian customer, or||- a custodian acting on behalf of an investment management institution or a broker/dealer.||||Usage||A BuyInRegulatpryReport may contain reports on multiple transactions. However, one BuyInRegulatoryReportStatusAdvice must be sent per transaction reported  unless the BuyInRegulatoryReport is rejected as a whole.|||The message may also be used to:|- re-send a message previously sent,||- provide a third party with a copy of a message for information,||- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_gW0V0YZFEe-6cOl7zMpJaA")]
 [DisplayName("Buy In Regulatory Advice Response V02")]
 public record BuyInRegulatoryAdviceResponseV02 : IOuterRecord
@@ -46,42 +61,42 @@ public record BuyInRegulatoryAdviceResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Advice Reference.
+    /// Identification of the BuyInRegulatoryAdvice message for which the response is provided.
     /// </summary>
     [DisplayName("Advice Reference")]
     [IsoXmlTag("AdvcRef")]
     public required Identification14 AdviceReference { get; init; }
 
     /// <summary>
-    /// Buy In Attributes.
+    /// Details of the buy-in.
     /// </summary>
     [DisplayName("Buy In Attributes")]
     [IsoXmlTag("BuyInAttrbts")]
     public ValueList<BuyInAdviceDetails2> BuyInAttributes { get; init; } = [];
 
     /// <summary>
-    /// Processing Status.
+    /// Provides details on the processing status of the advice.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public required ProcessingStatus79Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account used in the original failing transaction.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

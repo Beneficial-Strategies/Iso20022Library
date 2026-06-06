@@ -15,7 +15,13 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// <summary>
 /// This record is an implementation of the trck.001.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.
+/// Usage
+/// Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged.
 /// </summary>
+[Description(
+    @"The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.|Usage|Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged."
+)]
 [IsoId("bfeb7dc1-7509-4665-9e03-a7726d28da33")]
 [DisplayName("Payment Status Tracker Update V05")]
 public record PaymentStatusTrackerUpdateV05 : IOuterRecord
@@ -46,21 +52,21 @@ public record PaymentStatusTrackerUpdateV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Group Header.
+    /// Common business identification for the message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required TrackerHeader6 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Tracker Status And Transaction.
+    /// Transaction data and status information to be updated in the tracker.
     /// </summary>
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]

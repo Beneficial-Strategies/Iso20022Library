@@ -15,7 +15,31 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.020.001.09 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account owner sends a SecuritiesTransactionCancellationRequest to an account servicer to request the cancellation of a securities transaction.
+/// The account owner/servicer relationship may be:
+/// - a global custodian which has an account with a local custodian, or
+/// - an investment management institution which manage a fund account opened at a custodian, or - a broker which has an account with a custodian, or
+/// - a central securities depository participant which has an account with a central securities depository, or
+/// - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or
+/// - a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.
+///
+/// Usage
+/// The transaction may be:
+/// - a securities settlement transaction
+/// - an intra-position movement
+/// - a securities financing transaction
+/// The instruction cannot be:
+/// - a securities settlement conditions modification (another transaction processing command should be sent to reverse a processing change previously requested).
+/// - a securities financing modification
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account owner sends a SecuritiesTransactionCancellationRequest to an account servicer to request the cancellation of a securities transaction.|The account owner/servicer relationship may be:|- a global custodian which has an account with a local custodian, or|- an investment management institution which manage a fund account opened at a custodian, or - a broker which has an account with a custodian, or|- a central securities depository participant which has an account with a central securities depository, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure, or|- a central counterparty or a stock exchange or a trade matching utility which need to instruct to a central securities depository or another settlement market infrastructure.||Usage|The transaction may be:|- a securities settlement transaction|- an intra-position movement|- a securities financing transaction|The instruction cannot be:|- a securities settlement conditions modification (another transaction processing command should be sent to reverse a processing change previously requested).|- a securities financing modification|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_CtVcEZaPEfC2_67yGLymgA")]
 [DisplayName("Securities Transaction Cancellation Request V09")]
 public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
@@ -46,21 +70,21 @@ public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Account Owner Transaction Identification.
+    /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
     public required References45Choice_ AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Account Servicer Transaction Identification.
+    /// Unambiguous identification of the transaction as known by the account servicer.
     /// </summary>
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
@@ -69,28 +93,28 @@ public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
     public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Cancellation Reason.
+    /// Specifies the reason of the cancellation.
     /// </summary>
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     public CancellationReason23? CancellationReason { get; init; }
 
     /// <summary>
-    /// FX Cancellation.
+    /// Specifies whether an associated FX should be cancelled.
     /// </summary>
     [DisplayName("FX Cancellation")]
     [IsoXmlTag("FxCxl")]
     public FXCancellation3Choice_? FXCancellation { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
@@ -108,7 +132,7 @@ public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
     public IsoMax35Text? NonceIdentification { get; init; }
 
     /// <summary>
-    /// Processor Transaction Identification.
+    /// Message Reference identifying the Processor of the transaction.
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
@@ -117,21 +141,21 @@ public record SecuritiesTransactionCancellationRequestV09 : IOuterRecord
     public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]

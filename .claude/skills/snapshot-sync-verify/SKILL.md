@@ -34,13 +34,17 @@ If no milestone is ready (preceding phase still has unchecked items), report whi
 
 ## Steps
 
-### 3. Run the build
+### 3. Run the build and check documentation warnings
 
 ```bash
-cd src && dotnet build iso20022.sln
+cd src && dotnet build iso20022.sln --no-incremental 2>&1 | tee /tmp/build-output.txt
 ```
 
-**If the build FAILS:**
+Use `--no-incremental` to force a full rebuild so warning counts are accurate.
+
+**Check for errors (CS, MSB):**
+
+**If the build FAILS (errors > 0):**
 - Print the full error output.
 - Do **not** update any checkboxes in PLAN.md.
 - Identify which phase introduced the failures (look at the file paths in the error messages).
@@ -48,10 +52,25 @@ cd src && dotnet build iso20022.sln
   - Missing type reference → check if a removed codeset/component/choice still has a usage that wasn't cleaned up; add a FOLLOW-UP item to the relevant phase in PLAN.md.
   - Namespace not found → check the file's namespace declaration matches the directory name.
   - Ambiguous member → check for duplicate enum member ordinal assignments.
-- Stop. Do not proceed to tests.
+- Stop. Do not proceed to warning checks or tests.
 
-**If the build PASSES:**
-- Report build success.
+**Check for CS1591 warnings (missing XML documentation):**
+
+```bash
+grep -c "warning CS1591" /tmp/build-output.txt || echo "0"
+```
+
+**CS1591 is a hard gate.** Every public type and every public member in this library must carry its verbatim ISO description as an XML doc comment — this is a non-negotiable requirement (see CLAUDE.md). A CS1591 warning means a public member has no `/// <summary>` at all.
+
+**If CS1591 count > 0:**
+- Do **not** update any milestone checkboxes in PLAN.md.
+- Print the first 20 CS1591 occurrences to identify the files involved.
+- Report which phase owns those files (codesets → Phase 1, components → Phase 2, choices → Phase 3, messages → Phase 4).
+- Add FOLLOW-UP items in PLAN.md for each affected phase.
+- Stop. The milestone is not complete until CS1591 count is zero.
+
+**If build passes and CS1591 = 0:**
+- Report build success and zero documentation warnings.
 - Continue to Step 4 only if this is Milestone 4.
 - Otherwise skip to Step 5.
 

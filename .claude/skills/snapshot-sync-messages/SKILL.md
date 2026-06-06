@@ -28,11 +28,57 @@ Navigate to `## Phase 4: Messages`. If `$ARGUMENTS` is provided, find the `### {
 
 If there are no unchecked items (filtered by area if applicable), report Phase 4 is complete (or complete for that area).
 
-### 2. Load the lookup tool
+### 2. Download the message spec snapshot (required underlayment)
+
+Load the tool schema and download the full message snapshot **once at the start of Phase 4**:
+
+```
+ToolSearch: select:mcp__iso20022__get_spec_snapshot
+```
+
+Call `mcp__iso20022__get_spec_snapshot` with `artifactType: 'messages'`. Write the result to disk — it is the authoritative, grep-friendly source for all Phase 4 work. The snapshot contains two record types:
+
+**MSGDEF** (one per message):
+```
+MSGDEF  name  isoId  businessArea  status  definition
+```
+The `definition` field is the full Scope/Usage text for the message class — used verbatim in `[Description(@"...")]` and `/// <summary>`.
+
+**MSGBLOCK** (one per message building block):
+```
+MSGBLOCK  messageName  blockName  xmlTag  componentName  minOccurs  maxOccurs  status  memberIsoId  definition
+```
+- `memberIsoId`: the xmi:id of the messageBuildingBlock element — the stable identity key for a field across versions
+- `definition`: the field's verbatim ISO description — used in property `/// <summary>`
+
+With both columns, the snapshot is fully self-contained: no per-message MCP round trips are needed during normal processing.
+
+> **Server version note**: If `definition` or `memberIsoId` are absent from MSGBLOCK (older server), fall back to `universal_lookup` per message (step 3).
+
+### 3. Load the lookup tool (fallback and supplemental)
 
 ```
 ToolSearch: select:mcp__iso20022__universal_lookup
 ```
+
+`universal_lookup` renders the full definition in a dedicated `### Definition` section (untruncated). Use it when:
+- The spec snapshot is missing definition/memberIsoId columns (older server)
+- Navigating individual member details with `showChildDescriptions: true`
+- Verifying a specific field when the snapshot data is ambiguous
+
+### 4. Sourcing descriptions
+
+**The new snapshot is always authoritative.** Never copy descriptions from predecessor files as a substitute for the snapshot — a field's description can be updated between versions for any reason (repurposing, added clarity, corrected wording) without any structural change. Always write what the current snapshot says.
+
+**When the snapshot has `definition` columns** (current server):
+- Class `/// <summary>` and `[Description(@"...")]`: use MSGDEF `definition`
+- Each property `/// <summary>`: use MSGBLOCK `definition` for that building block
+- No predecessor file lookup needed
+
+**When the snapshot lacks `definition` columns** (older server — fallback only):
+- Use `universal_lookup` per message to get the class definition from the `### Definition` section
+- Use `showChildDescriptions: true` to get building block definitions from the children table
+- Predecessor file text may be used as a last resort for fields not returned by the lookup, but mark any such property with `// TODO: verify description against current spec`
 
 ## Processing Each Item
 

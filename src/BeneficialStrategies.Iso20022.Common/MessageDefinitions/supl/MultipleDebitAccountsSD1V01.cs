@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// <summary>
 /// This record is an implementation of the supl.044.001.01 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The MultipleDebitAccountsSD1V01 message extends ISO 20022 Customer Credit Transfer Initiation (pain.001) message for multiple debit accounts.
 /// </summary>
+[Description(
+    @"The MultipleDebitAccountsSD1V01 message extends ISO 20022 Customer Credit Transfer Initiation (pain.001) message for multiple debit accounts."
+)]
 [IsoId("_F24lM9IEEe20cKCFrGj2Qw")]
 [DisplayName("Multiple Debit Accounts SD1V01")]
 public record MultipleDebitAccountsSD1V01 : IOuterRecord
@@ -46,7 +50,7 @@ public record MultipleDebitAccountsSD1V01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Foreign Exchange Supplementary Data.
+    /// Foreign exchange details.
     /// </summary>
     [DisplayName("Foreign Exchange Supplementary Data")]
     [IsoXmlTag("FXSplmtryData")]

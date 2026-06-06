@@ -15,7 +15,16 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.011.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction.
+///  It may also be used to report the status of an event related to the asset being transferred or provide additional information.
+/// The TransferInstructionStatusReport message may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to provide information relevant for the settlement of a transfer transaction.
+/// Usage
+/// The TransferInstructionStatusReport message is used to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction, or in response to a RequestForTransferStatus message. It may also be used to report the status of an event related to the asset being transferred or provide additional information.
 /// </summary>
+[Description(
+    @"Scope|The TransferInstructionStatusReport message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction.| It may also be used to report the status of an event related to the asset being transferred or provide additional information.|The TransferInstructionStatusReport message may also be sent by any party in the transfer transaction to another party in the transfer transaction chain to provide information relevant for the settlement of a transfer transaction. |Usage|The TransferInstructionStatusReport message is used to provide the status of a previously received request for holdings information, portfolio transfer or transfer instruction, or in response to a RequestForTransferStatus message. It may also be used to report the status of an event related to the asset being transferred or provide additional information."
+)]
 [IsoId("6d8aabaf-c569-4b9f-a38e-8ad74f74ecba")]
 [DisplayName("Transfer Instruction Status Report V10")]
 public record TransferInstructionStatusReportV10 : IOuterRecord
@@ -46,42 +55,42 @@ public record TransferInstructionStatusReportV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Counterparty Reference.
+    /// Unambiguous identification of the transfer allocated by the counterparty.
     /// </summary>
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
     public AdditionalReference10? CounterpartyReference { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Market Practice Version.
+    /// Identifies the market practice to which the message conforms.
     /// </summary>
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Reference.
+    /// Reference to the message or communication that was previously received.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public References64Choice_? Reference { get; init; }
 
     /// <summary>
-    /// Status Report.
+    /// Status of the transfer instruction.
     /// </summary>
     [DisplayName("Status Report")]
     [IsoXmlTag("StsRpt")]

@@ -15,7 +15,31 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.030.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account owner sends a SecuritiesSettlementConditionsModificationRequest to an account servicer to request the modification of a processing indicator or another non-matching information.
+///
+/// The account owner/servicer relationship may be:
+/// - a central securities depository participant which has an account with a central securities depository.
+/// It could also be, if agreed in a service level agreement:
+/// - a global custodian which has an account with its local agent (sub-custodian), or
+/// - an investment management institution which manage a fund account opened at a custodian, or
+/// - a broker which has an account with a custodian, or
+/// - a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
+///
+/// In markets where this applies (for example, securities market infrastructures with no pre-settlement matching process), it is used by a party to approve, cancel or reject a transaction instructed by the counterparty.
+///
+/// This message cannot be used to request the modification of trade or event details.
+/// The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.
 /// </summary>
+[Description(
+    @"Scope|An account owner sends a SecuritiesSettlementConditionsModificationRequest to an account servicer to request the modification of a processing indicator or another non-matching information.||The account owner/servicer relationship may be:|- a central securities depository participant which has an account with a central securities depository.|It could also be, if agreed in a service level agreement:|- a global custodian which has an account with its local agent (sub-custodian), or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.||In markets where this applies (for example, securities market infrastructures with no pre-settlement matching process), it is used by a party to approve, cancel or reject a transaction instructed by the counterparty.||This message cannot be used to request the modification of trade or event details.|The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice."
+)]
 [IsoId("_TuNWsYYdEe-Pv9KR9bv9IA")]
 [DisplayName("Securities Settlement Conditions Modification Request V10")]
 public record SecuritiesSettlementConditionsModificationRequestV10 : IOuterRecord
@@ -46,42 +70,42 @@ public record SecuritiesSettlementConditionsModificationRequestV10 : IOuterRecor
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Additional Information.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<AdditionalInformation26> AdditionalInformation { get; init; } = [];
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Request Details.
+    /// Details of the request.
     /// </summary>
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
     public ValueList<RequestDetails31> RequestDetails { get; init; } = [];
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

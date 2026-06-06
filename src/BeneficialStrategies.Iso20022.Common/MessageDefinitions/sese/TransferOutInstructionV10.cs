@@ -15,7 +15,15 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.001.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The TransferOutInstruction message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.
+/// This message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.
+/// Usage
+/// The TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.
 /// </summary>
+[Description(
+    @"Scope|The TransferOutInstruction message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.|Usage|The TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party."
+)]
 [IsoId("f32bbd62-3b8d-47b1-b0d0-0f810e0efd68")]
 [DisplayName("Transfer Out Instruction V10")]
 public record TransferOutInstructionV10 : IOuterRecord
@@ -46,35 +54,35 @@ public record TransferOutInstructionV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Information related to the account from which the financial instrument is to be withdrawn.
     /// </summary>
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
     public required InvestmentAccount82 AccountDetails { get; init; }
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Market Practice Version.
+    /// Identifies the market practice to which the message conforms.
     /// </summary>
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
 
     /// <summary>
-    /// Master Reference.
+    /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
@@ -83,42 +91,42 @@ public record TransferOutInstructionV10 : IOuterRecord
     public IsoMax35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public AdditionalReference10? PreviousReference { get; init; }
 
     /// <summary>
-    /// Related Reference.
+    /// Reference to a linked message that was previously received.
     /// </summary>
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
 
     /// <summary>
-    /// Settlement Details.
+    /// Information related to the receiving side of the transfer.
     /// </summary>
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
     public ReceiveInformation22? SettlementDetails { get; init; }
 
     /// <summary>
-    /// Transfer Details.
+    /// General information related to the transfer of the financial instrument.
     /// </summary>
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]

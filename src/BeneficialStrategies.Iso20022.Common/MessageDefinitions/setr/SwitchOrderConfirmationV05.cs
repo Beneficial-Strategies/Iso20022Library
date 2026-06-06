@@ -15,7 +15,16 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.015.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The SwitchOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of the execution of a previously received SwitchOrder instruction.
+/// Usage
+/// The SwitchOrderConfirmation message is used to confirm that all the legs of the previously instructed switch order have been executed. The reference of the switch order confirmation is identified in DealReference.
+/// The reference of the original switch order is specified in OrderReference. The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference but this is not recommended.
+/// When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s.
 /// </summary>
+[Description(
+    @"Scope|The SwitchOrderConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the details of the execution of a previously received SwitchOrder instruction.|Usage|The SwitchOrderConfirmation message is used to confirm that all the legs of the previously instructed switch order have been executed. The reference of the switch order confirmation is identified in DealReference.|The reference of the original switch order is specified in OrderReference. The message identification of the SwitchOrder message in which the switch order was conveyed may also be quoted in RelatedReference but this is not recommended.|When the message is used to convey a confirmation amendment/s, the AmendmentIndicator must be present with the value ‘true’ or ‘1’. When this is the case, the message must only contain a confirmation amendment/s and not contain both a confirmation amendment/s and a ‘new’ confirmation/s."
+)]
 [IsoId("eaea3956-4abe-4582-a09a-bfb5602bfedf")]
 [DisplayName("Switch Order Confirmation V05")]
 public record SwitchOrderConfirmationV05 : IOuterRecord
@@ -46,49 +55,49 @@ public record SwitchOrderConfirmationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public ValueList<AdditionalReference10> PreviousReference { get; init; } = [];
 
     /// <summary>
-    /// Related Reference.
+    /// Reference to a linked message that was previously received.
     /// </summary>
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
 
     /// <summary>
-    /// Switch Execution Details.
+    /// Information related to a switch execution.
     /// </summary>
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]

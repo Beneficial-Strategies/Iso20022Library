@@ -15,7 +15,22 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.027.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// SCOPE
+/// Sent by an executing party to an instructing party directly or through Central Matching Utility (CMU) to provide trade confirmation on a per-account basis based on instructions provided by the instructing party in the SecuritiesAllocationInstruction message.
+///
+/// It may also be used to provide trade confirmation on the trade level from an executing party or an instructing party to the custodian or an affirming party directly or through CMU.
+///
+/// The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.
+/// The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.
+/// The custodian or the affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.
+///
+/// USAGE
+/// Initiator: In local matching, the initiator of this message is always the executing party. In central matching the initiator may be either the executing party or instructing party.
+/// Respondent: instructing party, a custodian or an affirming party responds with SecuritiesTradeConfirmationResponse (accept or reject) message.
 /// </summary>
+[Description(
+    @"SCOPE|Sent by an executing party to an instructing party directly or through Central Matching Utility (CMU) to provide trade confirmation on a per-account basis based on instructions provided by the instructing party in the SecuritiesAllocationInstruction message.||It may also be used to provide trade confirmation on the trade level from an executing party or an instructing party to the custodian or an affirming party directly or through CMU.||The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The custodian or the affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.||USAGE|Initiator: In local matching, the initiator of this message is always the executing party. In central matching the initiator may be either the executing party or instructing party.|Respondent: instructing party, a custodian or an affirming party responds with SecuritiesTradeConfirmationResponse (accept or reject) message."
+)]
 [IsoId("_Xx1LEYZHEe-6cOl7zMpJaA")]
 [DisplayName("Securities Trade Confirmation V05")]
 public record SecuritiesTradeConfirmationV05 : IOuterRecord
@@ -46,154 +61,155 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cash Parties.
+    /// Cash parties involved in the specific transaction.
     /// </summary>
     [DisplayName("Cash Parties")]
     [IsoXmlTag("CshPties")]
     public CashParties33? CashParties { get; init; }
 
     /// <summary>
-    /// Clearing Details.
+    /// Provides clearing member information.
     /// </summary>
     [DisplayName("Clearing Details")]
     [IsoXmlTag("ClrDtls")]
     public Clearing5? ClearingDetails { get; init; }
 
     /// <summary>
-    /// Confirmation Parties.
+    /// Parties involved in the confirmation of the details of a trade.
     /// </summary>
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
     public ValueList<ConfirmationParties6> ConfirmationParties { get; init; } = [];
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Specifies the chain of delivering settlement parties.
     /// </summary>
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
     public SettlementParties59? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Financial Instrument Attributes.
+    /// Elements characterising a financial instrument.
     /// </summary>
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
     public FinancialInstrumentAttributes124? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Unique and unambiguous identifier of a financial instrument, assigned under a formal or proprietary identification scheme.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Information that unambiguously identifies an SecuritiesTradeConfirmation message as known by the account owner (or the instructing party acting on its behalf).
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required TransactiontIdentification4 Identification { get; init; }
 
     /// <summary>
-    /// Number Count.
+    /// Count of the number of transactions linked.
     /// </summary>
     [DisplayName("Number Count")]
     [IsoXmlTag("NbCnt")]
     public NumberCount1Choice_? NumberCount { get; init; }
 
     /// <summary>
-    /// Other Amounts.
+    /// Other amounts than the settlement amount.
     /// </summary>
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
     public ValueList<OtherAmounts16> OtherAmounts { get; init; } = [];
 
     /// <summary>
-    /// Other Business Parties.
+    /// Other business parties relevant to the transaction.
     /// </summary>
     [DisplayName("Other Business Parties")]
     [IsoXmlTag("OthrBizPties")]
     public OtherParties32? OtherBusinessParties { get; init; }
 
     /// <summary>
-    /// Other Prices.
+    /// Other prices than the deal price.
     /// </summary>
     [DisplayName("Other Prices")]
     [IsoXmlTag("OthrPrics")]
     public ValueList<OtherPrices5> OtherPrices { get; init; } = [];
 
     /// <summary>
-    /// Receiving Settlement Parties.
+    /// Specifies the chain of receiving settlement parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
     public SettlementParties59? ReceivingSettlementParties { get; init; }
 
     /// <summary>
-    /// References.
+    /// Reference to the transaction identifier issued by a business party and/or market infrastructure. It may also be used to reference a previous transaction, for example, a block/allocation instruction, or tie a set of messages together.
     /// </summary>
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
     public ValueList<Linkages76> References { get; init; } = [];
 
     /// <summary>
-    /// Regulatory Stipulations.
+    /// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.
     /// </summary>
     [DisplayName("Regulatory Stipulations")]
     [IsoXmlTag("RgltryStiptns")]
     public RegulatoryStipulations1? RegulatoryStipulations { get; init; }
 
     /// <summary>
-    /// Settlement Amount.
+    /// Total amount of money to be paid or received in exchange for the securities. The amount includes the principal with any commissions and fees or accrued interest.
     /// </summary>
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
     public AmountAndDirection28? SettlementAmount { get; init; }
 
     /// <summary>
-    /// Settlement Parameters.
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
     /// </summary>
     [DisplayName("Settlement Parameters")]
     [IsoXmlTag("SttlmParams")]
     public SettlementDetails213? SettlementParameters { get; init; }
 
     /// <summary>
-    /// Standing Settlement Instruction.
+    /// Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.
     /// </summary>
     [DisplayName("Standing Settlement Instruction")]
     [IsoXmlTag("StgSttlmInstr")]
     public StandingSettlementInstruction13? StandingSettlementInstruction { get; init; }
 
     /// <summary>
-    /// Stipulations.
+    /// Additional restrictions on the financial instrument, related to the stipulation.
     /// </summary>
     [DisplayName("Stipulations")]
     [IsoXmlTag("Stiptns")]
     public FinancialInstrumentStipulations4? Stipulations { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Trade Details.
+    /// Details of the trade.
     /// </summary>
     [DisplayName("Trade Details")]
     [IsoXmlTag("TradDtls")]
     public required Order24 TradeDetails { get; init; }
 
     /// <summary>
-    /// Two Leg Transaction Details.
+    /// Specifies a transaction that the trading parties are agreeing to repurchase, sell back or return the same or similar securities at a later time.
+    /// The two leg transaction details defines the closing leg conditions of a two leg transaction. It is also used to define the anticipated closing leg conditions at the time of opening the closed-end transaction.
     /// </summary>
     [DisplayName("Two Leg Transaction Details")]
     [IsoXmlTag("TwoLegTxDtls")]
     public TwoLegTransactionDetails5? TwoLegTransactionDetails { get; init; }
 
     /// <summary>
-    /// Underlying Financial Instrument.
+    /// Underlying financial instrument to which an trade confirmation is related.
     /// </summary>
     [DisplayName("Underlying Financial Instrument")]
     [IsoXmlTag("UndrlygFinInstrm")]

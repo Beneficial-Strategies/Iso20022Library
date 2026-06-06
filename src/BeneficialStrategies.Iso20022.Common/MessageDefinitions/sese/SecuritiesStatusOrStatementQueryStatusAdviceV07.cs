@@ -15,7 +15,22 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.022.001.07 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends a SecuritiesStatusOrStatementQueryStatusAdvice to an account owner to advise the status of a status query or statement query previously sent by the account owner.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends a SecuritiesStatusOrStatementQueryStatusAdvice to an account owner to advise the status of a status query or statement query previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_0sKb8YYREe-Pv9KR9bv9IA")]
 [DisplayName("Securities Status Or Statement Query Status Advice V07")]
 public record SecuritiesStatusOrStatementQueryStatusAdviceV07 : IOuterRecord
@@ -46,49 +61,49 @@ public record SecuritiesStatusOrStatementQueryStatusAdviceV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Processing Status.
+    /// Provides details on the processing status of the request.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public required ProcessingStatus89Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Query Details.
+    /// Unambiguous identification of the query as per the account owner.
     /// </summary>
     [DisplayName("Query Details")]
     [IsoXmlTag("QryDtls")]
     public required DocumentIdentification54 QueryDetails { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Status Or Statement Requested.
+    /// Details of the request.
     /// </summary>
     [DisplayName("Status Or Statement Requested")]
     [IsoXmlTag("StsOrStmtReqd")]
     public StatusOrStatement13Choice_? StatusOrStatementRequested { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

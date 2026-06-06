@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// <summary>
 /// This record is an implementation of the trck.002.001.04 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The PaymentStatusTrackerReport message is sent by a tracking facility to relevant parties involved in the business transaction to report on the progress of one or more business transaction(s) and obtain transparency on the status.
 /// </summary>
+[Description(
+    @"The PaymentStatusTrackerReport message is sent by a tracking facility to relevant parties involved in the business transaction to report on the progress of one or more business transaction(s) and obtain transparency on the status."
+)]
 [IsoId("a3a36189-234f-4ed4-9038-c5b7de971443")]
 [DisplayName("Payment Status Tracker Report V04")]
 public record PaymentStatusTrackerReportV04 : IOuterRecord
@@ -46,21 +50,21 @@ public record PaymentStatusTrackerReportV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Group Header.
+    /// Common business identification for the message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required TrackerHeader5 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Tracker Status And Transaction.
+    /// Transaction data and status information to be updated in the tracker.
     /// </summary>
     [DisplayName("Tracker Status And Transaction")]
     [IsoXmlTag("TrckrStsAndTx")]

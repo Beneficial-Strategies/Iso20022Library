@@ -15,7 +15,17 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.001.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The RedemptionBulkOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct a redemption from a financial instrument for two or more accounts.
+/// Usage
+/// The RedemptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are for the same financial instrument. The RedemptionBulkOrder can result in one single bulk cash settlement or several individual cash settlements.
+/// This message will be typically used by a party collecting orders, that is, a concentrator, bulking these individual orders into one bulk order before sending it to an executing party.
+/// For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.
+/// If there are redemption orders for different financial instruments but for the same account, then the RedemptionOrder must be used.
 /// </summary>
+[Description(
+    @"Scope|The RedemptionBulkOrder message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to instruct a redemption from a financial instrument for two or more accounts.|Usage|The RedemptionBulkOrder message is used to bulk several individual orders into one bulk order. The individual orders come from different instructing parties, that is, account owners, but are for the same financial instrument. The RedemptionBulkOrder can result in one single bulk cash settlement or several individual cash settlements.|This message will be typically used by a party collecting orders, that is, a concentrator, bulking these individual orders into one bulk order before sending it to an executing party.|For a single redemption order, the RedemptionOrder message, not the RedemptionBulkOrder message, must be used.|If there are redemption orders for different financial instruments but for the same account, then the RedemptionOrder must be used."
+)]
 [IsoId("3a261563-b653-4d49-9418-7de2c9c6b3d0")]
 [DisplayName("Redemption Bulk Order V05")]
 public record RedemptionBulkOrderV05 : IOuterRecord
@@ -46,42 +56,42 @@ public record RedemptionBulkOrderV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Bulk Order Details.
+    /// General information related to the orders.
     /// </summary>
     [DisplayName("Bulk Order Details")]
     [IsoXmlTag("BlkOrdrDtls")]
     public required RedemptionBulkOrder08 BulkOrderDetails { get; init; }
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]

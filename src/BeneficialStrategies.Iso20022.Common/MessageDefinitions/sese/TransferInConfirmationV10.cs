@@ -15,7 +15,17 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.007.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The TransferInConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.
+/// This message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.
+/// This message may also be used as an advice, that is, the message is used to provide account information.
+/// Usage
+/// The TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.
+/// The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.
 /// </summary>
+[Description(
+    @"Scope|The TransferInConfirmation message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to confirm the receipt of a financial instrument, free of payment, on a given date, from a specified party.|This message may also be used to confirm the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.|This message may also be used as an advice, that is, the message is used to provide account information.|Usage|The TransferInConfirmation message is used to confirm receipt of a financial instrument, either from another account owned by the instructing party or from a third party. The reference of the transfer confirmation is identified in TransferConfirmationReference.|The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference."
+)]
 [IsoId("c14d73b8-4189-4922-86cb-8217e0074a3e")]
 [DisplayName("Transfer In Confirmation V10")]
 public record TransferInConfirmationV10 : IOuterRecord
@@ -46,42 +56,42 @@ public record TransferInConfirmationV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Information related to the account into which the financial instrument was received.
     /// </summary>
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
     public required InvestmentAccount83 AccountDetails { get; init; }
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Function.
+    /// Function of the transfer in, that is, whether the transfer in message is used as a confirmation or as or an advice. The absence of Function indicates the message is a confirmation.
     /// </summary>
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
     public TransferInFunction2Code? Function { get; init; }
 
     /// <summary>
-    /// Market Practice Version.
+    /// Identifies the market practice to which the message conforms.
     /// </summary>
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
 
     /// <summary>
-    /// Master Reference.
+    /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
@@ -90,42 +100,42 @@ public record TransferInConfirmationV10 : IOuterRecord
     public IsoMax35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public AdditionalReference10? PreviousReference { get; init; }
 
     /// <summary>
-    /// Related Reference.
+    /// Reference to a linked message that was previously received.
     /// </summary>
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
 
     /// <summary>
-    /// Settlement Details.
+    /// Information related to the delivering side of the transfer.
     /// </summary>
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
     public DeliverInformation23? SettlementDetails { get; init; }
 
     /// <summary>
-    /// Transfer Details.
+    /// General information related to the transfer of the financial instrument.
     /// </summary>
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]

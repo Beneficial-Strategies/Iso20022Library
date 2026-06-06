@@ -15,7 +15,23 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.029.001.08 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends a SecuritiesSettlementAllegementRemovalAdvice to an account owner to acknowledge that a previously sent allegement is no longer outstanding, because the alleged party sent its instruction.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information
+/// using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends a SecuritiesSettlementAllegementRemovalAdvice to an account owner to acknowledge that a previously sent allegement is no longer outstanding, because the alleged party sent its instruction.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header."
+)]
 [IsoId("_rn4Z4ZaCEfC2_67yGLymgA")]
 [DisplayName("Securities Settlement Allegement Removal Advice V08")]
 public record SecuritiesSettlementAllegementRemovalAdviceV08 : IOuterRecord
@@ -46,28 +62,28 @@ public record SecuritiesSettlementAllegementRemovalAdviceV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Account Servicer Transaction Identification.
+    /// Provides transaction type and identification information.
     /// </summary>
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
     public required SettlementTypeAndIdentification18 AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
+    /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
@@ -76,7 +92,7 @@ public record SecuritiesSettlementAllegementRemovalAdviceV08 : IOuterRecord
     public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
@@ -85,21 +101,21 @@ public record SecuritiesSettlementAllegementRemovalAdviceV08 : IOuterRecord
     public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]

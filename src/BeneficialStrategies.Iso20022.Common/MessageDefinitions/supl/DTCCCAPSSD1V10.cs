@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// <summary>
 /// This record is an implementation of the supl.010.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The DTCCCAPSSD1 message extends ISO corporate action event processing status advice message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
+[Description(
+    @"The DTCCCAPSSD1 message extends ISO corporate action event processing status advice message with DTCC corporate action elements not covered in the standard message."
+)]
 [IsoId("_NiVMraMrEe-4O7NbwmwJkQ")]
 [DisplayName("DTCCCAPSSD1V10")]
 public record DTCCCAPSSD1V10 : IOuterRecord
@@ -46,21 +50,21 @@ public record DTCCCAPSSD1V10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Corporate Action Details.
+    /// Information to be extended as supplementary data to corporate action details.
     /// </summary>
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
     public CorporateActionSD19? CorporateActionDetails { get; init; }
 
     /// <summary>
-    /// Corporate Action General Information.
+    /// Information to be extended as supplementary data to corporate action general information.
     /// </summary>
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
     public CorporateActionGeneralInformationSD59? CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
-    /// Underlying Security.
+    /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]

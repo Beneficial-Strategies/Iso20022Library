@@ -15,7 +15,14 @@ namespace BeneficialStrategies.Iso20022.setr;
 /// <summary>
 /// This record is an implementation of the setr.055.001.03 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The SwitchOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent SwitchOrderConfirmation.
+/// Usage
+/// To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.
 /// </summary>
+[Description(
+    @"Scope|The SwitchOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent SwitchOrderConfirmation.|Usage|To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’."
+)]
 [IsoId("7569862a-1df4-454b-9f3f-bb3136d6818c")]
 [DisplayName("Switch Order Confirmation Cancellation Instruction V03")]
 public record SwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
@@ -46,7 +53,7 @@ public record SwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Amendment Indicator.
+    /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.
     /// </summary>
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
@@ -54,14 +61,14 @@ public record SwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
     public required IsoYesNoIndicator AmendmentIndicator { get; init; }
 
     /// <summary>
-    /// Copy Details.
+    /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
     public CopyInformation5? CopyDetails { get; init; }
 
     /// <summary>
-    /// Master Reference.
+    /// Reference assigned to a set of orders or trades in order to link them together.
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
@@ -70,35 +77,35 @@ public record SwitchOrderConfirmationCancellationInstructionV03 : IOuterRecord
     public IsoMax35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Order References.
+    /// Identification of the individual order confirmation to be cancelled.
     /// </summary>
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
     public ValueList<InvestmentFundOrder14> OrderReferences { get; init; } = [];
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public ValueList<AdditionalReference10> PreviousReference { get; init; } = [];
 
     /// <summary>
-    /// Related Reference.
+    /// Reference to a linked message that was previously received.
     /// </summary>
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]

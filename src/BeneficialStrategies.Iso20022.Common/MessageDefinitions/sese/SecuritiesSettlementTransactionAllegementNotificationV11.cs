@@ -15,7 +15,22 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.028.001.11 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner&apos;s account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends a SecuritiesSettlementTransactionAllegementNotification to an account owner to advise the account owner that a counterparty has alleged an instruction against the account owner's account at the account servicer and that the account servicer could not find the corresponding instruction of the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_CiAl4YYcEe-Pv9KR9bv9IA")]
 [DisplayName("Securities Settlement Transaction Allegement Notification V11")]
 public record SecuritiesSettlementTransactionAllegementNotificationV11 : IOuterRecord
@@ -46,119 +61,119 @@ public record SecuritiesSettlementTransactionAllegementNotificationV11 : IOuterR
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cash Parties.
+    /// Specifies cash parties in the framework of a corporate action event.
     /// </summary>
     [DisplayName("Cash Parties")]
     [IsoXmlTag("CshPties")]
     public CashParties42? CashParties { get; init; }
 
     /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
+    /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
     public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Identifies the chain of delivering settlement parties.
     /// </summary>
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
     public SettlementParties126? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Financial Instrument Attributes.
+    /// Elements characterising a financial instrument.
     /// </summary>
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
     public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
     public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Other Amounts.
+    /// Other amounts than the settlement amount.
     /// </summary>
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
     public OtherAmounts32? OtherAmounts { get; init; }
 
     /// <summary>
-    /// Other Business Parties.
+    /// Other business parties relevant to the transaction.
     /// </summary>
     [DisplayName("Other Business Parties")]
     [IsoXmlTag("OthrBizPties")]
     public OtherParties34? OtherBusinessParties { get; init; }
 
     /// <summary>
-    /// Quantity And Account Details.
+    /// Details related to the account and quantity involved in the transaction.
     /// </summary>
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
     public required QuantityAndAccount116 QuantityAndAccountDetails { get; init; }
 
     /// <summary>
-    /// Receiving Settlement Parties.
+    /// Identifies the chain of receiving settlement parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
     public SettlementParties126? ReceivingSettlementParties { get; init; }
 
     /// <summary>
-    /// Securities Financing Details.
+    /// Details of the closing of the securities financing transaction.
     /// </summary>
     [DisplayName("Securities Financing Details")]
     [IsoXmlTag("SctiesFincgDtls")]
     public SecuritiesFinancingTransactionDetails55? SecuritiesFinancingDetails { get; init; }
 
     /// <summary>
-    /// Settlement Amount.
+    /// Total amount of money to be paid or received in exchange for the securities.
     /// </summary>
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
     public AmountAndDirection88? SettlementAmount { get; init; }
 
     /// <summary>
-    /// Settlement Parameters.
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
     /// </summary>
     [DisplayName("Settlement Parameters")]
     [IsoXmlTag("SttlmParams")]
     public required SettlementDetails187 SettlementParameters { get; init; }
 
     /// <summary>
-    /// Settlement Type And Additional Parameters.
+    /// Provides settlement type and identification information.
     /// </summary>
     [DisplayName("Settlement Type And Additional Parameters")]
     [IsoXmlTag("SttlmTpAndAddtlParams")]
     public required SettlementTypeAndAdditionalParameters12 SettlementTypeAndAdditionalParameters { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Trade Details.
+    /// Details of the trade.
     /// </summary>
     [DisplayName("Trade Details")]
     [IsoXmlTag("TradDtls")]
     public required SecuritiesTradeDetails144 TradeDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Unambiguous identification of the transaction as known by the instructing party.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]

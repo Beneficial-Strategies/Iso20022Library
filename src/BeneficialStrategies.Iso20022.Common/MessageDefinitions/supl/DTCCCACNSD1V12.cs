@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// <summary>
 /// This record is an implementation of the supl.006.001.12 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The DTCCCACNSD1 message extends ISO corporate action cancellation advice (CACN) message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
+[Description(
+    @"The DTCCCACNSD1 message extends ISO corporate action cancellation advice (CACN) message with DTCC corporate action elements not covered in the standard message."
+)]
 [IsoId("_NiVMcaMrEe-4O7NbwmwJkQ")]
 [DisplayName("DTCCCACNSD1V12")]
 public record DTCCCACNSD1V12 : IOuterRecord
@@ -46,42 +50,42 @@ public record DTCCCACNSD1V12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Events Linkage.
+    /// Information to be extended as supplementary data to events linkage.
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
     public ValueList<CorporateActionCancellationSD3> EventsLinkage { get; init; } = [];
 
     /// <summary>
-    /// External Comments.
+    /// Information to be extended as external comments to cancellation advice.
     /// </summary>
     [DisplayName("External Comments")]
     [IsoXmlTag("XtrnlCmnts")]
     public CorporateActionCancellationSD4? ExternalComments { get; init; }
 
     /// <summary>
-    /// General Information.
+    /// Information to be extended as supplementary data to general information.
     /// </summary>
     [DisplayName("General Information")]
     [IsoXmlTag("GnlInf")]
     public CorporateActionGeneralInformationSD56? GeneralInformation { get; init; }
 
     /// <summary>
-    /// Notification.
+    /// Notification information to be extended as supplementary data to cancellation advice.
     /// </summary>
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
     public CorporateActionNotificationSD10? Notification { get; init; }
 
     /// <summary>
-    /// Pagination.
+    /// Page number of the message and continuation indicator to indicate that the multi-parts message is to continue or that the message is the last page of the multi-parts message.
     /// </summary>
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
     public Pagination1? Pagination { get; init; }
 
     /// <summary>
-    /// Underlying Security.
+    /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]

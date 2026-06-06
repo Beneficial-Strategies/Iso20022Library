@@ -15,7 +15,23 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.027.001.09 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information
+/// using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header."
+)]
 [IsoId("_LpIawZaBEfC2_67yGLymgA")]
 [DisplayName("Securities Transaction Cancellation Request Status Advice V09")]
 public record SecuritiesTransactionCancellationRequestStatusAdviceV09 : IOuterRecord
@@ -46,7 +62,7 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV09 : IOuterRe
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Request Reference.
+    /// Reference to the unambiguous identification of the cancellation request as per the account owner.
     /// </summary>
     [DisplayName("Cancellation Request Reference")]
     [IsoXmlTag("CxlReqRef")]
@@ -55,28 +71,28 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV09 : IOuterRe
     public required IsoMax35Text CancellationRequestReference { get; init; }
 
     /// <summary>
-    /// Processing Status.
+    /// Provides details on the processing status of the request.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public required ProcessingStatus105Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
     public TransactionDetails178? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Unambiguous identification of the transaction as known by the account servicer.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]

@@ -50,6 +50,120 @@ restored and fixed.
 
 ---
 
+## ~~universal_lookup Definition Truncation~~ — RESOLVED IN STAGING — 2026-06-05 (snapshot-sync-messages)
+
+> **Resolution**: `universal_lookup` now renders the `definition` attribute as a dedicated
+> `### Definition` section with full untruncated text, rather than as a truncated cell in the
+> Properties table. The children table `Definition` column also honours `forceVerbose: true`
+> and no longer hard-caps at 120 chars. Deployed to staging 2026-06-05. Production deploy pending.
+> Original report preserved below.
+
+**Operation**: Retrieve the full Scope/Usage description for a message definition by IsoId, to
+populate the `[Description(@"...")]` attribute and `/// <summary>` in generated C# files.
+
+**What MCP provided**: `definition` appeared as a row in the Properties table, capped at ~200
+characters via `FormatAttributeValue`. The children table `Definition` column was capped at 120
+characters regardless of `forceVerbose: true`. Both truncations produced mid-sentence cutoffs
+with no indication of how much text was missing.
+
+**Gap**: The full Scope/Usage text is a non-negotiable requirement for every generated message
+class (CLAUDE.md). A truncated definition cannot be written verbatim, cannot be verified, and
+cannot be used to populate the `[Description(@"Scope|...|Usage|...")]` attribute correctly.
+`forceVerbose: true` existed as a parameter but had no effect on the children table cap.
+
+**Workaround**: For messages with documented predecessors on disk, copied the class description
+from the predecessor file (same message family, one version lower) — valid because Scope/Usage
+text is typically preserved across versions. For 7 brand-new messages with no predecessor,
+the full text was unrecoverable from production; those files were left with only partial
+descriptions until the staging fix was available.
+
+**Enterprise Impact**: Every new message version and every brand-new message type added to a
+snapshot requires a readable, complete definition. At the scale of a full snapshot sync
+(potentially hundreds of changed messages), truncated definitions multiply into a systemic
+documentation gap that is invisible to the compiler but visible to every API consumer.
+
+**Fix applied**: `definition` rendered in a dedicated `### Definition` section. `forceVerbose`
+respected in children table. Both changes deployed to staging 2026-06-05.
+
+---
+
+## get_spec_snapshot Missing definition Fields — 2026-06-05 (snapshot-sync-messages)
+
+**Operation**: Download the full spec snapshot once at the start of each sync phase, use it as
+a local grep-friendly lookup for all descriptions — class-level and member-level — across all
+four phases (codesets, components, choices, messages). Eliminate per-entity `universal_lookup`
+round trips.
+
+**What MCP provided**: The spec snapshot delivers structural data (what types exist, what members
+they have, multiplicities, XML tags) but is missing `definition` on all records except MSGDEF.
+Specifically:
+
+| Record type | Has `isoId` | Has `definition` |
+|---|---|---|
+| `MSGDEF` | ✓ | ✓ (fixed in staging) |
+| `MSGBLOCK` | ✗ | ✗ |
+| `MSGCOMP` | ✓ | ✗ |
+| `MSGELEMENT` | ✗ | ✗ |
+| `CODESET` | ✓ | ✗ |
+| `CODE` / `EXTCODE` | ✗ | ✗ |
+| `CHOICE` | ✓ | ✗ |
+| `VARIANT` | ✗ | ✗ |
+| `SIMPLETYPE` | ✓ | ✗ |
+| `AMOUNT` | ✓ | ✗ |
+
+Note: `get_data_type_members_snapshot` already returns full `definition` for component members
+and proves the pattern works. `get_spec_snapshot` needs to achieve full parity.
+
+**Gap**: Without `definition` in the snapshot, every property description requires a separate
+`universal_lookup` call. At the scale of a full sync — thousands of components, hundreds of
+messages, thousands of codeset values — this produces hundreds to thousands of serial MCP calls
+per phase. The spec snapshot exists specifically to make this unnecessary: one download, local
+grep, no round trips. Its current form delivers only half the contract.
+
+Additionally, `MSGBLOCK`, `MSGELEMENT`, `CODE`, `EXTCODE`, and `VARIANT` records lack their own
+`isoId` / `memberIsoId` column. Without stable IDs on child records, it is impossible to track
+whether a same-named field across two consecutive message versions is the same field (same IsoId,
+possibly updated description) or a repurposed slot (different IsoId, different semantics). This
+distinction matters: descriptions must always come from the current snapshot, not carried forward
+blindly from a predecessor file.
+
+**Workaround**: For consecutive-version message updates, descriptions were copied from
+predecessor files on disk and verified by inspection. For brand-new messages, `universal_lookup`
+was called individually. For the bulk sese/setr/supl/trck remediation pass (100 files), a Python
+script read predecessor files and applied descriptions via regex — functional but fragile, and
+bypasses the intended server-sourced workflow.
+
+**Enterprise Impact**: The stated design intent is that every entity and every child property in
+the spec snapshot has two fields: `id` and `definition`. Until that intent is fully implemented,
+the snapshot cannot serve as the authoritative single-pass source it was designed to be. Every
+sync phase falls back to per-entity MCP calls, reintroducing the round-trip cost the snapshot
+was designed to eliminate. For an enterprise team running automated syncs on each ISO 20022
+release, this significantly increases sync time and API load.
+
+**Suggested Enhancement**: Add to each record type:
+
+```
+MSGBLOCK    messageName  blockName  xmlTag  componentName  minOccurs  maxOccurs  status  memberIsoId  definition
+MSGELEMENT  componentName  elementName  xmlTag  dataTypeName  minOccurs  maxOccurs  status  elementIsoId  definition
+CODE        codeSetName  codeName  codeIsoId  status  definition
+EXTCODE     codeSetName  codeName  codeIsoId  status  definition
+CHOICE      name  isoId  status  definition
+VARIANT     choiceName  variantName  variantIsoId  xmlTag  status  definition
+MSGCOMP     name  isoId  status  definition
+SIMPLETYPE  name  isoId  status  definition
+AMOUNT      name  isoId  status  definition
+```
+
+The `definition` field should use the same pipe-sanitization already applied to MSGDEF, so
+embedded newlines and pipe characters in multi-paragraph Scope/Usage text do not break TSV
+parsing. With these additions, a single six-call download at the start of each sync provides
+every description needed across all four phases with no additional server round trips.
+
+**Commented-out candidate**: `get_data_type_members_snapshot` already delivers this pattern for
+component members. The implementation approach is proven — extend it to all record types.
+
+---
+
 ## No Repository-Wide Snapshot Diff Tool — 2026-05-11 (snapshot-sync-plan)
 
 **Operation**: Retrieve all artifact changes (codesets, components, choices, messages) between

@@ -15,7 +15,25 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.038.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The SecuritiesSettlementTransactionModificationRequest is sent by an account owner to an account servicer.
+///
+/// The account owner will generally be:
+/// - a central securities depository participant which has an account with a central securities depository or a market infrastructure
+/// - an investment manager which has an account with a custodian acting as accounting and/or settlement agent.
+///
+/// It is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.
+///
+/// Usage
+/// The modification must only contain the data to be modified.
+/// The message may also be used to:
+/// - re-send a message sent by the account owner to the account servicer,
+/// - provide a third party with a copy of a message being sent by the account owner for information,
+/// - re-send to a third party a copy of a message being sent by the account owner for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|The SecuritiesSettlementTransactionModificationRequest is sent by an account owner to an account servicer. ||The account owner will generally be:|- a central securities depository participant which has an account with a central securities depository or a market infrastructure|- an investment manager which has an account with a custodian acting as accounting and/or settlement agent.||It is used to request the modification of non core business data (matching or non-matching) information in a pending or settled instruction. It can also be used for the enrichment of an incomplete transaction.||Usage|The modification must only contain the data to be modified.|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_0NmpQYS0Ee-Pv9KR9bv9IA")]
 [DisplayName("Securities Settlement Transaction Modification Request V10")]
 public record SecuritiesSettlementTransactionModificationRequestV10 : IOuterRecord
@@ -46,14 +64,14 @@ public record SecuritiesSettlementTransactionModificationRequestV10 : IOuterReco
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Modified Transaction Details.
+    /// Identifies the details of the transaction that is being modified.
     /// </summary>
     [DisplayName("Modified Transaction Details")]
     [IsoXmlTag("ModfdTxDtls")]
     public required TransactionDetails176 ModifiedTransactionDetails { get; init; }
 
     /// <summary>
-    /// Update Type.
+    /// Specifies the type of update requested.
     /// </summary>
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]

@@ -15,7 +15,11 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// <summary>
 /// This record is an implementation of the supl.030.001.08 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The DTCCCAISSD1 message extends ISO corporate action instruction status advice message with DTCC corporate action elements not covered in the standard message.
 /// </summary>
+[Description(
+    @"The DTCCCAISSD1 message extends ISO corporate action instruction status advice message with DTCC corporate action elements not covered in the standard message."
+)]
 [IsoId("_Xt5vkXGxEe6S2Llv74R19w")]
 [DisplayName("DTCCCAISSD1V08")]
 public record DTCCCAISSD1V08 : IOuterRecord
@@ -46,14 +50,14 @@ public record DTCCCAISSD1V08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Distribution Instruction Details.
+    /// Information to be extended as supplementary data to instruction status message for distribution events.
     /// </summary>
     [DisplayName("Distribution Instruction Details")]
     [IsoXmlTag("DstrbtnInstrDtls")]
     public DistributionInstructionSD1? DistributionInstructionDetails { get; init; }
 
     /// <summary>
-    /// Reorganisation Instruction Details.
+    /// Information to be extended as supplementary data to instruction status message for reorganisation events.
     /// </summary>
     [DisplayName("Reorganisation Instruction Details")]
     [IsoXmlTag("ReorgInstrDtls")]

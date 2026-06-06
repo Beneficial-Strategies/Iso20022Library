@@ -15,7 +15,22 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.039.001.07 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends a SecuritiesSettlementTransactionModificationRequestStatusAdvice to an account owner to advise the status of a SecuritiesSettlementModificationRequest message previously sent by the account owner.
+/// The account servicer may be:
+/// - a central securities depository or another settlement market infrastructure managing securities settlement transactions on behalf of their participants
+/// - an custodian acting as an accounting and/or settlement agent.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message sent by the account owner to the account servicer,
+/// - provide a third party with a copy of a message being sent by the account owner for information,
+/// - re-send to a third party a copy of a message being sent by the account owner for information
+/// using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends a SecuritiesSettlementTransactionModificationRequestStatusAdvice to an account owner to advise the status of a SecuritiesSettlementModificationRequest message previously sent by the account owner.|The account servicer may be:|- a central securities depository or another settlement market infrastructure managing securities settlement transactions on behalf of their participants|- an custodian acting as an accounting and/or settlement agent.||Usage|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information|using the relevant elements in the Business Application Header."
+)]
 [IsoId("_N6XqgYooEe-efPejSUAtLw")]
 [DisplayName("Securities Settlement Transaction Modification Request Status Advice V07")]
 public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 : IOuterRecord
@@ -46,56 +61,56 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Modification Processing Status.
+    /// Provides details on the processing status of the request.
     /// </summary>
     [DisplayName("Modification Processing Status")]
     [IsoXmlTag("ModPrcgSts")]
     public required ModificationProcessingStatus10Choice_ ModificationProcessingStatus { get; init; }
 
     /// <summary>
-    /// Modification Request Reference.
+    /// Reference to the unambiguous identification of the cancellation request as per the account owner.
     /// </summary>
     [DisplayName("Modification Request Reference")]
     [IsoXmlTag("ModReqRef")]
     public required IsoMax35Text ModificationRequestReference { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account to or from which a securities entry is made.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
     public TransactionDetails171? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Provides unambiguous transaction identification information.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]

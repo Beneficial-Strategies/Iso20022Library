@@ -15,7 +15,15 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.012.001.12 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The PortfolioTransferInstruction message is sent by an instructing party, for example, a (new) plan manager (transferee), to the executing party, for example, a (old) plan manager (transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the client’s account at the old plan manager (transferor) to the clients account at the new plan manager (transferee).
+/// Usage
+/// The PortfolioTransferInstruction message is used to instruct one or more portfolio transfers for one client. Each portfolio transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors.
+/// If the instructing party does not have enough information to instruct the portfolio transfer, then it must first send an AccountHoldingInformationRequest message to the executing party in order to receive an AccountHoldingInformation message.
 /// </summary>
+[Description(
+    @"Scope|The PortfolioTransferInstruction message is sent by an instructing party, for example, a (new) plan manager (transferee), to the executing party, for example, a (old) plan manager (transferor), on behalf of the initiating party, for example, an investor (client), to instruct the transfer of financial instruments from the client’s account at the old plan manager (transferor) to the clients account at the new plan manager (transferee). |Usage|The PortfolioTransferInstruction message is used to instruct one or more portfolio transfers for one client. Each portfolio transfer is for delivery to the same account. The account may be owned by one or more individual investors or one or more corporate investors.|If the instructing party does not have enough information to instruct the portfolio transfer, then it must first send an AccountHoldingInformationRequest message to the executing party in order to receive an AccountHoldingInformation message."
+)]
 [IsoId("baa836d4-ff0a-4ffb-90c2-8c5a1f09e696")]
 [DisplayName("Portfolio Transfer Instruction V12")]
 public record PortfolioTransferInstructionV12 : IOuterRecord
@@ -46,112 +54,112 @@ public record PortfolioTransferInstructionV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Extension.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
 
     /// <summary>
-    /// Market Practice Version.
+    /// Identifies the market practice to which the message conforms.
     /// </summary>
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
 
     /// <summary>
-    /// Message Reference.
+    /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Reference")]
     [IsoXmlTag("MsgRef")]
     public required MessageIdentification1 MessageReference { get; init; }
 
     /// <summary>
-    /// Nominee Account.
+    /// Account held in the name of a party that is not the name of the beneficial owner of the shares.
     /// </summary>
     [DisplayName("Nominee Account")]
     [IsoXmlTag("NmneeAcct")]
     public InvestmentAccount69? NomineeAccount { get; init; }
 
     /// <summary>
-    /// Other Corporate Investor.
+    /// Information identifying the other corporate investors, for example, name and address.
     /// </summary>
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
     public ValueList<Organisation36> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
-    /// Other Individual Investor.
+    /// Information identifying the other individual investors, for example, name, address, social security number and date of birth.
     /// </summary>
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
     public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
-    /// Pool Reference.
+    /// Collective reference identifying a set of messages.
     /// </summary>
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
     public AdditionalReference11? PoolReference { get; init; }
 
     /// <summary>
-    /// Previous Reference.
+    /// Reference to a linked message that was previously sent.
     /// </summary>
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public AdditionalReference10? PreviousReference { get; init; }
 
     /// <summary>
-    /// Primary Corporate Investor.
+    /// Information identifying the primary corporate investor, for example, name and address.
     /// </summary>
     [DisplayName("Primary Corporate Investor")]
     [IsoXmlTag("PmryCorpInvstr")]
     public Organisation36? PrimaryCorporateInvestor { get; init; }
 
     /// <summary>
-    /// Primary Individual Investor.
+    /// Information identifying the primary individual investor, for example, name, address, social security number and date of birth.
     /// </summary>
     [DisplayName("Primary Individual Investor")]
     [IsoXmlTag("PmryIndvInvstr")]
     public IndividualPerson8? PrimaryIndividualInvestor { get; init; }
 
     /// <summary>
-    /// Product Transfer.
+    /// Information about the portfolio and assets.
     /// </summary>
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
     public ValueList<PortfolioTransfer14> ProductTransfer { get; init; } = [];
 
     /// <summary>
-    /// Related Reference.
+    /// Reference to a linked message that was previously received.
     /// </summary>
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
 
     /// <summary>
-    /// Secondary Corporate Investor.
+    /// Information identifying the secondary corporate investor, for example, name and address.
     /// </summary>
     [DisplayName("Secondary Corporate Investor")]
     [IsoXmlTag("ScndryCorpInvstr")]
     public Organisation36? SecondaryCorporateInvestor { get; init; }
 
     /// <summary>
-    /// Secondary Individual Investor.
+    /// Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.
     /// </summary>
     [DisplayName("Secondary Individual Investor")]
     [IsoXmlTag("ScndryIndvInvstr")]
     public IndividualPerson8? SecondaryIndividualInvestor { get; init; }
 
     /// <summary>
-    /// Transferee.
+    /// Identification of the institution to which the financial instrument is to be transferred. This may also be known as the new plan manager.
     /// </summary>
     [DisplayName("Transferee")]
     [IsoXmlTag("Trfee")]
     public required PartyIdentification132 Transferee { get; init; }
 
     /// <summary>
-    /// Transferor Account.
+    /// Identification of the account owned by the investor at the old plan manager (account servicer).
     /// </summary>
     [DisplayName("Transferor Account")]
     [IsoXmlTag("TrfrAcct")]

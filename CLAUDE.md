@@ -16,6 +16,85 @@ This library was originally auto-generated from the ISO20022 specification by th
 - The `.g.cs` files will be maintained directly with assistance from Claude and the ISO20022 MCP server
 - The original generators in Iso20022MasterControl will be abandoned
 
+## XML Documentation — Non-Negotiable Requirement
+
+**Every public type and every public member must carry the verbatim ISO 20022 specification
+description as its XML doc comment.** This is a hard requirement, not a style preference. The
+NuGet package surfaces these descriptions directly to consumers via IntelliSense and generated
+API documentation — paraphrasing, truncation, or substituting the display name destroys the
+understanding the ISO spec authors encoded.
+
+### What "verbatim" means
+
+- **Do not paraphrase.** "Reference that uniquely identifies the message from a business
+  application standpoint." is correct. "Message Identification." is not.
+- **Do not infer from the name.** The display name (`[DisplayName]`) and the XML doc summary are
+  separate concerns. The display name is a label; the summary is explanatory prose from the spec.
+- **Do not truncate** lengthy Scope/Usage/Constraint text. If the ISO text is long, use
+  `<remarks>` for the overflow — but keep it all.
+- **`<seealso>` tags** are welcome where the spec cross-references other types or messages.
+
+### Where to put the content
+
+| ISO text | XML doc placement |
+|---|---|
+| Primary one-sentence description | `<summary>` |
+| Scope / Usage / Constraint paragraphs (when lengthy) | `<remarks>` |
+| Cross-references to related types or messages | `<seealso cref="..."/>` |
+
+### What must be on every generated type
+
+**Message record (class):**
+```csharp
+/// <summary>
+/// {ISO primary description — the first sentence or the "Scope" intro.}
+/// </summary>
+/// <remarks>
+/// {Full ISO Usage / Scope text, preserved verbatim, as many paragraphs as needed.}
+/// </remarks>
+[Description(@"Scope|{ISO pipe-delimited full text}")]
+[IsoId("...")]
+[DisplayName("...")]
+public record MyMessageV01 : IOuterRecord { ... }
+```
+
+**Message property:**
+```csharp
+/// <summary>
+/// {Verbatim ISO field description — NOT just the display name.}
+/// </summary>
+[IsoId("...")]          // present on properties in older files; may be omitted in newer style
+[DisplayName("...")]
+[IsoXmlTag("...")]
+public required SomeType MyField { get; init; }
+```
+
+**Component record and its properties:** same rules — class gets the ISO component description,
+each property gets the ISO element description.
+
+**Codeset enum and its members:** same rules — enum gets the ISO code-set description, each
+`[EnumMember]`-decorated value gets the ISO code description.
+
+### Where to source the descriptions
+
+Use the ISO 20022 MCP server tools:
+- `universal_lookup` — returns full spec text for a named artifact (message, component, element,
+  code set, code value).
+- `get_data_type_members_snapshot` — bulk element descriptions for a component.
+- `get_code_set_details` — full descriptions for a code set and its values.
+
+Always fetch descriptions from the MCP server rather than guessing or deriving them from names.
+If a description cannot be retrieved, leave a `// TODO: fetch ISO description via MCP` comment
+rather than fabricating one.
+
+### Historical gap
+
+Files written during snapshot syncs prior to 2026-06 were often written without verbatim
+descriptions — properties received only the display name as their `<summary>`, and class-level
+`[Description(...)]` attributes were omitted. These files must be corrected as they are
+encountered. The correct reference style is shown in the older auto-generated files such as
+`MessageDefinitions/setr/RedemptionOrderV04.cs`.
+
 ## Build Commands
 
 ```bash

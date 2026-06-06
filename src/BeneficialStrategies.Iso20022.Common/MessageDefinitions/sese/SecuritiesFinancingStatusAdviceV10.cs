@@ -15,7 +15,23 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.034.001.10 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An securities financing transaction account servicer sends a SecuritiesFinancingStatusAdvice to an account owner to advise the status of a securities financing transaction previously instructed by the account owner.
+/// The status advice may be sent as a response to the request of the account owner or not.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants
+/// - an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or
+/// - a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An securities financing transaction account servicer sends a SecuritiesFinancingStatusAdvice to an account owner to advise the status of a securities financing transaction previously instructed by the account owner.|The status advice may be sent as a response to the request of the account owner or not.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure managing securities financing transactions on behalf of their participants|- an agent (sub-custodian) managing securities financing transactions on behalf of their global custodian customer, or|- a custodian managing securities financing transactions on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("_Lz5Q8YVsEe-Pv9KR9bv9IA")]
 [DisplayName("Securities Financing Status Advice V10")]
 public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
@@ -46,56 +62,56 @@ public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Inferred Matching Status.
+    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
     /// </summary>
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
     public MatchingStatus26Choice_? InferredMatchingStatus { get; init; }
 
     /// <summary>
-    /// Matching Status.
+    /// Provides the matching status of the instruction.
     /// </summary>
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
     public MatchingStatus26Choice_? MatchingStatus { get; init; }
 
     /// <summary>
-    /// Processing Status.
+    /// Processing status of the transaction.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus83Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Repo Call Request Status.
+    /// Provides the status of the repurchase agreement call request.
     /// </summary>
     [DisplayName("Repo Call Request Status")]
     [IsoXmlTag("RepoCallReqSts")]
     public RepoCallRequestStatus7Choice_? RepoCallRequestStatus { get; init; }
 
     /// <summary>
-    /// Settlement Status.
+    /// Provides the status of settlement of a transaction.
     /// </summary>
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
     public SettlementStatus18Choice_? SettlementStatus { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
     public SecuritiesFinancingTransactionDetails57? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Provides unambiguous transaction identification information.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]

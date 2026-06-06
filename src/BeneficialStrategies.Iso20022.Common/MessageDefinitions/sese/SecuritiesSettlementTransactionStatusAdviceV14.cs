@@ -15,7 +15,23 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// <summary>
 /// This record is an implementation of the sese.024.001.14 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// An account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.
+/// The status advice may be sent as a response to the request of the account owner or not.
+/// The account servicer/owner relationship may be:
+/// - a central securities depository or another settlement market infrastructure acting on behalf of their participants
+/// - an agent (sub-custodian) acting on behalf of their global custodian customer, or
+/// - a custodian acting on behalf of an investment management institution or a broker/dealer.
+///
+/// Usage
+/// The message may also be used to:
+/// - re-send a message previously sent,
+/// - provide a third party with a copy of a message for information,
+/// - re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.
 /// </summary>
+[Description(
+    @"Scope|An account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.|The status advice may be sent as a response to the request of the account owner or not.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header."
+)]
 [IsoId("2fd4cc36-b29b-4f27-9aa3-ff5b549a1a30")]
 [DisplayName("Securities Settlement Transaction Status Advice V14")]
 public record SecuritiesSettlementTransactionStatusAdviceV14 : IOuterRecord
@@ -46,56 +62,56 @@ public record SecuritiesSettlementTransactionStatusAdviceV14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Inferred Matching Status.
+    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
     /// </summary>
     [DisplayName("Inferred Matching Status")]
     [IsoXmlTag("IfrrdMtchgSts")]
     public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
 
     /// <summary>
-    /// Linkages.
+    /// Link to another transaction - provided for information only.
     /// </summary>
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
     public Linkages41? Linkages { get; init; }
 
     /// <summary>
-    /// Matching Status.
+    /// Provides the matching status of the instruction.
     /// </summary>
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
     public MatchingStatus24Choice_? MatchingStatus { get; init; }
 
     /// <summary>
-    /// Processing Status.
+    /// Provides details on the processing status of the transaction.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus101Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Settlement Status.
+    /// Provides the status of settlement of a transaction.
     /// </summary>
     [DisplayName("Settlement Status")]
     [IsoXmlTag("SttlmSts")]
     public SettlementStatus30Choice_? SettlementStatus { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Details.
+    /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
     public TransactionDetails177? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Provides unambiguous transaction identification information.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
