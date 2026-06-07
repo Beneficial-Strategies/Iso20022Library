@@ -1,8 +1,9 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
@@ -11,10 +12,53 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 /// </summary>
 [DataContract]
 [Serializable]
-[IsoId("_ExternalCardTransactionCategory1Code")]
-[Description(
-    @"Specifies the category of card transaction in the format of character string with a maximum length of 4 characters."
-)]
+[IsoId("_t7bogFkyEeGeoaLUQk__nA_-1719712446")]
+[Description(@"Specifies the category of card transaction in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
 [DerivedFrom(typeof(ExternalCardTransactionCategoryCode))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalCardTransactionCategory1Code>))]
-public enum ExternalCardTransactionCategory1Code { }
+[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<ExternalCardTransactionCategory1Code>))]
+public readonly struct ExternalCardTransactionCategory1Code : IIsoExternalCode, IEquatable<ExternalCardTransactionCategory1Code>
+{
+    /// <summary>ISO 20022 format constraint — 1 to 4 characters.</summary>
+    public const string Pattern = @"^.{1,4}$";
+
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <summary>Initializes a new instance with the given category code.</summary>
+    /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
+    public ExternalCardTransactionCategory1Code(string value)
+    {
+        if (!Regex.IsMatch(value, Pattern))
+            throw new Iso20022FormatException(typeof(ExternalCardTransactionCategory1Code), value, Pattern);
+        Value = value;
+    }
+
+    /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
+    public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalCardTransactionCategory1Code result)
+    {
+        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
+        result = default;
+        return false;
+    }
+
+    /// <summary>Implicitly wraps a string as a <see cref="ExternalCardTransactionCategory1Code"/>.</summary>
+    public static implicit operator ExternalCardTransactionCategory1Code(string value) => new(value);
+    /// <summary>Implicitly unwraps the code to its string value.</summary>
+    public static implicit operator string(ExternalCardTransactionCategory1Code code) => code.Value;
+
+    /// <inheritdoc/>
+    public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
+    public bool Equals(ExternalCardTransactionCategory1Code other) => Value == other.Value;
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is ExternalCardTransactionCategory1Code other && Equals(other);
+    /// <inheritdoc/>
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    public static bool operator ==(ExternalCardTransactionCategory1Code a, ExternalCardTransactionCategory1Code b) => a.Equals(b);
+    public static bool operator !=(ExternalCardTransactionCategory1Code a, ExternalCardTransactionCategory1Code b) => !a.Equals(b);
+    public static bool operator ==(ExternalCardTransactionCategory1Code a, string? b) => a.Value == b;
+    public static bool operator !=(ExternalCardTransactionCategory1Code a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, ExternalCardTransactionCategory1Code b) => a == b.Value;
+    public static bool operator !=(string? a, ExternalCardTransactionCategory1Code b) => a != b.Value;
+}

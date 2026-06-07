@@ -158,11 +158,129 @@ src/BeneficialStrategies.Iso20022.Common/
 - Enums with `[EnumMember]` and `[IsoId]` attributes
 - Versioned codes (e.g., `PaymentMethod3Code`)
 
+### ISO Simple Value Primitives — Non-Negotiable Design Pattern
+
+**An empty `enum` is never an acceptable type for a field in this library.** If a user cannot
+assign a value to a `required` property, the library is broken — full stop.
+
+All ISO 20022 primitive types that carry constraints (pattern, length, range, character set) are
+represented as `readonly struct` wrappers implementing `IIsoSimpleValue<T>`. This covers:
+
+- External code sets (open-value registries like `ExternalBankTransactionDomainCode`)
+- Spec-fixed string types (`BICIdentifier`, `IBANIdentifier`, `Max35Text`, etc.)
+- Decimal types with range/precision constraints (`IsoDecimal`, etc.)
+- Binary types for cryptographic material (`SignatureValue`, `DigestValue`, etc.)
+
+#### Interface Hierarchy (`Framework/`)
+
+```
+IIsoSimpleValue<T>          — base: any ISO primitive wrapping a CLR value of type T
+  IIsoExternalCode          — semantic marker: value list is an external ISO registry
+```
+
+`IIsoSimpleValue<T>` is the serialization hook. Both `Iso20022XmlSerializer` and
+`Iso20022ExternalCodeJsonConverter<T>` detect this interface to treat the type as a scalar.
+Implementing the interface is what registers correct serialization behavior — no per-type
+XML attribute is needed.
+
+#### Struct Template
+
+Every primitive struct follows this exact shape. Replace `MyCode`, `string`, `Pattern`,
+and the `[IsoId]`/`[Description]` values:
+
+```csharp
+[DataContract]
+[Serializable]
+[IsoId("...")]
+[Description(@"...")]
+[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<MyCode>))]   // string types
+public readonly struct MyCode : IIsoExternalCode, IEquatable<MyCode>
+{
+    /// <summary>ISO 20022 format constraint for this type.</summary>
+    public const string Pattern = @"^[A-Z0-9]{1,4}$";
+
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <exception cref="Iso20022FormatException">Value does not satisfy <see cref="Pattern"/>.</exception>
+    public MyCode(string value)
+    {
+        if (!Regex.IsMatch(value, Pattern))
+            throw new Iso20022FormatException(typeof(MyCode), value, Pattern);
+        Value = value;
+    }
+
+    public static bool TryCreate(string value, [NotNullWhen(true)] out MyCode result)
+    {
+        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
+        result = default;
+        return false;
+    }
+
+    public static implicit operator MyCode(string value) => new(value);
+    public static implicit operator string(MyCode code) => code.Value;
+
+    public override string ToString() => Value ?? string.Empty;
+
+    public bool Equals(MyCode other) => Value == other.Value;
+    public override bool Equals(object? obj) => obj is MyCode other && Equals(other);
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    public static bool operator ==(MyCode a, MyCode b)    => a.Equals(b);
+    public static bool operator !=(MyCode a, MyCode b)    => !a.Equals(b);
+    public static bool operator ==(MyCode a, string? b)   => a.Value == b;
+    public static bool operator !=(MyCode a, string? b)   => a.Value != b;
+    public static bool operator ==(string? a, MyCode b)   => a == b.Value;
+    public static bool operator !=(string? a, MyCode b)   => a != b.Value;
+}
+```
+
+**For `IIsoSimpleValue<decimal>` types:** the constructor receives a `decimal` (not a string).
+The XML serializer parses text → `decimal.Parse()` → passes to the constructor. The constructor
+then applies ISO-specific constraints (min/max, scale).
+
+**For `IIsoSimpleValue<byte[]>` types** (digital signatures, digests, certificates): the
+constructor receives a `byte[]`. The XML serializer base64-decodes → passes to constructor.
+These types may have additional behavioral contracts (e.g. minimum length, OID validation)
+tested separately.
+
+#### Serialization Contract
+
+| Layer | String types | Decimal types | Binary types |
+|---|---|---|---|
+| XML | `IIsoSimpleValue<string>` detected → text content | `IIsoSimpleValue<decimal>` → `decimal.Parse()` → ctor | `IIsoSimpleValue<byte[]>` → Base64 decode → ctor |
+| JSON | `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<T>))]` on class | Same converter, generic over T | Same converter |
+| Error | `Iso20022FormatException` from ctor → wrapped as `JsonException` / `InvalidOperationException` | ← same | ← same |
+
+#### Contract Test Registration
+
+Every `IIsoSimpleValue<T>` type must have an entry in the contract test data source in
+`Codesets/SimpleValueContractTests.cs`. The test verifies: valid construction, invalid
+construction throws `Iso20022FormatException`, `TryCreate` both paths, struct/struct equality,
+struct/value equality, `ToString`, JSON round-trip, XML round-trip via the serializer.
+
+Adding a new primitive = one new entry in the data dictionary. A meta-test fails if any
+`IIsoSimpleValue<T>` type in the assembly is missing from the dictionary.
+
+Special types with additional behavioral requirements (binary, signatures) still participate
+in the base contract test and add their own test methods alongside it.
+
+#### Before writing or modifying any primitive type, verify
+
+1. Is it an `enum` with zero members? → Must be converted to `readonly struct`.
+2. Does the struct implement `IIsoSimpleValue<T>` (or `IIsoExternalCode`)? → Required.
+3. Does the constructor validate and throw `Iso20022FormatException` on failure? → Required.
+4. Are all six equality operators present (struct/struct and struct/T)? → Required.
+5. Is there an entry in the contract test data source? → Required.
+
 ### Key Interfaces (Framework/)
 
 - `IOuterRecord` - All top-level messages
 - `IOuterDocument` - XML document wrapper
 - `IIsoXmlSerializable` - Serialization contract
+- `IIsoSimpleValue<T>` - All ISO primitive value wrappers (string, decimal, byte[], Uri)
+- `IIsoExternalCode` - Semantic sub-interface of `IIsoSimpleValue<string>` for external registry types
+- `Iso20022FormatException` - Thrown when a value violates an ISO format constraint
 
 ## Multi-Package Repository Strategy
 

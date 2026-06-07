@@ -387,6 +387,10 @@ public static class Iso20022XmlSerializer
     private static string FormatLeaf(object value) =>
         value switch
         {
+            // IIsoSimpleValue<T>: extract the inner value and format it recursively.
+            // IIsoExternalCode (a sub-interface) is covered here too.
+            _ when GetSimpleValueType(value.GetType()) is not null
+                => FormatLeaf(value.GetType().GetProperty("Value")!.GetValue(value)!),
             string s => s,
             DateTime dt => dt.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture),
             DateOnly d => d.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
@@ -422,6 +426,21 @@ public static class Iso20022XmlSerializer
             return Convert.FromBase64String(text);
         if (type.IsEnum)
             return ParseEnum(type, text);
+        var simpleValueType = GetSimpleValueType(type);
+        if (simpleValueType is not null)
+        {
+            // Parse text → T, then construct the struct (constructor validates ISO constraints).
+            var innerValue = ParseLeaf(simpleValueType, text);
+            try
+            {
+                return Activator.CreateInstance(type, innerValue)!;
+            }
+            catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is Iso20022FormatException fmt)
+            {
+                throw new InvalidOperationException(
+                    $"XML deserialization failed: {fmt.Message}", fmt);
+            }
+        }
         return text;
     }
 
@@ -507,7 +526,18 @@ public static class Iso20022XmlSerializer
         || t == typeof(ushort)
         || t == typeof(byte)
         || t == typeof(byte[])
-        || t.IsEnum;
+        || t.IsEnum
+        || GetSimpleValueType(t) is not null;
+
+    // Returns the T in IIsoSimpleValue<T> if the type implements it, otherwise null.
+    // Result is cached implicitly via PropMeta.CoreIsLeaf computed at startup.
+    private static Type? GetSimpleValueType(Type t)
+    {
+        foreach (var iface in t.GetInterfaces())
+            if (iface.IsGenericType && iface.GetGenericTypeDefinition() == typeof(IIsoSimpleValue<>))
+                return iface.GetGenericArguments()[0];
+        return null;
+    }
 
     private static bool TryGetCollectionElement(Type t, out Type? elementType)
     {
