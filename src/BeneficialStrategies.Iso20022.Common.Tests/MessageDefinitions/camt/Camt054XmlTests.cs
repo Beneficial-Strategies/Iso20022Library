@@ -35,7 +35,7 @@ public class Camt054XmlTests
 
     private const string ExpectedMsgId = "BNPAFRPP/240315/CAM054/00001";
     private const string ExpectedMsgRcptName = "GlobalSupply S.A.S.";
-    private const string ExpectedNtfctnId = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-001";
+    private const string ExpectedNtfctnId = "GLOBALSUPPLY-NTFN-20240315-001"; // shortened to comply with Max35Text
     private const string ExpectedEntry1Uetr = "97ed4827-7b6f-4491-a06f-b548d5a7512d";
     private const string ExpectedEntry2Uetr = "b1c2d3e4-f5a6-7890-abcd-ef1234567890";
 

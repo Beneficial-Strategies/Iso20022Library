@@ -29,32 +29,7 @@ public sealed class PaymentTransaction137Validator : AbstractValidator<PaymentTr
 
     public PaymentTransaction137Validator()
     {
-        // ── Max35Text fields (optional, MinLength=1, MaxLength=35 when present) ──────
-
-        RuleFor(x => x.CancellationIdentification)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.CancellationIdentification is not null);
-
-        RuleFor(x => x.OriginalInstructionIdentification)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.OriginalInstructionIdentification is not null);
-
-        RuleFor(x => x.OriginalEndToEndIdentification)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.OriginalEndToEndIdentification is not null);
-
-        RuleFor(x => x.OriginalTransactionIdentification)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.OriginalTransactionIdentification is not null);
-
-        RuleFor(x => x.OriginalClearingSystemReference)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.OriginalClearingSystemReference is not null);
+        // Max35Text optional fields: length [1..35] enforced by Max35Text constructor — no FV rules needed.
 
         // ── OriginalUETR: UUIDv4Identifier (RFC 4122) ───────────────────────────────
         RuleFor(x => x.OriginalUETR)

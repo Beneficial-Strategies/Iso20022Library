@@ -175,6 +175,89 @@ public abstract class SimpleValueStringContractTests<TStruct>
     }
 }
 
+// ── Max*Text length-constrained contract ──────────────────────────────────────
+
+/// <summary>
+/// Contract tests for ISO 20022 plain text types (Max*Text family): minLength and maxLength
+/// enforced, any Unicode character permitted, no pattern restriction.
+/// </summary>
+/// <remarks>
+/// Concrete subclasses need only override <see cref="MaxLength"/> (and <see cref="MinLength"/>
+/// for the rare type where it differs from 1, e.g. <c>Max30Text</c> where minLength is 0).
+/// <para>
+/// Valid and invalid samples are derived automatically — no per-type boilerplate needed.
+/// </para>
+/// </remarks>
+public abstract class SimpleValueMaxTextContractTests<TStruct>
+    : SimpleValueStringContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    /// <summary>ISO 20022 minLength for this type. Override when it is not 1.</summary>
+    protected virtual int MinLength => 1;
+
+    /// <summary>ISO 20022 maxLength for this type.</summary>
+    protected abstract int MaxLength { get; }
+
+    // Base class samples are derived from the length constraints.
+    protected override string ValidSample   => new string('A', MinLength == 0 ? 1 : MinLength);
+    protected override string InvalidSample => new string('X', MaxLength + 1);
+
+    // ── Boundary tests ─────────────────────────────────────────────────────────
+
+    [Fact]
+    public void ExactMaxLength_IsAccepted()
+    {
+        var value = new string('Z', MaxLength);
+        var instance = Activator.CreateInstance(typeof(TStruct), value);
+        Assert.NotNull(instance);
+    }
+
+    [Fact]
+    public void OneOverMaxLength_ThrowsTooLong()
+    {
+        var over = new string('Z', MaxLength + 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), over));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.TooLong, fmt.Violation);
+    }
+
+    [Fact]
+    public void Null_ThrowsArgumentNullException()
+    {
+        Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), (string)null!));
+    }
+
+    [Fact]
+    public void Empty_Behaviour_MatchesMinLength()
+    {
+        if (MinLength > 0)
+        {
+            // Empty is invalid — must throw TooShort.
+            var ex = Assert.Throws<TargetInvocationException>(
+                () => Activator.CreateInstance(typeof(TStruct), string.Empty));
+            var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+            Assert.Equal(Iso20022FormatViolation.TooShort, fmt.Violation);
+        }
+        else
+        {
+            // minLength == 0: empty string is valid.
+            var instance = Activator.CreateInstance(typeof(TStruct), string.Empty);
+            Assert.NotNull(instance);
+        }
+    }
+
+    [Fact]
+    public void TooLong_ExceptionMessage_ContainsActualLength()
+    {
+        var over = new string('Z', MaxLength + 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), over));
+        Assert.Contains((MaxLength + 1).ToString(), ex.InnerException!.Message);
+    }
+}
+
 // ── External codeset contract ──────────────────────────────────────────────────
 
 /// <summary>

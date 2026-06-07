@@ -21,12 +21,8 @@ public sealed class CaseAssignment5Validator : AbstractValidator<CaseAssignment5
     {
         RuleFor(x => x.Identification)
             .NotEmpty()
-            .WithMessage("CaseAssignment5.Identification is required (Max35Text, 1..1).")
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .WithMessage(
-                "CaseAssignment5.Identification must not exceed 35 characters (Max35Text)."
-            );
+            .WithMessage("CaseAssignment5.Identification is required (Max35Text, 1..1).");
+            // Length [1..35] enforced by Max35Text constructor.
 
         RuleFor(x => x.Assigner)
             .NotNull()

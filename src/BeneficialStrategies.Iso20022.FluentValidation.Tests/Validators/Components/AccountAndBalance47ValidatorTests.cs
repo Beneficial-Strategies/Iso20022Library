@@ -32,7 +32,8 @@ public class AccountAndBalance47ValidatorTests
         {
             Identification = id,
             Issuer = issuer,
-            SchemeName = schemeName
+            // Explicit null guard: the implicit string→Max35Text operator throws on null.
+            SchemeName = schemeName is null ? null : (Max35Text?)new Max35Text(schemeName)
         };
 
     private static SfkpgPlace28.Country PlaceCountry(string code) => new() { Value = code };
@@ -166,10 +167,11 @@ public class AccountAndBalance47ValidatorTests
     // ── SafekeepingAccount: Max35Text (0..1) ─────────────────────────────────────
 
     [Fact]
-    public void SafekeepingAccount_TooLong_HasValidationError()
+    public void SafekeepingAccount_TooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { SafekeepingAccount = new string('X', 36) };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.SafekeepingAccount);
+        // Max35Text constructor rejects invalid values — they never reach the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = ValidMessage() with { SafekeepingAccount = new string('X', 36) });
     }
 
     [Fact]
@@ -180,20 +182,19 @@ public class AccountAndBalance47ValidatorTests
     }
 
     [Fact]
-    public void SafekeepingAccount_EmptyString_HasValidationError()
+    public void SafekeepingAccount_EmptyString_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { SafekeepingAccount = "" };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.SafekeepingAccount);
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = ValidMessage() with { SafekeepingAccount = "" });
     }
 
     // ── BlockChainAddressOrWallet: Max140Text (0..1) ──────────────────────────────
 
     [Fact]
-    public void BlockChainAddress_TooLong_HasValidationError()
+    public void BlockChainAddress_TooLong_ThrowsAtConstruction()
     {
-        // Use BlockChain-only instance so rule 2/3 don't also fire.
-        var msg = new AccountAndBalance47 { BlockChainAddressOrWallet = new string('a', 141) };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.BlockChainAddressOrWallet);
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new AccountAndBalance47 { BlockChainAddressOrWallet = new string('a', 141) });
     }
 
     [Fact]
@@ -253,46 +254,27 @@ public class AccountAndBalance47ValidatorTests
     }
 
     [Fact]
-    public void AccountOwner_ProprietaryId_EmptyIdentification_HasValidationError()
+    public void AccountOwner_ProprietaryId_EmptyIdentification_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerPropId(id: "") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification
-            );
+        Assert.Throws<Iso20022FormatException>(() => OwnerPropId(id: ""));
     }
 
     [Fact]
-    public void AccountOwner_ProprietaryId_IdentificationTooLong_HasValidationError()
+    public void AccountOwner_ProprietaryId_IdentificationTooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerPropId(id: new string('X', 36)) };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification
-            );
+        Assert.Throws<Iso20022FormatException>(() => OwnerPropId(id: new string('X', 36)));
     }
 
     [Fact]
-    public void AccountOwner_ProprietaryId_IssuerTooLong_HasValidationError()
+    public void AccountOwner_ProprietaryId_IssuerTooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerPropId(issuer: new string('X', 36)) };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer
-            );
+        Assert.Throws<Iso20022FormatException>(() => OwnerPropId(issuer: new string('X', 36)));
     }
 
     [Fact]
-    public void AccountOwner_ProprietaryId_SchemeNameTooLong_HasValidationError()
+    public void AccountOwner_ProprietaryId_SchemeNameTooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            AccountOwner = OwnerPropId(schemeName: new string('X', 36)),
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
-            );
+        Assert.Throws<Iso20022FormatException>(() => OwnerPropId(schemeName: new string('X', 36)));
     }
 
     [Fact]

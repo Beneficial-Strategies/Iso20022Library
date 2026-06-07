@@ -110,7 +110,7 @@ public class Camt054ExamplesTests
             GroupHeader = CreateGroupHeader(),
             Notification = new AccountNotification21
             {
-                Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-001",
+                Identification = "GLOBALSUPPLY-NTFN-20240315-001",
                 Account = CreateNotificationAccount(),
                 Entry = [CreateIncomingCreditEntry()],
             },
@@ -213,7 +213,7 @@ public class Camt054ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM054/00002"),
             Notification = new AccountNotification21
             {
-                Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-INST",
+                Identification = "GLOBALSUPPLY-NTFN-20240315-INST",
                 Account = CreateNotificationAccount(),
                 Entry = [CreateIncomingCreditEntry() with
                 {
@@ -240,7 +240,7 @@ public class Camt054ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM054/00003"),
             Notification = new AccountNotification21
             {
-                Identification = "BNPAFRPP-GLOBALSUPPLY-NTFN-20240315-PROP",
+                Identification = "GLOBALSUPPLY-NTFN-20240315-PROP",
                 Account = CreateNotificationAccount(),
                 Entry = [CreateIncomingCreditEntry() with
                 {

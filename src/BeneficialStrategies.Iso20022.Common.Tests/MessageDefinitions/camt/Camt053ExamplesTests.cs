@@ -207,7 +207,7 @@ public class Camt053ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM053/00002"),
             Statement = new AccountStatement12
             {
-                Identification = "BNPAFRPP-GLOBALSUPPLY-STMT-20240315-INTRADAY",
+                Identification = "GLOBALSUPPLY-STMT-20240315-INTRADAY",
                 Account = new CashAccount41
                 {
                     Identification = new IBAN { Value = "FR7630006000011234567890189" },
@@ -235,7 +235,7 @@ public class Camt053ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM053/00003"),
             Statement = new AccountStatement12
             {
-                Identification = "BNPAFRPP-GLOBALSUPPLY-STMT-20240315-PROP",
+                Identification = "GLOBALSUPPLY-STMT-20240315-PROP",
                 Account = new CashAccount41
                 {
                     Identification = new IBAN { Value = "FR7630006000011234567890189" },

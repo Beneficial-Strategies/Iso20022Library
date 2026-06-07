@@ -26,35 +26,18 @@ public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalG
 {
     public OriginalGroupHeader15Validator()
     {
+        // Length [1..35] enforced by Max35Text constructor for all three Max35Text fields.
         RuleFor(x => x.OriginalMessageIdentification)
             .NotEmpty()
             .WithMessage(
                 "OriginalGroupHeader15.OriginalMessageIdentification is required (Max35Text, 1..1)."
-            )
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .WithMessage(
-                "OriginalGroupHeader15.OriginalMessageIdentification must not exceed 35 characters (Max35Text)."
             );
 
         RuleFor(x => x.OriginalMessageNameIdentification)
             .NotEmpty()
             .WithMessage(
                 "OriginalGroupHeader15.OriginalMessageNameIdentification is required (Max35Text, 1..1)."
-            )
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .WithMessage(
-                "OriginalGroupHeader15.OriginalMessageNameIdentification must not exceed 35 characters (Max35Text)."
             );
-
-        RuleFor(x => x.GroupCancellationIdentification)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .WithMessage(
-                "OriginalGroupHeader15.GroupCancellationIdentification must not exceed 35 characters (Max35Text)."
-            )
-            .When(x => x.GroupCancellationIdentification is not null);
 
         RuleFor(x => x.NumberOfTransactions)
             .Matches(@"^[0-9]{1,15}$")

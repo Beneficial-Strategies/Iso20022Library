@@ -429,7 +429,8 @@ public static class Iso20022XmlSerializer
         var simpleValueType = GetSimpleValueType(type);
         if (simpleValueType is not null)
         {
-            // Parse text → T, then construct the struct (constructor validates ISO constraints).
+            // Parse text → T (e.g. string, decimal), then construct the struct.
+            // The constructor validates ISO constraints and throws Iso20022FormatException on failure.
             var innerValue = ParseLeaf(simpleValueType, text);
             try
             {
@@ -438,7 +439,13 @@ public static class Iso20022XmlSerializer
             catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is Iso20022FormatException fmt)
             {
                 throw new InvalidOperationException(
-                    $"XML deserialization failed: {fmt.Message}", fmt);
+                    $"XML deserialization failed for {type.Name}: {fmt.Message} " +
+                    $"(violation: {fmt.Violation})", fmt);
+            }
+            catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is ArgumentNullException)
+            {
+                throw new InvalidOperationException(
+                    $"XML deserialization produced a null value for non-nullable {type.Name}.", ex);
             }
         }
         return text;

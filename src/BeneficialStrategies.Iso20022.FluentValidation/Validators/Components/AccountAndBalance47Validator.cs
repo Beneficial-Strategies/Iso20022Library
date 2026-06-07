@@ -96,17 +96,8 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
                     + "(SafekeepingAccountOrBlockChainAddress3Rule)."
             );
 
-        // ── SafekeepingAccount: Max35Text (0..1) ─────────────────────────────────
-        RuleFor(x => x.SafekeepingAccount)
-            .MinimumLength(1)
-            .MaximumLength(35)
-            .When(x => x.SafekeepingAccount is not null);
-
-        // ── BlockChainAddressOrWallet: Max140Text (0..1) ─────────────────────────
-        RuleFor(x => x.BlockChainAddressOrWallet)
-            .MinimumLength(1)
-            .MaximumLength(140)
-            .When(x => x.BlockChainAddressOrWallet is not null);
+        // SafekeepingAccount (Max35Text) and BlockChainAddressOrWallet (Max140Text):
+        // length enforced by their respective struct constructors — no FV rules needed.
 
         // ── AccountOwner: PartyIdentification127Choice (0..1) ────────────────────
         // Variant: AnyBIC — value must match AnyBICDec2014Identifier pattern
@@ -128,23 +119,12 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
             x => x.AccountOwner is PartyId127.ProprietaryIdentification,
             () =>
             {
+                // Length [1..35] enforced by Max35Text constructor for all three fields.
                 RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification)
-                    .NotEmpty()
-                    .MinimumLength(1)
-                    .MaximumLength(35);
+                    .NotEmpty();
 
                 RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer)
-                    .NotEmpty()
-                    .MinimumLength(1)
-                    .MaximumLength(35);
-
-                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName)
-                    .MinimumLength(1)
-                    .MaximumLength(35)
-                    .When(x =>
-                        ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
-                            is not null
-                    );
+                    .NotEmpty();
             }
         );
 
@@ -158,14 +138,7 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
                     // Pattern ^[A-Z]{2}$ is enforced by CountryCode constructor — no Matches() needed.
         );
 
-        // Variant: Identification — optional Max35Text narrative description
-        When(
-            x => x.SafekeepingPlace is SfkpgPlace28.Identification id && id.Value is not null,
-            () =>
-                RuleFor(x => ((SfkpgPlace28.Identification)x.SafekeepingPlace!).Value)
-                    .MinimumLength(1)
-                    .MaximumLength(35)
-        );
+        // Variant: Identification — Max35Text length enforced by struct constructor.
 
         // Variant: TypeAndIdentification — Identification must match AnyBICDec2014Identifier
         When(
@@ -182,14 +155,7 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
                     )
         );
 
-        // Variant: Proprietary — Identification optional Max35Text
-        When(
-            x => x.SafekeepingPlace is SfkpgPlace28.Proprietary p && p.Identification is not null,
-            () =>
-                RuleFor(x => ((SfkpgPlace28.Proprietary)x.SafekeepingPlace!).Identification)
-                    .MinimumLength(1)
-                    .MaximumLength(35)
-        );
+        // Variant: Proprietary — Identification is Max35Text, length enforced by struct constructor.
 
         // ── Balance: CorporateActionBalanceDetails43 (0..1) ──────────────────────
         When(

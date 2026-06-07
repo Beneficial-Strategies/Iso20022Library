@@ -31,12 +31,6 @@ public sealed class DistributionRejectionStatus1Validator
                 "DistributionRejectionStatus1.Reason must contain at least one element (1..∞)."
             );
 
-        RuleFor(x => x.AdditionalInformation)
-            .MinimumLength(1)
-            .MaximumLength(350)
-            .WithMessage(
-                "DistributionRejectionStatus1.AdditionalInformation must not exceed 350 characters (Max350Text)."
-            )
-            .When(x => x.AdditionalInformation is not null);
+        // AdditionalInformation: length [1..350] enforced by Max350Text constructor.
     }
 }

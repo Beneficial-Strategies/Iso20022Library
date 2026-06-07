@@ -137,23 +137,18 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     // ── CaseAssignment5: Identification ───────────────────────────────────────
 
     [Fact]
-    public void Assignment_Identification_Empty_HasValidationError()
+    public void Assignment_Identification_Empty_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            Assignment = ValidAssignment() with { Identification = "" },
-        };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
+        // Max35Text constructor rejects empty — never reaches the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = ValidAssignment() with { Identification = "" });
     }
 
     [Fact]
-    public void Assignment_Identification_TooLong_HasValidationError()
+    public void Assignment_Identification_TooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            Assignment = ValidAssignment() with { Identification = new string('A', 36) },
-        };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = ValidAssignment() with { Identification = new string('A', 36) });
     }
 
     [Fact]
@@ -256,20 +251,11 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     // ── PaymentTransaction137: OriginalEndToEndIdentification length ──────────
 
     [Fact]
-    public void TransactionInfo_EndToEndId_TooLong_HasValidationError()
+    public void TransactionInfo_EndToEndId_TooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalEndToEndIdentification = new string('X', 36),
-                }],
-            },
-        };
-        var result3 = _sut.Validate(msg);
-        Assert.Contains(result3.Errors, e => e.PropertyName.EndsWith(".OriginalEndToEndIdentification"));
+        // Max35Text constructor rejects TooLong — never reaches the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new PaymentTransaction137 { OriginalEndToEndIdentification = new string('X', 36) });
     }
 
     // ── UnderlyingTransaction28: empty underlying ─────────────────────────────
@@ -365,24 +351,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     // ── OriginalGroupHeader15: required fields ────────────────────────────────
 
     [Fact]
-    public void GroupHeader_MissingOriginalMessageId_HasValidationError()
+    public void GroupHeader_MissingOriginalMessageId_ThrowsAtConstruction()
     {
-        var msg = new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            Underlying = new UnderlyingTransaction28
+        // Max35Text constructor rejects empty strings (TooShort) — never reaches the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new OriginalGroupHeader15
             {
-                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
-                {
-                    OriginalMessageIdentification = "", // violates required Max35Text
-                    OriginalMessageNameIdentification = "pacs.008.001.11",
-                },
-            },
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                x.Underlying.OriginalGroupInformationAndCancellation!.OriginalMessageIdentification
-            );
+                OriginalMessageIdentification = "", // violates Max35Text minLength=1
+                OriginalMessageNameIdentification = "pacs.008.001.11",
+            });
     }
 
     // ── UnderlyingTransaction28: GroupCancellationAndReasonRule ──────────────────

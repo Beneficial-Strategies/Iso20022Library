@@ -140,7 +140,7 @@ public class Camt056ExamplesTests
                             Value = ExternalCancellationReason1Code.DuplicatePayment
                         },
                         AdditionalInformation =
-                            ["Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent at 08:30 UTC; duplicate submitted at 08:31 UTC."],
+                            ["Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent 08:30 UTC."],
                     }],
                 }],
             },
@@ -170,7 +170,7 @@ public class Camt056ExamplesTests
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = [CreateTransactionCancellation(
-                    new Proprietary { Value = "DEUTDE-AML-FREEZE-REF-2024-03-16-0042", }
+                    new Proprietary { Value = "AML-FREEZE-REF-2024-03-16-0042", }
                 ) with
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00003",
