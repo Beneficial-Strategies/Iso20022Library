@@ -180,25 +180,18 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     // ── ControlData1: NumberOfTransactions pattern ────────────────────────────
 
     [Fact]
-    public void ControlData_NumberOfTransactions_AlphaChars_HasValidationError()
+    public void ControlData_NumberOfTransactions_AlphaChars_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            ControlData = new ControlData1 { NumberOfTransactions = "12X" },
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.ControlData!.NumberOfTransactions);
+        // Max15NumericText enforces [0-9]{1,15} — invalid values cannot reach the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new ControlData1 { NumberOfTransactions = "12X" });
     }
 
     [Fact]
-    public void ControlData_NumberOfTransactions_TooManyDigits_HasValidationError()
+    public void ControlData_NumberOfTransactions_TooManyDigits_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            ControlData = new ControlData1 { NumberOfTransactions = "1234567890123456" }, // 16 digits
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.ControlData!.NumberOfTransactions);
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new ControlData1 { NumberOfTransactions = "1234567890123456" }); // 16 digits
     }
 
     [Fact]

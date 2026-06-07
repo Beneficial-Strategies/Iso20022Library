@@ -121,9 +121,18 @@ public abstract class SimpleValueContractTests<TStruct, TValue>
 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
+    // Selects the TryCreate(TValue, out TStruct) overload specifically, handling types that
+    // also expose TryCreate(byte, out TStruct) or other additional overloads.
     private static MethodInfo GetTryCreate() =>
-        typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static)
-        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a public static TryCreate method.");
+        typeof(TStruct)
+            .GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .FirstOrDefault(m =>
+                m.Name == "TryCreate"
+                && m.GetParameters() is [var p0, var p1]
+                && p0.ParameterType == typeof(TValue)
+                && p1.ParameterType == typeof(TStruct).MakeByRefType())
+        ?? throw new InvalidOperationException(
+            $"{typeof(TStruct).Name} is missing a TryCreate({typeof(TValue).Name}, out {typeof(TStruct).Name}) method.");
 }
 
 /// <summary>
@@ -165,13 +174,80 @@ public abstract class SimpleValueStringContractTests<TStruct>
     public void ImplicitConversion_StructToString_Succeeds()
     {
         var instance = (TStruct)Activator.CreateInstance(typeof(TStruct), ValidSample)!;
-        var op = typeof(TStruct).GetMethod(
-            "op_Implicit",
-            BindingFlags.Public | BindingFlags.Static,
-            [typeof(TStruct)]);
+        // Filter by return type to disambiguate types with multiple op_Implicit overloads (e.g. Exact1HexBinaryText).
+        var op = typeof(TStruct)
+            .GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .FirstOrDefault(m =>
+                m.Name == "op_Implicit"
+                && m.ReturnType == typeof(string)
+                && m.GetParameters() is [var p] && p.ParameterType == typeof(TStruct));
         Assert.NotNull(op); // implicit operator string(TStruct) must exist
         var str = (string)op!.Invoke(null, [instance])!;
         Assert.Equal(ValidSample, str);
+    }
+}
+
+// ── Exact-length any-character contract ───────────────────────────────────────
+
+/// <summary>
+/// Contract base for types that accept any Unicode character at an exact fixed length
+/// (e.g. <c>Exact10Text</c>). Subclasses need only override <see cref="ExactLength"/>.
+/// </summary>
+public abstract class SimpleValueExactTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    protected abstract int ExactLength { get; }
+    protected override int MinLength => ExactLength;
+    protected override int MaxLength => ExactLength;
+}
+
+// ── Numeric-only contract ──────────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 numeric-text types (<c>[0-9]{M,N}</c>).
+/// Adds a test verifying that non-digit characters are rejected with
+/// <see cref="Iso20022FormatViolation.InvalidCharacter"/>.
+/// </summary>
+public abstract class SimpleValueNumericTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    // Numeric types require digit pad characters for length tests.
+    protected override char ValidPadChar => '1';
+
+    [Fact]
+    public void NonDigit_ThrowsInvalidCharacter()
+    {
+        // A string of valid length but containing letters — should reject with InvalidCharacter.
+        var invalidChars = new string('A', MaxLength);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), invalidChars));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.InvalidCharacter, fmt.Violation);
+    }
+}
+
+// ── Alphanumeric-only contract ─────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 alphanumeric-text types (<c>[a-zA-Z0-9]{M,N}</c>).
+/// Adds a test verifying that special characters are rejected with
+/// <see cref="Iso20022FormatViolation.InvalidCharacter"/>.
+/// </summary>
+public abstract class SimpleValueAlphaNumericTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    [Fact]
+    public void SpecialChar_ThrowsInvalidCharacter()
+    {
+        // A string of valid length but containing only special characters.
+        var invalidChars = new string('!', MaxLength);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), invalidChars));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.InvalidCharacter, fmt.Violation);
     }
 }
 
@@ -198,24 +274,30 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     /// <summary>ISO 20022 maxLength for this type.</summary>
     protected abstract int MaxLength { get; }
 
+    /// <summary>
+    /// A character that is always valid for this type, used to build pad strings in length tests.
+    /// Override in restricted subtypes (e.g. numeric types should return '1', not 'A').
+    /// </summary>
+    protected virtual char ValidPadChar => 'A';
+
     // Base class samples are derived from the length constraints.
-    protected override string ValidSample   => new string('A', MinLength == 0 ? 1 : MinLength);
-    protected override string InvalidSample => new string('X', MaxLength + 1);
+    protected override string ValidSample   => new string(ValidPadChar, MinLength == 0 ? 1 : MinLength);
+    protected override string InvalidSample => new string(ValidPadChar, MaxLength + 1);
 
     // ── Boundary tests ─────────────────────────────────────────────────────────
 
     [Fact]
-    public void ExactMaxLength_IsAccepted()
+    public virtual void ExactMaxLength_IsAccepted()
     {
-        var value = new string('Z', MaxLength);
+        var value = new string(ValidPadChar, MaxLength);
         var instance = Activator.CreateInstance(typeof(TStruct), value);
         Assert.NotNull(instance);
     }
 
     [Fact]
-    public void OneOverMaxLength_ThrowsTooLong()
+    public virtual void OneOverMaxLength_ThrowsTooLong()
     {
-        var over = new string('Z', MaxLength + 1);
+        var over = new string(ValidPadChar, MaxLength + 1);
         var ex = Assert.Throws<TargetInvocationException>(
             () => Activator.CreateInstance(typeof(TStruct), over));
         var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
@@ -225,8 +307,11 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     [Fact]
     public void Null_ThrowsArgumentNullException()
     {
-        Assert.Throws<TargetInvocationException>(
-            () => Activator.CreateInstance(typeof(TStruct), (string)null!));
+        // Use explicit constructor lookup to avoid AmbiguousMatchException on types with
+        // multiple constructors (e.g. Exact1HexBinaryText has both (string) and (byte)).
+        var ctor = typeof(TStruct).GetConstructor(new[] { typeof(string) })
+            ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+        Assert.Throws<TargetInvocationException>(() => ctor.Invoke(new object?[] { null }));
     }
 
     [Fact]
@@ -251,7 +336,7 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     [Fact]
     public void TooLong_ExceptionMessage_ContainsActualLength()
     {
-        var over = new string('Z', MaxLength + 1);
+        var over = new string(ValidPadChar, MaxLength + 1);
         var ex = Assert.Throws<TargetInvocationException>(
             () => Activator.CreateInstance(typeof(TStruct), over));
         Assert.Contains((MaxLength + 1).ToString(), ex.InnerException!.Message);

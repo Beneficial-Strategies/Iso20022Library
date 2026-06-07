@@ -39,12 +39,7 @@ public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalG
                 "OriginalGroupHeader15.OriginalMessageNameIdentification is required (Max35Text, 1..1)."
             );
 
-        RuleFor(x => x.NumberOfTransactions)
-            .Matches(@"^[0-9]{1,15}$")
-            .WithMessage(
-                "OriginalGroupHeader15.NumberOfTransactions must be a numeric string of 1–15 digits (Max15NumericText)."
-            )
-            .When(x => x.NumberOfTransactions is not null);
+        // NumberOfTransactions: pattern [0-9]{1,15} enforced by Max15NumericText constructor.
 
         When(
             x => x.Case is not null,
