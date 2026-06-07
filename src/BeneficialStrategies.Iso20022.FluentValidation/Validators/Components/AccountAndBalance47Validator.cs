@@ -155,11 +155,7 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
             () =>
                 RuleFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value)
                     .NotEmpty()
-                    .Matches(CountryRegex)
-                    .WithMessage(
-                        "SafekeepingPlace.Country must be a valid ISO 3166 Alpha-2 country code "
-                            + "(two uppercase letters, e.g. DE, US)."
-                    )
+                    // Pattern ^[A-Z]{2}$ is enforced by CountryCode constructor — no Matches() needed.
         );
 
         // Variant: Identification — optional Max35Text narrative description

@@ -318,19 +318,17 @@ public class AccountAndBalance47ValidatorTests
     }
 
     [Fact]
-    public void SafekeepingPlace_Country_LowercaseCode_HasValidationError()
+    public void SafekeepingPlace_Country_LowercaseCode_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { SafekeepingPlace = PlaceCountry("de") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
+        // CountryCode enforces ^[A-Z]{2}$ at construction — invalid values never reach the validator.
+        Assert.Throws<Iso20022FormatException>(() => PlaceCountry("de"));
     }
 
     [Fact]
-    public void SafekeepingPlace_Country_ThreeLetters_HasValidationError()
+    public void SafekeepingPlace_Country_ThreeLetters_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { SafekeepingPlace = PlaceCountry("DEU") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
+        // CountryCode enforces ^[A-Z]{2}$ at construction — invalid values never reach the validator.
+        Assert.Throws<Iso20022FormatException>(() => PlaceCountry("DEU"));
     }
 
     // ── SafekeepingPlace: TypeAndIdentification variant ───────────────────────────
