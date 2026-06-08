@@ -25,7 +25,7 @@ public record VoteMethods4
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = [];
+    public SimpleValueList<string> VoteThroughNetwork { get; init; } = [];
 
     /// <summary>
     /// Address where the voting ballot can be sent.
@@ -54,5 +54,5 @@ public record VoteMethods4
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteByTelephone { get; init; } = [];
+    public SimpleValueList<string> VoteByTelephone { get; init; } = [];
 }

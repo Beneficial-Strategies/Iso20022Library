@@ -42,6 +42,6 @@ public record UpdatedAdditionalInformation5
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<string> AdditionalInformation { get; init; } = [];
     // ID for the above is _XWm_Ndp-Ed-ak6NoX_4Aeg_-81650276
 }

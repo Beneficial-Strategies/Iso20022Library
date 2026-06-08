@@ -112,6 +112,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice
         [MinLength(0)]
         [MaxLength(7)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public SimpleValueList<System.String> AddressLine { get; init; } = [];
+        public SimpleValueList<string> AddressLine { get; init; } = [];
     }
 }

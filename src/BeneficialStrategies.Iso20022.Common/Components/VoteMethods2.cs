@@ -25,7 +25,7 @@ public record VoteMethods2
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = [];
+    public SimpleValueList<string> VoteThroughNetwork { get; init; } = [];
 
     /// <summary>
     /// Specifies the address where voting ballot can be sent.
@@ -56,5 +56,5 @@ public record VoteMethods2
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteByTelephone { get; init; } = [];
+    public SimpleValueList<string> VoteByTelephone { get; init; } = [];
 }

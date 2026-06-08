@@ -23,7 +23,7 @@ public record ClearedProduct1
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public SimpleValueList<System.String> TradingVenue { get; init; } = [];
+    public SimpleValueList<string> TradingVenue { get; init; } = [];
 
     // ID for the above is __o5ZsLVNEeadLcJesEbkTQ
 

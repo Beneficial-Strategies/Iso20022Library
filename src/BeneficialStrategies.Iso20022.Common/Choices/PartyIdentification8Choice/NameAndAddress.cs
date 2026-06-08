@@ -44,6 +44,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification8Choice
         [MinLength(0)]
         [MaxLength(10)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = [];
+        public SimpleValueList<string> AlternativeIdentifier { get; init; } = [];
     }
 }

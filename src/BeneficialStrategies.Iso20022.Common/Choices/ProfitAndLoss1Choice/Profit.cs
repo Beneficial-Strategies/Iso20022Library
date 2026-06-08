@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice
         [IsoId("_YX4O9Np-Ed-ak6NoX_4Aeg_-184934550_Currency")]
         [DisplayName("Active Currency And 13 Decimal Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required System.String Currency { get; init; }
+        public required string Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.
@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice
         [IsoId("_YX4O9Np-Ed-ak6NoX_4Aeg_-184934550_Amount")]
         [DisplayName("Active Currency And 13 Decimal Amount _ Amount")]
         [IsoXmlTag("Amount")]
-        public required System.Decimal Amount { get; init; }
+        public required decimal Amount { get; init; }
     }
 }

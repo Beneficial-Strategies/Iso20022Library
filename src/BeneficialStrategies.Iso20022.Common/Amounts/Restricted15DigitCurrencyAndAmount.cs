@@ -17,7 +17,7 @@ public record Restricted15DigitCurrencyAndAmount
     [IsoId("_hldkIFmsEea0TrLY-ZieOg_Currency")]
     [DisplayName("Restricted 15 Digit Currency And Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record Restricted15DigitCurrencyAndAmount
     [IsoId("_hldkIFmsEea0TrLY-ZieOg_Amount")]
     [DisplayName("Restricted 15 Digit Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

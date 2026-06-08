@@ -51,5 +51,5 @@ public record UndertakingConfirmation1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Confirmation { get; init; } = [];
+    public SimpleValueList<string> Confirmation { get; init; } = [];
 }

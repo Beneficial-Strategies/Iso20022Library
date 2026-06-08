@@ -22,12 +22,12 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat21Choice
         [IsoId("_WN5Dptp-Ed-ak6NoX_4Aeg_-154812387_Currency")]
         [DisplayName("Restricted FIN Active Currency And 13 Decimal Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required System.String Currency { get; init; }
+        public required string Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.
         /// </summary>
         [IsoXmlTag("Amount")]
-        public required System.Decimal Value { get; init; }
+        public required decimal Value { get; init; }
     }
 }

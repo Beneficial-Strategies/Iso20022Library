@@ -33,5 +33,5 @@ public record Narrative1
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [MinLength(1)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Text { get; init; } = [];
+    public SimpleValueList<string> Text { get; init; } = [];
 }

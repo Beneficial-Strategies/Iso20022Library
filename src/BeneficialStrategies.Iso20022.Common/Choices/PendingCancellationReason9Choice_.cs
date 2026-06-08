@@ -1,8 +1,8 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices.PendingCancellationReason9Choice;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using BeneficialStrategies.Iso20022.Choices.PendingCancellationReason9Choice;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {

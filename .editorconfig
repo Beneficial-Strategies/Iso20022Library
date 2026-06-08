@@ -2,6 +2,10 @@
 # Modeled after ASP.NET Core / dotnet/runtime conventions.
 root = true
 
+# ── Generated / excluded files ───────────────────────────────────────────────
+[**/GlobalUsings.cs]
+generated_code = true
+
 # ── All files ────────────────────────────────────────────────────────────────
 [*]
 indent_style             = space

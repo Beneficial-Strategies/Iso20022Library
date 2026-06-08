@@ -31,7 +31,7 @@ public record References6
     [DisplayName("Rejection Reason")]
     [IsoXmlTag("RjctnRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    public SimpleValueList<System.String> RejectionReason { get; init; } = [];
+    public SimpleValueList<string> RejectionReason { get; init; } = [];
 
     // ID for the above is _QoQ34tp-Ed-ak6NoX_4Aeg_1011680219
 

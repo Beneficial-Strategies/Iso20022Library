@@ -53,7 +53,7 @@ public record OtherAsset1
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> OtherIdentification { get; init; } = [];
+    public SimpleValueList<string> OtherIdentification { get; init; } = [];
 
     /// <summary>
     /// Additional information about the other asset.

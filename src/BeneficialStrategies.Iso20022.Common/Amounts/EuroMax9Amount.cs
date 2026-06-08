@@ -17,7 +17,7 @@ public record EuroMax9Amount
     [IsoId("_VwiZQtp-Ed-ak6NoX_4Aeg_-1873420126_Currency")]
     [DisplayName("Euro Max 9 Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record EuroMax9Amount
     [IsoId("_VwiZQtp-Ed-ak6NoX_4Aeg_-1873420126_Amount")]
     [DisplayName("Euro Max 9 Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

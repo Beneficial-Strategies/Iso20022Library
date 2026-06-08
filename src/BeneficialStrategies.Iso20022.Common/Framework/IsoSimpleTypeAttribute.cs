@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Framework
         /// <param name="isoSimpleType">ISO20022 simple type for this member.</param>
         public IsoSimpleTypeAttribute(IsoSimpleType isoSimpleType)
         {
-            this.SimpleType = isoSimpleType;
+            SimpleType = isoSimpleType;
         }
     }
 
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Framework
         /// <param name="xmlTag">ISO20022 xml element name used for this member.</param>
         public IsoXmlTagAttribute(string xmlTag)
         {
-            this.XmlTag = xmlTag;
+            XmlTag = xmlTag;
         }
     }
 }

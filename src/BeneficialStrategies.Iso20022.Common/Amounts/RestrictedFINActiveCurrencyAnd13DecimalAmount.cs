@@ -17,7 +17,7 @@ public record RestrictedFINActiveCurrencyAnd13DecimalAmount
     [IsoId("_WN5Dptp-Ed-ak6NoX_4Aeg_-154812387_Currency")]
     [DisplayName("Restricted FIN Active Currency And 13 Decimal Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record RestrictedFINActiveCurrencyAnd13DecimalAmount
     [IsoId("_WN5Dptp-Ed-ak6NoX_4Aeg_-154812387_Amount")]
     [DisplayName("Restricted FIN Active Currency And 13 Decimal Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

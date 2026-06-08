@@ -17,7 +17,7 @@ public record RestrictedFINImpliedCurrencyAndAmount
     [IsoId("_XZJV1Np-Ed-ak6NoX_4Aeg_681057429_Currency")]
     [DisplayName("Restricted FIN Implied Currency And Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record RestrictedFINImpliedCurrencyAndAmount
     [IsoId("_XZJV1Np-Ed-ak6NoX_4Aeg_681057429_Amount")]
     [DisplayName("Restricted FIN Implied Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

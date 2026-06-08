@@ -35,5 +35,5 @@ public record MailAddress1
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> EmailAddress { get; init; } = [];
+    public SimpleValueList<string> EmailAddress { get; init; } = [];
 }

@@ -31,7 +31,7 @@ public record TransportByRail3
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> PlaceOfDelivery { get; init; } = [];
+    public SimpleValueList<string> PlaceOfDelivery { get; init; } = [];
 
     // ID for the above is _SuFU69p-Ed-ak6NoX_4Aeg_-1718113995
 

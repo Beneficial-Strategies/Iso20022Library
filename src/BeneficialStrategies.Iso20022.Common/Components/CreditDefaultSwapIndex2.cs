@@ -43,7 +43,7 @@ public record CreditDefaultSwapIndex2
     [IsoSimpleType(IsoSimpleType.RestrictedMonthExact2Number)]
     [MinLength(0)]
     [MaxLength(12)]
-    public SimpleValueList<System.UInt64> RollMonth { get; init; } = [];
+    public SimpleValueList<ulong> RollMonth { get; init; } = [];
 
     /// <summary>
     /// To be populated in the case of a CDS Index or a derivative CDS Index with the next roll date of the index as established by the index provider.

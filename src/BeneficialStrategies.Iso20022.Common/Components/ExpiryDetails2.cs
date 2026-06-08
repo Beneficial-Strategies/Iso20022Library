@@ -33,5 +33,5 @@ public record ExpiryDetails2
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalExpiryInformation { get; init; } = [];
+    public SimpleValueList<string> AdditionalExpiryInformation { get; init; } = [];
 }

@@ -41,5 +41,5 @@ public record Location1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Text { get; init; } = [];
+    public SimpleValueList<string> Text { get; init; } = [];
 }

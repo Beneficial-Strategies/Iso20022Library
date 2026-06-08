@@ -47,7 +47,7 @@ public record References3
     [DisplayName("Request Reason")]
     [IsoXmlTag("ReqRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> RequestReason { get; init; } = [];
+    public SimpleValueList<string> RequestReason { get; init; } = [];
 
     // ID for the above is _QoHt9tp-Ed-ak6NoX_4Aeg_-1380111633
 

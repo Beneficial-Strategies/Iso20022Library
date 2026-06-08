@@ -25,6 +25,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio4Choice
         [MinLength(0)]
         [MaxLength(5)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public SimpleValueList<System.String> PortfolioInformation { get; init; } = [];
+        public SimpleValueList<string> PortfolioInformation { get; init; } = [];
     }
 }

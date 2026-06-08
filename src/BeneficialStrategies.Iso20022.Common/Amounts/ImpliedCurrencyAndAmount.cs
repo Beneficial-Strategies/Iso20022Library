@@ -17,7 +17,7 @@ public record ImpliedCurrencyAndAmount
     [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Currency")]
     [DisplayName("Implied Currency And Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record ImpliedCurrencyAndAmount
     [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Amount")]
     [DisplayName("Implied Currency And Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

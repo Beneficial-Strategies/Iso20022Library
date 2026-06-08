@@ -25,7 +25,7 @@ public record PostalAddress18
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = [];
+    public SimpleValueList<string> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -76,7 +76,7 @@ public record PostalAddress18
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> CountrySubDivision { get; init; } = [];
+    public SimpleValueList<string> CountrySubDivision { get; init; } = [];
 
     /// <summary>
     /// Nation with its own government, occupying a particular territory.

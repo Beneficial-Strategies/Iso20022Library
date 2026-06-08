@@ -121,5 +121,5 @@ public record PaymentComplementaryInformation
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<System.String> SenderToReceiverInformation { get; init; } = [];
+    public SimpleValueList<string> SenderToReceiverInformation { get; init; } = [];
 }

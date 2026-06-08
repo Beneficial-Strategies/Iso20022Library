@@ -17,7 +17,7 @@ public record ActiveCurrencyAnd24Amount
     [IsoId("_cuFukzTxEemwtJBLtapBmw_Currency")]
     [DisplayName("Active Currency And 24 Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record ActiveCurrencyAnd24Amount
     [IsoId("_cuFukzTxEemwtJBLtapBmw_Amount")]
     [DisplayName("Active Currency And 24 Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

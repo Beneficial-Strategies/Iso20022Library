@@ -42,6 +42,6 @@ public record UpdatedAdditionalInformation8
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<string> AdditionalInformation { get; init; } = [];
     // ID for the above is _xWSyGUEJEeWVgfuHGaKtRQ
 }

@@ -81,5 +81,5 @@ public record StructuredRemittanceInformation10
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [MinLength(0)]
     [MaxLength(3)]
-    public SimpleValueList<System.String> AdditionalRemittanceInformation { get; init; } = [];
+    public SimpleValueList<string> AdditionalRemittanceInformation { get; init; } = [];
 }

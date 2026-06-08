@@ -36,5 +36,5 @@ public record SingleQualifiedPartyIdentification1
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> RelativeIdentifier { get; init; } = [];
+    public SimpleValueList<string> RelativeIdentifier { get; init; } = [];
 }

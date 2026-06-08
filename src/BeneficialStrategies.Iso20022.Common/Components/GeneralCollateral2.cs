@@ -23,7 +23,7 @@ public record GeneralCollateral2
     [DisplayName("Eligible Financial Instrument Identification")]
     [IsoXmlTag("ElgblFinInstrmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> EligibleFinancialInstrumentIdentification { get; init; } =
+    public SimpleValueList<string> EligibleFinancialInstrumentIdentification { get; init; } =
         [];
     // ID for the above is _OFpSY8huEeadgvwNGwK05w
 }

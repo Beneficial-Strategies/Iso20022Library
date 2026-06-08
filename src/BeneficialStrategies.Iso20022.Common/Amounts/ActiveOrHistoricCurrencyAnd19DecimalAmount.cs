@@ -17,7 +17,7 @@ public record ActiveOrHistoricCurrencyAnd19DecimalAmount
     [IsoId("_A6FBE5jfEeqkLZLH6DK3UQ_Currency")]
     [DisplayName("Active Or Historic Currency And 19 Decimal Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required System.String Currency { get; init; }
+    public required string Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -25,5 +25,5 @@ public record ActiveOrHistoricCurrencyAnd19DecimalAmount
     [IsoId("_A6FBE5jfEeqkLZLH6DK3UQ_Amount")]
     [DisplayName("Active Or Historic Currency And 19 Decimal Amount _ Amount")]
     [IsoXmlTag("Amount")]
-    public required System.Decimal Amount { get; init; }
+    public required decimal Amount { get; init; }
 }

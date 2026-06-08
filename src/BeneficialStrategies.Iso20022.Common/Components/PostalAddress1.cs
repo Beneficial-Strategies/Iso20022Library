@@ -33,7 +33,7 @@ public record PostalAddress1
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = [];
+    public SimpleValueList<string> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Name of a street or thoroughfare.

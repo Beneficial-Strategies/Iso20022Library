@@ -91,7 +91,7 @@ public record UndertakingIssuanceAdviceV01 : IOuterRecord
     [MinLength(0)]
     [MaxLength(5)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public SimpleValueList<System.String> BankToBankInformation { get; init; } = [];
+    public SimpleValueList<string> BankToBankInformation { get; init; } = [];
 
     /// <summary>
     /// Digital signature of the undertaking advice.

@@ -1,12 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using System.Text.Json;
-using BeneficialStrategies.Iso20022.Serialization;
 using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.Serialization;
 
 namespace BeneficialStrategies.Iso20022;
 

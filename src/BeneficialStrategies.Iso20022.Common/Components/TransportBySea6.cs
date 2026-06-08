@@ -31,7 +31,7 @@ public record TransportBySea6
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> PortOfDischarge { get; init; } = [];
+    public SimpleValueList<string> PortOfDischarge { get; init; } = [];
 
     // ID for the above is _W4LZwxriEeOVR9VN6fAMUg
 

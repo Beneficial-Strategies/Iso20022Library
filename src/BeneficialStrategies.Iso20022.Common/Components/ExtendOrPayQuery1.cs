@@ -74,5 +74,5 @@ public record ExtendOrPayQuery1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<string> AdditionalInformation { get; init; } = [];
 }

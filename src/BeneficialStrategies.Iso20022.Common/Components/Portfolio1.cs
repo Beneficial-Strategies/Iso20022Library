@@ -25,5 +25,5 @@ public record Portfolio1
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> PortfolioInformation { get; init; } = [];
+    public SimpleValueList<string> PortfolioInformation { get; init; } = [];
 }

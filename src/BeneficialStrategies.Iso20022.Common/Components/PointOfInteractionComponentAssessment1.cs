@@ -31,7 +31,7 @@ public record PointOfInteractionComponentAssessment1
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> Assigner { get; init; } = [];
+    public SimpleValueList<string> Assigner { get; init; } = [];
 
     // ID for the above is _L3GT4AyREeKa_56Jbsi1RQ
 

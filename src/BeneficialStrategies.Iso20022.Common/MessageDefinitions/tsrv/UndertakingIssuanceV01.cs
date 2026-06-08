@@ -68,7 +68,7 @@ public record UndertakingIssuanceV01 : IOuterRecord
     [MinLength(0)]
     [MaxLength(5)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public SimpleValueList<System.String> BankToBeneficiaryInformation { get; init; } = [];
+    public SimpleValueList<string> BankToBeneficiaryInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information specific to the bank-to-bank communication.
@@ -80,7 +80,7 @@ public record UndertakingIssuanceV01 : IOuterRecord
     [MinLength(0)]
     [MaxLength(5)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public SimpleValueList<System.String> BankToBankInformation { get; init; } = [];
+    public SimpleValueList<string> BankToBankInformation { get; init; } = [];
 
     /// <summary>
     /// Digital signature of the undertaking.

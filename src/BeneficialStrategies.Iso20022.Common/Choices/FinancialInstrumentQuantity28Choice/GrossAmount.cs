@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
         [IsoId("_YYB_9tp-Ed-ak6NoX_4Aeg_-1587763373_Currency")]
         [DisplayName("Active Or Historic Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required System.String Currency { get; init; }
+        public required string Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.
@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
         [IsoId("_YYB_9tp-Ed-ak6NoX_4Aeg_-1587763373_Amount")]
         [DisplayName("Active Or Historic Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]
-        public required System.Decimal Amount { get; init; }
+        public required decimal Amount { get; init; }
     }
 }

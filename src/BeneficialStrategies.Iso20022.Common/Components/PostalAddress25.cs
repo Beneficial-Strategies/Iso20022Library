@@ -171,7 +171,7 @@ public record PostalAddress25
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
     [MaxLength(7)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = [];
+    public SimpleValueList<string> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Specifies the date from which the address is valid.

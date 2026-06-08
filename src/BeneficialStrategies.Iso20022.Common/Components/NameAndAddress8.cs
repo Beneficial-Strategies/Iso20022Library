@@ -43,5 +43,5 @@ public record NameAndAddress8
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(10)]
-    public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = [];
+    public SimpleValueList<string> AlternativeIdentifier { get; init; } = [];
 }

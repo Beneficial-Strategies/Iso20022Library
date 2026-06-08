@@ -31,6 +31,6 @@ public record RegulatoryStipulations1
     [DisplayName("Stipulations")]
     [IsoXmlTag("Stiptns")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    public SimpleValueList<System.String> Stipulations { get; init; } = [];
+    public SimpleValueList<string> Stipulations { get; init; } = [];
     // ID for the above is _Amhp8dokEeC60axPepSq7g_1275857359
 }

@@ -25,7 +25,7 @@ public record PostalAddress7
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = [];
+    public SimpleValueList<string> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
