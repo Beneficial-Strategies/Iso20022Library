@@ -343,6 +343,67 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     }
 }
 
+// ── RestrictedFINX (SWIFT character set X) contracts ──────────────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 RestrictedFINX text types — character set X:
+/// <c>0-9 a-z A-Z / - ? : ( ) . , ' + SPACE</c> (some variants also permit \n \r).
+/// Adds a test verifying that characters outside set X are rejected with
+/// <see cref="Iso20022FormatViolation.InvalidCharacter"/>.
+/// </summary>
+public abstract class SimpleValueRestrictedFINXTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    [Fact]
+    public void NonXChar_ThrowsInvalidCharacter()
+    {
+        // '@' is outside character set X and has valid length.
+        var invalidChars = new string('@', MaxLength);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), invalidChars));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.InvalidCharacter, fmt.Violation);
+    }
+}
+
+/// <summary>
+/// Contract base for RestrictedFINX types that additionally disallow a leading slash,
+/// trailing slash, or double slash (<c>//</c>) within the value.
+/// </summary>
+public abstract class SimpleValueRestrictedFINXSlashTextContractTests<TStruct>
+    : SimpleValueRestrictedFINXTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    [Fact]
+    public void LeadingSlash_ThrowsPatternMismatch()
+    {
+        var value = "/" + new string('A', MaxLength - 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void TrailingSlash_ThrowsPatternMismatch()
+    {
+        var value = new string('A', MaxLength - 1) + "/";
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void DoubleSlash_ThrowsPatternMismatch()
+    {
+        // "A//A..." — double slash anywhere in the value is rejected.
+        var value = "A//A" + new string('A', Math.Max(0, MaxLength - 4));
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+}
+
 // ── External codeset contract ──────────────────────────────────────────────────
 
 /// <summary>

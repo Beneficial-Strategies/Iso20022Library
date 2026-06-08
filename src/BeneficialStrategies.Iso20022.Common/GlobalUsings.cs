@@ -11,6 +11,23 @@ global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.Codesets;
 global using BeneficialStrategies.Iso20022.SimpleTypes;
 // IsoMax*Text aliases — redirect to validated structs in SimpleTypes namespace
+// IsoRestrictedFINX* aliases — redirect to validated structs
+global using IsoRestrictedFINXMax8Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax8Text;
+global using IsoRestrictedFINXMax16Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax16Text;
+global using IsoRestrictedFINXMax24Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax24Text;
+global using IsoRestrictedFINXMax25Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax25Text;
+global using IsoRestrictedFINXMax30Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax30Text;
+global using IsoRestrictedFINXMax31Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax31Text;
+global using IsoRestrictedFINXMax34Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax34Text;
+global using IsoRestrictedFINXMax35Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax35Text;
+global using IsoRestrictedFINXMax52Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax52Text;
+global using IsoRestrictedFINXMax70Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax70Text;
+global using IsoRestrictedFINXMax140Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax140Text;
+global using IsoRestrictedFINXMax210Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax210Text;
+global using IsoRestrictedFINXMax256Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax256Text;
+global using IsoRestrictedFINXMax350Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax350Text;
+global using IsoRestrictedFINXMax520Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax520Text;
+global using IsoRestrictedFINX2Max34Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINX2Max34Text;
 // IsoXxx aliases for Groups A/B/C/D pattern-restricted simple types
 global using IsoMax2NumericText = BeneficialStrategies.Iso20022.SimpleTypes.Max2NumericText;
 global using IsoMax3NumericText = BeneficialStrategies.Iso20022.SimpleTypes.Max3NumericText;
@@ -107,29 +124,15 @@ global using IsoMax20000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max2000
 global using BeneficialStrategies.Iso20022.Framework;
 global using BeneficialStrategies.Iso20022.Metadata;
 global using BeneficialStrategies.Iso20022.Serialization;
-#if NET8_0_OR_GREATER // C# 12 global type aliases
 global using IsoPhoneNumber = System.String; // Text
 global using IsoExtended350Code = System.String; // Text
 global using IsoPreviousAll = System.String; // Text
-global using IsoRestrictedFINXMax16Text = System.String; // Text
-global using IsoRestrictedFINXMax35Text = System.String; // Text
-global using IsoRestrictedFINXMax34Text = System.String; // Text
-global using IsoRestrictedFINXMax210Text = System.String; // Text
 global using IsoISO20022MessageIdentificationText = System.String; // Text
-global using IsoRestrictedFINXMax140Text = System.String; // Text
-global using IsoRestrictedFINXMax31Text = System.String; // Text
-global using IsoRestrictedFINXMax30Text = System.String; // Text
-global using IsoRestrictedFINXMax350Text = System.String; // Text
 global using IsoRestrictedFINMax30Text = System.String; // Text
 global using IsoRestrictedFINMax8Text = System.String; // Text
-global using IsoRestrictedFINX2Max34Text = System.String; // Text
-global using IsoRestrictedFINXMax256Text = System.String; // Text
-global using IsoRestrictedFINXMax70Text = System.String; // Text
 global using IsoRestrictedFINZMax256Text = System.String; // Text
 global using IsoRestrictedFINZMax8000Text = System.String; // Text
 global using IsoRestrictedFINMax35Text = System.String; // Text
-global using IsoRestrictedFINXMax8Text = System.String; // Text
-global using IsoRestrictedFINXMax24Text = System.String; // Text
 global using IsoUnlimited9Text = System.String; // Text
 global using IsoExternalLocalInstrumentCode_Obsolete = System.String; // Text
 global using IsoRefused7Text = System.String; // Text
@@ -158,8 +161,6 @@ global using IsoRateSourceText = System.String; // Text
 global using IsoMax6AlphaText = System.String; // Text
 global using IsoDateOffsetText = System.String; // Text
 global using IsoMax1850Text = System.String; // Text
-global using IsoRestrictedFINXMax52Text = System.String; // Text
-global using IsoRestrictedFINXMax25Text = System.String; // Text
 global using IsoMax20KText = System.String; // Text
 global using IsoMax9999HexBinaryText = System.String; // Text
 global using IsoMax10KText = System.String; // Text
@@ -169,7 +170,6 @@ global using IsoMax8HexBinaryText = System.String; // Text
 global using IsoMax19HexBinaryText = System.String; // Text
 global using IsoMax16HexBinaryText = System.String; // Text
 global using IsoRestrictedFINZMax2048Text = System.String; // Text
-global using IsoRestrictedFINXMax520Text = System.String; // Text
 global using IsoRestrictedFINMax50Text = System.String; // Text
 global using IsoGeographicPointInDecimalDegrees = System.String; // Text
 global using IsoGeographicPointInDecimalDegreesText = System.String; // Text
@@ -529,4 +529,3 @@ global using ValidityPeriodTypeCode = System.String;
 global using IsoATICALaxProcessing = BeneficialStrategies.Iso20022.ExternalSchema.ATICALaxProcessing;
 global using IsoLaxPayload = BeneficialStrategies.Iso20022.ExternalSchema.LaxPayload;
 global using IsoSignatureEnvelope = BeneficialStrategies.Iso20022.ExternalSchema.SignatureEnvelope;
-#endif
