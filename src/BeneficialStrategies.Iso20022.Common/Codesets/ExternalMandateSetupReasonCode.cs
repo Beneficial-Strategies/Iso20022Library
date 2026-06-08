@@ -59,10 +59,16 @@ public readonly struct ExternalMandateSetupReasonCode : IIsoExternalCode, IEquat
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalMandateSetupReasonCode a, ExternalMandateSetupReasonCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalMandateSetupReasonCode a, ExternalMandateSetupReasonCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalMandateSetupReasonCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalMandateSetupReasonCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalMandateSetupReasonCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalMandateSetupReasonCode b) => a != b.Value;
 }

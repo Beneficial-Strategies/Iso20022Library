@@ -73,10 +73,16 @@ public readonly struct Exact3AlphaNumericText : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Exact3AlphaNumericText a, Exact3AlphaNumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Exact3AlphaNumericText a, Exact3AlphaNumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Exact3AlphaNumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact3AlphaNumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Exact3AlphaNumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Exact3AlphaNumericText b) => a != b.Value;
 }

@@ -80,10 +80,16 @@ public readonly struct RestrictedFINMax16Text : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINMax16Text a, RestrictedFINMax16Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINMax16Text a, RestrictedFINMax16Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINMax16Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINMax16Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, RestrictedFINMax16Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, RestrictedFINMax16Text b) => a != b.Value;
 }

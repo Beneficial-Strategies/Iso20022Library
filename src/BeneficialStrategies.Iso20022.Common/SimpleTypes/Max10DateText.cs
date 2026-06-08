@@ -32,22 +32,35 @@ public readonly struct Max10DateText : IIsoSimpleValue<string>, IEquatable<Max10
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max10DateText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Max10DateText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Max10DateText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Max10DateText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Max10DateText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Max10DateText a, Max10DateText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max10DateText a, Max10DateText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max10DateText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max10DateText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max10DateText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max10DateText b) => a != b.Value;
 }

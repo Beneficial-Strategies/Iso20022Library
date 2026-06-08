@@ -32,22 +32,35 @@ public readonly struct HexBinaryText : IIsoSimpleValue<string>, IEquatable<HexBi
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out HexBinaryText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator HexBinaryText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(HexBinaryText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(HexBinaryText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is HexBinaryText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(HexBinaryText a, HexBinaryText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(HexBinaryText a, HexBinaryText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(HexBinaryText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(HexBinaryText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, HexBinaryText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, HexBinaryText b) => a != b.Value;
 }

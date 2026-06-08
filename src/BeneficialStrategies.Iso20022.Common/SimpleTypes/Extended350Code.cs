@@ -35,22 +35,35 @@ public readonly struct Extended350Code : IIsoSimpleValue<string>, IEquatable<Ext
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Extended350Code result)
     {
         if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Extended350Code(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Extended350Code t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Extended350Code other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Extended350Code other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Extended350Code a, Extended350Code b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Extended350Code a, Extended350Code b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Extended350Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Extended350Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Extended350Code b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Extended350Code b) => a != b.Value;
 }

@@ -32,22 +32,35 @@ public readonly struct SHA256SignatureText : IIsoSimpleValue<string>, IEquatable
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out SHA256SignatureText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator SHA256SignatureText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(SHA256SignatureText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(SHA256SignatureText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is SHA256SignatureText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(SHA256SignatureText a, SHA256SignatureText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(SHA256SignatureText a, SHA256SignatureText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(SHA256SignatureText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(SHA256SignatureText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, SHA256SignatureText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, SHA256SignatureText b) => a != b.Value;
 }

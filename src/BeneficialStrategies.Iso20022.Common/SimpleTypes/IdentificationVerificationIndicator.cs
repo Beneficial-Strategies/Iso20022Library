@@ -75,14 +75,24 @@ public readonly struct IdentificationVerificationIndicator : IIsoSimpleValue<str
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(IdentificationVerificationIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(IdentificationVerificationIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, IdentificationVerificationIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, IdentificationVerificationIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(IdentificationVerificationIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(IdentificationVerificationIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, IdentificationVerificationIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, IdentificationVerificationIndicator b) => a != b.BoolValue;
 }

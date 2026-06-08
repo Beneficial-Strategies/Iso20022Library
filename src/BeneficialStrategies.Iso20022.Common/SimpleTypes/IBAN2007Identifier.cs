@@ -58,10 +58,16 @@ public readonly struct IBAN2007Identifier : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(IBAN2007Identifier a, IBAN2007Identifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(IBAN2007Identifier a, IBAN2007Identifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(IBAN2007Identifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(IBAN2007Identifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, IBAN2007Identifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, IBAN2007Identifier b) => a != b.Value;
 }

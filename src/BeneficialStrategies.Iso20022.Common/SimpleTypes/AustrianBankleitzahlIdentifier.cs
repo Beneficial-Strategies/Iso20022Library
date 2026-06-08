@@ -58,10 +58,16 @@ public readonly struct AustrianBankleitzahlIdentifier : IIsoSimpleValue<string>,
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(AustrianBankleitzahlIdentifier a, AustrianBankleitzahlIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(AustrianBankleitzahlIdentifier a, AustrianBankleitzahlIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(AustrianBankleitzahlIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(AustrianBankleitzahlIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, AustrianBankleitzahlIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, AustrianBankleitzahlIdentifier b) => a != b.Value;
 }

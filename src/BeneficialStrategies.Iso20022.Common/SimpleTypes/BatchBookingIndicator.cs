@@ -75,14 +75,24 @@ public readonly struct BatchBookingIndicator : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(BatchBookingIndicator a, BatchBookingIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(BatchBookingIndicator a, BatchBookingIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(BatchBookingIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(BatchBookingIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, BatchBookingIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, BatchBookingIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(BatchBookingIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(BatchBookingIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, BatchBookingIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, BatchBookingIndicator b) => a != b.BoolValue;
 }

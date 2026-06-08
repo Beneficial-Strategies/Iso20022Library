@@ -75,14 +75,24 @@ public readonly struct OverrideIndicator : IIsoSimpleValue<string>, IEquatable<O
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(OverrideIndicator a, OverrideIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(OverrideIndicator a, OverrideIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(OverrideIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(OverrideIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, OverrideIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, OverrideIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(OverrideIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(OverrideIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, OverrideIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, OverrideIndicator b) => a != b.BoolValue;
 }

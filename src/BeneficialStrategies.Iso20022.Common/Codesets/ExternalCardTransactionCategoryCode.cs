@@ -58,10 +58,16 @@ public readonly struct ExternalCardTransactionCategoryCode : IIsoExternalCode, I
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalCardTransactionCategoryCode a, ExternalCardTransactionCategoryCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalCardTransactionCategoryCode a, ExternalCardTransactionCategoryCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalCardTransactionCategoryCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalCardTransactionCategoryCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalCardTransactionCategoryCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalCardTransactionCategoryCode b) => a != b.Value;
 }

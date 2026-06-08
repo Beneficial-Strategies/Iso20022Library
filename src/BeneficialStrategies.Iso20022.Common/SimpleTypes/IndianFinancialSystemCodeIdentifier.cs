@@ -58,10 +58,16 @@ public readonly struct IndianFinancialSystemCodeIdentifier : IIsoSimpleValue<str
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(IndianFinancialSystemCodeIdentifier a, IndianFinancialSystemCodeIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(IndianFinancialSystemCodeIdentifier a, IndianFinancialSystemCodeIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(IndianFinancialSystemCodeIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(IndianFinancialSystemCodeIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, IndianFinancialSystemCodeIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, IndianFinancialSystemCodeIdentifier b) => a != b.Value;
 }

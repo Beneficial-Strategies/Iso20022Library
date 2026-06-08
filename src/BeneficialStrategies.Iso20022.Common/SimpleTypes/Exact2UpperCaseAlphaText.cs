@@ -69,10 +69,16 @@ public readonly struct Exact2UpperCaseAlphaText : IIsoSimpleValue<string>, IEqua
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Exact2UpperCaseAlphaText a, Exact2UpperCaseAlphaText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Exact2UpperCaseAlphaText a, Exact2UpperCaseAlphaText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Exact2UpperCaseAlphaText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact2UpperCaseAlphaText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Exact2UpperCaseAlphaText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Exact2UpperCaseAlphaText b) => a != b.Value;
 }

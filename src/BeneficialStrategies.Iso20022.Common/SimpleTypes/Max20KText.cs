@@ -35,22 +35,35 @@ public readonly struct Max20KText : IIsoSimpleValue<string>, IEquatable<Max20KTe
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max20KText result)
     {
         if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Max20KText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Max20KText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Max20KText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Max20KText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Max20KText a, Max20KText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max20KText a, Max20KText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max20KText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max20KText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max20KText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max20KText b) => a != b.Value;
 }

@@ -75,14 +75,24 @@ public readonly struct RequestedIndicator : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(RequestedIndicator a, RequestedIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(RequestedIndicator a, RequestedIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(RequestedIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(RequestedIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, RequestedIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, RequestedIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(RequestedIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(RequestedIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, RequestedIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, RequestedIndicator b) => a != b.BoolValue;
 }

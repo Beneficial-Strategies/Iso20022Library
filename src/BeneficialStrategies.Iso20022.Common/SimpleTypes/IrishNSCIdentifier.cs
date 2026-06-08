@@ -58,10 +58,16 @@ public readonly struct IrishNSCIdentifier : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(IrishNSCIdentifier a, IrishNSCIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(IrishNSCIdentifier a, IrishNSCIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(IrishNSCIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(IrishNSCIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, IrishNSCIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, IrishNSCIdentifier b) => a != b.Value;
 }

@@ -58,10 +58,16 @@ public readonly struct CanadianPaymentsARNIdentifier : IIsoSimpleValue<string>, 
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(CanadianPaymentsARNIdentifier a, CanadianPaymentsARNIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(CanadianPaymentsARNIdentifier a, CanadianPaymentsARNIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(CanadianPaymentsARNIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(CanadianPaymentsARNIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, CanadianPaymentsARNIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, CanadianPaymentsARNIdentifier b) => a != b.Value;
 }

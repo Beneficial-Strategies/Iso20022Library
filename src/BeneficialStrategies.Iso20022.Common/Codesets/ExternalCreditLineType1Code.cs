@@ -55,10 +55,16 @@ public readonly struct ExternalCreditLineType1Code : IIsoExternalCode, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalCreditLineType1Code a, ExternalCreditLineType1Code b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalCreditLineType1Code a, ExternalCreditLineType1Code b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalCreditLineType1Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalCreditLineType1Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalCreditLineType1Code b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalCreditLineType1Code b) => a != b.Value;
 }

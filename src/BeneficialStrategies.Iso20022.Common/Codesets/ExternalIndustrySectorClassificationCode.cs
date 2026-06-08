@@ -54,10 +54,16 @@ public readonly struct ExternalIndustrySectorClassificationCode : IIsoExternalCo
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalIndustrySectorClassificationCode a, ExternalIndustrySectorClassificationCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalIndustrySectorClassificationCode a, ExternalIndustrySectorClassificationCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalIndustrySectorClassificationCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalIndustrySectorClassificationCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalIndustrySectorClassificationCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalIndustrySectorClassificationCode b) => a != b.Value;
 }

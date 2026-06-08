@@ -77,10 +77,16 @@ public readonly struct RestrictedFINXMax8Text : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINXMax8Text a, RestrictedFINXMax8Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINXMax8Text a, RestrictedFINXMax8Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINXMax8Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINXMax8Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, RestrictedFINXMax8Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, RestrictedFINXMax8Text b) => a != b.Value;
 }

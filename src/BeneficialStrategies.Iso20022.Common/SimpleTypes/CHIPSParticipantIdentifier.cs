@@ -58,10 +58,16 @@ public readonly struct CHIPSParticipantIdentifier : IIsoSimpleValue<string>, IEq
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(CHIPSParticipantIdentifier a, CHIPSParticipantIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(CHIPSParticipantIdentifier a, CHIPSParticipantIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(CHIPSParticipantIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(CHIPSParticipantIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, CHIPSParticipantIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, CHIPSParticipantIdentifier b) => a != b.Value;
 }

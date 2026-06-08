@@ -32,22 +32,35 @@ public readonly struct PreviousAll : IIsoSimpleValue<string>, IEquatable<Previou
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out PreviousAll result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator PreviousAll(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(PreviousAll t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(PreviousAll other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is PreviousAll other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(PreviousAll a, PreviousAll b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PreviousAll a, PreviousAll b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PreviousAll a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PreviousAll a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PreviousAll b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PreviousAll b) => a != b.Value;
 }

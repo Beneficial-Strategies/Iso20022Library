@@ -79,14 +79,24 @@ public readonly struct XsdByte : IIsoSimpleValue<sbyte>, IEquatable<XsdByte>
     /// <inheritdoc/>
     public override int GetHashCode() => Value.GetHashCode();
 
+    /// <inheritdoc/>
     public static bool operator ==(XsdByte a, XsdByte b) => a.Value == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(XsdByte a, XsdByte b) => a.Value != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdByte a, sbyte b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdByte a, sbyte b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(sbyte a, XsdByte b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(sbyte a, XsdByte b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdByte a, string? b) => a.ToString() == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdByte a, string? b) => a.ToString() != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, XsdByte b) => a == b.ToString();
+    /// <inheritdoc/>
     public static bool operator !=(string? a, XsdByte b) => a != b.ToString();
 }

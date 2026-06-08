@@ -75,14 +75,24 @@ public readonly struct AllOrNoneIndicator : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(AllOrNoneIndicator a, AllOrNoneIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(AllOrNoneIndicator a, AllOrNoneIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(AllOrNoneIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(AllOrNoneIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, AllOrNoneIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, AllOrNoneIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(AllOrNoneIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(AllOrNoneIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, AllOrNoneIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, AllOrNoneIndicator b) => a != b.BoolValue;
 }

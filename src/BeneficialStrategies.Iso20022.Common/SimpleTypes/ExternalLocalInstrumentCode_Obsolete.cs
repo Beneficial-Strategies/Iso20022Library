@@ -35,22 +35,35 @@ public readonly struct ExternalLocalInstrumentCode_Obsolete : IIsoSimpleValue<st
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out ExternalLocalInstrumentCode_Obsolete result)
     {
         if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator ExternalLocalInstrumentCode_Obsolete(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(ExternalLocalInstrumentCode_Obsolete t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(ExternalLocalInstrumentCode_Obsolete other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is ExternalLocalInstrumentCode_Obsolete other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(ExternalLocalInstrumentCode_Obsolete a, ExternalLocalInstrumentCode_Obsolete b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalLocalInstrumentCode_Obsolete a, ExternalLocalInstrumentCode_Obsolete b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalLocalInstrumentCode_Obsolete a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalLocalInstrumentCode_Obsolete a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalLocalInstrumentCode_Obsolete b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalLocalInstrumentCode_Obsolete b) => a != b.Value;
 }

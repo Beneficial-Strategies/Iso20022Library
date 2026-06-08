@@ -58,10 +58,16 @@ public readonly struct ExternalFinancialInstrumentProductTypeCode : IIsoExternal
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalFinancialInstrumentProductTypeCode a, ExternalFinancialInstrumentProductTypeCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalFinancialInstrumentProductTypeCode a, ExternalFinancialInstrumentProductTypeCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalFinancialInstrumentProductTypeCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalFinancialInstrumentProductTypeCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalFinancialInstrumentProductTypeCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalFinancialInstrumentProductTypeCode b) => a != b.Value;
 }

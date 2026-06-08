@@ -32,22 +32,35 @@ public readonly struct Unlimited9Text : IIsoSimpleValue<string>, IEquatable<Unli
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Unlimited9Text result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Unlimited9Text(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Unlimited9Text t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Unlimited9Text other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Unlimited9Text other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Unlimited9Text a, Unlimited9Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Unlimited9Text a, Unlimited9Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Unlimited9Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Unlimited9Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Unlimited9Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Unlimited9Text b) => a != b.Value;
 }

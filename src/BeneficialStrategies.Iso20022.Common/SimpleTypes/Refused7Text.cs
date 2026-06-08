@@ -32,22 +32,35 @@ public readonly struct Refused7Text : IIsoSimpleValue<string>, IEquatable<Refuse
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Refused7Text result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Refused7Text(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Refused7Text t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Refused7Text other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Refused7Text other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Refused7Text a, Refused7Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Refused7Text a, Refused7Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Refused7Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Refused7Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Refused7Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Refused7Text b) => a != b.Value;
 }

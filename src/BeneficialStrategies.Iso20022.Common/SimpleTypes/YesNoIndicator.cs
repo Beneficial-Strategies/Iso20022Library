@@ -75,14 +75,24 @@ public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesN
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(YesNoIndicator a, YesNoIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(YesNoIndicator a, YesNoIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(YesNoIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(YesNoIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, YesNoIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, YesNoIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(YesNoIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(YesNoIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, YesNoIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, YesNoIndicator b) => a != b.BoolValue;
 }

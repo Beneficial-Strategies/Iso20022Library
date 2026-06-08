@@ -58,10 +58,16 @@ public readonly struct BBANIdentifier : IIsoSimpleValue<string>, IEquatable<BBAN
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(BBANIdentifier a, BBANIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(BBANIdentifier a, BBANIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(BBANIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(BBANIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, BBANIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, BBANIdentifier b) => a != b.Value;
 }

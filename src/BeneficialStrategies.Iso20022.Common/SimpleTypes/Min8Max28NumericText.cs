@@ -71,10 +71,16 @@ public readonly struct Min8Max28NumericText : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Min8Max28NumericText a, Min8Max28NumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Min8Max28NumericText a, Min8Max28NumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Min8Max28NumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Min8Max28NumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Min8Max28NumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Min8Max28NumericText b) => a != b.Value;
 }

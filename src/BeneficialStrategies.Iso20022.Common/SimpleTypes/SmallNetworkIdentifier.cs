@@ -58,10 +58,16 @@ public readonly struct SmallNetworkIdentifier : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(SmallNetworkIdentifier a, SmallNetworkIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(SmallNetworkIdentifier a, SmallNetworkIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(SmallNetworkIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(SmallNetworkIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, SmallNetworkIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, SmallNetworkIdentifier b) => a != b.Value;
 }

@@ -58,10 +58,16 @@ public readonly struct SouthAfricanNCCIdentifier : IIsoSimpleValue<string>, IEqu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(SouthAfricanNCCIdentifier a, SouthAfricanNCCIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(SouthAfricanNCCIdentifier a, SouthAfricanNCCIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(SouthAfricanNCCIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(SouthAfricanNCCIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, SouthAfricanNCCIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, SouthAfricanNCCIdentifier b) => a != b.Value;
 }

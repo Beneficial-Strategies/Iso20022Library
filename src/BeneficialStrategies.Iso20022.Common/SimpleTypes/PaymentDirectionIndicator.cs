@@ -75,14 +75,24 @@ public readonly struct PaymentDirectionIndicator : IIsoSimpleValue<string>, IEqu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(PaymentDirectionIndicator a, PaymentDirectionIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PaymentDirectionIndicator a, PaymentDirectionIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PaymentDirectionIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PaymentDirectionIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PaymentDirectionIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PaymentDirectionIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(PaymentDirectionIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(PaymentDirectionIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, PaymentDirectionIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, PaymentDirectionIndicator b) => a != b.BoolValue;
 }

@@ -71,10 +71,16 @@ public readonly struct Exact1NumericText : IIsoSimpleValue<string>, IEquatable<E
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Exact1NumericText a, Exact1NumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Exact1NumericText a, Exact1NumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Exact1NumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact1NumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Exact1NumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Exact1NumericText b) => a != b.Value;
 }

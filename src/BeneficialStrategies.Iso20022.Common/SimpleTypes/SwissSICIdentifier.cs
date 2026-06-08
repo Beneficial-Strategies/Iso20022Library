@@ -58,10 +58,16 @@ public readonly struct SwissSICIdentifier : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(SwissSICIdentifier a, SwissSICIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(SwissSICIdentifier a, SwissSICIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(SwissSICIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(SwissSICIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, SwissSICIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, SwissSICIdentifier b) => a != b.Value;
 }

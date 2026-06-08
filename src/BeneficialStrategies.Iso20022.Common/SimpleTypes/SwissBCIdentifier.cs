@@ -58,10 +58,16 @@ public readonly struct SwissBCIdentifier : IIsoSimpleValue<string>, IEquatable<S
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(SwissBCIdentifier a, SwissBCIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(SwissBCIdentifier a, SwissBCIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(SwissBCIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(SwissBCIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, SwissBCIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, SwissBCIdentifier b) => a != b.Value;
 }

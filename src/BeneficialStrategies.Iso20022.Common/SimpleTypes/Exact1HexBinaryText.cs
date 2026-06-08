@@ -106,14 +106,24 @@ public readonly struct Exact1HexBinaryText : IIsoSimpleValue<string>, IEquatable
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Exact1HexBinaryText a, Exact1HexBinaryText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Exact1HexBinaryText a, Exact1HexBinaryText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Exact1HexBinaryText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact1HexBinaryText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Exact1HexBinaryText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Exact1HexBinaryText b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(Exact1HexBinaryText a, byte b) => a.ByteValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact1HexBinaryText a, byte b) => a.ByteValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(byte a, Exact1HexBinaryText b) => a == b.ByteValue;
+    /// <inheritdoc/>
     public static bool operator !=(byte a, Exact1HexBinaryText b) => a != b.ByteValue;
 }

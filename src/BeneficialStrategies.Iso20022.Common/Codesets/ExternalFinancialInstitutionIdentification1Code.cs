@@ -55,10 +55,16 @@ public readonly struct ExternalFinancialInstitutionIdentification1Code : IIsoExt
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalFinancialInstitutionIdentification1Code a, ExternalFinancialInstitutionIdentification1Code b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalFinancialInstitutionIdentification1Code a, ExternalFinancialInstitutionIdentification1Code b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalFinancialInstitutionIdentification1Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalFinancialInstitutionIdentification1Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalFinancialInstitutionIdentification1Code b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalFinancialInstitutionIdentification1Code b) => a != b.Value;
 }

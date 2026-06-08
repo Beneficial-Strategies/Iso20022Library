@@ -32,22 +32,35 @@ public readonly struct PhoneNumber : IIsoSimpleValue<string>, IEquatable<PhoneNu
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out PhoneNumber result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator PhoneNumber(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(PhoneNumber t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(PhoneNumber other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is PhoneNumber other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(PhoneNumber a, PhoneNumber b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PhoneNumber a, PhoneNumber b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PhoneNumber a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PhoneNumber a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PhoneNumber b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PhoneNumber b) => a != b.Value;
 }

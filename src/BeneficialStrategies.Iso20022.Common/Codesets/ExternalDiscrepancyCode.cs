@@ -58,10 +58,16 @@ public readonly struct ExternalDiscrepancyCode : IIsoExternalCode, IEquatable<Ex
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalDiscrepancyCode a, ExternalDiscrepancyCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalDiscrepancyCode a, ExternalDiscrepancyCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalDiscrepancyCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalDiscrepancyCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalDiscrepancyCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalDiscrepancyCode b) => a != b.Value;
 }

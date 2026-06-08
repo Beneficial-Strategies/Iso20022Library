@@ -59,10 +59,16 @@ public readonly struct UnicodeChartsCode : IIsoExternalCode, IEquatable<UnicodeC
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(UnicodeChartsCode a, UnicodeChartsCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(UnicodeChartsCode a, UnicodeChartsCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(UnicodeChartsCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(UnicodeChartsCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, UnicodeChartsCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, UnicodeChartsCode b) => a != b.Value;
 }

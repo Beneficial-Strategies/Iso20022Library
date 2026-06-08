@@ -59,10 +59,16 @@ public readonly struct ExternalChequeAgentInstructionCode : IIsoExternalCode, IE
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalChequeAgentInstructionCode a, ExternalChequeAgentInstructionCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalChequeAgentInstructionCode a, ExternalChequeAgentInstructionCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalChequeAgentInstructionCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalChequeAgentInstructionCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalChequeAgentInstructionCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalChequeAgentInstructionCode b) => a != b.Value;
 }

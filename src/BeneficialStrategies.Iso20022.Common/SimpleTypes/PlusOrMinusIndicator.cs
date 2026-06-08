@@ -75,14 +75,24 @@ public readonly struct PlusOrMinusIndicator : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(PlusOrMinusIndicator a, PlusOrMinusIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PlusOrMinusIndicator a, PlusOrMinusIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PlusOrMinusIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PlusOrMinusIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PlusOrMinusIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PlusOrMinusIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(PlusOrMinusIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(PlusOrMinusIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, PlusOrMinusIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, PlusOrMinusIndicator b) => a != b.BoolValue;
 }

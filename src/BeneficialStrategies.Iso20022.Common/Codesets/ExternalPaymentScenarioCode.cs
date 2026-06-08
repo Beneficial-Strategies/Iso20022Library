@@ -59,10 +59,16 @@ public readonly struct ExternalPaymentScenarioCode : IIsoExternalCode, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalPaymentScenarioCode a, ExternalPaymentScenarioCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalPaymentScenarioCode a, ExternalPaymentScenarioCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalPaymentScenarioCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalPaymentScenarioCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalPaymentScenarioCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalPaymentScenarioCode b) => a != b.Value;
 }

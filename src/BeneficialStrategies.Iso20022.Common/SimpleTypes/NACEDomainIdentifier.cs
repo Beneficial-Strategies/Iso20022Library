@@ -58,10 +58,16 @@ public readonly struct NACEDomainIdentifier : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(NACEDomainIdentifier a, NACEDomainIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(NACEDomainIdentifier a, NACEDomainIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(NACEDomainIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(NACEDomainIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, NACEDomainIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, NACEDomainIdentifier b) => a != b.Value;
 }

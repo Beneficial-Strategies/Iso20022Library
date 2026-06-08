@@ -58,10 +58,16 @@ public readonly struct BICFIDec2014Identifier : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(BICFIDec2014Identifier a, BICFIDec2014Identifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(BICFIDec2014Identifier a, BICFIDec2014Identifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(BICFIDec2014Identifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(BICFIDec2014Identifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, BICFIDec2014Identifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, BICFIDec2014Identifier b) => a != b.Value;
 }

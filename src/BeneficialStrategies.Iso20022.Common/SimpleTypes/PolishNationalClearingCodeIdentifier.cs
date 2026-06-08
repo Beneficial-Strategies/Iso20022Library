@@ -58,10 +58,16 @@ public readonly struct PolishNationalClearingCodeIdentifier : IIsoSimpleValue<st
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(PolishNationalClearingCodeIdentifier a, PolishNationalClearingCodeIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PolishNationalClearingCodeIdentifier a, PolishNationalClearingCodeIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PolishNationalClearingCodeIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PolishNationalClearingCodeIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PolishNationalClearingCodeIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PolishNationalClearingCodeIdentifier b) => a != b.Value;
 }

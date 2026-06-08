@@ -58,10 +58,16 @@ public readonly struct ItalianDomesticIdentifier : IIsoSimpleValue<string>, IEqu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ItalianDomesticIdentifier a, ItalianDomesticIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ItalianDomesticIdentifier a, ItalianDomesticIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ItalianDomesticIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ItalianDomesticIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ItalianDomesticIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ItalianDomesticIdentifier b) => a != b.Value;
 }

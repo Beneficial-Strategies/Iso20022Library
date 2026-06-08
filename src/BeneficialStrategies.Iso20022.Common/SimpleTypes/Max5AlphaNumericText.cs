@@ -73,10 +73,16 @@ public readonly struct Max5AlphaNumericText : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Max5AlphaNumericText a, Max5AlphaNumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max5AlphaNumericText a, Max5AlphaNumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max5AlphaNumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max5AlphaNumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max5AlphaNumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max5AlphaNumericText b) => a != b.Value;
 }

@@ -71,10 +71,16 @@ public readonly struct Exact3UpperCaseAlphaNumericText : IIsoSimpleValue<string>
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Exact3UpperCaseAlphaNumericText a, Exact3UpperCaseAlphaNumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Exact3UpperCaseAlphaNumericText a, Exact3UpperCaseAlphaNumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Exact3UpperCaseAlphaNumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Exact3UpperCaseAlphaNumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Exact3UpperCaseAlphaNumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Exact3UpperCaseAlphaNumericText b) => a != b.Value;
 }

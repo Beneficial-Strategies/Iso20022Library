@@ -58,10 +58,16 @@ public readonly struct PortugueseNCCIdentifier : IIsoSimpleValue<string>, IEquat
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(PortugueseNCCIdentifier a, PortugueseNCCIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(PortugueseNCCIdentifier a, PortugueseNCCIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(PortugueseNCCIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(PortugueseNCCIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, PortugueseNCCIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, PortugueseNCCIdentifier b) => a != b.Value;
 }

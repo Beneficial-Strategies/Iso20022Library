@@ -32,22 +32,35 @@ public readonly struct Min2Max3AlphaText : IIsoSimpleValue<string>, IEquatable<M
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Min2Max3AlphaText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Min2Max3AlphaText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Min2Max3AlphaText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Min2Max3AlphaText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Min2Max3AlphaText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Min2Max3AlphaText a, Min2Max3AlphaText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Min2Max3AlphaText a, Min2Max3AlphaText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Min2Max3AlphaText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Min2Max3AlphaText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Min2Max3AlphaText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Min2Max3AlphaText b) => a != b.Value;
 }

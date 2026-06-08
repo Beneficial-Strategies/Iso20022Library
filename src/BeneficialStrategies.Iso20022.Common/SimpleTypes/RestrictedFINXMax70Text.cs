@@ -27,7 +27,8 @@ public readonly struct RestrictedFINXMax70Text : IIsoSimpleValue<string>, IEquat
 
     /// <summary>ISO 20022 allowed character set: 0-9 a-z A-Z / - ? : ( ) . , ' + SPACE \n \r</summary>
     public const string AllowedCharacters = @"0-9 a-z A-Z / - ? : ( ) . , ' + SPACE 
- ";
+ 
+";
 
     /// <inheritdoc/>
     public string Value { get; }
@@ -85,10 +86,16 @@ public readonly struct RestrictedFINXMax70Text : IIsoSimpleValue<string>, IEquat
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINXMax70Text a, RestrictedFINXMax70Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINXMax70Text a, RestrictedFINXMax70Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(RestrictedFINXMax70Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(RestrictedFINXMax70Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, RestrictedFINXMax70Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, RestrictedFINXMax70Text b) => a != b.Value;
 }

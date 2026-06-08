@@ -75,14 +75,24 @@ public readonly struct TrueFalseIndicator : IIsoSimpleValue<string>, IEquatable<
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(TrueFalseIndicator a, TrueFalseIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(TrueFalseIndicator a, TrueFalseIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(TrueFalseIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(TrueFalseIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, TrueFalseIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, TrueFalseIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(TrueFalseIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(TrueFalseIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, TrueFalseIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, TrueFalseIndicator b) => a != b.BoolValue;
 }

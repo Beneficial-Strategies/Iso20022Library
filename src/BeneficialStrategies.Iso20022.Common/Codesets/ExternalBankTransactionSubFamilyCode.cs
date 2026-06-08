@@ -68,10 +68,16 @@ public readonly struct ExternalBankTransactionSubFamilyCode : IIsoExternalCode, 
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalBankTransactionSubFamilyCode a, ExternalBankTransactionSubFamilyCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalBankTransactionSubFamilyCode a, ExternalBankTransactionSubFamilyCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalBankTransactionSubFamilyCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalBankTransactionSubFamilyCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalBankTransactionSubFamilyCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalBankTransactionSubFamilyCode b) => a != b.Value;
 }

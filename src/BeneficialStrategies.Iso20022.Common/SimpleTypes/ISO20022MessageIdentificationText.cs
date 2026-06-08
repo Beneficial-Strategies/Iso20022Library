@@ -58,10 +58,16 @@ public readonly struct ISO20022MessageIdentificationText : IIsoSimpleValue<strin
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ISO20022MessageIdentificationText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ISO20022MessageIdentificationText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ISO20022MessageIdentificationText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ISO20022MessageIdentificationText b) => a != b.Value;
 }

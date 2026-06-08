@@ -54,10 +54,16 @@ public readonly struct CountryCode : IIsoExternalCode, IEquatable<CountryCode>
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(CountryCode a, CountryCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(CountryCode a, CountryCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(CountryCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(CountryCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, CountryCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, CountryCode b) => a != b.Value;
 }

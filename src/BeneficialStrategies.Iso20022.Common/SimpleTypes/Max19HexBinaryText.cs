@@ -32,22 +32,35 @@ public readonly struct Max19HexBinaryText : IIsoSimpleValue<string>, IEquatable<
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max19HexBinaryText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Max19HexBinaryText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Max19HexBinaryText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Max19HexBinaryText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Max19HexBinaryText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Max19HexBinaryText a, Max19HexBinaryText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max19HexBinaryText a, Max19HexBinaryText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max19HexBinaryText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max19HexBinaryText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max19HexBinaryText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max19HexBinaryText b) => a != b.Value;
 }

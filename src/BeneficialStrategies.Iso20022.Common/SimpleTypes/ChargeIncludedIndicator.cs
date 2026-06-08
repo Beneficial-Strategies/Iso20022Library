@@ -75,14 +75,24 @@ public readonly struct ChargeIncludedIndicator : IIsoSimpleValue<string>, IEquat
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ChargeIncludedIndicator a, ChargeIncludedIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ChargeIncludedIndicator a, ChargeIncludedIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ChargeIncludedIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ChargeIncludedIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ChargeIncludedIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ChargeIncludedIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(ChargeIncludedIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(ChargeIncludedIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, ChargeIncludedIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, ChargeIncludedIndicator b) => a != b.BoolValue;
 }

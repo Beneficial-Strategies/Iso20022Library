@@ -75,14 +75,24 @@ public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<G
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(GroupingIndicator a, GroupingIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(GroupingIndicator a, GroupingIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(GroupingIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(GroupingIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, GroupingIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, GroupingIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(GroupingIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(GroupingIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, GroupingIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, GroupingIndicator b) => a != b.BoolValue;
 }

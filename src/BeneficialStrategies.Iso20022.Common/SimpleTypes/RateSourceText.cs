@@ -32,22 +32,35 @@ public readonly struct RateSourceText : IIsoSimpleValue<string>, IEquatable<Rate
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out RateSourceText result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator RateSourceText(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(RateSourceText t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(RateSourceText other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is RateSourceText other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(RateSourceText a, RateSourceText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(RateSourceText a, RateSourceText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(RateSourceText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(RateSourceText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, RateSourceText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, RateSourceText b) => a != b.Value;
 }

@@ -73,10 +73,16 @@ public readonly struct Max20AlphaNumericText : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Max20AlphaNumericText a, Max20AlphaNumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max20AlphaNumericText a, Max20AlphaNumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max20AlphaNumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max20AlphaNumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max20AlphaNumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max20AlphaNumericText b) => a != b.Value;
 }

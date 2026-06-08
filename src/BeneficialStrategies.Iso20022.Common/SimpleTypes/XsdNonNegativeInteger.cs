@@ -81,14 +81,24 @@ public readonly struct XsdNonNegativeInteger : IIsoSimpleValue<long>, IEquatable
     /// <inheritdoc/>
     public override int GetHashCode() => Value.GetHashCode();
 
+    /// <inheritdoc/>
     public static bool operator ==(XsdNonNegativeInteger a, XsdNonNegativeInteger b) => a.Value == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(XsdNonNegativeInteger a, XsdNonNegativeInteger b) => a.Value != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdNonNegativeInteger a, long b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdNonNegativeInteger a, long b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(long a, XsdNonNegativeInteger b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(long a, XsdNonNegativeInteger b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdNonNegativeInteger a, string? b) => a.ToString() == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdNonNegativeInteger a, string? b) => a.ToString() != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, XsdNonNegativeInteger b) => a == b.ToString();
+    /// <inheritdoc/>
     public static bool operator !=(string? a, XsdNonNegativeInteger b) => a != b.ToString();
 }

@@ -58,10 +58,16 @@ public readonly struct UKDomesticSortCodeIdentifier : IIsoSimpleValue<string>, I
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(UKDomesticSortCodeIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(UKDomesticSortCodeIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, UKDomesticSortCodeIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, UKDomesticSortCodeIdentifier b) => a != b.Value;
 }

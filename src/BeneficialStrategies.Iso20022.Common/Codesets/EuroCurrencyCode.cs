@@ -57,10 +57,16 @@ public readonly struct EuroCurrencyCode : IIsoExternalCode, IEquatable<EuroCurre
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(EuroCurrencyCode a, EuroCurrencyCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(EuroCurrencyCode a, EuroCurrencyCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(EuroCurrencyCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(EuroCurrencyCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, EuroCurrencyCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, EuroCurrencyCode b) => a != b.Value;
 }

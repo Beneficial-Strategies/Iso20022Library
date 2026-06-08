@@ -58,10 +58,16 @@ public readonly struct AnyBICIdentifier : IIsoSimpleValue<string>, IEquatable<An
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(AnyBICIdentifier a, AnyBICIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(AnyBICIdentifier a, AnyBICIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(AnyBICIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(AnyBICIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, AnyBICIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, AnyBICIdentifier b) => a != b.Value;
 }

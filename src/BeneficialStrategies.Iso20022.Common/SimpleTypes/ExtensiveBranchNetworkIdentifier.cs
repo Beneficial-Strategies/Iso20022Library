@@ -58,10 +58,16 @@ public readonly struct ExtensiveBranchNetworkIdentifier : IIsoSimpleValue<string
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExtensiveBranchNetworkIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExtensiveBranchNetworkIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExtensiveBranchNetworkIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExtensiveBranchNetworkIdentifier b) => a != b.Value;
 }

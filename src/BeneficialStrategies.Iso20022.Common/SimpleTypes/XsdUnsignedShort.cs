@@ -79,14 +79,24 @@ public readonly struct XsdUnsignedShort : IIsoSimpleValue<ushort>, IEquatable<Xs
     /// <inheritdoc/>
     public override int GetHashCode() => Value.GetHashCode();
 
+    /// <inheritdoc/>
     public static bool operator ==(XsdUnsignedShort a, XsdUnsignedShort b) => a.Value == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(XsdUnsignedShort a, XsdUnsignedShort b) => a.Value != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdUnsignedShort a, ushort b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdUnsignedShort a, ushort b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(ushort a, XsdUnsignedShort b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(ushort a, XsdUnsignedShort b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(XsdUnsignedShort a, string? b) => a.ToString() == b;
+    /// <inheritdoc/>
     public static bool operator !=(XsdUnsignedShort a, string? b) => a.ToString() != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, XsdUnsignedShort b) => a == b.ToString();
+    /// <inheritdoc/>
     public static bool operator !=(string? a, XsdUnsignedShort b) => a != b.ToString();
 }

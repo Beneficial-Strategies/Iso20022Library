@@ -58,10 +58,16 @@ public readonly struct MerchantCategoryCodeIdentifier : IIsoSimpleValue<string>,
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(MerchantCategoryCodeIdentifier a, MerchantCategoryCodeIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(MerchantCategoryCodeIdentifier a, MerchantCategoryCodeIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(MerchantCategoryCodeIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(MerchantCategoryCodeIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, MerchantCategoryCodeIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, MerchantCategoryCodeIdentifier b) => a != b.Value;
 }

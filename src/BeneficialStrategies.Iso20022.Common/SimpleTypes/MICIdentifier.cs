@@ -58,10 +58,16 @@ public readonly struct MICIdentifier : IIsoSimpleValue<string>, IEquatable<MICId
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(MICIdentifier a, MICIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(MICIdentifier a, MICIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(MICIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(MICIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, MICIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, MICIdentifier b) => a != b.Value;
 }

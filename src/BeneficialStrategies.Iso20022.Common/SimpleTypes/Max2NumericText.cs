@@ -71,10 +71,16 @@ public readonly struct Max2NumericText : IIsoSimpleValue<string>, IEquatable<Max
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Max2NumericText a, Max2NumericText b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max2NumericText a, Max2NumericText b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max2NumericText a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max2NumericText a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max2NumericText b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max2NumericText b) => a != b.Value;
 }

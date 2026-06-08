@@ -75,14 +75,24 @@ public readonly struct AMLIndicator : IIsoSimpleValue<string>, IEquatable<AMLInd
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(AMLIndicator a, AMLIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(AMLIndicator a, AMLIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(AMLIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(AMLIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, AMLIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, AMLIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(AMLIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(AMLIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, AMLIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, AMLIndicator b) => a != b.BoolValue;
 }

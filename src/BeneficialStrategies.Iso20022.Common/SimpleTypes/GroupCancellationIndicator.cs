@@ -75,14 +75,24 @@ public readonly struct GroupCancellationIndicator : IIsoSimpleValue<string>, IEq
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(GroupCancellationIndicator a, GroupCancellationIndicator b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(GroupCancellationIndicator a, GroupCancellationIndicator b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(GroupCancellationIndicator a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(GroupCancellationIndicator a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, GroupCancellationIndicator b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, GroupCancellationIndicator b) => a != b.Value;
+    /// <inheritdoc/>
     public static bool operator ==(GroupCancellationIndicator a, bool b) => a.BoolValue == b;
+    /// <inheritdoc/>
     public static bool operator !=(GroupCancellationIndicator a, bool b) => a.BoolValue != b;
+    /// <inheritdoc/>
     public static bool operator ==(bool a, GroupCancellationIndicator b) => a == b.BoolValue;
+    /// <inheritdoc/>
     public static bool operator !=(bool a, GroupCancellationIndicator b) => a != b.BoolValue;
 }

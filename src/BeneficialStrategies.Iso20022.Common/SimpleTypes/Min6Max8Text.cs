@@ -35,22 +35,35 @@ public readonly struct Min6Max8Text : IIsoSimpleValue<string>, IEquatable<Min6Ma
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Min6Max8Text result)
     {
         if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Min6Max8Text(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Min6Max8Text t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Min6Max8Text other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Min6Max8Text other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Min6Max8Text a, Min6Max8Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Min6Max8Text a, Min6Max8Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Min6Max8Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Min6Max8Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Min6Max8Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Min6Max8Text b) => a != b.Value;
 }

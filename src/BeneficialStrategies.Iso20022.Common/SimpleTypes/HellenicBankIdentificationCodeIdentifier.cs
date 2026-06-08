@@ -58,10 +58,16 @@ public readonly struct HellenicBankIdentificationCodeIdentifier : IIsoSimpleValu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, HellenicBankIdentificationCodeIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, HellenicBankIdentificationCodeIdentifier b) => a != b.Value;
 }

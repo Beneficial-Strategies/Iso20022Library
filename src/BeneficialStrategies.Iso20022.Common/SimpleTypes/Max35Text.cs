@@ -70,10 +70,16 @@ public readonly struct Max35Text : IIsoSimpleValue<string>, IEquatable<Max35Text
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(Max35Text a, Max35Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Max35Text a, Max35Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Max35Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Max35Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Max35Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Max35Text b) => a != b.Value;
 }

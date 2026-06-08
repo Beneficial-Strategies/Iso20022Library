@@ -32,22 +32,35 @@ public readonly struct GeographicPointInDecimalDegrees : IIsoSimpleValue<string>
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out GeographicPointInDecimalDegrees result)
     {
         if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator GeographicPointInDecimalDegrees(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(GeographicPointInDecimalDegrees t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(GeographicPointInDecimalDegrees other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is GeographicPointInDecimalDegrees other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(GeographicPointInDecimalDegrees a, GeographicPointInDecimalDegrees b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(GeographicPointInDecimalDegrees a, GeographicPointInDecimalDegrees b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(GeographicPointInDecimalDegrees a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(GeographicPointInDecimalDegrees a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, GeographicPointInDecimalDegrees b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, GeographicPointInDecimalDegrees b) => a != b.Value;
 }

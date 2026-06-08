@@ -35,22 +35,35 @@ public readonly struct Min3Max4Text : IIsoSimpleValue<string>, IEquatable<Min3Ma
         Value = value;
     }
 
+    /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Min3Max4Text result)
     {
         if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
         result = default; return false;
     }
 
+    /// <inheritdoc/>
     public static implicit operator Min3Max4Text(string value) => new(value);
+    /// <inheritdoc/>
     public static implicit operator string(Min3Max4Text t) => t.Value;
+    /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
     public bool Equals(Min3Max4Text other) => Value == other.Value;
+    /// <inheritdoc/>
     public override bool Equals(object? obj) => obj is Min3Max4Text other && Equals(other);
+    /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+    /// <inheritdoc/>
     public static bool operator ==(Min3Max4Text a, Min3Max4Text b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(Min3Max4Text a, Min3Max4Text b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(Min3Max4Text a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(Min3Max4Text a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, Min3Max4Text b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, Min3Max4Text b) => a != b.Value;
 }

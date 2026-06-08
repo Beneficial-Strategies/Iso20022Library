@@ -59,10 +59,16 @@ public readonly struct ExternalClearingSystemMemberCode_Obsolete : IIsoExternalC
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalClearingSystemMemberCode_Obsolete a, ExternalClearingSystemMemberCode_Obsolete b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalClearingSystemMemberCode_Obsolete a, ExternalClearingSystemMemberCode_Obsolete b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalClearingSystemMemberCode_Obsolete a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalClearingSystemMemberCode_Obsolete a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalClearingSystemMemberCode_Obsolete b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalClearingSystemMemberCode_Obsolete b) => a != b.Value;
 }

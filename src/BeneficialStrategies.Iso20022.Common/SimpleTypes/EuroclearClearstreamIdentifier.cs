@@ -61,10 +61,16 @@ public readonly struct EuroclearClearstreamIdentifier : IIsoSimpleValue<string>,
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(EuroclearClearstreamIdentifier a, EuroclearClearstreamIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(EuroclearClearstreamIdentifier a, EuroclearClearstreamIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(EuroclearClearstreamIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(EuroclearClearstreamIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, EuroclearClearstreamIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, EuroclearClearstreamIdentifier b) => a != b.Value;
 }

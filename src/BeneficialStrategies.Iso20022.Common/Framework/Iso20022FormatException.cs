@@ -102,6 +102,9 @@ public sealed class Iso20022FormatException : FormatException
     { }
 
     /// <inheritdoc cref="Iso20022FormatException(Type,string,string)"/>
+    /// <param name="targetType"><inheritdoc cref="Iso20022FormatException(Type,string,string)" path="/param[@name='targetType']"/></param>
+    /// <param name="invalidValue"><inheritdoc cref="Iso20022FormatException(Type,string,string)" path="/param[@name='invalidValue']"/></param>
+    /// <param name="pattern"><inheritdoc cref="Iso20022FormatException(Type,string,string)" path="/param[@name='pattern']"/></param>
     /// <param name="inner">The exception that caused this one.</param>
     public Iso20022FormatException(Type targetType, string invalidValue, string pattern, Exception inner)
         : this(targetType, invalidValue, pattern, Iso20022FormatViolation.PatternMismatch,

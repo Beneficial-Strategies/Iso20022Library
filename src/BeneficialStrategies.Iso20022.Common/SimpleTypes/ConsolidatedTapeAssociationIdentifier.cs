@@ -61,10 +61,16 @@ public readonly struct ConsolidatedTapeAssociationIdentifier : IIsoSimpleValue<s
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ConsolidatedTapeAssociationIdentifier a, ConsolidatedTapeAssociationIdentifier b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ConsolidatedTapeAssociationIdentifier a, ConsolidatedTapeAssociationIdentifier b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ConsolidatedTapeAssociationIdentifier a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ConsolidatedTapeAssociationIdentifier a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ConsolidatedTapeAssociationIdentifier b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ConsolidatedTapeAssociationIdentifier b) => a != b.Value;
 }

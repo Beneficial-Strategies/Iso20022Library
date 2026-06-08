@@ -55,10 +55,16 @@ public readonly struct ExternalEntitySizeCode : IIsoExternalCode, IEquatable<Ext
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
+    /// <inheritdoc/>
     public static bool operator ==(ExternalEntitySizeCode a, ExternalEntitySizeCode b) => a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator !=(ExternalEntitySizeCode a, ExternalEntitySizeCode b) => !a.Equals(b);
+    /// <inheritdoc/>
     public static bool operator ==(ExternalEntitySizeCode a, string? b) => a.Value == b;
+    /// <inheritdoc/>
     public static bool operator !=(ExternalEntitySizeCode a, string? b) => a.Value != b;
+    /// <inheritdoc/>
     public static bool operator ==(string? a, ExternalEntitySizeCode b) => a == b.Value;
+    /// <inheritdoc/>
     public static bool operator !=(string? a, ExternalEntitySizeCode b) => a != b.Value;
 }
