@@ -343,6 +343,80 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     }
 }
 
+// ── Indicator (boolean true/false) contract ────────────────────────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 Indicator types — boolean concepts serialized as the
+/// strings <c>"true"</c> or <c>"false"</c> on the wire.
+/// Adds tests for bool construction, implicit conversions, and bool equality operators.
+/// </summary>
+public abstract class SimpleValueIndicatorContractTests<TStruct>
+    : SimpleValueStringContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    protected override string ValidSample   => "true";
+    protected override string InvalidSample => "maybe"; // not "true" or "false"
+
+    // Activator.CreateInstance(Type, bool) matches the (Type, nonPublic) overload, not our
+    // (bool value) constructor. Use explicit constructor lookup to avoid this trap.
+    private static TStruct CreateFromBool(bool value)
+    {
+        var ctor = typeof(TStruct).GetConstructor([typeof(bool)])
+            ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (bool) constructor.");
+        return (TStruct)ctor.Invoke([value])!;
+    }
+
+    [Fact]
+    public void BoolTrue_IsAccepted()
+    {
+        var instance = CreateFromBool(true);
+        Assert.Equal("true", instance.Value);
+    }
+
+    [Fact]
+    public void BoolFalse_IsAccepted()
+    {
+        var instance = CreateFromBool(false);
+        Assert.Equal("false", instance.Value);
+    }
+
+    [Fact]
+    public void ImplicitFromBool_True_Succeeds()
+    {
+        var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "op_Implicit"
+                && m.ReturnType == typeof(TStruct)
+                && m.GetParameters() is [var p] && p.ParameterType == typeof(bool));
+        var result = (TStruct)op.Invoke(null, [true])!;
+        Assert.Equal("true", result.Value);
+    }
+
+    [Fact]
+    public void ImplicitToBool_Works()
+    {
+        var instance = CreateFromBool(true);
+        var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "op_Implicit"
+                && m.ReturnType == typeof(bool)
+                && m.GetParameters() is [var p] && p.ParameterType == typeof(TStruct));
+        Assert.True((bool)op.Invoke(null, [instance])!);
+    }
+
+    [Fact]
+    public void BoolEqualityOperator_Works()
+    {
+        var opEq = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .FirstOrDefault(m => m.Name == "op_Equality"
+                && m.GetParameters() is [var p0, var p1]
+                && p0.ParameterType == typeof(TStruct)
+                && p1.ParameterType == typeof(bool));
+        Assert.NotNull(opEq);
+        var trueInstance = CreateFromBool(true);
+        Assert.True((bool)opEq!.Invoke(null, [trueInstance, true])!);
+        Assert.False((bool)opEq.Invoke(null, [trueInstance, false])!);
+    }
+}
+
 // ── RestrictedFIN (any character, slash restriction) contract ─────────────────
 
 /// <summary>

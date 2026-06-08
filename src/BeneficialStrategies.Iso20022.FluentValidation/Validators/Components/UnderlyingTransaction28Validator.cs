@@ -69,7 +69,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
         RuleFor(x => x)
             .Must(x =>
             {
-                if (x.OriginalGroupInformationAndCancellation?.GroupCancellation != "true")
+                if (x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue != true)
                     return true;
                 return x.OriginalGroupInformationAndCancellation
                     .CancellationReasonInformation
@@ -85,7 +85,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
         RuleFor(x => x)
             .Must(x =>
             {
-                if (x.OriginalGroupInformationAndCancellation?.GroupCancellation != "false")
+                if (x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue != false)
                     return true;
                 var nbStr = x.OriginalGroupInformationAndCancellation.NumberOfTransactions;
                 if (nbStr is null)
@@ -105,7 +105,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
         RuleFor(x => x)
             .Must(x =>
                 !(
-                    x.OriginalGroupInformationAndCancellation?.GroupCancellation == "true"
+                    x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue == true
                     && x.TransactionInformation.Count > 0
                 )
             )
@@ -119,7 +119,7 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
         RuleFor(x => x)
             .Must(x =>
                 !(
-                    x.OriginalGroupInformationAndCancellation?.GroupCancellation == "false"
+                    x.OriginalGroupInformationAndCancellation?.GroupCancellation?.BoolValue == false
                     && x.TransactionInformation.Count == 0
                 )
             )

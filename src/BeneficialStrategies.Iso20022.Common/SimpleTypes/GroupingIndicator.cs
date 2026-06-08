@@ -1,0 +1,88 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
+
+namespace BeneficialStrategies.Iso20022.SimpleTypes;
+
+/// <summary>
+/// A flag indicating a True or False value.
+/// </summary>
+/// <remarks>
+/// Wire values: <c>"true"</c> (One PaymentInformation block with multiple PaymentTransaction blocks.) or <c>"false"</c> (Equal numbers of PaymentInformation and PaymentTransaction blocks.).
+/// Supports direct bool assignment: <c>GroupingIndicator flag = true;</c>
+/// </remarks>
+[DataContract]
+[Serializable]
+[IsoId("_YX4O8dp-Ed-ak6NoX_4Aeg_-1242834099")]
+[Description(@"A flag indicating a True or False value.")]
+[JsonConverter(typeof(Iso20022SimpleValueJsonConverter<GroupingIndicator>))]
+public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<GroupingIndicator>
+{
+    private const string TrueWire  = "true";
+    private const string FalseWire = "false";
+
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <summary>The boolean value represented by this indicator.</summary>
+    public bool BoolValue => Value == TrueWire;
+
+    /// <summary>Initializes a new instance from a bool.</summary>
+    public GroupingIndicator(bool value) { Value = value ? TrueWire : FalseWire; }
+
+    /// <summary>Initializes a new instance from the wire string "true" or "false".</summary>
+    /// <exception cref="ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
+    /// <exception cref="Iso20022FormatException">
+    /// Thrown with <see cref="Iso20022FormatViolation.PatternMismatch"/> when value is
+    /// neither "true" nor "false".
+    /// </exception>
+    public GroupingIndicator(string value)
+    {
+        ArgumentNullException.ThrowIfNull(value);
+        if (value != TrueWire && value != FalseWire)
+            throw new Iso20022FormatException(typeof(GroupingIndicator), value, @"^(true|false)$");
+        Value = value;
+    }
+
+    /// <summary>Returns <see langword="true"/> when <paramref name="value"/> is "true" or "false".</summary>
+    public static bool TryCreate(string? value, [NotNullWhen(true)] out GroupingIndicator result)
+    {
+        if (value == TrueWire || value == FalseWire) { result = new(value); return true; }
+        result = default; return false;
+    }
+
+    /// <summary>Returns a valid instance for any <see cref="bool"/> value.</summary>
+    public static bool TryCreate(bool value, out GroupingIndicator result)
+    { result = new(value); return true; }
+
+    /// <summary>Implicitly wraps a bool as a <see cref="GroupingIndicator"/>.</summary>
+    public static implicit operator GroupingIndicator(bool value)   => new(value);
+    /// <summary>Implicitly wraps a wire string as a <see cref="GroupingIndicator"/>.</summary>
+    public static implicit operator GroupingIndicator(string value) => new(value);
+    /// <summary>Implicitly unwraps to the wire string.</summary>
+    public static implicit operator string(GroupingIndicator ind)   => ind.Value;
+    /// <summary>Implicitly unwraps to the bool value.</summary>
+    public static implicit operator bool(GroupingIndicator ind)     => ind.BoolValue;
+
+    /// <inheritdoc/>
+    public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
+    public bool Equals(GroupingIndicator other) => Value == other.Value;
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is GroupingIndicator other && Equals(other);
+    /// <inheritdoc/>
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    public static bool operator ==(GroupingIndicator a, GroupingIndicator b)  => a.Equals(b);
+    public static bool operator !=(GroupingIndicator a, GroupingIndicator b)  => !a.Equals(b);
+    public static bool operator ==(GroupingIndicator a, string? b)  => a.Value == b;
+    public static bool operator !=(GroupingIndicator a, string? b)  => a.Value != b;
+    public static bool operator ==(string? a, GroupingIndicator b)  => a == b.Value;
+    public static bool operator !=(string? a, GroupingIndicator b)  => a != b.Value;
+    public static bool operator ==(GroupingIndicator a, bool b)     => a.BoolValue == b;
+    public static bool operator !=(GroupingIndicator a, bool b)     => a.BoolValue != b;
+    public static bool operator ==(bool a, GroupingIndicator b)     => a == b.BoolValue;
+    public static bool operator !=(bool a, GroupingIndicator b)     => a != b.BoolValue;
+}

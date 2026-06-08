@@ -13,6 +13,20 @@ global using BeneficialStrategies.Iso20022.SimpleTypes;
 // IsoMax*Text aliases — redirect to validated structs in SimpleTypes namespace
 // IsoRestrictedFINX* aliases — redirect to validated structs
 // IsoRestrictedFIN* and IsoRestrictedFINZ* aliases
+// Indicator aliases — boolean true/false wire types
+global using IsoYesNoIndicator = BeneficialStrategies.Iso20022.SimpleTypes.YesNoIndicator;
+global using IsoTrueFalseIndicator = BeneficialStrategies.Iso20022.SimpleTypes.TrueFalseIndicator;
+global using IsoPlusOrMinusIndicator = BeneficialStrategies.Iso20022.SimpleTypes.PlusOrMinusIndicator;
+global using IsoAllOrNoneIndicator = BeneficialStrategies.Iso20022.SimpleTypes.AllOrNoneIndicator;
+global using IsoAMLIndicator = BeneficialStrategies.Iso20022.SimpleTypes.AMLIndicator;
+global using IsoBatchBookingIndicator = BeneficialStrategies.Iso20022.SimpleTypes.BatchBookingIndicator;
+global using IsoChargeIncludedIndicator = BeneficialStrategies.Iso20022.SimpleTypes.ChargeIncludedIndicator;
+global using IsoGroupCancellationIndicator = BeneficialStrategies.Iso20022.SimpleTypes.GroupCancellationIndicator;
+global using IsoGroupingIndicator = BeneficialStrategies.Iso20022.SimpleTypes.GroupingIndicator;
+global using IsoIdentificationVerificationIndicator = BeneficialStrategies.Iso20022.SimpleTypes.IdentificationVerificationIndicator;
+global using IsoOverrideIndicator = BeneficialStrategies.Iso20022.SimpleTypes.OverrideIndicator;
+global using IsoPaymentDirectionIndicator = BeneficialStrategies.Iso20022.SimpleTypes.PaymentDirectionIndicator;
+global using IsoRequestedIndicator = BeneficialStrategies.Iso20022.SimpleTypes.RequestedIndicator;
 global using IsoRestrictedFINMax8Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax8Text;
 global using IsoRestrictedFINMax15Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax15Text;
 global using IsoRestrictedFINMax16Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax16Text;
@@ -250,19 +264,6 @@ global using IsoMerchantCategoryCodeIdentifier = System.String; // IdentifierSet
 global using IsoUTIIdentifier = System.String; // IdentifierSet
 global using IsoISIN2021Identifier = System.String; // IdentifierSet
 global using IsoDTI2021Identifier = System.String; // IdentifierSet
-global using IsoYesNoIndicator = System.String; // IndicatorSet
-global using IsoPlusOrMinusIndicator = System.String; // IndicatorSet
-global using IsoRequestedIndicator = System.String; // IndicatorSet
-global using IsoTrueFalseIndicator = System.String; // IndicatorSet
-global using IsoPaymentDirectionIndicator = System.String; // IndicatorSet
-global using IsoAllOrNoneIndicator = System.String; // IndicatorSet
-global using IsoChargeIncludedIndicator = System.String; // IndicatorSet
-global using IsoBatchBookingIndicator = System.String; // IndicatorSet
-global using IsoGroupingIndicator = System.String; // IndicatorSet
-global using IsoGroupCancellationIndicator = System.String; // IndicatorSet
-global using IsoIdentificationVerificationIndicator = System.String; // IndicatorSet
-global using IsoAMLIndicator = System.String; // IndicatorSet
-global using IsoOverrideIndicator = System.String; // IndicatorSet
 global using IsoDirectionIndicator = System.String; // IndicatorSet
 global using IsoNumber = System.UInt64; // Quantity
 global using IsoDecimalNumber = System.UInt64; // Quantity
