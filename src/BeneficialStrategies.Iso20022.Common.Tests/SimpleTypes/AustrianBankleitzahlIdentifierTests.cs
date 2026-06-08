@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class AustrianBankleitzahlIdentifierTests : SimpleValueStringContractTests<AustrianBankleitzahlIdentifier>
 {
-    protected override string ValidSample   => "AT12345";
+    protected override string ValidSample => "AT12345";
     protected override string InvalidSample => "XX12345";
 }

@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Max6AlphaTextTests : SimpleValueStringContractTests<Max6AlphaText>
 {
-    protected override string ValidSample   => "ABCDEF";
+    protected override string ValidSample => "ABCDEF";
     protected override string InvalidSample => "123456";
 }

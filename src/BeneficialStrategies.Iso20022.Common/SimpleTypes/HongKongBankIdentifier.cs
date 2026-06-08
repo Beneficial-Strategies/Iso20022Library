@@ -58,10 +58,10 @@ public readonly struct HongKongBankIdentifier : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(HongKongBankIdentifier a, HongKongBankIdentifier b)  => a.Equals(b);
-    public static bool operator !=(HongKongBankIdentifier a, HongKongBankIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(HongKongBankIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(HongKongBankIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, HongKongBankIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, HongKongBankIdentifier b)  => a != b.Value;
+    public static bool operator ==(HongKongBankIdentifier a, HongKongBankIdentifier b) => a.Equals(b);
+    public static bool operator !=(HongKongBankIdentifier a, HongKongBankIdentifier b) => !a.Equals(b);
+    public static bool operator ==(HongKongBankIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(HongKongBankIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, HongKongBankIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, HongKongBankIdentifier b) => a != b.Value;
 }

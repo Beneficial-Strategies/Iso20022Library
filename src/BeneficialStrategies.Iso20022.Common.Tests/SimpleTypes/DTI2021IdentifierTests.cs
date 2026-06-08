@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class DTI2021IdentifierTests : SimpleValueStringContractTests<DTI2021Identifier>
 {
-    protected override string ValidSample   => "123456789";
+    protected override string ValidSample => "123456789";
     protected override string InvalidSample => "A12345678";
 }

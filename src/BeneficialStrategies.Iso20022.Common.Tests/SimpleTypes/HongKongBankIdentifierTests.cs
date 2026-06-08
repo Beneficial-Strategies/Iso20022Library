@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class HongKongBankIdentifierTests : SimpleValueStringContractTests<HongKongBankIdentifier>
 {
-    protected override string ValidSample   => "HK123";
+    protected override string ValidSample => "HK123";
     protected override string InvalidSample => "XX123";
 }

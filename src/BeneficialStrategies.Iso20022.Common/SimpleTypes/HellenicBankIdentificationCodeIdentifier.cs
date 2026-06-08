@@ -58,10 +58,10 @@ public readonly struct HellenicBankIdentificationCodeIdentifier : IIsoSimpleValu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b)  => a.Equals(b);
-    public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, HellenicBankIdentificationCodeIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, HellenicBankIdentificationCodeIdentifier b)  => a != b.Value;
+    public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b) => a.Equals(b);
+    public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, HellenicBankIdentificationCodeIdentifier b) => !a.Equals(b);
+    public static bool operator ==(HellenicBankIdentificationCodeIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(HellenicBankIdentificationCodeIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, HellenicBankIdentificationCodeIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, HellenicBankIdentificationCodeIdentifier b) => a != b.Value;
 }

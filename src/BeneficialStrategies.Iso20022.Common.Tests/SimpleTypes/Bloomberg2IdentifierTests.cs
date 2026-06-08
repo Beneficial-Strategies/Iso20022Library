@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Bloomberg2IdentifierTests : SimpleValueStringContractTests<Bloomberg2Identifier>
 {
-    protected override string ValidSample   => "BBG000B9XRZ4";
+    protected override string ValidSample => "BBG000B9XRZ4";
     protected override string InvalidSample => "NOTBLOOMBERG";
 }

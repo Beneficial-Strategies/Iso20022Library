@@ -78,10 +78,10 @@ public readonly struct Max15PlusSignedNumericText : IIsoSimpleValue<string>, IEq
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Max15PlusSignedNumericText a, Max15PlusSignedNumericText b)  => a.Equals(b);
-    public static bool operator !=(Max15PlusSignedNumericText a, Max15PlusSignedNumericText b)  => !a.Equals(b);
-    public static bool operator ==(Max15PlusSignedNumericText a, string? b)  => a.Value == b;
-    public static bool operator !=(Max15PlusSignedNumericText a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Max15PlusSignedNumericText b)  => a == b.Value;
-    public static bool operator !=(string? a, Max15PlusSignedNumericText b)  => a != b.Value;
+    public static bool operator ==(Max15PlusSignedNumericText a, Max15PlusSignedNumericText b) => a.Equals(b);
+    public static bool operator !=(Max15PlusSignedNumericText a, Max15PlusSignedNumericText b) => !a.Equals(b);
+    public static bool operator ==(Max15PlusSignedNumericText a, string? b) => a.Value == b;
+    public static bool operator !=(Max15PlusSignedNumericText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Max15PlusSignedNumericText b) => a == b.Value;
+    public static bool operator !=(string? a, Max15PlusSignedNumericText b) => a != b.Value;
 }

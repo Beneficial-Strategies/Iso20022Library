@@ -58,10 +58,10 @@ public readonly struct ExtensiveBranchNetworkIdentifier : IIsoSimpleValue<string
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b)  => a.Equals(b);
-    public static bool operator !=(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(ExtensiveBranchNetworkIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(ExtensiveBranchNetworkIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, ExtensiveBranchNetworkIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, ExtensiveBranchNetworkIdentifier b)  => a != b.Value;
+    public static bool operator ==(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b) => a.Equals(b);
+    public static bool operator !=(ExtensiveBranchNetworkIdentifier a, ExtensiveBranchNetworkIdentifier b) => !a.Equals(b);
+    public static bool operator ==(ExtensiveBranchNetworkIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(ExtensiveBranchNetworkIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, ExtensiveBranchNetworkIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, ExtensiveBranchNetworkIdentifier b) => a != b.Value;
 }

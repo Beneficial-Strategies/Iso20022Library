@@ -6,7 +6,7 @@ public class Exact6AlphaNumericTextTests : SimpleValueMaxTextContractTests<Exact
 {
     protected override int MinLength => 6;
     protected override int MaxLength => 6;
-    protected override string ValidSample   => "AB1 CD"; // alphanumeric + space (whitespace is allowed)
+    protected override string ValidSample => "AB1 CD"; // alphanumeric + space (whitespace is allowed)
     protected override string InvalidSample => "AB1CD!!"; // special chars + wrong length
 
     [Fact]

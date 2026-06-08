@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class ExtensiveBranchNetworkIdentifierTests : SimpleValueStringContractTests<ExtensiveBranchNetworkIdentifier>
 {
-    protected override string ValidSample   => "AU123456";
+    protected override string ValidSample => "AU123456";
     protected override string InvalidSample => "XX123456";
 }

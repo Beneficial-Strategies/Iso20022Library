@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class MICIdentifierTests : SimpleValueStringContractTests<MICIdentifier>
 {
-    protected override string ValidSample   => "XLON";
+    protected override string ValidSample => "XLON";
     protected override string InvalidSample => "X!ON";
 }

@@ -58,10 +58,10 @@ public readonly struct DTI2024Identifier : IIsoSimpleValue<string>, IEquatable<D
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(DTI2024Identifier a, DTI2024Identifier b)  => a.Equals(b);
-    public static bool operator !=(DTI2024Identifier a, DTI2024Identifier b)  => !a.Equals(b);
-    public static bool operator ==(DTI2024Identifier a, string? b)  => a.Value == b;
-    public static bool operator !=(DTI2024Identifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, DTI2024Identifier b)  => a == b.Value;
-    public static bool operator !=(string? a, DTI2024Identifier b)  => a != b.Value;
+    public static bool operator ==(DTI2024Identifier a, DTI2024Identifier b) => a.Equals(b);
+    public static bool operator !=(DTI2024Identifier a, DTI2024Identifier b) => !a.Equals(b);
+    public static bool operator ==(DTI2024Identifier a, string? b) => a.Value == b;
+    public static bool operator !=(DTI2024Identifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, DTI2024Identifier b) => a == b.Value;
+    public static bool operator !=(string? a, DTI2024Identifier b) => a != b.Value;
 }

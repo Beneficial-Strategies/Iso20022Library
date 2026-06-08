@@ -66,7 +66,7 @@ public readonly struct RestrictedFINXMax16Text : IIsoSimpleValue<string>, IEquat
         {
             foreach (var c in value) if (!IsCharSetX(c)) { result = default; return false; }
             if (value[0] == '/' || value[^1] == '/' || value.Contains("//"))
-                { result = default; return false; }
+            { result = default; return false; }
             result = new(value); return true;
         }
         result = default; return false;
@@ -91,10 +91,10 @@ public readonly struct RestrictedFINXMax16Text : IIsoSimpleValue<string>, IEquat
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(RestrictedFINXMax16Text a, RestrictedFINXMax16Text b)  => a.Equals(b);
-    public static bool operator !=(RestrictedFINXMax16Text a, RestrictedFINXMax16Text b)  => !a.Equals(b);
-    public static bool operator ==(RestrictedFINXMax16Text a, string? b)  => a.Value == b;
-    public static bool operator !=(RestrictedFINXMax16Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, RestrictedFINXMax16Text b)  => a == b.Value;
-    public static bool operator !=(string? a, RestrictedFINXMax16Text b)  => a != b.Value;
+    public static bool operator ==(RestrictedFINXMax16Text a, RestrictedFINXMax16Text b) => a.Equals(b);
+    public static bool operator !=(RestrictedFINXMax16Text a, RestrictedFINXMax16Text b) => !a.Equals(b);
+    public static bool operator ==(RestrictedFINXMax16Text a, string? b) => a.Value == b;
+    public static bool operator !=(RestrictedFINXMax16Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, RestrictedFINXMax16Text b) => a == b.Value;
+    public static bool operator !=(string? a, RestrictedFINXMax16Text b) => a != b.Value;
 }

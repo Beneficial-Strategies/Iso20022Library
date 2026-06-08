@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class IndianFinancialSystemCodeIdentifierTests : SimpleValueStringContractTests<IndianFinancialSystemCodeIdentifier>
 {
-    protected override string ValidSample   => "INIDFB0110001";
+    protected override string ValidSample => "INIDFB0110001";
     protected override string InvalidSample => "XX1234567890A";
 }

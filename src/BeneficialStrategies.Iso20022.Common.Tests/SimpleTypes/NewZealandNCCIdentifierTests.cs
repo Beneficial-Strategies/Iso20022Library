@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class NewZealandNCCIdentifierTests : SimpleValueStringContractTests<NewZealandNCCIdentifier>
 {
-    protected override string ValidSample   => "NZ123456";
+    protected override string ValidSample => "NZ123456";
     protected override string InvalidSample => "XX123456";
 }

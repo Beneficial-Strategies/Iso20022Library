@@ -71,10 +71,10 @@ public readonly struct Min3Max4NumericText : IIsoSimpleValue<string>, IEquatable
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Min3Max4NumericText a, Min3Max4NumericText b)  => a.Equals(b);
-    public static bool operator !=(Min3Max4NumericText a, Min3Max4NumericText b)  => !a.Equals(b);
-    public static bool operator ==(Min3Max4NumericText a, string? b)  => a.Value == b;
-    public static bool operator !=(Min3Max4NumericText a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Min3Max4NumericText b)  => a == b.Value;
-    public static bool operator !=(string? a, Min3Max4NumericText b)  => a != b.Value;
+    public static bool operator ==(Min3Max4NumericText a, Min3Max4NumericText b) => a.Equals(b);
+    public static bool operator !=(Min3Max4NumericText a, Min3Max4NumericText b) => !a.Equals(b);
+    public static bool operator ==(Min3Max4NumericText a, string? b) => a.Value == b;
+    public static bool operator !=(Min3Max4NumericText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Min3Max4NumericText b) => a == b.Value;
+    public static bool operator !=(string? a, Min3Max4NumericText b) => a != b.Value;
 }

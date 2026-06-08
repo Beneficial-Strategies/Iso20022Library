@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class RateSourceTextTests : SimpleValueStringContractTests<RateSourceText>
 {
-    protected override string ValidSample   => "USD01";
+    protected override string ValidSample => "USD01";
     protected override string InvalidSample => "US";
 }

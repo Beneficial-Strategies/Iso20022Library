@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class CanadianPaymentsARNIdentifierTests : SimpleValueStringContractTests<CanadianPaymentsARNIdentifier>
 {
-    protected override string ValidSample   => "CA123456789";
+    protected override string ValidSample => "CA123456789";
     protected override string InvalidSample => "US123456789";
 }

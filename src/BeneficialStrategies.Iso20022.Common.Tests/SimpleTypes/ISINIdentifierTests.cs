@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class ISINIdentifierTests : SimpleValueStringContractTests<ISINIdentifier>
 {
-    protected override string ValidSample   => "US0378331005";
+    protected override string ValidSample => "US0378331005";
     protected override string InvalidSample => "TOOSHORT";
 }

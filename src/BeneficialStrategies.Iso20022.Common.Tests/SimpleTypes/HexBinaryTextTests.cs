@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class HexBinaryTextTests : SimpleValueStringContractTests<HexBinaryText>
 {
-    protected override string ValidSample   => "DEADBEEF";
+    protected override string ValidSample => "DEADBEEF";
     protected override string InvalidSample => "INVALID!";
 }

@@ -16,15 +16,15 @@ public class Iso20022SerializationTests
     // ── Iso20022JsonNamingPolicy ──────────────────────────────────────────────
 
     [Theory]
-    [InlineData("GroupHeader",           "group_header")]
+    [InlineData("GroupHeader", "group_header")]
     [InlineData("MessageIdentification", "message_identification")]
-    [InlineData("CreationDateTime",      "creation_date_time")]
-    [InlineData("BIC",                   "bic")]           // all-caps acronym — no underscores
-    [InlineData("IBAN",                  "iban")]
-    [InlineData("XMLParser",             "xml_parser")]    // acronym followed by word
-    [InlineData("Amount",                "amount")]
-    [InlineData("Currency",              "currency")]
-    [InlineData("Id",                    "id")]
+    [InlineData("CreationDateTime", "creation_date_time")]
+    [InlineData("BIC", "bic")]           // all-caps acronym — no underscores
+    [InlineData("IBAN", "iban")]
+    [InlineData("XMLParser", "xml_parser")]    // acronym followed by word
+    [InlineData("Amount", "amount")]
+    [InlineData("Currency", "currency")]
+    [InlineData("Id", "id")]
     public void NamingPolicy_ConvertsToSnakeCase(string input, string expected)
     {
         Assert.Equal(expected, Iso20022JsonNamingPolicy.Instance.ConvertName(input));
@@ -53,7 +53,7 @@ public class Iso20022SerializationTests
         };
 
         Assert.Equal(CreditDebitCode.Credit, JsonSerializer.Deserialize<CreditDebitCode>("\"CRDT\"", opts));
-        Assert.Equal(CreditDebitCode.Debit,  JsonSerializer.Deserialize<CreditDebitCode>("\"DBIT\"", opts));
+        Assert.Equal(CreditDebitCode.Debit, JsonSerializer.Deserialize<CreditDebitCode>("\"DBIT\"", opts));
     }
 
     [Fact]
@@ -137,7 +137,7 @@ public class Iso20022SerializationTests
         var amount = new ActiveOrHistoricCurrencyAndAmount
         {
             Currency = "EUR",
-            Amount   = 47250.00m,
+            Amount = 47250.00m,
         };
 
         var json = JsonSerializer.Serialize(amount, Iso20022JsonSerializerOptions.Default);
@@ -154,15 +154,15 @@ public class Iso20022SerializationTests
         var original = new ActiveOrHistoricCurrencyAndAmount
         {
             Currency = "USD",
-            Amount   = 1_000_000.50m,
+            Amount = 1_000_000.50m,
         };
 
-        var json   = JsonSerializer.Serialize(original, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(original, Iso20022JsonSerializerOptions.Default);
         var result = JsonSerializer.Deserialize<ActiveOrHistoricCurrencyAndAmount>(json, Iso20022JsonSerializerOptions.Default);
 
         Assert.NotNull(result);
         Assert.Equal(original.Currency, result.Currency);
-        Assert.Equal(original.Amount,   result.Amount);
+        Assert.Equal(original.Amount, result.Amount);
     }
 
     // ── Iso20022JsonSerializerOptions.Default — combined behaviour ────────────

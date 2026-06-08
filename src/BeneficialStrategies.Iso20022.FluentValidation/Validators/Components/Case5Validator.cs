@@ -21,7 +21,7 @@ public sealed class Case5Validator : AbstractValidator<Case5>
         RuleFor(x => x.Identification)
             .NotEmpty()
             .WithMessage("Case5.Identification is required (Max35Text, 1..1).");
-            // Length [1..35] enforced by Max35Text constructor.
+        // Length [1..35] enforced by Max35Text constructor.
 
         RuleFor(x => x.Creator)
             .NotNull()

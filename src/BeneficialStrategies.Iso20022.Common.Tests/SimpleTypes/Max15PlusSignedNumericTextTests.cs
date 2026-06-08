@@ -6,7 +6,7 @@ public class Max15PlusSignedNumericTextTests : SimpleValueMaxTextContractTests<M
 {
     protected override int MaxLength => 16;
     // The '+' prefix makes single-char padding useless — provide explicit samples.
-    protected override string ValidSample   => "+12345";
+    protected override string ValidSample => "+12345";
     protected override string InvalidSample => new string('X', 17); // invalid char + too long
 
     // Override boundary tests: a single-char pad can't produce a valid 16-char value for this type.

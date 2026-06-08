@@ -58,10 +58,10 @@ public readonly struct ELFIdentifier : IIsoSimpleValue<string>, IEquatable<ELFId
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(ELFIdentifier a, ELFIdentifier b)  => a.Equals(b);
-    public static bool operator !=(ELFIdentifier a, ELFIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(ELFIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(ELFIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, ELFIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, ELFIdentifier b)  => a != b.Value;
+    public static bool operator ==(ELFIdentifier a, ELFIdentifier b) => a.Equals(b);
+    public static bool operator !=(ELFIdentifier a, ELFIdentifier b) => !a.Equals(b);
+    public static bool operator ==(ELFIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(ELFIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, ELFIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, ELFIdentifier b) => a != b.Value;
 }

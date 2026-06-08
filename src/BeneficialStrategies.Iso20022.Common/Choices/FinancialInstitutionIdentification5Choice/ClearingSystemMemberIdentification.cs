@@ -14,5 +14,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     [IsoId("_TFehONp-Ed-ak6NoX_4Aeg_1156630120")]
     [DisplayName("Clearing System Member Identification")]
     public record ClearingSystemMemberIdentification
-        : FinancialInstitutionIdentification5Choice_ { }
+        : FinancialInstitutionIdentification5Choice_
+    { }
 }

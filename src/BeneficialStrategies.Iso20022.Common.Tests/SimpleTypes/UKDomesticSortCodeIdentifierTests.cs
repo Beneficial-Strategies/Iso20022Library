@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class UKDomesticSortCodeIdentifierTests : SimpleValueStringContractTests<UKDomesticSortCodeIdentifier>
 {
-    protected override string ValidSample   => "SC123456";
+    protected override string ValidSample => "SC123456";
     protected override string InvalidSample => "XX123456";
 }

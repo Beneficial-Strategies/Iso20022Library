@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Min2Max3AlphaTextTests : SimpleValueStringContractTests<Min2Max3AlphaText>
 {
-    protected override string ValidSample   => "AB";
+    protected override string ValidSample => "AB";
     protected override string InvalidSample => "1234";
 }

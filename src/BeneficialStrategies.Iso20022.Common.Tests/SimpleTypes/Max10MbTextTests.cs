@@ -12,7 +12,7 @@ public class Max10MbTextTests : SimpleValueMaxTextContractTests<Max10MbText>
     // MaxLength = 10,000,000 but boundary tests allocating that many chars are impractical.
     // Use lightweight ValidSample and override the allocation-heavy tests.
     protected override int MaxLength => 10000000;
-    protected override string ValidSample   => "Hello";
+    protected override string ValidSample => "Hello";
     protected override string InvalidSample => new string('A', 10000001); // only used in InvalidConstruction check
 
     public override void ExactMaxLength_IsAccepted()

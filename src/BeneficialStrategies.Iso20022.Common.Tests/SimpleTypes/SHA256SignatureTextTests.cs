@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class SHA256SignatureTextTests : SimpleValueStringContractTests<SHA256SignatureText>
 {
-    protected override string ValidSample   => "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+    protected override string ValidSample => "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
     protected override string InvalidSample => "TOOSHORT";
 }

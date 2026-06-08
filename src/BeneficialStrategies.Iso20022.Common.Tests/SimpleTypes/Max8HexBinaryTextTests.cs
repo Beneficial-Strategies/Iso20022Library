@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Max8HexBinaryTextTests : SimpleValueStringContractTests<Max8HexBinaryText>
 {
-    protected override string ValidSample   => "1A2B3C4D";
+    protected override string ValidSample => "1A2B3C4D";
     protected override string InvalidSample => "lowercase";
 }

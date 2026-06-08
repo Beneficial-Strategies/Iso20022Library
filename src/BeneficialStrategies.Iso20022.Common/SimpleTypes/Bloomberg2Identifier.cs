@@ -58,10 +58,10 @@ public readonly struct Bloomberg2Identifier : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Bloomberg2Identifier a, Bloomberg2Identifier b)  => a.Equals(b);
-    public static bool operator !=(Bloomberg2Identifier a, Bloomberg2Identifier b)  => !a.Equals(b);
-    public static bool operator ==(Bloomberg2Identifier a, string? b)  => a.Value == b;
-    public static bool operator !=(Bloomberg2Identifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Bloomberg2Identifier b)  => a == b.Value;
-    public static bool operator !=(string? a, Bloomberg2Identifier b)  => a != b.Value;
+    public static bool operator ==(Bloomberg2Identifier a, Bloomberg2Identifier b) => a.Equals(b);
+    public static bool operator !=(Bloomberg2Identifier a, Bloomberg2Identifier b) => !a.Equals(b);
+    public static bool operator ==(Bloomberg2Identifier a, string? b) => a.Value == b;
+    public static bool operator !=(Bloomberg2Identifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Bloomberg2Identifier b) => a == b.Value;
+    public static bool operator !=(string? a, Bloomberg2Identifier b) => a != b.Value;
 }

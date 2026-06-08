@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class CFIIdentifierTests : SimpleValueStringContractTests<CFIIdentifier>
 {
-    protected override string ValidSample   => "ESXXXX";
+    protected override string ValidSample => "ESXXXX";
     protected override string InvalidSample => "1234567";
 }

@@ -6,7 +6,7 @@ public class Exact1AlphaTextTests : SimpleValueMaxTextContractTests<Exact1AlphaT
 {
     protected override int MinLength => 1;
     protected override int MaxLength => 1;
-    protected override string ValidSample   => "A";
+    protected override string ValidSample => "A";
     protected override string InvalidSample => "12"; // digit + wrong length
 
     [Fact]

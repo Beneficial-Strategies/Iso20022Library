@@ -58,10 +58,10 @@ public readonly struct EICIdentifier : IIsoSimpleValue<string>, IEquatable<EICId
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(EICIdentifier a, EICIdentifier b)  => a.Equals(b);
-    public static bool operator !=(EICIdentifier a, EICIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(EICIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(EICIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, EICIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, EICIdentifier b)  => a != b.Value;
+    public static bool operator ==(EICIdentifier a, EICIdentifier b) => a.Equals(b);
+    public static bool operator !=(EICIdentifier a, EICIdentifier b) => !a.Equals(b);
+    public static bool operator ==(EICIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(EICIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, EICIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, EICIdentifier b) => a != b.Value;
 }

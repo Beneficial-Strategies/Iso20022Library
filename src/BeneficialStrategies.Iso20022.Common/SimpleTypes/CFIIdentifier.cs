@@ -58,10 +58,10 @@ public readonly struct CFIIdentifier : IIsoSimpleValue<string>, IEquatable<CFIId
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(CFIIdentifier a, CFIIdentifier b)  => a.Equals(b);
-    public static bool operator !=(CFIIdentifier a, CFIIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(CFIIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(CFIIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, CFIIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, CFIIdentifier b)  => a != b.Value;
+    public static bool operator ==(CFIIdentifier a, CFIIdentifier b) => a.Equals(b);
+    public static bool operator !=(CFIIdentifier a, CFIIdentifier b) => !a.Equals(b);
+    public static bool operator ==(CFIIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(CFIIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, CFIIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, CFIIdentifier b) => a != b.Value;
 }

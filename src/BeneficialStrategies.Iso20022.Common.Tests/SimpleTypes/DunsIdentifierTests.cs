@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class DunsIdentifierTests : SimpleValueStringContractTests<DunsIdentifier>
 {
-    protected override string ValidSample   => "123456789";
+    protected override string ValidSample => "123456789";
     protected override string InvalidSample => "NOTADUNS";
 }

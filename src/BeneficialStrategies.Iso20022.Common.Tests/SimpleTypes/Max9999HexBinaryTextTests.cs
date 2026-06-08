@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Max9999HexBinaryTextTests : SimpleValueStringContractTests<Max9999HexBinaryText>
 {
-    protected override string ValidSample   => "1A2B3C4D";
+    protected override string ValidSample => "1A2B3C4D";
     protected override string InvalidSample => "lowercase";
 }

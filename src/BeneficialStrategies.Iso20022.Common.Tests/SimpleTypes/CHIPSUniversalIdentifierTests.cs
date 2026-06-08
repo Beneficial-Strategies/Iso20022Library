@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class CHIPSUniversalIdentifierTests : SimpleValueStringContractTests<CHIPSUniversalIdentifier>
 {
-    protected override string ValidSample   => "CH123456";
+    protected override string ValidSample => "CH123456";
     protected override string InvalidSample => "XX123456";
 }

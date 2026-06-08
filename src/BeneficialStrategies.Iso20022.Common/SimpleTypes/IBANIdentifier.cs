@@ -58,10 +58,10 @@ public readonly struct IBANIdentifier : IIsoSimpleValue<string>, IEquatable<IBAN
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(IBANIdentifier a, IBANIdentifier b)  => a.Equals(b);
-    public static bool operator !=(IBANIdentifier a, IBANIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(IBANIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(IBANIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, IBANIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, IBANIdentifier b)  => a != b.Value;
+    public static bool operator ==(IBANIdentifier a, IBANIdentifier b) => a.Equals(b);
+    public static bool operator !=(IBANIdentifier a, IBANIdentifier b) => !a.Equals(b);
+    public static bool operator ==(IBANIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(IBANIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, IBANIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, IBANIdentifier b) => a != b.Value;
 }

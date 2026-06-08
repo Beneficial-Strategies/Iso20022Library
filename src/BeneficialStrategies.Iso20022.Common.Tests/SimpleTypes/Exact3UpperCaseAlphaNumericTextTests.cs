@@ -6,7 +6,7 @@ public class Exact3UpperCaseAlphaNumericTextTests : SimpleValueMaxTextContractTe
 {
     protected override int MinLength => 3;
     protected override int MaxLength => 3;
-    protected override string ValidSample   => "A1B";
+    protected override string ValidSample => "A1B";
     protected override string InvalidSample => "abcd"; // lowercase + wrong length
 
     [Fact]

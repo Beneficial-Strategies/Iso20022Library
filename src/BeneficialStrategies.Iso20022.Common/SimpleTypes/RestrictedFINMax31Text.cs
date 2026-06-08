@@ -62,10 +62,10 @@ public readonly struct RestrictedFINMax31Text : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(RestrictedFINMax31Text a, RestrictedFINMax31Text b)  => a.Equals(b);
-    public static bool operator !=(RestrictedFINMax31Text a, RestrictedFINMax31Text b)  => !a.Equals(b);
-    public static bool operator ==(RestrictedFINMax31Text a, string? b)  => a.Value == b;
-    public static bool operator !=(RestrictedFINMax31Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, RestrictedFINMax31Text b)  => a == b.Value;
-    public static bool operator !=(string? a, RestrictedFINMax31Text b)  => a != b.Value;
+    public static bool operator ==(RestrictedFINMax31Text a, RestrictedFINMax31Text b) => a.Equals(b);
+    public static bool operator !=(RestrictedFINMax31Text a, RestrictedFINMax31Text b) => !a.Equals(b);
+    public static bool operator ==(RestrictedFINMax31Text a, string? b) => a.Value == b;
+    public static bool operator !=(RestrictedFINMax31Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, RestrictedFINMax31Text b) => a == b.Value;
+    public static bool operator !=(string? a, RestrictedFINMax31Text b) => a != b.Value;
 }

@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class NACEDomain2025IdentifierTests : SimpleValueStringContractTests<NACEDomain2025Identifier>
 {
-    protected override string ValidSample   => "A";
+    protected override string ValidSample => "A";
     protected override string InvalidSample => "W";
 }

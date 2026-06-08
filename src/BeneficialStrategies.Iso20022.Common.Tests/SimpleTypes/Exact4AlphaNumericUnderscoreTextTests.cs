@@ -6,7 +6,7 @@ public class Exact4AlphaNumericUnderscoreTextTests : SimpleValueMaxTextContractT
 {
     protected override int MinLength => 4;
     protected override int MaxLength => 4;
-    protected override string ValidSample   => "A_1b";
+    protected override string ValidSample => "A_1b";
     protected override string InvalidSample => "ABCDE"; // too long
 
     [Fact]

@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<IdentificationVerificationIndicator>))]
 public readonly struct IdentificationVerificationIndicator : IIsoSimpleValue<string>, IEquatable<IdentificationVerificationIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct IdentificationVerificationIndicator : IIsoSimpleValue<str
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="IdentificationVerificationIndicator"/>.</summary>
-    public static implicit operator IdentificationVerificationIndicator(bool value)   => new(value);
+    public static implicit operator IdentificationVerificationIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="IdentificationVerificationIndicator"/>.</summary>
     public static implicit operator IdentificationVerificationIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(IdentificationVerificationIndicator ind)   => ind.Value;
+    public static implicit operator string(IdentificationVerificationIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(IdentificationVerificationIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(IdentificationVerificationIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct IdentificationVerificationIndicator : IIsoSimpleValue<str
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b)  => a.Equals(b);
-    public static bool operator !=(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b)  => !a.Equals(b);
-    public static bool operator ==(IdentificationVerificationIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(IdentificationVerificationIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, IdentificationVerificationIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, IdentificationVerificationIndicator b)  => a != b.Value;
-    public static bool operator ==(IdentificationVerificationIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(IdentificationVerificationIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, IdentificationVerificationIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, IdentificationVerificationIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b) => a.Equals(b);
+    public static bool operator !=(IdentificationVerificationIndicator a, IdentificationVerificationIndicator b) => !a.Equals(b);
+    public static bool operator ==(IdentificationVerificationIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(IdentificationVerificationIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, IdentificationVerificationIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, IdentificationVerificationIndicator b) => a != b.Value;
+    public static bool operator ==(IdentificationVerificationIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(IdentificationVerificationIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, IdentificationVerificationIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, IdentificationVerificationIndicator b) => a != b.BoolValue;
 }

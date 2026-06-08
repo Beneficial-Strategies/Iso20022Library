@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<BatchBookingIndicator>))]
 public readonly struct BatchBookingIndicator : IIsoSimpleValue<string>, IEquatable<BatchBookingIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct BatchBookingIndicator : IIsoSimpleValue<string>, IEquatab
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="BatchBookingIndicator"/>.</summary>
-    public static implicit operator BatchBookingIndicator(bool value)   => new(value);
+    public static implicit operator BatchBookingIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="BatchBookingIndicator"/>.</summary>
     public static implicit operator BatchBookingIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(BatchBookingIndicator ind)   => ind.Value;
+    public static implicit operator string(BatchBookingIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(BatchBookingIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(BatchBookingIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct BatchBookingIndicator : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(BatchBookingIndicator a, BatchBookingIndicator b)  => a.Equals(b);
-    public static bool operator !=(BatchBookingIndicator a, BatchBookingIndicator b)  => !a.Equals(b);
-    public static bool operator ==(BatchBookingIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(BatchBookingIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, BatchBookingIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, BatchBookingIndicator b)  => a != b.Value;
-    public static bool operator ==(BatchBookingIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(BatchBookingIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, BatchBookingIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, BatchBookingIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(BatchBookingIndicator a, BatchBookingIndicator b) => a.Equals(b);
+    public static bool operator !=(BatchBookingIndicator a, BatchBookingIndicator b) => !a.Equals(b);
+    public static bool operator ==(BatchBookingIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(BatchBookingIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, BatchBookingIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, BatchBookingIndicator b) => a != b.Value;
+    public static bool operator ==(BatchBookingIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(BatchBookingIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, BatchBookingIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, BatchBookingIndicator b) => a != b.BoolValue;
 }

@@ -281,7 +281,7 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     protected virtual char ValidPadChar => 'A';
 
     // Base class samples are derived from the length constraints.
-    protected override string ValidSample   => new string(ValidPadChar, MinLength == 0 ? 1 : MinLength);
+    protected override string ValidSample => new string(ValidPadChar, MinLength == 0 ? 1 : MinLength);
     protected override string InvalidSample => new string(ValidPadChar, MaxLength + 1);
 
     // ── Boundary tests ─────────────────────────────────────────────────────────
@@ -354,7 +354,7 @@ public abstract class SimpleValueIndicatorContractTests<TStruct>
     : SimpleValueStringContractTests<TStruct>
     where TStruct : struct, IIsoSimpleValue<string>
 {
-    protected override string ValidSample   => "true";
+    protected override string ValidSample => "true";
     protected override string InvalidSample => "maybe"; // not "true" or "false"
 
     // Activator.CreateInstance(Type, bool) matches the (Type, nonPublic) overload, not our
@@ -560,7 +560,8 @@ public abstract class SimpleValueRestrictedFINXSlashTextContractTests<TStruct>
 /// </remarks>
 public abstract class ExternalCodesetContractTests<TStruct>
     : SimpleValueStringContractTests<TStruct>
-    where TStruct : struct, IIsoExternalCode { }
+    where TStruct : struct, IIsoExternalCode
+{ }
 
 // ── Meta-test: every IIsoSimpleValue<T> type must have a concrete test class ──
 

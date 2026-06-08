@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<PlusOrMinusIndicator>))]
 public readonly struct PlusOrMinusIndicator : IIsoSimpleValue<string>, IEquatable<PlusOrMinusIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct PlusOrMinusIndicator : IIsoSimpleValue<string>, IEquatabl
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="PlusOrMinusIndicator"/>.</summary>
-    public static implicit operator PlusOrMinusIndicator(bool value)   => new(value);
+    public static implicit operator PlusOrMinusIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="PlusOrMinusIndicator"/>.</summary>
     public static implicit operator PlusOrMinusIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(PlusOrMinusIndicator ind)   => ind.Value;
+    public static implicit operator string(PlusOrMinusIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(PlusOrMinusIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(PlusOrMinusIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct PlusOrMinusIndicator : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(PlusOrMinusIndicator a, PlusOrMinusIndicator b)  => a.Equals(b);
-    public static bool operator !=(PlusOrMinusIndicator a, PlusOrMinusIndicator b)  => !a.Equals(b);
-    public static bool operator ==(PlusOrMinusIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(PlusOrMinusIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, PlusOrMinusIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, PlusOrMinusIndicator b)  => a != b.Value;
-    public static bool operator ==(PlusOrMinusIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(PlusOrMinusIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, PlusOrMinusIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, PlusOrMinusIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(PlusOrMinusIndicator a, PlusOrMinusIndicator b) => a.Equals(b);
+    public static bool operator !=(PlusOrMinusIndicator a, PlusOrMinusIndicator b) => !a.Equals(b);
+    public static bool operator ==(PlusOrMinusIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(PlusOrMinusIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, PlusOrMinusIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, PlusOrMinusIndicator b) => a != b.Value;
+    public static bool operator ==(PlusOrMinusIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(PlusOrMinusIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, PlusOrMinusIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, PlusOrMinusIndicator b) => a != b.BoolValue;
 }

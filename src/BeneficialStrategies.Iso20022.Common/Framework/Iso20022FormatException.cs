@@ -98,14 +98,16 @@ public sealed class Iso20022FormatException : FormatException
     public Iso20022FormatException(Type targetType, string invalidValue, string pattern)
         : this(targetType, invalidValue, pattern, Iso20022FormatViolation.PatternMismatch,
             $"'{Preview(invalidValue)}' is not a valid {targetType.Name}. " +
-            $"ISO 20022 pattern constraint: {pattern}") { }
+            $"ISO 20022 pattern constraint: {pattern}")
+    { }
 
     /// <inheritdoc cref="Iso20022FormatException(Type,string,string)"/>
     /// <param name="inner">The exception that caused this one.</param>
     public Iso20022FormatException(Type targetType, string invalidValue, string pattern, Exception inner)
         : this(targetType, invalidValue, pattern, Iso20022FormatViolation.PatternMismatch,
             $"'{Preview(invalidValue)}' is not a valid {targetType.Name}. " +
-            $"ISO 20022 pattern constraint: {pattern}", inner) { }
+            $"ISO 20022 pattern constraint: {pattern}", inner)
+    { }
 
     // ── Factory methods for length violations ──
 

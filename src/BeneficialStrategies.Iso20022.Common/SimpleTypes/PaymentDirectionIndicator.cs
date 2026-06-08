@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<PaymentDirectionIndicator>))]
 public readonly struct PaymentDirectionIndicator : IIsoSimpleValue<string>, IEquatable<PaymentDirectionIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct PaymentDirectionIndicator : IIsoSimpleValue<string>, IEqu
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="PaymentDirectionIndicator"/>.</summary>
-    public static implicit operator PaymentDirectionIndicator(bool value)   => new(value);
+    public static implicit operator PaymentDirectionIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="PaymentDirectionIndicator"/>.</summary>
     public static implicit operator PaymentDirectionIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(PaymentDirectionIndicator ind)   => ind.Value;
+    public static implicit operator string(PaymentDirectionIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(PaymentDirectionIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(PaymentDirectionIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct PaymentDirectionIndicator : IIsoSimpleValue<string>, IEqu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(PaymentDirectionIndicator a, PaymentDirectionIndicator b)  => a.Equals(b);
-    public static bool operator !=(PaymentDirectionIndicator a, PaymentDirectionIndicator b)  => !a.Equals(b);
-    public static bool operator ==(PaymentDirectionIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(PaymentDirectionIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, PaymentDirectionIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, PaymentDirectionIndicator b)  => a != b.Value;
-    public static bool operator ==(PaymentDirectionIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(PaymentDirectionIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, PaymentDirectionIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, PaymentDirectionIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(PaymentDirectionIndicator a, PaymentDirectionIndicator b) => a.Equals(b);
+    public static bool operator !=(PaymentDirectionIndicator a, PaymentDirectionIndicator b) => !a.Equals(b);
+    public static bool operator ==(PaymentDirectionIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(PaymentDirectionIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, PaymentDirectionIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, PaymentDirectionIndicator b) => a != b.Value;
+    public static bool operator ==(PaymentDirectionIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(PaymentDirectionIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, PaymentDirectionIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, PaymentDirectionIndicator b) => a != b.BoolValue;
 }

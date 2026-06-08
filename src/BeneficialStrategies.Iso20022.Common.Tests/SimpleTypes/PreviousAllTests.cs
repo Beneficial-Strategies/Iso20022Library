@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class PreviousAllTests : SimpleValueStringContractTests<PreviousAll>
 {
-    protected override string ValidSample   => "ALL";
+    protected override string ValidSample => "ALL";
     protected override string InvalidSample => "SOME";
 }

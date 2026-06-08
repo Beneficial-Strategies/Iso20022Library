@@ -58,10 +58,10 @@ public readonly struct ISO20022MessageIdentificationText : IIsoSimpleValue<strin
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b)  => a.Equals(b);
-    public static bool operator !=(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b)  => !a.Equals(b);
-    public static bool operator ==(ISO20022MessageIdentificationText a, string? b)  => a.Value == b;
-    public static bool operator !=(ISO20022MessageIdentificationText a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, ISO20022MessageIdentificationText b)  => a == b.Value;
-    public static bool operator !=(string? a, ISO20022MessageIdentificationText b)  => a != b.Value;
+    public static bool operator ==(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b) => a.Equals(b);
+    public static bool operator !=(ISO20022MessageIdentificationText a, ISO20022MessageIdentificationText b) => !a.Equals(b);
+    public static bool operator ==(ISO20022MessageIdentificationText a, string? b) => a.Value == b;
+    public static bool operator !=(ISO20022MessageIdentificationText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, ISO20022MessageIdentificationText b) => a == b.Value;
+    public static bool operator !=(string? a, ISO20022MessageIdentificationText b) => a != b.Value;
 }

@@ -80,10 +80,10 @@ public readonly struct RestrictedFINMax8Text : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(RestrictedFINMax8Text a, RestrictedFINMax8Text b)  => a.Equals(b);
-    public static bool operator !=(RestrictedFINMax8Text a, RestrictedFINMax8Text b)  => !a.Equals(b);
-    public static bool operator ==(RestrictedFINMax8Text a, string? b)  => a.Value == b;
-    public static bool operator !=(RestrictedFINMax8Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, RestrictedFINMax8Text b)  => a == b.Value;
-    public static bool operator !=(string? a, RestrictedFINMax8Text b)  => a != b.Value;
+    public static bool operator ==(RestrictedFINMax8Text a, RestrictedFINMax8Text b) => a.Equals(b);
+    public static bool operator !=(RestrictedFINMax8Text a, RestrictedFINMax8Text b) => !a.Equals(b);
+    public static bool operator ==(RestrictedFINMax8Text a, string? b) => a.Value == b;
+    public static bool operator !=(RestrictedFINMax8Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, RestrictedFINMax8Text b) => a == b.Value;
+    public static bool operator !=(string? a, RestrictedFINMax8Text b) => a != b.Value;
 }

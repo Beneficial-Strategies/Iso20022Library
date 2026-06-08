@@ -51,7 +51,7 @@ public readonly struct Max15AlphaNumericText : IIsoSimpleValue<string>, IEquatab
         {
             foreach (var c in value)
                 if (c is (< '0' or > '9') and (< 'a' or > 'z') and (< 'A' or > 'Z'))
-                    { result = default; return false; }
+                { result = default; return false; }
             result = new(value);
             return true;
         }
@@ -73,10 +73,10 @@ public readonly struct Max15AlphaNumericText : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Max15AlphaNumericText a, Max15AlphaNumericText b)  => a.Equals(b);
-    public static bool operator !=(Max15AlphaNumericText a, Max15AlphaNumericText b)  => !a.Equals(b);
-    public static bool operator ==(Max15AlphaNumericText a, string? b)  => a.Value == b;
-    public static bool operator !=(Max15AlphaNumericText a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Max15AlphaNumericText b)  => a == b.Value;
-    public static bool operator !=(string? a, Max15AlphaNumericText b)  => a != b.Value;
+    public static bool operator ==(Max15AlphaNumericText a, Max15AlphaNumericText b) => a.Equals(b);
+    public static bool operator !=(Max15AlphaNumericText a, Max15AlphaNumericText b) => !a.Equals(b);
+    public static bool operator ==(Max15AlphaNumericText a, string? b) => a.Value == b;
+    public static bool operator !=(Max15AlphaNumericText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Max15AlphaNumericText b) => a == b.Value;
+    public static bool operator !=(string? a, Max15AlphaNumericText b) => a != b.Value;
 }

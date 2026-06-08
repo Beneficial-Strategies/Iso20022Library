@@ -6,7 +6,7 @@ public class Exact2UpperCaseAlphaTextTests : SimpleValueMaxTextContractTests<Exa
 {
     protected override int MinLength => 2;
     protected override int MaxLength => 2;
-    protected override string ValidSample   => "AB";
+    protected override string ValidSample => "AB";
     protected override string InvalidSample => "123"; // digits, not alpha; wrong length too
 
     [Fact]

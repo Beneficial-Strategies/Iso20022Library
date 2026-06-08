@@ -6,7 +6,7 @@ public class Exact1HexBinaryTextTests : SimpleValueMaxTextContractTests<Exact1He
 {
     protected override int MinLength => 2;
     protected override int MaxLength => 2;
-    protected override string ValidSample   => "1A";
+    protected override string ValidSample => "1A";
     protected override string InvalidSample => "GGG"; // invalid hex + wrong length
 
     [Fact]

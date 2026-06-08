@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<GroupingIndicator>))]
 public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<GroupingIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<G
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="GroupingIndicator"/>.</summary>
-    public static implicit operator GroupingIndicator(bool value)   => new(value);
+    public static implicit operator GroupingIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="GroupingIndicator"/>.</summary>
     public static implicit operator GroupingIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(GroupingIndicator ind)   => ind.Value;
+    public static implicit operator string(GroupingIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(GroupingIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(GroupingIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<G
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(GroupingIndicator a, GroupingIndicator b)  => a.Equals(b);
-    public static bool operator !=(GroupingIndicator a, GroupingIndicator b)  => !a.Equals(b);
-    public static bool operator ==(GroupingIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(GroupingIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, GroupingIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, GroupingIndicator b)  => a != b.Value;
-    public static bool operator ==(GroupingIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(GroupingIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, GroupingIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, GroupingIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(GroupingIndicator a, GroupingIndicator b) => a.Equals(b);
+    public static bool operator !=(GroupingIndicator a, GroupingIndicator b) => !a.Equals(b);
+    public static bool operator ==(GroupingIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(GroupingIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, GroupingIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, GroupingIndicator b) => a != b.Value;
+    public static bool operator ==(GroupingIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(GroupingIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, GroupingIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, GroupingIndicator b) => a != b.BoolValue;
 }

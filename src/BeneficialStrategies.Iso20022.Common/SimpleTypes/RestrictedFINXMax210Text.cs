@@ -85,10 +85,10 @@ public readonly struct RestrictedFINXMax210Text : IIsoSimpleValue<string>, IEqua
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(RestrictedFINXMax210Text a, RestrictedFINXMax210Text b)  => a.Equals(b);
-    public static bool operator !=(RestrictedFINXMax210Text a, RestrictedFINXMax210Text b)  => !a.Equals(b);
-    public static bool operator ==(RestrictedFINXMax210Text a, string? b)  => a.Value == b;
-    public static bool operator !=(RestrictedFINXMax210Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, RestrictedFINXMax210Text b)  => a == b.Value;
-    public static bool operator !=(string? a, RestrictedFINXMax210Text b)  => a != b.Value;
+    public static bool operator ==(RestrictedFINXMax210Text a, RestrictedFINXMax210Text b) => a.Equals(b);
+    public static bool operator !=(RestrictedFINXMax210Text a, RestrictedFINXMax210Text b) => !a.Equals(b);
+    public static bool operator ==(RestrictedFINXMax210Text a, string? b) => a.Value == b;
+    public static bool operator !=(RestrictedFINXMax210Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, RestrictedFINXMax210Text b) => a == b.Value;
+    public static bool operator !=(string? a, RestrictedFINXMax210Text b) => a != b.Value;
 }

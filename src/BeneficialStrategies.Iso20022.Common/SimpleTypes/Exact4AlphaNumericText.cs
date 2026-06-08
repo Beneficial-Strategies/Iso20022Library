@@ -51,7 +51,7 @@ public readonly struct Exact4AlphaNumericText : IIsoSimpleValue<string>, IEquata
         {
             foreach (var c in value)
                 if (c is (< '0' or > '9') and (< 'a' or > 'z') and (< 'A' or > 'Z'))
-                    { result = default; return false; }
+                { result = default; return false; }
             result = new(value);
             return true;
         }
@@ -73,10 +73,10 @@ public readonly struct Exact4AlphaNumericText : IIsoSimpleValue<string>, IEquata
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Exact4AlphaNumericText a, Exact4AlphaNumericText b)  => a.Equals(b);
-    public static bool operator !=(Exact4AlphaNumericText a, Exact4AlphaNumericText b)  => !a.Equals(b);
-    public static bool operator ==(Exact4AlphaNumericText a, string? b)  => a.Value == b;
-    public static bool operator !=(Exact4AlphaNumericText a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Exact4AlphaNumericText b)  => a == b.Value;
-    public static bool operator !=(string? a, Exact4AlphaNumericText b)  => a != b.Value;
+    public static bool operator ==(Exact4AlphaNumericText a, Exact4AlphaNumericText b) => a.Equals(b);
+    public static bool operator !=(Exact4AlphaNumericText a, Exact4AlphaNumericText b) => !a.Equals(b);
+    public static bool operator ==(Exact4AlphaNumericText a, string? b) => a.Value == b;
+    public static bool operator !=(Exact4AlphaNumericText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Exact4AlphaNumericText b) => a == b.Value;
+    public static bool operator !=(string? a, Exact4AlphaNumericText b) => a != b.Value;
 }

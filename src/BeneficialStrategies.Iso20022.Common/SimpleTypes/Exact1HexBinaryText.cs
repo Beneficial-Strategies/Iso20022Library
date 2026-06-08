@@ -71,7 +71,7 @@ public readonly struct Exact1HexBinaryText : IIsoSimpleValue<string>, IEquatable
         {
             foreach (var c in value)
                 if (!((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F')))
-                    { result = default; return false; }
+                { result = default; return false; }
             result = new(value); return true;
         }
         result = default; return false;
@@ -108,12 +108,12 @@ public readonly struct Exact1HexBinaryText : IIsoSimpleValue<string>, IEquatable
 
     public static bool operator ==(Exact1HexBinaryText a, Exact1HexBinaryText b) => a.Equals(b);
     public static bool operator !=(Exact1HexBinaryText a, Exact1HexBinaryText b) => !a.Equals(b);
-    public static bool operator ==(Exact1HexBinaryText a, string? b)             => a.Value == b;
-    public static bool operator !=(Exact1HexBinaryText a, string? b)             => a.Value != b;
-    public static bool operator ==(string? a,             Exact1HexBinaryText b) => a == b.Value;
-    public static bool operator !=(string? a,             Exact1HexBinaryText b) => a != b.Value;
-    public static bool operator ==(Exact1HexBinaryText a, byte b)                => a.ByteValue == b;
-    public static bool operator !=(Exact1HexBinaryText a, byte b)                => a.ByteValue != b;
-    public static bool operator ==(byte a,                Exact1HexBinaryText b) => a == b.ByteValue;
-    public static bool operator !=(byte a,                Exact1HexBinaryText b) => a != b.ByteValue;
+    public static bool operator ==(Exact1HexBinaryText a, string? b) => a.Value == b;
+    public static bool operator !=(Exact1HexBinaryText a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Exact1HexBinaryText b) => a == b.Value;
+    public static bool operator !=(string? a, Exact1HexBinaryText b) => a != b.Value;
+    public static bool operator ==(Exact1HexBinaryText a, byte b) => a.ByteValue == b;
+    public static bool operator !=(Exact1HexBinaryText a, byte b) => a.ByteValue != b;
+    public static bool operator ==(byte a, Exact1HexBinaryText b) => a == b.ByteValue;
+    public static bool operator !=(byte a, Exact1HexBinaryText b) => a != b.ByteValue;
 }

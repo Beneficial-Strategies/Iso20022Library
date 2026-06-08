@@ -62,10 +62,10 @@ public readonly struct Exact42Text : IIsoSimpleValue<string>, IEquatable<Exact42
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(Exact42Text a, Exact42Text b)  => a.Equals(b);
-    public static bool operator !=(Exact42Text a, Exact42Text b)  => !a.Equals(b);
-    public static bool operator ==(Exact42Text a, string? b)  => a.Value == b;
-    public static bool operator !=(Exact42Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, Exact42Text b)  => a == b.Value;
-    public static bool operator !=(string? a, Exact42Text b)  => a != b.Value;
+    public static bool operator ==(Exact42Text a, Exact42Text b) => a.Equals(b);
+    public static bool operator !=(Exact42Text a, Exact42Text b) => !a.Equals(b);
+    public static bool operator ==(Exact42Text a, string? b) => a.Value == b;
+    public static bool operator !=(Exact42Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, Exact42Text b) => a == b.Value;
+    public static bool operator !=(string? a, Exact42Text b) => a != b.Value;
 }

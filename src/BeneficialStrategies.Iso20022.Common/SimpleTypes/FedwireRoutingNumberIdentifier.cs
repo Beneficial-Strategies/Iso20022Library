@@ -58,10 +58,10 @@ public readonly struct FedwireRoutingNumberIdentifier : IIsoSimpleValue<string>,
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(FedwireRoutingNumberIdentifier a, FedwireRoutingNumberIdentifier b)  => a.Equals(b);
-    public static bool operator !=(FedwireRoutingNumberIdentifier a, FedwireRoutingNumberIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(FedwireRoutingNumberIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(FedwireRoutingNumberIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, FedwireRoutingNumberIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, FedwireRoutingNumberIdentifier b)  => a != b.Value;
+    public static bool operator ==(FedwireRoutingNumberIdentifier a, FedwireRoutingNumberIdentifier b) => a.Equals(b);
+    public static bool operator !=(FedwireRoutingNumberIdentifier a, FedwireRoutingNumberIdentifier b) => !a.Equals(b);
+    public static bool operator ==(FedwireRoutingNumberIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(FedwireRoutingNumberIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, FedwireRoutingNumberIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, FedwireRoutingNumberIdentifier b) => a != b.Value;
 }

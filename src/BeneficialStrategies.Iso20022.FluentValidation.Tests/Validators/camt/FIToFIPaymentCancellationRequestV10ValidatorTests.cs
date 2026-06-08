@@ -108,7 +108,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         // Records require `Assignment` at compile time; bypass via cast to trigger runtime validation
         var msg = ValidMessage() with
         {
-            };
+        };
         // Use reflection to clear the required property for test
         var result = _sut.Validate(
             new FIToFIPaymentCancellationRequestV10

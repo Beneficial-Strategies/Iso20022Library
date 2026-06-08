@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class BICFIDec2014IdentifierTests : SimpleValueStringContractTests<BICFIDec2014Identifier>
 {
-    protected override string ValidSample   => "DEUTDEBB";
+    protected override string ValidSample => "DEUTDEBB";
     protected override string InvalidSample => "!NOTBIC";
 }

@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class DateOffsetTextTests : SimpleValueStringContractTests<DateOffsetText>
 {
-    protected override string ValidSample   => "0";
+    protected override string ValidSample => "0";
     protected override string InvalidSample => "5";
 }

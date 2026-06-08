@@ -51,7 +51,7 @@ public readonly struct Exact3UpperCaseAlphaNumericText : IIsoSimpleValue<string>
         {
             foreach (var c in value)
                 if (!((c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')))
-                    { result = default; return false; }
+                { result = default; return false; }
             result = new(value); return true;
         }
         result = default; return false;

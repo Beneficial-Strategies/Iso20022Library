@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class SpanishDomesticInterbankingIdentifierTests : SimpleValueStringContractTests<SpanishDomesticInterbankingIdentifier>
 {
-    protected override string ValidSample   => "ES12345678";
+    protected override string ValidSample => "ES12345678";
     protected override string InvalidSample => "XX12345678";
 }

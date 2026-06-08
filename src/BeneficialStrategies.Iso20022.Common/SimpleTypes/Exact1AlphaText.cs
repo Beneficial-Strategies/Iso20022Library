@@ -51,7 +51,7 @@ public readonly struct Exact1AlphaText : IIsoSimpleValue<string>, IEquatable<Exa
         {
             var c = value[0];
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-                { result = new(value); return true; }
+            { result = new(value); return true; }
         }
         result = default; return false;
     }

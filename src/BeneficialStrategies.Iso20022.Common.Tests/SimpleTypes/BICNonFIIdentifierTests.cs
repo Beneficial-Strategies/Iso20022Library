@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class BICNonFIIdentifierTests : SimpleValueStringContractTests<BICNonFIIdentifier>
 {
-    protected override string ValidSample   => "DEUTDEDB";
+    protected override string ValidSample => "DEUTDEDB";
     protected override string InvalidSample => "12345678";
 }

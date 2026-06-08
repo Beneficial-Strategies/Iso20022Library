@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<YesNoIndicator>))]
 public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesNoIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesN
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="YesNoIndicator"/>.</summary>
-    public static implicit operator YesNoIndicator(bool value)   => new(value);
+    public static implicit operator YesNoIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="YesNoIndicator"/>.</summary>
     public static implicit operator YesNoIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(YesNoIndicator ind)   => ind.Value;
+    public static implicit operator string(YesNoIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(YesNoIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(YesNoIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesN
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(YesNoIndicator a, YesNoIndicator b)  => a.Equals(b);
-    public static bool operator !=(YesNoIndicator a, YesNoIndicator b)  => !a.Equals(b);
-    public static bool operator ==(YesNoIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(YesNoIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, YesNoIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, YesNoIndicator b)  => a != b.Value;
-    public static bool operator ==(YesNoIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(YesNoIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, YesNoIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, YesNoIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(YesNoIndicator a, YesNoIndicator b) => a.Equals(b);
+    public static bool operator !=(YesNoIndicator a, YesNoIndicator b) => !a.Equals(b);
+    public static bool operator ==(YesNoIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(YesNoIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, YesNoIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, YesNoIndicator b) => a != b.Value;
+    public static bool operator ==(YesNoIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(YesNoIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, YesNoIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, YesNoIndicator b) => a != b.BoolValue;
 }

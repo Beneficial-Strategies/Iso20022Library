@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class ELFIdentifierTests : SimpleValueStringContractTests<ELFIdentifier>
 {
-    protected override string ValidSample   => "2AKL";
+    protected override string ValidSample => "2AKL";
     protected override string InvalidSample => "!ABC";
 }

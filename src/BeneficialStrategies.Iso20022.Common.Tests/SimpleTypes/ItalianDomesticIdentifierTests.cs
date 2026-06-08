@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class ItalianDomesticIdentifierTests : SimpleValueStringContractTests<ItalianDomesticIdentifier>
 {
-    protected override string ValidSample   => "IT1234567890";
+    protected override string ValidSample => "IT1234567890";
     protected override string InvalidSample => "XX1234567890";
 }

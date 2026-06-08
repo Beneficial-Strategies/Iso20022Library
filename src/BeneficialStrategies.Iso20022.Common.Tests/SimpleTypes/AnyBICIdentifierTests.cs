@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class AnyBICIdentifierTests : SimpleValueStringContractTests<AnyBICIdentifier>
 {
-    protected override string ValidSample   => "DEUTDEDB";
+    protected override string ValidSample => "DEUTDEDB";
     protected override string InvalidSample => "12345678";
 }

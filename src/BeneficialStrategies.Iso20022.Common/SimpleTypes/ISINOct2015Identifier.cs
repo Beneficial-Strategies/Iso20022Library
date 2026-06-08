@@ -58,10 +58,10 @@ public readonly struct ISINOct2015Identifier : IIsoSimpleValue<string>, IEquatab
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(ISINOct2015Identifier a, ISINOct2015Identifier b)  => a.Equals(b);
-    public static bool operator !=(ISINOct2015Identifier a, ISINOct2015Identifier b)  => !a.Equals(b);
-    public static bool operator ==(ISINOct2015Identifier a, string? b)  => a.Value == b;
-    public static bool operator !=(ISINOct2015Identifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, ISINOct2015Identifier b)  => a == b.Value;
-    public static bool operator !=(string? a, ISINOct2015Identifier b)  => a != b.Value;
+    public static bool operator ==(ISINOct2015Identifier a, ISINOct2015Identifier b) => a.Equals(b);
+    public static bool operator !=(ISINOct2015Identifier a, ISINOct2015Identifier b) => !a.Equals(b);
+    public static bool operator ==(ISINOct2015Identifier a, string? b) => a.Value == b;
+    public static bool operator !=(ISINOct2015Identifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, ISINOct2015Identifier b) => a == b.Value;
+    public static bool operator !=(string? a, ISINOct2015Identifier b) => a != b.Value;
 }

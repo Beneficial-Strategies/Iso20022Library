@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class UTIIdentifierTests : SimpleValueStringContractTests<UTIIdentifier>
 {
-    protected override string ValidSample   => "AAAAAAAAAAAAAAAAAA12";
+    protected override string ValidSample => "AAAAAAAAAAAAAAAAAA12";
     protected override string InvalidSample => "TOOSHORT";
 }

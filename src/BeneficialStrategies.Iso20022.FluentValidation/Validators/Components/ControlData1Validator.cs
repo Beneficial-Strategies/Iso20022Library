@@ -20,6 +20,6 @@ public sealed class ControlData1Validator : AbstractValidator<ControlData1>
         RuleFor(x => x.NumberOfTransactions)
             .NotEmpty()
             .WithMessage("ControlData1.NumberOfTransactions is required (Max15NumericText, 1..1).");
-            // Pattern [0-9]{1,15} enforced by Max15NumericText constructor.
+        // Pattern [0-9]{1,15} enforced by Max15NumericText constructor.
     }
 }

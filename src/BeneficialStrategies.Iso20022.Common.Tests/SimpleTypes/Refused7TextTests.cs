@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class Refused7TextTests : SimpleValueStringContractTests<Refused7Text>
 {
-    protected override string ValidSample   => "REFUSED";
+    protected override string ValidSample => "REFUSED";
     protected override string InvalidSample => "OTHER";
 }

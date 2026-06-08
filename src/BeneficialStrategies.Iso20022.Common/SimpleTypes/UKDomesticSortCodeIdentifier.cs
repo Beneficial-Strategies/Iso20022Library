@@ -58,10 +58,10 @@ public readonly struct UKDomesticSortCodeIdentifier : IIsoSimpleValue<string>, I
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b)  => a.Equals(b);
-    public static bool operator !=(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b)  => !a.Equals(b);
-    public static bool operator ==(UKDomesticSortCodeIdentifier a, string? b)  => a.Value == b;
-    public static bool operator !=(UKDomesticSortCodeIdentifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, UKDomesticSortCodeIdentifier b)  => a == b.Value;
-    public static bool operator !=(string? a, UKDomesticSortCodeIdentifier b)  => a != b.Value;
+    public static bool operator ==(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b) => a.Equals(b);
+    public static bool operator !=(UKDomesticSortCodeIdentifier a, UKDomesticSortCodeIdentifier b) => !a.Equals(b);
+    public static bool operator ==(UKDomesticSortCodeIdentifier a, string? b) => a.Value == b;
+    public static bool operator !=(UKDomesticSortCodeIdentifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, UKDomesticSortCodeIdentifier b) => a == b.Value;
+    public static bool operator !=(string? a, UKDomesticSortCodeIdentifier b) => a != b.Value;
 }

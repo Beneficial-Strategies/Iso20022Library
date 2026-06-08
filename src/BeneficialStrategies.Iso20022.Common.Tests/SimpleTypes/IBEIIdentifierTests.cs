@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class IBEIIdentifierTests : SimpleValueStringContractTests<IBEIIdentifier>
 {
-    protected override string ValidSample   => "GB00000001";
+    protected override string ValidSample => "GB00000001";
     protected override string InvalidSample => "NOTIBEI!";
 }

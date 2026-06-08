@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 [JsonConverter(typeof(Iso20022SimpleValueJsonConverter<AMLIndicator>))]
 public readonly struct AMLIndicator : IIsoSimpleValue<string>, IEquatable<AMLIndicator>
 {
-    private const string TrueWire  = "true";
+    private const string TrueWire = "true";
     private const string FalseWire = "false";
 
     /// <inheritdoc/>
@@ -58,13 +58,13 @@ public readonly struct AMLIndicator : IIsoSimpleValue<string>, IEquatable<AMLInd
     { result = new(value); return true; }
 
     /// <summary>Implicitly wraps a bool as a <see cref="AMLIndicator"/>.</summary>
-    public static implicit operator AMLIndicator(bool value)   => new(value);
+    public static implicit operator AMLIndicator(bool value) => new(value);
     /// <summary>Implicitly wraps a wire string as a <see cref="AMLIndicator"/>.</summary>
     public static implicit operator AMLIndicator(string value) => new(value);
     /// <summary>Implicitly unwraps to the wire string.</summary>
-    public static implicit operator string(AMLIndicator ind)   => ind.Value;
+    public static implicit operator string(AMLIndicator ind) => ind.Value;
     /// <summary>Implicitly unwraps to the bool value.</summary>
-    public static implicit operator bool(AMLIndicator ind)     => ind.BoolValue;
+    public static implicit operator bool(AMLIndicator ind) => ind.BoolValue;
 
     /// <inheritdoc/>
     public override string ToString() => Value ?? string.Empty;
@@ -75,14 +75,14 @@ public readonly struct AMLIndicator : IIsoSimpleValue<string>, IEquatable<AMLInd
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(AMLIndicator a, AMLIndicator b)  => a.Equals(b);
-    public static bool operator !=(AMLIndicator a, AMLIndicator b)  => !a.Equals(b);
-    public static bool operator ==(AMLIndicator a, string? b)  => a.Value == b;
-    public static bool operator !=(AMLIndicator a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, AMLIndicator b)  => a == b.Value;
-    public static bool operator !=(string? a, AMLIndicator b)  => a != b.Value;
-    public static bool operator ==(AMLIndicator a, bool b)     => a.BoolValue == b;
-    public static bool operator !=(AMLIndicator a, bool b)     => a.BoolValue != b;
-    public static bool operator ==(bool a, AMLIndicator b)     => a == b.BoolValue;
-    public static bool operator !=(bool a, AMLIndicator b)     => a != b.BoolValue;
+    public static bool operator ==(AMLIndicator a, AMLIndicator b) => a.Equals(b);
+    public static bool operator !=(AMLIndicator a, AMLIndicator b) => !a.Equals(b);
+    public static bool operator ==(AMLIndicator a, string? b) => a.Value == b;
+    public static bool operator !=(AMLIndicator a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, AMLIndicator b) => a == b.Value;
+    public static bool operator !=(string? a, AMLIndicator b) => a != b.Value;
+    public static bool operator ==(AMLIndicator a, bool b) => a.BoolValue == b;
+    public static bool operator !=(AMLIndicator a, bool b) => a.BoolValue != b;
+    public static bool operator ==(bool a, AMLIndicator b) => a == b.BoolValue;
+    public static bool operator !=(bool a, AMLIndicator b) => a != b.BoolValue;
 }

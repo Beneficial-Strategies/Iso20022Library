@@ -64,10 +64,10 @@ public readonly struct RestrictedFINZMax8000Text : IIsoSimpleValue<string>, IEqu
 
     private static bool IsCharSetZ(char c) =>
         (c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
-        c == '!' || c == '"'  || c == '%' || c == '&' || c == '*' || c == ';' ||
-        c == '<' || c == '>'  || c == ' ' || c == '.' || c == ',' || c == '(' ||
+        c == '!' || c == '"' || c == '%' || c == '&' || c == '*' || c == ';' ||
+        c == '<' || c == '>' || c == ' ' || c == '.' || c == ',' || c == '(' ||
         c == ')' || c == '\n' || c == '\r' || c == '/' || c == '=' || c == '\'' ||
-        c == '+' || c == ':'  || c == '?' || c == '@' || c == '#' || c == '{' ||
+        c == '+' || c == ':' || c == '?' || c == '@' || c == '#' || c == '{' ||
         c == '-' || c == '_';
 
     /// <summary>Implicitly wraps a string as a <see cref="RestrictedFINZMax8000Text"/>.</summary>
@@ -84,10 +84,10 @@ public readonly struct RestrictedFINZMax8000Text : IIsoSimpleValue<string>, IEqu
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(RestrictedFINZMax8000Text a, RestrictedFINZMax8000Text b)  => a.Equals(b);
-    public static bool operator !=(RestrictedFINZMax8000Text a, RestrictedFINZMax8000Text b)  => !a.Equals(b);
-    public static bool operator ==(RestrictedFINZMax8000Text a, string? b)  => a.Value == b;
-    public static bool operator !=(RestrictedFINZMax8000Text a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, RestrictedFINZMax8000Text b)  => a == b.Value;
-    public static bool operator !=(string? a, RestrictedFINZMax8000Text b)  => a != b.Value;
+    public static bool operator ==(RestrictedFINZMax8000Text a, RestrictedFINZMax8000Text b) => a.Equals(b);
+    public static bool operator !=(RestrictedFINZMax8000Text a, RestrictedFINZMax8000Text b) => !a.Equals(b);
+    public static bool operator ==(RestrictedFINZMax8000Text a, string? b) => a.Value == b;
+    public static bool operator !=(RestrictedFINZMax8000Text a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, RestrictedFINZMax8000Text b) => a == b.Value;
+    public static bool operator !=(string? a, RestrictedFINZMax8000Text b) => a != b.Value;
 }

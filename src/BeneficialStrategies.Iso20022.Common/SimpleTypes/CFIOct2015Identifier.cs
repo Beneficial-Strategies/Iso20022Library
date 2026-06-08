@@ -58,10 +58,10 @@ public readonly struct CFIOct2015Identifier : IIsoSimpleValue<string>, IEquatabl
     /// <inheritdoc/>
     public override int GetHashCode() => Value?.GetHashCode() ?? 0;
 
-    public static bool operator ==(CFIOct2015Identifier a, CFIOct2015Identifier b)  => a.Equals(b);
-    public static bool operator !=(CFIOct2015Identifier a, CFIOct2015Identifier b)  => !a.Equals(b);
-    public static bool operator ==(CFIOct2015Identifier a, string? b)  => a.Value == b;
-    public static bool operator !=(CFIOct2015Identifier a, string? b)  => a.Value != b;
-    public static bool operator ==(string? a, CFIOct2015Identifier b)  => a == b.Value;
-    public static bool operator !=(string? a, CFIOct2015Identifier b)  => a != b.Value;
+    public static bool operator ==(CFIOct2015Identifier a, CFIOct2015Identifier b) => a.Equals(b);
+    public static bool operator !=(CFIOct2015Identifier a, CFIOct2015Identifier b) => !a.Equals(b);
+    public static bool operator ==(CFIOct2015Identifier a, string? b) => a.Value == b;
+    public static bool operator !=(CFIOct2015Identifier a, string? b) => a.Value != b;
+    public static bool operator ==(string? a, CFIOct2015Identifier b) => a == b.Value;
+    public static bool operator !=(string? a, CFIOct2015Identifier b) => a != b.Value;
 }
