@@ -343,6 +343,67 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     }
 }
 
+// ── RestrictedFIN (any character, slash restriction) contract ─────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 RestrictedFIN text types — any Unicode character is
+/// permitted, but no leading slash, no trailing slash, and no double slash (<c>//</c>).
+/// </summary>
+public abstract class SimpleValueRestrictedFINSlashTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    [Fact]
+    public void LeadingSlash_ThrowsPatternMismatch()
+    {
+        var value = "/" + new string('A', MaxLength - 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void TrailingSlash_ThrowsPatternMismatch()
+    {
+        var value = new string('A', MaxLength - 1) + "/";
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void DoubleSlash_ThrowsPatternMismatch()
+    {
+        var value = "A//A" + new string('A', Math.Max(0, MaxLength - 4));
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), value));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+}
+
+// ── RestrictedFINZ (SWIFT character set Z) contract ───────────────────────────
+
+/// <summary>
+/// Contract base for ISO 20022 RestrictedFINZ text types — character set Z:
+/// <c>0-9 a-z A-Z ! " % &amp; * ; &lt; &gt; SPACE . , ( ) \n \r / = ' + : ? @ # { - _</c>.
+/// Adds a test verifying that characters outside set Z are rejected.
+/// </summary>
+public abstract class SimpleValueRestrictedFINZTextContractTests<TStruct>
+    : SimpleValueMaxTextContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<string>
+{
+    [Fact]
+    public void NonZChar_ThrowsInvalidCharacter()
+    {
+        // '~' is outside character set Z and has valid length.
+        var invalidChars = new string('~', MaxLength);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), invalidChars));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.InvalidCharacter, fmt.Violation);
+    }
+}
+
 // ── RestrictedFINX (SWIFT character set X) contracts ──────────────────────────
 
 /// <summary>

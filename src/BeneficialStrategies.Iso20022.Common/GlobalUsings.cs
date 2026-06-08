@@ -12,6 +12,20 @@ global using BeneficialStrategies.Iso20022.Codesets;
 global using BeneficialStrategies.Iso20022.SimpleTypes;
 // IsoMax*Text aliases — redirect to validated structs in SimpleTypes namespace
 // IsoRestrictedFINX* aliases — redirect to validated structs
+// IsoRestrictedFIN* and IsoRestrictedFINZ* aliases
+global using IsoRestrictedFINMax8Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax8Text;
+global using IsoRestrictedFINMax15Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax15Text;
+global using IsoRestrictedFINMax16Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax16Text;
+global using IsoRestrictedFINMax23Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax23Text;
+global using IsoRestrictedFINMax30Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax30Text;
+global using IsoRestrictedFINMax31Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax31Text;
+global using IsoRestrictedFINMax34Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax34Text;
+global using IsoRestrictedFINMax35Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax35Text;
+global using IsoRestrictedFINMax50Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax50Text;
+global using IsoRestrictedFINMax210Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINMax210Text;
+global using IsoRestrictedFINZMax256Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINZMax256Text;
+global using IsoRestrictedFINZMax2048Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINZMax2048Text;
+global using IsoRestrictedFINZMax8000Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINZMax8000Text;
 global using IsoRestrictedFINXMax8Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax8Text;
 global using IsoRestrictedFINXMax16Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax16Text;
 global using IsoRestrictedFINXMax24Text = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINXMax24Text;
@@ -128,11 +142,6 @@ global using IsoPhoneNumber = System.String; // Text
 global using IsoExtended350Code = System.String; // Text
 global using IsoPreviousAll = System.String; // Text
 global using IsoISO20022MessageIdentificationText = System.String; // Text
-global using IsoRestrictedFINMax30Text = System.String; // Text
-global using IsoRestrictedFINMax8Text = System.String; // Text
-global using IsoRestrictedFINZMax256Text = System.String; // Text
-global using IsoRestrictedFINZMax8000Text = System.String; // Text
-global using IsoRestrictedFINMax35Text = System.String; // Text
 global using IsoUnlimited9Text = System.String; // Text
 global using IsoExternalLocalInstrumentCode_Obsolete = System.String; // Text
 global using IsoRefused7Text = System.String; // Text
@@ -144,12 +153,6 @@ global using IsoRestrictedSEPACodeText = System.String; // Text
 global using IsoRestrictedSMNDACodeText = System.String; // Text
 global using IsoRestrictedB2BCORECodeText = System.String; // Text
 global using IsoRestrictedRR01SL01CodeText = System.String; // Text
-global using IsoRestrictedFINMax210Text = System.String; // Text
-global using IsoRestrictedFINMax16Text = System.String; // Text
-global using IsoRestrictedFINMax34Text = System.String; // Text
-global using IsoRestrictedFINMax23Text = System.String; // Text
-global using IsoRestrictedFINMax15Text = System.String; // Text
-global using IsoRestrictedFINMax31Text = System.String; // Text
 global using IsoMin2Max3AlphaText = System.String; // Text
 global using IsoMax13AlphaNumericText = System.String; // Text
 global using IsoMax14Text = System.String; // Text
@@ -169,8 +172,6 @@ global using IsoMax10KHexBinaryText = System.String; // Text
 global using IsoMax8HexBinaryText = System.String; // Text
 global using IsoMax19HexBinaryText = System.String; // Text
 global using IsoMax16HexBinaryText = System.String; // Text
-global using IsoRestrictedFINZMax2048Text = System.String; // Text
-global using IsoRestrictedFINMax50Text = System.String; // Text
 global using IsoGeographicPointInDecimalDegrees = System.String; // Text
 global using IsoGeographicPointInDecimalDegreesText = System.String; // Text
 global using IsoMin5Max8Text = System.String; // Text
