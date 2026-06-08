@@ -14,6 +14,36 @@ global using BeneficialStrategies.Iso20022.SimpleTypes;
 // IsoRestrictedFINX* aliases — redirect to validated structs
 // IsoRestrictedFIN* and IsoRestrictedFINZ* aliases
 // Indicator aliases — boolean true/false wire types
+// Remaining SimpleTypes aliases
+global using IsoExtended350Code = BeneficialStrategies.Iso20022.SimpleTypes.Extended350Code;
+global using IsoExternalLocalInstrumentCode_Obsolete = BeneficialStrategies.Iso20022.SimpleTypes.ExternalLocalInstrumentCode_Obsolete;
+global using IsoMin3Max4Text = BeneficialStrategies.Iso20022.SimpleTypes.Min3Max4Text;
+global using IsoMin5Max8Text = BeneficialStrategies.Iso20022.SimpleTypes.Min5Max8Text;
+global using IsoMin6Max8Text = BeneficialStrategies.Iso20022.SimpleTypes.Min6Max8Text;
+global using IsoMax10KText = BeneficialStrategies.Iso20022.SimpleTypes.Max10KText;
+global using IsoMax20KText = BeneficialStrategies.Iso20022.SimpleTypes.Max20KText;
+global using IsoMax40KText = BeneficialStrategies.Iso20022.SimpleTypes.Max40KText;
+global using IsoMax10MbText = BeneficialStrategies.Iso20022.SimpleTypes.Max10MbText;
+global using IsoPhoneNumber = BeneficialStrategies.Iso20022.SimpleTypes.PhoneNumber;
+global using IsoSHA256SignatureText = BeneficialStrategies.Iso20022.SimpleTypes.SHA256SignatureText;
+global using IsoHexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.HexBinaryText;
+global using IsoDateOffsetText = BeneficialStrategies.Iso20022.SimpleTypes.DateOffsetText;
+global using IsoGeographicPointInDecimalDegrees = BeneficialStrategies.Iso20022.SimpleTypes.GeographicPointInDecimalDegrees;
+global using IsoGeographicPointInDecimalDegreesText = BeneficialStrategies.Iso20022.SimpleTypes.GeographicPointInDecimalDegreesText;
+global using IsoRefused7Text = BeneficialStrategies.Iso20022.SimpleTypes.Refused7Text;
+global using IsoRateSourceText = BeneficialStrategies.Iso20022.SimpleTypes.RateSourceText;
+global using IsoPreviousAll = BeneficialStrategies.Iso20022.SimpleTypes.PreviousAll;
+global using IsoUnlimited9Text = BeneficialStrategies.Iso20022.SimpleTypes.Unlimited9Text;
+global using IsoMax10DateText = BeneficialStrategies.Iso20022.SimpleTypes.Max10DateText;
+global using IsoJulianDate = BeneficialStrategies.Iso20022.SimpleTypes.JulianDate;
+global using IsoMax8HexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max8HexBinaryText;
+global using IsoMax16HexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max16HexBinaryText;
+global using IsoMax19HexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max19HexBinaryText;
+global using IsoMax32HexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max32HexBinaryText;
+global using IsoMax9999HexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max9999HexBinaryText;
+global using IsoMax10KHexBinaryText = BeneficialStrategies.Iso20022.SimpleTypes.Max10KHexBinaryText;
+global using IsoMax6AlphaText = BeneficialStrategies.Iso20022.SimpleTypes.Max6AlphaText;
+global using IsoMin2Max3AlphaText = BeneficialStrategies.Iso20022.SimpleTypes.Min2Max3AlphaText;
 // Identifier and financial-code aliases
 global using IsoBICFIIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.BICFIIdentifier;
 global using IsoBICIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.BICIdentifier;
@@ -215,45 +245,19 @@ global using IsoMax20000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max2000
 global using BeneficialStrategies.Iso20022.Framework;
 global using BeneficialStrategies.Iso20022.Metadata;
 global using BeneficialStrategies.Iso20022.Serialization;
-global using IsoPhoneNumber = System.String; // Text
-global using IsoExtended350Code = System.String; // Text
-global using IsoPreviousAll = System.String; // Text
-global using IsoUnlimited9Text = System.String; // Text
-global using IsoExternalLocalInstrumentCode_Obsolete = System.String; // Text
-global using IsoRefused7Text = System.String; // Text
-global using IsoMin3Max4Text = System.String; // Text
-global using IsoMin6Max8Text = System.String; // Text
 global using IsoRestrictedMS02MS03CodeText = System.String; // Text
 global using IsoRestrictedRR01CodeText = System.String; // Text
 global using IsoRestrictedSEPACodeText = System.String; // Text
 global using IsoRestrictedSMNDACodeText = System.String; // Text
 global using IsoRestrictedB2BCORECodeText = System.String; // Text
 global using IsoRestrictedRR01SL01CodeText = System.String; // Text
-global using IsoMin2Max3AlphaText = System.String; // Text
 global using IsoMax13AlphaNumericText = System.String; // Text
 global using IsoMax14Text = System.String; // Text
 global using IsoMax14AlphaNumericText = System.String; // Text
 global using IsoMax100AlphaNumericUnderscoreText = System.String; // Text
 global using IsoMax38AlphaNumericText = System.String; // Text
 global using IsoMax5Text = System.String; // Text
-global using IsoRateSourceText = System.String; // Text
-global using IsoMax6AlphaText = System.String; // Text
-global using IsoDateOffsetText = System.String; // Text
 global using IsoMax1850Text = System.String; // Text
-global using IsoMax20KText = System.String; // Text
-global using IsoMax9999HexBinaryText = System.String; // Text
-global using IsoMax10KText = System.String; // Text
-global using IsoMax32HexBinaryText = System.String; // Text
-global using IsoMax10KHexBinaryText = System.String; // Text
-global using IsoMax8HexBinaryText = System.String; // Text
-global using IsoMax19HexBinaryText = System.String; // Text
-global using IsoMax16HexBinaryText = System.String; // Text
-global using IsoGeographicPointInDecimalDegrees = System.String; // Text
-global using IsoGeographicPointInDecimalDegreesText = System.String; // Text
-global using IsoMin5Max8Text = System.String; // Text
-global using IsoJulianDate = System.String; // Text
-global using IsoMax10MbText = System.String; // Text
-global using IsoMax40KText = System.String; // Text
 global using IsoISODateTime = System.DateTime; // DateTime
 global using IsoISONormalisedDateTime = System.DateTime; // DateTime
 global using IsoISODate = System.DateOnly; // Date
@@ -369,12 +373,9 @@ global using IsounsignedLong = System.String; // Schema
 global using IsounsignedShort = System.String; // Schema
 global using IsoISOMonth = System.Byte; // Month
 global using IsoExact4UpperCaseAlphaText = System.String; // Text
-global using IsoHexBinaryText = System.String; // Text
-global using IsoMax10DateText = System.String; // Text
 global using IsoMax47Text = System.String; // Text
 global using IsoNPIIdentifier = System.String; // IdentifierSet
 global using IsoPercentage14Rate = System.Decimal; // Rate
-global using IsoSHA256SignatureText = System.String; // Text
 // External Codesets
 global using CurrencyCode = System.String;
 global using ActiveCurrencyCode = System.String;
