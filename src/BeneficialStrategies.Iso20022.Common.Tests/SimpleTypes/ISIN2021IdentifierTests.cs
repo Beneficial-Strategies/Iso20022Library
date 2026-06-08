@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The type being testedwill be removed in a future major version.")]
 public class ISIN2021IdentifierTests : SimpleValueStringContractTests<ISIN2021Identifier>
 {
     protected override string ValidSample => "US0378331005";

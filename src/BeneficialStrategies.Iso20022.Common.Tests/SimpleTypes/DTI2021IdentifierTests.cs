@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The type being testedwill be removed in a future major version.")]
 public class DTI2021IdentifierTests : SimpleValueStringContractTests<DTI2021Identifier>
 {
     protected override string ValidSample => "123456789";

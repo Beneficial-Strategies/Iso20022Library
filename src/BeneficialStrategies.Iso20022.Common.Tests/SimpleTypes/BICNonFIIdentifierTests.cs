@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The type being tested will be removed in a future major version.")]
 public class BICNonFIIdentifierTests : SimpleValueStringContractTests<BICNonFIIdentifier>
 {
     protected override string ValidSample => "DEUTDEDB";

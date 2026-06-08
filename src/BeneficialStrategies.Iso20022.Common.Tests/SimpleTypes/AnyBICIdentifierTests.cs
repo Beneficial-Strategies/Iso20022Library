@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The type being testedwill be removed in a future major version.")]
 public class AnyBICIdentifierTests : SimpleValueStringContractTests<AnyBICIdentifier>
 {
     protected override string ValidSample => "DEUTDEDB";

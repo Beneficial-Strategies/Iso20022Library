@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The BICFIIdentifier type is deprecated in favor of BICIdentifier. It will be removed in a future major version.")]
 public class BICFIIdentifierTests : SimpleValueStringContractTests<BICFIIdentifier>
 {
     protected override string ValidSample => "DEUTDEDB";

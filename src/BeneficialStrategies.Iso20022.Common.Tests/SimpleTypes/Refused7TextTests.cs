@@ -2,6 +2,7 @@
 
 namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
+[Obsolete("The type being testedwill be removed in a future major version.")]
 public class Refused7TextTests : SimpleValueStringContractTests<Refused7Text>
 {
     protected override string ValidSample => "REFUSED";
