@@ -221,27 +221,22 @@ public class AccountAndBalance47ValidatorTests
     }
 
     [Fact]
-    public void AccountOwner_AnyBic_LowercaseLetters_HasValidationError()
+    public void AccountOwner_AnyBic_LowercaseLetters_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("deutdeffxxx") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        // AnyBICDec2014Identifier enforces uppercase — invalid values cannot reach the validator.
+        Assert.Throws<Iso20022FormatException>(() => OwnerAnyBic("deutdeffxxx"));
     }
 
     [Fact]
-    public void AccountOwner_AnyBic_TooShort_HasValidationError()
+    public void AccountOwner_AnyBic_TooShort_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUT") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        Assert.Throws<Iso20022FormatException>(() => OwnerAnyBic("DEUT"));
     }
 
     [Fact]
-    public void AccountOwner_AnyBic_TooLong_HasValidationError()
+    public void AccountOwner_AnyBic_TooLong_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUTDEFFXXXQ") }; // 12 chars
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        Assert.Throws<Iso20022FormatException>(() => OwnerAnyBic("DEUTDEFFXXXQ")); // 12 chars
     }
 
     // ── AccountOwner: ProprietaryIdentification variant ──────────────────────────
@@ -323,13 +318,10 @@ public class AccountAndBalance47ValidatorTests
     }
 
     [Fact]
-    public void SafekeepingPlace_TypeAndId_InvalidBic_HasValidationError()
+    public void SafekeepingPlace_TypeAndId_InvalidBic_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with { SafekeepingPlace = PlaceTypeAndId("not-a-bic") };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x =>
-                ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification
-            );
+        // AnyBICDec2014Identifier enforces the BIC pattern — invalid values cannot reach the validator.
+        Assert.Throws<Iso20022FormatException>(() => PlaceTypeAndId("not-a-bic"));
     }
 
     // ── Balance: CorporateActionBalanceDetails43 ─────────────────────────────────

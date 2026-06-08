@@ -37,7 +37,7 @@ public class Camt054XmlTests
     private const string ExpectedMsgRcptName = "GlobalSupply S.A.S.";
     private const string ExpectedNtfctnId = "GLOBALSUPPLY-NTFN-20240315-001"; // shortened to comply with Max35Text
     private const string ExpectedEntry1Uetr = "97ed4827-7b6f-4491-a06f-b548d5a7512d";
-    private const string ExpectedEntry2Uetr = "b1c2d3e4-f5a6-7890-abcd-ef1234567890";
+    private const string ExpectedEntry2Uetr = "b1c2d3e4-f5a6-4890-abcd-ef1234567890";
 
     // ── Helper ─────────────────────────────────────────────────────────────────
 
@@ -124,8 +124,8 @@ public class Camt054XmlTests
 
         var txDtls = entry2.EntryDetails[0].TransactionDetails[0];
         Assert.NotNull(txDtls.References);
-        Assert.Equal(ExpectedEntry2Uetr, txDtls.References.UETR);
-        Assert.NotEqual(ExpectedEntry1Uetr, txDtls.References.UETR);
+        Assert.Equal(ExpectedEntry2Uetr, txDtls.References.UETR?.Value);
+        Assert.NotEqual(ExpectedEntry1Uetr, txDtls.References.UETR?.Value);
     }
 
     /// <summary>

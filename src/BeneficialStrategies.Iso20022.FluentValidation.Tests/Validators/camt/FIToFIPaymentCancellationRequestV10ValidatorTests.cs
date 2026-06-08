@@ -208,20 +208,11 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     // ── PaymentTransaction137: OriginalUETR pattern ───────────────────────────
 
     [Fact]
-    public void TransactionInfo_InvalidUETR_HasValidationError()
+    public void TransactionInfo_InvalidUETR_ThrowsAtConstruction()
     {
-        var msg = ValidMessage() with
-        {
-            Underlying = new UnderlyingTransaction28
-            {
-                TransactionInformation = [new PaymentTransaction137
-                {
-                    OriginalUETR = "not-a-valid-uuid",
-                }],
-            },
-        };
-        var result1 = _sut.Validate(msg);
-        Assert.Contains(result1.Errors, e => e.PropertyName.EndsWith(".OriginalUETR"));
+        // UUIDv4Identifier enforces RFC 4122 pattern — invalid values cannot reach the validator.
+        Assert.Throws<Iso20022FormatException>(() =>
+            _ = new PaymentTransaction137 { OriginalUETR = "not-a-valid-uuid" });
     }
 
     [Fact]

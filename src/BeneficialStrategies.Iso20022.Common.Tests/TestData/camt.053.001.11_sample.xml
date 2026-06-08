@@ -153,7 +153,7 @@
           <TxDtls>
             <Refs>
               <EndToEndId>ACME/INV-2024-848/PAY002</EndToEndId>
-              <UETR>b1c2d3e4-f5a6-7890-abcd-ef1234567890</UETR>
+              <UETR>b1c2d3e4-f5a6-4890-abcd-ef1234567890</UETR>
             </Refs>
             <RmtInf>
               <Ustrd>INV-2024-848 EUR 47250.00</Ustrd>

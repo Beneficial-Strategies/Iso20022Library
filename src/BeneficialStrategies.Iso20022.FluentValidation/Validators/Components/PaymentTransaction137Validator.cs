@@ -32,13 +32,7 @@ public sealed class PaymentTransaction137Validator : AbstractValidator<PaymentTr
         // Max35Text optional fields: length [1..35] enforced by Max35Text constructor — no FV rules needed.
 
         // ── OriginalUETR: UUIDv4Identifier (RFC 4122) ───────────────────────────────
-        RuleFor(x => x.OriginalUETR)
-            .Matches(UetrRegex)
-            .WithMessage(
-                "PaymentTransaction137.OriginalUETR must be a valid UUID v4 identifier "
-                    + "(RFC 4122, pattern: [a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12})."
-            )
-            .When(x => x.OriginalUETR is not null);
+        // UUID v4 pattern enforced by UUIDv4Identifier constructor — no FV Matches() needed.
 
         // ── OriginalInterbankSettlementAmount ────────────────────────────────────────
         When(

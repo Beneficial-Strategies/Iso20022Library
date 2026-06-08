@@ -106,11 +106,7 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
             () =>
                 RuleFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value)
                     .NotEmpty()
-                    .Matches(AnyBicRegex)
-                    .WithMessage(
-                        "AccountOwner.AnyBIC must match the AnyBICDec2014Identifier pattern "
-                            + "([A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1})."
-                    )
+                    // AnyBICDec2014Identifier pattern enforced by struct constructor.
         );
 
         // Variant: ProprietaryIdentification — Identification and Issuer required Max35Text;
@@ -148,11 +144,7 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
                         ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification
                     )
                     .NotEmpty()
-                    .Matches(AnyBicRegex)
-                    .WithMessage(
-                        "SafekeepingPlace.TypeAndIdentification.Identification must match the "
-                            + "AnyBICDec2014Identifier pattern."
-                    )
+                    // AnyBICDec2014Identifier pattern enforced by struct constructor.
         );
 
         // Variant: Proprietary — Identification is Max35Text, length enforced by struct constructor.
