@@ -1,1 +1,1 @@
-﻿namespace BeneficialStrategies.Iso20022.Metadata;
+namespace BeneficialStrategies.Iso20022.Metadata;

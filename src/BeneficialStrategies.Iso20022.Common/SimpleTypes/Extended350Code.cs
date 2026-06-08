@@ -38,8 +38,10 @@ public readonly struct Extended350Code : IIsoSimpleValue<string>, IEquatable<Ext
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Extended350Code result)
     {
-        if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
-        result = default; return false;
+        if (value is { Length: >= MinLength and <= MaxLength })
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

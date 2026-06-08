@@ -72,9 +72,11 @@ public readonly struct Exact1HexBinaryText : IIsoSimpleValue<string>, IEquatable
             foreach (var c in value)
                 if (!((c >= '0' && c <= '9') || (c >= 'A' && c <= 'F')))
                 { result = default; return false; }
-            result = new(value); return true;
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Returns a valid instance for any <see cref="byte"/> value.</summary>

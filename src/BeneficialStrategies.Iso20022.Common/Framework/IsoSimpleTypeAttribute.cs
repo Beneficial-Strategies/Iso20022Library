@@ -1,4 +1,4 @@
-﻿namespace BeneficialStrategies.Iso20022.Framework
+namespace BeneficialStrategies.Iso20022.Framework
 {
     /// <summary>
     /// To be applied to members of primitive types to identify how formatting and other handling should be done.

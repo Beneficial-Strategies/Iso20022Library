@@ -40,8 +40,10 @@ public readonly struct CFIOct2015Identifier : IIsoSimpleValue<string>, IEquatabl
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> satisfies <see cref="Pattern"/>.</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out CFIOct2015Identifier result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="CFIOct2015Identifier"/>.</summary>

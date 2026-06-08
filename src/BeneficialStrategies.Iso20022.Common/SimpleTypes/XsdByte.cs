@@ -46,7 +46,8 @@ public readonly struct XsdByte : IIsoSimpleValue<sbyte>, IEquatable<XsdByte>
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> is within range.</summary>
     public static bool TryCreate(sbyte value, [NotNullWhen(true)] out XsdByte result)
     {
-        try { result = new(value); return true; }
+        try
+        { result = new(value); return true; }
         catch (Iso20022FormatException) { result = default; return false; }
     }
 
@@ -55,10 +56,12 @@ public readonly struct XsdByte : IIsoSimpleValue<sbyte>, IEquatable<XsdByte>
     {
         if (value is not null && sbyte.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
         {
-            try { result = new(parsed); return true; }
+            try
+            { result = new(parsed); return true; }
             catch (Iso20022FormatException) { }
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a <see cref="sbyte"/> as a <see cref="XsdByte"/>.</summary>

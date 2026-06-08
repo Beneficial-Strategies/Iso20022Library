@@ -35,8 +35,10 @@ public readonly struct Max8HexBinaryText : IIsoSimpleValue<string>, IEquatable<M
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max8HexBinaryText result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

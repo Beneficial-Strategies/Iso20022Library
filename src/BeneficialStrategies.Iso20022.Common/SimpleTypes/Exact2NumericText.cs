@@ -49,7 +49,9 @@ public readonly struct Exact2NumericText : IIsoSimpleValue<string>, IEquatable<E
     {
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength)
         {
-            foreach (var c in value) if (c < '0' || c > '9') { result = default; return false; }
+            foreach (var c in value)
+                if (c < '0' || c > '9')
+                { result = default; return false; }
             result = new(value);
             return true;
         }

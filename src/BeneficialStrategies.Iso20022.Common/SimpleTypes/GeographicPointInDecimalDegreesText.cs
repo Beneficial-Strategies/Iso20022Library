@@ -35,8 +35,10 @@ public readonly struct GeographicPointInDecimalDegreesText : IIsoSimpleValue<str
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out GeographicPointInDecimalDegreesText result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

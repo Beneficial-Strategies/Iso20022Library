@@ -56,9 +56,11 @@ public readonly struct Exact6AlphaNumericText : IIsoSimpleValue<string>, IEquata
             foreach (var c in value)
                 if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || char.IsWhiteSpace(c)))
                 { result = default; return false; }
-            result = new(value); return true;
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact6AlphaNumericText"/>.</summary>

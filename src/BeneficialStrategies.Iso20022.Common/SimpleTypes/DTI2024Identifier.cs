@@ -40,8 +40,10 @@ public readonly struct DTI2024Identifier : IIsoSimpleValue<string>, IEquatable<D
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> satisfies <see cref="Pattern"/>.</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out DTI2024Identifier result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="DTI2024Identifier"/>.</summary>

@@ -369,20 +369,24 @@ public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
         typeof(TStruct).GetConstructor([typeof(string)])
         ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
 
-    [Fact] public void NativeConstruction_Succeeds()
+    [Fact]
+    public void NativeConstruction_Succeeds()
         => Assert.NotNull(NativeCtor().Invoke([ValidNativeSample]));
 
-    [Fact] public void StringConstruction_ValidString_Succeeds()
+    [Fact]
+    public void StringConstruction_ValidString_Succeeds()
         => Assert.NotNull(StringCtor().Invoke([ValidNativeSample.ToString()]));
 
-    [Fact] public void StringConstruction_InvalidString_ThrowsFormatException()
+    [Fact]
+    public void StringConstruction_InvalidString_ThrowsFormatException()
     {
         var ex = Assert.Throws<TargetInvocationException>(
             () => StringCtor().Invoke([InvalidStringSample]));
         Assert.IsType<Iso20022FormatException>(ex.InnerException);
     }
 
-    [Fact] public void EqualInstances_AreEqual()
+    [Fact]
+    public void EqualInstances_AreEqual()
     {
         var a = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
         var b = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
@@ -390,13 +394,15 @@ public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
         Assert.Equal(a.GetHashCode(), b.GetHashCode());
     }
 
-    [Fact] public void ToString_MatchesNativeToString()
+    [Fact]
+    public void ToString_MatchesNativeToString()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
         Assert.Equal(ValidNativeSample.ToString(), instance.ToString());
     }
 
-    [Fact] public void ImplicitFromNative_Works()
+    [Fact]
+    public void ImplicitFromNative_Works()
     {
         var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
             .First(m => m.Name == "op_Implicit"
@@ -406,7 +412,8 @@ public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
         Assert.Equal(ValidNativeSample, result.Value);
     }
 
-    [Fact] public void ImplicitToNative_Works()
+    [Fact]
+    public void ImplicitToNative_Works()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
         var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
@@ -416,7 +423,8 @@ public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
         Assert.Equal(ValidNativeSample, (TValue)op.Invoke(null, [instance])!);
     }
 
-    [Fact] public void NativeEqualityOperator_Works()
+    [Fact]
+    public void NativeEqualityOperator_Works()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
         var opEq = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
@@ -426,7 +434,8 @@ public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
         Assert.True((bool)opEq.Invoke(null, [instance, ValidNativeSample])!);
     }
 
-    [Fact] public void TryCreate_ValidNative_ReturnsTrue()
+    [Fact]
+    public void TryCreate_ValidNative_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
             .First(m => m.Name == "TryCreate"
@@ -716,7 +725,8 @@ public class SimpleValueCoverageTests(ITestOutputHelper output)
 
     private static bool IsSimpleValueType(Type t)
     {
-        if (!t.IsValueType || t.IsEnum) return false;
+        if (!t.IsValueType || t.IsEnum)
+            return false;
         return t.GetInterfaces().Any(i =>
             i.IsGenericType && i.GetGenericTypeDefinition() == typeof(IIsoSimpleValue<>));
     }
@@ -724,7 +734,8 @@ public class SimpleValueCoverageTests(ITestOutputHelper output)
     // Walk the inheritance chain to find all TStruct type args used in concrete subclasses.
     private static IEnumerable<Type> GetSimpleValueContractBaseTypes(Type testClass)
     {
-        if (testClass.IsAbstract) yield break;
+        if (testClass.IsAbstract)
+            yield break;
         var b = testClass.BaseType;
         while (b is not null && b != typeof(object))
         {

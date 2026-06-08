@@ -45,7 +45,8 @@ public readonly struct Exact42Text : IIsoSimpleValue<string>, IEquatable<Exact42
     {
         if (value is { Length: >= MinLength and <= MaxLength })
         { result = new(value); return true; }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact42Text"/>.</summary>

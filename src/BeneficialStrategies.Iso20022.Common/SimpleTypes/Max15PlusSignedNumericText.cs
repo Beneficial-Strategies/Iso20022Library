@@ -56,8 +56,11 @@ public readonly struct Max15PlusSignedNumericText : IIsoSimpleValue<string>, IEq
             if (value.Length - start >= 1 && value.Length - start <= 15)
             {
                 bool valid = true;
-                foreach (var c in value.AsSpan(start)) if (c < '0' || c > '9') { valid = false; break; }
-                if (valid) { result = new(value); return true; }
+                foreach (var c in value.AsSpan(start))
+                    if (c < '0' || c > '9')
+                    { valid = false; break; }
+                if (valid)
+                { result = new(value); return true; }
             }
         }
         result = default;

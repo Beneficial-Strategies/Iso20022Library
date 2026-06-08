@@ -38,8 +38,10 @@ public readonly struct ExternalLocalInstrumentCode_Obsolete : IIsoSimpleValue<st
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out ExternalLocalInstrumentCode_Obsolete result)
     {
-        if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
-        result = default; return false;
+        if (value is { Length: >= MinLength and <= MaxLength })
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

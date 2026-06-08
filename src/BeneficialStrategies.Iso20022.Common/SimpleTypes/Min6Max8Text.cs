@@ -38,8 +38,10 @@ public readonly struct Min6Max8Text : IIsoSimpleValue<string>, IEquatable<Min6Ma
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Min6Max8Text result)
     {
-        if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
-        result = default; return false;
+        if (value is { Length: >= MinLength and <= MaxLength })
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

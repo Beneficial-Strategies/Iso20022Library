@@ -1,4 +1,4 @@
-﻿namespace BeneficialStrategies.Iso20022.Metadata;
+namespace BeneficialStrategies.Iso20022.Metadata;
 
 /// <summary>
 /// Sets the ISO id number for the decorated item. May be used for resource lookup.

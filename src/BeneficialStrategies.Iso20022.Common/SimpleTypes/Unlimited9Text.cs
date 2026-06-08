@@ -35,8 +35,10 @@ public readonly struct Unlimited9Text : IIsoSimpleValue<string>, IEquatable<Unli
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Unlimited9Text result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

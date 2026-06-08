@@ -49,7 +49,9 @@ public readonly struct Max6NumericText : IIsoSimpleValue<string>, IEquatable<Max
     {
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength)
         {
-            foreach (var c in value) if (c < '0' || c > '9') { result = default; return false; }
+            foreach (var c in value)
+                if (c < '0' || c > '9')
+                { result = default; return false; }
             result = new(value);
             return true;
         }

@@ -35,8 +35,10 @@ public readonly struct JulianDate : IIsoSimpleValue<string>, IEquatable<JulianDa
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out JulianDate result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

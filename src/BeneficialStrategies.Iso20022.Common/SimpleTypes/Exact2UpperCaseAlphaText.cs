@@ -49,10 +49,14 @@ public readonly struct Exact2UpperCaseAlphaText : IIsoSimpleValue<string>, IEqua
     {
         if (value is { Length: 2 })
         {
-            foreach (var c in value) if (c < 'A' || c > 'Z') { result = default; return false; }
-            result = new(value); return true;
+            foreach (var c in value)
+                if (c < 'A' || c > 'Z')
+                { result = default; return false; }
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact2UpperCaseAlphaText"/>.</summary>

@@ -35,7 +35,8 @@ public readonly struct ExternalIndustrySectorClassificationCode : IIsoExternalCo
     /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
     public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalIndustrySectorClassificationCode result)
     {
-        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
         result = default;
         return false;
     }

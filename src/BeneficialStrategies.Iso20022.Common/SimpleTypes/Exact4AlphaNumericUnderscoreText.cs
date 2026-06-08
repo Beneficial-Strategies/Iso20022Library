@@ -67,10 +67,12 @@ public readonly struct Exact4AlphaNumericUnderscoreText : IIsoSimpleValue<string
                     if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_'))
                     { valid = false; break; }
                 }
-                if (valid) { result = new(value); return true; }
+                if (valid)
+                { result = new(value); return true; }
             }
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact4AlphaNumericUnderscoreText"/>.</summary>

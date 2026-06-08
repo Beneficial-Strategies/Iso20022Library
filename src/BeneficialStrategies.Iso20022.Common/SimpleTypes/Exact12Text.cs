@@ -45,7 +45,8 @@ public readonly struct Exact12Text : IIsoSimpleValue<string>, IEquatable<Exact12
     {
         if (value is { Length: >= MinLength and <= MaxLength })
         { result = new(value); return true; }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact12Text"/>.</summary>

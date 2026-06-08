@@ -58,10 +58,14 @@ public readonly struct RestrictedFINXMax70Text : IIsoSimpleValue<string>, IEquat
     {
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength)
         {
-            foreach (var c in value) if (!IsCharSetXWithNewlines(c)) { result = default; return false; }
-            result = new(value); return true;
+            foreach (var c in value)
+                if (!IsCharSetXWithNewlines(c))
+                { result = default; return false; }
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     private static bool IsCharSetX(char c) =>

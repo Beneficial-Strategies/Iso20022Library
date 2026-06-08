@@ -64,12 +64,16 @@ public readonly struct RestrictedFINXMax24Text : IIsoSimpleValue<string>, IEquat
     {
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength)
         {
-            foreach (var c in value) if (!IsCharSetX(c)) { result = default; return false; }
+            foreach (var c in value)
+                if (!IsCharSetX(c))
+                { result = default; return false; }
             if (value[0] == '/' || value[^1] == '/' || value.Contains("//"))
             { result = default; return false; }
-            result = new(value); return true;
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     private static bool IsCharSetX(char c) =>

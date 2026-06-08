@@ -4,6 +4,6 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 
 public class XsdNonPositiveIntegerTests : SimpleValueXsdConstrainedLongContractTests<XsdNonPositiveInteger>
 {
-    protected override long ValidNativeSample   => 0L;
+    protected override long ValidNativeSample => 0L;
     protected override long OutOfRangeNativeSample => 1L;
 }

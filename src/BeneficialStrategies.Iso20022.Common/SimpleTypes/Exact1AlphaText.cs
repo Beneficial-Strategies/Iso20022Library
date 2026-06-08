@@ -53,7 +53,8 @@ public readonly struct Exact1AlphaText : IIsoSimpleValue<string>, IEquatable<Exa
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
             { result = new(value); return true; }
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="Exact1AlphaText"/>.</summary>

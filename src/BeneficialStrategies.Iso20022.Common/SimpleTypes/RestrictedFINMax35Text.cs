@@ -50,7 +50,8 @@ public readonly struct RestrictedFINMax35Text : IIsoSimpleValue<string>, IEquata
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength
             && value[0] != '/' && value[^1] != '/' && !value.Contains("//"))
         { result = new(value); return true; }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     private static void ValidateSlash(Type type, string value)

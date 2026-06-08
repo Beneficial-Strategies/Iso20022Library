@@ -40,8 +40,10 @@ public readonly struct IBEIIdentifier : IIsoSimpleValue<string>, IEquatable<IBEI
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> satisfies <see cref="Pattern"/>.</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out IBEIIdentifier result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="IBEIIdentifier"/>.</summary>

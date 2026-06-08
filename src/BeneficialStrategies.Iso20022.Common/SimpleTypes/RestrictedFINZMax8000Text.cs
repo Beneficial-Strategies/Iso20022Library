@@ -56,10 +56,14 @@ public readonly struct RestrictedFINZMax8000Text : IIsoSimpleValue<string>, IEqu
     {
         if (value is not null && value.Length >= MinLength && value.Length <= MaxLength)
         {
-            foreach (var c in value) if (!IsCharSetZ(c)) { result = default; return false; }
-            result = new(value); return true;
+            foreach (var c in value)
+                if (!IsCharSetZ(c))
+                { result = default; return false; }
+            result = new(value);
+            return true;
         }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     private static bool IsCharSetZ(char c) =>

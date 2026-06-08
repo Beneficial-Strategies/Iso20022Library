@@ -48,7 +48,8 @@ public readonly struct BusinessMessagePriorityCode
     /// </summary>
     public static bool TryCreate(string value, [NotNullWhen(true)] out BusinessMessagePriorityCode result)
     {
-        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
         result = default;
         return false;
     }

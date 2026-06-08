@@ -38,8 +38,10 @@ public readonly struct Max10KText : IIsoSimpleValue<string>, IEquatable<Max10KTe
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max10KText result)
     {
-        if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
-        result = default; return false;
+        if (value is { Length: >= MinLength and <= MaxLength })
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

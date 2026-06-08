@@ -35,8 +35,10 @@ public readonly struct Max10DateText : IIsoSimpleValue<string>, IEquatable<Max10
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max10DateText result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

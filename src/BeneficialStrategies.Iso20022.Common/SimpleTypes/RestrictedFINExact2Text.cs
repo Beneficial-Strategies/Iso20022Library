@@ -48,8 +48,10 @@ public readonly struct RestrictedFINExact2Text : IIsoSimpleValue<string>, IEquat
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> is "XX" or "TS".</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out RestrictedFINExact2Text result)
     {
-        if (value == ValueXX || value == ValueTS) { result = new(value); return true; }
-        result = default; return false;
+        if (value == ValueXX || value == ValueTS)
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="RestrictedFINExact2Text"/>.</summary>

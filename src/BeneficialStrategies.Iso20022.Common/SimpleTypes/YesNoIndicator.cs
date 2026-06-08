@@ -49,8 +49,10 @@ public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesN
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> is "true" or "false".</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out YesNoIndicator result)
     {
-        if (value == TrueWire || value == FalseWire) { result = new(value); return true; }
-        result = default; return false;
+        if (value == TrueWire || value == FalseWire)
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Returns a valid instance for any <see cref="bool"/> value.</summary>

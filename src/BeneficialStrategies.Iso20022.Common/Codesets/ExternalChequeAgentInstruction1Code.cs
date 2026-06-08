@@ -36,7 +36,8 @@ public readonly struct ExternalChequeAgentInstruction1Code : IIsoExternalCode, I
     /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
     public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalChequeAgentInstruction1Code result)
     {
-        if (Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
         result = default;
         return false;
     }

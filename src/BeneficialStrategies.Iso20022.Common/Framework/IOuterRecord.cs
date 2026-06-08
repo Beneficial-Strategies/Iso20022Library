@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Framework
 {

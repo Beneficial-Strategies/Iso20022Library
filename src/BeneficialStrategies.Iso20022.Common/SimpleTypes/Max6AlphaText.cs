@@ -35,8 +35,10 @@ public readonly struct Max6AlphaText : IIsoSimpleValue<string>, IEquatable<Max6A
     /// <inheritdoc/>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out Max6AlphaText result)
     {
-        if (value is not null && Regex.IsMatch(value, Pattern)) { result = new(value); return true; }
-        result = default; return false;
+        if (value is not null && Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <inheritdoc/>

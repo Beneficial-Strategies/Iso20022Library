@@ -43,8 +43,10 @@ public readonly struct ConsolidatedTapeAssociationIdentifier : IIsoSimpleValue<s
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> satisfies all constraints.</summary>
     public static bool TryCreate(string? value, [NotNullWhen(true)] out ConsolidatedTapeAssociationIdentifier result)
     {
-        if (value is { Length: >= MinLength and <= MaxLength }) { result = new(value); return true; }
-        result = default; return false;
+        if (value is { Length: >= MinLength and <= MaxLength })
+        { result = new(value); return true; }
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="ConsolidatedTapeAssociationIdentifier"/>.</summary>

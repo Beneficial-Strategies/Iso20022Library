@@ -45,7 +45,8 @@ public readonly struct RestrictedFINMax15Text : IIsoSimpleValue<string>, IEquata
     {
         if (value is { Length: >= MinLength and <= MaxLength })
         { result = new(value); return true; }
-        result = default; return false;
+        result = default;
+        return false;
     }
 
     /// <summary>Implicitly wraps a string as a <see cref="RestrictedFINMax15Text"/>.</summary>
