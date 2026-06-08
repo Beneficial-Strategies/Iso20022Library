@@ -343,6 +343,122 @@ public abstract class SimpleValueMaxTextContractTests<TStruct>
     }
 }
 
+// ── XSD numeric type contract ──────────────────────────────────────────────────
+
+/// <summary>
+/// Standalone contract base for W3C XSD numeric types (xs:int, xs:long, xs:positiveInteger, etc.).
+/// Does NOT inherit from the string contract hierarchy because these types implement
+/// <see cref="IIsoSimpleValue{TValue}"/> where TValue is a numeric type, not <c>string</c>.
+/// Tests both the native-type and string-constructor paths.
+/// </summary>
+public abstract class SimpleValueXsdNumericContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>
+    where TValue : struct
+{
+    /// <summary>A valid native value (e.g. 42).</summary>
+    protected abstract TValue ValidNativeSample { get; }
+
+    /// <summary>A non-numeric string that must be rejected by the string constructor.</summary>
+    protected virtual string InvalidStringSample => "not-a-number";
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(TValue)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a ({typeof(TValue).Name}) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact] public void NativeConstruction_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([ValidNativeSample]));
+
+    [Fact] public void StringConstruction_ValidString_Succeeds()
+        => Assert.NotNull(StringCtor().Invoke([ValidNativeSample.ToString()]));
+
+    [Fact] public void StringConstruction_InvalidString_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => StringCtor().Invoke([InvalidStringSample]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact] public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var b = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact] public void ToString_MatchesNativeToString()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidNativeSample.ToString(), instance.ToString());
+    }
+
+    [Fact] public void ImplicitFromNative_Works()
+    {
+        var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "op_Implicit"
+                && m.ReturnType == typeof(TStruct)
+                && m.GetParameters() is [var p] && p.ParameterType == typeof(TValue));
+        var result = (TStruct)op.Invoke(null, [ValidNativeSample])!;
+        Assert.Equal(ValidNativeSample, result.Value);
+    }
+
+    [Fact] public void ImplicitToNative_Works()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var op = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "op_Implicit"
+                && m.ReturnType == typeof(TValue)
+                && m.GetParameters() is [var p] && p.ParameterType == typeof(TStruct));
+        Assert.Equal(ValidNativeSample, (TValue)op.Invoke(null, [instance])!);
+    }
+
+    [Fact] public void NativeEqualityOperator_Works()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var opEq = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "op_Equality"
+                && m.GetParameters() is [var p0, var p1]
+                && p0.ParameterType == typeof(TStruct) && p1.ParameterType == typeof(TValue));
+        Assert.True((bool)opEq.Invoke(null, [instance, ValidNativeSample])!);
+    }
+
+    [Fact] public void TryCreate_ValidNative_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethods(BindingFlags.Public | BindingFlags.Static)
+            .First(m => m.Name == "TryCreate"
+                && m.GetParameters() is [var p0, var p1]
+                && p0.ParameterType == typeof(TValue)
+                && p1.ParameterType == typeof(TStruct).MakeByRefType());
+        var args = new object?[] { ValidNativeSample, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+}
+
+/// <summary>
+/// Contract base for range-constrained XSD integer types (xs:positiveInteger, etc.)
+/// that additionally verify out-of-range native values are rejected.
+/// </summary>
+public abstract class SimpleValueXsdConstrainedLongContractTests<TStruct>
+    : SimpleValueXsdNumericContractTests<TStruct, long>
+    where TStruct : struct, IIsoSimpleValue<long>
+{
+    /// <summary>A long value that violates this type's range constraint.</summary>
+    protected abstract long OutOfRangeNativeSample { get; }
+
+    [Fact]
+    public void OutOfRangeNative_ThrowsFormatException()
+    {
+        var ctor = typeof(TStruct).GetConstructor([typeof(long)])!;
+        var ex = Assert.Throws<TargetInvocationException>(() => ctor.Invoke([OutOfRangeNativeSample]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+}
+
 // ── Indicator (boolean true/false) contract ────────────────────────────────────
 
 /// <summary>

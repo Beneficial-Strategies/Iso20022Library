@@ -396,9 +396,14 @@ public static class Iso20022XmlSerializer
             DateOnly d => d.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
             TimeOnly t => t.ToString("HH:mm:ss", CultureInfo.InvariantCulture),
             ulong n => n.ToString(CultureInfo.InvariantCulture),
+            long l => l.ToString(CultureInfo.InvariantCulture),
+            uint ui => ui.ToString(CultureInfo.InvariantCulture),
+            int i => i.ToString(CultureInfo.InvariantCulture),
             decimal d => d.ToString(CultureInfo.InvariantCulture),
             ushort s => s.ToString(CultureInfo.InvariantCulture),
+            short sh => sh.ToString(CultureInfo.InvariantCulture),
             byte b => b.ToString(CultureInfo.InvariantCulture),
+            sbyte sb => sb.ToString(CultureInfo.InvariantCulture),
             byte[] bytes => Convert.ToBase64String(bytes),
             _ when value.GetType().IsEnum => GetEnumMemberValue(value),
             _ => value.ToString() ?? string.Empty,
@@ -416,12 +421,22 @@ public static class Iso20022XmlSerializer
             return TimeOnly.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(ulong))
             return ulong.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(long))
+            return long.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(uint))
+            return uint.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(int))
+            return int.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(decimal))
             return decimal.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(ushort))
             return ushort.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(short))
+            return short.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(byte))
             return byte.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(sbyte))
+            return sbyte.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(byte[]))
             return Convert.FromBase64String(text);
         if (type.IsEnum)
@@ -529,9 +544,14 @@ public static class Iso20022XmlSerializer
         || t == typeof(DateOnly)
         || t == typeof(TimeOnly)
         || t == typeof(ulong)
+        || t == typeof(long)
+        || t == typeof(uint)
+        || t == typeof(int)
         || t == typeof(decimal)
         || t == typeof(ushort)
+        || t == typeof(short)
         || t == typeof(byte)
+        || t == typeof(sbyte)
         || t == typeof(byte[])
         || t.IsEnum
         || GetSimpleValueType(t) is not null;
