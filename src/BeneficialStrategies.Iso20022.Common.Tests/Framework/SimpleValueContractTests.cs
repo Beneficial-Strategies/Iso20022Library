@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text.Json;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Serialization;
+using BeneficialStrategies.Iso20022.SimpleTypes;
 using Xunit.Abstractions;
 
 namespace BeneficialStrategies.Iso20022;
@@ -763,6 +764,505 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
         const string json = "\"not-a-number\"";
         Assert.Throws<JsonException>(
             () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+    }
+}
+
+// ── XSD timezone-qualified Gregorian scalar contract ───────────────────────────
+
+/// <summary>
+/// Contract base for the timezone-qualified XSD Gregorian scalar primitives
+/// (<see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGYear"/>,
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGMonth"/>,
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGDay"/>). Each wraps a single native
+/// numeric <c>Value</c> plus an optional
+/// <see cref="IIsoTimezoneQualifiedValue.TimezoneOffset"/> that
+/// <see cref="SimpleValueXsdNumericContractTests{TStruct,TValue}"/> has no concept of, so this
+/// does not reuse it.
+/// </summary>
+public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>, IIsoTimezoneQualifiedValue
+    where TValue : struct
+{
+    /// <summary>A valid native sample value (e.g. month 6).</summary>
+    protected abstract TValue ValidNativeSample { get; }
+
+    /// <summary>The wire-format core (no timezone) for <see cref="ValidNativeSample"/> (e.g. "--06").</summary>
+    protected abstract string ValidNativeSampleWireCore { get; }
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(TValue), typeof(TimeSpan?)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a ({typeof(TValue).Name}, TimeSpan?) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_NoTimezone_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+        Assert.Null(instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_NoTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidNativeSampleWireCore])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+        Assert.Null(instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_UtcTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidNativeSampleWireCore + "Z"])!;
+        Assert.Equal(TimeSpan.Zero, instance.TimezoneOffset);
+    }
+
+    [Theory]
+    [InlineData("+05:00")]
+    [InlineData("-05:00")]
+    public void StringConstruction_OffsetTimezone_Succeeds(string tz)
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidNativeSampleWireCore + tz])!;
+        var expected = tz[0] == '-' ? -new TimeSpan(5, 0, 0) : new TimeSpan(5, 0, 0);
+        Assert.Equal(expected, instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_OutOfRangeTimezone_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke([ValidNativeSampleWireCore + "+15:00"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void StringConstruction_InvalidCore_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["not-a-value"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_NoTimezone_MatchesWireCore()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        Assert.Equal(ValidNativeSampleWireCore, instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_UtcTimezone_AppendsZ()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, TimeSpan.Zero])!;
+        Assert.Equal(ValidNativeSampleWireCore + "Z", instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_OffsetTimezone_AppendsOffset()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, new TimeSpan(5, 30, 0)])!;
+        Assert.Equal(ValidNativeSampleWireCore + "+05:30", instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        var b = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void DifferentTimezone_InstancesAreNotEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        var b = (TStruct)NativeCtor().Invoke([ValidNativeSample, TimeSpan.Zero])!;
+        Assert.NotEqual(a, b);
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { ValidNativeSampleWireCore, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "not-a-value", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_NoTimezone_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidNativeSampleWireCore}\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_WithTimezone_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, TimeSpan.Zero])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidNativeSampleWireCore}Z\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+}
+
+/// <summary>
+/// Contract base for range-constrained timezone-qualified Gregorian scalars
+/// (<see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGMonth"/>,
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGDay"/>) that additionally verify
+/// out-of-range native values are rejected. <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGYear"/>
+/// is unconstrained (any <see cref="int"/> is a valid year) and uses the base directly.
+/// </summary>
+public abstract class SimpleValueXsdGregorianScalarRangeConstrainedContractTests<TStruct, TValue>
+    : SimpleValueXsdGregorianScalarContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>, IIsoTimezoneQualifiedValue
+    where TValue : struct
+{
+    /// <summary>A native value that violates this type's range constraint.</summary>
+    protected abstract TValue OutOfRangeNativeSample { get; }
+
+    [Fact]
+    public void OutOfRangeNative_ThrowsFormatException()
+    {
+        var ctor = typeof(TStruct).GetConstructor([typeof(TValue), typeof(TimeSpan?)])!;
+        var ex = Assert.Throws<TargetInvocationException>(() => ctor.Invoke([OutOfRangeNativeSample, null]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+}
+
+// ── XSD timezone-qualified Gregorian composite contract ────────────────────────
+
+/// <summary>
+/// Contract base for <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGYearMonth"/> —
+/// wire format <c>"YYYY-MM"</c>, optionally timezone-qualified.
+/// </summary>
+public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<(int Year, byte Month)>, IIsoTimezoneQualifiedValue
+{
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(int), typeof(byte), typeof(TimeSpan?)])!;
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])!;
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, (byte)8, null])!;
+        Assert.Equal((2026, (byte)8), instance.Value);
+    }
+
+    [Fact]
+    public void NativeConstruction_InvalidMonth_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([2026, (byte)13, null]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void StringConstruction_NoTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["2026-08"])!;
+        Assert.Equal((2026, (byte)8), instance.Value);
+        Assert.Null(instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_WithTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["2026-08Z"])!;
+        Assert.Equal(TimeSpan.Zero, instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_NegativeYear_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["-0043-05"])!;
+        Assert.Equal((-43, (byte)5), instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_Invalid_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["not-a-value"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_MatchesWireFormat()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, (byte)8, new TimeSpan(5, 30, 0)])!;
+        Assert.Equal("2026-08+05:30", instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([2026, (byte)8, null])!;
+        var b = (TStruct)NativeCtor().Invoke([2026, (byte)8, null])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "2026-08", null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "not-a-value", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, (byte)8, TimeSpan.Zero])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"2026-08Z\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+}
+
+/// <summary>
+/// Contract base for <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdGMonthDay"/> —
+/// wire format <c>"--MM-DD"</c>, optionally timezone-qualified.
+/// </summary>
+public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<(byte Month, byte Day)>, IIsoTimezoneQualifiedValue
+{
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(byte), typeof(byte), typeof(TimeSpan?)])!;
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])!;
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, null])!;
+        Assert.Equal(((byte)8, (byte)15), instance.Value);
+    }
+
+    [Fact]
+    public void NativeConstruction_InvalidMonth_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([(byte)13, (byte)1, null]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void NativeConstruction_DayExceedsMonthMaximum_ThrowsFormatException()
+    {
+        // April has 30 days, even in a leap-year context.
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([(byte)4, (byte)31, null]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void NativeConstruction_February29_Succeeds()
+    {
+        // Feb 29 is always valid for gMonthDay — it's a recurring date, not tied to a specific year.
+        var instance = (TStruct)NativeCtor().Invoke([(byte)2, (byte)29, null])!;
+        Assert.Equal(((byte)2, (byte)29), instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_NoTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["--08-15"])!;
+        Assert.Equal(((byte)8, (byte)15), instance.Value);
+        Assert.Null(instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_WithTimezone_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["--08-15Z"])!;
+        Assert.Equal(TimeSpan.Zero, instance.TimezoneOffset);
+    }
+
+    [Fact]
+    public void StringConstruction_Invalid_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["not-a-value"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_MatchesWireFormat()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, new TimeSpan(5, 30, 0)])!;
+        Assert.Equal("--08-15+05:30", instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, null])!;
+        var b = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, null])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "--08-15", null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "not-a-value", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, TimeSpan.Zero])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"--08-15Z\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+}
+
+// ── XSD duration contract ───────────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdDuration"/> — wire
+/// format <c>"-?PnYnMnDTnHnMnS"</c>. No timezone component (unlike the <c>xs:g*</c> types).
+/// </summary>
+public abstract class SimpleValueXsdDurationContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<XsdDurationValue>
+{
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(XsdDurationValue)])!;
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])!;
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var value = new XsdDurationValue(false, 1, 2, 3, 4, 5, 6.5m);
+        var instance = (TStruct)NativeCtor().Invoke([value])!;
+        Assert.Equal(value, instance.Value);
+    }
+
+    [Fact]
+    public void NativeConstruction_NegativeComponent_ThrowsFormatException()
+    {
+        var value = new XsdDurationValue(false, -1, 0, 0, 0, 0, 0);
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([value]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Theory]
+    [InlineData("P1Y2M3DT4H5M6.5S", false, 1, 2, 3, 4, 5, 6.5)]
+    [InlineData("-P1Y", true, 1, 0, 0, 0, 0, 0)]
+    [InlineData("PT1H", false, 0, 0, 0, 1, 0, 0)]
+    [InlineData("P0D", false, 0, 0, 0, 0, 0, 0)]
+    [InlineData("PT0S", false, 0, 0, 0, 0, 0, 0)]
+    public void StringConstruction_ValidLexicalForm_Succeeds(
+        string text, bool isNegative, int years, int months, int days, int hours, int minutes, double seconds)
+    {
+        var instance = (TStruct)StringCtor().Invoke([text])!;
+        Assert.Equal(new XsdDurationValue(isNegative, years, months, days, hours, minutes, (decimal)seconds), instance.Value);
+    }
+
+    [Theory]
+    [InlineData("P")]
+    [InlineData("PT")]
+    [InlineData("P1Y2M3D4H")] // missing 'T' before time components
+    [InlineData("not-a-duration")]
+    public void StringConstruction_InvalidLexicalForm_ThrowsFormatException(string text)
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke([text]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_RoundTripsCanonicalForm()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["P1Y2M3DT4H5M6.5S"])!;
+        Assert.Equal("P1Y2M3DT4H5M6.5S", instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_ZeroDuration_ReturnsCanonicalP0D()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["PT0S"])!;
+        Assert.Equal("P0D", instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)StringCtor().Invoke(["P1Y"])!;
+        var b = (TStruct)StringCtor().Invoke(["P1Y"])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "P1Y", null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "not-a-duration", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["P1Y2M3DT4H5M6.5S"])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"P1Y2M3DT4H5M6.5S\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
     }
 }
 

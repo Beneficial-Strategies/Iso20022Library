@@ -387,6 +387,10 @@ public static class Iso20022XmlSerializer
     private static string FormatLeaf(object value) =>
         value switch
         {
+            // IIsoCompositeSimpleValue: Value doesn't round-trip via the generic per-T formatters
+            // below (it's a tuple/record, or extra lexical info like a timezone rides alongside
+            // it) — defer to the struct's own ToString(), which knows the full lexical grammar.
+            IIsoCompositeSimpleValue composite => composite.ToString() ?? string.Empty,
             // IIsoSimpleValue<T>: extract the inner value and format it recursively.
             // IIsoExternalCode (a sub-interface) is covered here too.
             _ when GetSimpleValueType(value.GetType()) is not null
@@ -461,26 +465,38 @@ public static class Iso20022XmlSerializer
         var simpleValueType = GetSimpleValueType(type);
         if (simpleValueType is not null)
         {
+            // IIsoCompositeSimpleValue: the full wire text doesn't decompose into a single T
+            // (it's a tuple/record, or extra lexical info like a timezone rides alongside it) —
+            // defer entirely to the struct's own (string) constructor, which knows the full
+            // lexical grammar, rather than parsing into T first.
+            if (typeof(IIsoCompositeSimpleValue).IsAssignableFrom(type))
+                return ConstructSimpleValue(type, text);
+
             // Parse text → T (e.g. string, decimal), then construct the struct.
             // The constructor validates ISO constraints and throws Iso20022FormatException on failure.
             var innerValue = ParseLeaf(simpleValueType, text);
-            try
-            {
-                return Activator.CreateInstance(type, innerValue)!;
-            }
-            catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is Iso20022FormatException fmt)
-            {
-                throw new InvalidOperationException(
-                    $"XML deserialization failed for {type.Name}: {fmt.Message} " +
-                    $"(violation: {fmt.Violation})", fmt);
-            }
-            catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is ArgumentNullException)
-            {
-                throw new InvalidOperationException(
-                    $"XML deserialization produced a null value for non-nullable {type.Name}.", ex);
-            }
+            return ConstructSimpleValue(type, innerValue);
         }
         return text;
+    }
+
+    private static object ConstructSimpleValue(Type type, object ctorArg)
+    {
+        try
+        {
+            return Activator.CreateInstance(type, ctorArg)!;
+        }
+        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is Iso20022FormatException fmt)
+        {
+            throw new InvalidOperationException(
+                $"XML deserialization failed for {type.Name}: {fmt.Message} " +
+                $"(violation: {fmt.Violation})", fmt);
+        }
+        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is ArgumentNullException)
+        {
+            throw new InvalidOperationException(
+                $"XML deserialization produced a null value for non-nullable {type.Name}.", ex);
+        }
     }
 
     // xs:boolean lexical space: "true"/"false" (canonical) or "1"/"0" (also permitted).
