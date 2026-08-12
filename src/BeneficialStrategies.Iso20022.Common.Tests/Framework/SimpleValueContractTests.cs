@@ -468,6 +468,304 @@ public abstract class SimpleValueXsdConstrainedLongContractTests<TStruct>
     }
 }
 
+// ── XSD boolean contract ───────────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdBoolean"/> — the
+/// lone <c>IIsoSimpleValue&lt;bool&gt;</c> primitive. Wire format is the lowercase
+/// <c>"true"</c>/<c>"false"</c> canonical form (NOT .NET's <c>bool.ToString()</c> output of
+/// <c>"True"</c>/<c>"False"</c>), so this does not reuse
+/// <see cref="SimpleValueXsdNumericContractTests{TStruct,TValue}"/>.
+/// </summary>
+public abstract class SimpleValueXsdBooleanContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<bool>
+{
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(bool)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (bool) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public void NativeConstruction_Succeeds(bool value)
+        => Assert.NotNull(NativeCtor().Invoke([value]));
+
+    [Theory]
+    [InlineData("true", true)]
+    [InlineData("false", false)]
+    [InlineData("1", true)]
+    [InlineData("0", false)]
+    public void StringConstruction_ValidLexicalForm_Succeeds(string text, bool expected)
+    {
+        var instance = (TStruct)StringCtor().Invoke([text])!;
+        Assert.Equal(expected, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_InvalidString_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["maybe"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Theory]
+    [InlineData(true, "true")]
+    [InlineData(false, "false")]
+    public void ToString_UsesLowercaseCanonicalForm(bool value, string expected)
+    {
+        var instance = (TStruct)NativeCtor().Invoke([value])!;
+        Assert.Equal(expected, instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([true])!;
+        var b = (TStruct)NativeCtor().Invoke([true])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void TryCreate_Native_AlwaysSucceeds()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(bool), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { true, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "true", null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "maybe", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([true])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"true\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonDeserialize_InvalidValue_ThrowsJsonException()
+    {
+        const string json = "\"maybe\"";
+        Assert.Throws<JsonException>(
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+    }
+}
+
+// ── XSD floating-point contract ────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for the XSD floating-point primitives
+/// (<see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdFloat"/>,
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdDouble"/>). Wire format for special
+/// values is <c>"INF"</c>/<c>"-INF"</c>/<c>"NaN"</c> (NOT .NET's
+/// <c>"Infinity"</c>/<c>"-Infinity"</c>), so this does not reuse
+/// <see cref="SimpleValueXsdNumericContractTests{TStruct,TValue}"/>.
+/// </summary>
+public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>
+    where TValue : struct
+{
+    /// <summary>A finite native sample value (e.g. 42.5).</summary>
+    protected abstract TValue FiniteSample { get; }
+
+    /// <summary>The wire-format string for <see cref="FiniteSample"/> (e.g. "42.5").</summary>
+    protected abstract string FiniteSampleWireText { get; }
+
+    protected abstract TValue PositiveInfinitySample { get; }
+    protected abstract TValue NegativeInfinitySample { get; }
+    protected abstract TValue NaNSample { get; }
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(TValue)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a ({typeof(TValue).Name}) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_FiniteValue_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([FiniteSample]));
+
+    [Fact]
+    public void NativeConstruction_PositiveInfinity_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([PositiveInfinitySample]));
+
+    [Fact]
+    public void NativeConstruction_NegativeInfinity_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([NegativeInfinitySample]));
+
+    [Fact]
+    public void NativeConstruction_NaN_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([NaNSample]));
+
+    [Fact]
+    public void StringConstruction_FiniteValue_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([FiniteSampleWireText])!;
+        Assert.Equal(FiniteSample, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_PositiveInfinity_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["INF"])!;
+        Assert.Equal(PositiveInfinitySample, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_NegativeInfinity_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["-INF"])!;
+        Assert.Equal(NegativeInfinitySample, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_NaN_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["NaN"])!;
+        Assert.Equal("NaN", instance.ToString());
+    }
+
+    [Fact]
+    public void StringConstruction_InvalidString_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["not-a-number"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_FiniteValue_MatchesWireText()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([FiniteSample])!;
+        Assert.Equal(FiniteSampleWireText, instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_PositiveInfinity_ReturnsINF()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([PositiveInfinitySample])!;
+        Assert.Equal("INF", instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_NegativeInfinity_ReturnsNegativeINF()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([NegativeInfinitySample])!;
+        Assert.Equal("-INF", instance.ToString());
+    }
+
+    [Fact]
+    public void ToString_NaN_ReturnsNaN()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([NaNSample])!;
+        Assert.Equal("NaN", instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([FiniteSample])!;
+        var b = (TStruct)NativeCtor().Invoke([FiniteSample])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void NaNInstances_AreEqual()
+    {
+        // Struct equality delegates to TValue.Equals (not the == operator), so NaN.Equals(NaN)
+        // is true here — unlike IEEE 754 == semantics, where NaN == NaN is false.
+        var a = (TStruct)NativeCtor().Invoke([NaNSample])!;
+        var b = (TStruct)NativeCtor().Invoke([NaNSample])!;
+        Assert.Equal(a, b);
+    }
+
+    [Fact]
+    public void TryCreate_Native_AlwaysSucceeds()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(TValue), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { FiniteSample, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { FiniteSampleWireText, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { "not-a-number", null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_FiniteValue_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([FiniteSample])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{FiniteSampleWireText}\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_PositiveInfinity_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([PositiveInfinitySample])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"INF\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonDeserialize_InvalidValue_ThrowsJsonException()
+    {
+        const string json = "\"not-a-number\"";
+        Assert.Throws<JsonException>(
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+    }
+}
+
 // ── Indicator (boolean true/false) contract ────────────────────────────────────
 
 /// <summary>
@@ -732,6 +1030,12 @@ public class SimpleValueCoverageTests(ITestOutputHelper output)
     }
 
     // Walk the inheritance chain to find all TStruct type args used in concrete subclasses.
+    // Every contract-test base in this file — SimpleValueContractTests<,>,
+    // SimpleValueXsdNumericContractTests<,>, SimpleValueXsdBooleanContractTests<>,
+    // SimpleValueXsdFloatingPointContractTests<,>, etc. — puts the struct under test as its
+    // first generic type argument by convention, so match on that rather than hard-coding one
+    // specific base class (which previously left every non-string-backed contract base,
+    // including the whole XSD numeric family, uncounted).
     private static IEnumerable<Type> GetSimpleValueContractBaseTypes(Type testClass)
     {
         if (testClass.IsAbstract)
@@ -739,10 +1043,14 @@ public class SimpleValueCoverageTests(ITestOutputHelper output)
         var b = testClass.BaseType;
         while (b is not null && b != typeof(object))
         {
-            if (b.IsGenericType && b.GetGenericTypeDefinition() == typeof(SimpleValueContractTests<,>))
+            if (b.IsGenericType)
             {
-                yield return b.GetGenericArguments()[0]; // TStruct
-                yield break;
+                var typeArgs = b.GetGenericArguments();
+                if (typeArgs.Length > 0 && IsSimpleValueType(typeArgs[0]))
+                {
+                    yield return typeArgs[0];
+                    yield break;
+                }
             }
             b = b.BaseType;
         }

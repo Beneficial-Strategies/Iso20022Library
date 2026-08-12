@@ -405,9 +405,20 @@ public static class Iso20022XmlSerializer
             byte b => b.ToString(CultureInfo.InvariantCulture),
             sbyte sb => sb.ToString(CultureInfo.InvariantCulture),
             byte[] bytes => Convert.ToBase64String(bytes),
+            // xs:boolean wire format is lowercase "true"/"false" — NOT bool.ToString()'s "True"/"False".
+            bool bl => bl ? "true" : "false",
+            // xs:float/xs:double special values use "INF"/"-INF"/"NaN" — NOT .NET's "Infinity"/"-Infinity".
+            float f => FormatXsdFloatingPoint(f, float.IsPositiveInfinity(f), float.IsNegativeInfinity(f), float.IsNaN(f)),
+            double db => FormatXsdFloatingPoint(db, double.IsPositiveInfinity(db), double.IsNegativeInfinity(db), double.IsNaN(db)),
             _ when value.GetType().IsEnum => GetEnumMemberValue(value),
             _ => value.ToString() ?? string.Empty,
         };
+
+    private static string FormatXsdFloatingPoint(IFormattable value, bool isPositiveInfinity, bool isNegativeInfinity, bool isNaN) =>
+        isPositiveInfinity ? "INF"
+        : isNegativeInfinity ? "-INF"
+        : isNaN ? "NaN"
+        : value.ToString(null, CultureInfo.InvariantCulture);
 
     private static object ParseLeaf(Type type, string text)
     {
@@ -437,6 +448,12 @@ public static class Iso20022XmlSerializer
             return byte.Parse(text, CultureInfo.InvariantCulture);
         if (type == typeof(sbyte))
             return sbyte.Parse(text, CultureInfo.InvariantCulture);
+        if (type == typeof(bool))
+            return ParseXsdBoolean(text);
+        if (type == typeof(float))
+            return ParseXsdFloat(text);
+        if (type == typeof(double))
+            return ParseXsdDouble(text);
         if (type == typeof(byte[]))
             return Convert.FromBase64String(text);
         if (type.IsEnum)
@@ -465,6 +482,35 @@ public static class Iso20022XmlSerializer
         }
         return text;
     }
+
+    // xs:boolean lexical space: "true"/"false" (canonical) or "1"/"0" (also permitted).
+    private static bool ParseXsdBoolean(string text) =>
+        text switch
+        {
+            "true" or "1" => true,
+            "false" or "0" => false,
+            _ => throw new InvalidOperationException($"Invalid xs:boolean value '{text}'."),
+        };
+
+    // xs:float lexical space: decimal/scientific notation, or "INF"/"-INF"/"NaN".
+    private static float ParseXsdFloat(string text) =>
+        text switch
+        {
+            "INF" => float.PositiveInfinity,
+            "-INF" => float.NegativeInfinity,
+            "NaN" => float.NaN,
+            _ => float.Parse(text, NumberStyles.Float, CultureInfo.InvariantCulture),
+        };
+
+    // xs:double lexical space: decimal/scientific notation, or "INF"/"-INF"/"NaN".
+    private static double ParseXsdDouble(string text) =>
+        text switch
+        {
+            "INF" => double.PositiveInfinity,
+            "-INF" => double.NegativeInfinity,
+            "NaN" => double.NaN,
+            _ => double.Parse(text, NumberStyles.Float, CultureInfo.InvariantCulture),
+        };
 
     private static string GetEnumMemberValue(object enumValue)
     {
@@ -552,6 +598,9 @@ public static class Iso20022XmlSerializer
         || t == typeof(short)
         || t == typeof(byte)
         || t == typeof(sbyte)
+        || t == typeof(bool)
+        || t == typeof(float)
+        || t == typeof(double)
         || t == typeof(byte[])
         || t.IsEnum
         || GetSimpleValueType(t) is not null;

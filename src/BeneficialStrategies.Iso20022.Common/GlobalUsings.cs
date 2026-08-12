@@ -28,6 +28,10 @@ global using IsopositiveInteger = BeneficialStrategies.Iso20022.SimpleTypes.XsdP
 global using IsonegativeInteger = BeneficialStrategies.Iso20022.SimpleTypes.XsdNegativeInteger;
 global using IsononNegativeInteger = BeneficialStrategies.Iso20022.SimpleTypes.XsdNonNegativeInteger;
 global using IsononPositiveInteger = BeneficialStrategies.Iso20022.SimpleTypes.XsdNonPositiveInteger;
+// XSD boolean/floating-point type aliases — W3C xs:boolean/float/double
+global using Isoboolean = BeneficialStrategies.Iso20022.SimpleTypes.XsdBoolean;
+global using Isofloat = BeneficialStrategies.Iso20022.SimpleTypes.XsdFloat;
+global using Isodouble = BeneficialStrategies.Iso20022.SimpleTypes.XsdDouble;
 // Remaining SimpleTypes aliases
 global using IsoExtended350Code = BeneficialStrategies.Iso20022.SimpleTypes.Extended350Code;
 global using IsoExternalLocalInstrumentCode_Obsolete = BeneficialStrategies.Iso20022.SimpleTypes.ExternalLocalInstrumentCode_Obsolete;
@@ -342,15 +346,12 @@ global using IsoMax20MbBinary = System.Byte[]; // Binary
 global using IsoanySimpleType = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsoanyURI = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using Isobase64Binary = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
-global using Isoboolean = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using Isodate = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsodateTime = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using Isodecimal = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
-global using Isodouble = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using Isoduration = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsoENTITIES = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsoENTITY = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
-global using Isofloat = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsogDay = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsogMonth = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsogMonthDay = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
