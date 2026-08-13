@@ -161,14 +161,14 @@ public record CreditTransferTransaction61
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
-    public RegulatoryReporting3? RegulatoryReporting { get; init; }
+    public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
 
     /// <summary>
     /// Related Remittance Information.
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
-    public RemittanceLocation8? RelatedRemittanceInformation { get; init; }
+    public ValueList<RemittanceLocation8> RelatedRemittanceInformation { get; init; } = [];
 
     /// <summary>
     /// Remittance Information.

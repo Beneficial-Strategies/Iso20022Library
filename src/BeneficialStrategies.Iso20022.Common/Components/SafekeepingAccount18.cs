@@ -42,14 +42,14 @@ public record SafekeepingAccount18
     /// </summary>
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
-    public required HoldingBalance15 InstructedBalance { get; init; }
+    public ValueList<HoldingBalance15> InstructedBalance { get; init; } = [];
 
     /// <summary>
     /// Rights Holder.
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public PartyIdentification246Choice_? RightsHolder { get; init; }
+    public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
     /// Sub Account Identification.

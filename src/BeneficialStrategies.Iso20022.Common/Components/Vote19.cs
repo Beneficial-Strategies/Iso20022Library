@@ -91,7 +91,7 @@ public record Vote19
     /// </summary>
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public ProprietaryVote2? Proprietary { get; init; }
+    public ValueList<ProprietaryVote2> Proprietary { get; init; } = [];
 
     /// <summary>
     /// Sub Status.

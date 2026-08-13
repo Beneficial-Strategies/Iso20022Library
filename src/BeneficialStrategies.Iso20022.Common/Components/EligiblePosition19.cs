@@ -42,12 +42,12 @@ public record EligiblePosition19
     /// </summary>
     [DisplayName("Holding Balance")]
     [IsoXmlTag("HldgBal")]
-    public HoldingBalance14? HoldingBalance { get; init; }
+    public ValueList<HoldingBalance14> HoldingBalance { get; init; } = [];
 
     /// <summary>
     /// Rights Holder.
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public PartyIdentification270? RightsHolder { get; init; }
+    public ValueList<PartyIdentification270> RightsHolder { get; init; } = [];
 }

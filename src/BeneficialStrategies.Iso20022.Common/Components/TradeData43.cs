@@ -28,7 +28,7 @@ public record TradeData43
     /// </summary>
     [DisplayName("Counterparty Specific Data")]
     [IsoXmlTag("CtrPtySpcfcData")]
-    public required CounterpartySpecificData36 CounterpartySpecificData { get; init; }
+    public ValueList<CounterpartySpecificData36> CounterpartySpecificData { get; init; } = [];
 
     /// <summary>
     /// Level.

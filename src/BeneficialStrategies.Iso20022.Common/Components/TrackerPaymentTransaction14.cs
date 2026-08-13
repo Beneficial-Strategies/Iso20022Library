@@ -308,7 +308,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
-    public RegulatoryReporting3? RegulatoryReporting { get; init; }
+    public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
 
     /// <summary>
     /// Reject Return Reason.
@@ -329,7 +329,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
-    public RemittanceLocation7? RelatedRemittanceInformation { get; init; }
+    public ValueList<RemittanceLocation7> RelatedRemittanceInformation { get; init; } = [];
 
     /// <summary>
     /// Remittance Information.

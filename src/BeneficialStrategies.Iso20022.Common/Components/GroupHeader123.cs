@@ -21,7 +21,7 @@ public record GroupHeader123
     /// </summary>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
-    public Authorisation1Choice_? Authorisation { get; init; }
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
 
     /// <summary>
     /// Batch Booking.

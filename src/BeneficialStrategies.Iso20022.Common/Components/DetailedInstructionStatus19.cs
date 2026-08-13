@@ -49,7 +49,7 @@ public record DetailedInstructionStatus19
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public PartyIdentification246Choice_? RightsHolder { get; init; }
+    public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
     /// Single Instruction Identification.
@@ -77,7 +77,7 @@ public record DetailedInstructionStatus19
     /// </summary>
     [DisplayName("Vote Per Resolution")]
     [IsoXmlTag("VotePerRsltn")]
-    public Vote19? VotePerResolution { get; init; }
+    public ValueList<Vote19> VotePerResolution { get; init; } = [];
 
     /// <summary>
     /// Vote Receipt Date Time.

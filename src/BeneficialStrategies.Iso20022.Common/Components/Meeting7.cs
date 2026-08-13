@@ -35,7 +35,7 @@ public record Meeting7
     /// </summary>
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
-    public required LocationFormat1Choice_ Location { get; init; }
+    public ValueList<LocationFormat1Choice_> Location { get; init; } = [];
 
     /// <summary>
     /// Quorum Quantity.

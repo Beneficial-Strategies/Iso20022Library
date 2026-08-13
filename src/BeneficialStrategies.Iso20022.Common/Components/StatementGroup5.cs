@@ -42,7 +42,7 @@ public record StatementGroup5
     /// </summary>
     [DisplayName("Receiver Individual Contact")]
     [IsoXmlTag("RcvrIndvCtct")]
-    public Contact13? ReceiverIndividualContact { get; init; }
+    public ValueList<Contact13> ReceiverIndividualContact { get; init; } = [];
 
     /// <summary>
     /// Sender.
@@ -56,5 +56,5 @@ public record StatementGroup5
     /// </summary>
     [DisplayName("Sender Individual Contact")]
     [IsoXmlTag("SndrIndvCtct")]
-    public Contact13? SenderIndividualContact { get; init; }
+    public ValueList<Contact13> SenderIndividualContact { get; init; } = [];
 }

@@ -21,7 +21,7 @@ public record NonFinancialRequestContentComponent5
     /// </summary>
     [DisplayName("Additional Request")]
     [IsoXmlTag("AddtlReq")]
-    public ExternallyDefinedData5? AdditionalRequest { get; init; }
+    public ValueList<ExternallyDefinedData5> AdditionalRequest { get; init; } = [];
 
     /// <summary>
     /// Non Financial Request Type.

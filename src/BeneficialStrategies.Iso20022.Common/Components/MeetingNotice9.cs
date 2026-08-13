@@ -28,7 +28,7 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Additional Procedure Details")]
     [IsoXmlTag("AddtlPrcdrDtls")]
-    public AdditionalRights4? AdditionalProcedureDetails { get; init; }
+    public ValueList<AdditionalRights4> AdditionalProcedureDetails { get; init; } = [];
 
     /// <summary>
     /// Announcement Date.
@@ -56,7 +56,7 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Contact Person Details")]
     [IsoXmlTag("CtctPrsnDtls")]
-    public MeetingContactPerson3? ContactPersonDetails { get; init; }
+    public ValueList<MeetingContactPerson3> ContactPersonDetails { get; init; } = [];
 
     /// <summary>
     /// Enrolment Deadline.

@@ -77,7 +77,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public InstructionReason4Code? Reason { get; init; }
+    public SimpleValueList<InstructionReason4Code> Reason { get; init; } = [];
 
     /// <summary>
     /// Securities Quantity Details.
@@ -119,7 +119,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Transaction Sequence")]
     [IsoXmlTag("TxSeq")]
-    public InstructionsTransactionsSequence2? TransactionSequence { get; init; }
+    public ValueList<InstructionsTransactionsSequence2> TransactionSequence { get; init; } = [];
 
     /// <summary>
     /// User Reference Number.

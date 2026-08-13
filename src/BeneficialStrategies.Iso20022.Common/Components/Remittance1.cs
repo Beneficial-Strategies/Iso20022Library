@@ -21,7 +21,7 @@ public record Remittance1
     /// </summary>
     [DisplayName("Related")]
     [IsoXmlTag("Rltd")]
-    public RemittanceLocation7? Related { get; init; }
+    public ValueList<RemittanceLocation7> Related { get; init; } = [];
 
     /// <summary>
     /// Structured.

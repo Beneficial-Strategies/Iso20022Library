@@ -21,7 +21,7 @@ public record StructuredRemittanceInformation18
     /// </summary>
     [DisplayName("Additional Remittance Information")]
     [IsoXmlTag("AddtlRmtInf")]
-    public IsoMax140Text? AdditionalRemittanceInformation { get; init; }
+    public SimpleValueList<IsoMax140Text> AdditionalRemittanceInformation { get; init; } = [];
 
     /// <summary>
     /// Creditor Reference Information.

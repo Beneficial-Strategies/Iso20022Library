@@ -77,7 +77,7 @@ public record Cheque19
     /// </summary>
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
-    public IsoMax35Text? MemoField { get; init; }
+    public SimpleValueList<IsoMax35Text> MemoField { get; init; } = [];
 
     /// <summary>
     /// Print Location.
@@ -98,5 +98,5 @@ public record Cheque19
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public IsoMax70Text? Signature { get; init; }
+    public SimpleValueList<IsoMax70Text> Signature { get; init; } = [];
 }

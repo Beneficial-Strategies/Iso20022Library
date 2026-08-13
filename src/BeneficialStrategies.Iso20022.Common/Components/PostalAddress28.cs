@@ -21,7 +21,7 @@ public record PostalAddress28
     /// </summary>
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
-    public IsoMax70Text? AddressLine { get; init; }
+    public SimpleValueList<IsoMax70Text> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Address Type.

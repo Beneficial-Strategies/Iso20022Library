@@ -77,7 +77,7 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Option Conditions")]
     [IsoXmlTag("OptnConds")]
-    public OptionConditions1? OptionConditions { get; init; }
+    public ValueList<OptionConditions1> OptionConditions { get; init; } = [];
 
     /// <summary>
     /// Oversubscription Charge Flag.
@@ -147,5 +147,5 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
-    public TaxCategory1? TaxCategory { get; init; }
+    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
 }

@@ -225,7 +225,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
-    public TaxCategory1? TaxCategory { get; init; }
+    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
 
     /// <summary>
     /// Withdrawal Allowed Indicator.

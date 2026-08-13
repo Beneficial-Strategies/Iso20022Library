@@ -175,7 +175,7 @@ public record EntryTransaction15
     /// </summary>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
-    public RemittanceLocation8? RelatedRemittanceInformation { get; init; }
+    public ValueList<RemittanceLocation8> RelatedRemittanceInformation { get; init; } = [];
 
     /// <summary>
     /// Remittance Information.

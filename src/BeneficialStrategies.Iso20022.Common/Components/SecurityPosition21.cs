@@ -28,5 +28,5 @@ public record SecurityPosition21
     /// </summary>
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
-    public EligiblePosition19? Position { get; init; }
+    public ValueList<EligiblePosition19> Position { get; init; } = [];
 }

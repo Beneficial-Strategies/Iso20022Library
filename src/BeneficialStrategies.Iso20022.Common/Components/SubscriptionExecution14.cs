@@ -126,7 +126,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Informative Price Details")]
     [IsoXmlTag("InftvPricDtls")]
-    public UnitPrice22? InformativePriceDetails { get; init; }
+    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = [];
 
     /// <summary>
     /// Informative Tax Details.
@@ -189,7 +189,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public FundOrderType4Choice_? OrderType { get; init; }
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
 
     /// <summary>
     /// Order Waiver Details.
@@ -245,7 +245,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Related Party Details")]
     [IsoXmlTag("RltdPtyDtls")]
-    public Intermediary49? RelatedPartyDetails { get; init; }
+    public ValueList<Intermediary49> RelatedPartyDetails { get; init; } = [];
 
     /// <summary>
     /// Requested NAV Currency.
@@ -308,7 +308,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Staff Client Breakdown")]
     [IsoXmlTag("StffClntBrkdwn")]
-    public InvestmentFundsOrderBreakdown2? StaffClientBreakdown { get; init; }
+    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
 
     /// <summary>
     /// Sub Account For Holding.

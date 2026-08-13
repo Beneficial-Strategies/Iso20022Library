@@ -42,7 +42,7 @@ public record FundReferenceDataReport5
     /// </summary>
     [DisplayName("Costs And Charges")]
     [IsoXmlTag("CostsAndChrgs")]
-    public CostsAndCharges2? CostsAndCharges { get; init; }
+    public ValueList<CostsAndCharges2> CostsAndCharges { get; init; } = [];
 
     /// <summary>
     /// Distribution Strategy.

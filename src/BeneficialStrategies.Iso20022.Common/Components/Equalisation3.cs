@@ -28,7 +28,7 @@ public record Equalisation3
     /// </summary>
     [DisplayName("Equalisation Methodology Type")]
     [IsoXmlTag("EqulstnMthdlgyTp")]
-    public EqualisationMethodologyType2? EqualisationMethodologyType { get; init; }
+    public ValueList<EqualisationMethodologyType2> EqualisationMethodologyType { get; init; } = [];
 
     /// <summary>
     /// Gross Asset Value.
