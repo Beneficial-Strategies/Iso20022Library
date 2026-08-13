@@ -1266,6 +1266,117 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     }
 }
 
+// ── XSD binary (byte[]) contract ────────────────────────────────────────────────
+
+/// <summary>
+/// Contract base for byte[]-backed XSD primitives (currently just
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.XsdBase64Binary"/>). Equality must use
+/// byte-sequence comparison rather than reference equality, and the wire format is base64 text
+/// rather than a scalar the generic bases assume, so this does not reuse
+/// <see cref="SimpleValueContractTests{TStruct,TValue}"/>.
+/// </summary>
+public abstract class SimpleValueXsdBinaryContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<byte[]>
+{
+    /// <summary>A valid native byte[] sample.</summary>
+    protected abstract byte[] ValidNativeSample { get; }
+
+    /// <summary>The base64 wire-format string for <see cref="ValidNativeSample"/>.</summary>
+    protected abstract string ValidNativeSampleWireText { get; }
+
+    /// <summary>A string that is not valid base64.</summary>
+    protected virtual string InvalidWireText => "not-valid-base64!!";
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(byte[])])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (byte[]) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+        => Assert.NotNull(NativeCtor().Invoke([ValidNativeSample]));
+
+    [Fact]
+    public void StringConstruction_ValidBase64_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidNativeSampleWireText])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_InvalidBase64_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke([InvalidWireText]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var b = (TStruct)NativeCtor().Invoke([(byte[])ValidNativeSample.Clone()])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void ToString_ReturnsBase64WireText()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidNativeSampleWireText, instance.ToString());
+    }
+
+    [Fact]
+    public void TryCreate_NativeValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(byte[]), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { ValidNativeSample, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { ValidNativeSampleWireText, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { InvalidWireText, null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidNativeSampleWireText}\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonDeserialize_InvalidValue_ThrowsJsonException()
+    {
+        var json = $"\"{InvalidWireText}\"";
+        Assert.Throws<JsonException>(
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+    }
+}
+
 // ── Indicator (boolean true/false) contract ────────────────────────────────────
 
 /// <summary>
