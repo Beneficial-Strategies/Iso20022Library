@@ -487,7 +487,6 @@ global using ExternalProductTypeCode = System.String;
 global using ExternalRegulatoryInformationType1Code = System.String;
 global using ExternalRegulatoryInformationTypeCode = System.String;
 global using ExternalRegulatoryReportingType1Code = System.String;
-// global using PartyRole4Code = System.String;
 // ExternalSchema type aliases
 global using IsoATICALaxProcessing = BeneficialStrategies.Iso20022.ExternalSchema.ATICALaxProcessing;
 global using IsoLaxPayload = BeneficialStrategies.Iso20022.ExternalSchema.LaxPayload;
