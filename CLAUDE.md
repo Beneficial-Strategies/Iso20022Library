@@ -292,10 +292,19 @@ verbatim `<summary>`/`[Description]` text (same non-negotiable rule as any other
 see "XML Documentation" above), and `[IsoId]` set to that specific **code's own** id from the MCP
 table (not the codeset's id, which belongs on the type-level `[IsoId]` instead).
 
-**This pattern needs to be retrofitted to earlier conversions on a case-by-case basis** — both
-Batch 1's external-codeset structs and Bucket B's other types were converted before this pattern
-was identified, so some of them may also have MCP member data sitting unused. Re-verify with
-`get_code_set_details` before assuming a plain open struct is already the final form.
+**Retrofit sweep of pre-existing conversions — done 2026-08-13, came back empty.** All 35
+`IIsoExternalCode` structs converted before this pattern was identified (the original Batch 1
+primitives pass, plus a handful of other Bucket B types) were individually re-checked against
+`get_code_set_details`. Every one returned zero member rows in that MCP snapshot — none had
+unused data to retrofit, so all 35 are confirmed already in their correct final form (plain open
+struct, no known-value constants). Full list: `BusinessMessagePriorityCode`, `CountryCode`,
+`CountrySubDivisionCode`, `EuroCurrencyCode`, `UnicodeChartsCode`,
+`ExternalClearingSystemMemberCode_Obsolete`, and 29 `External*Code`/`External*1Code` pairs
+(bank-transaction domain/family/sub-family, card-transaction category, cheque-agent instruction,
+communication format, credit-line type, entity size/type, financial-institution identification,
+financial-instrument product type, industry-sector classification, mandate-setup reason,
+payment-scenario). If the MCP snapshot is ever refreshed with new external-registry data, this
+sweep is worth re-running — `get_code_set_details` per type, same as before.
 
 #### Serialization Contract
 
