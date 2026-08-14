@@ -10,6 +10,11 @@ global using System.Text.Json.Serialization;
 global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.Codesets;
 global using BeneficialStrategies.Iso20022.SimpleTypes;
+
+global using BeneficialStrategies.Iso20022.Framework;
+global using BeneficialStrategies.Iso20022.Metadata;
+global using BeneficialStrategies.Iso20022.Serialization;
+
 // IsoMax*Text aliases — redirect to validated structs in SimpleTypes namespace
 // IsoRestrictedFINX* aliases — redirect to validated structs
 // IsoRestrictedFIN* and IsoRestrictedFINZ* aliases
@@ -272,24 +277,22 @@ global using IsoMax2048Text = BeneficialStrategies.Iso20022.SimpleTypes.Max2048T
 global using IsoMax4000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max4000Text;
 global using IsoMax8000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max8000Text;
 global using IsoMax20000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max20000Text;
-global using BeneficialStrategies.Iso20022.Framework;
-global using BeneficialStrategies.Iso20022.Metadata;
-global using BeneficialStrategies.Iso20022.Serialization;
-global using IsoRestrictedMS02MS03CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-global using IsoRestrictedRR01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-global using IsoRestrictedSEPACodeText = System.String; // Not in current ISO 20022 snapshot — SEPA payment scheme code; cannot convert
-global using IsoRestrictedSMNDACodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-global using IsoRestrictedB2BCORECodeText = System.String; // Not in current ISO 20022 snapshot — B2B CORE scheme code; cannot convert
-global using IsoRestrictedRR01SL01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-global using IsoMax13AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax14Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax14AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax100AlphaNumericUnderscoreText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax38AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax5Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax1850Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoISODateTime = System.DateTime; // DateTime
-global using IsoISONormalisedDateTime = System.DateTime; // DateTime
+
+// global using IsoRestrictedMS02MS03CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
+// global using IsoRestrictedRR01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
+// global using IsoRestrictedSEPACodeText = System.String; // Not in current ISO 20022 snapshot — SEPA payment scheme code; cannot convert
+// global using IsoRestrictedSMNDACodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
+// global using IsoRestrictedB2BCORECodeText = System.String; // Not in current ISO 20022 snapshot — B2B CORE scheme code; cannot convert
+// global using IsoRestrictedRR01SL01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
+// global using IsoMax13AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax14Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax14AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax100AlphaNumericUnderscoreText = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax38AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax5Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax1850Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
+global using IsoISODateTime = BeneficialStrategies.Iso20022.SimpleTypes.ISODateTime; // date+time, 3 permitted wire forms (UTC/offset/local) — see SimpleTypes/ISODateTime.cs
+global using IsoISONormalisedDateTime = BeneficialStrategies.Iso20022.SimpleTypes.ISONormalisedDateTime; // ISODateTime restricted to always-UTC (pattern .*Z) — see SimpleTypes/ISONormalisedDateTime.cs
 global using IsoISODate = System.DateOnly; // Date
 global using IsoSEDOLIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern; London Stock Exchange proprietary format
 global using IsoCUSIPIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern; CUSIP Bureau proprietary format
@@ -301,7 +304,7 @@ global using IsoSicovamIdentifier = System.String; // In ISO 20022 spec (Identif
 global using IsoBelgianIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern; Belgian securities proprietary format
 global using IsoRatingValueIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern; rating agency proprietary values
 global using IsoSNA2008SectorIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern; UN SNA 2008 hierarchical sector codes
-global using IsoDirectionIndicator = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoDirectionIndicator = System.String; // Not in current ISO 20022 snapshot — cannot convert
 global using IsoNumber = System.UInt64; // Quantity
 global using IsoDecimalNumber = System.UInt64; // Quantity
 global using IsoMax3Number = System.UInt64; // Quantity
@@ -374,8 +377,8 @@ global using IsoQName = System.String; // W3C XML Schema built-in (xsi:type: iso
 global using Isostring = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using Isotime = System.String; // W3C XML Schema built-in (xsi:type: iso20022:SchemaType) — no ISO 20022 constraint
 global using IsoISOMonth = System.Byte; // Month
-global using IsoExact4UpperCaseAlphaText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoMax47Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoExact4UpperCaseAlphaText = System.String; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax47Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
 global using IsoNPIIdentifier = System.String; // In ISO 20022 spec (IdentifierSet) — no formal pattern in spec; format described only in text (ISO 24366)
 global using IsoPercentage14Rate = System.Decimal; // Rate
 // External Codesets

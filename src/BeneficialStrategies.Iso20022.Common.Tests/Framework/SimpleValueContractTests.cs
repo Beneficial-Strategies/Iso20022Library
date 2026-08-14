@@ -946,6 +946,113 @@ public abstract class SimpleValueXsdGregorianScalarRangeConstrainedContractTests
     }
 }
 
+// ── Composite scalar, fixed-suffix contract ─────────────────────────────────────
+
+/// <summary>
+/// Contract base for composite <see cref="IIsoCompositeSimpleValue"/> scalars whose full lexical
+/// form differs from <c>Value.ToString()</c> by a <em>fixed</em> suffix/prefix rather than
+/// optional timezone variability — e.g.
+/// <see cref="BeneficialStrategies.Iso20022.SimpleTypes.ISONormalisedDateTime"/>, always suffixed
+/// with the mandatory ISO 20022 <c>"Z"</c> designator. For the timezone-<em>variable</em> case
+/// (three possible wire forms), see
+/// <see cref="SimpleValueXsdGregorianScalarContractTests{TStruct,TValue}"/> instead.
+/// </summary>
+public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>, IIsoCompositeSimpleValue
+    where TValue : struct
+{
+    /// <summary>A valid native sample value.</summary>
+    protected abstract TValue ValidNativeSample { get; }
+
+    /// <summary>The full wire-format text for <see cref="ValidNativeSample"/>, including the fixed suffix/prefix.</summary>
+    protected abstract string ValidWireText { get; }
+
+    /// <summary>Wire text that fails the format constraint (e.g. missing the mandatory suffix).</summary>
+    protected abstract string InvalidWireText { get; }
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(TValue)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a ({typeof(TValue).Name}) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_Valid_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidWireText])!;
+        Assert.Equal(ValidWireText, instance.ToString());
+    }
+
+    [Fact]
+    public void StringConstruction_Invalid_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke([InvalidWireText]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_MatchesWireText()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidWireText, instance.ToString());
+    }
+
+    [Fact]
+    public void EqualInstances_AreEqual()
+    {
+        var a = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var b = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(a, b);
+        Assert.Equal(a.GetHashCode(), b.GetHashCode());
+    }
+
+    [Fact]
+    public void TryCreate_StringValid_ReturnsTrue()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { ValidWireText, null };
+        Assert.True((bool)method.Invoke(null, args)!);
+        Assert.NotNull(args[1]);
+    }
+
+    [Fact]
+    public void TryCreate_StringInvalid_ReturnsFalse()
+    {
+        var method = typeof(TStruct).GetMethod(
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var args = new object?[] { InvalidWireText, null };
+        Assert.False((bool)method.Invoke(null, args)!);
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidWireText}\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+
+    [Fact]
+    public void JsonDeserialize_InvalidValue_ThrowsJsonException()
+    {
+        var json = $"\"{InvalidWireText}\"";
+        Assert.Throws<JsonException>(
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+    }
+}
+
 // ── XSD timezone-qualified Gregorian composite contract ────────────────────────
 
 /// <summary>
