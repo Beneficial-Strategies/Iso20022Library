@@ -1,642 +1,417 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Code to specify the authentication method used, as published separately in an external authentication method code set.
+/// Specifies the authentication method used, as published separately in an external authentication method code set.
 /// </summary>
+/// <remarks>
+/// External code sets can be downloaded from www.iso20022.org.
+/// </remarks>
 [DataContract]
 [Serializable]
-[IsoId("_ExternalAuthenticationMethod1Code")]
-[Description(
-    @"Code to specify the authentication method used, as published separately in an external authentication method code set."
-)]
-[DerivedFrom(typeof(ExternalAuthenticationMethodCode))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalAuthenticationMethod1Code>))]
-public enum ExternalAuthenticationMethod1Code
+[IsoId("_746_oCxIEeyg-aG5nXcnfg")]
+[Description(@"Specifies the authentication method used, as published separately in an external authentication method code set.|External code sets can be downloaded from www.iso20022.org.")]
+[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<ExternalAuthenticationMethod1Code>))]
+public readonly struct ExternalAuthenticationMethod1Code : IIsoExternalCode, IEquatable<ExternalAuthenticationMethod1Code>
 {
-    /// <summary>
-    /// Serial Number of the acceptor’s certificate.
-    /// Encoded/decoded by serializers as &quot;ACSN&quot;.
-    /// </summary>
-    [EnumMember(Value = "ACSN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_AcceptorCertificateSerialNumber")]
-    [Description(@"Serial Number of the acceptor’s certificate.")]
-    AcceptorCertificateSerialNumber =
-        ExternalAuthenticationMethodCode.AcceptorCertificateSerialNumber,
+    /// <summary>ISO 20022 format constraint — 1 to 4 characters.</summary>
+    public const string Pattern = @"^.{1,4}$";
 
-    /// <summary>
-    /// Cardholder billing address.
-    /// Encoded/decoded by serializers as &quot;ADDB&quot;.
-    /// </summary>
-    [EnumMember(Value = "ADDB")]
-    [IsoId("_ExternalAuthenticationMethod1Code_BillingAddress")]
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <summary>Initializes a new instance with the given authentication method code.</summary>
+    /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
+    public ExternalAuthenticationMethod1Code(string value)
+    {
+        if (!Regex.IsMatch(value, Pattern))
+            throw new Iso20022FormatException(typeof(ExternalAuthenticationMethod1Code), value, Pattern);
+        Value = value;
+    }
+
+    /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
+    public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalAuthenticationMethod1Code result)
+    {
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
+    }
+
+    /// <summary>Implicitly wraps a string as a <see cref="ExternalAuthenticationMethod1Code"/>.</summary>
+    public static implicit operator ExternalAuthenticationMethod1Code(string value) => new(value);
+    /// <summary>Implicitly unwraps the code to its string value.</summary>
+    public static implicit operator string(ExternalAuthenticationMethod1Code code) => code.Value;
+
+    /// <inheritdoc/>
+    public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
+    public bool Equals(ExternalAuthenticationMethod1Code other) => Value == other.Value;
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is ExternalAuthenticationMethod1Code other && Equals(other);
+    /// <inheritdoc/>
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalAuthenticationMethod1Code a, ExternalAuthenticationMethod1Code b) => a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalAuthenticationMethod1Code a, ExternalAuthenticationMethod1Code b) => !a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalAuthenticationMethod1Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalAuthenticationMethod1Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
+    public static bool operator ==(string? a, ExternalAuthenticationMethod1Code b) => a == b.Value;
+    /// <inheritdoc/>
+    public static bool operator !=(string? a, ExternalAuthenticationMethod1Code b) => a != b.Value;
+
+    // ── Known values (per ISO 20022 external registry snapshot, via MCP get_code_set_details) ──
+    // Convenience only — the constructor above still accepts any value satisfying Pattern,
+    // including future registry additions not listed here.
+
+    /// <summary>Serial Number of the acceptor's certificate.</summary>
+    [IsoId("_w_NQIbJSEe-rYMhHpAEI4A")]
+    [Description(@"Serial Number of the acceptor's certificate.")]
+    public static readonly ExternalAuthenticationMethod1Code AcceptorCertificateSerialNumber = new("ACSN");
+
+    /// <summary>Cardholder billing address.</summary>
+    [IsoId("_w_NQI7JSEe-rYMhHpAEI4A")]
     [Description(@"Cardholder billing address.")]
-    BillingAddress = ExternalAuthenticationMethodCode.BillingAddress,
+    public static readonly ExternalAuthenticationMethod1Code BillingAddress = new("ADDB");
 
-    /// <summary>
-    /// Shipping address.
-    /// Encoded/decoded by serializers as &quot;ADDS&quot;.
-    /// </summary>
-    [EnumMember(Value = "ADDS")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ShippingAddress")]
+    /// <summary>Shipping address.</summary>
+    [IsoId("_w_NQJbJSEe-rYMhHpAEI4A")]
     [Description(@"Shipping address.")]
-    ShippingAddress = ExternalAuthenticationMethodCode.ShippingAddress,
+    public static readonly ExternalAuthenticationMethod1Code ShippingAddress = new("ADDS");
 
-    /// <summary>
-    /// Account-based digital signature authentication.
-    /// Encoded/decoded by serializers as &quot;APKI&quot;.
-    /// </summary>
-    [EnumMember(Value = "APKI")]
-    [IsoId("_ExternalAuthenticationMethod1Code_AccountDigitalSignature")]
+    /// <summary>Account-based digital signature authentication.</summary>
+    [IsoId("_w_NQJ7JSEe-rYMhHpAEI4A")]
     [Description(@"Account-based digital signature authentication.")]
-    AccountDigitalSignature = ExternalAuthenticationMethodCode.AccountDigitalSignature,
+    public static readonly ExternalAuthenticationMethod1Code AccountDigitalSignature = new("APKI");
 
-    /// <summary>
-    /// Number assigned by a government agency to identify foreign nationals.
-    /// Encoded/decoded by serializers as &quot;ARNB&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARNB")]
-    [IsoId("_ExternalAuthenticationMethod1Code_AlienRegistrationNumber")]
+    /// <summary>Number assigned by a government agency to identify foreign nationals.</summary>
+    [IsoId("_w_NQKbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a government agency to identify foreign nationals.")]
-    AlienRegistrationNumber = ExternalAuthenticationMethodCode.AlienRegistrationNumber,
+    public static readonly ExternalAuthenticationMethod1Code AlienRegistrationNumber = new("ARNB");
 
-    /// <summary>
-    /// Response Card Cryptogram (ARPC) verification.
-    /// Encoded/decoded by serializers as &quot;ARPC&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARPC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ARPC")]
+    /// <summary>Response Card Cryptogram (ARPC) verification.</summary>
+    [IsoId("_w_NQK7JSEe-rYMhHpAEI4A")]
     [Description(@"Response Card Cryptogram (ARPC) verification.")]
-    ARPC = ExternalAuthenticationMethodCode.ARPC,
+    public static readonly ExternalAuthenticationMethod1Code ARPC = new("ARPC");
 
-    /// <summary>
-    /// Verification of a cryptogram generated by a chip card, for instance an ARQC (Authorisation Request Cryptogram).
-    /// Encoded/decoded by serializers as &quot;ARQC&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARQC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ARQC")]
-    [Description(
-        @"Verification of a cryptogram generated by a chip card, for instance an ARQC (Authorisation Request Cryptogram)."
-    )]
-    ARQC = ExternalAuthenticationMethodCode.ARQC,
+    /// <summary>Verification of a cryptogram generated by a chip card, for instance an ARQC (Authorisation Request Cryptogram).</summary>
+    [IsoId("_w_NQLbJSEe-rYMhHpAEI4A")]
+    [Description(@"Verification of a cryptogram generated by a chip card, for instance an ARQC (Authorisation Request Cryptogram).")]
+    public static readonly ExternalAuthenticationMethod1Code ARQC = new("ARQC");
 
-    /// <summary>
-    /// Application Transaction Counter.
-    /// Encoded/decoded by serializers as &quot;ATCC&quot;.
-    /// </summary>
-    [EnumMember(Value = "ATCC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ATC")]
+    /// <summary>Application Transaction Counter.</summary>
+    [IsoId("_w_NQL7JSEe-rYMhHpAEI4A")]
     [Description(@"Application Transaction Counter.")]
-    ATC = ExternalAuthenticationMethodCode.ATC,
+    public static readonly ExternalAuthenticationMethod1Code ATC = new("ATCC");
 
-    /// <summary>
-    /// A value is used to verify an already performed authentication, used for non ThreeDS related authentication.
-    /// Encoded/decoded by serializers as &quot;AUVA&quot;.
-    /// </summary>
-    [EnumMember(Value = "AUVA")]
-    [IsoId("_ExternalAuthenticationMethod1Code_AuthenticationValue")]
-    [Description(
-        @"A value is used to verify an already performed authentication, used for non ThreeDS related authentication."
-    )]
-    AuthenticationValue = ExternalAuthenticationMethodCode.AuthenticationValue,
+    /// <summary>A value is used to verify an already performed authentication, used for non ThreeDS related authentication.</summary>
+    [IsoId("_w_PFVbJSEe-rYMhHpAEI4A")]
+    [Description(@"A value is used to verify an already performed authentication, used for non ThreeDS related authentication.")]
+    public static readonly ExternalAuthenticationMethod1Code AuthenticationValue = new("AUVA");
 
-    /// <summary>
-    /// Biometric authentication of the cardholder.
-    /// Encoded/decoded by serializers as &quot;BIOM&quot;.
-    /// </summary>
-    [EnumMember(Value = "BIOM")]
-    [IsoId("_ExternalAuthenticationMethod1Code_Biometry")]
+    /// <summary>Biometric authentication of the cardholder.</summary>
+    [IsoId("_w_NQMbJSEe-rYMhHpAEI4A")]
     [Description(@"Biometric authentication of the cardholder.")]
-    Biometry = ExternalAuthenticationMethodCode.Biometry,
+    public static readonly ExternalAuthenticationMethod1Code Biometry = new("BIOM");
 
-    /// <summary>
-    /// Date of birth of a person.
-    /// Encoded/decoded by serializers as &quot;BTHD&quot;.
-    /// </summary>
-    [EnumMember(Value = "BTHD")]
-    [IsoId("_ExternalAuthenticationMethod1Code_BirthDate")]
+    /// <summary>Date of birth of a person.</summary>
+    [IsoId("_w_NQM7JSEe-rYMhHpAEI4A")]
     [Description(@"Date of birth of a person.")]
-    BirthDate = ExternalAuthenticationMethodCode.BirthDate,
+    public static readonly ExternalAuthenticationMethod1Code BirthDate = new("BTHD");
 
-    /// <summary>
-    /// Consumer Device Cardholder Verification Method.
-    /// Encoded/decoded by serializers as &quot;CDCM&quot;.
-    /// </summary>
-    [EnumMember(Value = "CDCM")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CDCVM")]
+    /// <summary>Consumer Device Cardholder Verification Method.</summary>
+    [IsoId("_w_NQNbJSEe-rYMhHpAEI4A")]
     [Description(@"Consumer Device Cardholder Verification Method.")]
-    CDCVM = ExternalAuthenticationMethodCode.CDCVM,
+    public static readonly ExternalAuthenticationMethod1Code CDCVM = new("CDCM");
 
-    /// <summary>
-    /// Cardholder data provided for verification.
-    /// Encoded/decoded by serializers as &quot;CDHI&quot;.
-    /// </summary>
-    [EnumMember(Value = "CDHI")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CardholderIdentificationData")]
+    /// <summary>Cardholder data provided for verification.</summary>
+    [IsoId("_w_N3MbJSEe-rYMhHpAEI4A")]
     [Description(@"Cardholder data provided for verification.")]
-    CardholderIdentificationData = ExternalAuthenticationMethodCode.CardholderIdentificationData,
+    public static readonly ExternalAuthenticationMethod1Code CardholderIdentificationData = new("CDHI");
 
-    /// <summary>
-    /// Name of cardholder.
-    /// Encoded/decoded by serializers as &quot;CHDN&quot;.
-    /// </summary>
-    [EnumMember(Value = "CHDN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CardholderName")]
+    /// <summary>Name of cardholder.</summary>
+    [IsoId("_w_N3M7JSEe-rYMhHpAEI4A")]
     [Description(@"Name of cardholder.")]
-    CardholderName = ExternalAuthenticationMethodCode.CardholderName,
+    public static readonly ExternalAuthenticationMethod1Code CardholderName = new("CHDN");
 
-    /// <summary>
-    /// Cardholder address.
-    /// Encoded/decoded by serializers as &quot;CHSA&quot;.
-    /// </summary>
-    [EnumMember(Value = "CHSA")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CardholderAddress")]
+    /// <summary>Cardholder address.</summary>
+    [IsoId("_w_N3NbJSEe-rYMhHpAEI4A")]
     [Description(@"Cardholder address.")]
-    CardholderAddress = ExternalAuthenticationMethodCode.CardholderAddress,
+    public static readonly ExternalAuthenticationMethod1Code CardholderAddress = new("CHSA");
 
-    /// <summary>
-    /// Serial Number of the cardholder’s certificate.
-    /// Encoded/decoded by serializers as &quot;CHSN&quot;.
-    /// </summary>
-    [EnumMember(Value = "CHSN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CardholderCertificateSerialNumber")]
-    [Description(@"Serial Number of the cardholder’s certificate.")]
-    CardholderCertificateSerialNumber =
-        ExternalAuthenticationMethodCode.CardholderCertificateSerialNumber,
+    /// <summary>Serial Number of the cardholder's certificate.</summary>
+    [IsoId("_w_N3N7JSEe-rYMhHpAEI4A")]
+    [Description(@"Serial Number of the cardholder's certificate.")]
+    public static readonly ExternalAuthenticationMethod1Code CardholderCertificateSerialNumber = new("CHSN");
 
-    /// <summary>
-    /// Registration number of a company.
-    /// Encoded/decoded by serializers as &quot;CPNY&quot;.
-    /// </summary>
-    [EnumMember(Value = "CPNY")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CompanyRegistrationNumber")]
+    /// <summary>Registration number of a company.</summary>
+    [IsoId("_w_PFYbJSEe-rYMhHpAEI4A")]
     [Description(@"Registration number of a company.")]
-    CompanyRegistrationNumber = ExternalAuthenticationMethodCode.CompanyRegistrationNumber,
+    public static readonly ExternalAuthenticationMethod1Code CompanyRegistrationNumber = new("CPNY");
 
-    /// <summary>
-    /// Electronic signature capture (handwritten signature).
-    /// Encoded/decoded by serializers as &quot;CPSG&quot;.
-    /// </summary>
-    [EnumMember(Value = "CPSG")]
-    [IsoId("_ExternalAuthenticationMethod1Code_SignatureCapture")]
+    /// <summary>Electronic signature capture (handwritten signature).</summary>
+    [IsoId("_w_N3ObJSEe-rYMhHpAEI4A")]
     [Description(@"Electronic signature capture (handwritten signature).")]
-    SignatureCapture = ExternalAuthenticationMethodCode.SignatureCapture,
+    public static readonly ExternalAuthenticationMethod1Code SignatureCapture = new("CPSG");
 
-    /// <summary>
-    /// Verification of Card Security Code.
-    /// Encoded/decoded by serializers as &quot;CSCV&quot;.
-    /// </summary>
-    [EnumMember(Value = "CSCV")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CSCVerification")]
+    /// <summary>Verification of Card Security Code.</summary>
+    [IsoId("_w_N3O7JSEe-rYMhHpAEI4A")]
     [Description(@"Verification of Card Security Code.")]
-    CSCVerification = ExternalAuthenticationMethodCode.CSCVerification,
+    public static readonly ExternalAuthenticationMethod1Code CSCVerification = new("CSCV");
 
-    /// <summary>
-    /// Authentication performed during a secure electronic commerce transaction.
-    /// Encoded/decoded by serializers as &quot;CSEC&quot;.
-    /// </summary>
-    [EnumMember(Value = "CSEC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_SecureElectronicCommerce")]
+    /// <summary>Authentication performed during a secure electronic commerce transaction.</summary>
+    [IsoId("_w_N3PbJSEe-rYMhHpAEI4A")]
     [Description(@"Authentication performed during a secure electronic commerce transaction.")]
-    SecureElectronicCommerce = ExternalAuthenticationMethodCode.SecureElectronicCommerce,
+    public static readonly ExternalAuthenticationMethod1Code SecureElectronicCommerce = new("CSEC");
 
-    /// <summary>
-    /// Customer number used as a mechanism of authentication.
-    /// Encoded/decoded by serializers as &quot;CUID&quot;.
-    /// </summary>
-    [EnumMember(Value = "CUID")]
-    [IsoId("_ExternalAuthenticationMethod1Code_CustomerIdentification")]
+    /// <summary>Customer number used as a mechanism of authentication.</summary>
+    [IsoId("_w_N3P7JSEe-rYMhHpAEI4A")]
     [Description(@"Customer number used as a mechanism of authentication.")]
-    CustomerIdentification = ExternalAuthenticationMethodCode.CustomerIdentification,
+    public static readonly ExternalAuthenticationMethod1Code CustomerIdentification = new("CUID");
 
-    /// <summary>
-    /// Number assigned by a driving license authority to a person.
-    /// Encoded/decoded by serializers as &quot;DRID&quot;.
-    /// </summary>
-    [EnumMember(Value = "DRID")]
-    [IsoId("_ExternalAuthenticationMethod1Code_DriverLicenseNumber")]
+    /// <summary>Number assigned by a driving license authority to a person.</summary>
+    [IsoId("_w_N3QbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a driving license authority to a person.")]
-    DriverLicenseNumber = ExternalAuthenticationMethodCode.DriverLicenseNumber,
+    public static readonly ExternalAuthenticationMethod1Code DriverLicenseNumber = new("DRID");
 
-    /// <summary>
-    /// Identification of a driver in a fleet of vehicles.
-    /// Encoded/decoded by serializers as &quot;DRVI&quot;.
-    /// </summary>
-    [EnumMember(Value = "DRVI")]
-    [IsoId("_ExternalAuthenticationMethod1Code_DriverIdentification")]
+    /// <summary>Identification of a driver in a fleet of vehicles.</summary>
+    [IsoId("_w_N3Q7JSEe-rYMhHpAEI4A")]
     [Description(@"Identification of a driver in a fleet of vehicles.")]
-    DriverIdentification = ExternalAuthenticationMethodCode.DriverIdentification,
+    public static readonly ExternalAuthenticationMethod1Code DriverIdentification = new("DRVI");
 
-    /// <summary>
-    /// Electronic mail address.
-    /// Encoded/decoded by serializers as &quot;EMAL&quot;.
-    /// </summary>
-    [EnumMember(Value = "EMAL")]
-    [IsoId("_ExternalAuthenticationMethod1Code_Email")]
+    /// <summary>Electronic mail address.</summary>
+    [IsoId("_w_N3RbJSEe-rYMhHpAEI4A")]
     [Description(@"Electronic mail address.")]
-    Email = ExternalAuthenticationMethodCode.Email,
+    public static readonly ExternalAuthenticationMethod1Code Email = new("EMAL");
 
-    /// <summary>
-    /// Number assigned to an employee by an employer.
-    /// Encoded/decoded by serializers as &quot;EMIN&quot;.
-    /// </summary>
-    [EnumMember(Value = "EMIN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_EmployeeIdentificationNumber")]
+    /// <summary>Number assigned to an employee by an employer.</summary>
+    [IsoId("_w_N3R7JSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned to an employee by an employer.")]
-    EmployeeIdentificationNumber = ExternalAuthenticationMethodCode.EmployeeIdentificationNumber,
+    public static readonly ExternalAuthenticationMethod1Code EmployeeIdentificationNumber = new("EMIN");
 
-    /// <summary>
-    /// Number assigned to an employer by a registration authority.
-    /// Encoded/decoded by serializers as &quot;EMRN&quot;.
-    /// </summary>
-    [EnumMember(Value = "EMRN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_EmployerIdentificationNumber")]
+    /// <summary>Number assigned to an employer by a registration authority.</summary>
+    [IsoId("_w_N3SbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned to an employer by a registration authority.")]
-    EmployerIdentificationNumber = ExternalAuthenticationMethodCode.EmployerIdentificationNumber,
+    public static readonly ExternalAuthenticationMethod1Code EmployerIdentificationNumber = new("EMRN");
 
-    /// <summary>
-    /// Biographics authentication in an offline mode.
-    /// Encoded/decoded by serializers as &quot;FBIG&quot;.
-    /// </summary>
-    [EnumMember(Value = "FBIG")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLineBiographics")]
+    /// <summary>Biographics authentication in an offline mode.</summary>
+    [IsoId("_w_N3S7JSEe-rYMhHpAEI4A")]
     [Description(@"Biographics authentication in an offline mode.")]
-    OffLineBiographics = ExternalAuthenticationMethodCode.OffLineBiographics,
+    public static readonly ExternalAuthenticationMethod1Code OffLineBiographics = new("FBIG");
 
-    /// <summary>
-    /// Biometrics authentication in an offline mode.
-    /// Encoded/decoded by serializers as &quot;FBIO&quot;.
-    /// </summary>
-    [EnumMember(Value = "FBIO")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLineBiometrics")]
+    /// <summary>Biometrics authentication in an offline mode.</summary>
+    [IsoId("_w_N3TbJSEe-rYMhHpAEI4A")]
     [Description(@"Biometrics authentication in an offline mode.")]
-    OffLineBiometrics = ExternalAuthenticationMethodCode.OffLineBiometrics,
+    public static readonly ExternalAuthenticationMethod1Code OffLineBiometrics = new("FBIO");
 
-    /// <summary>
-    /// PIN generated offline and transmitted in clear
-    /// Encoded/decoded by serializers as &quot;FCPN&quot;.
-    /// </summary>
-    [EnumMember(Value = "FCPN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLinePINInClear")]
+    /// <summary>PIN generated offline and transmitted in clear</summary>
+    [IsoId("_w_N3T7JSEe-rYMhHpAEI4A")]
     [Description(@"PIN generated offline and transmitted in clear")]
-    OffLinePINInClear = ExternalAuthenticationMethodCode.OffLinePINInClear,
+    public static readonly ExternalAuthenticationMethod1Code OffLinePINInClear = new("FCPN");
 
-    /// <summary>
-    /// Off-line PIN authentication (Personal Identification Number).
-    /// Encoded/decoded by serializers as &quot;FPIN&quot;.
-    /// </summary>
-    [EnumMember(Value = "FPIN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OfflinePIN")]
+    /// <summary>Off-line PIN authentication (Personal Identification Number).</summary>
+    [IsoId("_w_N3UbJSEe-rYMhHpAEI4A")]
     [Description(@"Off-line PIN authentication (Personal Identification Number).")]
-    OfflinePIN = ExternalAuthenticationMethodCode.OfflinePIN,
+    public static readonly ExternalAuthenticationMethod1Code OfflinePIN = new("FPIN");
 
-    /// <summary>
-    /// Number assigned by a national authority to an identity card.
-    /// Encoded/decoded by serializers as &quot;IDCN&quot;.
-    /// </summary>
-    [EnumMember(Value = "IDCN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_IdentityCardNumber")]
+    /// <summary>Number assigned by a national authority to an identity card.</summary>
+    [IsoId("_w_N3U7JSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a national authority to an identity card.")]
-    IdentityCardNumber = ExternalAuthenticationMethodCode.IdentityCardNumber,
+    public static readonly ExternalAuthenticationMethod1Code IdentityCardNumber = new("IDCN");
 
-    /// <summary>
-    /// Identification of law enforcement.
-    /// Encoded/decoded by serializers as &quot;LAWE&quot;.
-    /// </summary>
-    [EnumMember(Value = "LAWE")]
-    [IsoId("_ExternalAuthenticationMethod1Code_LawEnforcementIdentification")]
+    /// <summary>Identification of law enforcement.</summary>
+    [IsoId("_w_PFW7JSEe-rYMhHpAEI4A")]
     [Description(@"Identification of law enforcement.")]
-    LawEnforcementIdentification = ExternalAuthenticationMethodCode.LawEnforcementIdentification,
+    public static readonly ExternalAuthenticationMethod1Code LawEnforcementIdentification = new("LAWE");
 
-    /// <summary>
-    /// Manual verification, for example passport or drivers license.
-    /// Encoded/decoded by serializers as &quot;MANU&quot;.
-    /// </summary>
-    [EnumMember(Value = "MANU")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ManualVerification")]
+    /// <summary>Manual verification, for example passport or drivers license.</summary>
+    [IsoId("_w_N3VbJSEe-rYMhHpAEI4A")]
     [Description(@"Manual verification, for example passport or drivers license.")]
-    ManualVerification = ExternalAuthenticationMethodCode.ManualVerification,
+    public static readonly ExternalAuthenticationMethod1Code ManualVerification = new("MANU");
 
-    /// <summary>
-    /// Identification of military.
-    /// Encoded/decoded by serializers as &quot;MILI&quot;.
-    /// </summary>
-    [EnumMember(Value = "MILI")]
-    [IsoId("_ExternalAuthenticationMethod1Code_MilitaryIdentification")]
+    /// <summary>Identification of military.</summary>
+    [IsoId("_w_PFXbJSEe-rYMhHpAEI4A")]
     [Description(@"Identification of military.")]
-    MilitaryIdentification = ExternalAuthenticationMethodCode.MilitaryIdentification,
+    public static readonly ExternalAuthenticationMethod1Code MilitaryIdentification = new("MILI");
 
-    /// <summary>
-    /// Customer mobile phone number.
-    /// Encoded/decoded by serializers as &quot;MOBL&quot;.
-    /// </summary>
-    [EnumMember(Value = "MOBL")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PhoneMobile")]
+    /// <summary>Customer mobile phone number.</summary>
+    [IsoId("_w_N3V7JSEe-rYMhHpAEI4A")]
     [Description(@"Customer mobile phone number.")]
-    PhoneMobile = ExternalAuthenticationMethodCode.PhoneMobile,
+    public static readonly ExternalAuthenticationMethod1Code PhoneMobile = new("MOBL");
 
-    /// <summary>
-    /// Biographics authentication in an online mode.
-    /// Encoded/decoded by serializers as &quot;NBIG&quot;.
-    /// </summary>
-    [EnumMember(Value = "NBIG")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OnLineBiographics")]
+    /// <summary>Biographics authentication in an online mode.</summary>
+    [IsoId("_w_N3WbJSEe-rYMhHpAEI4A")]
     [Description(@"Biographics authentication in an online mode.")]
-    OnLineBiographics = ExternalAuthenticationMethodCode.OnLineBiographics,
+    public static readonly ExternalAuthenticationMethod1Code OnLineBiographics = new("NBIG");
 
-    /// <summary>
-    /// On-line PIN authentication (Personal Identification Number).
-    /// Encoded/decoded by serializers as &quot;NPIN&quot;.
-    /// </summary>
-    [EnumMember(Value = "NPIN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OnLinePIN")]
+    /// <summary>On-line PIN authentication (Personal Identification Number).</summary>
+    [IsoId("_w_OeQbJSEe-rYMhHpAEI4A")]
     [Description(@"On-line PIN authentication (Personal Identification Number).")]
-    OnLinePIN = ExternalAuthenticationMethodCode.OnLinePIN,
+    public static readonly ExternalAuthenticationMethod1Code OnLinePIN = new("NPIN");
 
-    /// <summary>
-    /// National Identifier.
-    /// Encoded/decoded by serializers as &quot;NTID&quot;.
-    /// </summary>
-    [EnumMember(Value = "NTID")]
-    [IsoId("_ExternalAuthenticationMethod1Code_NationalIdentifer")]
+    /// <summary>National Identifier.</summary>
+    [IsoId("_w_OeQ7JSEe-rYMhHpAEI4A")]
     [Description(@"National Identifier.")]
-    NationalIdentifer = ExternalAuthenticationMethodCode.NationalIdentifer,
+    public static readonly ExternalAuthenticationMethod1Code NationalIdentifer = new("NTID");
 
-    /// <summary>
-    /// Non visible Card Security Code.
-    /// Encoded/decoded by serializers as &quot;NVSC&quot;.
-    /// </summary>
-    [EnumMember(Value = "NVSC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_NonVisibleCSC")]
+    /// <summary>Non visible Card Security Code.</summary>
+    [IsoId("_w_OeRbJSEe-rYMhHpAEI4A")]
     [Description(@"Non visible Card Security Code.")]
-    NonVisibleCSC = ExternalAuthenticationMethodCode.NonVisibleCSC,
+    public static readonly ExternalAuthenticationMethod1Code NonVisibleCSC = new("NVSC");
 
-    /// <summary>
-    /// Other cardholder data provided for identification.
-    /// Encoded/decoded by serializers as &quot;OCHI&quot;.
-    /// </summary>
-    [EnumMember(Value = "OCHI")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OtherCardholderIdentification")]
+    /// <summary>Other cardholder data provided for identification.</summary>
+    [IsoId("_w_OeR7JSEe-rYMhHpAEI4A")]
     [Description(@"Other cardholder data provided for identification.")]
-    OtherCardholderIdentification = ExternalAuthenticationMethodCode.OtherCardholderIdentification,
+    public static readonly ExternalAuthenticationMethod1Code OtherCardholderIdentification = new("OCHI");
 
-    /// <summary>
-    /// PIN generated offline and transmitted encrypted.
-    /// Encoded/decoded by serializers as &quot;OFPE&quot;.
-    /// </summary>
-    [EnumMember(Value = "OFPE")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLinePINEncrypted")]
+    /// <summary>PIN generated offline and transmitted encrypted.</summary>
+    [IsoId("_w_OeSbJSEe-rYMhHpAEI4A")]
     [Description(@"PIN generated offline and transmitted encrypted.")]
-    OffLinePINEncrypted = ExternalAuthenticationMethodCode.OffLinePINEncrypted,
+    public static readonly ExternalAuthenticationMethod1Code OffLinePINEncrypted = new("OFPE");
 
-    /// <summary>
-    /// Authentication of data in an offline mode.
-    /// Encoded/decoded by serializers as &quot;OLDA&quot;.
-    /// </summary>
-    [EnumMember(Value = "OLDA")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLineDataAuthentication")]
+    /// <summary>Authentication of data in an offline mode.</summary>
+    [IsoId("_w_OeS7JSEe-rYMhHpAEI4A")]
     [Description(@"Authentication of data in an offline mode.")]
-    OffLineDataAuthentication = ExternalAuthenticationMethodCode.OffLineDataAuthentication,
+    public static readonly ExternalAuthenticationMethod1Code OffLineDataAuthentication = new("OLDA");
 
-    /// <summary>
-    /// Analysis of signature transmitted offline.
-    /// Encoded/decoded by serializers as &quot;OLDS&quot;.
-    /// </summary>
-    [EnumMember(Value = "OLDS")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OffLineDigitisedSignatureAnalysis")]
+    /// <summary>Analysis of signature transmitted offline.</summary>
+    [IsoId("_w_OeTbJSEe-rYMhHpAEI4A")]
     [Description(@"Analysis of signature transmitted offline.")]
-    OffLineDigitisedSignatureAnalysis =
-        ExternalAuthenticationMethodCode.OffLineDigitisedSignatureAnalysis,
+    public static readonly ExternalAuthenticationMethod1Code OffLineDigitisedSignatureAnalysis = new("OLDS");
 
-    /// <summary>
-    /// Other type of verification defined at national level.
-    /// Encoded/decoded by serializers as &quot;OTHN&quot;.
-    /// </summary>
-    [EnumMember(Value = "OTHN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OtherNational")]
+    /// <summary>Other type of verification defined at national level.</summary>
+    [IsoId("_w_OeT7JSEe-rYMhHpAEI4A")]
     [Description(@"Other type of verification defined at national level.")]
-    OtherNational = ExternalAuthenticationMethodCode.OtherNational,
+    public static readonly ExternalAuthenticationMethod1Code OtherNational = new("OTHN");
 
-    /// <summary>
-    /// Other type of verification defined at private level.
-    /// Encoded/decoded by serializers as &quot;OTHP&quot;.
-    /// </summary>
-    [EnumMember(Value = "OTHP")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OtherPrivate")]
+    /// <summary>Other type of verification defined at private level.</summary>
+    [IsoId("_w_OeUbJSEe-rYMhHpAEI4A")]
     [Description(@"Other type of verification defined at private level.")]
-    OtherPrivate = ExternalAuthenticationMethodCode.OtherPrivate,
+    public static readonly ExternalAuthenticationMethod1Code OtherPrivate = new("OTHP");
 
-    /// <summary>
-    /// Verification of a one-time password provided by the issuer.
-    /// Encoded/decoded by serializers as &quot;OTPW&quot;.
-    /// </summary>
-    [EnumMember(Value = "OTPW")]
-    [IsoId("_ExternalAuthenticationMethod1Code_OneTimePassword")]
+    /// <summary>Verification of a one-time password provided by the issuer.</summary>
+    [IsoId("_w_OeU7JSEe-rYMhHpAEI4A")]
     [Description(@"Verification of a one-time password provided by the issuer.")]
-    OneTimePassword = ExternalAuthenticationMethodCode.OneTimePassword,
+    public static readonly ExternalAuthenticationMethod1Code OneTimePassword = new("OTPW");
 
-    /// <summary>
-    /// Number assigned by a passport authority to a passport.
-    /// Encoded/decoded by serializers as &quot;PASS&quot;.
-    /// </summary>
-    [EnumMember(Value = "PASS")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PassportNumber")]
+    /// <summary>Number assigned by a passport authority to a passport.</summary>
+    [IsoId("_w_OeVbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a passport authority to a passport.")]
-    PassportNumber = ExternalAuthenticationMethodCode.PassportNumber,
+    public static readonly ExternalAuthenticationMethod1Code PassportNumber = new("PASS");
 
-    /// <summary>
-    /// Verification based on digits of the postal code.
-    /// Encoded/decoded by serializers as &quot;PCDV&quot;.
-    /// </summary>
-    [EnumMember(Value = "PCDV")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PostalCode")]
+    /// <summary>Verification based on digits of the postal code.</summary>
+    [IsoId("_w_OeV7JSEe-rYMhHpAEI4A")]
     [Description(@"Verification based on digits of the postal code.")]
-    PostalCode = ExternalAuthenticationMethodCode.PostalCode,
+    public static readonly ExternalAuthenticationMethod1Code PostalCode = new("PCDV");
 
-    /// <summary>
-    /// Generical phone number.
-    /// Encoded/decoded by serializers as &quot;PHNB&quot;.
-    /// </summary>
-    [EnumMember(Value = "PHNB")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PhoneNumber")]
+    /// <summary>Generical phone number.</summary>
+    [IsoId("_w_OeW7JSEe-rYMhHpAEI4A")]
     [Description(@"Generical phone number.")]
-    PhoneNumber = ExternalAuthenticationMethodCode.PhoneNumber,
+    public static readonly ExternalAuthenticationMethod1Code PhoneNumber = new("PHNB");
 
-    /// <summary>
-    /// Customer home phone number.
-    /// Encoded/decoded by serializers as &quot;PHOM&quot;.
-    /// </summary>
-    [EnumMember(Value = "PHOM")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PhoneHome")]
+    /// <summary>Customer home phone number.</summary>
+    [IsoId("_w_OeWbJSEe-rYMhHpAEI4A")]
     [Description(@"Customer home phone number.")]
-    PhoneHome = ExternalAuthenticationMethodCode.PhoneHome,
+    public static readonly ExternalAuthenticationMethod1Code PhoneHome = new("PHOM");
 
-    /// <summary>
-    /// PKI (Public Key Infrastructure) based digital signature.
-    /// Encoded/decoded by serializers as &quot;PKIS&quot;.
-    /// </summary>
-    [EnumMember(Value = "PKIS")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PKISignature")]
+    /// <summary>PKI (Public Key Infrastructure) based digital signature.</summary>
+    [IsoId("_w_OeXbJSEe-rYMhHpAEI4A")]
     [Description(@"PKI (Public Key Infrastructure) based digital signature.")]
-    PKISignature = ExternalAuthenticationMethodCode.PKISignature,
+    public static readonly ExternalAuthenticationMethod1Code PKISignature = new("PKIS");
 
-    /// <summary>
-    /// Place of birth of a person.
-    /// Encoded/decoded by serializers as &quot;PLOB&quot;.
-    /// </summary>
-    [EnumMember(Value = "PLOB")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PlaceOfBirth")]
+    /// <summary>Place of birth of a person.</summary>
+    [IsoId("_w_OeX7JSEe-rYMhHpAEI4A")]
     [Description(@"Place of birth of a person.")]
-    PlaceOfBirth = ExternalAuthenticationMethodCode.PlaceOfBirth,
+    public static readonly ExternalAuthenticationMethod1Code PlaceOfBirth = new("PLOB");
 
-    /// <summary>
-    /// Handwritten paper signature.
-    /// Encoded/decoded by serializers as &quot;PPSG&quot;.
-    /// </summary>
-    [EnumMember(Value = "PPSG")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PaperSignature")]
+    /// <summary>Handwritten paper signature.</summary>
+    [IsoId("_w_OeYbJSEe-rYMhHpAEI4A")]
     [Description(@"Handwritten paper signature.")]
-    PaperSignature = ExternalAuthenticationMethodCode.PaperSignature,
+    public static readonly ExternalAuthenticationMethod1Code PaperSignature = new("PPSG");
 
-    /// <summary>
-    /// Proxy.
-    /// Encoded/decoded by serializers as &quot;PRXY&quot;.
-    /// </summary>
-    [EnumMember(Value = "PRXY")]
-    [IsoId("_ExternalAuthenticationMethod1Code_Proxy")]
+    /// <summary>Proxy.</summary>
+    [IsoId("_w_OeY7JSEe-rYMhHpAEI4A")]
     [Description(@"Proxy.")]
-    Proxy = ExternalAuthenticationMethodCode.Proxy,
+    public static readonly ExternalAuthenticationMethod1Code Proxy = new("PRXY");
 
-    /// <summary>
-    /// Authentication by a passcode.
-    /// Encoded/decoded by serializers as &quot;PSCD&quot;.
-    /// </summary>
-    [EnumMember(Value = "PSCD")]
-    [IsoId("_ExternalAuthenticationMethod1Code_Passcode")]
+    /// <summary>Authentication by a passcode.</summary>
+    [IsoId("_w_OeZbJSEe-rYMhHpAEI4A")]
     [Description(@"Authentication by a passcode.")]
-    Passcode = ExternalAuthenticationMethodCode.Passcode,
+    public static readonly ExternalAuthenticationMethod1Code Passcode = new("PSCD");
 
-    /// <summary>
-    /// Authentication based on statistical cardholder behaviour.
-    /// Encoded/decoded by serializers as &quot;PSVE&quot;.
-    /// </summary>
-    [EnumMember(Value = "PSVE")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PassiveAuthentication")]
+    /// <summary>Authentication based on statistical cardholder behaviour.</summary>
+    [IsoId("_w_OeZ7JSEe-rYMhHpAEI4A")]
     [Description(@"Authentication based on statistical cardholder behaviour.")]
-    PassiveAuthentication = ExternalAuthenticationMethodCode.PassiveAuthentication,
+    public static readonly ExternalAuthenticationMethod1Code PassiveAuthentication = new("PSVE");
 
-    /// <summary>
-    /// Authentication by a password.
-    /// Encoded/decoded by serializers as &quot;PSWD&quot;.
-    /// </summary>
-    [EnumMember(Value = "PSWD")]
-    [IsoId("_ExternalAuthenticationMethod1Code_Password")]
+    /// <summary>Authentication by a password.</summary>
+    [IsoId("_w_OeabJSEe-rYMhHpAEI4A")]
     [Description(@"Authentication by a password.")]
-    Password = ExternalAuthenticationMethodCode.Password,
+    public static readonly ExternalAuthenticationMethod1Code Password = new("PSWD");
 
-    /// <summary>
-    /// Customer business phone number.
-    /// Encoded/decoded by serializers as &quot;PWOR&quot;.
-    /// </summary>
-    [EnumMember(Value = "PWOR")]
-    [IsoId("_ExternalAuthenticationMethod1Code_PhoneBusiness")]
+    /// <summary>Customer business phone number.</summary>
+    [IsoId("_w_Oea7JSEe-rYMhHpAEI4A")]
     [Description(@"Customer business phone number.")]
-    PhoneBusiness = ExternalAuthenticationMethodCode.PhoneBusiness,
+    public static readonly ExternalAuthenticationMethod1Code PhoneBusiness = new("PWOR");
 
-    /// <summary>
-    /// Qualified Certificate.
-    /// Encoded/decoded by serializers as &quot;QWAC&quot;.
-    /// </summary>
-    [EnumMember(Value = "QWAC")]
-    [IsoId("_ExternalAuthenticationMethod1Code_QualifiedCertificate")]
+    /// <summary>Qualified Certificate.</summary>
+    [IsoId("_w_OebbJSEe-rYMhHpAEI4A")]
     [Description(@"Qualified Certificate.")]
-    QualifiedCertificate = ExternalAuthenticationMethodCode.QualifiedCertificate,
+    public static readonly ExternalAuthenticationMethod1Code QualifiedCertificate = new("QWAC");
 
-    /// <summary>
-    /// Channel-encrypted transaction.
-    /// Encoded/decoded by serializers as &quot;SCNL&quot;.
-    /// </summary>
-    [EnumMember(Value = "SCNL")]
-    [IsoId("_ExternalAuthenticationMethod1Code_SecuredChannel")]
+    /// <summary>Channel-encrypted transaction.</summary>
+    [IsoId("_w_Oeb7JSEe-rYMhHpAEI4A")]
     [Description(@"Channel-encrypted transaction.")]
-    SecuredChannel = ExternalAuthenticationMethodCode.SecuredChannel,
+    public static readonly ExternalAuthenticationMethod1Code SecuredChannel = new("SCNL");
 
-    /// <summary>
-    /// Electronic commerce transaction secured with the X.509 certificate of a customer.
-    /// Encoded/decoded by serializers as &quot;SCRT&quot;.
-    /// </summary>
-    [EnumMember(Value = "SCRT")]
-    [IsoId("_ExternalAuthenticationMethod1Code_SecureCertificate")]
-    [Description(
-        @"Electronic commerce transaction secured with the X.509 certificate of a customer."
-    )]
-    SecureCertificate = ExternalAuthenticationMethodCode.SecureCertificate,
+    /// <summary>Electronic commerce transaction secured with the X.509 certificate of a customer.</summary>
+    [IsoId("_w_OecbJSEe-rYMhHpAEI4A")]
+    [Description(@"Electronic commerce transaction secured with the X.509 certificate of a customer.")]
+    public static readonly ExternalAuthenticationMethod1Code SecureCertificate = new("SCRT");
 
-    /// <summary>
-    /// Shipping address from verification.
-    /// Encoded/decoded by serializers as &quot;SHAF&quot;.
-    /// </summary>
-    [EnumMember(Value = "SHAF")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ShippingAddressFrom")]
+    /// <summary>Shipping address from verification.</summary>
+    [IsoId("_w_Oec7JSEe-rYMhHpAEI4A")]
     [Description(@"Shipping address from verification.")]
-    ShippingAddressFrom = ExternalAuthenticationMethodCode.ShippingAddressFrom,
+    public static readonly ExternalAuthenticationMethod1Code ShippingAddressFrom = new("SHAF");
 
-    /// <summary>
-    /// Shipping address to verification
-    /// Encoded/decoded by serializers as &quot;SHAT&quot;.
-    /// </summary>
-    [EnumMember(Value = "SHAT")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ShippingAddressTo")]
+    /// <summary>Shipping address to verification</summary>
+    [IsoId("_w_OedbJSEe-rYMhHpAEI4A")]
     [Description(@"Shipping address to verification")]
-    ShippingAddressTo = ExternalAuthenticationMethodCode.ShippingAddressTo,
+    public static readonly ExternalAuthenticationMethod1Code ShippingAddressTo = new("SHAT");
 
-    /// <summary>
-    /// Number assigned by a social security agency.
-    /// Encoded/decoded by serializers as &quot;SSYN&quot;.
-    /// </summary>
-    [EnumMember(Value = "SSYN")]
-    [IsoId("_ExternalAuthenticationMethod1Code_SocialSecurityNumber")]
+    /// <summary>Number assigned by a social security agency.</summary>
+    [IsoId("_w_PFUbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a social security agency.")]
-    SocialSecurityNumber = ExternalAuthenticationMethodCode.SocialSecurityNumber,
+    public static readonly ExternalAuthenticationMethod1Code SocialSecurityNumber = new("SSYN");
 
-    /// <summary>
-    /// A value used to validate the authorised use of a token.
-    /// Encoded/decoded by serializers as &quot;TAVV&quot;.
-    /// </summary>
-    [EnumMember(Value = "TAVV")]
-    [IsoId("_ExternalAuthenticationMethod1Code_TokenAuthenticationValue")]
+    /// <summary>A value used to validate the authorised use of a token.</summary>
+    [IsoId("_w_PFV7JSEe-rYMhHpAEI4A")]
     [Description(@"A value used to validate the authorised use of a token.")]
-    TokenAuthenticationValue = ExternalAuthenticationMethodCode.TokenAuthenticationValue,
+    public static readonly ExternalAuthenticationMethod1Code TokenAuthenticationValue = new("TAVV");
 
-    /// <summary>
-    /// Authentication performed during a secure electronic commerce transaction.
-    /// Encoded/decoded by serializers as &quot;THDS&quot;.
-    /// </summary>
-    [EnumMember(Value = "THDS")]
-    [IsoId("_ExternalAuthenticationMethod1Code_ThreeDS")]
+    /// <summary>Authentication performed during a secure electronic commerce transaction.</summary>
+    [IsoId("_w_PFU7JSEe-rYMhHpAEI4A")]
     [Description(@"Authentication performed during a secure electronic commerce transaction.")]
-    ThreeDS = ExternalAuthenticationMethodCode.ThreeDS,
+    public static readonly ExternalAuthenticationMethod1Code ThreeDS = new("THDS");
 
-    /// <summary>
-    /// Identification used for travel.
-    /// Encoded/decoded by serializers as &quot;TRVL&quot;.
-    /// </summary>
-    [EnumMember(Value = "TRVL")]
-    [IsoId("_ExternalAuthenticationMethod1Code_TravelIdentification")]
+    /// <summary>Identification used for travel.</summary>
+    [IsoId("_w_PFX7JSEe-rYMhHpAEI4A")]
     [Description(@"Identification used for travel.")]
-    TravelIdentification = ExternalAuthenticationMethodCode.TravelIdentification,
+    public static readonly ExternalAuthenticationMethod1Code TravelIdentification = new("TRVL");
 
-    /// <summary>
-    /// Number assigned by a tax authority to an entity.
-    /// Encoded/decoded by serializers as &quot;TXID&quot;.
-    /// </summary>
-    [EnumMember(Value = "TXID")]
-    [IsoId("_ExternalAuthenticationMethod1Code_TaxIdentificationNumber")]
+    /// <summary>Number assigned by a tax authority to an entity.</summary>
+    [IsoId("_w_PFWbJSEe-rYMhHpAEI4A")]
     [Description(@"Number assigned by a tax authority to an entity.")]
-    TaxIdentificationNumber = ExternalAuthenticationMethodCode.TaxIdentificationNumber,
+    public static readonly ExternalAuthenticationMethod1Code TaxIdentificationNumber = new("TXID");
 }

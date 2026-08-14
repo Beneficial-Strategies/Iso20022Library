@@ -1,211 +1,182 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
 /// Specifies the reason for the investigation status, as published in an external investigation status reason code set.
-/// External code sets can be downloaded from www.iso20022.org.
 /// </summary>
+/// <remarks>
+/// External code sets can be downloaded from www.iso20022.org.
+/// </remarks>
 [DataContract]
 [Serializable]
 [IsoId("_4evbwFEUEe2YkcF60skG_A")]
-[Description(
-    @"Specifies the reason for the investigation status, as published in an external investigation status reason code set.|External code sets can be downloaded from www.iso20022.org."
-)]
-[DerivedFrom(typeof(ExternalInvestigationStatusReasonCode))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalInvestigationStatusReason1Code>))]
-public enum ExternalInvestigationStatusReason1Code
+[Description(@"Specifies the reason for the investigation status, as published in an external investigation status reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<ExternalInvestigationStatusReason1Code>))]
+public readonly struct ExternalInvestigationStatusReason1Code : IIsoExternalCode, IEquatable<ExternalInvestigationStatusReason1Code>
 {
-    /// <summary>
-    /// Awaiting debit authorisation from customer.
-    /// Encoded/decoded by serializers as &quot;ADAC&quot;.
-    /// </summary>
-    [EnumMember(Value = "ADAC")]
+    /// <summary>ISO 20022 format constraint — 1 to 4 characters.</summary>
+    public const string Pattern = @"^.{1,4}$";
+
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <summary>Initializes a new instance with the given investigation status reason code.</summary>
+    /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
+    public ExternalInvestigationStatusReason1Code(string value)
+    {
+        if (!Regex.IsMatch(value, Pattern))
+            throw new Iso20022FormatException(typeof(ExternalInvestigationStatusReason1Code), value, Pattern);
+        Value = value;
+    }
+
+    /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
+    public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalInvestigationStatusReason1Code result)
+    {
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
+    }
+
+    /// <summary>Implicitly wraps a string as a <see cref="ExternalInvestigationStatusReason1Code"/>.</summary>
+    public static implicit operator ExternalInvestigationStatusReason1Code(string value) => new(value);
+    /// <summary>Implicitly unwraps the code to its string value.</summary>
+    public static implicit operator string(ExternalInvestigationStatusReason1Code code) => code.Value;
+
+    /// <inheritdoc/>
+    public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
+    public bool Equals(ExternalInvestigationStatusReason1Code other) => Value == other.Value;
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is ExternalInvestigationStatusReason1Code other && Equals(other);
+    /// <inheritdoc/>
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalInvestigationStatusReason1Code a, ExternalInvestigationStatusReason1Code b) => a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalInvestigationStatusReason1Code a, ExternalInvestigationStatusReason1Code b) => !a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalInvestigationStatusReason1Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalInvestigationStatusReason1Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
+    public static bool operator ==(string? a, ExternalInvestigationStatusReason1Code b) => a == b.Value;
+    /// <inheritdoc/>
+    public static bool operator !=(string? a, ExternalInvestigationStatusReason1Code b) => a != b.Value;
+
+    // ── Known values (per ISO 20022 external registry snapshot, via MCP get_code_set_details) ──
+    // Convenience only — the constructor above still accepts any value satisfying Pattern,
+    // including future registry additions not listed here.
+
+    /// <summary>Awaiting debit authorisation from customer.</summary>
     [IsoId("___as3dYUEe68t8Cw380-tA")]
     [Description(@"Awaiting debit authorisation from customer.")]
-    AwaitingDebitAuthorityFromCustomer = ExternalInvestigationStatusReasonCode.AwaitingDebitAuthorityFromCustomer, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code AwaitingDebitAuthorityFromCustomer = new("ADAC");
 
-    /// <summary>
-    /// Request message has been directed at an incorrect agent or party.
-    /// Encoded/decoded by serializers as &quot;AGNT&quot;.
-    /// </summary>
-    [EnumMember(Value = "AGNT")]
+    /// <summary>Request message has been directed at an incorrect agent or party.</summary>
     [IsoId("___as0dYUEe68t8Cw380-tA")]
     [Description(@"Request message has been directed at an incorrect agent or party.")]
-    IncorrectAgentOrParty = ExternalInvestigationStatusReasonCode.IncorrectAgentOrParty, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code IncorrectAgentOrParty = new("AGNT");
 
-    /// <summary>
-    /// Investigation request not accepted as the transaction has already been returned.
-    /// Encoded/decoded by serializers as &quot;ARDT&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARDT")]
+    /// <summary>Investigation request not accepted as the transaction has already been returned.</summary>
     [IsoId("___as6dYUEe68t8Cw380-tA")]
     [Description(@"Investigation request not accepted as the transaction has already been returned.")]
-    AlreadyReturned = ExternalInvestigationStatusReasonCode.AlreadyReturned, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code AlreadyReturned = new("ARDT");
 
-    /// <summary>
-    /// Underlying transaction already rejected.
-    /// Encoded/decoded by serializers as &quot;ARJT&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARJT")]
+    /// <summary>Underlying transaction already rejected.</summary>
     [IsoId("___as59YUEe68t8Cw380-tA")]
     [Description(@"Underlying transaction already rejected.")]
-    AlreadyRejectedTransaction = ExternalInvestigationStatusReasonCode.AlreadyRejectedTransaction, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code AlreadyRejectedTransaction = new("ARJT");
 
-    /// <summary>
-    /// Awaiting reply from customer.
-    /// Encoded/decoded by serializers as &quot;ARPL&quot;.
-    /// </summary>
-    [EnumMember(Value = "ARPL")]
+    /// <summary>Awaiting reply from customer.</summary>
     [IsoId("___as39YUEe68t8Cw380-tA")]
     [Description(@"Awaiting reply from customer.")]
-    AwaitingReplyFromCustomer = ExternalInvestigationStatusReasonCode.AwaitingReplyFromCustomer, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code AwaitingReplyFromCustomer = new("ARPL");
 
-    /// <summary>
-    /// Investigation closed as cancellation request for underlying transaction has been sent.
-    /// Encoded/decoded by serializers as &quot;CACR&quot;.
-    /// </summary>
-    [EnumMember(Value = "CACR")]
+    /// <summary>Investigation closed as cancellation request for underlying transaction has been sent.</summary>
     [IsoId("___as29YUEe68t8Cw380-tA")]
     [Description(@"Investigation closed as cancellation request for underlying transaction has been sent.")]
-    ClosedAsCancellationRequestSent = ExternalInvestigationStatusReasonCode.ClosedAsCancellationRequestSent, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code ClosedAsCancellationRequestSent = new("CACR");
 
-    /// <summary>
-    /// Investigation closed as per the request message.
-    /// Encoded/decoded by serializers as &quot;CAPR&quot;.
-    /// </summary>
-    [EnumMember(Value = "CAPR")]
+    /// <summary>Investigation closed as per the request message.</summary>
     [IsoId("___as2dYUEe68t8Cw380-tA")]
     [Description(@"Investigation closed as per the request message.")]
-    ClosedAsPerRequest = ExternalInvestigationStatusReasonCode.ClosedAsPerRequest, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code ClosedAsPerRequest = new("CAPR");
 
-    /// <summary>
-    /// Is related to a Correction Made as Per Inquiry procedure for investigation status Closed (CLSD).
-    /// Encoded/decoded by serializers as &quot;CMPI&quot;.
-    /// </summary>
-    [EnumMember(Value = "CMPI")]
+    /// <summary>Is related to a Correction Made as Per Inquiry procedure for investigation status Closed (CLSD).</summary>
     [IsoId("_o9w9cYKAEfCff8wf3dEAMw")]
     [Description(@"Is related to a Correction Made as Per Inquiry procedure for investigation status Closed (CLSD).")]
-    CorrectionMadeAsPerInquiry = ExternalInvestigationStatusReasonCode.CorrectionMadeAsPerInquiry, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code CorrectionMadeAsPerInquiry = new("CMPI");
 
-    /// <summary>
-    /// Request message is duplicate, duplicate request message is rejected.
-    /// Encoded/decoded by serializers as &quot;DU01&quot;.
-    /// </summary>
-    [EnumMember(Value = "DU01")]
+    /// <summary>Request message is duplicate, duplicate request message is rejected.</summary>
     [IsoId("___as09YUEe68t8Cw380-tA")]
     [Description(@"Request message is duplicate, duplicate request message is rejected.")]
-    DuplicateRequest = ExternalInvestigationStatusReasonCode.DuplicateRequest, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code DuplicateRequest = new("DU01");
 
-    /// <summary>
-    /// Special follow-up is taking place.
-    /// Encoded/decoded by serializers as &quot;ESCA&quot;.
-    /// </summary>
-    [EnumMember(Value = "ESCA")]
+    /// <summary>Special follow-up is taking place.</summary>
     [IsoId("___as79YUEe68t8Cw380-tA")]
     [Description(@"Special follow-up is taking place.")]
-    Escalation = ExternalInvestigationStatusReasonCode.Escalation, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code Escalation = new("ESCA");
 
-    /// <summary>
-    /// Request message forwarded to another agent or party, these may be indicated in NextResponder element.
-    /// Encoded/decoded by serializers as &quot;FTNA&quot;.
-    /// </summary>
-    [EnumMember(Value = "FTNA")]
+    /// <summary>Request message forwarded to another agent or party, these may be indicated in NextResponder element.</summary>
     [IsoId("___as19YUEe68t8Cw380-tA")]
     [Description(@"Request message forwarded to another agent or party, these may be indicated in NextResponder element.")]
-    InvestigationRequestForwardedToAgentOrParty = ExternalInvestigationStatusReasonCode.InvestigationRequestForwardedToAgentOrParty, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code InvestigationRequestForwardedToAgentOrParty = new("FTNA");
 
-    /// <summary>
-    /// Indicates that the credit claim non receipt investigation is pending as the cover creditor is waiting for the credit of the cover.
-    /// Encoded/decoded by serializers as &quot;G004&quot;.
-    /// </summary>
-    [EnumMember(Value = "G004")]
+    /// <summary>Indicates that the credit claim non receipt investigation is pending as the cover creditor is waiting for the credit of the cover.</summary>
     [IsoId("__bI0cvg-Ee-qYYWvwsxo3Q")]
     [Description(@"Indicates that the credit claim non receipt investigation is pending as the cover creditor is waiting for the credit of the cover.")]
-    WaitingForCover = ExternalInvestigationStatusReasonCode.WaitingForCover, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code WaitingForCover = new("G004");
 
-    /// <summary>
-    /// Incorrect investigation type used in request message.
-    /// Encoded/decoded by serializers as &quot;INIT&quot;.
-    /// </summary>
-    [EnumMember(Value = "INIT")]
+    /// <summary>Incorrect investigation type used in request message.</summary>
     [IsoId("___as8dYUEe68t8Cw380-tA")]
     [Description(@"Incorrect investigation type used in request message.")]
-    IncorrectInvestigationType = ExternalInvestigationStatusReasonCode.IncorrectInvestigationType, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code IncorrectInvestigationType = new("INIT");
 
-    /// <summary>
-    /// Collation of response data is still ongoing.
-    /// Encoded/decoded by serializers as &quot;INPO&quot;.
-    /// </summary>
-    [EnumMember(Value = "INPO")]
+    /// <summary>Collation of response data is still ongoing.</summary>
     [IsoId("___as49YUEe68t8Cw380-tA")]
     [Description(@"Collation of response data is still ongoing.")]
-    InProgress = ExternalInvestigationStatusReasonCode.InProgress, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code InProgress = new("INPO");
 
-    /// <summary>
-    /// Reported when the request cannot be accepted because of regulatory rules.
-    /// Encoded/decoded by serializers as &quot;LEGL&quot;.
-    /// </summary>
-    [EnumMember(Value = "LEGL")]
+    /// <summary>Reported when the request cannot be accepted because of regulatory rules.</summary>
     [IsoId("___as7dYUEe68t8Cw380-tA")]
     [Description(@"Reported when the request cannot be accepted because of regulatory rules.")]
-    LegalDecision = ExternalInvestigationStatusReasonCode.LegalDecision, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code LegalDecision = new("LEGL");
 
-    /// <summary>
-    /// See ResponseData element for additional information.
-    /// Encoded/decoded by serializers as &quot;NARR&quot;.
-    /// </summary>
-    [EnumMember(Value = "NARR")]
+    /// <summary>See ResponseData element for additional information.</summary>
     [IsoId("___as1dYUEe68t8Cw380-tA")]
     [Description(@"See ResponseData element for additional information.")]
-    Narrative = ExternalInvestigationStatusReasonCode.Narrative, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code Narrative = new("NARR");
 
-    /// <summary>
-    /// No additional information in relation to the request can be provided.
-    /// Encoded/decoded by serializers as &quot;NOAD&quot;.
-    /// </summary>
-    [EnumMember(Value = "NOAD")]
+    /// <summary>No additional information in relation to the request can be provided.</summary>
     [IsoId("___as9dYUEe68t8Cw380-tA")]
     [Description(@"No additional information in relation to the request can be provided.")]
-    NoAdditionalInformationAvailable = ExternalInvestigationStatusReasonCode.NoAdditionalInformationAvailable, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code NoAdditionalInformationAvailable = new("NOAD");
 
-    /// <summary>
-    /// No reply from customer.
-    /// Encoded/decoded by serializers as &quot;NOAS&quot;.
-    /// </summary>
-    [EnumMember(Value = "NOAS")]
+    /// <summary>No reply from customer.</summary>
     [IsoId("___as4dYUEe68t8Cw380-tA")]
     [Description(@"No reply from customer.")]
-    NoAnswerFromCustomer = ExternalInvestigationStatusReasonCode.NoAnswerFromCustomer, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code NoAnswerFromCustomer = new("NOAS");
 
-    /// <summary>
-    /// Underlying transaction never received.
-    /// Encoded/decoded by serializers as &quot;NOOR&quot;.
-    /// </summary>
-    [EnumMember(Value = "NOOR")]
+    /// <summary>Underlying transaction never received.</summary>
     [IsoId("___as5dYUEe68t8Cw380-tA")]
     [Description(@"Underlying transaction never received.")]
-    NoOriginalTransactionReceived = ExternalInvestigationStatusReasonCode.NoOriginalTransactionReceived, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code NoOriginalTransactionReceived = new("NOOR");
 
-    /// <summary>
-    /// Response message partially addresses the request, a further response message will follow.
-    /// Encoded/decoded by serializers as &quot;PARE&quot;.
-    /// </summary>
-    [EnumMember(Value = "PARE")]
+    /// <summary>Response message partially addresses the request, a further response message will follow.</summary>
     [IsoId("___as89YUEe68t8Cw380-tA")]
     [Description(@"Response message partially addresses the request, a further response message will follow.")]
-    PartialResponse = ExternalInvestigationStatusReasonCode.PartialResponse, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code PartialResponse = new("PARE");
 
-    /// <summary>
-    /// Regulatory Reason.
-    /// Encoded/decoded by serializers as &quot;RR04&quot;.
-    /// </summary>
-    [EnumMember(Value = "RR04")]
+    /// <summary>Regulatory Reason.</summary>
     [IsoId("___as69YUEe68t8Cw380-tA")]
     [Description(@"Regulatory Reason.")]
-    RegulatoryReason = ExternalInvestigationStatusReasonCode.RegulatoryReason, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationStatusReason1Code RegulatoryReason = new("RR04");
 }

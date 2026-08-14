@@ -1,51 +1,92 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using System.Reflection;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
 /// Specifies the requested action, as published in an external investigation action code set.
-/// External code sets can be downloaded from www.iso20022.org.
 /// </summary>
+/// <remarks>
+/// External code sets can be downloaded from www.iso20022.org.
+/// </remarks>
 [DataContract]
 [Serializable]
 [IsoId("_rkVJUBZdEe6d6Ip1Ob2kaQ")]
-[Description(
-    @"Specifies the requested action, as published in an external investigation action code set.|External code sets can be downloaded from www.iso20022.org."
-)]
-[DerivedFrom(typeof(ExternalInvestigationActionCode))]
-[JsonConverter(typeof(Iso20022EnumJsonConverter<ExternalInvestigationAction1Code>))]
-public enum ExternalInvestigationAction1Code
+[Description(@"Specifies the requested action, as published in an external investigation action code set.|External code sets can be downloaded from www.iso20022.org.")]
+[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<ExternalInvestigationAction1Code>))]
+public readonly struct ExternalInvestigationAction1Code : IIsoExternalCode, IEquatable<ExternalInvestigationAction1Code>
 {
-    /// <summary>
-    /// Responder is requested to close the investigation. All investigation requests relating to the investigation may be disregarded.
-    /// Encoded/decoded by serializers as &quot;RQCL&quot;.
-    /// </summary>
-    [EnumMember(Value = "RQCL")]
-    [IsoId("___Q68dYUEe68t8Cw380-tA")]
-    [Description(
-        @"Responder is requested to close the investigation. All investigation requests relating to the investigation may be disregarded."
-    )]
-    RequestInvestigationClosure = ExternalInvestigationActionCode.RequestInvestigationClosure, // same ordinal as derivation source for type conversions
+    /// <summary>ISO 20022 format constraint — 1 to 4 characters.</summary>
+    public const string Pattern = @"^.{1,4}$";
 
-    /// <summary>
-    /// Responder is requested to review an earlier response as the requestor objects to it.
-    /// Encoded/decoded by serializers as &quot;RQOB&quot;.
-    /// </summary>
-    [EnumMember(Value = "RQOB")]
+    /// <inheritdoc/>
+    public string Value { get; }
+
+    /// <summary>Initializes a new instance with the given investigation action code.</summary>
+    /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
+    public ExternalInvestigationAction1Code(string value)
+    {
+        if (!Regex.IsMatch(value, Pattern))
+            throw new Iso20022FormatException(typeof(ExternalInvestigationAction1Code), value, Pattern);
+        Value = value;
+    }
+
+    /// <summary>Returns <see langword="true"/> and a valid instance when <paramref name="value"/> satisfies <see cref="Pattern"/>; otherwise <see langword="false"/>.</summary>
+    public static bool TryCreate(string value, [NotNullWhen(true)] out ExternalInvestigationAction1Code result)
+    {
+        if (Regex.IsMatch(value, Pattern))
+        { result = new(value); return true; }
+        result = default;
+        return false;
+    }
+
+    /// <summary>Implicitly wraps a string as a <see cref="ExternalInvestigationAction1Code"/>.</summary>
+    public static implicit operator ExternalInvestigationAction1Code(string value) => new(value);
+    /// <summary>Implicitly unwraps the code to its string value.</summary>
+    public static implicit operator string(ExternalInvestigationAction1Code code) => code.Value;
+
+    /// <inheritdoc/>
+    public override string ToString() => Value ?? string.Empty;
+    /// <inheritdoc/>
+    public bool Equals(ExternalInvestigationAction1Code other) => Value == other.Value;
+    /// <inheritdoc/>
+    public override bool Equals(object? obj) => obj is ExternalInvestigationAction1Code other && Equals(other);
+    /// <inheritdoc/>
+    public override int GetHashCode() => Value?.GetHashCode() ?? 0;
+
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalInvestigationAction1Code a, ExternalInvestigationAction1Code b) => a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalInvestigationAction1Code a, ExternalInvestigationAction1Code b) => !a.Equals(b);
+    /// <inheritdoc/>
+    public static bool operator ==(ExternalInvestigationAction1Code a, string? b) => a.Value == b;
+    /// <inheritdoc/>
+    public static bool operator !=(ExternalInvestigationAction1Code a, string? b) => a.Value != b;
+    /// <inheritdoc/>
+    public static bool operator ==(string? a, ExternalInvestigationAction1Code b) => a == b.Value;
+    /// <inheritdoc/>
+    public static bool operator !=(string? a, ExternalInvestigationAction1Code b) => a != b.Value;
+
+    // ── Known values (per ISO 20022 external registry snapshot, via MCP get_code_set_details) ──
+    // Convenience only — the constructor above still accepts any value satisfying Pattern,
+    // including future registry additions not listed here.
+
+    /// <summary>Responder is requested to close the investigation. All investigation requests relating to the investigation may be disregarded.</summary>
+    [IsoId("___Q68dYUEe68t8Cw380-tA")]
+    [Description(@"Responder is requested to close the investigation. All investigation requests relating to the investigation may be disregarded.")]
+    public static readonly ExternalInvestigationAction1Code RequestInvestigationClosure = new("RQCL");
+
+    /// <summary>Responder is requested to review an earlier response as the requestor objects to it.</summary>
     [IsoId("___Q69dYUEe68t8Cw380-tA")]
     [Description(@"Responder is requested to review an earlier response as the requestor objects to it.")]
-    RequestObjection = ExternalInvestigationActionCode.RequestObjection, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationAction1Code RequestObjection = new("RQOB");
 
-    /// <summary>
-    /// Responder is requested to provide the status of the investigation.
-    /// Encoded/decoded by serializers as &quot;RQST&quot;.
-    /// </summary>
-    [EnumMember(Value = "RQST")]
+    /// <summary>Responder is requested to provide the status of the investigation.</summary>
     [IsoId("___Q689YUEe68t8Cw380-tA")]
     [Description(@"Responder is requested to provide the status of the investigation.")]
-    RequestInvestigationStatus = ExternalInvestigationActionCode.RequestInvestigationStatus, // same ordinal as derivation source for type conversions
+    public static readonly ExternalInvestigationAction1Code RequestInvestigationStatus = new("RQST");
 }

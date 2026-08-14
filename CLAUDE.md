@@ -244,6 +244,59 @@ constructor receives a `byte[]`. The XML serializer base64-decodes → passes to
 These types may have additional behavioral contracts (e.g. minimum length, OID validation)
 tested separately.
 
+#### Hybrid Pattern: External Code Set With Known Members
+
+Some `IIsoExternalCode` types are classified by the ISO 20022 data dictionary as an **external
+code set** ("codes maintained outside ISO 20022" — the registry can add new codes without a new
+ISO 20022 schema version) **and yet the MCP server's `get_code_set_details` tool still returns a
+concrete, named member table for them** (fetched from a secondary published external-registry
+file, not just the base repository). `ExternalAuthenticationMethod1Code` is the first confirmed
+example: 68 named codes with full definitions, despite being formally external.
+
+**Always verify this per type — don't assume.** Call `get_code_set_details` and check whether the
+response actually contains member rows. Many external code sets genuinely have no data available
+via MCP; those stay a plain open struct per the template above, nothing more. Only apply this
+hybrid when MCP demonstrably returns members.
+
+**When it does, do not convert the type to a closed `enum`.** The struct must stay exactly as
+open as the base template — same `(string)` constructor validating only length/pattern, same
+`TryCreate`, same implicit operators — because the "external code set" classification means a
+registry addition next month is a valid ISO 20022 value with zero schema-version signal. A closed
+`enum` would reject that value outright: a real interoperability bug, not a theoretical one.
+
+**Instead, add the known members as `public static readonly` named instances alongside the open
+struct** — giving IntelliSense/compile-time-friendly discoverability for the values known today,
+without narrowing what the constructor accepts:
+
+```csharp
+public readonly struct MyExternalCode : IIsoExternalCode, IEquatable<MyExternalCode>
+{
+    // ... Pattern, Value, constructor, TryCreate, operators — unchanged from the base template ...
+
+    // ── Known values (per ISO 20022 external registry snapshot, via MCP get_code_set_details) ──
+    // Convenience only — the constructor above still accepts any value satisfying Pattern,
+    // including future registry additions not listed here.
+
+    /// <summary>Serial Number of the acceptor's certificate.</summary>
+    [IsoId("_w_NQIbJSEe-rYMhHpAEI4A")]
+    [Description(@"Serial Number of the acceptor's certificate.")]
+    public static readonly MyExternalCode AcceptorCertificateSerialNumber = new("ACSN");
+
+    // ... one such field per member MCP returned ...
+}
+```
+
+Preserve, per member, everything the equivalent `enum` member would have carried: the field name
+(matches the original enum member identifier — least astonishment, no reason to rename), the
+verbatim `<summary>`/`[Description]` text (same non-negotiable rule as any other public member —
+see "XML Documentation" above), and `[IsoId]` set to that specific **code's own** id from the MCP
+table (not the codeset's id, which belongs on the type-level `[IsoId]` instead).
+
+**This pattern needs to be retrofitted to earlier conversions on a case-by-case basis** — both
+Batch 1's external-codeset structs and Bucket B's other types were converted before this pattern
+was identified, so some of them may also have MCP member data sitting unused. Re-verify with
+`get_code_set_details` before assuming a plain open struct is already the final form.
+
 #### Serialization Contract
 
 | Layer | String types | Decimal types | Binary types |
