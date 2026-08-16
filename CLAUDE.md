@@ -87,6 +87,38 @@ Always fetch descriptions from the MCP server rather than guessing or deriving t
 If a description cannot be retrieved, leave a `// TODO: fetch ISO description via MCP` comment
 rather than fabricating one.
 
+#### Exception: primitives defined by an external (non-ISO-20022) standard
+
+Some ISO 20022 `IdentifierSet` primitives (SEDOL, CUSIP, Valoren, WKN/Wertpapier, etc.) are
+identifiers whose *own* structure — length, character set, and especially check-digit algorithms —
+is defined by an external standards body (LSE, CUSIP Global Services, SIX Financial Information,
+Wertpapier Mitteilungen...), not by ISO 20022 itself. ISO 20022's own text for these is often a
+one-line description with no format detail at all; MCP has nothing more to give.
+
+For these — and only these, i.e. types where the *format itself* originates outside ISO 20022, not
+ordinary ISO 20022 elements — it's acceptable to research the external standard directly (web
+search, published algorithm references) rather than stop at "MCP has nothing." Requirements:
+
+- **Cite the source.** Every fact pulled from outside MCP (pattern, length, check-digit algorithm)
+  gets an XML-doc `<remarks>` note and/or inline comment naming where it came from (organization,
+  document, or URL) — so a future maintainer can verify or update it without redoing the research.
+- **Check digits are verified and can be generated.** If the external standard defines a check
+  digit, the struct validates it on construction when a full value (core + check digit) is
+  supplied, and computes+appends it automatically when only the core is supplied. Expose the
+  parts as separate `Core` and `CheckDigit` properties alongside the full `Value`.
+- **When the external standard can't be pinned down, stay permissive and say so.** Not every one
+  of these turns up a usable public spec (some are obscure legacy national schemes with no
+  findable documentation). When that happens, keep the pattern permissive (e.g. "non-empty
+  string") rather than guessing at structure, and leave a comment stating that external
+  verification was attempted and came up empty — so it reads as "investigated, not overlooked."
+  Same principle applies to genuinely uncertain details within an otherwise-known standard: default
+  to the more permissive interpretation and comment the doubt for later tightening. A pattern is
+  easy to tighten later; it's a breaking change to loosen one after consumers depend on it.
+- **Recognize when a type isn't actually a checksummed identifier at all.** Some `IdentifierSet`
+  members that look superficially similar (e.g. credit-rating symbols, hierarchical classification
+  codes) aren't numbered identifiers with check digits — don't force the `Core`/`CheckDigit` shape
+  onto something that isn't structured that way.
+
 ### Historical gap
 
 Files written during snapshot syncs prior to 2026-06 were often written without verbatim

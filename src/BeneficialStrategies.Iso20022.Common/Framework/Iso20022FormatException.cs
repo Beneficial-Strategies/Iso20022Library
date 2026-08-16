@@ -31,6 +31,13 @@ public enum Iso20022FormatViolation
     /// Catch with: <c>catch (Iso20022FormatException e) when (e.Violation == Iso20022FormatViolation.PatternMismatch)</c>
     /// </summary>
     PatternMismatch,
+
+    /// <summary>
+    /// The value's trailing check digit does not match the value computed from the rest of the
+    /// value using the external standard's check-digit algorithm (e.g. SEDOL, CUSIP).
+    /// Catch with: <c>catch (Iso20022FormatException e) when (e.Violation == Iso20022FormatViolation.CheckDigitMismatch)</c>
+    /// </summary>
+    CheckDigitMismatch,
 }
 
 /// <summary>
@@ -136,6 +143,19 @@ public sealed class Iso20022FormatException : FormatException
     public static Iso20022FormatException ForInvalidCharacter(Type targetType, string value, string allowedCharacters) =>
         new(targetType, value, $"character set: {allowedCharacters}", Iso20022FormatViolation.InvalidCharacter,
             $"'{targetType.Name}' contains characters outside the allowed set ({allowedCharacters}): '{Preview(value)}'.");
+
+    /// <summary>
+    /// Creates a <see cref="Iso20022FormatViolation.CheckDigitMismatch"/> exception.
+    /// </summary>
+    /// <param name="targetType">The ISO 20022 type that rejected the value.</param>
+    /// <param name="value">The full value supplied, including its (incorrect) check digit.</param>
+    /// <param name="expectedCheckDigit">The check digit computed from the value's core per the external standard's algorithm.</param>
+    /// <param name="actualCheckDigit">The check digit actually present in <paramref name="value"/>.</param>
+    public static Iso20022FormatException ForCheckDigitMismatch(
+        Type targetType, string value, char expectedCheckDigit, char actualCheckDigit) =>
+        new(targetType, value, "check digit", Iso20022FormatViolation.CheckDigitMismatch,
+            $"'{Preview(value)}' has an invalid check digit for {targetType.Name}: " +
+            $"expected '{expectedCheckDigit}' but the value supplied '{actualCheckDigit}'.");
 
     // ── Helpers ──
 
