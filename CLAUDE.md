@@ -138,6 +138,55 @@ wrapper struct — no need to reinvent parsing/validation the framework already 
   BCL type's wire format match what ISO 20022 expects on the XML/JSON side?) before aliasing —
   this exception is about not re-implementing a solved problem, not about skipping verification.
 
+#### Class-typed properties and hierarchical record equality
+
+Message and component types are `record`s specifically so that `==`/`Equals` gives correct
+hierarchical, structural equality without hand-written comparison code. That guarantee comes from
+the compiler-synthesized `Equals`/`GetHashCode`, which calls `EqualityComparer<T>.Default` on every
+property — **struct or class, it makes no difference to the mechanism.** Our `IIsoSimpleValue<T>`
+structs work with this because every one of them implements `IEquatable<T>` with real value
+comparison; that's *why* the struct convention is safe, not because it's a struct per se. A `class`
+property (from the W3C exception above, or a hand-modeled type for embedded/raw XML content) goes
+through the exact same mechanism — it only preserves the record's equality guarantee if that class
+itself overrides `Equals`/`GetHashCode` for value semantics. If it doesn't (falls back to
+`object.Equals`, i.e. reference identity), the record's `==` silently breaks for that property: two
+records built from byte-identical input, but holding two separately-constructed instances of that
+class, compare unequal — with no compiler warning, since it type-checks fine.
+
+**Before embedding any class-typed property in a record, verify from the actual source, not just
+documentation, whether it implements value equality.** Docs can be wrong: `XmlQualifiedName`'s own
+Microsoft Learn page states `Equals` "returns true if the two are the same instance object"
+(reference equality) — the real shipped implementation
+(`dotnet/runtime`'s `XmlQualifiedName.cs`) does a proper `Name`+`Namespace` value comparison with a
+reference-equality fast path first. Trusting the doc page over the source would have been wrong.
+Two data points already checked, to save re-deriving them:
+- `System.Xml.XmlQualifiedName` — value equality confirmed from source. Safe to embed directly.
+- `System.Xml.Linq.XElement` / `XNode` / `XmlElement` — reference equality confirmed (well-documented
+  .NET behavior); structural comparison is opt-in only via `XNode.DeepEquals`/`XNodeEqualityComparer`,
+  and even that has known rough edges (namespace-prefix-vs-default-namespace and attribute-ordering
+  differences read as "not equal" despite being semantically identical XML — see
+  [Equality Semantics of LINQ to XML Trees](https://learn.microsoft.com/en-us/archive/blogs/ericwhite/equality-semantics-of-linq-to-xml-trees)).
+  **Not safe to embed without one of the mitigations below.**
+
+When a class-typed property does *not* have value equality (most likely scenario: a component that
+carries embedded/raw XML content — e.g. `ExternalSchema/LaxPayload.cs`, `SignatureEnvelope.cs`,
+`ATICALaxProcessing.cs`, currently unimplemented stub records with no properties yet), pick one,
+in order of preference:
+
+1. **Override `Equals`/`GetHashCode` on that record explicitly**, using `XNode.DeepEquals` (or a
+   canonicalized-string comparison if robustness to `DeepEquals`'s prefix/attribute-order
+   sensitivity matters) instead of letting the compiler synthesize member-wise equality for that
+   property.
+2. **Store canonicalized XML as a `string`** inside an `IIsoSimpleValue<string>` struct wrapper
+   instead of holding a live `XElement`/`XmlElement` graph — gets correct record equality for free
+   via the normal struct convention, at the cost of losing in-place LINQ-to-XML querying (a
+   consumer parses the string on demand instead).
+3. **Accept reference equality, but document it.** Not a disaster on its own — but say so
+   explicitly in the type's `<remarks>` (e.g. "Equality for this property is reference-based; two
+   instances with identical XML content are not guaranteed to compare equal") so it reads as a
+   deliberate, acknowledged tradeoff instead of a silent gap someone finds the hard way, debugging
+   a failing `Assert.Equal` months later.
+
 ### Historical gap
 
 Files written during snapshot syncs prior to 2026-06 were often written without verbatim
