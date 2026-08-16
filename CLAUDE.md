@@ -119,6 +119,25 @@ search, published algorithm references) rather than stop at "MCP has nothing." R
   codes) aren't numbered identifiers with check digits — don't force the `Core`/`CheckDigit` shape
   onto something that isn't structured that way.
 
+#### Exception: primitives defined by a W3C standard
+
+Some ISO 20022 primitives are directly W3C XSD builtins or map one-to-one onto a W3C-defined
+concept (`xs:anyURI`, `xs:duration`, `xs:QName`, and similar). Where the .NET BCL already ships a
+type for the underlying W3C standard (e.g. something in `System.Xml`), it's fine to alias straight
+to that existing type in `GlobalUsings.cs` instead of hand-writing a new `IIsoSimpleValue<T>`
+wrapper struct — no need to reinvent parsing/validation the framework already gets right.
+
+- This can point the alias at a **class**, not just a struct — some `System.Xml` types are
+  reference types. That's fine; the ISO primitives template's "always a `readonly struct`" rule is
+  specifically about hand-written `IIsoSimpleValue<T>` wrappers, not about this exception.
+- A type aliased this way won't implement `IIsoSimpleValue<T>` and won't throw
+  `Iso20022FormatException` — it relies on the BCL type's own parsing/validation/serialization
+  instead. Note that in a comment on the alias line so it's clear the type is intentionally outside
+  the usual contract-test/serializer plumbing, not an oversight.
+- Still verify the mapping is actually correct for the specific ISO 20022 primitive (e.g. does the
+  BCL type's wire format match what ISO 20022 expects on the XML/JSON side?) before aliasing —
+  this exception is about not re-implementing a solved problem, not about skipping verification.
+
 ### Historical gap
 
 Files written during snapshot syncs prior to 2026-06 were often written without verbatim
