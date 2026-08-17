@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Iso20022Library** - a .NET library containing 2,665 ISO20022 financial message types as immutable C# records.
+This is the **Iso20022Library** - a .NET library containing 3,311 ISO20022 financial message types as immutable C# records.
 
 **NuGet Package**: `BeneficialStrategies.Iso20022`
 

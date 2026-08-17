@@ -26,30 +26,59 @@ In `src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Commo
 <Version>$ARGUMENTS</Version>
 ```
 
-### 3. Package description message count
+### 3. Message-count references (PackageDescription, both READMEs, Scope-Statement.md)
 
-> **2026-08-17 addition**: this step was missing entirely, and `PackageDescription` sat stale at
-> "2,665 B2B financial messages" through two full snapshot syncs (0.4.0-alpha and 0.5.0-alpha)
-> before being caught and hand-fixed. Always do this step on every release, not just when a
-> snapshot sync happened to run first.
+> **2026-08-17 addition**: none of this was covered by the skill at all, and every one of these
+> four locations sat stale — some through two full snapshot syncs (0.4.0-alpha and 0.5.0-alpha)
+> — before being caught and hand-fixed in the same sitting the user asked "did Scope-Statement.md
+> get updated also? It should." Always do this step on every release, not just when a snapshot
+> sync happened to run first — message counts drift on every sync even without a version bump.
 
-In the same `PropertyGroup` as `<Version>`, `PackageDescription` hardcodes a message count:
+Four files hardcode a message count and must be kept in sync together:
 
-```xml
-<PackageDescription>The entirety of the ISO20022 message domain model. {N} B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
-```
+- `src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Common.csproj` — `PackageDescription`:
+  ```xml
+  <PackageDescription>The entirety of the ISO20022 message domain model. {N} B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
+  ```
+- `README.md` (root) — opening sentence: `...containers for {N} different types of financial services messages...`
+- `doc/package/README.md` — same opening sentence (this is the file actually packed as the NuGet page's displayed README — see step 5's README-install step for how the two READMEs differ and why both still need editing)
+- `doc/Scope-Statement.md` — full regeneration, see below. Its own summary line and per-business-area table use the same `{N}`.
 
-Recompute `{N}` as the actual count of files under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/`:
+**Recompute `{N}`** as the actual count of files under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/`:
 
 ```bash
 find src/BeneficialStrategies.Iso20022.Common/MessageDefinitions -iname "*.cs" | wc -l
 ```
 
-Use this file count, not `get_repository_statistics`' MCP-reported total — they can differ by a
-handful (e.g. 3,311 shipped files vs. 3,312 MCP-reported messages, seen 2026-08-17) and the
-`PackageDescription` should describe what's actually in the package, not what the live MCP
-snapshot currently claims. Update the number with thousands separators matching the existing
-style (`3,311`, not `3311`).
+Use this file count, not `get_repository_statistics`' MCP-reported total, for `{N}` in the
+PackageDescription and both READMEs — they can differ by a handful (e.g. 3,311 shipped files vs.
+3,312 MCP-reported messages, seen 2026-08-17) and these three should describe what's actually in
+the shipped package, not what the live MCP snapshot currently claims. Update the number with
+thousands separators matching the existing style (`3,311`, not `3311`). The vaguer "over 2,600
+messages" phrasing already present in a couple of spots in root `README.md` doesn't need to track
+this exactly — only the precise counts do.
+
+**Regenerate `doc/Scope-Statement.md` in full** — its whole reason to exist is being an accurate,
+per-business-area snapshot, so partial updates leave it self-contradictory:
+1. Recompute the file-count-per-business-area table:
+   ```bash
+   cd src/BeneficialStrategies.Iso20022.Common/MessageDefinitions
+   for d in */; do echo "${d%/} $(find "${d%/}" -iname '*.cs' | wc -l)"; done | sort
+   ```
+2. Call `mcp__iso20022__get_repository_statistics` for the "Spec" column per business area and
+   the message-definition total, and for the Supporting Architecture Counts table (internal/
+   external code sets, message components, business components, simple types, external schemas,
+   user-defined entries, choice types, total).
+3. Diff Library vs. Spec per row. Any mismatch needs a real explanation in the Notes column, not
+   a guess — grep the cached `snapshot-sync/{date}/spec-snapshot.tsv` for duplicate `MSGDEF` names
+   within that business area (`grep "^MSGDEF" spec-snapshot.tsv | awk -F'\t' '$4=="{area}" {print $2}' | sort | uniq -d`)
+   to confirm a duplicate-entry artifact before writing that explanation, the same way the
+   `RequestToModifyPaymentV03` camt duplicate was confirmed 2026-08-17 (two distinct `xmi:id`
+   records sharing one name). Don't just carry forward whatever explanation the previous revision
+   used for a similarly-shaped row — reverify it, since the specific duplicate can change between
+   snapshots even if the row's off-by-one pattern looks familiar.
+4. Update the "Counts verified against actual files in the repository ({month} {year})" and
+   "ISO 20022 spec snapshot ({date})" phrasing at the top of both sections to the current date.
 
 ### 4. README install instructions
 
@@ -61,7 +90,7 @@ dotnet add package BeneficialStrategies.Iso20022 --version $ARGUMENTS
 
 ### 5. Commit
 
-Stage and commit those four files together (release notes, `.csproj` — both the `<Version>` and `<PackageDescription>` edits — and both READMEs as applicable):
+Stage and commit those five files together (release notes, `.csproj` — both the `<Version>` and `<PackageDescription>` edits — both READMEs, and `doc/Scope-Statement.md`):
 
 ```
 Bump version to $ARGUMENTS and add release notes

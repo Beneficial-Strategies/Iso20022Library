@@ -1,6 +1,6 @@
 # BeneficialStrategies.Iso20022.FluentValidation
 
-FluentValidation validators for all 2,665 ISO 20022 message types.
+FluentValidation validators for all 3,311 ISO 20022 message types.
 Companion package to `BeneficialStrategies.Iso20022`.
 
 ## Purpose

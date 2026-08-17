@@ -1,6 +1,6 @@
 # Beneficial Strategies ISO20022 Library
 
-This project contains a .NET implementation of containers for 2,665 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
+This project contains a .NET implementation of containers for 3,311 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
 
 It is an ongoing proof-of-concept demonstrating what this library can do, maintained with the assistance of the [Beneficial Strategies ISO20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/).
 
@@ -99,7 +99,7 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
     {
         PaymentInformationIdentification = "ABC/086",
         PaymentMethod = PaymentMethod3Code.CreditTransfer,
-        BatchBooking = "FALSE",
+        BatchBooking = "false",
         RequestedExecutionDate = new Beneficial.Choices.DateAndDateTime2Choice.Date { Value = new DateOnly(2012, 09, 29) },
         Debtor = new()
         {
@@ -212,7 +212,7 @@ Things to notice:
 Add one more using at the top of your file:
 
 ```C#
-using BeneficialStrategies.Iso20022; // for Iso20022XmlSerializer
+using BeneficialStrategies.Iso20022.Serialization; // for Iso20022XmlSerializer
 ```
 
 Then serialize the message to an XML string:
@@ -245,7 +245,7 @@ The result is a standards-compliant ISO 20022 XML document:
     <PmtInf>
       <PmtInfId>ABC/086</PmtInfId>
       <PmtMtd>TRF</PmtMtd>
-      <BtchBookg>FALSE</BtchBookg>
+      <BtchBookg>false</BtchBookg>
       <ReqdExctnDt>
         <Dt>2012-09-29</Dt>
       </ReqdExctnDt>

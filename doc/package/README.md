@@ -1,6 +1,6 @@
 # Beneficial Strategies ISO20022 Library
 
-This project contains a .NET implementation of containers for 2,665 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
+This project contains a .NET implementation of containers for 3,311 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
 
 ## Thank you
 
@@ -27,7 +27,7 @@ For more information about the project, see [the repository](https://github.com/
 
 This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community.  This library is a working proof of concept built using Claude Code and the [Beneficial Strategies ISO20022 MCP server](https://beneficialstrategies.com/product/mcp-server/) soon to be released.
 
-If you have questions or concerns about the implementation, please send developer comments or questions to [admin@beneficialstrategies.com](mailto:admin@beneficialstrategies.com).
+If you have questions or concerns about the implementation, please send developer comments or questions to [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com).
 
 ## Trying out the library 
 
@@ -66,7 +66,7 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
     {
         PaymentInformationIdentification = "ABC/086",
         PaymentMethod = PaymentMethod3Code.CreditTransfer,
-        BatchBooking = "FALSE",
+        BatchBooking = "false",
         RequestedExecutionDate = new Beneficial.Choices.DateAndDateTime2Choice.Date { Value = new DateOnly(2012, 09, 29) },
         Debtor = new()
         {
@@ -189,7 +189,7 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
 Add the serializer namespace to your usings:
 
 ```C#
-using BeneficialStrategies.Iso20022; // for Iso20022XmlSerializer
+using BeneficialStrategies.Iso20022.Serialization; // for Iso20022XmlSerializer
 ```
 
 Then serialize:
@@ -222,7 +222,7 @@ The resulting XML looks like this:
     <PmtInf>
       <PmtInfId>ABC/086</PmtInfId>
       <PmtMtd>TRF</PmtMtd>
-      <BtchBookg>FALSE</BtchBookg>
+      <BtchBookg>false</BtchBookg>
       <ReqdExctnDt>
         <Dt>2012-09-29</Dt>
       </ReqdExctnDt>
