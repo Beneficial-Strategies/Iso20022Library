@@ -341,25 +341,25 @@ global using IsoBaseOne25Rate = BeneficialStrategies.Iso20022.SimpleTypes.BaseOn
 global using IsoISOYearMonth = BeneficialStrategies.Iso20022.SimpleTypes.ISOYearMonth; // YearMonth; "YYYY-MM" composite — the previous System.UInt16 alias (max 65535) couldn't hold this shape at all
 global using IsoISOYear = BeneficialStrategies.Iso20022.SimpleTypes.ISOYear; // Year; 4-digit zero-padded wire form — the previous System.UInt16 alias didn't zero-pad
 global using IsoISORestrictedYear = BeneficialStrategies.Iso20022.SimpleTypes.ISORestrictedYear; // Year; minInclusive=1900, maxInclusive=2099
-global using IsoMax10KBinary = System.Byte[]; // Binary
-global using IsoMax2MBBinary = System.Byte[]; // Binary
-global using IsoMax10000Binary = System.Byte[]; // Binary
-global using IsoMax3000Binary = System.Byte[]; // Binary
-global using IsoMax35Binary = System.Byte[]; // Binary
-global using IsoMax500Binary = System.Byte[]; // Binary
-global using IsoMax140Binary = System.Byte[]; // Binary
-global using IsoMin5Max16Binary = System.Byte[]; // Binary
-global using IsoMax5000Binary = System.Byte[]; // Binary
-global using IsoMax100KBinary = System.Byte[]; // Binary
-global using IsoMax2KBinary = System.Byte[]; // Binary
-global using IsoMax50Binary = System.Byte[]; // Binary
-global using IsoMax4kBinary = System.Byte[]; // Binary
-global using IsoMax1kBinary = System.Byte[]; // Binary
-global using IsoMax10MbBinary = System.Byte[]; // Binary
-global using IsoMin1Max256Binary = System.Byte[]; // Binary
-global using IsoMax16Binary = System.Byte[]; // Binary
-global using IsoExact20Binary = System.Byte[]; // Binary
-global using IsoMax20MbBinary = System.Byte[]; // Binary
+global using IsoMax10KBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max10KBinary; // Binary; minLength=1, maxLength=10240 (10K = 10*1024) — was unvalidated System.Byte[]
+global using IsoMax2MBBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max2MBBinary; // Binary; minLength=1, maxLength=2097152 (2MB = 2*1024*1024) — was unvalidated System.Byte[]
+global using IsoMax10000Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max10000Binary; // Binary; minLength=1, maxLength=10000 — was unvalidated System.Byte[]
+global using IsoMax3000Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max3000Binary; // Binary; minLength=1, maxLength=3000 — was unvalidated System.Byte[]
+global using IsoMax35Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max35Binary; // Binary; minLength=1, maxLength=35 — was unvalidated System.Byte[]
+global using IsoMax500Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max500Binary; // Binary; minLength=1, maxLength=500 — was unvalidated System.Byte[]
+global using IsoMax140Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max140Binary; // Binary; minLength=1, maxLength=140 — was unvalidated System.Byte[]
+global using IsoMin5Max16Binary = BeneficialStrategies.Iso20022.SimpleTypes.Min5Max16Binary; // Binary; minLength=5, maxLength=16 — was unvalidated System.Byte[]
+global using IsoMax5000Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max5000Binary; // Binary; minLength=1, maxLength=5000 — was unvalidated System.Byte[]
+global using IsoMax100KBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max100KBinary; // Binary; minLength=1, maxLength=102400 (100K = 100*1024) — was unvalidated System.Byte[]
+global using IsoMax2KBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max2KBinary; // Binary; minLength=1, maxLength=2048 (2K = 2*1024) — was unvalidated System.Byte[]
+// global using IsoMax50Binary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax4kBinary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
+// global using IsoMax1kBinary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
+global using IsoMax10MbBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max10MbBinary; // Binary; minLength=1, maxLength=10485760 (10MB = 10*1024*1024) — was unvalidated System.Byte[]
+global using IsoMin1Max256Binary = BeneficialStrategies.Iso20022.SimpleTypes.Min1Max256Binary; // Binary; minLength=1, maxLength=256 — was unvalidated System.Byte[]
+global using IsoMax16Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max16Binary; // Binary; minLength=1, maxLength=16 — was unvalidated System.Byte[]
+global using IsoExact20Binary = BeneficialStrategies.Iso20022.SimpleTypes.Exact20Binary; // Binary; exact length=20 (minLength=maxLength=20) — was unvalidated System.Byte[]
+global using IsoMax20MbBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max20MbBinary; // Binary; minLength=1, maxLength=20971520 (20MB = 20*1024*1024) — was unvalidated System.Byte[]
 global using IsoanySimpleType = System.String; // W3C xs:anySimpleType — abstract root of the XSD simple-type hierarchy; no narrower representation possible without knowing the concrete runtime type
 global using Isodate = System.DateOnly; // W3C xs:date — matches IsoISODate's existing choice for the same concept
 global using IsodateTime = BeneficialStrategies.Iso20022.SimpleTypes.ISODateTime; // W3C xs:dateTime — reuses the struct built for ISO's own ISODateTime (plain DateTime can't capture the 3 permitted wire forms)

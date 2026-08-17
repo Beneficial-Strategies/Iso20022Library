@@ -138,6 +138,28 @@ public sealed class Iso20022FormatException : FormatException
             $"'{targetType.Name}' allows at most {maxLength} character(s) but received {value.Length}: '{Preview(value)}'.");
 
     /// <summary>
+    /// Creates a <see cref="Iso20022FormatViolation.TooShort"/> exception for a byte[]-backed
+    /// (binary) type. The message reports the byte count rather than a character count, and
+    /// <see cref="InvalidValue"/> stores the base64 wire representation of <paramref name="value"/>
+    /// rather than the raw bytes.
+    /// </summary>
+    public static Iso20022FormatException ForTooShort(Type targetType, byte[] value, int minLength) =>
+        new(targetType, Convert.ToBase64String(value), $"minLength {minLength} byte(s)", Iso20022FormatViolation.TooShort,
+            value.Length == 0
+                ? $"'{targetType.Name}' requires at least {minLength} byte(s) but received an empty array."
+                : $"'{targetType.Name}' requires at least {minLength} byte(s) but received {value.Length}.");
+
+    /// <summary>
+    /// Creates a <see cref="Iso20022FormatViolation.TooLong"/> exception for a byte[]-backed
+    /// (binary) type. The message reports the byte count rather than a character count, and
+    /// <see cref="InvalidValue"/> stores the base64 wire representation of <paramref name="value"/>
+    /// rather than the raw bytes.
+    /// </summary>
+    public static Iso20022FormatException ForTooLong(Type targetType, byte[] value, int maxLength) =>
+        new(targetType, Convert.ToBase64String(value), $"maxLength {maxLength} byte(s)", Iso20022FormatViolation.TooLong,
+            $"'{targetType.Name}' allows at most {maxLength} byte(s) but received {value.Length}.");
+
+    /// <summary>
     /// Creates a <see cref="Iso20022FormatViolation.InvalidCharacter"/> exception.
     /// </summary>
     public static Iso20022FormatException ForInvalidCharacter(Type targetType, string value, string allowedCharacters) =>

@@ -1484,6 +1484,83 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     }
 }
 
+// ── Length-constrained binary (Max*Binary / Min*Max*Binary / Exact*Binary family) ──
+
+/// <summary>
+/// Contract tests for ISO 20022 length-constrained binary types (Max*Binary, Min*Max*Binary,
+/// Exact*Binary family): minLength and maxLength are enforced in bytes (not base64 characters),
+/// on top of the base64 wire format and byte-sequence equality already covered by
+/// <see cref="SimpleValueXsdBinaryContractTests{TStruct}"/>.
+/// </summary>
+/// <remarks>
+/// Concrete subclasses need only override <see cref="MaxLength"/> (and <see cref="MinLength"/>
+/// for types where it differs from 1, e.g. <c>Min5Max16Binary</c>, or an Exact*Binary type where
+/// minLength == maxLength). Valid/invalid samples are derived automatically from the length
+/// constraints — content doesn't matter for these tests, only length.
+/// </remarks>
+public abstract class SimpleValueXsdLengthConstrainedBinaryContractTests<TStruct>
+    : SimpleValueXsdBinaryContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<byte[]>
+{
+    /// <summary>ISO 20022 minLength for this type, in bytes. Override when it is not 1.</summary>
+    protected virtual int MinLength => 1;
+
+    /// <summary>ISO 20022 maxLength for this type, in bytes.</summary>
+    protected abstract int MaxLength { get; }
+
+    private static byte[] Bytes(int length) =>
+        Enumerable.Range(0, length).Select(i => (byte)(i % 256)).ToArray();
+
+    protected override byte[] ValidNativeSample => Bytes(MinLength == 0 ? 1 : MinLength);
+    protected override string ValidNativeSampleWireText => Convert.ToBase64String(ValidNativeSample);
+
+    // ── Boundary tests ─────────────────────────────────────────────────────────
+
+    [Fact]
+    public virtual void ExactMaxLength_IsAccepted()
+    {
+        var value = Bytes(MaxLength);
+        var instance = Activator.CreateInstance(typeof(TStruct), value);
+        Assert.NotNull(instance);
+    }
+
+    [Fact]
+    public virtual void OneOverMaxLength_ThrowsTooLong()
+    {
+        var over = Bytes(MaxLength + 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), over));
+        var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+        Assert.Equal(Iso20022FormatViolation.TooLong, fmt.Violation);
+    }
+
+    [Fact]
+    public void Empty_Behaviour_MatchesMinLength()
+    {
+        if (MinLength > 0)
+        {
+            var ex = Assert.Throws<TargetInvocationException>(
+                () => Activator.CreateInstance(typeof(TStruct), Array.Empty<byte>()));
+            var fmt = Assert.IsType<Iso20022FormatException>(ex.InnerException);
+            Assert.Equal(Iso20022FormatViolation.TooShort, fmt.Violation);
+        }
+        else
+        {
+            var instance = Activator.CreateInstance(typeof(TStruct), Array.Empty<byte>());
+            Assert.NotNull(instance);
+        }
+    }
+
+    [Fact]
+    public void TooLong_ExceptionMessage_ContainsActualLength()
+    {
+        var over = Bytes(MaxLength + 1);
+        var ex = Assert.Throws<TargetInvocationException>(
+            () => Activator.CreateInstance(typeof(TStruct), over));
+        Assert.Contains((MaxLength + 1).ToString(), ex.InnerException!.Message);
+    }
+}
+
 // ── Indicator (boolean true/false) contract ────────────────────────────────────
 
 /// <summary>
