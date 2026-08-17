@@ -1,0 +1,24 @@
+<Project>
+
+  <!--
+    Shared package metadata for every packable project under src/. Centralizing these here makes
+    version desync between BeneficialStrategies.Iso20022 and its companion packages
+    (BeneficialStrategies.Iso20022.FluentValidation, and future ones such as .Sagas)
+    structurally impossible rather than merely policy-enforced — see CLAUDE.md
+    "Multi-Package Repository Strategy" for why these packages are released in lockstep.
+
+    Package-specific properties (PackageId, PackageDescription, PackageReleaseNotes, and the
+    packed README wiring) stay in each project's own .csproj, since that text necessarily differs
+    per package.
+  -->
+  <PropertyGroup>
+    <Version>0.6.1-alpha</Version>
+    <Authors>Jeff Ward,Beneficial Strategies</Authors>
+    <Company>BeneficialStrategies.com</Company>
+    <RepositoryUrl>https://github.com/Beneficial-Strategies/Iso20022Library</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+</Project>

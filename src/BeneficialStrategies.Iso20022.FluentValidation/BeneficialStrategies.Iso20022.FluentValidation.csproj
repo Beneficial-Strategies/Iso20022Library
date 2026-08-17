@@ -1,15 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <!-- TFM policy: same rationale and same two targets as BeneficialStrategies.Iso20022.Common — see that project's csproj. -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
     <AssemblyName>BeneficialStrategies.Iso20022.FluentValidation</AssemblyName>
-    <PackageId>BeneficialStrategies.Iso20022.FluentValidation</PackageId>
-    <Description>FluentValidation validators for ISO 20022 message types, generated from the ISO 20022 specification.</Description>
+    <!--
+      Not enabling GenerateDocumentationFile yet: none of the ~1,004 validator constructors carry
+      XML doc comments today, so turning this on would surface CS1591 across nearly all of them —
+      a real gap worth closing eventually (matches CLAUDE.md's non-negotiable doc standard for the
+      main library), but out of scope for "lay the groundwork to publish" and not something to
+      introduce as a side effect. Tracked as a follow-up, not silently dropped.
+    -->
     <IsPackable>true</IsPackable>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>BeneficialStrategies.Iso20022.FluentValidation</PackageId>
+    <PackageDescription>FluentValidation validators for the BeneficialStrategies.Iso20022 message domain model. Full ISO 20022 spec-compliance coverage for CAMT-reachable components; abbreviated (minimum-collection-size) coverage for the remaining components pending full review.</PackageDescription>
+    <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\doc\package\FluentValidation\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.*" />

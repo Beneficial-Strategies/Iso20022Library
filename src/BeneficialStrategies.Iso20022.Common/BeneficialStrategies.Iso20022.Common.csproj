@@ -1,7 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <!--
+      TFM policy: multi-target the two most recent LTS releases (not the two most recent version
+      numbers — see CLAUDE.md "Target Framework Policy" for why that distinction matters). net9.0
+      is STS and reaches end-of-support the same day as net8.0 (2026-11-10), so it's deliberately
+      not included.
+    -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022</RootNamespace>
@@ -22,14 +28,7 @@
   <PropertyGroup>
     <PackageId>BeneficialStrategies.Iso20022</PackageId>
     <PackageDescription>The entirety of the ISO20022 message domain model. 3,311 B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
-    <Version>0.6.1-alpha</Version>
-    <Authors>Jeff Ward,Beneficial Strategies</Authors>
-    <Company>BeneficialStrategies.com</Company>
-    <RepositoryUrl>https://github.com/Beneficial-Strategies/Iso20022Library</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <DebugType>embedded</DebugType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 

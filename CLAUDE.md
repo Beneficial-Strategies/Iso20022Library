@@ -198,14 +198,72 @@ encountered. The correct reference style is shown in the older auto-generated fi
 ## Build Commands
 
 ```bash
-# Build the library
+# Build the whole solution (both TFMs, all projects)
 cd src && dotnet build iso20022.sln
 
-# Build for all target frameworks
+# Build the library for Release/publish verification
 cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
 ```
 
-**Target Frameworks**: NET8, NET7, NET6
+### Target Framework Policy
+
+**Multi-target the two most recent .NET LTS releases** — deliberately *LTS releases*, not the two
+most recent version numbers. .NET alternates LTS (even-numbered, 3-year support) and STS
+(odd-numbered, 24-month support) every November. Tracking raw version numbers instead of LTS
+status causes needless churn: an STS release reaches end-of-support around the same time as the
+LTS release two versions behind it, and the next LTS release would force dropping a still-fully-supported
+older LTS a year early just to make room. Concretely as of 2026-08: **net8.0 + net10.0** (net9.0,
+an STS release, is skipped entirely — it reaches end-of-support 2026-11-10, the same day as
+net8.0). When .NET 12 (LTS) ships in November 2027, the policy becomes net10.0 + net12.0, dropping
+net8.0 (by then over a year past its own end-of-support) — not net11.0 + net12.0.
+
+This applies identically to `BeneficialStrategies.Iso20022`, `BeneficialStrategies.Iso20022.FluentValidation`,
+and both test projects — **test projects multi-target the same TFMs as the library they test**,
+not just the newest one. Source is identical across TFMs, but source-identical does not guarantee
+runtime-identical: BCL default behavior (JSON serialization, globalization/culture formatting,
+regex engine internals) has changed across major .NET versions before, and for a financial-data
+library a format drifting by one runtime is a real-money bug, not a style issue. A test project
+that only runs on the newest TFM never actually *executes* the older-TFM build, only compiles it.
+
+`src/global.json` pins the SDK's major version to the newer of the two targets (`rollForward:
+latestMinor` — matches the existing convention, just bumped). A single newer SDK can always build
+older TFM outputs via downloaded reference packs; you don't need multiple SDKs installed side by
+side just to build (CI only installs one). You do need the older runtime installed locally to
+*run* tests against it, which the `dotnet-install` / SDK installer already provides alongside the
+SDK.
+
+**Package versions are unified** across `BeneficialStrategies.Iso20022` and
+`BeneficialStrategies.Iso20022.FluentValidation` via `src/Directory.Build.props` (`<Version>` and
+the rest of the shared package metadata) — see "Multi-Package Repository Strategy" below for why.
+
+### Build Performance (Known, Not a Misconfiguration)
+
+A clean or touch-any-file build of `BeneficialStrategies.Iso20022.Common` takes roughly 80-100
+seconds **per TFM** — confirmed via `-clp:PerformanceSummary` to be almost entirely the `Csc` task
+itself (~80s), not restore (~3.5s) or anything else. This is inherent to compiling one ~24,000-file
+single-assembly project — Roslyn recompiles the whole assembly on any change (C# has no true
+per-file incremental compilation within one project), and this project's "everything in one
+package" design means that's ~24K files, not a handful. It is not a flag you can toggle away
+without restructuring into multiple smaller assemblies, which is a real architectural trade-off
+(current design vs. more, smaller published surface) — not something to do casually as a build-speed
+fix.
+
+Practical mitigations for interim/dev-loop builds (all confirmed against this repo, not
+theoretical):
+- **Build only the one project you're iterating on**, not the whole solution:
+  `dotnet build BeneficialStrategies.Iso20022.Common`, not `dotnet build iso20022.sln`.
+- **Build a single TFM while iterating**, not both: `dotnet build -f net8.0` (or whichever you're
+  actively targeting). Now that the library multi-targets two TFMs, building both on every save
+  doubles the ~80-100s cost for no benefit until you're actually checking cross-TFM behavior.
+  Reserve full multi-TFM builds/tests for pre-commit verification (this is exactly the difference
+  between the day-to-day workflow used throughout this project's history and the
+  `snapshot-sync-verify` skill's Milestone builds, which intentionally use `--no-incremental` and
+  build everything for an accurate final signal).
+- **`--no-restore`** on repeat invocations within a session saves the ~3.5s restore tax when
+  dependencies haven't changed — small, but free.
+- Test *execution* itself is not the bottleneck (the full 6,600+ test suite runs in ~1 second) —
+  only the build that precedes it is slow. `dotnet test --filter` to a narrower set doesn't
+  meaningfully speed up your local loop; skipping unnecessary rebuilds does.
 
 ## Architecture
 

@@ -13,12 +13,27 @@ jobs:
 
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x
 
-      - name: Build and pack
+      # A single .NET 10 SDK builds both TFMs (net8.0;net10.0) fine — the SDK targets older
+      # frameworks via downloaded reference packs, no need to install multiple SDK versions
+      # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
+
+      - name: Build and pack (BeneficialStrategies.Iso20022)
         run: |
           cd src
           dotnet pack BeneficialStrategies.Iso20022.Common \
+            -c Release \
+            --output ./nupkg
+
+      # Packed in dependency order per CLAUDE.md "Multi-Package Repository Strategy": the
+      # companion package's ProjectReference to Common is auto-translated into a PackageReference
+      # in its own .nuspec at pack time, pinned to Common's exact Version (both packages share
+      # <Version> via Directory.Build.props, so this is always in lockstep, never a range).
+      - name: Build and pack (BeneficialStrategies.Iso20022.FluentValidation)
+        run: |
+          cd src
+          dotnet pack BeneficialStrategies.Iso20022.FluentValidation \
             -c Release \
             --output ./nupkg
 

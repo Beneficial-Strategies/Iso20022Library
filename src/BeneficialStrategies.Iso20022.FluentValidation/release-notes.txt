@@ -1,0 +1,5 @@
+0.6.1-alpha
+    First NuGet release of this companion package, released in lockstep with BeneficialStrategies.Iso20022 0.6.1-alpha (see that package's release notes for the full history of the underlying message model).
+    FluentValidation validators for the ISO 20022 message domain model, generated from the ISO 20022 specification.
+    Full spec-compliance coverage (field-level constraints and cross-field rules) for CAMT-reachable components.
+    Abbreviated coverage (currently-known minimum-collection-size gaps only) for the remaining components, pending full review.

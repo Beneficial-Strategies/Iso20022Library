@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <!-- Mirrors the library's TFM policy so both targets actually get exercised, not just compiled — see BeneficialStrategies.Iso20022.Common.csproj. -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
