@@ -13,7 +13,7 @@ Even if you plan on changing toolsets somewhere down the road, it would be wise 
 
 ## What this library provides
 
-This library [covers all currently defined messages](doc/Scope-Statement.md) in the ISO specification — over 2,600 message types — plus XML serialization and deserialization. Great attention has been paid to:
+This library [covers all currently defined messages](doc/Scope-Statement.md) in the ISO specification — over 2,600 message types — plus both XML and JSON serialization and deserialization. Great attention has been paid to:
 
 - **Intellisense-friendly** — packaged so your IDE has access to source and commentary on all types, giving you context on how each class or field should be used.
 - **Compiler-enforced** — `required` properties ensure the compiler helps you construct valid ISO 20022 messages rather than discovering missing data at runtime.

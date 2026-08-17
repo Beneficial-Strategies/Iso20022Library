@@ -5,18 +5,18 @@ This project contains a .NET implementation of containers for 3,311 different ty
 ## Thank you
 
 You are about to download an implementation of the entire domain model for the [ISO20022](https://iso20022.org) standard.
-This includes basic serialization to/from XML and JSON according to the ISO20022 specifications.
+Both JSON and ISO 20022 XML serialization are included.
 
 The purpose of this library, by itself, is to simply present a faithful rendering of the data in memory in a .NET application.
-There are follow-on projects that do the serialization, validation, etc.  However, this is the bedrock that must be laid first.
+There are follow-on projects that do validation, etc.  However, this is the bedrock that must be laid first.
 
 Great attention has been put on certain details:
 - It is packaged in a way that your *intellisense* or compatible tech in your build tool should have access to source code.
 - You should see commenting on all types giving your analysis information on how each class or setting should be used.
-- We go back three versions in .NET core.  
 - New features like "required" properties are utilized so the compiler helps you construct valid Iso20022 messages.
 - Great effort was made to support records and value-equivilency throughout.
-- Where the multiplicity of a property was unapparent, we defaulted to a collection.
+- Industry-specific identifiers — CUSIP, SEDOL, IBAN, BIC, and others — are strongly typed, not bare strings.
+- Because our implementation is strongly-typed all the way down to the primitives, dirty data that doesn't fit the ISO 20022 spec can never be introduced into your system in the first place.
 
 Known limitations:
 - Digital signatures not yet supported.
