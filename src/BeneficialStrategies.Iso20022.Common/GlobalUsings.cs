@@ -305,42 +305,42 @@ global using IsoBelgianIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.Be
 global using IsoRatingValueIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.RatingValueIdentifier; // IdentifierSet; rating agency proprietary values, no ISO-stated pattern
 global using IsoSNA2008SectorIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.SNA2008SectorIdentifier; // IdentifierSet; UN SNA 2008 hierarchical sector codes, no ISO-stated pattern
 // global using IsoDirectionIndicator = System.String; // Not in current ISO 20022 snapshot — cannot convert
-global using IsoNumber = System.UInt64; // Quantity
-global using IsoDecimalNumber = System.UInt64; // Quantity
-global using IsoMax3Number = System.UInt64; // Quantity
-global using IsoRestrictedFINDecimalNumber = System.UInt64; // Quantity
-global using IsoNonNegativeDecimalNumber = System.UInt64; // Quantity
-global using IsoLongDecimalNumber = System.UInt64; // Quantity
-global using IsoRestrictedMonthExact2Number = System.UInt64; // Quantity
-global using IsoPositiveNumber = System.UInt64; // Quantity
-global using IsoMax5Number = System.UInt64; // Quantity
-global using IsoMax1Number = System.UInt64; // Quantity
-global using IsoDecimalNumberFraction5 = System.UInt64; // Quantity
-global using IsoLongFraction21DecimalNumber = System.UInt64; // Quantity
-global using IsoNonNegativeFraction5DecimalNumber = System.UInt64; // Quantity
-global using IsoNonNegativeNumber = System.UInt64; // Quantity
-global using IsoMax20PositiveNumber = System.UInt64; // Quantity
-global using IsoMax20PositiveDecimalNumber = System.UInt64; // Quantity
-global using IsoMax6NumberFraction2 = System.UInt64; // Quantity
-global using IsoMax10NumberFraction2 = System.UInt64; // Quantity
-global using IsoFraction5DecimalNumber = System.UInt64; // Quantity
-global using IsoMax2Fraction1NonNegativeNumber = System.UInt64; // Quantity
-global using IsoLongFraction19DecimalNumber = System.UInt64; // Quantity
-global using IsoDayOfMonthNumber = System.UInt64; // Quantity
-global using IsoMax30DecimalNumber = System.UInt64; // Quantity
-global using IsoMax5PositiveNumber = System.UInt64; // Quantity
-global using IsoMax10PositiveNumber = System.UInt64; // Quantity
-global using IsoISOTime = System.TimeOnly; // Time
-global using IsoPercentageRate = System.Decimal; // Rate
-global using IsoPercentageBoundedRate = System.Decimal; // Rate
-global using IsoBaseOneRate = System.Decimal; // Rate
-global using IsoBaseOne14Rate = System.Decimal; // Rate
-global using IsoPercentage = System.Decimal; // Rate
-global using IsoBaseOne18Rate = System.Decimal; // Rate
-global using IsoBaseOne25Rate = System.Decimal; // Rate
-global using IsoISOYearMonth = System.UInt16; // YearMonth
-global using IsoISOYear = System.UInt16; // Year
-global using IsoISORestrictedYear = System.UInt16; // Year
+global using IsoNumber = BeneficialStrategies.Iso20022.SimpleTypes.Number; // Quantity; totalDigits=18, signed (no minInclusive facet) — was wrongly unsigned as System.UInt64
+global using IsoDecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.DecimalNumber; // Quantity; totalDigits=18/fractionDigits=17 — was wrongly integer-typed as System.UInt64 despite being decimal-shaped
+global using IsoMax3Number = BeneficialStrategies.Iso20022.SimpleTypes.Max3Number; // Quantity; totalDigits=3, signed per companion NumberRule constraint — was wrongly unsigned as System.UInt64
+global using IsoRestrictedFINDecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedFINDecimalNumber; // Quantity; totalDigits=14/fractionDigits=14 (all-fractional) — was wrongly integer-typed as System.UInt64
+global using IsoNonNegativeDecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.NonNegativeDecimalNumber; // Quantity; minInclusive=0, totalDigits=18/fractionDigits=17 — was wrongly integer-typed as System.UInt64
+global using IsoLongDecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.LongDecimalNumber; // Quantity; totalDigits=22/fractionDigits=11 — was wrongly integer-typed as System.UInt64
+global using IsoRestrictedMonthExact2Number = BeneficialStrategies.Iso20022.SimpleTypes.RestrictedMonthExact2Number; // Quantity; exact 2-digit zero-padded wire form (pattern "[0-9]{2,2}") — the padding was lost via the previous System.UInt64 alias
+global using IsoPositiveNumber = BeneficialStrategies.Iso20022.SimpleTypes.PositiveNumber; // Quantity; minInclusive=1, totalDigits=18
+global using IsoMax5Number = BeneficialStrategies.Iso20022.SimpleTypes.Max5Number; // Quantity; totalDigits=5, signed per companion NumberRule constraint — was wrongly unsigned as System.UInt64
+global using IsoMax1Number = BeneficialStrategies.Iso20022.SimpleTypes.Max1Number; // Quantity; totalDigits=1, signed (no minInclusive facet) — was wrongly unsigned as System.UInt64
+global using IsoDecimalNumberFraction5 = BeneficialStrategies.Iso20022.SimpleTypes.DecimalNumberFraction5; // Quantity; Obsolete in ISO 20022 (removalDate 2020-02-01); totalDigits=18/fractionDigits=5 — was wrongly integer-typed as System.UInt64
+global using IsoLongFraction21DecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.LongFraction21DecimalNumber; // Quantity; totalDigits=22/fractionDigits=21 — was wrongly integer-typed as System.UInt64
+global using IsoNonNegativeFraction5DecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.NonNegativeFraction5DecimalNumber; // Quantity; minInclusive=0, totalDigits=18/fractionDigits=5 — was wrongly integer-typed as System.UInt64
+global using IsoNonNegativeNumber = BeneficialStrategies.Iso20022.SimpleTypes.NonNegativeNumber; // Quantity; minInclusive=0, totalDigits=18
+global using IsoMax20PositiveNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max20PositiveNumber; // Quantity; minInclusive=0 (despite the name — verified via MCP, not assumed), totalDigits=20 exceeds System.UInt64's practical range, decimal-backed
+global using IsoMax20PositiveDecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max20PositiveDecimalNumber; // Quantity; minInclusive=0, totalDigits=20/fractionDigits=2 — was wrongly integer-typed as System.UInt64
+global using IsoMax6NumberFraction2 = BeneficialStrategies.Iso20022.SimpleTypes.Max6NumberFraction2; // Quantity; totalDigits=6/fractionDigits=2 — was wrongly integer-typed as System.UInt64
+global using IsoMax10NumberFraction2 = BeneficialStrategies.Iso20022.SimpleTypes.Max10NumberFraction2; // Quantity; totalDigits=10/fractionDigits=2 — was wrongly integer-typed as System.UInt64
+global using IsoFraction5DecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.Fraction5DecimalNumber; // Quantity; totalDigits=18/fractionDigits=5 — was wrongly integer-typed as System.UInt64
+global using IsoMax2Fraction1NonNegativeNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max2Fraction1NonNegativeNumber; // Quantity; minInclusive=0, maxInclusive=9.9, fractionDigits=1 — was wrongly integer-typed as System.UInt64
+global using IsoLongFraction19DecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.LongFraction19DecimalNumber; // Quantity; totalDigits=25/fractionDigits=19 — was wrongly integer-typed as System.UInt64
+global using IsoDayOfMonthNumber = BeneficialStrategies.Iso20022.SimpleTypes.DayOfMonthNumber; // Quantity; minInclusive=1, maxInclusive=31
+global using IsoMax30DecimalNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max30DecimalNumber; // Quantity; totalDigits=30/fractionDigits=29 — exceeds System.Decimal's ~28-29 significant digits, documented practical limitation; was wrongly integer-typed as System.UInt64
+global using IsoMax5PositiveNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max5PositiveNumber; // Quantity; minInclusive=1, totalDigits=5
+global using IsoMax10PositiveNumber = BeneficialStrategies.Iso20022.SimpleTypes.Max10PositiveNumber; // Quantity; minInclusive=1, totalDigits=10
+global using IsoISOTime = BeneficialStrategies.Iso20022.SimpleTypes.ISOTime; // Time; 3 permitted wire forms (UTC/offset/local) per MCP — see SimpleTypes/ISOTime.cs; the previous System.TimeOnly alias couldn't hold the timezone
+global using IsoPercentageRate = BeneficialStrategies.Iso20022.SimpleTypes.PercentageRate; // Rate; totalDigits=11/fractionDigits=10 — plain System.Decimal didn't enforce ISO's precision/magnitude bound
+global using IsoPercentageBoundedRate = BeneficialStrategies.Iso20022.SimpleTypes.PercentageBoundedRate; // Rate; minInclusive=0, maxInclusive=100, fractionDigits=10
+global using IsoBaseOneRate = BeneficialStrategies.Iso20022.SimpleTypes.BaseOneRate; // Rate; totalDigits=11/fractionDigits=10
+global using IsoBaseOne14Rate = BeneficialStrategies.Iso20022.SimpleTypes.BaseOne14Rate; // Rate; totalDigits=14/fractionDigits=13
+global using IsoPercentage = BeneficialStrategies.Iso20022.SimpleTypes.Percentage; // Rate; Obsolete in ISO 20022 (removalDate 2017-01-05); totalDigits=11/fractionDigits=10
+global using IsoBaseOne18Rate = BeneficialStrategies.Iso20022.SimpleTypes.BaseOne18Rate; // Rate; totalDigits=18/fractionDigits=13
+global using IsoBaseOne25Rate = BeneficialStrategies.Iso20022.SimpleTypes.BaseOne25Rate; // Rate; totalDigits=25/fractionDigits=13, "may contain values larger than 1"
+global using IsoISOYearMonth = BeneficialStrategies.Iso20022.SimpleTypes.ISOYearMonth; // YearMonth; "YYYY-MM" composite — the previous System.UInt16 alias (max 65535) couldn't hold this shape at all
+global using IsoISOYear = BeneficialStrategies.Iso20022.SimpleTypes.ISOYear; // Year; 4-digit zero-padded wire form — the previous System.UInt16 alias didn't zero-pad
+global using IsoISORestrictedYear = BeneficialStrategies.Iso20022.SimpleTypes.ISORestrictedYear; // Year; minInclusive=1900, maxInclusive=2099
 global using IsoMax10KBinary = System.Byte[]; // Binary
 global using IsoMax2MBBinary = System.Byte[]; // Binary
 global using IsoMax10000Binary = System.Byte[]; // Binary

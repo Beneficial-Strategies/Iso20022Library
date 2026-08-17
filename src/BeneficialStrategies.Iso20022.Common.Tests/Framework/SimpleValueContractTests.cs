@@ -1704,6 +1704,139 @@ public abstract class ExternalCodesetContractTests<TStruct>
     where TStruct : struct, IIsoExternalCode
 { }
 
+// ── Composite (Year, Month), no timezone contract ──────────────────────────────
+
+/// <summary>
+/// Contract base for a <c>(int Year, int Month)</c>-composite <see cref="IIsoCompositeSimpleValue"/>
+/// scalar with no timezone qualification — currently just <see cref="BeneficialStrategies.Iso20022.SimpleTypes.ISOYearMonth"/>.
+/// Distinct from <see cref="SimpleValueXsdGYearMonthContractTests{TStruct}"/> (built for
+/// <c>xs:gYearMonth</c>, which both uses a narrower <c>byte</c> month and permits a timezone
+/// suffix that ISO 20022's own <c>ISOYearMonth</c> does not).
+/// </summary>
+public abstract class SimpleValueISOYearMonthContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<(int Year, int Month)>, IIsoCompositeSimpleValue
+{
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(int), typeof(int)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing an (int, int) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, 8])!;
+        Assert.Equal((2026, 8), instance.Value);
+    }
+
+    [Fact]
+    public void NativeConstruction_InvalidMonth_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([2026, 13]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void StringConstruction_Valid_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke(["2026-08"])!;
+        Assert.Equal((2026, 8), instance.Value);
+    }
+
+    [Fact]
+    public void StringConstruction_Invalid_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => StringCtor().Invoke(["not-a-yearmonth"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void ToString_RoundTrips()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, 8])!;
+        Assert.Equal("2026-08", instance.ToString());
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([2026, 8])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal("\"2026-08\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+}
+
+// ── Composite int (custom wire formatting), no timezone contract ──────────────
+
+/// <summary>
+/// Contract base for an <c>int</c>-backed <see cref="IIsoCompositeSimpleValue"/> scalar whose
+/// wire text needs custom formatting the generic per-<c>int</c> leaf formatter can't produce
+/// (zero-padding) — covers <see cref="BeneficialStrategies.Iso20022.SimpleTypes.ISOYear"/> (4-digit)
+/// and <see cref="BeneficialStrategies.Iso20022.SimpleTypes.RestrictedMonthExact2Number"/> (2-digit).
+/// </summary>
+public abstract class SimpleValueCompositeIntContractTests<TStruct>
+    where TStruct : struct, IIsoSimpleValue<int>, IIsoCompositeSimpleValue
+{
+    /// <summary>A valid native int value.</summary>
+    protected abstract int ValidNativeSample { get; }
+
+    /// <summary>The zero-padded wire text for <see cref="ValidNativeSample"/> (e.g. <c>"0099"</c> or <c>"01"</c>).</summary>
+    protected abstract string ValidWireText { get; }
+
+    /// <summary>A native int value outside this type's valid range.</summary>
+    protected abstract int OutOfRangeNativeSample { get; }
+
+    private static ConstructorInfo NativeCtor() =>
+        typeof(TStruct).GetConstructor([typeof(int)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing an (int) constructor.");
+
+    private static ConstructorInfo StringCtor() =>
+        typeof(TStruct).GetConstructor([typeof(string)])
+        ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor.");
+
+    [Fact]
+    public void NativeConstruction_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+    }
+
+    [Fact]
+    public void NativeConstruction_OutOfRange_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => NativeCtor().Invoke([OutOfRangeNativeSample]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void StringConstruction_Valid_Succeeds()
+    {
+        var instance = (TStruct)StringCtor().Invoke([ValidWireText])!;
+        Assert.Equal(ValidNativeSample, instance.Value);
+    }
+
+    [Fact]
+    public void ToString_ProducesZeroPaddedWireText()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        Assert.Equal(ValidWireText, instance.ToString());
+    }
+
+    [Fact]
+    public void JsonRoundTrip_Succeeds()
+    {
+        var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidWireText}\"", json);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal(instance, roundTripped);
+    }
+}
+
 // ── Meta-test: every IIsoSimpleValue<T> type must have a concrete test class ──
 
 /// <summary>
