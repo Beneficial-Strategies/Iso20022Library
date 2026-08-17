@@ -15,11 +15,6 @@ global using BeneficialStrategies.Iso20022.Framework;
 global using BeneficialStrategies.Iso20022.Metadata;
 global using BeneficialStrategies.Iso20022.Serialization;
 
-// IsoMax*Text aliases — redirect to validated structs in SimpleTypes namespace
-// IsoRestrictedFINX* aliases — redirect to validated structs
-// IsoRestrictedFIN* and IsoRestrictedFINZ* aliases
-// Indicator aliases — boolean true/false wire types
-// XSD integer type aliases — W3C xs:int/long/short/byte/unsigned/constrained
 global using Isoint = BeneficialStrategies.Iso20022.SimpleTypes.XsdInt;
 global using Isolong = BeneficialStrategies.Iso20022.SimpleTypes.XsdLong;
 global using Isoshort = BeneficialStrategies.Iso20022.SimpleTypes.XsdShort;
@@ -278,19 +273,6 @@ global using IsoMax4000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max4000T
 global using IsoMax8000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max8000Text;
 global using IsoMax20000Text = BeneficialStrategies.Iso20022.SimpleTypes.Max20000Text;
 
-// global using IsoRestrictedMS02MS03CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-// global using IsoRestrictedRR01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-// global using IsoRestrictedSEPACodeText = System.String; // Not in current ISO 20022 snapshot — SEPA payment scheme code; cannot convert
-// global using IsoRestrictedSMNDACodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-// global using IsoRestrictedB2BCORECodeText = System.String; // Not in current ISO 20022 snapshot — B2B CORE scheme code; cannot convert
-// global using IsoRestrictedRR01SL01CodeText = System.String; // Not in current ISO 20022 snapshot — payment scheme-specific code; cannot convert
-// global using IsoMax13AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax14Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax14AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax100AlphaNumericUnderscoreText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax38AlphaNumericText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax5Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax1850Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
 global using IsoISODateTime = BeneficialStrategies.Iso20022.SimpleTypes.ISODateTime; // date+time, 3 permitted wire forms (UTC/offset/local) — see SimpleTypes/ISODateTime.cs
 global using IsoISONormalisedDateTime = BeneficialStrategies.Iso20022.SimpleTypes.ISONormalisedDateTime; // ISODateTime restricted to always-UTC (pattern .*Z) — see SimpleTypes/ISONormalisedDateTime.cs
 global using IsoISODate = System.DateOnly; // Date
@@ -352,9 +334,6 @@ global using IsoMin5Max16Binary = BeneficialStrategies.Iso20022.SimpleTypes.Min5
 global using IsoMax5000Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max5000Binary; // Binary; minLength=1, maxLength=5000 — was unvalidated System.Byte[]
 global using IsoMax100KBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max100KBinary; // Binary; minLength=1, maxLength=102400 (100K = 100*1024) — was unvalidated System.Byte[]
 global using IsoMax2KBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max2KBinary; // Binary; minLength=1, maxLength=2048 (2K = 2*1024) — was unvalidated System.Byte[]
-// global using IsoMax50Binary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax4kBinary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax1kBinary = System.Byte[]; // Not in current ISO 20022 snapshot — cannot convert
 global using IsoMax10MbBinary = BeneficialStrategies.Iso20022.SimpleTypes.Max10MbBinary; // Binary; minLength=1, maxLength=10485760 (10MB = 10*1024*1024) — was unvalidated System.Byte[]
 global using IsoMin1Max256Binary = BeneficialStrategies.Iso20022.SimpleTypes.Min1Max256Binary; // Binary; minLength=1, maxLength=256 — was unvalidated System.Byte[]
 global using IsoMax16Binary = BeneficialStrategies.Iso20022.SimpleTypes.Max16Binary; // Binary; minLength=1, maxLength=16 — was unvalidated System.Byte[]
@@ -377,88 +356,8 @@ global using IsoQName = System.Xml.XmlQualifiedName; // W3C xs:QName — verifie
 global using Isostring = System.String; // W3C xs:string — already the exact correct mapping, not an oversight
 global using Isotime = System.TimeOnly; // W3C xs:time — matches IsoISOTime's existing choice for the same concept
 global using IsoISOMonth = System.Byte; // Month
-// global using IsoExact4UpperCaseAlphaText = System.String; // Not in current ISO 20022 snapshot — cannot convert
-// global using IsoMax47Text = System.String; // Not in current ISO 20022 snapshot — cannot convert
 global using IsoNPIIdentifier = BeneficialStrategies.Iso20022.SimpleTypes.NPIIdentifier; // IdentifierSet; ISO 24366 format given in prose (13 upper-case alphanumeric + 2 check digits), pattern derived from that text
 global using IsoPercentage14Rate = System.Decimal; // Rate
-// External Codesets
-global using CurrencyCode = System.String;
-global using ActiveCurrencyCode = System.String;
-global using ActiveOrHistoricCurrencyCode = System.String;
-global using LanguageCode = System.String;
-global using NationalityCode = System.String;
-global using ExternalClearingSystemMemberCode = System.String;
-global using ExternalPurposeCode_Obsolete = System.String;
-global using ExternalCode = System.String;
-global using ISO2ALanguageCode = System.String;
-global using ISO3ACountryCode = System.String;
-global using ISO3NumericCountryCode = System.String;
-global using BusinessFilePriorityCode = System.String;
-global using ExternalDiscrepancy1Code = System.String;
-global using ExternalClearingSystemMember1Code = System.String;
-global using ExternalTechnicalError1Code = System.String;
-global using ExternalTechnicalErrorCode = System.String;
-global using ExternalSystemEvent1Code = System.String;
-global using ExternalSecuritiesLendingTypeCode = System.String;
-global using ExternalSecuritiesLendingType1Code = System.String;
-global using ExternalInvalidEventReason1Code = System.String;
-global using ExternalInvalidPaymentsEvent1Code = System.String;
-global using ExternalInvalidPaymentsEventCode = System.String;
-global using ExternalInvalidEventReasonCode = System.String;
-global using ParentCurrencyCode = System.String;
-global using ISO3NumericCurrencyCode = System.String;
-global using ExternalTrackertAlertStatus1Code = System.String;
-global using ExternalTrackerAlertStatusReason1Code = System.String;
-global using ExternalTrackerAlertStatusReasonCode = System.String;
-global using ExternalTrackertAlertStatusCode = System.String;
-global using ExternalSecuritiesUpdateReason1Code = System.String;
-global using ExternalSecuritiesUpdateReasonCode = System.String;
-global using ExternalNotificationCancellationReason1Code = System.String;
-global using ExternalNotificationCancellationReasonCode = System.String;
-global using ISO8583TransactionTypeCode = System.String;
-global using ISO8583MessageReasonCode = System.String;
-global using ISO8583AmountTypeCode = System.String;
-global using ISOMax3ACountryCode = System.String;
-global using ISOMax3ALanguageCode = System.String;
-global using ISO8583ResponseCode = System.String;
-global using ISO18245MerchantCategoryCode = System.String;
-global using ISOCountrySubDivisionCode = System.String;
-global using ISO8583AccountTypeCode = System.String;
-global using ISO8583AccountEntryDeviceTypeCode = System.String;
-global using ISO8583AccountIdentifierTypeCode = System.String;
-global using ISO8583ActionCode = System.String;
-global using ISO8583AdditionalServiceResultCode = System.String;
-global using ISO8583FeeTypeCode = System.String;
-global using ISO8583MessageErrorCode = System.String;
-global using ISO8583NetworkManagementInformationCode = System.String;
-global using ISO8583PINEntryCapabilityCode = System.String;
-global using ISO8583POSConditionCode = System.String;
-global using ISO8583ShippingIndicatorCode = System.String;
-global using ExternalPartyRelationshipType1Code = System.String;
-global using ExternalTrackerInvestigationStatusReason1Code = System.String;
-global using ExternalTrackerInvestigationStatus1Code = System.String;
-global using ExternalTrackerInvestigationType1Code = System.String;
-global using ExternalTrackerInvestigationStatusCode = System.String;
-global using ExternalTrackerInvestigationStatusReasonCode = System.String;
-global using ExternalTrackerInvestigationTypeCode = System.String;
-global using ExternalLegalFramework1Code = System.String;
-global using ExternalLegalFrameworkCode = System.String;
-global using ExternalNotificationSubType1Code = System.String;
-global using ExternalNotificationSubTypeCode = System.String;
-global using ExternalNotificationType1Code = System.String;
-global using ExternalNotificationTypeCode = System.String;
-global using ExternalPostTradeEventType1Code = System.String;
-global using ExternalPostTradeEventTypeCode = System.String;
-global using ExternalPaymentMethode1Code = System.String;
-global using ExternalPaymentMethodeCode = System.String;
-global using ExternalPenaltyPartyType1Code = System.String;
-global using ExternalPenaltyPartyTypeCode = System.String;
-global using ExternalProductType1Code = System.String;
-global using ExternalProductTypeCode = System.String;
-global using ExternalRegulatoryInformationType1Code = System.String;
-global using ExternalRegulatoryInformationTypeCode = System.String;
-global using ExternalRegulatoryReportingType1Code = System.String;
-// ExternalSchema type aliases
 global using IsoATICALaxProcessing = BeneficialStrategies.Iso20022.ExternalSchema.ATICALaxProcessing;
 global using IsoLaxPayload = BeneficialStrategies.Iso20022.ExternalSchema.LaxPayload;
 global using IsoSignatureEnvelope = BeneficialStrategies.Iso20022.ExternalSchema.SignatureEnvelope;
