@@ -58,3 +58,15 @@
     Updated repository URL from jefforyamos to Beneficial-Strategies throughout.
     Refreshed Scope-Statement.md with verified message counts from the April 2025 MCP spec snapshot.
     Overhauled README with MCP server reference, updated code examples, and merged package/NuGet documentation.
+
+0.6.0-alpha
+    Aligned with ISO 20022 spec snapshot dated May 11, 2026 — codesets, components, choices, and message definitions across all business areas (acmt, admi, auth, caaa/caad/caam/cafc/cafm/cafr/cain, camt, canm, casp, casr, catm, fxtr, nvlp, pacs, pain, reda, remt, secl, seev, semt, sese, setr, supl, trck) added, updated, or removed to match.
+    Converted every remaining unvalidated GlobalUsings.cs primitive alias (System.String/System.Byte[]) to a proper validated readonly struct implementing IIsoSimpleValue<T> — covering XSD integer/boolean/float/double/Gregorian/duration/URI/string-subtype builtins, ISO Indicator/Identifier/RestrictedFIN/Max*Text/miscellaneous text families, length-constrained Binary types, Quantity/Rate/Time/Year types, and the full "External Codesets" registry family (64 types). No field in this library can silently be an unvalidated raw string or byte array anymore.
+    Fixed a defect where 68 GlobalUsings.cs aliases silently shadowed real generated Codesets/ enums (C#'s using-alias-wins rule meant fields declared with an enum type were actually System.String at runtime, with zero compile error) — 42 of the 68 were live in production message fields.
+    Fixed a related, separately-discovered gap: 64 more ISO 20022 external codesets had never been implemented at all (not shadowed — simply missing), traced to a categorization bug in the snapshot-sync automation itself; the automation is now fixed so it won't reproduce this gap on future syncs.
+    Added external-standard check-digit validation (SEDOL, CUSIP, and 9 other proprietary identifier formats) and a documented policy for primitives whose format is defined outside ISO 20022 (W3C XSD builtins, external check-digit standards).
+    Wired System.Xml.XmlQualifiedName (xs:QName) into both the XML and JSON serializers.
+    Fixed 80 multiplicity fields incorrectly collapsed to scalar instead of collection, via a comprehensive (not sampled) codebase-wide audit.
+    Added FluentValidation companion-package validators: full ISO-spec-compliance coverage for CAMT-reachable components, abbreviated coverage for the remaining ~1,200 non-CAMT components.
+    Eliminated all CS1591 (missing XML documentation) warnings across Components/ and MessageDefinitions/.
+    Every public type and member added or touched in this release carries its verbatim ISO 20022 specification description, per this project's non-negotiable documentation standard.
