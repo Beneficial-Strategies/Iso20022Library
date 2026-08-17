@@ -201,7 +201,7 @@ public static class Iso20022XmlSerializer
     )
     {
         if (isLeaf)
-            return new XElement(ns + tag, FormatLeaf(value));
+            return new XElement(ns + tag, FormatLeaf(value, ns));
 
         var runtimeType = value.GetType();
         if (runtimeType.IsEnum)
@@ -309,7 +309,7 @@ public static class Iso20022XmlSerializer
     {
         var core = UnwrapNullable(type);
         if (isLeaf || IsLeafType(core))
-            return ParseLeaf(core, el.Value);
+            return ParseLeaf(core, el.Value, el);
         if (core.IsEnum)
             return ParseEnum(core, el.Value);
         if (core.IsAbstract)
@@ -384,7 +384,7 @@ public static class Iso20022XmlSerializer
 
     // ── Leaf formatting ────────────────────────────────────────────────────────
 
-    private static string FormatLeaf(object value) =>
+    private static string FormatLeaf(object value, XNamespace ns) =>
         value switch
         {
             // IIsoCompositeSimpleValue: Value doesn't round-trip via the generic per-T formatters
@@ -394,7 +394,7 @@ public static class Iso20022XmlSerializer
             // IIsoSimpleValue<T>: extract the inner value and format it recursively.
             // IIsoExternalCode (a sub-interface) is covered here too.
             _ when GetSimpleValueType(value.GetType()) is not null
-                => FormatLeaf(value.GetType().GetProperty("Value")!.GetValue(value)!),
+                => FormatLeaf(value.GetType().GetProperty("Value")!.GetValue(value)!, ns),
             string s => s,
             DateTime dt => dt.ToString("yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture),
             DateOnly d => d.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture),
@@ -414,9 +414,36 @@ public static class Iso20022XmlSerializer
             // xs:float/xs:double special values use "INF"/"-INF"/"NaN" — NOT .NET's "Infinity"/"-Infinity".
             float f => FormatXsdFloatingPoint(f, float.IsPositiveInfinity(f), float.IsNegativeInfinity(f), float.IsNaN(f)),
             double db => FormatXsdFloatingPoint(db, double.IsPositiveInfinity(db), double.IsNegativeInfinity(db), double.IsNaN(db)),
+            // xs:QName's lexical form is "prefix:localName" (a namespace PREFIX, not the raw
+            // namespace URI) — XmlQualifiedName.ToString() does NOT produce this; it returns
+            // "{Namespace}:{Name}" using the raw URI (confirmed from dotnet/runtime source), which
+            // is not valid QName syntax. Special-cased here rather than falling through to the
+            // generic ToString() fallback below.
+            System.Xml.XmlQualifiedName qname => FormatQName(qname, ns),
             _ when value.GetType().IsEnum => GetEnumMemberValue(value),
             _ => value.ToString() ?? string.Empty,
         };
+
+    /// <summary>
+    /// Formats an <see cref="System.Xml.XmlQualifiedName"/> per xs:QName's lexical rules: a bare
+    /// name resolves against the in-scope default namespace, so this is only valid when the
+    /// QName's own namespace matches the document's. Every ISO 20022 message this serializer
+    /// writes declares exactly one namespace (the message's own, as the default <c>xmlns</c> on
+    /// the root) — there's no mechanism here to introduce an additional prefix binding for a QName
+    /// referencing a genuinely different namespace, so that case throws rather than emit invalid
+    /// or silently-wrong XML.
+    /// </summary>
+    private static string FormatQName(System.Xml.XmlQualifiedName value, XNamespace ns)
+    {
+        if (value.Namespace.Length == 0 || value.Namespace == ns.NamespaceName)
+            return value.Name;
+        throw new NotSupportedException(
+            $"Cannot serialize XmlQualifiedName '{value}': its namespace ('{value.Namespace}') "
+                + $"differs from the document's namespace ('{ns.NamespaceName}'). This serializer "
+                + "only ever declares one namespace (the message's own) and has no prefix binding "
+                + "available to reference a different one."
+        );
+    }
 
     private static string FormatXsdFloatingPoint(IFormattable value, bool isPositiveInfinity, bool isNegativeInfinity, bool isNaN) =>
         isPositiveInfinity ? "INF"
@@ -424,7 +451,7 @@ public static class Iso20022XmlSerializer
         : isNaN ? "NaN"
         : value.ToString(null, CultureInfo.InvariantCulture);
 
-    private static object ParseLeaf(Type type, string text)
+    private static object ParseLeaf(Type type, string text, XElement el)
     {
         if (type == typeof(string))
             return text;
@@ -460,6 +487,8 @@ public static class Iso20022XmlSerializer
             return ParseXsdDouble(text);
         if (type == typeof(byte[]))
             return Convert.FromBase64String(text);
+        if (type == typeof(System.Xml.XmlQualifiedName))
+            return ParseQName(text, el);
         if (type.IsEnum)
             return ParseEnum(type, text);
         var simpleValueType = GetSimpleValueType(type);
@@ -474,10 +503,34 @@ public static class Iso20022XmlSerializer
 
             // Parse text → T (e.g. string, decimal), then construct the struct.
             // The constructor validates ISO constraints and throws Iso20022FormatException on failure.
-            var innerValue = ParseLeaf(simpleValueType, text);
+            var innerValue = ParseLeaf(simpleValueType, text, el);
             return ConstructSimpleValue(type, innerValue);
         }
         return text;
+    }
+
+    /// <summary>
+    /// Parses an xs:QName wire value ("prefix:localName", or a bare "localName" resolving against
+    /// the in-scope default namespace) into an <see cref="System.Xml.XmlQualifiedName"/>, resolving
+    /// the prefix (if any) against the namespace declarations actually in scope at <paramref name="el"/>
+    /// — the same ancestor-walking resolution real XML QName consumption requires, which is why
+    /// this needs the source element rather than just the isolated text.
+    /// </summary>
+    private static System.Xml.XmlQualifiedName ParseQName(string text, XElement el)
+    {
+        var colonIndex = text.IndexOf(':');
+        if (colonIndex < 0)
+            return new System.Xml.XmlQualifiedName(text, el.GetDefaultNamespace().NamespaceName);
+
+        var prefix = text[..colonIndex];
+        var localName = text[(colonIndex + 1)..];
+        var resolvedNs = el.GetNamespaceOfPrefix(prefix);
+        if (resolvedNs is null)
+            throw new Iso20022FormatException(
+                typeof(System.Xml.XmlQualifiedName), text,
+                $"prefix '{prefix}' is not bound to a namespace in scope at this element"
+            );
+        return new System.Xml.XmlQualifiedName(localName, resolvedNs.NamespaceName);
     }
 
     private static object ConstructSimpleValue(Type type, object ctorArg)
@@ -618,6 +671,7 @@ public static class Iso20022XmlSerializer
         || t == typeof(float)
         || t == typeof(double)
         || t == typeof(byte[])
+        || t == typeof(System.Xml.XmlQualifiedName)
         || t.IsEnum
         || GetSimpleValueType(t) is not null;
 

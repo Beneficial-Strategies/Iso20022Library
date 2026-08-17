@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022.Serialization;
 /// conforming to the ISO 20022 JSON binding specification (Annex A, 2018 whitepaper).
 /// </summary>
 /// <remarks>
-/// Applies three conventions:
+/// Applies four conventions:
 /// <list type="bullet">
 ///   <item>Property names use <c>snake_case</c> derived from C# PascalCase names
 ///         (<see cref="Iso20022JsonNamingPolicy"/>).</item>
@@ -18,6 +18,10 @@ namespace BeneficialStrategies.Iso20022.Serialization;
 ///   <item>Collection properties (<see cref="ValueList{T}"/>, <see cref="SimpleValueList{T}"/>,
 ///         <see cref="ImmutableValueList{T}"/>) serialize as JSON arrays
 ///         (<see cref="ImmutableValueListConverterFactory"/>).</item>
+///   <item><see cref="System.Xml.XmlQualifiedName"/> (the BCL type backing <c>IsoQName</c>, per
+///         CLAUDE.md's W3C-standard exception) serializes as a single "namespace:localName" string
+///         rather than System.Text.Json's default reflection-based object shape
+///         (<see cref="Iso20022XmlQualifiedNameJsonConverter"/>).</item>
 /// </list>
 /// Register once; reuse everywhere.
 /// </remarks>
@@ -37,6 +41,7 @@ public static class Iso20022JsonSerializerOptions
         opts.Converters.Add(ImmutableValueListConverterFactory.Instance);
         opts.Converters.Add(Iso20022EnumConverterFactory.Instance);
         opts.Converters.Add(Iso20022DecimalJsonConverter.Instance);
+        opts.Converters.Add(new Iso20022XmlQualifiedNameJsonConverter());
         opts.MakeReadOnly();
         return opts;
     }
