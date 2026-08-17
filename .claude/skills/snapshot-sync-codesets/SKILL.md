@@ -58,14 +58,28 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 1. Call `mcp__iso20022__universal_lookup` with the codeset name to retrieve its full spec: IsoId, description, parent/DerivedFrom type, and all enum member codes with their values and descriptions.
 
    **MEMBERLESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
+
+   > **2026-08-16 correction**: this check previously routed every memberless codeset to a bare
+   > `global using {CodesetName} = System.String;` alias in `GlobalUsings.cs`. That is a
+   > **non-negotiable violation of CLAUDE.md** ("An empty `enum` is never an acceptable type...
+   > all ISO 20022 primitive types that carry constraints are represented as `readonly struct`
+   > wrappers") — a bare `System.String` alias carries zero validation and defeats
+   > `IIsoSimpleValue<T>`/`IIsoExternalCode` serializer detection entirely. This exact rule
+   > produced a 60-type defect discovered and fixed 2026-08-16 (see
+   > `project_external_codeset_shadowing_defect.md` memory and commit `4db243b1e1`) — every one
+   > of those 60 had been marked `[x]` complete by this skill with notes like *"(pattern-constrained
+   > string alias in GlobalUsings.cs)"*. **`= System.String` is no longer a valid outcome of this
+   > check for any codeset that has ANY constraint (pattern, length, or table) to enforce.**
+
    Inspect the lookup result for enum members first:
    - If the codeset has **no codes** in the spec (no `[EnumMember]` entries to write), do NOT create an empty enum. Instead:
-     1. Check whether the codeset has a `pattern` attribute (regex-validated, e.g. `[A-Z]{3,3}`) or a `ValidationByTable` constraint — if either is present, it is a string alias type.
-     2. Check whether the codeset is marked `IsExternal` by the MCP. If external, check whether the MCP returns any members sourced from the external codeset JSON (the server loads `*externalcodesets*.json` at startup and merges members for external codesets). If external members are available, use them and proceed to create a normal enum.
-     3. If no members are available from any source (spec or external JSON), the type must be a `global using` string alias:
-        - Check `src/BeneficialStrategies.Iso20022.Common/GlobalUsings.cs` — if the alias already exists there, this codeset is already handled; mark the PLAN.md item `[x]` with note `(string alias — already in GlobalUsings.cs)` and skip file creation.
-        - If the alias is missing, add `global using {CodesetName} = System.String;` to the `// External Codesets` section of `GlobalUsings.cs`, then mark the item `[x]` with note `(string alias — added to GlobalUsings.cs)`.
-        - In either case, do NOT create a `.cs` file in `Codesets/`.
+     1. Check whether the codeset is marked `IsExternal` by the MCP. If external, check whether the MCP returns any members sourced from the external codeset JSON (the server loads `*externalcodesets*.json` at startup and merges members for external codesets). If external members are available, this is the **hybrid pattern** — go to 2a below (NOT a closed enum: CLAUDE.md is explicit that a registry addition next month must still construct, which a C# `enum` cannot allow).
+     2. Otherwise — whether the codeset has a `pattern` attribute (regex-validated, e.g. `[A-Z]{3,3}`), a length facet (`minLength`/`maxLength`/exact `length`), a `ValidationByTable` constraint with no facet at all, or genuinely nothing MCP can supply — it is an **open `IIsoExternalCode` struct**, go to 2b below. This still applies even when MCP gives no facet at all: per CLAUDE.md's external-standard-exception guidance, stay permissive (`Pattern = @"^.+$"`) and document in a `<remarks>`/comment that MCP was checked and came up empty — do not fall back to an unvalidated string alias.
+     3. `GlobalUsings.cs`'s `// External Codesets` section is legacy and should not receive new entries. If the codeset name is unprefixed (no `Iso` prefix) matching that section's existing convention, still create the real struct in `Codesets/` — `BeneficialStrategies.Iso20022.Codesets` is already a `global using` namespace import, so the bare name resolves with no alias needed. Only add an `Iso`-prefixed `global using` alias (pointing at the real struct, never at `System.String`) if the codeset's naming matches the `Iso*`-prefixed convention used throughout the rest of `GlobalUsings.cs`.
+
+   **2a. Hybrid struct (external, with known members)** — open `IIsoExternalCode` struct (same shape as 2b) PLUS one `public static readonly {CodesetName} {MemberName} = new("{code}");` field per known member, each with its own `<summary>`/`[Description]`/`[IsoId]` (the member's own IsoId, not the codeset's). See `Codesets/ExternalAuthenticationMethod1Code.cs` or `Codesets/ExternalProductType1Code.cs` for the reference shape. The constructor stays exactly as open as 2b — the constants are additive convenience only.
+
+   **2b. Plain open struct (no known members)** — follow the `IIsoExternalCode` struct template in CLAUDE.md ("ISO Simple Value Primitives" → struct template), file goes in `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`, namespace `BeneficialStrategies.Iso20022.Codesets`, `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<{CodesetName}>))]`. See `Codesets/CurrencyCode.cs` for the reference shape (Pattern-validated, `TryCreate`, full six equality operators, implicit string operators). Mark the item `[x]` in PLAN.md with a note identifying which of 2a/2b was used and the source of the Pattern (MCP facet, or "no facet published — kept permissive").
 
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
    After receiving the lookup result, verify the member list is complete:
@@ -81,7 +95,7 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
    A codeset file with missing enum members will compile but produce silent runtime errors (unmapped codes). This is not acceptable.
 
-2. Create `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs` using this pattern:
+2. **If the codeset has real `[EnumMember]` entries in the spec** (the MEMBERLESS CHECK above did not apply), create `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs` as a closed `enum` using this pattern. (If the MEMBERLESS CHECK above DID apply, 2a/2b already specified the struct shape to use instead — skip this enum template.)
 
 ```csharp
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
