@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CounterpartySpecificData</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..2</description></item>
 /// </list>
 /// </remarks>
-public sealed class TradePositionComponent5Validator : AbstractValidator<TradePositionComponent5>
+public class TradePositionComponent5Validator : AbstractValidator<TradePositionComponent5>
 {
     public TradePositionComponent5Validator()
     {

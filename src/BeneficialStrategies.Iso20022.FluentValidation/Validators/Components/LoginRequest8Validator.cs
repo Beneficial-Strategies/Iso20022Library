@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SaleSoftware</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class LoginRequest8Validator : AbstractValidator<LoginRequest8>
+public class LoginRequest8Validator : AbstractValidator<LoginRequest8>
 {
     public LoginRequest8Validator()
     {

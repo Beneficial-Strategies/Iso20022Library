@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PriceDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AggregateBalanceInformation26Validator : AbstractValidator<AggregateBalanceInformation26>
+public class AggregateBalanceInformation26Validator : AbstractValidator<AggregateBalanceInformation26>
 {
     public AggregateBalanceInformation26Validator()
     {

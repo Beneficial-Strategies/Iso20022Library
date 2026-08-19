@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PostalAddress</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public sealed class IndividualPerson23Validator : AbstractValidator<IndividualPerson23>
+public class IndividualPerson23Validator : AbstractValidator<IndividualPerson23>
 {
     public IndividualPerson23Validator()
     {

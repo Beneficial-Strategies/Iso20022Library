@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SubscriptionLegDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class SwitchExecution8Validator : AbstractValidator<SwitchExecution8>
+public class SwitchExecution8Validator : AbstractValidator<SwitchExecution8>
 {
     public SwitchExecution8Validator()
     {

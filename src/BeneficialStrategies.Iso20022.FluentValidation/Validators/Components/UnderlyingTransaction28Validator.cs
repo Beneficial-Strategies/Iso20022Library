@@ -48,10 +48,31 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///     </description>
 ///   </item>
 /// </list>
+///
+/// Dependency injection: the <c>OriginalGroupInformationAndCancellation</c> building block and
+/// the <c>TransactionInformation</c> collection are each validated by an injected
+/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public sealed class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTransaction28>
+public class UnderlyingTransaction28Validator : AbstractValidator<UnderlyingTransaction28>
 {
-    public UnderlyingTransaction28Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the optional <c>OriginalGroupInformationAndCancellation</c> building block and for the
+    /// <c>TransactionInformation</c> collection's item type — e.g. resolved from a DI container —
+    /// instead of this type constructing its own.
+    /// </summary>
+    /// <param name="originalGroupInformationAndCancellationValidator">
+    /// Validator for the optional <c>OriginalGroupInformationAndCancellation</c> building block
+    /// (OriginalGroupHeader15, 0..1) — only invoked when present.
+    /// </param>
+    /// <param name="transactionInformationValidator">
+    /// Validator for each item of the <c>TransactionInformation</c> collection
+    /// (PaymentTransaction137, 0..∞).
+    /// </param>
+    public UnderlyingTransaction28Validator(
+        IValidator<OriginalGroupHeader15> originalGroupInformationAndCancellationValidator,
+        IValidator<PaymentTransaction137> transactionInformationValidator
+    )
     {
         // Practical check: at least one cancellation target must be specified.
         RuleFor(x => x)
@@ -148,10 +169,19 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
             x => x.OriginalGroupInformationAndCancellation is not null,
             () =>
                 RuleFor(x => x.OriginalGroupInformationAndCancellation)
-                    .SetValidator(new OriginalGroupHeader15Validator()!)
+                    .SetValidator(originalGroupInformationAndCancellationValidator!)
         );
 
-        RuleForEach(x => x.TransactionInformation)
-            .SetValidator(new PaymentTransaction137Validator());
+        RuleForEach(x => x.TransactionInformation).SetValidator(transactionInformationValidator);
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the
+    /// <c>OriginalGroupInformationAndCancellation</c> building block and the
+    /// <c>TransactionInformation</c> collection are each validated by their own default validator
+    /// (<see cref="OriginalGroupHeader15Validator"/>, <see cref="PaymentTransaction137Validator"/>).
+    /// Convenience constructor for callers not using a DI container.
+    /// </summary>
+    public UnderlyingTransaction28Validator()
+        : this(new OriginalGroupHeader15Validator(), new PaymentTransaction137Validator()) { }
 }

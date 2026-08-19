@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ClearingExemptionException</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NonClearingReason2Validator : AbstractValidator<NonClearingReason2>
+public class NonClearingReason2Validator : AbstractValidator<NonClearingReason2>
 {
     public NonClearingReason2Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Assigner</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PointOfInteractionComponentAssessment1Validator : AbstractValidator<PointOfInteractionComponentAssessment1>
+public class PointOfInteractionComponentAssessment1Validator : AbstractValidator<PointOfInteractionComponentAssessment1>
 {
     public PointOfInteractionComponentAssessment1Validator()
     {

@@ -47,8 +47,11 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///     <description>If SafekeepingAccount is present then BlockChainAddressOrWallet must be absent.</description>
 ///   </item>
 /// </list>
+///
+/// Dependency injection: the <c>Balance</c> building block is validated by an injected
+/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance47>
+public class AccountAndBalance47Validator : AbstractValidator<AccountAndBalance47>
 {
     // AnyBICDec2014Identifier (ISO ID: _jp-90kI6EeirV6K70JJQ8Q):
     // Format: 4 chars institution + 2 chars country + 2 chars location + optional 3 chars branch
@@ -62,7 +65,16 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
     private static readonly Regex CountryRegex =
         new(@"^[A-Z]{2}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
-    public AccountAndBalance47Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the optional <c>Balance</c> building block — e.g. resolved from a DI container —
+    /// instead of this type constructing its own.
+    /// </summary>
+    /// <param name="balanceValidator">
+    /// Validator for the optional <c>Balance</c> building block (CorporateActionBalanceDetails43,
+    /// 0..1) — only invoked when present.
+    /// </param>
+    public AccountAndBalance47Validator(IValidator<CorporateActionBalanceDetails43> balanceValidator)
     {
         // ── Cross-field constraints ───────────────────────────────────────────────
         // SafekeepingPlaceRule: business-context only — cannot be enforced structurally.
@@ -152,9 +164,15 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
         // ── Balance: CorporateActionBalanceDetails43 (0..1) ──────────────────────
         When(
             x => x.Balance is not null,
-            () =>
-                RuleFor(x => x.Balance)
-                    .SetValidator(new CorporateActionBalanceDetails43Validator()!)
+            () => RuleFor(x => x.Balance).SetValidator(balanceValidator!)
         );
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>Balance</c> building block
+    /// is validated by its own default validator (<see cref="CorporateActionBalanceDetails43Validator"/>).
+    /// Convenience constructor for callers not using a DI container.
+    /// </summary>
+    public AccountAndBalance47Validator()
+        : this(new CorporateActionBalanceDetails43Validator()) { }
 }

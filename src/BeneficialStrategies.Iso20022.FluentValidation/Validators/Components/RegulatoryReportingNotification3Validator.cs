@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TransactionCertificate</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class RegulatoryReportingNotification3Validator : AbstractValidator<RegulatoryReportingNotification3>
+public class RegulatoryReportingNotification3Validator : AbstractValidator<RegulatoryReportingNotification3>
 {
     public RegulatoryReportingNotification3Validator()
     {

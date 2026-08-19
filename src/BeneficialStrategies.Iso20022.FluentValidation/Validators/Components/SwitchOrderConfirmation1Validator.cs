@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SwitchExecutionDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class SwitchOrderConfirmation1Validator : AbstractValidator<SwitchOrderConfirmation1>
+public class SwitchOrderConfirmation1Validator : AbstractValidator<SwitchOrderConfirmation1>
 {
     public SwitchOrderConfirmation1Validator()
     {

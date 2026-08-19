@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DigestAlgorithm</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class DigestedData3Validator : AbstractValidator<DigestedData3>
+public class DigestedData3Validator : AbstractValidator<DigestedData3>
 {
     public DigestedData3Validator()
     {

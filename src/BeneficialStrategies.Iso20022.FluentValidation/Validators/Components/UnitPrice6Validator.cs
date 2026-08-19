@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ValueInInvestmentCurrency</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class UnitPrice6Validator : AbstractValidator<UnitPrice6>
+public class UnitPrice6Validator : AbstractValidator<UnitPrice6>
 {
     public UnitPrice6Validator()
     {

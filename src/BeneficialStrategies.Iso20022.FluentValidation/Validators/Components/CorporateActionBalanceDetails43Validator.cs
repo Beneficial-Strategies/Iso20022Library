@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   </item>
 /// </list>
 /// </remarks>
-public sealed class CorporateActionBalanceDetails43Validator
+public class CorporateActionBalanceDetails43Validator
     : AbstractValidator<CorporateActionBalanceDetails43>
 {
     public CorporateActionBalanceDetails43Validator()

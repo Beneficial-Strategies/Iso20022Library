@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DataSet</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AcceptorConfiguration14Validator : AbstractValidator<AcceptorConfiguration14>
+public class AcceptorConfiguration14Validator : AbstractValidator<AcceptorConfiguration14>
 {
     public AcceptorConfiguration14Validator()
     {

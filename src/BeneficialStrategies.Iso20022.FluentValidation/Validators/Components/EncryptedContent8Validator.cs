@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>EncryptedDataElement</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class EncryptedContent8Validator : AbstractValidator<EncryptedContent8>
+public class EncryptedContent8Validator : AbstractValidator<EncryptedContent8>
 {
     public EncryptedContent8Validator()
     {

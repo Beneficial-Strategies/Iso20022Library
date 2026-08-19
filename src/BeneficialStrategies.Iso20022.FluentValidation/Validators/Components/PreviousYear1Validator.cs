@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SpecificPreviousYears</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PreviousYear1Validator : AbstractValidator<PreviousYear1>
+public class PreviousYear1Validator : AbstractValidator<PreviousYear1>
 {
     public PreviousYear1Validator()
     {

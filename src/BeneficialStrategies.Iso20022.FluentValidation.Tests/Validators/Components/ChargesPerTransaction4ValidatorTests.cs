@@ -11,8 +11,15 @@ public class ChargesPerTransaction4ValidatorTests
     private static BranchAndFinancialInstitutionIdentification8 ValidOwner() =>
         new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
 
+    private static ChargesBreakdown1 ValidChargesBreakdown() =>
+        new() { Amount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 5m } };
+
     private static ChargesPerTransactionRecord4 MinimalRecord() =>
-        new() { UnderlyingTransaction = new TransactionReferences7() };
+        new()
+        {
+            UnderlyingTransaction = new TransactionReferences7(),
+            ChargesBreakdown = [ValidChargesBreakdown()],
+        };
 
     private static ChargesPerTransaction4 ValidMessage() => new() { Record = [MinimalRecord()] };
 

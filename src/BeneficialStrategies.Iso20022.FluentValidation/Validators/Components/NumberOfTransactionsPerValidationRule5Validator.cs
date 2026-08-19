@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ReportStatus</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NumberOfTransactionsPerValidationRule5Validator : AbstractValidator<NumberOfTransactionsPerValidationRule5>
+public class NumberOfTransactionsPerValidationRule5Validator : AbstractValidator<NumberOfTransactionsPerValidationRule5>
 {
     public NumberOfTransactionsPerValidationRule5Validator()
     {

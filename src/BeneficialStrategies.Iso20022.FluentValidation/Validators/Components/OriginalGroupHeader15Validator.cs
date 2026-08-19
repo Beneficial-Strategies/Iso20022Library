@@ -21,10 +21,30 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </list>
 ///
 /// Constraints: *(none defined in spec)*
+///
+/// Dependency injection: the <c>Case</c> building block and the <c>CancellationReasonInformation</c>
+/// collection are each validated by an injected <see cref="IValidator{T}"/> rather than a
+/// hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalGroupHeader15>
+public class OriginalGroupHeader15Validator : AbstractValidator<OriginalGroupHeader15>
 {
-    public OriginalGroupHeader15Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the optional <c>Case</c> building block and for the <c>CancellationReasonInformation</c>
+    /// collection's item type — e.g. resolved from a DI container — instead of this type
+    /// constructing its own.
+    /// </summary>
+    /// <param name="caseValidator">
+    /// Validator for the optional <c>Case</c> building block (Case5, 0..1) — only invoked when present.
+    /// </param>
+    /// <param name="cancellationReasonInformationValidator">
+    /// Validator for each item of the <c>CancellationReasonInformation</c> collection
+    /// (PaymentCancellationReason5, 0..∞).
+    /// </param>
+    public OriginalGroupHeader15Validator(
+        IValidator<Case5> caseValidator,
+        IValidator<PaymentCancellationReason5> cancellationReasonInformationValidator
+    )
     {
         // Length [1..35] enforced by Max35Text constructor for all three Max35Text fields.
         RuleFor(x => x.OriginalMessageIdentification)
@@ -43,10 +63,19 @@ public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalG
 
         When(
             x => x.Case is not null,
-            () => RuleFor(x => x.Case).SetValidator(new Case5Validator()!)
+            () => RuleFor(x => x.Case).SetValidator(caseValidator!)
         );
 
         RuleForEach(x => x.CancellationReasonInformation)
-            .SetValidator(new PaymentCancellationReason5Validator());
+            .SetValidator(cancellationReasonInformationValidator);
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>Case</c> building block and
+    /// the <c>CancellationReasonInformation</c> collection are each validated by their own default
+    /// validator (<see cref="Case5Validator"/>, <see cref="PaymentCancellationReason5Validator"/>).
+    /// Convenience constructor for callers not using a DI container.
+    /// </summary>
+    public OriginalGroupHeader15Validator()
+        : this(new Case5Validator(), new PaymentCancellationReason5Validator()) { }
 }

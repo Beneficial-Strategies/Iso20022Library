@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IndividualCostOrCharge</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CostsAndCharges1Validator : AbstractValidator<CostsAndCharges1>
+public class CostsAndCharges1Validator : AbstractValidator<CostsAndCharges1>
 {
     public CostsAndCharges1Validator()
     {

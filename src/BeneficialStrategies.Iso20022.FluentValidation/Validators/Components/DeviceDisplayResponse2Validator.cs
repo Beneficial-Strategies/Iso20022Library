@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OutputResult</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class DeviceDisplayResponse2Validator : AbstractValidator<DeviceDisplayResponse2>
+public class DeviceDisplayResponse2Validator : AbstractValidator<DeviceDisplayResponse2>
 {
     public DeviceDisplayResponse2Validator()
     {

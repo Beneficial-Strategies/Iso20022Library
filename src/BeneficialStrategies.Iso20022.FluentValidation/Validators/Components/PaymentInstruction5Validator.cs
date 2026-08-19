@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CreditTransferTransaction</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PaymentInstruction5Validator : AbstractValidator<PaymentInstruction5>
+public class PaymentInstruction5Validator : AbstractValidator<PaymentInstruction5>
 {
     public PaymentInstruction5Validator()
     {

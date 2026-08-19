@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Action</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ManagementPlanContent4Validator : AbstractValidator<ManagementPlanContent4>
+public class ManagementPlanContent4Validator : AbstractValidator<ManagementPlanContent4>
 {
     public ManagementPlanContent4Validator()
     {

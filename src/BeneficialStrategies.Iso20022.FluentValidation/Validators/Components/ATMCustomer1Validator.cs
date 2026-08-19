@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Authentication</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ATMCustomer1Validator : AbstractValidator<ATMCustomer1>
+public class ATMCustomer1Validator : AbstractValidator<ATMCustomer1>
 {
     public ATMCustomer1Validator()
     {

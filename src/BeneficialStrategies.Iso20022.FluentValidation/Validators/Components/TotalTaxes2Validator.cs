@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TaxDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TotalTaxes2Validator : AbstractValidator<TotalTaxes2>
+public class TotalTaxes2Validator : AbstractValidator<TotalTaxes2>
 {
     public TotalTaxes2Validator()
     {

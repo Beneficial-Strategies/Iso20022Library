@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OrderType</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class Blocked1Validator : AbstractValidator<Blocked1>
+public class Blocked1Validator : AbstractValidator<Blocked1>
 {
     public Blocked1Validator()
     {

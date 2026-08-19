@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TrackerRecord</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TrackerData7Validator : AbstractValidator<TrackerData7>
+public class TrackerData7Validator : AbstractValidator<TrackerData7>
 {
     public TrackerData7Validator()
     {

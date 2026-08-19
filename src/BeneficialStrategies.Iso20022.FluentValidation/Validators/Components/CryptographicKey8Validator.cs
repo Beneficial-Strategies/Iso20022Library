@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Function</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CryptographicKey8Validator : AbstractValidator<CryptographicKey8>
+public class CryptographicKey8Validator : AbstractValidator<CryptographicKey8>
 {
     public CryptographicKey8Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TransactionTotals</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CardPaymentDataSet42Validator : AbstractValidator<CardPaymentDataSet42>
+public class CardPaymentDataSet42Validator : AbstractValidator<CardPaymentDataSet42>
 {
     public CardPaymentDataSet42Validator()
     {

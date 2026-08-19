@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ProxyType</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..2</description></item>
 /// </list>
 /// </remarks>
-public sealed class Proxy5Validator : AbstractValidator<Proxy5>
+public class Proxy5Validator : AbstractValidator<Proxy5>
 {
     public Proxy5Validator()
     {

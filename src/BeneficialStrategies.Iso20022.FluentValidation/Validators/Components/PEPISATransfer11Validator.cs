@@ -77,7 +77,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   </item>
 /// </list>
 /// </remarks>
-public sealed class PEPISATransfer11Validator : AbstractValidator<PEPISATransfer11>
+public class PEPISATransfer11Validator : AbstractValidator<PEPISATransfer11>
 {
     public PEPISATransfer11Validator()
     {

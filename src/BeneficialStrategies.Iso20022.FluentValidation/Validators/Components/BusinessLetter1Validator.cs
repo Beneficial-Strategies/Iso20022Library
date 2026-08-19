@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PrimaryRecipient</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class BusinessLetter1Validator : AbstractValidator<BusinessLetter1>
+public class BusinessLetter1Validator : AbstractValidator<BusinessLetter1>
 {
     public BusinessLetter1Validator()
     {

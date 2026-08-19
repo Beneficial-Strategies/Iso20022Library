@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Submitter</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class RequiredSubmission3Validator : AbstractValidator<RequiredSubmission3>
+public class RequiredSubmission3Validator : AbstractValidator<RequiredSubmission3>
 {
     public RequiredSubmission3Validator()
     {

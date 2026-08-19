@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints were found for this component (no "constraint" rows in the
 /// MCP children table).
 /// </remarks>
-public sealed class AccountStatement2Validator : AbstractValidator<AccountStatement2>
+public class AccountStatement2Validator : AbstractValidator<AccountStatement2>
 {
     public AccountStatement2Validator()
     {

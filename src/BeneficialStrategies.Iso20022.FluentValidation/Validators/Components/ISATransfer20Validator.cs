@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ProductTransfer</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ISATransfer20Validator : AbstractValidator<ISATransfer20>
+public class ISATransfer20Validator : AbstractValidator<ISATransfer20>
 {
     public ISATransfer20Validator()
     {

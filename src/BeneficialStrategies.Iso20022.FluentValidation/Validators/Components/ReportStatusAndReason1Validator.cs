@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Rejected</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..100</description></item>
 /// </list>
 /// </remarks>
-public sealed class ReportStatusAndReason1Validator : AbstractValidator<ReportStatusAndReason1>
+public class ReportStatusAndReason1Validator : AbstractValidator<ReportStatusAndReason1>
 {
     public ReportStatusAndReason1Validator()
     {

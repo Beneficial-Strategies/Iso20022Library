@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>POISoftware</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class LoginResponse8Validator : AbstractValidator<LoginResponse8>
+public class LoginResponse8Validator : AbstractValidator<LoginResponse8>
 {
     public LoginResponse8Validator()
     {

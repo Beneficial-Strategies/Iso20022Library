@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CreationDateTime</term><description>ISODateTime — required (1..1)</description></item>
 /// </list>
 /// </remarks>
-public sealed class CaseAssignment5Validator : AbstractValidator<CaseAssignment5>
+public class CaseAssignment5Validator : AbstractValidator<CaseAssignment5>
 {
     public CaseAssignment5Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>LegalFramework</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ClassificationType4Validator : AbstractValidator<ClassificationType4>
+public class ClassificationType4Validator : AbstractValidator<ClassificationType4>
 {
     public ClassificationType4Validator()
     {

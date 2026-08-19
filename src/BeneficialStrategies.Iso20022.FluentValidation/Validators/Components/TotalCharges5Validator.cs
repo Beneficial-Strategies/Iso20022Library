@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ChargeDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..4</description></item>
 /// </list>
 /// </remarks>
-public sealed class TotalCharges5Validator : AbstractValidator<TotalCharges5>
+public class TotalCharges5Validator : AbstractValidator<TotalCharges5>
 {
     public TotalCharges5Validator()
     {

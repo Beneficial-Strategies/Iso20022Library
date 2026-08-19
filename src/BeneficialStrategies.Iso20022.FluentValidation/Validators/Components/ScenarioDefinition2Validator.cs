@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>StressItem</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ScenarioDefinition2Validator : AbstractValidator<ScenarioDefinition2>
+public class ScenarioDefinition2Validator : AbstractValidator<ScenarioDefinition2>
 {
     public ScenarioDefinition2Validator()
     {

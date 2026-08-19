@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RequestedDelegation</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class MaintenanceDelegationRequest11Validator : AbstractValidator<MaintenanceDelegationRequest11>
+public class MaintenanceDelegationRequest11Validator : AbstractValidator<MaintenanceDelegationRequest11>
 {
     public MaintenanceDelegationRequest11Validator()
     {

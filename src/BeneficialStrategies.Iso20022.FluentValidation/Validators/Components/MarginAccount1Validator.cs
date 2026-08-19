@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PositionAccount</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class MarginAccount1Validator : AbstractValidator<MarginAccount1>
+public class MarginAccount1Validator : AbstractValidator<MarginAccount1>
 {
     public MarginAccount1Validator()
     {

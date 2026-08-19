@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Location</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public sealed class Meeting6Validator : AbstractValidator<Meeting6>
+public class Meeting6Validator : AbstractValidator<Meeting6>
 {
     public Meeting6Validator()
     {

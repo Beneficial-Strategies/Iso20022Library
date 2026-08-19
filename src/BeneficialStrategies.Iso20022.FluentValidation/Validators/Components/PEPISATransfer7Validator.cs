@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ProductTransfer</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PEPISATransfer7Validator : AbstractValidator<PEPISATransfer7>
+public class PEPISATransfer7Validator : AbstractValidator<PEPISATransfer7>
 {
     public PEPISATransfer7Validator()
     {

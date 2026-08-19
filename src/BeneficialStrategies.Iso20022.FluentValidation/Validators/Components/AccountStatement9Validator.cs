@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public sealed class AccountStatement9Validator : AbstractValidator<AccountStatement9>
+public class AccountStatement9Validator : AbstractValidator<AccountStatement9>
 {
     public AccountStatement9Validator()
     {

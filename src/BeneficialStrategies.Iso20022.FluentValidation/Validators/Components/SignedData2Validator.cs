@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Signer</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class SignedData2Validator : AbstractValidator<SignedData2>
+public class SignedData2Validator : AbstractValidator<SignedData2>
 {
     public SignedData2Validator()
     {

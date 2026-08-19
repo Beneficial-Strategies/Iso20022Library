@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TransferDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TransferIn14Validator : AbstractValidator<TransferIn14>
+public class TransferIn14Validator : AbstractValidator<TransferIn14>
 {
     public TransferIn14Validator()
     {

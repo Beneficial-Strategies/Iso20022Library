@@ -32,10 +32,22 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// is <see cref="ForecastParameter2"/>, which has both <c>CashInForecastDetails</c>
 /// (<see cref="CashInForecast1"/>) and <c>CashOutForecastDetails</c> (<see cref="CashOutForecast1"/>)
 /// collections, and each element type carries its own nullable <c>ExceptionalCashFlowIndicator</c>.
+///
+/// Dependency injection: the <c>SortingCriteriaDetails</c> collection is validated per-item by
+/// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
+/// constructors below.
 /// </remarks>
-public sealed class FundCashForecast2Validator : AbstractValidator<FundCashForecast2>
+public class FundCashForecast2Validator : AbstractValidator<FundCashForecast2>
 {
-    public FundCashForecast2Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the <c>SortingCriteriaDetails</c> collection's item type — e.g. resolved from a DI
+    /// container — instead of this type constructing its own.
+    /// </summary>
+    /// <param name="sortingCriteriaDetailsValidator">
+    /// Validator for each item of the <c>SortingCriteriaDetails</c> collection (CashSortingCriterion2, 1..∞).
+    /// </param>
+    public FundCashForecast2Validator(IValidator<CashSortingCriterion2> sortingCriteriaDetailsValidator)
     {
         // ── Cross-field constraints ───────────────────────────────────────────────
 
@@ -70,9 +82,21 @@ public sealed class FundCashForecast2Validator : AbstractValidator<FundCashForec
         // (NetCashForecast1, 0..∞): no validator exists yet for these component fields; nested
         // fields unvalidated.
 
-        // SortingCriteriaDetails: CashSortingCriterion2, 1..∞ — NEEDS NotEmpty RULE.
+        // SortingCriteriaDetails: CashSortingCriterion2, 1..∞ — NotEmpty on the collection, plus
+        // its own validator applied per item.
         RuleFor(x => x.SortingCriteriaDetails)
             .NotEmpty()
             .WithMessage("FundCashForecast2.SortingCriteriaDetails must contain at least one element (1..∞).");
+
+        RuleForEach(x => x.SortingCriteriaDetails).SetValidator(sortingCriteriaDetailsValidator);
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>SortingCriteriaDetails</c>
+    /// collection is validated by its own default validator
+    /// (<see cref="CashSortingCriterion2Validator"/>). Convenience constructor for callers not
+    /// using a DI container.
+    /// </summary>
+    public FundCashForecast2Validator()
+        : this(new CashSortingCriterion2Validator()) { }
 }

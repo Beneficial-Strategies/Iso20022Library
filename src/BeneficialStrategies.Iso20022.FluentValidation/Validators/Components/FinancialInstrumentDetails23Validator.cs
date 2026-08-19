@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Transaction</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class FinancialInstrumentDetails23Validator : AbstractValidator<FinancialInstrumentDetails23>
+public class FinancialInstrumentDetails23Validator : AbstractValidator<FinancialInstrumentDetails23>
 {
     public FinancialInstrumentDetails23Validator()
     {

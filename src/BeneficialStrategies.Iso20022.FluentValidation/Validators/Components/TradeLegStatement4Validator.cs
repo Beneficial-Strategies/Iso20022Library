@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TradeLegsDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TradeLegStatement4Validator : AbstractValidator<TradeLegStatement4>
+public class TradeLegStatement4Validator : AbstractValidator<TradeLegStatement4>
 {
     public TradeLegStatement4Validator()
     {

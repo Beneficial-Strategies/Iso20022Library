@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>HighestInVolume</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class SettlementFailsSecuritiesRange1Validator : AbstractValidator<SettlementFailsSecuritiesRange1>
+public class SettlementFailsSecuritiesRange1Validator : AbstractValidator<SettlementFailsSecuritiesRange1>
 {
     public SettlementFailsSecuritiesRange1Validator()
     {

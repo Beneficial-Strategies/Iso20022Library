@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ExpirationStyle</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..4</description></item>
 /// </list>
 /// </remarks>
-public sealed class Option14Validator : AbstractValidator<Option14>
+public class Option14Validator : AbstractValidator<Option14>
 {
     public Option14Validator()
     {

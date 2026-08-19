@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TaxIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..3</description></item>
 /// </list>
 /// </remarks>
-public sealed class BillingMethod2Validator : AbstractValidator<BillingMethod2>
+public class BillingMethod2Validator : AbstractValidator<BillingMethod2>
 {
     public BillingMethod2Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>MediaItem</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ATMDepositedMedia4Validator : AbstractValidator<ATMDepositedMedia4>
+public class ATMDepositedMedia4Validator : AbstractValidator<ATMDepositedMedia4>
 {
     public ATMDepositedMedia4Validator()
     {

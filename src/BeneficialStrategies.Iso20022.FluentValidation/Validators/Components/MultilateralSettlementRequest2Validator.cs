@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>MovementRecord</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=2..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class MultilateralSettlementRequest2Validator : AbstractValidator<MultilateralSettlementRequest2>
+public class MultilateralSettlementRequest2Validator : AbstractValidator<MultilateralSettlementRequest2>
 {
     public MultilateralSettlementRequest2Validator()
     {

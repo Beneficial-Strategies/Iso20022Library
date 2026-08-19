@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Modification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class IntraBalanceModification5Validator : AbstractValidator<IntraBalanceModification5>
+public class IntraBalanceModification5Validator : AbstractValidator<IntraBalanceModification5>
 {
     public IntraBalanceModification5Validator()
     {

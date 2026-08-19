@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Country</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class LocalMarketAnnex3Validator : AbstractValidator<LocalMarketAnnex3>
+public class LocalMarketAnnex3Validator : AbstractValidator<LocalMarketAnnex3>
 {
     public LocalMarketAnnex3Validator()
     {

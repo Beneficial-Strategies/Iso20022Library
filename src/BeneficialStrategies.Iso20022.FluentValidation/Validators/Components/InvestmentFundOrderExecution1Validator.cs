@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OrderReferences</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class InvestmentFundOrderExecution1Validator : AbstractValidator<InvestmentFundOrderExecution1>
+public class InvestmentFundOrderExecution1Validator : AbstractValidator<InvestmentFundOrderExecution1>
 {
     public InvestmentFundOrderExecution1Validator()
     {

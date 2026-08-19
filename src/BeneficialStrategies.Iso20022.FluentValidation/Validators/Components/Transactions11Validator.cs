@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>PaymentInstructionStatus</c> value. Left unimplemented rather than guessing which list
 /// entry or field the spec author intended.
 /// </remarks>
-public sealed class Transactions11Validator : AbstractValidator<Transactions11>
+public class Transactions11Validator : AbstractValidator<Transactions11>
 {
     public Transactions11Validator()
     {

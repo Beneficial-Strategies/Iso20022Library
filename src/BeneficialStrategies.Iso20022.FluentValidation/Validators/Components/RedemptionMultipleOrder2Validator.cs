@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   </item>
 /// </list>
 /// </remarks>
-public sealed class RedemptionMultipleOrder2Validator : AbstractValidator<RedemptionMultipleOrder2>
+public class RedemptionMultipleOrder2Validator : AbstractValidator<RedemptionMultipleOrder2>
 {
     public RedemptionMultipleOrder2Validator()
     {

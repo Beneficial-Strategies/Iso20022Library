@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ConfirmationRejected</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..10</description></item>
 /// </list>
 /// </remarks>
-public sealed class IndividualOrderConfirmationStatusAndReason1Validator : AbstractValidator<IndividualOrderConfirmationStatusAndReason1>
+public class IndividualOrderConfirmationStatusAndReason1Validator : AbstractValidator<IndividualOrderConfirmationStatusAndReason1>
 {
     public IndividualOrderConfirmationStatusAndReason1Validator()
     {

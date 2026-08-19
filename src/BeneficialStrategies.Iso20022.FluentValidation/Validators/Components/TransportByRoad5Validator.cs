@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>PlaceOfDelivery</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TransportByRoad5Validator : AbstractValidator<TransportByRoad5>
+public class TransportByRoad5Validator : AbstractValidator<TransportByRoad5>
 {
     public TransportByRoad5Validator()
     {

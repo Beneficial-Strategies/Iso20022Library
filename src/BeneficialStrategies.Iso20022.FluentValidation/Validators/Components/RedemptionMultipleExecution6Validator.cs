@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IndividualExecutionDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class RedemptionMultipleExecution6Validator : AbstractValidator<RedemptionMultipleExecution6>
+public class RedemptionMultipleExecution6Validator : AbstractValidator<RedemptionMultipleExecution6>
 {
     public RedemptionMultipleExecution6Validator()
     {

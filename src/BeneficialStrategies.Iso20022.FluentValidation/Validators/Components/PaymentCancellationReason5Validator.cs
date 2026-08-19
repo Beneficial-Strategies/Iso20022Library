@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Constraints: *(none defined in spec)*
 /// </remarks>
-public sealed class PaymentCancellationReason5Validator
+public class PaymentCancellationReason5Validator
     : AbstractValidator<PaymentCancellationReason5>
 {
     public PaymentCancellationReason5Validator()

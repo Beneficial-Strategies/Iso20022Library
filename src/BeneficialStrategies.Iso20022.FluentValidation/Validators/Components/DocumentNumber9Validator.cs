@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>References</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class DocumentNumber9Validator : AbstractValidator<DocumentNumber9>
+public class DocumentNumber9Validator : AbstractValidator<DocumentNumber9>
 {
     public DocumentNumber9Validator()
     {

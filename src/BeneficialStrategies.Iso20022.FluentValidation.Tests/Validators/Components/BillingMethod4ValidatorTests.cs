@@ -31,6 +31,35 @@ public class BillingMethod4ValidatorTests
                 Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 5m },
                 Sign = true,
             },
+            TaxableServiceChargeConversion =
+            [
+                new BillingServicesAmount3
+                {
+                    SourceAmount = new AmountAndDirection34
+                    {
+                        Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
+                        Sign = true,
+                    },
+                    HostAmount = new AmountAndDirection34
+                    {
+                        Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 100m },
+                        Sign = true,
+                    },
+                },
+            ],
+            TaxIdentification =
+            [
+                new BillingServicesTax3
+                {
+                    Number = "TAX-001",
+                    Rate = 5m,
+                    TotalTaxAmount = new AmountAndDirection34
+                    {
+                        Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = "USD", Amount = 5m },
+                        Sign = true,
+                    },
+                },
+            ],
         };
 
     private static BillingMethod4 ValidMessage() =>

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>FeeCollectionIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class FeeCollectionReference1Validator : AbstractValidator<FeeCollectionReference1>
+public class FeeCollectionReference1Validator : AbstractValidator<FeeCollectionReference1>
 {
     public FeeCollectionReference1Validator()
     {

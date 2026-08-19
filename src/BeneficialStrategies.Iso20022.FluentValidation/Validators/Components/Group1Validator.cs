@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Party</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class Group1Validator : AbstractValidator<Group1>
+public class Group1Validator : AbstractValidator<Group1>
 {
     public Group1Validator()
     {

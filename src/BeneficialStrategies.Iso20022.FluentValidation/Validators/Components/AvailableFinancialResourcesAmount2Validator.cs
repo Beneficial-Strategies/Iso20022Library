@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CCPSkinInTheGame</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AvailableFinancialResourcesAmount2Validator : AbstractValidator<AvailableFinancialResourcesAmount2>
+public class AvailableFinancialResourcesAmount2Validator : AbstractValidator<AvailableFinancialResourcesAmount2>
 {
     public AvailableFinancialResourcesAmount2Validator()
     {

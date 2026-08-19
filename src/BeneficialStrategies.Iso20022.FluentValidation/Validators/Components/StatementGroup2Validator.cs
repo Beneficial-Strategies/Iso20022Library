@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// See docs/multiplicity-audit-2026-08.md.
 /// No cross-field constraints found for this component.
 /// </remarks>
-public sealed class StatementGroup2Validator : AbstractValidator<StatementGroup2>
+public class StatementGroup2Validator : AbstractValidator<StatementGroup2>
 {
     public StatementGroup2Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>MaintenanceService</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TMSProtocolParameters3Validator : AbstractValidator<TMSProtocolParameters3>
+public class TMSProtocolParameters3Validator : AbstractValidator<TMSProtocolParameters3>
 {
     public TMSProtocolParameters3Validator()
     {

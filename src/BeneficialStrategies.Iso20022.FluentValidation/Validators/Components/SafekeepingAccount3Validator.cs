@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>InstructedBalance</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..10</description></item>
 /// </list>
 /// </remarks>
-public sealed class SafekeepingAccount3Validator : AbstractValidator<SafekeepingAccount3>
+public class SafekeepingAccount3Validator : AbstractValidator<SafekeepingAccount3>
 {
     public SafekeepingAccount3Validator()
     {

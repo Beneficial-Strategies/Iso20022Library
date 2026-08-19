@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DisputeIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class DisputeReference1Validator : AbstractValidator<DisputeReference1>
+public class DisputeReference1Validator : AbstractValidator<DisputeReference1>
 {
     public DisputeReference1Validator()
     {

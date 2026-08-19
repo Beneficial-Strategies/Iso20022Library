@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RelatedMarginAccount</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CollateralAccount5Validator : AbstractValidator<CollateralAccount5>
+public class CollateralAccount5Validator : AbstractValidator<CollateralAccount5>
 {
     public CollateralAccount5Validator()
     {

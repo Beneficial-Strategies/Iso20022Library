@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Trustee</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public sealed class AccountParties5Validator : AbstractValidator<AccountParties5>
+public class AccountParties5Validator : AbstractValidator<AccountParties5>
 {
     public AccountParties5Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>IntraPositionMovement</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class IntraPositionDetails54Validator : AbstractValidator<IntraPositionDetails54>
+public class IntraPositionDetails54Validator : AbstractValidator<IntraPositionDetails54>
 {
     public IntraPositionDetails54Validator()
     {

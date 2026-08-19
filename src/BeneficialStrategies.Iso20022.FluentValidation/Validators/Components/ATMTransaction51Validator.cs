@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TotalDepositedAmount</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ATMTransaction51Validator : AbstractValidator<ATMTransaction51>
+public class ATMTransaction51Validator : AbstractValidator<ATMTransaction51>
 {
     public ATMTransaction51Validator()
     {

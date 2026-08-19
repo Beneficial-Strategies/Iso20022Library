@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ValuationAmounts</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CounterpartyAggregation3Validator : AbstractValidator<CounterpartyAggregation3>
+public class CounterpartyAggregation3Validator : AbstractValidator<CounterpartyAggregation3>
 {
     public CounterpartyAggregation3Validator()
     {

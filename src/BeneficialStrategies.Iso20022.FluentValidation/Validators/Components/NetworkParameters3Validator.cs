@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Address</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NetworkParameters3Validator : AbstractValidator<NetworkParameters3>
+public class NetworkParameters3Validator : AbstractValidator<NetworkParameters3>
 {
     public NetworkParameters3Validator()
     {

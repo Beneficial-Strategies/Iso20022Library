@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CollateralComponent</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class ReuseDataReportCorrection7Validator : AbstractValidator<ReuseDataReportCorrection7>
+public class ReuseDataReportCorrection7Validator : AbstractValidator<ReuseDataReportCorrection7>
 {
     public ReuseDataReportCorrection7Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>LiquidityRequiredAndAvailable</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=6..6</description></item>
 /// </list>
 /// </remarks>
-public sealed class LiquidityStressTestResult1Validator : AbstractValidator<LiquidityStressTestResult1>
+public class LiquidityStressTestResult1Validator : AbstractValidator<LiquidityStressTestResult1>
 {
     public LiquidityStressTestResult1Validator()
     {

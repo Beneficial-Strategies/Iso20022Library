@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Record</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PartyReferenceDataChange2Validator : AbstractValidator<PartyReferenceDataChange2>
+public class PartyReferenceDataChange2Validator : AbstractValidator<PartyReferenceDataChange2>
 {
     public PartyReferenceDataChange2Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Identification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class CardProgrammeMode2Validator : AbstractValidator<CardProgrammeMode2>
+public class CardProgrammeMode2Validator : AbstractValidator<CardProgrammeMode2>
 {
     public CardProgrammeMode2Validator()
     {

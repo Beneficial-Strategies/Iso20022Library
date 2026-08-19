@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Tax</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AncillaryPurchase1Validator : AbstractValidator<AncillaryPurchase1>
+public class AncillaryPurchase1Validator : AbstractValidator<AncillaryPurchase1>
 {
     public AncillaryPurchase1Validator()
     {

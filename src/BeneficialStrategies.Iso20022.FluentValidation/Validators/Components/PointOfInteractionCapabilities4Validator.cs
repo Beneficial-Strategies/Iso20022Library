@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CardReadingCapabilities</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PointOfInteractionCapabilities4Validator : AbstractValidator<PointOfInteractionCapabilities4>
+public class PointOfInteractionCapabilities4Validator : AbstractValidator<PointOfInteractionCapabilities4>
 {
     public PointOfInteractionCapabilities4Validator()
     {

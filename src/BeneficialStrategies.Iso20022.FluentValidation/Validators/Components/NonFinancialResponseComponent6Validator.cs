@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ResponseContent</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NonFinancialResponseComponent6Validator : AbstractValidator<NonFinancialResponseComponent6>
+public class NonFinancialResponseComponent6Validator : AbstractValidator<NonFinancialResponseComponent6>
 {
     public NonFinancialResponseComponent6Validator()
     {

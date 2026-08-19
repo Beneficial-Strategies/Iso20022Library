@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Record</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class PartyAuditTrail2Validator : AbstractValidator<PartyAuditTrail2>
+public class PartyAuditTrail2Validator : AbstractValidator<PartyAuditTrail2>
 {
     public PartyAuditTrail2Validator()
     {

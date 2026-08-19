@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DefaultFundCalculation</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class DefaultFundReport1Validator : AbstractValidator<DefaultFundReport1>
+public class DefaultFundReport1Validator : AbstractValidator<DefaultFundReport1>
 {
     public DefaultFundReport1Validator()
     {

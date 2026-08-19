@@ -6,6 +6,22 @@ public class FundDetailedConfirmedCashForecastReport1ValidatorTests
 {
     private readonly FundDetailedConfirmedCashForecastReport1Validator _sut = new();
 
+    private static ForecastParameter2 ValidForecastParameter() =>
+        new()
+        {
+            ReportParameter = new Choices.ReportParameter2Choice.Currency { Value = "USD" },
+        };
+
+    private static CashSortingCriterion2 ValidSortingCriterion() =>
+        new()
+        {
+            SortingCriterionType = new Choices.SortCriteria1Choice.Predefined
+            {
+                Value = Codesets.ReportSortedType1Code.Currency,
+            },
+            ForecastBreakdownDetails = [ValidForecastParameter()],
+        };
+
     private static FundCashForecast2 MinimalItem() =>
         new()
         {
@@ -16,6 +32,7 @@ public class FundDetailedConfirmedCashForecastReport1ValidatorTests
                 DualFundIndicator = false,
             },
             ExceptionalNetCashFlowIndicator = false,
+            SortingCriteriaDetails = [ValidSortingCriterion()],
         };
 
     private static FundDetailedConfirmedCashForecastReport1 ValidMessage() =>

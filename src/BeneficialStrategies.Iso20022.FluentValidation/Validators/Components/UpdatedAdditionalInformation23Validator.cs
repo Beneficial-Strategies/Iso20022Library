@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AdditionalInformation</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class UpdatedAdditionalInformation23Validator : AbstractValidator<UpdatedAdditionalInformation23>
+public class UpdatedAdditionalInformation23Validator : AbstractValidator<UpdatedAdditionalInformation23>
 {
     public UpdatedAdditionalInformation23Validator()
     {

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CommissionDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TotalCommissions3Validator : AbstractValidator<TotalCommissions3>
+public class TotalCommissions3Validator : AbstractValidator<TotalCommissions3>
 {
     public TotalCommissions3Validator()
     {

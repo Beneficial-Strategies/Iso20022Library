@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Order</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NewOrderReport2Validator : AbstractValidator<NewOrderReport2>
+public class NewOrderReport2Validator : AbstractValidator<NewOrderReport2>
 {
     public NewOrderReport2Validator()
     {

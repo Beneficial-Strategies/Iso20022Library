@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Structured</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..3</description></item>
 /// </list>
 /// </remarks>
-public sealed class SuspendedStatusReason1Validator : AbstractValidator<SuspendedStatusReason1>
+public class SuspendedStatusReason1Validator : AbstractValidator<SuspendedStatusReason1>
 {
     public SuspendedStatusReason1Validator()
     {

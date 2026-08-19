@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ChargesAccountTypeOrRecord1Rule</term><description>When ChargesAccount is present or ChargesAccountOwner is present then Record/ChargesAccount must be absent and Record/ChargesAccountOwner must be absent.</description></item>
 /// </list>
 /// </remarks>
-public sealed class ChargesPerType4Validator : AbstractValidator<ChargesPerType4>
+public class ChargesPerType4Validator : AbstractValidator<ChargesPerType4>
 {
     public ChargesPerType4Validator()
     {

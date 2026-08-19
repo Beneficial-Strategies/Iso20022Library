@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Text</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..5</description></item>
 /// </list>
 /// </remarks>
-public sealed class Narrative1Validator : AbstractValidator<Narrative1>
+public class Narrative1Validator : AbstractValidator<Narrative1>
 {
     public Narrative1Validator()
     {

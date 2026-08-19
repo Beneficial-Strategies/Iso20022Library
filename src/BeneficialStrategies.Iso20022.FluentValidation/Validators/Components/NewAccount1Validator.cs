@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AccountParty</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NewAccount1Validator : AbstractValidator<NewAccount1>
+public class NewAccount1Validator : AbstractValidator<NewAccount1>
 {
     public NewAccount1Validator()
     {

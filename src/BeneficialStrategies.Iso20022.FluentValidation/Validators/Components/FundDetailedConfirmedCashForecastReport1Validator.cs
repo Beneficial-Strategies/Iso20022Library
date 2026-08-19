@@ -17,18 +17,43 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
+///
+/// Dependency injection: the <c>FundCashForecastDetails</c> collection is validated per-item by
+/// an injected <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
+/// constructors below.
 /// </remarks>
-public sealed class FundDetailedConfirmedCashForecastReport1Validator : AbstractValidator<FundDetailedConfirmedCashForecastReport1>
+public class FundDetailedConfirmedCashForecastReport1Validator : AbstractValidator<FundDetailedConfirmedCashForecastReport1>
 {
-    public FundDetailedConfirmedCashForecastReport1Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the <c>FundCashForecastDetails</c> collection's item type — e.g. resolved from a DI
+    /// container — instead of this type constructing its own.
+    /// </summary>
+    /// <param name="fundCashForecastDetailsValidator">
+    /// Validator for each item of the <c>FundCashForecastDetails</c> collection (FundCashForecast2, 1..∞).
+    /// </param>
+    public FundDetailedConfirmedCashForecastReport1Validator(
+        IValidator<FundCashForecast2> fundCashForecastDetailsValidator
+    )
     {
         // Extension: Extension1, 0..∞ — any size including empty is valid, no rule needed.
 
-        // FundCashForecastDetails: FundCashForecast2, 1..∞ — NEEDS NotEmpty RULE.
+        // FundCashForecastDetails: FundCashForecast2, 1..∞ — NotEmpty on the collection, plus its
+        // own validator applied per item.
         RuleFor(x => x.FundCashForecastDetails)
             .NotEmpty()
             .WithMessage(
                 "FundDetailedConfirmedCashForecastReport1.FundCashForecastDetails must contain at least one element (1..∞)."
             );
+
+        RuleForEach(x => x.FundCashForecastDetails).SetValidator(fundCashForecastDetailsValidator);
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>FundCashForecastDetails</c>
+    /// collection is validated by its own default validator (<see cref="FundCashForecast2Validator"/>).
+    /// Convenience constructor for callers not using a DI container.
+    /// </summary>
+    public FundDetailedConfirmedCashForecastReport1Validator()
+        : this(new FundCashForecast2Validator()) { }
 }

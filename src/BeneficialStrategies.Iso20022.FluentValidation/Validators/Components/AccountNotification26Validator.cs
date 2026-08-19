@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RelatedAccountRule</term><description>Either RelatedAccount or Item/RelatedAccount may be present but not both.</description></item>
 /// </list>
 /// </remarks>
-public sealed class AccountNotification26Validator : AbstractValidator<AccountNotification26>
+public class AccountNotification26Validator : AbstractValidator<AccountNotification26>
 {
     public AccountNotification26Validator()
     {

@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Constraints: *(none defined in spec)*
 /// </remarks>
-public sealed class DistributionRejectionStatus1Validator
+public class DistributionRejectionStatus1Validator
     : AbstractValidator<DistributionRejectionStatus1>
 {
     public DistributionRejectionStatus1Validator()

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>NewCutOff</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class NettingCutOff1Validator : AbstractValidator<NettingCutOff1>
+public class NettingCutOff1Validator : AbstractValidator<NettingCutOff1>
 {
     public NettingCutOff1Validator()
     {

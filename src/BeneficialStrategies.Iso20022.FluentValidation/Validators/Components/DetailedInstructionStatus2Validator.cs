@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>VotePerResolution</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..200</description></item>
 /// </list>
 /// </remarks>
-public sealed class DetailedInstructionStatus2Validator : AbstractValidator<DetailedInstructionStatus2>
+public class DetailedInstructionStatus2Validator : AbstractValidator<DetailedInstructionStatus2>
 {
     public DetailedInstructionStatus2Validator()
     {

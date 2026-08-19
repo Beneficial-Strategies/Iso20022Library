@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ControlSum</term><description>DecimalNumber — optional (0..1)</description></item>
 /// </list>
 /// </remarks>
-public sealed class ControlData1Validator : AbstractValidator<ControlData1>
+public class ControlData1Validator : AbstractValidator<ControlData1>
 {
     public ControlData1Validator()
     {

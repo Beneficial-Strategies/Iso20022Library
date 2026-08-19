@@ -20,10 +20,21 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ChargesAccountAgent2Rule</term><description>When Record/ChargesAccountAgent is present or Record/ChargesAccountAgentAccount is present then ChargesAccountAgent must be absent and ChargesAccountAgentAccount must be absent.</description></item>
 ///   <item><term>ChargesAccountAgentRule</term><description>When ChargesAccountAgent is present or ChargesAccountAgentAccount is present then Record/ChargesAccountAgent must be absent and Record/ChargesAccountAgentAccount must be absent.</description></item>
 /// </list>
+///
+/// Dependency injection: the <c>Record</c> collection is validated per-item by an injected
+/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
-public sealed class ChargesPerTransaction6Validator : AbstractValidator<ChargesPerTransaction6>
+public class ChargesPerTransaction6Validator : AbstractValidator<ChargesPerTransaction6>
 {
-    public ChargesPerTransaction6Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the <c>Record</c> collection's item type — e.g. resolved from a DI container — instead
+    /// of this type constructing its own.
+    /// </summary>
+    /// <param name="recordValidator">
+    /// Validator for each item of the <c>Record</c> collection (ChargesPerTransactionRecord6, 1..∞).
+    /// </param>
+    public ChargesPerTransaction6Validator(IValidator<ChargesPerTransactionRecord6> recordValidator)
     {
         // ── Cross-field constraints ───────────────────────────────────────────────
         // Both rules express the same mutual-exclusivity between the top-level charges account
@@ -67,9 +78,20 @@ public sealed class ChargesPerTransaction6Validator : AbstractValidator<ChargesP
         // (TotalCharges7, 0..1): no validator exists yet for these; nested fields unvalidated
         // beyond the cross-field constraints already enforced above.
 
-        // Record: ChargesPerTransactionRecord6, 1..∞ — NEEDS NotEmpty RULE.
+        // Record: ChargesPerTransactionRecord6, 1..∞ — NotEmpty on the collection, plus its own
+        // validator applied per item.
         RuleFor(x => x.Record)
             .NotEmpty()
             .WithMessage("ChargesPerTransaction6.Record must contain at least one element (1..*).");
+
+        RuleForEach(x => x.Record).SetValidator(recordValidator);
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>Record</c> collection is
+    /// validated by its own default validator (<see cref="ChargesPerTransactionRecord6Validator"/>).
+    /// Convenience constructor for callers not using a DI container.
+    /// </summary>
+    public ChargesPerTransaction6Validator()
+        : this(new ChargesPerTransactionRecord6Validator()) { }
 }

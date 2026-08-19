@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>StatusAndReasonRule</term><description>StatusAndReason must be present or Movement(*)/StatusAndReason must be present, but not both.</description></item>
 /// </list>
 /// </remarks>
-public sealed class IntraBalancePending5Validator : AbstractValidator<IntraBalancePending5>
+public class IntraBalancePending5Validator : AbstractValidator<IntraBalancePending5>
 {
     public IntraBalancePending5Validator()
     {

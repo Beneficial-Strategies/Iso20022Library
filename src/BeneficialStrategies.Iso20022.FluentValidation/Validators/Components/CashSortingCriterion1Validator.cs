@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public sealed class CashSortingCriterion1Validator : AbstractValidator<CashSortingCriterion1>
+public class CashSortingCriterion1Validator : AbstractValidator<CashSortingCriterion1>
 {
     public CashSortingCriterion1Validator()
     {

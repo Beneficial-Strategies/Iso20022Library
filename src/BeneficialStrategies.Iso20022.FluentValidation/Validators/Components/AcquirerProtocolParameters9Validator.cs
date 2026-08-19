@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>AcquirerIdentification</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AcquirerProtocolParameters9Validator : AbstractValidator<AcquirerProtocolParameters9>
+public class AcquirerProtocolParameters9Validator : AbstractValidator<AcquirerProtocolParameters9>
 {
     public AcquirerProtocolParameters9Validator()
     {

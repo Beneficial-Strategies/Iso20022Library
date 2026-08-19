@@ -11,8 +11,15 @@ public class ChargesPerTransaction3ValidatorTests
 
     private static CashAccount40 ValidAccount() => new();
 
+    private static ChargesBreakdown1 ValidChargesBreakdown() =>
+        new() { Amount = new ActiveCurrencyAndAmount { Currency = "USD", Amount = 5m } };
+
     private static ChargesPerTransactionRecord3 MinimalRecord() =>
-        new() { UnderlyingTransaction = new TransactionReferences7() };
+        new()
+        {
+            UnderlyingTransaction = new TransactionReferences7(),
+            ChargesBreakdown = [ValidChargesBreakdown()],
+        };
 
     private static ChargesPerTransaction3 ValidMessage() => new() { Record = [MinimalRecord()] };
 

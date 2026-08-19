@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>TransportedGoods</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class TransportDetails2Validator : AbstractValidator<TransportDetails2>
+public class TransportDetails2Validator : AbstractValidator<TransportDetails2>
 {
     public TransportDetails2Validator()
     {

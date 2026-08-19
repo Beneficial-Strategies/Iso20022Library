@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RemittanceLocationDetails</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class RemittanceLocation10Validator : AbstractValidator<RemittanceLocation10>
+public class RemittanceLocation10Validator : AbstractValidator<RemittanceLocation10>
 {
     public RemittanceLocation10Validator()
     {

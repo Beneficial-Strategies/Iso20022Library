@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>BalanceForFinancialInstrument</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
-public sealed class AggregateHoldingBalance2Validator : AbstractValidator<AggregateHoldingBalance2>
+public class AggregateHoldingBalance2Validator : AbstractValidator<AggregateHoldingBalance2>
 {
     public AggregateHoldingBalance2Validator()
     {

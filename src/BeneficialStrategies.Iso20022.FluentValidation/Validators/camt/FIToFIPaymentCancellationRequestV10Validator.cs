@@ -38,11 +38,42 @@ namespace BeneficialStrategies.Iso20022.Validation.camt;
 ///     </description>
 ///   </item>
 /// </list>
+///
+/// Dependency injection: each nested building block is validated by an injected
+/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two
+/// constructors below. IValidator&lt;T&gt;, not AbstractValidator&lt;T&gt;, so that
+/// FluentValidation's own <c>AddValidatorsFromAssemblyContaining&lt;T&gt;()</c> DI registration
+/// helper (which registers every validator as IValidator&lt;T&gt;) wires the DI constructor up
+/// automatically, with no manual per-type registration required from consumers.
 /// </remarks>
-public sealed class FIToFIPaymentCancellationRequestV10Validator
+public class FIToFIPaymentCancellationRequestV10Validator
     : AbstractValidator<FIToFIPaymentCancellationRequestV10>
 {
-    public FIToFIPaymentCancellationRequestV10Validator()
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for each nested building block — e.g. resolved from a DI container — instead of this type
+    /// constructing its own. This lets a caller substitute, decorate, or mock any nested
+    /// validator independently (e.g. a stricter <see cref="CaseAssignment5Validator"/> subtype)
+    /// without forking this class.
+    /// </summary>
+    /// <param name="caseAssignmentValidator">
+    /// Validator for the required <c>Assignment</c> building block (CaseAssignment5, 1..1).
+    /// </param>
+    /// <param name="underlyingTransactionValidator">
+    /// Validator for the required <c>Underlying</c> building block (UnderlyingTransaction28, 1..1).
+    /// </param>
+    /// <param name="caseValidator">
+    /// Validator for the optional <c>Case</c> building block (Case5, 0..1) — only invoked when present.
+    /// </param>
+    /// <param name="controlDataValidator">
+    /// Validator for the optional <c>ControlData</c> building block (ControlData1, 0..1) — only invoked when present.
+    /// </param>
+    public FIToFIPaymentCancellationRequestV10Validator(
+        IValidator<CaseAssignment5> caseAssignmentValidator,
+        IValidator<UnderlyingTransaction28> underlyingTransactionValidator,
+        IValidator<Case5> caseValidator,
+        IValidator<ControlData1> controlDataValidator
+    )
     {
         // ── Required building blocks ─────────────────────────────────────────────────
 
@@ -51,26 +82,28 @@ public sealed class FIToFIPaymentCancellationRequestV10Validator
             .WithMessage(
                 "FIToFIPaymentCancellationRequestV10.Assignment is required (CaseAssignment5, 1..1)."
             )
-            .SetValidator(new CaseAssignment5Validator());
+            .SetValidator(caseAssignmentValidator);
 
         RuleFor(x => x.Underlying)
             .NotNull()
             .WithMessage(
                 "FIToFIPaymentCancellationRequestV10.Underlying is required (UnderlyingTransaction28, 1..1)."
             )
-            .SetValidator(new UnderlyingTransaction28Validator());
+            .SetValidator(underlyingTransactionValidator);
 
         // ── Optional building blocks — validate when present ─────────────────────────
 
-        When(
-            x => x.Case is not null,
-            () => RuleFor(x => x.Case).SetValidator(new Case5Validator()!)
-        );
+        When(x => x.Case is not null, () => RuleFor(x => x.Case).SetValidator(caseValidator!));
 
         When(
             x => x.ControlData is not null,
-            () => RuleFor(x => x.ControlData).SetValidator(new ControlData1Validator()!)
+            () => RuleFor(x => x.ControlData).SetValidator(controlDataValidator!)
         );
+
+        // SupplementaryData: SupplementaryData1 (0..1) — no validator exists yet for
+        // SupplementaryData1, so the SupplementaryDataRule cross-field constraint documented
+        // above (message-level block must not convey per-transaction information) is not yet
+        // enforced here.
 
         // ── Cross-field: MessageOrGroupCaseRule / MessageOrTransactionCaseRule ───────
         // Spec: Case may be present at either Case, OriginalGroupInformationAndCancellation,
@@ -85,6 +118,21 @@ public sealed class FIToFIPaymentCancellationRequestV10Validator
                     + "(MessageOrGroupCaseRule / MessageOrTransactionCaseRule)."
             );
     }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: each nested building block is
+    /// validated by its own default validator (<see cref="CaseAssignment5Validator"/>,
+    /// <see cref="UnderlyingTransaction28Validator"/>, <see cref="Case5Validator"/>,
+    /// <see cref="ControlData1Validator"/>). Convenience constructor for callers not using a DI
+    /// container.
+    /// </summary>
+    public FIToFIPaymentCancellationRequestV10Validator()
+        : this(
+            new CaseAssignment5Validator(),
+            new UnderlyingTransaction28Validator(),
+            new Case5Validator(),
+            new ControlData1Validator()
+        ) { }
 
     private static bool NoCaseDuplication(FIToFIPaymentCancellationRequestV10 msg)
     {

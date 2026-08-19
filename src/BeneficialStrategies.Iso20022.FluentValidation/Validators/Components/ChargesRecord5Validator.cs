@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// No cross-field constraints found for this component (no "constraint" declaration rows
 /// under its ISO dictionary entry).
 /// </remarks>
-public sealed class ChargesRecord5Validator : AbstractValidator<ChargesRecord5>
+public class ChargesRecord5Validator : AbstractValidator<ChargesRecord5>
 {
     public ChargesRecord5Validator()
     {

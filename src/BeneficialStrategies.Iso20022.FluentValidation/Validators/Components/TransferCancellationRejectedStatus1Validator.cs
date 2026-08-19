@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>DataSourceScheme</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..10</description></item>
 /// </list>
 /// </remarks>
-public sealed class TransferCancellationRejectedStatus1Validator : AbstractValidator<TransferCancellationRejectedStatus1>
+public class TransferCancellationRejectedStatus1Validator : AbstractValidator<TransferCancellationRejectedStatus1>
 {
     public TransferCancellationRejectedStatus1Validator()
     {
