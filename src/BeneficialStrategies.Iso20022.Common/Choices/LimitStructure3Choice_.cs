@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Limit Structure3Choice.
+    /// Limit details of one or more limits set by the member and managed by the transaction administrator.
     /// </summary>
     [KnownType(typeof(LimitStructure3Choice.AllCurrentLimits))]
     [KnownType(typeof(LimitStructure3Choice.CurrentLimitIdentification))]

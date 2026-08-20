@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Standing Order Or All4Choice.
+    /// Characteristics of one or all standing orders set by the member and managed by the transaction administrator.
     /// </summary>
     [KnownType(typeof(StandingOrderOrAll4Choice.AllStandingOrders))]
     [KnownType(typeof(StandingOrderOrAll4Choice.StandingOrder))]

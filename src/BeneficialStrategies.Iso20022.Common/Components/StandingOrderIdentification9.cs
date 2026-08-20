@@ -10,21 +10,21 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Standing Order Identification9.
+/// Defines the elements used to uniquely identify a standing order.
 /// </summary>
 [IsoId("_6l3dlTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Identification9")]
 public record StandingOrderIdentification9
 {
     /// <summary>
-    /// Account.
+    /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
     /// </summary>
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
     public required CashAccount40 Account { get; init; }
 
     /// <summary>
-    /// Account Owner.
+    /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]

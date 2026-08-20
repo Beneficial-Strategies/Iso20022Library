@@ -1,22 +1,28 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,076 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,095 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **165 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 8 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
+- **184 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 14 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
 
   | ISO ID | Message | C# type | Description |
   |---|---|---|---|
+  | camt.012.001.08 | Delete Limit | `DeleteLimitV08` | Sent by a member to the transaction administrator to request the deletion of one, several, or all limits set by the member and managed by the transaction administrator. |
+  | camt.030.001.06 | Notification Of Case Assignment | `NotificationOfCaseAssignmentV06` | Sent by a case assignee to a case creator/case assigner to inform them of further action undertaken on the case (reassignment, or working it directly). |
   | camt.031.001.07 | Reject Investigation | `RejectInvestigationV07` | Sent by a case assignee to a case creator or case assigner to reject a case given to it. |
   | camt.032.001.05 | Cancel Case Assignment | `CancelCaseAssignmentV05` | Sent by a case creator or case assigner to a case assignee to request the cancellation of a case. |
   | camt.033.001.07 | Request For Duplicate | `RequestForDuplicateV07` | Sent by the case assignee to the case creator or case assigner to request a copy of the original payment instruction considered in the case. |
+  | camt.034.001.07 | Duplicate | `DuplicateV07` | Sent in response to a RequestForDuplicate message, to exchange a duplicate payment instruction. |
+  | camt.035.001.06 | Proprietary Format Investigation | `ProprietaryFormatInvestigationV06` | Used, by bilateral agreement, as an envelope for a non-standard message managing an exception or investigation outside the scope of any other formatted message. |
   | camt.036.001.06 | Debit Authorisation Response | `DebitAuthorisationResponseV06` | Sent by an account owner to its account servicing institution to approve or reject a debit authorisation request. |
   | camt.038.001.05 | Case Status Report Request | `CaseStatusReportRequestV05` | Sent by a case creator or case assigner to a case assignee to request the status of a case. |
+  | camt.039.001.06 | Case Status Report | `CaseStatusReportV06` | Sent by a case assignee to a case creator or case assigner to report on the status of a case, in reply to a CaseStatusReportRequest message. |
   | camt.063.001.02 | Pay In Event Acknowledgement | `PayInEventAcknowledgementV02` | Sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received. |
+  | camt.071.001.05 | Delete Standing Order | `DeleteStandingOrderV05` | Sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator. |
   | pain.009.001.08 | Mandate Initiation Request | `MandateInitiationRequestV08` | Sent by the initiator of a mandate request (debtor or creditor) to their agent, to set up the instruction that allows the debtor agent to accept debit instructions from the creditor agent. |
   | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
 

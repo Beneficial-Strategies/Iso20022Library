@@ -49,6 +49,12 @@ public class CoverageCompletenessTests
         typeof(DebitAuthorisationResponseV06),
         typeof(RejectInvestigationV07),
         typeof(MandateInitiationRequestV08),
+        typeof(CaseStatusReportV06),
+        typeof(NotificationOfCaseAssignmentV06),
+        typeof(DeleteLimitV08),
+        typeof(DeleteStandingOrderV05),
+        typeof(DuplicateV07),
+        typeof(ProprietaryFormatInvestigationV06),
     ];
 
     [Theory]

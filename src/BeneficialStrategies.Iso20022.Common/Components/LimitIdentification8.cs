@@ -10,42 +10,42 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Limit Identification8.
+/// Defines the identification details to uniquely identify a limit within the system.
 /// </summary>
 [IsoId("_0WRu0TEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Identification8")]
 public record LimitIdentification8
 {
     /// <summary>
-    /// Account Identification.
+    /// Unique and unambiguous identification for the account between the account owner and the account servicer.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     public AccountIdentification4Choice_? AccountIdentification { get; init; }
 
     /// <summary>
-    /// Account Owner.
+    /// Owner of the account which is being queried.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
 
     /// <summary>
-    /// Bilateral Limit Counterparty Identification.
+    /// Identification of the system member for which the limit is established.
     /// </summary>
     [DisplayName("Bilateral Limit Counterparty Identification")]
     [IsoXmlTag("BilLmtCtrPtyId")]
     public BranchAndFinancialInstitutionIdentification8? BilateralLimitCounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// System Identification.
+    /// Identification of a particular cash clearing system.
     /// </summary>
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
     public SystemIdentification2Choice_? SystemIdentification { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Nature of the risk management limit.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
