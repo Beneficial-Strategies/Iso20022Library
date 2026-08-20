@@ -85,6 +85,22 @@ starting from scratch. To find what to build next, do a transitive BFS from each
 top-level message's record type over its `Component`/`Choice`-typed properties, count how many
 messages reach each type, and rank by reuse count descending.
 
+### Known gap: `FIToFIPaymentCancellationRequestV10`
+
+This message has its own `FIToFIPaymentCancellationRequestV10Validator` (predates
+`CoverageCompletenessTests.cs`) and the NuGet README used to list it as one of the fully-supported
+messages. Attempting to add it to `FullySupportedMessages` on 2026-08-20 — as part of mechanically
+verifying it for the first time — found **66 reachable model types with no wired validator**
+(`SupplementaryData1`, `CashAccount40`, `PostalAddress24`, `CountryCode`, and 62 others, mostly
+older-generation component types this message's own graph reaches that no other in-scope message
+currently needs: `PartyIdentification135`, `CashAccountType2Choice_`, the full
+Tax/Garnishment/DocumentLine family, etc.). That claim had simply never been mechanically checked
+before the completeness harness existed. The README has been corrected to stop claiming it, and it
+is deliberately absent from `FullySupportedMessages` — see that array's own remarks. Closing this
+gap is real, scoped follow-up work (build ~66 more component/choice validators, largely a
+different, older generation of building blocks than the rest of this project's current coverage),
+not something to fold into an unrelated batch that happens to trip over it.
+
 ## Adding a New Validator
 
 ### Step 1 — Query the spec via MCP

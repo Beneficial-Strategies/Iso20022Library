@@ -26,11 +26,29 @@ public class CoverageCompletenessTests
     /// policy. Add to this list only once a message's entire reachable graph is genuinely wired —
     /// this test will fail immediately if that's not true.
     /// </summary>
+    /// <remarks>
+    /// <c>FIToFIPaymentCancellationRequestV10</c> is deliberately NOT listed here despite the
+    /// NuGet README having previously (incorrectly) claimed it as one of the fully-supported
+    /// messages: attempting to add it here on 2026-08-20 (as part of mechanically verifying it
+    /// for the first time, alongside the batch below) revealed 66 reachable model types with no
+    /// wired validator — SupplementaryData1, CashAccount40, PostalAddress24, CountryCode, and 62
+    /// others, mostly older-generation component types (PartyIdentification135,
+    /// CashAccountType2Choice_, the Tax/Garnishment/DocumentLine family, etc.) this message's own
+    /// graph reaches that no other in-scope message happens to need yet. That claim was never
+    /// actually mechanically checked before this test existed. The README has been corrected to
+    /// stop claiming it. Re-add it here once its real gap is closed — tracked as follow-up work,
+    /// not attempted in the same pass that discovered it.
+    /// </remarks>
     public static readonly Type[] FullySupportedMessages =
     [
         typeof(CancelCaseAssignmentV05),
         typeof(RequestForDuplicateV07),
         typeof(MandateCopyRequestV04),
+        typeof(CaseStatusReportRequestV05),
+        typeof(PayInEventAcknowledgementV02),
+        typeof(DebitAuthorisationResponseV06),
+        typeof(RejectInvestigationV07),
+        typeof(MandateInitiationRequestV08),
     ];
 
     [Theory]

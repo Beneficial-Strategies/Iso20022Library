@@ -1,19 +1,32 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,066 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,076 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **155 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 4 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph: `FIToFIPaymentCancellationRequestV10` (camt.056), `CancelCaseAssignmentV05` (camt.032), `RequestForDuplicateV07` (camt.033), and `MandateCopyRequestV04` (pain.017).
+- **165 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 8 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
+
+  | ISO ID | Message | C# type | Description |
+  |---|---|---|---|
+  | camt.031.001.07 | Reject Investigation | `RejectInvestigationV07` | Sent by a case assignee to a case creator or case assigner to reject a case given to it. |
+  | camt.032.001.05 | Cancel Case Assignment | `CancelCaseAssignmentV05` | Sent by a case creator or case assigner to a case assignee to request the cancellation of a case. |
+  | camt.033.001.07 | Request For Duplicate | `RequestForDuplicateV07` | Sent by the case assignee to the case creator or case assigner to request a copy of the original payment instruction considered in the case. |
+  | camt.036.001.06 | Debit Authorisation Response | `DebitAuthorisationResponseV06` | Sent by an account owner to its account servicing institution to approve or reject a debit authorisation request. |
+  | camt.038.001.05 | Case Status Report Request | `CaseStatusReportRequestV05` | Sent by a case creator or case assigner to a case assignee to request the status of a case. |
+  | camt.063.001.02 | Pay In Event Acknowledgement | `PayInEventAcknowledgementV02` | Sent by a participant of a central system to the central system to confirm a PayInSchedule or a PayInCall has been received. |
+  | pain.009.001.08 | Mandate Initiation Request | `MandateInitiationRequestV08` | Sent by the initiator of a mandate request (debtor or creditor) to their agent, to set up the instruction that allows the debtor agent to accept debit instructions from the creditor agent. |
+  | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
+
+  (`FIToFIPaymentCancellationRequestV10`, camt.056.001.10, has a validator too, but mechanical verification found gaps in its dependency graph — not yet complete enough to list above. See the FluentValidation project's own `CLAUDE.md` for tracking.)
 - **911 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
 
 Every validator — full or abbreviated — carries an XML doc `<remarks>` block naming exactly which spec constraints it currently checks, so you always know what you're getting from a specific type, not just its category.
 
 Known limitations:
-- No composite message-level validator yet for most business areas — validators exist per component (and per full message for the 4 messages above); you compose them yourself for now via `SetValidator()` where needed.
+- No composite message-level validator yet for most business areas — validators exist per component (and per full message for the messages in the table above); you compose them yourself for now via `SetValidator()` where needed.
 - Abbreviated validators (see above) are not yet a complete spec-compliance check.
 
 For more information about the project, see [the repository](https://github.com/Beneficial-Strategies/Iso20022Library).
