@@ -11,4 +11,5 @@ global using BeneficialStrategies.Iso20022.Validation.camt;
 global using BeneficialStrategies.Iso20022.Validation.Components;
 global using FluentValidation;
 global using FluentValidation.TestHelper;
+global using Microsoft.Extensions.DependencyInjection;
 global using Xunit;

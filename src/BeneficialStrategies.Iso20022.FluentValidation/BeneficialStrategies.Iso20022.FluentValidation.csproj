@@ -30,6 +30,13 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.*" />
+    <!--
+      Powers AddIso20022Validators() (Extensions/ServiceCollectionExtensions.cs) — a thin wrapper
+      around FluentValidation's own AddValidatorsFromAssemblyContaining<T>(). Pulls in
+      Microsoft.Extensions.DependencyInjection.Abstractions transitively, which is standard and
+      expected for a validators package designed for DI registration.
+    -->
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.*" />
   </ItemGroup>
 
   <ItemGroup>
