@@ -2,7 +2,9 @@
 
 global using BeneficialStrategies.Iso20022.Amounts;
 global using BeneficialStrategies.Iso20022.camt;
+global using BeneficialStrategies.Iso20022.pain;
 global using BeneficialStrategies.Iso20022.Choices;
 global using BeneficialStrategies.Iso20022.Components;
+global using BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 global using BeneficialStrategies.Iso20022.Validation.Components;
 global using FluentValidation;
