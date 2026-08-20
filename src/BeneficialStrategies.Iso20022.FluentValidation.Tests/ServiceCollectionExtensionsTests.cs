@@ -224,4 +224,61 @@ public class ServiceCollectionExtensionsTests
         );
         Assert.Contains("String", ex.Message);
     }
+
+    // ── External code registry: open-generic default + per-type override ──────
+
+    private sealed class AlwaysRejectRegistry : IExternalCodeRegistry<CountryCode>
+    {
+        public bool IsAcceptable(CountryCode value) => false;
+    }
+
+    [Fact]
+    public void ExternalCodeRegistry_DefaultsToInMemory_ForEveryType()
+    {
+        var services = new ServiceCollection();
+        services.AddIso20022Validators();
+        using var provider = services.BuildServiceProvider();
+
+        // One line of open-generic registration covers every external code type — no per-type
+        // registration was added anywhere, yet both resolve.
+        Assert.IsType<InMemoryExternalCodeRegistry<CountryCode>>(
+            provider.GetRequiredService<IExternalCodeRegistry<CountryCode>>()
+        );
+        Assert.IsType<InMemoryExternalCodeRegistry<ActiveOrHistoricCurrencyCode>>(
+            provider.GetRequiredService<IExternalCodeRegistry<ActiveOrHistoricCurrencyCode>>()
+        );
+    }
+
+    [Fact]
+    public void ExternalCodeRegistry_OverrideOneType_OthersStayDefault()
+    {
+        var services = new ServiceCollection();
+        services.AddIso20022Validators();
+        // Registered after the open-generic default: overrides CountryCode only.
+        services.AddSingleton<IExternalCodeRegistry<CountryCode>>(new AlwaysRejectRegistry());
+        using var provider = services.BuildServiceProvider();
+
+        Assert.IsType<AlwaysRejectRegistry>(
+            provider.GetRequiredService<IExternalCodeRegistry<CountryCode>>()
+        );
+        // Everything else still falls back to the in-memory default — the override was scoped to
+        // exactly the one closed generic type it targeted, not global.
+        Assert.IsType<InMemoryExternalCodeRegistry<ActiveOrHistoricCurrencyCode>>(
+            provider.GetRequiredService<IExternalCodeRegistry<ActiveOrHistoricCurrencyCode>>()
+        );
+    }
+
+    [Fact]
+    public void ExternalCodeRegistry_Override_ActuallyChangesValidationOutcome()
+    {
+        var services = new ServiceCollection();
+        services.AddIso20022Validators();
+        services.AddSingleton<IExternalCodeRegistry<CountryCode>>(new AlwaysRejectRegistry());
+        using var provider = services.BuildServiceProvider();
+
+        var sut = provider.GetRequiredService<IValidator<CountryCode>>();
+        var result = sut.Validate((CountryCode)"US");
+
+        Assert.False(result.IsValid); // the override, not the default permissive behavior, ran
+    }
 }

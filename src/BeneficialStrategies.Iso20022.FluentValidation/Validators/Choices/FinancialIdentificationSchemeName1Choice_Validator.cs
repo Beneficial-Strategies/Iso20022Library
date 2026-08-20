@@ -12,15 +12,54 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Sets of elements to identify a name of the organisation identification scheme.
 /// <list type="table">
 ///   <item><term><see cref="FinancialIdentificationSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalFinancialInstitutionIdentification1Code</description></item>
-///   <item><term><see cref="FinancialIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
+///   <item><term><see cref="FinancialIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
-/// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>
-/// pattern-constrained wrapper / a length-constrained <c>IIsoSimpleValue&lt;string&gt;</c>) —
-/// there is no additional cross-field or business rule to add at the FluentValidation layer, so
-/// this validator has no rules. It still exists as a first-class type so the coverage-scoping
-/// policy (see the FluentValidation project's own <c>CLAUDE.md</c>) can record this type as
-/// reviewed rather than silently skipped.
+/// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
+/// runtime-type-matches the instance to the correct variant validator below.
+///
+/// Dependency injection: the <c>Code</c> variant's <c>Value</c> — an
+/// <see cref="ExternalFinancialInstitutionIdentification1Code"/> — is checked against an injected
+/// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="ExternalFinancialInstitutionIdentification1CodeValidator"/>)
+/// rather than a hardcoded <c>new</c> — see the two constructors below.
 /// </remarks>
 public class FinancialIdentificationSchemeName1Choice_Validator
-    : AbstractValidator<FinancialIdentificationSchemeName1Choice_> { }
+    : AbstractValidator<FinancialIdentificationSchemeName1Choice_>
+{
+    /// <summary>
+    /// Initializes a new instance using dependency injection: the caller supplies the validator
+    /// for the <c>Code</c> variant's <c>Value</c> — e.g. resolved from a DI container — instead
+    /// of this type constructing its own.
+    /// </summary>
+    /// <param name="codeValueValidator">
+    /// Validator for <see cref="FinancialIdentificationSchemeName1Choice.Code"/>'s <c>Value</c>
+    /// (ExternalFinancialInstitutionIdentification1Code).
+    /// </param>
+    public FinancialIdentificationSchemeName1Choice_Validator(
+        IValidator<ExternalFinancialInstitutionIdentification1Code> codeValueValidator
+    )
+    {
+        // Proprietary variant: Value is fully struct-enforced (Max35Text) — no rules needed, so
+        // no InlineValidator is registered for it; SetInheritanceValidator leaves an unregistered
+        // variant type as always-valid by design (see Party50Choice_Validator's own remarks).
+
+        var codeVariantValidator =
+            new InlineValidator<Choices.FinancialIdentificationSchemeName1Choice.Code>();
+        codeVariantValidator.RuleFor(x => x.Value).SetValidator(codeValueValidator);
+
+        RuleFor(x => x)
+            .SetInheritanceValidator(v =>
+            {
+                v.Add(codeVariantValidator);
+            });
+    }
+
+    /// <summary>
+    /// Initializes a new instance using default dependencies: the <c>Code</c> variant's
+    /// <c>Value</c> is validated by its own default validator
+    /// (<see cref="ExternalFinancialInstitutionIdentification1CodeValidator"/>). Convenience
+    /// constructor for callers not using a DI container.
+    /// </summary>
+    public FinancialIdentificationSchemeName1Choice_Validator()
+        : this(new ExternalFinancialInstitutionIdentification1CodeValidator()) { }
+}

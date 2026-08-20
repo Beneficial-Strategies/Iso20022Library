@@ -17,9 +17,51 @@ public class OriginalMandate10Choice_ValidatorTests
         _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
     }
 
-    // OriginalMandate variant (wraps Mandate20, which has no validator yet — see the type's own
-    // <remarks>) is intentionally not exercised here beyond confirming the dispatcher itself
-    // doesn't throw for an unregistered-but-legitimate variant type; SetInheritanceValidator only
-    // runs rules for variants explicitly registered via v.Add(...), so an unregistered variant is
-    // always reported as valid by design, not by omission.
+    [Fact]
+    public void OriginalMandateVariant_Valid_NoValidationErrors()
+    {
+        BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice_ choice =
+            new BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice.OriginalMandate
+            {
+                Value = new Mandate20
+                {
+                    Creditor = new PartyIdentification272 { Name = "Creditor Co" },
+                    Debtor = new PartyIdentification272 { Name = "Debtor Co" },
+                    DebtorAgent = new BranchAndFinancialInstitutionIdentification8
+                    {
+                        FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
+                    },
+                    MandateIdentification = "MNDT-001",
+                    TrackingIndicator = true,
+                },
+            };
+        _sut.TestValidate(choice).ShouldNotHaveAnyValidationErrors();
+    }
+
+    [Fact]
+    public void OriginalMandateVariant_InvalidNestedGuideline_PropagatesError()
+    {
+        var party = new PartyIdentification272 { Name = "Same Co" };
+        BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice_ choice =
+            new BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice.OriginalMandate
+            {
+                Value = new Mandate20
+                {
+                    Creditor = party,
+                    Debtor = new PartyIdentification272 { Name = "Debtor Co" },
+                    DebtorAgent = new BranchAndFinancialInstitutionIdentification8
+                    {
+                        FinancialInstitutionIdentification = new FinancialInstitutionIdentification23(),
+                    },
+                    MandateIdentification = "MNDT-001",
+                    TrackingIndicator = true,
+                    // Violates Mandate20's UltimateCreditorGuideline (must differ from Creditor).
+                    UltimateCreditor = party,
+                },
+            };
+
+        var result = _sut.Validate(choice);
+        Assert.False(result.IsValid);
+        Assert.Contains(result.Errors, e => e.PropertyName.Contains("UltimateCreditorGuideline"));
+    }
 }

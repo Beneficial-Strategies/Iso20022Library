@@ -27,6 +27,37 @@ it — transitively, all the way down — has its own full-spec validator wired 
 area actually reference*, not a fixed alphabetical or convenience-ordered slice of
 `Validators/Components/`.
 
+### Exactly two completion states — no partial third state
+
+There are only two legitimate states for a component/choice validator in this project:
+
+1. **Orphaned** — a validator that exists on its own, not currently claimed as part of any
+   message's complete chain. No completeness claim attached to it. This is where a brand-new
+   component/choice validator starts out, and where most of the ~1,000 pre-existing "abbreviated"
+   validators from before this policy still sit today (openly marked in their own remarks as "not
+   yet reviewed for full spec compliance" — that label *is* the honest state, not a gap to hide).
+2. **Fully supported** — a top-level message where the entire reachable graph, all the way down,
+   has validators wired in. Zero exceptions.
+
+**There is no third state where a message is called "fully supported" while a reachable type is
+quietly left unvalidated with a "deferred, out of scope for this pass" comment.** That looked like
+a reasonable application of the "orphaned" convention the first time it happened here (two gaps
+left in `CancelCaseAssignmentV05`/`RequestForDuplicateV07`/`MandateCopyRequestV04` via
+`Party52Choice_`'s variants and `OriginalMandate10Choice_.OriginalMandate` → `Mandate20`) — it
+was not: those three messages were listed as supported, so the gap was real, not filed as
+"orphaned." It was caught and closed the same day (31 additional validators — see git history
+around 2026-08-20) specifically *because* it broke this rule, not because it was an acceptable
+interim state. If closing a newly-discovered gap isn't practical immediately, the message comes
+out of `FullySupportedMessages` (see below) until it is — it does not stay listed with a caveat.
+
+**This is enforced mechanically, not just by convention.** `CoverageCompletenessTests.cs` in the
+test project independently walks each message's actual model property graph via reflection (not
+the validators' own constructors — a validator that forgot to declare a dependency wouldn't be
+caught by re-checking its own constructor) and cross-checks it against the registered DI closure
+from `AddIso20022Validators`. `FullySupportedMessages` in that file is the authoritative list of
+what this project currently claims is complete — adding a message there without the graph actually
+being complete fails the build immediately, on every push, not just when someone happens to notice.
+
 ### Registration status verification
 
 `RegistrationStatus` (`Registered` / `Provisionally Registered` / etc.) comes from the ISO 20022
@@ -163,6 +194,110 @@ Validators/
 │   └── ...
 └── ...                            # one folder per business area
 ```
+
+`ExternalCodes/` (project root, not under `Validators/`) holds the reusable framework pieces
+described below — `IExternalCodeRegistry<TCode>`, `InMemoryExternalCodeRegistry<TCode>`,
+`ExternalCodesetAbstractValidator<TCode>` — one of each, not per code set type.
+`Validators/Codesets/` holds the per-type validators
+(`Validators/Codesets/CountryCodeValidator.cs`, etc.), namespace
+`BeneficialStrategies.Iso20022.Validation.CodesetValidators` — **not** `.Codesets`, for the same
+reason `.Choices` was rejected in favor of `.ChoiceValidators`: `BeneficialStrategies.Iso20022.Codesets`
+is a direct child of `BeneficialStrategies.Iso20022`, so `Validation.Codesets` would shadow it for
+ancestor-scope lookups from `Validation.Components` and every other validator namespace — and
+unlike the `Choices` collision, this one would break far more existing code, since bare codeset
+enum references (`SequenceType2Code`, etc.) are already scattered through nearly every validator.
+
+## External Code Set Validation
+
+An `IIsoExternalCode` struct's own constructor enforces only its structural pattern (length,
+character set) — deliberately not membership in a specific set of currently-registered values,
+because these registries (ISO 3166 countries, ISO 4217 currencies, and ISO 20022's own
+externally-maintained code lists) can add codes independently of any ISO 20022 schema version.
+"Matches the regex" and "is an ISO 20022-legal value" are not the same claim, and treating them as
+equivalent would be wrong — the acceptable values live in a registry outside this library, not in
+a hardcoded pattern.
+
+### The framework pieces (`ExternalCodes/`)
+
+- **`IExternalCodeRegistry<TCode>`** — `bool IsAcceptable(TCode value)`. One registry *per code
+  set type*, not one shared registry keyed by name — this is what lets different code sets have
+  different backing stores (in-memory, database-backed, a reference-data service) via ordinary DI,
+  rather than branching inside a single implementation.
+- **`InMemoryExternalCodeRegistry<TCode>`** — the default. Auto-seeds via reflection over
+  `TCode`'s own `public static readonly` known-value members (the "hybrid pattern" — see the main
+  library's own `CLAUDE.md`) at construction time. A type with no such members ends up with an
+  empty set; a type with them ends up pre-populated. Either way, **empty set = permissive** (every
+  value that satisfies the struct's own format constructor passes) — never fail-closed. Most
+  external code types have zero known members today (per the retrofit sweep referenced in the
+  main library's `CLAUDE.md`), so most default to permissive until a caller populates them.
+  `Add`/`Remove`/`AddRange`/`RemoveRange` tweak the (possibly auto-seeded) set — construct, tweak,
+  then register the instance:
+  ```csharp
+  var reasons = new InMemoryExternalCodeRegistry<ExternalMandateSetupReason1Code>(); // auto-seeded
+  reasons.Add("ZZZZ");    // newer than the MCP snapshot this seed came from
+  reasons.Remove("MD01"); // this deployment doesn't want to allow it
+  services.AddSingleton<IExternalCodeRegistry<ExternalMandateSetupReason1Code>>(reasons);
+  ```
+  Because the seeding is genuine reflection against `TCode`'s current compiled metadata — not a
+  hardcoded list anywhere in this framework — a future snapshot sync that adds a
+  `public static readonly` member to the struct is picked up automatically the next time the
+  registry is constructed. No change to this class, `ExternalCodesetAbstractValidator<TCode>`, or
+  the per-type validator is ever needed for that; declaring the member is the whole update.
+- **`ExternalCodesetAbstractValidator<TCode>`** — writes the one `Must(registry.IsAcceptable)`
+  rule, once, for every code set type to inherit. Two constructors, same convention as every other
+  validator in this project (DI constructor taking `IExternalCodeRegistry<TCode>`; parameterless
+  convenience constructor defaulting to a fresh `InMemoryExternalCodeRegistry<TCode>`).
+
+### Registering the default (`Iso20022ServiceCollectionExtensions`)
+
+One open-generic registration covers every external code type, present or future — not 300+
+individual lines:
+```csharp
+services.TryAddSingleton(typeof(IExternalCodeRegistry<>), typeof(InMemoryExternalCodeRegistry<>));
+```
+A consumer overrides one specific type (e.g. with a database-backed registry) by registering the
+closed generic afterward — ordinary last-registration-wins DI resolution scopes the override to
+exactly that type; every other type still falls back to the open-generic default. `AddIso20022Validators()`
+calls this automatically; you don't need to call it yourself.
+
+### Per-type validator
+
+```csharp
+public class ExternalMandateSetupReason1CodeValidator
+    : ExternalCodesetAbstractValidator<ExternalMandateSetupReason1Code>
+{
+    public ExternalMandateSetupReason1CodeValidator(
+        IExternalCodeRegistry<ExternalMandateSetupReason1Code> registry
+    ) : base(registry) { }
+
+    public ExternalMandateSetupReason1CodeValidator() { }
+}
+```
+
+### Wiring an external code property into its containing validator
+
+Two shapes, matching where the external code actually appears in the model:
+
+- **Direct property on a plain component** (e.g. `PostalAddress27.Country : CountryCode?`) — DI
+  constructor takes `IValidator<CountryCode>`, wired the same as any other optional building
+  block. Note the property is `TCode?` (`Nullable<T>` for a struct, not a nullable reference), so
+  the rule needs `.Value` after the null check:
+  `RuleFor(x => x.Country!.Value).SetValidator(countryValidator)` inside the usual
+  `When(x => x.Country is not null, ...)`.
+- **Inside a Choice's `Code` variant** (e.g. `MandateSetupReason1Choice.Code.Value : ExternalMandateSetupReason1Code`)
+  — the containing Choice validator needs real `SetInheritanceValidator` dispatch (not an empty
+  shell, even if the `Proprietary` variant has nothing to check) — see
+  `MandateSetupReason1Choice_Validator` for the reference example, same `InlineValidator<TVariant>`
+  pattern as `Party50Choice_Validator`.
+
+### This is a completeness dimension too
+
+`CoverageCompletenessTests` treats an `IIsoExternalCode` leaf exactly like a Component or Choice
+type for the "zero exceptions" bar — a message isn't fully supported if a reachable external code
+property has no validator wired, same as if a reachable component didn't. Any existing validator
+with a `// CountryCode/currency: closed set, no rule needed` style comment predating this section
+has a stale comment, not a correct one — it just hasn't been retrofitted yet if that message isn't
+currently in `FullySupportedMessages`.
 
 ## Spec Encoding Rules
 

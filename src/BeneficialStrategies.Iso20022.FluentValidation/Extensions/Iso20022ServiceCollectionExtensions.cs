@@ -3,6 +3,7 @@
 using System.Reflection;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace BeneficialStrategies.Iso20022.Validation;
 
@@ -63,6 +64,8 @@ public static class Iso20022ServiceCollectionExtensions
         Func<Type, bool>? filter = null
     )
     {
+        services.AddExternalCodeRegistryDefault();
+
         return services.AddValidatorsFromAssemblyContaining<AssemblyMarker>(
             lifetime,
             filter is null ? null : scanResult => filter(scanResult.ValidatorType)
@@ -158,6 +161,8 @@ public static class Iso20022ServiceCollectionExtensions
         ServiceLifetime lifetime = ServiceLifetime.Scoped
     )
     {
+        services.AddExternalCodeRegistryDefault();
+
         var byValidatedType = AssemblyScanner
             .FindValidatorsInAssemblyContaining<AssemblyMarker>()
             .ToDictionary(
@@ -227,4 +232,21 @@ public static class Iso20022ServiceCollectionExtensions
             parameter.ParameterType.IsGenericType
             && parameter.ParameterType.GetGenericTypeDefinition() == typeof(IValidator<>);
     }
+
+    /// <summary>
+    /// Registers the open-generic default <see cref="IExternalCodeRegistry{TCode}"/> — one
+    /// registration line covers every external code set type, present or future, via .NET's
+    /// open-generic DI resolution. <see cref="ServiceCollectionDescriptorExtensions.TryAdd(IServiceCollection,ServiceDescriptor)"/>
+    /// so calling <c>AddIso20022Validators</c> more than once, or a caller who registered their
+    /// own open-generic default first, doesn't double-register. A caller overriding one specific
+    /// code set (e.g. with a database-backed registry) registers
+    /// <c>IExternalCodeRegistry&lt;TheirSpecificCode&gt;</c> afterward — the closed-generic
+    /// registration wins for that one type via ordinary last-registration-wins resolution; every
+    /// other type still falls back to this default.
+    /// </summary>
+    private static void AddExternalCodeRegistryDefault(this IServiceCollection services) =>
+        services.TryAddSingleton(
+            typeof(IExternalCodeRegistry<>),
+            typeof(InMemoryExternalCodeRegistry<>)
+        );
 }

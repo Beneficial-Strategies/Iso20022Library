@@ -23,15 +23,17 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Dependency injection: <c>ContactDetails</c>, <c>Identification</c>, and <c>PostalAddress</c>
 /// are each validated by an injected <see cref="IValidator{T}"/> rather than a hardcoded
-/// <c>new</c> — see the two constructors below.
+/// <c>new</c>; <c>CountryOfResidence</c> — an ISO 3166 <see cref="CountryCode"/> — is checked
+/// against an injected <see cref="IExternalCodeRegistry{TCode}"/> (via
+/// <see cref="CountryCodeValidator"/>) — see the two constructors below.
 /// </remarks>
 public class PartyIdentification272Validator : AbstractValidator<PartyIdentification272>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
-    /// for the optional <c>ContactDetails</c>, <c>Identification</c>, and <c>PostalAddress</c>
-    /// building blocks — e.g. resolved from a DI container — instead of this type constructing
-    /// its own.
+    /// for the optional <c>ContactDetails</c>, <c>Identification</c>, <c>PostalAddress</c>, and
+    /// <c>CountryOfResidence</c> building blocks — e.g. resolved from a DI container — instead of
+    /// this type constructing its own.
     /// </summary>
     /// <param name="contactDetailsValidator">
     /// Validator for the optional <c>ContactDetails</c> building block (Contact13, 0..1) — only
@@ -45,14 +47,18 @@ public class PartyIdentification272Validator : AbstractValidator<PartyIdentifica
     /// Validator for the optional <c>PostalAddress</c> building block (PostalAddress27, 0..1) —
     /// only invoked when present.
     /// </param>
+    /// <param name="countryOfResidenceValidator">
+    /// Validator for the optional <c>CountryOfResidence</c> (CountryCode, 0..1) — only invoked
+    /// when present.
+    /// </param>
     public PartyIdentification272Validator(
         IValidator<Contact13> contactDetailsValidator,
         IValidator<Party52Choice_> identificationValidator,
-        IValidator<PostalAddress27> postalAddressValidator
+        IValidator<PostalAddress27> postalAddressValidator,
+        IValidator<CountryCode> countryOfResidenceValidator
     )
     {
         // Name: optional scalar, length enforced by struct constructor — no rule needed.
-        // CountryOfResidence: CountryCode enum — closed set, no rule needed.
 
         When(
             x => x.ContactDetails is not null,
@@ -68,19 +74,26 @@ public class PartyIdentification272Validator : AbstractValidator<PartyIdentifica
             x => x.PostalAddress is not null,
             () => RuleFor(x => x.PostalAddress).SetValidator(postalAddressValidator!)
         );
+
+        When(
+            x => x.CountryOfResidence is not null,
+            () => RuleFor(x => x.CountryOfResidence!.Value).SetValidator(countryOfResidenceValidator)
+        );
     }
 
     /// <summary>
     /// Initializes a new instance using default dependencies: <c>ContactDetails</c>,
-    /// <c>Identification</c>, and <c>PostalAddress</c> are each validated by their own default
-    /// validator (<see cref="Contact13Validator"/>, <see cref="Party52Choice_Validator"/>,
-    /// <see cref="PostalAddress27Validator"/>). Convenience constructor for callers not using a DI
+    /// <c>Identification</c>, <c>PostalAddress</c>, and <c>CountryOfResidence</c> are each
+    /// validated by their own default validator (<see cref="Contact13Validator"/>,
+    /// <see cref="Party52Choice_Validator"/>, <see cref="PostalAddress27Validator"/>,
+    /// <see cref="CountryCodeValidator"/>). Convenience constructor for callers not using a DI
     /// container.
     /// </summary>
     public PartyIdentification272Validator()
         : this(
             new Contact13Validator(),
             new Party52Choice_Validator(),
-            new PostalAddress27Validator()
+            new PostalAddress27Validator(),
+            new CountryCodeValidator()
         ) { }
 }

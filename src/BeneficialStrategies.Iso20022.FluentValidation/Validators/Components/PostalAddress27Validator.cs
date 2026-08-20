@@ -35,37 +35,52 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// its ISO dictionary entry).
 ///
 /// Dependency injection: the <c>AddressType</c> building block is validated by an injected
-/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c> — see the two constructors below.
+/// <see cref="IValidator{T}"/> rather than a hardcoded <c>new</c>; <c>Country</c> — an ISO 3166
+/// <see cref="CountryCode"/> — is checked against an injected
+/// <see cref="IExternalCodeRegistry{TCode}"/> (via <see cref="CountryCodeValidator"/>) — see the
+/// two constructors below.
 /// </remarks>
 public class PostalAddress27Validator : AbstractValidator<PostalAddress27>
 {
     /// <summary>
     /// Initializes a new instance using dependency injection: the caller supplies the validator
-    /// for the optional <c>AddressType</c> building block — e.g. resolved from a DI container —
-    /// instead of this type constructing its own.
+    /// for the optional <c>AddressType</c> building block and <c>Country</c> — e.g. resolved from
+    /// a DI container — instead of this type constructing its own.
     /// </summary>
     /// <param name="addressTypeValidator">
     /// Validator for the optional <c>AddressType</c> building block (AddressType3Choice_, 0..1) —
     /// only invoked when present.
     /// </param>
-    public PostalAddress27Validator(IValidator<AddressType3Choice_> addressTypeValidator)
+    /// <param name="countryValidator">
+    /// Validator for the optional <c>Country</c> (CountryCode, 0..1) — only invoked when present.
+    /// </param>
+    public PostalAddress27Validator(
+        IValidator<AddressType3Choice_> addressTypeValidator,
+        IValidator<CountryCode> countryValidator
+    )
     {
         // All scalar fields (CareOf, Department, SubDepartment, StreetName, BuildingNumber,
         // BuildingName, Floor, UnitNumber, PostBox, Room, PostCode, TownName, TownLocationName,
-        // DistrictName, CountrySubDivision, Country, AddressLine): optional, length/pattern
-        // enforced by struct constructors — no rule needed.
+        // DistrictName, CountrySubDivision, AddressLine): optional, length/pattern enforced by
+        // struct constructors — no rule needed.
 
         When(
             x => x.AddressType is not null,
             () => RuleFor(x => x.AddressType).SetValidator(addressTypeValidator!)
         );
+
+        When(
+            x => x.Country is not null,
+            () => RuleFor(x => x.Country!.Value).SetValidator(countryValidator)
+        );
     }
 
     /// <summary>
     /// Initializes a new instance using default dependencies: the <c>AddressType</c> building
-    /// block is validated by its own default validator (<see cref="AddressType3Choice_Validator"/>).
+    /// block and <c>Country</c> are each validated by their own default validator
+    /// (<see cref="AddressType3Choice_Validator"/>, <see cref="CountryCodeValidator"/>).
     /// Convenience constructor for callers not using a DI container.
     /// </summary>
     public PostalAddress27Validator()
-        : this(new AddressType3Choice_Validator()) { }
+        : this(new AddressType3Choice_Validator(), new CountryCodeValidator()) { }
 }

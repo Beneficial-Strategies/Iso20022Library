@@ -2,7 +2,7 @@
 
 This project contains a .NET implementation of containers for 3,311 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
 
-## Thank you
+## Welcome!
 
 You are about to download an implementation of the entire domain model for the [ISO20022](https://iso20022.org) standard.
 Both JSON and ISO 20022 XML serialization are included.
