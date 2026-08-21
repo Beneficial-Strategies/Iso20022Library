@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Current Or Default Reservation4Choice.
+    /// Current or default reservation set by the member and managed by the transaction administrator.
     /// </summary>
     [KnownType(typeof(CurrentOrDefaultReservation4Choice.Current))]
     [KnownType(typeof(CurrentOrDefaultReservation4Choice.Default))]

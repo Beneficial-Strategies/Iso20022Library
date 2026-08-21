@@ -62,6 +62,11 @@ public class CoverageCompletenessTests
         typeof(LiquidityDebitTransferV07),
         typeof(MandateCancellationRequestV08),
         typeof(MandateSuspensionRequestV04),
+        typeof(CreateLimitV02),
+        typeof(CreateReservationV03),
+        typeof(CreateStandingOrderV03),
+        typeof(ModifyStandingOrderV08),
+        typeof(ModifyReservationV07),
     ];
 
     [Theory]
