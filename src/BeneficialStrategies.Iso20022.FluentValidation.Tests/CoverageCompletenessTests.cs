@@ -55,6 +55,9 @@ public class CoverageCompletenessTests
         typeof(DeleteStandingOrderV05),
         typeof(DuplicateV07),
         typeof(ProprietaryFormatInvestigationV06),
+        typeof(GetCurrencyExchangeRateV04),
+        typeof(GetGeneralBusinessInformationV04),
+        typeof(DeleteReservationV07),
     ];
 
     [Theory]
