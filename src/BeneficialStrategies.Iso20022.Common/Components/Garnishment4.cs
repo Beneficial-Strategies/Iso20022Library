@@ -10,63 +10,64 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Garnishment4.
+/// Provides remittance information about a payment for garnishment-related purposes.
 /// </summary>
 [IsoId("_v9i0ETEyEe6g-ffJsqGiSA")]
+[Description(@"Provides remittance information about a payment for garnishment-related purposes.")]
 [DisplayName("Garnishment4")]
 public record Garnishment4
 {
     /// <summary>
-    /// Date.
+    /// Date of payment which garnishment was taken from.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     public IsoISODate? Date { get; init; }
 
     /// <summary>
-    /// Employee Termination Indicator.
+    /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
     /// </summary>
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
     public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 
     /// <summary>
-    /// Family Medical Insurance Indicator.
+    /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
     /// </summary>
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
     public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
 
     /// <summary>
-    /// Garnishee.
+    /// Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.
     /// </summary>
     [DisplayName("Garnishee")]
     [IsoXmlTag("Grnshee")]
     public PartyIdentification272? Garnishee { get; init; }
 
     /// <summary>
-    /// Garnishment Administrator.
+    /// Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary.
     /// </summary>
     [DisplayName("Garnishment Administrator")]
     [IsoXmlTag("GrnshmtAdmstr")]
     public PartyIdentification272? GarnishmentAdministrator { get; init; }
 
     /// <summary>
-    /// Reference Number.
+    /// Reference information that is specific to the agency receiving the garnishment.
     /// </summary>
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
     public IsoMax140Text? ReferenceNumber { get; init; }
 
     /// <summary>
-    /// Remitted Amount.
+    /// Amount of money remitted for the referred document.
     /// </summary>
     [DisplayName("Remitted Amount")]
     [IsoXmlTag("RmtdAmt")]
     public ActiveOrHistoricCurrencyAndAmount? RemittedAmount { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Specifies the type of garnishment.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]

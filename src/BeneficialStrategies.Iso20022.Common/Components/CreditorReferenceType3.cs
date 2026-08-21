@@ -10,21 +10,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Creditor Reference Type3.
+/// Specifies the type of creditor reference.
 /// </summary>
 [IsoId("_7xH-hTEsEe6GxLzpkVnWYg")]
+[Description(@"Specifies the type of creditor reference.")]
 [DisplayName("Creditor Reference Type3")]
 public record CreditorReferenceType3
 {
     /// <summary>
-    /// Code Or Proprietary.
+    /// Coded or proprietary format creditor reference type.
     /// </summary>
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required CreditorReferenceType2Choice_ CodeOrProprietary { get; init; }
 
     /// <summary>
-    /// Issuer.
+    /// Entity that assigns the credit reference type.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

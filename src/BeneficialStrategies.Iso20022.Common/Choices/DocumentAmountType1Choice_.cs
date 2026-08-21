@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Document Amount Type1Choice.
+    /// Specifies the amount type.
     /// </summary>
     [KnownType(typeof(DocumentAmountType1Choice.Code))]
     [KnownType(typeof(DocumentAmountType1Choice.Proprietary))]

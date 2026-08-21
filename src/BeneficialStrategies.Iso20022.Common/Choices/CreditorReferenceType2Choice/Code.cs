@@ -9,13 +9,14 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice
 {
     /// <summary>
-    /// Code.
+    /// Type of creditor reference, as published in an external creditor reference type code set.
     /// </summary>
     [DisplayName("Code")]
     public record Code : CreditorReferenceType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.
+        /// Type of creditor reference, as published in an external creditor reference type code set.
         /// </summary>
         [IsoXmlTag("Cd")]
         public required ExternalCreditorReferenceType1Code Value { get; init; }

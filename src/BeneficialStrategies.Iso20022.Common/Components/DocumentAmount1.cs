@@ -10,21 +10,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Document Amount1.
+/// Provides details on the amount and type of the referred document.
 /// </summary>
 [IsoId("_vRiGoDKzEe6dJsbzsnAdDg")]
+[Description(@"Provides details on the amount and type of the referred document.")]
 [DisplayName("Document Amount1")]
 public record DocumentAmount1
 {
     /// <summary>
-    /// Amount.
+    /// Amount of money for the referred document.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Defines the type of amount.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]

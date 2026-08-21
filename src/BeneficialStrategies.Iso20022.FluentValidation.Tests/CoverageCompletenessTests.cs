@@ -70,6 +70,7 @@ public class CoverageCompletenessTests
         typeof(MandateAcceptanceReportV08),
         typeof(MandateAmendmentRequestV08),
         typeof(CreditorPaymentActivationRequestV12),
+        typeof(CustomerPaymentReversalV13),
     ];
 
     [Theory]

@@ -10,77 +10,78 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Mandate Related Information16.
+/// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
 /// </summary>
 [IsoId("_wJuO0TEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further details related to a direct debit mandate signed between the creditor and the debtor.")]
 [DisplayName("Mandate Related Information16")]
 public record MandateRelatedInformation16
 {
     /// <summary>
-    /// Amendment Indicator.
+    /// Indicator notifying whether the underlying mandate is amended or not.
     /// </summary>
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
-    /// Amendment Information Details.
+    /// List of mandate elements that have been modified.
     /// </summary>
     [DisplayName("Amendment Information Details")]
     [IsoXmlTag("AmdmntInfDtls")]
     public AmendmentInformationDetails15? AmendmentInformationDetails { get; init; }
 
     /// <summary>
-    /// Date Of Signature.
+    /// Date on which the direct debit mandate has been signed by the debtor.
     /// </summary>
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     public IsoISODate? DateOfSignature { get; init; }
 
     /// <summary>
-    /// Electronic Signature.
+    /// Additional security provisions, such as a digital signature, as provided by the debtor.
     /// </summary>
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
     public IsoMax1025Text? ElectronicSignature { get; init; }
 
     /// <summary>
-    /// Final Collection Date.
+    /// Date of the final collection of a direct debit as per the mandate.
     /// </summary>
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     public IsoISODate? FinalCollectionDate { get; init; }
 
     /// <summary>
-    /// First Collection Date.
+    /// Date of the first collection of a direct debit as per the mandate.
     /// </summary>
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     public IsoISODate? FirstCollectionDate { get; init; }
 
     /// <summary>
-    /// Frequency.
+    /// Regularity with which direct debit instructions are to be created and processed.
     /// </summary>
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
     public Frequency36Choice_? Frequency { get; init; }
 
     /// <summary>
-    /// Mandate Identification.
+    /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
     public IsoMax35Text? MandateIdentification { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public MandateSetupReason1Choice_? Reason { get; init; }
 
     /// <summary>
-    /// Tracking Days.
+    /// Specifies the number of days the direct debit instruction must be tracked.
     /// </summary>
     [DisplayName("Tracking Days")]
     [IsoXmlTag("TrckgDays")]

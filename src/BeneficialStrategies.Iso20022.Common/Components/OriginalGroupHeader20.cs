@@ -10,35 +10,36 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Original Group Header20.
+/// Provides details on the original group, to which the message refers.
 /// </summary>
 [IsoId("_yCJJATEyEe6g-ffJsqGiSA")]
+[Description(@"Provides details on the original group, to which the message refers.")]
 [DisplayName("Original Group Header20")]
 public record OriginalGroupHeader20
 {
     /// <summary>
-    /// Original Creation Date Time.
+    /// Date and time at which the original message was created.
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
-    /// Original Message Identification.
+    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
-    /// Original Message Name Identification.
+    /// Specifies the original message name identifier to which the message refers.
     /// </summary>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
-    /// Reversal Reason Information.
+    /// Provides detailed information on the reversal reason.
     /// </summary>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]

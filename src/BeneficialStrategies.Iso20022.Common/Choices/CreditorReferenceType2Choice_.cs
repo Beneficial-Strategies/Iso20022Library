@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Creditor Reference Type2Choice.
+    /// Specifies the type of document referred by the creditor.
     /// </summary>
     [KnownType(typeof(CreditorReferenceType2Choice.Code))]
     [KnownType(typeof(CreditorReferenceType2Choice.Proprietary))]
