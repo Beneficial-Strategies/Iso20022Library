@@ -71,6 +71,10 @@ public class CoverageCompletenessTests
         typeof(MandateAmendmentRequestV08),
         typeof(CreditorPaymentActivationRequestV12),
         typeof(CustomerPaymentReversalV13),
+        typeof(CustomerDirectDebitInitiationV12),
+        typeof(CustomerCreditTransferInitiationV13),
+        typeof(CustomerPaymentStatusReportV15),
+        typeof(CreditorPaymentActivationRequestStatusReportV12),
     ];
 
     [Theory]

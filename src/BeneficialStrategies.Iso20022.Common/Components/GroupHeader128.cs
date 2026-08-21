@@ -10,49 +10,51 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Group Header128.
+/// Provides the characteristics shared by all individual transactions included in the message.
 /// </summary>
 [IsoId("_6hTGoTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides the characteristics shared by all individual transactions included in the message.")]
 [DisplayName("Group Header128")]
 public record GroupHeader128
 {
     /// <summary>
-    /// Creation Date Time.
+    /// Date and time at which the message was created.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required IsoISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Financial institution servicing an account for the creditor.
     /// </summary>
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Debtor Agent.
+    /// Financial institution servicing an account for the debtor.
     /// </summary>
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// Forwarding Agent.
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.
     /// </summary>
     [DisplayName("Forwarding Agent")]
     [IsoXmlTag("FwdgAgt")]
     public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 
     /// <summary>
-    /// Initiating Party.
+    /// Party that initiates the status message.
     /// </summary>
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
     public PartyIdentification272? InitiatingParty { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]

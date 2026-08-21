@@ -10,35 +10,37 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Direct Debit Transaction12.
+/// Provides further specific details on the direct debit transaction and the related mandate.
 /// </summary>
 [IsoId("_wuFgITEyEe6g-ffJsqGiSA")]
+[Description(@"Provides further specific details on the direct debit transaction and the related mandate.")]
 [DisplayName("Direct Debit Transaction12")]
 public record DirectDebitTransaction12
 {
     /// <summary>
-    /// Creditor Scheme Identification.
+    /// Credit party that signs the mandate.
     /// </summary>
     [DisplayName("Creditor Scheme Identification")]
     [IsoXmlTag("CdtrSchmeId")]
     public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 
     /// <summary>
-    /// Mandate Related Information.
+    /// Provides further details of the direct debit mandate signed between the creditor and the debtor.
     /// </summary>
     [DisplayName("Mandate Related Information")]
     [IsoXmlTag("MndtRltdInf")]
     public MandateRelatedInformation16? MandateRelatedInformation { get; init; }
 
     /// <summary>
-    /// Pre Notification Date.
+    /// Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.
     /// </summary>
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
     public IsoISODate? PreNotificationDate { get; init; }
 
     /// <summary>
-    /// Pre Notification Identification.
+    /// Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.
+    /// Usage: The direct debit pre-notification is used to reconcile separately sent collection information with the direct debit transaction information.
     /// </summary>
     [DisplayName("Pre Notification Identification")]
     [IsoXmlTag("PreNtfctnId")]

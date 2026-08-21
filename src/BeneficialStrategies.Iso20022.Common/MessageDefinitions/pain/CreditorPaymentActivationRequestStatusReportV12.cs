@@ -13,10 +13,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.pain;
 
 /// <summary>
-/// This record is an implementation of the pain.014.001.12 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).
 /// </summary>
 [IsoId("f36c5c5e-539b-48a7-974d-3cfeeacd209e")]
+[Description(
+    @"The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file)."
+)]
 [DisplayName("Creditor Payment Activation Request Status Report V12")]
 public record CreditorPaymentActivationRequestStatusReportV12 : IOuterRecord
 {
@@ -46,21 +48,21 @@ public record CreditorPaymentActivationRequestStatusReportV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Group Header.
+    /// Set of characteristics shared by all individual transactions included in the message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader111 GroupHeader { get; init; }
 
     /// <summary>
-    /// Original Group Information And Status.
+    /// Original group information concerning the group of transactions, to which the status report message refers to.
     /// </summary>
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupInformation32 OriginalGroupInformationAndStatus { get; init; }
 
     /// <summary>
-    /// Original Payment Information And Status.
+    /// Information concerning the original payment information, to which the status report message refers.
     /// </summary>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
@@ -68,7 +70,7 @@ public record CreditorPaymentActivationRequestStatusReportV12 : IOuterRecord
         [];
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

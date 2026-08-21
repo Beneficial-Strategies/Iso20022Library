@@ -1,13 +1,13 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,216 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,248 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **307 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 30 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
+- **342 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 34 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph — **the entire `pain` (Payments Initiation) business area is now 100% complete** (12/12 addressable message families; two additional legacy IDs, `PaymentCancellationRequestV01` and `PaymentStatusReportV02`, are permanently out of scope — see the note below the table). This list only grows, so it's kept here as a table, sorted by ISO ID:
 
   | ISO ID | Message | C# type | Description |
   |---|---|---|---|
@@ -33,19 +33,23 @@ Coverage today:
   | camt.101.001.02 | Create Limit | `CreateLimitV02` | Sent by a member to the transaction administrator to create one or several limits set by the member and managed by the transaction administrator. |
   | camt.102.001.03 | Create Standing Order | `CreateStandingOrderV03` | Sent by a member to the transaction administrator to create a permanent order for the transfer of funds between two of its accounts. |
   | camt.103.001.03 | Create Reservation | `CreateReservationV03` | Used to request the creation of one particular reservation by the member and managed by the transaction administrator. |
+  | pain.001.001.13 | Customer Credit Transfer Initiation | `CustomerCreditTransferInitiationV13` | Sent by the initiating party to the forwarding agent or debtor agent, to request movement of funds from the debtor account to a creditor. |
+  | pain.002.001.15 | Customer Payment Status Report | `CustomerPaymentStatusReportV15` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
   | pain.007.001.13 | Customer Payment Reversal | `CustomerPaymentReversalV13` | Sent by the initiating party to the next party in the payment chain, to reverse a payment previously executed. |
+  | pain.008.001.12 | Customer Direct Debit Initiation | `CustomerDirectDebitInitiationV12` | Sent by the initiating party to the forwarding agent or creditor agent, to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor. |
   | pain.009.001.08 | Mandate Initiation Request | `MandateInitiationRequestV08` | Sent by the initiator of a mandate request (debtor or creditor) to their agent, to set up the instruction that allows the debtor agent to accept debit instructions from the creditor agent. |
   | pain.010.001.08 | Mandate Amendment Request | `MandateAmendmentRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent and/or counterparty to request the amendment of specific information in an existing mandate. |
   | pain.011.001.08 | Mandate Cancellation Request | `MandateCancellationRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent to request the cancellation of an existing mandate. |
   | pain.012.001.08 | Mandate Acceptance Report | `MandateAcceptanceReportV08` | Sent from the agent of the receiver of a mandate request to the agent of the initiator, to confirm the acceptance or rejection of that request. |
   | pain.013.001.12 | Creditor Payment Activation Request | `CreditorPaymentActivationRequestV12` | Sent by the Creditor sending party to the Debtor receiving party, directly or through agents, to request movement of funds from the debtor account to a creditor. |
+  | pain.014.001.12 | Creditor Payment Activation Request Status Report | `CreditorPaymentActivationRequestStatusReportV12` | Sent by a party to the next party in the creditor payment activation request chain, to inform them about the positive or negative status of a creditor payment activation request. |
   | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
   | pain.018.001.04 | Mandate Suspension Request | `MandateSuspensionRequestV04` | Sent by the initiator of the request (debtor, debtor agent, creditor, or creditor agent) to its agent to request the suspension of an existing mandate. |
 
   (`FIToFIPaymentCancellationRequestV10`, camt.056.001.10, has a validator too, but mechanical verification found gaps in its dependency graph — not yet complete enough to list above. See the FluentValidation project's own `CLAUDE.md` for tracking.)
 
   (Two `pain` message IDs are intentionally absent above, not merely unbuilt: `PaymentCancellationRequestV01` (pain.006.001.01) and `PaymentStatusReportV02` (pain.002.001.02) are both superseded — per ISO 20022's own `nextVersions` pointer, each was renamed decades ago into the `CustomerXxx` naming convention. `PaymentCancellationRequestV01`'s lineage continued as `CustomerPaymentCancellationRequestV01` → ... → `CustomerPaymentCancellationRequestV11`, which now lives in the `camt` business area (camt.055.001.11) — permanently out of `pain` scope. `PaymentStatusReportV02`'s lineage continued as `CustomerPaymentStatusReportV03` → ... → `CustomerPaymentStatusReportV15`, which stays in `pain` and is tracked under its current name instead. Neither of the two old IDs will ever be built under those names.)
-- **909 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
+- **906 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
 
 Every validator — full or abbreviated — carries an XML doc `<remarks>` block naming exactly which spec constraints it currently checks, so you always know what you're getting from a specific type, not just its category.
 
