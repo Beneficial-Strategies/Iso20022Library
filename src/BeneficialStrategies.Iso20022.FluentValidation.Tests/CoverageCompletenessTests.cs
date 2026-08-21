@@ -58,6 +58,10 @@ public class CoverageCompletenessTests
         typeof(GetCurrencyExchangeRateV04),
         typeof(GetGeneralBusinessInformationV04),
         typeof(DeleteReservationV07),
+        typeof(LiquidityCreditTransferV07),
+        typeof(LiquidityDebitTransferV07),
+        typeof(MandateCancellationRequestV08),
+        typeof(MandateSuspensionRequestV04),
     ];
 
     [Theory]
