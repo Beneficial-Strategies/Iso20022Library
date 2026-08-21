@@ -10,7 +10,7 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Mandate Acceptance8.
+/// Identifies the mandate, which is being accepted.
 /// </summary>
 [IsoId("_1f7egTEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Acceptance8")]

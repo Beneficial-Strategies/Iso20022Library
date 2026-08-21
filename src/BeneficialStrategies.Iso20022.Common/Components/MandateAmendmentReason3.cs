@@ -10,28 +10,28 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Mandate Amendment Reason3.
+/// Provides further details on the reason of the amendment of the mandate.
 /// </summary>
 [IsoId("_yUI4ITEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Amendment Reason3")]
 public record MandateAmendmentReason3
 {
     /// <summary>
-    /// Additional Information.
+    /// Further details on the amendment request reason.
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
-    /// Originator.
+    /// Party that issues the amendment request.
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification272? Originator { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Specifies the reason for the amendment request.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]

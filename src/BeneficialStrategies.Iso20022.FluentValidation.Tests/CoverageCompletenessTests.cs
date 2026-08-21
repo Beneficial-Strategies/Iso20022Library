@@ -67,6 +67,8 @@ public class CoverageCompletenessTests
         typeof(CreateStandingOrderV03),
         typeof(ModifyStandingOrderV08),
         typeof(ModifyReservationV07),
+        typeof(MandateAcceptanceReportV08),
+        typeof(MandateAmendmentRequestV08),
     ];
 
     [Theory]

@@ -10,7 +10,7 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Mandate Amendment8.
+/// Identifies the mandate to be amended and gives details of the new mandate.
 /// </summary>
 [IsoId("_yLKiITEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Amendment8")]

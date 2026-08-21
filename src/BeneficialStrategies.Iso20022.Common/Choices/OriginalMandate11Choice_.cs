@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Original Mandate11Choice.
+    /// Specifies the mandate that is being accepted.
     /// </summary>
     [KnownType(typeof(OriginalMandate11Choice.OriginalMandate))]
     [KnownType(typeof(OriginalMandate11Choice.OriginalMandateIdentification))]
