@@ -10,70 +10,71 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Document15.
+/// Information about a document.
 /// </summary>
 [IsoId("_wy9ZETEyEe6g-ffJsqGiSA")]
+[Description(@"Information about a document.")]
 [DisplayName("Document15")]
 public record Document15
 {
     /// <summary>
-    /// Digital Signature.
+    /// Digital signature of the enclosed binary file.
     /// </summary>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
     public PartyAndSignature4? DigitalSignature { get; init; }
 
     /// <summary>
-    /// Enclosure.
+    /// Binary file representing the enclosed document or template, such as a PDF file, image file, XML file, MT message.
     /// </summary>
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
     public required IsoMax10MbBinary Enclosure { get; init; }
 
     /// <summary>
-    /// File Name.
+    /// Technical name of the file.
     /// </summary>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
     public IsoMax140Text? FileName { get; init; }
 
     /// <summary>
-    /// Format.
+    /// Format of the document or template, such as PDF, XML, XSLT.
     /// </summary>
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
     public required DocumentFormat1Choice_ Format { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Identification of the document or template.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required IsoMax35Text Identification { get; init; }
 
     /// <summary>
-    /// Issue Date.
+    /// Issue date or date time of the document.
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     public required DateAndDateTime2Choice_ IssueDate { get; init; }
 
     /// <summary>
-    /// Language Code.
+    /// Unique identifier for a language used in the document.
     /// </summary>
     [DisplayName("Language Code")]
     [IsoXmlTag("LangCd")]
     public LanguageCode? LanguageCode { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Name of document or transaction, for example, tax invoice.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public IsoMax140Text? Name { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Type of document or template.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]

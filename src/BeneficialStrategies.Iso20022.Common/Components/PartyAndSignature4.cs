@@ -10,21 +10,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Party And Signature4.
+/// Entity involved in an activity.
 /// </summary>
 [IsoId("_w1V-sTEyEe6g-ffJsqGiSA")]
+[Description(@"Entity involved in an activity.")]
 [DisplayName("Party And Signature4")]
 public record PartyAndSignature4
 {
     /// <summary>
-    /// Party.
+    /// Entity involved in an activity.
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public required PartyIdentification272 Party { get; init; }
 
     /// <summary>
-    /// Signature.
+    /// Signature of a party.
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]

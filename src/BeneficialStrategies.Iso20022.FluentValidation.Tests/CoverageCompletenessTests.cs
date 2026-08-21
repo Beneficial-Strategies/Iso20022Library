@@ -69,6 +69,7 @@ public class CoverageCompletenessTests
         typeof(ModifyReservationV07),
         typeof(MandateAcceptanceReportV08),
         typeof(MandateAmendmentRequestV08),
+        typeof(CreditorPaymentActivationRequestV12),
     ];
 
     [Theory]

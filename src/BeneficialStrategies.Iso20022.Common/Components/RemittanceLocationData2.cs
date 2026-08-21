@@ -10,28 +10,29 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Remittance Location Data2.
+/// Provides additional details on the remittance advice.
 /// </summary>
 [IsoId("_0KjnBTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides additional details on the remittance advice.")]
 [DisplayName("Remittance Location Data2")]
 public record RemittanceLocationData2
 {
     /// <summary>
-    /// Electronic Address.
+    /// Electronic address to which an agent is to send the remittance information.
     /// </summary>
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
     public IsoMax2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
-    /// Method.
+    /// Method used to deliver the remittance advice information.
     /// </summary>
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
     public required RemittanceLocationMethod2Code Method { get; init; }
 
     /// <summary>
-    /// Postal Address.
+    /// Postal address to which an agent is to send the remittance information.
     /// </summary>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]

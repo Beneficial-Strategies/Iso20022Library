@@ -1,13 +1,13 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,149 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,174 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **238 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 28 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
+- **264 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 29 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
 
   | ISO ID | Message | C# type | Description |
   |---|---|---|---|
@@ -37,11 +37,12 @@ Coverage today:
   | pain.010.001.08 | Mandate Amendment Request | `MandateAmendmentRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent and/or counterparty to request the amendment of specific information in an existing mandate. |
   | pain.011.001.08 | Mandate Cancellation Request | `MandateCancellationRequestV08` | Sent by the initiator of the request (debtor or creditor) to their agent to request the cancellation of an existing mandate. |
   | pain.012.001.08 | Mandate Acceptance Report | `MandateAcceptanceReportV08` | Sent from the agent of the receiver of a mandate request to the agent of the initiator, to confirm the acceptance or rejection of that request. |
+  | pain.013.001.12 | Creditor Payment Activation Request | `CreditorPaymentActivationRequestV12` | Sent by the Creditor sending party to the Debtor receiving party, directly or through agents, to request movement of funds from the debtor account to a creditor. |
   | pain.017.001.04 | Mandate Copy Request | `MandateCopyRequestV04` | Sent by the initiator of the request (debtor or creditor) to their agent to request a copy of an existing mandate. |
   | pain.018.001.04 | Mandate Suspension Request | `MandateSuspensionRequestV04` | Sent by the initiator of the request (debtor, debtor agent, creditor, or creditor agent) to its agent to request the suspension of an existing mandate. |
 
   (`FIToFIPaymentCancellationRequestV10`, camt.056.001.10, has a validator too, but mechanical verification found gaps in its dependency graph — not yet complete enough to list above. See the FluentValidation project's own `CLAUDE.md` for tracking.)
-- **911 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
+- **910 validators** — abbreviated coverage. These currently only enforce a known minimum-collection-size gap (some `required`-looking collections were generated with no lower bound, so an empty collection compiles but violates the spec); they have not yet been reviewed for the remaining field-level constraints and cross-field rules a full validator would cover.
 
 Every validator — full or abbreviated — carries an XML doc `<remarks>` block naming exactly which spec constraints it currently checks, so you always know what you're getting from a specific type, not just its category.
 

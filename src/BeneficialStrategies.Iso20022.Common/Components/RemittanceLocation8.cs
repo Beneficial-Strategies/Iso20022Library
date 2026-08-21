@@ -10,21 +10,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Remittance Location8.
+/// Provides information on the remittance advice.
 /// </summary>
 [IsoId("_0IULUTEyEe6g-ffJsqGiSA")]
+[Description(@"Provides information on the remittance advice.")]
 [DisplayName("Remittance Location8")]
 public record RemittanceLocation8
 {
     /// <summary>
-    /// Remittance Identification.
+    /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
     public IsoMax35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
-    /// Remittance Location Details.
+    /// Set of elements used to provide information on the location and/or delivery of the remittance information.
     /// </summary>
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]

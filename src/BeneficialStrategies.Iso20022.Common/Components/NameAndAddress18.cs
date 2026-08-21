@@ -10,21 +10,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Name And Address18.
+/// Information that locates and identifies a party.
 /// </summary>
 [IsoId("_0MzpxzEyEe6g-ffJsqGiSA")]
+[Description(@"Information that locates and identifies a party.")]
 [DisplayName("Name And Address18")]
 public record NameAndAddress18
 {
     /// <summary>
-    /// Address.
+    /// Postal address of a party.
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     public required PostalAddress27 Address { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Name by which a party is known and is usually used to identify that party.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]

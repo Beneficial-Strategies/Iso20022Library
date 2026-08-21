@@ -13,6 +13,7 @@ global using BeneficialStrategies.Iso20022.Validation;
 global using BeneficialStrategies.Iso20022.Validation.camt;
 global using BeneficialStrategies.Iso20022.Validation.pain;
 global using BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
+global using BeneficialStrategies.Iso20022.Validation.CodesetValidators;
 global using BeneficialStrategies.Iso20022.Validation.Components;
 global using FluentValidation;
 global using FluentValidation.TestHelper;
