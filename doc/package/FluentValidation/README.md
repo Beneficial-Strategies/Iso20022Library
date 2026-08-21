@@ -1,13 +1,13 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,144 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,149 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **233 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 28 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
+- **238 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 28 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph. This list only grows, so it's kept here as a table, sorted by ISO ID:
 
   | ISO ID | Message | C# type | Description |
   |---|---|---|---|
