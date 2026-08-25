@@ -10,28 +10,29 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Payment Return Reason7.
+/// Provides further details on the reason of the return of the transaction.
 /// </summary>
+[Description(@"Provides further details on the reason of the return of the transaction.")]
 [IsoId("_wrllwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Return Reason7")]
 public record PaymentReturnReason7
 {
     /// <summary>
-    /// Additional Information.
+    /// Further details on the return reason.
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
-    /// Originator.
+    /// Party that issues the return.
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification272? Originator { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Specifies the reason for the return.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]

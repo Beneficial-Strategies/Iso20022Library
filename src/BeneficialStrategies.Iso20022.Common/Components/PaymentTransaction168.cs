@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the return message applies.
 /// </summary>
+[Description(@"Provides further details on the reference and status on the original transactions, included in the original instruction, to which the return message applies.")]
 [IsoId("fccbf899-2453-42a4-ac0e-594ac02c735b")]
 [DisplayName("Payment Transaction168")]
 public record PaymentTransaction168

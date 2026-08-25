@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Specifies key elements as defined in the original transaction.
 /// </summary>
+[Description(@"Specifies key elements as defined in the original transaction.")]
 [IsoId("4e387edc-deca-49ee-beb0-bf53f204c1d5")]
 [DisplayName("Original Transaction Reference45")]
 public record OriginalTransactionReference45
