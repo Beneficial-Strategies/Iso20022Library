@@ -80,6 +80,7 @@ public class CoverageCompletenessTests
         typeof(FIToFIPaymentStatusRequestV07),
         typeof(FIToFIPaymentReversalV14),
         typeof(FIToFIPaymentStatusReportV16),
+        typeof(FIToFICustomerCreditTransferV14),
     ];
 
     [Theory]

@@ -73,6 +73,23 @@ public record CreditTransferTransaction73
     public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
 
     /// <summary>
+    /// Series of additional date and time data that can be applied to the payment.
+    /// </summary>
+    [DisplayName("Additional Date Time")]
+    [IsoXmlTag("AddtlDtTm")]
+    public AdditionalDateTime1? AdditionalDateTime { get; init; }
+
+    /// <summary>
+    /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
+    /// </summary>
+    /// <remarks>
+    /// Usage: This amount has to be transported unchanged through the transaction chain.
+    /// </remarks>
+    [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? InstructedAmount { get; init; }
+
+    /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
     /// </summary>
     [IsoId("d64d5a68-0008-0008-0008-12844122abcc")]
@@ -103,6 +120,20 @@ public record CreditTransferTransaction73
     [DisplayName("Agreed Rate")]
     [IsoXmlTag("AgrdRate")]
     public CurrencyExchange26? AgreedRate { get; init; }
+
+    /// <summary>
+    /// Provides further details of the mandate signed between the creditor and the debtor.
+    /// </summary>
+    [DisplayName("Mandate Related Information")]
+    [IsoXmlTag("MndtRltdInf")]
+    public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
+
+    /// <summary>
+    /// Cryptographic key identifying terms agreed by agents within the payment chain pre-settlement. This key can also be used post-settlement to confirm the payment has been credited as intended.
+    /// </summary>
+    [DisplayName("Payment Signature")]
+    [IsoXmlTag("PmtSgntr")]
+    public CryptographicKey1Choice_? PaymentSignature { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the creditor's agent (previous instructing agent 1).
@@ -151,6 +182,20 @@ public record CreditTransferTransaction73
     [DisplayName("Previous Instructing Agent3 Account")]
     [IsoXmlTag("PrvsInstgAgt3Acct")]
     public CashAccount40? PreviousInstructingAgent3Account { get; init; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the creditor's agent (intermediary agent 1).
@@ -239,6 +284,16 @@ public record CreditTransferTransaction73
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }
+
+    /// <summary>
+    /// Party that initiates the payment.
+    /// </summary>
+    /// <remarks>
+    /// Usage: This can be either the debtor or a party that initiates the credit transfer on behalf of the debtor.
+    /// </remarks>
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public PartyIdentification272? InitiatingParty { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the creditor.
