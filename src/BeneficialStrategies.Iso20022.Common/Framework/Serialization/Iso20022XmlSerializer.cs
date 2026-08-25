@@ -2,10 +2,12 @@
 
 using System.Collections;
 using System.Collections.Concurrent;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Serialization;
@@ -76,6 +78,87 @@ public static class Iso20022XmlSerializer
     /// <summary>Deserializes an XML string to an ISO 20022 message record.</summary>
     public static TMessage Deserialize<TMessage>(string xml)
         where TMessage : IOuterRecord => Deserialize<TMessage>(XDocument.Parse(xml));
+
+    /// <summary>
+    /// Attempts to deserialize an XML string to an ISO 20022 message record without throwing.
+    /// </summary>
+    /// <remarks>
+    /// Catches every exception category <see cref="Deserialize{TMessage}(string)"/> is known to
+    /// throw for malformed or structurally invalid input: malformed XML text
+    /// (<see cref="XmlException"/>), a missing/wrong root or message element or an internal
+    /// reflection failure (<see cref="InvalidOperationException"/>), unresolvable choice-variant
+    /// dispatch (<see cref="NotSupportedException"/>), an ISO 20022 format-constraint violation
+    /// (<see cref="Iso20022FormatException"/>), a malformed numeric/date leaf value
+    /// (<see cref="FormatException"/>, <see cref="OverflowException"/>), and a
+    /// <see langword="null"/> <paramref name="xml"/> argument. Anything else (e.g. an
+    /// <see cref="OutOfMemoryException"/>) still propagates — only recognized "this input didn't
+    /// parse" failures are captured here.
+    /// </remarks>
+    /// <returns><see langword="true"/> if deserialization succeeded; otherwise <see langword="false"/>.</returns>
+    public static bool TryDeserialize<TMessage>(
+        string? xml,
+        [NotNullWhen(true)] out TMessage? message,
+        out Exception? error
+    )
+        where TMessage : class, IOuterRecord
+    {
+        try
+        {
+            if (xml is null)
+                throw new ArgumentNullException(nameof(xml));
+
+            message = Deserialize<TMessage>(xml);
+            error = null;
+            return true;
+        }
+        catch (Exception ex) when (IsRecognizedParseFailure(ex))
+        {
+            message = null;
+            error = ex;
+            return false;
+        }
+    }
+
+    /// <summary>
+    /// Attempts to deserialize an <see cref="XDocument"/> to an ISO 20022 message record without
+    /// throwing. See
+    /// <see cref="TryDeserialize{TMessage}(string, out TMessage, out Exception)"/> for which
+    /// exceptions are captured as a failed result versus left to propagate.
+    /// </summary>
+    /// <returns><see langword="true"/> if deserialization succeeded; otherwise <see langword="false"/>.</returns>
+    public static bool TryDeserialize<TMessage>(
+        XDocument? document,
+        [NotNullWhen(true)] out TMessage? message,
+        out Exception? error
+    )
+        where TMessage : class, IOuterRecord
+    {
+        try
+        {
+            if (document is null)
+                throw new ArgumentNullException(nameof(document));
+
+            message = Deserialize<TMessage>(document);
+            error = null;
+            return true;
+        }
+        catch (Exception ex) when (IsRecognizedParseFailure(ex))
+        {
+            message = null;
+            error = ex;
+            return false;
+        }
+    }
+
+    // Iso20022FormatException : FormatException, so it's already covered by the FormatException
+    // clause below — not listed separately, to avoid an ineffective/redundant type pattern.
+    private static bool IsRecognizedParseFailure(Exception ex) =>
+        ex is XmlException
+            or InvalidOperationException
+            or NotSupportedException
+            or FormatException // covers Iso20022FormatException too (see above)
+            or OverflowException
+            or ArgumentNullException;
 
     // ── Message constants ──────────────────────────────────────────────────────
 
