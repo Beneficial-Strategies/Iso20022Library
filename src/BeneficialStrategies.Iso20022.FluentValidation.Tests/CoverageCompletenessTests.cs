@@ -75,6 +75,7 @@ public class CoverageCompletenessTests
         typeof(CustomerCreditTransferInitiationV13),
         typeof(CustomerPaymentStatusReportV15),
         typeof(CreditorPaymentActivationRequestStatusReportV12),
+        typeof(MultilateralSettlementRequestV02),
     ];
 
     [Theory]

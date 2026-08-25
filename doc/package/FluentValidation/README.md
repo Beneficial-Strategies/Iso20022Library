@@ -1,13 +1,13 @@
 # Beneficial Strategies ISO20022 FluentValidation Library
 
-This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,248 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
+This project contains [FluentValidation](https://docs.fluentvalidation.net/) validators for the message domain model published in [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) — 1,254 validators covering top-level messages, message components, choice types, and external code sets, generated from and cross-checked against the ISO 20022 specification.
 
 ## Welcome!
 
 `BeneficialStrategies.Iso20022` gives you a strongly-typed, compiler-enforced rendering of ISO 20022 messages in memory — but the C# type system can only express so much. Some ISO 20022 rules are cross-field ("a case identification may appear in at most one of three possible locations") or depend on runtime data the compiler can't see. This package is the follow-on project that covers that ground: validators that check field-level constraints and cross-field business rules the record types themselves cannot enforce.
 
 Coverage today:
-- **342 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 34 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph — **the entire `pain` (Payments Initiation) business area is now 100% complete** (12/12 addressable message families; two additional legacy IDs, `PaymentCancellationRequestV01` and `PaymentStatusReportV02`, are permanently out of scope — see the note below the table). This list only grows, so it's kept here as a table, sorted by ISO ID:
+- **348 validators** — full ISO 20022 spec-compliance coverage (field-level constraints and cross-field rules), including 35 top-level messages validated completely, top to bottom, with zero exceptions anywhere in their reachable graph — **the entire `pain` (Payments Initiation) business area is 100% complete** (12/12 addressable message families; two additional legacy IDs, `PaymentCancellationRequestV01` and `PaymentStatusReportV02`, are permanently out of scope — see the note below the table), and the `pacs` (Payments Clearing and Settlement) business area is now underway, starting with `MultilateralSettlementRequestV02`. This list only grows, so it's kept here as a table, sorted by ISO ID:
 
   | ISO ID | Message | C# type | Description |
   |---|---|---|---|
@@ -33,6 +33,7 @@ Coverage today:
   | camt.101.001.02 | Create Limit | `CreateLimitV02` | Sent by a member to the transaction administrator to create one or several limits set by the member and managed by the transaction administrator. |
   | camt.102.001.03 | Create Standing Order | `CreateStandingOrderV03` | Sent by a member to the transaction administrator to create a permanent order for the transfer of funds between two of its accounts. |
   | camt.103.001.03 | Create Reservation | `CreateReservationV03` | Used to request the creation of one particular reservation by the member and managed by the transaction administrator. |
+  | pacs.029.001.02 | Multilateral Settlement Request | `MultilateralSettlementRequestV02` | Sent from an instructing agent to a market infrastructure, to settle obligations between their participants using accounts held in a settlement service. |
   | pain.001.001.13 | Customer Credit Transfer Initiation | `CustomerCreditTransferInitiationV13` | Sent by the initiating party to the forwarding agent or debtor agent, to request movement of funds from the debtor account to a creditor. |
   | pain.002.001.15 | Customer Payment Status Report | `CustomerPaymentStatusReportV15` | Sent by an instructed agent to the previous party in the payment chain, to inform them about the positive or negative status of an instruction, or to report on a pending instruction. |
   | pain.007.001.13 | Customer Payment Reversal | `CustomerPaymentReversalV13` | Sent by the initiating party to the next party in the payment chain, to reverse a payment previously executed. |
