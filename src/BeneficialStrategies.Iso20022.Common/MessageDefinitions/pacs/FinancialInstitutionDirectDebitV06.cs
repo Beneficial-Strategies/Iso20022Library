@@ -15,7 +15,15 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// <summary>
 /// This record is an implementation of the pacs.010.001.06 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent. It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.
 /// </summary>
+/// <remarks>
+/// Usage
+/// The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.
+/// </remarks>
+[Description(
+    @"Scope|The FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent. It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.|Usage|The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios."
+)]
 [IsoId("_R3LnHzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Financial Institution Direct Debit V06")]
 public record FinancialInstitutionDirectDebitV06 : IOuterRecord
@@ -46,21 +54,21 @@ public record FinancialInstitutionDirectDebitV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Credit Instruction.
+    /// Characteristics that apply to the credit side of the payment transaction(s) included in the message.
     /// </summary>
     [DisplayName("Credit Instruction")]
     [IsoXmlTag("CdtInstr")]
     public ValueList<CreditTransferTransaction66> CreditInstruction { get; init; } = [];
 
     /// <summary>
-    /// Group Header.
+    /// Common characteristics for all individual transactions included in the message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader119 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

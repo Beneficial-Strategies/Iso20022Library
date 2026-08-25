@@ -10,49 +10,53 @@ using BeneficialStrategies.Iso20022.UserDefined;
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Group Header119.
+/// Set of characteristics shared by all individual transactions included in the message.
 /// </summary>
+[Description(@"Set of characteristics shared by all individual transactions included in the message.")]
 [IsoId("_282IcTEyEe6g-ffJsqGiSA")]
 [DisplayName("Group Header119")]
 public record GroupHeader119
 {
     /// <summary>
-    /// Control Sum.
+    /// Total of all individual amounts included in the message, irrespective of currencies.
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     public IsoDecimalNumber? ControlSum { get; init; }
 
     /// <summary>
-    /// Creation Date Time.
+    /// Date and time at which the message was created.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required IsoISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Instructed Agent.
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
     /// </summary>
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
-    /// Instructing Agent.
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
     /// </summary>
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
     /// </summary>
+    /// <remarks>
+    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// </remarks>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required IsoMax35Text MessageIdentification { get; init; }
 
     /// <summary>
-    /// Number Of Transactions.
+    /// Number of individual transactions contained in the message.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
