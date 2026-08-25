@@ -78,6 +78,7 @@ public class CoverageCompletenessTests
         typeof(MultilateralSettlementRequestV02),
         typeof(FinancialInstitutionDirectDebitV06),
         typeof(FIToFIPaymentStatusRequestV07),
+        typeof(FIToFIPaymentReversalV14),
     ];
 
     [Theory]
