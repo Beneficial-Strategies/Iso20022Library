@@ -15,7 +15,19 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// <summary>
 /// This record is an implementation of the pacs.002.001.16 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The FIToFIPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.
 /// </summary>
+/// <remarks>
+/// Usage
+/// The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage may be governed by a bilateral or multilateral agreement between the agents.
+/// The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).
+/// The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
+/// The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.
+/// The FIToFIPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (for example either the beneficiary is credited, or the transaction is rejected).
+/// </remarks>
+[Description(
+    @"Scope|The FIToFIPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage may be governed by a bilateral or multilateral agreement between the agents.|The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.|The FIToFIPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (for example either the beneficiary is credited, or the transaction is rejected)."
+)]
 [IsoId("42d3d142-0665-41d5-b5b7-87bdd32671d8")]
 [DisplayName("FI To FI Payment Status Report V16")]
 public record FIToFIPaymentStatusReportV16 : IOuterRecord
@@ -46,28 +58,28 @@ public record FIToFIPaymentStatusReportV16 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Group Header.
+    /// Set of characteristics shared by all individual transactions included in the status report message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader120 GroupHeader { get; init; }
 
     /// <summary>
-    /// Original Group Information And Status.
+    /// Original group information concerning the group of transactions, to which the status report message refers to.
     /// </summary>
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public ValueList<OriginalGroupHeader22> OriginalGroupInformationAndStatus { get; init; } = [];
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// Transaction Information And Status.
+    /// Information concerning the original transactions, to which the status report message refers.
     /// </summary>
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
