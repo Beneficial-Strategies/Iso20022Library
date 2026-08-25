@@ -82,6 +82,7 @@ public class CoverageCompletenessTests
         typeof(FIToFIPaymentStatusReportV16),
         typeof(FIToFICustomerCreditTransferV14),
         typeof(FinancialInstitutionCreditTransferV13),
+        typeof(FIToFICustomerDirectDebitV12),
     ];
 
     [Theory]
