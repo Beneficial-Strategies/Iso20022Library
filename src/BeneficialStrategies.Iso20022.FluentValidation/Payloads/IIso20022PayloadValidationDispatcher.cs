@@ -16,9 +16,14 @@ namespace BeneficialStrategies.Iso20022.Validation.Payloads;
 /// band — from a queue header, HTTP content-type parameter, enclosing envelope, or similar.
 ///
 /// Every failure mode — malformed payload, unrecognized message type, no validator registered for
-/// the resolved type — surfaces as a <see cref="ValidationFailure"/> in the returned
-/// <see cref="ValidationResult"/>, never a thrown exception, so callers get the same result shape
-/// regardless of which of these problems occurred.
+/// the resolved type — surfaces as a <see cref="ValidationFailure"/> inside the returned
+/// <see cref="Iso20022PayloadValidationResult.ValidationResult"/>, never a thrown exception, so
+/// callers get the same result shape regardless of which of these problems occurred. The returned
+/// <see cref="Iso20022PayloadValidationResult"/> also carries the resolved message type and the
+/// deserialized instance itself, so a caller that anticipates more than one possible message type
+/// can act differently per type — typically by switching on
+/// <see cref="Iso20022PayloadValidationResult.MessageType"/> after confirming
+/// <see cref="Iso20022PayloadValidationResult.IsValid"/>.
 ///
 /// Use this when the message type isn't known until the payload (or an out-of-band hint) is
 /// inspected. When the type IS known at the call site, prefer resolving
@@ -33,7 +38,7 @@ public interface IIso20022PayloadValidationDispatcher
     /// document namespace, then validates it with that type's registered <see cref="IValidator{T}"/>.
     /// </summary>
     /// <param name="xml">The raw XML payload, including its <c>&lt;Document&gt;</c> root.</param>
-    ValidationResult ValidateXml(string xml);
+    Iso20022PayloadValidationResult ValidateXml(string xml);
 
     /// <summary>
     /// Deserializes <paramref name="json"/> as the message type identified by
@@ -46,5 +51,5 @@ public interface IIso20022PayloadValidationDispatcher
     /// <c>"pacs.008.001.14"</c> — supplied out of band, since JSON carries no self-describing
     /// type discriminator (see remarks on <see cref="IIso20022PayloadValidationDispatcher"/>).
     /// </param>
-    ValidationResult ValidateJson(string json, string isoIdentifier);
+    Iso20022PayloadValidationResult ValidateJson(string json, string isoIdentifier);
 }

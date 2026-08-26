@@ -191,6 +191,148 @@ computed by walking each validator's own dependency-injection constructor. It's 
 for if you're only ever validating a known, fixed set of message types and want to avoid
 registering the other 1,000+ validators in the assembly you'll never resolve.
 
+## Validating raw XML/JSON payloads (e.g. off a message queue)
+
+The examples above validate an already-deserialized message record. Often what you actually have
+is raw XML or JSON text — off a queue, from an HTTP body — and you want deserialization failures
+to show up as ordinary validation errors too, not as a separate exception-handling path. Two
+building blocks cover this, depending on whether you know the message type up front:
+
+- `IValidator<XmlEnvelope<TMessage>>` / `IValidator<JsonEnvelope<TMessage>>` — when the type is
+  known at the call site (e.g. a queue bound to one message type). Registered via
+  `AddIso20022PayloadValidators()`; behaves as literally just another `IValidator<T>`.
+- `IIso20022PayloadValidationDispatcher` — when the payload could be any one of several message
+  types, resolved from the payload itself. Registered via `AddIso20022PayloadValidationDispatcher()`.
+
+Either way, a parse failure becomes a `ValidationFailure` in the result (`ErrorCode` values like
+`"XmlParseError"`, `"JsonParseError"`, `"UnknownMessageType"`), never a thrown exception.
+
+### Example 1 — known type, JSON payload
+
+A queue consumer bound to exactly one message type validates each message body as it arrives:
+
+```C#
+using BeneficialStrategies.Iso20022.pacs;
+using BeneficialStrategies.Iso20022.Serialization;
+using BeneficialStrategies.Iso20022.Validation;
+using BeneficialStrategies.Iso20022.Validation.Payloads;
+using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
+
+public sealed class CreditTransferQueueHandler
+{
+    private readonly IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> _validator;
+
+    public CreditTransferQueueHandler(IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> validator) =>
+        _validator = validator;
+
+    public void Handle(string messageBody)
+    {
+        var result = _validator.Validate(new JsonEnvelope<FIToFICustomerCreditTransferV14>(messageBody));
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
+            return; // dead-letter, nack, etc. — whatever your queue client calls for. Covers
+                     // malformed JSON (ErrorCode "JsonParseError") exactly like a business-rule
+                     // violation — same list, same shape, no separate catch block needed.
+        }
+
+        // `result` proves the body is valid but, like any IValidator<T> result, doesn't hand the
+        // deserialized instance back — re-deserializing once, now that you know it's valid, is
+        // cheap and keeps "is this valid" and "give me the object" as separate concerns.
+        var message = Iso20022JsonSerializer.Deserialize<FIToFICustomerCreditTransferV14>(messageBody);
+        var firstTransfer = message.CreditTransferTransactionInformation[0];
+        Console.WriteLine($"Processing transfer {firstTransfer.PaymentIdentification.EndToEndIdentification}");
+    }
+}
+
+var services = new ServiceCollection();
+services.AddIso20022Validators(rootTypes: [typeof(FIToFICustomerCreditTransferV14)]);
+services.AddIso20022PayloadValidators();
+services.AddSingleton<CreditTransferQueueHandler>();
+using var provider = services.BuildServiceProvider();
+
+var handler = provider.GetRequiredService<CreditTransferQueueHandler>();
+// handler.Handle(messageBodyFromYourQueueClient);
+```
+
+### Example 2 — type unknown up front, XML payload, one of several candidates
+
+A queue that carries any of several related message types — here, three events in a payment's
+lifecycle — resolved from each payload's own root document namespace, then dispatched by a
+`switch` on the resolved type:
+
+```C#
+using BeneficialStrategies.Iso20022.pacs;
+using BeneficialStrategies.Iso20022.Validation;
+using BeneficialStrategies.Iso20022.Validation.Payloads;
+using Microsoft.Extensions.DependencyInjection;
+
+public sealed class PaymentLifecycleQueueHandler
+{
+    private readonly IIso20022PayloadValidationDispatcher _dispatcher;
+
+    public PaymentLifecycleQueueHandler(IIso20022PayloadValidationDispatcher dispatcher) =>
+        _dispatcher = dispatcher;
+
+    public void Handle(string xmlBody)
+    {
+        var result = _dispatcher.ValidateXml(xmlBody);
+
+        if (!result.IsValid)
+        {
+            // Covers malformed XML, an unrecognized document namespace, and ordinary business-rule
+            // failures alike — all as ValidationFailure entries, none of them a thrown exception.
+            foreach (var error in result.ValidationResult.Errors)
+                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
+            return;
+        }
+
+        // result.Message is the deserialized instance, typed as `object` since the concrete type
+        // wasn't known until the payload was inspected — pattern-match it to each type you expect.
+        switch (result.Message)
+        {
+            case FIToFIPaymentStatusReportV16 statusReport:
+                Console.WriteLine(
+                    $"Status report: {statusReport.TransactionInformationAndStatus.Count} transaction(s)"
+                );
+                break;
+
+            case FIToFIPaymentReversalV14 reversal:
+                Console.WriteLine($"Reversal request: {reversal.TransactionInformation.Count} transaction(s)");
+                break;
+
+            case PaymentReturnV15 paymentReturn:
+                Console.WriteLine($"Payment return: {paymentReturn.TransactionInformation.Count} transaction(s)");
+                break;
+
+            default:
+                // Only reachable if a validator for a fourth type got registered without a
+                // matching case being added here — rootTypes below scopes DI to exactly the
+                // three types this handler knows about, so nothing else should ever validate.
+                throw new InvalidOperationException($"Unhandled message type: {result.MessageType}");
+        }
+    }
+}
+
+var services = new ServiceCollection();
+services.AddIso20022Validators(
+    rootTypes:
+    [
+        typeof(FIToFIPaymentStatusReportV16),
+        typeof(FIToFIPaymentReversalV14),
+        typeof(PaymentReturnV15),
+    ]
+);
+services.AddIso20022PayloadValidationDispatcher();
+services.AddSingleton<PaymentLifecycleQueueHandler>();
+using var provider = services.BuildServiceProvider();
+
+var handler = provider.GetRequiredService<PaymentLifecycleQueueHandler>();
+// handler.Handle(xmlBodyFromYourQueueClient);
+```
+
 ## External code set validation
 
 Some ISO 20022 fields — country codes, currency codes, and ISO 20022's own externally-maintained

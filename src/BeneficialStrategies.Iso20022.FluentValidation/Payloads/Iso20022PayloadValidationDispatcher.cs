@@ -39,7 +39,7 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
     public Iso20022PayloadValidationDispatcher(IServiceProvider serviceProvider) =>
         _serviceProvider = serviceProvider;
 
-    public ValidationResult ValidateXml(string xml)
+    public Iso20022PayloadValidationResult ValidateXml(string xml)
     {
         XDocument document;
         try
@@ -48,7 +48,7 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         }
         catch (Exception ex) when (ex is XmlException or ArgumentNullException or ArgumentException)
         {
-            return SingleFailure("$root", $"XML could not be parsed: {ex.Message}", "XmlParseError");
+            return NoTypeFailure($"XML could not be parsed: {ex.Message}", "XmlParseError");
         }
 
         var documentNamespace = document.Root?.Name.NamespaceName;
@@ -57,8 +57,7 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
             || !Iso20022MessageTypeRegistry.TryGetByDocumentNamespace(documentNamespace, out var messageType)
         )
         {
-            return SingleFailure(
-                "$root",
+            return NoTypeFailure(
                 documentNamespace is null
                     ? "XML has no root element."
                     : $"Unrecognized ISO 20022 document namespace '{documentNamespace}'.",
@@ -72,12 +71,11 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         );
     }
 
-    public ValidationResult ValidateJson(string json, string isoIdentifier)
+    public Iso20022PayloadValidationResult ValidateJson(string json, string isoIdentifier)
     {
         if (!Iso20022MessageTypeRegistry.TryGetByIsoIdentifier(isoIdentifier, out var messageType))
         {
-            return SingleFailure(
-                "$root",
+            return NoTypeFailure(
                 $"Unrecognized ISO 20022 message identifier '{isoIdentifier}'.",
                 "UnknownMessageType"
             );
@@ -91,24 +89,24 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
 
     private delegate bool TryDeserializeDelegate(out object? message, out Exception? error);
 
-    private ValidationResult Dispatch(Type messageType, TryDeserializeDelegate tryDeserialize)
+    private Iso20022PayloadValidationResult Dispatch(Type messageType, TryDeserializeDelegate tryDeserialize)
     {
         if (!tryDeserialize(out var message, out var error))
         {
-            return SingleFailure(
-                "$root",
-                $"Payload could not be parsed as {messageType.Name}: {error?.Message}",
-                "PayloadParseError"
+            return new Iso20022PayloadValidationResult(
+                SingleFailure($"Payload could not be parsed as {messageType.Name}: {error?.Message}", "PayloadParseError"),
+                messageType,
+                null
             );
         }
 
         var validatorInterface = typeof(IValidator<>).MakeGenericType(messageType);
         if (_serviceProvider.GetService(validatorInterface) is not IValidator validator)
         {
-            return SingleFailure(
-                "$root",
-                $"No validator is registered for {messageType.Name}.",
-                "NoValidatorRegistered"
+            return new Iso20022PayloadValidationResult(
+                SingleFailure($"No validator is registered for {messageType.Name}.", "NoValidatorRegistered"),
+                messageType,
+                message
             );
         }
 
@@ -117,8 +115,12 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         // documented adapter for dispatching to an IValidator<T> whose T isn't known at compile
         // time (exactly this scenario: messageType is only known at runtime).
         var nonGenericContext = new ValidationContext<object>(message!);
-        return validator.Validate(nonGenericContext);
+        var validationResult = validator.Validate(nonGenericContext);
+        return new Iso20022PayloadValidationResult(validationResult, messageType, message);
     }
+
+    private static Iso20022PayloadValidationResult NoTypeFailure(string message, string errorCode) =>
+        new(SingleFailure(message, errorCode), null, null);
 
     // MethodInfo.Invoke supports out parameters via the args array: pass placeholder slots for
     // them, then read the values Invoke writes back into those slots after it returns.
@@ -148,6 +150,6 @@ internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadVali
         return success;
     }
 
-    private static ValidationResult SingleFailure(string propertyName, string message, string errorCode) =>
-        new([new ValidationFailure(propertyName, message) { ErrorCode = errorCode }]);
+    private static ValidationResult SingleFailure(string message, string errorCode) =>
+        new([new ValidationFailure("$root", message) { ErrorCode = errorCode }]);
 }

@@ -54,7 +54,10 @@ public class Iso20022PayloadValidationDispatcherTests
 
         var result = dispatcher.ValidateXml(xml);
 
-        Assert.True(result.IsValid, string.Join("; ", result.Errors.Select(e => e.ErrorMessage)));
+        Assert.True(result.IsValid, string.Join("; ", result.ValidationResult.Errors.Select(e => e.ErrorMessage)));
+        Assert.Equal(typeof(MultilateralSettlementRequestV02), result.MessageType);
+        var message = Assert.IsType<MultilateralSettlementRequestV02>(result.Message);
+        Assert.Equal("MSG-001", (string)message.GroupHeader.MessageIdentification);
     }
 
     [Fact]
@@ -75,7 +78,11 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateXml(xml);
 
         Assert.False(result.IsValid);
-        Assert.Contains(result.Errors, e => e.PropertyName == "SettlementRequest");
+        Assert.Contains(result.ValidationResult.Errors, e => e.PropertyName == "SettlementRequest");
+        // The type was still resolved and the message still deserialized — only the business
+        // rule failed. Both remain available to the caller alongside the failure.
+        Assert.Equal(typeof(MultilateralSettlementRequestV02), result.MessageType);
+        Assert.NotNull(result.Message);
     }
 
     [Fact]
@@ -86,7 +93,7 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateXml("<Document><Unclosed>");
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
+        var failure = Assert.Single(result.ValidationResult.Errors);
         Assert.Equal("XmlParseError", failure.ErrorCode);
     }
 
@@ -98,8 +105,10 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateXml("<Document xmlns=\"urn:not-iso20022\"><Foo/></Document>");
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
+        var failure = Assert.Single(result.ValidationResult.Errors);
         Assert.Equal("UnknownMessageType", failure.ErrorCode);
+        Assert.Null(result.MessageType);
+        Assert.Null(result.Message);
     }
 
     [Fact]
@@ -114,8 +123,11 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateXml(xml);
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
+        var failure = Assert.Single(result.ValidationResult.Errors);
         Assert.Equal("NoValidatorRegistered", failure.ErrorCode);
+        // The type resolved and the message deserialized fine — DI just has no validator for it.
+        Assert.Equal(typeof(MultilateralSettlementRequestV02), result.MessageType);
+        Assert.NotNull(result.Message);
     }
 
     // ── JSON: type supplied out of band (no self-describing discriminator) ───────
@@ -128,7 +140,7 @@ public class Iso20022PayloadValidationDispatcherTests
 
         var result = dispatcher.ValidateJson(json, "pacs.029.001.02");
 
-        Assert.True(result.IsValid, string.Join("; ", result.Errors.Select(e => e.ErrorMessage)));
+        Assert.True(result.IsValid, string.Join("; ", result.ValidationResult.Errors.Select(e => e.ErrorMessage)));
     }
 
     [Fact]
@@ -140,7 +152,7 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateJson(json, "xxxx.999.999.99");
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
+        var failure = Assert.Single(result.ValidationResult.Errors);
         Assert.Equal("UnknownMessageType", failure.ErrorCode);
     }
 
@@ -152,7 +164,7 @@ public class Iso20022PayloadValidationDispatcherTests
         var result = dispatcher.ValidateJson("{ this is not valid json", "pacs.029.001.02");
 
         Assert.False(result.IsValid);
-        var failure = Assert.Single(result.Errors);
+        var failure = Assert.Single(result.ValidationResult.Errors);
         Assert.Equal("PayloadParseError", failure.ErrorCode);
     }
 }
