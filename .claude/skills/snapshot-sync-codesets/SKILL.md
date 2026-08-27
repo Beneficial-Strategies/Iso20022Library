@@ -143,6 +143,13 @@ Omit `[DerivedFrom]` and the `= {ParentCode}.{MemberName}` ordinal assignment if
 3. Apply the changes:
    - **Added members**: append new `[EnumMember]` entries at the end of the enum body following the existing pattern.
    - **Removed members**: delete the member's doc comment + attributes + declaration. Then search for any references to that member across the solution (`grep -r "{CodesetName}.{MemberName}" src/`) and list them in the progress report as broken references to fix.
+   - **Description text changed** — check this regardless of whether membership also changed:
+     compare the enum's own class-level `<summary>`/`[Description(@"...")]` and every individual
+     member's `<summary>`/`[Description]` against the fresh `universal_lookup` text. Update any
+     that differ, verbatim (never paraphrased) — per CLAUDE.md's non-negotiable XML Documentation
+     requirement. A codeset whose membership is unchanged can still have had its own or a member's
+     definition text reworded/clarified by the spec; a diff signal limited to `registrationStatus`
+     or reference-graph attributes does NOT mean the description is still current — always check.
 
 4. Mark the item `[x]` in PLAN.md.
 

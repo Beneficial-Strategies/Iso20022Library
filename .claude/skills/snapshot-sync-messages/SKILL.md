@@ -162,7 +162,16 @@ public record {ClassName} : IOuterRecord
 
 4. If a field type change could break callers, note it in the progress report.
 
-5. Mark the item `[x]` in PLAN.md.
+5. **Description text changed** — check this regardless of whether the field list also changed:
+   compare the message's own class-level `<summary>`/`[Description(@"...")]` and every individual
+   property's `<summary>` against the fresh `universal_lookup` text. Update any that differ,
+   verbatim (never paraphrased) — per CLAUDE.md's non-negotiable XML Documentation requirement. A
+   message whose fields are structurally unchanged can still have had its own or a field's
+   definition text reworded/clarified by the spec; a diff signal limited to `messageSet`/
+   `previousVersion`/`nextVersions` version-graph metadata does NOT mean the description is still
+   current — always check.
+
+6. Mark the item `[x]` in PLAN.md.
 
 ---
 

@@ -59,6 +59,22 @@ After all calls, verify the assembled file:
 
 ### 2. Diff against the previous snapshot
 
+**Prefer `get_snapshot_diff` over comparing two `spec-snapshot.tsv` captures directly, whenever a
+live pair exists for the two dates in question.** Always pass `snapshotPair` explicitly (e.g.
+`"2026-05-11/2026-06-26"`) rather than relying on the no-args default or a previously-cached tool
+description — a session's cached view of "available pairs" can go stale across a server
+deployment (confirmed 2026-08-27: a pair that appeared unavailable via the cached description
+worked immediately once specified explicitly on a live call). `changedContent` (optionally
+`xsiType`-filtered for Codesets/Components/Choices; unfiltered record-shape scan for Messages,
+which carry no `xsiType`) is the only reliable source for field-level Changed detection — raw TSV
+comparison across two `get_spec_snapshot` captures is unsafe once the bulk export's own column
+schema has changed between the two capture dates (confirmed 2026-08-27: the 2026-05-11 baseline
+predates both the checksum and definition-text columns entirely, so a naive "last field =
+definition" comparison against it reported ~100% of everything as changed — the last field in an
+old row was actually `status`, not a definition). Only fall back to raw TSV comparison when no
+live diff pair exists for the transition at all, and even then key by **isoId presence/absence
+only** (New/Removed) — never by row-content comparison, which the schema mismatch makes unsafe.
+
 Check for a previous snapshot:
 
 ```bash

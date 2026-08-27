@@ -107,6 +107,14 @@ Do **not** add explicit constructors. Use `required` + init-only properties.
    - **Removed field**: delete the property block. Search for direct access to that field (`grep -r "\.{PropertyName}" src/ --include="*.cs"`) and add follow-up notes for any callers found.
    - **Type change**: update the property type. If this changes nullability or collection type, note it as a potentially breaking change.
    - **Multiplicity change** (e.g., `0..1` → `0..∞`): change the property type from `T?` to `ValueList<T>` — this is a breaking change; add a `// BREAKING: multiplicity changed` comment and list any callers in the progress report.
+   - **Description text changed** — check this regardless of whether the field list also changed:
+     compare the component's own class-level `<summary>`/`[Description(@"...")]` and every
+     individual property's `<summary>` against the fresh `universal_lookup` text. Update any that
+     differ, verbatim (never paraphrased) — per CLAUDE.md's non-negotiable XML Documentation
+     requirement. A component whose fields are structurally unchanged can still have had its own
+     or a field's definition text reworded/clarified by the spec; a diff signal limited to
+     `messageBuildingBlock`-reference-graph churn or `registrationStatus` does NOT mean the
+     description is still current — always check.
 
 4. Mark the item `[x]` in PLAN.md.
 

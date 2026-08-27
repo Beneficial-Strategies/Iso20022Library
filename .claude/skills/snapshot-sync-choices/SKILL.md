@@ -153,6 +153,13 @@ namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
    - **Variant added**: add `[KnownType]` and `[JsonDerivedType]` entries to the base file; create a new variant `.cs` file in the directory.
    - **Variant removed**: remove its `[KnownType]` and `[JsonDerivedType]` lines from the base; delete the variant file. Search for references (`grep -r "{ChoiceName}.{VariantName}" src/ --include="*.cs"`) and add follow-up notes for any callers.
    - **Variant element type changed**: update the property type in the variant file; note if it's breaking.
+   - **Description text changed** — check this regardless of whether variants also changed:
+     compare the base type's own class-level `<summary>`/`[Description]` and every variant's
+     `<summary>` against the fresh `universal_lookup` text. Update any that differ, verbatim
+     (never paraphrased) — per CLAUDE.md's non-negotiable XML Documentation requirement. A choice
+     whose variant list is structurally unchanged can still have had its own or a variant's
+     definition text reworded/clarified by the spec; a diff signal limited to `registrationStatus`
+     does NOT mean the description is still current — always check.
 
 4. Mark the item `[x]` in PLAN.md.
 
