@@ -14,10 +14,10 @@ Process Phase 1 (Codesets) of the active iso20022 snapshot sync plan. Each invoc
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date. Find the active plan at:
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot date. Find the active plan at:
 ```
 snapshot-sync/{date}/iso20022/PLAN.md
 ```
@@ -44,7 +44,7 @@ This ordering ensures that when a derived file is written, all its parent member
 ### 2. Load the lookup tool
 
 ```
-ToolSearch: select:mcp__iso20022__universal_lookup
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup
 ```
 
 ## Processing Each Item
@@ -55,7 +55,7 @@ For each unchecked codeset item (up to 20), determine the action from its label 
 
 ### New Codeset
 
-1. Call `mcp__iso20022__universal_lookup` with the codeset name to retrieve its full spec: IsoId, description, parent/DerivedFrom type, and all enum member codes with their values and descriptions.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the codeset name to retrieve its full spec: IsoId, description, parent/DerivedFrom type, and all enum member codes with their values and descriptions.
 
    **MEMBERLESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
 
@@ -136,7 +136,7 @@ Omit `[DerivedFrom]` and the `= {ParentCode}.{MemberName}` ordinal assignment if
 
 ### Changed Codeset
 
-1. Call `mcp__iso20022__universal_lookup` with the codeset name to get the authoritative current member list.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the codeset name to get the authoritative current member list.
 
 2. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Codesets/{CodesetName}.cs`.
 

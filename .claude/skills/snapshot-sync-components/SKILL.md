@@ -14,10 +14,10 @@ Process Phase 2 (Components) of the active iso20022 snapshot sync plan. Each inv
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date. Read:
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot date. Read:
 ```
 snapshot-sync/{date}/iso20022/PLAN.md
 ```
@@ -29,7 +29,7 @@ If there are no unchecked items in Phase 2, report that Phase 2 is already compl
 ### 2. Load the lookup tool
 
 ```
-ToolSearch: select:mcp__iso20022__universal_lookup
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup
 ```
 
 ## Processing Each Item
@@ -38,7 +38,7 @@ ToolSearch: select:mcp__iso20022__universal_lookup
 
 ### New Component
 
-1. Call `mcp__iso20022__universal_lookup` with the component name to get: IsoId, display name, description, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the component name to get: IsoId, display name, description, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
 
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
    Verify the field list is complete before proceeding:
@@ -98,7 +98,7 @@ Do **not** add explicit constructors. Use `required` + init-only properties.
 
 ### Changed Component
 
-1. Call `mcp__iso20022__universal_lookup` to get the authoritative current field list.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` to get the authoritative current field list.
 
 2. Read the existing file.
 

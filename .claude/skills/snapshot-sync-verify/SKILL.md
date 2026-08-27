@@ -14,10 +14,10 @@ Run the build and optionally tests for the current snapshot sync milestone. Upda
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date.
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot date.
 
 Work through the library dependency order (`iso20022` → `fluentvalidation`) and find the first library whose plan is not yet at Completion. Read its plan at `snapshot-sync/{date}/{library}/PLAN.md`.
 

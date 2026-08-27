@@ -16,10 +16,10 @@ If `$ARGUMENTS` is provided, only process items in the matching business area se
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date. Read:
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot date. Read:
 ```
 snapshot-sync/{date}/iso20022/PLAN.md
 ```
@@ -33,10 +33,10 @@ If there are no unchecked items (filtered by area if applicable), report Phase 4
 Load the tool schema and download the full message snapshot **once at the start of Phase 4**:
 
 ```
-ToolSearch: select:mcp__iso20022__get_spec_snapshot
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_spec_snapshot
 ```
 
-Call `mcp__iso20022__get_spec_snapshot` with `artifactType: 'messages'`. Write the result to disk — it is the authoritative, grep-friendly source for all Phase 4 work. The snapshot contains two record types:
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_spec_snapshot` with `artifactType: 'messages'`. Write the result to disk — it is the authoritative, grep-friendly source for all Phase 4 work. The snapshot contains two record types:
 
 **MSGDEF** (one per message):
 ```
@@ -58,7 +58,7 @@ With both columns, the snapshot is fully self-contained: no per-message MCP roun
 ### 3. Load the lookup tool (fallback and supplemental)
 
 ```
-ToolSearch: select:mcp__iso20022__universal_lookup
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup
 ```
 
 `universal_lookup` renders the full definition in a dedicated `### Definition` section (untruncated). Use it when:
@@ -88,7 +88,7 @@ For each item, extract the business area from the ISO message identifier (e.g., 
 
 ### New Message
 
-1. Call `mcp__iso20022__universal_lookup` with the message identifier (e.g., `pain.001.001.12`) to retrieve: IsoId, display name, description, XmlTag, DocumentNamespace, DocumentElementName, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the message identifier (e.g., `pain.001.001.12`) to retrieve: IsoId, display name, description, XmlTag, DocumentNamespace, DocumentElementName, and all fields with their IsoId, display name, XML tag, type, and multiplicity.
 
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING THE FILE.**
    Verify the field list is complete:
@@ -154,7 +154,7 @@ public record {ClassName} : IOuterRecord
 
 ### Updated Message
 
-1. Call `mcp__iso20022__universal_lookup` to get the current authoritative field list.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` to get the current authoritative field list.
 
 2. Read the existing file at `MessageDefinitions/{area}/{ClassName}.cs`.
 

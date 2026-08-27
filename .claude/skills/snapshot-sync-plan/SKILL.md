@@ -13,9 +13,9 @@ Create `snapshot-sync/{date}/{library}/PLAN.md` — the master checklist that dr
 1. Determine the **library**: `$ARGUMENTS` if provided, otherwise `iso20022`.
 2. Load MCP tool schemas:
    ```
-   ToolSearch: select:mcp__iso20022__get_repository_statistics,mcp__iso20022__get_migration_diff,mcp__iso20022__get_migration_path
+   ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics,mcp__plugin_iso20022-staging_iso20022-staging__get_migration_diff,mcp__plugin_iso20022-staging_iso20022-staging__get_migration_path
    ```
-3. Call `mcp__iso20022__get_repository_statistics` to get the current snapshot **date** (format as `YYYY-MM-DD`).
+3. Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot **date** (format as `YYYY-MM-DD`).
 4. Set **plan path** = `snapshot-sync/{date}/{library}/PLAN.md`.
 5. If the plan file already exists, warn the user that regenerating it **resets all checkbox state** and ask for explicit confirmation before proceeding. Stop if they decline.
 
@@ -25,10 +25,10 @@ Create `snapshot-sync/{date}/{library}/PLAN.md` — the master checklist that dr
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_spec_snapshot
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_spec_snapshot
 ```
 
-Call `mcp__iso20022__get_spec_snapshot` for each `artifactType`, writing each result to disk
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_spec_snapshot` for each `artifactType`, writing each result to disk
 before calling the next. Large sections (`components`, `codesets`) require multiple pages —
 each response includes `# Page X of Y`; keep calling with `page+1` until `X == Y`.
 

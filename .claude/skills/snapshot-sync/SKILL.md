@@ -16,10 +16,10 @@ This is the top-level entry point for the snapshot sync process. Run `/snapshot-
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to retrieve the current snapshot date from the MCP server. Format it as `YYYY-MM-DD`. This becomes the **date key** used in all folder paths.
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to retrieve the current snapshot date from the MCP server. Format it as `YYYY-MM-DD`. This becomes the **date key** used in all folder paths.
 
 ### 1a. Download the spec snapshot (required underlayment — do this once per sync)
 
@@ -27,7 +27,7 @@ Check whether `snapshot-sync/{date}/spec-snapshot.tsv` already exists. If not, d
 
 Load the tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_spec_snapshot
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_spec_snapshot
 ```
 
 Call `get_spec_snapshot` once for each artifact type and **append** each response to `snapshot-sync/{date}/spec-snapshot.tsv`:

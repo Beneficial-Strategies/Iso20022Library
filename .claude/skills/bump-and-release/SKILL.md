@@ -65,7 +65,7 @@ per-business-area snapshot, so partial updates leave it self-contradictory:
    cd src/BeneficialStrategies.Iso20022.Common/MessageDefinitions
    for d in */; do echo "${d%/} $(find "${d%/}" -iname '*.cs' | wc -l)"; done | sort
    ```
-2. Call `mcp__iso20022__get_repository_statistics` for the "Spec" column per business area and
+2. Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` for the "Spec" column per business area and
    the message-definition total, and for the Supporting Architecture Counts table (internal/
    external code sets, message components, business components, simple types, external schemas,
    user-defined entries, choice types, total).

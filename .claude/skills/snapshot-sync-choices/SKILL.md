@@ -14,10 +14,10 @@ Process Phase 3 (Choices) of the active iso20022 snapshot sync plan. Each invoca
 
 Load the MCP tool schema:
 ```
-ToolSearch: select:mcp__iso20022__get_repository_statistics
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics
 ```
 
-Call `mcp__iso20022__get_repository_statistics` to get the current snapshot date. Read:
+Call `mcp__plugin_iso20022-staging_iso20022-staging__get_repository_statistics` to get the current snapshot date. Read:
 ```
 snapshot-sync/{date}/iso20022/PLAN.md
 ```
@@ -29,7 +29,7 @@ If there are no unchecked items in Phase 3, report that Phase 3 is already compl
 ### 2. Load the lookup tool
 
 ```
-ToolSearch: select:mcp__iso20022__universal_lookup
+ToolSearch: select:mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup
 ```
 
 ## Choice Type File Structure
@@ -46,7 +46,7 @@ The abstract base uses `[KnownType]` and `[JsonDerivedType]` attributes for each
 
 ### New Choice
 
-1. Call `mcp__iso20022__universal_lookup` with the choice name to get: IsoId, description, and all variants (each with its XML tag, element type, and description).
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` with the choice name to get: IsoId, description, and all variants (each with its XML tag, element type, and description).
 
    **COMPLETENESS CHECK — REQUIRED BEFORE WRITING ANY FILES.**
    Verify the variant list is complete:
@@ -145,7 +145,7 @@ namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
 
 ### Changed Choice
 
-1. Call `mcp__iso20022__universal_lookup` to get the current authoritative variant list.
+1. Call `mcp__plugin_iso20022-staging_iso20022-staging__universal_lookup` to get the current authoritative variant list.
 
 2. Read the existing `Choices/{ChoiceName}_.cs` base file.
 
