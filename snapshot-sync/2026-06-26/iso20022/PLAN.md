@@ -72,23 +72,23 @@ therefore nothing to do."
 - [x] `ExternalPostTradeEquityCode` — `Codesets/ExternalPostTradeEquityCode.cs` (hybrid, 13 known members)
 - [x] `TradingSystemStatusCode` — `Codesets/TradingSystemStatusCode.cs` (base, 3 members, own ordinals)
 ### Changed (metadata only — see Diff Sourcing Note; verify no code impact, then check off)
-- [ ] `ExternalSecuritiesStatementType1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalServiceCategory1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalPenaltyPartyType1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalObligationSettlementMethodCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalObligationSettlementMethod1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalServiceCategoryCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `ExternalSecuritiesStatementType1Code` — registrationStatus: Provisionally Registered → Registered. Description text re-verified against `get_code_set_details` (class + both members) — exact match, no drift.
+- [x] `ExternalServiceCategory1Code` — registrationStatus: Provisionally Registered → Registered. **Real drift found and fixed**: the `AccountManagementServices`/`ACMS` member's description collapsed a genuine paragraph break in the source into a single space-joined sentence — restored as two `///` lines / a `|`-joined `[Description]`, matching the source's actual two-paragraph structure. All other 17 members verified exact match.
+- [x] `ExternalPenaltyPartyType1Code` — registrationStatus: Provisionally Registered → Registered. Description text re-verified — exact match. Genuinely memberless (confirmed via `get_code_set_details`), correctly a plain open struct.
+- [x] `ExternalObligationSettlementMethodCode` — registrationStatus: Provisionally Registered → Registered. **Real drift found and fixed**: class-level description collapsed two blank-line paragraph breaks in the source (`obligation.` / blank / blank / `The list...` / blank / `External code sets...`) into single pipes — restored the full `|||`/` ||` structure matching `universal_lookup`'s verbatim text. Both members (Bilateral, Multilateral) verified exact match.
+- [x] `ExternalObligationSettlementMethod1Code` — registrationStatus: Provisionally Registered → Registered. Same class-level drift and fix as its base codeset above. Both members verified exact match.
+- [x] `ExternalServiceCategoryCode` — registrationStatus: Provisionally Registered → Registered. Same `ACMS` member drift and fix as `ExternalServiceCategory1Code` above.
 - [x] `TradingVenueCode` — derivation: gained successor pointer to new `TradingVenue5Code`. **Real code
       impact found** (not metadata-only after all): `[Derivations(...)]` attribute list on
       `Codesets/TradingVenueCode.cs` updated to add `typeof(TradingVenue5Code)`.
-- [ ] `ExternalSecuritiesStatementTypeCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `ExternalSecuritiesStatementTypeCode` — registrationStatus: Provisionally Registered → Registered. Description text re-verified against `get_code_set_details` (class + both members) — exact match, no drift.
 - [x] `SecurityStatusCode` — derivation: gained successor pointer to new `SecurityStatus3Code`. **Real
       code impact found**: `[Derivations(...)]` attribute list on `Codesets/SecurityStatusCode.cs`
       updated to add `typeof(SecurityStatus3Code)`.
-- [ ] `ExternalPenaltyPartyTypeCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `ExternalPenaltyPartyTypeCode` — registrationStatus: Provisionally Registered → Registered. Description text re-verified — exact match. Genuinely memberless (confirmed via `get_code_set_details`), correctly a plain open struct.
 
 ## Milestone 1: Build
-- [ ] Build passes after codesets
+- [x] Build passes after codesets (`dotnet build BeneficialStrategies.Iso20022.Common -f net10.0` — 0 warnings, 0 errors, confirmed after the description-drift fixes above)
 
 ## Phase 2: Components (36 new · 20 changed · 0 obsolete · 6 removed)
 <!-- /snapshot-sync-components works this section -->

@@ -21,12 +21,13 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum ExternalServiceCategoryCode
 {
     /// <summary>
-    /// Agreement under which or rules under which the transaction should be processed expressed as a code. This category encompasses the reporting of fees related to account management services including, inter alia, membership fees and minimum fees (i.e. fees added to small invoices in order to reach the minimum fees agreed for each participant).
+    /// Agreement under which or rules under which the transaction should be processed expressed as a code.
+    /// This category encompasses the reporting of fees related to account management services including, inter alia, membership fees and minimum fees (i.e. fees added to small invoices in order to reach the minimum fees agreed for each participant).
     /// Encoded/decoded by serializers as &quot;ACMS&quot;.
     /// </summary>
     [EnumMember(Value = "ACMS")]
     [IsoId("_laiScJujEey__7eNd9lW5Q")]
-    [Description(@"Agreement under which or rules under which the transaction should be processed expressed as a code. This category encompasses the reporting of fees related to account management services including, inter alia, membership fees and minimum fees (i.e. fees added to small invoices in order to reach the minimum fees agreed for each participant).")]
+    [Description(@"Agreement under which or rules under which the transaction should be processed expressed as a code.|This category encompasses the reporting of fees related to account management services including, inter alia, membership fees and minimum fees (i.e. fees added to small invoices in order to reach the minimum fees agreed for each participant).")]
     AccountManagementServices,
 
     /// <summary>
