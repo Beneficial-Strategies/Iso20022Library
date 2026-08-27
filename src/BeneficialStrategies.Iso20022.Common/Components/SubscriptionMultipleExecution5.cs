@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G7y2HzbtEead9bDRE_1DAQ")]
 [DisplayName("Subscription Multiple Execution")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record SubscriptionMultipleExecution5
 {
     /// <summary>

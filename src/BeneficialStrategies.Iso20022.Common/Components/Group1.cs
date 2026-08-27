@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ruFa0A4WEeKGXqvMN6jpiw")]
 [DisplayName("Group")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record Group1
 {
     /// <summary>

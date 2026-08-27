@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>VotePerResolution</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..1000</description></item>
 /// </list>
 /// </remarks>
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class DetailedInstructionStatus9Validator : AbstractValidator<DetailedInstructionStatus9>
 {
     public DetailedInstructionStatus9Validator()

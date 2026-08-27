@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5W7ENZNLEeWGlc8L7oPDIg")]
 [DisplayName("Aggregate Balance Per Safekeeping Place")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record AggregateBalancePerSafekeepingPlace30
 {
     /// <summary>

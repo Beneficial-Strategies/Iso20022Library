@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SE84Utp-Ed-ak6NoX_4Aeg_-1277150734")]
 [DisplayName("Redemption Bulk Order")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record RedemptionBulkOrder4
 {
     /// <summary>

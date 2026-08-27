@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TKY2Y9p-Ed-ak6NoX_4Aeg_795834246")]
 [DisplayName("Meeting")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record Meeting2
 {
     /// <summary>

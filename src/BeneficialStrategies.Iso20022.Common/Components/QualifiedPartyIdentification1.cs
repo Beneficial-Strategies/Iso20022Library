@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjEy-AOSNFX-8224491")]
 [DisplayName("Qualified Party Identification")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record QualifiedPartyIdentification1
 {
     /// <summary>

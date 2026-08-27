@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-ddILaMOEeCojJW5vEuTEQ_1402285716")]
 [DisplayName("Default Fund Report")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record DefaultFundReport1
 {
     /// <summary>

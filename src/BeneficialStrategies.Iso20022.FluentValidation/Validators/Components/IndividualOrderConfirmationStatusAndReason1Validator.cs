@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>ConfirmationRejected</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..10</description></item>
 /// </list>
 /// </remarks>
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class IndividualOrderConfirmationStatusAndReason1Validator : AbstractValidator<IndividualOrderConfirmationStatusAndReason1>
 {
     public IndividualOrderConfirmationStatusAndReason1Validator()

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Spw1k9p-Ed-ak6NoX_4Aeg_720183247")]
 [DisplayName("Commercial Data Set")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record CommercialDataSet3
 {
     /// <summary>

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>SubBalance</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public class FinancialInstrumentDetails6Validator : AbstractValidator<FinancialInstrumentDetails6>
 {
     public FinancialInstrumentDetails6Validator()

@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>Beneficiary</term><description>ValueList&lt;T&gt; = [] allows empty, spec requires Min=1..&#8734;</description></item>
 /// </list>
 /// </remarks>
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-09-08.")]
 public class Undertaking1Validator : AbstractValidator<Undertaking1>
 {
     public Undertaking1Validator()

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TGcRVgEcEeCQm6a_G2yO_w_744459004")]
 [DisplayName("Transaction Reconciliation")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record TransactionReconciliation1
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IieegSCBEeWhHbfCMWc1cw")]
 [DisplayName("Individual Person")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-11-10.")]
 public record IndividualPerson27
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TxujO9p-Ed-ak6NoX_4Aeg_-1625514395")]
 [DisplayName("Financial Instrument Details")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public record FinancialInstrumentDetails2
 {
     /// <summary>

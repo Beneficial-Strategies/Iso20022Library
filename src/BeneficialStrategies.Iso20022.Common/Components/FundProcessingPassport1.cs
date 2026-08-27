@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q5ZrMtp-Ed-ak6NoX_4Aeg_1497334338")]
 [DisplayName("Fund Processing Passport")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record FundProcessingPassport1
 {
     /// <summary>

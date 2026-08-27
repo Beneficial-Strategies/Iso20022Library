@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F1m1IRX2EeOBE-jZfcm4KQ")]
 [DisplayName("Transfer Out")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record TransferOut12
 {
     /// <summary>

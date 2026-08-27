@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YffTUQ03EeK9as54HthO0w")]
 [DisplayName("Aggregate Balance Information")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public record AggregateBalanceInformation22
 {
     /// <summary>

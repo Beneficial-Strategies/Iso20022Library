@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uw6IQtp-Ed-ak6NoX_4Aeg_1294908608")]
 [DisplayName("Cash Sorting Criterion")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record CashSortingCriterion1
 {
     /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCWdldp-Ed-ak6NoX_4Aeg_-373893977")]
 [DisplayName("Estimated Fund Cash Forecast")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record EstimatedFundCashForecast2
 {
     /// <summary>

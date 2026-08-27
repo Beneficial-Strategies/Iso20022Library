@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// See docs/multiplicity-audit-2026-08.md.
 /// No cross-field constraints found for this component.
 /// </remarks>
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class StatementGroup1Validator : AbstractValidator<StatementGroup1>
 {
     public StatementGroup1Validator()

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TR_TNtp-Ed-ak6NoX_4Aeg_-1985802937")]
 [DisplayName("Individual Order Status And Reason")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record IndividualOrderStatusAndReason2
 {
     /// <summary>

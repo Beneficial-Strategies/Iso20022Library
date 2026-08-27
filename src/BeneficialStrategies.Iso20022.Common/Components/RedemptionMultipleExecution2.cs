@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VXgOOdp-Ed-ak6NoX_4Aeg_1399796950")]
 [DisplayName("Redemption Multiple Execution")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record RedemptionMultipleExecution2
 {
     /// <summary>

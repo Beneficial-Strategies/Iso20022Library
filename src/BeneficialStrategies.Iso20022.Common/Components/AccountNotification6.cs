@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tlra8lkyEeGeoaLUQk__nA_-1825023044")]
 [DisplayName("Account Notification")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record AccountNotification6
 {
     /// <summary>

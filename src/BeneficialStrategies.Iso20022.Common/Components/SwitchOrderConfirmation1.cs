@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RNqrBtp-Ed-ak6NoX_4Aeg_1790539148")]
 [DisplayName("Switch Order Confirmation")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record SwitchOrderConfirmation1
 {
     /// <summary>

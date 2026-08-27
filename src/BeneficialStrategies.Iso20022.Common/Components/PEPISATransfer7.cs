@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQ8ogtp-Ed-ak6NoX_4Aeg_1365580031")]
 [DisplayName("PEPISA Transfer")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public record PEPISATransfer7
 {
     /// <summary>
