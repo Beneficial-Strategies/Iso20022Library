@@ -229,37 +229,37 @@ therefore nothing to do."
 ## Phase 4: Messages (19 new · 59 changed · 0 obsolete · 2 removed)
 <!-- /snapshot-sync-messages [area] works this section -->
 ### acmt (6)
-- [ ] `AccountSwitchInformationRequestV04` — new: `MessageDefinitions/acmt/AccountSwitchInformationRequestV04.cs`
-- [ ] `AccountSwitchInformationResponseV04` — new: `MessageDefinitions/acmt/AccountSwitchInformationResponseV04.cs`
-- [ ] `AccountSwitchRequestBalanceTransferV04` — new: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV04.cs`
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV04` — new: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV04.cs`
-- [ ] `AccountSwitchRequestPaymentV04` — new: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV04.cs`
-- [ ] `AccountSwitchCancelExistingPaymentV04` — new: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV04.cs`
+- [x] `AccountSwitchInformationRequestV04` — new: `MessageDefinitions/acmt/AccountSwitchInformationRequestV04.cs`
+- [x] `AccountSwitchInformationResponseV04` — new: `MessageDefinitions/acmt/AccountSwitchInformationResponseV04.cs`
+- [x] `AccountSwitchRequestBalanceTransferV04` — new: `MessageDefinitions/acmt/AccountSwitchRequestBalanceTransferV04.cs`
+- [x] `AccountSwitchBalanceTransferAcknowledgementV04` — new: `MessageDefinitions/acmt/AccountSwitchBalanceTransferAcknowledgementV04.cs`
+- [x] `AccountSwitchRequestPaymentV04` — new: `MessageDefinitions/acmt/AccountSwitchRequestPaymentV04.cs`
+- [x] `AccountSwitchCancelExistingPaymentV04` — new: `MessageDefinitions/acmt/AccountSwitchCancelExistingPaymentV04.cs`
 
 ### auth (5)
-- [ ] `TradingSystemStatusReportV01` — new: `MessageDefinitions/auth/TradingSystemStatusReportV01.cs`
-- [ ] `PreTradeInputMarketDataReportV01` — new: `MessageDefinitions/auth/PreTradeInputMarketDataReportV01.cs`
-- [ ] `FinancialInstrumentStatusReportV01` — new: `MessageDefinitions/auth/FinancialInstrumentStatusReportV01.cs`
-- [ ] `PreTradeOutputMarketDataReportV01` — new: `MessageDefinitions/auth/PreTradeOutputMarketDataReportV01.cs`
-- [ ] `PostTradeMarketDataReportV01` — new: `MessageDefinitions/auth/PostTradeMarketDataReportV01.cs`
+- [x] `TradingSystemStatusReportV01` — new: `MessageDefinitions/auth/TradingSystemStatusReportV01.cs`
+- [x] `PreTradeInputMarketDataReportV01` — new: `MessageDefinitions/auth/PreTradeInputMarketDataReportV01.cs`
+- [x] `FinancialInstrumentStatusReportV01` — new: `MessageDefinitions/auth/FinancialInstrumentStatusReportV01.cs`
+- [x] `PreTradeOutputMarketDataReportV01` — new: `MessageDefinitions/auth/PreTradeOutputMarketDataReportV01.cs`
+- [x] `PostTradeMarketDataReportV01` — new: `MessageDefinitions/auth/PostTradeMarketDataReportV01.cs`
 
 ### camt (4)
-- [ ] `CashWithdrawalRequestV01` — new: `MessageDefinitions/camt/CashWithdrawalRequestV01.cs`
-- [ ] `CashDepositRequestV01` — new: `MessageDefinitions/camt/CashDepositRequestV01.cs`
-- [ ] `CashDepositOrWithdrawalCancellationRequestV01` — new: `MessageDefinitions/camt/CashDepositOrWithdrawalCancellationRequestV01.cs`
-- [ ] `CashDepositOrWithdrawalStatusUpdateV01` — new: `MessageDefinitions/camt/CashDepositOrWithdrawalStatusUpdateV01.cs`
+- [x] `CashWithdrawalRequestV01` — new: `MessageDefinitions/camt/CashWithdrawalRequestV01.cs`
+- [x] `CashDepositRequestV01` — new: `MessageDefinitions/camt/CashDepositRequestV01.cs`
+- [x] `CashDepositOrWithdrawalCancellationRequestV01` — new: `MessageDefinitions/camt/CashDepositOrWithdrawalCancellationRequestV01.cs`
+- [x] `CashDepositOrWithdrawalStatusUpdateV01` — new: `MessageDefinitions/camt/CashDepositOrWithdrawalStatusUpdateV01.cs`
 
 ### remt (1)
-- [ ] `RemittanceAdviceV05` — new: `MessageDefinitions/remt/RemittanceAdviceV05.cs`
+- [x] `RemittanceAdviceV05` — new: `MessageDefinitions/remt/RemittanceAdviceV05.cs`
 
 ### semt (2)
 - [x] `StatementOfInvestmentFundTransactionsV03` — deleted `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsV03.cs` (dependency-chain removal — see Phase 2 note; deleted first, before its Components)
 - [x] `StatementOfInvestmentFundTransactionsCancellationV03` — deleted `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsCancellationV03.cs` (dependency-chain removal — see Phase 2 note; deleted first, before its Components)
 
 ### trck (3)
-- [ ] `PaymentStatusCustomerTrackerReportV03` — new: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV03.cs`
-- [ ] `PaymentStatusTrackerReportV03` — new: `MessageDefinitions/trck/PaymentStatusTrackerReportV03.cs`
-- [ ] `PaymentStatusTrackerUpdateV04` — new: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV04.cs`
+- [x] `PaymentStatusCustomerTrackerReportV03` — new: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV03.cs`
+- [x] `PaymentStatusTrackerReportV03` — new: `MessageDefinitions/trck/PaymentStatusTrackerReportV03.cs`
+- [x] `PaymentStatusTrackerUpdateV04` — new: `MessageDefinitions/trck/PaymentStatusTrackerUpdateV04.cs` (3 constraints documented in `<remarks>`: TrackerInformingPartyRule, TrackerInformedPartyRule, TrackerInformingParty2Rule)
 
 ### Changed (59 total, metadata only — messageSet/previousVersion/nextVersions graph churn;
 ### see Diff Sourcing Note. Dominant families: DTCCCA* corporate-action messages,
