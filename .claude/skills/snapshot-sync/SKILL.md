@@ -8,7 +8,7 @@ argument-hint: (none — state is read from snapshot-sync/DATE/LIBRARY/PLAN.md)
 
 This is the top-level entry point for the snapshot sync process. Run `/snapshot-sync` repeatedly — each invocation reads the current state and executes the next batch of work automatically.
 
-**Library dependency order**: `iso20022` → `fluentvalidation` (future). A dependent library's plan is not created or started until the preceding library reaches Completion.
+**Library dependency order**: `iso20022` → `fluentvalidation` (future). A dependent library's plan is not created or started until the preceding library reaches Completion. The first concrete piece of the `fluentvalidation` phase already exists: once `iso20022`'s sync reaches Completion for a given date, run `.claude/skills/snapshot-sync-validator-checksums/SKILL.md` to find which *existing* FluentValidation validators need editing or obsoleting (it does not find new coverage candidates — that stays part of the normal per-message-family build process).
 
 ## Steps
 

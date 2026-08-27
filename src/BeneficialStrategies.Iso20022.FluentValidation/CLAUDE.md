@@ -101,6 +101,62 @@ gap is real, scoped follow-up work (build ~66 more component/choice validators, 
 different, older generation of building blocks than the rest of this project's current coverage),
 not something to fold into an unrelated batch that happens to trip over it.
 
+## Detecting Stale Validators — `coverage-checksums.json`
+
+Building a validator is a point-in-time snapshot of the ISO 20022 spec. Nothing in the coverage
+policy above re-checks it later — a message's own cross-field constraints, or a component's field
+list, can change in a subsequent spec release with no signal in this repository unless something
+goes looking. `coverage-checksums.json` (this directory) is that signal: it maps every model type
+with a validator in this package to the ISO 20022 spec's own content checksum for that type (a
+per-artifact hash the MCP server started providing on 2026-08-26 — see
+`project_mcp_checksum_field` in project memory).
+
+- **Regenerate it** with `tools/build_coverage_checksums.py` against a `spec-snapshot.tsv` (the
+  same file `snapshot-sync-plan` already produces) — see that script's own docstring, or run the
+  `snapshot-sync-validator-checksums` skill, which wraps the full regenerate-diff-categorize
+  procedure.
+- **`git diff` on this file after regenerating IS the maintenance signal.** Coverage policy:
+  validators only ever accumulate, but a type's ISO registry lifecycle has three states, and each
+  transition means something different for the validator:
+  1. **Checksum changed, `"status"` unchanged** — the spec content itself changed. **EDIT
+     candidate** — re-fetch via `universal_lookup` to see what actually changed before touching
+     the validator.
+  2. **`"status"` newly became `"Obsolete"`** (the type still appears in `get_spec_snapshot`,
+     just flagged) — mirror `[Obsolete(...)]` onto the **model type** in `Common` first (per the
+     existing sync convention — see `Components/Quantity3.cs` for the marker shape, `"Marked
+     obsolete in the ISO 20022 {date} snapshot. {removal date or 'No removal date recorded.'}"`),
+     then mirror the same attribute onto the validator. Both files stay, both still compile.
+  3. **`"status"` newly became `"NOT_FOUND_IN_CURRENT_SNAPSHOT"`** (the type no longer appears in
+     `get_spec_snapshot` at all — genuinely purged from the registry, not merely `Obsolete`) —
+     **this is the deletion trigger**, for the model type and its validator together, in the same
+     commit. Not a standalone validator-side decision: delete the model type from `Common` first
+     (an `iso20022`-library change, subject to the same reference-safety check
+     `snapshot-sync-components`/`-choices`/`-messages` already do — grep for external references;
+     a referencing type that's itself also gone must be removed first, in dependency order), and
+     the validator's removal follows as a compile-forced consequence, not a discretionary act.
+  - The first real hit this tool found (2026-08-26): `InvestmentFundTransactionsByFund3` —
+    `Obsolete` in the ISO spec since 2018 and fully purged from the queryable MCP snapshot by the
+    2026-06-26 sync (state 3, a deletion candidate), but blocked from immediate deletion by two
+    live references — `Components/StatementOfInvestmentFundTransactions3.cs` and
+    `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsV03.cs` — which are themselves
+    *also* absent from the current snapshot. A dependency-chain removal (message, then the
+    component that references it, then the innermost component), not a single-file one — real,
+    scoped follow-up work for `snapshot-sync-messages`/`snapshot-sync-components` on the `semt`
+    business area, not something to fold into an unrelated batch.
+  - **Known backlog, quantified 2026-08-26, not yet addressed**: 302 of our 1,295 currently-live
+    validator targets are already state 2 (`Obsolete`-but-present) in the spec, but only 7
+    `Components/` files, 34 `Codesets/` files, 0 `Choices/` base types, 0 `MessageDefinitions/`
+    files, and 0 validators currently carry `[Obsolete(...)]` anywhere in this repository. This
+    predates the checksum manifest — it reflects `[Obsolete]`-marking never having been applied
+    retroactively across the whole `iso20022` library, not a regression. Closing it is real, scoped
+    follow-up work, not something to absorb into unrelated sync batches; the corrected
+    Obsolete/Removed distinction now documented in `snapshot-sync-plan` and the per-phase sync
+    skills prevents new instances from *accumulating* going forward, but doesn't retroactively fix
+    the existing 302.
+- This only re-checks types **already** in the manifest — it does not discover new coverage
+  candidates (new messages, or growth in an existing message's reachable graph). That stays part
+  of the normal per-message-family scoping process described in "Coverage Scoping Policy" above.
+
 ## Adding a New Validator
 
 ### Step 1 — Query the spec via MCP

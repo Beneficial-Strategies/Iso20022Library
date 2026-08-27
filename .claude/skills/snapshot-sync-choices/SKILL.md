@@ -1,6 +1,6 @@
 ---
 name: snapshot-sync-choices
-description: Phase 3 of the iso20022 snapshot sync. Reads Phase 3 from the active PLAN.md and processes up to 20 choice type additions, changes, and removals per invocation. Fully reentrant.
+description: Phase 3 of the iso20022 snapshot sync. Reads Phase 3 from the active PLAN.md and processes up to 20 choice type additions, changes, obsoletions, and removals per invocation. Fully reentrant.
 argument-hint: (none — reads state from active snapshot-sync/DATE/iso20022/PLAN.md)
 ---
 
@@ -158,7 +158,28 @@ namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
 
 ---
 
+### Obsolete Choice
+
+A choice whose `registrationStatus` flipped to `Obsolete` in `get_snapshot_diff` but which **still
+appears** in `get_spec_snapshot` output. Not a removal.
+
+1. Read the existing base file at `src/BeneficialStrategies.Iso20022.Common/Choices/{ChoiceName}_.cs`.
+
+2. Add the `[Obsolete]` attribute immediately before `public abstract record {ChoiceName}_`, after
+   all other attributes:
+   - If a removalDate is recorded in PLAN.md: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. Removal date: {removalDate}.")]`
+   - If no removalDate: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. No removal date recorded.")]`
+
+3. Do NOT delete the base file, the variant directory, or any variant files.
+
+4. Mark the item `[x]` in PLAN.md.
+
+---
+
 ### Removed Choice
+
+A choice that no longer appears in `get_spec_snapshot` output at all — genuinely absent, not
+merely `Obsolete`-flagged (see the Obsolete step above).
 
 1. Search for references: `grep -r "{ChoiceName}" src/ --include="*.cs" -l`
 
@@ -166,8 +187,14 @@ namespace BeneficialStrategies.Iso20022.Choices.{ChoiceName}
    ```
      - [ ] FOLLOW-UP: {ChoiceName} referenced in {files} — resolve before deletion
    ```
+   A referencing type that is *itself* also Removed in this same sync should be processed first —
+   follow the dependency chain, not checklist order.
 
-3. If no external references, delete `Choices/{ChoiceName}_.cs` and the entire `Choices/{ChoiceName}/` directory.
+3. If no external references, delete `Choices/{ChoiceName}_.cs` and the entire `Choices/{ChoiceName}/`
+   directory, **and its FluentValidation validator in the same commit** if one exists
+   (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Choices/{ChoiceName}_Validator.cs`).
+   See `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also
+   update.
 
 4. Mark the item `[x]` in PLAN.md.
 

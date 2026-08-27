@@ -129,10 +129,46 @@ Sort every changed artifact into one of four phases. For each item record whethe
   - Removed: file path to delete — only for codesets that appear in `get_snapshot_diff` `section: removed` with `xsi:type: CodeSet` AND whose file exists in `Codesets/`. Items that are merely Obsolete are NOT removals.
 - **Phase 2 — Components**: record types under `src/BeneficialStrategies.Iso20022.Common/Components/`
   - Changed: field-level description (type change, added field, removed field)
+  - Obsolete/Removed: **same three-state distinction as Phase 1** (below), substituting
+    `xsiType: MessageComponent` and `Components/` for `CodeSet`/`Codesets/`. This is not
+    optional — `InvestmentFundTransactionsByFund3` was found 2026-08-26 sitting in `Components/`
+    with no `[Obsolete]` attribute despite the ISO spec having marked it Obsolete since 2018 and
+    fully purged it from the queryable snapshot by 2026-06-26, specifically because an earlier
+    version of this section had no Obsolete/Removed step for Components at all — see
+    `project_validator_checksum_manifest` in project memory.
 - **Phase 3 — Choices**: abstract choice records under `src/BeneficialStrategies.Iso20022.Common/Choices/`
   - Changed: variant added/removed
+  - Obsolete/Removed: same three-state distinction, `xsiType: ChoiceComponent` and `Choices/`.
 - **Phase 4 — Messages**: outer record types under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/{area}/`
   - Group by 4-letter business area prefix (pain, pacs, camt, seev, sese, semt, acmt, admi, auth, etc.)
+  - Obsolete/Removed: same three-state distinction. Messages have no `xsiType` value in
+    `get_snapshot_diff` (`MessageDefinition` returns zero results — confirmed 2026-08-26); scan the
+    unfiltered `added`/`removed`/`changedContent` sections instead (tractable at this artifact's
+    scale — see `project_mcp_checksum_field` in project memory) and identify message-shaped records
+    by their attribute shape (`xmlTag`+`rootElement`+`messageSet`, no `xsi:type` field) rather than
+    by filter.
+
+**The three-state distinction, spelled out once (applies to all four phases above):**
+1. **Registered** (no `registrationStatus` change, or unchanged) — ordinary New/Changed handling.
+2. **Obsolete, still present in the snapshot** — `registrationStatus` becomes `"Obsolete"` in a
+   `changedContent` record (`changes.registrationStatus[1] === "Obsolete"`), and the entity still
+   appears in `get_spec_snapshot`. The file **stays** in the library, gets
+   `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}."`
+   (or `"No removal date recorded."` if `changes.removalDate` is absent) — matching the ~40+
+   existing examples across `Components`/`Codesets` (e.g. `Components/Quantity3.cs`). Do **not**
+   put these in the Removed bucket.
+3. **Genuinely absent** — the entity appears in `get_snapshot_diff`'s `removed` section (filtered
+   by the phase's `xsiType`, where one exists) AND its file still exists in the library. This is
+   the actual deletion trigger — but delete only after the same reference-safety check the
+   "Removed Component/Choice/Message" processing steps already do (`grep` for external references;
+   if any exist, add a `FOLLOW-UP` instead of deleting, since the referencing type may itself need
+   to go first — chains of retired types, like the semt `InvestmentFundTransactionsByFund3` →
+   `StatementOfInvestmentFundTransactions3` → `StatementOfInvestmentFundTransactionsV03` cluster
+   found 2026-08-26, must be removed in dependency order, not all at once).
+
+A type merely flipping to Obsolete is never a Removed entry, and a type already absent from the
+snapshot should never linger as a bare `[Obsolete]` marker forever — eventually it disappears from
+the snapshot's queryable output entirely, at which point it belongs in state 3, not state 2.
 
 ### 3. Write the plan file
 
@@ -150,46 +186,52 @@ Create `snapshot-sync/{date}/{library}/` directory if needed, then write `PLAN.m
 - **Plan created**: YYYY-MM-DD
 - **Last updated**: YYYY-MM-DD
 
-## Phase 1: Codesets (N new · M changed · P removed)
+## Phase 1: Codesets (N new · M changed · O obsolete · P removed)
 <!-- /snapshot-sync-codesets works this section -->
 ### New
 - [ ] `CodesetName` — `Codesets/CodesetName.cs`
 ### Changed
 - [ ] `CodesetName` — add: CODE1, CODE2; remove: OLDCODE
+### Obsolete
+- [ ] `CodesetName` — add `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]`, file stays
 ### Removed
 - [ ] `CodesetName` — delete `Codesets/CodesetName.cs`
 
 ## Milestone 1: Build
 - [ ] Build passes after codesets
 
-## Phase 2: Components (N new · M changed · P removed)
+## Phase 2: Components (N new · M changed · O obsolete · P removed)
 <!-- /snapshot-sync-components works this section -->
 ### New
 - [ ] `ComponentName##` — `Components/ComponentName##.cs`
 ### Changed
 - [ ] `ComponentName##` — [field-level description]
+### Obsolete
+- [ ] `ComponentName##` — add `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]`, file stays
 ### Removed
 - [ ] `ComponentName##` — delete `Components/ComponentName##.cs`
 
 ## Milestone 2: Build
 - [ ] Build passes after components
 
-## Phase 3: Choices (N new · M changed · P removed)
+## Phase 3: Choices (N new · M changed · O obsolete · P removed)
 <!-- /snapshot-sync-choices works this section -->
 ### New
 - [ ] `ChoiceName` — `Choices/ChoiceName_.cs` + `Choices/ChoiceName/` directory
 ### Changed
 - [ ] `ChoiceName` — [variant added/removed]
+### Obsolete
+- [ ] `ChoiceName` — add `[Obsolete("Marked obsolete in the ISO 20022 {date} snapshot. Removal date: {removalDate}.")]` on the base type, files stay
 ### Removed
 - [ ] `ChoiceName` — delete `Choices/ChoiceName_.cs` and `Choices/ChoiceName/`
 
 ## Milestone 3: Build
 - [ ] Build passes after choices
 
-## Phase 4: Messages (N new · M changed · P removed)
+## Phase 4: Messages (N new · M changed · O obsolete · P removed)
 <!-- /snapshot-sync-messages [area] works this section -->
 ### {area} (N)
-- [ ] `{area}.NNN.001.VV` — [new | updated | removed]: [description]
+- [ ] `{area}.NNN.001.VV` — [new | updated | obsolete | removed]: [description]
 
 ## Milestone 4: Full Build + Tests
 - [ ] Build passes
@@ -211,13 +253,13 @@ git commit -m "Snapshot sync {date} ({library}): create plan document (N total c
 
 ### 5. Print summary
 
-| Phase | New | Changed | Removed | Total |
-|-------|-----|---------|---------|-------|
-| Codesets | | | | |
-| Components | | | | |
-| Choices | | | | |
-| Messages | | | | |
-| **Total** | | | | |
+| Phase | New | Changed | Obsolete | Removed | Total |
+|-------|-----|---------|----------|---------|-------|
+| Codesets | | | | | |
+| Components | | | | | |
+| Choices | | | | | |
+| Messages | | | | | |
+| **Total** | | | | | |
 
 Remind the user to run `/snapshot-sync` to begin execution.
 

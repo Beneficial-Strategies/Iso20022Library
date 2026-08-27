@@ -1,6 +1,6 @@
 ---
 name: snapshot-sync-messages
-description: Phase 4 of the iso20022 snapshot sync. Reads Phase 4 from the active PLAN.md and processes up to 20 message definition additions, changes, and removals per invocation. Optionally filter to a single business area. Fully reentrant.
+description: Phase 4 of the iso20022 snapshot sync. Reads Phase 4 from the active PLAN.md and processes up to 20 message definition additions, changes, obsoletions, and removals per invocation. Optionally filter to a single business area. Fully reentrant.
 argument-hint: [area] (optional — filter to one business area, e.g. "pain", "pacs", "camt")
 ---
 
@@ -166,13 +166,43 @@ public record {ClassName} : IOuterRecord
 
 ---
 
+### Obsolete Message
+
+A message whose `registrationStatus` flipped to `Obsolete` but which **still appears** in
+`get_spec_snapshot` output. Not a removal. Messages have no `xsiType` filter value in
+`get_snapshot_diff` (`MessageDefinition` returns zero results) — identify these by scanning the
+unfiltered `changedContent` section for message-shaped records (`xmlTag`+`rootElement`+
+`messageSet` attributes, no `xsi:type` field) with `changes.registrationStatus[1] === "Obsolete"`.
+
+1. Read the existing file at `MessageDefinitions/{area}/{ClassName}.cs`.
+
+2. Add the `[Obsolete]` attribute immediately before `public record {ClassName} : IOuterRecord`,
+   after all other attributes:
+   - If a removalDate is recorded in PLAN.md: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. Removal date: {removalDate}.")]`
+   - If no removalDate: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. No removal date recorded.")]`
+
+3. Do NOT delete the file or remove any fields.
+
+4. Mark the item `[x]` in PLAN.md.
+
+---
+
 ### Removed Message
+
+A message that no longer appears in `get_spec_snapshot` output at all — genuinely absent, not
+merely `Obsolete`-flagged (see the Obsolete step above). Same unfiltered-scan caveat applies:
+identify these from the raw `removed` section by record shape, since there's no `xsiType` filter
+for messages.
 
 1. Search for references: `grep -r "{ClassName}" src/ --include="*.cs" -l`
 
 2. If external references exist (outside the file itself), add a follow-up item and do not delete.
+   A referencing type that is *itself* also Removed in this same sync should be processed first.
 
-3. If no external references, delete the file.
+3. If no external references, delete the file, **and its FluentValidation validator in the same
+   commit** if one exists (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/{area}/{ClassName}Validator.cs`).
+   See `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also
+   update.
 
 4. Mark the item `[x]` in PLAN.md.
 

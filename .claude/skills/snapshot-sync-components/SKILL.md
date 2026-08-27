@@ -1,6 +1,6 @@
 ---
 name: snapshot-sync-components
-description: Phase 2 of the iso20022 snapshot sync. Reads Phase 2 from the active PLAN.md and processes up to 20 component (record type) additions, changes, and removals per invocation. Fully reentrant.
+description: Phase 2 of the iso20022 snapshot sync. Reads Phase 2 from the active PLAN.md and processes up to 20 component (record type) additions, changes, obsoletions, and removals per invocation. Fully reentrant.
 argument-hint: (none — reads state from active snapshot-sync/DATE/iso20022/PLAN.md)
 ---
 
@@ -112,7 +112,31 @@ Do **not** add explicit constructors. Use `required` + init-only properties.
 
 ---
 
+### Obsolete Component
+
+A component whose `registrationStatus` flipped to `Obsolete` in `get_snapshot_diff` but which
+**still appears** in `get_spec_snapshot` output — i.e. the ISO registry still tracks it, just
+flagged. This is not a removal.
+
+1. Read the existing file at `src/BeneficialStrategies.Iso20022.Common/Components/{ComponentName}.cs`.
+
+2. Add the `[Obsolete]` attribute immediately before `public record {ComponentName}`, after all
+   other attributes:
+   - If a removalDate is recorded in PLAN.md: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. Removal date: {removalDate}.")]`
+   - If no removalDate: `[Obsolete("Marked obsolete in the ISO 20022 {snapshot-date} snapshot. No removal date recorded.")]`
+
+3. Do NOT delete the file or remove any fields.
+
+4. Mark the item `[x]` in PLAN.md.
+
+---
+
 ### Removed Component
+
+A component that no longer appears in `get_spec_snapshot` output at all — genuinely absent from
+the queryable registry, not merely `Obsolete`-flagged (see the Obsolete step above for that case;
+an item already `[Obsolete]`-marked eventually lands here once the spec purges it entirely — that
+transition is expected, not a special case).
 
 1. Search for all type references: `grep -r "{ComponentName}" src/ --include="*.cs" -l`
 
@@ -120,8 +144,18 @@ Do **not** add explicit constructors. Use `required` + init-only properties.
    ```
      - [ ] FOLLOW-UP: {ComponentName} referenced in {files} — remove usages before deletion
    ```
+   A referencing type that is *itself* also Removed in this same sync should be processed first —
+   removal order follows the dependency chain, not checklist order. (Example encountered
+   2026-08-26: `InvestmentFundTransactionsByFund3` ← `StatementOfInvestmentFundTransactions3` ←
+   `StatementOfInvestmentFundTransactionsV03`, all three genuinely removed together — the message
+   must go first, then the component, then the innermost component.)
 
-3. If no external references, delete the file.
+3. If no external references, delete the file **and its FluentValidation validator in the same
+   commit** if one exists (`src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Components/{ComponentName}Validator.cs`)
+   — a validator has no reason to outlive the type it validates, and deleting the model type alone
+   would leave the validator failing to compile anyway. See
+   `snapshot-sync-validator-checksums` for the FluentValidation-side manifest this should also
+   update.
 
 4. Mark the original item `[x]` in PLAN.md.
 
