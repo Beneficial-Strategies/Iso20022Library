@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RORH9tp-Ed-ak6NoX_4Aeg_1205526240")]
 [DisplayName("Statement")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public record Statement8
 {
     /// <summary>

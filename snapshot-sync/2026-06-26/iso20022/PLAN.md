@@ -131,26 +131,46 @@ therefore nothing to do."
 - [x] `CashNote1` — `Components/CashNote1.cs`
 ### Changed (messageBuildingBlock reference-list churn only — see Diff Sourcing Note; verify
 ### via universal_lookup whether this component's OWN fields changed vs. just who references it)
-- [ ] `AdditionalReference2` — `Components/AdditionalReference2.cs`
-- [ ] `PaymentInstruction38` — `Components/PaymentInstruction38.cs`
-- [ ] `TrackerStatusAndTransaction18` — `Components/TrackerStatusAndTransaction18.cs`
-- [ ] `AccountSwitchDetails1` — `Components/AccountSwitchDetails1.cs`
-- [ ] `TrackerHeader5` — `Components/TrackerHeader5.cs`
-- [ ] `CashAccount41` — `Components/CashAccount41.cs`
-- [ ] `RemittanceInformation20` — `Components/RemittanceInformation20.cs`
-- [ ] `DirectDebitInstructionDetails2` — `Components/DirectDebitInstructionDetails2.cs`
-- [ ] `TrackerHeader6` — `Components/TrackerHeader6.cs`
-- [ ] `AmountAndDirection5` — `Components/AmountAndDirection5.cs`
-- [ ] `Extension1` — `Components/Extension1.cs`
-- [ ] `MessageIdentification1` — `Components/MessageIdentification1.cs`
-- [ ] `TrackerStatusAndTransaction19` — `Components/TrackerStatusAndTransaction19.cs`
-- [ ] `SupplementaryData1` — `Components/SupplementaryData1.cs`
-- [ ] `NewAccount3` — `Components/NewAccount3.cs`
-- [ ] `CreditTransferTransaction51` — `Components/CreditTransferTransaction51.cs`
-- [ ] `Pagination` — `Components/Pagination.cs`
-- [ ] `GroupHeader79` — `Components/GroupHeader79.cs`
-- [ ] `Statement8` — `Components/Statement8.cs`
-- [ ] `BalanceTransfer4` — `Components/BalanceTransfer4.cs`
+<!--
+  Verified 2026-08-27: all 20 items' field lists confirmed structurally unchanged (name/type/
+  multiplicity match universal_lookup exactly). Per CLAUDE.md's non-negotiable verbatim-
+  description rule, class- and field-level <summary> text was independently diffed against
+  fresh universal_lookup Definition text for every item (not just trusted as "metadata only"):
+    - 2 real description-drift fixes: TrackerStatusAndTransaction18 and
+      TrackerStatusAndTransaction19 both carried placeholder text ("Tracker Status And
+      Transaction18.", "Transaction.", "Transaction Status." — the display name restated, not
+      ISO spec prose) instead of verbatim descriptions, and were missing [IsoId] on both
+      properties. Fixed with real ISO text + IsoId values from universal_lookup.
+    - 4 separate discoveries: AdditionalReference2, Extension1, Pagination, and Statement8 are
+      `Obsolete` in the current 2026-06-26 snapshot but were unmarked in code AND have no
+      FluentValidation validator — invisible to the coverage-checksums.json 302-item backlog
+      mechanism (that only covers validated types). Marked [Obsolete] with removal dates
+      (AdditionalReference2: 2016-09-08, Pagination: 2018-09-08, Statement8: 2018-09-08,
+      Extension1: none recorded).
+    - Remaining 14 items confirmed clean: class- and field-level descriptions already verbatim,
+      no code changes needed — the diff signal really was messageBuildingBlock-reference-graph
+      churn only, as the plan predicted.
+-->
+- [x] `AdditionalReference2` — `Components/AdditionalReference2.cs` (Obsolete, removal date 2016-09-08 — see note above)
+- [x] `PaymentInstruction38` — `Components/PaymentInstruction38.cs` (verified clean)
+- [x] `TrackerStatusAndTransaction18` — `Components/TrackerStatusAndTransaction18.cs` (description drift fixed — see note above)
+- [x] `AccountSwitchDetails1` — `Components/AccountSwitchDetails1.cs` (verified clean)
+- [x] `TrackerHeader5` — `Components/TrackerHeader5.cs` (verified clean)
+- [x] `CashAccount41` — `Components/CashAccount41.cs` (verified clean)
+- [x] `RemittanceInformation20` — `Components/RemittanceInformation20.cs` (verified clean)
+- [x] `DirectDebitInstructionDetails2` — `Components/DirectDebitInstructionDetails2.cs` (verified clean)
+- [x] `TrackerHeader6` — `Components/TrackerHeader6.cs` (verified clean)
+- [x] `AmountAndDirection5` — `Components/AmountAndDirection5.cs` (verified clean)
+- [x] `Extension1` — `Components/Extension1.cs` (Obsolete, no removal date recorded — see note above)
+- [x] `MessageIdentification1` — `Components/MessageIdentification1.cs` (verified clean)
+- [x] `TrackerStatusAndTransaction19` — `Components/TrackerStatusAndTransaction19.cs` (description drift fixed — see note above)
+- [x] `SupplementaryData1` — `Components/SupplementaryData1.cs` (verified clean)
+- [x] `NewAccount3` — `Components/NewAccount3.cs` (verified clean)
+- [x] `CreditTransferTransaction51` — `Components/CreditTransferTransaction51.cs` (verified clean)
+- [x] `Pagination` — `Components/Pagination.cs` (Obsolete, removal date 2018-09-08 — see note above)
+- [x] `GroupHeader79` — `Components/GroupHeader79.cs` (verified clean)
+- [x] `Statement8` — `Components/Statement8.cs` (Obsolete, removal date 2018-09-08 — see note above)
+- [x] `BalanceTransfer4` — `Components/BalanceTransfer4.cs` (verified clean)
 ### Removed
 <!--
   Dependency-ordered removal cluster, all 8 items (2 Messages + 6 Components), confirmed

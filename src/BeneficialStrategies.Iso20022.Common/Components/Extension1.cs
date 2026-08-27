@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q6vvCNp-Ed-ak6NoX_4Aeg_1503007069")]
 [DisplayName("Extension")]
+[Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. No removal date recorded.")]
 public record Extension1
 {
     /// <summary>
