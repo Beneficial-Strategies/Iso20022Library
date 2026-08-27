@@ -326,9 +326,18 @@ therefore nothing to do."
 - [x] `AccountSwitchInformationRequestV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
 
 ## Milestone 4: Full Build + Tests
-- [ ] Build passes
-- [ ] All tests pass
+- [x] Build passes (`dotnet build iso20022.sln --no-incremental`: 0 Error(s), 132 Warning(s) — all CS0618 obsolete-usage in FluentValidation.Tests, expected fallout of the Obsolete-marking batches this sync; 0 CS1591)
+- [x] All tests pass (`dotnet test iso20022.sln`: 6,757 Common.Tests + 1,740 FluentValidation.Tests = 8,497 total, 0 failed, across both net8.0 and net10.0)
+
+### Annual obsolete-warning audit (informational, does not block the milestone)
+`dotnet build BeneficialStrategies.Iso20022.Common -c Release --no-incremental -p:EnableObsoleteWarnings=true`
+found 13,504 CS0618/CS0612 hits — a large number, reflecting the cumulative effect of every
+`[Obsolete]` marker applied across this repo's history (the 302-item backlog closure, this sync's
+own 63 new Obsolete markers, and pre-existing ones) plus every downstream reference to those types.
+Full per-type triage (obsoleted-in-current-snapshot vs. safe-to-delete-now) is real, scoped
+follow-up work — not something to fold into this sync's commit. No safe deletions identified in
+this pass; deferred to a future milestone-4 audit per the verify skill's own guidance.
 
 ## Completion
-- [ ] All phases and milestones verified
-- [ ] Changes committed and branch ready for review
+- [x] All phases and milestones verified
+- [x] Changes committed and branch ready for review
