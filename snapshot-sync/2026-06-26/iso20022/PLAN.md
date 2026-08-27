@@ -113,22 +113,22 @@ therefore nothing to do."
 - [x] `CashWithdrawalRequest1` — `Components/CashWithdrawalRequest1.cs`
 - [x] `CashDepositRequest1` — `Components/CashDepositRequest1.cs`
 - [x] `TradingSystemReport1` — `Components/TradingSystemReport1.cs`
-- [ ] `ContinuousOrderBookData1` — `Components/ContinuousOrderBookData1.cs`
-- [ ] `PreTradeInputReport1` — `Components/PreTradeInputReport1.cs`
-- [ ] `GroupHeader132` — `Components/GroupHeader132.cs`
-- [ ] `ConsolidatedTapeProviderData1` — `Components/ConsolidatedTapeProviderData1.cs`
-- [ ] `InstrumentReport1` — `Components/InstrumentReport1.cs`
-- [ ] `RequestIdentification2` — `Components/RequestIdentification2.cs`
-- [ ] `AuctionTradingSystemData1` — `Components/AuctionTradingSystemData1.cs`
-- [ ] `CashCoin1` — `Components/CashCoin1.cs`
-- [ ] `FinancialInstrumentAttributes140` — `Components/FinancialInstrumentAttributes140.cs`
-- [ ] `TradingSystemData1` — `Components/TradingSystemData1.cs`
-- [ ] `BidData1` — `Components/BidData1.cs`
-- [ ] `PreTradeOutputReport1` — `Components/PreTradeOutputReport1.cs`
-- [ ] `TradingSystemData2` — `Components/TradingSystemData2.cs`
-- [ ] `CashWithdrawal1` — `Components/CashWithdrawal1.cs`
-- [ ] `PreTradeInputData1` — `Components/PreTradeInputData1.cs`
-- [ ] `CashNote1` — `Components/CashNote1.cs`
+- [x] `ContinuousOrderBookData1` — `Components/ContinuousOrderBookData1.cs`
+- [x] `PreTradeInputReport1` — `Components/PreTradeInputReport1.cs`
+- [x] `GroupHeader132` — `Components/GroupHeader132.cs`
+- [x] `ConsolidatedTapeProviderData1` — `Components/ConsolidatedTapeProviderData1.cs`
+- [x] `InstrumentReport1` — `Components/InstrumentReport1.cs`
+- [x] `RequestIdentification2` — `Components/RequestIdentification2.cs`
+- [x] `AuctionTradingSystemData1` — `Components/AuctionTradingSystemData1.cs`
+- [x] `CashCoin1` — `Components/CashCoin1.cs`
+- [x] `FinancialInstrumentAttributes140` — `Components/FinancialInstrumentAttributes140.cs`
+- [x] `TradingSystemData1` — `Components/TradingSystemData1.cs`
+- [x] `BidData1` — `Components/BidData1.cs`
+- [x] `PreTradeOutputReport1` — `Components/PreTradeOutputReport1.cs`
+- [x] `TradingSystemData2` — `Components/TradingSystemData2.cs`
+- [x] `CashWithdrawal1` — `Components/CashWithdrawal1.cs`
+- [x] `PreTradeInputData1` — `Components/PreTradeInputData1.cs`
+- [x] `CashNote1` — `Components/CashNote1.cs`
 ### Changed (messageBuildingBlock reference-list churn only — see Diff Sourcing Note; verify
 ### via universal_lookup whether this component's OWN fields changed vs. just who references it)
 - [ ] `AdditionalReference2` — `Components/AdditionalReference2.cs`
