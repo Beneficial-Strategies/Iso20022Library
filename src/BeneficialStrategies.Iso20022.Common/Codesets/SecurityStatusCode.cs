@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZKGWEtp-Ed-ak6NoX_4Aeg_274745711")]
 [Description(@"Specifies the status of the security.")]
-[Derivations(typeof(SecurityStatus1Code), typeof(SecurityStatus2Code))]
+[Derivations(typeof(SecurityStatus1Code), typeof(SecurityStatus2Code), typeof(SecurityStatus3Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<SecurityStatusCode>))]
 public enum SecurityStatusCode
 {

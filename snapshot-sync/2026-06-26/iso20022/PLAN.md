@@ -37,29 +37,40 @@ independently re-verify description text against a fresh `universal_lookup` call
 off any Changed item — belt-and-suspenders on top of this plan's own diff-based confirmation, not
 a substitute for it.
 
+**Correction found during Phase 1 processing (2026-08-27):** "metadata-only" was too strong a claim
+for the two `derivation`-attribute Changed entries specifically (`SecurityStatusCode`,
+`TradingVenueCode`). `get_snapshot_diff` correctly reported `definition`/`xmlTag` as unchanged for
+both — but this codebase mirrors the `derivation` (Derived-By) relationship into a hand-maintained
+`[Derivations(typeof(...))]` attribute on the base type, which genuinely needed editing to add the
+new derived type. "No `definition` change" ≠ "no code change" whenever an attribute encodes a
+*structural relationship* the diff tool tracks under a different field name than the one this plan
+checked. Both real edits were made (see Phase 1 Changed section below) — flagged here so the same
+class of gap gets checked for in Phases 2–4 too, not just re-confirmed as "definition unchanged and
+therefore nothing to do."
+
 ## Phase 1: Codesets (20 new · 10 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-codesets works this section -->
 ### New
-- [ ] `SecurityStatus3Code` — `Codesets/SecurityStatus3Code.cs`
-- [ ] `TradingSystemPhase1Code` — `Codesets/TradingSystemPhase1Code.cs`
-- [ ] `TradingSystemType2Code` — `Codesets/TradingSystemType2Code.cs`
-- [ ] `ExternalCashTypeCode` — `Codesets/ExternalCashTypeCode.cs`
-- [ ] `TradingSystemStatus1Code` — `Codesets/TradingSystemStatus1Code.cs`
-- [ ] `ExternalPostTradeDerivative1Code` — `Codesets/ExternalPostTradeDerivative1Code.cs`
-- [ ] `ExternalPostTradeDerivativeCode` — `Codesets/ExternalPostTradeDerivativeCode.cs`
-- [ ] `TradingVenue5Code` — `Codesets/TradingVenue5Code.cs`
-- [ ] `TradingSystemPhaseCode` — `Codesets/TradingSystemPhaseCode.cs`
-- [ ] `TradingSystemTypeCode` — `Codesets/TradingSystemTypeCode.cs`
-- [ ] `ExternalDeliveryMethodCode` — `Codesets/ExternalDeliveryMethodCode.cs` (ProvisionallyRegistered)
-- [ ] `TradingSystemType1Code` — `Codesets/TradingSystemType1Code.cs`
-- [ ] `ExternalDeliveryMethod1Code` — `Codesets/ExternalDeliveryMethod1Code.cs` (ProvisionallyRegistered)
-- [ ] `ExternalCashType1Code` — `Codesets/ExternalCashType1Code.cs`
-- [ ] `TradingSystemPhase2Code` — `Codesets/TradingSystemPhase2Code.cs`
-- [ ] `ExternalPostTradeBond1Code` — `Codesets/ExternalPostTradeBond1Code.cs`
-- [ ] `ExternalPostTradeBondCode` — `Codesets/ExternalPostTradeBondCode.cs`
-- [ ] `ExternalPostTradeEquity1Code` — `Codesets/ExternalPostTradeEquity1Code.cs`
-- [ ] `ExternalPostTradeEquityCode` — `Codesets/ExternalPostTradeEquityCode.cs`
-- [ ] `TradingSystemStatusCode` — `Codesets/TradingSystemStatusCode.cs`
+- [x] `SecurityStatus3Code` — `Codesets/SecurityStatus3Code.cs` (DerivedFrom SecurityStatusCode, 4 members reusing base ordinals)
+- [x] `TradingSystemPhase1Code` — `Codesets/TradingSystemPhase1Code.cs` (DerivedFrom TradingSystemPhaseCode)
+- [x] `TradingSystemType2Code` — `Codesets/TradingSystemType2Code.cs` (DerivedFrom TradingSystemTypeCode)
+- [x] `ExternalCashTypeCode` — `Codesets/ExternalCashTypeCode.cs` (plain open struct — genuinely memberless per get_code_set_details)
+- [x] `TradingSystemStatus1Code` — `Codesets/TradingSystemStatus1Code.cs` (DerivedFrom TradingSystemStatusCode)
+- [x] `ExternalPostTradeDerivative1Code` — `Codesets/ExternalPostTradeDerivative1Code.cs` (hybrid, 4 known members)
+- [x] `ExternalPostTradeDerivativeCode` — `Codesets/ExternalPostTradeDerivativeCode.cs` (hybrid, 4 known members)
+- [x] `TradingVenue5Code` — `Codesets/TradingVenue5Code.cs` (DerivedFrom TradingVenueCode, 1 member)
+- [x] `TradingSystemPhaseCode` — `Codesets/TradingSystemPhaseCode.cs` (base, 13 members, own ordinals)
+- [x] `TradingSystemTypeCode` — `Codesets/TradingSystemTypeCode.cs` (base, 7 members, own ordinals)
+- [x] `ExternalDeliveryMethodCode` — `Codesets/ExternalDeliveryMethodCode.cs` (ProvisionallyRegistered; plain open struct — genuinely memberless)
+- [x] `TradingSystemType1Code` — `Codesets/TradingSystemType1Code.cs` (DerivedFrom TradingSystemTypeCode)
+- [x] `ExternalDeliveryMethod1Code` — `Codesets/ExternalDeliveryMethod1Code.cs` (ProvisionallyRegistered; plain open struct)
+- [x] `ExternalCashType1Code` — `Codesets/ExternalCashType1Code.cs` (plain open struct — genuinely memberless)
+- [x] `TradingSystemPhase2Code` — `Codesets/TradingSystemPhase2Code.cs` (DerivedFrom TradingSystemPhaseCode, 10-member subset)
+- [x] `ExternalPostTradeBond1Code` — `Codesets/ExternalPostTradeBond1Code.cs` (hybrid, 19 known members)
+- [x] `ExternalPostTradeBondCode` — `Codesets/ExternalPostTradeBondCode.cs` (hybrid, 19 known members)
+- [x] `ExternalPostTradeEquity1Code` — `Codesets/ExternalPostTradeEquity1Code.cs` (hybrid, 13 known members)
+- [x] `ExternalPostTradeEquityCode` — `Codesets/ExternalPostTradeEquityCode.cs` (hybrid, 13 known members)
+- [x] `TradingSystemStatusCode` — `Codesets/TradingSystemStatusCode.cs` (base, 3 members, own ordinals)
 ### Changed (metadata only — see Diff Sourcing Note; verify no code impact, then check off)
 - [ ] `ExternalSecuritiesStatementType1Code` — registrationStatus: Provisionally Registered → Registered
 - [ ] `ExternalServiceCategory1Code` — registrationStatus: Provisionally Registered → Registered
@@ -67,9 +78,13 @@ a substitute for it.
 - [ ] `ExternalObligationSettlementMethodCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `ExternalObligationSettlementMethod1Code` — registrationStatus: Provisionally Registered → Registered
 - [ ] `ExternalServiceCategoryCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `TradingVenueCode` — derivation: gained successor pointer to new `TradingVenue5Code` (see New above)
+- [x] `TradingVenueCode` — derivation: gained successor pointer to new `TradingVenue5Code`. **Real code
+      impact found** (not metadata-only after all): `[Derivations(...)]` attribute list on
+      `Codesets/TradingVenueCode.cs` updated to add `typeof(TradingVenue5Code)`.
 - [ ] `ExternalSecuritiesStatementTypeCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `SecurityStatusCode` — derivation: gained successor pointer to new `SecurityStatus3Code` (see New above)
+- [x] `SecurityStatusCode` — derivation: gained successor pointer to new `SecurityStatus3Code`. **Real
+      code impact found**: `[Derivations(...)]` attribute list on `Codesets/SecurityStatusCode.cs`
+      updated to add `typeof(SecurityStatus3Code)`.
 - [ ] `ExternalPenaltyPartyTypeCode` — registrationStatus: Provisionally Registered → Registered
 
 ## Milestone 1: Build

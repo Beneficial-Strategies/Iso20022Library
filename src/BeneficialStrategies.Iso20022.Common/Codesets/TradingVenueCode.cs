@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_8UfE0F0fEeWErPfQ7BYx8A")]
 [Description(@"Specifies the type of a trading venue.")]
-[Derivations(typeof(TradingVenue2Code), typeof(TradingVenue1Code), typeof(MICEntityType1Code))]
+[Derivations(typeof(TradingVenue2Code), typeof(TradingVenue1Code), typeof(MICEntityType1Code), typeof(TradingVenue5Code))]
 [JsonConverter(typeof(Iso20022EnumJsonConverter<TradingVenueCode>))]
 public enum TradingVenueCode
 {
