@@ -79,7 +79,11 @@ Categorize every changed entry:
     an `iso20022`-library change (via `snapshot-sync-components`/`-choices`/`-codesets`/
     `-messages`, matching the marker shape already used in existing model types, e.g.
     `Components/Quantity3.cs`: `"Marked obsolete in the ISO 20022 {date} snapshot. {removal date,
-    or 'No removal date recorded.'}"`).
+    or 'No removal date recorded.'}"`). **Use this entry's own `"removalDate"` field directly** —
+    it's sourced from the bulk `get_spec_snapshot` TSV (a real column since the 2026-08-27
+    deployment); no separate `universal_lookup` call needed. `null` genuinely means no date is
+    recorded (or, for external codesets specifically, that the column isn't present on that row
+    shape at all — see `build_coverage_checksums.py`'s docstring) — not a signal to go look harder.
   - Once the model type carries `[Obsolete(...)]`, mirror the same attribute onto its validator.
     Both files stay in the repository, both still compile, both are marked.
 - **`"status": "NOT_FOUND_IN_CURRENT_SNAPSHOT"` newly appeared** — the spec entity no longer

@@ -126,13 +126,17 @@ per-artifact hash the MCP server started providing on 2026-08-26 — see
      existing sync convention — see `Components/Quantity3.cs` for the marker shape, `"Marked
      obsolete in the ISO 20022 {date} snapshot. {removal date or 'No removal date recorded.'}"`),
      then mirror the same attribute onto the validator. Both files stay, both still compile.
-     **`removalDate` is NOT a column in the bulk `get_spec_snapshot` TSV this manifest is built
-     from** (confirmed 2026-08-27) — don't default to "No removal date recorded" just because the
-     bulk regeneration made a per-type check inconvenient. Fetch it per type via `universal_lookup`
-     (its Properties table includes `removalDate` whenever the spec actually records one) before
-     writing the marker. When closing the 302-item backlog this section documents below, all 302
-     individually-checked types turned out to have a real `removalDate` — "no removal date
-     recorded" would have been true for zero of them, not the norm this text originally implied.
+     **`removalDate` is now a real column in this manifest** (deployed by the MCP server
+     2026-08-27, requested as direct feedback from this project's own 302-item backlog closure
+     below) — this entry's own `"removalDate"` field (`null` if genuinely not recorded, a plain
+     `YYYY-MM-DD` string if it is) is the marker's source of truth. No per-type `universal_lookup`
+     call needed anymore for this step; regenerating the manifest is now sufficient by itself.
+     One asymmetry to know about: **external codesets** (the `IIsoExternalCode` types — see
+     `project_external_codeset_shadowing_defect` in project memory) never got the new column at
+     all — their bulk TSV rows stay the pre-2026-08-27 shape with no `removalDate`, so their
+     entries in this manifest legitimately have `"removalDate": null` even when `"status":
+     "Obsolete"`. `build_coverage_checksums.py` detects this per-row from actual field count, not
+     a fixed offset — do not "fix" a null `removalDate` on one of these by assuming it's a bug.
   3. **`"status"` newly became `"NOT_FOUND_IN_CURRENT_SNAPSHOT"`** (the type no longer appears in
      `get_spec_snapshot` at all — genuinely purged from the registry, not merely `Obsolete`) —
      **this is the deletion trigger**, for the model type and its validator together, in the same
@@ -155,12 +159,14 @@ per-artifact hash the MCP server started providing on 2026-08-26 — see
     Messages in this particular set) were already state 2 (`Obsolete`-but-present) in the spec
     with no `[Obsolete(...)]` on either the model type or its validator — a pre-existing gap
     predating the checksum manifest, not a regression. Closed by mirroring `[Obsolete(...)]` onto
-    all 302 model types and their 302 validators, with a real per-type `removalDate` fetched via
-    `universal_lookup` for every one of them (not the bulk-TSV-driven "No removal date recorded"
-    default — see the note above; all 302 had a real date on file, none needed the fallback text).
-    `Common` and `FluentValidation` both build with 0 warnings/0 errors; all 6,619 Common tests and
-    1,740 FluentValidation tests still pass, with the expected `CS0618` obsolete-usage warnings
-    surfacing only in the ~24 test files that directly reference the newly-marked types.
+    all 302 model types and their 302 validators. At the time this closure ran, `removalDate` was
+    not yet a bulk-TSV column — every one of the 302 real dates was fetched individually via
+    `universal_lookup` (10 parallel lookups, one per type), which turned out to be the same data
+    the MCP server exposed in bulk one day later. `Common` and `FluentValidation` both build with 0
+    warnings/0 errors; all 6,619 Common tests and 1,740 FluentValidation tests still pass, with the
+    expected `CS0618` obsolete-usage warnings surfacing only in the ~24 test files that directly
+    reference the newly-marked types. Regenerating the manifest post-deployment confirmed all 302
+    markers already match the bulk-sourced data exactly — nothing to correct.
 - This only re-checks types **already** in the manifest — it does not discover new coverage
   candidates (new messages, or growth in an existing message's reachable graph). That stays part
   of the normal per-message-family scoping process described in "Coverage Scoping Policy" above.

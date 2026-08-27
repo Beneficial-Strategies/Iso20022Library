@@ -14,7 +14,9 @@ all three:
   1. Registered (or any non-Obsolete status) — normal, "status": null in the manifest.
   2. "Obsolete" but still present in get_spec_snapshot output — "status": "Obsolete". The
      underlying model type AND its validator both get [Obsolete(...)] mirrored onto them (matching
-     the ~40+ existing examples, e.g. Components/Quantity3.cs) — both files stay, both compile.
+     the ~40+ existing examples, e.g. Components/Quantity3.cs) — both files stay, both compile. The
+     marker's removal-date clause is sourced from this manifest's own "removalDate" field (see
+     below) — never defaulted to "No removal date recorded" without checking it first.
   3. Absent from get_spec_snapshot entirely — "status": "NOT_FOUND_IN_CURRENT_SNAPSHOT". This IS
      the deletion trigger, for both the model type and its validator, in the same commit — subject
      to the same reference-safety check snapshot-sync-components/-choices/-messages already do
@@ -24,6 +26,16 @@ all three:
      immediate deletion by two live references (StatementOfInvestmentFundTransactions3,
      StatementOfInvestmentFundTransactionsV03) that are themselves also gone — a dependency-chain
      removal, not a single-file one.
+
+removalDate (added 2026-08-27, requested as direct feedback after this project's own 302-item
+Obsolete-backlog closure hit exactly this gap): get_spec_snapshot's bulk TSV now carries a
+removalDate column immediately after status for all 8 record types below (MSGDEF has an extra
+businessArea column ahead of status, shifting both one further right). Value is "—" when the ISO
+registry hasn't recorded one (a legitimate state — e.g. a type freshly flagged Obsolete may not
+have a removal date assigned yet), or a plain YYYY-MM-DD date when it has. This manifest surfaces
+it as "removalDate": null / "YYYY-MM-DD" per entry — use it directly when writing an [Obsolete(...)]
+marker; do not fall back to a per-type universal_lookup call unless this manifest predates the
+2026-08-27 deployment (an older cached coverage-checksums.json won't have this field at all).
 
 Two-step process, since checksums can only come from a live MCP call (this script has no network
 access) and the Common model files can only be read from a checked-out repo (the MCP session
@@ -36,8 +48,8 @@ can't see them):
        python3 build_coverage_checksums.py snapshot-sync/{date}/spec-snapshot.tsv
      It scans the Common project for every model type's own [IsoId("...")] attribute, joins that
      against every validator's AbstractValidator<T>/ExternalCodesetAbstractValidator<T>
-     declaration, looks up each resulting id's checksum in the spec-snapshot TSV, and writes
-     coverage-checksums.json (git-diffable — see below).
+     declaration, looks up each resulting id's checksum (and status/removalDate) in the
+     spec-snapshot TSV, and writes coverage-checksums.json (git-diffable — see below).
 
 Usage:
     python3 build_coverage_checksums.py <spec-snapshot.tsv> [<more.tsv> ...] [--out PATH] [--snapshot-date YYYY-MM-DD]
@@ -55,7 +67,8 @@ After regenerating, `git diff coverage-checksums.json` IS the validator-maintena
   - A new top-level key appeared                -> a validator was added since the last manifest
                                                     (not itself actionable here — just bookkeeping).
   - "status" newly became "Obsolete"            -> mirror [Obsolete(...)] onto the model type (if
-                                                    not already) and the validator. Neither is deleted.
+                                                    not already) and the validator, using this
+                                                    entry's own "removalDate" field. Neither is deleted.
   - "status" newly became "NOT_FOUND_IN_CURRENT_SNAPSHOT" -> deletion candidate for both the model
                                                     type and its validator (see policy above).
 This does NOT detect brand-new spec messages/components we have no validator for yet (that's a
@@ -79,18 +92,28 @@ VALIDATOR_DECL_RE = re.compile(
     r'public\s+(?:sealed\s+)?class\s+(\w+)\s*:\s*(?:AbstractValidator|ExternalCodesetAbstractValidator)<([\w\.]+)>'
 )
 
-# Record types the MCP snapshot carries a checksum for: (statusColIdx, checksumColIdx), 0-based.
-# Confirmed empirically 2026-08-26: MSGDEF has an extra businessArea column MSGCOMP/CHOICE/CODESET
-# don't, shifting both columns one later.
+# Record types the MCP snapshot carries a checksum for: (statusColIdx, baselineFieldCount),
+# 0-based statusColIdx. baselineFieldCount is the row length WITHOUT a removalDate column —
+# checksum and definition are always the last two fields regardless, so they're located by
+# counting back from len(row), not by a fixed forward offset. This matters because the
+# 2026-08-27 removalDate deployment turned out to be inconsistent: MSGDEF/MSGCOMP/CHOICE/
+# internal-CODESET/SIMPLETYPE/AMOUNT/EXTSCHEMA/USERDEF rows gained the extra column, but
+# external codesets (337 of them — a structurally distinct repository entity, same "External
+# Code Sets" bucket get_repository_statistics reports separately from "Internal Code Sets")
+# still come back as the old 6-field CODESET row with no removalDate at all. A row's actual
+# length (not its record type alone) is what tells you which shape you got — confirmed the hard
+# way 2026-08-27 when a fixed-index version of this table silently swapped checksum and
+# definition for exactly those 7 external-codeset entries (ActiveCurrencyCode,
+# ActiveOrHistoricCurrencyCode, CountryCode, and 4 more) before this file was ever committed.
 CHECKSUM_RECORD_TYPES = {
-    "MSGDEF": (4, 5),
-    "MSGCOMP": (3, 4),
-    "CHOICE": (3, 4),
-    "CODESET": (3, 4),
-    "SIMPLETYPE": (3, 4),
-    "AMOUNT": (3, 4),
-    "EXTSCHEMA": (3, 4),
-    "USERDEF": (3, 4),
+    "MSGDEF": (4, 7),
+    "MSGCOMP": (3, 6),
+    "CHOICE": (3, 6),
+    "CODESET": (3, 6),
+    "SIMPLETYPE": (3, 6),
+    "AMOUNT": (3, 6),
+    "EXTSCHEMA": (3, 6),
+    "USERDEF": (3, 6),
 }
 
 
@@ -152,8 +175,19 @@ def scan_validators():
 
 
 def load_checksums(tsv_paths):
-    """id -> (recordType, registrationStatus, checksum), from one or more spec-snapshot TSV files."""
+    """id -> (recordType, registrationStatus, removalDate, checksum), from one or more
+    spec-snapshot TSV files.
+
+    checksum and definition are always the LAST two fields of a row regardless of whether a
+    removalDate column is present — located by counting back from len(row), not a fixed forward
+    offset, since removalDate presence varies row-by-row within the same record type (see
+    CHECKSUM_RECORD_TYPES comment: internal vs. external codesets in particular). removalDate is
+    None when absent (TSV cell is "—", or the row is the pre-2026-08-27 baseline length with no
+    such column at all — the two cases are indistinguishable from row shape alone and are treated
+    identically, which is correct: both mean "no removal date to report").
+    """
     id_to_checksum = {}
+    unexpected_len = []
     for path in tsv_paths:
         with open(path, "r", encoding="utf-8") as f:
             reader = csv.reader(f, delimiter="\t")
@@ -163,10 +197,28 @@ def load_checksums(tsv_paths):
                 cols = CHECKSUM_RECORD_TYPES.get(row[0])
                 if cols is None:
                     continue
-                status_idx, checksum_idx = cols
-                if len(row) <= checksum_idx:
+                status_idx, baseline_len = cols
+                if len(row) == baseline_len:
+                    removal_date = None
+                elif len(row) == baseline_len + 1:
+                    removal_date_idx = status_idx + 1
+                    removal_date = row[removal_date_idx] if row[removal_date_idx] != "—" else None
+                else:
+                    # Neither the pre- nor post-removalDate shape — don't guess field positions
+                    # from a row shape we've never actually confirmed; record the definition's
+                    # own id so it can be investigated with the specific record it came from.
+                    unexpected_len.append((row[0], row[1] if len(row) > 1 else "?", len(row)))
                     continue
-                id_to_checksum[row[2]] = (row[0], row[status_idx], row[checksum_idx])
+                checksum_idx = len(row) - 2
+                id_to_checksum[row[2]] = (row[0], row[status_idx], removal_date, row[checksum_idx])
+    if unexpected_len:
+        print(
+            f"WARNING: {len(unexpected_len)} row(s) had a field count matching neither the "
+            f"baseline nor baseline+1 shape for their record type — skipped, not guessed:",
+            file=sys.stderr,
+        )
+        for u in unexpected_len[:20]:
+            print(f"  {u}", file=sys.stderr)
     return id_to_checksum
 
 
@@ -226,10 +278,12 @@ def main():
                 "checksum": None,
                 "recordType": None,
                 "status": "NOT_FOUND_IN_CURRENT_SNAPSHOT",
+                "removalDate": None,
                 "validatorFile": relpath,
             }
         else:
-            record_type, registration_status, checksum = hit
+            record_type, registration_status, removal_date, checksum = hit
+            is_obsolete = registration_status == "Obsolete"
             manifest[validated_type] = {
                 "isoId": isoid,
                 "checksum": checksum,
@@ -237,7 +291,11 @@ def main():
                 # null for the common case (Registered/whatever non-Obsolete status the spec
                 # uses) so an ordinary entry's JSON stays uncluttered; "Obsolete" is the one
                 # value worth surfacing directly here rather than needing a separate lookup.
-                "status": registration_status if registration_status == "Obsolete" else None,
+                "status": registration_status if is_obsolete else None,
+                # Only meaningful (and only ever non-null) when status == "Obsolete" — a
+                # Registered type has no removal date to report, so this stays null even if the
+                # TSV cell happened to be populated for some other reason.
+                "removalDate": removal_date if is_obsolete else None,
                 "validatorFile": relpath,
             }
 
@@ -248,9 +306,13 @@ def main():
 
     not_found = sum(1 for e in manifest.values() if e.get("status") == "NOT_FOUND_IN_CURRENT_SNAPSHOT")
     obsolete_but_present = sum(1 for e in manifest.values() if e.get("status") == "Obsolete")
+    obsolete_with_date = sum(
+        1 for e in manifest.values() if e.get("status") == "Obsolete" and e.get("removalDate")
+    )
     print(
         f"Resolved with a current checksum: {len(manifest) - not_found} "
-        f"({obsolete_but_present} of those are Obsolete-but-present)",
+        f"({obsolete_but_present} of those are Obsolete-but-present, "
+        f"{obsolete_with_date} of those carry a removalDate)",
         file=sys.stderr,
     )
     print(f"ABSENT from the current snapshot entirely (deletion candidates): {not_found}", file=sys.stderr)
