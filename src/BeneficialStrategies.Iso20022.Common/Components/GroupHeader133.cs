@@ -1,0 +1,67 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics shared by all individual notifications included in the message.
+/// </summary>
+[IsoId("_08LHkeR8Ee-NFYIkYc90gw")]
+[DisplayName("Group Header133")]
+public record GroupHeader133
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the sender, and sent to the receiver to unambiguously identify the message.
+    /// Usage: The sender has to make sure that MessageIdentification is unique per receiver for a pre-agreed period.
+    /// </summary>
+    [IsoId("_1MZU4eR8Ee-NFYIkYc90gw")]
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [IsoId("_1Mc_QeR8Ee-NFYIkYc90gw")]
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required IsoISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
+    /// Party that requests the cash withdrawal.
+    /// </summary>
+    [IsoId("_1Mc_Q-R8Ee-NFYIkYc90gw")]
+    [DisplayName("Cash Receiver")]
+    [IsoXmlTag("CshRcvr")]
+    public required Party50Choice_ CashReceiver { get; init; }
+
+    /// <summary>
+    /// Party that responds to the cash withdrawal request.
+    /// </summary>
+    [IsoId("_1Mc_ReR8Ee-NFYIkYc90gw")]
+    [DisplayName("Cash Sender")]
+    [IsoXmlTag("CshSndr")]
+    public required Party50Choice_ CashSender { get; init; }
+
+    /// <summary>
+    /// Number of individual requests contained in the message.
+    /// </summary>
+    [IsoId("_NjPAEuSBEe-NFYIkYc90gw")]
+    [DisplayName("Number Of Requests")]
+    [IsoXmlTag("NbOfReqs")]
+    public IsoMax15NumericText? NumberOfRequests { get; init; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [IsoId("_NjPAE-SBEe-NFYIkYc90gw")]
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public IsoDecimalNumber? ControlSum { get; init; }
+}

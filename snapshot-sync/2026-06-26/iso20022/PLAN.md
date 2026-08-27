@@ -93,26 +93,26 @@ therefore nothing to do."
 ## Phase 2: Components (36 new · 20 changed · 0 obsolete · 6 removed)
 <!-- /snapshot-sync-components works this section -->
 ### New
-- [ ] `GroupHeader133` — `Components/GroupHeader133.cs`
-- [ ] `PostTradeReport1` — `Components/PostTradeReport1.cs`
-- [ ] `InstrumentData1` — `Components/InstrumentData1.cs`
-- [ ] `TradingSystemData3` — `Components/TradingSystemData3.cs`
-- [ ] `GroupHeader134` — `Components/GroupHeader134.cs`
-- [ ] `OfferData1` — `Components/OfferData1.cs`
-- [ ] `CancelReport1` — `Components/CancelReport1.cs`
-- [ ] `PreTradeOutputData1` — `Components/PreTradeOutputData1.cs`
-- [ ] `RequestIdentification1` — `Components/RequestIdentification1.cs`
-- [ ] `AuctionPriceData1` — `Components/AuctionPriceData1.cs`
-- [ ] `CashDepositConfirmation1` — `Components/CashDepositConfirmation1.cs`
-- [ ] `UnderlyingTransaction38` — `Components/UnderlyingTransaction38.cs`
-- [ ] `RequestIdentificationAndStatus1` — `Components/RequestIdentificationAndStatus1.cs`
-- [ ] `SecuritiesMarketReportHeader5` — `Components/SecuritiesMarketReportHeader5.cs`
-- [ ] `PostTradeData1` — `Components/PostTradeData1.cs`
-- [ ] `ContributorPublicationData1` — `Components/ContributorPublicationData1.cs`
-- [ ] `CashBreakdown1` — `Components/CashBreakdown1.cs`
-- [ ] `CashWithdrawalRequest1` — `Components/CashWithdrawalRequest1.cs`
-- [ ] `CashDepositRequest1` — `Components/CashDepositRequest1.cs`
-- [ ] `TradingSystemReport1` — `Components/TradingSystemReport1.cs`
+- [x] `GroupHeader133` — `Components/GroupHeader133.cs`
+- [x] `PostTradeReport1` — `Components/PostTradeReport1.cs`
+- [x] `InstrumentData1` — `Components/InstrumentData1.cs`
+- [x] `TradingSystemData3` — `Components/TradingSystemData3.cs`
+- [x] `GroupHeader134` — `Components/GroupHeader134.cs`
+- [x] `OfferData1` — `Components/OfferData1.cs`
+- [x] `CancelReport1` — `Components/CancelReport1.cs`
+- [x] `PreTradeOutputData1` — `Components/PreTradeOutputData1.cs`
+- [x] `RequestIdentification1` — `Components/RequestIdentification1.cs`
+- [x] `AuctionPriceData1` — `Components/AuctionPriceData1.cs`
+- [x] `CashDepositConfirmation1` — `Components/CashDepositConfirmation1.cs`
+- [x] `UnderlyingTransaction38` — `Components/UnderlyingTransaction38.cs`
+- [x] `RequestIdentificationAndStatus1` — `Components/RequestIdentificationAndStatus1.cs`
+- [x] `SecuritiesMarketReportHeader5` — `Components/SecuritiesMarketReportHeader5.cs`
+- [x] `PostTradeData1` — `Components/PostTradeData1.cs`
+- [x] `ContributorPublicationData1` — `Components/ContributorPublicationData1.cs`
+- [x] `CashBreakdown1` — `Components/CashBreakdown1.cs`
+- [x] `CashWithdrawalRequest1` — `Components/CashWithdrawalRequest1.cs`
+- [x] `CashDepositRequest1` — `Components/CashDepositRequest1.cs`
+- [x] `TradingSystemReport1` — `Components/TradingSystemReport1.cs`
 - [ ] `ContinuousOrderBookData1` — `Components/ContinuousOrderBookData1.cs`
 - [ ] `PreTradeInputReport1` — `Components/PreTradeInputReport1.cs`
 - [ ] `GroupHeader132` — `Components/GroupHeader132.cs`
