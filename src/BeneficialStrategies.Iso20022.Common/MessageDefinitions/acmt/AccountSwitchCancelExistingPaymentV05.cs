@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 
 /// <summary>
 /// This record is an implementation of the acmt.029.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch.
 /// </summary>
+[Description(
+    @"The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch."
+)]
 [IsoId("_R3AApjEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Cancel Existing Payment V05")]
 public record AccountSwitchCancelExistingPaymentV05 : IOuterRecord
@@ -46,43 +49,49 @@ public record AccountSwitchCancelExistingPaymentV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
+    /// Unique identification for the message.
     /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Direct Debit Instruction.
-    /// </summary>
-    [DisplayName("Direct Debit Instruction")]
-    [IsoXmlTag("DrctDbtInstr")]
-    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    [IsoId("_R3AAqDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Old Account.
+    /// Contains information about the details of the account switch.
     /// </summary>
+    [IsoId("_R3AAqjEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
+    /// Details of the old account.
+    /// </summary>
+    [IsoId("_R3AArDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
 
     /// <summary>
-    /// Payment Instruction.
+    /// Details of a debit payment arrangement associated with the old account. The payment may be a standing order, a bill payment arrangement or a future dated payment.
     /// </summary>
+    [IsoId("_R3AArjEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
     public ValueList<PaymentInstruction43> PaymentInstruction { get; init; } = [];
 
     /// <summary>
-    /// Supplementary Data.
+    /// Details of a direct debit Instruction associated with the old account.
     /// </summary>
+    [IsoId("_R3AAsDEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Direct Debit Instruction")]
+    [IsoXmlTag("DrctDbtInstr")]
+    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_R3AAsjEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

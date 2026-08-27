@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 
 /// <summary>
 /// This record is an implementation of the acmt.034.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountSwitchRequestPayment message is sent by the old account servicer to the new account servicer after the completion of the account switch to request the transfer of funds for a payment that the previous account servicer has had to make from the old account (for example: the settlement of a card transaction that was authorised offline).
 /// </summary>
+[Description(
+    @"The AccountSwitchRequestPayment message is sent by the old account servicer to the new account servicer after the completion of the account switch to request the transfer of funds for a payment that the previous account servicer has had to make from the old account (for example: the settlement of a card transaction that was authorised offline)."
+)]
 [IsoId("_R3AntzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Request Payment V05")]
 public record AccountSwitchRequestPaymentV05 : IOuterRecord
@@ -46,36 +49,41 @@ public record AccountSwitchRequestPaymentV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
+    /// Unique identification for the message.
     /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Credit Instruction.
-    /// </summary>
-    [DisplayName("Credit Instruction")]
-    [IsoXmlTag("CdtInstr")]
-    public required CreditTransferTransaction59 CreditInstruction { get; init; }
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    [IsoId("_R3AnuzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Old Account.
+    /// Contains information about the details of the account switch and a response code to the original payment request.
     /// </summary>
+    [IsoId("_R3AnvTEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
+    /// Account held at the old account servicer being switched to the new account servicer.
+    /// </summary>
+    [IsoId("_R3AnvzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Specific information relating to a request for payment, including details that enable the receiving account servicer to reconcile the payment to be received with the original payment request.
     /// </summary>
+    [IsoId("_R3AnwTEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Credit Instruction")]
+    [IsoXmlTag("CdtInstr")]
+    public required CreditTransferTransaction59 CreditInstruction { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_R3AnwzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

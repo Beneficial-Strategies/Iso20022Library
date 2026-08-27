@@ -204,7 +204,7 @@ therefore nothing to do."
 - [x] `InvestmentFundTransaction4` — deleted `Components/InvestmentFundTransaction4.cs`
 
 ## Milestone 2: Build
-- [ ] Build passes after components
+- [x] Build passes after components (deferred at the time — Phase 2's New components introduced 6 expected forward-references to not-yet-created Phase 3 Choices, confirmed as the only errors; retroactively confirmed passing once Phase 3 completed and the full-solution build succeeded cleanly)
 
 ## Phase 3: Choices (11 new · 1 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-choices works this section -->
@@ -265,65 +265,65 @@ therefore nothing to do."
 ### see Diff Sourcing Note. Dominant families: DTCCCA* corporate-action messages,
 ### AccountSwitch* (UK Account Switch Service), RemittanceAdvice*. get_snapshot_diff reported
 ### zero definition/xmlTag/rootElement changes for any of these — verify briefly, then check off.)
-- [ ] `StatementOfInvestmentFundTransactionsCancellationV02` — messageSet, nextVersions
-- [ ] `AccountSwitchTechnicalRejectionV01` — messageSet
-- [ ] `DTCCCACSSD1V02` — messageSet
-- [ ] `DTCCCARESD1V04` — messageSet
-- [ ] `AccountSwitchInformationRequestV05` — messageSet, previousVersion
-- [ ] `AccountSwitchInformationResponseV01` — messageSet
-- [ ] `DTCCCACOSD1V10` — messageSet
-- [ ] `DTCCCANOMarketDataSD1V06` — messageSet
-- [ ] `DTCCCANODerivativeSD1V03` — messageSet
-- [ ] `AccountSwitchRequestPaymentV03` — messageSet, nextVersions
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV05` — messageSet, previousVersion
-- [ ] `RemittanceAdviceV04` — messageSet, nextVersions
-- [ ] `DTCCCANOCustodianSD1V03` — messageSet
-- [ ] `AccountSwitchRequestBalanceTransferV03` — messageSet, nextVersions
-- [ ] `DTCCCAPCSD1V04` — messageSet
-- [ ] `AccountSwitchRequestBalanceTransferV01` — messageSet
-- [ ] `DTCCCANOServiceDataSD1V03` — messageSet
-- [ ] `DTCCCAISSD1V07` — messageSet
-- [ ] `DTCCCANOEligibleBalanceSD1V11` — messageSet
-- [ ] `AccountSwitchPaymentResponseV01` — messageSet
-- [ ] `RemittanceAdviceV01` — messageSet
-- [ ] `AccountSwitchRequestBalanceTransferV05` — messageSet, previousVersion
-- [ ] `AccountSwitchCancelExistingPaymentV02` — messageSet
-- [ ] `RemittanceLocationAdviceV02` — messageSet
-- [ ] `AccountSwitchInformationRequestV01` — messageSet
-- [ ] `AccountSwitchRequestRedirectionV02` — messageSet
-- [ ] `AccountSwitchInformationResponseV03` — messageSet, nextVersions
-- [ ] `PaymentStatusCustomerTrackerReportV04` — previousVersion
-- [ ] `DTCCCAINSD1V06` — messageSet
-- [ ] `RemittanceAdviceV03` — messageSet
-- [ ] `AccountSwitchInformationRequestV03` — messageSet, nextVersions
-- [ ] `DTCCCASTSD1V05` — messageSet
-- [ ] `AccountSwitchRequestPaymentV05` — messageSet, previousVersion
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV03` — messageSet, nextVersions
-- [ ] `AccountSwitchCancelExistingPaymentV01` — messageSet
-- [ ] `DTCCCAICSD1V01` — messageSet
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV01` — messageSet
-- [ ] `AccountSwitchRequestPaymentV01` — messageSet
-- [ ] `AccountSwitchRequestBalanceTransferV02` — messageSet
-- [ ] `AccountSwitchNotifyAccountSwitchCompleteV01` — messageSet
-- [ ] `AccountSwitchCancelExistingPaymentV05` — messageSet, previousVersion
-- [ ] `DTCCCAPSSD1V09` — messageSet
-- [ ] `StatementOfInvestmentFundTransactionsV02` — messageSet, nextVersions
-- [ ] `AccountSwitchInformationResponseV02` — messageSet
-- [ ] `AccountSwitchRequestRedirectionV01` — messageSet
-- [ ] `RemittanceAdviceV02` — messageSet
-- [ ] `DTCCCAPASD1V10` — messageSet
-- [ ] `PaymentStatusTrackerUpdateV05` — previousVersion
-- [ ] `AccountSwitchBalanceTransferAcknowledgementV02` — messageSet
-- [ ] `AccountSwitchRequestRedirectionV03` — messageSet
-- [ ] `AccountSwitchCancelExistingPaymentV03` — messageSet, nextVersions
-- [ ] `PaymentStatusTrackerReportV04` — previousVersion
-- [ ] `AccountSwitchInformationResponseV05` — messageSet, previousVersion
-- [ ] `AccountSwitchRequestPaymentV02` — messageSet
-- [ ] `RemittanceLocationAdviceV01` — messageSet
-- [ ] `DTCCCANOCSDDataSD1V16` — messageSet
-- [ ] `DTCCCACNSD1V11` — messageSet
-- [ ] `RemittanceAdviceV06` — messageSet, previousVersion
-- [ ] `AccountSwitchInformationRequestV02` — messageSet
+- [x] `StatementOfInvestmentFundTransactionsCancellationV02` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchTechnicalRejectionV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCACSSD1V02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCARESD1V04` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationRequestV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `AccountSwitchInformationResponseV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCACOSD1V10` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANOMarketDataSD1V06` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANODerivativeSD1V03` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestPaymentV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchBalanceTransferAcknowledgementV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `RemittanceAdviceV04` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANOCustodianSD1V03` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestBalanceTransferV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCAPCSD1V04` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestBalanceTransferV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANOServiceDataSD1V03` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCAISSD1V07` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANOEligibleBalanceSD1V11` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchPaymentResponseV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceAdviceV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestBalanceTransferV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `AccountSwitchCancelExistingPaymentV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceLocationAdviceV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationRequestV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestRedirectionV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationResponseV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `PaymentStatusCustomerTrackerReportV04` — previousVersion — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCAINSD1V06` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceAdviceV03` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationRequestV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCASTSD1V05` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestPaymentV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `AccountSwitchBalanceTransferAcknowledgementV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchCancelExistingPaymentV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCAICSD1V01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchBalanceTransferAcknowledgementV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestPaymentV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestBalanceTransferV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchNotifyAccountSwitchCompleteV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchCancelExistingPaymentV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `DTCCCAPSSD1V09` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `StatementOfInvestmentFundTransactionsV02` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationResponseV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestRedirectionV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceAdviceV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCAPASD1V10` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `PaymentStatusTrackerUpdateV05` — previousVersion — description drift fixed: pipe-paragraph-break + "Usage:" colon were dropped from both class summary and [Description]
+- [x] `AccountSwitchBalanceTransferAcknowledgementV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchRequestRedirectionV03` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchCancelExistingPaymentV03` — messageSet, nextVersions — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `PaymentStatusTrackerReportV04` — previousVersion — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `AccountSwitchInformationResponseV05` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `AccountSwitchRequestPaymentV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceLocationAdviceV01` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCANOCSDDataSD1V16` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `DTCCCACNSD1V11` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
+- [x] `RemittanceAdviceV06` — messageSet, previousVersion — HISTORICAL GAP FIXED: was missing [Description] entirely + placeholder property text (predates verbatim-description convention); added real ISO text + [IsoId] on all properties
+- [x] `AccountSwitchInformationRequestV02` — messageSet — verified clean (class + field descriptions re-checked against fresh universal_lookup/TSV data, no drift)
 
 ## Milestone 4: Full Build + Tests
 - [ ] Build passes

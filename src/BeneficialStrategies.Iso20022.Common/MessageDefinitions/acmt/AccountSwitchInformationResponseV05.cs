@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 
 /// <summary>
 /// This record is an implementation of the acmt.028.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer.
 /// </summary>
+[Description(
+    @"The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer."
+)]
 [IsoId("_R3AAwjEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Information Response V05")]
 public record AccountSwitchInformationResponseV05 : IOuterRecord
@@ -46,50 +49,57 @@ public record AccountSwitchInformationResponseV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
+    /// Unique identification for the message.
     /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Direct Debit Instruction.
-    /// </summary>
-    [DisplayName("Direct Debit Instruction")]
-    [IsoXmlTag("DrctDbtInstr")]
-    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    [IsoId("_R3AAxDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// New Account.
+    /// Contains information about the details of the account switch.
     /// </summary>
+    [IsoId("_R3AAxjEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
+    /// New account to which the switch will be made (destination account).
+    /// </summary>
+    [IsoId("_R3AAyDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("New Account")]
     [IsoXmlTag("NewAcct")]
     public required CashAccount43 NewAccount { get; init; }
 
     /// <summary>
-    /// Old Account.
+    /// Account held at the old account servicer being switched to the new account servicer.
     /// </summary>
+    [IsoId("_R3AAyjEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
 
     /// <summary>
-    /// Payment Instruction.
+    /// Details of debit payment arrangements associated with the old account. For example the payment may be a standing order, a bill payment arrangement or a future dated payment.
     /// </summary>
+    [IsoId("_R3AAzDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
     public ValueList<PaymentInstruction43> PaymentInstruction { get; init; } = [];
 
     /// <summary>
-    /// Supplementary Data.
+    /// Details of a direct debit instruction associated with the old account.
     /// </summary>
+    [IsoId("_R3AAzjEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Direct Debit Instruction")]
+    [IsoXmlTag("DrctDbtInstr")]
+    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_R3AA0DEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.remt;
 
 /// <summary>
 /// This record is an implementation of the remt.001.001.06 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The RemittanceAdvice message allows the originator to provide remittance details that can be associated with a payment.
 /// </summary>
+[Description(
+    @"The RemittanceAdvice message allows the originator to provide remittance details that can be associated with a payment."
+)]
 [IsoId("_R3SUrTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Remittance Advice V06")]
 public record RemittanceAdviceV06 : IOuterRecord
@@ -46,22 +49,25 @@ public record RemittanceAdviceV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Group Header.
+    /// Set of characteristics shared by all remittance information included in the message.
     /// </summary>
+    [IsoId("_R3SUtzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader122 GroupHeader { get; init; }
 
     /// <summary>
-    /// Remittance Information.
+    /// Provides information to enable the matching of an entry with the items that the associated payment is intended to settle, such as commercial invoices in an accounts' receivable system, tax obligations, or garnishment orders.
     /// </summary>
+    [IsoId("_R3SUuTEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public ValueList<RemittanceInformation23> RemittanceInformation { get; init; } = [];
 
     /// <summary>
-    /// Supplementary Data.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
+    [IsoId("_R3SUuzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

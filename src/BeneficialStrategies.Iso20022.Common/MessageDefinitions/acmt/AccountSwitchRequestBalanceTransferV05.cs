@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 
 /// <summary>
 /// This record is an implementation of the acmt.031.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountSwitchRequestBalanceTransfer message is sent by the new account servicer to the account servicer which previously held the account to request the transfer of the closing balance. This may be addressed to the new account or an alternate account nominated by the new account servicer.
 /// </summary>
+[Description(
+    @"The AccountSwitchRequestBalanceTransfer message is sent by the new account servicer to the account servicer which previously held the account to request the transfer of the closing balance. This may be addressed to the new account or an alternate account nominated by the new account servicer."
+)]
 [IsoId("_R3AnqTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Request Balance Transfer V05")]
 public record AccountSwitchRequestBalanceTransferV05 : IOuterRecord
@@ -46,43 +49,50 @@ public record AccountSwitchRequestBalanceTransferV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
+    /// Unique identification for the message.
     /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Balance Transfer.
-    /// </summary>
-    [DisplayName("Balance Transfer")]
-    [IsoXmlTag("BalTrf")]
-    public ValueList<BalanceTransfer5> BalanceTransfer { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    [IsoId("_R3AnqzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// New Account.
+    /// Contains information about the details of the account switch.
     /// </summary>
+    [IsoId("_R3AnrTEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
+    /// Details of the new account set up with the new account servicer.
+    /// Usage: If an Alternate Credit Account is not specified and the closing balance of the old account was positive then the payment of the outstanding balance should be made to this account.
+    /// </summary>
+    [IsoId("_R3AnrzEZEe6kQ-WGAhcVPQ")]
     [DisplayName("New Account")]
     [IsoXmlTag("NewAcct")]
     public required CashAccount43 NewAccount { get; init; }
 
     /// <summary>
-    /// Nominated Account.
+    /// Alternate beneficiary account for a payment made from the old account servicer to the new account servicer in the case of a positive closing balance of the old bank.
     /// </summary>
+    [IsoId("_R3AnsTEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Nominated Account")]
     [IsoXmlTag("NmntdAcct")]
     public CashAccount43? NominatedAccount { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Information that enables the receiving bank to reconcile the payment with the request.
     /// </summary>
+    [IsoId("_R3AnszEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Balance Transfer")]
+    [IsoXmlTag("BalTrf")]
+    public ValueList<BalanceTransfer5> BalanceTransfer { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_R3AntTEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

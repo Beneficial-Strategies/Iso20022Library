@@ -16,11 +16,11 @@ namespace BeneficialStrategies.Iso20022.trck;
 /// This record is an implementation of the trck.001.001.05 ISO standard message type.
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.
-/// Usage
+/// Usage:
 /// Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged.
 /// </summary>
 [Description(
-    @"The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.|Usage|Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged."
+    @"The PaymentStatusTrackerUpdate message is sent by an agent to a tracking facility to monitor the progress of a business transaction, and to update the status of this business transaction for obtaining tracking and transparency purpose.||Usage:|Multiple business transaction statuses may be reported in a single message, and each status may include all relevant information of a single transaction or multiple transactions of the tracked payment(s) exchanged."
 )]
 [IsoId("bfeb7dc1-7509-4665-9e03-a7726d28da33")]
 [DisplayName("Payment Status Tracker Update V05")]

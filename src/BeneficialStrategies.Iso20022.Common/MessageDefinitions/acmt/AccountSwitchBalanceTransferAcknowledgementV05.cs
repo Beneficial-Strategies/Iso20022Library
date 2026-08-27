@@ -14,8 +14,11 @@ namespace BeneficialStrategies.Iso20022.acmt;
 
 /// <summary>
 /// This record is an implementation of the acmt.032.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The AccountSwitchBalanceTransferAcknowledgement message is sent by the previous account servicer to the new account servicer in response to the AccountSwitchRequestBalanceTransfer message. It confirms the status of the old account and the balance of the account on closure. In the case of a negative closing balance, the old account servicer provides details of the nominated account to which payment should be made from the new account servicer.
 /// </summary>
+[Description(
+    @"The AccountSwitchBalanceTransferAcknowledgement message is sent by the previous account servicer to the new account servicer in response to the AccountSwitchRequestBalanceTransfer message. It confirms the status of the old account and the balance of the account on closure. In the case of a negative closing balance, the old account servicer provides details of the nominated account to which payment should be made from the new account servicer."
+)]
 [IsoId("_R3AAmDEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Account Switch Balance Transfer Acknowledgement V05")]
 public record AccountSwitchBalanceTransferAcknowledgementV05 : IOuterRecord
@@ -46,43 +49,50 @@ public record AccountSwitchBalanceTransferAcknowledgementV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
+    /// Unique identification for the message.
     /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Balance Transfer.
-    /// </summary>
-    [DisplayName("Balance Transfer")]
-    [IsoXmlTag("BalTrf")]
-    public ValueList<BalanceTransfer5> BalanceTransfer { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    [IsoId("_R3AAmjEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
-    /// Old Account.
+    /// Contains information about the details of the account switch.
     /// </summary>
+    [IsoId("_R3AAnDEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
+    /// Account held at the old Account Servicer being switched to the new Account Servicer.
+    /// </summary>
+    [IsoId("_R3AAnjEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
 
     /// <summary>
-    /// Old Account Balance.
+    /// Balance of the old account.
     /// </summary>
+    [IsoId("_R3AAoDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Old Account Balance")]
     [IsoXmlTag("OdAcctBal")]
     public required AmountAndDirection5 OldAccountBalance { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Information that enables any payments made in connection with the fulfilment of an account switch to be reconciled by the relevant account servicer with the associated request.
+    /// Usage: In the case of a negative closing balance of the old account, and where the old account servicer wishes any payment from the new account servicer to be addressed to an alternate account, this will be specified here.
     /// </summary>
+    [IsoId("_R3AAojEZEe6kQ-WGAhcVPQ")]
+    [DisplayName("Balance Transfer")]
+    [IsoXmlTag("BalTrf")]
+    public ValueList<BalanceTransfer5> BalanceTransfer { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_R3AApDEZEe6kQ-WGAhcVPQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
