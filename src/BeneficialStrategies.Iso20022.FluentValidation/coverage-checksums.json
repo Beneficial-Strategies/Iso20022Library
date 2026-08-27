@@ -4765,14 +4765,6 @@
       "status": "Obsolete",
       "validatorFile": "Validators/Components/InvestmentFundTransactionsByFund2Validator.cs"
     },
-    "InvestmentFundTransactionsByFund3": {
-      "checksum": null,
-      "isoId": "_3ZqIWwf9EeSaceXTzyiZRg",
-      "recordType": null,
-      "removalDate": null,
-      "status": "NOT_FOUND_IN_CURRENT_SNAPSHOT",
-      "validatorFile": "Validators/Components/InvestmentFundTransactionsByFund3Validator.cs"
-    },
     "InvestmentPlan10": {
       "checksum": "7C704255BD99423A",
       "isoId": "_SDztUQjbEeS5F6qHcKOrew",

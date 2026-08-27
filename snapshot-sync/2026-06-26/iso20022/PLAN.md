@@ -196,12 +196,12 @@ therefore nothing to do."
   7. Intermediary27 — no further in-cluster references
   8. InvestmentFundTransaction4 — no further in-cluster references
 -->
-- [ ] `StatementOfInvestmentFundTransactions3` — delete `Components/StatementOfInvestmentFundTransactions3.cs` (after Phase 4 messages below)
-- [ ] `SubAccountIdentification36` — delete `Components/SubAccountIdentification36.cs`
-- [ ] `InvestmentAccount43` — delete `Components/InvestmentAccount43.cs`
-- [ ] `InvestmentFundTransactionsByFund3` — delete `Components/InvestmentFundTransactionsByFund3.cs` and `src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Components/InvestmentFundTransactionsByFund3Validator.cs`
-- [ ] `Intermediary27` — delete `Components/Intermediary27.cs`
-- [ ] `InvestmentFundTransaction4` — delete `Components/InvestmentFundTransaction4.cs`
+- [x] `StatementOfInvestmentFundTransactions3` — deleted `Components/StatementOfInvestmentFundTransactions3.cs` (Phase 4 messages deleted first, confirmed self-contained via grep — see note above)
+- [x] `SubAccountIdentification36` — deleted `Components/SubAccountIdentification36.cs`
+- [x] `InvestmentAccount43` — deleted `Components/InvestmentAccount43.cs`
+- [x] `InvestmentFundTransactionsByFund3` — deleted `Components/InvestmentFundTransactionsByFund3.cs`, `src/BeneficialStrategies.Iso20022.FluentValidation/Validators/Components/InvestmentFundTransactionsByFund3Validator.cs`, and its `coverage-checksums.json` entry
+- [x] `Intermediary27` — deleted `Components/Intermediary27.cs`
+- [x] `InvestmentFundTransaction4` — deleted `Components/InvestmentFundTransaction4.cs`
 
 ## Milestone 2: Build
 - [ ] Build passes after components
@@ -253,8 +253,8 @@ therefore nothing to do."
 - [ ] `RemittanceAdviceV05` — new: `MessageDefinitions/remt/RemittanceAdviceV05.cs`
 
 ### semt (2)
-- [ ] `StatementOfInvestmentFundTransactionsV03` — delete `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsV03.cs` (dependency-chain removal — see Phase 2 note; delete FIRST, before its Components)
-- [ ] `StatementOfInvestmentFundTransactionsCancellationV03` — delete `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsCancellationV03.cs` (dependency-chain removal — see Phase 2 note; delete FIRST, before its Components)
+- [x] `StatementOfInvestmentFundTransactionsV03` — deleted `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsV03.cs` (dependency-chain removal — see Phase 2 note; deleted first, before its Components)
+- [x] `StatementOfInvestmentFundTransactionsCancellationV03` — deleted `MessageDefinitions/semt/StatementOfInvestmentFundTransactionsCancellationV03.cs` (dependency-chain removal — see Phase 2 note; deleted first, before its Components)
 
 ### trck (3)
 - [ ] `PaymentStatusCustomerTrackerReportV03` — new: `MessageDefinitions/trck/PaymentStatusCustomerTrackerReportV03.cs`
