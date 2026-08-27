@@ -209,22 +209,22 @@ therefore nothing to do."
 ## Phase 3: Choices (11 new · 1 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-choices works this section -->
 ### New
-- [ ] `TradingSystemReport1Choice` — `Choices/TradingSystemReport1Choice_.cs` + `Choices/TradingSystemReport1Choice/` directory
-- [ ] `OutputData1Choice` — `Choices/OutputData1Choice_.cs` + `Choices/OutputData1Choice/` directory
-- [ ] `PreTradeInputReport1Choice` — `Choices/PreTradeInputReport1Choice_.cs` + `Choices/PreTradeInputReport1Choice/` directory
-- [ ] `InstrumentReport1Choice` — `Choices/InstrumentReport1Choice_.cs` + `Choices/InstrumentReport1Choice/` directory
-- [ ] `TradingVenueIdentification4Choice` — `Choices/TradingVenueIdentification4Choice_.cs` + `Choices/TradingVenueIdentification4Choice/` directory
-- [ ] `SecuritiesTransactionPrice26Choice` — `Choices/SecuritiesTransactionPrice26Choice_.cs` + `Choices/SecuritiesTransactionPrice26Choice/` directory (note: has a `previousVersion` pointer — likely supersedes an earlier `SecuritiesTransactionPrice2xChoice`; check during implementation)
-- [ ] `PreTradeOutputReport1Choice` — `Choices/PreTradeOutputReport1Choice_.cs` + `Choices/PreTradeOutputReport1Choice/` directory
-- [ ] `CashType1Choice` — `Choices/CashType1Choice_.cs` + `Choices/CashType1Choice/` directory
-- [ ] `CashDeliveryMethod1Choice` — `Choices/CashDeliveryMethod1Choice_.cs` + `Choices/CashDeliveryMethod1Choice/` directory
-- [ ] `PostTradeReport1Choice` — `Choices/PostTradeReport1Choice_.cs` + `Choices/PostTradeReport1Choice/` directory
-- [ ] `PostTradeData1Choice` — `Choices/PostTradeData1Choice_.cs` + `Choices/PostTradeData1Choice/` directory
+- [x] `TradingSystemReport1Choice` — `Choices/TradingSystemReport1Choice_.cs` + `Choices/TradingSystemReport1Choice/` directory
+- [x] `OutputData1Choice` — `Choices/OutputData1Choice_.cs` + `Choices/OutputData1Choice/` directory
+- [x] `PreTradeInputReport1Choice` — `Choices/PreTradeInputReport1Choice_.cs` + `Choices/PreTradeInputReport1Choice/` directory
+- [x] `InstrumentReport1Choice` — `Choices/InstrumentReport1Choice_.cs` + `Choices/InstrumentReport1Choice/` directory
+- [x] `TradingVenueIdentification4Choice` — `Choices/TradingVenueIdentification4Choice_.cs` + `Choices/TradingVenueIdentification4Choice/` directory
+- [x] `SecuritiesTransactionPrice26Choice` — `Choices/SecuritiesTransactionPrice26Choice_.cs` + `Choices/SecuritiesTransactionPrice26Choice/` directory (5 variants: MonetaryValue/Percentage/Yield/BasisPoints/NoPrice; `previousVersion` pointer confirmed harmless — old `SecuritiesTransactionPrice2xChoice` not referenced anywhere in this batch)
+- [x] `PreTradeOutputReport1Choice` — `Choices/PreTradeOutputReport1Choice_.cs` + `Choices/PreTradeOutputReport1Choice/` directory
+- [x] `CashType1Choice` — `Choices/CashType1Choice_.cs` + `Choices/CashType1Choice/` directory
+- [x] `CashDeliveryMethod1Choice` — `Choices/CashDeliveryMethod1Choice_.cs` + `Choices/CashDeliveryMethod1Choice/` directory
+- [x] `PostTradeReport1Choice` — `Choices/PostTradeReport1Choice_.cs` + `Choices/PostTradeReport1Choice/` directory
+- [x] `PostTradeData1Choice` — `Choices/PostTradeData1Choice_.cs` + `Choices/PostTradeData1Choice/` directory
 ### Changed (metadata only — see Diff Sourcing Note; verify no code impact, then check off)
-- [ ] `CancellationReason16Choice` — registrationStatus: Provisionally Registered → Registered
+- [x] `CancellationReason16Choice` — registrationStatus: Provisionally Registered → Registered (not tracked in generated code — see FluentValidation/CLAUDE.md's Registration status verification note; description/variant content re-verified against fresh universal_lookup, unchanged; no code edit needed)
 
 ## Milestone 3: Build
-- [ ] Build passes after choices
+- [x] Build passes after choices (`dotnet build iso20022.sln --no-incremental`: 0 Error(s), 132 Warning(s) — all CS0618 obsolete-usage in FluentValidation.Tests, expected fallout of the earlier Obsolete-marking batches, not suppressed for the Tests project; 0 CS1591)
 
 ## Phase 4: Messages (19 new · 59 changed · 0 obsolete · 2 removed)
 <!-- /snapshot-sync-messages [area] works this section -->
