@@ -1,0 +1,6 @@
+0.6.1-alpha
+    First NuGet release of this companion package, released in lockstep with BeneficialStrategies.Iso20022 0.6.1-alpha.
+    Proof-of-concept MassTransit saga toolkit for the ISO 20022 Request-to-Pay (RTP) Service message set (reda.066-073).
+    Two service-provider sagas: Creditor Enrolment and Debtor Activation, each covering the Request/Amendment/Cancellation/StatusReport lifecycle.
+    No concrete saga persistence ships — callers supply their own ISagaRepository<T> via the AddCreditorEnrolmentSaga/AddDebtorActivationSaga registration extensions.
+    Scoped to the two genuinely stateful actors per sub-process (the RTP Service Provider roles); the reactive Directory Provider and originating-party actors are not covered yet.

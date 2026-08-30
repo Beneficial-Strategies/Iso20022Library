@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- TFM policy: same rationale as BeneficialStrategies.Iso20022.Common / .FluentValidation. -->
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BeneficialStrategies.Iso20022.MassTransit.Sagas</RootNamespace>
+    <AssemblyName>BeneficialStrategies.Iso20022.MassTransit.Sagas</AssemblyName>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>BeneficialStrategies.Iso20022.MassTransit.Sagas</PackageId>
+    <PackageDescription>MassTransit saga toolkit correlated to ISO 20022 message flows. First release: Request-to-Pay (reda.066-073) Creditor Enrolment and Debtor Activation service-provider sagas.</PackageDescription>
+    <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\doc\package\MassTransit.Sagas\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+      Pinned to the 8.x line deliberately, NOT floated to the newest major. MassTransit v9 (first
+      stable release ~2026-01) moved to a commercial/source-available license (see
+      https://masstransit.io licensing announcement, 2025); v8.x is the last Apache-2.0-licensed
+      line and still receives security patches through end of 2026. This package packs MIT
+      (Directory.Build.props) and must not force a commercial dependency on consumers. "8.*"
+      floats safely within the 8.x line only — NuGet's floating-version wildcard is scoped per
+      numeric segment, so it can never silently resolve to 9.0. Revisit this pin explicitly, not
+      by habit, if MassTransit's licensing position changes again.
+    -->
+    <PackageReference Include="MassTransit" Version="8.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
+  </ItemGroup>
+
+</Project>

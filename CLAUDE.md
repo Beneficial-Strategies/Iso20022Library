@@ -511,7 +511,7 @@ All NuGet packages produced by Beneficial Strategies that depend on each other l
 single repository. The planned packages include (at minimum):
 
 - `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
-- `BeneficialStrategies.Iso20022.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages
+- `BeneficialStrategies.Iso20022.MassTransit.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages (named with the engine in the package id, not just `.Sagas`, since an NServiceBus-based sagas package is a plausible future sibling and this disambiguates on NuGet and in code from day one)
 
 **Reasons:**
 
