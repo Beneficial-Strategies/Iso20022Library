@@ -79,6 +79,12 @@ packages/
 ## TODO: If the tool you use requires repositories.config, also uncomment the next line
 !packages/repositories.config
 
+# dotnet pack output (.github/workflows/publish.yml packs into src/nupkg/) — a stray
+# 0.2.6-alpha .nupkg sat committed here undetected for several releases before this
+# entry existed; see git history around 2026-08-31 for the cleanup.
+*.nupkg
+nupkg/
+
 # Windows Azure Build Output
 csx/
 *.build.csdef
