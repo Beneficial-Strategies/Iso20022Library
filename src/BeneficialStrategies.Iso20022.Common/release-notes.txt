@@ -75,3 +75,7 @@
     Fixed the documented "Trying out the library" example in both README.md and doc/package/README.md: Iso20022XmlSerializer and Iso20022JsonSerializerOptions moved to the BeneficialStrategies.Iso20022.Serialization namespace in 0.6.0-alpha, and BatchBookingIndicator now requires lowercase true/false — the documented example no longer compiled/ran as written.
     Corrected stale message-count references (2,665 -> 3,311) in both READMEs, doc/Scope-Statement.md, and this project's own internal CLAUDE.md guidance files; fully regenerated doc/Scope-Statement.md's per-business-area breakdown against the current spec snapshot.
     Polished README wording: removed inaccurate claims (targeting "three versions" of .NET, an "unapparent multiplicity" implementation note not meaningful to consumers), corrected the description of serialization vs. validation as follow-on work (both JSON and XML serialization are included in this library; only validation is a separate package), and added detail on strongly-typed industry-specific identifiers (CUSIP, SEDOL, IBAN, BIC, etc.) and spec-conformance guarantees from being strongly-typed down to the primitives.
+
+0.6.2-alpha
+    Transferred NuGet package ownership from the individual jefforyamos account to the BeneficialStrategies.com organization.
+    Migrated CI publishing from a long-lived NUGET_API_KEY secret to NuGet Trusted Publishing (OIDC) — GitHub Actions now exchanges a short-lived signed token for a 1-hour NuGet API key at publish time; no standing secret is stored in the repository anymore.

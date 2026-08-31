@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # required so GitHub can issue the OIDC token NuGet Trusted Publishing exchanges for a short-lived API key — see https://learn.microsoft.com/nuget/nuget-org/trusted-publishing
     steps:
       - uses: actions/checkout@v4
 
@@ -37,9 +39,21 @@ jobs:
             -c Release \
             --output ./nupkg
 
+      # Trusted Publishing (OIDC), replacing the long-lived NUGET_API_KEY secret. The GitHub OIDC
+      # token from this workflow run is exchanged for a NuGet API key valid for 1 hour, matched
+      # against the policy registered on nuget.org for Beneficial-Strategies/Iso20022Library,
+      # workflow publish.yml, policy owner "BeneficialStrategies.com". "user" below is the
+      # nuget.org account the temporary key is issued for — the org's public account name, not a
+      # secret (it's the same value shown as the package Owner on nuget.org).
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: BeneficialStrategies.com
+
       - name: Push to NuGet
         run: |
           dotnet nuget push src/nupkg/*.nupkg \
-            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --api-key ${{ steps.login.outputs.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
