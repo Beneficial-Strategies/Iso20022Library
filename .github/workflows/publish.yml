@@ -42,14 +42,17 @@ jobs:
       # Trusted Publishing (OIDC), replacing the long-lived NUGET_API_KEY secret. The GitHub OIDC
       # token from this workflow run is exchanged for a NuGet API key valid for 1 hour, matched
       # against the policy registered on nuget.org for Beneficial-Strategies/Iso20022Library,
-      # workflow publish.yml, policy owner "BeneficialStrategies.com". "user" below is the
-      # nuget.org account the temporary key is issued for — the org's public account name, not a
-      # secret (it's the same value shown as the package Owner on nuget.org).
+      # workflow publish.yml, package owner "BeneficialStrategies.com". "user" below must be the
+      # individual account that CREATED the policy, not the org that owns the packages —
+      # confirmed the hard way (run 33442674763, 2026-08-31): passing the org name here fails
+      # OIDC token exchange with "Make sure you are using the username of the policy creator, not
+      # the policy owner". jefforyamos is an admin member of BeneficialStrategies.com, which is
+      # what actually grants the push; this field just identifies who's asking.
       - name: NuGet login (OIDC → temp API key)
         uses: NuGet/login@v1
         id: login
         with:
-          user: BeneficialStrategies.com
+          user: jefforyamos
 
       - name: Push to NuGet
         run: |
