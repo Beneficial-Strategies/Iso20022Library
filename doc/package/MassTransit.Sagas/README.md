@@ -84,6 +84,27 @@ from `MassTransit.EntityFrameworkCore`) — it configures every registered saga 
 different sagas genuinely need different persistence strategies, use the strongly-typed methods
 below instead.
 
+*How "plus its fan-out consumers" happens without listing them:* there's no
+`x.AddConsumer<CreditorEnrolmentRequestConsumer>()`-style line anywhere in
+`AddIso20022Sagas`'s own code. Instead, once reflection has picked the saga state machines to
+register (`CreditorEnrolmentServiceProviderStateMachine`, living in namespace
+`BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCreditorEnrolment`), that
+namespace becomes a filter for MassTransit's own `AddConsumersFromNamespaceContaining<T>` — which
+does the actual assembly-wide `IConsumer<T>` scan:
+
+```csharp
+configurator.AddConsumersFromNamespaceContaining<AssemblyMarker>(consumerType =>
+    registeredFamilyNamespaces.Any(ns =>
+        (consumerType.Namespace ?? string.Empty).StartsWith(ns + ".", StringComparison.Ordinal)));
+```
+
+`CreditorEnrolmentRequestConsumer`, `...AmendmentRequestConsumer`, `...CancellationRequestConsumer`,
+and `...StatusReportConsumer` all live under
+`...RequestToPayCreditorEnrolment.Consumers` — a child of that same family namespace — so all four
+match the prefix check and get registered with no per-type line needed. A saga that wasn't
+selected (filtered out, or from a business area you didn't ask for) contributes nothing to
+`registeredFamilyNamespaces`, so its own consumers are excluded the same way, automatically.
+
 **Strongly-typed, per saga** (`Iso20022SagaServiceCollectionExtensions`, `reda/Extensions/`) — for
 when you want independent control over each saga's own repository configuration:
 
