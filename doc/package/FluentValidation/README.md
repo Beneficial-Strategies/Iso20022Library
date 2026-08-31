@@ -78,8 +78,8 @@ If you have questions or concerns about the implementation, please send develope
 mkdir test
 cd test
 dotnet new console
-dotnet add package BeneficialStrategies.Iso20022 --version 0.6.1-alpha
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.6.1-alpha
+dotnet add package BeneficialStrategies.Iso20022 --version 0.6.2-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.6.2-alpha
 ```
 
 Open your `Program.cs` and paste the following. This validates `camt.056.001.10` (FIToFIPaymentCancellationRequest) — one of the full-spec-compliance validators — first against a well-formed message, then against one that violates a cross-field rule no C# type could express on its own:
@@ -98,8 +98,14 @@ var request = new FIToFIPaymentCancellationRequestV10
     Assignment = new CaseAssignment5
     {
         Identification = "CASE-2026-0001",
-        Assigner = new Agent { FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" } },
-        Assignee = new Agent { FinancialInstitutionIdentification = new() { BICFI = "BBBBUS33" } },
+        Assigner = new Agent
+        {
+            FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
+        },
+        Assignee = new Agent
+        {
+            FinancialInstitutionIdentification = new() { BICFI = "BBBBUS33" },
+        },
         CreationDateTime = new DateTime(2026, 8, 17, 9, 0, 0),
     },
     Underlying = new UnderlyingTransaction28
@@ -111,15 +117,18 @@ var request = new FIToFIPaymentCancellationRequestV10
 var result = validator.Validate(request);
 Console.WriteLine($"IsValid={result.IsValid}"); // True
 
-// The same message, but with a case identification present at both the message level
-// and the transaction level — a spec rule (MessageOrGroupCaseRule) that no property type
-// alone can enforce, since both locations are individually optional.
+// The same message, but with a case identification present at both the message
+// level and the transaction level — a spec rule (MessageOrGroupCaseRule) that no
+// property type alone can enforce, since both locations are individually optional.
 var invalidRequest = request with
 {
     Case = new Case5
     {
         Identification = "CASE-2026-0001",
-        Creator = new Agent { FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" } },
+        Creator = new Agent
+        {
+            FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
+        },
     },
     Underlying = new UnderlyingTransaction28
     {
@@ -130,7 +139,10 @@ var invalidRequest = request with
                 Case = new Case5
                 {
                     Identification = "CASE-2026-0001",
-                    Creator = new Agent { FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" } },
+                    Creator = new Agent
+                    {
+                        FinancialInstitutionIdentification = new() { BICFI = "AAAAGB2L" },
+                    },
                 },
             },
         ],
@@ -143,9 +155,10 @@ foreach (var error in invalidResult.Errors)
 {
     Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
 }
-// MessageOrGroupCaseRule: Case identification must appear in at most one location: message-level
-// Case, Underlying.OriginalGroupInformationAndCancellation.Case, or
-// Underlying.TransactionInformation.Case (MessageOrGroupCaseRule / MessageOrTransactionCaseRule).
+// MessageOrGroupCaseRule: Case identification must appear in at most one location:
+// message-level Case, Underlying.OriginalGroupInformationAndCancellation.Case, or
+// Underlying.TransactionInformation.Case (MessageOrGroupCaseRule /
+// MessageOrTransactionCaseRule).
 ```
 
 ## Registering validators with dependency injection
@@ -154,7 +167,14 @@ Constructing one validator with `new` is fine for a quick check, but every valid
 package composes its children via constructor injection — the two-constructor pattern you'll see
 throughout the source (a DI constructor taking `IValidator<T>` for each child, and a parameterless
 convenience constructor for exactly the kind of one-off use above). `AddIso20022Validators()`
-registers all of them at once with a standard `IServiceCollection`:
+registers all of them at once with a standard `IServiceCollection`.
+
+The examples below construct a `ServiceCollection` directly, which needs one more package in a
+plain console app (ASP.NET Core and other hosts already bring this in for you):
+
+```bash
+dotnet add package Microsoft.Extensions.DependencyInjection --version 8.0.0
+```
 
 ```C#
 using BeneficialStrategies.Iso20022.camt;
@@ -174,16 +194,21 @@ Registering every validator in the assembly is the simplest option, but not alwa
 three narrower overloads are available when you know your scope up front:
 
 ```C#
-// Only validators for a specific ISO 20022 business area (plus whatever shared component/choice
-// validators those messages actually depend on — never fewer than that, so nothing breaks).
+// Only validators for a specific ISO 20022 business area (plus whatever shared
+// component/choice validators those messages actually depend on — never fewer, so
+// nothing breaks).
 services.AddIso20022Validators(businessAreas: ["camt", "pain"]);
 
-// The exact transitive closure one specific message needs — nothing more, nothing approximated.
-// Computed via reflection over the validators' own constructors, not a namespace guess.
+// The exact transitive closure one specific message needs — nothing more, nothing
+// approximated. Computed via reflection over the validators' own constructors, not
+// a namespace guess.
 services.AddIso20022Validators(rootTypes: [typeof(CancelCaseAssignmentV05)]);
 
-// A raw predicate over each concrete validator type, for anything the two above don't cover.
-services.AddIso20022Validators(filter: validatorType => validatorType.Namespace!.EndsWith(".camt"));
+// A raw predicate over each concrete validator type, for anything the two above
+// don't cover.
+services.AddIso20022Validators(
+    filter: validatorType => validatorType.Namespace!.EndsWith(".camt")
+);
 ```
 
 `rootTypes` is the tightest of the three — it registers precisely what the given message(s) need,
@@ -219,34 +244,9 @@ using BeneficialStrategies.Iso20022.Validation.Payloads;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-public sealed class CreditTransferQueueHandler
-{
-    private readonly IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> _validator;
-
-    public CreditTransferQueueHandler(IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> validator) =>
-        _validator = validator;
-
-    public void Handle(string messageBody)
-    {
-        var result = _validator.Validate(new JsonEnvelope<FIToFICustomerCreditTransferV14>(messageBody));
-        if (!result.IsValid)
-        {
-            foreach (var error in result.Errors)
-                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
-            return; // dead-letter, nack, etc. — whatever your queue client calls for. Covers
-                     // malformed JSON (ErrorCode "JsonParseError") exactly like a business-rule
-                     // violation — same list, same shape, no separate catch block needed.
-        }
-
-        // `result` proves the body is valid but, like any IValidator<T> result, doesn't hand the
-        // deserialized instance back — re-deserializing once, now that you know it's valid, is
-        // cheap and keeps "is this valid" and "give me the object" as separate concerns.
-        var message = Iso20022JsonSerializer.Deserialize<FIToFICustomerCreditTransferV14>(messageBody);
-        var firstTransfer = message.CreditTransferTransactionInformation[0];
-        Console.WriteLine($"Processing transfer {firstTransfer.PaymentIdentification.EndToEndIdentification}");
-    }
-}
-
+// Top-level statements must precede type declarations in a file, so the setup code
+// comes first here — CreditTransferQueueHandler (declared below) is only referenced
+// by type, never constructed directly, so declaration order doesn't matter for it.
 var services = new ServiceCollection();
 services.AddIso20022Validators(rootTypes: [typeof(FIToFICustomerCreditTransferV14)]);
 services.AddIso20022PayloadValidators();
@@ -255,6 +255,42 @@ using var provider = services.BuildServiceProvider();
 
 var handler = provider.GetRequiredService<CreditTransferQueueHandler>();
 // handler.Handle(messageBodyFromYourQueueClient);
+
+public sealed class CreditTransferQueueHandler
+{
+    private readonly IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> _validator;
+
+    public CreditTransferQueueHandler(
+        IValidator<JsonEnvelope<FIToFICustomerCreditTransferV14>> validator
+    ) => _validator = validator;
+
+    public void Handle(string messageBody)
+    {
+        var envelope = new JsonEnvelope<FIToFICustomerCreditTransferV14>(messageBody);
+        var result = _validator.Validate(envelope);
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
+
+            // Covers malformed JSON (ErrorCode "JsonParseError") the same way as an
+            // ordinary business-rule violation — same list, same shape, no separate
+            // catch block needed.
+            return; // dead-letter, nack, etc. — whatever your queue client calls for.
+        }
+
+        // `result` proves the body is valid but, like any IValidator<T> result,
+        // doesn't hand the deserialized instance back — re-deserializing once, now
+        // that you know it's valid, is cheap and keeps "is this valid" and "give me
+        // the object" as separate concerns.
+        var message = Iso20022JsonSerializer.Deserialize<FIToFICustomerCreditTransferV14>(
+            messageBody
+        );
+        var firstTransfer = message.CreditTransferTransactionInformation[0];
+        var endToEndId = firstTransfer.PaymentIdentification.EndToEndIdentification;
+        Console.WriteLine($"Processing transfer {endToEndId}");
+    }
+}
 ```
 
 ### Example 2 — type unknown up front, XML payload, one of several candidates
@@ -269,53 +305,9 @@ using BeneficialStrategies.Iso20022.Validation;
 using BeneficialStrategies.Iso20022.Validation.Payloads;
 using Microsoft.Extensions.DependencyInjection;
 
-public sealed class PaymentLifecycleQueueHandler
-{
-    private readonly IIso20022PayloadValidationDispatcher _dispatcher;
-
-    public PaymentLifecycleQueueHandler(IIso20022PayloadValidationDispatcher dispatcher) =>
-        _dispatcher = dispatcher;
-
-    public void Handle(string xmlBody)
-    {
-        var result = _dispatcher.ValidateXml(xmlBody);
-
-        if (!result.IsValid)
-        {
-            // Covers malformed XML, an unrecognized document namespace, and ordinary business-rule
-            // failures alike — all as ValidationFailure entries, none of them a thrown exception.
-            foreach (var error in result.ValidationResult.Errors)
-                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
-            return;
-        }
-
-        // result.Message is the deserialized instance, typed as `object` since the concrete type
-        // wasn't known until the payload was inspected — pattern-match it to each type you expect.
-        switch (result.Message)
-        {
-            case FIToFIPaymentStatusReportV16 statusReport:
-                Console.WriteLine(
-                    $"Status report: {statusReport.TransactionInformationAndStatus.Count} transaction(s)"
-                );
-                break;
-
-            case FIToFIPaymentReversalV14 reversal:
-                Console.WriteLine($"Reversal request: {reversal.TransactionInformation.Count} transaction(s)");
-                break;
-
-            case PaymentReturnV15 paymentReturn:
-                Console.WriteLine($"Payment return: {paymentReturn.TransactionInformation.Count} transaction(s)");
-                break;
-
-            default:
-                // Only reachable if a validator for a fourth type got registered without a
-                // matching case being added here — rootTypes below scopes DI to exactly the
-                // three types this handler knows about, so nothing else should ever validate.
-                throw new InvalidOperationException($"Unhandled message type: {result.MessageType}");
-        }
-    }
-}
-
+// Top-level statements must precede type declarations in a file, so the setup code
+// comes first here — PaymentLifecycleQueueHandler (declared below) is only referenced
+// by type, never constructed directly, so declaration order doesn't matter for it.
 var services = new ServiceCollection();
 services.AddIso20022Validators(
     rootTypes:
@@ -331,6 +323,66 @@ using var provider = services.BuildServiceProvider();
 
 var handler = provider.GetRequiredService<PaymentLifecycleQueueHandler>();
 // handler.Handle(xmlBodyFromYourQueueClient);
+
+public sealed class PaymentLifecycleQueueHandler
+{
+    private readonly IIso20022PayloadValidationDispatcher _dispatcher;
+
+    public PaymentLifecycleQueueHandler(
+        IIso20022PayloadValidationDispatcher dispatcher
+    ) => _dispatcher = dispatcher;
+
+    public void Handle(string xmlBody)
+    {
+        var result = _dispatcher.ValidateXml(xmlBody);
+
+        if (!result.IsValid)
+        {
+            // Covers malformed XML, an unrecognized document namespace, and ordinary
+            // business-rule failures alike — all as ValidationFailure entries, none of
+            // them a thrown exception.
+            foreach (var error in result.ValidationResult.Errors)
+                Console.WriteLine($"  {error.PropertyName}: {error.ErrorMessage}");
+            return;
+        }
+
+        // result.Message is the deserialized instance, typed as `object` since the
+        // concrete type wasn't known until the payload was inspected — pattern-match
+        // it to each type you expect.
+        switch (result.Message)
+        {
+            case FIToFIPaymentStatusReportV16 statusReport:
+            {
+                var count = statusReport.TransactionInformationAndStatus.Count;
+                Console.WriteLine($"Status report: {count} transaction(s)");
+                break;
+            }
+
+            case FIToFIPaymentReversalV14 reversal:
+            {
+                var count = reversal.TransactionInformation.Count;
+                Console.WriteLine($"Reversal request: {count} transaction(s)");
+                break;
+            }
+
+            case PaymentReturnV15 paymentReturn:
+            {
+                var count = paymentReturn.TransactionInformation.Count;
+                Console.WriteLine($"Payment return: {count} transaction(s)");
+                break;
+            }
+
+            default:
+                // Only reachable if a validator for a fourth type got registered
+                // without a matching case being added here — rootTypes below scopes
+                // DI to exactly the three types this handler knows about, so nothing
+                // else should ever validate.
+                throw new InvalidOperationException(
+                    $"Unhandled message type: {result.MessageType}"
+                );
+        }
+    }
+}
 ```
 
 ## External code set validation
@@ -364,9 +416,12 @@ services.AddSingleton<IExternalCodeRegistry<CountryCode>>(countries);
 using var provider = services.BuildServiceProvider();
 
 var validator = provider.GetRequiredService<IValidator<CountryCode>>();
-Console.WriteLine(validator.Validate((CountryCode)"US").IsValid); // True
-Console.WriteLine(validator.Validate((CountryCode)"KP").IsValid); // False — removed above
-Console.WriteLine(validator.Validate((CountryCode)"FR").IsValid); // False — never added
+var usIsValid = validator.Validate((CountryCode)"US").IsValid;
+var kpIsValid = validator.Validate((CountryCode)"KP").IsValid;
+var frIsValid = validator.Validate((CountryCode)"FR").IsValid;
+Console.WriteLine(usIsValid); // True
+Console.WriteLine(kpIsValid); // False — removed above
+Console.WriteLine(frIsValid); // False — never added
 ```
 
 Some external code types (the ones ISO 20022's own registry snapshot had known values for) start
@@ -393,8 +448,10 @@ services.AddSingleton<IExternalCodeRegistry<CountryCode>, EmbargoedCountryRegist
 using var provider = services.BuildServiceProvider();
 
 var validator = provider.GetRequiredService<IValidator<CountryCode>>();
-Console.WriteLine(validator.Validate((CountryCode)"US").IsValid); // True  — base is permissive
-Console.WriteLine(validator.Validate((CountryCode)"KP").IsValid); // False — rejected by the override
+var usIsValid = validator.Validate((CountryCode)"US").IsValid;
+var kpIsValid = validator.Validate((CountryCode)"KP").IsValid;
+Console.WriteLine(usIsValid); // True  — base is permissive
+Console.WriteLine(kpIsValid); // False — rejected by the override
 ```
 
 Register your override *after* `AddIso20022Validators()` — the last registration for a given
