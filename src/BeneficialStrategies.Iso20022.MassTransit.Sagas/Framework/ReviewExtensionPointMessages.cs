@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.Framework;
 /// <summary>
 /// Placeholder message contract for the "review requested" extension-point event exposed by this
 /// package's state machines (see e.g.
-/// <see cref="RequestToPayCreditorEnrolment.CreditorEnrolmentServiceProviderStateMachine.ReviewRequested"/>).
+/// <see cref="reda.RequestToPayCreditorEnrolment.CreditorEnrolmentServiceProviderStateMachine.ReviewRequested"/>).
 /// Not an ISO 20022 type — the source Message Definition Report specifies no review/compliance
 /// step for this flow, so this carries only enough to let a caller's own activity correlate back
 /// to the right saga episode. A caller needing richer review context should define and publish

@@ -1,0 +1,23 @@
+# Standalone MySQL instance for this demo only. Not part of any other project's infrastructure.
+#
+#   docker compose up -d      # start
+#   dotnet run                # run the demo against it
+#   docker compose down -v    # tear down + wipe the persisted saga data
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: demo_password
+      MYSQL_DATABASE: rtp_debtor_activation_demo
+    ports:
+      - "3306:3306"
+    volumes:
+      - rtp_debtor_activation_demo_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-pdemo_password"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  rtp_debtor_activation_demo_data:

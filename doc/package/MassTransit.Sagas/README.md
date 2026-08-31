@@ -48,7 +48,44 @@ saga instance always tracks exactly one enrolment/activation, never a whole batc
   Creditor's/Debtor's own originating systems) — those are reactive pass-throughs in the source
   document, not saga-worthy, and are not covered by this first release.
 
+## Project layout
+
+Both state machines live under `reda/` (folder and namespace:
+`BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.*`) — the ISO 20022 business area they
+implement (Reference Data), matching the folder naming convention `BeneficialStrategies.Iso20022`
+itself uses (`MessageDefinitions/reda/`). This is deliberate: it's meant to make it obvious at a
+glance which business areas have saga coverage today (`reda`) and which don't yet (e.g. `pain`) —
+a future business area's sagas would get their own sibling folder/namespace, not get folded into
+`reda`. `Framework/` (shared saga-state base class, party-identity correlation helper) rounds out
+the package, alongside the two registration surfaces below.
+
 ## Registration
+
+Two ways to register, mirroring the sibling `BeneficialStrategies.Iso20022.FluentValidation`
+package's own `AddIso20022Validators` — "register everything (optionally narrowed by business
+area)" via reflection, or strongly-typed per-saga registration:
+
+**Everything, or narrowed by business area** (`Iso20022ServiceCollectionExtensions`, package root)
+— finds every saga state machine in the assembly via reflection and registers each one plus its
+fan-out consumers, using one shared `ISagaRepositoryRegistrationProvider` for persistence. Compose
+it *inside* your own `AddMassTransit`/`AddMassTransitTestHarness` call, the same way you'd use
+MassTransit's own `AddConsumersFromNamespaceContaining`:
+
+```csharp
+services.AddMassTransitTestHarness(cfg =>
+{
+    cfg.AddIso20022Sagas(["reda"], new InMemorySagaRepositoryRegistrationProvider());
+    cfg.UsingInMemory((context, busCfg) => busCfg.ConfigureEndpoints(context));
+});
+```
+
+For real persistence, swap the provider (e.g. `new EntityFrameworkSagaRepositoryRegistrationProvider(r => r.UseSqlite(...))`
+from `MassTransit.EntityFrameworkCore`) — it configures every registered saga uniformly. If
+different sagas genuinely need different persistence strategies, use the strongly-typed methods
+below instead.
+
+**Strongly-typed, per saga** (`Iso20022SagaServiceCollectionExtensions`, `reda/Extensions/`) — for
+when you want independent control over each saga's own repository configuration:
 
 ```csharp
 services.AddCreditorEnrolmentSaga(

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Standalone demo console app — deliberately NOT part of src/iso20022.sln. It exists to prove
+    end-to-end that BeneficialStrategies.Iso20022.MassTransit.Sagas actually works: a saga runs
+    through to conclusion, its handlers fire, its state persists to a real MySQL database, and the
+    messages that drive it are genuinely serialized/deserialized on the wire — not just object
+    references passed around in-process. Never published, so it gets a short name and a single
+    TFM rather than following the packable-library conventions in CLAUDE.md.
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!--
+      net8.0, not net10.0 — deliberately. MassTransit.EntityFrameworkCore 8.5.10 ships a
+      net10.0-specific dependency group requiring Microsoft.EntityFrameworkCore.Relational
+      10.0.0, but Pomelo.EntityFrameworkCore.MySql's latest stable (9.0.0) caps at EF Core
+      9.0.x — no net10-compatible MySQL provider exists yet upstream. The Sagas library itself
+      still multi-targets net8.0;net10.0 fine; only this demo's EF Core/MySQL dependency chain
+      is pinned to net8.0 until Pomelo ships an EF-Core-10 line.
+    -->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>RequestToPayDebtorActivation.Demo</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.*" />
+    <!-- EF Core saga repository integration — separate package from core MassTransit. -->
+    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.*" />
+    <!--
+      MySQL EF Core provider (community-maintained, most widely used one for .NET/MySQL). Pinned
+      exactly, not floated — Pomelo 9.0.0 requires Microsoft.EntityFrameworkCore.Relational in
+      [9.0.0, 9.0.999], and a floated "9.*" on the Microsoft.Extensions.* packages below was
+      observed pulling in a 10.0.0 Logging/DI chain that broke that constraint (NU1605/NU1608).
+      Pinning the whole Microsoft.Extensions.* graph to the same exact minor as the EF Core 9.0.1
+      that MassTransit.EntityFrameworkCore 8.5.10 itself resolves keeps everything on one line.
+    -->
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\BeneficialStrategies.Iso20022.MassTransit.Sagas\BeneficialStrategies.Iso20022.MassTransit.Sagas.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -13,7 +13,26 @@
   <ItemGroup>
     <!-- MassTransit's own core package includes the in-memory transport and AddMassTransitTestHarness — no separate test-specific package needed. -->
     <PackageReference Include="MassTransit" Version="8.*" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.*" />
+    <!-- EF Core saga repository integration, for the *SqliteCorrelationTests classes — these back
+         each saga's follow-up-event correlation with a real relational EF Core saga repository
+         (SQLite, in-memory database) instead of the trivial in-memory MassTransit repository the
+         other tests use, so a CorrelateBy predicate that isn't genuinely SQL-translatable fails a
+         test immediately instead of only surfacing against a real deployment's database — which is
+         exactly what happened building RequestToPayDebtorActivation.Demo against real MySQL. See
+         RequestToPayCreditorEnrolment/CreditorEnrolmentSqliteCorrelationTests.cs. -->
+    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.*" />
+    <!--
+      Microsoft.EntityFrameworkCore.Sqlite pinned per-TFM, not floated — MassTransit.EntityFrameworkCore
+      8.5.10 ships a net10.0-specific dependency group requiring Microsoft.EntityFrameworkCore.Relational
+      10.0.0, but only 9.0.1 under net8.0 (same split documented in
+      RequestToPayDebtorActivation.Demo's .csproj). Unlike Pomelo's MySQL provider, Microsoft's own
+      Sqlite provider ships version-matched to every EF Core release, so both sides of this split
+      have a real corresponding Sqlite version — no upstream gap like the demo hit with MySQL.
+    -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.19" Condition="'$(TargetFramework)' == 'net8.0'" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.11" Condition="'$(TargetFramework)' == 'net10.0'" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.19" Condition="'$(TargetFramework)' == 'net8.0'" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.11" Condition="'$(TargetFramework)' == 'net10.0'" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
