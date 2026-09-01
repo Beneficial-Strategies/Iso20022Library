@@ -1,12 +1,12 @@
 ---
 name: bump-and-release
-description: Bump the package version, write release notes, update README install instructions, commit, merge to main, tag, and push to trigger NuGet publish.
+description: Bump the shared package version, write release notes, update README install instructions, commit, merge to main, tag, and push to trigger NuGet publish.
 argument-hint: <new-version> (e.g. 0.6.0-alpha)
 ---
 
 # Bump and Release
 
-Prepare and publish a new version of the BeneficialStrategies.Iso20022 NuGet package.
+Prepare and publish a new version of the `BeneficialStrategies.Iso20022*` NuGet packages.
 
 The version to release is: **$ARGUMENTS**
 
@@ -14,34 +14,50 @@ The version to release is: **$ARGUMENTS**
 
 ### 1. Release notes
 
-Open `src/BeneficialStrategies.Iso20022.Common/release-notes.txt`.
+Open `src/BeneficialStrategies.Iso20022.Common/release-notes.txt` (and the equivalent
+`release-notes.txt` for any other package with meaningful changes this release —
+`BeneficialStrategies.Iso20022.FluentValidation`, `BeneficialStrategies.Iso20022.MassTransit.Sagas`).
 
-Add a new entry for `$ARGUMENTS` at the bottom. Review commits since the last version bump (`git log <last-bump-tag>..HEAD --oneline`) and summarize the meaningful changes — one bullet per logical group of commits. Skip pure doc/housekeeping commits unless they are user-facing.
+Add a new entry for `$ARGUMENTS` at the bottom of each. Review commits since the last version bump
+(`git log <last-bump-tag>..HEAD --oneline`) and summarize the meaningful changes — one bullet per
+logical group of commits. Skip pure doc/housekeeping commits unless they are user-facing.
 
 ### 2. Version bump
 
-In `src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Common.csproj`, set:
+All packages share one version in lockstep — see `CLAUDE.md`'s "Multi-Package Repository
+Strategy." Set it in exactly one place, `src/Directory.Build.props`:
 
 ```xml
 <Version>$ARGUMENTS</Version>
 ```
 
-### 3. Message-count references (PackageDescription, both READMEs, Scope-Statement.md)
+Do **not** add a per-project `<Version>` to any individual `.csproj` — that would fork a package
+off the shared version, defeating the point of centralizing it here.
+
+### 3. Message-count references (PackageDescription, Common's README, root README, Scope-Statement.md)
 
 > **2026-08-17 addition**: none of this was covered by the skill at all, and every one of these
-> four locations sat stale — some through two full snapshot syncs (0.4.0-alpha and 0.5.0-alpha)
-> — before being caught and hand-fixed in the same sitting the user asked "did Scope-Statement.md
+> locations sat stale — some through two full snapshot syncs (0.4.0-alpha and 0.5.0-alpha) —
+> before being caught and hand-fixed in the same sitting the user asked "did Scope-Statement.md
 > get updated also? It should." Always do this step on every release, not just when a snapshot
 > sync happened to run first — message counts drift on every sync even without a version bump.
+>
+> **2026-08-31 restructuring note**: this used to be a 4-file list including a separate
+> `doc/package/README.md` (the file actually packed as the NuGet page's README, distinct from and
+> frequently out of sync with root `README.md`). That duplication is exactly what caused the drift
+> this note originally warned about. Each package now has exactly **one** `README.md`, living in
+> its own project root (`src/{ProjectName}/README.md`), which is both what GitHub shows for that
+> folder and what gets packed — see each `.csproj`'s `<None Include="README.md">`. The list below
+> reflects that; there is no more separate `doc/package/` tree to keep in sync.
 
-Four files hardcode a message count and must be kept in sync together:
+Files that hardcode a message count and must be kept in sync together:
 
 - `src/BeneficialStrategies.Iso20022.Common/BeneficialStrategies.Iso20022.Common.csproj` — `PackageDescription`:
   ```xml
   <PackageDescription>The entirety of the ISO20022 message domain model. {N} B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
   ```
-- `README.md` (root) — opening sentence: `...containers for {N} different types of financial services messages...`
-- `doc/package/README.md` — same opening sentence (this is the file actually packed as the NuGet page's displayed README — see step 5's README-install step for how the two READMEs differ and why both still need editing)
+- `src/BeneficialStrategies.Iso20022.Common/README.md` — opening sentence: `...containers for {N} different types of financial services messages...`
+- `README.md` (root) — the package table's one-line description of `BeneficialStrategies.Iso20022` (now much smaller surface area than before the restructuring — a single table cell, not a duplicated paragraph).
 - `doc/Scope-Statement.md` — full regeneration, see below. Its own summary line and per-business-area table use the same `{N}`.
 
 **Recompute `{N}`** as the actual count of files under `src/BeneficialStrategies.Iso20022.Common/MessageDefinitions/`:
@@ -51,12 +67,12 @@ find src/BeneficialStrategies.Iso20022.Common/MessageDefinitions -iname "*.cs" |
 ```
 
 Use this file count, not `get_repository_statistics`' MCP-reported total, for `{N}` in the
-PackageDescription and both READMEs — they can differ by a handful (e.g. 3,311 shipped files vs.
-3,312 MCP-reported messages, seen 2026-08-17) and these three should describe what's actually in
-the shipped package, not what the live MCP snapshot currently claims. Update the number with
-thousands separators matching the existing style (`3,311`, not `3311`). The vaguer "over 2,600
-messages" phrasing already present in a couple of spots in root `README.md` doesn't need to track
-this exactly — only the precise counts do.
+PackageDescription and the README — they can differ by a handful (e.g. 3,311 shipped files vs.
+3,312 MCP-reported messages, seen 2026-08-17) and these should describe what's actually in the
+shipped package, not what the live MCP snapshot currently claims. Update the number with thousands
+separators matching the existing style (`3,311`, not `3311`). The vaguer "over 2,600 messages"
+phrasing already present in a couple of spots in the Common README doesn't need to track this
+exactly — only the precise counts do.
 
 **Regenerate `doc/Scope-Statement.md` in full** — its whole reason to exist is being an accurate,
 per-business-area snapshot, so partial updates leave it self-contradictory:
@@ -82,15 +98,26 @@ per-business-area snapshot, so partial updates leave it self-contradictory:
 
 ### 4. README install instructions
 
-In both `README.md` (root) and `doc/package/README.md`, update the `dotnet add package` line to reference `$ARGUMENTS`:
+Every package with a `PackageReadmeFile` (currently `BeneficialStrategies.Iso20022` and
+`BeneficialStrategies.Iso20022.FluentValidation`; `BeneficialStrategies.Iso20022.MassTransit.Sagas`
+once it's actually published) has its own `dotnet add package ... --version` line(s), in its own
+`src/{ProjectName}/README.md` — one edit per package now, not two:
 
 ```bash
 dotnet add package BeneficialStrategies.Iso20022 --version $ARGUMENTS
 ```
 
+`src/BeneficialStrategies.Iso20022.FluentValidation/README.md` has two such lines (it installs
+both `BeneficialStrategies.Iso20022` and `BeneficialStrategies.Iso20022.FluentValidation`) — update
+both. A mechanical backstop also exists for this specific step:
+`src/BeneficialStrategies.Iso20022.Common.Tests/ReadmeVersionPinTests.cs` fails the test suite if
+any package README's version pin drifts from `Directory.Build.props`, so a missed line here
+surfaces immediately in step 6 below rather than silently shipping stale.
+
 ### 5. Commit
 
-Stage and commit those five files together (release notes, `.csproj` — both the `<Version>` and `<PackageDescription>` edits — both READMEs, and `doc/Scope-Statement.md`):
+Stage and commit the changed files together (release notes, `Directory.Build.props`, the
+`PackageDescription` edit, the affected package READMEs, and `doc/Scope-Statement.md`):
 
 ```
 Bump version to $ARGUMENTS and add release notes
@@ -98,10 +125,11 @@ Bump version to $ARGUMENTS and add release notes
 
 ### 6. Build verification
 
-Before merging, confirm the build is clean locally:
+Before merging, confirm the build and the README version-pin guard test are clean locally:
 
 ```bash
 cd src && dotnet build BeneficialStrategies.Iso20022.Common -c Release
+cd src && dotnet test BeneficialStrategies.Iso20022.Common.Tests
 ```
 
 Fix any errors before proceeding.
@@ -130,4 +158,6 @@ git push origin main
 git push origin v$ARGUMENTS
 ```
 
-The `v*` tag push triggers the GitHub Actions workflow (`.github/workflows/publish.yml`), which builds, packs, and pushes the NuGet package automatically. No manual publish step needed.
+The `v*` tag push triggers the GitHub Actions workflow (`.github/workflows/publish.yml`), which
+builds, packs, and pushes the NuGet packages automatically via Trusted Publishing (OIDC) — no
+manual publish step, and no long-lived API key involved.

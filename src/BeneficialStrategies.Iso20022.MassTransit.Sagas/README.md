@@ -1,5 +1,10 @@
 # Beneficial Strategies ISO 20022 MassTransit Sagas
 
+> **Status: investigative work-in-progress.** This package is **not published to NuGet** and its
+> API/design may change significantly before (or instead of) a first release. It stays in this
+> monorepo per `CLAUDE.md`'s "Multi-Package Repository Strategy" so it evolves in lockstep with
+> `BeneficialStrategies.Iso20022`, not because it's ready for production use.
+
 A [MassTransit](https://masstransit.io) saga toolkit correlated to ISO 20022 message flows, built
 on top of the strongly-typed message model published in
 [`BeneficialStrategies.Iso20022`](https://www.nuget.org/packages/BeneficialStrategies.Iso20022).
