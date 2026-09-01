@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AggregateBalanceInformation37Validator : AbstractValidator<AggregateBalanceInformation37>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AggregateBalanceInformation37"/>.
+    /// </summary>
     public AggregateBalanceInformation37Validator()
     {
         RuleFor(x => x.PriceDetails)

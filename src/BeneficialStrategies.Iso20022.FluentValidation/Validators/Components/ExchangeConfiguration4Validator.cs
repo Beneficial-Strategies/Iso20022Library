@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ExchangeConfiguration4Validator : AbstractValidator<ExchangeConfiguration4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ExchangeConfiguration4"/>.
+    /// </summary>
     public ExchangeConfiguration4Validator()
     {
         RuleFor(x => x.ExchangePolicy)

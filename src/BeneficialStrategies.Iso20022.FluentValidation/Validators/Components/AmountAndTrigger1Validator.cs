@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AmountAndTrigger1Validator : AbstractValidator<AmountAndTrigger1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AmountAndTrigger1"/>.
+    /// </summary>
     public AmountAndTrigger1Validator()
     {
         RuleFor(x => x.Trigger)

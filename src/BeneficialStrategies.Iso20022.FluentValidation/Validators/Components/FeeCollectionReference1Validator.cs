@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class FeeCollectionReference1Validator : AbstractValidator<FeeCollectionReference1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FeeCollectionReference1"/>.
+    /// </summary>
     public FeeCollectionReference1Validator()
     {
         RuleFor(x => x.FeeCollectionIdentification)

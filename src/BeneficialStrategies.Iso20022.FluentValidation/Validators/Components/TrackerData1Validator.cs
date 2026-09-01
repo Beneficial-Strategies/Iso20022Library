@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TrackerData1Validator : AbstractValidator<TrackerData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TrackerData1"/>.
+    /// </summary>
     public TrackerData1Validator()
     {
         RuleFor(x => x.TrackerRecord)

@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CardPaymentDataSet23Validator : AbstractValidator<CardPaymentDataSet23>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CardPaymentDataSet23"/>.
+    /// </summary>
     public CardPaymentDataSet23Validator()
     {
         RuleFor(x => x.Transaction)

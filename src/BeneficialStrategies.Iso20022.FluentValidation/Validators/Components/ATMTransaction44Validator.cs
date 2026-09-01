@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ATMTransaction44Validator : AbstractValidator<ATMTransaction44>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ATMTransaction44"/>.
+    /// </summary>
     public ATMTransaction44Validator()
     {
         RuleFor(x => x.TotalAuthorisedAmount)

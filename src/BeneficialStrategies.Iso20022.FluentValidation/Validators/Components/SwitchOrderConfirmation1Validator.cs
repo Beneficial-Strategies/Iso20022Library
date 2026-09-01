@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class SwitchOrderConfirmation1Validator : AbstractValidator<SwitchOrderConfirmation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SwitchOrderConfirmation1"/>.
+    /// </summary>
     public SwitchOrderConfirmation1Validator()
     {
         RuleFor(x => x.SwitchExecutionDetails)

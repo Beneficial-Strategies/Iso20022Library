@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class RemittanceLocation10Validator : AbstractValidator<RemittanceLocation10>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RemittanceLocation10"/>.
+    /// </summary>
     public RemittanceLocation10Validator()
     {
         RuleFor(x => x.RemittanceLocationDetails)

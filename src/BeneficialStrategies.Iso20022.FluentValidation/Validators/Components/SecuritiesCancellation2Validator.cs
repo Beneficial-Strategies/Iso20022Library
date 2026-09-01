@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SecuritiesCancellation2Validator : AbstractValidator<SecuritiesCancellation2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SecuritiesCancellation2"/>.
+    /// </summary>
     public SecuritiesCancellation2Validator()
     {
         RuleFor(x => x.Cancellation)

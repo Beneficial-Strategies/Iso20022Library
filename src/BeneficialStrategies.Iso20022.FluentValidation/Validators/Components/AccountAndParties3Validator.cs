@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AccountAndParties3Validator : AbstractValidator<AccountAndParties3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountAndParties3"/>.
+    /// </summary>
     public AccountAndParties3Validator()
     {
         RuleFor(x => x.AuthorityRequestType)

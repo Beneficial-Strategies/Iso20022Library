@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NetworkParameters7Validator : AbstractValidator<NetworkParameters7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NetworkParameters7"/>.
+    /// </summary>
     public NetworkParameters7Validator()
     {
         RuleFor(x => x.Address)

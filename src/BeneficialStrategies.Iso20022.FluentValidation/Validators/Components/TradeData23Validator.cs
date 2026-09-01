@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeData23Validator : AbstractValidator<TradeData23>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeData23"/>.
+    /// </summary>
     public TradeData23Validator()
     {
         RuleFor(x => x.CounterpartySpecificData)

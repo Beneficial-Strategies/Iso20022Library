@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Sets of elements to identify the status of a mandate.
 /// <list type="table">
-///   <item><term><see cref="MandateStatus1Choice.Code"/></term><description>Status of the mandate, in a coded form as published in an external list — Value: ExternalMandateStatus1Code</description></item>
-///   <item><term><see cref="MandateStatus1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.MandateStatus1Choice.Code"/></term><description>Status of the mandate, in a coded form as published in an external list — Value: ExternalMandateStatus1Code</description></item>
+///   <item><term><see cref="Choices.MandateStatus1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>

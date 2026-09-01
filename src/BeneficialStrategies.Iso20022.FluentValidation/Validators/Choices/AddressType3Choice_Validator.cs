@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of formats for the type of address.
 /// <list type="table">
-///   <item><term><see cref="AddressType3Choice.Code"/></term><description>Type of address expressed as a code — Value: AddressType2Code</description></item>
-///   <item><term><see cref="AddressType3Choice.Proprietary"/></term><description>Type of address expressed as a proprietary code — Identification (Exact4AlphaNumericText, required), Issuer (Max35Text, required), SchemeName (Max35Text, optional)</description></item>
+///   <item><term><see cref="Choices.AddressType3Choice.Code"/></term><description>Type of address expressed as a code — Value: AddressType2Code</description></item>
+///   <item><term><see cref="Choices.AddressType3Choice.Proprietary"/></term><description>Type of address expressed as a proprietary code — Identification (Exact4AlphaNumericText, required), Issuer (Max35Text, required), SchemeName (Max35Text, optional)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (the <c>Code</c> variant's

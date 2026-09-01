@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SignedData3Validator : AbstractValidator<SignedData3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SignedData3"/>.
+    /// </summary>
     public SignedData3Validator()
     {
         RuleFor(x => x.DigestAlgorithm)

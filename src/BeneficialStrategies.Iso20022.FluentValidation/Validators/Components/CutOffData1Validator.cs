@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CutOffData1Validator : AbstractValidator<CutOffData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CutOffData1"/>.
+    /// </summary>
     public CutOffData1Validator()
     {
         RuleFor(x => x.NettingCutOffDetails)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TransportBySea3Validator : AbstractValidator<TransportBySea3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransportBySea3"/>.
+    /// </summary>
     public TransportBySea3Validator()
     {
         RuleFor(x => x.PortOfDischarge)

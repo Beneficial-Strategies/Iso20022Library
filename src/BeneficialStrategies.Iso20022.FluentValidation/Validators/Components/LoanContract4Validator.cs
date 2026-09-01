@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LoanContract4Validator : AbstractValidator<LoanContract4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LoanContract4"/>.
+    /// </summary>
     public LoanContract4Validator()
     {
         RuleFor(x => x.Buyer)

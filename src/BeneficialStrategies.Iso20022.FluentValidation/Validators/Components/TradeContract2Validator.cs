@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeContract2Validator : AbstractValidator<TradeContract2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeContract2"/>.
+    /// </summary>
     public TradeContract2Validator()
     {
         RuleFor(x => x.Buyer)

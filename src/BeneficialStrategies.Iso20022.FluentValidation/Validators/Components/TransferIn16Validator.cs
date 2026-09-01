@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-03-02.")]
 public class TransferIn16Validator : AbstractValidator<TransferIn16>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransferIn16"/>.
+    /// </summary>
     public TransferIn16Validator()
     {
         RuleFor(x => x.TransferDetails)

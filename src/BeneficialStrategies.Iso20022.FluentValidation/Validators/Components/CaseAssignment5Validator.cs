@@ -17,6 +17,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CaseAssignment5Validator : AbstractValidator<CaseAssignment5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CaseAssignment5"/>.
+    /// </summary>
     public CaseAssignment5Validator()
     {
         RuleFor(x => x.Identification)

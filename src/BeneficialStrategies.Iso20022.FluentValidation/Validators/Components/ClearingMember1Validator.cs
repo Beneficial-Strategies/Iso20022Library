@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ClearingMember1Validator : AbstractValidator<ClearingMember1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ClearingMember1"/>.
+    /// </summary>
     public ClearingMember1Validator()
     {
         RuleFor(x => x.ClearingAccountOwner)

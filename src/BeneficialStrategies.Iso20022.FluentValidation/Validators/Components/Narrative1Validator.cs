@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Narrative1Validator : AbstractValidator<Narrative1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Narrative1"/>.
+    /// </summary>
     public Narrative1Validator()
     {
         RuleFor(x => x.Text)

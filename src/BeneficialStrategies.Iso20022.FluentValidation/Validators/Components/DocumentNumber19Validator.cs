@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DocumentNumber19Validator : AbstractValidator<DocumentNumber19>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DocumentNumber19"/>.
+    /// </summary>
     public DocumentNumber19Validator()
     {
         RuleFor(x => x.References)

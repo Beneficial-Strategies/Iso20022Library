@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class UpdatedAdditionalInformation10Validator : AbstractValidator<UpdatedAdditionalInformation10>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="UpdatedAdditionalInformation10"/>.
+    /// </summary>
     public UpdatedAdditionalInformation10Validator()
     {
         RuleFor(x => x.AdditionalInformation)

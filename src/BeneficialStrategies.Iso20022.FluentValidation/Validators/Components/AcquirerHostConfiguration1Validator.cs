@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AcquirerHostConfiguration1Validator : AbstractValidator<AcquirerHostConfiguration1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AcquirerHostConfiguration1"/>.
+    /// </summary>
     public AcquirerHostConfiguration1Validator()
     {
         RuleFor(x => x.MessageToSend)

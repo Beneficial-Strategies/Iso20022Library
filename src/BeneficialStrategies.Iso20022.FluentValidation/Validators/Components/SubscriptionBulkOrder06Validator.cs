@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SubscriptionBulkOrder06Validator : AbstractValidator<SubscriptionBulkOrder06>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SubscriptionBulkOrder06"/>.
+    /// </summary>
     public SubscriptionBulkOrder06Validator()
     {
         RuleFor(x => x.IndividualOrderDetails)

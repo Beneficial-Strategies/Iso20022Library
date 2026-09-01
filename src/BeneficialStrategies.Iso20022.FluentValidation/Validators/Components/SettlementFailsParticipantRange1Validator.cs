@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SettlementFailsParticipantRange1Validator : AbstractValidator<SettlementFailsParticipantRange1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SettlementFailsParticipantRange1"/>.
+    /// </summary>
     public SettlementFailsParticipantRange1Validator()
     {
         RuleFor(x => x.HighestInValue)

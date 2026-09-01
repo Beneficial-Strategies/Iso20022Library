@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CostsAndCharges1Validator : AbstractValidator<CostsAndCharges1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CostsAndCharges1"/>.
+    /// </summary>
     public CostsAndCharges1Validator()
     {
         RuleFor(x => x.IndividualCostOrCharge)

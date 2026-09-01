@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class QualifiedPartyIdentification1Validator : AbstractValidator<QualifiedPartyIdentification1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="QualifiedPartyIdentification1"/>.
+    /// </summary>
     public QualifiedPartyIdentification1Validator()
     {
         RuleFor(x => x.Party)

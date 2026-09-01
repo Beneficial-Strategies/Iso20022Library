@@ -11,9 +11,9 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Defines the type of action to be performed in the request.
 /// <list type="table">
-///   <item><term><see cref="RequestType4Choice.PaymentControl"/></term><description>Value: ExternalPaymentControlRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="RequestType4Choice.Enquiry"/></term><description>Value: ExternalEnquiryRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="RequestType4Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.PaymentControl"/></term><description>Value: ExternalPaymentControlRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.Enquiry"/></term><description>Value: ExternalEnquiryRequestType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.RequestType4Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// All three variants are fully enforced at the struct/enum level already — there is no

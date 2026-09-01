@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ManagementPlanContent1Validator : AbstractValidator<ManagementPlanContent1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ManagementPlanContent1"/>.
+    /// </summary>
     public ManagementPlanContent1Validator()
     {
         RuleFor(x => x.Action)

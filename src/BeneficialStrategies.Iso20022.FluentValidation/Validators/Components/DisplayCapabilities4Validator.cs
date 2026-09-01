@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DisplayCapabilities4Validator : AbstractValidator<DisplayCapabilities4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DisplayCapabilities4"/>.
+    /// </summary>
     public DisplayCapabilities4Validator()
     {
         RuleFor(x => x.Destination)

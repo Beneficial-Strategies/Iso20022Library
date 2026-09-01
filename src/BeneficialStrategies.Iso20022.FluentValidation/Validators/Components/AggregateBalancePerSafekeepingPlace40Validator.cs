@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AggregateBalancePerSafekeepingPlace40Validator : AbstractValidator<AggregateBalancePerSafekeepingPlace40>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AggregateBalancePerSafekeepingPlace40"/>.
+    /// </summary>
     public AggregateBalancePerSafekeepingPlace40Validator()
     {
         RuleFor(x => x.PriceDetails)

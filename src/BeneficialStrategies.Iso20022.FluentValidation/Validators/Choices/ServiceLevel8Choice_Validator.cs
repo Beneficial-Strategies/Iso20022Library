@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the service level of the transaction.
 /// <list type="table">
-///   <item><term><see cref="ServiceLevel8Choice.Code"/></term><description>Specifies a pre-agreed service or level of service between the parties, as published in an external service level code list — Value: ExternalServiceLevel1Code</description></item>
-///   <item><term><see cref="ServiceLevel8Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.ServiceLevel8Choice.Code"/></term><description>Specifies a pre-agreed service or level of service between the parties, as published in an external service level code list — Value: ExternalServiceLevel1Code</description></item>
+///   <item><term><see cref="Choices.ServiceLevel8Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class AccountStatement8Validator : AbstractValidator<AccountStatement8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountStatement8"/>.
+    /// </summary>
     public AccountStatement8Validator()
     {
         // Identification (Max35Text): required (1..1) and already `required` C# property — no

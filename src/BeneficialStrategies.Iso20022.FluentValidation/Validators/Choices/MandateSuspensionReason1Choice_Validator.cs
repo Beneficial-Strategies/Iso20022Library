@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the reason for the suspension request of a mandate.
 /// <list type="table">
-///   <item><term><see cref="MandateSuspensionReason1Choice.Code"/></term><description>Value: ExternalMandateSuspensionReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="MandateSuspensionReason1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.Code"/></term><description>Value: ExternalMandateSuspensionReason1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateSuspensionReason1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

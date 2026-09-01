@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CreditTransferTransaction38Validator : AbstractValidator<CreditTransferTransaction38>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CreditTransferTransaction38"/>.
+    /// </summary>
     public CreditTransferTransaction38Validator()
     {
         RuleFor(x => x.DirectDebitTransactionInformation)

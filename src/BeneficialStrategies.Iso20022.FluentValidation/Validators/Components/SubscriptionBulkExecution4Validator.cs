@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class SubscriptionBulkExecution4Validator : AbstractValidator<SubscriptionBulkExecution4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SubscriptionBulkExecution4"/>.
+    /// </summary>
     public SubscriptionBulkExecution4Validator()
     {
         RuleFor(x => x.IndividualExecutionDetails)

@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ChargesRecord5Validator : AbstractValidator<ChargesRecord5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ChargesRecord5"/>.
+    /// </summary>
     public ChargesRecord5Validator()
     {
         // Amount (ActiveCurrencyAndAmount): required (1..1) and already `required` C# property —

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ContractRegistration5Validator : AbstractValidator<ContractRegistration5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ContractRegistration5"/>.
+    /// </summary>
     public ContractRegistration5Validator()
     {
         RuleFor(x => x.ContractRegistrationOpening)

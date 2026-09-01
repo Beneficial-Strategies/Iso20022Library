@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class Baseline5Validator : AbstractValidator<Baseline5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Baseline5"/>.
+    /// </summary>
     public Baseline5Validator()
     {
         RuleFor(x => x.PaymentTerms)

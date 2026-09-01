@@ -15,6 +15,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ControlData1Validator : AbstractValidator<ControlData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ControlData1"/>.
+    /// </summary>
     public ControlData1Validator()
     {
         RuleFor(x => x.NumberOfTransactions)

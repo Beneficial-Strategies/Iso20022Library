@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class TradeLegStatement3Validator : AbstractValidator<TradeLegStatement3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeLegStatement3"/>.
+    /// </summary>
     public TradeLegStatement3Validator()
     {
         RuleFor(x => x.TradeLegsDetails)

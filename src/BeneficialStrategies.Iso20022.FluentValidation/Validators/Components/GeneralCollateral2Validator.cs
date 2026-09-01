@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class GeneralCollateral2Validator : AbstractValidator<GeneralCollateral2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="GeneralCollateral2"/>.
+    /// </summary>
     public GeneralCollateral2Validator()
     {
         RuleFor(x => x.EligibleFinancialInstrumentIdentification)

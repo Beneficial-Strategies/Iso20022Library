@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CounterpartyData88Validator : AbstractValidator<CounterpartyData88>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CounterpartyData88"/>.
+    /// </summary>
     public CounterpartyData88Validator()
     {
         RuleFor(x => x.Counterparty)

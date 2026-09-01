@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Payloads;
 /// The closed generic <see cref="MethodInfo"/>s this requires (one per message type, for whichever
 /// serializer's <c>TryDeserialize&lt;T&gt;</c> was needed) are cached after first use, so repeat
 /// dispatch to an already-seen message type costs one dictionary lookup plus one
-/// <see cref="MethodInfo.Invoke(object?, object?[]?)"/> call, not a fresh
+/// <c>MethodInfo.Invoke</c> call, not a fresh
 /// <see cref="MethodInfo.MakeGenericMethod"/> per call.
 /// </remarks>
 internal sealed class Iso20022PayloadValidationDispatcher : IIso20022PayloadValidationDispatcher

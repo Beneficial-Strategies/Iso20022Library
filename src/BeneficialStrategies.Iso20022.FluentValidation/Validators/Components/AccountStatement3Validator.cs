@@ -23,6 +23,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class AccountStatement3Validator : AbstractValidator<AccountStatement3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountStatement3"/>.
+    /// </summary>
     public AccountStatement3Validator()
     {
         // Identification, CreationDateTime: required scalars — already `required`; Max35Text

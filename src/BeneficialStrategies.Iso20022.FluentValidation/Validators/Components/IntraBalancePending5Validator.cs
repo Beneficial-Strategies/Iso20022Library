@@ -22,6 +22,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IntraBalancePending5Validator : AbstractValidator<IntraBalancePending5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IntraBalancePending5"/>.
+    /// </summary>
     public IntraBalancePending5Validator()
     {
         // ── Cross-field constraints ───────────────────────────────────────────────

@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the mandate that is being accepted.
 /// <list type="table">
-///   <item><term><see cref="OriginalMandate11Choice.OriginalMandateIdentification"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="OriginalMandate11Choice.OriginalMandate"/></term><description>Value: Mandate22</description></item>
+///   <item><term><see cref="Choices.OriginalMandate11Choice.OriginalMandateIdentification"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.OriginalMandate11Choice.OriginalMandate"/></term><description>Value: Mandate22</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -35,7 +35,7 @@ public class OriginalMandate11Choice_Validator : AbstractValidator<OriginalManda
     /// — instead of this type constructing its own.
     /// </summary>
     /// <param name="originalMandateValueValidator">
-    /// Validator for <see cref="OriginalMandate11Choice.OriginalMandate"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.OriginalMandate11Choice.OriginalMandate"/>'s <c>Value</c>
     /// (Mandate22).
     /// </param>
     public OriginalMandate11Choice_Validator(IValidator<Mandate22> originalMandateValueValidator)

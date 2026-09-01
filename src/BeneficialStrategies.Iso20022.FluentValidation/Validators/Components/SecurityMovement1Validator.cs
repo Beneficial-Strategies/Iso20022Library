@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class SecurityMovement1Validator : AbstractValidator<SecurityMovement1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SecurityMovement1"/>.
+    /// </summary>
     public SecurityMovement1Validator()
     {
         RuleFor(x => x.AccountDetails)

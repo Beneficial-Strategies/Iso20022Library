@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class VariationMargin3Validator : AbstractValidator<VariationMargin3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="VariationMargin3"/>.
+    /// </summary>
     public VariationMargin3Validator()
     {
         RuleFor(x => x.TotalVariationMargin)

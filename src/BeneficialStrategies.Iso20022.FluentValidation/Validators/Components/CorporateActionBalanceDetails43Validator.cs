@@ -26,6 +26,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class CorporateActionBalanceDetails43Validator
     : AbstractValidator<CorporateActionBalanceDetails43>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CorporateActionBalanceDetails43"/>.
+    /// </summary>
     public CorporateActionBalanceDetails43Validator()
     {
         // AffectedAndUnaffectedBalanceRule: business-context only — cannot be enforced

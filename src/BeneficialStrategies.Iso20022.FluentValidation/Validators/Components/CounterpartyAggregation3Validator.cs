@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CounterpartyAggregation3Validator : AbstractValidator<CounterpartyAggregation3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CounterpartyAggregation3"/>.
+    /// </summary>
     public CounterpartyAggregation3Validator()
     {
         RuleFor(x => x.ValuationAmounts)

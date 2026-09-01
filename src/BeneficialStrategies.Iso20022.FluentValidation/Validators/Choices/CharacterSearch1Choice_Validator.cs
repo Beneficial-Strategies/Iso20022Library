@@ -11,10 +11,10 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Set of characters to be matched to be considered as valid.
 /// <list type="table">
-///   <item><term><see cref="CharacterSearch1Choice.Equal"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="CharacterSearch1Choice.NotEqual"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="CharacterSearch1Choice.Contain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="CharacterSearch1Choice.NotContain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.Equal"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.NotEqual"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.Contain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CharacterSearch1Choice.NotContain"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// All four variants are fully enforced at the struct level already — there is no additional

@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Sets of elements to identify a name of the organisation identification scheme.
 /// <list type="table">
-///   <item><term><see cref="FinancialIdentificationSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalFinancialInstitutionIdentification1Code</description></item>
-///   <item><term><see cref="FinancialIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.FinancialIdentificationSchemeName1Choice.Code"/></term><description>Name of the identification scheme, in a coded form as published in an external list — Value: ExternalFinancialInstitutionIdentification1Code</description></item>
+///   <item><term><see cref="Choices.FinancialIdentificationSchemeName1Choice.Proprietary"/></term><description>Name of the identification scheme, in a free text form — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -32,7 +32,7 @@ public class FinancialIdentificationSchemeName1Choice_Validator
     /// of this type constructing its own.
     /// </summary>
     /// <param name="codeValueValidator">
-    /// Validator for <see cref="FinancialIdentificationSchemeName1Choice.Code"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.FinancialIdentificationSchemeName1Choice.Code"/>'s <c>Value</c>
     /// (ExternalFinancialInstitutionIdentification1Code).
     /// </param>
     public FinancialIdentificationSchemeName1Choice_Validator(

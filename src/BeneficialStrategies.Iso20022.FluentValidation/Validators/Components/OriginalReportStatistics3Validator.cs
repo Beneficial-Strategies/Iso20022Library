@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OriginalReportStatistics3Validator : AbstractValidator<OriginalReportStatistics3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OriginalReportStatistics3"/>.
+    /// </summary>
     public OriginalReportStatistics3Validator()
     {
         RuleFor(x => x.NumberOfRecordsPerStatus)

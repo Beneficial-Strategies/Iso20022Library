@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
 public class PortfolioBalance1Validator : AbstractValidator<PortfolioBalance1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PortfolioBalance1"/>.
+    /// </summary>
     public PortfolioBalance1Validator()
     {
         RuleFor(x => x.DetailedBalance)

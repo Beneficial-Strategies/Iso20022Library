@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>CreditorAgent</term><description>BranchAndFinancialInstitutionIdentification8 — optional (0..1)</description></item>
 ///   <item><term>DebtorAgent</term><description>BranchAndFinancialInstitutionIdentification8 — optional (0..1)</description></item>
 ///   <item><term>ForwardingAgent</term><description>BranchAndFinancialInstitutionIdentification8 — optional (0..1)</description></item>
-///   <item><term>GroupReversal</term><description>TrueFalseIndicator — optional (0..1), fully struct-enforced; drives the message-level cross-field rules on <see cref="CustomerPaymentReversalV13Validator"/></description></item>
+///   <item><term>GroupReversal</term><description>TrueFalseIndicator — optional (0..1), fully struct-enforced; drives the message-level cross-field rules on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/></description></item>
 ///   <item><term>InitiatingParty</term><description>PartyIdentification272 — optional (0..1)</description></item>
 ///   <item><term>MessageIdentification</term><description>Max35Text — required (1..1), fully struct-enforced</description></item>
 ///   <item><term>NumberOfTransactions</term><description>Max15NumericText — required (1..1), fully struct-enforced</description></item>
@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// rules referencing <c>GroupHeader/GroupReversal</c> (<c>GroupReversalAndPaymentInformationNotPresentRule</c>,
 /// <c>GroupReversalAndReasonRule</c>, <c>GroupReversalAndNumberOfTransactionsGuideline</c>,
 /// <c>GroupReversalAndPaymentInformationPresentRule</c>) span multiple top-level message building
-/// blocks and are enforced on <see cref="CustomerPaymentReversalV13Validator"/> instead, where
+/// blocks and are enforced on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/> instead, where
 /// both sides of each rule are visible.
 ///
 /// Note: MCP's <c>maxOccurs</c> facet for <c>Authorisation</c> is 2 (not unbounded) — not

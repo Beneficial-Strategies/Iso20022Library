@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between an amount or a rate.
 /// <list type="table">
-///   <item><term><see cref="AmountOrRate1Choice.Amount"/></term><description>Currency/Value: raw <c>string</c>/<c>decimal</c> (ActiveCurrencyAndAmount-shaped for the XML Ccy-attribute pattern — outside the <c>IIsoSimpleValue&lt;T&gt;</c>/Amounts-namespace coverage tracked by this project, same as every other amount-choice variant built so far)</description></item>
-///   <item><term><see cref="AmountOrRate1Choice.Rate"/></term><description>Value: PercentageRate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AmountOrRate1Choice.Amount"/></term><description>Currency/Value: raw <c>string</c>/<c>decimal</c> (ActiveCurrencyAndAmount-shaped for the XML Ccy-attribute pattern — outside the <c>IIsoSimpleValue&lt;T&gt;</c>/Amounts-namespace coverage tracked by this project, same as every other amount-choice variant built so far)</description></item>
+///   <item><term><see cref="Choices.AmountOrRate1Choice.Rate"/></term><description>Value: PercentageRate (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// No additional cross-field or business rule to add at the FluentValidation layer, so this

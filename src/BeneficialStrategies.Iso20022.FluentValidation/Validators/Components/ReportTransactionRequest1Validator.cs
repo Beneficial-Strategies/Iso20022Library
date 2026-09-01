@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ReportTransactionRequest1Validator : AbstractValidator<ReportTransactionRequest1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ReportTransactionRequest1"/>.
+    /// </summary>
     public ReportTransactionRequest1Validator()
     {
         RuleFor(x => x.SearchCriteria)

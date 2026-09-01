@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OpeningConditions1Validator : AbstractValidator<OpeningConditions1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OpeningConditions1"/>.
+    /// </summary>
     public OpeningConditions1Validator()
     {
         RuleFor(x => x.SettlementRateSource)

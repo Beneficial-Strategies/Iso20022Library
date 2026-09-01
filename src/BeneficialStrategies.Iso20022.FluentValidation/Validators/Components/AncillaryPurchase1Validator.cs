@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AncillaryPurchase1Validator : AbstractValidator<AncillaryPurchase1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AncillaryPurchase1"/>.
+    /// </summary>
     public AncillaryPurchase1Validator()
     {
         RuleFor(x => x.Tax)

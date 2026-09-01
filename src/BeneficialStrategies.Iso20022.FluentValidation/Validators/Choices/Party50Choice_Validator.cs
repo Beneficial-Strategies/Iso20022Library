@@ -15,8 +15,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// instance (enforced by the C# model — <see cref="Party50Choice_"/> is an abstract record and
 /// each variant is a distinct derived record with its own single <c>Value</c> property).
 /// <list type="table">
-///   <item><term><see cref="Party50Choice.Party"/></term><description>Identification of a person or an organisation — Value: PartyIdentification272</description></item>
-///   <item><term><see cref="Party50Choice.Agent"/></term><description>Identification of a financial institution — Value: BranchAndFinancialInstitutionIdentification8</description></item>
+///   <item><term><see cref="Choices.Party50Choice.Party"/></term><description>Identification of a person or an organisation — Value: PartyIdentification272</description></item>
+///   <item><term><see cref="Choices.Party50Choice.Agent"/></term><description>Identification of a financial institution — Value: BranchAndFinancialInstitutionIdentification8</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -34,10 +34,10 @@ public class Party50Choice_Validator : AbstractValidator<Party50Choice_>
     /// this type constructing its own.
     /// </summary>
     /// <param name="agentValueValidator">
-    /// Validator for <see cref="Party50Choice.Agent"/>'s <c>Value</c> (BranchAndFinancialInstitutionIdentification8).
+    /// Validator for <see cref="Choices.Party50Choice.Agent"/>'s <c>Value</c> (BranchAndFinancialInstitutionIdentification8).
     /// </param>
     /// <param name="partyValueValidator">
-    /// Validator for <see cref="Party50Choice.Party"/>'s <c>Value</c> (PartyIdentification272).
+    /// Validator for <see cref="Choices.Party50Choice.Party"/>'s <c>Value</c> (PartyIdentification272).
     /// </param>
     public Party50Choice_Validator(
         IValidator<BranchAndFinancialInstitutionIdentification8> agentValueValidator,

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ClassificationType4Validator : AbstractValidator<ClassificationType4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ClassificationType4"/>.
+    /// </summary>
     public ClassificationType4Validator()
     {
         RuleFor(x => x.LegalFramework)

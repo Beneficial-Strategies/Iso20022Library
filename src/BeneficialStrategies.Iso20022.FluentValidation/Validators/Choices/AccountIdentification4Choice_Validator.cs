@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the unique identification of an account as assigned by the account servicer.
 /// <list type="table">
-///   <item><term><see cref="AccountIdentification4Choice.IBAN"/></term><description>International Bank Account Number — Value: IBAN2007Identifier (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="AccountIdentification4Choice.Other"/></term><description>Unique identification of an account, as assigned by the account servicer, using an identification scheme — Identification: Max34Text (required), SchemeName: AccountSchemeName1Choice_ (optional), Issuer: Max35Text (optional)</description></item>
+///   <item><term><see cref="Choices.AccountIdentification4Choice.IBAN"/></term><description>International Bank Account Number — Value: IBAN2007Identifier (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.AccountIdentification4Choice.Other"/></term><description>Unique identification of an account, as assigned by the account servicer, using an identification scheme — Identification: Max34Text (required), SchemeName: AccountSchemeName1Choice_ (optional), Issuer: Max35Text (optional)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -29,7 +29,7 @@ public class AccountIdentification4Choice_Validator : AbstractValidator<AccountI
     /// instead of this type constructing its own.
     /// </summary>
     /// <param name="otherSchemeNameValidator">
-    /// Validator for <see cref="AccountIdentification4Choice.Other"/>'s optional <c>SchemeName</c>
+    /// Validator for <see cref="Choices.AccountIdentification4Choice.Other"/>'s optional <c>SchemeName</c>
     /// (AccountSchemeName1Choice_, 0..1) — only invoked when present.
     /// </param>
     public AccountIdentification4Choice_Validator(

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PartyAuditTrail1Validator : AbstractValidator<PartyAuditTrail1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PartyAuditTrail1"/>.
+    /// </summary>
     public PartyAuditTrail1Validator()
     {
         RuleFor(x => x.Record)

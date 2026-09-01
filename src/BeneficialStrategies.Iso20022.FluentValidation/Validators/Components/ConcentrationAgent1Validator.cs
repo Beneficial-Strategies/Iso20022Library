@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ConcentrationAgent1Validator : AbstractValidator<ConcentrationAgent1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ConcentrationAgent1"/>.
+    /// </summary>
     public ConcentrationAgent1Validator()
     {
         RuleFor(x => x.Account)

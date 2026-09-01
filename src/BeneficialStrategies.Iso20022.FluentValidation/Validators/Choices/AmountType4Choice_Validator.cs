@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Specifies the amount of money to be moved between the debtor and creditor, before deduction of
 /// charges, expressed in the currency as ordered by the initiating party.
 /// <list type="table">
-///   <item><term><see cref="AmountType4Choice.InstructedAmount"/></term><description>Currency/Amount: raw <c>string</c>/<c>decimal</c> (ActiveOrHistoricCurrencyAndAmount-shaped for the XML Ccy-attribute pattern — outside the <c>IIsoSimpleValue&lt;T&gt;</c>/Amounts-namespace coverage tracked by this project)</description></item>
-///   <item><term><see cref="AmountType4Choice.EquivalentAmount"/></term><description>Amount: ActiveOrHistoricCurrencyAndAmount (same Amounts-namespace exemption, required 1..1); CurrencyOfTransfer: ActiveOrHistoricCurrencyCode (required 1..1) — checked against an injected <see cref="IExternalCodeRegistry{TCode}"/> via <see cref="ActiveOrHistoricCurrencyCodeValidator"/>)</description></item>
+///   <item><term><see cref="Choices.AmountType4Choice.InstructedAmount"/></term><description>Currency/Amount: raw <c>string</c>/<c>decimal</c> (ActiveOrHistoricCurrencyAndAmount-shaped for the XML Ccy-attribute pattern — outside the <c>IIsoSimpleValue&lt;T&gt;</c>/Amounts-namespace coverage tracked by this project)</description></item>
+///   <item><term><see cref="Choices.AmountType4Choice.EquivalentAmount"/></term><description>Amount: ActiveOrHistoricCurrencyAndAmount (same Amounts-namespace exemption, required 1..1); CurrencyOfTransfer: ActiveOrHistoricCurrencyCode (required 1..1) — checked against an injected <see cref="IExternalCodeRegistry{TCode}"/> via <see cref="ActiveOrHistoricCurrencyCodeValidator"/>)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,7 +31,7 @@ public class AmountType4Choice_Validator : AbstractValidator<AmountType4Choice_>
     /// DI container — instead of this type constructing its own.
     /// </summary>
     /// <param name="equivalentAmountCurrencyOfTransferValidator">
-    /// Validator for <see cref="AmountType4Choice.EquivalentAmount"/>'s required
+    /// Validator for <see cref="Choices.AmountType4Choice.EquivalentAmount"/>'s required
     /// <c>CurrencyOfTransfer</c> (ActiveOrHistoricCurrencyCode, 1..1).
     /// </param>
     public AmountType4Choice_Validator(

@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class InvestmentPlan11Validator : AbstractValidator<InvestmentPlan11>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="InvestmentPlan11"/>.
+    /// </summary>
     public InvestmentPlan11Validator()
     {
         RuleFor(x => x.SecurityDetails)

@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class PaymentInstruction19Validator : AbstractValidator<PaymentInstruction19>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PaymentInstruction19"/>.
+    /// </summary>
     public PaymentInstruction19Validator()
     {
         RuleFor(x => x.CreditTransferTransaction)

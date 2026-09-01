@@ -22,6 +22,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class DistributionRejectionStatus1Validator
     : AbstractValidator<DistributionRejectionStatus1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DistributionRejectionStatus1"/>.
+    /// </summary>
     public DistributionRejectionStatus1Validator()
     {
         // Reason is 1..∞ but the C# model allows empty (model defect — see XML doc).

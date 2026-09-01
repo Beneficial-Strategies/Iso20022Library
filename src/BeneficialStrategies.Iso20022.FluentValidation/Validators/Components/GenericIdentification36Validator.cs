@@ -16,6 +16,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class GenericIdentification36Validator : AbstractValidator<GenericIdentification36>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="GenericIdentification36"/>.
+    /// </summary>
     public GenericIdentification36Validator()
     {
         // Length [1..35] enforced by Max35Text constructor for all three fields.

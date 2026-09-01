@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ReportLine6Validator : AbstractValidator<ReportLine6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ReportLine6"/>.
+    /// </summary>
     public ReportLine6Validator()
     {
         RuleFor(x => x.BreakdownByPurchaseOrder)

@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-11-10.")]
 public class IndividualPerson22Validator : AbstractValidator<IndividualPerson22>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IndividualPerson22"/>.
+    /// </summary>
     public IndividualPerson22Validator()
     {
         RuleFor(x => x.Citizenship)

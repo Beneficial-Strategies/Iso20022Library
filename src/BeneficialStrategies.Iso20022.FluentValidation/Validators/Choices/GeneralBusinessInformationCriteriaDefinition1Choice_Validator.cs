@@ -13,8 +13,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Defines the information that is searched either implicitly by recalling a previous query or
 /// explicitly by defining the criteria.
 /// <list type="table">
-///   <item><term><see cref="GeneralBusinessInformationCriteriaDefinition1Choice.QueryName"/></term><description>Recalls the criteria defined in a preceding query — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/></term><description>Defines the criteria based on which the information is extracted — NewQueryName (Max35Text, optional), SearchCriteria (GeneralBusinessInformationSearchCriteria1, optional), ReturnCriteria (GeneralBusinessInformationReturnCriteria1, optional)</description></item>
+///   <item><term><see cref="Choices.GeneralBusinessInformationCriteriaDefinition1Choice.QueryName"/></term><description>Recalls the criteria defined in a preceding query — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/></term><description>Defines the criteria based on which the information is extracted — NewQueryName (Max35Text, optional), SearchCriteria (GeneralBusinessInformationSearchCriteria1, optional), ReturnCriteria (GeneralBusinessInformationReturnCriteria1, optional)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -39,11 +39,11 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_Validator
     /// its own.
     /// </summary>
     /// <param name="searchCriteriaValidator">
-    /// Validator for <see cref="GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/>'s
+    /// Validator for <see cref="Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/>'s
     /// optional <c>SearchCriteria</c> building block (GeneralBusinessInformationSearchCriteria1, 0..1).
     /// </param>
     /// <param name="returnCriteriaValidator">
-    /// Validator for <see cref="GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/>'s
+    /// Validator for <see cref="Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria"/>'s
     /// optional <c>ReturnCriteria</c> building block (GeneralBusinessInformationReturnCriteria1, 0..1).
     /// </param>
     public GeneralBusinessInformationCriteriaDefinition1Choice_Validator(

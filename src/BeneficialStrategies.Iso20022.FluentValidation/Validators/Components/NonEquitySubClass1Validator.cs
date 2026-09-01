@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NonEquitySubClass1Validator : AbstractValidator<NonEquitySubClass1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NonEquitySubClass1"/>.
+    /// </summary>
     public NonEquitySubClass1Validator()
     {
         RuleFor(x => x.SegmentationCriteria)

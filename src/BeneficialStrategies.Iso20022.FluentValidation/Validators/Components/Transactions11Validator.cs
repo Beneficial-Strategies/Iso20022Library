@@ -37,6 +37,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Transactions11Validator : AbstractValidator<Transactions11>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Transactions11"/>.
+    /// </summary>
     public Transactions11Validator()
     {
         // ── Cross-field constraints (enforceable subset — see class remarks) ──────

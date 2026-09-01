@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class UnitPrice6Validator : AbstractValidator<UnitPrice6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="UnitPrice6"/>.
+    /// </summary>
     public UnitPrice6Validator()
     {
         RuleFor(x => x.ValueInInvestmentCurrency)

@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the type of the document line identification.
 /// <list type="table">
-///   <item><term><see cref="DocumentLineType1Choice.Code"/></term><description>Value: ExternalDocumentLineType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="DocumentLineType1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DocumentLineType1Choice.Code"/></term><description>Value: ExternalDocumentLineType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DocumentLineType1Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

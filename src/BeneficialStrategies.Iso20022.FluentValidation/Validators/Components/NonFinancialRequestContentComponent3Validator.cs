@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NonFinancialRequestContentComponent3Validator : AbstractValidator<NonFinancialRequestContentComponent3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NonFinancialRequestContentComponent3"/>.
+    /// </summary>
     public NonFinancialRequestContentComponent3Validator()
     {
         RuleFor(x => x.NonFinancialRequestType)

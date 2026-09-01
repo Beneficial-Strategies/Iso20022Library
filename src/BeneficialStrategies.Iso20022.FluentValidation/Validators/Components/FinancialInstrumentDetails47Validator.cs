@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class FinancialInstrumentDetails47Validator : AbstractValidator<FinancialInstrumentDetails47>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FinancialInstrumentDetails47"/>.
+    /// </summary>
     public FinancialInstrumentDetails47Validator()
     {
         RuleFor(x => x.SubBalance)

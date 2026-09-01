@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ChargesPerTransactionRecord4Validator : AbstractValidator<ChargesPerTransactionRecord4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ChargesPerTransactionRecord4"/>.
+    /// </summary>
     public ChargesPerTransactionRecord4Validator()
     {
         // UnderlyingTransaction (TransactionReferences7): required (1..1) and already `required`

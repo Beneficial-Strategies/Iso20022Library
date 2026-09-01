@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IntraPositionDetails45Validator : AbstractValidator<IntraPositionDetails45>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IntraPositionDetails45"/>.
+    /// </summary>
     public IntraPositionDetails45Validator()
     {
         RuleFor(x => x.IntraPositionMovement)

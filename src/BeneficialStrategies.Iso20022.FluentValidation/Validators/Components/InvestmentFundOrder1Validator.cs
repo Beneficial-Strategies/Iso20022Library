@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class InvestmentFundOrder1Validator : AbstractValidator<InvestmentFundOrder1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="InvestmentFundOrder1"/>.
+    /// </summary>
     public InvestmentFundOrder1Validator()
     {
         RuleFor(x => x.OrderReferences)

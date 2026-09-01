@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CardTransactionDetail5Validator : AbstractValidator<CardTransactionDetail5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CardTransactionDetail5"/>.
+    /// </summary>
     public CardTransactionDetail5Validator()
     {
         RuleFor(x => x.MessageReason)

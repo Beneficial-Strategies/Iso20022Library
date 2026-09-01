@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LoginRequest7Validator : AbstractValidator<LoginRequest7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LoginRequest7"/>.
+    /// </summary>
     public LoginRequest7Validator()
     {
         RuleFor(x => x.SaleSoftware)

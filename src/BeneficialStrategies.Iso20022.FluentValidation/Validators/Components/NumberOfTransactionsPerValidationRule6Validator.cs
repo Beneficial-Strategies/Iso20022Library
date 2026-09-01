@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NumberOfTransactionsPerValidationRule6Validator : AbstractValidator<NumberOfTransactionsPerValidationRule6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NumberOfTransactionsPerValidationRule6"/>.
+    /// </summary>
     public NumberOfTransactionsPerValidationRule6Validator()
     {
         RuleFor(x => x.ReportStatus)

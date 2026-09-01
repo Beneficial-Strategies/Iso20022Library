@@ -29,13 +29,16 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   </item>
 /// </list>
 ///
-/// <see cref="SupplementaryDataEnvelope1"/> is an empty stub record (no properties) — it exists in
+/// <see cref="BeneficialStrategies.Iso20022.ExternalSchema.SupplementaryDataEnvelope1"/> is an empty stub record (no properties) — it exists in
 /// the C# model only as a placeholder for the ISO-compliant structure the Envelope element
 /// ultimately carries, per the SupplementaryDataRule above. There is nothing to validate on it
 /// today; <c>required</c> already enforces its presence.
 /// </remarks>
 public class SupplementaryData1Validator : AbstractValidator<SupplementaryData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SupplementaryData1"/>.
+    /// </summary>
     public SupplementaryData1Validator()
     {
         // PlaceAndName: Max350Text, optional — length [1..350] enforced by struct constructor.

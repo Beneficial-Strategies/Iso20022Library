@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NewOrderReport2Validator : AbstractValidator<NewOrderReport2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NewOrderReport2"/>.
+    /// </summary>
     public NewOrderReport2Validator()
     {
         RuleFor(x => x.Order)

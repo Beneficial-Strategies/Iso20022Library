@@ -31,6 +31,9 @@ public class AmountAndDirection5Validator : AbstractValidator<AmountAndDirection
     private static readonly Regex CurrencyRegex =
         new(@"^[A-Z]{3}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AmountAndDirection5"/>.
+    /// </summary>
     public AmountAndDirection5Validator()
     {
         // ── Amount (ActiveCurrencyAndAmount, required 1..1) ──────────────────────────

@@ -35,6 +35,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IntraBalanceMovements4Validator : AbstractValidator<IntraBalanceMovements4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IntraBalanceMovements4"/>.
+    /// </summary>
     public IntraBalanceMovements4Validator()
     {
         // ── Cross-field constraints ───────────────────────────────────────────────

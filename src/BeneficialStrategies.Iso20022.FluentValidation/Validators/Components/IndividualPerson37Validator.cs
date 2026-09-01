@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IndividualPerson37Validator : AbstractValidator<IndividualPerson37>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IndividualPerson37"/>.
+    /// </summary>
     public IndividualPerson37Validator()
     {
         RuleFor(x => x.PostalAddress)

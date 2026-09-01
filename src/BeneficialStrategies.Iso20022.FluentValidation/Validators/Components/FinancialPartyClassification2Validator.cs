@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class FinancialPartyClassification2Validator : AbstractValidator<FinancialPartyClassification2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FinancialPartyClassification2"/>.
+    /// </summary>
     public FinancialPartyClassification2Validator()
     {
         RuleFor(x => x.Classification)

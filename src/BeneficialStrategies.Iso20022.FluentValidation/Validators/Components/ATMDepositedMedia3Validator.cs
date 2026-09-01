@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ATMDepositedMedia3Validator : AbstractValidator<ATMDepositedMedia3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ATMDepositedMedia3"/>.
+    /// </summary>
     public ATMDepositedMedia3Validator()
     {
         RuleFor(x => x.MediaItems)

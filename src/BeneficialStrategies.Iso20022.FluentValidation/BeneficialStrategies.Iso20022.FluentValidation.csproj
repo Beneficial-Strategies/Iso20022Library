@@ -8,41 +8,22 @@
     <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
     <AssemblyName>BeneficialStrategies.Iso20022.FluentValidation</AssemblyName>
     <!--
-      Enabled deliberately, even though none of the ~1,004 validator constructors carry XML doc
-      comments today: the validator CLASSES themselves already carry rich <summary>/<remarks>
-      content (which spec constraints each one enforces — see CLAUDE.md's "Adding a New
-      Validator" section) that was previously compiled into nothing, since no .xml doc file was
-      ever generated. Consumers got zero IntelliSense benefit from that content despite it already
-      existing in source. CS1591 (missing doc comment) is suppressed below rather than blocking on
-      it, matching BeneficialStrategies.Iso20022.Common's own CS0618/CS0612 precedent — the
-      per-constructor doc gap is a real, tracked follow-up (matches CLAUDE.md's non-negotiable doc
-      standard for the main library), not something to silently drop or to let block shipping the
-      documentation that already exists.
+      Enabled 2026-08-31: the validator CLASSES already carry rich <summary>/<remarks> content
+      (which spec constraints each one enforces — see CLAUDE.md's "Adding a New Validator"
+      section) that was previously compiled into nothing, since no .xml doc file was ever
+      generated. Consumers got zero IntelliSense benefit from that content despite it already
+      existing in source. Turning this on surfaced two real, now-closed backlogs: 988 validator
+      constructors with no doc comment at all (CS1591 — mechanically fixed via a templated
+      <summary> insertion, since every one was a bare parameterless constructor with nothing
+      unique to say) and 171 XML doc <see cref> references that didn't resolve (CS1574 — fixed by
+      restoring a missing `Choices.` namespace prefix on Choice-variant references, and adding the
+      correct namespace to cross-references between validator classes). Both are ordinary,
+      always-on warnings now — deliberately NOT suppressed going forward, so a future validator
+      added without a doc comment (or with a broken cref) fails the build immediately instead of
+      the gap silently regrowing.
     -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
-  </PropertyGroup>
-
-  <!--
-    CS1591: missing XML doc comment on a publicly visible member. Suppressed in normal builds
-    because none of the ~1,004 validator constructors carry their own doc comment yet (their
-    containing classes do). Run with -p:EnableMissingDocWarnings=true to see the real count and
-    work through it — same convention as Common's -p:EnableObsoleteWarnings.
-  -->
-  <PropertyGroup Condition="'$(EnableMissingDocWarnings)' != 'true'">
-    <NoWarn>$(NoWarn);CS1591</NoWarn>
-  </PropertyGroup>
-
-  <!--
-    CS1574: XML comment <see cref="..."/>/<seealso cref="..."/> references a type/member name
-    that doesn't resolve — 173 instances found the moment doc-file generation first turned this
-    check on (2026-08-31), mostly unqualified Choice-variant names (e.g. cref="Code" instead of
-    the fully-qualified sub-namespace form) and cross-references between component/message
-    validators. Suppressed for now as a separate, independently-auditable debt category from
-    CS1591 above — run with -p:EnableBrokenCrefWarnings=true to see the current count.
-  -->
-  <PropertyGroup Condition="'$(EnableBrokenCrefWarnings)' != 'true'">
-    <NoWarn>$(NoWarn);CS1574</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>

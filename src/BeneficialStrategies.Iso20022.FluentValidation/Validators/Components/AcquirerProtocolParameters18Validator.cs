@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AcquirerProtocolParameters18Validator : AbstractValidator<AcquirerProtocolParameters18>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AcquirerProtocolParameters18"/>.
+    /// </summary>
     public AcquirerProtocolParameters18Validator()
     {
         RuleFor(x => x.AcquirerIdentification)

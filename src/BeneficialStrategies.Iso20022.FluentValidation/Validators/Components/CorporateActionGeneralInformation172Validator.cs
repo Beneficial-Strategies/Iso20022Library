@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CorporateActionGeneralInformation172Validator : AbstractValidator<CorporateActionGeneralInformation172>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CorporateActionGeneralInformation172"/>.
+    /// </summary>
     public CorporateActionGeneralInformation172Validator()
     {
         RuleFor(x => x.UnderlyingSecurity)

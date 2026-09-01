@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ExposureTypeAggregation3Validator : AbstractValidator<ExposureTypeAggregation3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ExposureTypeAggregation3"/>.
+    /// </summary>
     public ExposureTypeAggregation3Validator()
     {
         RuleFor(x => x.ValuationAmounts)

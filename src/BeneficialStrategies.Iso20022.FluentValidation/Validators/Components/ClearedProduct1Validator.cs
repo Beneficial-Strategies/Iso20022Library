@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ClearedProduct1Validator : AbstractValidator<ClearedProduct1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ClearedProduct1"/>.
+    /// </summary>
     public ClearedProduct1Validator()
     {
         RuleFor(x => x.TradingVenue)

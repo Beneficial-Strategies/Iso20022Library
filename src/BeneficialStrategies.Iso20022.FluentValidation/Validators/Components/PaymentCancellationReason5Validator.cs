@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class PaymentCancellationReason5Validator
     : AbstractValidator<PaymentCancellationReason5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PaymentCancellationReason5"/>.
+    /// </summary>
     public PaymentCancellationReason5Validator()
     {
         // AdditionalInformation: Max105Text (0..∞) — length [1..105] enforced by Max105Text constructor.

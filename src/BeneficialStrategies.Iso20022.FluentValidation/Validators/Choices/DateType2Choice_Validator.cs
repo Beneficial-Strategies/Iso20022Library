@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of formats for the type of a date.
 /// <list type="table">
-///   <item><term><see cref="DateType2Choice.Code"/></term><description>Specifies the type of date, as published in an external date type code list — Value: ExternalDateType1Code</description></item>
-///   <item><term><see cref="DateType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.DateType2Choice.Code"/></term><description>Specifies the type of date, as published in an external date type code list — Value: ExternalDateType1Code</description></item>
+///   <item><term><see cref="Choices.DateType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

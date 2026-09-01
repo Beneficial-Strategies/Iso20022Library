@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class EligibleSecurity5Validator : AbstractValidator<EligibleSecurity5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="EligibleSecurity5"/>.
+    /// </summary>
     public EligibleSecurity5Validator()
     {
         RuleFor(x => x.SecurityIdentification)

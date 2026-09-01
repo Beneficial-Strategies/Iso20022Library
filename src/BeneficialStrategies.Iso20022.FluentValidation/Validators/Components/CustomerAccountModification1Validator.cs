@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CustomerAccountModification1Validator : AbstractValidator<CustomerAccountModification1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CustomerAccountModification1"/>.
+    /// </summary>
     public CustomerAccountModification1Validator()
     {
         RuleFor(x => x.Identification)

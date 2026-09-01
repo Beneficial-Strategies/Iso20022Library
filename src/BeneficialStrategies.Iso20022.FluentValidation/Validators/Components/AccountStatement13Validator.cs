@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AccountStatement13Validator : AbstractValidator<AccountStatement13>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountStatement13"/>.
+    /// </summary>
     public AccountStatement13Validator()
     {
         // Identification (Max35Text): required (1..1), already `required` C# property — no

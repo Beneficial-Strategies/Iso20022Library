@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TransferReference3Validator : AbstractValidator<TransferReference3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransferReference3"/>.
+    /// </summary>
     public TransferReference3Validator()
     {
         RuleFor(x => x.TransferReferences)

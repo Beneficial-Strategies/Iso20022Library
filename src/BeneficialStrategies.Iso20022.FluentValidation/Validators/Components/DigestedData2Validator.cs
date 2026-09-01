@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DigestedData2Validator : AbstractValidator<DigestedData2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DigestedData2"/>.
+    /// </summary>
     public DigestedData2Validator()
     {
         RuleFor(x => x.DigestAlgorithm)

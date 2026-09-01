@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DeviceDisplayRequest7Validator : AbstractValidator<DeviceDisplayRequest7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DeviceDisplayRequest7"/>.
+    /// </summary>
     public DeviceDisplayRequest7Validator()
     {
         RuleFor(x => x.DisplayOutput)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SupportingDocument4Validator : AbstractValidator<SupportingDocument4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SupportingDocument4"/>.
+    /// </summary>
     public SupportingDocument4Validator()
     {
         RuleFor(x => x.Entry)

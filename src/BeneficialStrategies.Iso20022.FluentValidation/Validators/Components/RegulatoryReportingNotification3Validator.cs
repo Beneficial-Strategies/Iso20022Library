@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class RegulatoryReportingNotification3Validator : AbstractValidator<RegulatoryReportingNotification3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RegulatoryReportingNotification3"/>.
+    /// </summary>
     public RegulatoryReportingNotification3Validator()
     {
         RuleFor(x => x.TransactionCertificate)

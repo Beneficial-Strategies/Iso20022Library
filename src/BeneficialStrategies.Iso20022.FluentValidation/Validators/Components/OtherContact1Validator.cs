@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OtherContact1Validator : AbstractValidator<OtherContact1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OtherContact1"/>.
+    /// </summary>
     public OtherContact1Validator()
     {
         // ChannelType: Max4Text, required (1..1) and already `required` C# property — length

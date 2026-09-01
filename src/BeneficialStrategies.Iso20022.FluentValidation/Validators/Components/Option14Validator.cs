@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Option14Validator : AbstractValidator<Option14>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Option14"/>.
+    /// </summary>
     public Option14Validator()
     {
         RuleFor(x => x.ExpirationStyle)

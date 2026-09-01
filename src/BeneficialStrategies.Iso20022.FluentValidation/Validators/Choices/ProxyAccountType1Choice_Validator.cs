@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the scheme used for the identification of an account alias.
 /// <list type="table">
-///   <item><term><see cref="ProxyAccountType1Choice.Code"/></term><description>Specifies the proxy account type, as published in an external proxy account type code list — Value: ExternalProxyAccountType1Code</description></item>
-///   <item><term><see cref="ProxyAccountType1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.ProxyAccountType1Choice.Code"/></term><description>Specifies the proxy account type, as published in an external proxy account type code list — Value: ExternalProxyAccountType1Code</description></item>
+///   <item><term><see cref="Choices.ProxyAccountType1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

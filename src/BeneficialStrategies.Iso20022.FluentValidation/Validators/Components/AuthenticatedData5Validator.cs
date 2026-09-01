@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AuthenticatedData5Validator : AbstractValidator<AuthenticatedData5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AuthenticatedData5"/>.
+    /// </summary>
     public AuthenticatedData5Validator()
     {
         RuleFor(x => x.Recipient)

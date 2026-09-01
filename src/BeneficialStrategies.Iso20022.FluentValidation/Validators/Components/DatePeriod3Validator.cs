@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DatePeriod3Validator : AbstractValidator<DatePeriod3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DatePeriod3"/>.
+    /// </summary>
     public DatePeriod3Validator()
     {
         // FromDate: required (1..1) and already `required` C# property — format enforced by

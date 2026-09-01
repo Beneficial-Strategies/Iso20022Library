@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NonFinancialResponseComponent1Validator : AbstractValidator<NonFinancialResponseComponent1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NonFinancialResponseComponent1"/>.
+    /// </summary>
     public NonFinancialResponseComponent1Validator()
     {
         RuleFor(x => x.ResponseContent)

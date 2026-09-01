@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IntraBalancePosting5Validator : AbstractValidator<IntraBalancePosting5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IntraBalancePosting5"/>.
+    /// </summary>
     public IntraBalancePosting5Validator()
     {
         // BalanceFrom (CashSubBalanceTypeAndQuantityBreakdown3): required (1..1) and already

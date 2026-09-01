@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IntraBalanceModification5Validator : AbstractValidator<IntraBalanceModification5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IntraBalanceModification5"/>.
+    /// </summary>
     public IntraBalanceModification5Validator()
     {
         RuleFor(x => x.Modification)

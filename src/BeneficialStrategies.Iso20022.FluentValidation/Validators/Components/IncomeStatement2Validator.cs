@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class IncomeStatement2Validator : AbstractValidator<IncomeStatement2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="IncomeStatement2"/>.
+    /// </summary>
     public IncomeStatement2Validator()
     {
         RuleFor(x => x.ClearingMemberFee)

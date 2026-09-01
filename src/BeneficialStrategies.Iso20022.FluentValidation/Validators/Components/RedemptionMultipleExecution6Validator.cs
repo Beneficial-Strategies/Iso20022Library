@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class RedemptionMultipleExecution6Validator : AbstractValidator<RedemptionMultipleExecution6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RedemptionMultipleExecution6"/>.
+    /// </summary>
     public RedemptionMultipleExecution6Validator()
     {
         RuleFor(x => x.IndividualExecutionDetails)

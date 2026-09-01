@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TransactionCertificate4Validator : AbstractValidator<TransactionCertificate4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransactionCertificate4"/>.
+    /// </summary>
     public TransactionCertificate4Validator()
     {
         RuleFor(x => x.CertificateRecord)

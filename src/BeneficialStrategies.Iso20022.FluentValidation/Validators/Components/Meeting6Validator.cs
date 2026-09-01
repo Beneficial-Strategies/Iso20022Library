@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Meeting6Validator : AbstractValidator<Meeting6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Meeting6"/>.
+    /// </summary>
     public Meeting6Validator()
     {
         RuleFor(x => x.Location)

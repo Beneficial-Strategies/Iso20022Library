@@ -47,6 +47,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class OriginalNotificationReference2Validator : AbstractValidator<OriginalNotificationReference2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OriginalNotificationReference2"/>.
+    /// </summary>
     public OriginalNotificationReference2Validator()
     {
         // ── Cross-field constraints (enforceable subset — see class remarks) ──────

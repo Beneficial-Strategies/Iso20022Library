@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LiquidResources1Validator : AbstractValidator<LiquidResources1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LiquidResources1"/>.
+    /// </summary>
     public LiquidResources1Validator()
     {
         RuleFor(x => x.CashDue)

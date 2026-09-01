@@ -34,6 +34,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AccountNotification18Validator : AbstractValidator<AccountNotification18>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountNotification18"/>.
+    /// </summary>
     public AccountNotification18Validator()
     {
         // ── Cross-field constraints ───────────────────────────────────────────────

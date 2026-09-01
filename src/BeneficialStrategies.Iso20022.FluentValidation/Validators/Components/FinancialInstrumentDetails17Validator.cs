@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
 public class FinancialInstrumentDetails17Validator : AbstractValidator<FinancialInstrumentDetails17>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FinancialInstrumentDetails17"/>.
+    /// </summary>
     public FinancialInstrumentDetails17Validator()
     {
         RuleFor(x => x.Transaction)

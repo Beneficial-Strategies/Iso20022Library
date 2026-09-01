@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Organisation23Validator : AbstractValidator<Organisation23>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Organisation23"/>.
+    /// </summary>
     public Organisation23Validator()
     {
         RuleFor(x => x.PostalAddress)

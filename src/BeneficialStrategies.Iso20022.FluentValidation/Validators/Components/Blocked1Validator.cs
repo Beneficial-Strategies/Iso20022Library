@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Blocked1Validator : AbstractValidator<Blocked1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Blocked1"/>.
+    /// </summary>
     public Blocked1Validator()
     {
         RuleFor(x => x.OrderType)

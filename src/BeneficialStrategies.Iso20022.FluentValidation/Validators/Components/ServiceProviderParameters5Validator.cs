@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ServiceProviderParameters5Validator : AbstractValidator<ServiceProviderParameters5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ServiceProviderParameters5"/>.
+    /// </summary>
     public ServiceProviderParameters5Validator()
     {
         RuleFor(x => x.ServiceProviderIdentification)

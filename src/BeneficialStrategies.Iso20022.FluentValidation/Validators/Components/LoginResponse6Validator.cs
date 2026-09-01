@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LoginResponse6Validator : AbstractValidator<LoginResponse6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LoginResponse6"/>.
+    /// </summary>
     public LoginResponse6Validator()
     {
         RuleFor(x => x.POISoftware)

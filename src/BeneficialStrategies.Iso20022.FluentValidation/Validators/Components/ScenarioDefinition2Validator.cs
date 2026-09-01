@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ScenarioDefinition2Validator : AbstractValidator<ScenarioDefinition2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ScenarioDefinition2"/>.
+    /// </summary>
     public ScenarioDefinition2Validator()
     {
         RuleFor(x => x.StressItem)

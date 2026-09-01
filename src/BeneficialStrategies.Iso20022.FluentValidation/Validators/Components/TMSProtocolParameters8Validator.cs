@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TMSProtocolParameters8Validator : AbstractValidator<TMSProtocolParameters8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TMSProtocolParameters8"/>.
+    /// </summary>
     public TMSProtocolParameters8Validator()
     {
         RuleFor(x => x.MaintenanceService)

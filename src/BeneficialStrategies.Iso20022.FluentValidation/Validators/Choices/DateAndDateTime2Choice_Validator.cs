@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice between a date or a date and time format.
 /// <list type="table">
-///   <item><term><see cref="DateAndDateTime2Choice.Date"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="DateAndDateTime2Choice.DateTime"/></term><description>Value: ISODateTime (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DateAndDateTime2Choice.Date"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DateAndDateTime2Choice.DateTime"/></term><description>Value: ISODateTime (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already — there is no additional

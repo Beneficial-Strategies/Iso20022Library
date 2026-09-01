@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NewAccount2Validator : AbstractValidator<NewAccount2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NewAccount2"/>.
+    /// </summary>
     public NewAccount2Validator()
     {
         RuleFor(x => x.AccountParty)

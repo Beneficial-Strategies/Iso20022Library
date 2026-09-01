@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CardPaymentDataSet39Validator : AbstractValidator<CardPaymentDataSet39>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CardPaymentDataSet39"/>.
+    /// </summary>
     public CardPaymentDataSet39Validator()
     {
         RuleFor(x => x.TransactionTotals)

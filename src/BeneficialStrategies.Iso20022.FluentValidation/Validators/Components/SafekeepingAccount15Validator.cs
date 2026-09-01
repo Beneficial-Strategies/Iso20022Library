@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SafekeepingAccount15Validator : AbstractValidator<SafekeepingAccount15>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SafekeepingAccount15"/>.
+    /// </summary>
     public SafekeepingAccount15Validator()
     {
         RuleFor(x => x.InstructedBalance)

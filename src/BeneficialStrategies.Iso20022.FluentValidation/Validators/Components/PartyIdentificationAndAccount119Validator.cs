@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PartyIdentificationAndAccount119Validator : AbstractValidator<PartyIdentificationAndAccount119>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PartyIdentificationAndAccount119"/>.
+    /// </summary>
     public PartyIdentificationAndAccount119Validator()
     {
         RuleFor(x => x.AccountIdentification)

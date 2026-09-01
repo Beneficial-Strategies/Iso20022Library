@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PriceReport4Validator : AbstractValidator<PriceReport4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PriceReport4"/>.
+    /// </summary>
     public PriceReport4Validator()
     {
         RuleFor(x => x.PriceValuationDetails)

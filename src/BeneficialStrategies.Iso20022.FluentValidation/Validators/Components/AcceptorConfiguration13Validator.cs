@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AcceptorConfiguration13Validator : AbstractValidator<AcceptorConfiguration13>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AcceptorConfiguration13"/>.
+    /// </summary>
     public AcceptorConfiguration13Validator()
     {
         RuleFor(x => x.DataSet)

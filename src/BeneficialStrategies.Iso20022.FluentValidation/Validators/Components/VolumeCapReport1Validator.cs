@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class VolumeCapReport1Validator : AbstractValidator<VolumeCapReport1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="VolumeCapReport1"/>.
+    /// </summary>
     public VolumeCapReport1Validator()
     {
         RuleFor(x => x.InstrumentReport)

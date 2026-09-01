@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PartyReferenceDataChange2Validator : AbstractValidator<PartyReferenceDataChange2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PartyReferenceDataChange2"/>.
+    /// </summary>
     public PartyReferenceDataChange2Validator()
     {
         RuleFor(x => x.Record)

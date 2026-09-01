@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SecuritiesNonTradingDayReport1Validator : AbstractValidator<SecuritiesNonTradingDayReport1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SecuritiesNonTradingDayReport1"/>.
+    /// </summary>
     public SecuritiesNonTradingDayReport1Validator()
     {
         RuleFor(x => x.NonWorkingDay)

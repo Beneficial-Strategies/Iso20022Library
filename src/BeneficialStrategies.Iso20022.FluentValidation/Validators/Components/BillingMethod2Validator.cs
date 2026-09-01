@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class BillingMethod2Validator : AbstractValidator<BillingMethod2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="BillingMethod2"/>.
+    /// </summary>
     public BillingMethod2Validator()
     {
         RuleFor(x => x.TaxIdentification)

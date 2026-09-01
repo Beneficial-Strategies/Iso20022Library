@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class AccountParties5Validator : AbstractValidator<AccountParties5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountParties5"/>.
+    /// </summary>
     public AccountParties5Validator()
     {
         RuleFor(x => x.JointOwner)

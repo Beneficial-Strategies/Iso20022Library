@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CollateralAccount5Validator : AbstractValidator<CollateralAccount5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CollateralAccount5"/>.
+    /// </summary>
     public CollateralAccount5Validator()
     {
         RuleFor(x => x.RelatedMarginAccount)

@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class LineItem8Validator : AbstractValidator<LineItem8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LineItem8"/>.
+    /// </summary>
     public LineItem8Validator()
     {
         RuleFor(x => x.LineItemDetails)

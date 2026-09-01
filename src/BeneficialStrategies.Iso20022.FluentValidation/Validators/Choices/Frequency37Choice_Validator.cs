@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of format for a frequency, for example, the frequency of payment.
 /// <list type="table">
-///   <item><term><see cref="Frequency37Choice.Code"/></term><description>Specifies a frequency in terms of a specified period type — Value: Frequency10Code</description></item>
-///   <item><term><see cref="Frequency37Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.Frequency37Choice.Code"/></term><description>Specifies a frequency in terms of a specified period type — Value: Frequency10Code</description></item>
+///   <item><term><see cref="Choices.Frequency37Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

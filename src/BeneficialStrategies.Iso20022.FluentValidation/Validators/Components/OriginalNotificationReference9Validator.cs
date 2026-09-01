@@ -46,6 +46,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OriginalNotificationReference9Validator : AbstractValidator<OriginalNotificationReference9>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OriginalNotificationReference9"/>.
+    /// </summary>
     public OriginalNotificationReference9Validator()
     {
         // ── Cross-field constraints (enforceable subset — see class remarks) ──────

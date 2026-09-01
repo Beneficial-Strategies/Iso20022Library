@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Derivative3Validator : AbstractValidator<Derivative3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Derivative3"/>.
+    /// </summary>
     public Derivative3Validator()
     {
         RuleFor(x => x.DerivativeUnderlyingLeg)

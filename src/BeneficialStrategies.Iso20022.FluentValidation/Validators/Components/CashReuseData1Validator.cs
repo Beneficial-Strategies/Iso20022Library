@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CashReuseData1Validator : AbstractValidator<CashReuseData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CashReuseData1"/>.
+    /// </summary>
     public CashReuseData1Validator()
     {
         RuleFor(x => x.ReinvestedCash)

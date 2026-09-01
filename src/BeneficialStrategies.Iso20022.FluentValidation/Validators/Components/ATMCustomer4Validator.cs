@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ATMCustomer4Validator : AbstractValidator<ATMCustomer4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ATMCustomer4"/>.
+    /// </summary>
     public ATMCustomer4Validator()
     {
         RuleFor(x => x.Authentication)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AccountSubLevel25Validator : AbstractValidator<AccountSubLevel25>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountSubLevel25"/>.
+    /// </summary>
     public AccountSubLevel25Validator()
     {
         RuleFor(x => x.ShareholdingBalance)

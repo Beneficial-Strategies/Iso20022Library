@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SecuritiesReferenceDataReport7Validator : AbstractValidator<SecuritiesReferenceDataReport7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SecuritiesReferenceDataReport7"/>.
+    /// </summary>
     public SecuritiesReferenceDataReport7Validator()
     {
         RuleFor(x => x.TradingVenueRelatedAttributes)

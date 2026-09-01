@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Report7Validator : AbstractValidator<Report7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Report7"/>.
+    /// </summary>
     public Report7Validator()
     {
         RuleFor(x => x.SettlementObligationDetails)

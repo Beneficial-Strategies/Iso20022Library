@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the mandate that is being accepted.
 /// <list type="table">
-///   <item><term><see cref="OriginalMandate10Choice.OriginalMandateIdentification"/></term><description>Unique identification, as assigned by the responsible party or agent, to unambiguously identify the original mandate — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="OriginalMandate10Choice.OriginalMandate"/></term><description>Provides the original mandate data — Value: Mandate20</description></item>
+///   <item><term><see cref="Choices.OriginalMandate10Choice.OriginalMandateIdentification"/></term><description>Unique identification, as assigned by the responsible party or agent, to unambiguously identify the original mandate — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.OriginalMandate10Choice.OriginalMandate"/></term><description>Provides the original mandate data — Value: Mandate20</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -30,7 +30,7 @@ public class OriginalMandate10Choice_Validator : AbstractValidator<OriginalManda
     /// — instead of this type constructing its own.
     /// </summary>
     /// <param name="originalMandateValueValidator">
-    /// Validator for <see cref="OriginalMandate10Choice.OriginalMandate"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.OriginalMandate10Choice.OriginalMandate"/>'s <c>Value</c>
     /// (Mandate20).
     /// </param>
     public OriginalMandate10Choice_Validator(IValidator<Mandate20> originalMandateValueValidator)

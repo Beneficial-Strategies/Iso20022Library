@@ -80,6 +80,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class PEPISATransfer11Validator : AbstractValidator<PEPISATransfer11>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PEPISATransfer11"/>.
+    /// </summary>
     public PEPISATransfer11Validator()
     {
         // ProductTransfer is 1..∞ but the C# model allows empty (model defect — see XML doc).

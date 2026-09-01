@@ -23,6 +23,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AccountStatement15Validator : AbstractValidator<AccountStatement15>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AccountStatement15"/>.
+    /// </summary>
     public AccountStatement15Validator()
     {
         // Identification: Max35Text, required — already `required`; length enforced by struct ctor.

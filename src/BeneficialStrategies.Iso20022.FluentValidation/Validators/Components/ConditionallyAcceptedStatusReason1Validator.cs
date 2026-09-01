@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ConditionallyAcceptedStatusReason1Validator : AbstractValidator<ConditionallyAcceptedStatusReason1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ConditionallyAcceptedStatusReason1"/>.
+    /// </summary>
     public ConditionallyAcceptedStatusReason1Validator()
     {
         RuleFor(x => x.Structured)

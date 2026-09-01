@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeLegStatement5Validator : AbstractValidator<TradeLegStatement5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeLegStatement5"/>.
+    /// </summary>
     public TradeLegStatement5Validator()
     {
         RuleFor(x => x.TradeLegsDetails)

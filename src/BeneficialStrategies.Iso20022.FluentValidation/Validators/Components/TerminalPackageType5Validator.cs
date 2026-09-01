@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TerminalPackageType5Validator : AbstractValidator<TerminalPackageType5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TerminalPackageType5"/>.
+    /// </summary>
     public TerminalPackageType5Validator()
     {
         RuleFor(x => x.Package)

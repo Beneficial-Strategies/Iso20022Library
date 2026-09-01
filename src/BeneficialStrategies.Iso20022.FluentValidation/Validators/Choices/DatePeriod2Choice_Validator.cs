@@ -11,9 +11,9 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Range of time defined by a start date and an end date.
 /// <list type="table">
-///   <item><term><see cref="DatePeriod2Choice.FromDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="DatePeriod2Choice.ToDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="DatePeriod2Choice.FromToDate"/></term><description>FromDate, ToDate — both ISODate, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.FromDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.ToDate"/></term><description>Value: ISODate (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DatePeriod2Choice.FromToDate"/></term><description>FromDate, ToDate — both ISODate, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// All three variants are fully enforced at the struct level already — there is no additional

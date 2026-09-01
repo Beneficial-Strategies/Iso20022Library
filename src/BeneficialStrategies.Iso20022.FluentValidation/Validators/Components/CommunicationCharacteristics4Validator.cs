@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CommunicationCharacteristics4Validator : AbstractValidator<CommunicationCharacteristics4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CommunicationCharacteristics4"/>.
+    /// </summary>
     public CommunicationCharacteristics4Validator()
     {
         RuleFor(x => x.RemoteParty)

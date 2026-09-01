@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the charge type.
 /// <list type="table">
-///   <item><term><see cref="ChargeType3Choice.Code"/></term><description>Value: ExternalChargeType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="ChargeType3Choice.Proprietary"/></term><description>Identification: Max35Text (required), Issuer: Max35Text (optional) — both fully struct-enforced</description></item>
+///   <item><term><see cref="Choices.ChargeType3Choice.Code"/></term><description>Value: ExternalChargeType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ChargeType3Choice.Proprietary"/></term><description>Identification: Max35Text (required), Issuer: Max35Text (optional) — both fully struct-enforced</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

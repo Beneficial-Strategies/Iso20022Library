@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CorporateActionStandingInstructionCancellationRejectionStatus1Validator : AbstractValidator<CorporateActionStandingInstructionCancellationRejectionStatus1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CorporateActionStandingInstructionCancellationRejectionStatus1"/>.
+    /// </summary>
     public CorporateActionStandingInstructionCancellationRejectionStatus1Validator()
     {
         RuleFor(x => x.Reason)

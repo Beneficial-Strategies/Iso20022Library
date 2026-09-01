@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SettlementAgent2Validator : AbstractValidator<SettlementAgent2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SettlementAgent2"/>.
+    /// </summary>
     public SettlementAgent2Validator()
     {
         RuleFor(x => x.Account)

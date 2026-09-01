@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Defines the type of action to be performed in the request.
 /// <list type="table">
-///   <item><term><see cref="ReservationType2Choice.Code"/></term><description>Value: ExternalReservationType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="ReservationType2Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ReservationType2Choice.Code"/></term><description>Value: ExternalReservationType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ReservationType2Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

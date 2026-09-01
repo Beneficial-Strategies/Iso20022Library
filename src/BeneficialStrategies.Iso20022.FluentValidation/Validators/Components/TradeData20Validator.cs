@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeData20Validator : AbstractValidator<TradeData20>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeData20"/>.
+    /// </summary>
     public TradeData20Validator()
     {
         RuleFor(x => x.ReportStatistics)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NonClearingReason2Validator : AbstractValidator<NonClearingReason2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NonClearingReason2"/>.
+    /// </summary>
     public NonClearingReason2Validator()
     {
         RuleFor(x => x.ClearingExemptionException)

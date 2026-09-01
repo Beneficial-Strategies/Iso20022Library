@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DeviceDisplayResponse3Validator : AbstractValidator<DeviceDisplayResponse3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DeviceDisplayResponse3"/>.
+    /// </summary>
     public DeviceDisplayResponse3Validator()
     {
         RuleFor(x => x.OutputResult)

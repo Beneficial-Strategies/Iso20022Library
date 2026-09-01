@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the reason for the setup of the mandate.
 /// <list type="table">
-///   <item><term><see cref="MandateSetupReason1Choice.Code"/></term><description>Reason for the setup of the mandate, as published in an external mandate setup reason code list — Value: ExternalMandateSetupReason1Code</description></item>
-///   <item><term><see cref="MandateSetupReason1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 70 characters — Value: Max70Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.MandateSetupReason1Choice.Code"/></term><description>Reason for the setup of the mandate, as published in an external mandate setup reason code list — Value: ExternalMandateSetupReason1Code</description></item>
+///   <item><term><see cref="Choices.MandateSetupReason1Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 70 characters — Value: Max70Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,7 +31,7 @@ public class MandateSetupReason1Choice_Validator : AbstractValidator<MandateSetu
     /// of this type constructing its own.
     /// </summary>
     /// <param name="codeValueValidator">
-    /// Validator for <see cref="MandateSetupReason1Choice.Code"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.MandateSetupReason1Choice.Code"/>'s <c>Value</c>
     /// (ExternalMandateSetupReason1Code).
     /// </param>
     public MandateSetupReason1Choice_Validator(

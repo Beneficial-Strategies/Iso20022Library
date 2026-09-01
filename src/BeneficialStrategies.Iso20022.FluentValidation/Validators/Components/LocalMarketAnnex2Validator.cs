@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class LocalMarketAnnex2Validator : AbstractValidator<LocalMarketAnnex2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LocalMarketAnnex2"/>.
+    /// </summary>
     public LocalMarketAnnex2Validator()
     {
         RuleFor(x => x.Country)

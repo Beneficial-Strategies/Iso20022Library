@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DisputeReference1Validator : AbstractValidator<DisputeReference1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DisputeReference1"/>.
+    /// </summary>
     public DisputeReference1Validator()
     {
         RuleFor(x => x.DisputeIdentification)

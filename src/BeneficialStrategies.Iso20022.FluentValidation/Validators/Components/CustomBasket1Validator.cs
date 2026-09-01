@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CustomBasket1Validator : AbstractValidator<CustomBasket1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CustomBasket1"/>.
+    /// </summary>
     public CustomBasket1Validator()
     {
         RuleFor(x => x.Constituents)

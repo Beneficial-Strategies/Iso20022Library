@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DocumentLineInformation1Validator : AbstractValidator<DocumentLineInformation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DocumentLineInformation1"/>.
+    /// </summary>
     public DocumentLineInformation1Validator()
     {
         // Description (Max2048Text): optional (0..1) scalar, length enforced by struct

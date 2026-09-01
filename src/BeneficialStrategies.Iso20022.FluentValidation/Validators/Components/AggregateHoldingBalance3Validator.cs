@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class AggregateHoldingBalance3Validator : AbstractValidator<AggregateHoldingBalance3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AggregateHoldingBalance3"/>.
+    /// </summary>
     public AggregateHoldingBalance3Validator()
     {
         RuleFor(x => x.BalanceForAccount)

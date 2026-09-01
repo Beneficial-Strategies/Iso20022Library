@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class BusinessDay8Validator : AbstractValidator<BusinessDay8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="BusinessDay8"/>.
+    /// </summary>
     public BusinessDay8Validator()
     {
         RuleFor(x => x.SystemIdentification)

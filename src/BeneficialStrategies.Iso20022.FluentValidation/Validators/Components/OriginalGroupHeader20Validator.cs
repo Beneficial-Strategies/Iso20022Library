@@ -14,13 +14,13 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OriginalCreationDateTime</term><description>ISODateTime — optional (0..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalMessageIdentification</term><description>Max35Text — required (1..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalMessageNameIdentification</term><description>Max35Text — required (1..1), fully struct-enforced</description></item>
-///   <item><term>ReversalReasonInformation</term><description>PaymentReversalReason10 collection — optional (0..n); drives the message-level <c>GroupReversalAndReasonRule</c> on <see cref="CustomerPaymentReversalV13Validator"/></description></item>
+///   <item><term>ReversalReasonInformation</term><description>PaymentReversalReason10 collection — optional (0..n); drives the message-level <c>GroupReversalAndReasonRule</c> on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/></description></item>
 /// </list>
 ///
 /// No cross-field constraints attach directly to this component — <c>GroupReversalAndReasonRule</c>
 /// (referencing both <c>GroupHeader/GroupReversal</c> and this component's own
 /// <c>ReversalReasonInformation/Reason</c>) spans multiple top-level message building blocks and
-/// is enforced on <see cref="CustomerPaymentReversalV13Validator"/> instead, where both sides of
+/// is enforced on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/> instead, where both sides of
 /// the rule are visible.
 ///
 /// Dependency injection: <c>ReversalReasonInformation</c> is validated by an injected

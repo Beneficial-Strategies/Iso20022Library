@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TaxCalculation1Validator : AbstractValidator<TaxCalculation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TaxCalculation1"/>.
+    /// </summary>
     public TaxCalculation1Validator()
     {
         // HostCurrency (ActiveOrHistoricCurrencyCode), TotalTaxableServiceChargeHostAmount,

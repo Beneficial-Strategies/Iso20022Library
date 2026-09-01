@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OperationMandate4Validator : AbstractValidator<OperationMandate4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OperationMandate4"/>.
+    /// </summary>
     public OperationMandate4Validator()
     {
         RuleFor(x => x.ApplicableChannel)

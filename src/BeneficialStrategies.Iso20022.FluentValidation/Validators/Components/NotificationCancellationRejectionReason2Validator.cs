@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class NotificationCancellationRejectionReason2Validator : AbstractValidator<NotificationCancellationRejectionReason2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="NotificationCancellationRejectionReason2"/>.
+    /// </summary>
     public NotificationCancellationRejectionReason2Validator()
     {
         RuleFor(x => x.Reason)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SearchCriteria1Validator : AbstractValidator<SearchCriteria1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SearchCriteria1"/>.
+    /// </summary>
     public SearchCriteria1Validator()
     {
         RuleFor(x => x.SearchOr)

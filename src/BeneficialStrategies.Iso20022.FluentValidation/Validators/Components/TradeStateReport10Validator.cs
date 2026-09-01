@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeStateReport10Validator : AbstractValidator<TradeStateReport10>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeStateReport10"/>.
+    /// </summary>
     public TradeStateReport10Validator()
     {
         RuleFor(x => x.CounterpartySpecificData)

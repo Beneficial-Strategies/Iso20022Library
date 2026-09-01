@@ -22,6 +22,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 public class FundDetailedConfirmedCashForecastReport3Validator
     : AbstractValidator<FundDetailedConfirmedCashForecastReport3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FundDetailedConfirmedCashForecastReport3"/>.
+    /// </summary>
     public FundDetailedConfirmedCashForecastReport3Validator()
     {
         // FundOrSubFundDetails (Fund4, 0..1), ConsolidatedNetCashForecast (NetCashForecast3,

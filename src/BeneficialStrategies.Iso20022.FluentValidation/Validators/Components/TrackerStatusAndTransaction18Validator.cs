@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TrackerStatusAndTransaction18Validator : AbstractValidator<TrackerStatusAndTransaction18>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TrackerStatusAndTransaction18"/>.
+    /// </summary>
     public TrackerStatusAndTransaction18Validator()
     {
         RuleFor(x => x.Transaction)

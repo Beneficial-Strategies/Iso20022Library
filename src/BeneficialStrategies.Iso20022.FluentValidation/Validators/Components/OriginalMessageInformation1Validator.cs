@@ -22,6 +22,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class OriginalMessageInformation1Validator : AbstractValidator<OriginalMessageInformation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OriginalMessageInformation1"/>.
+    /// </summary>
     public OriginalMessageInformation1Validator()
     {
         // MessageIdentification, MessageNameIdentification: Max35Text, required (1..1) and

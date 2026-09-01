@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LineItem14Validator : AbstractValidator<LineItem14>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LineItem14"/>.
+    /// </summary>
     public LineItem14Validator()
     {
         RuleFor(x => x.LineItemDetails)

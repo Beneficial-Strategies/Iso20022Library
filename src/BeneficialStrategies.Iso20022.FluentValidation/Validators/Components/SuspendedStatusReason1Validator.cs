@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SuspendedStatusReason1Validator : AbstractValidator<SuspendedStatusReason1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SuspendedStatusReason1"/>.
+    /// </summary>
     public SuspendedStatusReason1Validator()
     {
         RuleFor(x => x.Structured)

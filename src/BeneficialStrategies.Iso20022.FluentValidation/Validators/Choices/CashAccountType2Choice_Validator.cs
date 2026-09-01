@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Nature or use of the account.
 /// <list type="table">
-///   <item><term><see cref="CashAccountType2Choice.Code"/></term><description>Specifies the nature, or use, of the account in a coded form — Value: ExternalCashAccountType1Code</description></item>
-///   <item><term><see cref="CashAccountType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.CashAccountType2Choice.Code"/></term><description>Specifies the nature, or use, of the account in a coded form — Value: ExternalCashAccountType1Code</description></item>
+///   <item><term><see cref="Choices.CashAccountType2Choice.Proprietary"/></term><description>Specifies a character string with a maximum length of 35 characters — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (a closed codeset enum / an

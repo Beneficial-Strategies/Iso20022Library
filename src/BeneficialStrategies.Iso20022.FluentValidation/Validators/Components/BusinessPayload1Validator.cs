@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class BusinessPayload1Validator : AbstractValidator<BusinessPayload1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="BusinessPayload1"/>.
+    /// </summary>
     public BusinessPayload1Validator()
     {
         RuleFor(x => x.BusinessContent)

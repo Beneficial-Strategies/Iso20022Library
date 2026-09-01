@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class StatementGroup2Validator : AbstractValidator<StatementGroup2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="StatementGroup2"/>.
+    /// </summary>
     public StatementGroup2Validator()
     {
         // GroupIdentification, Receiver, Sender: required (1..1) scalars, already `required`

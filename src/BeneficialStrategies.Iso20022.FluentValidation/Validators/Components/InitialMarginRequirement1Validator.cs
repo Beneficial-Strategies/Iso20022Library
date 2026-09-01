@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class InitialMarginRequirement1Validator : AbstractValidator<InitialMarginRequirement1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="InitialMarginRequirement1"/>.
+    /// </summary>
     public InitialMarginRequirement1Validator()
     {
         RuleFor(x => x.InitialMarginExposure)

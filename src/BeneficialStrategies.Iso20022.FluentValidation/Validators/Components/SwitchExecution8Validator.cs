@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SwitchExecution8Validator : AbstractValidator<SwitchExecution8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SwitchExecution8"/>.
+    /// </summary>
     public SwitchExecution8Validator()
     {
         RuleFor(x => x.RedemptionLegDetails)

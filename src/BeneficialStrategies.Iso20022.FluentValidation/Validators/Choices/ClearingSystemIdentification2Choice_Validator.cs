@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of a clearing system identifier.
 /// <list type="table">
-///   <item><term><see cref="ClearingSystemIdentification2Choice.Code"/></term><description>Identification of a clearing system, in a coded form as published in an external list — Value: ExternalClearingSystemIdentification1Code</description></item>
-///   <item><term><see cref="ClearingSystemIdentification2Choice.Proprietary"/></term><description>Identification code for a clearing system not yet identified in the external list — Value: Max35Text</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.Code"/></term><description>Identification of a clearing system, in a coded form as published in an external list — Value: ExternalClearingSystemIdentification1Code</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification2Choice.Proprietary"/></term><description>Identification code for a clearing system not yet identified in the external list — Value: Max35Text</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (an <c>IIsoExternalCode</c>

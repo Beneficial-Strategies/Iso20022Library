@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class Meeting2Validator : AbstractValidator<Meeting2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Meeting2"/>.
+    /// </summary>
     public Meeting2Validator()
     {
         RuleFor(x => x.Location)

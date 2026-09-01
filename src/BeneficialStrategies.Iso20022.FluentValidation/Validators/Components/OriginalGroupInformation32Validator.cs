@@ -11,14 +11,14 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Provides information on the original group, to which the message refers.
 /// <list type="table">
-///   <item><term>GroupStatus</term><description>ExternalPaymentGroupStatus1Code — optional (0..1), closed enum, fully enforced; drives the message-level cross-field rules on <see cref="CreditorPaymentActivationRequestStatusReportV12Validator"/></description></item>
+///   <item><term>GroupStatus</term><description>ExternalPaymentGroupStatus1Code — optional (0..1), closed enum, fully enforced; drives the message-level cross-field rules on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CreditorPaymentActivationRequestStatusReportV12Validator"/></description></item>
 ///   <item><term>NumberOfTransactionsPerStatus</term><description>NumberOfTransactionsPerStatus5 collection — optional (0..n)</description></item>
 ///   <item><term>OriginalControlSum</term><description>DecimalNumber — optional (0..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalCreationDateTime</term><description>ISODateTime — optional (0..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalMessageIdentification</term><description>Max35Text — required (1..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalMessageNameIdentification</term><description>Max35Text — required (1..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalNumberOfTransactions</term><description>Max15NumericText — optional (0..1), fully struct-enforced</description></item>
-///   <item><term>StatusReasonInformation</term><description>StatusReasonInformation14 collection — optional (0..n); drives the message-level <c>GroupStatusRejectedRule</c> on <see cref="CreditorPaymentActivationRequestStatusReportV12Validator"/></description></item>
+///   <item><term>StatusReasonInformation</term><description>StatusReasonInformation14 collection — optional (0..n); drives the message-level <c>GroupStatusRejectedRule</c> on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CreditorPaymentActivationRequestStatusReportV12Validator"/></description></item>
 /// </list>
 ///
 /// No cross-field constraints attach directly to this component — the message-level
@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>GroupStatusReceivedRule</c> (referencing this component's own <c>GroupStatus</c> alongside
 /// the sibling <c>OriginalPaymentInformationAndStatus</c> building block) span multiple top-level
 /// message building blocks and are enforced on
-/// <see cref="CreditorPaymentActivationRequestStatusReportV12Validator"/> instead, where both
+/// <see cref="BeneficialStrategies.Iso20022.Validation.pain.CreditorPaymentActivationRequestStatusReportV12Validator"/> instead, where both
 /// sides of each rule are visible.
 ///
 /// Dependency injection: <c>NumberOfTransactionsPerStatus</c> and <c>StatusReasonInformation</c>

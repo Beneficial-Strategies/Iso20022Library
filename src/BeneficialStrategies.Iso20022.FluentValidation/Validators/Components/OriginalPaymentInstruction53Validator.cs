@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>OriginalNumberOfTransactions</term><description>Max15NumericText — optional (0..1), fully struct-enforced</description></item>
 ///   <item><term>OriginalControlSum</term><description>DecimalNumber — optional (0..1), fully struct-enforced</description></item>
 ///   <item><term>BatchBooking</term><description>BatchBookingIndicator — optional (0..1), fully struct-enforced</description></item>
-///   <item><term>PaymentInformationReversal</term><description>TrueFalseIndicator — optional (0..1), fully struct-enforced; drives the message-level <c>GroupReversalAndNumberOfTransactionsGuideline</c> on <see cref="CustomerPaymentReversalV13Validator"/></description></item>
+///   <item><term>PaymentInformationReversal</term><description>TrueFalseIndicator — optional (0..1), fully struct-enforced; drives the message-level <c>GroupReversalAndNumberOfTransactionsGuideline</c> on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/></description></item>
 ///   <item><term>ReversalReasonInformation</term><description>PaymentReversalReason10 collection — optional (0..n)</description></item>
 ///   <item><term>TransactionInformation</term><description>PaymentTransaction174 collection — optional (0..n)</description></item>
 /// </list>
@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// <c>GroupReversalAndNumberOfTransactionsGuideline</c> (referencing this component's own
 /// <c>PaymentInformationReversal</c> alongside <c>GroupHeader/GroupReversal</c> and
 /// <c>GroupHeader/NumberOfTransactions</c>) spans multiple top-level message building blocks and
-/// is enforced on <see cref="CustomerPaymentReversalV13Validator"/> instead, where all three
+/// is enforced on <see cref="BeneficialStrategies.Iso20022.Validation.pain.CustomerPaymentReversalV13Validator"/> instead, where all three
 /// sides of the rule are visible.
 ///
 /// Dependency injection: <c>ReversalReasonInformation</c> and <c>TransactionInformation</c> are

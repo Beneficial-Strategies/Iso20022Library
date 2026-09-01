@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class References6Validator : AbstractValidator<References6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="References6"/>.
+    /// </summary>
     public References6Validator()
     {
         RuleFor(x => x.RejectionReason)

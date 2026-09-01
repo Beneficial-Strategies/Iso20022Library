@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TransportDetails3Validator : AbstractValidator<TransportDetails3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransportDetails3"/>.
+    /// </summary>
     public TransportDetails3Validator()
     {
         RuleFor(x => x.TransportDocumentReference)

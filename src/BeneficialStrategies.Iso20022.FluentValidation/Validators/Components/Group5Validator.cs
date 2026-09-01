@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class Group5Validator : AbstractValidator<Group5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="Group5"/>.
+    /// </summary>
     public Group5Validator()
     {
         RuleFor(x => x.Party)

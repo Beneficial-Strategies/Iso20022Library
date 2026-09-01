@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class RedemptionBulkExecution5Validator : AbstractValidator<RedemptionBulkExecution5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RedemptionBulkExecution5"/>.
+    /// </summary>
     public RedemptionBulkExecution5Validator()
     {
         RuleFor(x => x.IndividualExecutionDetails)

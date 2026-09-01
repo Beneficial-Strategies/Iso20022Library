@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ReuseDataReportCorrection7Validator : AbstractValidator<ReuseDataReportCorrection7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ReuseDataReportCorrection7"/>.
+    /// </summary>
     public ReuseDataReportCorrection7Validator()
     {
         RuleFor(x => x.CollateralComponent)

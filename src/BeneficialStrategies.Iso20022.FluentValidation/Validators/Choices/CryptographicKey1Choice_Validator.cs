@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of cryptographic key representations.
 /// <list type="table">
-///   <item><term><see cref="CryptographicKey1Choice.ILPV4"/></term><description>Value: HexBinaryText</description></item>
-///   <item><term><see cref="CryptographicKey1Choice.Signature"/></term><description>Value: SHA256SignatureText</description></item>
+///   <item><term><see cref="Choices.CryptographicKey1Choice.ILPV4"/></term><description>Value: HexBinaryText</description></item>
+///   <item><term><see cref="Choices.CryptographicKey1Choice.Signature"/></term><description>Value: SHA256SignatureText</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct level already (both wrap

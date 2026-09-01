@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PaymentInstruction44Validator : AbstractValidator<PaymentInstruction44>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PaymentInstruction44"/>.
+    /// </summary>
     public PaymentInstruction44Validator()
     {
         RuleFor(x => x.CreditTransferTransactionInformation)

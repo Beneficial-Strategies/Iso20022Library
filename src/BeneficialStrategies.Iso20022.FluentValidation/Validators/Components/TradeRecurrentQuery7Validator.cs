@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TradeRecurrentQuery7Validator : AbstractValidator<TradeRecurrentQuery7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TradeRecurrentQuery7"/>.
+    /// </summary>
     public TradeRecurrentQuery7Validator()
     {
         RuleFor(x => x.Frequency)

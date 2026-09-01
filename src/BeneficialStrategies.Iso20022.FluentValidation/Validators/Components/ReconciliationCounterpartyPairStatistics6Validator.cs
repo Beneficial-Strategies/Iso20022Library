@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ReconciliationCounterpartyPairStatistics6Validator : AbstractValidator<ReconciliationCounterpartyPairStatistics6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ReconciliationCounterpartyPairStatistics6"/>.
+    /// </summary>
     public ReconciliationCounterpartyPairStatistics6Validator()
     {
         RuleFor(x => x.ReconciliationReport)

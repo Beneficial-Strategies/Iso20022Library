@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ErrorAction3Validator : AbstractValidator<ErrorAction3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ErrorAction3"/>.
+    /// </summary>
     public ErrorAction3Validator()
     {
         RuleFor(x => x.ActionResult)

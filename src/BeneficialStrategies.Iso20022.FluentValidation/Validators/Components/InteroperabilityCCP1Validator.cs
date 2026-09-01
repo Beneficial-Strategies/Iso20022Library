@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class InteroperabilityCCP1Validator : AbstractValidator<InteroperabilityCCP1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="InteroperabilityCCP1"/>.
+    /// </summary>
     public InteroperabilityCCP1Validator()
     {
         RuleFor(x => x.AssetHolding)

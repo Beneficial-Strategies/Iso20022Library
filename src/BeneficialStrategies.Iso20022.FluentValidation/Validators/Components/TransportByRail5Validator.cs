@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class TransportByRail5Validator : AbstractValidator<TransportByRail5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="TransportByRail5"/>.
+    /// </summary>
     public TransportByRail5Validator()
     {
         RuleFor(x => x.PlaceOfDelivery)

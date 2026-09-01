@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class MaintenanceDelegation1Validator : AbstractValidator<MaintenanceDelegation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="MaintenanceDelegation1"/>.
+    /// </summary>
     public MaintenanceDelegation1Validator()
     {
         RuleFor(x => x.MaintenanceService)

@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// No cross-field constraints found for this component (no "constraint" declaration rows under
 /// its ISO dictionary entry — no ordering rule between FromTime/TillTime/RejectTime/CLSTime is
-/// specified). All four fields are already fully enforced at the <see cref="ISOTime"/> struct
+/// specified). All four fields are already fully enforced at the <see cref="BeneficialStrategies.Iso20022.SimpleTypes.ISOTime"/> struct
 /// level (lexical form parsing) — nothing left for FluentValidation to add. Empty shell exists as
 /// a first-class type per the coverage-scoping policy ("reviewed and confirmed to need nothing"),
 /// same convention as <c>AddressType3Choice_Validator</c>.

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class EnvelopedData9Validator : AbstractValidator<EnvelopedData9>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="EnvelopedData9"/>.
+    /// </summary>
     public EnvelopedData9Validator()
     {
         RuleFor(x => x.Recipient)

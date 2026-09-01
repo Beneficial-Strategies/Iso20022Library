@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class SwitchOrder2Validator : AbstractValidator<SwitchOrder2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SwitchOrder2"/>.
+    /// </summary>
     public SwitchOrder2Validator()
     {
         RuleFor(x => x.RedemptionLegDetails)

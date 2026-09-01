@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class SubscriptionMultipleExecution6Validator : AbstractValidator<SubscriptionMultipleExecution6>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="SubscriptionMultipleExecution6"/>.
+    /// </summary>
     public SubscriptionMultipleExecution6Validator()
     {
         RuleFor(x => x.IndividualExecutionDetails)

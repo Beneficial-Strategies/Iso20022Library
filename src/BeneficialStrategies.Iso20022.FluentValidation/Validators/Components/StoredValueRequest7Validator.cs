@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class StoredValueRequest7Validator : AbstractValidator<StoredValueRequest7>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="StoredValueRequest7"/>.
+    /// </summary>
     public StoredValueRequest7Validator()
     {
         RuleFor(x => x.Data)

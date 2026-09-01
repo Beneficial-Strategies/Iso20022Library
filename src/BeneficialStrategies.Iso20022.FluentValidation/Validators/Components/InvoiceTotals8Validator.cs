@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class InvoiceTotals8Validator : AbstractValidator<InvoiceTotals8>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="InvoiceTotals8"/>.
+    /// </summary>
     public InvoiceTotals8Validator()
     {
         // AccountIdentification (AccountIdentification38Choice_) and InvoiceTotals

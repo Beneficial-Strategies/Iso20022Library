@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class RedemptionMultipleOrder07Validator : AbstractValidator<RedemptionMultipleOrder07>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RedemptionMultipleOrder07"/>.
+    /// </summary>
     public RedemptionMultipleOrder07Validator()
     {
         RuleFor(x => x.IndividualOrderDetails)

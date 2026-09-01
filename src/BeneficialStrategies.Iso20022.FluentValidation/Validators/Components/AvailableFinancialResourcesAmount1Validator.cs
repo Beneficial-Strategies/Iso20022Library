@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AvailableFinancialResourcesAmount1Validator : AbstractValidator<AvailableFinancialResourcesAmount1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AvailableFinancialResourcesAmount1"/>.
+    /// </summary>
     public AvailableFinancialResourcesAmount1Validator()
     {
         RuleFor(x => x.CCPSkinInTheGame)

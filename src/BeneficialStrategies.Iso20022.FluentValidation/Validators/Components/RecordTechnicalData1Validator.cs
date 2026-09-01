@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class RecordTechnicalData1Validator : AbstractValidator<RecordTechnicalData1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="RecordTechnicalData1"/>.
+    /// </summary>
     public RecordTechnicalData1Validator()
     {
         RuleFor(x => x.ExchangeReason)

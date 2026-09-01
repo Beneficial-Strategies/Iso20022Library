@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class FundConfirmedCashForecastReport1Validator : AbstractValidator<FundConfirmedCashForecastReport1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="FundConfirmedCashForecastReport1"/>.
+    /// </summary>
     public FundConfirmedCashForecastReport1Validator()
     {
         // Extension: Extension1, 0..∞ — any size including empty is valid, no rule needed.

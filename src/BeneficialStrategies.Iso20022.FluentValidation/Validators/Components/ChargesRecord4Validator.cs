@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ChargesRecord4Validator : AbstractValidator<ChargesRecord4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ChargesRecord4"/>.
+    /// </summary>
     public ChargesRecord4Validator()
     {
         // Amount (ActiveCurrencyAndAmount) and ChargesAccount (CashAccount40): required (1..1)

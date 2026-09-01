@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class MultilateralSettlementRequest2Validator : AbstractValidator<MultilateralSettlementRequest2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="MultilateralSettlementRequest2"/>.
+    /// </summary>
     public MultilateralSettlementRequest2Validator()
     {
         RuleFor(x => x.MovementRecord)

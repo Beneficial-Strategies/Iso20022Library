@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class MarginAccount1Validator : AbstractValidator<MarginAccount1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="MarginAccount1"/>.
+    /// </summary>
     public MarginAccount1Validator()
     {
         RuleFor(x => x.PositionAccount)

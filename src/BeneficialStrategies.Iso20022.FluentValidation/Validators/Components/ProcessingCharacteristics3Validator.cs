@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ProcessingCharacteristics3Validator : AbstractValidator<ProcessingCharacteristics3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ProcessingCharacteristics3"/>.
+    /// </summary>
     public ProcessingCharacteristics3Validator()
     {
         RuleFor(x => x.DealingCurrencyAccepted)

@@ -21,6 +21,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
 public class AggregateBalancePerSafekeepingPlace4Validator : AbstractValidator<AggregateBalancePerSafekeepingPlace4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AggregateBalancePerSafekeepingPlace4"/>.
+    /// </summary>
     public AggregateBalancePerSafekeepingPlace4Validator()
     {
         RuleFor(x => x.HoldingValue)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class DetailedTransactionStatistics10Validator : AbstractValidator<DetailedTransactionStatistics10>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="DetailedTransactionStatistics10"/>.
+    /// </summary>
     public DetailedTransactionStatistics10Validator()
     {
         RuleFor(x => x.NumberOfTransactionsRejected)

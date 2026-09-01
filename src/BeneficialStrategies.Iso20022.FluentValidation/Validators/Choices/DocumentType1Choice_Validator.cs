@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Choice of format for the document type.
 /// <list type="table">
-///   <item><term><see cref="DocumentType1Choice.Code"/></term><description>Value: ExternalDocumentType1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="DocumentType1Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
+///   <item><term><see cref="Choices.DocumentType1Choice.Code"/></term><description>Value: ExternalDocumentType1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.DocumentType1Choice.Proprietary"/></term><description>Identification, SchemeName, Issuer — all Max35Text, fully struct-enforced, no further rule needed</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

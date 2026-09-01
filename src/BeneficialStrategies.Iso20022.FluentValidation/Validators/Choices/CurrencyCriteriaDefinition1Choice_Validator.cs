@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Defines the information that is searched either implicitly by recalling a previous query or
 /// explicitly by defining the criteria.
 /// <list type="table">
-///   <item><term><see cref="CurrencyCriteriaDefinition1Choice.QueryName"/></term><description>Recalls the criteria defined in a preceding query — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
-///   <item><term><see cref="CurrencyCriteriaDefinition1Choice.NewCriteria"/></term><description>Defines the criteria based on which the information is extracted — NewQueryName (Max35Text, optional), SearchCriteria (CurrencyExchangeSearchCriteria1 collection, 0..∞)</description></item>
+///   <item><term><see cref="Choices.CurrencyCriteriaDefinition1Choice.QueryName"/></term><description>Recalls the criteria defined in a preceding query — Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.CurrencyCriteriaDefinition1Choice.NewCriteria"/></term><description>Defines the criteria based on which the information is extracted — NewQueryName (Max35Text, optional), SearchCriteria (CurrencyExchangeSearchCriteria1 collection, 0..∞)</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -36,7 +36,7 @@ public class CurrencyCriteriaDefinition1Choice_Validator : AbstractValidator<Cur
     /// DI container — instead of this type constructing its own.
     /// </summary>
     /// <param name="searchCriteriaValidator">
-    /// Validator for each item of <see cref="CurrencyCriteriaDefinition1Choice.NewCriteria"/>'s
+    /// Validator for each item of <see cref="Choices.CurrencyCriteriaDefinition1Choice.NewCriteria"/>'s
     /// <c>SearchCriteria</c> collection (CurrencyExchangeSearchCriteria1, 0..∞).
     /// </param>
     public CurrencyCriteriaDefinition1Choice_Validator(

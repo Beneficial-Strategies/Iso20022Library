@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Limit details of one or more limits set by the member and managed by the transaction
 /// administrator.
 /// <list type="table">
-///   <item><term><see cref="LimitStructure3Choice.AllCurrentLimits"/></term><description>Identifies all the current limits managed by the transaction administrator — Value: LimitIdentification9</description></item>
-///   <item><term><see cref="LimitStructure3Choice.CurrentLimitIdentification"/></term><description>Identifies one particular current limit — Value: LimitIdentification8</description></item>
+///   <item><term><see cref="Choices.LimitStructure3Choice.AllCurrentLimits"/></term><description>Identifies all the current limits managed by the transaction administrator — Value: LimitIdentification9</description></item>
+///   <item><term><see cref="Choices.LimitStructure3Choice.CurrentLimitIdentification"/></term><description>Identifies one particular current limit — Value: LimitIdentification8</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,11 +31,11 @@ public class LimitStructure3Choice_Validator : AbstractValidator<LimitStructure3
     /// this type constructing its own.
     /// </summary>
     /// <param name="allCurrentLimitsValueValidator">
-    /// Validator for <see cref="LimitStructure3Choice.AllCurrentLimits"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.LimitStructure3Choice.AllCurrentLimits"/>'s <c>Value</c>
     /// (LimitIdentification9).
     /// </param>
     /// <param name="currentLimitIdentificationValueValidator">
-    /// Validator for <see cref="LimitStructure3Choice.CurrentLimitIdentification"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.LimitStructure3Choice.CurrentLimitIdentification"/>'s <c>Value</c>
     /// (LimitIdentification8).
     /// </param>
     public LimitStructure3Choice_Validator(

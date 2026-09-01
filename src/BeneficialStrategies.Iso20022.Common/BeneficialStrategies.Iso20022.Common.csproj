@@ -14,16 +14,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <!--
-    CS0618/CS0612: obsolete-member-usage warnings. Suppressed in normal builds because the
-    ISO 20022 spec retires types slowly — active types legitimately reference obsolete parents
-    for years (e.g. derived codesets that inherit enum ordinals from an obsolete base codeset).
-    Run annually during snapshot-sync-verify with -p:EnableObsoleteWarnings=true to audit the
-    tangle and decide what can be removed.
-  -->
-  <PropertyGroup Condition="'$(EnableObsoleteWarnings)' != 'true'">
-    <NoWarn>$(NoWarn);CS0618;CS0612</NoWarn>
-  </PropertyGroup>
+  <!-- CS0618/CS0612 suppression now lives repo-wide in src/Directory.Build.props. -->
 
   <PropertyGroup>
     <PackageId>BeneficialStrategies.Iso20022</PackageId>

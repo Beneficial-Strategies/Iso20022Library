@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class EligiblePosition17Validator : AbstractValidator<EligiblePosition17>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="EligiblePosition17"/>.
+    /// </summary>
     public EligiblePosition17Validator()
     {
         RuleFor(x => x.HoldingBalance)

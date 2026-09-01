@@ -23,6 +23,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ChargesPerType3Validator : AbstractValidator<ChargesPerType3>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ChargesPerType3"/>.
+    /// </summary>
     public ChargesPerType3Validator()
     {
         // ── Cross-field constraints ───────────────────────────────────────────────

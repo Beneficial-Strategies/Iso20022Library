@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CardProgrammeMode2Validator : AbstractValidator<CardProgrammeMode2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CardProgrammeMode2"/>.
+    /// </summary>
     public CardProgrammeMode2Validator()
     {
         RuleFor(x => x.Identification)

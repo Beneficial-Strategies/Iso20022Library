@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class PointOfInteractionComponentAssessment1Validator : AbstractValidator<PointOfInteractionComponentAssessment1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="PointOfInteractionComponentAssessment1"/>.
+    /// </summary>
     public PointOfInteractionComponentAssessment1Validator()
     {
         RuleFor(x => x.Assigner)

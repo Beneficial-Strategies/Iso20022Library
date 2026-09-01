@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 /// Characteristics of one or all standing orders set by the member and managed by the transaction
 /// administrator.
 /// <list type="table">
-///   <item><term><see cref="StandingOrderOrAll4Choice.AllStandingOrders"/></term><description>Identifies all the standing orders managed by the transaction administrator — Value: StandingOrderIdentification9</description></item>
-///   <item><term><see cref="StandingOrderOrAll4Choice.StandingOrder"/></term><description>Identifies one particular standing order — Value: StandingOrderIdentification8</description></item>
+///   <item><term><see cref="Choices.StandingOrderOrAll4Choice.AllStandingOrders"/></term><description>Identifies all the standing orders managed by the transaction administrator — Value: StandingOrderIdentification9</description></item>
+///   <item><term><see cref="Choices.StandingOrderOrAll4Choice.StandingOrder"/></term><description>Identifies one particular standing order — Value: StandingOrderIdentification8</description></item>
 /// </list>
 ///
 /// Dispatch: <see cref="FluentValidation.DefaultValidatorExtensions.SetInheritanceValidator{T,TProperty}"/>
@@ -31,11 +31,11 @@ public class StandingOrderOrAll4Choice_Validator : AbstractValidator<StandingOrd
     /// this type constructing its own.
     /// </summary>
     /// <param name="allStandingOrdersValueValidator">
-    /// Validator for <see cref="StandingOrderOrAll4Choice.AllStandingOrders"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.StandingOrderOrAll4Choice.AllStandingOrders"/>'s <c>Value</c>
     /// (StandingOrderIdentification9).
     /// </param>
     /// <param name="standingOrderValueValidator">
-    /// Validator for <see cref="StandingOrderOrAll4Choice.StandingOrder"/>'s <c>Value</c>
+    /// Validator for <see cref="Choices.StandingOrderOrAll4Choice.StandingOrder"/>'s <c>Value</c>
     /// (StandingOrderIdentification8).
     /// </param>
     public StandingOrderOrAll4Choice_Validator(

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CryptographicKey5Validator : AbstractValidator<CryptographicKey5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CryptographicKey5"/>.
+    /// </summary>
     public CryptographicKey5Validator()
     {
         RuleFor(x => x.Function)

@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Validation.ChoiceValidators;
 ///
 /// Specifies the clearing system identification.
 /// <list type="table">
-///   <item><term><see cref="ClearingSystemIdentification3Choice.Code"/></term><description>Value: ExternalCashClearingSystem1Code (closed enum, fully enforced, no further rule needed)</description></item>
-///   <item><term><see cref="ClearingSystemIdentification3Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.Code"/></term><description>Value: ExternalCashClearingSystem1Code (closed enum, fully enforced, no further rule needed)</description></item>
+///   <item><term><see cref="Choices.ClearingSystemIdentification3Choice.Proprietary"/></term><description>Value: Max35Text (fully struct-enforced, no further rule needed)</description></item>
 /// </list>
 ///
 /// Both variants are fully enforced at the struct/enum level already — there is no additional

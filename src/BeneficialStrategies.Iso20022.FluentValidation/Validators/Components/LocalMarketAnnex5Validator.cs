@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class LocalMarketAnnex5Validator : AbstractValidator<LocalMarketAnnex5>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="LocalMarketAnnex5"/>.
+    /// </summary>
     public LocalMarketAnnex5Validator()
     {
         RuleFor(x => x.Country)

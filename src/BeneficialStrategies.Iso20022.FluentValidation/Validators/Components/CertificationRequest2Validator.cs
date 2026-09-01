@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class CertificationRequest2Validator : AbstractValidator<CertificationRequest2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="CertificationRequest2"/>.
+    /// </summary>
     public CertificationRequest2Validator()
     {
         RuleFor(x => x.Attribute)

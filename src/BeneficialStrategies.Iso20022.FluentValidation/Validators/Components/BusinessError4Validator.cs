@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class BusinessError4Validator : AbstractValidator<BusinessError4>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="BusinessError4"/>.
+    /// </summary>
     public BusinessError4Validator()
     {
         RuleFor(x => x.BusinessError)

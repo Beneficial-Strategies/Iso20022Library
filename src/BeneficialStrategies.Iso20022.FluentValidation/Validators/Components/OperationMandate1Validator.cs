@@ -20,6 +20,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
 public class OperationMandate1Validator : AbstractValidator<OperationMandate1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="OperationMandate1"/>.
+    /// </summary>
     public OperationMandate1Validator()
     {
         RuleFor(x => x.BankOperation)

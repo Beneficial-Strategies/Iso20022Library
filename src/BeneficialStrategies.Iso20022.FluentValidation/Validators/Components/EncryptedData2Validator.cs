@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class EncryptedData2Validator : AbstractValidator<EncryptedData2>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="EncryptedData2"/>.
+    /// </summary>
     public EncryptedData2Validator()
     {
         RuleFor(x => x.EncryptedElement)

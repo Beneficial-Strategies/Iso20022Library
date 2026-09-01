@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class ModificationScope35Validator : AbstractValidator<ModificationScope35>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="ModificationScope35"/>.
+    /// </summary>
     public ModificationScope35Validator()
     {
         RuleFor(x => x.AdditionalInformation)

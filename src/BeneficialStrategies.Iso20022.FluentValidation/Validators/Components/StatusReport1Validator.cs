@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class StatusReport1Validator : AbstractValidator<StatusReport1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="StatusReport1"/>.
+    /// </summary>
     public StatusReport1Validator()
     {
         RuleFor(x => x.DataSet)

@@ -19,6 +19,9 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// </remarks>
 public class AutomaticVariation1Validator : AbstractValidator<AutomaticVariation1>
 {
+    /// <summary>
+    /// Initializes a new instance of the validator for <see cref="AutomaticVariation1"/>.
+    /// </summary>
     public AutomaticVariation1Validator()
     {
         RuleFor(x => x.AmountAndTrigger)
