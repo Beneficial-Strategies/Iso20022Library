@@ -512,6 +512,18 @@ single repository. The planned packages include (at minimum):
 
 - `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
 - `BeneficialStrategies.Iso20022.MassTransit.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages (named with the engine in the package id, not just `.Sagas`, since an NServiceBus-based sagas package is a plausible future sibling and this disambiguates on NuGet and in code from day one)
+- `BeneficialStrategies.Iso20022.MassTransit` (planned, not yet started) — a thin adapter package
+  wiring `BeneficialStrategies.Iso20022.FluentValidation`'s validators into MassTransit's own
+  pipeline (`IFilter<SendContext<T>>` on publish, `IFilter<ConsumeContext<T>>` on consume), so a
+  non-conformant message is rejected at the transport boundary rather than reaching application
+  code. Deliberately **transport-agnostic by design, not by accident**: MassTransit abstracts
+  RabbitMQ, Kafka (via its Kafka Rider), Azure Service Bus, and SQS underneath one pipeline API, so
+  one package covers all of them — no separate `.Kafka`/`.RabbitMQ` packages needed unless real
+  demand shows up from shops not using MassTransit at all. This also carries forward to sagas:
+  MassTransit already abstracts saga state persistence, and a large share of ISO 20022 message
+  families are expected to be saga-shaped (see `.MassTransit.Sagas` above) — another reason to
+  build on MassTransit rather than against raw transport clients. (2026-09-02 architecture
+  discussion.)
 
 **Reasons:**
 
@@ -527,6 +539,26 @@ single repository. The planned packages include (at minimum):
 
 Each package retains its own `.csproj` with its own `<PackageId>` and `<Version>`. CI packs and
 publishes them in dependency order (ISO 20022 library first, then Sagas).
+
+### Code generation for framework-specific siblings — considered, declined for now
+
+If `.MassTransit.Sagas` ever gains an `.NServiceBus.Sagas` sibling, the two would need to stay
+behaviorally consistent (same states, events, transitions, correlation rules) despite being built
+against genuinely different paradigms — MassTransit's declarative `MassTransitStateMachine<T>`
+builder vs. NServiceBus's imperative `Saga<TSagaData>` + `IHandleMessages<T>` handlers. A
+shared-source-model-plus-per-framework-template approach (T4, or a Roslyn incremental source
+generator, or a small standalone codegen console app) was considered for exactly this reason.
+
+**Declined for now** — this repo already lived through the generator-vs-hand-maintained trade-off
+once, for the message library itself (see "Transition Notice" at the top of this file: the original
+generators were retired once volume no longer justified the tooling overhead). With one saga pair
+today, that same lesson applies again. `coverage-checksums.json` (in
+`BeneficialStrategies.Iso20022.FluentValidation`, see that project's own CLAUDE.md) already flags
+when a message type's spec content changes between snapshots — the same signal doubles as the
+prompt to re-check whether a saga built against that message family (MassTransit's, and any future
+NServiceBus sibling's) still holds, without needing a dedicated generator pipeline to catch drift.
+Revisit code generation if/when enough saga pairs exist that hand-keeping them aligned becomes the
+actual bottleneck — not before. (2026-09-02 architecture discussion.)
 
 ## Test Patterns
 

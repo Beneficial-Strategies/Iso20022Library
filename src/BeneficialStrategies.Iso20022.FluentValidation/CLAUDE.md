@@ -170,6 +170,10 @@ per-artifact hash the MCP server started providing on 2026-08-26 — see
 - This only re-checks types **already** in the manifest — it does not discover new coverage
   candidates (new messages, or growth in an existing message's reachable graph). That stays part
   of the normal per-message-family scoping process described in "Coverage Scoping Policy" above.
+- **Reused beyond this package**: a checksum change here is also the intended signal for reviewing
+  any saga package built against that same message family (`.MassTransit.Sagas` and any future
+  `.NServiceBus.Sagas` sibling) — see "Code generation for framework-specific siblings" in the root
+  `CLAUDE.md`. One drift-detection mechanism, not a separate one per consuming package.
 
 ## Adding a New Validator
 
