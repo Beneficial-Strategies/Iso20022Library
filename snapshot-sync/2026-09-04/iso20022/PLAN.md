@@ -50,26 +50,32 @@ types.
 
 ## Phase 1: Codesets (31 new · 17 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-codesets works this section -->
+<!-- 2026-09-25 batch-1 correction: 2 of the original 31 "New" bullets (ExternalTrackerNotificationTypeCode,
+     ExternalTransactorTypeCode) were plan errors — both files already existed in the repo (dated
+     2026-06-26 and 2026-08-16 respectively) before this sync started. ExternalTrackerNotificationTypeCode's
+     real work item is its Changed bullet below (it gained a derivation pointer). ExternalTransactorTypeCode
+     was not present anywhere in the 2026-06-26→2026-09-04 diff at all — genuinely no action needed this
+     cycle; removed from New with no file changes. Corrected New count: 29 real items (30 bullets below
+     minus the ExternalTrackerNotificationTypeCode duplicate). -->
 ### New
-- [ ] `ExternalProspectusExemptionReasonCode` — `Codesets/ExternalProspectusExemptionReasonCode.cs`
-- [ ] `ExternalProspectusExemptionReason1Code` — `Codesets/ExternalProspectusExemptionReason1Code.cs`
-- [ ] `ExternalPostTradeCode` — `Codesets/ExternalPostTradeCode.cs`
-- [ ] `ExternalPostTrade1Code` — `Codesets/ExternalPostTrade1Code.cs`
-- [ ] `ExternalPostTrade2Code` — `Codesets/ExternalPostTrade2Code.cs`
-- [ ] `ExternalPostTrade3Code` — `Codesets/ExternalPostTrade3Code.cs`
-- [ ] `ExternalDecisionStatusUpdateReasonCode` — `Codesets/ExternalDecisionStatusUpdateReasonCode.cs`
-- [ ] `ExternalDecisionStatusUpdateReason1Code` — `Codesets/ExternalDecisionStatusUpdateReason1Code.cs`
-- [ ] `ExternalProspectusDocumentTypeCode` — `Codesets/ExternalProspectusDocumentTypeCode.cs`
-- [ ] `ExternalProspectusDocumentType1Code` — `Codesets/ExternalProspectusDocumentType1Code.cs`
-- [ ] `ExternalPartyTypeCode` — `Codesets/ExternalPartyTypeCode.cs`
-- [ ] `ExternalPartyType1Code` — `Codesets/ExternalPartyType1Code.cs`
-- [ ] `ExternalLocaleCode` — `Codesets/ExternalLocaleCode.cs`
-- [ ] `ExternalLocale1Code` — `Codesets/ExternalLocale1Code.cs`
-- [ ] `ExternalRatingOutlookCode` — `Codesets/ExternalRatingOutlookCode.cs`
-- [ ] `ExternalRatingOutlook1Code` — `Codesets/ExternalRatingOutlook1Code.cs`
-- [ ] `ExternalTrackerNotificationTypeCode` — `Codesets/ExternalTrackerNotificationTypeCode.cs`
-- [ ] `ExternalTrackerNotificationType1Code` — `Codesets/ExternalTrackerNotificationType1Code.cs`
-- [ ] `ExternalTrackerNotificationSubType1Code` — `Codesets/ExternalTrackerNotificationSubType1Code.cs` (base `ExternalTrackerNotificationSubTypeCode` already exists, gained derivation to this — see Changed)
+- [x] `ExternalProspectusExemptionReasonCode` — `Codesets/ExternalProspectusExemptionReasonCode.cs` (memberless external code set — plain open `IIsoExternalCode` struct, Pattern `^.{1,4}$` from MCP minLength/maxLength facet)
+- [x] `ExternalProspectusExemptionReason1Code` — `Codesets/ExternalProspectusExemptionReason1Code.cs` (memberless, restriction of base — plain open struct)
+- [x] `ExternalPostTradeCode` — `Codesets/ExternalPostTradeCode.cs` (hybrid: external + 38 known members via get_code_set_details — open struct + named constants)
+- [x] `ExternalPostTrade1Code` — `Codesets/ExternalPostTrade1Code.cs` (hybrid, restriction of ExternalPostTradeCode — 19 members, own IsoIds)
+- [x] `ExternalPostTrade2Code` — `Codesets/ExternalPostTrade2Code.cs` (hybrid, restriction of ExternalPostTradeCode — 11 members, own IsoIds)
+- [x] `ExternalPostTrade3Code` — `Codesets/ExternalPostTrade3Code.cs` (hybrid, restriction of ExternalPostTradeCode — 14 members, own IsoIds)
+- [x] `ExternalDecisionStatusUpdateReasonCode` — `Codesets/ExternalDecisionStatusUpdateReasonCode.cs` (hybrid, 16 known members)
+- [x] `ExternalDecisionStatusUpdateReason1Code` — `Codesets/ExternalDecisionStatusUpdateReason1Code.cs` (hybrid, restriction of base — 16 members, own IsoIds)
+- [x] `ExternalProspectusDocumentTypeCode` — `Codesets/ExternalProspectusDocumentTypeCode.cs` (hybrid, 15 known members)
+- [x] `ExternalProspectusDocumentType1Code` — `Codesets/ExternalProspectusDocumentType1Code.cs` (hybrid, restriction of base — 15 members, own IsoIds)
+- [x] `ExternalPartyTypeCode` — `Codesets/ExternalPartyTypeCode.cs` (memberless — plain open struct)
+- [x] `ExternalPartyType1Code` — `Codesets/ExternalPartyType1Code.cs` (memberless, restriction of base — plain open struct)
+- [x] `ExternalLocaleCode` — `Codesets/ExternalLocaleCode.cs` (memberless — plain open struct)
+- [x] `ExternalLocale1Code` — `Codesets/ExternalLocale1Code.cs` (memberless, restriction of base — plain open struct)
+- [x] `ExternalRatingOutlookCode` — `Codesets/ExternalRatingOutlookCode.cs` (hybrid, 7 known members; no length facet published by MCP, Pattern kept permissive at `^.{1,4}$`)
+- [x] `ExternalRatingOutlook1Code` — `Codesets/ExternalRatingOutlook1Code.cs` (hybrid, restriction of base — 7 members, own IsoIds)
+- [x] `ExternalTrackerNotificationType1Code` — `Codesets/ExternalTrackerNotificationType1Code.cs` (memberless, restriction of base — processed after its prerequisite Changed item below per ordering rule)
+- [x] `ExternalTrackerNotificationSubType1Code` — `Codesets/ExternalTrackerNotificationSubType1Code.cs` (memberless, restriction of base — processed after its prerequisite Changed item below per ordering rule)
 - [ ] `ExternalMaximumAmountTypeCode` — `Codesets/ExternalMaximumAmountTypeCode.cs`
 - [ ] `ExternalMaximumAmountType1Code` — `Codesets/ExternalMaximumAmountType1Code.cs`
 - [ ] `ExternalBenchmarkTypeCode` — `Codesets/ExternalBenchmarkTypeCode.cs`
@@ -82,19 +88,19 @@ types.
 - [ ] `ExternalAccountVerificationReason1Code` — `Codesets/ExternalAccountVerificationReason1Code.cs`
 - [ ] `ExternalNetObligationSettlementMethodCode` — `Codesets/ExternalNetObligationSettlementMethodCode.cs`
 - [ ] `ExternalNetObligationSettlementMethod1Code` — `Codesets/ExternalNetObligationSettlementMethod1Code.cs`
-- [ ] `ExternalTransactorTypeCode` — `Codesets/ExternalTransactorTypeCode.cs` (no `derivation`/`trace` pair — standalone)
-### Changed (metadata only except the BE01 typo — see Diff Sourcing Note; verify no other drift, then check off)
+- [x] `ExternalTransactorTypeCode` — plan error: already fully implemented (2026-08-16, `Codesets/ExternalTransactorTypeCode.cs`), not present in the 2026-06-26→2026-09-04 diff at all. No action needed.
+### Changed (metadata only except the BE01 typo and the two Tracker derivation gains — see Diff Sourcing Note)
 - [ ] `ExternalRegulatoryReportingType1Code` — registrationStatus: Provisionally Registered → Registered
 - [ ] `PenaltyStatusReasonCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `ExternalRegulatoryReportingTypeCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `PenaltyTypeCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalTrackerNotificationSubTypeCode` — registrationStatus: Provisionally Registered → Registered; gained `derivation` pointer to new `ExternalTrackerNotificationSubType1Code` — update `[Derivations(...)]` if present
+- [x] `ExternalTrackerNotificationSubTypeCode` — registrationStatus already Registered in the existing file (no change needed there); gained `derivation` pointer to new `ExternalTrackerNotificationSubType1Code` — added `[Derivations(typeof(ExternalTrackerNotificationSubType1Code))]` and updated stale "no derivation relationship reported" remark
 - [ ] `ExternalDeliveryMethodCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `PenaltyListTypeCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `ExternalDeliveryMethod1Code` — registrationStatus: Provisionally Registered → Registered
 - [ ] `PenaltyStatusCode` — registrationStatus: Provisionally Registered → Registered
 - [ ] `PenaltyCalculationMethodCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalTrackerNotificationTypeCode` — registrationStatus: Provisionally Registered → Registered; gained `derivation` pointer to new `ExternalTrackerNotificationType1Code` — update `[Derivations(...)]` if present
+- [x] `ExternalTrackerNotificationTypeCode` — registrationStatus already Registered in the existing file (no change needed there); gained `derivation` pointer to new `ExternalTrackerNotificationType1Code` — added `[Derivations(typeof(ExternalTrackerNotificationType1Code))]` and updated stale "no derivation relationship reported" remark
 - [ ] `ExternalStatusReasonCode` — code `BE01` name typo fix: `InconsistenWithEndCustomer` → `InconsistentWithEndCustomer` (rename member/field, keep `[Description]`/summary text, update contract test entry if member name is referenced there)
 - [ ] `ExternalStatusReason1Code` — same `BE01` typo fix as above
 - [ ] `ExternalMandateReasonCode` — same `BE01` typo fix as above

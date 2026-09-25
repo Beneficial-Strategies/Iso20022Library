@@ -12,13 +12,15 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 /// </summary>
 /// <remarks>
 /// External code sets can be downloaded from www.iso20022.org.
-/// No derivation relationship reported by MCP (unlike the similarly-named ExternalNotificationType1Code/Code pair, already implemented) - standalone type.
-/// Length facet from MCP: minLength=1, maxLength=4
+/// Length facet from MCP: minLength=1, maxLength=4.
+/// As of the 2026-09-04 MCP snapshot, gained a derivation pointer to <see cref="ExternalTrackerNotificationType1Code"/>
+/// (superseding the earlier "no derivation relationship reported" note from this file's original 2026-06-26 sync).
 /// </remarks>
 [DataContract]
 [Serializable]
 [IsoId("_b6mLkEN9Ee-QZYT2pcGFZw")]
 [Description(@"Specifies the tracker notification type, as published in an external tracker notification type code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Derivations(typeof(ExternalTrackerNotificationType1Code))]
 [JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<ExternalTrackerNotificationTypeCode>))]
 public readonly struct ExternalTrackerNotificationTypeCode : IIsoExternalCode, IEquatable<ExternalTrackerNotificationTypeCode>
 {
