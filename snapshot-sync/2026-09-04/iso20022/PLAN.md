@@ -128,7 +128,7 @@ types.
      No action required; see Diff Sourcing Note. -->
 
 ## Milestone 2: Build
-- [ ] Build passes after components
+- [x] Build passes after components (`dotnet build BeneficialStrategies.Iso20022.Common` — net8.0 and net10.0, 0 Warning(s), 0 Error(s))
 
 ## Phase 3: Choices (2 new · 0 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-choices works this section -->
