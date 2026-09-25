@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25
+- **Last updated**: 2026-09-25 (codesets batch 2: 20 more items done, 7 remain in Phase 1)
 
 ## Diff Sourcing Note
 
@@ -76,29 +76,29 @@ types.
 - [x] `ExternalRatingOutlook1Code` — `Codesets/ExternalRatingOutlook1Code.cs` (hybrid, restriction of base — 7 members, own IsoIds)
 - [x] `ExternalTrackerNotificationType1Code` — `Codesets/ExternalTrackerNotificationType1Code.cs` (memberless, restriction of base — processed after its prerequisite Changed item below per ordering rule)
 - [x] `ExternalTrackerNotificationSubType1Code` — `Codesets/ExternalTrackerNotificationSubType1Code.cs` (memberless, restriction of base — processed after its prerequisite Changed item below per ordering rule)
-- [ ] `ExternalMaximumAmountTypeCode` — `Codesets/ExternalMaximumAmountTypeCode.cs`
-- [ ] `ExternalMaximumAmountType1Code` — `Codesets/ExternalMaximumAmountType1Code.cs`
-- [ ] `ExternalBenchmarkTypeCode` — `Codesets/ExternalBenchmarkTypeCode.cs`
-- [ ] `ExternalBenchmarkType1Code` — `Codesets/ExternalBenchmarkType1Code.cs`
-- [ ] `ExternalBenchmarkSignificanceCode` — `Codesets/ExternalBenchmarkSignificanceCode.cs`
-- [ ] `ExternalBenchmarkSignificance1Code` — `Codesets/ExternalBenchmarkSignificance1Code.cs`
-- [ ] `ExternalTrackerAlertStatusCode` — `Codesets/ExternalTrackerAlertStatusCode.cs`
-- [ ] `ExternalTrackerAlertStatus1Code` — `Codesets/ExternalTrackerAlertStatus1Code.cs`
-- [ ] `ExternalAccountVerificationReasonCode` — `Codesets/ExternalAccountVerificationReasonCode.cs`
-- [ ] `ExternalAccountVerificationReason1Code` — `Codesets/ExternalAccountVerificationReason1Code.cs`
-- [ ] `ExternalNetObligationSettlementMethodCode` — `Codesets/ExternalNetObligationSettlementMethodCode.cs`
-- [ ] `ExternalNetObligationSettlementMethod1Code` — `Codesets/ExternalNetObligationSettlementMethod1Code.cs`
+- [x] `ExternalMaximumAmountTypeCode` — `Codesets/ExternalMaximumAmountTypeCode.cs` (memberless — plain open struct, Length 1-4 facet from MCP)
+- [x] `ExternalMaximumAmountType1Code` — `Codesets/ExternalMaximumAmountType1Code.cs` (memberless, restriction of base — plain open struct)
+- [x] `ExternalBenchmarkTypeCode` — `Codesets/ExternalBenchmarkTypeCode.cs` (hybrid, 4 known members, Length 1-4 facet from MCP)
+- [x] `ExternalBenchmarkType1Code` — `Codesets/ExternalBenchmarkType1Code.cs` (hybrid, restriction of base — 4 members, own IsoIds)
+- [x] `ExternalBenchmarkSignificanceCode` — `Codesets/ExternalBenchmarkSignificanceCode.cs` (hybrid, 6 known members, Length 1-4 facet from MCP)
+- [x] `ExternalBenchmarkSignificance1Code` — `Codesets/ExternalBenchmarkSignificance1Code.cs` (hybrid, restriction of base — 6 members, own IsoIds)
+- [x] `ExternalTrackerAlertStatusCode` — `Codesets/ExternalTrackerAlertStatusCode.cs` (memberless — plain open struct, Length 1-4 facet from MCP)
+- [x] `ExternalTrackerAlertStatus1Code` — `Codesets/ExternalTrackerAlertStatus1Code.cs` (memberless, restriction of base — plain open struct)
+- [x] `ExternalAccountVerificationReasonCode` — `Codesets/ExternalAccountVerificationReasonCode.cs` (hybrid, 19 known members; no length facet published by MCP, Pattern kept permissive at `^.{1,4}$` per observed code widths)
+- [x] `ExternalAccountVerificationReason1Code` — `Codesets/ExternalAccountVerificationReason1Code.cs` (hybrid, restriction of base — 19 members, own IsoIds)
+- [x] `ExternalNetObligationSettlementMethodCode` — `Codesets/ExternalNetObligationSettlementMethodCode.cs` (memberless — plain open struct, Length 1-4 facet from MCP)
+- [x] `ExternalNetObligationSettlementMethod1Code` — `Codesets/ExternalNetObligationSettlementMethod1Code.cs` (memberless, restriction of base — plain open struct; no definition text of its own published by MCP, base definition reused per convention)
 - [x] `ExternalTransactorTypeCode` — plan error: already fully implemented (2026-08-16, `Codesets/ExternalTransactorTypeCode.cs`), not present in the 2026-06-26→2026-09-04 diff at all. No action needed.
 ### Changed (metadata only except the BE01 typo and the two Tracker derivation gains — see Diff Sourcing Note)
-- [ ] `ExternalRegulatoryReportingType1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `PenaltyStatusReasonCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalRegulatoryReportingTypeCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `PenaltyTypeCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `ExternalRegulatoryReportingType1Code` — registrationStatus: Provisionally Registered → Registered. No code representation of registrationStatus exists anywhere in this codebase (confirmed by repo-wide grep); metadata-only, no code change. Definition text re-confirmed unchanged (plan's Diff Sourcing Note: zero `definition` changes across all 242 changedContent items).
+- [x] `PenaltyStatusReasonCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
+- [x] `ExternalRegulatoryReportingTypeCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
+- [x] `PenaltyTypeCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
 - [x] `ExternalTrackerNotificationSubTypeCode` — registrationStatus already Registered in the existing file (no change needed there); gained `derivation` pointer to new `ExternalTrackerNotificationSubType1Code` — added `[Derivations(typeof(ExternalTrackerNotificationSubType1Code))]` and updated stale "no derivation relationship reported" remark
-- [ ] `ExternalDeliveryMethodCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `PenaltyListTypeCode` — registrationStatus: Provisionally Registered → Registered
-- [ ] `ExternalDeliveryMethod1Code` — registrationStatus: Provisionally Registered → Registered
-- [ ] `PenaltyStatusCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `ExternalDeliveryMethodCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
+- [x] `PenaltyListTypeCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
+- [x] `ExternalDeliveryMethod1Code` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
+- [x] `PenaltyStatusCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
 - [ ] `PenaltyCalculationMethodCode` — registrationStatus: Provisionally Registered → Registered
 - [x] `ExternalTrackerNotificationTypeCode` — registrationStatus already Registered in the existing file (no change needed there); gained `derivation` pointer to new `ExternalTrackerNotificationType1Code` — added `[Derivations(typeof(ExternalTrackerNotificationType1Code))]` and updated stale "no derivation relationship reported" remark
 - [ ] `ExternalStatusReasonCode` — code `BE01` name typo fix: `InconsistenWithEndCustomer` → `InconsistentWithEndCustomer` (rename member/field, keep `[Description]`/summary text, update contract test entry if member name is referenced there)
