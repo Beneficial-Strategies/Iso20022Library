@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7)
+- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2)
 
 ## Diff Sourcing Note
 
@@ -133,8 +133,8 @@ types.
 ## Phase 3: Choices (2 new · 0 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-choices works this section -->
 ### New
-- [ ] `AccountReportOrError4Choice` — `Choices/AccountReportOrError4Choice_.cs` + `Choices/AccountReportOrError4Choice/` directory
-- [ ] `CashAccountAuditTrailOrOperationalError4Choice` — `Choices/CashAccountAuditTrailOrOperationalError4Choice_.cs` + `Choices/CashAccountAuditTrailOrOperationalError4Choice/` directory
+- [x] `AccountReportOrError4Choice` — `Choices/AccountReportOrError4Choice_.cs` + `Choices/AccountReportOrError4Choice/` directory (2 single-value variants: Error → ErrorHandling5, AccountReport → AccountReport34)
+- [x] `CashAccountAuditTrailOrOperationalError4Choice` — `Choices/CashAccountAuditTrailOrOperationalError4Choice_.cs` + `Choices/CashAccountAuditTrailOrOperationalError4Choice/` directory (2 single-value variants: CashAccountAuditTrailReport → CashAccountAuditTrailReport4, OperationalError → ErrorHandling5)
 
 <!-- No Changed section: the 4 ChoiceComponent changedContent hits are all messageBuildingBlock
      reference-list gains only — no variant added/removed. No action required. -->
