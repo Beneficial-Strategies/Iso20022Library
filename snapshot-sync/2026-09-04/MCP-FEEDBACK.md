@@ -33,3 +33,29 @@ file-based fallback logic built in from the start rather than discovering it int
 discover the safe page size by trial and error.
 
 **Commented-out candidate**: None identified.
+
+## No batch lookup for get_code_set_details across a 20-item codeset batch — 2026-09-25 (snapshot-sync-codesets)
+
+**Operation**: Resolving IsoId, description, external-code-set flag, length/pattern facets, and
+member tables for 18 New codesets (including 4 hybrid codesets requiring full member tables of
+7-38 entries each) plus 2 Changed codesets, one at a time.
+
+**What MCP provided**: `get_code_set_details` returned complete, correctly-shaped data for every
+single-name call — no follow-up calls were needed per codeset, and no pagination gaps were found
+(a real improvement over some earlier syncs).
+
+**Gap**: Each of the 20 items required its own serial `get_code_set_details` round trip; there is
+no way to pass a list of codeset names and get all their details back in one response.
+
+**Workaround**: None beyond making the 20 calls serially — none needed given the low overall
+latency, but the round-trip count scales linearly with batch size.
+
+**Enterprise Impact**: At the 20-items-per-invocation cap this skill uses, a full multi-hundred-item
+codeset phase across several releases means hundreds of serial round trips that a batch endpoint
+would collapse into a handful of calls — meaningful for CI wall-clock time and API rate limits at
+enterprise scale.
+
+**Suggested Enhancement**: A `get_code_set_details_batch(codeSetNames: string[])` accepting up to
+~20-50 names and returning all results in one response.
+
+**Commented-out candidate**: None identified.
