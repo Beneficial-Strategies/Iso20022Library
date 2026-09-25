@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2)
+- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2; Milestone 3 build verified green)
 
 ## Diff Sourcing Note
 
@@ -140,7 +140,7 @@ types.
      reference-list gains only — no variant added/removed. No action required. -->
 
 ## Milestone 3: Build
-- [ ] Build passes after choices
+- [x] Build passes after choices (`dotnet build BeneficialStrategies.Iso20022.Common` — net8.0 and net10.0, 0 Warning(s), 0 Error(s))
 
 ## Phase 4: Messages (11 new · 0 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-messages [area] works this section -->
