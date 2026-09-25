@@ -7,12 +7,12 @@ using System.Text.Json.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Specifies the calculation method for the penalty.
+/// Specifies the calculation methode for the penalty.
 /// </summary>
 [DataContract]
 [Serializable]
 [IsoId("_PCcrwDkUEem897H7zB2RJg")]
-[Description(@"Specifies the calculation method for the penalty.")]
+[Description(@"Specifies the calculation methode for the penalty.")]
 [Derivations(
     typeof(PenaltyAmountType1Code),
     typeof(PenaltyCalculationMethod1Code)

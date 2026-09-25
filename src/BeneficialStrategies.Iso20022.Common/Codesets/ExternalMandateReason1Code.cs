@@ -104,7 +104,7 @@ public enum ExternalMandateReason1Code
     [Description(
         @"Identification of end customer is not consistent with associated account number. (formerly CreditorConsistency)."
     )]
-    InconsistenWithEndCustomer = ExternalMandateReasonCode.InconsistenWithEndCustomer, // same ordinal as derivation source for type conversions
+    InconsistentWithEndCustomer = ExternalMandateReasonCode.InconsistentWithEndCustomer, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Specification of creditor&apos;s address, which is required for payment, is missing/not correct (formerly IncorrectCreditorAddress).

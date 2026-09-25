@@ -616,7 +616,7 @@ public enum ExternalStatusReasonCode
     [Description(
         @"Identification of end customer is not consistent with associated account number. (formerly CreditorConsistency)."
     )]
-    InconsistenWithEndCustomer,
+    InconsistentWithEndCustomer,
 
     /// <summary>
     /// Specification of creditor&apos;s address, which is required for payment, is missing/not correct (formerly IncorrectCreditorAddress).

@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25 (codesets batch 2: 20 more items done, 7 remain in Phase 1)
+- **Last updated**: 2026-09-25 (codesets batch 3: final 7 items done — Phase 1 complete, 47/47)
 
 ## Diff Sourcing Note
 
@@ -99,14 +99,14 @@ types.
 - [x] `PenaltyListTypeCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
 - [x] `ExternalDeliveryMethod1Code` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
 - [x] `PenaltyStatusCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only, no code change (see note above).
-- [ ] `PenaltyCalculationMethodCode` — registrationStatus: Provisionally Registered → Registered
+- [x] `PenaltyCalculationMethodCode` — registrationStatus: Provisionally Registered → Registered. Metadata-only (see note above), but incidental drift found on the fresh-lookup re-check: class-level `<summary>`/`[Description]` said "calculation method" while the live spec's own definition text is "calculation methode" (verbatim ISO typo) — corrected to match spec verbatim per CLAUDE.md's non-negotiable rule. All 4 member descriptions already matched, no change needed there.
 - [x] `ExternalTrackerNotificationTypeCode` — registrationStatus already Registered in the existing file (no change needed there); gained `derivation` pointer to new `ExternalTrackerNotificationType1Code` — added `[Derivations(typeof(ExternalTrackerNotificationType1Code))]` and updated stale "no derivation relationship reported" remark
-- [ ] `ExternalStatusReasonCode` — code `BE01` name typo fix: `InconsistenWithEndCustomer` → `InconsistentWithEndCustomer` (rename member/field, keep `[Description]`/summary text, update contract test entry if member name is referenced there)
-- [ ] `ExternalStatusReason1Code` — same `BE01` typo fix as above
-- [ ] `ExternalMandateReasonCode` — same `BE01` typo fix as above
-- [ ] `ExternalMandateReason1Code` — same `BE01` typo fix as above
-- [ ] `ExternalReturnReasonCode` — same `BE01` typo fix as above
-- [ ] `ExternalReturnReason1Code` — same `BE01` typo fix as above
+- [x] `ExternalStatusReasonCode` — code `BE01` name typo fix: `InconsistenWithEndCustomer` → `InconsistentWithEndCustomer`. Confirmed via `get_code_set_details` the live spec now reads `InconsistentWithEndCustomer`. Renamed the member identifier; `[Description]`/summary text was already correct (never contained the typo). Repo-wide grep confirmed no other `.cs` source outside these 6 files referenced the old name (only stale `bin/`/`obj/` build artifacts did, which rebuild automatically).
+- [x] `ExternalStatusReason1Code` — same `BE01` typo fix as above; also updated the `= ExternalStatusReasonCode.InconsistenWithEndCustomer` derivation-ordinal reference to the new name.
+- [x] `ExternalMandateReasonCode` — same `BE01` typo fix as above.
+- [x] `ExternalMandateReason1Code` — same `BE01` typo fix as above; also updated the `= ExternalMandateReasonCode.InconsistenWithEndCustomer` derivation-ordinal reference.
+- [x] `ExternalReturnReasonCode` — same `BE01` typo fix as above.
+- [x] `ExternalReturnReason1Code` — same `BE01` typo fix as above; also updated the `= ExternalReturnReasonCode.InconsistenWithEndCustomer` derivation-ordinal reference.
 
 ## Milestone 1: Build
 - [ ] Build passes after codesets

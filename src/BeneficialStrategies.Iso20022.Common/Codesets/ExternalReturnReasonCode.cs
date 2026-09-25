@@ -220,7 +220,7 @@ public enum ExternalReturnReasonCode
     [Description(
         @"Identification of end customer is not consistent with associated account number, organisation ID or private ID."
     )]
-    InconsistenWithEndCustomer,
+    InconsistentWithEndCustomer,
 
     /// <summary>
     /// Specification of creditor&apos;s address, which is required for payment, is missing/not correct (formerly IncorrectCreditorAddress).
