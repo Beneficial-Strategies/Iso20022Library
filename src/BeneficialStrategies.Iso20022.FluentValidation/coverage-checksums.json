@@ -2,7 +2,7 @@
   "_meta": {
     "entryCount": 1295,
     "generatedFrom": "spec-snapshot.tsv",
-    "snapshotDate": "2026-06-26"
+    "snapshotDate": "2026-09-04"
   },
   "entries": {
     "ATMCustomer1": {
@@ -3558,7 +3558,7 @@
       "validatorFile": "Validators/Codesets/ExternalMandateSetupReason1CodeValidator.cs"
     },
     "ExternalRegulatoryReportingType1Code": {
-      "checksum": "8A3843906BE18268",
+      "checksum": "C97986CE8E863B64",
       "isoId": "_8T8SAHeKEfCdoODv2ypKfw",
       "recordType": "CODESET",
       "removalDate": null,
@@ -9030,7 +9030,7 @@
       "validatorFile": "Validators/Components/SubscriptionMultipleOrder7Validator.cs"
     },
     "SupplementaryData1": {
-      "checksum": "66F4B3EA957EA524",
+      "checksum": "E291E170DA100DA4",
       "isoId": "_Qn0zC9p-Ed-ak6NoX_4Aeg_468227563",
       "recordType": "MSGCOMP",
       "removalDate": null,
