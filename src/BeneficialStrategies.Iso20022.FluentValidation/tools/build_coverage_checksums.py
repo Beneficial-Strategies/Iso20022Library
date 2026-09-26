@@ -71,9 +71,12 @@ After regenerating, `git diff coverage-checksums.json` IS the validator-maintena
                                                     entry's own "removalDate" field. Neither is deleted.
   - "status" newly became "NOT_FOUND_IN_CURRENT_SNAPSHOT" -> deletion candidate for both the model
                                                     type and its validator (see policy above).
-This does NOT detect brand-new spec messages/components we have no validator for yet (that's a
-"what should we add coverage for" question, not a "what do we already have that might be stale"
-question) — that stays a job for snapshot-sync-plan's own added/removed diff.
+This does NOT detect brand-new spec messages/components we have no validator for yet in general
+(that's a "what should we add coverage for" question, not a "what do we already have that might be
+stale" question) — that stays part of the normal per-message-family scoping process. One narrower
+case of it IS covered, by a sibling script: see check_message_coverage_gaps.py, which detects a
+new/superseding top-level message landing in a business area FullySupportedMessages already claims
+is 100% complete — a case CoverageCompletenessTests itself can never catch on its own.
 """
 import re
 import os

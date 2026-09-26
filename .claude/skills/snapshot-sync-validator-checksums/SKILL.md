@@ -1,6 +1,6 @@
 ---
 name: snapshot-sync-validator-checksums
-description: Refresh coverage-checksums.json (FluentValidation package) from the current MCP spec snapshot and flag which existing validators need review — edit (spec content changed), mirror [Obsolete] from the model type (spec entity flagged obsolete but still present), or delete in lockstep with its model type (spec entity genuinely absent, subject to reference-safety check). Does NOT find new coverage candidates — that's snapshot-sync-plan's job.
+description: Refresh coverage-checksums.json (FluentValidation package) from the current MCP spec snapshot and flag which existing validators need review — edit (spec content changed), mirror [Obsolete] from the model type (spec entity flagged obsolete but still present), or delete in lockstep with its model type (spec entity genuinely absent, subject to reference-safety check). Also runs tools/check_message_coverage_gaps.py to detect a new/superseding message landing in a business area already claimed 100% complete.
 argument-hint: (none — reads snapshot-sync/{date}/spec-snapshot.tsv, writes src/BeneficialStrategies.Iso20022.FluentValidation/coverage-checksums.json)
 ---
 
@@ -119,9 +119,54 @@ that explains *why* a checksum moved.
 
 It never proposes **new** validators for spec entities that have no validator at all yet — a
 checksum-based join can only ever cover types already in the manifest. Finding new coverage
-candidates (new messages, or existing messages whose reachable graph grew) stays
-`snapshot-sync-plan`'s and the individual message-scoping workflow's job (see
-`project_fluentvalidation_coverage_progress` in project memory for that ongoing effort).
+candidates in general (an *existing* message's reachable graph growing a new field that needs a
+new component validator) stays the individual message-scoping workflow's job (see
+`project_fluentvalidation_coverage_progress` in project memory for that ongoing effort) — this
+skill has no way to know that a message's own graph grew without re-deriving the whole reachable
+set, which is exactly what building/reviewing that message's validator already does.
+
+### 6. New-or-superseded top-level message in an already-100%-complete area
+
+**This one narrower case IS checked here, automatically, every time this skill runs** — it was
+previously undocumented (both this skill and `build_coverage_checksums.py`'s own docstring used to
+say "that's `snapshot-sync-plan`'s job," but `snapshot-sync-plan/SKILL.md` never actually
+implemented it — a real gap, found and closed 2026-09-25). `CoverageCompletenessTests.
+FullySupportedMessages` only mechanically verifies the exact class names already listed in it; a
+brand-new message family, or a newer version that supersedes one already listed, in a business
+area this project calls 100% complete (`pain`, `pacs` as of 2026-09-25 — see README.md's coverage
+table intro) is invisible to that test. Nothing goes red; the completeness claim just quietly stops
+being true.
+
+```bash
+cd src/BeneficialStrategies.Iso20022.FluentValidation
+python3 tools/check_message_coverage_gaps.py ../../snapshot-sync/{date}/spec-snapshot.tsv
+```
+
+Exit code 1 means it found something. Two finding types:
+
+- **SUPERSEDED** — a message already in `FullySupportedMessages` has a newer version now in the
+  spec. Per this project's own Coverage Scoping Policy ("support the newest Registered version"),
+  the listed version is no longer current. This needs a human scoping decision: build the new
+  version's validator (usually cheap — see `project_fluentvalidation_coverage_progress`'s
+  "shared-foundation" lesson, most of the graph is typically already validated) and swap it into
+  `FullySupportedMessages` in place of the old one, or explicitly decide to leave the old version
+  listed for now and note why.
+- **NEW FAMILY** — a message family with no `FullySupportedMessages` entry at all appeared in a
+  100%-complete area. Needs the same scoping decision: build it (the area's "100% complete" claim
+  now covers one more family) or explicitly leave it out with a documented reason (see the
+  `PaymentCancellationRequestV01`/`PaymentStatusReportV02` precedent in README.md and the script's
+  own `KNOWN_EXCLUDED_LEGACY_NAMES` constant — add a new permanent exclusion there if that's the
+  right call, don't just let it silently recur every run).
+
+**Do not build the validator as part of this skill invocation.** This skill's job is detection and
+reporting, matching its scope everywhere else in this file. Report the finding (and append it to
+`project_fluentvalidation_coverage_progress` memory) and let the user decide whether to scope it
+into the next validator-authoring session — building a full-spec validator is real, potentially
+substantial work (see that memory's own build-order/shared-foundation notes), not something to
+fold silently into a checksum-refresh batch.
+
+If the script reports "No coverage gaps found," note that in this skill's own report and move on —
+no PLAN.md or memory update needed for a clean run.
 
 ## Known tool friction (log new instances to `snapshot-sync/{date}/MCP-FEEDBACK.md`)
 

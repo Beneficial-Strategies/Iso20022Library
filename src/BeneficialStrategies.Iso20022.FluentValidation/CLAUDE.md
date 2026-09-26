@@ -168,8 +168,15 @@ per-artifact hash the MCP server started providing on 2026-08-26 — see
     reference the newly-marked types. Regenerating the manifest post-deployment confirmed all 302
     markers already match the bulk-sourced data exactly — nothing to correct.
 - This only re-checks types **already** in the manifest — it does not discover new coverage
-  candidates (new messages, or growth in an existing message's reachable graph). That stays part
-  of the normal per-message-family scoping process described in "Coverage Scoping Policy" above.
+  candidates in general (growth in an existing message's reachable graph stays part of the normal
+  per-message-family scoping process described in "Coverage Scoping Policy" above). **One specific
+  case is covered separately**: `tools/check_message_coverage_gaps.py` (run as Step 6 of the
+  `snapshot-sync-validator-checksums` skill, added 2026-09-25 after this exact gap was found to be
+  undocumented anywhere) detects a brand-new message family, or a version that supersedes one
+  already listed, landing in a business area `FullySupportedMessages` already claims is 100%
+  complete (`pain`, `pacs`) — a case `CoverageCompletenessTests` itself can never catch, since it
+  only walks class names already in that array. Detection only; building the validator is a
+  separate, explicit decision each time.
 - **Reused beyond this package**: a checksum change here is also the intended signal for reviewing
   any saga package built against that same message family (`.MassTransit.Sagas` and any future
   `.NServiceBus.Sagas` sibling) — see "Code generation for framework-specific siblings" in the root
