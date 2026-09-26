@@ -8,17 +8,17 @@ categories : ["ISO20022"]
 
 This document gives you an idea of the scope of implementation of this library.
 
-The library currently contains **3,311 message files** across all 35 business areas. The ISO 20022 repository snapshot dated May 11, 2026 (source: [ISO 20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/)) defines **3,312 messages**. The library is at near-complete parity with the spec; the small discrepancy is flagged in the table below.
+The library currently contains **3,339 message files** across all 35 business areas. The ISO 20022 repository snapshot dated September 4, 2026 (source: [ISO 20022 AI MCP Server](https://beneficialstrategies.com/product/mcp-server/)) defines **3,340 messages**. The library is at near-complete parity with the spec; the small discrepancy is flagged in the table below.
 
 ## ISO 20022 Messages by Business Area
 
-Counts verified against actual files in the repository (August 2026) and the ISO 20022 spec snapshot (May 11, 2026).
+Counts verified against actual files in the repository (September 2026) and the ISO 20022 spec snapshot (September 4, 2026).
 
 | Abbreviation | Business Area | Library | Spec | Notes |
 |---|---|---:|---:|---|
-| acmt | Account management — opening, maintenance, and related activities. | 152 | 152 | ✓ |
+| acmt | Account management — opening, maintenance, and related activities. | 158 | 158 | ✓ |
 | admi | Generic messages — system event notifications, generic rejections, etc. | 15 | 15 | ✓ |
-| auth | Reporting miscellaneous financial information to authorities (regulators, tax, customs, enforcement, etc.). | 172 | 172 | ✓ |
+| auth | Reporting miscellaneous financial information to authorities (regulators, tax, customs, enforcement, etc.). | 177 | 177 | ✓ |
 | caaa | Card payment transactions and services between a card acceptor and acquirer, including authorisation, cancellation, and capture. | 295 | 295 | ✓ |
 | caad | Card-related administrative services between financial institutions and their agents. | 27 | 27 | ✓ |
 | caam | Card terminal management services between an ATM and an acquirer. | 40 | 40 | ✓ |
@@ -26,7 +26,7 @@ Counts verified against actual files in the repository (August 2026) and the ISO
 | cafm | File management services in a card payment environment. | 6 | 6 | ✓ |
 | cafr | Card payment fraud reporting and disposition services. | 12 | 12 | ✓ |
 | cain | Card payment transactions and services between a card acquirer and card issuer. | 76 | 76 | ✓ |
-| camt | Cash management — reporting and advising the cash side of financial transactions, including cash movements, balances, exceptions, and investigations. | 373 | 374 | ✓ (spec count inflated by 1 duplicate entry: `RequestToModifyPaymentV03` appears twice under distinct internal IDs) |
+| camt | Cash management — reporting and advising the cash side of financial transactions, including cash movements, balances, exceptions, and investigations. | 377 | 378 | ✓ (spec count inflated by 1 duplicate entry: `RequestToModifyPaymentV03` appears twice under distinct internal IDs — reconfirmed against the September 4, 2026 snapshot) |
 | canm | Network management services in a card payment environment. | 12 | 12 | ✓ |
 | casp | Card-related transactions and services between a sale system and a Point of Interaction (POI) system. | 130 | 130 | ✓ |
 | casr | Card payment settlement reporting services. | 6 | 6 | ✓ |
@@ -38,15 +38,15 @@ Counts verified against actual files in the repository (August 2026) and the ISO
 | nvlp | Envelope messages used to bundle multiple message instances, typically for processing or transport. | 3 | 3 | ✓ |
 | pacs | Payments clearing and settlement — clearing and settlement of payment transactions between financial institutions. | 98 | 98 | ✓ |
 | pain | Payment initiation — customer-initiated payments to a financial institution and their status. | 116 | 116 | ✓ |
-| reda | Reference data — financial instruments, parties, accounts, prices, and other supporting business data. | 89 | 89 | ✓ |
-| remt | Remittance — communication between creditors and debtors about remittance details associated with payments. | 9 | 9 | ✓ |
+| reda | Reference data — financial instruments, parties, accounts, prices, and other supporting business data. | 93 | 93 | ✓ |
+| remt | Remittance — communication between creditors and debtors about remittance details associated with payments. | 10 | 10 | ✓ |
 | secl | Securities clearing — post-trading, pre-settlement credit exposure, netting, margining, and borrowing. | 23 | 23 | ✓ |
 | seev | Securities events — asset servicing, proxy voting, income, and corporate actions. | 432 | 432 | ✓ |
-| semt | Securities management — post-settlement reporting on movements, trades, and balances. | 208 | 208 | ✓ |
+| semt | Securities management — post-settlement reporting on movements, trades, and balances. | 206 | 206 | ✓ |
 | sese | Securities settlement — settlement process for securities and its status/confirmation. | 472 | 472 | ✓ |
 | setr | Securities trade — order to buy/sell, execution, affirmation, confirmation, allocation, and notification. | 114 | 114 | ✓ |
-| supl | Supplementary data extensions that add new components to existing message definitions. | 71 | 71 | ✓ |
-| trck | Payment tracking messages. | 3 | 3 | ✓ |
+| supl | Supplementary data extensions that add new components to existing message definitions. | 78 | 78 | ✓ |
+| trck | Payment tracking messages. | 6 | 6 | ✓ |
 | trea | Treasury operations (obsolete area, being progressively replaced by fxtr and related domains). | 13 | 13 | ✓ |
 | tsin | Trade service requests — applications, instructions, acknowledgements, and advice. | 13 | 13 | ✓ |
 | tsmt | Ancillary commercial trade services — checking, matching, reporting, exceptions, and investigations. | 69 | 69 | ✓ |
@@ -54,16 +54,16 @@ Counts verified against actual files in the repository (August 2026) and the ISO
 
 ## Supporting Architecture Counts
 
-Each message requires supporting structures to fully describe its business content. The table below shows counts from the current ISO 20022 specification (source: MCP server, May 11, 2026).
+Each message requires supporting structures to fully describe its business content. The table below shows counts from the current ISO 20022 specification (source: MCP server, September 4, 2026).
 
 | Component Type | Current Spec |
 |---|---:|
-| Internal code sets supplying dropdown values defined by the specification | 3,815 |
-| External code sets that may change independently of the specification | 327 |
-| Message components used to compose complex content | 14,564 |
+| Internal code sets supplying dropdown values defined by the specification | 3,825 |
+| External code sets that may change independently of the specification | 368 |
+| Message components used to compose complex content | 14,601 |
 | Business components used as building blocks across messages | 791 |
 | Simple types used for text, dates, etc., usually constrained | 339 |
 | Types relating to external schemas | 8 |
 | Types relating to user-defined content | 2 |
-| Choice types (polymorphic variants) | 4,328 |
-| **Total** | **24,174** |
+| Choice types (polymorphic variants) | 4,341 |
+| **Total** | **24,275** |

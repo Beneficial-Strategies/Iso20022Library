@@ -6,7 +6,7 @@ A family of .NET libraries for working with the [ISO 20022](https://iso20022.org
 
 | Package | Status | Description |
 |---|---|---|
-| [`BeneficialStrategies.Iso20022`](src/BeneficialStrategies.Iso20022.Common/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | The full ISO 20022 message domain model — 3,311 message types as immutable, strongly-typed C# records, with XML and JSON serialization. |
+| [`BeneficialStrategies.Iso20022`](src/BeneficialStrategies.Iso20022.Common/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | The full ISO 20022 message domain model — 3,339 message types as immutable, strongly-typed C# records, with XML and JSON serialization. |
 | [`BeneficialStrategies.Iso20022.FluentValidation`](src/BeneficialStrategies.Iso20022.FluentValidation/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | FluentValidation validators enforcing ISO 20022 spec-level constraints the C# type system alone can't express. |
 | [`BeneficialStrategies.Iso20022.MassTransit.Sagas`](src/BeneficialStrategies.Iso20022.MassTransit.Sagas/README.md) | Work in progress — not published | A MassTransit saga toolkit for ISO 20022 message flows (currently: Request-to-Pay). Investigative, not yet released. |
 

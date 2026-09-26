@@ -79,3 +79,9 @@
 0.6.2-alpha
     Transferred NuGet package ownership from the individual jefforyamos account to the BeneficialStrategies.com organization.
     Migrated CI publishing from a long-lived NUGET_API_KEY secret to NuGet Trusted Publishing (OIDC) — GitHub Actions now exchanges a short-lived signed token for a 1-hour NuGet API key at publish time; no standing secret is stored in the repository anymore.
+
+0.7.0-alpha
+    Aligned with the ISO 20022 spec snapshot dated September 4, 2026: added a complete new Standing Settlement Instruction message family in reda (initiation, cancellation, deletion, and status advice messages) and 7 new DTCC market-practice supplementary corporate-action messages in supl, plus 7 new message components, 2 new choice types, and 29 new external code sets (led by the ExternalPostTradeCode family covering 38 known post-trade processing codes). Corrected an ISO spec typo carried since a prior snapshot (code BE01: InconsistenWithEndCustomer -> InconsistentWithEndCustomer) across six related reason code sets, and graduated 8 code sets from Provisionally Registered to fully Registered status. Zero breaking changes, zero removed or newly-obsoleted types this cycle.
+    Closed a gap found while syncing this release: 30 new external code set structs were missing their required contract-test registrations; all 30 now have one, per this library's non-negotiable per-primitive test coverage policy.
+    Eliminated all remaining CS1591/CS1574 (missing/invalid XML documentation) warnings across the codebase and established a repo-wide zero-warnings build standard (CS0618/CS0612 obsolete-usage warnings remain intentionally suppressed).
+    Restructured NuGet package documentation to one README per published project, living in that project's own root, eliminating the previous drift-prone duplicate copies under doc/package/; fixed a code-sample formatting issue that was causing NuGet's README renderer to truncate examples.

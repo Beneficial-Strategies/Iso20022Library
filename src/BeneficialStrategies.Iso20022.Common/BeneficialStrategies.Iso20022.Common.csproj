@@ -18,7 +18,7 @@
 
   <PropertyGroup>
     <PackageId>BeneficialStrategies.Iso20022</PackageId>
-    <PackageDescription>The entirety of the ISO20022 message domain model. 3,311 B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
+    <PackageDescription>The entirety of the ISO20022 message domain model. 3,339 B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
     <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/release-notes.txt"))</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>

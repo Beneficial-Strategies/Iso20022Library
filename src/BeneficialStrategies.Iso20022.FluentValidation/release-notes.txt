@@ -3,3 +3,9 @@
     FluentValidation validators for the ISO 20022 message domain model, generated from the ISO 20022 specification.
     Full spec-compliance coverage (field-level constraints and cross-field rules) for CAMT-reachable components.
     Abbreviated coverage (currently-known minimum-collection-size gaps only) for the remaining components, pending full review.
+
+0.7.0-alpha
+    Verified against the ISO 20022 spec snapshot dated September 4, 2026: the pain and pacs business areas remain 100% full-spec validator coverage, with zero validator changes required this cycle; refreshed coverage-checksums.json accordingly.
+    Added tooling (check_message_coverage_gaps.py) that automatically detects a new or superseding top-level message landing in an already-100%-complete business area on future snapshot syncs, closing a previously-undocumented gap in the sync process.
+    Eliminated all remaining CS1591/CS1574 (missing/invalid XML documentation) warnings across the codebase and adopted the repo-wide zero-warnings build standard.
+    Restructured NuGet package documentation to a single README living in this project's own root, matching the same change across the other published packages in this repository.

@@ -1,6 +1,6 @@
 # Beneficial Strategies ISO20022 Library
 
-This project contains a .NET implementation of containers for 3,311 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
+This project contains a .NET implementation of containers for 3,339 different types of financial services messages as defined by the [ISO20022](https://iso20022.org) standard.
 
 This library was built as part of developing and testing the [Beneficial Strategies ISO 20022 MCP Server](https://beneficialstrategies.com/product/mcp-server/) — a subscription SaaS product; its source is not released. This library itself, however, is provided free of charge under a permissive license, and is expected to keep being updated as the ISO 20022 organization publishes new snapshots of the standard.
 
@@ -67,7 +67,7 @@ It is presumed you already have the [latest .NET SDK](https://dotnet.microsoft.c
 mkdir test
 cd test
 dotnet new console
-dotnet add package BeneficialStrategies.Iso20022 --version 0.6.2-alpha
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
 ```
 
 Open your `Program.cs` and paste the following:

@@ -78,8 +78,8 @@ If you have questions or concerns about the implementation, please send develope
 mkdir test
 cd test
 dotnet new console
-dotnet add package BeneficialStrategies.Iso20022 --version 0.6.2-alpha
-dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.6.2-alpha
+dotnet add package BeneficialStrategies.Iso20022 --version 0.7.0-alpha
+dotnet add package BeneficialStrategies.Iso20022.FluentValidation --version 0.7.0-alpha
 ```
 
 Open your `Program.cs` and paste the following. This validates `camt.056.001.10` (FIToFIPaymentCancellationRequest) — one of the full-spec-compliance validators — first against a well-formed message, then against one that violates a cross-field rule no C# type could express on its own:
