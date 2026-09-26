@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2; Milestone 3 build verified green; Phase 4 complete 11/11)
+- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2; Milestone 3 build verified green; Phase 4 complete 11/11; Milestone 4 full build+tests verified green — see note below)
 
 ## Diff Sourcing Note
 
@@ -165,9 +165,17 @@ types.
      No action required; see Diff Sourcing Note. -->
 
 ## Milestone 4: Full Build + Tests
-- [ ] Build passes
-- [ ] All tests pass
+- [x] Build passes (`dotnet build iso20022.sln --no-incremental`: 0 Warning(s), 0 Error(s), 0 CS1591, both net8.0 and net10.0)
+- [x] All tests pass (`dotnet test iso20022.sln`: Common.Tests 7,366 + FluentValidation.Tests 1,740 + MassTransit.Sagas.Tests 23 = 9,129 total per TFM, 0 failed, both net8.0 and net10.0)
+
+Note: the initial Milestone 4 test run found 30 `IIsoExternalCode` structs created in Phase 1
+(this sync) with no contract test class — a real gap in `CoverageCompletenessTests`'s sibling meta
+test, `SimpleValueCoverageTests.AllSimpleValueTypes_HaveConcretContractTestClass`. CLAUDE.md's
+"Contract Test Registration" requirement is non-negotiable but the `snapshot-sync-codesets` skill
+does not currently mention this step — closed by adding all 30 missing test files (commit
+`a4191aef98`); flagged as a skill-maintenance follow-up (`snapshot-sync-codesets` should gain an
+explicit contract-test-registration step so this doesn't recur on the next codeset-heavy sync).
 
 ## Completion
-- [ ] All phases and milestones verified
-- [ ] Changes committed and branch ready for review
+- [x] All phases and milestones verified
+- [x] Changes committed and branch ready for review
