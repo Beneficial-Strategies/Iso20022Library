@@ -7,7 +7,7 @@
 - **Previous snapshot**: 2026-06-26
 - **Branch**: main
 - **Plan created**: 2026-09-25
-- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2; Milestone 3 build verified green)
+- **Last updated**: 2026-09-25 (Phase 1 complete 47/47; Milestone 1 build verified green; Phase 2 complete 7/7; Milestone 2 build verified green; Phase 3 complete 2/2; Milestone 3 build verified green; Phase 4 complete 11/11)
 
 ## Diff Sourcing Note
 
@@ -145,18 +145,18 @@ types.
 ## Phase 4: Messages (11 new · 0 changed · 0 obsolete · 0 removed)
 <!-- /snapshot-sync-messages [area] works this section -->
 ### supl (7)
-- [ ] `DTCCCACNSD1V07` — new: extends ISO corporate action cancellation advice (CACN) with DTCC-specific elements
-- [ ] `DTCCCACOSD1V06` — new: extends ISO corporate action movement confirmation with DTCC-specific elements
-- [ ] `DTCCCAISSD1V02` — new: extends ISO Corporate Action Instruction Status Advice with DTCC-specific elements
-- [ ] `DTCCCANOCSDDataSD1V10` — new: extends ISO CANO asset servicer data (CSD type) with DTCC-specific elements
-- [ ] `DTCCCANOCSDDataSD1V17` — new: extends ISO CANO asset servicer data (CSD type) with DTCC-specific elements
-- [ ] `DTCCCANOEligibleBalanceSD1V07` — new: extends ISO CANO (Eligible Balance market practice) with DTCC-specific elements
-- [ ] `DTCCCAPASD1V06` — new: extends ISO corporate action movement preliminary advice with DTCC-specific elements
+- [x] `DTCCCACNSD1V07` — new: extends ISO corporate action cancellation advice (CACN) with DTCC-specific elements
+- [x] `DTCCCACOSD1V06` — new: extends ISO corporate action movement confirmation with DTCC-specific elements
+- [x] `DTCCCAISSD1V02` — new: extends ISO Corporate Action Instruction Status Advice with DTCC-specific elements
+- [x] `DTCCCANOCSDDataSD1V10` — new: extends ISO CANO asset servicer data (CSD type) with DTCC-specific elements
+- [x] `DTCCCANOCSDDataSD1V17` — new: extends ISO CANO asset servicer data (CSD type) with DTCC-specific elements
+- [x] `DTCCCANOEligibleBalanceSD1V07` — new: extends ISO CANO (Eligible Balance market practice) with DTCC-specific elements
+- [x] `DTCCCAPASD1V06` — new: extends ISO corporate action movement preliminary advice with DTCC-specific elements
 ### reda (4)
-- [ ] `StandingSettlementInstructionV01` — new: creates/updates a standing cash or securities settlement instruction (SSI)
-- [ ] `StandingSettlementInstructionCancellationV01` — new: cancels a previously sent StandingSettlementInstruction message
-- [ ] `StandingSettlementInstructionDeletionV01` — new: deletes a previously sent StandingSettlementInstruction message
-- [ ] `StandingSettlementInstructionStatusAdviceV01` — new: reports status of a StandingSettlementInstruction/Cancellation/Deletion message
+- [x] `StandingSettlementInstructionV01` — new: creates/updates a standing cash or securities settlement instruction (SSI)
+- [x] `StandingSettlementInstructionCancellationV01` — new: cancels a previously sent StandingSettlementInstruction message
+- [x] `StandingSettlementInstructionDeletionV01` — new: deletes a previously sent StandingSettlementInstruction message
+- [x] `StandingSettlementInstructionStatusAdviceV01` — new: reports status of a StandingSettlementInstruction/Cancellation/Deletion message
 
 <!-- No Changed section: 39 existing messages (mostly DTCC*SD1 variants + BusinessFileHeaderV01,
      ReportQueryRequestV02, SecuritiesAccountCreationRequestV01, SecuritiesSettlementTransactionQueryV01)
