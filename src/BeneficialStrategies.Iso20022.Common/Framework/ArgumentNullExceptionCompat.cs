@@ -15,4 +15,3 @@ internal static class ArgumentNullExceptionHelper
 #endif
     }
 }
-
