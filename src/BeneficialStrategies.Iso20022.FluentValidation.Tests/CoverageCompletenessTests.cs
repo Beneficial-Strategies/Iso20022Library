@@ -197,14 +197,13 @@ public class CoverageCompletenessTests
         var services = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
         services.AddIso20022Validators(rootTypes: [root]);
 
-        return services
+        return new HashSet<Type>(services
             .Where(descriptor =>
                 descriptor.ServiceType.IsGenericType
                 && !descriptor.ServiceType.ContainsGenericParameters
                 && descriptor.ServiceType.GetGenericTypeDefinition() == typeof(IValidator<>)
             )
             .Select(descriptor => descriptor.ServiceType.GetGenericArguments()[0])
-            .Where(t => t != root)
-            .ToHashSet();
+            .Where(t => t != root));
     }
 }

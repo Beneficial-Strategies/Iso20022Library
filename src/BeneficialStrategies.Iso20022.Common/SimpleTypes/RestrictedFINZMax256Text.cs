@@ -40,7 +40,7 @@ public readonly struct RestrictedFINZMax256Text : IIsoSimpleValue<string>, IEqua
     /// </exception>
     public RestrictedFINZMax256Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RestrictedFINZMax256Text), value, MinLength);
         if (value.Length > MaxLength)

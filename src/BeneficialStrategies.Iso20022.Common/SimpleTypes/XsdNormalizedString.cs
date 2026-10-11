@@ -34,7 +34,7 @@ public readonly struct XsdNormalizedString : IIsoSimpleValue<string>, IEquatable
     /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> contains a tab, newline, or carriage return.</exception>
     public XsdNormalizedString(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(XsdNormalizedString), value, "xs:normalizedString — no tab, newline, or carriage return characters");
         Value = value;

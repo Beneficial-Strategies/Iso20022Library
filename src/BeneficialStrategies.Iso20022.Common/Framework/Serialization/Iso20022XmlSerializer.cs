@@ -680,8 +680,16 @@ public static class Iso20022XmlSerializer
                 return field.GetValue(null)!;
         }
         // Fallback: try by C# name (e.g. for external codeset strings stored as-is)
-        if (Enum.TryParse(enumType, text, out var result))
-            return result!;
+        try
+        {
+            return Enum.Parse(enumType, text);
+        }
+        catch (ArgumentException)
+        {
+        }
+        catch (OverflowException)
+        {
+        }
         throw new InvalidOperationException($"Unknown value '{text}' for enum {enumType.Name}.");
     }
 

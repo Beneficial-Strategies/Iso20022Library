@@ -31,7 +31,7 @@ public readonly struct HongKongBankIdentifier : IIsoSimpleValue<string>, IEquata
     /// </exception>
     public HongKongBankIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(HongKongBankIdentifier), value, Pattern);
         Value = value;

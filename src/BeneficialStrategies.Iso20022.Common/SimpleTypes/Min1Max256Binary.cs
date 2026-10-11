@@ -38,7 +38,7 @@ public readonly struct Min1Max256Binary : IIsoSimpleValue<byte[]>, IEquatable<Mi
     /// </exception>
     public Min1Max256Binary(byte[] value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Min1Max256Binary), value, MinLength);
         if (value.Length > MaxLength)
@@ -56,7 +56,7 @@ public readonly struct Min1Max256Binary : IIsoSimpleValue<byte[]>, IEquatable<Mi
 
     private static byte[] DecodeBase64(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         try
         {
             return Convert.FromBase64String(value);

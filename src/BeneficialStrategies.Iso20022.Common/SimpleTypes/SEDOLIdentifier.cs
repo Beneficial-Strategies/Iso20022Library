@@ -73,7 +73,7 @@ public readonly struct SEDOLIdentifier : IIsoSimpleValue<string>, IEquatable<SED
     /// </exception>
     public SEDOLIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length == 6 && Regex.IsMatch(value, CorePattern))
         {
             Value = value + ComputeCheckDigit(value);

@@ -31,7 +31,7 @@ public readonly struct PortugueseNCCIdentifier : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public PortugueseNCCIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(PortugueseNCCIdentifier), value, Pattern);
         Value = value;

@@ -35,7 +35,7 @@ public readonly struct RestrictedFINMax35Text : IIsoSimpleValue<string>, IEquata
     /// </exception>
     public RestrictedFINMax35Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RestrictedFINMax35Text), value, MinLength);
         if (value.Length > MaxLength)

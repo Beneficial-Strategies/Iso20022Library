@@ -33,7 +33,7 @@ public readonly struct Exact3UpperCaseAlphaNumericText : IIsoSimpleValue<string>
     /// </exception>
     public Exact3UpperCaseAlphaNumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact3UpperCaseAlphaNumericText), value, MinLength);
         if (value.Length > MaxLength)

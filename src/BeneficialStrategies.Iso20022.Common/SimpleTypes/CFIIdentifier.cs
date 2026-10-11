@@ -31,7 +31,7 @@ public readonly struct CFIIdentifier : IIsoSimpleValue<string>, IEquatable<CFIId
     /// </exception>
     public CFIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(CFIIdentifier), value, Pattern);
         Value = value;

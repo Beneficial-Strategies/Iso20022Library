@@ -40,7 +40,7 @@ public readonly struct AMLIndicator : IIsoSimpleValue<string>, IEquatable<AMLInd
     /// </exception>
     public AMLIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(AMLIndicator), value, @"^(true|false)$");
         Value = value;

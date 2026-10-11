@@ -31,7 +31,7 @@ public readonly struct CHIPSParticipantIdentifier : IIsoSimpleValue<string>, IEq
     /// </exception>
     public CHIPSParticipantIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(CHIPSParticipantIdentifier), value, Pattern);
         Value = value;

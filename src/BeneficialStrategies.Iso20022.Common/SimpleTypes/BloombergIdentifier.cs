@@ -32,7 +32,7 @@ public readonly struct BloombergIdentifier : IIsoSimpleValue<string>, IEquatable
     /// </exception>
     public BloombergIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(BloombergIdentifier), value, MinLength);
         if (value.Length > MaxLength)

@@ -39,7 +39,7 @@ public readonly struct BelgianIdentifier : IIsoSimpleValue<string>, IEquatable<B
     /// </exception>
     public BelgianIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(BelgianIdentifier), value, Pattern);
         Value = value;

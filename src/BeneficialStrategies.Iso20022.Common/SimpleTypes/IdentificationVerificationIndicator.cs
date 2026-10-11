@@ -40,7 +40,7 @@ public readonly struct IdentificationVerificationIndicator : IIsoSimpleValue<str
     /// </exception>
     public IdentificationVerificationIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(IdentificationVerificationIndicator), value, @"^(true|false)$");
         Value = value;

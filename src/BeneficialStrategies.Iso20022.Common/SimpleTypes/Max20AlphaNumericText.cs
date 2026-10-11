@@ -33,7 +33,7 @@ public readonly struct Max20AlphaNumericText : IIsoSimpleValue<string>, IEquatab
     /// </exception>
     public Max20AlphaNumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max20AlphaNumericText), value, MinLength);
         if (value.Length > MaxLength)

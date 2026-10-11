@@ -26,7 +26,7 @@ public readonly struct Refused7Text : IIsoSimpleValue<string>, IEquatable<Refuse
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public Refused7Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(Refused7Text), value, Pattern);
         Value = value;

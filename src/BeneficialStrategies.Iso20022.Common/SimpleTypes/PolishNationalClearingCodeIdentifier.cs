@@ -31,7 +31,7 @@ public readonly struct PolishNationalClearingCodeIdentifier : IIsoSimpleValue<st
     /// </exception>
     public PolishNationalClearingCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(PolishNationalClearingCodeIdentifier), value, Pattern);
         Value = value;

@@ -26,7 +26,7 @@ public readonly struct RateSourceText : IIsoSimpleValue<string>, IEquatable<Rate
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public RateSourceText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(RateSourceText), value, Pattern);
         Value = value;

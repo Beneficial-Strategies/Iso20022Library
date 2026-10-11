@@ -53,7 +53,7 @@ public readonly struct Max30DecimalNumber : IIsoSimpleValue<decimal>, IEquatable
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid decimal, out of range, or exceeds the digit facets.</exception>
     public Max30DecimalNumber(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!decimal.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(Max30DecimalNumber), value, "decimal string");
         this = new(parsed);

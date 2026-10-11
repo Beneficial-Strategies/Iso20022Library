@@ -40,7 +40,7 @@ public readonly struct PaymentDirectionIndicator : IIsoSimpleValue<string>, IEqu
     /// </exception>
     public PaymentDirectionIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(PaymentDirectionIndicator), value, @"^(true|false)$");
         Value = value;

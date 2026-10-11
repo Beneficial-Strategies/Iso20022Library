@@ -31,7 +31,7 @@ public readonly struct EICIdentifier : IIsoSimpleValue<string>, IEquatable<EICId
     /// </exception>
     public EICIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(EICIdentifier), value, Pattern);
         Value = value;

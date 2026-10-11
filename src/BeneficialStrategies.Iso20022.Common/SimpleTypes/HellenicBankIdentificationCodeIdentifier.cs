@@ -31,7 +31,7 @@ public readonly struct HellenicBankIdentificationCodeIdentifier : IIsoSimpleValu
     /// </exception>
     public HellenicBankIdentificationCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(HellenicBankIdentificationCodeIdentifier), value, Pattern);
         Value = value;

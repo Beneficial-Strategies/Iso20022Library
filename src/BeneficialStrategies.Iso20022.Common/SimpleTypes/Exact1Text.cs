@@ -32,7 +32,7 @@ public readonly struct Exact1Text : IIsoSimpleValue<string>, IEquatable<Exact1Te
     /// </exception>
     public Exact1Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact1Text), value, MinLength);
         if (value.Length > MaxLength)

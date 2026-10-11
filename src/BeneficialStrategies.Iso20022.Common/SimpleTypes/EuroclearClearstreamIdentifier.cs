@@ -32,7 +32,7 @@ public readonly struct EuroclearClearstreamIdentifier : IIsoSimpleValue<string>,
     /// </exception>
     public EuroclearClearstreamIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(EuroclearClearstreamIdentifier), value, MinLength);
         if (value.Length > MaxLength)

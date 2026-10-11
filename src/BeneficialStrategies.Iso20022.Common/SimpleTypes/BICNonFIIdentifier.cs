@@ -31,7 +31,7 @@ public readonly struct BICNonFIIdentifier : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public BICNonFIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(BICNonFIIdentifier), value, Pattern);
         Value = value;

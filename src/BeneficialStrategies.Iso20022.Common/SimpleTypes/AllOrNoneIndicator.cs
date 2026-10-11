@@ -40,7 +40,8 @@ public readonly struct AllOrNoneIndicator : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public AllOrNoneIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+//        ArgumentNullExceptionCompat.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(AllOrNoneIndicator), value, @"^(true|false)$");
         Value = value;

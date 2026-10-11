@@ -57,7 +57,7 @@ public readonly struct Max20PositiveNumber : IIsoSimpleValue<decimal>, IEquatabl
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid decimal, out of range, or exceeds the digit facets.</exception>
     public Max20PositiveNumber(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!decimal.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(Max20PositiveNumber), value, "decimal string");
         this = new(parsed);

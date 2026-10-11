@@ -27,7 +27,7 @@ public readonly struct ExternalLocalInstrumentCode_Obsolete : IIsoSimpleValue<st
     /// <exception cref="Iso20022FormatException">Thrown with TooShort or TooLong.</exception>
     public ExternalLocalInstrumentCode_Obsolete(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(ExternalLocalInstrumentCode_Obsolete), value, MinLength);
         if (value.Length > MaxLength)

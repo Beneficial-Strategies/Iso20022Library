@@ -76,9 +76,9 @@ public abstract class SimpleValueContractTests<TStruct, TValue>
 
         // Invoke == and != via reflection — compiler cannot resolve operators on generic TStruct.
         var opEq = typeof(TStruct).GetMethod("op_Equality",
-            BindingFlags.Public | BindingFlags.Static, [typeof(TStruct), typeof(TStruct)]);
+            BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(TStruct), typeof(TStruct)], modifiers: null);
         var opNe = typeof(TStruct).GetMethod("op_Inequality",
-            BindingFlags.Public | BindingFlags.Static, [typeof(TStruct), typeof(TStruct)]);
+            BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(TStruct), typeof(TStruct)], modifiers: null);
         Assert.NotNull(opEq);
         Assert.NotNull(opNe);
         Assert.True((bool)opEq!.Invoke(null, [a, b])!);
@@ -151,8 +151,7 @@ public abstract class SimpleValueStringContractTests<TStruct>
         // Use object.Equals via reflection to avoid compile-time operator resolution issues
         var opEq = typeof(TStruct).GetMethod(
             "op_Equality",
-            BindingFlags.Public | BindingFlags.Static,
-            [typeof(TStruct), typeof(string)]);
+            BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(TStruct), typeof(string)], modifiers: null);
         Assert.NotNull(opEq); // operator ==(TStruct, string?) must exist
         Assert.True((bool)opEq!.Invoke(null, [instance, ValidSample])!);
         Assert.False((bool)opEq.Invoke(null, [instance, InvalidSample])!);
@@ -163,8 +162,7 @@ public abstract class SimpleValueStringContractTests<TStruct>
     {
         var op = typeof(TStruct).GetMethod(
             "op_Implicit",
-            BindingFlags.Public | BindingFlags.Static,
-            [typeof(string)]);
+            BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string)], modifiers: null);
         Assert.NotNull(op); // implicit operator TStruct(string) must exist
         var instance = op!.Invoke(null, [ValidSample]);
         Assert.NotNull(instance);
@@ -535,7 +533,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     public void TryCreate_Native_AlwaysSucceeds()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(bool), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(bool), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { true, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -545,7 +543,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "true", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -555,7 +553,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "maybe", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -713,7 +711,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     public void TryCreate_Native_AlwaysSucceeds()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(TValue), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(TValue), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { FiniteSample, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -723,7 +721,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { FiniteSampleWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -733,7 +731,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "not-a-number", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -886,7 +884,7 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { ValidNativeSampleWireCore, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -896,7 +894,7 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1019,7 +1017,7 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { ValidWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1029,7 +1027,7 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { InvalidWireText, null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1130,7 +1128,7 @@ public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "2026-08", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1140,7 +1138,7 @@ public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1240,7 +1238,7 @@ public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "--08-15", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1250,7 +1248,7 @@ public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1347,7 +1345,7 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "P1Y", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1357,7 +1355,7 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { "not-a-duration", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1440,7 +1438,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     public void TryCreate_NativeValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(byte[]), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(byte[]), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { ValidNativeSample, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1450,7 +1448,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     public void TryCreate_StringValid_ReturnsTrue()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { ValidNativeSampleWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1460,7 +1458,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
         var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+            "TryCreate", BindingFlags.Public | BindingFlags.Static, binder: null, types: [typeof(string), typeof(TStruct).MakeByRefType()], modifiers: null)!;
         var args = new object?[] { InvalidWireText, null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1929,10 +1927,9 @@ public class SimpleValueCoverageTests(ITestOutputHelper output)
         var productionAssembly = typeof(BusinessMessagePriorityCode).Assembly;
         var testAssembly = typeof(SimpleValueCoverageTests).Assembly;
 
-        var coveredTypes = testAssembly
+        var coveredTypes = new HashSet<Type>(testAssembly
             .GetTypes()
-            .SelectMany(t => GetSimpleValueContractBaseTypes(t))
-            .ToHashSet();
+            .SelectMany(t => GetSimpleValueContractBaseTypes(t)));
 
         var missing = productionAssembly
             .GetTypes()

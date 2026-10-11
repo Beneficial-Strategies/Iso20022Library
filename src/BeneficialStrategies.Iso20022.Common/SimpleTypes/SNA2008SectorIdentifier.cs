@@ -43,7 +43,7 @@ public readonly struct SNA2008SectorIdentifier : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public SNA2008SectorIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SNA2008SectorIdentifier), value, Pattern);
         Value = value;

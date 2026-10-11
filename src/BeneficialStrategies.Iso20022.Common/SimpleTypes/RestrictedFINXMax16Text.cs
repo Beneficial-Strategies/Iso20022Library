@@ -39,7 +39,7 @@ public readonly struct RestrictedFINXMax16Text : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public RestrictedFINXMax16Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RestrictedFINXMax16Text), value, MinLength);
         if (value.Length > MaxLength)

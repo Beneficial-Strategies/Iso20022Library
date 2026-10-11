@@ -43,7 +43,7 @@ public readonly struct Exact1HexBinaryText : IIsoSimpleValue<string>, IEquatable
     /// </exception>
     public Exact1HexBinaryText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < 2)
             throw Iso20022FormatException.ForTooShort(typeof(Exact1HexBinaryText), value, 2);
         if (value.Length > 2)

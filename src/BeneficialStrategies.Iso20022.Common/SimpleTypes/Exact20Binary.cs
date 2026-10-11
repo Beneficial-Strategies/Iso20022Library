@@ -38,7 +38,7 @@ public readonly struct Exact20Binary : IIsoSimpleValue<byte[]>, IEquatable<Exact
     /// </exception>
     public Exact20Binary(byte[] value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact20Binary), value, MinLength);
         if (value.Length > MaxLength)
@@ -56,7 +56,7 @@ public readonly struct Exact20Binary : IIsoSimpleValue<byte[]>, IEquatable<Exact
 
     private static byte[] DecodeBase64(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         try
         {
             return Convert.FromBase64String(value);

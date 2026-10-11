@@ -33,7 +33,7 @@ public readonly struct Min2Max3NumericText : IIsoSimpleValue<string>, IEquatable
     /// </exception>
     public Min2Max3NumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Min2Max3NumericText), value, MinLength);
         if (value.Length > MaxLength)

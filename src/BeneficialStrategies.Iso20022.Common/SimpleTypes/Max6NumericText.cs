@@ -33,7 +33,7 @@ public readonly struct Max6NumericText : IIsoSimpleValue<string>, IEquatable<Max
     /// </exception>
     public Max6NumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max6NumericText), value, MinLength);
         if (value.Length > MaxLength)

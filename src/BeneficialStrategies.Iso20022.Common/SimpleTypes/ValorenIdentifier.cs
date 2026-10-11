@@ -40,7 +40,7 @@ public readonly struct ValorenIdentifier : IIsoSimpleValue<string>, IEquatable<V
     /// </exception>
     public ValorenIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ValorenIdentifier), value, Pattern);
         Value = value;

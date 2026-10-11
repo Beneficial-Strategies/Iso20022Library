@@ -42,7 +42,7 @@ public readonly struct RestrictedFINXMax70Text : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public RestrictedFINXMax70Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RestrictedFINXMax70Text), value, MinLength);
         if (value.Length > MaxLength)

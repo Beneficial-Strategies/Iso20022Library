@@ -40,7 +40,7 @@ public readonly struct ChargeIncludedIndicator : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public ChargeIncludedIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(ChargeIncludedIndicator), value, @"^(true|false)$");
         Value = value;

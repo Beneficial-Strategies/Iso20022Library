@@ -32,7 +32,7 @@ public readonly struct ConsolidatedTapeAssociationIdentifier : IIsoSimpleValue<s
     /// </exception>
     public ConsolidatedTapeAssociationIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(ConsolidatedTapeAssociationIdentifier), value, MinLength);
         if (value.Length > MaxLength)

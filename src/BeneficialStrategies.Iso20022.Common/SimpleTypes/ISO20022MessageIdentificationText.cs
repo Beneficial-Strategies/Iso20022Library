@@ -31,7 +31,7 @@ public readonly struct ISO20022MessageIdentificationText : IIsoSimpleValue<strin
     /// </exception>
     public ISO20022MessageIdentificationText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ISO20022MessageIdentificationText), value, Pattern);
         Value = value;

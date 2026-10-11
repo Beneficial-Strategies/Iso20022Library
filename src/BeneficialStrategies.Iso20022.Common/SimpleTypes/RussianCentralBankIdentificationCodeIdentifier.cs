@@ -31,7 +31,7 @@ public readonly struct RussianCentralBankIdentificationCodeIdentifier : IIsoSimp
     /// </exception>
     public RussianCentralBankIdentificationCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(RussianCentralBankIdentificationCodeIdentifier), value, Pattern);
         Value = value;

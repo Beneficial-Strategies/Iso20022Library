@@ -37,7 +37,7 @@ public readonly struct XsdUnsignedInt : IIsoSimpleValue<uint>, IEquatable<XsdUns
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid uint.</exception>
     public XsdUnsignedInt(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!uint.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(XsdUnsignedInt), value, "xs:unsignedInt — uint decimal integer");
         this = new(parsed); // delegate to native ctor for range check

@@ -40,7 +40,7 @@ public readonly struct QUICKIdentifier : IIsoSimpleValue<string>, IEquatable<QUI
     /// </exception>
     public QUICKIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(QUICKIdentifier), value, Pattern);
         Value = value;

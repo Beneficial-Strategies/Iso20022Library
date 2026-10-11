@@ -39,7 +39,7 @@ public readonly struct RestrictedFINExact2Text : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public RestrictedFINExact2Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != ValueXX && value != ValueTS)
             throw new Iso20022FormatException(typeof(RestrictedFINExact2Text), value, Pattern);
         Value = value;

@@ -59,7 +59,7 @@ public readonly struct PercentageBoundedRate : IIsoSimpleValue<decimal>, IEquata
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid decimal, out of range, or exceeds the digit facets.</exception>
     public PercentageBoundedRate(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!decimal.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(PercentageBoundedRate), value, "decimal string");
         this = new(parsed);

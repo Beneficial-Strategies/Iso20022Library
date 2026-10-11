@@ -32,7 +32,7 @@ public readonly struct XsdNMTOKENS : IIsoSimpleValue<string>, IEquatable<XsdNMTO
     /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
     public XsdNMTOKENS(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(XsdNMTOKENS), value, Pattern);
         Value = value;

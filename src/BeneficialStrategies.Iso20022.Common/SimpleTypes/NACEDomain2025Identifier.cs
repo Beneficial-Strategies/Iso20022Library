@@ -31,7 +31,7 @@ public readonly struct NACEDomain2025Identifier : IIsoSimpleValue<string>, IEqua
     /// </exception>
     public NACEDomain2025Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(NACEDomain2025Identifier), value, Pattern);
         Value = value;

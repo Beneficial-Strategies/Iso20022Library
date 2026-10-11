@@ -43,7 +43,7 @@ public readonly struct Max5Number : IIsoSimpleValue<long>, IEquatable<Max5Number
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid integer, or out of range.</exception>
     public Max5Number(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(Max5Number), value, "decimal integer string");
         this = new(parsed);

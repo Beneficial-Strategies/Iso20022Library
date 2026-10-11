@@ -30,7 +30,7 @@ public readonly struct WertpapierIdentifier : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public WertpapierIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(WertpapierIdentifier), value, Pattern);
         Value = value;

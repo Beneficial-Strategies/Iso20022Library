@@ -33,7 +33,7 @@ public readonly struct Exact7NumericText : IIsoSimpleValue<string>, IEquatable<E
     /// </exception>
     public Exact7NumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact7NumericText), value, MinLength);
         if (value.Length > MaxLength)

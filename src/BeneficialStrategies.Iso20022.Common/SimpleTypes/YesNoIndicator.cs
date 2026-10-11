@@ -40,7 +40,7 @@ public readonly struct YesNoIndicator : IIsoSimpleValue<string>, IEquatable<YesN
     /// </exception>
     public YesNoIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(YesNoIndicator), value, @"^(true|false)$");
         Value = value;

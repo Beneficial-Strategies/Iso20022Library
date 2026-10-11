@@ -76,7 +76,7 @@ public readonly struct ISODateTime : IIsoSimpleValue<DateTime>, IIsoTimezoneQual
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid ISODateTime.</exception>
     public ISODateTime(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         string core;
         TimeSpan? tz;
         try

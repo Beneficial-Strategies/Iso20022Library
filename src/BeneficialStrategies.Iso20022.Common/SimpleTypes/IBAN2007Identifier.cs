@@ -31,7 +31,7 @@ public readonly struct IBAN2007Identifier : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public IBAN2007Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(IBAN2007Identifier), value, Pattern);
         Value = value;

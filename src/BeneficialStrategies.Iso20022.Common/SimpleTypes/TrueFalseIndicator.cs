@@ -40,7 +40,7 @@ public readonly struct TrueFalseIndicator : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public TrueFalseIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(TrueFalseIndicator), value, @"^(true|false)$");
         Value = value;

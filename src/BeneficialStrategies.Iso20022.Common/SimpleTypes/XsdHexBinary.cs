@@ -31,13 +31,26 @@ public readonly struct XsdHexBinary : IIsoSimpleValue<string>, IEquatable<XsdHex
     public string Value { get; }
 
     /// <summary>The binary data represented by this instance.</summary>
-    public byte[] Bytes => Convert.FromHexString(Value);
+    public byte[] Bytes
+    {
+        get
+        {
+#if NET462
+            var bytes = new byte[Value.Length / 2];
+            for (var i = 0; i < bytes.Length; i++)
+                bytes[i] = Convert.ToByte(Value.Substring(i * 2, 2), 16);
+            return bytes;
+#else
+            return Convert.FromHexString(Value);
+#endif
+        }
+    }
 
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
     /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
     public XsdHexBinary(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(XsdHexBinary), value, "xs:hexBinary — an even number of uppercase hex digits (0-9, A-F)");
         Value = value;
@@ -47,8 +60,12 @@ public readonly struct XsdHexBinary : IIsoSimpleValue<string>, IEquatable<XsdHex
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="bytes"/> is null.</exception>
     public XsdHexBinary(byte[] bytes)
     {
-        ArgumentNullException.ThrowIfNull(bytes);
+        ArgumentNullExceptionHelper.ThrowIfNull(bytes);
+#if NET462
+        Value = BitConverter.ToString(bytes).Replace("-", string.Empty);
+#else
         Value = Convert.ToHexString(bytes);
+#endif
     }
 
     /// <summary>Returns <see langword="true"/> when <paramref name="value"/> satisfies <see cref="Pattern"/>.</summary>

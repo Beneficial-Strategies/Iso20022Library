@@ -32,7 +32,7 @@ public readonly struct XsdBase64Binary : IIsoSimpleValue<byte[]>, IEquatable<Xsd
     /// <exception cref="ArgumentNullException">Thrown when <paramref name="value"/> is null.</exception>
     public XsdBase64Binary(byte[] value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         Value = value;
     }
 
@@ -41,7 +41,7 @@ public readonly struct XsdBase64Binary : IIsoSimpleValue<byte[]>, IEquatable<Xsd
     /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> is not valid base64.</exception>
     public XsdBase64Binary(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         try
         {
             Value = Convert.FromBase64String(value);

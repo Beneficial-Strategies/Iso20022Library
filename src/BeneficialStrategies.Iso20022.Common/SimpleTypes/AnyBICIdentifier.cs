@@ -31,7 +31,7 @@ public readonly struct AnyBICIdentifier : IIsoSimpleValue<string>, IEquatable<An
     /// </exception>
     public AnyBICIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(AnyBICIdentifier), value, Pattern);
         Value = value;

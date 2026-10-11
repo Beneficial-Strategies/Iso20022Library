@@ -22,7 +22,7 @@ internal static class XsdTimezone
     /// <exception cref="FormatException">The offset falls outside -14:00..+14:00.</exception>
     public static (string Core, TimeSpan? Offset) SplitTrailingTimezone(string text)
     {
-        if (text.EndsWith('Z'))
+        if (text.EndsWith("Z", StringComparison.Ordinal))
             return (text[..^1], TimeSpan.Zero);
 
         // A trailing "+HH:MM" or "-HH:MM" is exactly 6 characters. Matching from the end (rather
@@ -36,8 +36,8 @@ internal static class XsdTimezone
                 && tail[3] == ':'
                 && char.IsDigit(tail[4]) && char.IsDigit(tail[5]))
             {
-                var hours = int.Parse(tail.AsSpan(1, 2), CultureInfo.InvariantCulture);
-                var minutes = int.Parse(tail.AsSpan(4, 2), CultureInfo.InvariantCulture);
+                var hours = int.Parse(tail.Substring(1, 2), CultureInfo.InvariantCulture);
+                var minutes = int.Parse(tail.Substring(4, 2), CultureInfo.InvariantCulture);
                 var magnitude = new TimeSpan(hours, minutes, 0);
                 if (magnitude > TimeSpan.FromHours(14))
                     throw new FormatException($"Timezone offset '{tail}' is outside the permitted range of -14:00 to +14:00.");

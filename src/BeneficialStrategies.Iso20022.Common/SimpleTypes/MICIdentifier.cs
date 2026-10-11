@@ -31,7 +31,7 @@ public readonly struct MICIdentifier : IIsoSimpleValue<string>, IEquatable<MICId
     /// </exception>
     public MICIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(MICIdentifier), value, Pattern);
         Value = value;

@@ -26,7 +26,7 @@ public readonly struct GeographicPointInDecimalDegrees : IIsoSimpleValue<string>
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public GeographicPointInDecimalDegrees(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(GeographicPointInDecimalDegrees), value, Pattern);
         Value = value;

@@ -31,7 +31,7 @@ public readonly struct ISINOct2015Identifier : IIsoSimpleValue<string>, IEquatab
     /// </exception>
     public ISINOct2015Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ISINOct2015Identifier), value, Pattern);
         Value = value;

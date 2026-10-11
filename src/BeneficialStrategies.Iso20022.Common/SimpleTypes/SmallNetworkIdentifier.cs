@@ -31,7 +31,7 @@ public readonly struct SmallNetworkIdentifier : IIsoSimpleValue<string>, IEquata
     /// </exception>
     public SmallNetworkIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SmallNetworkIdentifier), value, Pattern);
         Value = value;

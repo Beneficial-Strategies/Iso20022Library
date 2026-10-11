@@ -27,7 +27,7 @@ public readonly struct Min5Max8Text : IIsoSimpleValue<string>, IEquatable<Min5Ma
     /// <exception cref="Iso20022FormatException">Thrown with TooShort or TooLong.</exception>
     public Min5Max8Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Min5Max8Text), value, MinLength);
         if (value.Length > MaxLength)

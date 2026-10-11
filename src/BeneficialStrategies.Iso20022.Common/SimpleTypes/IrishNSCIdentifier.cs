@@ -31,7 +31,7 @@ public readonly struct IrishNSCIdentifier : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public IrishNSCIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(IrishNSCIdentifier), value, Pattern);
         Value = value;

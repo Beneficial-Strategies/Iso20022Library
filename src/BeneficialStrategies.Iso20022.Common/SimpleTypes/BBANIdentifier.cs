@@ -31,7 +31,7 @@ public readonly struct BBANIdentifier : IIsoSimpleValue<string>, IEquatable<BBAN
     /// </exception>
     public BBANIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(BBANIdentifier), value, Pattern);
         Value = value;

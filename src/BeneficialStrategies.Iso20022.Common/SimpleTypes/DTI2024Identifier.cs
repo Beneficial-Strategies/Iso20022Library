@@ -31,7 +31,7 @@ public readonly struct DTI2024Identifier : IIsoSimpleValue<string>, IEquatable<D
     /// </exception>
     public DTI2024Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(DTI2024Identifier), value, Pattern);
         Value = value;

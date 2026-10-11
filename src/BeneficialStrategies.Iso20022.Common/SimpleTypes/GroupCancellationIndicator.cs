@@ -40,7 +40,7 @@ public readonly struct GroupCancellationIndicator : IIsoSimpleValue<string>, IEq
     /// </exception>
     public GroupCancellationIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(GroupCancellationIndicator), value, @"^(true|false)$");
         Value = value;

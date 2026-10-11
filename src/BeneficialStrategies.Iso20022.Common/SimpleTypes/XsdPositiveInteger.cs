@@ -39,7 +39,7 @@ public readonly struct XsdPositiveInteger : IIsoSimpleValue<long>, IEquatable<Xs
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid long.</exception>
     public XsdPositiveInteger(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(XsdPositiveInteger), value, "xs:positiveInteger — long decimal integer");
         this = new(parsed); // delegate to native ctor for range check

@@ -39,7 +39,7 @@ public readonly struct DutchIdentifier : IIsoSimpleValue<string>, IEquatable<Dut
     /// </exception>
     public DutchIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(DutchIdentifier), value, Pattern);
         Value = value;

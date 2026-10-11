@@ -31,7 +31,7 @@ public readonly struct XsdLanguage : IIsoSimpleValue<string>, IEquatable<XsdLang
     /// <exception cref="Iso20022FormatException">Thrown when <paramref name="value"/> does not satisfy <see cref="Pattern"/>.</exception>
     public XsdLanguage(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(XsdLanguage), value, Pattern);
         Value = value;

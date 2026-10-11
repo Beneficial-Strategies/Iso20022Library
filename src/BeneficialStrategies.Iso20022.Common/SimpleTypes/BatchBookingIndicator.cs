@@ -40,7 +40,7 @@ public readonly struct BatchBookingIndicator : IIsoSimpleValue<string>, IEquatab
     /// </exception>
     public BatchBookingIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(BatchBookingIndicator), value, @"^(true|false)$");
         Value = value;

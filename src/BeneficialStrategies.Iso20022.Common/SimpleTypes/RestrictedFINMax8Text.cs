@@ -35,7 +35,7 @@ public readonly struct RestrictedFINMax8Text : IIsoSimpleValue<string>, IEquatab
     /// </exception>
     public RestrictedFINMax8Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RestrictedFINMax8Text), value, MinLength);
         if (value.Length > MaxLength)

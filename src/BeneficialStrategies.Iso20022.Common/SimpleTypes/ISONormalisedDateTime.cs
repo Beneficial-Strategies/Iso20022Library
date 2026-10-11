@@ -64,8 +64,8 @@ public readonly struct ISONormalisedDateTime : IIsoSimpleValue<DateTime>, IIsoCo
     /// </exception>
     public ISONormalisedDateTime(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
-        if (!value.EndsWith('Z'))
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
+        if (!value.EndsWith("Z", StringComparison.Ordinal))
             throw new Iso20022FormatException(typeof(ISONormalisedDateTime), value, "ISO 8601 date and time mandatorily suffixed with \"Z\" (pattern .*Z)");
         var core = value[..^1];
         if (!Regex.IsMatch(core, CorePattern))

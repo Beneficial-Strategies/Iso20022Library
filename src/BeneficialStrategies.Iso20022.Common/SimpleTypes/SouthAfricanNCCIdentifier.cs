@@ -31,7 +31,7 @@ public readonly struct SouthAfricanNCCIdentifier : IIsoSimpleValue<string>, IEqu
     /// </exception>
     public SouthAfricanNCCIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SouthAfricanNCCIdentifier), value, Pattern);
         Value = value;

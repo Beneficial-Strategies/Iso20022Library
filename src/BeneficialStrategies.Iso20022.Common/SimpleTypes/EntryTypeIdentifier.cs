@@ -31,7 +31,7 @@ public readonly struct EntryTypeIdentifier : IIsoSimpleValue<string>, IEquatable
     /// </exception>
     public EntryTypeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(EntryTypeIdentifier), value, Pattern);
         Value = value;

@@ -33,7 +33,7 @@ public readonly struct XsdToken : IIsoSimpleValue<string>, IEquatable<XsdToken>
     /// </exception>
     public XsdToken(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!IsValid(value))
             throw new Iso20022FormatException(
                 typeof(XsdToken), value,
@@ -52,9 +52,9 @@ public readonly struct XsdToken : IIsoSimpleValue<string>, IEquatable<XsdToken>
 
     private static bool IsValid(string value) =>
         !Regex.IsMatch(value, @"[\t\n\r]")
-        && !value.StartsWith(' ')
-        && !value.EndsWith(' ')
-        && !value.Contains("  ", StringComparison.Ordinal);
+        && !value.StartsWith(" ", StringComparison.Ordinal)
+        && !value.EndsWith(" ", StringComparison.Ordinal)
+        && !value.Contains("  ");
 
     /// <summary>Implicitly wraps a <see cref="string"/> as a <see cref="XsdToken"/>.</summary>
     public static implicit operator XsdToken(string value) => new(value);

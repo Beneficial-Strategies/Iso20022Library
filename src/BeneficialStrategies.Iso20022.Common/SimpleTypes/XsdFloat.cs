@@ -43,7 +43,7 @@ public readonly struct XsdFloat : IIsoSimpleValue<float>, IEquatable<XsdFloat>
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:float.</exception>
     public XsdFloat(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!TryParseWireFormat(value, out var parsed))
             throw new Iso20022FormatException(typeof(XsdFloat), value, "xs:float — decimal/scientific notation, \"INF\", \"-INF\", or \"NaN\"");
         Value = parsed;

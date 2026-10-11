@@ -31,7 +31,7 @@ public readonly struct SwissBCIdentifier : IIsoSimpleValue<string>, IEquatable<S
     /// </exception>
     public SwissBCIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SwissBCIdentifier), value, Pattern);
         Value = value;

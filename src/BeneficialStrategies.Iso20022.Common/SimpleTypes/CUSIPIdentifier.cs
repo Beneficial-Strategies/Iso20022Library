@@ -72,7 +72,7 @@ public readonly struct CUSIPIdentifier : IIsoSimpleValue<string>, IEquatable<CUS
     /// </exception>
     public CUSIPIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length == 8 && Regex.IsMatch(value, CorePattern))
         {
             Value = value + ComputeCheckDigit(value);

@@ -31,7 +31,7 @@ public readonly struct ISINIdentifier : IIsoSimpleValue<string>, IEquatable<ISIN
     /// </exception>
     public ISINIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ISINIdentifier), value, Pattern);
         Value = value;

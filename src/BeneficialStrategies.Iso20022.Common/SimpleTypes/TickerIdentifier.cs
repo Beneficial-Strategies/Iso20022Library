@@ -32,7 +32,7 @@ public readonly struct TickerIdentifier : IIsoSimpleValue<string>, IEquatable<Ti
     /// </exception>
     public TickerIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(TickerIdentifier), value, MinLength);
         if (value.Length > MaxLength)

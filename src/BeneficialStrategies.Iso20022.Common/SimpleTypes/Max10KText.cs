@@ -27,7 +27,7 @@ public readonly struct Max10KText : IIsoSimpleValue<string>, IEquatable<Max10KTe
     /// <exception cref="Iso20022FormatException">Thrown with TooShort or TooLong.</exception>
     public Max10KText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max10KText), value, MinLength);
         if (value.Length > MaxLength)

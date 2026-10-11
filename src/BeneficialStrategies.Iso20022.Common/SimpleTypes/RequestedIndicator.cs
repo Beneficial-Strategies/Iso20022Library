@@ -40,7 +40,7 @@ public readonly struct RequestedIndicator : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public RequestedIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(RequestedIndicator), value, @"^(true|false)$");
         Value = value;

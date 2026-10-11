@@ -52,7 +52,7 @@ public readonly struct XsdGMonth : IIsoSimpleValue<byte>, IIsoTimezoneQualifiedV
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:gMonth.</exception>
     public XsdGMonth(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         string core;
         TimeSpan? tz;
         try
@@ -65,7 +65,7 @@ public readonly struct XsdGMonth : IIsoSimpleValue<byte>, IIsoTimezoneQualifiedV
         }
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(XsdGMonth), value, "xs:gMonth — \"--MM\" (month 01-12) with an optional timezone");
-        Value = byte.Parse(core.AsSpan(2, 2), CultureInfo.InvariantCulture);
+        Value = byte.Parse(core.Substring(2, 2), CultureInfo.InvariantCulture);
         TimezoneOffset = tz;
     }
 

@@ -31,7 +31,7 @@ public readonly struct CFIOct2015Identifier : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public CFIOct2015Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(CFIOct2015Identifier), value, Pattern);
         Value = value;

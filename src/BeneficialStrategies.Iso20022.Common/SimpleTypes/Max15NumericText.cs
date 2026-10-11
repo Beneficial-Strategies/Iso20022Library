@@ -33,7 +33,7 @@ public readonly struct Max15NumericText : IIsoSimpleValue<string>, IEquatable<Ma
     /// </exception>
     public Max15NumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max15NumericText), value, MinLength);
         if (value.Length > MaxLength)

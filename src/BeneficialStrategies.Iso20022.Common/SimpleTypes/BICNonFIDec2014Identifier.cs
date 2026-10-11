@@ -31,7 +31,7 @@ public readonly struct BICNonFIDec2014Identifier : IIsoSimpleValue<string>, IEqu
     /// </exception>
     public BICNonFIDec2014Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(BICNonFIDec2014Identifier), value, Pattern);
         Value = value;

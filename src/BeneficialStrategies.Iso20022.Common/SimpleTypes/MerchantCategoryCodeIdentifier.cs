@@ -31,7 +31,7 @@ public readonly struct MerchantCategoryCodeIdentifier : IIsoSimpleValue<string>,
     /// </exception>
     public MerchantCategoryCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(MerchantCategoryCodeIdentifier), value, Pattern);
         Value = value;

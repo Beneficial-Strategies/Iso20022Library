@@ -50,7 +50,7 @@ public readonly struct ISOYearMonth : IIsoSimpleValue<(int Year, int Month)>, II
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid ISOYearMonth.</exception>
     public ISOYearMonth(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         var match = Regex.Match(value, Pattern);
         if (!match.Success)
             throw new Iso20022FormatException(typeof(ISOYearMonth), value, "\"YYYY-MM\"");

@@ -33,7 +33,7 @@ public readonly struct Max350Text : IIsoSimpleValue<string>, IEquatable<Max350Te
     /// </exception>
     public Max350Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max350Text), value, MinLength);
         if (value.Length > MaxLength)

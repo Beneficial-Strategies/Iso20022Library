@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <!-- TFM policy: same rationale and same two targets as BeneficialStrategies.Iso20022.Common — see that project's csproj. -->
-    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>net462;net8.0;net10.0</TargetFrameworks>
+    <LangVersion Condition="'$(TargetFramework)' == 'net462'">latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022.Validation</RootNamespace>
@@ -50,6 +51,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <PackageReference Include="PolySharp" Version="1.16.0" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>

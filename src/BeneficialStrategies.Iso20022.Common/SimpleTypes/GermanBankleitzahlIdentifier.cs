@@ -31,7 +31,7 @@ public readonly struct GermanBankleitzahlIdentifier : IIsoSimpleValue<string>, I
     /// </exception>
     public GermanBankleitzahlIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(GermanBankleitzahlIdentifier), value, Pattern);
         Value = value;

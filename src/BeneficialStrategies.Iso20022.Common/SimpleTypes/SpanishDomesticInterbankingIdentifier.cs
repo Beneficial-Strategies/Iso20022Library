@@ -31,7 +31,7 @@ public readonly struct SpanishDomesticInterbankingIdentifier : IIsoSimpleValue<s
     /// </exception>
     public SpanishDomesticInterbankingIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SpanishDomesticInterbankingIdentifier), value, Pattern);
         Value = value;

@@ -26,7 +26,7 @@ public readonly struct Min2Max3AlphaText : IIsoSimpleValue<string>, IEquatable<M
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public Min2Max3AlphaText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(Min2Max3AlphaText), value, Pattern);
         Value = value;

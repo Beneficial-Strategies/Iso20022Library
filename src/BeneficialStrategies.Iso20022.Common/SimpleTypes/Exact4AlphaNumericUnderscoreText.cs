@@ -33,7 +33,7 @@ public readonly struct Exact4AlphaNumericUnderscoreText : IIsoSimpleValue<string
     /// </exception>
     public Exact4AlphaNumericUnderscoreText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact4AlphaNumericUnderscoreText), value, MinLength);
         if (value.Length > MaxLength)

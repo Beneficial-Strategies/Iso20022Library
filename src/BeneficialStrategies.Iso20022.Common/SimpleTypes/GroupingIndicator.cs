@@ -40,7 +40,7 @@ public readonly struct GroupingIndicator : IIsoSimpleValue<string>, IEquatable<G
     /// </exception>
     public GroupingIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(GroupingIndicator), value, @"^(true|false)$");
         Value = value;

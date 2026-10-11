@@ -49,7 +49,7 @@ public readonly struct ISOYear : IIsoSimpleValue<int>, IIsoCompositeSimpleValue,
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid 4-digit year.</exception>
     public ISOYear(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ISOYear), value, Pattern);
         Value = int.Parse(value, CultureInfo.InvariantCulture);

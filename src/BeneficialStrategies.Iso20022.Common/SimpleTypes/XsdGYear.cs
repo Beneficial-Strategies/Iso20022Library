@@ -50,7 +50,7 @@ public readonly struct XsdGYear : IIsoSimpleValue<int>, IIsoTimezoneQualifiedVal
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:gYear.</exception>
     public XsdGYear(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         string core;
         TimeSpan? tz;
         try

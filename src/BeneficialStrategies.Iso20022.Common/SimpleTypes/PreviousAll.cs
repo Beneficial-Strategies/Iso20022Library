@@ -26,7 +26,7 @@ public readonly struct PreviousAll : IIsoSimpleValue<string>, IEquatable<Previou
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public PreviousAll(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(PreviousAll), value, Pattern);
         Value = value;

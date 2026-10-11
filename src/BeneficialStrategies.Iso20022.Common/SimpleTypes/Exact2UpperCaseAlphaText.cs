@@ -33,7 +33,7 @@ public readonly struct Exact2UpperCaseAlphaText : IIsoSimpleValue<string>, IEqua
     /// </exception>
     public Exact2UpperCaseAlphaText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact2UpperCaseAlphaText), value, MinLength);
         if (value.Length > MaxLength)

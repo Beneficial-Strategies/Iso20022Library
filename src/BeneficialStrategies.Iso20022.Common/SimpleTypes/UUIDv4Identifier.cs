@@ -31,7 +31,7 @@ public readonly struct UUIDv4Identifier : IIsoSimpleValue<string>, IEquatable<UU
     /// </exception>
     public UUIDv4Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(UUIDv4Identifier), value, Pattern);
         Value = value;

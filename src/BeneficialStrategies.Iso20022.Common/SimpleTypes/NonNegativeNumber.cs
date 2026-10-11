@@ -43,7 +43,7 @@ public readonly struct NonNegativeNumber : IIsoSimpleValue<long>, IEquatable<Non
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid integer, or out of range.</exception>
     public NonNegativeNumber(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(NonNegativeNumber), value, "decimal integer string");
         this = new(parsed);

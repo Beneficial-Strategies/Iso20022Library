@@ -31,7 +31,7 @@ public readonly struct Bloomberg2Identifier : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public Bloomberg2Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(Bloomberg2Identifier), value, Pattern);
         Value = value;

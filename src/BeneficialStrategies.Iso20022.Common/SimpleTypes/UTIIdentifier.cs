@@ -31,7 +31,7 @@ public readonly struct UTIIdentifier : IIsoSimpleValue<string>, IEquatable<UTIId
     /// </exception>
     public UTIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(UTIIdentifier), value, Pattern);
         Value = value;

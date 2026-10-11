@@ -75,7 +75,7 @@ public class Iso20022SerializationTests
             Converters = { new Iso20022EnumJsonConverter<CreditDebitCode>() },
         };
 
-        foreach (CreditDebitCode value in Enum.GetValues<CreditDebitCode>())
+        foreach (CreditDebitCode value in Enum.GetValues(typeof(CreditDebitCode)).Cast<CreditDebitCode>())
         {
             var json = JsonSerializer.Serialize(value, opts);
             Assert.Equal(value, JsonSerializer.Deserialize<CreditDebitCode>(json, opts));

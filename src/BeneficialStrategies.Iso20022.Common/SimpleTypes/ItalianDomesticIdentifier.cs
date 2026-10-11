@@ -31,7 +31,7 @@ public readonly struct ItalianDomesticIdentifier : IIsoSimpleValue<string>, IEqu
     /// </exception>
     public ItalianDomesticIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ItalianDomesticIdentifier), value, Pattern);
         Value = value;

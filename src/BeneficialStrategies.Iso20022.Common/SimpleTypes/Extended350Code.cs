@@ -27,7 +27,7 @@ public readonly struct Extended350Code : IIsoSimpleValue<string>, IEquatable<Ext
     /// <exception cref="Iso20022FormatException">Thrown with TooShort or TooLong.</exception>
     public Extended350Code(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Extended350Code), value, MinLength);
         if (value.Length > MaxLength)

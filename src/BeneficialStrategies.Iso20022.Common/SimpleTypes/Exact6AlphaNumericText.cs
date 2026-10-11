@@ -37,7 +37,7 @@ public readonly struct Exact6AlphaNumericText : IIsoSimpleValue<string>, IEquata
     /// </exception>
     public Exact6AlphaNumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Exact6AlphaNumericText), value, MinLength);
         if (value.Length > MaxLength)

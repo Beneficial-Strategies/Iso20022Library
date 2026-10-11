@@ -33,7 +33,7 @@ public readonly struct Max5AlphaNumericText : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public Max5AlphaNumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max5AlphaNumericText), value, MinLength);
         if (value.Length > MaxLength)

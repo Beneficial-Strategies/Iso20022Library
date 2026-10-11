@@ -31,7 +31,7 @@ public readonly struct ELFIdentifier : IIsoSimpleValue<string>, IEquatable<ELFId
     /// </exception>
     public ELFIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ELFIdentifier), value, Pattern);
         Value = value;

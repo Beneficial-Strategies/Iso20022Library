@@ -52,7 +52,7 @@ public readonly struct XsdGDay : IIsoSimpleValue<byte>, IIsoTimezoneQualifiedVal
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:gDay.</exception>
     public XsdGDay(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         string core;
         TimeSpan? tz;
         try
@@ -65,7 +65,7 @@ public readonly struct XsdGDay : IIsoSimpleValue<byte>, IIsoTimezoneQualifiedVal
         }
         if (!Regex.IsMatch(core, CorePattern))
             throw new Iso20022FormatException(typeof(XsdGDay), value, "xs:gDay — \"---DD\" (day 01-31) with an optional timezone");
-        Value = byte.Parse(core.AsSpan(3, 2), CultureInfo.InvariantCulture);
+        Value = byte.Parse(core.Substring(3, 2), CultureInfo.InvariantCulture);
         TimezoneOffset = tz;
     }
 

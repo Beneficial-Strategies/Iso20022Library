@@ -31,7 +31,7 @@ public readonly struct Max15PlusSignedNumericText : IIsoSimpleValue<string>, IEq
     /// </exception>
     public Max15PlusSignedNumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < 1)
             throw Iso20022FormatException.ForTooShort(typeof(Max15PlusSignedNumericText), value, 1);
         if (value.Length > 16)

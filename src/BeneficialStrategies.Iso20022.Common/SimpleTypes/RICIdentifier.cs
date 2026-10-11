@@ -32,7 +32,7 @@ public readonly struct RICIdentifier : IIsoSimpleValue<string>, IEquatable<RICId
     /// </exception>
     public RICIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(RICIdentifier), value, MinLength);
         if (value.Length > MaxLength)

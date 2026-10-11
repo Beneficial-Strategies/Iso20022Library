@@ -50,6 +50,9 @@ public class InMemoryExternalCodeRegistry<TCode> : IExternalCodeRegistry<TCode>
     where TCode : IIsoExternalCode
 {
     private readonly HashSet<string> _acceptableValues = new();
+#if NET462
+    private readonly IReadOnlySet<string> _acceptableValuesView;
+#endif
 
     /// <summary>
     /// Initializes a new instance, optionally auto-seeded from <typeparamref name="TCode"/>'s own
@@ -64,6 +67,9 @@ public class InMemoryExternalCodeRegistry<TCode> : IExternalCodeRegistry<TCode>
     /// </param>
     public InMemoryExternalCodeRegistry(bool seedFromKnownMembers = true)
     {
+#if NET462
+        _acceptableValuesView = new ReadOnlySetAdapter<string>(_acceptableValues);
+#endif
         if (!seedFromKnownMembers)
         {
             return;
@@ -107,7 +113,17 @@ public class InMemoryExternalCodeRegistry<TCode> : IExternalCodeRegistry<TCode>
     /// additional logic (e.g. an extra rejection rule) on top of the base membership check
     /// without duplicating it.
     /// </summary>
-    protected IReadOnlySet<string> AcceptableValues => _acceptableValues;
+    protected IReadOnlySet<string> AcceptableValues
+    {
+        get
+        {
+#if NET462
+            return _acceptableValuesView;
+#else
+            return _acceptableValues;
+#endif
+        }
+    }
 
     /// <inheritdoc/>
     /// <remarks>

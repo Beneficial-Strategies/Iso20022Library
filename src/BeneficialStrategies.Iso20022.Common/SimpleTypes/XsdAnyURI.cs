@@ -30,7 +30,7 @@ public readonly struct XsdAnyURI : IIsoSimpleValue<string>, IEquatable<XsdAnyURI
     /// <exception cref="Iso20022FormatException">Thrown when the value is not a syntactically valid URI reference.</exception>
     public XsdAnyURI(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length > 0 && !Uri.TryCreate(value, UriKind.RelativeOrAbsolute, out _))
             throw new Iso20022FormatException(typeof(XsdAnyURI), value, "xs:anyURI — a syntactically valid URI reference (RFC 3986), absolute or relative");
         Value = value;

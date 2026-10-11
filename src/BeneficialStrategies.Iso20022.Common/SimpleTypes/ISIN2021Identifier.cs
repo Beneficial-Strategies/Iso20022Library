@@ -31,7 +31,7 @@ public readonly struct ISIN2021Identifier : IIsoSimpleValue<string>, IEquatable<
     /// </exception>
     public ISIN2021Identifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ISIN2021Identifier), value, Pattern);
         Value = value;

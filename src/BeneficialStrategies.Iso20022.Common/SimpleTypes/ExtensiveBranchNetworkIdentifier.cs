@@ -31,7 +31,7 @@ public readonly struct ExtensiveBranchNetworkIdentifier : IIsoSimpleValue<string
     /// </exception>
     public ExtensiveBranchNetworkIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(ExtensiveBranchNetworkIdentifier), value, Pattern);
         Value = value;

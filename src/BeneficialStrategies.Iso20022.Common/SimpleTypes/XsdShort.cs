@@ -37,7 +37,7 @@ public readonly struct XsdShort : IIsoSimpleValue<short>, IEquatable<XsdShort>
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid short.</exception>
     public XsdShort(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!short.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(XsdShort), value, "xs:short — short decimal integer");
         this = new(parsed); // delegate to native ctor for range check

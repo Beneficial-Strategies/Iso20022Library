@@ -31,7 +31,7 @@ public readonly struct IndianFinancialSystemCodeIdentifier : IIsoSimpleValue<str
     /// </exception>
     public IndianFinancialSystemCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(IndianFinancialSystemCodeIdentifier), value, Pattern);
         Value = value;

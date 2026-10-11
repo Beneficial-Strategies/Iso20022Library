@@ -31,7 +31,7 @@ public readonly struct LEIIdentifier : IIsoSimpleValue<string>, IEquatable<LEIId
     /// </exception>
     public LEIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(LEIIdentifier), value, Pattern);
         Value = value;

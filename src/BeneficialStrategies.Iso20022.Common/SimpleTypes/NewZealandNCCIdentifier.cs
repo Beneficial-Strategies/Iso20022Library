@@ -31,7 +31,7 @@ public readonly struct NewZealandNCCIdentifier : IIsoSimpleValue<string>, IEquat
     /// </exception>
     public NewZealandNCCIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(NewZealandNCCIdentifier), value, Pattern);
         Value = value;

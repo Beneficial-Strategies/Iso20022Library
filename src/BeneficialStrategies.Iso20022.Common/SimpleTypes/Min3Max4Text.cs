@@ -27,7 +27,7 @@ public readonly struct Min3Max4Text : IIsoSimpleValue<string>, IEquatable<Min3Ma
     /// <exception cref="Iso20022FormatException">Thrown with TooShort or TooLong.</exception>
     public Min3Max4Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Min3Max4Text), value, MinLength);
         if (value.Length > MaxLength)

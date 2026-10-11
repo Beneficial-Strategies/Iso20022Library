@@ -26,7 +26,7 @@ public readonly struct Max9999HexBinaryText : IIsoSimpleValue<string>, IEquatabl
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public Max9999HexBinaryText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(Max9999HexBinaryText), value, Pattern);
         Value = value;

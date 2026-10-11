@@ -26,7 +26,7 @@ public readonly struct Unlimited9Text : IIsoSimpleValue<string>, IEquatable<Unli
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public Unlimited9Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(Unlimited9Text), value, Pattern);
         Value = value;

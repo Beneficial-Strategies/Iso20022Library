@@ -31,7 +31,7 @@ public readonly struct UKDomesticSortCodeIdentifier : IIsoSimpleValue<string>, I
     /// </exception>
     public UKDomesticSortCodeIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(UKDomesticSortCodeIdentifier), value, Pattern);
         Value = value;

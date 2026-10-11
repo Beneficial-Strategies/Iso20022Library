@@ -41,7 +41,7 @@ public readonly struct XsdBoolean : IIsoSimpleValue<bool>, IEquatable<XsdBoolean
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:boolean.</exception>
     public XsdBoolean(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         Value = value switch
         {
             "true" or "1" => true,

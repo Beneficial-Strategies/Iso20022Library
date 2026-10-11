@@ -40,7 +40,7 @@ public readonly struct PlusOrMinusIndicator : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public PlusOrMinusIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(PlusOrMinusIndicator), value, @"^(true|false)$");
         Value = value;

@@ -31,7 +31,7 @@ public readonly struct CanadianPaymentsARNIdentifier : IIsoSimpleValue<string>, 
     /// </exception>
     public CanadianPaymentsARNIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(CanadianPaymentsARNIdentifier), value, Pattern);
         Value = value;

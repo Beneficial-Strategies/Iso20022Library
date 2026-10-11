@@ -31,7 +31,7 @@ public readonly struct DunsIdentifier : IIsoSimpleValue<string>, IEquatable<Duns
     /// </exception>
     public DunsIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(DunsIdentifier), value, Pattern);
         Value = value;

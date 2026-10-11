@@ -40,7 +40,7 @@ public readonly struct OverrideIndicator : IIsoSimpleValue<string>, IEquatable<O
     /// </exception>
     public OverrideIndicator(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value != TrueWire && value != FalseWire)
             throw new Iso20022FormatException(typeof(OverrideIndicator), value, @"^(true|false)$");
         Value = value;

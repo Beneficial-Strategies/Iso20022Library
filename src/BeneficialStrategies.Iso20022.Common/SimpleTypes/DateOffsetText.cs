@@ -26,7 +26,7 @@ public readonly struct DateOffsetText : IIsoSimpleValue<string>, IEquatable<Date
     /// <exception cref="Iso20022FormatException">Thrown with PatternMismatch when value does not satisfy Pattern.</exception>
     public DateOffsetText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(DateOffsetText), value, Pattern);
         Value = value;

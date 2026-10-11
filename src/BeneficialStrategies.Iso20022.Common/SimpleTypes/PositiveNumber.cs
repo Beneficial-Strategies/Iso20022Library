@@ -43,7 +43,7 @@ public readonly struct PositiveNumber : IIsoSimpleValue<long>, IEquatable<Positi
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid integer, or out of range.</exception>
     public PositiveNumber(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(PositiveNumber), value, "decimal integer string");
         this = new(parsed);

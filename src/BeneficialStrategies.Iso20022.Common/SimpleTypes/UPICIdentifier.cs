@@ -31,7 +31,7 @@ public readonly struct UPICIdentifier : IIsoSimpleValue<string>, IEquatable<UPIC
     /// </exception>
     public UPICIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(UPICIdentifier), value, Pattern);
         Value = value;

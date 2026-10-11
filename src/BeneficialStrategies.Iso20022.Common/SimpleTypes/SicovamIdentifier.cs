@@ -30,7 +30,7 @@ public readonly struct SicovamIdentifier : IIsoSimpleValue<string>, IEquatable<S
     /// </exception>
     public SicovamIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(SicovamIdentifier), value, Pattern);
         Value = value;

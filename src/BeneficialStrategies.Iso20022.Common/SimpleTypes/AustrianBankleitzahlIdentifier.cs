@@ -31,7 +31,7 @@ public readonly struct AustrianBankleitzahlIdentifier : IIsoSimpleValue<string>,
     /// </exception>
     public AustrianBankleitzahlIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(AustrianBankleitzahlIdentifier), value, Pattern);
         Value = value;

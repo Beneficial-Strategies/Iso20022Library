@@ -68,7 +68,7 @@ public readonly struct XsdDuration : IIsoSimpleValue<XsdDurationValue>, IIsoComp
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid xs:duration.</exception>
     public XsdDuration(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         var match = Pattern.Match(value);
         var hasAnyDesignator = match.Success
             && (match.Groups[2].Success || match.Groups[3].Success || match.Groups[4].Success

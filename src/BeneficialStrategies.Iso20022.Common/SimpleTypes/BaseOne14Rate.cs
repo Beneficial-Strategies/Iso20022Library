@@ -53,7 +53,7 @@ public readonly struct BaseOne14Rate : IIsoSimpleValue<decimal>, IEquatable<Base
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid decimal, out of range, or exceeds the digit facets.</exception>
     public BaseOne14Rate(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!decimal.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(BaseOne14Rate), value, "decimal string");
         this = new(parsed);

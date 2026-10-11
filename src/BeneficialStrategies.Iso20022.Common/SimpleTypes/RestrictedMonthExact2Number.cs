@@ -48,7 +48,7 @@ public readonly struct RestrictedMonthExact2Number : IIsoSimpleValue<int>, IIsoC
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid 2-digit month.</exception>
     public RestrictedMonthExact2Number(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(RestrictedMonthExact2Number), value, Pattern);
         this = new(int.Parse(value, CultureInfo.InvariantCulture));

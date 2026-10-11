@@ -57,7 +57,7 @@ public readonly struct RatingValueIdentifier : IIsoSimpleValue<string>, IEquatab
     /// </exception>
     public RatingValueIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(RatingValueIdentifier), value, Pattern);
         Value = value;

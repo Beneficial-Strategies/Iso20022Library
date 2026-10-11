@@ -33,7 +33,7 @@ public readonly struct NPIIdentifier : IIsoSimpleValue<string>, IEquatable<NPIId
     /// </exception>
     public NPIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(NPIIdentifier), value, Pattern);
         Value = value;

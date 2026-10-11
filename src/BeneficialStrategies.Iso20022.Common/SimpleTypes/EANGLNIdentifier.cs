@@ -31,7 +31,7 @@ public readonly struct EANGLNIdentifier : IIsoSimpleValue<string>, IEquatable<EA
     /// </exception>
     public EANGLNIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(EANGLNIdentifier), value, Pattern);
         Value = value;

@@ -33,7 +33,7 @@ public readonly struct Min8Max28NumericText : IIsoSimpleValue<string>, IEquatabl
     /// </exception>
     public Min8Max28NumericText(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Min8Max28NumericText), value, MinLength);
         if (value.Length > MaxLength)

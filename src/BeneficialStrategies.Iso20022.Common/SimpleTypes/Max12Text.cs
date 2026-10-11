@@ -33,7 +33,7 @@ public readonly struct Max12Text : IIsoSimpleValue<string>, IEquatable<Max12Text
     /// </exception>
     public Max12Text(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (value.Length < MinLength)
             throw Iso20022FormatException.ForTooShort(typeof(Max12Text), value, MinLength);
         if (value.Length > MaxLength)

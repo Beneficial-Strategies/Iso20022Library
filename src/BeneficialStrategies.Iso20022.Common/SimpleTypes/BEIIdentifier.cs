@@ -31,7 +31,7 @@ public readonly struct BEIIdentifier : IIsoSimpleValue<string>, IEquatable<BEIId
     /// </exception>
     public BEIIdentifier(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!Regex.IsMatch(value, Pattern))
             throw new Iso20022FormatException(typeof(BEIIdentifier), value, Pattern);
         Value = value;

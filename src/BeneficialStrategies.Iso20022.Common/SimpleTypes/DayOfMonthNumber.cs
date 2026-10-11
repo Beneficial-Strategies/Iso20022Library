@@ -43,7 +43,7 @@ public readonly struct DayOfMonthNumber : IIsoSimpleValue<long>, IEquatable<DayO
     /// <exception cref="Iso20022FormatException">Thrown when the string is not a valid integer, or out of range.</exception>
     public DayOfMonthNumber(string value)
     {
-        ArgumentNullException.ThrowIfNull(value);
+        ArgumentNullExceptionHelper.ThrowIfNull(value);
         if (!long.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var parsed))
             throw new Iso20022FormatException(typeof(DayOfMonthNumber), value, "decimal integer string");
         this = new(parsed);
