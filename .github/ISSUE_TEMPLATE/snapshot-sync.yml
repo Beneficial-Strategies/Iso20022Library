@@ -1,0 +1,29 @@
+name: Snapshot sync (maintainers)
+description: Track aligning the library with a new ISO 20022 specification snapshot
+labels: ["snapshot-sync", "tracking", "release"]
+body:
+  - type: input
+    id: snapshot
+    attributes:
+      label: Snapshot date
+      placeholder: "2026-09-04"
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      description: The sync plan, and the counts of new, changed and removed codesets, components, choices and messages.
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Task list
+      value: |
+        - [ ] Codesets
+        - [ ] Components
+        - [ ] Choices
+        - [ ] Messages
+        - [ ] FluentValidation coverage checked
+        - [ ] Scope statement and README counts updated

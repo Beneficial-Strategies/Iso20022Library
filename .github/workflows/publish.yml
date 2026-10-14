@@ -9,6 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
+      contents: write   # to create the GitHub Release for the tag once the packages are on NuGet
       id-token: write   # required so GitHub can issue the OIDC token NuGet Trusted Publishing exchanges for a short-lived API key — see https://learn.microsoft.com/nuget/nuget-org/trusted-publishing
     steps:
       - uses: actions/checkout@v4
@@ -60,3 +61,17 @@ jobs:
             --api-key ${{ steps.login.outputs.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
+
+      # The GitHub Release carries the same notes as the NuGet package: the entry for this version in the core package's
+      # release-notes.txt (written by tools/release/prepare_release.py). Pre-release versions (-alpha) are marked as such.
+      - name: Create the GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v v="$version" '$0 == v {found=1; next} found && /^[^ ]/ {exit} found {print}' \
+            src/BeneficialStrategies.Iso20022.Common/release-notes.txt | sed 's/^    //' > release-body.md
+          [ -s release-body.md ] || echo "See the NuGet package release notes." > release-body.md
+          flags=()
+          case "$version" in *-*) flags+=(--prerelease);; esac
+          gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file release-body.md "${flags[@]}"

@@ -29,3 +29,7 @@ jobs:
 
       - name: Test (both TFMs)
         run: dotnet test src/iso20022.sln -c Release --no-build
+
+      - name: Test the release tooling
+        run: python3 -m unittest -q test_prepare_release
+        working-directory: tools/release

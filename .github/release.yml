@@ -1,0 +1,16 @@
+changelog:
+  exclude:
+    labels: ["no-release-notes"]
+  categories:
+    - title: Breaking changes
+      labels: ["breaking-change"]
+    - title: Snapshot sync
+      labels: ["snapshot-sync"]
+    - title: Messages and features
+      labels: ["message-support", "enhancement"]
+    - title: Bug fixes
+      labels: ["bug"]
+    - title: Documentation
+      labels: ["documentation"]
+    - title: Other changes
+      labels: ["*"]

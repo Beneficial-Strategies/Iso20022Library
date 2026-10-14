@@ -1,0 +1,64 @@
+name: Bug
+description: The library throws, returns wrong data, or does not match the ISO 20022 specification
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The fastest way to get a bug fixed is a **unit test that fails today**. The test becomes the proof the bug is fixed, and the issue is closed by the pull request that makes it pass.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - BeneficialStrategies.Iso20022
+        - BeneficialStrategies.Iso20022.FluentValidation
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.7.0-alpha
+    validations:
+      required: true
+  - type: input
+    id: message
+    attributes:
+      label: ISO 20022 message or type involved
+      description: The message identifier (for example pacs.008.001.14) or the type name, if the bug is about one.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happens, and what should happen
+      description: Include the exact exception text or the wrong value.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Input that shows it
+      description: The smallest XML or JSON, or code, that reproduces it. Remove anything confidential.
+      render: text
+  - type: dropdown
+    id: has-test
+    attributes:
+      label: Is there a unit test that reproduces it?
+      options:
+        - "Yes, linked below (it fails today)"
+        - "No, but I can add one"
+        - "No, I cannot add one"
+    validations:
+      required: true
+  - type: input
+    id: test-link
+    attributes:
+      label: Link to the failing test
+      description: A link to the test in a pull request, branch or fork (a line in a file is fine), and its name. If a test is added later, edit this field. A bug without a test gets the `needs-test` label.
+      placeholder: https://github.com/.../blob/.../SomeTests.cs#L42  (SomeTests.Rejects_negative_enum)
+  - type: textarea
+    id: related
+    attributes:
+      label: Related
+      description: Issues and pull requests, as #number.

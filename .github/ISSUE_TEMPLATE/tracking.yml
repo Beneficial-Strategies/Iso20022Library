@@ -1,0 +1,30 @@
+name: Tracking issue
+description: A body of work spread over several pull requests
+labels: ["tracking"]
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Task list
+      description: One line per child issue, as `- [ ] #number short title`. GitHub ticks each box when its issue closes.
+      placeholder: "- [ ] #123 First part"
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+    validations:
+      required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions, commercial support, sponsoring, or helping maintain this library
+    url: https://github.com/Beneficial-Strategies/Iso20022Library#help-keep-this-library-maintained
+    about: This library is free and maintained by a small team. If your company depends on it, or you would like to help maintain an area, start here (or write to support@beneficialstrategies.com).
