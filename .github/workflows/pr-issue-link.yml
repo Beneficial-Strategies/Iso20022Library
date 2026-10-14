@@ -1,0 +1,36 @@
+name: PR is linked to an issue
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  linked:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const labels = pr.labels.map(l => l.name);
+            // release branches carry the version bump and notes; they close nothing themselves
+            if (labels.includes('no-issue') || pr.head.ref.startsWith('release/')) {
+              core.info('Exempt from the issue link.');
+              return;
+            }
+            const q = `query($o:String!,$r:String!,$n:Int!){repository(owner:$o,name:$r){pullRequest(number:$n){
+                closingIssuesReferences(first:20){nodes{number}}}}}`;
+            const res = await github.graphql(q, {o: context.repo.owner, r: context.repo.repo, n: pr.number});
+            const closing = res.repository.pullRequest.closingIssuesReferences.nodes.map(n => n.number);
+            const refs = [...(pr.body || '').matchAll(/\b(?:refs?|references?|part of)\s+#(\d+)/gi)].map(m => Number(m[1]));
+            if (closing.length > 0 || refs.length > 0) {
+              core.info(`Linked: closes ${closing.join(', ') || 'none'}, refs ${refs.join(', ') || 'none'}.`);
+              return;
+            }
+            core.setFailed('Link this pull request to an issue: write "Closes #123" (or "Refs #123" for a tracking issue) in the description. ' +
+              'A typo or a generated file can take the `no-issue` label from a maintainer.');

@@ -12,6 +12,20 @@ A family of .NET libraries for working with the [ISO 20022](https://iso20022.org
 
 See each package's own README (linked above) for installation instructions and usage examples. For a full breakdown of ISO 20022 message coverage by business area, see [`doc/Scope-Statement.md`](doc/Scope-Statement.md).
 
+## Help keep this library maintained
+
+This library is free and permissively licensed, and it is **looking for support**. It has to follow every ISO 20022 snapshot (message sets, code sets, component changes), keep its validators in step, and answer the bug reports and requests that come with being used. That is a lot for a small team, and it is stronger with more people on it.
+
+If your company builds on it, or you want to see an area kept up to date, there are several ways to help:
+
+- **Sponsor or fund maintenance.** Write to [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com) to talk about it.
+- **Co-maintain an area.** The areas are the message model and serializers (`area:core`), the validators (`area:validation`) and the saga toolkit (`area:sagas`). Issues labelled [`maintainer-wanted`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/maintainer-wanted) say where it would make the difference most.
+- **Pick up an issue.** [`help wanted`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/help%20wanted) and [`good first issue`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/good%20first%20issue) are chosen to be doable without knowing the whole code base.
+- **Bring real messages.** Valid, anonymised samples from your scheme turn into round-trip tests and decide which messages come next.
+- **Report precisely.** A bug with a [failing unit test](CONTRIBUTING.md#reporting-a-bug) is usually fixed fastest.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how issues and pull requests work, and [doc/Releasing.md](doc/Releasing.md) for how releases are made from them.
+
 ## License
 
 Provided free of charge under a very non-restrictive license as a good-faith contribution to the community.

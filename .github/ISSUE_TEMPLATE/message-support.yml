@@ -1,0 +1,40 @@
+name: Support for a message
+description: Ask for an ISO 20022 message (or a whole business area) to be fully supported
+labels: ["message-support", "enhancement", "needs-triage"]
+body:
+  - type: input
+    id: message
+    attributes:
+      label: Message identifier
+      description: For example camt.052.001.13. Several are fine if they belong together.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: What do you need
+      options:
+        - The message model and XML/JSON serialization
+        - FluentValidation rules for the message
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Who uses it and for what
+      description: Your use case, and which scheme or market practice requires it. This decides the order.
+    validations:
+      required: true
+  - type: textarea
+    id: samples
+    attributes:
+      label: Sample messages
+      description: Valid XML from your scheme or counterparty (anonymised) lets us add round-trip tests.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help
+      options:
+        - label: I can review the result against real messages
+        - label: I or my company would sponsor or help maintain this area (see the README)

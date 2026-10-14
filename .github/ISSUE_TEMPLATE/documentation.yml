@@ -1,0 +1,17 @@
+name: Documentation
+description: A README, a code sample or an XML doc comment is wrong, missing or unclear
+labels: ["documentation", "needs-triage"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The file, the NuGet page or the type.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing
+    validations:
+      required: true
