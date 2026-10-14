@@ -41,7 +41,7 @@ jobs:
 
       - name: Test the release script
         run: python3 -m unittest -q test_prepare_release
-        working-directory: tools/release
+        working-directory: tools/releasing
 
       - name: Choose the version and write the notes
         id: prepare
@@ -56,7 +56,7 @@ jobs:
           [ "$GRADUATE" = "true" ] && args+=(--graduate)
           [ -n "$SUFFIX" ] && args+=(--suffix "$SUFFIX")
           [ "$DRY_RUN" = "true" ] && args+=(--dry-run)
-          python3 tools/release/prepare_release.py "${args[@]}" | tee release-plan.txt
+          python3 tools/releasing/prepare_release.py "${args[@]}" | tee release-plan.txt
           { echo '```text'; cat release-plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Push the release branch

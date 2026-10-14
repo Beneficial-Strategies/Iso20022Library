@@ -32,4 +32,4 @@ jobs:
 
       - name: Test the release tooling
         run: python3 -m unittest -q test_prepare_release
-        working-directory: tools/release
+        working-directory: tools/releasing

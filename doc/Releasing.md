@@ -30,7 +30,7 @@ For each issue, in this order: a `Release note:` line in the pull request that c
 
 The tag stays a manual step on purpose: publishing to NuGet cannot be taken back.
 
-Locally: `python3 tools/release/prepare_release.py --dry-run` (needs `gh` logged in). The logic is tested in `tools/release/test_prepare_release.py`, which CI runs.
+Locally: `python3 tools/releasing/prepare_release.py --dry-run` (needs `gh` logged in). The logic is tested in `tools/releasing/test_prepare_release.py`, which CI runs.
 
 ## Pull requests and issues
 
