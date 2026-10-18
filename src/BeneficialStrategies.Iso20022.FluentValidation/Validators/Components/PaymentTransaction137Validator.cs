@@ -59,7 +59,7 @@ public class PaymentTransaction137Validator : AbstractValidator<PaymentTransacti
             x => x.OriginalInterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.OriginalInterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.OriginalInterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

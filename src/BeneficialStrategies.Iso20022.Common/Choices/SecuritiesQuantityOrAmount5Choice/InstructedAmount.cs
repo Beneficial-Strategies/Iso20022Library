@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount5Choic
         [IsoId("_WOVvkNp-Ed-ak6NoX_4Aeg_-1267706960_Currency")]
         [DisplayName("Restricted FIN Active Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
+        public required ActiveCurrencyCode Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.

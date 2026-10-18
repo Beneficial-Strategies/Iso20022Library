@@ -81,7 +81,7 @@ public class CreditTransferTransaction82Validator : AbstractValidator<CreditTran
         RuleFor(x => x.Debtor).SetValidator(agentValidator!);
         RuleFor(x => x.Creditor).SetValidator(agentValidator!);
 
-        RuleFor(x => x.InterbankSettlementAmount.Currency)
+        RuleFor(x => (string)x.InterbankSettlementAmount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(

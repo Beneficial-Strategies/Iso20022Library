@@ -17,7 +17,7 @@ public record RestrictedFINActiveOrHistoricCurrencyAndAmount
     [IsoId("_XY_k3tp-Ed-ak6NoX_4Aeg_1054967173_Currency")]
     [DisplayName("Restricted FIN Active Or Historic Currency And Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required string Currency { get; init; }
+    public required ActiveOrHistoricCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.

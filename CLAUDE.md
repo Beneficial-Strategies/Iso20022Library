@@ -8,13 +8,9 @@ This is the **Iso20022Library** - a .NET library containing 3,311 ISO20022 finan
 
 **NuGet Package**: `BeneficialStrategies.Iso20022`
 
-### Transition Notice
+### How the code is maintained
 
-This library was originally auto-generated from the ISO20022 specification by the Iso20022MasterControl project. **The code generation approach is being discontinued.** Going forward:
-
-- This repository will become independent (no longer a submodule of Iso20022MasterControl)
-- The `.g.cs` files will be maintained directly with assistance from Claude and the ISO20022 MCP server
-- The original generators in Iso20022MasterControl will be abandoned
+Every file in this repository is maintained directly, with assistance from Claude and the ISO20022 MCP server. The code was generated from the ISO20022 specification when the library began, but that ended over a year ago and nothing regenerates it, so edit any file as needed, including the types under `Amounts`, `Choices`, `Codesets` and `Components`. A comment or heading that says "generated" describes the history, not a rule.
 
 ## XML Documentation — Non-Negotiable Requirement
 
@@ -42,7 +38,7 @@ understanding the ISO spec authors encoded.
 | Scope / Usage / Constraint paragraphs (when lengthy) | `<remarks>` |
 | Cross-references to related types or messages | `<seealso cref="..."/>` |
 
-### What must be on every generated type
+### What must be on every type
 
 **Message record (class):**
 ```csharp
@@ -192,7 +188,7 @@ in order of preference:
 Files written during snapshot syncs prior to 2026-06 were often written without verbatim
 descriptions — properties received only the display name as their `<summary>`, and class-level
 `[Description(...)]` attributes were omitted. These files must be corrected as they are
-encountered. The correct reference style is shown in the older auto-generated files such as
+encountered. The correct reference style is shown in older files such as
 `MessageDefinitions/setr/RedemptionOrderV04.cs`.
 
 ## Build Commands
@@ -269,17 +265,17 @@ theoretical):
 
 ### Code Maintenance
 
-The `.g.cs` files were originally auto-generated but are now maintained directly. Claude may edit these files as needed to fix bugs, add features, or align with ISO20022 specification updates. The MCP server provides access to ISO20022 specification data to assist with maintenance.
+The files are maintained directly (see "How the code is maintained" above). Claude may edit any of them to fix bugs, add features, or align with ISO20022 specification updates. The MCP server provides access to ISO20022 specification data to assist with maintenance.
 
 ### Directory Structure
 
 ```
 src/BeneficialStrategies.Iso20022.Common/
 ├── Framework/           # Hand-written base interfaces and helpers
-├── Components/          # Generated message components (12,653 types)
-├── Choices/             # Generated polymorphic choice types
-├── Codesets/            # Generated enums (3,774 types)
-├── Amounts/             # Generated amount types
+├── Components/          # Message components (12,653 types)
+├── Choices/             # Polymorphic choice types
+├── Codesets/            # Enums (code sets) (3,774 types)
+├── Amounts/             # Amount types
 ├── ExternalSchema/      # External schema references
 ├── UserDefined/         # User-defined content placeholders
 ├── Metadata/            # Attribute definitions
@@ -298,9 +294,9 @@ src/BeneficialStrategies.Iso20022.Common/
 | `sese` | Securities Settlement |
 | `semt` | Securities Management |
 
-### Generated Code Patterns
+### Code Patterns
 
-**Messages** (`MessageDefinitions/[area]/MessageName.g.cs`):
+**Messages** (`MessageDefinitions/[area]/MessageName.cs`):
 - Implement `IOuterRecord` interface
 - Include `IsoIdentifier` constant (e.g., `"pain.001.001.11"`)
 - Rich XML documentation from ISO spec
@@ -312,7 +308,7 @@ src/BeneficialStrategies.Iso20022.Common/
 - Single-value variants: `[IsoId]`+`[DisplayName]` on class, `[IsoXmlTag]` on `Value` property only
 - Multi-field variants: `[IsoId]`+`[DisplayName]`+`[IsoXmlTag]` on class, each property has its own attributes
 
-**Codesets** (`Codesets/[Name]Code.g.cs`):
+**Codesets** (`Codesets/[Name]Code.cs`):
 - Enums with `[EnumMember]` and `[IsoId]` attributes
 - Versioned codes (e.g., `PaymentMethod3Code`)
 

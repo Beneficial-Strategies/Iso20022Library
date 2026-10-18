@@ -52,7 +52,7 @@ public class TransactionAllocation2Validator : AbstractValidator<TransactionAllo
     )
     {
         // ── Amount (ActiveOrHistoricCurrencyAndAmount, required 1..1) ────────────────
-        RuleFor(x => x.Amount.Currency)
+        RuleFor(x => (string)x.Amount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(

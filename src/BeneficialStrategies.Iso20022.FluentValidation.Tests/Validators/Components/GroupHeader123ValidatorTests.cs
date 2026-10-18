@@ -89,11 +89,11 @@ public class GroupHeader123ValidatorTests
     // ── TotalReturnedInterbankSettlementAmount ────────────────────────────────────
 
     [Fact]
-    public void TotalReturnedInterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void TotalReturnedInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            TotalReturnedInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "eur", Amount = 100m },
+            TotalReturnedInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = default, Amount = 100m },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalReturnedInterbankSettlementAmount.Currency");

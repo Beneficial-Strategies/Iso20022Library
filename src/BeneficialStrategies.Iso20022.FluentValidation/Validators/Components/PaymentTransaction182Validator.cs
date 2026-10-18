@@ -76,7 +76,7 @@ public class PaymentTransaction182Validator : AbstractValidator<PaymentTransacti
     )
     {
         // ── ReversedInterbankSettlementAmount (ActiveCurrencyAndAmount, required 1..1) ───
-        RuleFor(x => x.ReversedInterbankSettlementAmount.Currency)
+        RuleFor(x => (string)x.ReversedInterbankSettlementAmount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(
@@ -96,7 +96,7 @@ public class PaymentTransaction182Validator : AbstractValidator<PaymentTransacti
             x => x.OriginalInterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.OriginalInterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.OriginalInterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(
@@ -115,7 +115,7 @@ public class PaymentTransaction182Validator : AbstractValidator<PaymentTransacti
             x => x.ReversedInstructedAmount is not null,
             () =>
             {
-                RuleFor(x => x.ReversedInstructedAmount!.Currency)
+                RuleFor(x => (string)x.ReversedInstructedAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(
@@ -132,7 +132,7 @@ public class PaymentTransaction182Validator : AbstractValidator<PaymentTransacti
             x => x.CompensationAmount is not null,
             () =>
             {
-                RuleFor(x => x.CompensationAmount!.Currency)
+                RuleFor(x => (string)x.CompensationAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

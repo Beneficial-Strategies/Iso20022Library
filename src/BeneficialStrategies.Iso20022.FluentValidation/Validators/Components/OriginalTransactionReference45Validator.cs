@@ -80,7 +80,7 @@ public class OriginalTransactionReference45Validator : AbstractValidator<Origina
             x => x.InterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.InterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.InterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

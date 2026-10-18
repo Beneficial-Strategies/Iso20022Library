@@ -104,7 +104,7 @@ public class DirectDebitTransactionInformation35Validator : AbstractValidator<Di
         RuleFor(x => x.DebtorAgent).SetValidator(agentValidator!);
 
         // ── InterbankSettlementAmount (ActiveCurrencyAndAmount, required 1..1) ───────
-        RuleFor(x => x.InterbankSettlementAmount.Currency)
+        RuleFor(x => (string)x.InterbankSettlementAmount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(
@@ -130,7 +130,7 @@ public class DirectDebitTransactionInformation35Validator : AbstractValidator<Di
             x => x.InstructedAmount is not null,
             () =>
             {
-                RuleFor(x => x.InstructedAmount!.Currency)
+                RuleFor(x => (string)x.InstructedAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

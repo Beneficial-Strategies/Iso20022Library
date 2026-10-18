@@ -17,7 +17,7 @@ public record ActiveCurrencyAnd24Amount
     [IsoId("_cuFukzTxEemwtJBLtapBmw_Currency")]
     [DisplayName("Active Currency And 24 Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required string Currency { get; init; }
+    public required ActiveCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
