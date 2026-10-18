@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType1Choice
     /// </summary>
     [IsoId("_U7ERUK4KEemG7MmivSuE5g")]
     [DisplayName("Type")]
-    public record Type : VoteInstructionType1Choice_
+    public partial record Type : VoteInstructionType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

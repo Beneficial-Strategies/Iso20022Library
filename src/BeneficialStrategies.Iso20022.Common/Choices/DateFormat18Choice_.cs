@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QhuyIeENEd-qUMZtd_eZuQ")]
     [DisplayName("Date Format 18 Choice")]
-    public abstract record DateFormat18Choice_ { }
+    public abstract partial record DateFormat18Choice_ { }
 }

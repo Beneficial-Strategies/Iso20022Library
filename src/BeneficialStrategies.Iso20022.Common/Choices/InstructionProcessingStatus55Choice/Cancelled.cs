@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
     /// Cancelled.
     /// </summary>
     [DisplayName("Cancelled")]
-    public record Cancelled : InstructionProcessingStatus55Choice_
+    public partial record Cancelled : InstructionProcessingStatus55Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

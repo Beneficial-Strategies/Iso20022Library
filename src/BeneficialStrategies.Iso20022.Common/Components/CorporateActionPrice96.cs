@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nLgeZZt3Ee-wQIOX0djF2w")]
 [DisplayName("Corporate Action Price96")]
-public record CorporateActionPrice96
+public partial record CorporateActionPrice96
 {
     /// <summary>
     /// Maximum Price.

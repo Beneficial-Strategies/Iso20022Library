@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
     [IsoId("_x8LwleAZEd-D2OAFXdoRmA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : IntermediateSecuritiesDistributionTypeFormat6Choice_
+    public partial record Proprietary : IntermediateSecuritiesDistributionTypeFormat6Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

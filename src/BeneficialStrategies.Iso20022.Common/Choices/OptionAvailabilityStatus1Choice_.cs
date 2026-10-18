@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q0CqG9p-Ed-ak6NoX_4Aeg_-885794787")]
     [DisplayName("Option Availability Status 1 Choice")]
-    public abstract record OptionAvailabilityStatus1Choice_ { }
+    public abstract partial record OptionAvailabilityStatus1Choice_ { }
 }

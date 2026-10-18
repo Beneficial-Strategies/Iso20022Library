@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountOrCode1Choice
     /// </summary>
     [IsoId("_SoRAwNp-Ed-ak6NoX_4Aeg_361303128")]
     [DisplayName("Code")]
-    public record Code : UnitOrFaceAmountOrCode1Choice_
+    public partial record Code : UnitOrFaceAmountOrCode1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

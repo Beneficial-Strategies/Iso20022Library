@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TXEAddp-Ed-ak6NoX_4Aeg_-525646890")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate4
+public partial record CorporateActionRate4
 {
     /// <summary>
     /// Rate used to calculate the amount of the charges/fees that cannot be categorised.

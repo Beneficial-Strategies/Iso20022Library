@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CAVnIUECEeWVgfuHGaKtRQ")]
     [DisplayName("Fraction Disposition Type 25 Choice")]
-    public abstract record FractionDispositionType25Choice_ { }
+    public abstract partial record FractionDispositionType25Choice_ { }
 }

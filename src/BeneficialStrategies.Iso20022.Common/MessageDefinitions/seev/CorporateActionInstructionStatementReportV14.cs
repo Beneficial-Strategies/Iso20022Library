@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_47-Ksa8vEfCx2aBifPEdRg")]
 [DisplayName("Corporate Action Instruction Statement Report V14")]
-public record CorporateActionInstructionStatementReportV14 : IOuterRecord
+public partial record CorporateActionInstructionStatementReportV14 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

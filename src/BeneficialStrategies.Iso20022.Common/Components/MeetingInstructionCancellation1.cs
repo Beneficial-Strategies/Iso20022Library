@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mbPBQDUAEe2tRf29bleifQ")]
 [DisplayName("Meeting Instruction Cancellation")]
-public record MeetingInstructionCancellation1
+public partial record MeetingInstructionCancellation1
 {
     /// <summary>
     /// Identification of the meeting instruction cancellation request message containing the individual instruction(s) for which the cancellation was requested.

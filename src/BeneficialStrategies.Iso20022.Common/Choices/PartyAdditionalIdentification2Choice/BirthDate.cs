@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
     /// </summary>
     [IsoId("_Qo3U0tp-Ed-ak6NoX_4Aeg_-86602673")]
     [DisplayName("Birth Date")]
-    public record BirthDate : PartyAdditionalIdentification2Choice_
+    public partial record BirthDate : PartyAdditionalIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

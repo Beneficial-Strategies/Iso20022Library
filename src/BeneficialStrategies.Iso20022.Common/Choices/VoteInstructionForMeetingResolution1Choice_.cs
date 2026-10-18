@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TK1iUNp-Ed-ak6NoX_4Aeg_853994638")]
     [DisplayName("Vote Instruction For Meeting Resolution 1 Choice")]
-    public abstract record VoteInstructionForMeetingResolution1Choice_ { }
+    public abstract partial record VoteInstructionForMeetingResolution1Choice_ { }
 }

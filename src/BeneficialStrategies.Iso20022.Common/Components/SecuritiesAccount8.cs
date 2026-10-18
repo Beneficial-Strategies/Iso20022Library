@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QUckBdp-Ed-ak6NoX_4Aeg_-1097204754")]
 [DisplayName("Securities Account")]
-public record SecuritiesAccount8
+public partial record SecuritiesAccount8
 {
     /// <summary>
     /// Specifies whether the value is a debit or credit.

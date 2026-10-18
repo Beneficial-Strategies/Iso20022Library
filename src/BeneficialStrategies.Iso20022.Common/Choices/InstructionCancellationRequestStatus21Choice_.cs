@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionCancellationRequestStatus21Choice.ProprietaryStatus), nameof(InstructionCancellationRequestStatus21Choice.ProprietaryStatus))]
     [IsoId("_c2C24aKvEfCHi7w3_0pcpw")]
     [DisplayName("Instruction Cancellation Request Status 21 Choice")]
-    public abstract record InstructionCancellationRequestStatus21Choice_ { }
+    public abstract partial record InstructionCancellationRequestStatus21Choice_ { }
 }

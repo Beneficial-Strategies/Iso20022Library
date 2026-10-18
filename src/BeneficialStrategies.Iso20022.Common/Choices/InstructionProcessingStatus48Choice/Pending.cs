@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus48Cho
     [IsoId("_pf9iWzi7Eeydid5dcNPKvg")]
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
-    public record Pending : InstructionProcessingStatus48Choice_
+    public partial record Pending : InstructionProcessingStatus48Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

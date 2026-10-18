@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x_GL6R9REeuFz_FaCzCLgQ")]
 [DisplayName("Updated UR Llnformation")]
-public record UpdatedURLlnformation5
+public partial record UpdatedURLlnformation5
 {
     /// <summary>
     /// Language used to provide additional information and using the ISO 639-1 language code standard.

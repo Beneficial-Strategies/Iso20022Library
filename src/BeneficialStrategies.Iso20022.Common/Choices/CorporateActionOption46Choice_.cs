@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZHey_x9REeuFz_FaCzCLgQ")]
     [DisplayName("Corporate Action Option 46 Choice")]
-    public abstract record CorporateActionOption46Choice_ { }
+    public abstract partial record CorporateActionOption46Choice_ { }
 }

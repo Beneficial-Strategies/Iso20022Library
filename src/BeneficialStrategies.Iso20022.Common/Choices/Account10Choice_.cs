@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Account10Choice.TaxAccount), nameof(Account10Choice.TaxAccount))]
     [IsoId("_olMCy5BPEe-COKgew96POA")]
     [DisplayName("Account10Choice")]
-    public abstract record Account10Choice_ { }
+    public abstract partial record Account10Choice_ { }
 }

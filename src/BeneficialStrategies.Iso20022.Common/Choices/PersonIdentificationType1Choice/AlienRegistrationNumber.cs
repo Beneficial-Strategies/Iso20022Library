@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
     /// </summary>
     [IsoId("_QEW5l9p-Ed-ak6NoX_4Aeg_-1180196117")]
     [DisplayName("Alien Registration Number")]
-    public record AlienRegistrationNumber : PersonIdentificationType1Choice_
+    public partial record AlienRegistrationNumber : PersonIdentificationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

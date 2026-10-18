@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceCalculationMethod2Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : PriceCalculationMethod2Choice_
+    public partial record Proprietary : PriceCalculationMethod2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

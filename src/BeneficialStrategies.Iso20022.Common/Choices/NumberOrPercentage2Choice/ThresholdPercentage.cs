@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage2Choice
     /// Threshold Percentage.
     /// </summary>
     [DisplayName("Threshold Percentage")]
-    public record ThresholdPercentage : NumberOrPercentage2Choice_
+    public partial record ThresholdPercentage : NumberOrPercentage2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

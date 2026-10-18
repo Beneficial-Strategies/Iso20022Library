@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ozMp2ZBPEe-COKgew96POA")]
 [DisplayName("Cash Parties43")]
-public record CashParties43
+public partial record CashParties43
 {
     /// <summary>
     /// Creditor.

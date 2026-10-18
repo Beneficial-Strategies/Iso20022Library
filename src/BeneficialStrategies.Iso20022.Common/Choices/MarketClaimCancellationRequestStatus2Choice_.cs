@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_A4VBYYYTEe-9jM3-w7OB3g")]
     [DisplayName("Market Claim Cancellation Request Status2Choice")]
-    public abstract record MarketClaimCancellationRequestStatus2Choice_ { }
+    public abstract partial record MarketClaimCancellationRequestStatus2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vBAHGxrmEeyhRdHRjakS2w")]
 [DisplayName("Communication Address")]
-public record CommunicationAddress12
+public partial record CommunicationAddress12
 {
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.

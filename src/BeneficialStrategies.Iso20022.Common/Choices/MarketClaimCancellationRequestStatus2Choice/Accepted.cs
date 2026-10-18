@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// Accepted.
     /// </summary>
     [DisplayName("Accepted")]
-    public record Accepted : MarketClaimCancellationRequestStatus2Choice_
+    public partial record Accepted : MarketClaimCancellationRequestStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

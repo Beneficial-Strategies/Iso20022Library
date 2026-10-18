@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason64Choice
     /// <summary>Specifies the proprietary value.</summary>
     [IsoId("_j-z3ud8PEe-NrtAAlrBEgQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : RejectedReason64Choice_
+    public partial record Proprietary : RejectedReason64Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus32Choice
     /// Processing Status.
     /// </summary>
     [DisplayName("Processing Status")]
-    public record ProcessingStatus : CancellationStatus32Choice_
+    public partial record ProcessingStatus : CancellationStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

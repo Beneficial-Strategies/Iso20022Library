@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnedStatus1Choice
     /// No Specified Reason.
     /// </summary>
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ReturnedStatus1Choice_
+    public partial record NoSpecifiedReason : ReturnedStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

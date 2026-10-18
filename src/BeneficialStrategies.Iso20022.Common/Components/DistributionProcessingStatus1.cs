@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RlXZVdp-Ed-ak6NoX_4Aeg_-2044015905")]
 [DisplayName("Distribution Processing Status")]
-public record DistributionProcessingStatus1
+public partial record DistributionProcessingStatus1
 {
     /// <summary>
     /// The processing status.

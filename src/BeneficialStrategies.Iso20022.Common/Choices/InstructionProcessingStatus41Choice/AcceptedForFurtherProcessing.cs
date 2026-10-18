@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
     [IsoId("_4Yit_e6KEeqc-LCjwLsUVg")]
     [DisplayName("Accepted For Further Processing")]
     [IsoXmlTag("AccptdForFrthrPrcg")]
-    public record AcceptedForFurtherProcessing : InstructionProcessingStatus41Choice_
+    public partial record AcceptedForFurtherProcessing : InstructionProcessingStatus41Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

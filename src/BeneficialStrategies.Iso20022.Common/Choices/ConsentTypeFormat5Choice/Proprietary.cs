@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentTypeFormat5Choice
     [IsoId("_c5Whg5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ConsentTypeFormat5Choice_
+    public partial record Proprietary : ConsentTypeFormat5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

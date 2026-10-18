@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity50Choice
     [IsoId("_LU1r4xuyEeyhRdHRjakS2w")]
     [DisplayName("Signed Quantity")]
     [IsoXmlTag("SgndQty")]
-    public record SignedQuantity : Quantity50Choice_
+    public partial record SignedQuantity : Quantity50Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

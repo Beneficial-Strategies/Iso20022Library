@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote18Choice
     /// <summary>Instruction specifying a vote instruction per resolution for the entire entitlement.</summary>
     [IsoId("_xMNNVajGEfCzuLlmLrhIvA")]
     [DisplayName("Global Vote Instruction")]
-    public record GlobalVoteInstruction : Vote18Choice_
+    public partial record GlobalVoteInstruction : Vote18Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GblVoteInstr")]

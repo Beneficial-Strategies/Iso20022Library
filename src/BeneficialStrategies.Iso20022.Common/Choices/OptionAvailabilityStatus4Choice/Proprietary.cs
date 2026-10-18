@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionAvailabilityStatus4Choice
     [IsoId("_cta-L5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OptionAvailabilityStatus4Choice_
+    public partial record Proprietary : OptionAvailabilityStatus4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

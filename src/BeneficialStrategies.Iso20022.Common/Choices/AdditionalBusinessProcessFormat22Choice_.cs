@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_p4YCtTi7Eeydid5dcNPKvg")]
     [DisplayName("Additional Business Process Format 22 Choice")]
-    public abstract record AdditionalBusinessProcessFormat22Choice_ { }
+    public abstract partial record AdditionalBusinessProcessFormat22Choice_ { }
 }

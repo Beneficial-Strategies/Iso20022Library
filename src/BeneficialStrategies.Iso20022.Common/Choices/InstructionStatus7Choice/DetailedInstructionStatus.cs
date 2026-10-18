@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus7Choice
     [IsoId("_8bzrBa-nEemJ1NnLPsTFaw")]
     [DisplayName("Detailed Instruction Status")]
     [IsoXmlTag("DtldInstrSts")]
-    public record DetailedInstructionStatus : InstructionStatus7Choice_
+    public partial record DetailedInstructionStatus : InstructionStatus7Choice_
     {
         /// <summary>
         /// Identification of the specific individual instruction from the original meeting instruction message, element InstructionType/ InstructionIdentification, for which the status is provided.

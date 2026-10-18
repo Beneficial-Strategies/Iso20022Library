@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason6Ch
     [IsoId("_TsubFl99Ee262vCSVgjImg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionReversalReason6Choice_
+    public partial record Proprietary : CorporateActionReversalReason6Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

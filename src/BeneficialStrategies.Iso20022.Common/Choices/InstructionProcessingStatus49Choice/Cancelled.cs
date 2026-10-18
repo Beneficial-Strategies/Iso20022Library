@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus49Cho
     /// </summary>
     [IsoId("_piIs_ji7Eeydid5dcNPKvg")]
     [DisplayName("Cancelled")]
-    public record Cancelled : InstructionProcessingStatus49Choice_
+    public partial record Cancelled : InstructionProcessingStatus49Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Canc")]

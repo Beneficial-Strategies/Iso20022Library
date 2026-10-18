@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AdditionalBusinessProcessFormat25Choice.Proprietary), nameof(AdditionalBusinessProcessFormat25Choice.Proprietary))]
     [IsoId("_bWpU4aNYEfC9id413JK-Ig")]
     [DisplayName("AdditionalBusinessProcessFormat25Choice")]
-    public abstract record AdditionalBusinessProcessFormat25Choice_ { }
+    public abstract partial record AdditionalBusinessProcessFormat25Choice_ { }
 }

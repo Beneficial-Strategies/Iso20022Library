@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRate1Choice
     [IsoId("_UPh5gtp-Ed-ak6NoX_4Aeg_-398759257")]
     [DisplayName("Rate Type Amount")]
     [IsoXmlTag("RateTpAmt")]
-    public record RateTypeAmount : NetDividendRate1Choice_
+    public partial record RateTypeAmount : NetDividendRate1Choice_
     {
         /// <summary>
         /// Type of underlying securities to which the rate is related, eg, underlying security for which an interest is paid.

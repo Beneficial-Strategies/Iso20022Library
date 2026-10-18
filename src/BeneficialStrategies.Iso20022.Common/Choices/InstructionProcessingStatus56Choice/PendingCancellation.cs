@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus56Cho
     /// Pending Cancellation.
     /// </summary>
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : InstructionProcessingStatus56Choice_
+    public partial record PendingCancellation : InstructionProcessingStatus56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

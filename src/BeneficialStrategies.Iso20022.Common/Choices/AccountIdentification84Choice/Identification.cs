@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification84Choice
     /// <summary>Additional disclosure account identification.</summary>
     [IsoId("_z4SBEKnOEfC5VNwixU6YfQ")]
     [DisplayName("Identification")]
-    public record Identification : AccountIdentification84Choice_
+    public partial record Identification : AccountIdentification84Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Id")]

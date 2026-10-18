@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice
     /// Proprietary Indicator.
     /// </summary>
     [DisplayName("Proprietary Indicator")]
-    public record ProprietaryIndicator : ActivityIndicator1Choice_
+    public partial record ProprietaryIndicator : ActivityIndicator1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

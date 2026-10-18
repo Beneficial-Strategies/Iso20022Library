@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RiYWwNp-Ed-ak6NoX_4Aeg_1248187111")]
     [DisplayName("Corporate Action Deactivation Cancellation Status 1 Choice")]
-    public abstract record CorporateActionDeactivationCancellationStatus1Choice_ { }
+    public abstract partial record CorporateActionDeactivationCancellationStatus1Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TJVpRZK5Ee-l-O3vIHRmRw")]
     [DisplayName("Number Or Percentage2Choice")]
-    public abstract record NumberOrPercentage2Choice_ { }
+    public abstract partial record NumberOrPercentage2Choice_ { }
 }

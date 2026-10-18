@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator5Cho
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : NonEligibleProceedsIndicator5Choice_
+    public partial record Proprietary : NonEligibleProceedsIndicator5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

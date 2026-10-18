@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1
     /// </summary>
     [IsoId("_Q1O85tp-Ed-ak6NoX_4Aeg_-1955694222")]
     [DisplayName("For Information Only Indicator")]
-    public record ForInformationOnlyIndicator : CorporateActionProcessingStatus1Choice_
+    public partial record ForInformationOnlyIndicator : CorporateActionProcessingStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

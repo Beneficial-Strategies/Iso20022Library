@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus17Choice
     /// No Specified Reason.
     /// </summary>
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : CancelledStatus17Choice_
+    public partial record NoSpecifiedReason : CancelledStatus17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

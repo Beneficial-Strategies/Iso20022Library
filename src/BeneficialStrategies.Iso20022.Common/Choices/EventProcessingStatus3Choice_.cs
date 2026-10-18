@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_s1KyAUGSEeWqy4niLuXETA")]
     [DisplayName("Event Processing Status 3 Choice")]
-    public abstract record EventProcessingStatus3Choice_ { }
+    public abstract partial record EventProcessingStatus3Choice_ { }
 }

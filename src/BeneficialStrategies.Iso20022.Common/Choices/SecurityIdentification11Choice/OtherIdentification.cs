@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification11Choice
     [IsoId("_RCMa09p-Ed-ak6NoX_4Aeg_-1826318510")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public record OtherIdentification : SecurityIdentification11Choice_
+    public partial record OtherIdentification : SecurityIdentification11Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier of a security.

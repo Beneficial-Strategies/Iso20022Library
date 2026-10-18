@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus35Choice
     /// <summary>Status advising on the rejection of the instruction cancellation request and on the reason for the rejection.</summary>
     [IsoId("_dFg2o68uEfCx2aBifPEdRg")]
     [DisplayName("Rejected")]
-    public record Rejected : CancellationStatus35Choice_
+    public partial record Rejected : CancellationStatus35Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

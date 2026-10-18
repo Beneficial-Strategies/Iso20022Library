@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nM3dIYWAEe-ufOxNNkEXmg")]
 [DisplayName("Accepted Status2")]
-public record AcceptedStatus2
+public partial record AcceptedStatus2
 {
     /// <summary>
     /// Accepted Quantity.

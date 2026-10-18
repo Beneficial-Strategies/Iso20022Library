@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity3Ch
     /// <summary>Specifies the proration type as a proprietary value.</summary>
     [IsoId("_NpRYI6j5EfCG_LQaXOxwew")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ProrationBelowMinimumQuantity3Choice_
+    public partial record Proprietary : ProrationBelowMinimumQuantity3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

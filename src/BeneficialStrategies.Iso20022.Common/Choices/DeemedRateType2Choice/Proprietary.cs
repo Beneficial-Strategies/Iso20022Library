@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeemedRateType2Choice
     [IsoId("_sH2RM9BbEee0mNiKMkpGNQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DeemedRateType2Choice_
+    public partial record Proprietary : DeemedRateType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

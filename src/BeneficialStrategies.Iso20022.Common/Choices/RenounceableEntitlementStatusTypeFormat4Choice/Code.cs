@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableEntitlementStatusTyp
     /// </summary>
     [IsoId("_c5Lh5ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : RenounceableEntitlementStatusTypeFormat4Choice_
+    public partial record Code : RenounceableEntitlementStatusTypeFormat4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tgcl-dp-Ed-ak6NoX_4Aeg_-1124848708")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice1
+public partial record CorporateActionPrice1
 {
     /// <summary>
     /// 1. Price at which security will be purchased/sold if warrant is exercised, either as an actual amount or a percentage.|2. Price at which a bond is converted to underlying security either as an actual amount or a percentage.|3. Strike price of an option, represented either as an actual amount, a percentage or or a number of points above an index.

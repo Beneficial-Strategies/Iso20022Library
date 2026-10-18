@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lprEMDttEemIf7eyjCwinw")]
 [DisplayName("Shareholding Balance")]
-public record ShareholdingBalance1
+public partial record ShareholdingBalance1
 {
     /// <summary>
     /// Identifies the category of shareholding.

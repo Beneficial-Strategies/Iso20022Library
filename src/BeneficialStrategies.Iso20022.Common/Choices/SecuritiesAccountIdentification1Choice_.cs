@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesAccountIdentification1Choice.BlockChainAddressOrWallet))]
     [JsonDerivedType(typeof(SecuritiesAccountIdentification1Choice.SafekeepingAccount))]
     [JsonDerivedType(typeof(SecuritiesAccountIdentification1Choice.BlockChainAddressOrWallet))]
-    public abstract record SecuritiesAccountIdentification1Choice_
+    public abstract partial record SecuritiesAccountIdentification1Choice_
     {
     }
 }

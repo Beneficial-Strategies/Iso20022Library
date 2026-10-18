@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gC4scaNWEfC9id413JK-Ig")]
 [DisplayName("Corporate Action Balance Details48")]
-public record CorporateActionBalanceDetails48
+public partial record CorporateActionBalanceDetails48
 {
     /// <summary>
     /// Total called amount of the security that has been called for redemption on a specific payable date.

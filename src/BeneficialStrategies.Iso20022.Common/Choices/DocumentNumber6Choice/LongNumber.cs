@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber6Choice
     /// </summary>
     [IsoId("_celQ3ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Long Number")]
-    public record LongNumber : DocumentNumber6Choice_
+    public partial record LongNumber : DocumentNumber6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

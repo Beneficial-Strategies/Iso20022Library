@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus4Choice
     [IsoId("_cel3-ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Complete")]
     [IsoXmlTag("Cmplt")]
-    public record Complete : EventProcessingStatus4Choice_
+    public partial record Complete : EventProcessingStatus4Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

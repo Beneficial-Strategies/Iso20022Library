@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice
     /// </summary>
     [IsoId("_Cph1QDT8Ee2tRf29bleifQ")]
     [DisplayName("Vote Channel")]
-    public record VoteChannel : VoteThroughNetwork1Choice_
+    public partial record VoteChannel : VoteThroughNetwork1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

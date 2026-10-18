@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     [IsoId("_8rhp60GWEeWqy4niLuXETA")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : InstructionCancellationRequestStatus9Choice_
+    public partial record Accepted : InstructionCancellationRequestStatus9Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

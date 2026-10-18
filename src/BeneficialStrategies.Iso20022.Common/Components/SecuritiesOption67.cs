@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sks-Nc3wEee5nJBZsW8MFQ")]
 [DisplayName("Securities Option")]
-public record SecuritiesOption67
+public partial record SecuritiesOption67
 {
     /// <summary>
     /// Identification of the financial instrument.

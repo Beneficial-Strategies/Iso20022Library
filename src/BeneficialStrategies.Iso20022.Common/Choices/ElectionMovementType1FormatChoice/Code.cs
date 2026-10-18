@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionMovementType1FormatChoic
     /// </summary>
     [IsoId("_RmjsINp-Ed-ak6NoX_4Aeg_2024835239")]
     [DisplayName("Code")]
-    public record Code : ElectionMovementType1FormatChoice_
+    public partial record Code : ElectionMovementType1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

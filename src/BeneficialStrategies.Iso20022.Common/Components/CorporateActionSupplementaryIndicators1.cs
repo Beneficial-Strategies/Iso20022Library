@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w5PS8EnDEe-NocYul3BKXQ")]
 [DisplayName("Corporate Action Supplementary Indicators1")]
-public record CorporateActionSupplementaryIndicators1
+public partial record CorporateActionSupplementaryIndicators1
 {
     /// <summary>
     /// Conditional Payment Applicable Indicator.

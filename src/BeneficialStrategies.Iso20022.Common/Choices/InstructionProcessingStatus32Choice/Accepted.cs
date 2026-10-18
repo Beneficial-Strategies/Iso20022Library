@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus32Cho
     [IsoId("_hLopwLtUEeilsanBGAzy4A")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : InstructionProcessingStatus32Choice_
+    public partial record Accepted : InstructionProcessingStatus32Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

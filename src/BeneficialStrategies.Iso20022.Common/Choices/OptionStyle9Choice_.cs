@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ctPX95KQEeWHWpTQn1FFVg")]
     [DisplayName("Option Style 9 Choice")]
-    public abstract record OptionStyle9Choice_ { }
+    public abstract partial record OptionStyle9Choice_ { }
 }

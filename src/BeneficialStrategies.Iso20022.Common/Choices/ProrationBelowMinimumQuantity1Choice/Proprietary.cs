@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity1Ch
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : ProrationBelowMinimumQuantity1Choice_
+    public partial record Proprietary : ProrationBelowMinimumQuantity1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

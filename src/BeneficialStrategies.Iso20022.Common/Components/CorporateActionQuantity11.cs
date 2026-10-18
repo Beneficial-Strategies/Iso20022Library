@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lhWKQxu0EeyhRdHRjakS2w")]
 [DisplayName("Corporate Action Quantity")]
-public record CorporateActionQuantity11
+public partial record CorporateActionQuantity11
 {
     /// <summary>
     /// The maximum number of securities the offeror/issuer is ready to purchase or redeem. This can be a number or the term &quot;any and all&quot;.

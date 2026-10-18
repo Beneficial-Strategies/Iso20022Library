@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat10Choice
     /// </summary>
     [IsoId("_ctjhSZKQEeWHWpTQn1FFVg")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : TaxCreditRateFormat10Choice_
+    public partial record NotSpecifiedRate : TaxCreditRateFormat10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_ezLAgajGEfCzuLlmLrhIvA")]
 [DisplayName("Meeting Instruction V11")]
-public record MeetingInstructionV11 : IOuterRecord
+public partial record MeetingInstructionV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

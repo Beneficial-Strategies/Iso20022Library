@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_celQqZKQEeWHWpTQn1FFVg")]
 [DisplayName("Document Identification")]
-public record DocumentIdentification34
+public partial record DocumentIdentification34
 {
     /// <summary>
     /// Unique identifier of the document (message) assigned either by the account servicer or the account owner.

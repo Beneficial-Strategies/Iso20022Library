@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ro8RwNp-Ed-ak6NoX_4Aeg_-124095903")]
     [DisplayName("Securities Balance Type 9 Format Choice")]
-    public abstract record SecuritiesBalanceType9FormatChoice_ { }
+    public abstract partial record SecuritiesBalanceType9FormatChoice_ { }
 }

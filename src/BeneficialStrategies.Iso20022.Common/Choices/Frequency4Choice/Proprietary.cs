@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency4Choice
     [IsoId("_QxgTcdp-Ed-ak6NoX_4Aeg_-1160536005")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Frequency4Choice_
+    public partial record Proprietary : Frequency4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

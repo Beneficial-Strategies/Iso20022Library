@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator4Cho
     [IsoId("_cthE95KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : NonEligibleProceedsIndicator4Choice_
+    public partial record Proprietary : NonEligibleProceedsIndicator4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

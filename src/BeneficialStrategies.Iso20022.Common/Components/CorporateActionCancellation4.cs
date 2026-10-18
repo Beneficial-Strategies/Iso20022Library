@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TdbKmVAeEeO1M--XQMqOtA")]
 [DisplayName("Corporate Action Cancellation")]
-public record CorporateActionCancellation4
+public partial record CorporateActionCancellation4
 {
     /// <summary>
     /// Specifies reasons for cancellation of a corporate action event.

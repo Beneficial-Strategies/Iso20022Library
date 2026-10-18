@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RWnLqtp-Ed-ak6NoX_4Aeg_1637255890")]
     [DisplayName("Instruction Status 2 Choice")]
-    public abstract record InstructionStatus2Choice_ { }
+    public abstract partial record InstructionStatus2Choice_ { }
 }

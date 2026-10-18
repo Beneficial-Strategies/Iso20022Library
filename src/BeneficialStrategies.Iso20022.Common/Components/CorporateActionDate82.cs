@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x_Gznx9REeuFz_FaCzCLgQ")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate82
+public partial record CorporateActionDate82
 {
     /// <summary>
     /// Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives.

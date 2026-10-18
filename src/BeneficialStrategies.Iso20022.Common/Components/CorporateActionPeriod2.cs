@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TfjOGdp-Ed-ak6NoX_4Aeg_-1268934712")]
 [DisplayName("Corporate Action Period")]
-public record CorporateActionPeriod2
+public partial record CorporateActionPeriod2
 {
     /// <summary>
     /// Period during which the assented line is available.

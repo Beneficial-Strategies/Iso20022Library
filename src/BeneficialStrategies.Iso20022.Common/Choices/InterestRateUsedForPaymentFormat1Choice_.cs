@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UOySodp-Ed-ak6NoX_4Aeg_-1208255480")]
     [DisplayName("Interest Rate Used For Payment Format 1 Choice")]
-    public abstract record InterestRateUsedForPaymentFormat1Choice_ { }
+    public abstract partial record InterestRateUsedForPaymentFormat1Choice_ { }
 }

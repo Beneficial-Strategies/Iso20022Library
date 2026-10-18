@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus62Choice
     /// <summary>Specifies the reason for the rejected status.</summary>
     [IsoId("_j2C9Sd8PEe-NrtAAlrBEgQ")]
     [DisplayName("Reason")]
-    public record Reason : RejectedStatus62Choice_
+    public partial record Reason : RejectedStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

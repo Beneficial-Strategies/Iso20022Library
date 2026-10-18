@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice
     /// <summary>Provides information about the processing status of advice.</summary>
     [IsoId("_4z1pYaUeEfCnE_wCEfCqTA")]
     [DisplayName("Processed Status")]
-    public record ProcessedStatus : NotificationAdviceStatus4Choice_
+    public partial record ProcessedStatus : NotificationAdviceStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrcdSts")]

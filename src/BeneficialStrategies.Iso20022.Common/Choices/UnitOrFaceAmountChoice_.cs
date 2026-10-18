@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SoH20dp-Ed-ak6NoX_4Aeg_144255606")]
     [DisplayName("Unit Or Face Amount Choice")]
-    public abstract record UnitOrFaceAmountChoice_ { }
+    public abstract partial record UnitOrFaceAmountChoice_ { }
 }

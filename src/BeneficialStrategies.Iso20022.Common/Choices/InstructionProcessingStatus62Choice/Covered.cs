@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
     /// <summary>Protect instruction has been fully covered.</summary>
     [IsoId("_H9heda8wEfCx2aBifPEdRg")]
     [DisplayName("Covered")]
-    public record Covered : InstructionProcessingStatus62Choice_
+    public partial record Covered : InstructionProcessingStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cvrd")]

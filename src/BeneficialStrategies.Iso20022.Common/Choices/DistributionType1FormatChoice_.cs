@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmZ7Jdp-Ed-ak6NoX_4Aeg_-1392239918")]
     [DisplayName("Distribution Type 1 Format Choice")]
-    public abstract record DistributionType1FormatChoice_ { }
+    public abstract partial record DistributionType1FormatChoice_ { }
 }

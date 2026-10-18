@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType2Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : BidRangeType2Choice_
+    public partial record Code : BidRangeType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

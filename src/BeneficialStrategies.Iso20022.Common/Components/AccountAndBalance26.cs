@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_40u68SqdEeObprHJy8Zrxg")]
 [DisplayName("Account And Balance")]
-public record AccountAndBalance26
+public partial record AccountAndBalance26
 {
     /// <summary>
     /// Account where financial instruments are maintained.

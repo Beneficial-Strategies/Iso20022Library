@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f6Wace2-Eeqc-LCjwLsUVg")]
 [DisplayName("Corporate Action Period")]
-public record CorporateActionPeriod15
+public partial record CorporateActionPeriod15
 {
     /// <summary>
     /// Period during which the price of a security is determined.

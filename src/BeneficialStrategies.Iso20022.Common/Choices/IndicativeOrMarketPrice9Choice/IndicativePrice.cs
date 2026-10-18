@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice9Choice
     /// </summary>
     [IsoId("_chez1ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Indicative Price")]
-    public record IndicativePrice : IndicativeOrMarketPrice9Choice_
+    public partial record IndicativePrice : IndicativeOrMarketPrice9Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IndctvPric")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rD6A0WHgEe6yt_d72zQZeQ")]
 [DisplayName("Securities Option101")]
-public record SecuritiesOption101
+public partial record SecuritiesOption101
 {
     /// <summary>
     /// Security Details.

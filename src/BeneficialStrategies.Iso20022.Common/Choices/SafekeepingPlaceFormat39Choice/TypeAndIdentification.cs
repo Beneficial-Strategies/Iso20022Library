@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat39Choice
     [IsoId("_8GiQD_fREeiNZp_PtLohLw")]
     [DisplayName("Type And Identification")]
     [IsoXmlTag("TpAndId")]
-    public record TypeAndIdentification : SafekeepingPlaceFormat39Choice_
+    public partial record TypeAndIdentification : SafekeepingPlaceFormat39Choice_
     {
         /// <summary>
         /// Place of safekeeping as a code.

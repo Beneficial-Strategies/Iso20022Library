@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnedStatus2Choice
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
-    public record Reason : ReturnedStatus2Choice_
+    public partial record Reason : ReturnedStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

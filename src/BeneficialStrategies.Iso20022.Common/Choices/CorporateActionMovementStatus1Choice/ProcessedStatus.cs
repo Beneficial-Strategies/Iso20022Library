@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
     [IsoId("_RiPM1tp-Ed-ak6NoX_4Aeg_-1805228847")]
     [DisplayName("Processed Status")]
     [IsoXmlTag("PrcdSts")]
-    public record ProcessedStatus : CorporateActionMovementStatus1Choice_
+    public partial record ProcessedStatus : CorporateActionMovementStatus1Choice_
     {
         /// <summary>
         /// The processing status.

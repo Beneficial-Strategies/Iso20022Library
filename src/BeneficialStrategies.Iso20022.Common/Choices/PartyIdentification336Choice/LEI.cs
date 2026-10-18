@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification336Choice
     /// <summary>Legal Entity Identifier of the party.</summary>
     [IsoId("_1fJ0EKnVEfC5VNwixU6YfQ")]
     [DisplayName("LEI")]
-    public record LEI : PartyIdentification336Choice_
+    public partial record LEI : PartyIdentification336Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("LEI")]

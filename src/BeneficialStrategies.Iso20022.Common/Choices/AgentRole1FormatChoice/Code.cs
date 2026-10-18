@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentRole1FormatChoice
     /// </summary>
     [IsoId("_RlgjSNp-Ed-ak6NoX_4Aeg_349250144")]
     [DisplayName("Code")]
-    public record Code : AgentRole1FormatChoice_
+    public partial record Code : AgentRole1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

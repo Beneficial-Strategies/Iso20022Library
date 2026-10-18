@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus3Choice
     [IsoId("_RCpGxNp-Ed-ak6NoX_4Aeg_-1175269447")]
     [DisplayName("Detailed Instruction Status")]
     [IsoXmlTag("DtldInstrSts")]
-    public record DetailedInstructionStatus : InstructionStatus3Choice_
+    public partial record DetailedInstructionStatus : InstructionStatus3Choice_
     {
         /// <summary>
         /// Identifies the detailed instruction within an instruction message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qdH44bINEemux5trsZcCpw")]
 [DisplayName("Meeting Contact Person")]
-public record MeetingContactPerson3
+public partial record MeetingContactPerson3
 {
     /// <summary>
     /// Identification of the contact person by its name, given name and address.

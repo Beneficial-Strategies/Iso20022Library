@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_eFp0cYCzEe-3UrLQHGsjgQ")]
     [DisplayName("Corporate Action Reversal Reason10Choice")]
-    public abstract record CorporateActionReversalReason10Choice_ { }
+    public abstract partial record CorporateActionReversalReason10Choice_ { }
 }

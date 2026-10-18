@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sk06k83wEee5nJBZsW8MFQ")]
 [DisplayName("Tax Voucher")]
-public record TaxVoucher5
+public partial record TaxVoucher5
 {
     /// <summary>
     /// Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated.

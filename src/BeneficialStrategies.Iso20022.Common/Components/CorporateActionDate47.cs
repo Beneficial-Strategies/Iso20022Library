@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Lo7nOEEEEeWVgfuHGaKtRQ")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate47
+public partial record CorporateActionDate47
 {
     /// <summary>
     /// Date on which the movement is due to take place (cash and/or securities).

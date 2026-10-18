@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethodFormat4
     [IsoId("_bMY-4zm6EeWV5sr121Fc8A")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InterestComputationMethodFormat4Choice_
+    public partial record Proprietary : InterestComputationMethodFormat4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShareRanking1FormatChoice
     [IsoId("_Ro8Rxdp-Ed-ak6NoX_4Aeg_1569147870")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ShareRanking1FormatChoice_
+    public partial record Proprietary : ShareRanking1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

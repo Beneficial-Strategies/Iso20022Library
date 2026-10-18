@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity2Choice
     [IsoId("_Q0of8Np-Ed-ak6NoX_4Aeg_-2052451365")]
     [DisplayName("Proprietary Quantity")]
     [IsoXmlTag("PrtryQty")]
-    public record ProprietaryQuantity : Quantity2Choice_
+    public partial record ProprietaryQuantity : Quantity2Choice_
     {
         /// <summary>
         /// Provides the proprietary quantity with a decimal number.

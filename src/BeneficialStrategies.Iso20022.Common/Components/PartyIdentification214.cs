@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AQe65TqWEemL_ewJY9QP1g")]
 [DisplayName("Party Identification")]
-public record PartyIdentification214
+public partial record PartyIdentification214
 {
     /// <summary>
     /// Identification of the party to which the disclosure response must be sent.

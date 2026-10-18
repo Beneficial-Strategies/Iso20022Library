@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_BfsUT_L-Ed-3lpUMQaXLjQ")]
     [DisplayName("Party Identification 40 Choice")]
-    public abstract record PartyIdentification40Choice_ { }
+    public abstract partial record PartyIdentification40Choice_ { }
 }

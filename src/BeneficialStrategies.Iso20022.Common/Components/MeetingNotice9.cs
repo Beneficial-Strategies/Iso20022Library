@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NWvMkYZEEe-5eN4DwJpixA")]
 [DisplayName("Meeting Notice9")]
-public record MeetingNotice9
+public partial record MeetingNotice9
 {
     /// <summary>
     /// Meeting Identification.

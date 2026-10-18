@@ -33,5 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k7YK1zq5EeWQ1Y7f8kds2A")]
     [DisplayName("Balance Format 6 Choice")]
-    public abstract record BalanceFormat6Choice_ { }
+    public abstract partial record BalanceFormat6Choice_ { }
 }

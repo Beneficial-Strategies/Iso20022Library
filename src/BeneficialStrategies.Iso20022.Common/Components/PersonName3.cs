@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FhKN1bqcEemCAOifqHrKJw")]
 [DisplayName("Person Name")]
-public record PersonName3
+public partial record PersonName3
 {
     /// <summary>
     /// Prefix, as a title before a person&apos;s name.

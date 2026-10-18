@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason53Choice
     /// </summary>
     [IsoId("_kjbPceXzEemEj48jhmlA0Q")]
     [DisplayName("Code")]
-    public record Code : PendingReason53Choice_
+    public partial record Code : PendingReason53Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

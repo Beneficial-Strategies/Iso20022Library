@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8pNRsV61EeSjaerr_EM7AQ")]
 [DisplayName("Vote")]
-public record Vote6
+public partial record Vote6
 {
     /// <summary>
     /// Numbering of the resolution as specified by the issuer or its agent.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period12Choice
     /// <summary>Specifies the period.</summary>
     [IsoId("_qUrwhatmEfCqjuqNaaNXgw")]
     [DisplayName("Period")]
-    public record Period : Period12Choice_
+    public partial record Period : Period12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prd")]

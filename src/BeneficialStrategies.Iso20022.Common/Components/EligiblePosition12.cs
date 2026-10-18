@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iFbDZxuUEeyhRdHRjakS2w")]
 [DisplayName("Eligible Position")]
-public record EligiblePosition12
+public partial record EligiblePosition12
 {
     /// <summary>
     /// Identification of the securities account.

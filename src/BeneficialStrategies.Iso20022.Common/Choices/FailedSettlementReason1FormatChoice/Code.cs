@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementReason1FormatCho
     /// </summary>
     [IsoId("_RmjsI9p-Ed-ak6NoX_4Aeg_-183406333")]
     [DisplayName("Code")]
-    public record Code : FailedSettlementReason1FormatChoice_
+    public partial record Code : FailedSettlementReason1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

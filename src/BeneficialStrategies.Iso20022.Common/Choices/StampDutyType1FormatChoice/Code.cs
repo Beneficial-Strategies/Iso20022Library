@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StampDutyType1FormatChoice
     /// </summary>
     [IsoId("_Ro8Rx9p-Ed-ak6NoX_4Aeg_-874099083")]
     [DisplayName("Code")]
-    public record Code : StampDutyType1FormatChoice_
+    public partial record Code : StampDutyType1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

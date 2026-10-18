@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q4NYYtp-Ed-ak6NoX_4Aeg_1303508122")]
     [DisplayName("Option Style 4 Choice")]
-    public abstract record OptionStyle4Choice_ { }
+    public abstract partial record OptionStyle4Choice_ { }
 }

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedWithWarningStatus1Format
     /// <summary>Proprietary code to express the processing status of the notification advice.</summary>
     [IsoId("__1hY46UdEfCnE_wCEfCqTA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : AcceptedWithWarningStatus1Format1Choice_
+    public partial record Proprietary : AcceptedWithWarningStatus1Format1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

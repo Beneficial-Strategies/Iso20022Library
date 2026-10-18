@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ui4e-_NBEeqRfth943bvEA")]
     [DisplayName("Incentive Premium Type 2 Choice")]
-    public abstract record IncentivePremiumType2Choice_ { }
+    public abstract partial record IncentivePremiumType2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dTVYEZK5Ee-l-O3vIHRmRw")]
 [DisplayName("Additional Rights4")]
-public record AdditionalRights4
+public partial record AdditionalRights4
 {
     /// <summary>
     /// Additional Right.

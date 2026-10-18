@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat1Choice
     /// </summary>
     [IsoId("_UOMcydp-Ed-ak6NoX_4Aeg_-1900141564")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : SolicitationFeeRateFormat1Choice_
+    public partial record NotSpecifiedRate : SolicitationFeeRateFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

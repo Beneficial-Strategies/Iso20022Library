@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rl0FRNp-Ed-ak6NoX_4Aeg_-1615660129")]
     [DisplayName("Charge Type 2 Format Choice")]
-    public abstract record ChargeType2FormatChoice_ { }
+    public abstract partial record ChargeType2FormatChoice_ { }
 }

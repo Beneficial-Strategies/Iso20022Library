@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat18Choice
     [IsoId("_7mLRJ0EKEeWVgfuHGaKtRQ")]
     [DisplayName("Quantity To Amount")]
     [IsoXmlTag("QtyToAmt")]
-    public record QuantityToAmount : RatioFormat18Choice_
+    public partial record QuantityToAmount : RatioFormat18Choice_
     {
         /// <summary>
         /// Cash amount.

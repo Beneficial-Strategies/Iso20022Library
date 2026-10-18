@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode1Choice
     [IsoId("_Q0VlAdp-Ed-ak6NoX_4Aeg_1716337438")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DeadlineCode1Choice_
+    public partial record Proprietary : DeadlineCode1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

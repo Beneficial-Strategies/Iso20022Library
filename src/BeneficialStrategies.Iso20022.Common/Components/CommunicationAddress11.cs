@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L13eAa4jEemG7MmivSuE5g")]
 [DisplayName("Communication Address")]
-public record CommunicationAddress11
+public partial record CommunicationAddress11
 {
     /// <summary>
     /// Address for electronic mail (e-mail).

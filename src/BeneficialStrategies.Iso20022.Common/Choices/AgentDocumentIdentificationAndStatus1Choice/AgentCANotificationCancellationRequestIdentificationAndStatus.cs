@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
     /// Agent CA Notification Cancellation Request Identification And Status.
     /// </summary>
     [DisplayName("Agent CA Notification Cancellation Request Identification And Status")]
-    public record AgentCANotificationCancellationRequestIdentificationAndStatus
+    public partial record AgentCANotificationCancellationRequestIdentificationAndStatus
         : AgentDocumentIdentificationAndStatus1Choice_
     {
         /// <summary>

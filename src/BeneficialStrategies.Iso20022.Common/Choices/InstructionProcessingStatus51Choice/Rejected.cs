@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus51Cho
     /// Rejected.
     /// </summary>
     [DisplayName("Rejected")]
-    public record Rejected : InstructionProcessingStatus51Choice_
+    public partial record Rejected : InstructionProcessingStatus51Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

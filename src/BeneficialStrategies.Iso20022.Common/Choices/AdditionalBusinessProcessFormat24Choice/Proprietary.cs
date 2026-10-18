@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat2
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : AdditionalBusinessProcessFormat24Choice_
+    public partial record Proprietary : AdditionalBusinessProcessFormat24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

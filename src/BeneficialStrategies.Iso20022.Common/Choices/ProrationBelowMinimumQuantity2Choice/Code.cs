@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity2Ch
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : ProrationBelowMinimumQuantity2Choice_
+    public partial record Code : ProrationBelowMinimumQuantity2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

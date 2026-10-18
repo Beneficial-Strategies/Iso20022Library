@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmZ7KNp-Ed-ak6NoX_4Aeg_-162374366")]
     [DisplayName("Election Movement Type 1 Format Choice")]
-    public abstract record ElectionMovementType1FormatChoice_ { }
+    public abstract partial record ElectionMovementType1FormatChoice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference3Ch
     /// </summary>
     [IsoId("_4h3LozncEeWLJsP1cO-amg")]
     [DisplayName("Linked Official Corporate Action Event Identification")]
-    public record LinkedOfficialCorporateActionEventIdentification
+    public partial record LinkedOfficialCorporateActionEventIdentification
         : CorporateActionEventReference3Choice_
     {
         /// <summary>

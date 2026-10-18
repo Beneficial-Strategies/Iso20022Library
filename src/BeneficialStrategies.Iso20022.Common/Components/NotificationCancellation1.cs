@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rjual9p-Ed-ak6NoX_4Aeg_493176942")]
 [DisplayName("Notification Cancellation")]
-public record NotificationCancellation1
+public partial record NotificationCancellation1
 {
     /// <summary>
     /// The function of the notification e.g. new notification.

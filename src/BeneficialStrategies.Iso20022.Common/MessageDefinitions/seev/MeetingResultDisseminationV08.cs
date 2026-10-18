@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_nIzH7TQ7Ee22Z83HpR5E8w")]
 [DisplayName("Meeting Result Dissemination V")]
-public record MeetingResultDisseminationV08 : IOuterRecord
+public partial record MeetingResultDisseminationV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

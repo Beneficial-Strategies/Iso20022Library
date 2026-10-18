@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rPgKMN8nEe-NrtAAlrBEgQ")]
 [DisplayName("Buyer Protection Selection Criteria1")]
-public record BuyerProtectionSelectionCriteria1
+public partial record BuyerProtectionSelectionCriteria1
 {
     /// <summary>
     /// Unique and unambiguous identification of a financial institution.

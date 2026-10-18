@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus3
     /// </summary>
     [IsoId("_PMH--QuIEeGnWuuxuI2McQ")]
     [DisplayName("Code")]
-    public record Code : CorporateActionProcessingStatus3Choice_
+    public partial record Code : CorporateActionProcessingStatus3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

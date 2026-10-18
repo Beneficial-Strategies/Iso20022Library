@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q3dxhtp-Ed-ak6NoX_4Aeg_1417014637")]
     [DisplayName("Renounceable Entitlement Status Type Format 1 Choice")]
-    public abstract record RenounceableEntitlementStatusTypeFormat1Choice_ { }
+    public abstract partial record RenounceableEntitlementStatusTypeFormat1Choice_ { }
 }

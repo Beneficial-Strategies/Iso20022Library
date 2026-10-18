@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ri1Ctdp-Ed-ak6NoX_4Aeg_-997189670")]
     [DisplayName("Notification Advice Status 1 Choice")]
-    public abstract record NotificationAdviceStatus1Choice_ { }
+    public abstract partial record NotificationAdviceStatus1Choice_ { }
 }

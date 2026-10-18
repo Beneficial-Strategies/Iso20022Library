@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kTlKUYYZEe-haozGYc1X7Q")]
 [DisplayName("Related Settlement Instruction2")]
-public record RelatedSettlementInstruction2
+public partial record RelatedSettlementInstruction2
 {
     /// <summary>
     /// Related Settlement Instruction Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UKwuSNp-Ed-ak6NoX_4Aeg_-198423815")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice4
+public partial record CorporateActionPrice4
 {
     /// <summary>
     /// Estimated price, eg, for valuation purposes.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VyhR45qLEeWcAIE4lEkF_Q")]
 [DisplayName("Account Identification")]
-public record AccountIdentification39
+public partial record AccountIdentification39
 {
     /// <summary>
     /// Account where financial instruments are maintained.

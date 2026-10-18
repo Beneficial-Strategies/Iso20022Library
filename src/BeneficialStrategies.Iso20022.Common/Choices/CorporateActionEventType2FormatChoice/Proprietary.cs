@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType2FormatC
     [IsoId("_RjRupdp-Ed-ak6NoX_4Aeg_-1421399537")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionEventType2FormatChoice_
+    public partial record Proprietary : CorporateActionEventType2FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

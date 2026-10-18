@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pgBMvzi7Eeydid5dcNPKvg")]
 [DisplayName("Pending Balance")]
-public record PendingBalance8
+public partial record PendingBalance8
 {
     /// <summary>
     /// Signed quantity of balance.

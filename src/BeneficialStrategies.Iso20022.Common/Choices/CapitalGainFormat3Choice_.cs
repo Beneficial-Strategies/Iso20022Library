@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MYGIUUEGEeWVgfuHGaKtRQ")]
     [DisplayName("Capital Gain Format 3 Choice")]
-    public abstract record CapitalGainFormat3Choice_ { }
+    public abstract partial record CapitalGainFormat3Choice_ { }
 }

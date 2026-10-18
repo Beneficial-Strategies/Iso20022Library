@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cel395KQEeWHWpTQn1FFVg")]
     [DisplayName("Event Processing Status 4 Choice")]
-    public abstract record EventProcessingStatus4Choice_ { }
+    public abstract partial record EventProcessingStatus4Choice_ { }
 }

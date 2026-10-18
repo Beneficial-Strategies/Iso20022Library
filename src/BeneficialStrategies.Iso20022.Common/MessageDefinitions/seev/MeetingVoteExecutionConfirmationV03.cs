@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TuFVsNEwEd-BzquC8wXy7w_156758329")]
 [DisplayName("Meeting Vote Execution Confirmation V")]
-public record MeetingVoteExecutionConfirmationV03 : IOuterRecord
+public partial record MeetingVoteExecutionConfirmationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

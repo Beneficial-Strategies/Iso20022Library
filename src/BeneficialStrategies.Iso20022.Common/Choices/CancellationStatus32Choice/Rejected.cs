@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus32Choice
     /// Rejected.
     /// </summary>
     [DisplayName("Rejected")]
-    public record Rejected : CancellationStatus32Choice_
+    public partial record Rejected : CancellationStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

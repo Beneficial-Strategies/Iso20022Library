@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus7
     /// For Information Only.
     /// </summary>
     [DisplayName("For Information Only")]
-    public record ForInformationOnly : CorporateActionProcessingStatus7Choice_
+    public partial record ForInformationOnly : CorporateActionProcessingStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

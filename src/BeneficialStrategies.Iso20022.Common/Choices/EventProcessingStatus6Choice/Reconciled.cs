@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus6Choice
     [IsoId("_Szi6RAVREeqjd8n6wD9JVw")]
     [DisplayName("Reconciled")]
     [IsoXmlTag("Rcncld")]
-    public record Reconciled : EventProcessingStatus6Choice_
+    public partial record Reconciled : EventProcessingStatus6Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

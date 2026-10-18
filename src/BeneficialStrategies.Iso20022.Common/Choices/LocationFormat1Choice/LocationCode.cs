@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice
     /// </summary>
     [IsoId("_RXD3mdp-Ed-ak6NoX_4Aeg_33853992")]
     [DisplayName("Location Code")]
-    public record LocationCode : LocationFormat1Choice_
+    public partial record LocationCode : LocationFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

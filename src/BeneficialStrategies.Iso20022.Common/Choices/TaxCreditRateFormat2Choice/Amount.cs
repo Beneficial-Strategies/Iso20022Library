@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat2Choice
     [IsoId("_UM2Y8dp-Ed-ak6NoX_4Aeg_-1707519636")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : TaxCreditRateFormat2Choice_
+    public partial record Amount : TaxCreditRateFormat2Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

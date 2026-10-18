@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode35Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : DateCode35Choice_
+    public partial record Proprietary : DateCode35Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

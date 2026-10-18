@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat21Choice
     [IsoId("_ckBxuZKQEeWHWpTQn1FFVg")]
     [DisplayName("Quantity To Quantity")]
     [IsoXmlTag("QtyToQty")]
-    public record QuantityToQuantity : RatioFormat21Choice_
+    public partial record QuantityToQuantity : RatioFormat21Choice_
     {
         /// <summary>
         /// Numerator of the quotient of quantities.

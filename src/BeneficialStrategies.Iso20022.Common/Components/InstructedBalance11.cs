@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wSkDc-aqEemtTOaHuc_63w")]
 [DisplayName("Instructed Balance")]
-public record InstructedBalance11
+public partial record InstructedBalance11
 {
     /// <summary>
     /// Provides information about the total instructed balance.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ETpRI4DCEe-eGe8fbP3Zug")]
     [DisplayName("Proration Below Minimum Quantity1Choice")]
-    public abstract record ProrationBelowMinimumQuantity1Choice_ { }
+    public abstract partial record ProrationBelowMinimumQuantity1Choice_ { }
 }

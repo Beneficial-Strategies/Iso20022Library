@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat50Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : SafekeepingPlaceFormat50Choice_
+    public partial record Proprietary : SafekeepingPlaceFormat50Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

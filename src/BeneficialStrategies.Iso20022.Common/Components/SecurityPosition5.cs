@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QT2uKNp-Ed-ak6NoX_4Aeg_583952553")]
 [DisplayName("Security Position")]
-public record SecurityPosition5
+public partial record SecurityPosition5
 {
     /// <summary>
     /// Security held in an account on which the balance is calculated.

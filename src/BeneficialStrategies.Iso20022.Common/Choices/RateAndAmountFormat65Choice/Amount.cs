@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat65Choice
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
-    public record Amount : RateAndAmountFormat65Choice_
+    public partial record Amount : RateAndAmountFormat65Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

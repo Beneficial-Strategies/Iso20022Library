@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AERn0EnGEe-NocYul3BKXQ")]
 [DisplayName("Corporate Action Amounts70")]
-public record CorporateActionAmounts70
+public partial record CorporateActionAmounts70
 {
     /// <summary>
     /// Refunded Amount.

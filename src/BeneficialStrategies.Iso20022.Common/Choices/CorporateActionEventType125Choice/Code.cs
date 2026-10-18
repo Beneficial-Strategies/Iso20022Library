@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType125Choic
     /// <summary>Event type expressed as a code.</summary>
     [IsoId("_zwH4c9_MEe-Ned3-G07x_A")]
     [DisplayName("Code")]
-    public record Code : CorporateActionEventType125Choice_
+    public partial record Code : CorporateActionEventType125Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

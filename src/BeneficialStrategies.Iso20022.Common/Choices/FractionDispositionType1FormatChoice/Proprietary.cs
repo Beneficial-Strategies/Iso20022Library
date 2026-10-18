@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType1FormatCh
     [IsoId("_RmjsJ9p-Ed-ak6NoX_4Aeg_-1753886297")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FractionDispositionType1FormatChoice_
+    public partial record Proprietary : FractionDispositionType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

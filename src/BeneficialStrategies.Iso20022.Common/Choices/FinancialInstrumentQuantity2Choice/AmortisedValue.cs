@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity2Choi
     /// </summary>
     [IsoId("_Sn-F1tp-Ed-ak6NoX_4Aeg_-85763248")]
     [DisplayName("Amortised Value")]
-    public record AmortisedValue : FinancialInstrumentQuantity2Choice_
+    public partial record AmortisedValue : FinancialInstrumentQuantity2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AmtsdVal")]

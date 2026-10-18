@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xiaQoPQ9EeqAradXpAelDQ")]
 [DisplayName("Pledge Information")]
-public record PledgeInformation1
+public partial record PledgeInformation1
 {
     /// <summary>
     /// Entity that provide assets to a counterparty as a guarantee.

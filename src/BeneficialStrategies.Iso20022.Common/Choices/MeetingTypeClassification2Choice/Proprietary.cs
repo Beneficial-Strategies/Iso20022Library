@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingTypeClassification2Choice
     [IsoId("_e0JEo67NEemG7MmivSuE5g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MeetingTypeClassification2Choice_
+    public partial record Proprietary : MeetingTypeClassification2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(MatchingStatus), nameof(MatchingStatus))]
     [KnownType(typeof(ProprietaryStatus))]
     [JsonDerivedType(typeof(ProprietaryStatus), nameof(ProprietaryStatus))]
-    public abstract record MarketClaimProcessingStatus2Choice_;
+    public abstract partial record MarketClaimProcessingStatus2Choice_;
 }

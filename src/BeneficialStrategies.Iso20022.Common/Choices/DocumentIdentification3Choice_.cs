@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_E5kPkTnaEeWLJsP1cO-amg")]
     [DisplayName("Document Identification 3 Choice")]
-    public abstract record DocumentIdentification3Choice_ { }
+    public abstract partial record DocumentIdentification3Choice_ { }
 }

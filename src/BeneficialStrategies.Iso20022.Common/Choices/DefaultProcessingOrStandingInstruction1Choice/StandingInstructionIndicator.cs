@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
     /// </summary>
     [IsoId("_Q0VlBNp-Ed-ak6NoX_4Aeg_-857961387")]
     [DisplayName("Standing Instruction Indicator")]
-    public record StandingInstructionIndicator : DefaultProcessingOrStandingInstruction1Choice_
+    public partial record StandingInstructionIndicator : DefaultProcessingOrStandingInstruction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

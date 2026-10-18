@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
     /// Processed Status.
     /// </summary>
     [DisplayName("Processed Status")]
-    public record ProcessedStatus : NotificationCancellationRequestStatus2Choice_
+    public partial record ProcessedStatus : NotificationCancellationRequestStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat31Choice
     [IsoId("_skrJRc3wEee5nJBZsW8MFQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : GrossDividendRateFormat31Choice_
+    public partial record Amount : GrossDividendRateFormat31Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

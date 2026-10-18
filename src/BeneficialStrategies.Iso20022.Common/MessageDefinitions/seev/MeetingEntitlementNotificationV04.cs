@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_Tme46dEwEd-BzquC8wXy7w_-1564035735")]
 [DisplayName("Meeting Entitlement Notification V")]
-public record MeetingEntitlementNotificationV04 : IOuterRecord
+public partial record MeetingEntitlementNotificationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

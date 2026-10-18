@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat90Choice
     /// Index Points.
     /// </summary>
     [DisplayName("Index Points")]
-    public record IndexPoints : PriceFormat90Choice_
+    public partial record IndexPoints : PriceFormat90Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

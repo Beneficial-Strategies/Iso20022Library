@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus55Choice
     [IsoId("_Tfp1KrKdEemux5trsZcCpw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingStatus55Choice_
+    public partial record Reason : PendingStatus55Choice_
     {
         /// <summary>
         /// Reason for the pending status.

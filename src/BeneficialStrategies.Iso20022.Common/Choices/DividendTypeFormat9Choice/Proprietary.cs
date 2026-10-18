@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat9Choice
     [IsoId("_yEjjFUEFEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DividendTypeFormat9Choice_
+    public partial record Proprietary : DividendTypeFormat9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

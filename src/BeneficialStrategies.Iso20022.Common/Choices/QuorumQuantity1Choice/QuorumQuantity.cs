@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity1Choice
     /// </summary>
     [IsoId("_RDieptp-Ed-ak6NoX_4Aeg_-2055367828")]
     [DisplayName("Quorum Quantity")]
-    public record QuorumQuantity : QuorumQuantity1Choice_
+    public partial record QuorumQuantity : QuorumQuantity1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

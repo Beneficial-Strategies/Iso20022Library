@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentRole1FormatChoice
     [IsoId("_RlqUQNp-Ed-ak6NoX_4Aeg_338165020")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AgentRole1FormatChoice_
+    public partial record Proprietary : AgentRole1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

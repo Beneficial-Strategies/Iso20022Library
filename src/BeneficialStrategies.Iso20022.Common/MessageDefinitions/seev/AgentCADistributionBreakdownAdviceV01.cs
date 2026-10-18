@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TMj9DtEwEd-BzquC8wXy7w_707588589")]
 [DisplayName("Agent CA Distribution Breakdown Advice V")]
-public record AgentCADistributionBreakdownAdviceV01 : IOuterRecord
+public partial record AgentCADistributionBreakdownAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
     /// </summary>
     [IsoId("_Q0VlA9p-Ed-ak6NoX_4Aeg_-887513505")]
     [DisplayName("Default Option Indicator")]
-    public record DefaultOptionIndicator : DefaultProcessingOrStandingInstruction1Choice_
+    public partial record DefaultOptionIndicator : DefaultProcessingOrStandingInstruction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

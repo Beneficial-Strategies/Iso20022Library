@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure1Choice
     /// </summary>
     [IsoId("_G07V0MANEembi_x1QDJfxw")]
     [DisplayName("No Disclosure")]
-    public record NoDisclosure : Disclosure1Choice_
+    public partial record NoDisclosure : Disclosure1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

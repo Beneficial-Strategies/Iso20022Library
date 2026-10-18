@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_WO8Mitp-Ed-ak6NoX_4Aeg_-720963071")]
     [DisplayName("Cash Account Identification 6 Choice")]
-    public abstract record CashAccountIdentification6Choice_ { }
+    public abstract partial record CashAccountIdentification6Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateType1FormatChoi
     [IsoId("_Rms2Edp-Ed-ak6NoX_4Aeg_-8475343")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GrossDividendRateType1FormatChoice_
+    public partial record Proprietary : GrossDividendRateType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

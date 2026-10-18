@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionRejectionStatus1Choic
     [IsoId("_RCfVx9p-Ed-ak6NoX_4Aeg_-867514398")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InstructionRejectionStatus1Choice_
+    public partial record Proprietary : InstructionRejectionStatus1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus26Choice
     /// </summary>
     [IsoId("_iKIapbKfEemux5trsZcCpw")]
     [DisplayName("Rejected")]
-    public record Rejected : CancellationStatus26Choice_
+    public partial record Rejected : CancellationStatus26Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

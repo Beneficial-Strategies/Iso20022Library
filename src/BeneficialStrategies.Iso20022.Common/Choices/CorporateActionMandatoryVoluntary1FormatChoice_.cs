@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmZ7Itp-Ed-ak6NoX_4Aeg_1296355739")]
     [DisplayName("Corporate Action Mandatory Voluntary 1 Format Choice")]
-    public abstract record CorporateActionMandatoryVoluntary1FormatChoice_ { }
+    public abstract partial record CorporateActionMandatoryVoluntary1FormatChoice_ { }
 }

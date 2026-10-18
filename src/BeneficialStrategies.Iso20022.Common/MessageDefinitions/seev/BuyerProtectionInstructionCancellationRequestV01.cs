@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_xodUALbdEe-NMoTZ6Byg6A")]
 [DisplayName("Buyer Protection Instruction Cancellation Request V01")]
-public record BuyerProtectionInstructionCancellationRequestV01 : IOuterRecord
+public partial record BuyerProtectionInstructionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

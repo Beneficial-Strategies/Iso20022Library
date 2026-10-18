@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus34Choice
     /// <summary>Status applicable globally to the meeting instruction cancellation request message.</summary>
     [IsoId("_c87iYa8uEfCx2aBifPEdRg")]
     [DisplayName("Global Cancellation Status")]
-    public record GlobalCancellationStatus : CancellationStatus34Choice_
+    public partial record GlobalCancellationStatus : CancellationStatus34Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GblCxlSts")]

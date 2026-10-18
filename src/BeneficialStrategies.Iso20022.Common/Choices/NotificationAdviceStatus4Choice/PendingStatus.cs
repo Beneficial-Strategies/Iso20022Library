@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus4Choice
     /// <summary>Provides information about the pending status of advice.</summary>
     [IsoId("_DYZ0UKUfEfCnE_wCEfCqTA")]
     [DisplayName("Pending Status")]
-    public record PendingStatus : NotificationAdviceStatus4Choice_
+    public partial record PendingStatus : NotificationAdviceStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgSts")]

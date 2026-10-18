@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cjuPYZKQEeWHWpTQn1FFVg")]
 [DisplayName("Total Eligible Balance Format")]
-public record TotalEligibleBalanceFormat9
+public partial record TotalEligibleBalanceFormat9
 {
     /// <summary>
     /// Provides information about balance related to a corporate action.

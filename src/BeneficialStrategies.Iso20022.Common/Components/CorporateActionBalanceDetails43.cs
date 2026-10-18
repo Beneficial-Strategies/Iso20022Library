@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tj5YGRuyEeyhRdHRjakS2w")]
 [DisplayName("Corporate Action Balance Details")]
-public record CorporateActionBalanceDetails43
+public partial record CorporateActionBalanceDetails43
 {
     /// <summary>
     /// Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_celQ0ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Document Number 6 Choice")]
-    public abstract record DocumentNumber6Choice_ { }
+    public abstract partial record DocumentNumber6Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModalityOfCounting1Choice
     [IsoId("_iCsvoK-vEemJ1NnLPsTFaw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ModalityOfCounting1Choice_
+    public partial record Proprietary : ModalityOfCounting1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RpFbsdp-Ed-ak6NoX_4Aeg_215638433")]
     [DisplayName("Tax Type 3 Format Choice")]
-    public abstract record TaxType3FormatChoice_ { }
+    public abstract partial record TaxType3FormatChoice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification257Choice
     /// Digital Ledger Identification.
     /// </summary>
     [DisplayName("Digital Ledger Identification")]
-    public record DigitalLedgerIdentification : PartyIdentification257Choice_
+    public partial record DigitalLedgerIdentification : PartyIdentification257Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

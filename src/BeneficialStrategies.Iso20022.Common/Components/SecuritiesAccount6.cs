@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QUTaGdp-Ed-ak6NoX_4Aeg_477135220")]
 [DisplayName("Securities Account")]
-public record SecuritiesAccount6
+public partial record SecuritiesAccount6
 {
     /// <summary>
     /// Identification of the financial instrument.

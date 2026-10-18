@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QmL0Sdp-Ed-ak6NoX_4Aeg_12523031")]
     [DisplayName("Identification Source 3 Choice")]
-    public abstract record IdentificationSource3Choice_ { }
+    public abstract partial record IdentificationSource3Choice_ { }
 }

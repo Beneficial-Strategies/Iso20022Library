@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wlX_cBuMEeyhRdHRjakS2w")]
     [DisplayName("Threshold Basis 1 Choice")]
-    public abstract record ThresholdBasis1Choice_ { }
+    public abstract partial record ThresholdBasis1Choice_ { }
 }

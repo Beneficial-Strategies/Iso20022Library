@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4rfMQfPEEd-SiYFtSzfh2Q")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice21
+public partial record CorporateActionPrice21
 {
     /// <summary>
     /// Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.

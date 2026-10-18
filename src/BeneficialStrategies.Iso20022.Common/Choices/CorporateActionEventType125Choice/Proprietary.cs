@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType125Choic
     /// <summary>Event type expressed as a proprietary code.</summary>
     [IsoId("_zwH4e9_MEe-Ned3-G07x_A")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CorporateActionEventType125Choice_
+    public partial record Proprietary : CorporateActionEventType125Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

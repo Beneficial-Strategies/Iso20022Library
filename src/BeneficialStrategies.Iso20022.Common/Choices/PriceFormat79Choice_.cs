@@ -41,5 +41,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jcPS-YV6Ee-oeNhl-Tk6YQ")]
     [DisplayName("Price Format79Choice")]
-    public abstract record PriceFormat79Choice_ { }
+    public abstract partial record PriceFormat79Choice_ { }
 }

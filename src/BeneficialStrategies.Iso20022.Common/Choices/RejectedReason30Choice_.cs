@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_eKVR2cAUEembi_x1QDJfxw")]
     [DisplayName("Rejected Reason 30 Choice")]
-    public abstract record RejectedReason30Choice_ { }
+    public abstract partial record RejectedReason30Choice_ { }
 }

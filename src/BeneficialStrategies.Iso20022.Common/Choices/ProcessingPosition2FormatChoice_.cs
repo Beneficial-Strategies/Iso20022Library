@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rnv-8Np-Ed-ak6NoX_4Aeg_306788682")]
     [DisplayName("Processing Position 2 Format Choice")]
-    public abstract record ProcessingPosition2FormatChoice_ { }
+    public abstract partial record ProcessingPosition2FormatChoice_ { }
 }

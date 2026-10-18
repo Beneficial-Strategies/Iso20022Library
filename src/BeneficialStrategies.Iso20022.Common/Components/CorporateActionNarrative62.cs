@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U1azK3SdEe6VWZz2tTgENw")]
 [DisplayName("Corporate Action Narrative62")]
-public record CorporateActionNarrative62
+public partial record CorporateActionNarrative62
 {
     /// <summary>
     /// Additional Text.

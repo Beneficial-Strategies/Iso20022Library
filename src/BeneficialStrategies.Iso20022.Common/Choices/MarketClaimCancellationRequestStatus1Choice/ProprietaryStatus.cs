@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     [IsoId("_1Tcqatx4EeqESbVR5AloZQ")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public record ProprietaryStatus : MarketClaimCancellationRequestStatus1Choice_
+    public partial record ProprietaryStatus : MarketClaimCancellationRequestStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

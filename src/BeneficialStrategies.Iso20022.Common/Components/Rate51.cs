@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J2PZIa3gEfCN-rGCydxGUA")]
 [DisplayName("Rate51")]
-public record Rate51
+public partial record Rate51
 {
     /// <summary>
     /// Rate used for additional tax that cannot be categorised.

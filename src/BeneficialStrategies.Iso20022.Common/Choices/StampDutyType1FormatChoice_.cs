@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ro8Rxtp-Ed-ak6NoX_4Aeg_-891645005")]
     [DisplayName("Stamp Duty Type 1 Format Choice")]
-    public abstract record StampDutyType1FormatChoice_ { }
+    public abstract partial record StampDutyType1FormatChoice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WbwwURreEeyhRdHRjakS2w")]
 [DisplayName("Meeting Notice")]
-public record MeetingNotice7
+public partial record MeetingNotice7
 {
     /// <summary>
     /// Identification assigned to the general meeting by the party that provides the meeting notification. It must be unique to the party providing the notification

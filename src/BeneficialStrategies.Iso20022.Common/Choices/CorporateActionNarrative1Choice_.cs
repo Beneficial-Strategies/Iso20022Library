@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q10yxtp-Ed-ak6NoX_4Aeg_-1781540198")]
     [DisplayName("Corporate Action Narrative 1 Choice")]
-    public abstract record CorporateActionNarrative1Choice_ { }
+    public abstract partial record CorporateActionNarrative1Choice_ { }
 }

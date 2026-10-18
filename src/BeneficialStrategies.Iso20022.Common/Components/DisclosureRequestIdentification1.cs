@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_im8pMDqgEemL_ewJY9QP1g")]
 [DisplayName("Disclosure Request Identification")]
-public record DisclosureRequestIdentification1
+public partial record DisclosureRequestIdentification1
 {
     /// <summary>
     /// Official and unique reference assigned to a shareholders identification disclosure request process by the issuer or third party nominated by him.

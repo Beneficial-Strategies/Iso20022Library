@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus2Choice
     /// </summary>
     [IsoId("_rZOb016uEeSyc4g_pm5hbw")]
     [DisplayName("Cancellation Status")]
-    public record CancellationStatus : InstructionTypeStatus2Choice_
+    public partial record CancellationStatus : InstructionTypeStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CxlSts")]

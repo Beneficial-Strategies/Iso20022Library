@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZRuqZa4cEemG7MmivSuE5g")]
 [DisplayName("Vote Details")]
-public record VoteDetails4
+public partial record VoteDetails4
 {
     /// <summary>
     /// Vote instructions for the resolutions that are announced via the meeting agenda in advance of the meeting.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// <summary>Instruction cancellation request has been rejected.</summary>
     [IsoId("_Jg5gMa8xEfCx2aBifPEdRg")]
     [DisplayName("Rejected")]
-    public record Rejected : MarketClaimCancellationRequestStatus3Choice_
+    public partial record Rejected : MarketClaimCancellationRequestStatus3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

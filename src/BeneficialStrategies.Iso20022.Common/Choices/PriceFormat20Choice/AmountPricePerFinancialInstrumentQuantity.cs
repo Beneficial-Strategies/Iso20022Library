@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat20Choice
     [IsoId("_sKEj9-EJEd-udr336SN7mQ")]
     [DisplayName("Amount Price Per Financial Instrument Quantity")]
     [IsoXmlTag("AmtPricPerFinInstrmQty")]
-    public record AmountPricePerFinancialInstrumentQuantity : PriceFormat20Choice_
+    public partial record AmountPricePerFinancialInstrumentQuantity : PriceFormat20Choice_
     {
         /// <summary>
         /// Type of amount price.

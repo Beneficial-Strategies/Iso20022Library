@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RejectedReason70Choice.Proprietary))]
     [JsonDerivedType(typeof(RejectedReason70Choice.Code))]
     [JsonDerivedType(typeof(RejectedReason70Choice.Proprietary))]
-    public abstract record RejectedReason70Choice_
+    public abstract partial record RejectedReason70Choice_
     {
     }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat3Choice
     /// </summary>
     [IsoId("_UPO-kdp-Ed-ak6NoX_4Aeg_282901463")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : RateAndAmountFormat3Choice_
+    public partial record NotSpecifiedRate : RateAndAmountFormat3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dPPy8fmWEeCcAY_zfcalaA")]
     [DisplayName("Financial Instrument Quantity 19 Choice")]
-    public abstract record FinancialInstrumentQuantity19Choice_ { }
+    public abstract partial record FinancialInstrumentQuantity19Choice_ { }
 }

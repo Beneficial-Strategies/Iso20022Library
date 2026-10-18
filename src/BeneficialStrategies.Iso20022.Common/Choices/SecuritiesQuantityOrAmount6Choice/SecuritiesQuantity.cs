@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount6Choic
     [IsoId("_N-tRIRuyEeyhRdHRjakS2w")]
     [DisplayName("Securities Quantity")]
     [IsoXmlTag("SctiesQty")]
-    public record SecuritiesQuantity : SecuritiesQuantityOrAmount6Choice_
+    public partial record SecuritiesQuantity : SecuritiesQuantityOrAmount6Choice_
     {
         /// <summary>
         /// Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.

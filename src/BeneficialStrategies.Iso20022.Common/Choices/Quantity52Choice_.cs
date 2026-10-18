@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Quantity52Choice.Quantity), nameof(Quantity52Choice.Quantity))]
     [IsoId("_OT3o3RuyEeyhRdHRjakS2w")]
     [DisplayName("Quantity 52 Choice")]
-    public abstract record Quantity52Choice_ { }
+    public abstract partial record Quantity52Choice_ { }
 }

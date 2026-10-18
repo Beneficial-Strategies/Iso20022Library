@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// <summary>Proprietary status related to an instruction cancellation request.</summary>
     [IsoId("_s9Gd5t8OEe-NrtAAlrBEgQ")]
     [DisplayName("Proprietary Status")]
-    public record ProprietaryStatus : InstructionCancellationRequestStatus20Choice_
+    public partial record ProprietaryStatus : InstructionCancellationRequestStatus20Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrtrySts")]

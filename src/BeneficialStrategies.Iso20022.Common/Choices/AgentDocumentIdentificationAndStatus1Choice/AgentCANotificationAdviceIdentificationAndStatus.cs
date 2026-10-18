@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
     /// Agent CA Notification Advice Identification And Status.
     /// </summary>
     [DisplayName("Agent CA Notification Advice Identification And Status")]
-    public record AgentCANotificationAdviceIdentificationAndStatus
+    public partial record AgentCANotificationAdviceIdentificationAndStatus
         : AgentDocumentIdentificationAndStatus1Choice_
     {
         /// <summary>

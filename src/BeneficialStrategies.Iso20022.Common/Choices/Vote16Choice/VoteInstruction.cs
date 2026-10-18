@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote16Choice
     [IsoId("_XbSmlfNoEeqRfth943bvEA")]
     [DisplayName("Vote Instruction")]
     [IsoXmlTag("VoteInstr")]
-    public record VoteInstruction : Vote16Choice_
+    public partial record VoteInstruction : Vote16Choice_
     {
         /// <summary>
         /// Number of the resolution as specified by the issuer or its agent.

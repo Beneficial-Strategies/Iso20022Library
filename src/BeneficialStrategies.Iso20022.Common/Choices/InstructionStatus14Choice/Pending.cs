@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus14Choice
     /// <summary>Status advising that the instruction is pending and advising on the reason for the pending status.</summary>
     [IsoId("_EFISxajVEfCzuLlmLrhIvA")]
     [DisplayName("Pending")]
-    public record Pending : InstructionStatus14Choice_
+    public partial record Pending : InstructionStatus14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

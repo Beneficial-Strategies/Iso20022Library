@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus1Choice
     [IsoId("_RVa41tp-Ed-ak6NoX_4Aeg_-538392762")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public record ProcessingStatus : CancellationStatus1Choice_
+    public partial record ProcessingStatus : CancellationStatus1Choice_
     {
         /// <summary>
         /// Status of the request for cancellation.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : IssuerOfferorTaxabilityIndicator2Choice_
+    public partial record Code : IssuerOfferorTaxabilityIndicator2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

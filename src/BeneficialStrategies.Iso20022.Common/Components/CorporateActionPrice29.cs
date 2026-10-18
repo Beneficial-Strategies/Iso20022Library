@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r9NDHfo6EeCVCIR-Uq3c5A")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice29
+public partial record CorporateActionPrice29
 {
     /// <summary>
     /// Indicates whether the price is an indicative price or a market price.

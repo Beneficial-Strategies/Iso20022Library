@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
     /// <summary>Standing instruction has been applied.</summary>
     [IsoId("_rt3LPY74EfCbNJ3GwkFTcw")]
     [DisplayName("Standing Instruction")]
-    public record StandingInstruction : InstructionProcessingStatus60Choice_
+    public partial record StandingInstruction : InstructionProcessingStatus60Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("StgInstr")]

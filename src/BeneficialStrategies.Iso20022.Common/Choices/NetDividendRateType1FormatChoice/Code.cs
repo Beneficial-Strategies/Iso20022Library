@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateType1FormatChoice
     /// </summary>
     [IsoId("_Rm2nENp-Ed-ak6NoX_4Aeg_342462790")]
     [DisplayName("Code")]
-    public record Code : NetDividendRateType1FormatChoice_
+    public partial record Code : NetDividendRateType1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

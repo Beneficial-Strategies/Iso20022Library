@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_nIpWYTQ7Ee22Z83HpR5E8w")]
 [DisplayName("Meeting Cancellation V")]
-public record MeetingCancellationV09 : IOuterRecord
+public partial record MeetingCancellationV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

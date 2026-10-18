@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QzJSM9p-Ed-ak6NoX_4Aeg_-1719963560")]
 [DisplayName("Extension Envelope")]
-public record ExtensionEnvelope1
+public partial record ExtensionEnvelope1
 {
     /// <summary>
     /// Technical element that specifies the extension.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightThreshold1Choice
     /// </summary>
     [IsoId("_RDrolNp-Ed-ak6NoX_4Aeg_2143895546")]
     [DisplayName("Additional Right Threshold")]
-    public record AdditionalRightThreshold : AdditionalRightThreshold1Choice_
+    public partial record AdditionalRightThreshold : AdditionalRightThreshold1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

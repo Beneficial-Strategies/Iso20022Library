@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-SiQkaD9Ee-4O7NbwmwJkQ")]
 [DisplayName("Corporate Action SD26")]
-public record CorporateActionSD26
+public partial record CorporateActionSD26
 {
     /// <summary>
     /// Certificate Number.

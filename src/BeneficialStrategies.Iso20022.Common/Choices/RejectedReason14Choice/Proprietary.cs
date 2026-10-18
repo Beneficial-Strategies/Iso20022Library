@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason14Choice
     [IsoId("_GnF7KUGXEeWqy4niLuXETA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RejectedReason14Choice_
+    public partial record Proprietary : RejectedReason14Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

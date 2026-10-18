@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote1Choice
     [IsoId("_Rb-Mydp-Ed-ak6NoX_4Aeg_4446117")]
     [DisplayName("Global Vote Instruction")]
     [IsoXmlTag("GblVoteInstr")]
-    public record GlobalVoteInstruction : Vote1Choice_
+    public partial record GlobalVoteInstruction : Vote1Choice_
     {
         /// <summary>
         /// Numbering of the resolution as specified by the issuer or its agent.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
     /// <summary>Status information related to an instruction request rejected for further processing due to system reasons.</summary>
     [IsoId("_rt3LI474EfCbNJ3GwkFTcw")]
     [DisplayName("Rejected")]
-    public record Rejected : InstructionProcessingStatus60Choice_
+    public partial record Rejected : InstructionProcessingStatus60Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

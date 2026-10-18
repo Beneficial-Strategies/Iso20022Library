@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v78-0KD4Ee-4O7NbwmwJkQ")]
 [DisplayName("Corporate Action Balance Details47")]
-public record CorporateActionBalanceDetails47
+public partial record CorporateActionBalanceDetails47
 {
     /// <summary>
     /// Security Called Amount.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WbKDmNp-Ed-ak6NoX_4Aeg_1685038746")]
 [DisplayName("Corporate Action Narrative")]
-public record CorporateActionNarrative19
+public partial record CorporateActionNarrative19
 {
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.

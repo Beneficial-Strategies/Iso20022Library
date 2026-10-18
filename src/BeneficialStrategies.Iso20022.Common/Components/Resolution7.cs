@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PkHwo1xyEe6fgZt44_IqFA")]
 [DisplayName("Resolution7")]
-public record Resolution7
+public partial record Resolution7
 {
     /// <summary>
     /// Issuer Label.

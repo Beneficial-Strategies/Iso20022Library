@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProrationBelowMinimumQuantity3Ch
     /// <summary>Specifies the proration type as a code.</summary>
     [IsoId("_NpRYIaj5EfCG_LQaXOxwew")]
     [DisplayName("Code")]
-    public record Code : ProrationBelowMinimumQuantity3Choice_
+    public partial record Code : ProrationBelowMinimumQuantity3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// <summary>Instruction cancellation request has been accepted.</summary>
     [IsoId("_Jg5gKa8xEfCx2aBifPEdRg")]
     [DisplayName("Accepted")]
-    public record Accepted : MarketClaimCancellationRequestStatus3Choice_
+    public partial record Accepted : MarketClaimCancellationRequestStatus3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Accptd")]

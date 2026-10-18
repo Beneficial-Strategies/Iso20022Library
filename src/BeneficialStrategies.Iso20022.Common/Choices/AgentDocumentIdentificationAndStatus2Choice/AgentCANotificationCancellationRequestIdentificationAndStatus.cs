@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
     /// <summary>Identification of the linked Agent CA Notification Cancellation Request for which a status is given.</summary>
     [IsoId("f32375ec-55d1-45cd-83a6-b96133925c9c")]
     [DisplayName("Agent CA Notification Cancellation Request Identification And Status")]
-    public record AgentCANotificationCancellationRequestIdentificationAndStatus : AgentDocumentIdentificationAndStatus2Choice_
+    public partial record AgentCANotificationCancellationRequestIdentificationAndStatus : AgentDocumentIdentificationAndStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AgtCANtfctnCxlReqIdAndSts")]

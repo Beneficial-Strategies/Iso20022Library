@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus56Cho
     /// Covered.
     /// </summary>
     [DisplayName("Covered")]
-    public record Covered : InstructionProcessingStatus56Choice_
+    public partial record Covered : InstructionProcessingStatus56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

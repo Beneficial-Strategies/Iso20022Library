@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrQuantityToReceive1Choice
     /// </summary>
     [IsoId("_UGvw8Np-Ed-ak6NoX_4Aeg_1067930264")]
     [DisplayName("Status Quantity")]
-    public record StatusQuantity : StatusOrQuantityToReceive1Choice_
+    public partial record StatusQuantity : StatusOrQuantityToReceive1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("StsQty")]

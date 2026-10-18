@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rjkpmtp-Ed-ak6NoX_4Aeg_1579470167")]
 [DisplayName("Election Advice Function")]
-public record ElectionAdviceFunction1
+public partial record ElectionAdviceFunction1
 {
     /// <summary>
     /// Type of election advice.

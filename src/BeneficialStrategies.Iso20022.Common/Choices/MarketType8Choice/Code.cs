@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType8Choice
     /// </summary>
     [IsoId("_Ql4SQ9p-Ed-ak6NoX_4Aeg_931715496")]
     [DisplayName("Code")]
-    public record Code : MarketType8Choice_
+    public partial record Code : MarketType8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

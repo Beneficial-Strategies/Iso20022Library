@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MxiOA0EEEeWVgfuHGaKtRQ")]
 [DisplayName("Cash Option")]
-public record CashOption43
+public partial record CashOption43
 {
     /// <summary>
     /// Indicates whether the value is a debit or a credit.

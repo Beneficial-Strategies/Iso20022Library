@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason65Choice
     /// <summary>Specifies the code.</summary>
     [IsoId("_Crapkd79Ee-NrtAAlrBEgQ")]
     [DisplayName("Code")]
-    public record Code : RejectedReason65Choice_
+    public partial record Code : RejectedReason65Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

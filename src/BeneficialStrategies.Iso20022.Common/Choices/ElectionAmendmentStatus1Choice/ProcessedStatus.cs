@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAmendmentStatus1Choice
     [IsoId("_RiiHxtp-Ed-ak6NoX_4Aeg_-1968652783")]
     [DisplayName("Processed Status")]
     [IsoXmlTag("PrcdSts")]
-    public record ProcessedStatus : ElectionAmendmentStatus1Choice_
+    public partial record ProcessedStatus : ElectionAmendmentStatus1Choice_
     {
         /// <summary>
         /// The processing status.

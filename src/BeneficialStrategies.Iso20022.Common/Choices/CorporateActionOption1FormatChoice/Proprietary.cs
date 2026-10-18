@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption1FormatChoi
     [IsoId("_RlgjQtp-Ed-ak6NoX_4Aeg_-1058861936")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionOption1FormatChoice_
+    public partial record Proprietary : CorporateActionOption1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

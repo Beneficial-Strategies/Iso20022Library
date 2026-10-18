@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat10Choice
     [IsoId("_8mNj80EFEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OfferTypeFormat10Choice_
+    public partial record Proprietary : OfferTypeFormat10Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

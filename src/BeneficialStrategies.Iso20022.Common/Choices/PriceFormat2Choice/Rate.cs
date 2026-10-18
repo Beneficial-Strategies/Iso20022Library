@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat2Choice
     [IsoId("_Qa2uANp-Ed-ak6NoX_4Aeg_-488464996")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public record Rate : PriceFormat2Choice_
+    public partial record Rate : PriceFormat2Choice_
     {
         /// <summary>
         /// Type of rate, eg, yield.

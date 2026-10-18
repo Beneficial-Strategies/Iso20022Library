@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecurityDistribution
     [IsoId("_Rms2FNp-Ed-ak6NoX_4Aeg_1911197103")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : IntermediateSecurityDistributionType1FormatChoice_
+    public partial record Proprietary : IntermediateSecurityDistributionType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

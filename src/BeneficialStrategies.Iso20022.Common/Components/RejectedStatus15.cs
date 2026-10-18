@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BkbKsaKtEfCHi7w3_0pcpw")]
 [DisplayName("Rejected Status15")]
-public record RejectedStatus15
+public partial record RejectedStatus15
 {
     /// <summary>
     /// Quantity of instructed securities for which processing is rejected.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RiiHwtp-Ed-ak6NoX_4Aeg_1698122957")]
     [DisplayName("Election Cancellation Status 1 Choice")]
-    public abstract record ElectionCancellationStatus1Choice_ { }
+    public abstract partial record ElectionCancellationStatus1Choice_ { }
 }

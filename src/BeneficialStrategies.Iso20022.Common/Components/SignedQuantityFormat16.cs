@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SJ9r8Zz2Ee-wlaN-gaj0FQ")]
 [DisplayName("Signed Quantity Format16")]
-public record SignedQuantityFormat16
+public partial record SignedQuantityFormat16
 {
     /// <summary>
     /// Short Long Position.

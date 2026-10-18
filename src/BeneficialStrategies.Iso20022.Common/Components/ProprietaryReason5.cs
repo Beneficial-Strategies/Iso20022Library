@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ceme2ZKQEeWHWpTQn1FFVg")]
 [DisplayName("Proprietary Reason")]
-public record ProprietaryReason5
+public partial record ProprietaryReason5
 {
     /// <summary>
     /// Proprietary identification of the reason related to a status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountChoice
     [IsoId("_SoH209p-Ed-ak6NoX_4Aeg_144255631")]
     [DisplayName("Face Amount")]
     [IsoXmlTag("FaceAmt")]
-    public record FaceAmount : UnitOrFaceAmountChoice_
+    public partial record FaceAmount : UnitOrFaceAmountChoice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

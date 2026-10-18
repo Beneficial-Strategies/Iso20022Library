@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RiYWw9p-Ed-ak6NoX_4Aeg_-987032957")]
     [DisplayName("Notification Cancellation Request Status 1 Choice")]
-    public abstract record NotificationCancellationRequestStatus1Choice_ { }
+    public abstract partial record NotificationCancellationRequestStatus1Choice_ { }
 }

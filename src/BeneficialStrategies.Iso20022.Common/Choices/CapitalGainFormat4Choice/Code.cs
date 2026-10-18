@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CapitalGainFormat4Choice
     /// </summary>
     [IsoId("_c5V6qZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : CapitalGainFormat4Choice_
+    public partial record Code : CapitalGainFormat4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

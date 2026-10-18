@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TN5ZxdEwEd-BzquC8wXy7w_893376547")]
 [DisplayName("Agent CA Global Distribution Status Advice V")]
-public record AgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
+public partial record AgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

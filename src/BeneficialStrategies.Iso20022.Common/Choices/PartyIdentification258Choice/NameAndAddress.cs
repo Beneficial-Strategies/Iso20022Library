@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification258Choice
     /// Name And Address.
     /// </summary>
     [DisplayName("Name And Address")]
-    public record NameAndAddress : PartyIdentification258Choice_
+    public partial record NameAndAddress : PartyIdentification258Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SlI0Stp-Ed-ak6NoX_4Aeg_-1692049135")]
 [DisplayName("Alternate Financial Instrument Identification")]
-public record AlternateFinancialInstrumentIdentification1
+public partial record AlternateFinancialInstrumentIdentification1
 {
     /// <summary>
     /// Country of the proprietary identification scheme.

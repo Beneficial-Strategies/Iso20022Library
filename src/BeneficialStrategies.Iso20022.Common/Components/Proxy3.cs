@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_T4cPNNp-Ed-ak6NoX_4Aeg_-1419937890")]
 [DisplayName("Proxy")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record Proxy3
+public partial record Proxy3
 {
     /// <summary>
     /// Specifies the type of proxy.

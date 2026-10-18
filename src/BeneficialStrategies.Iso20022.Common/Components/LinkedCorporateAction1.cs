@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RjH9pNp-Ed-ak6NoX_4Aeg_866442593")]
 [DisplayName("Linked Corporate Action")]
-public record LinkedCorporateAction1
+public partial record LinkedCorporateAction1
 {
     /// <summary>
     /// The function of the notification e.g. new notification.

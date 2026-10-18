@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RnAYE9p-Ed-ak6NoX_4Aeg_1859127225")]
     [DisplayName("Price Rate Type 3 Format Choice")]
-    public abstract record PriceRateType3FormatChoice_ { }
+    public abstract partial record PriceRateType3FormatChoice_ { }
 }

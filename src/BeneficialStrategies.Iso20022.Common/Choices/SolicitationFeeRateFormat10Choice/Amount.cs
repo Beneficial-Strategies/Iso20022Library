@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat10Choic
     [IsoId("_ctoZSZKQEeWHWpTQn1FFVg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : SolicitationFeeRateFormat10Choice_
+    public partial record Amount : SolicitationFeeRateFormat10Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

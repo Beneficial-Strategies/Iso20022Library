@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// Cancellation Completed.
     /// </summary>
     [DisplayName("Cancellation Completed")]
-    public record CancellationCompleted : InstructionCancellationRequestStatus17Choice_
+    public partial record CancellationCompleted : InstructionCancellationRequestStatus17Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

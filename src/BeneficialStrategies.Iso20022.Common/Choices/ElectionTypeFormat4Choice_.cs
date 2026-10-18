@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5WhK5KQEeWHWpTQn1FFVg")]
     [DisplayName("Election Type Format 4 Choice")]
-    public abstract record ElectionTypeFormat4Choice_ { }
+    public abstract partial record ElectionTypeFormat4Choice_ { }
 }

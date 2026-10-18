@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fi5-VzndEeWLJsP1cO-amg")]
 [DisplayName("Event Information")]
-public record EventInformation7
+public partial record EventInformation7
 {
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.

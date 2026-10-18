@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rctzptp-Ed-ak6NoX_4Aeg_-309699993")]
     [DisplayName("Market Identification 1 Choice")]
-    public abstract record MarketIdentification1Choice_ { }
+    public abstract partial record MarketIdentification1Choice_ { }
 }

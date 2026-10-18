@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus1Choice
     [IsoId("_Ri1Cttp-Ed-ak6NoX_4Aeg_288350026")]
     [DisplayName("Processed Status")]
     [IsoXmlTag("PrcdSts")]
-    public record ProcessedStatus : NotificationAdviceStatus1Choice_
+    public partial record ProcessedStatus : NotificationAdviceStatus1Choice_
     {
         /// <summary>
         /// The processing status.

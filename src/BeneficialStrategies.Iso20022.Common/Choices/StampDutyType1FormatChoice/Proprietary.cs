@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StampDutyType1FormatChoice
     [IsoId("_RpFbsNp-Ed-ak6NoX_4Aeg_-874099114")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : StampDutyType1FormatChoice_
+    public partial record Proprietary : StampDutyType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

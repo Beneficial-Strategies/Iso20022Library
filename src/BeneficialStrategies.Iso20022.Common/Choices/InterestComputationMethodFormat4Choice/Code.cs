@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethodFormat4
     /// </summary>
     [IsoId("_bMY-4Tm6EeWV5sr121Fc8A")]
     [DisplayName("Code")]
-    public record Code : InterestComputationMethodFormat4Choice_
+    public partial record Code : InterestComputationMethodFormat4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

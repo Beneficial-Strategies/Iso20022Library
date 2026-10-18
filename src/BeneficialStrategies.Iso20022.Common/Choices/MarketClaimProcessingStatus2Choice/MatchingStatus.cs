@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
     /// <summary>Provides the matching status of the instruction.</summary>
     [IsoId("_G1D_QbMaEfCEXew4g5B5oA")]
     [DisplayName("Matching Status")]
-    public record MatchingStatus : MarketClaimProcessingStatus2Choice_
+    public partial record MatchingStatus : MarketClaimProcessingStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MtchgSts")]

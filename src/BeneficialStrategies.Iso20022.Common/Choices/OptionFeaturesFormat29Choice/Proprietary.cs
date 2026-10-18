@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat29Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : OptionFeaturesFormat29Choice_
+    public partial record Proprietary : OptionFeaturesFormat29Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType3Choice
     /// <summary>Vote option expressed as a proprietary code.</summary>
     [IsoId("_r1A-w65vEfCUHaCK5HWOhg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : VoteInstructionType3Choice_
+    public partial record Proprietary : VoteInstructionType3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

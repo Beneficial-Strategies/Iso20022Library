@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiranNp-Ed-ak6NoX_4Aeg_-1547572395")]
 [DisplayName("Attendance Card")]
-public record AttendanceCard2
+public partial record AttendanceCard2
 {
     /// <summary>
     /// Information to be indicated on the attendance card.

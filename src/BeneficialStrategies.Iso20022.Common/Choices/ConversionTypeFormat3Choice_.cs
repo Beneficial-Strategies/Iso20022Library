@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1ms0IUEFEeWVgfuHGaKtRQ")]
     [DisplayName("Conversion Type Format 3 Choice")]
-    public abstract record ConversionTypeFormat3Choice_ { }
+    public abstract partial record ConversionTypeFormat3Choice_ { }
 }

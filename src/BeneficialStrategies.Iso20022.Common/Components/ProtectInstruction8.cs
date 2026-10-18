@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mnkCkf0hEeiKOe8GCUL1Lg")]
 [DisplayName("Protect Instruction")]
-public record ProtectInstruction8
+public partial record ProtectInstruction8
 {
     /// <summary>
     /// Indicates whether the instruction is a protect or a cover protect instruction.

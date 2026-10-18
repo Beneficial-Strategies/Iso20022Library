@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
     [IsoId("_RiPM2Np-Ed-ak6NoX_4Aeg_-1502312147")]
     [DisplayName("Rejected Status")]
     [IsoXmlTag("RjctdSts")]
-    public record RejectedStatus : CorporateActionMovementStatus1Choice_
+    public partial record RejectedStatus : CorporateActionMovementStatus1Choice_
     {
         /// <summary>
         /// The rejection reason.

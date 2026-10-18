@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(LegalPerson), nameof(LegalPerson))]
     [KnownType(typeof(NaturalPerson))]
     [JsonDerivedType(typeof(NaturalPerson), nameof(NaturalPerson))]
-    public abstract record PartyIdentification264Choice_;
+    public abstract partial record PartyIdentification264Choice_;
 }

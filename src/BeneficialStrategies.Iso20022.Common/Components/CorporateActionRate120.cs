@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AbYYAYVVEe-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Rate120")]
-public record CorporateActionRate120
+public partial record CorporateActionRate120
 {
     /// <summary>
     /// Gross Distribution Rate.

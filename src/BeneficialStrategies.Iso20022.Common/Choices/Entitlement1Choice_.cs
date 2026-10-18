@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RDroltp-Ed-ak6NoX_4Aeg_278431032")]
     [DisplayName("Entitlement 1 Choice")]
-    public abstract record Entitlement1Choice_ { }
+    public abstract partial record Entitlement1Choice_ { }
 }

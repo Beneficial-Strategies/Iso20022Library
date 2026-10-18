@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReturnedStatus2Choice.Reason), nameof(ReturnedStatus2Choice.Reason))]
     [IsoId("_wYfEaaGpEe-4O7NbwmwJkQ")]
     [DisplayName("Returned Status2Choice")]
-    public abstract record ReturnedStatus2Choice_ { }
+    public abstract partial record ReturnedStatus2Choice_ { }
 }

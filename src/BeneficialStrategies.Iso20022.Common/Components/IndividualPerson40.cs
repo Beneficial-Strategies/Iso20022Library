@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X0GdZbIPEemux5trsZcCpw")]
 [DisplayName("Individual Person")]
-public record IndividualPerson40
+public partial record IndividualPerson40
 {
     /// <summary>
     /// Unique and unambiguous identification of the proxy.

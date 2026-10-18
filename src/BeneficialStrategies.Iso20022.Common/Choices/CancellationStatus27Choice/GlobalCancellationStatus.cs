@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus27Choice
     /// </summary>
     [IsoId("_DOiZwMT2Eem9aZlimxVUIw")]
     [DisplayName("Global Cancellation Status")]
-    public record GlobalCancellationStatus : CancellationStatus27Choice_
+    public partial record GlobalCancellationStatus : CancellationStatus27Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GblCxlSts")]

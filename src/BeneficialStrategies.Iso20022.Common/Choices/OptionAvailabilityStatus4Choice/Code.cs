@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionAvailabilityStatus4Choice
     /// </summary>
     [IsoId("_cta-LZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : OptionAvailabilityStatus4Choice_
+    public partial record Code : OptionAvailabilityStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

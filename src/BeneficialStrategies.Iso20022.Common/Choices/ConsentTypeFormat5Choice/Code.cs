@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentTypeFormat5Choice
     /// </summary>
     [IsoId("_c5WhgZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : ConsentTypeFormat5Choice_
+    public partial record Code : ConsentTypeFormat5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

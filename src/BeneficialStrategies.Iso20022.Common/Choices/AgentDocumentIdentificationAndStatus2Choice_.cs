@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AgentDocumentIdentificationAndStatus2Choice.AgentCANotificationCancellationRequestIdentificationAndStatus), nameof(AgentDocumentIdentificationAndStatus2Choice.AgentCANotificationCancellationRequestIdentificationAndStatus))]
     [IsoId("4c6dcfc0-1a9a-48f7-a6b5-ff1367607aa5")]
     [DisplayName("AgentDocumentIdentificationAndStatus2Choice")]
-    public abstract record AgentDocumentIdentificationAndStatus2Choice_ { }
+    public abstract partial record AgentDocumentIdentificationAndStatus2Choice_ { }
 }

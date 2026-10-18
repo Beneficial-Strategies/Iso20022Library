@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__SFAwCXaEeOFIcNWlDEvdQ")]
     [DisplayName("Information Type Format 1 Choice")]
-    public abstract record InformationTypeFormat1Choice_ { }
+    public abstract partial record InformationTypeFormat1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XENzQRrlEeyhRdHRjakS2w")]
 [DisplayName("Participation Method")]
-public record ParticipationMethod2
+public partial record ParticipationMethod2
 {
     /// <summary>
     /// Method of voting participation to the general meeting.

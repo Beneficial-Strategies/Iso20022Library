@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification263Choice
     /// <summary>Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority.</summary>
     [IsoId("_EnMLQa3pEfCN-rGCydxGUA")]
     [DisplayName("Any BIC")]
-    public record AnyBIC : PartyIdentification263Choice_
+    public partial record AnyBIC : PartyIdentification263Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AnyBIC")]

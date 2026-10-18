@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus32Cho
     /// </summary>
     [IsoId("_BfFOBLtTEeilsanBGAzy4A")]
     [DisplayName("Rejected")]
-    public record Rejected : InstructionProcessingStatus32Choice_
+    public partial record Rejected : InstructionProcessingStatus32Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

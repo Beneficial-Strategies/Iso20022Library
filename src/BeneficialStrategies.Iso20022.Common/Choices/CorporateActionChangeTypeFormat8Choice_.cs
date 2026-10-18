@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5V6a5KQEeWHWpTQn1FFVg")]
     [DisplayName("Corporate Action Change Type Format 8 Choice")]
-    public abstract record CorporateActionChangeTypeFormat8Choice_ { }
+    public abstract partial record CorporateActionChangeTypeFormat8Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uZGyd9-2Ee-Ned3-G07x_A")]
 [DisplayName("Financial Institution Identification28")]
-public record FinancialInstitutionIdentification28
+public partial record FinancialInstitutionIdentification28
 {
     /// <summary>
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362.

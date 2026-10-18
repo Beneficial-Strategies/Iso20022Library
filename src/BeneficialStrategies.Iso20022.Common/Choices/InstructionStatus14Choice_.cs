@@ -13,5 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionStatus14Choice.Pending), nameof(InstructionStatus14Choice.Pending))]
     [IsoId("_D98Fq6jVEfCzuLlmLrhIvA")]
     [DisplayName("Instruction Status 14 Choice")]
-    public abstract record InstructionStatus14Choice_ { }
+    public abstract partial record InstructionStatus14Choice_ { }
 }

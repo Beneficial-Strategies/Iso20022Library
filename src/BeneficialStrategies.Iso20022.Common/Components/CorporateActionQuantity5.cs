@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fT1XVfmVEeCcAY_zfcalaA")]
 [DisplayName("Corporate Action Quantity")]
-public record CorporateActionQuantity5
+public partial record CorporateActionQuantity5
 {
     /// <summary>
     /// Minimum quantity (or lot) of financial instrument that may be exercised or tendered.

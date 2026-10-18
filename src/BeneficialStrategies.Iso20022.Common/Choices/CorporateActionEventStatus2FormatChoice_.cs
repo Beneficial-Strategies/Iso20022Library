@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmQKIdp-Ed-ak6NoX_4Aeg_-108007853")]
     [DisplayName("Corporate Action Event Status 2 Format Choice")]
-    public abstract record CorporateActionEventStatus2FormatChoice_ { }
+    public abstract partial record CorporateActionEventStatus2FormatChoice_ { }
 }

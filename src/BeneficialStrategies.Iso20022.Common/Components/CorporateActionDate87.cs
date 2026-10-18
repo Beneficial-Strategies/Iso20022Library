@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qpF07zQKEe2o-K1dwNg8Gg")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate87
+public partial record CorporateActionDate87
 {
     /// <summary>
     /// Date/time of the posting (credit or debit) to the account.

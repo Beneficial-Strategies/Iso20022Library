@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JDUOwaj7EfCG_LQaXOxwew")]
 [DisplayName("Corporate Action Quantity15")]
-public record CorporateActionQuantity15
+public partial record CorporateActionQuantity15
 {
     /// <summary>
     /// Maximum number of securities that can be instructed.

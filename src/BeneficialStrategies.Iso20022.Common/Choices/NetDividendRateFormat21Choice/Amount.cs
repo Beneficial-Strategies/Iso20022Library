@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat21Choice
     [IsoId("_HAqdE2OWEeWYYI9c62RCjw")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : NetDividendRateFormat21Choice_
+    public partial record Amount : NetDividendRateFormat21Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

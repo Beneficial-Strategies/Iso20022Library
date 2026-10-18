@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TmHJHdp-Ed-ak6NoX_4Aeg_742278644")]
 [DisplayName("Eligibility Dates")]
-public record EligibilityDates1
+public partial record EligibilityDates1
 {
     /// <summary>
     /// Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ddxGe5K5Ee-l-O3vIHRmRw")]
     [DisplayName("Additional Right Threshold2Choice")]
-    public abstract record AdditionalRightThreshold2Choice_ { }
+    public abstract partial record AdditionalRightThreshold2Choice_ { }
 }

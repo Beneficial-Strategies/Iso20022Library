@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType9Cho
     [IsoId("_UQaTGfiyEeSjz7lzcp5lWQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BeneficiaryCertificationType9Choice_
+    public partial record Proprietary : BeneficiaryCertificationType9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

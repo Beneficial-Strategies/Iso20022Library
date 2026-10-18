@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RoMq4tp-Ed-ak6NoX_4Aeg_-549911598")]
     [DisplayName("Rejection Reason 13 Format Choice")]
-    public abstract record RejectionReason13FormatChoice_ { }
+    public abstract partial record RejectionReason13FormatChoice_ { }
 }

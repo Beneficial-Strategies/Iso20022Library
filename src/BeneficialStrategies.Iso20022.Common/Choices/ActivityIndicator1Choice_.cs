@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Lg8f41x7Ee6fgZt44_IqFA")]
     [DisplayName("Activity Indicator1Choice")]
-    public abstract record ActivityIndicator1Choice_ { }
+    public abstract partial record ActivityIndicator1Choice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus71Choice
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
-    public record Reason : PendingStatus71Choice_
+    public partial record Reason : PendingStatus71Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

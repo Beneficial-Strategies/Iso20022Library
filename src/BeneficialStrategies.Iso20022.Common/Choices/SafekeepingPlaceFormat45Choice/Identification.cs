@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat45Choice
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
-    public record Identification : SafekeepingPlaceFormat45Choice_
+    public partial record Identification : SafekeepingPlaceFormat45Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus8Choice
     [IsoId("_86aTe5wtEeazcsnODTksnQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingCancellationStatus8Choice_
+    public partial record Reason : PendingCancellationStatus8Choice_
     {
         /// <summary>
         /// Specifies the reason why the cancellation request is pending.

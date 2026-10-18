@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account11Choice
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
-    public record CashAccount : Account11Choice_
+    public partial record CashAccount : Account11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qwMS0RreEeyhRdHRjakS2w")]
 [DisplayName("Corporate Event Narrative")]
-public record CorporateEventNarrative4
+public partial record CorporateEventNarrative4
 {
     /// <summary>
     /// Issuer’s disclaimer notice relative to the meeting announcement information provided. It may be ignored for automated processing.

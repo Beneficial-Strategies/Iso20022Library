@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2cdEEOaDEemtTOaHuc_63w")]
 [DisplayName("Transaction Identification")]
-public record TransactionIdentification1
+public partial record TransactionIdentification1
 {
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.

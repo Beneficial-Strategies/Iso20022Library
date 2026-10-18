@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus1Choi
     [IsoId("_Qy_hNNp-Ed-ak6NoX_4Aeg_1216872806")]
     [DisplayName("Default Action")]
     [IsoXmlTag("DfltActn")]
-    public record DefaultAction : InstructionProcessingStatus1Choice_
+    public partial record DefaultAction : InstructionProcessingStatus1Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

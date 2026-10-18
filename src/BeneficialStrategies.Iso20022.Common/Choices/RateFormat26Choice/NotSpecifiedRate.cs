@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat26Choice
     /// Not Specified Rate.
     /// </summary>
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : RateFormat26Choice_
+    public partial record NotSpecifiedRate : RateFormat26Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

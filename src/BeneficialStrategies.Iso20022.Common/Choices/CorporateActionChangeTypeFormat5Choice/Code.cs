@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionChangeTypeFormat5
     /// </summary>
     [IsoId("_HY0x8UEGEeWVgfuHGaKtRQ")]
     [DisplayName("Code")]
-    public record Code : CorporateActionChangeTypeFormat5Choice_
+    public partial record Code : CorporateActionChangeTypeFormat5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U1ay-3SdEe6VWZz2tTgENw")]
 [DisplayName("Updated Additional Information22")]
-public record UpdatedAdditionalInformation22
+public partial record UpdatedAdditionalInformation22
 {
     /// <summary>
     /// Additional Information.

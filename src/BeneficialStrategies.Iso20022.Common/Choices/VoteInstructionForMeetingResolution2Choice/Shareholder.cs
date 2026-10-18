@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
     [IsoId("_n3g1VV6-EeSjaerr_EM7AQ")]
     [DisplayName("Shareholder")]
     [IsoXmlTag("Shrhldr")]
-    public record Shareholder : VoteInstructionForMeetingResolution2Choice_
+    public partial record Shareholder : VoteInstructionForMeetingResolution2Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

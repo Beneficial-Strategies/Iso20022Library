@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus36Choice
     [IsoId("_cVfl2fNfEeqRfth943bvEA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RejectedStatus36Choice_
+    public partial record Reason : RejectedStatus36Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

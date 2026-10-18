@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType2Choice
     /// </summary>
     [IsoId("_5wAlwbmwEemdEs93hOkPKA")]
     [DisplayName("Instruction Identification")]
-    public record InstructionIdentification : InstructionType2Choice_
+    public partial record InstructionIdentification : InstructionType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

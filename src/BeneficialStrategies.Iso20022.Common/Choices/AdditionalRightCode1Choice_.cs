@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RDYto9p-Ed-ak6NoX_4Aeg_-1284935135")]
     [DisplayName("Additional Right Code 1 Choice")]
-    public abstract record AdditionalRightCode1Choice_ { }
+    public abstract partial record AdditionalRightCode1Choice_ { }
 }

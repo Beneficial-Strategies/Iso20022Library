@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_eTupkx9QEeuFz_FaCzCLgQ")]
 [DisplayName("Corporate Action Instruction Cancellation Request 002 V")]
-public record CorporateActionInstructionCancellationRequest002V10 : IOuterRecord
+public partial record CorporateActionInstructionCancellationRequest002V10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

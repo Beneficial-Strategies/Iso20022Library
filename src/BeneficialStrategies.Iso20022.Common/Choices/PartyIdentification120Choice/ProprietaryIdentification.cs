@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification120Choice
     [IsoId("_V5dsc7pYEeifFaUMRKyMMw")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : PartyIdentification120Choice_
+    public partial record ProprietaryIdentification : PartyIdentification120Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

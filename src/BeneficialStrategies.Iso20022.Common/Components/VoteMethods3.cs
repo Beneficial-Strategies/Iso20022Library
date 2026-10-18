@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MPdpxa4jEemG7MmivSuE5g")]
 [DisplayName("Vote Methods")]
-public record VoteMethods3
+public partial record VoteMethods3
 {
     /// <summary>
     /// Network address through which a voting party can cast its vote via a structured message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator1Cho
     /// </summary>
     [IsoId("_Q5QhQNp-Ed-ak6NoX_4Aeg_-1187456138")]
     [DisplayName("Code")]
-    public record Code : NonEligibleProceedsIndicator1Choice_
+    public partial record Code : NonEligibleProceedsIndicator1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

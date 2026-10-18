@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference3Ch
     /// </summary>
     [IsoId("_4h3LqzncEeWLJsP1cO-amg")]
     [DisplayName("Linked Corporate Action Identification")]
-    public record LinkedCorporateActionIdentification : CorporateActionEventReference3Choice_
+    public partial record LinkedCorporateActionIdentification : CorporateActionEventReference3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

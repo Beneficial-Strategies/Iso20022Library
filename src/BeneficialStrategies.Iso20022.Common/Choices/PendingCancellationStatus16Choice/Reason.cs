@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus16Choic
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
-    public record Reason : PendingCancellationStatus16Choice_
+    public partial record Reason : PendingCancellationStatus16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

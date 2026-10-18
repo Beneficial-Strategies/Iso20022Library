@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledReason3Choice
     [IsoId("_YlglleJxEd-Q6MzBzY5WkA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CancelledReason3Choice_
+    public partial record Proprietary : CancelledReason3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

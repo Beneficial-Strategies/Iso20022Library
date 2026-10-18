@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType46Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : IdentificationType46Choice_
+    public partial record Code : IdentificationType46Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x_GLtx9REeuFz_FaCzCLgQ")]
 [DisplayName("Corporate Action Narrative")]
-public record CorporateActionNarrative47
+public partial record CorporateActionNarrative47
 {
     /// <summary>
     /// Provides the entity making the offer and is different from the issuing company.

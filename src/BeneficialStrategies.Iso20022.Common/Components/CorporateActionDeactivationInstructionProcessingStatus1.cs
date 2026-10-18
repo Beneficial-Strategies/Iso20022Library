@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RkeBc9p-Ed-ak6NoX_4Aeg_1446345184")]
 [DisplayName("Corporate Action Deactivation Instruction Processing Status")]
-public record CorporateActionDeactivationInstructionProcessingStatus1
+public partial record CorporateActionDeactivationInstructionProcessingStatus1
 {
     /// <summary>
     /// The processing status.

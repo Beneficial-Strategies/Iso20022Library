@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationTypeFormat4Choice
     /// </summary>
     [IsoId("_gr8cAUEGEeWVgfuHGaKtRQ")]
     [DisplayName("Code")]
-    public record Code : InformationTypeFormat4Choice_
+    public partial record Code : InformationTypeFormat4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

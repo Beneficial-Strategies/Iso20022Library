@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryType1FormatChoice
     [IsoId("_Rms2F9p-Ed-ak6NoX_4Aeg_-924254405")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LotteryType1FormatChoice_
+    public partial record Proprietary : LotteryType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

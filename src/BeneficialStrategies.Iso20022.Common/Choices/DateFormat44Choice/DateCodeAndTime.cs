@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat44Choice
     [IsoId("_QRUo27QYEeeKRKrD60ELBQ")]
     [DisplayName("Date Code And Time")]
     [IsoXmlTag("DtCdAndTm")]
-    public record DateCodeAndTime : DateFormat44Choice_
+    public partial record DateCodeAndTime : DateFormat44Choice_
     {
         /// <summary>
         /// Specifies the type of date.

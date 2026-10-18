@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
     /// <summary>Instruction processing has been cancelled.</summary>
     [IsoId("_G1D_IbMaEfCEXew4g5B5oA")]
     [DisplayName("Cancelled")]
-    public record Cancelled : MarketClaimProcessingStatus2Choice_
+    public partial record Cancelled : MarketClaimProcessingStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Canc")]

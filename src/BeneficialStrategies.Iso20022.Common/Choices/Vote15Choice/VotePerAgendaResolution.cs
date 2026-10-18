@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote15Choice
     /// </summary>
     [IsoId("_9WxvEfNXEeqRfth943bvEA")]
     [DisplayName("Vote Per Agenda Resolution")]
-    public record VotePerAgendaResolution : Vote15Choice_
+    public partial record VotePerAgendaResolution : Vote15Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("VotePerAgndRsltn")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UMZtCNp-Ed-ak6NoX_4Aeg_302800554")]
 [DisplayName("Corporate Action Additional Information")]
-public record CorporateActionAdditionalInformation1
+public partial record CorporateActionAdditionalInformation1
 {
     /// <summary>
     /// Provides information about the beneficial owner of the securities.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_e9j1tzndEeWLJsP1cO-amg")]
     [DisplayName("Corporate Action Mandatory Voluntary 3 Choice")]
-    public abstract record CorporateActionMandatoryVoluntary3Choice_ { }
+    public abstract partial record CorporateActionMandatoryVoluntary3Choice_ { }
 }

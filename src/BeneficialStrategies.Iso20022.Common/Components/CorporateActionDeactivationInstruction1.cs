@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJuMddp-Ed-ak6NoX_4Aeg_-1685692105")]
 [DisplayName("Corporate Action Deactivation Instruction")]
-public record CorporateActionDeactivationInstruction1
+public partial record CorporateActionDeactivationInstruction1
 {
     /// <summary>
     /// Date and time at which the CSD must deactivate the corporate action event or the option.

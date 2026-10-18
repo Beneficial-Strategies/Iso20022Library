@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus2Choice
     /// Processed Status.
     /// </summary>
     [DisplayName("Processed Status")]
-    public record ProcessedStatus : NotificationAdviceStatus2Choice_
+    public partial record ProcessedStatus : NotificationAdviceStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

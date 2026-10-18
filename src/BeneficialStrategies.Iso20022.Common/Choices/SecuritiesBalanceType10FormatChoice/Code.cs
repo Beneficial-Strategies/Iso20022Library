@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType10FormatCho
     /// </summary>
     [IsoId("_RoygxNp-Ed-ak6NoX_4Aeg_-1171470357")]
     [DisplayName("Code")]
-    public record Code : SecuritiesBalanceType10FormatChoice_
+    public partial record Code : SecuritiesBalanceType10FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

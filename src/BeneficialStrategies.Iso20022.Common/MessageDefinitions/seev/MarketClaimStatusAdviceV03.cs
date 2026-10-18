@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_g4ztT3_5Ee-h086v0qPiyQ")]
 [DisplayName("Market Claim Status Advice V03")]
-public record MarketClaimStatusAdviceV03 : IOuterRecord
+public partial record MarketClaimStatusAdviceV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

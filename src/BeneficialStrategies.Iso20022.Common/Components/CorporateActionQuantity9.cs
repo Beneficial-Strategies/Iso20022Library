@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Jsfaa5cCEee8S7xwGG7Veg")]
 [DisplayName("Corporate Action Quantity")]
-public record CorporateActionQuantity9
+public partial record CorporateActionQuantity9
 {
     /// <summary>
     /// Minimum integral amount of securities that each account owner must have remaining after the called amounts are applied.

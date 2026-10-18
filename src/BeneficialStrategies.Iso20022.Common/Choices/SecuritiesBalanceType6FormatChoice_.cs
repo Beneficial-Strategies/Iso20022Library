@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Roygxtp-Ed-ak6NoX_4Aeg_758304831")]
     [DisplayName("Securities Balance Type 6 Format Choice")]
-    public abstract record SecuritiesBalanceType6FormatChoice_ { }
+    public abstract partial record SecuritiesBalanceType6FormatChoice_ { }
 }

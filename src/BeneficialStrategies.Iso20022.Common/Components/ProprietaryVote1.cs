@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v_P28K-XEemJ1NnLPsTFaw")]
 [DisplayName("Proprietary Vote")]
-public record ProprietaryVote1
+public partial record ProprietaryVote1
 {
     /// <summary>
     /// Other type of vote expressed as a proprietary code.

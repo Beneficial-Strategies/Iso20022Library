@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionTypeFormat4Choice
     /// </summary>
     [IsoId("_c5WhLZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : ElectionTypeFormat4Choice_
+    public partial record Code : ElectionTypeFormat4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

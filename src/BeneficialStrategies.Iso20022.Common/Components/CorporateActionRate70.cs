@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7k009UEEEeWVgfuHGaKtRQ")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate70
+public partial record CorporateActionRate70
 {
     /// <summary>
     /// Cash dividend amount per equity before deductions or allowances have been made.

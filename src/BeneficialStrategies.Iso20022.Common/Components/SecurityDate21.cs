@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VTskzTQKEe2o-K1dwNg8Gg")]
 [DisplayName("Security Date")]
-public record SecurityDate21
+public partial record SecurityDate21
 {
     /// <summary>
     /// Date of the posting (credit or debit) to the account.

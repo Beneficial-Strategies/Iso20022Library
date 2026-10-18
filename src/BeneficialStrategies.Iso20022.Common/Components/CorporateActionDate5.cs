@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TfjOFNp-Ed-ak6NoX_4Aeg_1806455399")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate5
+public partial record CorporateActionDate5
 {
     /// <summary>
     /// Date/time at which a foreign exchange rate will be determined.

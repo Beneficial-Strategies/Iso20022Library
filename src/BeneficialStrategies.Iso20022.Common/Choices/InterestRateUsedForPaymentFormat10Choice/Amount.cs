@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     [IsoId("_cteBzZKQEeWHWpTQn1FFVg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : InterestRateUsedForPaymentFormat10Choice_
+    public partial record Amount : InterestRateUsedForPaymentFormat10Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus2Choice
     [IsoId("_RWwVkNp-Ed-ak6NoX_4Aeg_-1271508072")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public record ProcessingStatus : InstructionStatus2Choice_
+    public partial record ProcessingStatus : InstructionStatus2Choice_
     {
         /// <summary>
         /// Status on the processing of the instructions.

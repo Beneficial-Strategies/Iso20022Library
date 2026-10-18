@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVa40tp-Ed-ak6NoX_4Aeg_-1270467118")]
 [DisplayName("Amend Information")]
-public record AmendInformation1
+public partial record AmendInformation1
 {
     /// <summary>
     /// Identifies the linked message which was previously sent.

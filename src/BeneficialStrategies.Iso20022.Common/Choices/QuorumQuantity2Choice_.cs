@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_h-GeH5K5Ee-l-O3vIHRmRw")]
     [DisplayName("Quorum Quantity2Choice")]
-    public abstract record QuorumQuantity2Choice_ { }
+    public abstract partial record QuorumQuantity2Choice_ { }
 }

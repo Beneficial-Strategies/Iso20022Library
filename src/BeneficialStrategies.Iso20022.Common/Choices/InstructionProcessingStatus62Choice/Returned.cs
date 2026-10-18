@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
     /// <summary>Instructed units are returned or partially returned to the instructing party.</summary>
     [IsoId("_H9heea8wEfCx2aBifPEdRg")]
     [DisplayName("Returned")]
-    public record Returned : InstructionProcessingStatus62Choice_
+    public partial record Returned : InstructionProcessingStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rtrd")]

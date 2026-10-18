@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus27Choice
     [IsoId("_GQGGQMT2Eem9aZlimxVUIw")]
     [DisplayName("Detailed Cancellation Status")]
     [IsoXmlTag("DtldCxlSts")]
-    public record DetailedCancellationStatus : CancellationStatus27Choice_
+    public partial record DetailedCancellationStatus : CancellationStatus27Choice_
     {
         /// <summary>
         /// Identification of the specific individual instruction cancellation request from the original meeting instruction cancellation request message identified in InstructionType/ InstructionCancellationIdentification, for which the status is provided.

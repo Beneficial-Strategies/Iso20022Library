@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QUy-OV99Ee262vCSVgjImg")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate91
+public partial record CorporateActionDate91
 {
     /// <summary>
     /// Last day a holder can deliver the securities that it had elected on and/or previously protected.

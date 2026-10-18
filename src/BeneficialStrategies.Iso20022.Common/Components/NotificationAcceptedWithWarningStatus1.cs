@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rZVzIaUeEfCnE_wCEfCqTA")]
 [DisplayName("Notification Accepted With Warning Status1")]
-public record NotificationAcceptedWithWarningStatus1
+public partial record NotificationAcceptedWithWarningStatus1
 {
     /// <summary>
     /// The processing status.

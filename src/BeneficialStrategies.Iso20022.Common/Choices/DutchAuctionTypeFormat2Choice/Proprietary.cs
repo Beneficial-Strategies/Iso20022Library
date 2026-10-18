@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DutchAuctionTypeFormat2Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : DutchAuctionTypeFormat2Choice_
+    public partial record Proprietary : DutchAuctionTypeFormat2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

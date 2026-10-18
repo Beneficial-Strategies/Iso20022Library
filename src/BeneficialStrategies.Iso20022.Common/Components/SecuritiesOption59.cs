@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mv98AYcQEeavwKddCbm3hg")]
 [DisplayName("Securities Option")]
-public record SecuritiesOption59
+public partial record SecuritiesOption59
 {
     /// <summary>
     /// Provides description of the financial instrument related to securities movement.

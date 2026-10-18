@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P0SfATT_Ee2tRf29bleifQ")]
 [DisplayName("Notification General Information")]
-public record NotificationGeneralInformation4
+public partial record NotificationGeneralInformation4
 {
     /// <summary>
     /// Unique identification of the group of meeting notification messages when the notification is split in multiple (paginated) messages.

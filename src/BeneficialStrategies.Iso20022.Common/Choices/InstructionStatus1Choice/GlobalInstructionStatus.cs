@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus1Choice
     /// </summary>
     [IsoId("_RWnLqNp-Ed-ak6NoX_4Aeg_1691740935")]
     [DisplayName("Global Instruction Status")]
-    public record GlobalInstructionStatus : InstructionStatus1Choice_
+    public partial record GlobalInstructionStatus : InstructionStatus1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GblInstrSts")]

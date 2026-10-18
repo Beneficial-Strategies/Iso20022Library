@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceCalculationMethod2Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : PriceCalculationMethod2Choice_
+    public partial record Code : PriceCalculationMethod2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

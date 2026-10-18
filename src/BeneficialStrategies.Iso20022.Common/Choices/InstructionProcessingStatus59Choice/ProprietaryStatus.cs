@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus59Cho
     /// <summary>Proprietary status related to an instruction.</summary>
     [IsoId("_j-yrwd75Ee-NrtAAlrBEgQ")]
     [DisplayName("Proprietary Status")]
-    public record ProprietaryStatus : InstructionProcessingStatus59Choice_
+    public partial record ProprietaryStatus : InstructionProcessingStatus59Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrtrySts")]

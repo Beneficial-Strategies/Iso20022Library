@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     /// </summary>
     [IsoId("_cj-G-5KQEeWHWpTQn1FFVg")]
     [DisplayName("Rate")]
-    public record Rate : InterestRateUsedForPaymentFormat9Choice_
+    public partial record Rate : InterestRateUsedForPaymentFormat9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

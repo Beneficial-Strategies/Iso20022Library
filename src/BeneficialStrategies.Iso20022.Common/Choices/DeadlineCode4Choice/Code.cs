@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode4Choice
     /// </summary>
     [IsoId("_cfsslZKQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : DeadlineCode4Choice_
+    public partial record Code : DeadlineCode4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KL1NkfNmEeqRfth943bvEA")]
 [DisplayName("Cancel Instruction")]
-public record CancelInstruction2
+public partial record CancelInstruction2
 {
     /// <summary>
     /// Identification of the individual instruction previously sent.

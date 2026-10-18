@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_DUEMcIlzEeavwKddCbm3hg")]
     [DisplayName("Issuer Offeror Taxability Indicator 1 Choice")]
-    public abstract record IssuerOfferorTaxabilityIndicator1Choice_ { }
+    public abstract partial record IssuerOfferorTaxabilityIndicator1Choice_ { }
 }

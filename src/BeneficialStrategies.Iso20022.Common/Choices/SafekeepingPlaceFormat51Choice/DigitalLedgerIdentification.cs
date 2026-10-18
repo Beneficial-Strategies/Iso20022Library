@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat51Choice
     /// Digital Ledger Identification.
     /// </summary>
     [DisplayName("Digital Ledger Identification")]
-    public record DigitalLedgerIdentification : SafekeepingPlaceFormat51Choice_
+    public partial record DigitalLedgerIdentification : SafekeepingPlaceFormat51Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

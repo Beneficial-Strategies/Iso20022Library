@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RjH9odp-Ed-ak6NoX_4Aeg_245466411")]
 [DisplayName("Corporate Action Notification Advice")]
-public record CorporateActionNotificationAdvice1
+public partial record CorporateActionNotificationAdvice1
 {
     /// <summary>
     /// Provides detailed information about the corporate action event.

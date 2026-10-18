@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat1Choice
     /// </summary>
     [IsoId("_Q3K2kNp-Ed-ak6NoX_4Aeg_330230362")]
     [DisplayName("Code")]
-    public record Code : LotteryTypeFormat1Choice_
+    public partial record Code : LotteryTypeFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

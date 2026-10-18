@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// Pending Cancellation.
     /// </summary>
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : MarketClaimCancellationRequestStatus2Choice_
+    public partial record PendingCancellation : MarketClaimCancellationRequestStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

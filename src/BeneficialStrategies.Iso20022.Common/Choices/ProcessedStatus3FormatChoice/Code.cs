@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus3FormatChoice
     /// </summary>
     [IsoId("_RnTTBdp-Ed-ak6NoX_4Aeg_-735203961")]
     [DisplayName("Code")]
-    public record Code : ProcessedStatus3FormatChoice_
+    public partial record Code : ProcessedStatus3FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

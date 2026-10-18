@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity34Cho
     /// </summary>
     [IsoId("_cb9dgRu1EeyhRdHRjakS2w")]
     [DisplayName("Digital Token Unit")]
-    public record DigitalTokenUnit : FinancialInstrumentQuantity34Choice_
+    public partial record DigitalTokenUnit : FinancialInstrumentQuantity34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

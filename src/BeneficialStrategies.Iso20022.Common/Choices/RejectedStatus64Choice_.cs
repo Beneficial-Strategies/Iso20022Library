@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RejectedStatus64Choice.Reason))]
     [JsonDerivedType(typeof(RejectedStatus64Choice.NoSpecifiedReason))]
     [JsonDerivedType(typeof(RejectedStatus64Choice.Reason))]
-    public abstract record RejectedStatus64Choice_
+    public abstract partial record RejectedStatus64Choice_
     {
     }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QENImdp-Ed-ak6NoX_4Aeg_1939129475")]
 [DisplayName("Person Identification")]
-public record PersonIdentification6
+public partial record PersonIdentification6
 {
     /// <summary>
     /// Entity that assigns the identifier.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("a62916a1-f130-404c-8c6f-2aa78713f931")]
 [DisplayName("Agent CA Notification Advice V03")]
-public record AgentCANotificationAdviceV03 : IOuterRecord
+public partial record AgentCANotificationAdviceV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

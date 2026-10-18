@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UB00vtp-Ed-ak6NoX_4Aeg_2027853243")]
 [DisplayName("Tax Voucher")]
-public record TaxVoucher1
+public partial record TaxVoucher1
 {
     /// <summary>
     /// Distribution rate per share.

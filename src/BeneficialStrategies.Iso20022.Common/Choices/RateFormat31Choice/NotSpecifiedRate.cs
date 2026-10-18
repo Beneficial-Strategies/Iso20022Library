@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice
     /// <summary>Specifies the not specified rate.</summary>
     [IsoId("__Ha5SajtEfCG_LQaXOxwew")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : RateFormat31Choice_
+    public partial record NotSpecifiedRate : RateFormat31Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NotSpcfdRate")]

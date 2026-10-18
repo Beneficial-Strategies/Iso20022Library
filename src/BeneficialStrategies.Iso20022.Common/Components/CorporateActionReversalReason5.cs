@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ragCYTQVEe2o-K1dwNg8Gg")]
 [DisplayName("Corporate Action Reversal Reason")]
-public record CorporateActionReversalReason5
+public partial record CorporateActionReversalReason5
 {
     /// <summary>
     /// Specifies the reason for the reversal.

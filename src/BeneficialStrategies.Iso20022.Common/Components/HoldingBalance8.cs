@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__b2CMVtkEeSwKe7KuKvXhg")]
 [DisplayName("Holding Balance")]
-public record HoldingBalance8
+public partial record HoldingBalance8
 {
     /// <summary>
     /// Total quantity of financial instrument for the referenced holding.

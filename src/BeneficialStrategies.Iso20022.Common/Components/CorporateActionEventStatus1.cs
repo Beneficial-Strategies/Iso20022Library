@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UKK4Ztp-Ed-ak6NoX_4Aeg_1829134178")]
 [DisplayName("Corporate Action Event Status")]
-public record CorporateActionEventStatus1
+public partial record CorporateActionEventStatus1
 {
     /// <summary>
     /// Indicates whether the details provided about an event are complete or incomplete.

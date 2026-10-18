@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6_92AIzzEemXJvzC2Wyt1g")]
 [DisplayName("Ownership")]
-public record Ownership1
+public partial record Ownership1
 {
     /// <summary>
     /// Specifies the type of ownership.

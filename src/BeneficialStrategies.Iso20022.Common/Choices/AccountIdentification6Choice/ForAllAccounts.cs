@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification6Choice
     [IsoId("_QSgqVtp-Ed-ak6NoX_4Aeg_-1574969341")]
     [DisplayName("For All Accounts")]
     [IsoXmlTag("ForAllAccts")]
-    public record ForAllAccounts : AccountIdentification6Choice_
+    public partial record ForAllAccounts : AccountIdentification6Choice_
     {
         /// <summary>
         /// Standard code to specify that announcement applies to all safekeeping accounts that own underlying financial instrument.

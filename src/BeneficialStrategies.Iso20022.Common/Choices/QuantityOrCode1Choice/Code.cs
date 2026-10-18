@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrCode1Choice
     /// </summary>
     [IsoId("_Q7368K-WEemJ1NnLPsTFaw")]
     [DisplayName("Code")]
-    public record Code : QuantityOrCode1Choice_
+    public partial record Code : QuantityOrCode1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

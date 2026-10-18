@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmQKJ9p-Ed-ak6NoX_4Aeg_-1912631141")]
     [DisplayName("Corporate Action Frequency Type 1 Format Choice")]
-    public abstract record CorporateActionFrequencyType1FormatChoice_ { }
+    public abstract partial record CorporateActionFrequencyType1FormatChoice_ { }
 }

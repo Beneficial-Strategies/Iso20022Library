@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w_HKh1x7Ee6fgZt44_IqFA")]
 [DisplayName("Account Sub Level25")]
-public record AccountSubLevel25
+public partial record AccountSubLevel25
 {
     /// <summary>
     /// Safekeeping Account.

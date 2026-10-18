@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     [IsoId("_YGaIhtx4EeqESbVR5AloZQ")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public record ProprietaryStatus : MarketClaimProcessingStatus1Choice_
+    public partial record ProprietaryStatus : MarketClaimProcessingStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndi
     [IsoId("_KWEpaUEKEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TemporaryFinancialInstrumentIndicator3Choice_
+    public partial record Proprietary : TemporaryFinancialInstrumentIndicator3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

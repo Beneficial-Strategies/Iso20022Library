@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c5SQE5KQEeWHWpTQn1FFVg")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate78
+public partial record CorporateActionRate78
 {
     /// <summary>
     /// Annual rate of a financial instrument.

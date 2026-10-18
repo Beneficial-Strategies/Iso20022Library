@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason82Choice
     /// <summary>Pending reason in a proprietary form.</summary>
     [IsoId("_jGVR2bMZEfCEXew4g5B5oA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PendingReason82Choice_
+    public partial record Proprietary : PendingReason82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

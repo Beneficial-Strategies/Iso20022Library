@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightThreshold2Choice
     /// Additional Right Threshold.
     /// </summary>
     [DisplayName("Additional Right Threshold")]
-    public record AdditionalRightThreshold : AdditionalRightThreshold2Choice_
+    public partial record AdditionalRightThreshold : AdditionalRightThreshold2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

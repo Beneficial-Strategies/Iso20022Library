@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat65Choice
     /// </summary>
     [IsoId("_MVDy0xuyEeyhRdHRjakS2w")]
     [DisplayName("Not Specified Price")]
-    public record NotSpecifiedPrice : PriceFormat65Choice_
+    public partial record NotSpecifiedPrice : PriceFormat65Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

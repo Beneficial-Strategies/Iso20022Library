@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
     /// </summary>
     [IsoId("_fCkac_M7EeqRfth943bvEA")]
     [DisplayName("Proxy Not Allowed")]
-    public record ProxyNotAllowed : Proxy4Choice_
+    public partial record ProxyNotAllowed : Proxy4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

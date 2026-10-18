@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// <summary>Instruction cancellation request is pending cancellation.</summary>
     [IsoId("_Jg5gOa8xEfCx2aBifPEdRg")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : MarketClaimCancellationRequestStatus3Choice_
+    public partial record PendingCancellation : MarketClaimCancellationRequestStatus3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxl")]

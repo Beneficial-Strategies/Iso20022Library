@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EJ4DMYV6Ee-oeNhl-Tk6YQ")]
 [DisplayName("Price Details39")]
-public record PriceDetails39
+public partial record PriceDetails39
 {
     /// <summary>
     /// Generic Cash Price Paid Per Product.

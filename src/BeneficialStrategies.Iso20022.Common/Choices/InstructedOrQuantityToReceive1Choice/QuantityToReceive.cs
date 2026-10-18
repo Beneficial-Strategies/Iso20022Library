@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructedOrQuantityToReceive1Ch
     /// </summary>
     [IsoId("_UHL10Np-Ed-ak6NoX_4Aeg_-1856405188")]
     [DisplayName("Quantity To Receive")]
-    public record QuantityToReceive : InstructedOrQuantityToReceive1Choice_
+    public partial record QuantityToReceive : InstructedOrQuantityToReceive1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("QtyToRcv")]

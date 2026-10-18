@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yhcMIa7BEemG7MmivSuE5g")]
 [DisplayName("Specific Instruction Request")]
-public record SpecificInstructionRequest2
+public partial record SpecificInstructionRequest2
 {
     /// <summary>
     /// Method of voting participation to the general meeting.

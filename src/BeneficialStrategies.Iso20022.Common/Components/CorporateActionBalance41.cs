@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wAajAeaqEemtTOaHuc_63w")]
 [DisplayName("Corporate Action Balance")]
-public record CorporateActionBalance41
+public partial record CorporateActionBalance41
 {
     /// <summary>
     /// Total quantity of financial instruments of the balance.

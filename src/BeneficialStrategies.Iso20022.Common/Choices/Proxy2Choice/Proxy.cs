@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy2Choice
     [IsoId("_7fsSgVtgEeSwKe7KuKvXhg")]
     [DisplayName("Proxy")]
     [IsoXmlTag("Prxy")]
-    public record Proxy : Proxy2Choice_
+    public partial record Proxy : Proxy2Choice_
     {
         /// <summary>
         /// Specifies how to register the proxy.

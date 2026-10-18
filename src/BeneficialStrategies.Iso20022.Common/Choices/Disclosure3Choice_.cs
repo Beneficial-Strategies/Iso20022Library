@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wl7OcVx7Ee6fgZt44_IqFA")]
     [DisplayName("Disclosure3Choice")]
-    public abstract record Disclosure3Choice_ { }
+    public abstract partial record Disclosure3Choice_ { }
 }

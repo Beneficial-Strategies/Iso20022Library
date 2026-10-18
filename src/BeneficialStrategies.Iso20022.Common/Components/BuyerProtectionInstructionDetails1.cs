@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wvC70N_GEe-Ned3-G07x_A")]
 [DisplayName("Buyer Protection Instruction Details1")]
-public record BuyerProtectionInstructionDetails1
+public partial record BuyerProtectionInstructionDetails1
 {
     /// <summary>
     /// Identification of the related buyer protection instruction document for which the cancellation is requested.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RCWL0dp-Ed-ak6NoX_4Aeg_1417276542")]
     [DisplayName("Meeting Cancellation Reason 1 Choice")]
-    public abstract record MeetingCancellationReason1Choice_ { }
+    public abstract partial record MeetingCancellationReason1Choice_ { }
 }

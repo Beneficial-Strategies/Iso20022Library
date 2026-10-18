@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UMQjFNp-Ed-ak6NoX_4Aeg_1627158994")]
 [DisplayName("Corporate Action Narrative")]
-public record CorporateActionNarrative1
+public partial record CorporateActionNarrative1
 {
     /// <summary>
     /// Provides conditional information related to the event, eg, an offer is subject to 50% acceptance, the offeror allows the securities holder to set some conditions.

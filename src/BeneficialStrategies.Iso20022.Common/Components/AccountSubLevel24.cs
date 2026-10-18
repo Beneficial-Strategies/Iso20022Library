@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w26Q01x7Ee6fgZt44_IqFA")]
 [DisplayName("Account Sub Level24")]
-public record AccountSubLevel24
+public partial record AccountSubLevel24
 {
     /// <summary>
     /// Non Disclosed Shareholding Quantity.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YxFiR4Y_Ee-5eN4DwJpixA")]
 [DisplayName("Instruction Processing Status6")]
-public record InstructionProcessingStatus6
+public partial record InstructionProcessingStatus6
 {
     /// <summary>
     /// Status.

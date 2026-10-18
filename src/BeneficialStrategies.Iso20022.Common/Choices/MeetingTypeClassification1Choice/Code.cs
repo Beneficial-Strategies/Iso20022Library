@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingTypeClassification1Choice
     /// </summary>
     [IsoId("_RDrokdp-Ed-ak6NoX_4Aeg_865867729")]
     [DisplayName("Code")]
-    public record Code : MeetingTypeClassification1Choice_
+    public partial record Code : MeetingTypeClassification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

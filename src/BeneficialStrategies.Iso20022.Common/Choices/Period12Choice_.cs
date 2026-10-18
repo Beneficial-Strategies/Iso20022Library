@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Period12Choice.PeriodCode))]
     [JsonDerivedType(typeof(Period12Choice.Period))]
     [JsonDerivedType(typeof(Period12Choice.PeriodCode))]
-    public abstract record Period12Choice_
+    public abstract partial record Period12Choice_
     {
     }
 }

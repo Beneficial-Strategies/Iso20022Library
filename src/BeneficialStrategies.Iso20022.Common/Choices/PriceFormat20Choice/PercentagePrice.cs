@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat20Choice
     [IsoId("_sKEj8eEJEd-udr336SN7mQ")]
     [DisplayName("Percentage Price")]
     [IsoXmlTag("PctgPric")]
-    public record PercentagePrice : PriceFormat20Choice_
+    public partial record PercentagePrice : PriceFormat20Choice_
     {
         /// <summary>
         /// Specifies the type of percentage price.

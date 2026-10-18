@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__ZsXMFuSEeSmO6RkXg92Lg")]
 [DisplayName("Date Format")]
-public record DateFormat1
+public partial record DateFormat1
 {
     /// <summary>
     /// Date at which the event occurs.

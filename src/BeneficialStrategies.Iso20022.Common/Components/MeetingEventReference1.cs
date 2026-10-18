@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M8fK-a7rEemG7MmivSuE5g")]
 [DisplayName("Meeting Event Reference")]
-public record MeetingEventReference1
+public partial record MeetingEventReference1
 {
     /// <summary>
     /// Identification of the linked meeting event.

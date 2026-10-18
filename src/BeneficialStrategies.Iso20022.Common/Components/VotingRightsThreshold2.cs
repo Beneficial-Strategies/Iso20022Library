@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S_DsAZK5Ee-l-O3vIHRmRw")]
 [DisplayName("Voting Rights Threshold2")]
-public record VotingRightsThreshold2
+public partial record VotingRightsThreshold2
 {
     /// <summary>
     /// Threshold.

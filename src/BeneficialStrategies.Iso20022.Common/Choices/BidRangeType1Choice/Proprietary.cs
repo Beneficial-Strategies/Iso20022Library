@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType1Choice
     [IsoId("_dYWZ8O3NEeqc-LCjwLsUVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BidRangeType1Choice_
+    public partial record Proprietary : BidRangeType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

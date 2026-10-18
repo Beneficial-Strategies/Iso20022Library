@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CorporateActionOption47Choice.Proprietary), nameof(CorporateActionOption47Choice.Proprietary))]
     [IsoId("_RWX8oQ7VEfC-6PbsYHIdig")]
     [DisplayName("Corporate Action Option 47 Choice")]
-    public abstract record CorporateActionOption47Choice_ { }
+    public abstract partial record CorporateActionOption47Choice_ { }
 }

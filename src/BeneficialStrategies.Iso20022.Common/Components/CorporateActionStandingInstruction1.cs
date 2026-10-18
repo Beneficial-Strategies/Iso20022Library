@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJbRidp-Ed-ak6NoX_4Aeg_852863952")]
 [DisplayName("Corporate Action Standing Instruction")]
-public record CorporateActionStandingInstruction1
+public partial record CorporateActionStandingInstruction1
 {
     /// <summary>
     /// Identifies whether the account Holders want their income to be paid net or gross of income tax (default is gross).

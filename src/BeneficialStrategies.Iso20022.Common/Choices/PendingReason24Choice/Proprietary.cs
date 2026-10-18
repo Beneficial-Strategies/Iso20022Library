@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason24Choice
     [IsoId("_VQDG6VhbEeSewsfsZR0hxA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PendingReason24Choice_
+    public partial record Proprietary : PendingReason24Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

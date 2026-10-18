@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TmHJH9p-Ed-ak6NoX_4Aeg_-30513816")]
 [DisplayName("Entitlement Assessment")]
-public record EntitlementAssessment1
+public partial record EntitlementAssessment1
 {
     /// <summary>
     /// Date by which the securities should be blocked. This deadline is set by an intermediary.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JWF6waKuEfCHi7w3_0pcpw")]
 [DisplayName("Pending Status3")]
-public record PendingStatus3
+public partial record PendingStatus3
 {
     /// <summary>
     /// Quantity of instructed securities for which processing is pending.

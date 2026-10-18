@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5VTNZKQEeWHWpTQn1FFVg")]
     [DisplayName("Identification Format 4 Choice")]
-    public abstract record IdentificationFormat4Choice_ { }
+    public abstract partial record IdentificationFormat4Choice_ { }
 }

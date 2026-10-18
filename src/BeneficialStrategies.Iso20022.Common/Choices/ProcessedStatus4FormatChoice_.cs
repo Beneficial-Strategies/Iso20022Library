@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RnTTB9p-Ed-ak6NoX_4Aeg_-1763256245")]
     [DisplayName("Processed Status 4 Format Choice")]
-    public abstract record ProcessedStatus4FormatChoice_ { }
+    public abstract partial record ProcessedStatus4FormatChoice_ { }
 }

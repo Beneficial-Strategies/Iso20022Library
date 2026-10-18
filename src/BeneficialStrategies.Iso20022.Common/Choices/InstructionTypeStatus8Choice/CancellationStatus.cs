@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus8Choice
     /// <summary>Status applying to the instruction cancellation request received.</summary>
     [IsoId("_D2yUw6jVEfCzuLlmLrhIvA")]
     [DisplayName("Cancellation Status")]
-    public record CancellationStatus : InstructionTypeStatus8Choice_
+    public partial record CancellationStatus : InstructionTypeStatus8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CxlSts")]

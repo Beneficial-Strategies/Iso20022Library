@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TZcmFtp-Ed-ak6NoX_4Aeg_-910030421")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice3
+public partial record CorporateActionPrice3
 {
     /// <summary>
     /// Maximum or cap price at which a holder can bid, for example, on a Dutch auction offer.

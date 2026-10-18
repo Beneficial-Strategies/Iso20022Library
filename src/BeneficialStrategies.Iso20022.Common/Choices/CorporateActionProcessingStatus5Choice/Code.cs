@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus5
     [IsoId("_JoF7gTnXEeWLJsP1cO-amg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public record Code : CorporateActionProcessingStatus5Choice_
+    public partial record Code : CorporateActionProcessingStatus5Choice_
     {
         /// <summary>
         /// Indicates whether the details provided about an event are complete or incomplete.

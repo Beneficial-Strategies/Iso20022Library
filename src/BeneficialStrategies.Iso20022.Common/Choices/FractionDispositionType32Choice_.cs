@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5Lh-5KQEeWHWpTQn1FFVg")]
     [DisplayName("Fraction Disposition Type 32 Choice")]
-    public abstract record FractionDispositionType32Choice_ { }
+    public abstract partial record FractionDispositionType32Choice_ { }
 }

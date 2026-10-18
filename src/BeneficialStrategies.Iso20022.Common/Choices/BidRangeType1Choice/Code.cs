@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType1Choice
     /// </summary>
     [IsoId("_ZWOBQO3NEeqc-LCjwLsUVg")]
     [DisplayName("Code")]
-    public record Code : BidRangeType1Choice_
+    public partial record Code : BidRangeType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

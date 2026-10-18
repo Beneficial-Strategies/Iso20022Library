@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_DHUNIUGNEeWqy4niLuXETA")]
     [DisplayName("Ratio Format 20 Choice")]
-    public abstract record RatioFormat20Choice_ { }
+    public abstract partial record RatioFormat20Choice_ { }
 }

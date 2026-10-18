@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat18Choice
     /// </summary>
     [IsoId("_QhuyJeENEd-qUMZtd_eZuQ")]
     [DisplayName("Not Specified Date")]
-    public record NotSpecifiedDate : DateFormat18Choice_
+    public partial record NotSpecifiedDate : DateFormat18Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableStatus1FormatChoice
     /// </summary>
     [IsoId("_Roygwdp-Ed-ak6NoX_4Aeg_-576437300")]
     [DisplayName("Code")]
-    public record Code : RenounceableStatus1FormatChoice_
+    public partial record Code : RenounceableStatus1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

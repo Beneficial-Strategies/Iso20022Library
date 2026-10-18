@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r9uog473EfCbNJ3GwkFTcw")]
 [DisplayName("Returned Status1")]
-public record ReturnedStatus1
+public partial record ReturnedStatus1
 {
     /// <summary>
     /// Quantity of securities that have been returned.

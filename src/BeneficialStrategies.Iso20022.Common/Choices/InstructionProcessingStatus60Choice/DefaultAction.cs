@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
     /// <summary>Default action is taken.</summary>
     [IsoId("_rt3LNY74EfCbNJ3GwkFTcw")]
     [DisplayName("Default Action")]
-    public record DefaultAction : InstructionProcessingStatus60Choice_
+    public partial record DefaultAction : InstructionProcessingStatus60Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DfltActn")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAmendmentStatus1Choice
     [IsoId("_RiiHx9p-Ed-ak6NoX_4Aeg_-1936329849")]
     [DisplayName("Rejected Status")]
     [IsoXmlTag("RjctdSts")]
-    public record RejectedStatus : ElectionAmendmentStatus1Choice_
+    public partial record RejectedStatus : ElectionAmendmentStatus1Choice_
     {
         /// <summary>
         /// The rejection reason.

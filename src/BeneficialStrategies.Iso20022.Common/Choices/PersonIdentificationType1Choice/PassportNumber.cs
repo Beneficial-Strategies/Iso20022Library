@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
     /// </summary>
     [IsoId("_QEW5ktp-Ed-ak6NoX_4Aeg_-1180196056")]
     [DisplayName("Passport Number")]
-    public record PassportNumber : PersonIdentificationType1Choice_
+    public partial record PassportNumber : PersonIdentificationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

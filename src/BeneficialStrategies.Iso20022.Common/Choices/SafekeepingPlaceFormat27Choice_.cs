@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k1xAAaWXEeahOrvW2rewGg")]
     [DisplayName("Safekeeping Place Format 27 Choice")]
-    public abstract record SafekeepingPlaceFormat27Choice_ { }
+    public abstract partial record SafekeepingPlaceFormat27Choice_ { }
 }

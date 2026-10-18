@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UakE19p-Ed-ak6NoX_4Aeg_-1550563657")]
 [DisplayName("No Specified Reason")]
-public record NoSpecifiedReason1
+public partial record NoSpecifiedReason1
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

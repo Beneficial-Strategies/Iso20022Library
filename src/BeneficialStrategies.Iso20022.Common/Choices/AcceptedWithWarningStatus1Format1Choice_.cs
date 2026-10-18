@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AcceptedWithWarningStatus1Format1Choice.Proprietary), nameof(AcceptedWithWarningStatus1Format1Choice.Proprietary))]
     [IsoId("__uhZAaUdEfCnE_wCEfCqTA")]
     [DisplayName("AcceptedWithWarningStatus1Format1Choice")]
-    public abstract record AcceptedWithWarningStatus1Format1Choice_ { }
+    public abstract partial record AcceptedWithWarningStatus1Format1Choice_ { }
 }

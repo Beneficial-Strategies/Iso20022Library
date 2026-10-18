@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QSgqU9p-Ed-ak6NoX_4Aeg_-565848131")]
 [DisplayName("Account Identification")]
-public record AccountIdentification10
+public partial record AccountIdentification10
 {
     /// <summary>
     /// Standard code to specify that announcement applies to all safekeeping accounts that own underlying financial instrument.

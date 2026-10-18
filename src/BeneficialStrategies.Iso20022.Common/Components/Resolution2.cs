@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ti1Lodp-Ed-ak6NoX_4Aeg_-799797210")]
 [DisplayName("Resolution")]
-public record Resolution2
+public partial record Resolution2
 {
     /// <summary>
     /// Numbering of the resolution as specified by the issuer or its agent.

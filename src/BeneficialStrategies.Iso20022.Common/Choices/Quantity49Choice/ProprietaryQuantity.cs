@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity49Choice
     [IsoId("_K-7tUxuyEeyhRdHRjakS2w")]
     [DisplayName("Proprietary Quantity")]
     [IsoXmlTag("PrtryQty")]
-    public record ProprietaryQuantity : Quantity49Choice_
+    public partial record ProprietaryQuantity : Quantity49Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus14Choice
     /// <summary>Status advising on the processing of the instruction.</summary>
     [IsoId("_EFISwajVEfCzuLlmLrhIvA")]
     [DisplayName("Processing Status")]
-    public record ProcessingStatus : InstructionStatus14Choice_
+    public partial record ProcessingStatus : InstructionStatus14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrcgSts")]

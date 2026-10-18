@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType46Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : IdentificationType46Choice_
+    public partial record Proprietary : IdentificationType46Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

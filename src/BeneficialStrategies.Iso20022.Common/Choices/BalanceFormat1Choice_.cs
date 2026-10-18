@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q0of-tp-Ed-ak6NoX_4Aeg_86295556")]
     [DisplayName("Balance Format 1 Choice")]
-    public abstract record BalanceFormat1Choice_ { }
+    public abstract partial record BalanceFormat1Choice_ { }
 }

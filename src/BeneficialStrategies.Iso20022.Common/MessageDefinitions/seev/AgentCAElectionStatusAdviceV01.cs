@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TNct0NEwEd-BzquC8wXy7w_1059605864")]
 [DisplayName("Agent CA Election Status Advice V")]
-public record AgentCAElectionStatusAdviceV01 : IOuterRecord
+public partial record AgentCAElectionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

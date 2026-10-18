@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TL9gGdEwEd-BzquC8wXy7w_1830397138")]
 [DisplayName("Agent CA Deactivation Cancellation Request V")]
-public record AgentCADeactivationCancellationRequestV01 : IOuterRecord
+public partial record AgentCADeactivationCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

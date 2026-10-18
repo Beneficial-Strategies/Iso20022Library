@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8GmhP_fREeiNZp_PtLohLw")]
 [DisplayName("Cash Parties")]
-public record CashParties37
+public partial record CashParties37
 {
     /// <summary>
     /// Party to which an amount of money is due.

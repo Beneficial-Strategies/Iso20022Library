@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationTypeFormat4Choice
     [IsoId("_gr8cA0EGEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InformationTypeFormat4Choice_
+    public partial record Proprietary : InformationTypeFormat4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

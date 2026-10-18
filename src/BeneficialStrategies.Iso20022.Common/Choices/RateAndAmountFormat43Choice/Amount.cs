@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat43Choice
     [IsoId("_cheznZKQEeWHWpTQn1FFVg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : RateAndAmountFormat43Choice_
+    public partial record Amount : RateAndAmountFormat43Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

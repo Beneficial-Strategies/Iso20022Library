@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1PTjXSeBEeOXAt_43VmZGw")]
 [DisplayName("Price Details")]
-public record PriceDetails15
+public partial record PriceDetails15
 {
     /// <summary>
     /// Generic cash price paid per product by the underlying security holder either as a percentage or an amount or a number of points above an index, for example, reinvestment price, strike price and exercise price.

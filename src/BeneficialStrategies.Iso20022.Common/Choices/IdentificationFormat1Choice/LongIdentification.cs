@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat1Choice
     /// </summary>
     [IsoId("_Q4EOctp-Ed-ak6NoX_4Aeg_1003151038")]
     [DisplayName("Long Identification")]
-    public record LongIdentification : IdentificationFormat1Choice_
+    public partial record LongIdentification : IdentificationFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.
