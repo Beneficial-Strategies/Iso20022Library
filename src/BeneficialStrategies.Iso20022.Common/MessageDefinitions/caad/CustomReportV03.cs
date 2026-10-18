@@ -46,39 +46,11 @@ public record CustomReportV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Correction.
-    /// </summary>
-    [DisplayName("Correction")]
-    [IsoXmlTag("Crrctn")]
-    public CorrectionIdentification1? Correction { get; init; }
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Originator.
@@ -88,18 +60,11 @@ public record CustomReportV03 : IOuterRecord
     public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
-    /// Private Data.
+    /// Sender.
     /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ValueList<ProgrammeMode6> Programme { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
@@ -109,11 +74,46 @@ public record CustomReportV03 : IOuterRecord
     public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ValueList<ProgrammeMode6> Programme { get; init; } = [];
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
     /// Reconciliation.
     /// </summary>
     [DisplayName("Reconciliation")]
     [IsoXmlTag("Rcncltn")]
     public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Correction.
+    /// </summary>
+    [DisplayName("Correction")]
+    [IsoXmlTag("Crrctn")]
+    public CorrectionIdentification1? Correction { get; init; }
 
     /// <summary>
     /// Report.
@@ -126,8 +126,22 @@ public record CustomReportV03 : IOuterRecord
     /// Report Content.
     /// </summary>
     [DisplayName("Report Content")]
-    [IsoXmlTag("RptCntnt")]
+    [IsoXmlTag("RptCntt")]
     public ValueList<ReportContent3> ReportContent { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Security Trailer.
@@ -135,18 +149,4 @@ public record CustomReportV03 : IOuterRecord
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
 }

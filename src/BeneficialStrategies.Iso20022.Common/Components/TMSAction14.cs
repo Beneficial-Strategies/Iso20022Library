@@ -29,7 +29,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-rmt")]
     [DisplayName("Remote Access")]
-    [IsoXmlTag("RmtAcs")]
+    [IsoXmlTag("RmotAccs")]
     public NetworkParameters7? RemoteAccess { get; init; }
 
     /// <summary>
@@ -45,7 +45,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tmid")]
     [DisplayName("Terminal Manager Identification")]
-    [IsoXmlTag("TrmnlMgrId")]
+    [IsoXmlTag("TermnlMgrId")]
     public GenericIdentification176? TerminalManagerIdentification { get; init; }
 
     /// <summary>
@@ -53,7 +53,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tpro")]
     [DisplayName("TMS Protocol")]
-    [IsoXmlTag("TMSPrtcl")]
+    [IsoXmlTag("TMSPrtcol")]
     public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
@@ -61,7 +61,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tpvr")]
     [DisplayName("TMS Protocol Version")]
-    [IsoXmlTag("TMSPrtclVrsn")]
+    [IsoXmlTag("TMSPrtcolVrsn")]
     public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
@@ -77,7 +77,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-cmpt")]
     [DisplayName("Component Type")]
-    [IsoXmlTag("CmptTp")]
+    [IsoXmlTag("CmpntTp")]
     public SimpleValueList<DataSetCategory20Code> ComponentType { get; init; } = [];
 
     /// <summary>
@@ -85,7 +85,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsc")]
     [DisplayName("Delegation Scope Identification")]
-    [IsoXmlTag("DlgtnScopeId")]
+    [IsoXmlTag("DlgtnScpId")]
     public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
@@ -93,7 +93,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsd")]
     [DisplayName("Delegation Scope Definition")]
-    [IsoXmlTag("DlgtnScopeDfntn")]
+    [IsoXmlTag("DlgtnScpDef")]
     public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
@@ -101,7 +101,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsp")]
     [DisplayName("Delegation Proof")]
-    [IsoXmlTag("DlgtnPrf")]
+    [IsoXmlTag("DlgtnProof")]
     public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
@@ -109,7 +109,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-prdp")]
     [DisplayName("Protected Delegation Proof")]
-    [IsoXmlTag("PrtctdDlgtnPrf")]
+    [IsoXmlTag("PrtctdDlgtnProof")]
     public ContentInformationType39? ProtectedDelegationProof { get; init; }
 
     /// <summary>
@@ -117,7 +117,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-trgr")]
     [DisplayName("Trigger")]
-    [IsoXmlTag("Trgr")]
+    [IsoXmlTag("Trggr")]
     public required TerminalManagementActionTrigger1Code Trigger { get; init; }
 
     /// <summary>
@@ -125,7 +125,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-adpr")]
     [DisplayName("Additional Process")]
-    [IsoXmlTag("AddtlPrcs")]
+    [IsoXmlTag("AddtlPrc")]
     public SimpleValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } = [];
 
     /// <summary>
@@ -157,7 +157,7 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-kecr")]
     [DisplayName("Key Encipherment Certificate")]
-    [IsoXmlTag("KeyNcrptnCert")]
+    [IsoXmlTag("KeyNcphrmntCert")]
     public SimpleValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
@@ -189,6 +189,6 @@ public record TMSAction14
     /// </summary>
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dvrq")]
     [DisplayName("Device Request")]
-    [IsoXmlTag("DvcRq")]
+    [IsoXmlTag("DvcReq")]
     public DeviceRequest9? DeviceRequest { get; init; }
 }

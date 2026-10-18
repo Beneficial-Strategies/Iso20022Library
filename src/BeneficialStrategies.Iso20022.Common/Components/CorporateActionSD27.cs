@@ -45,7 +45,7 @@ public record CorporateActionSD27
     /// </summary>
     [IsoId("_r_kLAaOEEfCHhuKwuscqyg")]
     [DisplayName("Number Of Shares To Be Issued")]
-    [IsoXmlTag("NbOfShrsToBIssd")]
+    [IsoXmlTag("NbOfShrsToBeIssd")]
     public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
 
     /// <summary>
@@ -53,7 +53,7 @@ public record CorporateActionSD27
     /// </summary>
     [IsoId("_r_kLBaOEEfCHhuKwuscqyg")]
     [DisplayName("Total Number Of Shares Offered")]
-    [IsoXmlTag("TtlNbOfShrsOffrd")]
+    [IsoXmlTag("TtlNbOfShrsOfferd")]
     public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
 
     /// <summary>
@@ -69,7 +69,7 @@ public record CorporateActionSD27
     /// </summary>
     [IsoId("_r_kLDaOEEfCHhuKwuscqyg")]
     [DisplayName("DTC Automated Offer Program")]
-    [IsoXmlTag("DTCAutmtdOfferPrgm")]
+    [IsoXmlTag("DTCAutomtdOfferPrgm")]
     public DTCAutoOfferProgram1Code? DTCAutomatedOfferProgram { get; init; }
 
     /// <summary>
@@ -189,7 +189,7 @@ public record CorporateActionSD27
     /// </summary>
     [IsoId("_r_kLSaOEEfCHhuKwuscqyg")]
     [DisplayName("EDS Messaging Country Code")]
-    [IsoXmlTag("EDSMsgCtryCode")]
+    [IsoXmlTag("EDSMsggCtryCd")]
     public CountryCode? EDSMessagingCountryCode { get; init; }
 
     /// <summary>

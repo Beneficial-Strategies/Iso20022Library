@@ -69,7 +69,7 @@ public record CardPaymentTransactionDetails54
     /// </summary>
     [IsoId("_S1CoKbZjEfCUZfsQO4rYeA")]
     [DisplayName("Authorised Amount")]
-    [IsoXmlTag("AutorsdAmt")]
+    [IsoXmlTag("AuthrsdAmt")]
     public ImpliedCurrencyAndAmount? AuthorisedAmount { get; init; }
 
     /// <summary>

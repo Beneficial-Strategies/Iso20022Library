@@ -29,7 +29,7 @@ public record TaxCalculationInformation12
     /// </summary>
     [IsoId("61b9a6d5-pcdc-0001-0002-0ca6a9409801")]
     [DisplayName("Percentage Of Debt Claim")]
-    [IsoXmlTag("PctgOfDbtClm")]
+    [IsoXmlTag("PctgOfDebtClm")]
     public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
@@ -37,7 +37,7 @@ public record TaxCalculationInformation12
     /// </summary>
     [IsoId("61b9a6d5-pggd-0001-0003-0ca6a9409801")]
     [DisplayName("Percentage Grandfathered Debt")]
-    [IsoXmlTag("PctgGrndfthrdDbt")]
+    [IsoXmlTag("PctgGrdfthdDebt")]
     public PercentageRate? PercentageGrandfatheredDebt { get; init; }
 
     /// <summary>

@@ -29,7 +29,7 @@ public record TMSProtocolParameters8
     /// </summary>
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-tmid")]
     [DisplayName("Terminal Manager Identification")]
-    [IsoXmlTag("TrmnlMgrId")]
+    [IsoXmlTag("TermnlMgrId")]
     public required GenericIdentification176 TerminalManagerIdentification { get; init; }
 
     /// <summary>
@@ -37,7 +37,7 @@ public record TMSProtocolParameters8
     /// </summary>
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-pver")]
     [DisplayName("Protocol Version")]
-    [IsoXmlTag("PrtclVrsn")]
+    [IsoXmlTag("PrtcolVrsn")]
     public Max8Text? ProtocolVersion { get; init; }
 
     /// <summary>
@@ -118,6 +118,6 @@ public record TMSProtocolParameters8
     /// </summary>
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-exts")]
     [DisplayName("Externally Type Supported")]
-    [IsoXmlTag("ExtnllyTpSpprtd")]
+    [IsoXmlTag("XtrnlyTpSpprtd")]
     public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

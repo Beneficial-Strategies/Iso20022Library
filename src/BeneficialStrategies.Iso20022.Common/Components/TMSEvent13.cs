@@ -53,7 +53,7 @@ public record TMSEvent13
     /// </summary>
     [IsoId("_PMKpAbYEEfCUZfsQO4rYeA-tmid")]
     [DisplayName("Terminal Manager Identification")]
-    [IsoXmlTag("TrmnlMgrId")]
+    [IsoXmlTag("TermnlMgrId")]
     public Max35Text? TerminalManagerIdentification { get; init; }
 
     /// <summary>

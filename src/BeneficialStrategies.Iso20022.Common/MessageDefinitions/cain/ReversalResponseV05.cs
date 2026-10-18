@@ -46,11 +46,46 @@ public record ReversalResponseV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acceptor.
+    /// Header.
     /// </summary>
-    [DisplayName("Acceptor")]
-    [IsoXmlTag("Accptr")]
-    public AcceptorData2? Acceptor { get; init; }
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header72 Header { get; init; }
+
+    /// <summary>
+    /// Transaction Characteristics.
+    /// </summary>
+    [DisplayName("Transaction Characteristics")]
+    [IsoXmlTag("TxChrtcs")]
+    public required TransactionCharacteristics5 TransactionCharacteristics { get; init; }
+
+    /// <summary>
+    /// Originator.
+    /// </summary>
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public OriginatorData2? Originator { get; init; }
+
+    /// <summary>
+    /// Acquirer.
+    /// </summary>
+    [DisplayName("Acquirer")]
+    [IsoXmlTag("Acqrr")]
+    public required AcquirerData1 Acquirer { get; init; }
+
+    /// <summary>
+    /// Sender.
+    /// </summary>
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public SenderData1? Sender { get; init; }
+
+    /// <summary>
+    /// Card.
+    /// </summary>
+    [DisplayName("Card")]
+    [IsoXmlTag("Card")]
+    public CardData17? Card { get; init; }
 
     /// <summary>
     /// Account From.
@@ -67,67 +102,11 @@ public record ReversalResponseV05 : IOuterRecord
     public AccountDetails4? AccountTo { get; init; }
 
     /// <summary>
-    /// Acquirer.
+    /// Issuer.
     /// </summary>
-    [DisplayName("Acquirer")]
-    [IsoXmlTag("Acqrr")]
-    public required AcquirerData1 Acquirer { get; init; }
-
-    /// <summary>
-    /// Additional Amount.
-    /// </summary>
-    [DisplayName("Additional Amount")]
-    [IsoXmlTag("AddtlAmt")]
-    public ValueList<AdditionalAmounts5> AdditionalAmount { get; init; } = [];
-
-    /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Additional Service.
-    /// </summary>
-    [DisplayName("Additional Service")]
-    [IsoXmlTag("AddtlSvc")]
-    public ValueList<AdditionalService3> AdditionalService { get; init; } = [];
-
-    /// <summary>
-    /// Authentication Data.
-    /// </summary>
-    [DisplayName("Authentication Data")]
-    [IsoXmlTag("AuthntcnData")]
-    public CardAuthenticationData1? AuthenticationData { get; init; }
-
-    /// <summary>
-    /// Card.
-    /// </summary>
-    [DisplayName("Card")]
-    [IsoXmlTag("Card")]
-    public CardData17? Card { get; init; }
-
-    /// <summary>
-    /// Cardholder.
-    /// </summary>
-    [DisplayName("Cardholder")]
-    [IsoXmlTag("Crdhldr")]
-    public ValueList<Cardholder23> Cardholder { get; init; } = [];
-
-    /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public Context29? Context { get; init; }
-
-    /// <summary>
-    /// Conversion Date Time.
-    /// </summary>
-    [DisplayName("Conversion Date Time")]
-    [IsoXmlTag("ConvsDtTm")]
-    public DateTime2? ConversionDateTime { get; init; }
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public IssuerData1? Issuer { get; init; }
 
     /// <summary>
     /// Destination.
@@ -137,179 +116,11 @@ public record ReversalResponseV05 : IOuterRecord
     public DestinationData1? Destination { get; init; }
 
     /// <summary>
-    /// Funds Services.
-    /// </summary>
-    [DisplayName("Funds Services")]
-    [IsoXmlTag("FndsSvcs")]
-    public FundingService4? FundsServices { get; init; }
-
-    /// <summary>
-    /// Header.
-    /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10KHexBinaryText? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Instalment.
-    /// </summary>
-    [DisplayName("Instalment")]
-    [IsoXmlTag("Instlmt")]
-    public Instalment8? Instalment { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public IssuerData1? Issuer { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
-
-    /// <summary>
-    /// Original Data Elements.
-    /// </summary>
-    [DisplayName("Original Data Elements")]
-    [IsoXmlTag("OrgnlDataElmts")]
-    public OriginalDataElements6? OriginalDataElements { get; init; }
-
-    /// <summary>
-    /// Originator.
-    /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public OriginatorData2? Originator { get; init; }
-
-    /// <summary>
-    /// Payee.
-    /// </summary>
-    [DisplayName("Payee")]
-    [IsoXmlTag("Pyee")]
-    public PayeeData1? Payee { get; init; }
-
-    /// <summary>
-    /// Payer.
-    /// </summary>
-    [DisplayName("Payer")]
-    [IsoXmlTag("Pyer")]
-    public PayerData1? Payer { get; init; }
-
-    /// <summary>
-    /// Private Data.
-    /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
-
-    /// <summary>
-    /// Processing Result.
-    /// </summary>
-    [DisplayName("Processing Result")]
-    [IsoXmlTag("PrcgRslt")]
-    public ProcessingResult29? ProcessingResult { get; init; }
-
-    /// <summary>
     /// Programme.
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
     public ValueList<ProgrammeMode6> Programme { get; init; } = [];
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
-
-    /// <summary>
-    /// Recurring Payment.
-    /// </summary>
-    [DisplayName("Recurring Payment")]
-    [IsoXmlTag("RcrrgPmt")]
-    public RecurringPaymentData1? RecurringPayment { get; init; }
-
-    /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public SenderData1? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
-
-    /// <summary>
-    /// Special Programme Qualification.
-    /// </summary>
-    [DisplayName("Special Programme Qualification")]
-    [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public ValueList<ATICALaxProcessing> SpecialProgrammeQualification { get; init; } = [];
-
-    /// <summary>
-    /// Tax.
-    /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public ValueList<Tax44> Tax { get; init; } = [];
-
-    /// <summary>
-    /// Terminal.
-    /// </summary>
-    [DisplayName("Terminal")]
-    [IsoXmlTag("Termnl")]
-    public Terminal12? Terminal { get; init; }
-
-    /// <summary>
-    /// Token.
-    /// </summary>
-    [DisplayName("Token")]
-    [IsoXmlTag("Tkn")]
-    public Token5? Token { get; init; }
-
-    /// <summary>
-    /// Transaction Amounts.
-    /// </summary>
-    [DisplayName("Transaction Amounts")]
-    [IsoXmlTag("TxAmts")]
-    public required TransactionAmounts5 TransactionAmounts { get; init; }
-
-    /// <summary>
-    /// Transaction Characteristics.
-    /// </summary>
-    [DisplayName("Transaction Characteristics")]
-    [IsoXmlTag("TxChrtcs")]
-    public required TransactionCharacteristics5 TransactionCharacteristics { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -319,6 +130,48 @@ public record ReversalResponseV05 : IOuterRecord
     public required TransactionIdentification58 TransactionIdentification { get; init; }
 
     /// <summary>
+    /// Conversion Date Time.
+    /// </summary>
+    [DisplayName("Conversion Date Time")]
+    [IsoXmlTag("ConvsDtTm")]
+    public DateTime2? ConversionDateTime { get; init; }
+
+    /// <summary>
+    /// Transaction Amounts.
+    /// </summary>
+    [DisplayName("Transaction Amounts")]
+    [IsoXmlTag("TxAmts")]
+    public required TransactionAmounts5 TransactionAmounts { get; init; }
+
+    /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public ValueList<Tax44> Tax { get; init; } = [];
+
+    /// <summary>
+    /// Additional Amount.
+    /// </summary>
+    [DisplayName("Additional Amount")]
+    [IsoXmlTag("AddtlAmt")]
+    public ValueList<AdditionalAmounts5> AdditionalAmount { get; init; } = [];
+
+    /// <summary>
+    /// Original Data Elements.
+    /// </summary>
+    [DisplayName("Original Data Elements")]
+    [IsoXmlTag("OrgnlDataElmts")]
+    public OriginalDataElements6? OriginalDataElements { get; init; }
+
+    /// <summary>
+    /// Acceptor.
+    /// </summary>
+    [DisplayName("Acceptor")]
+    [IsoXmlTag("Accptr")]
+    public AcceptorData2? Acceptor { get; init; }
+
+    /// <summary>
     /// Transactor.
     /// </summary>
     [DisplayName("Transactor")]
@@ -326,9 +179,156 @@ public record ReversalResponseV05 : IOuterRecord
     public TransactorData1? Transactor { get; init; }
 
     /// <summary>
+    /// Terminal.
+    /// </summary>
+    [DisplayName("Terminal")]
+    [IsoXmlTag("Termnl")]
+    public Terminal12? Terminal { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public Context29? Context { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10KHexBinaryText? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Authentication Data.
+    /// </summary>
+    [DisplayName("Authentication Data")]
+    [IsoXmlTag("AuthntcnData")]
+    public CardAuthenticationData1? AuthenticationData { get; init; }
+
+    /// <summary>
+    /// Payer.
+    /// </summary>
+    [DisplayName("Payer")]
+    [IsoXmlTag("Pyer")]
+    public PayerData1? Payer { get; init; }
+
+    /// <summary>
+    /// Payee.
+    /// </summary>
+    [DisplayName("Payee")]
+    [IsoXmlTag("Pyee")]
+    public PayeeData1? Payee { get; init; }
+
+    /// <summary>
+    /// Token.
+    /// </summary>
+    [DisplayName("Token")]
+    [IsoXmlTag("Tkn")]
+    public Token5? Token { get; init; }
+
+    /// <summary>
+    /// Cardholder.
+    /// </summary>
+    [DisplayName("Cardholder")]
+    [IsoXmlTag("Crdhldr")]
+    public ValueList<Cardholder23> Cardholder { get; init; } = [];
+
+    /// <summary>
     /// Verification.
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
     public ValueList<Verification9> Verification { get; init; } = [];
+
+    /// <summary>
+    /// Special Programme Qualification.
+    /// </summary>
+    [DisplayName("Special Programme Qualification")]
+    [IsoXmlTag("SpclPrgrmmQlfctn")]
+    public ValueList<ATICALaxProcessing> SpecialProgrammeQualification { get; init; } = [];
+
+    /// <summary>
+    /// Instalment.
+    /// </summary>
+    [DisplayName("Instalment")]
+    [IsoXmlTag("Instlmt")]
+    public Instalment8? Instalment { get; init; }
+
+    /// <summary>
+    /// Recurring Payment.
+    /// </summary>
+    [DisplayName("Recurring Payment")]
+    [IsoXmlTag("RcrngPmt")]
+    public RecurringPaymentData1? RecurringPayment { get; init; }
+
+    /// <summary>
+    /// Additional Service.
+    /// </summary>
+    [DisplayName("Additional Service")]
+    [IsoXmlTag("AddtlSvc")]
+    public ValueList<AdditionalService3> AdditionalService { get; init; } = [];
+
+    /// <summary>
+    /// Funds Services.
+    /// </summary>
+    [DisplayName("Funds Services")]
+    [IsoXmlTag("FndsSvcs")]
+    public FundingService4? FundsServices { get; init; }
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Processing Result.
+    /// </summary>
+    [DisplayName("Processing Result")]
+    [IsoXmlTag("PrcgRslt")]
+    public ProcessingResult29? ProcessingResult { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

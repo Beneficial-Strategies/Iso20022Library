@@ -21,7 +21,7 @@ public record ServiceCategoryTotals7
     /// </summary>
     [IsoId("_xSxKtUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Billed Customer Identification")]
-    [IsoXmlTag("BllgCstmrId")]
+    [IsoXmlTag("BlldCstmrId")]
     public PartyIdentification136? BilledCustomerIdentification { get; init; }
 
     /// <summary>

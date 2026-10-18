@@ -37,7 +37,7 @@ public record SwitchLegReferences3
     /// </summary>
     [IsoId("26ce5ad0-rprd-0001-0003-e3e0bec8798b")]
     [DisplayName("Repaired Fee")]
-    [IsoXmlTag("RepairdFee")]
+    [IsoXmlTag("RprdFee")]
     public ValueList<Fee12> RepairedFee { get; init; } = [];
 
     /// <summary>
