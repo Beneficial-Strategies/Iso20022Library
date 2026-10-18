@@ -583,6 +583,15 @@ actual bottleneck — not before. (2026-09-02 architecture discussion.)
 
 ## Test Patterns
 
+### Validating against ISO's XSDs
+
+ISO's message schemas are not in the repository (they are ISO's). Download the message definition archives from iso20022.org,
+unzip the `*.xsd` into one folder, and set `ISO20022_XSD_DIR` to it: `IsoXsdValidationTests` then reads each sample of `TestData`,
+writes it back and validates the output with `XmlSchemaSet`. `ISO20022_XSD_SCAN=1` also runs `IsoXsdStructureTests`, which compares
+the record model of every message with the structure of its XSD (element order and names, multiplicity, choice alternatives) and
+writes `structure-report.txt` and `structure-problems.tsv` into the folder. Without the variable both are skipped. What fails today is
+in #41 (and #39 for the choices). Put derived files in `_work/<project>/xsd/`, not in the repository.
+
 ### Embedded XML Sample Files
 
 XML sample files live in `src/BeneficialStrategies.Iso20022.Common.Tests/TestData/` and are
