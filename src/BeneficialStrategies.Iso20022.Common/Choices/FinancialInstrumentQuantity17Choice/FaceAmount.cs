@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity17Cho
     /// </summary>
     [IsoId("_fUaVoAgYEeCVlvYcV4HKqQ")]
     [DisplayName("Face Amount")]
-    [IsoXmlTag("FaceAmt")]
     public record FaceAmount : FinancialInstrumentQuantity17Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_XZJV1Np-Ed-ak6NoX_4Aeg_681057429_Currency")]
-        [DisplayName("Restricted FIN Implied Currency And Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_XZJV1Np-Ed-ak6NoX_4Aeg_681057429_Amount")]
-        [DisplayName("Restricted FIN Implied Currency And Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("FaceAmt")]
+        public required RestrictedFINImpliedCurrencyAndAmount Value { get; init; }
     }
 }

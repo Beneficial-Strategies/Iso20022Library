@@ -10,8 +10,8 @@ public class PayInFactors1ValidatorTests
         new()
         {
             Currency = "USD",
-            ShortPositionLimit = new ImpliedCurrencyAndAmount { Currency = "USD", Amount = 100m },
-            MinimumPayInAmount = new ImpliedCurrencyAndAmount { Currency = "USD", Amount = 10m },
+            ShortPositionLimit = 100m,
+            MinimumPayInAmount = 10m,
             VolatilityMargin = 5m,
         };
 
