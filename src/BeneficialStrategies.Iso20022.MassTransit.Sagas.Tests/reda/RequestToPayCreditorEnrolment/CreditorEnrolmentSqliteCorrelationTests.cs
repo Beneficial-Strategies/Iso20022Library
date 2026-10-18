@@ -1,7 +1,6 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Serialization;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using static BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCreditorEnrolment.CreditorEnrolmentFixtures;
 
@@ -22,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCredi
 /// </summary>
 /// <remarks>
 /// This class backs <see cref="CreditorEnrolmentServiceProviderStateMachine"/>'s follow-up-event
-/// correlation with a REAL relational EF Core saga repository (SQLite, an in-memory database — no
+/// correlation with a REAL relational EF Core saga repository (SQLite, a throwaway database file — no
 /// external server needed, fast enough for every normal <c>dotnet test</c> run) instead of the
 /// trivial in-memory MassTransit repository <see cref="CreditorEnrolmentServiceProviderStateMachineTests"/>
 /// uses, specifically so a future change that reintroduces a helper-method-taking-<c>state</c>
@@ -40,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayCredi
 ///
 /// TEMPLATE FOR FUTURE SAGAS: any new saga family added to this package should get an equivalent
 /// test class following this same shape — a minimal EF Core <see cref="DbContext"/> mapping just
-/// the saga's own scalar/correlation columns, backed by an open in-memory <see cref="SqliteConnection"/>,
+/// the saga's own scalar/correlation columns, backed by a <see cref="SqliteTestDatabase"/> (a throwaway SQLite file, one connection per DbContext),
 /// running the same follow-up-event scenarios the in-memory tests already cover.
 /// </remarks>
 public class CreditorEnrolmentSqliteCorrelationTests
@@ -73,19 +72,18 @@ public class CreditorEnrolmentSqliteCorrelationTests
     }
 
     /// <summary>
-    /// A single open connection for the lifetime of the harness — SQLite's <c>:memory:</c>
-    /// database is destroyed the moment its owning connection closes, so this must be kept alive
-    /// (and reused, not reopened) for every DbContext instance the saga repository creates.
+    /// A database file of this test's own (see <see cref="SqliteTestDatabase"/>). Every DbContext
+    /// opens its own connection to it, so the saga repository's transactions and this test's polling
+    /// reads never share a connection (#17).
     /// </summary>
     private static async Task<(
         ServiceProvider Provider,
-        SqliteConnection Connection,
+        SqliteTestDatabase Database,
         ITestHarness Harness,
         ISagaStateMachineTestHarness<CreditorEnrolmentServiceProviderStateMachine, CreditorEnrolmentSagaState> SagaHarness
     )> StartHarnessAsync()
     {
-        var connection = new SqliteConnection("DataSource=:memory:");
-        await connection.OpenAsync();
+        var database = await SqliteTestDatabase.CreateAsync();
 
         var services = new ServiceCollection();
 
@@ -93,7 +91,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
         // (its AddDbContext<DbContext, TImplementation> call configures EF Core FOR the saga
         // repository, but doesn't expose TestDbContext as a directly resolvable service) — this
         // harness also needs to resolve it directly, to run EnsureCreatedAsync.
-        services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(connection));
+        services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(database.ConnectionString));
 
         var provider = services.AddMassTransitTestHarness(cfg =>
             {
@@ -101,7 +99,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
                     .EntityFrameworkRepository(r =>
                     {
                         r.ConcurrencyMode = ConcurrencyMode.Pessimistic;
-                        r.AddDbContext<DbContext, TestDbContext>((_, builder) => builder.UseSqlite(connection));
+                        r.AddDbContext<DbContext, TestDbContext>((_, builder) => builder.UseSqlite(database.ConnectionString));
                         r.UseSqlite();
                     });
                 cfg.AddConsumer<Consumers.CreditorEnrolmentRequestConsumer>();
@@ -139,7 +137,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
             CreditorEnrolmentSagaState
         >();
 
-        return (provider, connection, harness, sagaHarness);
+        return (provider, database, harness, sagaHarness);
     }
 
     /// <summary>
@@ -203,9 +201,9 @@ public class CreditorEnrolmentSqliteCorrelationTests
     [Fact]
     public async Task AmendmentAfterEnrolled_CorrelatesAndFoldsBackToEnrolled_ViaRealSqlTranslation()
     {
-        var (provider, connection, harness, _) = await StartHarnessAsync();
+        var (provider, database, harness, _) = await StartHarnessAsync();
         await using var _p = provider;
-        await using var __ = connection;
+        await using var __ = database;
 
         await harness.Bus.Publish(ARequest("MSG-201"));
         var correlationId = await WaitForCreatedAsync(provider, "MSG-201");
@@ -223,9 +221,9 @@ public class CreditorEnrolmentSqliteCorrelationTests
     [Fact]
     public async Task OrphanStatusReport_CorrelatesToNothing_ViaRealSqlTranslation()
     {
-        var (provider, connection, harness, sagaHarness) = await StartHarnessAsync();
+        var (provider, database, harness, sagaHarness) = await StartHarnessAsync();
         await using var _ = provider;
-        await using var __ = connection;
+        await using var __ = database;
 
         await harness.Bus.Publish(AStatusReport("MSG-301", "NEVER-SENT", ServiceRequestStatus1Code.Accepted));
         Assert.True(await harness.Consumed.Any<RequestToPayCreditorEnrolmentStatusReportV02>());
