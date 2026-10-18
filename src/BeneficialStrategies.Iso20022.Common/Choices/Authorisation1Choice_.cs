@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RD1Zltp-Ed-ak6NoX_4Aeg_-955120203")]
     [DisplayName("Authorisation 1 Choice")]
-    public abstract record Authorisation1Choice_ { }
+    public abstract partial record Authorisation1Choice_ { }
 }

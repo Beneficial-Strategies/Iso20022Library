@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v2tzSTEyEe6g-ffJsqGiSA")]
 [DisplayName("Financial Institution Identification23")]
-public record FinancialInstitutionIdentification23
+public partial record FinancialInstitutionIdentification23
 {
     /// <summary>
     /// BICFI.

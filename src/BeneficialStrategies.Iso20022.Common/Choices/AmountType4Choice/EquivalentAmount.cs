@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType4Choice
     [IsoId("__k-HBVkJEeSeLKjZh_lWZw")]
     [DisplayName("Equivalent Amount")]
     [IsoXmlTag("EqvtAmt")]
-    public record EquivalentAmount : AmountType4Choice_
+    public partial record EquivalentAmount : AmountType4Choice_
     {
         /// <summary>
         /// Amount of money to be moved between debtor and creditor, before deduction of charges, expressed in the currency of the debtor&apos;s account, and to be moved in a different currency.|Usage: The first agent will convert the equivalent amount into the amount to be moved.

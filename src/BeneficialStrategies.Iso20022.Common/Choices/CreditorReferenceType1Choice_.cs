@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_T3_jStp-Ed-ak6NoX_4Aeg_651436639")]
     [DisplayName("Creditor Reference Type 1 Choice")]
-    public abstract record CreditorReferenceType1Choice_ { }
+    public abstract partial record CreditorReferenceType1Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JThtg2oDEearR-CA7eRZXQ")]
     [DisplayName("Mandate Classification 1 Choice")]
-    public abstract record MandateClassification1Choice_ { }
+    public abstract partial record MandateClassification1Choice_ { }
 }

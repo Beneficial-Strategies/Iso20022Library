@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TD_Td9p-Ed-ak6NoX_4Aeg_-361247398")]
 [DisplayName("Amendment Information Details")]
-public record AmendmentInformationDetails1
+public partial record AmendmentInformationDetails1
 {
     /// <summary>
     /// Original mandate identification that has been modified.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnReason5Choice
     /// </summary>
     [IsoId("_TP6Pk9p-Ed-ak6NoX_4Aeg_-1676325975")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReturnReason5Choice_
+    public partial record Proprietary : ReturnReason5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

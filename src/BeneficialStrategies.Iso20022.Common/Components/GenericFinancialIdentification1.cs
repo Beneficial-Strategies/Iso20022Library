@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QALkM9p-Ed-ak6NoX_4Aeg_-2141717394")]
 [DisplayName("Generic Financial Identification")]
-public record GenericFinancialIdentification1
+public partial record GenericFinancialIdentification1
 {
     /// <summary>
     /// Unique and unambiguous identification of a person.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_v9i0ETEyEe6g-ffJsqGiSA")]
 [Description(@"Provides remittance information about a payment for garnishment-related purposes.")]
 [DisplayName("Garnishment4")]
-public record Garnishment4
+public partial record Garnishment4
 {
     /// <summary>
     /// Specifies the type of garnishment.

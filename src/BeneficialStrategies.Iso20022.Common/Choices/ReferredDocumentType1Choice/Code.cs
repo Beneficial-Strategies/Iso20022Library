@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentType1Choice
     /// </summary>
     [IsoId("_T3sBRtp-Ed-ak6NoX_4Aeg_174928147")]
     [DisplayName("Code")]
-    public record Code : ReferredDocumentType1Choice_
+    public partial record Code : ReferredDocumentType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

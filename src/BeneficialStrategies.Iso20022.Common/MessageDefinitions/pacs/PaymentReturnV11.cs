@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_jMZaEdcBEeq_l4BJLVUF2Q")]
 [DisplayName("Payment Return V")]
-public record PaymentReturnV11 : IOuterRecord
+public partial record PaymentReturnV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

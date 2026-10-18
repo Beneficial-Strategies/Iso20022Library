@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocalInstrument1Choice
     /// </summary>
     [IsoId("_TGhDCdp-Ed-ak6NoX_4Aeg_-2017969230")]
     [DisplayName("Proprietary")]
-    public record Proprietary : LocalInstrument1Choice_
+    public partial record Proprietary : LocalInstrument1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

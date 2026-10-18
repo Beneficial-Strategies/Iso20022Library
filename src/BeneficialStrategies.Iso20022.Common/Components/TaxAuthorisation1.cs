@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pc3bx9p-Ed-ak6NoX_4Aeg_-197973580")]
 [DisplayName("Tax Authorisation")]
-public record TaxAuthorisation1
+public partial record TaxAuthorisation1
 {
     /// <summary>
     /// Title or position of debtor or the debtor&apos;s authorised representative.

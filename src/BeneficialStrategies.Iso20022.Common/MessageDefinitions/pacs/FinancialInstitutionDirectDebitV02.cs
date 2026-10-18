@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_CWdYcTttEeWiAsQFICzmOw")]
 [DisplayName("Financial Institution Direct Debit V")]
-public record FinancialInstitutionDirectDebitV02 : IOuterRecord
+public partial record FinancialInstitutionDirectDebitV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

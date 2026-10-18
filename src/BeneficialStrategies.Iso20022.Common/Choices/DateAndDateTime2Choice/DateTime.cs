@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice
     /// </summary>
     [IsoId("_fPH6g5lhEeeE1Ya-LgRsuQ")]
     [DisplayName("Date Time")]
-    public record DateTime : DateAndDateTime2Choice_
+    public partial record DateTime : DateAndDateTime2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

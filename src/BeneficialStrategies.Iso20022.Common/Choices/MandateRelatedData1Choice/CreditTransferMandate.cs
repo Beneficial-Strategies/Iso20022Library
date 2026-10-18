@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
     [IsoId("_2_Hf4clxEem0vqvvoqYsqQ")]
     [DisplayName("Credit Transfer Mandate")]
     [IsoXmlTag("CdtTrfMndt")]
-    public record CreditTransferMandate : MandateRelatedData1Choice_
+    public partial record CreditTransferMandate : MandateRelatedData1Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.

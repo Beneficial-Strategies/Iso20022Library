@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PhVsF9p-Ed-ak6NoX_4Aeg_-330079515")]
 [DisplayName("Original Group Information")]
-public record OriginalGroupInformation5
+public partial record OriginalGroupInformation5
 {
     /// <summary>
     /// Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.

@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_R3QfeTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Multilateral Settlement Request V02")]
-public record MultilateralSettlementRequestV02 : IOuterRecord
+public partial record MultilateralSettlementRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

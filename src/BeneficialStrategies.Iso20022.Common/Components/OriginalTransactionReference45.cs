@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Description(@"Specifies key elements as defined in the original transaction.")]
 [IsoId("4e387edc-deca-49ee-beb0-bf53f204c1d5")]
 [DisplayName("Original Transaction Reference45")]
-public record OriginalTransactionReference45
+public partial record OriginalTransactionReference45
 {
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent.

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
     @"Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set."
 )]
 [DisplayName("Amendment Information Details15")]
-public record AmendmentInformationDetails15
+public partial record AmendmentInformationDetails15
 {
     /// <summary>
     /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.

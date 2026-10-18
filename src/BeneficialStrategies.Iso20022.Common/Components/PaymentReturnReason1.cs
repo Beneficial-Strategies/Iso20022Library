@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t3s_ElkyEeGeoaLUQk__nA_-1045029043")]
 [DisplayName("Payment Return Reason")]
-public record PaymentReturnReason1
+public partial record PaymentReturnReason1
 {
     /// <summary>
     /// Party that issues the return.

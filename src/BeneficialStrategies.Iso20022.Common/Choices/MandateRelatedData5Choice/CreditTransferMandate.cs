@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice
     /// <summary>Specific credit transfer mandate data.</summary>
     [IsoId("_RH9Ek7vIEfCYYbmqNrQFSg")]
     [DisplayName("Credit Transfer Mandate")]
-    public record CreditTransferMandate : MandateRelatedData5Choice_
+    public partial record CreditTransferMandate : MandateRelatedData5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CdtTrfMndt")]

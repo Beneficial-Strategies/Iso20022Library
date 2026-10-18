@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cm369kjwEeaVLL5QKJ4f-A")]
 [DisplayName("Mandate Type Information")]
-public record MandateTypeInformation2
+public partial record MandateTypeInformation2
 {
     /// <summary>
     /// Agreement under which or rules under which the mandate resides.

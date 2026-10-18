@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_luR59Xh2EeidzqjNEfehPg")]
 [DisplayName("Proxy Account Identification")]
-public record ProxyAccountIdentification1
+public partial record ProxyAccountIdentification1
 {
     /// <summary>
     /// Type of the proxy identification.

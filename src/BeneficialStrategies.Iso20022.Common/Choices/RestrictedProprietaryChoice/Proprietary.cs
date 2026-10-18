@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RestrictedProprietaryChoice
     /// </summary>
     [IsoId("_QJkwwNp-Ed-ak6NoX_4Aeg_1495592134")]
     [DisplayName("Proprietary")]
-    public record Proprietary : RestrictedProprietaryChoice_
+    public partial record Proprietary : RestrictedProprietaryChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel3Choice
     /// </summary>
     [IsoId("_QJkwxtp-Ed-ak6NoX_4Aeg_1187501430")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ServiceLevel3Choice_
+    public partial record Proprietary : ServiceLevel3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

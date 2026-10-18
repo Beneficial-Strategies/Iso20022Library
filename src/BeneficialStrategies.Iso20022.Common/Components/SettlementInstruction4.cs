@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tgdjw1kyEeGeoaLUQk__nA_721141769")]
 [DisplayName("Settlement Instruction")]
-public record SettlementInstruction4
+public partial record SettlementInstruction4
 {
     /// <summary>
     /// Method used to settle the (batch of) payment instructions.

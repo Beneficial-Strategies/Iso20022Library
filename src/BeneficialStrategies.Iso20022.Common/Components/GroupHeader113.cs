@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yfTmITEyEe6g-ffJsqGiSA")]
 [DisplayName("Group Header113")]
-public record GroupHeader113
+public partial record GroupHeader113
 {
     /// <summary>
     /// Message Identification.

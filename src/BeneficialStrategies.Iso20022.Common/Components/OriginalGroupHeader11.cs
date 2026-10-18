@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RdfHobThEeef0oKPLRNatg")]
 [DisplayName("Original Group Header")]
-public record OriginalGroupHeader11
+public partial record OriginalGroupHeader11
 {
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.

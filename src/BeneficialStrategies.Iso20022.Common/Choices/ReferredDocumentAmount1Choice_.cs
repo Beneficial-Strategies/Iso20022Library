@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QGJCQtp-Ed-ak6NoX_4Aeg_-888106501")]
     [DisplayName("Referred Document Amount 1 Choice")]
-    public abstract record ReferredDocumentAmount1Choice_ { }
+    public abstract partial record ReferredDocumentAmount1Choice_ { }
 }

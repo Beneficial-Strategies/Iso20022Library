@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QJkwwdp-Ed-ak6NoX_4Aeg_913208063")]
     [DisplayName("Service Level 2 Choice")]
-    public abstract record ServiceLevel2Choice_ { }
+    public abstract partial record ServiceLevel2Choice_ { }
 }

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k8MIkYnnEeOORMXOfBk1Bw")]
     [DisplayName("Garnishment Type 1 Choice")]
-    public abstract record GarnishmentType1Choice_ { }
+    public abstract partial record GarnishmentType1Choice_ { }
 }

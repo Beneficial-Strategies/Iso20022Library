@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_eZxMgTE4Ee62xuUQ2zyZww")]
 [Description(@"Provides document line information.")]
 [DisplayName("Document Line Information2")]
-public record DocumentLineInformation2
+public partial record DocumentLineInformation2
 {
     /// <summary>
     /// Provides identification of the document line.

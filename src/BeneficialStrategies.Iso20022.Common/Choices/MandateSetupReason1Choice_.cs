@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_iQq8ND2OEeS6DKIV6SF6gw")]
     [DisplayName("Mandate Setup Reason 1 Choice")]
-    public abstract record MandateSetupReason1Choice_ { }
+    public abstract partial record MandateSetupReason1Choice_ { }
 }

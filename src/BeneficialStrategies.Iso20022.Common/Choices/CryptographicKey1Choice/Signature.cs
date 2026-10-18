@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
-    public record Signature : CryptographicKey1Choice_
+    public partial record Signature : CryptographicKey1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

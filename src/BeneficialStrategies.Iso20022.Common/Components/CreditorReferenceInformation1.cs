@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T3_jRNp-Ed-ak6NoX_4Aeg_1085128342")]
 [DisplayName("Creditor Reference Information")]
-public record CreditorReferenceInformation1
+public partial record CreditorReferenceInformation1
 {
     /// <summary>
     /// Provides the type of the creditor reference.

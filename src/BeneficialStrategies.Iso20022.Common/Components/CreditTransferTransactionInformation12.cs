@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P6OGJNp-Ed-ak6NoX_4Aeg_1618159966")]
 [DisplayName("Credit Transfer Transaction Information")]
-public record CreditTransferTransactionInformation12
+public partial record CreditTransferTransactionInformation12
 {
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor.

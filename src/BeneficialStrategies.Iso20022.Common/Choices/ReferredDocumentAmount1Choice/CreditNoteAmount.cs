@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
     [IsoId("_QGJCRtp-Ed-ak6NoX_4Aeg_-888106456")]
     [DisplayName("Credit Note Amount")]
     [IsoXmlTag("CdtNoteAmt")]
-    public record CreditNoteAmount : ReferredDocumentAmount1Choice_
+    public partial record CreditNoteAmount : ReferredDocumentAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

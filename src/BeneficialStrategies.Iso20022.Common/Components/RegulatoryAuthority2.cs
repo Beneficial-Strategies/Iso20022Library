@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pc3bxNp-Ed-ak6NoX_4Aeg_-1526379440")]
 [DisplayName("Regulatory Authority")]
-public record RegulatoryAuthority2
+public partial record RegulatoryAuthority2
 {
     /// <summary>
     /// Name of the entity requiring the regulatory reporting information.

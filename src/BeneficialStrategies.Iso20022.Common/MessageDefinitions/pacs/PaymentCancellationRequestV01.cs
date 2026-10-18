@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_eoSrcdEuEd-BzquC8wXy7w_-1218856998")]
 [DisplayName("Payment Cancellation Request V")]
-public record PaymentCancellationRequestV01 : IOuterRecord
+public partial record PaymentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

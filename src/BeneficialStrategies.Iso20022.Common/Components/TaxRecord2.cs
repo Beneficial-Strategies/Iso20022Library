@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yKFWd69fEeen6L7OP7lnvg")]
 [DisplayName("Tax Record")]
-public record TaxRecord2
+public partial record TaxRecord2
 {
     /// <summary>
     /// High level code to identify the type of tax details.

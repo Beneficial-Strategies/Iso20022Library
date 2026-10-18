@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_T3sBRdp-Ed-ak6NoX_4Aeg_174928116")]
     [DisplayName("Referred Document Type 1 Choice")]
-    public abstract record ReferredDocumentType1Choice_ { }
+    public abstract partial record ReferredDocumentType1Choice_ { }
 }

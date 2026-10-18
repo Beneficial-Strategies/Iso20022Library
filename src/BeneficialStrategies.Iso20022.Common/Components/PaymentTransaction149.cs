@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8JUcETEsEe6GxLzpkVnWYg")]
 [DisplayName("Payment Transaction149")]
-public record PaymentTransaction149
+public partial record PaymentTransaction149
 {
     /// <summary>
     /// Reversal Identification.

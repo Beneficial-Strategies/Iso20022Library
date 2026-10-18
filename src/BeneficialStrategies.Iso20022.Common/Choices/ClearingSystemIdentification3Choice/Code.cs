@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification3Cho
     /// </summary>
     [IsoId("_TMVXJtp-Ed-ak6NoX_4Aeg_948374929")]
     [DisplayName("Code")]
-    public record Code : ClearingSystemIdentification3Choice_
+    public partial record Code : ClearingSystemIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YPoeXT3JEe-thIfLZ94a1w")]
 [DisplayName("Original Transaction Reference44")]
-public record OriginalTransactionReference44
+public partial record OriginalTransactionReference44
 {
     /// <summary>
     /// Interbank Settlement Amount.

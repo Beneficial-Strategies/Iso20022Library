@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentLineType1Choice
     /// </summary>
     [IsoId("__rM9XabkEeKvUvwX_r3tzA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : DocumentLineType1Choice_
+    public partial record Proprietary : DocumentLineType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice
     /// <summary>Specific direct debit mandate data.</summary>
     [IsoId("_RH9EkbvIEfCYYbmqNrQFSg")]
     [DisplayName("Direct Debit Mandate")]
-    public record DirectDebitMandate : MandateRelatedData5Choice_
+    public partial record DirectDebitMandate : MandateRelatedData5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DrctDbtMndt")]

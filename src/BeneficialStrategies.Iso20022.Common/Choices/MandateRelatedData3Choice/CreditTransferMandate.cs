@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice
     /// Credit Transfer Mandate.
     /// </summary>
     [DisplayName("Credit Transfer Mandate")]
-    public record CreditTransferMandate : MandateRelatedData3Choice_
+    public partial record CreditTransferMandate : MandateRelatedData3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s3kkUWk2Eeanu6HLe77Rkg")]
 [DisplayName("Direct Debit Transaction")]
-public record DirectDebitTransaction9
+public partial record DirectDebitTransaction9
 {
     /// <summary>
     /// Provides further details of the direct debit mandate signed between the creditor and the debtor.

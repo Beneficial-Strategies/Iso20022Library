@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tMpP41kyEeGeoaLUQk__nA_1650052580")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction34
+public partial record PaymentTransaction34
 {
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the returned transaction.|Usage: The instructing party is the party sending the return message and not the party that sent the original instruction that is being returned.

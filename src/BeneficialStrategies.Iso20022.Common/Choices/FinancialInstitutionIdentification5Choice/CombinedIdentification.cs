@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     [IsoId("_TFnrItp-Ed-ak6NoX_4Aeg_1781480692")]
     [DisplayName("Combined Identification")]
     [IsoXmlTag("CmbndId")]
-    public record CombinedIdentification : FinancialInstitutionIdentification5Choice_
+    public partial record CombinedIdentification : FinancialInstitutionIdentification5Choice_
     {
         /// <summary>
         /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

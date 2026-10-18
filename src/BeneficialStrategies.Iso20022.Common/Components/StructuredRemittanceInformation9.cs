@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tdxcIVkyEeGeoaLUQk__nA_1056984745")]
 [DisplayName("Structured Remittance Information")]
-public record StructuredRemittanceInformation9
+public partial record StructuredRemittanceInformation9
 {
     /// <summary>
     /// Set of elements used to identify the documents referred to in the remittance information.

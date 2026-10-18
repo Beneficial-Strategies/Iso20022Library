@@ -68,5 +68,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gLk2a4YdEe-Pv9KR9bv9IA")]
     [DisplayName("References80Choice")]
-    public abstract record References80Choice_ { }
+    public abstract partial record References80Choice_ { }
 }

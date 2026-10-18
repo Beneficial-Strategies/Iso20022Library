@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UQSHctp-Ed-ak6NoX_4Aeg_2034124941")]
 [DisplayName("Tax Period")]
-public record TaxPeriod1
+public partial record TaxPeriod1
 {
     /// <summary>
     /// Year related to the tax payment.

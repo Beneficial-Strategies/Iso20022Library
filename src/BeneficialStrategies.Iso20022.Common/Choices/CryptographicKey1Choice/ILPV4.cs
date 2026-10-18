@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
     /// ILPV4.
     /// </summary>
     [DisplayName("ILPV4")]
-    public record ILPV4 : CryptographicKey1Choice_
+    public partial record ILPV4 : CryptographicKey1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

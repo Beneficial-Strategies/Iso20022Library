@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_wJuO0TEyEe6g-ffJsqGiSA")]
 [Description(@"Provides further details related to a direct debit mandate signed between the creditor and the debtor.")]
 [DisplayName("Mandate Related Information16")]
-public record MandateRelatedInformation16
+public partial record MandateRelatedInformation16
 {
     /// <summary>
     /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.

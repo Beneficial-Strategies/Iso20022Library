@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice
     /// </summary>
     [IsoId("_sb6WgVkyEeGeoaLUQk__nA_-1937269286")]
     [DisplayName("Code")]
-    public record Code : CashAccountType2Choice_
+    public partial record Code : CashAccountType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

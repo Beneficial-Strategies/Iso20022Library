@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_xPVMATEyEe6g-ffJsqGiSA")]
 [Description(@"Provides information on the status reason of the transaction.")]
 [DisplayName("Status Reason Information14")]
-public record StatusReasonInformation14
+public partial record StatusReasonInformation14
 {
     /// <summary>
     /// Party that issues the status.

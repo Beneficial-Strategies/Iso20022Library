@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__lk0wD6wEe-QZYT2pcGFZw")]
     [DisplayName("Cryptographic Key1Choice")]
-    public abstract record CryptographicKey1Choice_ { }
+    public abstract partial record CryptographicKey1Choice_ { }
 }

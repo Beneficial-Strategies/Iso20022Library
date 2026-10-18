@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Frequency36Choice.PointInTime), nameof(Frequency36Choice.PointInTime))]
     [IsoId("_sVM2vWk2Eeanu6HLe77Rkg")]
     [DisplayName("Frequency 36 Choice")]
-    public abstract record Frequency36Choice_ { }
+    public abstract partial record Frequency36Choice_ { }
 }

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice
     /// </summary>
     [IsoId("_lG0rQ4nnEeOORMXOfBk1Bw")]
     [DisplayName("Code")]
-    public record Code : GarnishmentType1Choice_
+    public partial record Code : GarnishmentType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

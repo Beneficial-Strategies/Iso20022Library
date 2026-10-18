@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GlhY8GdWEe6jWPHmQqpKMw")]
 [DisplayName("Transaction Allocation1")]
-public record TransactionAllocation1
+public partial record TransactionAllocation1
 {
     /// <summary>
     /// Amount.

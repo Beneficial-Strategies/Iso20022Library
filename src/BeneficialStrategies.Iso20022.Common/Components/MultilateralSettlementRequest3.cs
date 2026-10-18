@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Description(@"Provides details specific to the individual settlement instruction(s) included in the message.")]
 [IsoId("_z-2GQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Multilateral Settlement Request3")]
-public record MultilateralSettlementRequest3
+public partial record MultilateralSettlementRequest3
 {
     /// <summary>
     /// Unique identification, as assigned by the instructing agent, and sent to the market infrastructure to unambiguously identify the instruction.

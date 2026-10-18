@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SnOe_9p-Ed-ak6NoX_4Aeg_699509907")]
 [DisplayName("Structured Regulatory Reporting")]
-public record StructuredRegulatoryReporting2
+public partial record StructuredRegulatoryReporting2
 {
     /// <summary>
     /// Specifies the nature, purpose, and reason for the transaction to be reported for regulatory and statutory requirements in a coded form.

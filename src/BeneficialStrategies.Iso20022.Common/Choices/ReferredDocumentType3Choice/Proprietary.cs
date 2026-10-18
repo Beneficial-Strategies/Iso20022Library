@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentType3Choice
     /// </summary>
     [IsoId("_YCiq5R77EeSxevWRRWxNAg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReferredDocumentType3Choice_
+    public partial record Proprietary : ReferredDocumentType3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

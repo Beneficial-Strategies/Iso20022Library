@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TPKBpdp-Ed-ak6NoX_4Aeg_2976420")]
 [DisplayName("Return Reason Information")]
-public record ReturnReasonInformation1
+public partial record ReturnReasonInformation1
 {
     /// <summary>
     /// Party issuing the return.

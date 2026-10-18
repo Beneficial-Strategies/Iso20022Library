@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification1Cho
     /// </summary>
     [IsoId("_TMVXINp-Ed-ak6NoX_4Aeg_-843594927")]
     [DisplayName("Clearing System Identification")]
-    public record ClearingSystemIdentification : ClearingSystemIdentification1Choice_
+    public partial record ClearingSystemIdentification : ClearingSystemIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

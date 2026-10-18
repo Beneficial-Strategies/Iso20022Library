@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(MandateRelatedData5Choice.CreditTransferMandate), nameof(MandateRelatedData5Choice.CreditTransferMandate))]
     [IsoId("_RA3lIbvIEfCYYbmqNrQFSg")]
     [DisplayName("Mandate Related Data 5 Choice")]
-    public abstract record MandateRelatedData5Choice_ { }
+    public abstract partial record MandateRelatedData5Choice_ { }
 }

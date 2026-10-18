@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification3Choice
     /// </summary>
     [IsoId("_PdnCptp-Ed-ak6NoX_4Aeg_638115990")]
     [DisplayName("IBAN")]
-    public record IBAN : AccountIdentification3Choice_
+    public partial record IBAN : AccountIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

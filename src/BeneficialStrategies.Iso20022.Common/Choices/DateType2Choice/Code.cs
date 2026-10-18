@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateType2Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : DateType2Choice_
+    public partial record Code : DateType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

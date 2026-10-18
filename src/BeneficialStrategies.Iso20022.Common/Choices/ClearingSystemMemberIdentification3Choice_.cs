@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMehGdp-Ed-ak6NoX_4Aeg_-1564562098")]
     [DisplayName("Clearing System Member Identification 3 Choice")]
-    public abstract record ClearingSystemMemberIdentification3Choice_ { }
+    public abstract partial record ClearingSystemMemberIdentification3Choice_ { }
 }

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Description(@"Set of elements used to provide details of the currency exchange.")]
 [IsoId("_rA87IT6lEe-QZYT2pcGFZw")]
 [DisplayName("Currency Exchange26")]
-public record CurrencyExchange26
+public partial record CurrencyExchange26
 {
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example GBP 1.00 = USD 1.30, the unit currency is GBP.

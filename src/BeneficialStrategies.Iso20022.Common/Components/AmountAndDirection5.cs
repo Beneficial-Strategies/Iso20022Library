@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T2Wkhdp-Ed-ak6NoX_4Aeg_-2124038249")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection5
+public partial record AmountAndDirection5
 {
     /// <summary>
     /// Amount of money that is debited or credited.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency21Choice
     [IsoId("_6GkgCR7yEeSxevWRRWxNAg")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public record Period : Frequency21Choice_
+    public partial record Period : Frequency21Choice_
     {
         /// <summary>
         /// Period for which the number of instructions are to be created and processed.

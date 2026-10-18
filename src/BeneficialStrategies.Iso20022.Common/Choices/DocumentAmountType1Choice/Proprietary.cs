@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice
     /// Specifies the amount type, in a free-text form.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : DocumentAmountType1Choice_
+    public partial record Proprietary : DocumentAmountType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

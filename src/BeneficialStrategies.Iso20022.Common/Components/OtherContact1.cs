@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6SokSZqlEeGSON8vddiWzQ_1969673172")]
 [DisplayName("Other Contact")]
-public record OtherContact1
+public partial record OtherContact1
 {
     /// <summary>
     /// Method used to contact the financial institution’s contact for the specific tax region.

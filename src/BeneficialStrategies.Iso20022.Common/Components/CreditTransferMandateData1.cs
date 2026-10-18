@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EVj2MclqEem0vqvvoqYsqQ")]
 [DisplayName("Credit Transfer Mandate Data")]
-public record CreditTransferMandateData1
+public partial record CreditTransferMandateData1
 {
     /// <summary>
     /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.

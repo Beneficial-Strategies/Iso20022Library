@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dyock3h3EeidzqjNEfehPg")]
     [DisplayName("Proxy Account Type 1 Choice")]
-    public abstract record ProxyAccountType1Choice_ { }
+    public abstract partial record ProxyAccountType1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RFBsa9p-Ed-ak6NoX_4Aeg_187558079")]
 [DisplayName("Number Of Transactions Per Status")]
-public record NumberOfTransactionsPerStatus1
+public partial record NumberOfTransactionsPerStatus1
 {
     /// <summary>
     /// Number of individual transactions contained in the message, detailed per status.

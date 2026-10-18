@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType1Choice
     /// </summary>
     [IsoId("_T4ItMNp-Ed-ak6NoX_4Aeg_651436918")]
     [DisplayName("Code")]
-    public record Code : CreditorReferenceType1Choice_
+    public partial record Code : CreditorReferenceType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice
     /// </summary>
     [IsoId("_JThthGoDEearR-CA7eRZXQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : MandateClassification1Choice_
+    public partial record Proprietary : MandateClassification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_SNLNYDH0Ee6BxvG014AZzQ")]
 [Description(@"Provides details on the amounts of the referred document.")]
 [DisplayName("Remittance Amount4")]
-public record RemittanceAmount4
+public partial record RemittanceAmount4
 {
     /// <summary>
     /// Type and amount of money for the referred document.

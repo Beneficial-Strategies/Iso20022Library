@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_vRiGoDKzEe6dJsbzsnAdDg")]
 [Description(@"Provides details on the amount and type of the referred document.")]
 [DisplayName("Document Amount1")]
-public record DocumentAmount1
+public partial record DocumentAmount1
 {
     /// <summary>
     /// Defines the type of amount.
