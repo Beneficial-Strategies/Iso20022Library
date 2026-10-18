@@ -1,0 +1,23 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record TransactionParties7 : ITransactionParties7
+{
+    IParty40Choice? ITransactionParties7.UltimateDebtor => UltimateDebtor;
+    IParty40Choice ITransactionParties7.Debtor => Debtor;
+    IParty40Choice? ITransactionParties7.InitiatingParty => InitiatingParty;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.PreviousInstructingAgent1 => PreviousInstructingAgent1;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.PreviousInstructingAgent2 => PreviousInstructingAgent2;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.PreviousInstructingAgent3 => PreviousInstructingAgent3;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.IntermediaryAgent1 => IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.IntermediaryAgent2 => IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.IntermediaryAgent3 => IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties7.CreditorAgent => CreditorAgent;
+    IParty40Choice ITransactionParties7.Creditor => Creditor;
+    IParty40Choice? ITransactionParties7.UltimateCreditor => UltimateCreditor;
+}

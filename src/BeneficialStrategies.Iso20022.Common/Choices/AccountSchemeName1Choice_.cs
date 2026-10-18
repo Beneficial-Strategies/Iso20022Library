@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_P_4pQNp-Ed-ak6NoX_4Aeg_-240227306")]
     [DisplayName("Account Scheme Name 1 Choice")]
-    public abstract record AccountSchemeName1Choice_ { }
+    public abstract partial record AccountSchemeName1Choice_ { }
 }

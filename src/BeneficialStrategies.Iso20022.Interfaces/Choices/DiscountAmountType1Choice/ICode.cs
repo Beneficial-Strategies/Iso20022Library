@@ -1,0 +1,19 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.DiscountAmountType1Choice;
+
+/// <summary>
+/// Specifies the amount type, in a coded form.
+/// </summary>
+[IsoId("_tlra8FkyEeGeoaLUQk__nA_1847720881")]
+public interface ICode : IDiscountAmountType1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.
+    /// The list of valid codes is an external code list published separately.
+    /// External code sets can be downloaded from www.iso20022.org.
+    /// </summary>
+    [IsoXmlTag("Cd")]
+    ExternalDiscountAmountType1Code Value { get; }
+}

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
     [IsoId("_tjJEU1kyEeGeoaLUQk__nA_-265813283")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ChargeType3Choice_
+    public partial record Proprietary : ChargeType3Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v0bUQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Branch Data5")]
-public record BranchData5
+public partial record BranchData5
 {
     /// <summary>
     /// Identification.

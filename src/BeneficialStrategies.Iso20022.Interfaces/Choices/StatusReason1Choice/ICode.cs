@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.StatusReason1Choice;
+
+/// <summary>
+/// Reason for the status in a coded form.
+/// </summary>
+[IsoId("_TPA3utp-Ed-ak6NoX_4Aeg_-1029924179")]
+public interface ICode : IStatusReason1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.
+    /// </summary>
+    [IsoXmlTag("Cd")]
+    TransactionRejectReason2Code Value { get; }
+}

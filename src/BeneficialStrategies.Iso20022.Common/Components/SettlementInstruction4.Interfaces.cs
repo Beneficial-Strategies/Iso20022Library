@@ -1,0 +1,18 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record SettlementInstruction4 : ISettlementInstruction4
+{
+    ICashAccount24? ISettlementInstruction4.SettlementAccount => SettlementAccount;
+    IClearingSystemIdentification3Choice? ISettlementInstruction4.ClearingSystem => ClearingSystem;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructingReimbursementAgent => InstructingReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.InstructingReimbursementAgentAccount => InstructingReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.InstructedReimbursementAgent => InstructedReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.InstructedReimbursementAgentAccount => InstructedReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction4.ThirdReimbursementAgent => ThirdReimbursementAgent;
+    ICashAccount24? ISettlementInstruction4.ThirdReimbursementAgentAccount => ThirdReimbursementAgentAccount;
+}

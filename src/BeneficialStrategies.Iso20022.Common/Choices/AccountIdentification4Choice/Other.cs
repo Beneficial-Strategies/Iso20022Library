@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
     [IsoId("_Pdwzo9p-Ed-ak6NoX_4Aeg_-1833657786")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : AccountIdentification4Choice_
+    public partial record Other : AccountIdentification4Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -1,0 +1,15 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record GroupHeader94 : IGroupHeader94
+{
+    IEnumerable<IAuthorisation1Choice> IGroupHeader94.Authorisation => Authorisation;
+    ISettlementInstruction8 IGroupHeader94.SettlementInformation => SettlementInformation;
+    IPaymentTypeInformation27? IGroupHeader94.PaymentTypeInformation => PaymentTypeInformation;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? IGroupHeader94.InstructedAgent => InstructedAgent;
+}

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FhFKIJIhEeu5eNv5D0Izbw")]
 [DisplayName("Movement Record")]
-public record MovementRecord1
+public partial record MovementRecord1
 {
     /// <summary>
     /// Unique identification, as assigned by the instructing agent, and sent to the market infrastructure to unambiguously identify the specific movement record (transaction) within a settlement request.

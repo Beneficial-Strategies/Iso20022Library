@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_8Pj8MRlUEe2Do_UtrNmb2g")]
 [DisplayName("FI To FI Customer Direct Debit V")]
-public record FIToFICustomerDirectDebitV10 : IOuterRecord
+public partial record FIToFICustomerDirectDebitV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

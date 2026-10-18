@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QIrY6dp-Ed-ak6NoX_4Aeg_2050617089")]
 [DisplayName("Settlement Time Request")]
-public record SettlementTimeRequest2
+public partial record SettlementTimeRequest2
 {
     /// <summary>
     /// Time by which the amount of money must be credited, with confirmation, to the CLS Bank&apos;s account at the central bank.|Usage: Time must be expressed in Central European Time (CET).

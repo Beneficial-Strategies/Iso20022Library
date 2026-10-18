@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QIYeB9p-Ed-ak6NoX_4Aeg_-498720410")]
 [DisplayName("Settlement Date Time Indication")]
-public record SettlementDateTimeIndication1
+public partial record SettlementDateTimeIndication1
 {
     /// <summary>
     /// Date and time at which a payment has been debited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been debited at the central bank, expressed in Central European Time (CET).

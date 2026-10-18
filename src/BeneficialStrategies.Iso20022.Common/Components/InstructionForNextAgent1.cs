@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TOHf0dp-Ed-ak6NoX_4Aeg_1118639475")]
 [DisplayName("Instruction For Next Agent")]
-public record InstructionForNextAgent1
+public partial record InstructionForNextAgent1
 {
     /// <summary>
     /// Coded information related to the processing of the payment instruction, provided by the initiating party, and intended for the next agent in the payment chain.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TPA3udp-Ed-ak6NoX_4Aeg_-1029924222")]
     [DisplayName("Status Reason 1 Choice")]
-    public abstract record StatusReason1Choice_ { }
+    public abstract partial record StatusReason1Choice_ { }
 }

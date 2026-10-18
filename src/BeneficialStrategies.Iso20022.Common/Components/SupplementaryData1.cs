@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qn0zC9p-Ed-ak6NoX_4Aeg_468227563")]
 [DisplayName("Supplementary Data")]
-public record SupplementaryData1
+public partial record SupplementaryData1
 {
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.

@@ -16,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QJa_z9p-Ed-ak6NoX_4Aeg_1495589549")]
     [DisplayName("Restricted Proprietary Choice")]
-    public abstract record RestrictedProprietaryChoice_ { }
+    public abstract partial record RestrictedProprietaryChoice_ { }
 }

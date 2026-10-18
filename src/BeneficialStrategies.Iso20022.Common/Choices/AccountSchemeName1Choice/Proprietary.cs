@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSchemeName1Choice
     /// </summary>
     [IsoId("_P_4pQtp-Ed-ak6NoX_4Aeg_194748605")]
     [DisplayName("Proprietary")]
-    public record Proprietary : AccountSchemeName1Choice_
+    public partial record Proprietary : AccountSchemeName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

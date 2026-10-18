@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the settlement of the instruction.
+/// </summary>
+[IsoId("_QJIE0Np-Ed-ak6NoX_4Aeg_-1401894087")]
+public interface ISettlementInformation14 : IIsoComponent
+{
+    /// <summary>
+    /// Method used to settle the (batch of) payment instructions.
+    /// </summary>
+    [IsoId("_QJIE0dp-Ed-ak6NoX_4Aeg_-1401894056")]
+    [DisplayName("Settlement Method")]
+    [IsoXmlTag("SttlmMtd")]
+    SettlementMethod2Code SettlementMethod { get; }
+
+    /// <summary>
+    /// A specific purpose account used to post debit and credit entries as a result of the transaction.
+    /// </summary>
+    [IsoId("_QJIE0tp-Ed-ak6NoX_4Aeg_-1401893993")]
+    [DisplayName("Settlement Account")]
+    [IsoXmlTag("SttlmAcct")]
+    ICashAccount16? SettlementAccount { get; }
+
+    /// <summary>
+    /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.
+    /// </summary>
+    [IsoId("_QJIE09p-Ed-ak6NoX_4Aeg_-1401893685")]
+    [DisplayName("Clearing System")]
+    [IsoXmlTag("ClrSys")]
+    IClearingSystemIdentification3Choice? ClearingSystem { get; }
+}

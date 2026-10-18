@@ -1,0 +1,130 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides further details on the original transactions, to which the status report message refers.
+/// </summary>
+[IsoId("_kIeZXTq3EeWZFYSPlduMhw")]
+public interface IPaymentTransaction63 : IIsoComponent
+{
+    /// <summary>
+    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.|Usage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on.
+    /// </summary>
+    [IsoId("_kP0XQzq3EeWZFYSPlduMhw")]
+    [DisplayName("Status Identification")]
+    [IsoXmlTag("StsId")]
+    Max35Text? StatusIdentification { get; }
+
+    /// <summary>
+    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
+    /// </summary>
+    [IsoId("_kP0XRTq3EeWZFYSPlduMhw")]
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    IOriginalGroupInformation3? OriginalGroupInformation { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
+    /// </summary>
+    [IsoId("_kP0XRzq3EeWZFYSPlduMhw")]
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    Max35Text? OriginalInstructionIdentification { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
+    /// </summary>
+    [IsoId("_kP0XSTq3EeWZFYSPlduMhw")]
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    Max35Text? OriginalEndToEndIdentification { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
+    /// </summary>
+    [IsoId("_kP0XSzq3EeWZFYSPlduMhw")]
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    Max35Text? OriginalTransactionIdentification { get; }
+
+    /// <summary>
+    /// Specifies the status of a transaction, in a coded form.
+    /// </summary>
+    [IsoId("_kP0XTTq3EeWZFYSPlduMhw")]
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    TransactionIndividualStatus3Code? TransactionStatus { get; }
+
+    /// <summary>
+    /// Provides detailed information on the status reason.
+    /// </summary>
+    [IsoId("_kP0XTzq3EeWZFYSPlduMhw")]
+    [DisplayName("Status Reason Information")]
+    [IsoXmlTag("StsRsnInf")]
+    IEnumerable<IStatusReasonInformation9> StatusReasonInformation { get; }
+
+    /// <summary>
+    /// Provides information on the charges related to the processing of the rejection of the instruction.||Usage: This is passed on for information purposes only. Settlement of the charges will be done separately.
+    /// </summary>
+    [IsoId("_kP0XUTq3EeWZFYSPlduMhw")]
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    IEnumerable<ICharges2> ChargesInformation { get; }
+
+    /// <summary>
+    /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.
+    /// </summary>
+    [IsoId("_kP0XUzq3EeWZFYSPlduMhw")]
+    [DisplayName("Acceptance Date Time")]
+    [IsoXmlTag("AccptncDtTm")]
+    ISODateTime? AcceptanceDateTime { get; }
+
+    /// <summary>
+    /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.
+    /// </summary>
+    [IsoId("_kP0XVTq3EeWZFYSPlduMhw")]
+    [DisplayName("Account Servicer Reference")]
+    [IsoXmlTag("AcctSvcrRef")]
+    Max35Text? AccountServicerReference { get; }
+
+    /// <summary>
+    /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
+    /// </summary>
+    [IsoId("_kP0XVzq3EeWZFYSPlduMhw")]
+    [DisplayName("Clearing System Reference")]
+    [IsoXmlTag("ClrSysRef")]
+    Max35Text? ClearingSystemReference { get; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on.
+    /// </summary>
+    [IsoId("_kP0XWTq3EeWZFYSPlduMhw")]
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    IBranchAndFinancialInstitutionIdentification5? InstructingAgent { get; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).||Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
+    /// </summary>
+    [IsoId("_kP0XWzq3EeWZFYSPlduMhw")]
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    IBranchAndFinancialInstitutionIdentification5? InstructedAgent { get; }
+
+    /// <summary>
+    /// Key elements used to identify the original transaction that is being referred to.
+    /// </summary>
+    [IsoId("_kP0XXTq3EeWZFYSPlduMhw")]
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    IOriginalTransactionReference22? OriginalTransactionReference { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_kP0XXzq3EeWZFYSPlduMhw")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

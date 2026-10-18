@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice
     /// </summary>
     [IsoId("_RD1Zl9p-Ed-ak6NoX_4Aeg_-955120142")]
     [DisplayName("Code")]
-    public record Code : Authorisation1Choice_
+    public partial record Code : Authorisation1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

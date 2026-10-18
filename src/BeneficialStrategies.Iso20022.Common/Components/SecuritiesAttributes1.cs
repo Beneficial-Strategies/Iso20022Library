@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("15df450f-df3b-4230-9d9a-8fba15b89a4e")]
 [DisplayName("Securities Attributes1")]
-public record SecuritiesAttributes1
+public partial record SecuritiesAttributes1
 {
     /// <summary>
     /// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction.

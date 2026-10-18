@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CneugRb-EeiyVv5j1vf1VQ")]
     [DisplayName("Address Type 3 Choice")]
-    public abstract record AddressType3Choice_ { }
+    public abstract partial record AddressType3Choice_ { }
 }

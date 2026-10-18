@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TOHf1Np-Ed-ak6NoX_4Aeg_1659539851")]
 [DisplayName("Instruction For Creditor Agent")]
-public record InstructionForCreditorAgent2
+public partial record InstructionForCreditorAgent2
 {
     /// <summary>
     /// Coded information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor&apos;s agent.

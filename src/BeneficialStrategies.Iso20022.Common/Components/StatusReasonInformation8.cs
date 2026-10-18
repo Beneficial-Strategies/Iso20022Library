@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TRPsUNp-Ed-ak6NoX_4Aeg_1156620566")]
 [DisplayName("Status Reason Information")]
-public record StatusReasonInformation8
+public partial record StatusReasonInformation8
 {
     /// <summary>
     /// Party that issues the status.

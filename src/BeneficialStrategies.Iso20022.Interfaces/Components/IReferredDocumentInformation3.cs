@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to identify the documents referred to in the remittance information.
+/// </summary>
+[IsoId("_ThMM2tp-Ed-ak6NoX_4Aeg_-882800583")]
+public interface IReferredDocumentInformation3 : IIsoComponent
+{
+    /// <summary>
+    /// Specifies the type of referred document.
+    /// </summary>
+    [IsoId("_ThV90Np-Ed-ak6NoX_4Aeg_-882800242")]
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    IReferredDocumentType2? Type { get; }
+
+    /// <summary>
+    /// Unique and unambiguous identification of the referred document.
+    /// </summary>
+    [IsoId("_ThV90dp-Ed-ak6NoX_4Aeg_-882800304")]
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    Max35Text? Number { get; }
+
+    /// <summary>
+    /// Date associated with the referred document.
+    /// </summary>
+    [IsoId("_ThV90tp-Ed-ak6NoX_4Aeg_1205279992")]
+    [DisplayName("Related Date")]
+    [IsoXmlTag("RltdDt")]
+    ISODate? RelatedDate { get; }
+}

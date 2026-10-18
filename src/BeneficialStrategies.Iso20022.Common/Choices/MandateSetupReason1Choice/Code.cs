@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice
     /// </summary>
     [IsoId("_iQq8NT2OEeS6DKIV6SF6gw")]
     [DisplayName("Code")]
-    public record Code : MandateSetupReason1Choice_
+    public partial record Code : MandateSetupReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_sB-zkFkyEeGeoaLUQk__nA_-289152134")]
 [DisplayName("Financial Institution Credit Transfer V")]
-public record FinancialInstitutionCreditTransferV03 : IOuterRecord
+public partial record FinancialInstitutionCreditTransferV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

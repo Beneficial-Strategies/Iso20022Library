@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
-    public record CommonIdentification : References80Choice_
+    public partial record CommonIdentification : References80Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party52Choice
     /// Private Identification.
     /// </summary>
     [DisplayName("Private Identification")]
-    public record PrivateIdentification : Party52Choice_
+    public partial record PrivateIdentification : Party52Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

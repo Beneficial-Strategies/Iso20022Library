@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tsOu4FkyEeGeoaLUQk__nA_1838839671")]
 [DisplayName("Original Business Query")]
-public record OriginalBusinessQuery1
+public partial record OriginalBusinessQuery1
 {
     /// <summary>
     /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original query message.

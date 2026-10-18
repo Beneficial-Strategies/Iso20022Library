@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice
     /// Pool Identification.
     /// </summary>
     [DisplayName("Pool Identification")]
-    public record PoolIdentification : References80Choice_
+    public partial record PoolIdentification : References80Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

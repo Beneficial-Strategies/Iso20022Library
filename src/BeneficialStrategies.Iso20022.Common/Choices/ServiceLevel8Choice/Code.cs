@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice
     /// </summary>
     [IsoId("_QJa_zdp-Ed-ak6NoX_4Aeg_1912716972")]
     [DisplayName("Code")]
-    public record Code : ServiceLevel8Choice_
+    public partial record Code : ServiceLevel8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

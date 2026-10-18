@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TFB1Qdp-Ed-ak6NoX_4Aeg_1367253312")]
 [DisplayName("Branch And Financial Institution Identification")]
-public record BranchAndFinancialInstitutionIdentification5
+public partial record BranchAndFinancialInstitutionIdentification5
 {
     /// <summary>
     /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.

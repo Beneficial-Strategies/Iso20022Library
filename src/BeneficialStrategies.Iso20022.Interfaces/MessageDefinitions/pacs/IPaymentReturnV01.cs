@@ -1,0 +1,43 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+/// <summary>
+/// This record is an implementation of the pacs.004.001.01 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.
+/// Usage
+/// The PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).
+/// The PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through an Advice of Credit/Debit message and/or Statement message.
+/// The PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.
+/// The PaymentReturn message can be used in domestic and cross-border scenarios.
+/// The PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|.
+/// </summary>
+[IsoId("_eqFbL9EuEd-BzquC8wXy7w_1826980297")]
+public interface IPaymentReturnV01 : IOuterRecord
+{
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [IsoId("_eqOlENEuEd-BzquC8wXy7w_1567907625")]
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader6 GroupHeader { get; }
+
+    /// <summary>
+    /// Information concerning the original group of transactions, to which the message refers.
+    /// </summary>
+    [IsoId("_eqOlEdEuEd-BzquC8wXy7w_497715970")]
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    IOriginalGroupInformation2? OriginalGroupInformation { get; }
+
+    /// <summary>
+    /// Information concerning the original transactions, to which the return message refers.
+    /// </summary>
+    [IsoId("_eqOlEtEuEd-BzquC8wXy7w_-1979906269")]
+    [DisplayName("Transaction Information")]
+    [IsoXmlTag("TxInf")]
+    IEnumerable<IPaymentTransactionInformation2> TransactionInformation { get; }
+}

@@ -1,0 +1,18 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record StructuredRemittanceInformation17 : IStructuredRemittanceInformation17
+{
+    IEnumerable<IReferredDocumentInformation7> IStructuredRemittanceInformation17.ReferredDocumentInformation => ReferredDocumentInformation;
+    IRemittanceAmount2? IStructuredRemittanceInformation17.ReferredDocumentAmount => ReferredDocumentAmount;
+    ICreditorReferenceInformation2? IStructuredRemittanceInformation17.CreditorReferenceInformation => CreditorReferenceInformation;
+    IPartyIdentification135? IStructuredRemittanceInformation17.Invoicer => Invoicer;
+    IPartyIdentification135? IStructuredRemittanceInformation17.Invoicee => Invoicee;
+    ITaxData1? IStructuredRemittanceInformation17.TaxRemittance => TaxRemittance;
+    IGarnishment3? IStructuredRemittanceInformation17.GarnishmentRemittance => GarnishmentRemittance;
+    IEnumerable<string> IStructuredRemittanceInformation17.AdditionalRemittanceInformation => AdditionalRemittanceInformation;
+}

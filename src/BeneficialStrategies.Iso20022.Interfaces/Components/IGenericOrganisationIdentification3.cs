@@ -1,0 +1,31 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Generic Organisation Identification3.
+/// </summary>
+[IsoId("_bM2KRzFIEe651u5xu3f5iw")]
+public interface IGenericOrganisationIdentification3 : IIsoComponent
+{
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    Max256Text Identification { get; }
+
+    /// <summary>
+    /// Scheme Name.
+    /// </summary>
+    [DisplayName("Scheme Name")]
+    [IsoXmlTag("SchmeNm")]
+    IOrganisationIdentificationSchemeName1Choice? SchemeName { get; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    Max35Text? Issuer { get; }
+}

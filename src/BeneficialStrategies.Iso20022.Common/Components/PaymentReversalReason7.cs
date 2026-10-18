@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t3aEIVkyEeGeoaLUQk__nA_20263708")]
 [DisplayName("Payment Reversal Reason")]
-public record PaymentReversalReason7
+public partial record PaymentReversalReason7
 {
     /// <summary>
     /// Party that issues the reversal.

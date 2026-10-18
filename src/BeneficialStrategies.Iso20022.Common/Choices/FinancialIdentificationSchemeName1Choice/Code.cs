@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialIdentificationSchemeNam
     /// </summary>
     [IsoId("_QALkMdp-Ed-ak6NoX_4Aeg_-2021925430")]
     [DisplayName("Code")]
-    public record Code : FinancialIdentificationSchemeName1Choice_
+    public partial record Code : FinancialIdentificationSchemeName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

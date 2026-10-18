@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_THaa5Np-Ed-ak6NoX_4Aeg_1223014142")]
     [DisplayName("Category Purpose 1 Choice")]
-    public abstract record CategoryPurpose1Choice_ { }
+    public abstract partial record CategoryPurpose1Choice_ { }
 }

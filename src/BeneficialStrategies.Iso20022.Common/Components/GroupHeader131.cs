@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Description(@"Set of characteristics shared by all individual transactions included in the message.")]
 [IsoId("_sVST0W9YEe-Mlpx0N5T4gg")]
 [DisplayName("Group Header131")]
-public record GroupHeader131
+public partial record GroupHeader131
 {
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_x7KXQTEyEe6g-ffJsqGiSA")]
 [Description(@"Provides information on the charges related to the payment transaction.")]
 [DisplayName("Charges16")]
-public record Charges16
+public partial record Charges16
 {
     /// <summary>
     /// Transaction charges to be paid by the charge bearer.

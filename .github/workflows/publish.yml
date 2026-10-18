@@ -30,6 +30,13 @@ jobs:
             -c Release \
             --output ./nupkg
 
+      - name: Build and pack (BeneficialStrategies.Iso20022.Interfaces)
+        run: |
+          cd src
+          dotnet pack BeneficialStrategies.Iso20022.Interfaces \
+            -c Release \
+            --output ./nupkg
+
       - name: Build and pack (BeneficialStrategies.Iso20022)
         run: |
           cd src

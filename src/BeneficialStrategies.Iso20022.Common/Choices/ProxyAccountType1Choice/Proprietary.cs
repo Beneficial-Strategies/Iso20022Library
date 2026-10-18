@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProxyAccountType1Choice
     /// </summary>
     [IsoId("_dyoclHh3EeidzqjNEfehPg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ProxyAccountType1Choice_
+    public partial record Proprietary : ProxyAccountType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

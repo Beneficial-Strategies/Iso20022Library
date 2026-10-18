@@ -1,0 +1,42 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the tax amount(s) of tax record.
+/// </summary>
+[IsoId("_n-65U94lEeqt1ZcLzWyWFw")]
+public interface ITaxAmount3 : IIsoComponent
+{
+    /// <summary>
+    /// Rate used to calculate the tax.
+    /// </summary>
+    [IsoId("_oAWcod4lEeqt1ZcLzWyWFw")]
+    [DisplayName("Rate")]
+    [IsoXmlTag("Rate")]
+    PercentageRate? Rate { get; }
+
+    /// <summary>
+    /// Amount of money on which the tax is based.
+    /// </summary>
+    [IsoId("_oAWco94lEeqt1ZcLzWyWFw")]
+    [DisplayName("Taxable Base Amount")]
+    [IsoXmlTag("TaxblBaseAmt")]
+    ActiveOrHistoricCurrencyAndAmount? TaxableBaseAmount { get; }
+
+    /// <summary>
+    /// Total amount that is the result of the calculation of the tax for the record.
+    /// </summary>
+    [IsoId("_oAWcpd4lEeqt1ZcLzWyWFw")]
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    ActiveOrHistoricCurrencyAndAmount? TotalAmount { get; }
+
+    /// <summary>
+    /// Set of elements used to provide details on the tax period and amount.
+    /// </summary>
+    [IsoId("_oAWcp94lEeqt1ZcLzWyWFw")]
+    [DisplayName("Details")]
+    [IsoXmlTag("Dtls")]
+    IEnumerable<ITaxRecordDetails3> Details { get; }
+}

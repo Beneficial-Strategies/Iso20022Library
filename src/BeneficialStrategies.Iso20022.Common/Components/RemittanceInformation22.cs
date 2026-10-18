@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
     @"Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system."
 )]
 [DisplayName("Remittance Information22")]
-public record RemittanceInformation22
+public partial record RemittanceInformation22
 {
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.

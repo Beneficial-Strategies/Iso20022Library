@@ -1,0 +1,14 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+public partial record PaymentReturnV04 : IPaymentReturnV04
+{
+    IGroupHeader54 IPaymentReturnV04.GroupHeader => GroupHeader;
+    IOriginalGroupHeader2? IPaymentReturnV04.OriginalGroupInformation => OriginalGroupInformation;
+    IEnumerable<IPaymentTransaction44> IPaymentReturnV04.TransactionInformation => TransactionInformation;
+    IEnumerable<ISupplementaryData1> IPaymentReturnV04.SupplementaryData => SupplementaryData;
+}

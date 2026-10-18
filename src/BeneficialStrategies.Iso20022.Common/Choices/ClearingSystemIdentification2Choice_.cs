@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMoSENp-Ed-ak6NoX_4Aeg_-1410917193")]
     [DisplayName("Clearing System Identification 2 Choice")]
-    public abstract record ClearingSystemIdentification2Choice_ { }
+    public abstract partial record ClearingSystemIdentification2Choice_ { }
 }

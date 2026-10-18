@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
     [IsoId("_QGJCRNp-Ed-ak6NoX_4Aeg_-888106465")]
     [DisplayName("Discount Applied Amount")]
     [IsoXmlTag("DscntApldAmt")]
-    public record DiscountAppliedAmount : ReferredDocumentAmount1Choice_
+    public partial record DiscountAppliedAmount : ReferredDocumentAmount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

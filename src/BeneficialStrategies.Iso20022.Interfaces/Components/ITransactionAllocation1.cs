@@ -1,0 +1,52 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Transaction Allocation1.
+/// </summary>
+[IsoId("_GlhY8GdWEe6jWPHmQqpKMw")]
+public interface ITransactionAllocation1 : IIsoComponent
+{
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    ActiveOrHistoricCurrencyAndAmount Amount { get; }
+
+    /// <summary>
+    /// Credit Debit Indicator.
+    /// </summary>
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    CreditDebitCode CreditDebitIndicator { get; }
+
+    /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    ICashAccount40 Account { get; }
+
+    /// <summary>
+    /// Purpose.
+    /// </summary>
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    IPurpose2Choice Purpose { get; }
+
+    /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    Max35Text Reference { get; }
+
+    /// <summary>
+    /// Related References.
+    /// </summary>
+    [DisplayName("Related References")]
+    [IsoXmlTag("RltdRefs")]
+    IEnumerable<IReferences74Choice> RelatedReferences { get; }
+}

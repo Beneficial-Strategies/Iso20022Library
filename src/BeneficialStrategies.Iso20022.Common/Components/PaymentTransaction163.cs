@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YIoekz3JEe-thIfLZ94a1w")]
 [DisplayName("Payment Transaction163")]
-public record PaymentTransaction163
+public partial record PaymentTransaction163
 {
     /// <summary>
     /// Return Identification.

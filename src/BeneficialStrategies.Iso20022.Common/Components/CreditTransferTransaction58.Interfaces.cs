@@ -1,0 +1,49 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction58 : ICreditTransferTransaction58
+{
+    IPaymentIdentification13 ICreditTransferTransaction58.PaymentIdentification => PaymentIdentification;
+    IPaymentTypeInformation28? ICreditTransferTransaction58.PaymentTypeInformation => PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction58.SettlementTimeIndication => SettlementTimeIndication;
+    ISettlementTimeRequest2? ICreditTransferTransaction58.SettlementTimeRequest => SettlementTimeRequest;
+    IEnumerable<ICharges12> ICreditTransferTransaction58.ChargesInformation => ChargesInformation;
+    ICreditTransferMandateData1? ICreditTransferTransaction58.MandateRelatedInformation => MandateRelatedInformation;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.PreviousInstructingAgent1 => PreviousInstructingAgent1;
+    ICashAccount40? ICreditTransferTransaction58.PreviousInstructingAgent1Account => PreviousInstructingAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.PreviousInstructingAgent2 => PreviousInstructingAgent2;
+    ICashAccount40? ICreditTransferTransaction58.PreviousInstructingAgent2Account => PreviousInstructingAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.PreviousInstructingAgent3 => PreviousInstructingAgent3;
+    ICashAccount40? ICreditTransferTransaction58.PreviousInstructingAgent3Account => PreviousInstructingAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.IntermediaryAgent1 => IntermediaryAgent1;
+    ICashAccount40? ICreditTransferTransaction58.IntermediaryAgent1Account => IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.IntermediaryAgent2 => IntermediaryAgent2;
+    ICashAccount40? ICreditTransferTransaction58.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction58.IntermediaryAgent3 => IntermediaryAgent3;
+    ICashAccount40? ICreditTransferTransaction58.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IPartyIdentification135? ICreditTransferTransaction58.UltimateDebtor => UltimateDebtor;
+    IPartyIdentification135? ICreditTransferTransaction58.InitiatingParty => InitiatingParty;
+    IPartyIdentification135 ICreditTransferTransaction58.Debtor => Debtor;
+    ICashAccount40? ICreditTransferTransaction58.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction58.DebtorAgent => DebtorAgent;
+    ICashAccount40? ICreditTransferTransaction58.DebtorAgentAccount => DebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction58.CreditorAgent => CreditorAgent;
+    ICashAccount40? ICreditTransferTransaction58.CreditorAgentAccount => CreditorAgentAccount;
+    IPartyIdentification135 ICreditTransferTransaction58.Creditor => Creditor;
+    ICashAccount40? ICreditTransferTransaction58.CreditorAccount => CreditorAccount;
+    IPartyIdentification135? ICreditTransferTransaction58.UltimateCreditor => UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction58.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction58.InstructionForNextAgent => InstructionForNextAgent;
+    IPurpose2Choice? ICreditTransferTransaction58.Purpose => Purpose;
+    IEnumerable<IRegulatoryReporting3> ICreditTransferTransaction58.RegulatoryReporting => RegulatoryReporting;
+    ITaxInformation10? ICreditTransferTransaction58.Tax => Tax;
+    IEnumerable<IRemittanceLocation7> ICreditTransferTransaction58.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceInformation21? ICreditTransferTransaction58.RemittanceInformation => RemittanceInformation;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction58.SupplementaryData => SupplementaryData;
+}

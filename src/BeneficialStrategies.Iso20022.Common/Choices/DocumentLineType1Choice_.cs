@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__hXr4abkEeKvUvwX_r3tzA")]
     [DisplayName("Document Line Type 1 Choice")]
-    public abstract record DocumentLineType1Choice_ { }
+    public abstract partial record DocumentLineType1Choice_ { }
 }

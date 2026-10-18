@@ -1,0 +1,186 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies.
+/// </summary>
+[IsoId("_qAAHgZe-EfCsfrvk22Hpaw")]
+public interface IPaymentTransaction182 : IIsoComponent
+{
+    /// <summary>
+    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.
+    /// </summary>
+    [IsoId("_qHFm9Ze-EfCsfrvk22Hpaw")]
+    [DisplayName("Reversal Identification")]
+    [IsoXmlTag("RvslId")]
+    Max35Text? ReversalIdentification { get; }
+
+    /// <summary>
+    /// Provides information on the original message.
+    /// </summary>
+    [IsoId("_qHFm95e-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    IOriginalGroupInformation33? OriginalGroupInformation { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
+    /// </summary>
+    [IsoId("_qHFm-Ze-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    Max35Text? OriginalInstructionIdentification { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
+    /// </summary>
+    [IsoId("_qHFm-5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    Max35Text? OriginalEndToEndIdentification { get; }
+
+    /// <summary>
+    /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
+    /// </summary>
+    [IsoId("_qHFm_Ze-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    Max35Text? OriginalTransactionIdentification { get; }
+
+    /// <summary>
+    /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
+    /// </summary>
+    [IsoId("_qHFm_5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    UUIDv4Identifier? OriginalUETR { get; }
+
+    /// <summary>
+    /// Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.
+    /// </summary>
+    [IsoId("_qHFnAZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Clearing System Reference")]
+    [IsoXmlTag("OrgnlClrSysRef")]
+    Max35Text? OriginalClearingSystemReference { get; }
+
+    /// <summary>
+    /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
+    /// </summary>
+    [IsoId("_qHFnA5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Interbank Settlement Amount")]
+    [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
+    ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; }
+
+    /// <summary>
+    /// Amount of money to be moved between the instructing agent and the instructed agent in the reversed instruction.
+    /// </summary>
+    [IsoId("_qHFnBZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Reversed Interbank Settlement Amount")]
+    [IsoXmlTag("RvsdIntrBkSttlmAmt")]
+    ActiveCurrencyAndAmount ReversedInterbankSettlementAmount { get; }
+
+    /// <summary>
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount becomes available to the agent to which it is due.
+    /// </summary>
+    [IsoId("_qHFnB5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    ISODate? InterbankSettlementDate { get; }
+
+    /// <summary>
+    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
+    /// </summary>
+    [IsoId("_qHFnCZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Settlement Priority")]
+    [IsoXmlTag("SttlmPrty")]
+    Priority3Code? SettlementPriority { get; }
+
+    /// <summary>
+    /// Provides information on the occurred settlement time of the payment transaction.
+    /// </summary>
+    [IsoId("_qHFnC5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    ISettlementDateTimeIndication1? SettlementTimeIndication { get; }
+
+    /// <summary>
+    /// Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the reversed transaction.
+    /// </summary>
+    [IsoId("_qHFnDZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Reversed Instructed Amount")]
+    [IsoXmlTag("RvsdInstdAmt")]
+    ActiveOrHistoricCurrencyAndAmount? ReversedInstructedAmount { get; }
+
+    /// <summary>
+    /// Factor used to convert an amount from one currency into another.
+    /// </summary>
+    [IsoId("_qHFnD5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    BaseOneRate? ExchangeRate { get; }
+
+    /// <summary>
+    /// Amount of money asked or paid as compensation for the processing of the instruction.
+    /// </summary>
+    [IsoId("_qHFnEZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Compensation Amount")]
+    [IsoXmlTag("CompstnAmt")]
+    ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; }
+
+    /// <summary>
+    /// Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.
+    /// </summary>
+    [IsoId("_qHFnE5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    ChargeBearerType1Code? ChargeBearer { get; }
+
+    /// <summary>
+    /// Provides information on the charges to be paid by the charge bearer(s) related to the processing of the reversal transaction.
+    /// </summary>
+    [IsoId("_qHFnFZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    IEnumerable<ICharges16> ChargesInformation { get; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("_qHFnF5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    IBranchAndFinancialInstitutionIdentification8? InstructingAgent { get; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("_qHFnGZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    IBranchAndFinancialInstitutionIdentification8? InstructedAgent { get; }
+
+    /// <summary>
+    /// Provides detailed information on the reversal reason.
+    /// </summary>
+    [IsoId("_qHFnG5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Reversal Reason Information")]
+    [IsoXmlTag("RvslRsnInf")]
+    IEnumerable<IPaymentReversalReason10> ReversalReasonInformation { get; }
+
+    /// <summary>
+    /// Key elements used to identify the original transaction that is being referred to.
+    /// </summary>
+    [IsoId("_qHFnHZe-EfCsfrvk22Hpaw")]
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    IOriginalTransactionReference47? OriginalTransactionReference { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_qHFnH5e-EfCsfrvk22Hpaw")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9C36QTEsEe6GxLzpkVnWYg")]
 [DisplayName("Credit Transfer Transaction64")]
-public record CreditTransferTransaction64
+public partial record CreditTransferTransaction64
 {
     /// <summary>
     /// Payment Identification.

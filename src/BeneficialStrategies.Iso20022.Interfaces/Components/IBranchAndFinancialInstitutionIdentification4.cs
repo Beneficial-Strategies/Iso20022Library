@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.
+/// </summary>
+[IsoId("_TFB1RNp-Ed-ak6NoX_4Aeg_-736060150")]
+public interface IBranchAndFinancialInstitutionIdentification4 : IIsoComponent
+{
+    /// <summary>
+    /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
+    /// </summary>
+    [IsoId("_TFB1Rdp-Ed-ak6NoX_4Aeg_-736059286")]
+    [DisplayName("Financial Institution Identification")]
+    [IsoXmlTag("FinInstnId")]
+    IFinancialInstitutionIdentification7 FinancialInstitutionIdentification { get; }
+
+    /// <summary>
+    /// Identifies a specific branch of a financial institution.||Usage: This component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
+    /// </summary>
+    [IsoId("_TFB1Rtp-Ed-ak6NoX_4Aeg_-1911467512")]
+    [DisplayName("Branch Identification")]
+    [IsoXmlTag("BrnchId")]
+    IBranchData2? BranchIdentification { get; }
+}

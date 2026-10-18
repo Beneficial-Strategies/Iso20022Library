@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__Cz88248EeiU9cctagi5ow")]
 [DisplayName("Garnishment")]
-public record Garnishment3
+public partial record Garnishment3
 {
     /// <summary>
     /// Specifies the type of garnishment.

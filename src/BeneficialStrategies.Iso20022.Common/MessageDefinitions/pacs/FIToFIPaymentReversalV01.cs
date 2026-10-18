@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_elKe5dEuEd-BzquC8wXy7w_-1796587382")]
 [DisplayName("FI To FI Payment Reversal V")]
-public record FIToFIPaymentReversalV01 : IOuterRecord
+public partial record FIToFIPaymentReversalV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

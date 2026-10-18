@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TMehHNp-Ed-ak6NoX_4Aeg_151445359")]
 [DisplayName("Clearing System Member Identification")]
-public record ClearingSystemMemberIdentification2
+public partial record ClearingSystemMemberIdentification2
 {
     /// <summary>
     /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T3sBQtp-Ed-ak6NoX_4Aeg_1965243464")]
 [DisplayName("Referred Document Type")]
-public record ReferredDocumentType2
+public partial record ReferredDocumentType2
 {
     /// <summary>
     /// Provides the type details of the referred document.

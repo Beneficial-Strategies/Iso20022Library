@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("8fa60901-04a4-4c2d-8d76-a9c734a35cb6")]
 [DisplayName("FI To FI Payment Status Request V07")]
-public record FIToFIPaymentStatusRequestV07 : IOuterRecord
+public partial record FIToFIPaymentStatusRequestV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

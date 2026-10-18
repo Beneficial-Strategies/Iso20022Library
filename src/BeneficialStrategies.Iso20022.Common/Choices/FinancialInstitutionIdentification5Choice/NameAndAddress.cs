@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     [IsoId("_TFnrINp-Ed-ak6NoX_4Aeg_426657982")]
     [DisplayName("Name And Address")]
     [IsoXmlTag("NmAndAdr")]
-    public record NameAndAddress : FinancialInstitutionIdentification5Choice_
+    public partial record NameAndAddress : FinancialInstitutionIdentification5Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

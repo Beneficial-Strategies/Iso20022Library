@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TF7NItp-Ed-ak6NoX_4Aeg_365018897")]
     [DisplayName("Local Instrument 2 Choice")]
-    public abstract record LocalInstrument2Choice_ { }
+    public abstract partial record LocalInstrument2Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversalReason1Choice
     /// </summary>
     [IsoId("_TPTypdp-Ed-ak6NoX_4Aeg_673786832")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReversalReason1Choice_
+    public partial record Proprietary : ReversalReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

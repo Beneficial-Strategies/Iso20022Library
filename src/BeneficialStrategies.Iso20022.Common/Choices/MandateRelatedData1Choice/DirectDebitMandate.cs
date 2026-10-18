@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
     [IsoId("_su3YKslxEem0vqvvoqYsqQ")]
     [DisplayName("Direct Debit Mandate")]
     [IsoXmlTag("DrctDbtMndt")]
-    public record DirectDebitMandate : MandateRelatedData1Choice_
+    public partial record DirectDebitMandate : MandateRelatedData1Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.

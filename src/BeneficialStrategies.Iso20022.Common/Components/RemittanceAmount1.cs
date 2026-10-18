@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QGJCSNp-Ed-ak6NoX_4Aeg_-903711790")]
 [DisplayName("Remittance Amount")]
-public record RemittanceAmount1
+public partial record RemittanceAmount1
 {
     /// <summary>
     /// Amount specified is the exact amount due and payable to the creditor.

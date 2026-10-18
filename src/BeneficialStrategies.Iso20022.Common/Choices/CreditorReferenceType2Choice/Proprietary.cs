@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice
     /// Type of creditor reference, in a proprietary form.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : CreditorReferenceType2Choice_
+    public partial record Proprietary : CreditorReferenceType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_0IULUTEyEe6g-ffJsqGiSA")]
 [Description(@"Provides information on the remittance advice.")]
 [DisplayName("Remittance Location8")]
-public record RemittanceLocation8
+public partial record RemittanceLocation8
 {
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.

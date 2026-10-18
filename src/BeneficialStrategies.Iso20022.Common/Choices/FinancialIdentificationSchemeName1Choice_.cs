@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QALkMNp-Ed-ak6NoX_4Aeg_-2021925461")]
     [DisplayName("Financial Identification Scheme Name 1 Choice")]
-    public abstract record FinancialIdentificationSchemeName1Choice_ { }
+    public abstract partial record FinancialIdentificationSchemeName1Choice_ { }
 }

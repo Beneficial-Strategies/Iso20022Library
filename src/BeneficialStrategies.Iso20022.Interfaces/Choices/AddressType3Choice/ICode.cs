@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice;
+
+/// <summary>
+/// Type of address expressed as a code.
+/// </summary>
+[IsoId("_C7IDQRb-EeiyVv5j1vf1VQ")]
+public interface ICode : IAddressType3Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies the type of address.
+    /// </summary>
+    [IsoXmlTag("Cd")]
+    AddressType2Code Value { get; }
+}

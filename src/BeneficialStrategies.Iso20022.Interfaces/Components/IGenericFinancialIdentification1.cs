@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information related to an identification of a financial institution.
+/// </summary>
+[IsoId("_QALkM9p-Ed-ak6NoX_4Aeg_-2141717394")]
+public interface IGenericFinancialIdentification1 : IIsoComponent
+{
+    /// <summary>
+    /// Unique and unambiguous identification of a person.
+    /// </summary>
+    [IsoId("_QALkNNp-Ed-ak6NoX_4Aeg_-2141717392")]
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    Max35Text Identification { get; }
+
+    /// <summary>
+    /// Name of the identification scheme.
+    /// </summary>
+    [IsoId("_QALkNdp-Ed-ak6NoX_4Aeg_-2141717054")]
+    [DisplayName("Scheme Name")]
+    [IsoXmlTag("SchmeNm")]
+    IFinancialIdentificationSchemeName1Choice? SchemeName { get; }
+
+    /// <summary>
+    /// Entity that assigns the identification.
+    /// </summary>
+    [IsoId("_QALkNtp-Ed-ak6NoX_4Aeg_-2141717116")]
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    Max35Text? Issuer { get; }
+}

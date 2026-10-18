@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TP6Pkdp-Ed-ak6NoX_4Aeg_-1676326037")]
     [DisplayName("Return Reason 5 Choice")]
-    public abstract record ReturnReason5Choice_ { }
+    public abstract partial record ReturnReason5Choice_ { }
 }

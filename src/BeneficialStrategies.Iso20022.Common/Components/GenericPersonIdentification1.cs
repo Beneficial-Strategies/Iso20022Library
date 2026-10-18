@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P_4pRtp-Ed-ak6NoX_4Aeg_-893603485")]
 [DisplayName("Generic Person Identification")]
-public record GenericPersonIdentification1
+public partial record GenericPersonIdentification1
 {
     /// <summary>
     /// Unique and unambiguous identification of a person.

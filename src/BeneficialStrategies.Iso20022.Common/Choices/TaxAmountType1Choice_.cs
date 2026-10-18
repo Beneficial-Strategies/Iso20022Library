@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_tsra0lkyEeGeoaLUQk__nA_-1905418813")]
     [DisplayName("Tax Amount Type 1 Choice")]
-    public abstract record TaxAmountType1Choice_ { }
+    public abstract partial record TaxAmountType1Choice_ { }
 }

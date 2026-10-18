@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationSchemeName1C
     /// </summary>
     [IsoId("_P_4pRNp-Ed-ak6NoX_4Aeg_2056543161")]
     [DisplayName("Code")]
-    public record Code : PersonIdentificationSchemeName1Choice_
+    public partial record Code : PersonIdentificationSchemeName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

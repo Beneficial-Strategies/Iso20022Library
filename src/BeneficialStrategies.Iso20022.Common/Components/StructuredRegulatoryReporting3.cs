@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SnhZ4tp-Ed-ak6NoX_4Aeg_797411932")]
 [DisplayName("Structured Regulatory Reporting")]
-public record StructuredRegulatoryReporting3
+public partial record StructuredRegulatoryReporting3
 {
     /// <summary>
     /// Specifies the type of the information supplied in the regulatory reporting details.

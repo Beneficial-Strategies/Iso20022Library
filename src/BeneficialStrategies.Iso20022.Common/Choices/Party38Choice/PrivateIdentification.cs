@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party38Choice
     [IsoId("_6VWvRW48EeiU9cctagi5ow")]
     [DisplayName("Private Identification")]
     [IsoXmlTag("PrvtId")]
-    public record PrivateIdentification : Party38Choice_
+    public partial record PrivateIdentification : Party38Choice_
     {
         /// <summary>
         /// Date and place of birth of a person.

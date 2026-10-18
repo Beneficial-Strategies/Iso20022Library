@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-v4Z3W48EeiU9cctagi5ow")]
 [DisplayName("Remittance Information")]
-public record RemittanceInformation16
+public partial record RemittanceInformation16
 {
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts&apos; receivable system, in an unstructured form.

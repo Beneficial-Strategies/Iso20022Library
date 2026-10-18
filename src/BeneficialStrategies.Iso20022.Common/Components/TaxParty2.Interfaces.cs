@@ -1,0 +1,11 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record TaxParty2 : ITaxParty2
+{
+    ITaxAuthorisation1? ITaxParty2.Authorisation => Authorisation;
+}

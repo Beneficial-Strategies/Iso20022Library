@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice
     /// Direct Debit Mandate.
     /// </summary>
     [DisplayName("Direct Debit Mandate")]
-    public record DirectDebitMandate : MandateRelatedData3Choice_
+    public partial record DirectDebitMandate : MandateRelatedData3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

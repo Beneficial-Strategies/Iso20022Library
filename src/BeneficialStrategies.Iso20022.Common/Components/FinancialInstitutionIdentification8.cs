@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TE4ETNp-Ed-ak6NoX_4Aeg_1904039525")]
 [DisplayName("Financial Institution Identification")]
-public record FinancialInstitutionIdentification8
+public partial record FinancialInstitutionIdentification8
 {
     /// <summary>
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

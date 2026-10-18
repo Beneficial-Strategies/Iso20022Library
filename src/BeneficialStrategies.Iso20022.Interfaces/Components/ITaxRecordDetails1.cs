@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides information on the individual tax amount(s) per period of the tax record.
+/// </summary>
+[IsoId("_RwPMldp-Ed-ak6NoX_4Aeg_-1423474117")]
+public interface ITaxRecordDetails1 : IIsoComponent
+{
+    /// <summary>
+    /// Set of elements used to provide details on the period of time related to the tax payment.
+    /// </summary>
+    [IsoId("_RwPMltp-Ed-ak6NoX_4Aeg_-1180585644")]
+    [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
+    ITaxPeriod1? Period { get; }
+
+    /// <summary>
+    /// Underlying tax amount related to the specified period.
+    /// </summary>
+    [IsoId("_RwPMl9p-Ed-ak6NoX_4Aeg_-1423474086")]
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    ActiveOrHistoricCurrencyAndAmount Amount { get; }
+}

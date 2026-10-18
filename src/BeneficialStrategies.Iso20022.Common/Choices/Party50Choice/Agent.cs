@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party50Choice
     /// Agent.
     /// </summary>
     [DisplayName("Agent")]
-    public record Agent : Party50Choice_
+    public partial record Agent : Party50Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

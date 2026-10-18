@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+/// <summary>
+/// This record is an implementation of the pacs.007.001.03 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.
+/// Usage
+/// The FIToFIPaymentReversal message is exchanged between agents to reverse a FIToFICustomerDirectDebit message that has been settled. The result will be a credit on the debtor account.
+/// The FIToFIPaymentReversal message may or may not be the follow-up of a CustomerDirectDebitInitiation message.
+/// The FIToFIPaymentReversal message refers to the original FIToFICustomerDirectDebit message by means of references only or by means of references and a set of elements from the original instruction.
+/// The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.
+/// </summary>
+[IsoId("_sHC5wFkyEeGeoaLUQk__nA_-203184069")]
+public interface IFIToFIPaymentReversalV03 : IOuterRecord
+{
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [IsoId("_sHC5wVkyEeGeoaLUQk__nA_1620531152")]
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader57 GroupHeader { get; }
+
+    /// <summary>
+    /// Information concerning the original group of transactions, to which the message refers.
+    /// </summary>
+    [IsoId("_sHMqwFkyEeGeoaLUQk__nA_737297865")]
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    IOriginalGroupHeader3 OriginalGroupInformation { get; }
+
+    /// <summary>
+    /// Information concerning the original transactions, to which the reversal message refers.
+    /// </summary>
+    [IsoId("_sHMqwVkyEeGeoaLUQk__nA_623458799")]
+    [DisplayName("Transaction Information")]
+    [IsoXmlTag("TxInf")]
+    IEnumerable<IPaymentTransaction36> TransactionInformation { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_sHWbwFkyEeGeoaLUQk__nA_319943093")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nuAWu7TREeeyuKckOGlwuA")]
 [DisplayName("Amendment Information Details")]
-public record AmendmentInformationDetails12
+public partial record AmendmentInformationDetails12
 {
     /// <summary>
     /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.

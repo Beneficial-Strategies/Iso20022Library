@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("36b7291f-b8fd-4d08-957c-47b12fd4de39")]
 [DisplayName("Remittance Information26")]
-public record RemittanceInformation26
+public partial record RemittanceInformation26
 {
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry, in an unstructured form.

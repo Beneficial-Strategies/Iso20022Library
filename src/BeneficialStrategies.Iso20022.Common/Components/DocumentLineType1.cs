@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cX4kMablEeKvUvwX_r3tzA")]
 [DisplayName("Document Line Type")]
-public record DocumentLineType1
+public partial record DocumentLineType1
 {
     /// <summary>
     /// Provides the type details of the referred document line identification.

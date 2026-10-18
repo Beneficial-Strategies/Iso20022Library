@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 )]
 [IsoId("_LwCB8cP_Eemsic1bQcEtLA")]
 [DisplayName("FI To FI Customer Credit Transfer V")]
-public record FIToFICustomerCreditTransferV09 : IOuterRecord
+public partial record FIToFICustomerCreditTransferV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

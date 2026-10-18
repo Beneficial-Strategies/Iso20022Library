@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the original group, to which the message refers.
+/// </summary>
+[IsoId("_6x8aIRdSEea6o_d8S96x5g")]
+public interface IOriginalGroupInformation27 : IIsoComponent
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
+    /// </summary>
+    [IsoId("_7FfoQxdSEea6o_d8S96x5g")]
+    [DisplayName("Original Message Identification")]
+    [IsoXmlTag("OrgnlMsgId")]
+    Max35Text OriginalMessageIdentification { get; }
+
+    /// <summary>
+    /// Specifies the original message name identifier to which the message refers.
+    /// </summary>
+    [IsoId("_7FfoRRdSEea6o_d8S96x5g")]
+    [DisplayName("Original Message Name Identification")]
+    [IsoXmlTag("OrgnlMsgNmId")]
+    Max35Text OriginalMessageNameIdentification { get; }
+
+    /// <summary>
+    /// Date and time at which the original message was created.
+    /// </summary>
+    [IsoId("_7FfoRxdSEea6o_d8S96x5g")]
+    [DisplayName("Original Creation Date Time")]
+    [IsoXmlTag("OrgnlCreDtTm")]
+    ISODateTime? OriginalCreationDateTime { get; }
+
+    /// <summary>
+    /// Number of individual transactions contained in the original message.
+    /// </summary>
+    [IsoId("_7FfoSRdSEea6o_d8S96x5g")]
+    [DisplayName("Original Number Of Transactions")]
+    [IsoXmlTag("OrgnlNbOfTxs")]
+    Max15NumericText? OriginalNumberOfTransactions { get; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the original message, irrespective of currencies.
+    /// </summary>
+    [IsoId("_7FfoSxdSEea6o_d8S96x5g")]
+    [DisplayName("Original Control Sum")]
+    [IsoXmlTag("OrgnlCtrlSum")]
+    DecimalNumber? OriginalControlSum { get; }
+}

@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification1Choice;
+
+/// <summary>
+/// Proprietary clearing system service selected for a transaction.
+/// </summary>
+[IsoId("_TMVXIdp-Ed-ak6NoX_4Aeg_-601632483")]
+public interface IProprietary : IClearingSystemIdentification1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies a character string with a maximum length of 35 characters.
+    /// </summary>
+    [IsoXmlTag("Prtry")]
+    Max35Text Value { get; }
+}

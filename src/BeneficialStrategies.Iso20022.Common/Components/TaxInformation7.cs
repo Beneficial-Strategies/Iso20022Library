@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Cdax17TNEeeYQd8Z9bqFog")]
 [DisplayName("Tax Information")]
-public record TaxInformation7
+public partial record TaxInformation7
 {
     /// <summary>
     /// Party on the credit side of the transaction to which the tax applies.

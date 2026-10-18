@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SnYP99p-Ed-ak6NoX_4Aeg_-1655670600")]
 [DisplayName("Regulatory Reporting")]
-public record RegulatoryReporting3
+public partial record RegulatoryReporting3
 {
     /// <summary>
     /// Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.

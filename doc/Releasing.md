@@ -14,7 +14,7 @@ The highest label among the issues closed since the last `v*` tag wins.
 
 The pre-release suffix (`-alpha`) is kept. **A `breaking-change` while the version is 0.x would mean 1.0.0, the first production release**, so the script refuses that on its own; leaving 0.x is done on purpose with the `graduate` option (and a `suffix` if you want one, for example `-beta`, or empty for none).
 
-An issue closed as *not planned*, and an issue labelled `no-release-notes`, are left out of the notes and of the bump. Area labels route a line: `area:primitives` to the Primitives notes only, `area:validation` to the FluentValidation notes only, `area:core` to the core notes only, none to all three, `area:sagas` nowhere (that package is not published).
+An issue closed as *not planned*, and an issue labelled `no-release-notes`, are left out of the notes and of the bump. Area labels route a line: `area:primitives` to the Primitives notes only, `area:interfaces` to the Interfaces notes only, `area:validation` to the FluentValidation notes only, `area:core` to the core notes only, none to all four, `area:sagas` nowhere (that package is not published).
 
 ## What goes into the notes
 

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AKL0qW49EeiU9cctagi5ow")]
 [DisplayName("Original Transaction Reference")]
-public record OriginalTransactionReference28
+public partial record OriginalTransactionReference28
 {
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent.

@@ -1,0 +1,13 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+public partial record FinancialInstitutionCreditTransferV08 : IFinancialInstitutionCreditTransferV08
+{
+    IGroupHeader93 IFinancialInstitutionCreditTransferV08.GroupHeader => GroupHeader;
+    IEnumerable<ICreditTransferTransaction36> IFinancialInstitutionCreditTransferV08.CreditTransferTransactionInformation => CreditTransferTransactionInformation;
+    IEnumerable<ISupplementaryData1> IFinancialInstitutionCreditTransferV08.SupplementaryData => SupplementaryData;
+}

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RwPMldp-Ed-ak6NoX_4Aeg_-1423474117")]
 [DisplayName("Tax Record Details")]
-public record TaxRecordDetails1
+public partial record TaxRecordDetails1
 {
     /// <summary>
     /// Set of elements used to provide details on the period of time related to the tax payment.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Description(@"Series of additional dates related to the payment.")]
 [IsoId("_e2UX0G9ZEe-Mlpx0N5T4gg")]
 [DisplayName("Additional Date Time1")]
-public record AdditionalDateTime1
+public partial record AdditionalDateTime1
 {
     /// <summary>
     /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.

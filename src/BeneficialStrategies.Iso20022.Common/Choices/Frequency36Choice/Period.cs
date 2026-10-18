@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
     [IsoId("_seR6M2k2Eeanu6HLe77Rkg")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public record Period : Frequency36Choice_
+    public partial record Period : Frequency36Choice_
     {
         /// <summary>
         /// Period for which the number of instructions are to be created and processed.

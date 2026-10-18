@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QACaRdp-Ed-ak6NoX_4Aeg_-322320404")]
 [DisplayName("Generic Organisation Identification")]
-public record GenericOrganisationIdentification1
+public partial record GenericOrganisationIdentification1
 {
     /// <summary>
     /// Identification assigned by an institution.

@@ -1,0 +1,24 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice;
+
+/// <summary>
+/// Specifies a frequency in terms of an exact point in time or moment within a specified period type.
+/// </summary>
+[IsoId("_6IxUQWk2Eeanu6HLe77Rkg")]
+public interface IPointInTime : IFrequency36Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Period for which the number of instructions are to be created and processed.
+    /// </summary>
+    [IsoId("_CWY19Wk3Eeanu6HLe77Rkg")]
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    Frequency6Code Type { get; }
+
+    /// <summary>
+    /// Further information on the exact point in time the event should take place.
+    /// </summary>
+    [IsoXmlTag("PtInTm")]
+    Exact2NumericText Value { get; }
+}

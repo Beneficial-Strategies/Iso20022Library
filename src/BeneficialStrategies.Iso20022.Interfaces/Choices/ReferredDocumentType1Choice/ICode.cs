@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentType1Choice;
+
+/// <summary>
+/// Document type in a coded form.
+/// </summary>
+[IsoId("_T3sBRtp-Ed-ak6NoX_4Aeg_174928147")]
+public interface ICode : IReferredDocumentType1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies a type of financial or commercial document.
+    /// </summary>
+    [IsoXmlTag("Cd")]
+    DocumentType5Code Value { get; }
+}

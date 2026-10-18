@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_0KjnBTEyEe6g-ffJsqGiSA")]
 [Description(@"Provides additional details on the remittance advice.")]
 [DisplayName("Remittance Location Data2")]
-public record RemittanceLocationData2
+public partial record RemittanceLocationData2
 {
     /// <summary>
     /// Method used to deliver the remittance advice information.

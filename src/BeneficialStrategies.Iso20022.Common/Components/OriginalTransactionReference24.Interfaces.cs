@@ -1,0 +1,27 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record OriginalTransactionReference24 : IOriginalTransactionReference24
+{
+    IAmountType4Choice? IOriginalTransactionReference24.Amount => Amount;
+    IDateAndDateTimeChoice? IOriginalTransactionReference24.RequestedExecutionDate => RequestedExecutionDate;
+    IPartyIdentification43? IOriginalTransactionReference24.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    ISettlementInstruction4? IOriginalTransactionReference24.SettlementInformation => SettlementInformation;
+    IPaymentTypeInformation25? IOriginalTransactionReference24.PaymentTypeInformation => PaymentTypeInformation;
+    IMandateRelatedInformation11? IOriginalTransactionReference24.MandateRelatedInformation => MandateRelatedInformation;
+    IRemittanceInformation11? IOriginalTransactionReference24.RemittanceInformation => RemittanceInformation;
+    IPartyIdentification43? IOriginalTransactionReference24.UltimateDebtor => UltimateDebtor;
+    IPartyIdentification43? IOriginalTransactionReference24.Debtor => Debtor;
+    ICashAccount24? IOriginalTransactionReference24.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalTransactionReference24.DebtorAgent => DebtorAgent;
+    ICashAccount24? IOriginalTransactionReference24.DebtorAgentAccount => DebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalTransactionReference24.CreditorAgent => CreditorAgent;
+    ICashAccount24? IOriginalTransactionReference24.CreditorAgentAccount => CreditorAgentAccount;
+    IPartyIdentification43? IOriginalTransactionReference24.Creditor => Creditor;
+    ICashAccount24? IOriginalTransactionReference24.CreditorAccount => CreditorAccount;
+    IPartyIdentification43? IOriginalTransactionReference24.UltimateCreditor => UltimateCreditor;
+}
