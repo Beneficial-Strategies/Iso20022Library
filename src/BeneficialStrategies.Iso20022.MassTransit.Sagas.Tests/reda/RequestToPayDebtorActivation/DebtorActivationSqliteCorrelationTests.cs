@@ -1,7 +1,6 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Serialization;
-using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using static BeneficialStrategies.Iso20022.MassTransit.Sagas.reda.RequestToPayDebtorActivation.DebtorActivationFixtures;
 
@@ -45,13 +44,12 @@ public class DebtorActivationSqliteCorrelationTests
 
     private static async Task<(
         ServiceProvider Provider,
-        SqliteConnection Connection,
+        SqliteTestDatabase Database,
         ITestHarness Harness,
         ISagaStateMachineTestHarness<DebtorActivationServiceProviderStateMachine, DebtorActivationSagaState> SagaHarness
     )> StartHarnessAsync()
     {
-        var connection = new SqliteConnection("DataSource=:memory:");
-        await connection.OpenAsync();
+        var database = await SqliteTestDatabase.CreateAsync();
 
         var services = new ServiceCollection();
 
@@ -59,7 +57,7 @@ public class DebtorActivationSqliteCorrelationTests
         // (its AddDbContext<DbContext, TImplementation> call configures EF Core FOR the saga
         // repository, but doesn't expose TestDbContext as a directly resolvable service) — this
         // harness also needs to resolve it directly, to run EnsureCreatedAsync.
-        services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(connection));
+        services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(database.ConnectionString));
 
         var provider = services.AddMassTransitTestHarness(cfg =>
             {
@@ -67,7 +65,7 @@ public class DebtorActivationSqliteCorrelationTests
                     .EntityFrameworkRepository(r =>
                     {
                         r.ConcurrencyMode = ConcurrencyMode.Pessimistic;
-                        r.AddDbContext<DbContext, TestDbContext>((_, builder) => builder.UseSqlite(connection));
+                        r.AddDbContext<DbContext, TestDbContext>((_, builder) => builder.UseSqlite(database.ConnectionString));
                         r.UseSqlite();
                     });
                 cfg.AddConsumer<Consumers.DebtorActivationRequestConsumer>();
@@ -104,7 +102,7 @@ public class DebtorActivationSqliteCorrelationTests
             DebtorActivationSagaState
         >();
 
-        return (provider, connection, harness, sagaHarness);
+        return (provider, database, harness, sagaHarness);
     }
 
     /// <summary>
@@ -157,9 +155,9 @@ public class DebtorActivationSqliteCorrelationTests
     [Fact]
     public async Task AmendmentAfterActivated_CorrelatesAndFoldsBackToActivated_ViaRealSqlTranslation()
     {
-        var (provider, connection, harness, _) = await StartHarnessAsync();
+        var (provider, database, harness, _) = await StartHarnessAsync();
         await using var _p = provider;
-        await using var __ = connection;
+        await using var __ = database;
 
         await harness.Bus.Publish(ARequest("MSG-201"));
         var correlationId = await WaitForCreatedAsync(provider, "MSG-201");
@@ -177,9 +175,9 @@ public class DebtorActivationSqliteCorrelationTests
     [Fact]
     public async Task OrphanStatusReport_CorrelatesToNothing_ViaRealSqlTranslation()
     {
-        var (provider, connection, harness, sagaHarness) = await StartHarnessAsync();
+        var (provider, database, harness, sagaHarness) = await StartHarnessAsync();
         await using var _ = provider;
-        await using var __ = connection;
+        await using var __ = database;
 
         await harness.Bus.Publish(AStatusReport("MSG-301", "NEVER-SENT", ServiceRequestStatus1Code.Accepted));
         Assert.True(await harness.Consumed.Any<RequestToPayDebtorActivationStatusReportV02>());
