@@ -99,49 +99,49 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
+    public OriginatorData2? Originator { get; init; }
 
     /// <summary>
     /// Acquirer.
     /// </summary>
     [DisplayName("Acquirer")]
     [IsoXmlTag("Acqrr")]
-    public required PartyIdentification286 Acquirer { get; init; }
+    public required AcquirerData1 Acquirer { get; init; }
 
     /// <summary>
     /// Sender.
     /// </summary>
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
+    public SenderData1? Sender { get; init; }
 
     /// <summary>
     /// Card.
     /// </summary>
     [DisplayName("Card")]
     [IsoXmlTag("Card")]
-    public CardData11? Card { get; init; }
+    public CardData16? Card { get; init; }
 
     /// <summary>
     /// Receiver.
     /// </summary>
     [DisplayName("Receiver")]
     [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
+    public ReceiverData1? Receiver { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public PartyIdentification286? Issuer { get; init; }
+    public IssuerData1? Issuer { get; init; }
 
     /// <summary>
     /// Destination.
     /// </summary>
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
+    public DestinationData1? Destination { get; init; }
 
     /// <summary>
     /// Programme.
@@ -155,7 +155,7 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public TransactionIdentification56? TransactionIdentification { get; init; }
+    public TransactionIdentification61? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Conversion Date Time.
@@ -169,14 +169,14 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public ValueList<ExchangeRateInformation5> ExchangeRate { get; init; } = [];
+    public ValueList<CardExchangeRate1> ExchangeRate { get; init; } = [];
 
     /// <summary>
     /// Acceptor.
     /// </summary>
     [DisplayName("Acceptor")]
     [IsoXmlTag("Accptr")]
-    public PartyIdentification288? Acceptor { get; init; }
+    public AcceptorData1? Acceptor { get; init; }
 
     /// <summary>
     /// Transactor.
@@ -190,7 +190,7 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Terminal")]
     [IsoXmlTag("Termnl")]
-    public Terminal7? Terminal { get; init; }
+    public Terminal10? Terminal { get; init; }
 
     /// <summary>
     /// POI Component.
@@ -225,42 +225,42 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Payer")]
     [IsoXmlTag("Pyer")]
-    public PartyIdentification287? Payer { get; init; }
+    public PayerData1? Payer { get; init; }
 
     /// <summary>
     /// Payee.
     /// </summary>
     [DisplayName("Payee")]
     [IsoXmlTag("Pyee")]
-    public PartyIdentification287? Payee { get; init; }
+    public PayeeData1? Payee { get; init; }
 
     /// <summary>
     /// Token.
     /// </summary>
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
-    public Token2? Token { get; init; }
+    public Token5? Token { get; init; }
 
     /// <summary>
     /// Customer Device.
     /// </summary>
     [DisplayName("Customer Device")]
     [IsoXmlTag("CstmrDvc")]
-    public CustomerDevice5? CustomerDevice { get; init; }
+    public CustomerDevice6? CustomerDevice { get; init; }
 
     /// <summary>
     /// Wallet.
     /// </summary>
     [DisplayName("Wallet")]
     [IsoXmlTag("Wllt")]
-    public Wallet3? Wallet { get; init; }
+    public Wallet4? Wallet { get; init; }
 
     /// <summary>
     /// Cardholder.
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
-    public ValueList<Cardholder22> Cardholder { get; init; } = [];
+    public ValueList<Cardholder23> Cardholder { get; init; } = [];
 
     /// <summary>
     /// Customer.
@@ -274,14 +274,14 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public ValueList<Verification6> Verification { get; init; } = [];
+    public ValueList<Verification8> Verification { get; init; } = [];
 
     /// <summary>
     /// Risk.
     /// </summary>
     [DisplayName("Risk")]
     [IsoXmlTag("Rsk")]
-    public ValueList<RiskContext3> Risk { get; init; } = [];
+    public ValueList<RiskContext4> Risk { get; init; } = [];
 
     /// <summary>
     /// Special Programme Qualification.
@@ -296,14 +296,14 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Instalment")]
     [IsoXmlTag("Instlmt")]
-    public Instalment6? Instalment { get; init; }
+    public Instalment8? Instalment { get; init; }
 
     /// <summary>
     /// Additional Service.
     /// </summary>
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public ValueList<AdditionalService2> AdditionalService { get; init; } = [];
+    public ValueList<AdditionalService3> AdditionalService { get; init; } = [];
 
     /// <summary>
     /// Jurisdiction.
@@ -324,7 +324,7 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Reconciliation.
@@ -345,14 +345,14 @@ public record AdministrativeResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
-    public ValueList<OriginalTransaction3> OriginalTransaction { get; init; } = [];
+    public ValueList<OriginalTransaction4> OriginalTransaction { get; init; } = [];
 
     /// <summary>
     /// Protected Data.
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Private Data.

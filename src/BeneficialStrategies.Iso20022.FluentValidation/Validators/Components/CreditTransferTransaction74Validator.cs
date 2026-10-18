@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// <list type="table">
 ///   <item><term>PaymentIdentification</term><description>PaymentIdentification6 — required (1..1)</description></item>
-///   <item><term>PaymentTypeInformation</term><description>PaymentTypeInformation28 — optional (0..1)</description></item>
+///   <item><term>PaymentTypeInformation</term><description>PaymentTypeInformation29 — optional (0..1)</description></item>
 ///   <item><term>Amount</term><description>AmountType4Choice_ — required (1..1)</description></item>
 ///   <item><term>ChargeBearer</term><description>ChargeBearerType1Code — optional (0..1), closed enum, fully enforced</description></item>
 ///   <item><term>PreviousInstructingAgent1/2/3</term><description>BranchAndFinancialInstitutionIdentification8 — optional (0..1) each</description></item>
@@ -60,7 +60,7 @@ public class CreditTransferTransaction74Validator : AbstractValidator<CreditTran
     /// </summary>
     public CreditTransferTransaction74Validator(
         IValidator<PaymentIdentification6> paymentIdentificationValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<PaymentTypeInformation29> paymentTypeInformationValidator,
         IValidator<AmountType4Choice_> amountValidator,
         IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
         IValidator<CashAccount40> cashAccountValidator,
@@ -157,7 +157,7 @@ public class CreditTransferTransaction74Validator : AbstractValidator<CreditTran
     public CreditTransferTransaction74Validator()
         : this(
             new PaymentIdentification6Validator(),
-            new PaymentTypeInformation28Validator(),
+            new PaymentTypeInformation29Validator(),
             new AmountType4Choice_Validator(),
             new BranchAndFinancialInstitutionIdentification8Validator(),
             new CashAccount40Validator(),

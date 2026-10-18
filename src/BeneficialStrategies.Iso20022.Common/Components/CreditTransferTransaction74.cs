@@ -30,7 +30,7 @@ public record CreditTransferTransaction74
     [IsoId("93934465-0002-0002-0002-b4514b8f9290")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, expressed in the currency as ordered by the initiating party.

@@ -92,14 +92,14 @@ public record BatchTransferInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
+    public OriginatorData2? Originator { get; init; }
 
     /// <summary>
     /// Destination.
     /// </summary>
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
+    public DestinationData1? Destination { get; init; }
 
     /// <summary>
     /// Programme.
@@ -197,7 +197,7 @@ public record BatchTransferInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Private Data.

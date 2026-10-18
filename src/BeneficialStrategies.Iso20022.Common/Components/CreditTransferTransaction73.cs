@@ -389,7 +389,7 @@ public record CreditTransferTransaction73
     [IsoId("d64d5a68-0040-0040-0040-12844122abcc")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
+    public RemittanceInformation26? RemittanceInformation { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

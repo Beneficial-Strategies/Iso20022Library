@@ -205,7 +205,7 @@ public record ReconciliationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Processing Result")]
     [IsoXmlTag("PrcgRslt")]
-    public required ProcessingResult26 ProcessingResult { get; init; }
+    public required ProcessingResult23 ProcessingResult { get; init; }
 
     /// <summary>
     /// Original Response Code.

@@ -57,28 +57,28 @@ public record CustomReportV03 : IOuterRecord
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
+    public OriginatorData2? Originator { get; init; }
 
     /// <summary>
     /// Sender.
     /// </summary>
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
+    public SenderData1? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
     /// </summary>
     [DisplayName("Receiver")]
     [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
+    public ReceiverData1? Receiver { get; init; }
 
     /// <summary>
     /// Destination.
     /// </summary>
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
+    public DestinationData1? Destination { get; init; }
 
     /// <summary>
     /// Programme.

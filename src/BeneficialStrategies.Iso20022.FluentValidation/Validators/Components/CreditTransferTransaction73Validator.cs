@@ -48,7 +48,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>RegulatoryReporting</term><description>RegulatoryReporting10 collection — optional (0..&#8734;)</description></item>
 ///   <item><term>Tax</term><description>TaxData1 — optional (0..1)</description></item>
 ///   <item><term>RelatedRemittanceInformation</term><description>RemittanceLocation8 collection — optional (0..&#8734;)</description></item>
-///   <item><term>RemittanceInformation</term><description>RemittanceInformation22 — optional (0..1)</description></item>
+///   <item><term>RemittanceInformation</term><description>RemittanceInformation26 — optional (0..1)</description></item>
 ///   <item><term>SupplementaryData</term><description>SupplementaryData1 collection — optional (0..&#8734;)</description></item>
 /// </list>
 ///
@@ -103,7 +103,7 @@ public class CreditTransferTransaction73Validator : AbstractValidator<CreditTran
         IValidator<RegulatoryReporting10> regulatoryReportingValidator,
         IValidator<TaxData1> taxValidator,
         IValidator<RemittanceLocation8> relatedRemittanceInformationValidator,
-        IValidator<RemittanceInformation22> remittanceInformationValidator,
+        IValidator<RemittanceInformation26> remittanceInformationValidator,
         IValidator<SupplementaryData1> supplementaryDataValidator
     )
     {
@@ -308,7 +308,7 @@ public class CreditTransferTransaction73Validator : AbstractValidator<CreditTran
             new RegulatoryReporting10Validator(),
             new TaxData1Validator(),
             new RemittanceLocation8Validator(),
-            new RemittanceInformation22Validator(),
+            new RemittanceInformation26Validator(),
             new SupplementaryData1Validator()
         ) { }
 }

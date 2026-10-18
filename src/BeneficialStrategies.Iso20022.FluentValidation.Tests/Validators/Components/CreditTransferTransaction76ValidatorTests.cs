@@ -40,7 +40,7 @@ public class CreditTransferTransaction76ValidatorTests
         var party = new PartyIdentification272 { Name = "Some Party" };
         var msg = ValidMessage() with
         {
-            PaymentTypeInformation = new PaymentTypeInformation28(),
+            PaymentTypeInformation = new PaymentTypeInformation26(),
             ChargeBearer = ChargeBearerType1Code.BorneByDebtor,
             PreviousInstructingAgent1 = agent,
             PreviousInstructingAgent1Account = account,
@@ -66,7 +66,7 @@ public class CreditTransferTransaction76ValidatorTests
                 new RegulatoryReporting10 { DebitCreditReportingIndicator = RegulatoryReportingType1Code.Debit },
             ],
             RelatedRemittanceInformation = [new RemittanceLocation8()],
-            RemittanceInformation = new RemittanceInformation22(),
+            RemittanceInformation = new RemittanceInformation26(),
             SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();

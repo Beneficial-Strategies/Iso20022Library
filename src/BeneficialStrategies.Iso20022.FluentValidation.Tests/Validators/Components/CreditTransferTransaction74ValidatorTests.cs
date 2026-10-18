@@ -45,7 +45,7 @@ public class CreditTransferTransaction74ValidatorTests
 
         var msg = ValidMessage() with
         {
-            PaymentTypeInformation = new PaymentTypeInformation28(),
+            PaymentTypeInformation = new PaymentTypeInformation29(),
             ChargeBearer = ChargeBearerType1Code.BorneByDebtor,
             PreviousInstructingAgent1 = agent,
             PreviousInstructingAgent1Account = account,

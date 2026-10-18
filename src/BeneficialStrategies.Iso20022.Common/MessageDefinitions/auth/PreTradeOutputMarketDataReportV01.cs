@@ -63,7 +63,7 @@ public record PreTradeOutputMarketDataReportV01 : IOuterRecord
     [DisplayName("Output Data Report")]
     [IsoXmlTag("OutptDataRpt")]
     [MinLength(1)]
-    public ValueList<OutputData1Choice_> OutputDataReport { get; init; } = [];
+    public ValueList<PreTradeOutputReport1Choice_> OutputDataReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
