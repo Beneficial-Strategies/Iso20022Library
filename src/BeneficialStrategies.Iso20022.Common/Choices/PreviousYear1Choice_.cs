@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_3fxScUXfEeGY6MkiuzuPOA_-1781639499")]
     [DisplayName("Previous Year 1 Choice")]
-    public abstract record PreviousYear1Choice_ { }
+    public abstract partial record PreviousYear1Choice_ { }
 }

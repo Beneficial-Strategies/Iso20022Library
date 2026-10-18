@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal8Choice
     [IsoId("_-GjFwyPvEeWQjryFgN2ITg")]
     [DisplayName("Transfer Out Confirmation Details")]
     [IsoXmlTag("TrfOutConfDtls")]
-    public record TransferOutConfirmationDetails : Reversal8Choice_
+    public partial record TransferOutConfirmationDetails : Reversal8Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

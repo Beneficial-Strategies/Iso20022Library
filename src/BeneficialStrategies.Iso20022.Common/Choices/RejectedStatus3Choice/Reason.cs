@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus3Choice
     [IsoId("_U3BXUNp-Ed-ak6NoX_4Aeg_456007921")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RejectedStatus3Choice_
+    public partial record Reason : RejectedStatus3Choice_
     {
         /// <summary>
         /// Reason for a rejected status in structured form.

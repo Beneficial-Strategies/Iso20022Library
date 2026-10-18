@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus4Cho
     /// </summary>
     [IsoId("_gvJOK1hgEeS8HfHHd4stCA")]
     [DisplayName("Denied")]
-    public record Denied : ModificationProcessingStatus4Choice_
+    public partial record Denied : ModificationProcessingStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dnd")]

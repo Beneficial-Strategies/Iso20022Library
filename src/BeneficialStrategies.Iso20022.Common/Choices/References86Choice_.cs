@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(References86Choice.CounterpartyMarketInfrastructureTransactionIdentification))]
     [JsonDerivedType(typeof(References86Choice.PoolIdentification))]
     [JsonDerivedType(typeof(References86Choice.OtherTransactionIdentification))]
-    public abstract record References86Choice_
+    public abstract partial record References86Choice_
     {
     }
 }

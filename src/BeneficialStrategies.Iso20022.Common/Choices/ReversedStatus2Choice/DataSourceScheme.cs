@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversedStatus2Choice
     [IsoId("_bUFeJSY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : ReversedStatus2Choice_
+    public partial record DataSourceScheme : ReversedStatus2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

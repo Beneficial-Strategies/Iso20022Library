@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0kkl0QlIEeGATtfOBToyew_-1998753292")]
     [DisplayName("Modification Status 2 Choice")]
-    public abstract record ModificationStatus2Choice_ { }
+    public abstract partial record ModificationStatus2Choice_ { }
 }

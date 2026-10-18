@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType24Choice
     /// </summary>
     [IsoId("_ciETAzi8Eeydid5dcNPKvg")]
     [DisplayName("Code")]
-    public record Code : ExposureType24Choice_
+    public partial record Code : ExposureType24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

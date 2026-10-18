@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SoH21Np-Ed-ak6NoX_4Aeg_-1748202213")]
 [DisplayName("Financial Instrument Quantity")]
-public record FinancialInstrumentQuantity1
+public partial record FinancialInstrumentQuantity1
 {
     /// <summary>
     /// Quantity expressed as a number, eg, a number of shares.

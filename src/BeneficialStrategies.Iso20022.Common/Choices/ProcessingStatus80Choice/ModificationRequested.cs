@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus80Choice
     [IsoId("_6icMMQpJEeup4r-PFG2T5Q")]
     [DisplayName("Modification Requested")]
     [IsoXmlTag("ModReqd")]
-    public record ModificationRequested : ProcessingStatus80Choice_
+    public partial record ModificationRequested : ProcessingStatus80Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

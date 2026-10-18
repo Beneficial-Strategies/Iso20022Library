@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_61RRNZNLEeWGlc8L7oPDIg")]
     [DisplayName("Update Type 22 Choice")]
-    public abstract record UpdateType22Choice_ { }
+    public abstract partial record UpdateType22Choice_ { }
 }

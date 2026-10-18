@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus5Choice
     /// </summary>
     [IsoId("_WY1VT-ijEeuLe8v4JEtDDg")]
     [DisplayName("Reversed")]
-    public record Reversed : TransferStatus5Choice_
+    public partial record Reversed : TransferStatus5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rvsd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9242905c-7475-4b1c-8c93-796ba22731b4")]
 [DisplayName("Status And Reason50")]
-public record StatusAndReason50
+public partial record StatusAndReason50
 {
     /// <summary>
     /// Provides the status of an instruction.

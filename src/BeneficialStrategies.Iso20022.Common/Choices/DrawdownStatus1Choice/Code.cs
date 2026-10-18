@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownStatus1Choice
     /// </summary>
     [IsoId("_kMkhAFKiEeiSDqv62fL07g")]
     [DisplayName("Code")]
-    public record Code : DrawdownStatus1Choice_
+    public partial record Code : DrawdownStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

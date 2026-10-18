@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5m6BTZNLEeWGlc8L7oPDIg")]
     [DisplayName("Market Client Side 5 Choice")]
-    public abstract record MarketClientSide5Choice_ { }
+    public abstract partial record MarketClientSide5Choice_ { }
 }

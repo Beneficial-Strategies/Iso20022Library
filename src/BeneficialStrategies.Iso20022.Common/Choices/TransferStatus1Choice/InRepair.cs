@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     [IsoId("_o1CqqxwkEeOIveEnnb_1-A")]
     [DisplayName("In Repair")]
     [IsoXmlTag("InRpr")]
-    public record InRepair : TransferStatus1Choice_
+    public partial record InRepair : TransferStatus1Choice_
     {
         /// <summary>
         /// Reason for the in-repair status.

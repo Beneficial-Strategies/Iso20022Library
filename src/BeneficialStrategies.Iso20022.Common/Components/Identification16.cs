@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5PaGvZNLEeWGlc8L7oPDIg")]
 [DisplayName("Identification")]
-public record Identification16
+public partial record Identification16
 {
     /// <summary>
     /// Unique identifier of a document, message or transaction.

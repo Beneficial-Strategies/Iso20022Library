@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y6HYAZELEem-9Y6mq5ZH3Q")]
 [DisplayName("Copy Information")]
-public record CopyInformation5
+public partial record CopyInformation5
 {
     /// <summary>
     /// Indicates whether the message is a copy.

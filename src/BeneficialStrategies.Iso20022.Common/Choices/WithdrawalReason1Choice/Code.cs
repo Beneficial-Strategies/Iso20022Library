@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WithdrawalReason1Choice
     /// </summary>
     [IsoId("_SpFGUE7XEeifNrXGwadPmg")]
     [DisplayName("Code")]
-    public record Code : WithdrawalReason1Choice_
+    public partial record Code : WithdrawalReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

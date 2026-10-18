@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6GWV7ZNLEeWGlc8L7oPDIg")]
 [DisplayName("Registration Reason")]
-public record RegistrationReason6
+public partial record RegistrationReason6
 {
     /// <summary>
     /// Specifies the reason of the holding status.

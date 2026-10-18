@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatusType1Choice
     /// </summary>
     [IsoId("_GLJdEFNYEeijdq8ilaxyOA")]
     [DisplayName("Code")]
-    public record Code : TransferStatusType1Choice_
+    public partial record Code : TransferStatusType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

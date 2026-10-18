@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType1Choice
     [IsoId("_RdnLhtp-Ed-ak6NoX_4Aeg_-394309489")]
     [DisplayName("Market")]
     [IsoXmlTag("Mkt")]
-    public record Market : PriceType1Choice_
+    public partial record Market : PriceType1Choice_
     {
         /// <summary>
         /// Specification of the price type.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pzAI0a5xEeeMy7TnJ3e__g")]
     [DisplayName("Quantity 43 Choice")]
-    public abstract record Quantity43Choice_ { }
+    public abstract partial record Quantity43Choice_ { }
 }

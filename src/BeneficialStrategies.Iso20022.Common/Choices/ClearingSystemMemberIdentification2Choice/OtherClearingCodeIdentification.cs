@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDPFhdp-Ed-ak6NoX_4Aeg_-1854348245")]
     [DisplayName("Other Clearing Code Identification")]
-    public record OtherClearingCodeIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record OtherClearingCodeIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

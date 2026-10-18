@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus12Ch
     /// <summary>Instruction has been modified.</summary>
     [IsoId("_rZrHf6ohEfCG2_q2WT-90w")]
     [DisplayName("Modified")]
-    public record Modified : ModificationProcessingStatus12Choice_
+    public partial record Modified : ModificationProcessingStatus12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Modfd")]

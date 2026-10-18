@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5NZUzpNLEeWGlc8L7oPDIg")]
     [DisplayName("Form Of Security 7 Choice")]
-    public abstract record FormOfSecurity7Choice_ { }
+    public abstract partial record FormOfSecurity7Choice_ { }
 }

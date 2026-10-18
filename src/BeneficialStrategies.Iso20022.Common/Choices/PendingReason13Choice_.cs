@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Bsv4f_40EeClUvPNHKL9Zw")]
     [DisplayName("Pending Reason 13 Choice")]
-    public abstract record PendingReason13Choice_ { }
+    public abstract partial record PendingReason13Choice_ { }
 }

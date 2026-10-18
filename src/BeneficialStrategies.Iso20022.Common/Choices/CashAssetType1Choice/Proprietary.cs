@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAssetType1Choice
     [IsoId("__5TfkEyIEeir2sRRVd9XhA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CashAssetType1Choice_
+    public partial record Proprietary : CashAssetType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

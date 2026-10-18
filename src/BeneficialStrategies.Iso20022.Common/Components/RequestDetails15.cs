@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-zrY2zqEEeWVrPy0StzzSg")]
 [DisplayName("Request Details")]
-public record RequestDetails15
+public partial record RequestDetails15
 {
     /// <summary>
     /// References of the transaction for which the securities settlement condition modification is requested.

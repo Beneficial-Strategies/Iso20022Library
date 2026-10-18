@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S12nAfsnEeCFH_HrG1Cfjg")]
 [DisplayName("Receiving Parties And Account")]
-public record ReceivingPartiesAndAccount8
+public partial record ReceivingPartiesAndAccount8
 {
     /// <summary>
     /// Party that buys goods or services, or a financial instrument.

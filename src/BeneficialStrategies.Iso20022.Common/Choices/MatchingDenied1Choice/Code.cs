@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingDenied1Choice
     /// </summary>
     [IsoId("_UakE1dp-Ed-ak6NoX_4Aeg_-1792146341")]
     [DisplayName("Code")]
-    public record Code : MatchingDenied1Choice_
+    public partial record Code : MatchingDenied1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

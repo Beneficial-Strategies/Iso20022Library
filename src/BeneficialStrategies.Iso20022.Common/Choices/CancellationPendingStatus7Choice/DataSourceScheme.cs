@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationPendingStatus7Choice
     [IsoId("_nF77lSY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : CancellationPendingStatus7Choice_
+    public partial record DataSourceScheme : CancellationPendingStatus7Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

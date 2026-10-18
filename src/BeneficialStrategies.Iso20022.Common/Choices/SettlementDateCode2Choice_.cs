@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QurB5Np-Ed-ak6NoX_4Aeg_-1955127258")]
     [DisplayName("Settlement Date Code 2 Choice")]
-    public abstract record SettlementDateCode2Choice_ { }
+    public abstract partial record SettlementDateCode2Choice_ { }
 }

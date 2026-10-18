@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vdmqUZEKEem-9Y6mq5ZH3Q")]
 [DisplayName("Fees")]
-public record Fees2
+public partial record Fees2
 {
     /// <summary>
     /// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.

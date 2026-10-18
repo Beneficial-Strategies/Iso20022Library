@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sgqj-tp-Ed-ak6NoX_4Aeg_-2083447080")]
 [DisplayName("PEPISA Transfer")]
-public record PEPISATransfer6
+public partial record PEPISATransfer6
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

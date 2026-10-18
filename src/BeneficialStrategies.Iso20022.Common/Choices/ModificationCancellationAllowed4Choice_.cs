@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_421HATtFEeWRTLSN0i0tng")]
     [DisplayName("Modification Cancellation Allowed 4 Choice")]
-    public abstract record ModificationCancellationAllowed4Choice_ { }
+    public abstract partial record ModificationCancellationAllowed4Choice_ { }
 }

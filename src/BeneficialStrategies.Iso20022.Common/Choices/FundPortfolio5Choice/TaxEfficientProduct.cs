@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
     [IsoId("_nxCyoZNMEemQB_8XA98K0Q")]
     [DisplayName("Tax Efficient Product")]
     [IsoXmlTag("TaxEffcntPdct")]
-    public record TaxEfficientProduct : FundPortfolio5Choice_
+    public partial record TaxEfficientProduct : FundPortfolio5Choice_
     {
         /// <summary>
         /// Type of tax efficient product, for example, an individual savings account (ISA) in the UK.

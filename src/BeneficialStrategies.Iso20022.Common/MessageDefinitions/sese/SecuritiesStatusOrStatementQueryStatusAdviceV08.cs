@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("__tNJkaovEfCG2_q2WT-90w")]
 [DisplayName("Securities Status Or Statement Query Status Advice V08")]
-public record SecuritiesStatusOrStatementQueryStatusAdviceV08 : IOuterRecord
+public partial record SecuritiesStatusOrStatementQueryStatusAdviceV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U0yisNp-Ed-ak6NoX_4Aeg_-337704522")]
 [DisplayName("Transfer In")]
-public record TransferIn2
+public partial record TransferIn2
 {
     /// <summary>
     /// General information related to the transfer of a financial instrument.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gwUucTnvEeWfSKvvZlhRKg")]
     [DisplayName("Acknowledged Accepted Status 21 Choice")]
-    public abstract record AcknowledgedAcceptedStatus21Choice_ { }
+    public abstract partial record AcknowledgedAcceptedStatus21Choice_ { }
 }

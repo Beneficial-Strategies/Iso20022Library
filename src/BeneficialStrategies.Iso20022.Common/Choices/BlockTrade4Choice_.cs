@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(BlockTrade4Choice.Proprietary), nameof(BlockTrade4Choice.Proprietary))]
     [IsoId("_1_5ugTqHEeWVrPy0StzzSg")]
     [DisplayName("Block Trade 4 Choice")]
-    public abstract record BlockTrade4Choice_ { }
+    public abstract partial record BlockTrade4Choice_ { }
 }

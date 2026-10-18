@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RejectedStatus17Choice.Reason), nameof(RejectedStatus17Choice.Reason))]
     [IsoId("_db1M1zt5EeW638lNyHKv7A")]
     [DisplayName("Rejected Status 17 Choice")]
-    public abstract record RejectedStatus17Choice_ { }
+    public abstract partial record RejectedStatus17Choice_ { }
 }

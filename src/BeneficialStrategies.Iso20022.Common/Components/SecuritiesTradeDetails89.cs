@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VLemU832Eee5nJBZsW8MFQ")]
 [DisplayName("Securities Trade Details")]
-public record SecuritiesTradeDetails89
+public partial record SecuritiesTradeDetails89
 {
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.

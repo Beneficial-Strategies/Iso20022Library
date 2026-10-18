@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5TJ_AZNLEeWGlc8L7oPDIg")]
     [DisplayName("Securities RTGS 5 Choice")]
-    public abstract record SecuritiesRTGS5Choice_ { }
+    public abstract partial record SecuritiesRTGS5Choice_ { }
 }

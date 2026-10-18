@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KLKpuzzbEeWeNtT0s2RbkQ")]
 [DisplayName("Linkages")]
-public record Linkages40
+public partial record Linkages40
 {
     /// <summary>
     /// Reference to the linked transaction.

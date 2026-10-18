@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5NZ7p5NLEeWGlc8L7oPDIg")]
     [DisplayName("Securities Payment Status 6 Choice")]
-    public abstract record SecuritiesPaymentStatus6Choice_ { }
+    public abstract partial record SecuritiesPaymentStatus6Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K37R0F23EeiFXdiLi_Nf4A")]
 [DisplayName("Bonus Withdrawal")]
-public record BonusWithdrawal1
+public partial record BonusWithdrawal1
 {
     /// <summary>
     /// Specifies whether the amount is the result of a bonus paid, a withdrawal or other kind of amount.

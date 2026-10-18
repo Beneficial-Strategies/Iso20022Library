@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5TFs1ZNLEeWGlc8L7oPDIg")]
 [DisplayName("Statement")]
-public record Statement50
+public partial record Statement50
 {
     /// <summary>
     /// Identification assigned by the portfolio transfer counterpart to unambiguously identify a portfolio transfer notification.

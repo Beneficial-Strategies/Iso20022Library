@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ua2_xtp-Ed-ak6NoX_4Aeg_-1399251365")]
 [DisplayName("Registration Parameters")]
-public record RegistrationParameters1
+public partial record RegistrationParameters1
 {
     /// <summary>
     /// Identification assigned to a deposit.

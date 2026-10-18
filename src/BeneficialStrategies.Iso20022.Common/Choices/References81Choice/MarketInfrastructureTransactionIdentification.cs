@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice
     /// Market Infrastructure Transaction Identification.
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
-    public record MarketInfrastructureTransactionIdentification : References81Choice_
+    public partial record MarketInfrastructureTransactionIdentification : References81Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

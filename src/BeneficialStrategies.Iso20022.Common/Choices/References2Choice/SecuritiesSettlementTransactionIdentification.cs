@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References2Choice
     [IsoId("_US9oCtp-Ed-ak6NoX_4Aeg_-95050128")]
     [DisplayName("Securities Settlement Transaction Identification")]
     [IsoXmlTag("SctiesSttlmTxId")]
-    public record SecuritiesSettlementTransactionIdentification : References2Choice_
+    public partial record SecuritiesSettlementTransactionIdentification : References2Choice_
     {
         /// <summary>
         /// Provides unambiguous transaction identification information.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ae2moSGPEeW7gKYhAMEFCw")]
 [DisplayName("Alternate Security Identification")]
-public record AlternateSecurityIdentification7
+public partial record AlternateSecurityIdentification7
 {
     /// <summary>
     /// Unique and unambiguous identifier of a security.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification1Choice
     /// </summary>
     [IsoId("_VcIPg9p-Ed-ak6NoX_4Aeg_-371877998")]
     [DisplayName("Bloomberg")]
-    public record Bloomberg : SecurityIdentification1Choice_
+    public partial record Bloomberg : SecurityIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

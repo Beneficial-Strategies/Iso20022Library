@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RNE1Kdp-Ed-ak6NoX_4Aeg_-577369889")]
 [DisplayName("Additional Reference")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record AdditionalReference2
+public partial record AdditionalReference2
 {
     /// <summary>
     /// Business reference of a message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.

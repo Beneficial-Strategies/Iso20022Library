@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument102Choice
     /// <summary>Identification of the security.</summary>
     [IsoId("4fa97e60-c7bf-4279-a6e2-09c96dfc97e9")]
     [DisplayName("Security")]
-    public record Security : FinancialInstrument102Choice_
+    public partial record Security : FinancialInstrument102Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Scty")]

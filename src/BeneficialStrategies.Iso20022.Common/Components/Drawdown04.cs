@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("b207a4a1-9b3d-4b69-a7eb-5cb6fafb08dd")]
 [DisplayName("Drawdown04")]
-public record Drawdown04
+public partial record Drawdown04
 {
     /// <summary>
     /// Identification of the drawdown.

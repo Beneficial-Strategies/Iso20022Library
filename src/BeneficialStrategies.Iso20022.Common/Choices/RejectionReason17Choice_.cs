@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CF-CICzVEeOsiuMH68so7Q")]
     [DisplayName("Rejection Reason 17 Choice")]
-    public abstract record RejectionReason17Choice_ { }
+    public abstract partial record RejectionReason17Choice_ { }
 }

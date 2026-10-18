@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zQVCEYotEe-efPejSUAtLw")]
 [DisplayName("Settlement Parties127")]
-public record SettlementParties127
+public partial record SettlementParties127
 {
     /// <summary>
     /// Depository.

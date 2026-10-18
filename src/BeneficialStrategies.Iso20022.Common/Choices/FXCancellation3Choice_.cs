@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IHRikT0EEeWjqIDN7tjEjQ")]
     [DisplayName("FX Cancellation 3 Choice")]
-    public abstract record FXCancellation3Choice_ { }
+    public abstract partial record FXCancellation3Choice_ { }
 }

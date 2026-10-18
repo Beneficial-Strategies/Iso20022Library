@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LongPostalAddress1Choice
     [IsoId("_QG4pJ9p-Ed-ak6NoX_4Aeg_-1635487889")]
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
-    public record Structured : LongPostalAddress1Choice_
+    public partial record Structured : LongPostalAddress1Choice_
     {
         /// <summary>
         /// Name of the building or house.

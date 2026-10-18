@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus4Cho
     /// </summary>
     [IsoId("_gvJOIVhgEeS8HfHHd4stCA")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : ModificationProcessingStatus4Choice_
+    public partial record AcknowledgedAccepted : ModificationProcessingStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AckdAccptd")]

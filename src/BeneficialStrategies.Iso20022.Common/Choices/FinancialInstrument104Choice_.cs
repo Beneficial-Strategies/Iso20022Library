@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FinancialInstrument104Choice.OtherAsset), nameof(FinancialInstrument104Choice.OtherAsset))]
     [IsoId("790dc0e5-bd9f-403d-80fb-efcf5b914a98")]
     [DisplayName("Financial Instrument 104 Choice")]
-    public abstract record FinancialInstrument104Choice_ { }
+    public abstract partial record FinancialInstrument104Choice_ { }
 }

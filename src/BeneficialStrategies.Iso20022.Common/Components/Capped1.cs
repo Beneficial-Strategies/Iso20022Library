@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_56qUIFNdEeijdq8ilaxyOA")]
 [DisplayName("Capped")]
-public record Capped1
+public partial record Capped1
 {
     /// <summary>
     /// Start date of current reference period

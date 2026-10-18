@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus106Choice
     /// <summary>Specifies the denied status.</summary>
     [IsoId("_lrsGY6ogEfCG2_q2WT-90w")]
     [DisplayName("Denied")]
-    public record Denied : ProcessingStatus106Choice_
+    public partial record Denied : ProcessingStatus106Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dnd")]

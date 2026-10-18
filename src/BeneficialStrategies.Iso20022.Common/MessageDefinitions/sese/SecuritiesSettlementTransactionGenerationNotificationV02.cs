@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_fjU1AdtaEd-RF5yaMAVhAw")]
 [DisplayName("Securities Settlement Transaction Generation Notification V")]
-public record SecuritiesSettlementTransactionGenerationNotificationV02 : IOuterRecord
+public partial record SecuritiesSettlementTransactionGenerationNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

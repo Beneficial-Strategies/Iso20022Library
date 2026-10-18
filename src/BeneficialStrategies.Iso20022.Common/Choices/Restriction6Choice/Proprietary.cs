@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Restriction6Choice
     [IsoId("_5TJ-55NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Restriction6Choice_
+    public partial record Proprietary : Restriction6Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

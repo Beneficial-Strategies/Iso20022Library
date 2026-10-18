@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument104Choice
     /// <summary>Identification of another kind of asset in the holding that is not a security or cash.</summary>
     [IsoId("6113ce1b-81e5-47e3-a177-487f426a0831")]
     [DisplayName("Other Asset")]
-    public record OtherAsset : FinancialInstrument104Choice_
+    public partial record OtherAsset : FinancialInstrument104Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OthrAsst")]

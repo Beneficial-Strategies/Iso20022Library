@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xU1ak2wsEeWLq_lbZ2Mhyw")]
 [DisplayName("Place Of Trade Identification")]
-public record PlaceOfTradeIdentification1
+public partial record PlaceOfTradeIdentification1
 {
     /// <summary>
     /// Identification and type of the place of trade.

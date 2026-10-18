@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus27Choi
     /// </summary>
     [IsoId("_6BK6xZNLEeWGlc8L7oPDIg")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : AcknowledgedAcceptedStatus27Choice_
+    public partial record NoSpecifiedReason : AcknowledgedAcceptedStatus27Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

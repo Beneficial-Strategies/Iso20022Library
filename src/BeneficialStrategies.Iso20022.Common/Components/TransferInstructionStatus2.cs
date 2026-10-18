@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQWypdp-Ed-ak6NoX_4Aeg_-1720727029")]
 [DisplayName("Transfer Instruction Status")]
-public record TransferInstructionStatus2
+public partial record TransferInstructionStatus2
 {
     /// <summary>
     /// Status of the transfer is accepted, sent to next party, matched, already executed, or settled.

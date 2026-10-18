@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatus10Choice
     [IsoId("_6HWbkZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AcceptedStatus10Choice_
+    public partial record Reason : AcceptedStatus10Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has been accepted.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f4NugRgmEeK-_89we2b-bA")]
 [DisplayName("Transfer")]
-public record Transfer25
+public partial record Transfer25
 {
     /// <summary>
     /// Date and time at which the transfer was executed.

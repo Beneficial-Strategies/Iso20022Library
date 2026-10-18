@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairStatus5Choice
     [IsoId("_3e1lj_7qEeCvPoRGOxRobQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RepairStatus5Choice_
+    public partial record Reason : RepairStatus5Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected or repair status.

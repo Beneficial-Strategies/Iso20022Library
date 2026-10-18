@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason3Choice
     [IsoId("_UXb4Utp-Ed-ak6NoX_4Aeg_-1471943891")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AcknowledgementReason3Choice_
+    public partial record Proprietary : AcknowledgementReason3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

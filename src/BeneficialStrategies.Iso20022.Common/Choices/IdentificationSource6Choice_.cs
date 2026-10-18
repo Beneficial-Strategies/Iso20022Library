@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IdentificationSource6Choice.Proprietary), nameof(IdentificationSource6Choice.Proprietary))]
     [IsoId("09420273-6e0b-40f0-b994-3f62f2a474ec")]
     [DisplayName("Identification Source 6 Choice")]
-    public abstract record IdentificationSource6Choice_ { }
+    public abstract partial record IdentificationSource6Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yqs64fsnEeCFH_HrG1Cfjg")]
 [DisplayName("Receive Information")]
-public record ReceiveInformation8
+public partial record ReceiveInformation8
 {
     /// <summary>
     /// Date and time at which the securities were exchange at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).

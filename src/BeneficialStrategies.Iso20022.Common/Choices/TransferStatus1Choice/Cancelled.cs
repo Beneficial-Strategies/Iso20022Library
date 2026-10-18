@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     [IsoId("_o1CqrhwkEeOIveEnnb_1-A")]
     [DisplayName("Cancelled")]
     [IsoXmlTag("Canc")]
-    public record Cancelled : TransferStatus1Choice_
+    public partial record Cancelled : TransferStatus1Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkageType4Choice
     /// </summary>
     [IsoId("_6GVvcZNLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : LinkageType4Choice_
+    public partial record Code : LinkageType4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lM8GQE7bEeifNrXGwadPmg")]
 [DisplayName("Innovative Finance")]
-public record InnovativeFinance1
+public partial record InnovativeFinance1
 {
     /// <summary>
     /// Type of innovative finance product.

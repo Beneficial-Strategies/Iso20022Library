@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wZdgANvdEeqxGfKJubfhIw")]
     [DisplayName("Type Of Request 1 Choice")]
-    public abstract record TypeOfRequest1Choice_ { }
+    public abstract partial record TypeOfRequest1Choice_ { }
 }

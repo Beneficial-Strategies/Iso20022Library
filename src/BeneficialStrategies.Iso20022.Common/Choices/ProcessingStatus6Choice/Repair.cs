@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus6Choice
     /// </summary>
     [IsoId("_UVMcp9p-Ed-ak6NoX_4Aeg_-747897571")]
     [DisplayName("Repair")]
-    public record Repair : ProcessingStatus6Choice_
+    public partial record Repair : ProcessingStatus6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rpr")]

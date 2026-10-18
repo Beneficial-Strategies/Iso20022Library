@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseType12Choice
     [IsoId("_YbpmeTqHEeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RepurchaseType12Choice_
+    public partial record Proprietary : RepurchaseType12Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

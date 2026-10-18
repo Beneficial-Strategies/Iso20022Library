@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References6Choice
     /// </summary>
     [IsoId("_UTGx89p-Ed-ak6NoX_4Aeg_-1346791785")]
     [DisplayName("Market Infrastructure Transaction Identification")]
-    public record MarketInfrastructureTransactionIdentification : References6Choice_
+    public partial record MarketInfrastructureTransactionIdentification : References6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

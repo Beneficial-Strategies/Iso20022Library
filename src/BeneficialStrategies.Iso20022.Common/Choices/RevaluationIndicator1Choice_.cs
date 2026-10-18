@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Quh38dp-Ed-ak6NoX_4Aeg_1541845195")]
     [DisplayName("Revaluation Indicator 1 Choice")]
-    public abstract record RevaluationIndicator1Choice_ { }
+    public abstract partial record RevaluationIndicator1Choice_ { }
 }

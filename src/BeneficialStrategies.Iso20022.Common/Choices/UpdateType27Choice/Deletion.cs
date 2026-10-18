@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType27Choice
     [IsoId("_IAvcc6z2EeeBIMhGLpLUsQ")]
     [DisplayName("Deletion")]
     [IsoXmlTag("Deltn")]
-    public record Deletion : UpdateType27Choice_
+    public partial record Deletion : UpdateType27Choice_
     {
         /// <summary>
         /// Provides settlement type and identification information.

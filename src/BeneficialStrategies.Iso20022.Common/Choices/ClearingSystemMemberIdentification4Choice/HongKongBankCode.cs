@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCgbNIEeejueAciesPMA")]
     [DisplayName("Hong Kong Bank Code")]
-    public record HongKongBankCode : ClearingSystemMemberIdentification4Choice_
+    public partial record HongKongBankCode : ClearingSystemMemberIdentification4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

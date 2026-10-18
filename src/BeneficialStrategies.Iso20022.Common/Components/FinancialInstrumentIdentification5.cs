@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e0TXVX_8Ee-5A_neRtHpSQ")]
 [DisplayName("Financial Instrument Identification5")]
-public record FinancialInstrumentIdentification5
+public partial record FinancialInstrumentIdentification5
 {
     /// <summary>
     /// Identification.

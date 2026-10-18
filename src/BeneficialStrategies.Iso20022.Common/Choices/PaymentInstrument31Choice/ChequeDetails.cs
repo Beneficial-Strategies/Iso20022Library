@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument31Choice
     /// <summary>Cheque details.</summary>
     [IsoId("4613b0ed-26a6-45db-8c7e-f14a71bb25fb")]
     [DisplayName("Cheque Details")]
-    public record ChequeDetails : PaymentInstrument31Choice_
+    public partial record ChequeDetails : PaymentInstrument31Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ChqDtls")]

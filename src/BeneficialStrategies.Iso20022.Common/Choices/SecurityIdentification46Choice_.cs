@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SecurityIdentification46Choice.Common))]
     [JsonDerivedType(typeof(SecurityIdentification46Choice.DTI))]
     [JsonDerivedType(typeof(SecurityIdentification46Choice.OtherProprietaryIdentification))]
-    public abstract record SecurityIdentification46Choice_
+    public abstract partial record SecurityIdentification46Choice_
     {
     }
 }

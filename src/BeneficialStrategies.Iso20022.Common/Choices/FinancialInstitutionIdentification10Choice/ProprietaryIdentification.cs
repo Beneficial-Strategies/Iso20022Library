@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_Rou1F2AZEeiH9-hkDDXUHA")]
     [DisplayName("Proprietary Identification")]
-    public record ProprietaryIdentification : FinancialInstitutionIdentification10Choice_
+    public partial record ProprietaryIdentification : FinancialInstitutionIdentification10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BlC7cU4EEeiQHa-q1Uephw")]
 [DisplayName("Financial Instrument")]
-public record FinancialInstrument67
+public partial record FinancialInstrument67
 {
     /// <summary>
     /// Identification of the line of holding in the portfolio.

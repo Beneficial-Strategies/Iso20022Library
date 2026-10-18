@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeFormat2Choice
     /// </summary>
     [IsoId("_UyQMGdp-Ed-ak6NoX_4Aeg_2129381722")]
     [DisplayName("Structured")]
-    public record Structured : ChargeTypeFormat2Choice_
+    public partial record Structured : ChargeTypeFormat2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

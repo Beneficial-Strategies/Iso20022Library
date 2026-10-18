@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QuFMBdp-Ed-ak6NoX_4Aeg_-1270541396")]
     [DisplayName("FX Standing Instruction 1 Choice")]
-    public abstract record FXStandingInstruction1Choice_ { }
+    public abstract partial record FXStandingInstruction1Choice_ { }
 }

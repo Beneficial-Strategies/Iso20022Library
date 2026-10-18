@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_byLWQYZMEeemXK0UETsSiA")]
 [DisplayName("Portfolio Transfer Instruction V")]
-public record PortfolioTransferInstructionV08 : IOuterRecord
+public partial record PortfolioTransferInstructionV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

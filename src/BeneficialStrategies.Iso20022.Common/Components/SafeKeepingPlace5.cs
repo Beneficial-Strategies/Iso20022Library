@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PERT24-4Ee-nyIlugK8fOQ")]
 [DisplayName("Safe Keeping Place5")]
-public record SafeKeepingPlace5
+public partial record SafeKeepingPlace5
 {
     /// <summary>
     /// Safekeeping Place Format.

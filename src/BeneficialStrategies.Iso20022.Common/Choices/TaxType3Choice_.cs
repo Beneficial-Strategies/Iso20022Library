@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TaxType3Choice.Proprietary), nameof(TaxType3Choice.Proprietary))]
     [IsoId("_CRfa8Dh7EeaH-93K5JKmzw")]
     [DisplayName("Tax Type 3 Choice")]
-    public abstract record TaxType3Choice_ { }
+    public abstract partial record TaxType3Choice_ { }
 }

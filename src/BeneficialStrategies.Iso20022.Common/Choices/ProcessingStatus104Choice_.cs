@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ProcessingStatus104Choice.PendingCancellation))]
     [JsonDerivedType(typeof(ProcessingStatus104Choice.Proprietary))]
     [JsonDerivedType(typeof(ProcessingStatus104Choice.CancellationRequested))]
-    public abstract record ProcessingStatus104Choice_
+    public abstract partial record ProcessingStatus104Choice_
     {
     }
 }

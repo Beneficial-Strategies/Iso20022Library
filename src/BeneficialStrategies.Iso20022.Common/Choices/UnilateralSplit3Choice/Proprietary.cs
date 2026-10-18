@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnilateralSplit3Choice
     [IsoId("_e2Y7yTt4EeW638lNyHKv7A")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnilateralSplit3Choice_
+    public partial record Proprietary : UnilateralSplit3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

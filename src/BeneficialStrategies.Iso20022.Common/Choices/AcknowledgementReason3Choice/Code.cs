@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason3Choice
     /// </summary>
     [IsoId("_UXb4Udp-Ed-ak6NoX_4Aeg_-1471943913")]
     [DisplayName("Code")]
-    public record Code : AcknowledgementReason3Choice_
+    public partial record Code : AcknowledgementReason3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

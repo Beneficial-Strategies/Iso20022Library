@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zuNFIFiOEeaMNZxYNthMeA")]
 [DisplayName("Charge Or Commission Discount")]
-public record ChargeOrCommissionDiscount1
+public partial record ChargeOrCommissionDiscount1
 {
     /// <summary>
     /// Difference between the standard fee (charge/commission) amount and the applied fee (charge/commission) amount.

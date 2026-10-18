@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal4Choice
     [IsoId("_QND7sxX3EeOBE-jZfcm4KQ")]
     [DisplayName("Transfer In Confirmation Details")]
     [IsoXmlTag("TrfInConfDtls")]
-    public record TransferInConfirmationDetails : Reversal4Choice_
+    public partial record TransferInConfirmationDetails : Reversal4Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

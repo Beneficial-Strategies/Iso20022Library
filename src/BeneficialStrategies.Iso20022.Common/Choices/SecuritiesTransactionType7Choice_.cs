@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xV3Vsd0fEd-Cb-IGbQ4hBQ")]
     [DisplayName("Securities Transaction Type 7 Choice")]
-    public abstract record SecuritiesTransactionType7Choice_ { }
+    public abstract partial record SecuritiesTransactionType7Choice_ { }
 }

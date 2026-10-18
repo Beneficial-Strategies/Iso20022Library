@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType5Choice
     /// </summary>
     [IsoId("_gBPhM_IxEd-dOvqmSLSz5g")]
     [DisplayName("Code")]
-    public record Code : ExposureType5Choice_
+    public partial record Code : ExposureType5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

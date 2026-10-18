@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PriceType5Choice.Indicative), nameof(PriceType5Choice.Indicative))]
     [IsoId("_SKL8C83yEee5nJBZsW8MFQ")]
     [DisplayName("Price Type 5 Choice")]
-    public abstract record PriceType5Choice_ { }
+    public abstract partial record PriceType5Choice_ { }
 }

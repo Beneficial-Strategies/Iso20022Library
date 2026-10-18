@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_ECTI8dtaEd-RF5yaMAVhAw")]
 [DisplayName("Securities Transaction Cancellation Request Status Advice V")]
-public record SecuritiesTransactionCancellationRequestStatusAdviceV02 : IOuterRecord
+public partial record SecuritiesTransactionCancellationRequestStatusAdviceV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

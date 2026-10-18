@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QsvINNp-Ed-ak6NoX_4Aeg_-1081021298")]
     [DisplayName("Trade Originator 1 Choice")]
-    public abstract record TradeOriginator1Choice_ { }
+    public abstract partial record TradeOriginator1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RR_KV9p-Ed-ak6NoX_4Aeg_1532242447")]
 [DisplayName("Failed Settlement Status")]
-public record FailedSettlementStatus1
+public partial record FailedSettlementStatus1
 {
     /// <summary>
     /// Reason for the failed settlement status.

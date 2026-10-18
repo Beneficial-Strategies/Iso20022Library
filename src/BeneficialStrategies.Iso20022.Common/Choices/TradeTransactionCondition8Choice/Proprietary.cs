@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition8Choice
     [IsoId("_P2iDm0c9EeaBWtcfqEyXyw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TradeTransactionCondition8Choice_
+    public partial record Proprietary : TradeTransactionCondition8Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

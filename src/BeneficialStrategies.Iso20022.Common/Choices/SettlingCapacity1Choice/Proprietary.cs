@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlingCapacity1Choice
     [IsoId("_QwK2tNp-Ed-ak6NoX_4Aeg_402233736")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlingCapacity1Choice_
+    public partial record Proprietary : SettlingCapacity1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

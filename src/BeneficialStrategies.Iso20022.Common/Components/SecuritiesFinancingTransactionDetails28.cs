@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cm_VdTm6EeWV5sr121Fc8A")]
 [DisplayName("Securities Financing Transaction Details")]
-public record SecuritiesFinancingTransactionDetails28
+public partial record SecuritiesFinancingTransactionDetails28
 {
     /// <summary>
     /// Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).

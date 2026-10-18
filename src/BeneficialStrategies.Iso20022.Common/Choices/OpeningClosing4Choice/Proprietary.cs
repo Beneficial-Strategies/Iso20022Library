@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningClosing4Choice
     [IsoId("_6SXYu5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OpeningClosing4Choice_
+    public partial record Proprietary : OpeningClosing4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_HFtUYNE6Ed-BzquC8wXy7w_1729523466")]
 [DisplayName("Transfer Cancellation Status Report")]
-public record TransferCancellationStatusReport : IOuterRecord
+public partial record TransferCancellationStatusReport : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

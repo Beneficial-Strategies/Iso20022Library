@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XgbC4SgyEeyhTqybPBSPFQ")]
 [DisplayName("Settlement Type And Additional Parameters")]
-public record SettlementTypeAndAdditionalParameters21
+public partial record SettlementTypeAndAdditionalParameters21
 {
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.

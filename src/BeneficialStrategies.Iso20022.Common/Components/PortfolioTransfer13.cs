@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BzkVIT6XEe-N3-3e5ejJAw")]
 [DisplayName("Portfolio Transfer13")]
-public record PortfolioTransfer13
+public partial record PortfolioTransfer13
 {
     /// <summary>
     /// Master Reference.

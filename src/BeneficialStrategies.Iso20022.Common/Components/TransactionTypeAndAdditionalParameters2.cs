@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UjW0d9p-Ed-ak6NoX_4Aeg_1455971930")]
 [DisplayName("Transaction Type And Additional Parameters")]
-public record TransactionTypeAndAdditionalParameters2
+public partial record TransactionTypeAndAdditionalParameters2
 {
     /// <summary>
     /// Unambiguous identification of the transaction (unique per piece of collateral) as known by the account owner (or the instructing party managing the account).

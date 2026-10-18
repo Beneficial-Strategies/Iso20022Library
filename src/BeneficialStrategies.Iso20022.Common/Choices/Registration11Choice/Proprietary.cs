@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Registration11Choice
     [IsoId("_5TJ-w5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Registration11Choice_
+    public partial record Proprietary : Registration11Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

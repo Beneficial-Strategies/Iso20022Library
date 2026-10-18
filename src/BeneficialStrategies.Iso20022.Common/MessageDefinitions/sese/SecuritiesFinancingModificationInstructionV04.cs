@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_11E68SRSEeON6sEIseGaUg")]
 [DisplayName("Securities Financing Modification Instruction V")]
-public record SecuritiesFinancingModificationInstructionV04 : IOuterRecord
+public partial record SecuritiesFinancingModificationInstructionV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity13Choice
     [IsoId("_RWwlY_peEeCPwaG9zjUPNQ")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
-    public record TotalUnitsNumber : Quantity13Choice_
+    public partial record TotalUnitsNumber : Quantity13Choice_
     {
         /// <summary>
         /// Quantity expressed as a number, eg, a number of shares.

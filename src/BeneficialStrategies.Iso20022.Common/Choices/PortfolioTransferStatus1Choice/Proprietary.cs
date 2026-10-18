@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus1Choice
     [IsoId("_BJu8ya3EEeeBVbuVcoH9Nw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PortfolioTransferStatus1Choice_
+    public partial record Proprietary : PortfolioTransferStatus1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

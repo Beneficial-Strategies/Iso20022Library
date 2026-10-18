@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus27Choice
     [IsoId("_Y5m_6TqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MatchingStatus27Choice_
+    public partial record Proprietary : MatchingStatus27Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

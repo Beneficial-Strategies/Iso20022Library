@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RevaluationIndicator1Choice
     [IsoId("_Quh389p-Ed-ak6NoX_4Aeg_1941726547")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RevaluationIndicator1Choice_
+    public partial record Proprietary : RevaluationIndicator1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

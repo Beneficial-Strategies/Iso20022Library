@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxEfficientProductType1Choice
     [IsoId("_IzhQIE4LEeiQHa-q1Uephw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TaxEfficientProductType1Choice_
+    public partial record Proprietary : TaxEfficientProductType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

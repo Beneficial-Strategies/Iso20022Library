@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalFramework4Choice
     [IsoId("_5mxdyJNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LegalFramework4Choice_
+    public partial record Proprietary : LegalFramework4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5mw3_ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Revaluation Indicator 4 Choice")]
-    public abstract record RevaluationIndicator4Choice_ { }
+    public abstract partial record RevaluationIndicator4Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice
     [IsoId("_l0CXowgMEeSFYfyUKDXKaw")]
     [DisplayName("Cancellation By Reference")]
     [IsoXmlTag("CxlByRef")]
-    public record CancellationByReference : Cancellation7Choice_
+    public partial record CancellationByReference : Cancellation7Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

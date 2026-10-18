@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingStatus15Choice
     [IsoId("_6P-zF5NLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingProcessingStatus15Choice_
+    public partial record Reason : PendingProcessingStatus15Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has a pending processing status.

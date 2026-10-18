@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType2Choice
     [IsoId("_XLcRB9p-Ed-ak6NoX_4Aeg_-1042385228")]
     [DisplayName("Indicative")]
     [IsoXmlTag("Indctv")]
-    public record Indicative : PriceType2Choice_
+    public partial record Indicative : PriceType2Choice_
     {
         /// <summary>
         /// Specification of the price type.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YJCEAHzpEeuEHsEB8Johfw")]
 [DisplayName("Employment Details")]
-public record EmploymentDetails1
+public partial record EmploymentDetails1
 {
     /// <summary>
     /// Current tax code.

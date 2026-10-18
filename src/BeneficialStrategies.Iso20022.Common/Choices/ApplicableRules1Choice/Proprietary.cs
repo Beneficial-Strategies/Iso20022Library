@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ApplicableRules1Choice
     [IsoId("_3OvD8FNeEeijdq8ilaxyOA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ApplicableRules1Choice_
+    public partial record Proprietary : ApplicableRules1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

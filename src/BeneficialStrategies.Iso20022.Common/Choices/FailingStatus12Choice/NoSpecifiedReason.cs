@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus12Choice
     /// </summary>
     [IsoId("_6BKT-5NLEeWGlc8L7oPDIg")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : FailingStatus12Choice_
+    public partial record NoSpecifiedReason : FailingStatus12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

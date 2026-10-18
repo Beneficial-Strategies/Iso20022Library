@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.YieldedOrValueType2Choice
     /// </summary>
     [IsoId("_VBLs0QycEeuG8M5giQ2e0w")]
     [DisplayName("Yielded")]
-    public record Yielded : YieldedOrValueType2Choice_
+    public partial record Yielded : YieldedOrValueType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

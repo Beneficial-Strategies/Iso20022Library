@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_GNYdQTxKEeW5v6FXICU4Ew")]
     [DisplayName("Settlement Transaction Condition 19 Choice")]
-    public abstract record SettlementTransactionCondition19Choice_ { }
+    public abstract partial record SettlementTransactionCondition19Choice_ { }
 }

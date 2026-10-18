@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_K1LPztE6Ed-BzquC8wXy7w_-1400319754")]
 [DisplayName("Transfer Out Cancellation Instruction")]
-public record TransferOutCancellationInstruction : IOuterRecord
+public partial record TransferOutCancellationInstruction : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

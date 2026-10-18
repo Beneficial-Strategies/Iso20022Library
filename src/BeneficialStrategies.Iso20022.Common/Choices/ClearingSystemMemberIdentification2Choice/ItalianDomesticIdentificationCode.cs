@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TC8KmNp-Ed-ak6NoX_4Aeg_1989940263")]
     [DisplayName("Italian Domestic Identification Code")]
-    public record ItalianDomesticIdentificationCode : ClearingSystemMemberIdentification2Choice_
+    public partial record ItalianDomesticIdentificationCode : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QtogGdp-Ed-ak6NoX_4Aeg_510702003")]
     [DisplayName("Unilateral Split 1 Choice")]
-    public abstract record UnilateralSplit1Choice_ { }
+    public abstract partial record UnilateralSplit1Choice_ { }
 }

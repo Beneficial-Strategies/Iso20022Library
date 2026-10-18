@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Oo4kLGuEeirN-C08vro8Q")]
 [DisplayName("Drawdown Allowance Check")]
-public record DrawdownAllowanceCheck1
+public partial record DrawdownAllowanceCheck1
 {
     /// <summary>
     /// Indicates the Benefit Crystallised Event (BCE).

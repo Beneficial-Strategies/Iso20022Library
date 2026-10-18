@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
     [IsoId("_Qd1wldp-Ed-ak6NoX_4Aeg_1064399293")]
     [DisplayName("Other Proprietary Identification")]
     [IsoXmlTag("OthrPrtryId")]
-    public record OtherProprietaryIdentification : SecurityIdentification3Choice_
+    public partial record OtherProprietaryIdentification : SecurityIdentification3Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier of a security.

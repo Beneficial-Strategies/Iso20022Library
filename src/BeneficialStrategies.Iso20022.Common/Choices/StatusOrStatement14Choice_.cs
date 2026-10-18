@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(StatusOrStatement14Choice.Statement))]
     [JsonDerivedType(typeof(StatusOrStatement14Choice.StatusAdvice))]
     [JsonDerivedType(typeof(StatusOrStatement14Choice.Statement))]
-    public abstract record StatusOrStatement14Choice_
+    public abstract partial record StatusOrStatement14Choice_
     {
     }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType1Choice
     [IsoId("_RdUQldp-Ed-ak6NoX_4Aeg_-111885370")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public record AlternateClassification : ClassificationType1Choice_
+    public partial record AlternateClassification : ClassificationType1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

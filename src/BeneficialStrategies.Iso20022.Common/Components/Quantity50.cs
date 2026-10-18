@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2lB3AX_7Ee-5A_neRtHpSQ")]
 [DisplayName("Quantity50")]
-public record Quantity50
+public partial record Quantity50
 {
     /// <summary>
     /// Unit.

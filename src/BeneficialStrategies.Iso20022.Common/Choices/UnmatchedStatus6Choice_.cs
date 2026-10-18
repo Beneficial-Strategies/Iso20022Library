@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UnmatchedStatus6Choice.Reason), nameof(UnmatchedStatus6Choice.Reason))]
     [IsoId("_EhheBf7ZEeCtrO5qCU90cA")]
     [DisplayName("Unmatched Status 6 Choice")]
-    public abstract record UnmatchedStatus6Choice_ { }
+    public abstract partial record UnmatchedStatus6Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R5oZItp-Ed-ak6NoX_4Aeg_376487239")]
 [DisplayName("Subscription Information")]
-public record SubscriptionInformation1
+public partial record SubscriptionInformation1
 {
     /// <summary>
     /// Date the investment plan starts.

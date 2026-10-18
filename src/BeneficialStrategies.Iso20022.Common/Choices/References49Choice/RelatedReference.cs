@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References49Choice
     [IsoId("_duUiYSYtEeW_ZNn8gbfY7Q")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public record RelatedReference : References49Choice_
+    public partial record RelatedReference : References49Choice_
     {
         /// <summary>
         /// Message identification of a message. This reference was assigned by the party issuing the message.

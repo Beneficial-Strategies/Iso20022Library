@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingStatus23Choice
     /// <summary>Reason not specified.</summary>
     [IsoId("_rb4t1aohEfCG2_q2WT-90w")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : PendingProcessingStatus23Choice_
+    public partial record NoSpecifiedReason : PendingProcessingStatus23Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NoSpcfdRsn")]

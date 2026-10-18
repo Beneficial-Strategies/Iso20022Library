@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus2Choice
     [IsoId("_UaQi0tp-Ed-ak6NoX_4Aeg_1658959012")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MatchingStatus2Choice_
+    public partial record Proprietary : MatchingStatus2Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

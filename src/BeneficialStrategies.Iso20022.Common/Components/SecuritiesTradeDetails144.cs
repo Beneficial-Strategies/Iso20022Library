@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HtRJ0YYcEe-Pv9KR9bv9IA")]
 [DisplayName("Securities Trade Details144")]
-public record SecuritiesTradeDetails144
+public partial record SecuritiesTradeDetails144
 {
     /// <summary>
     /// Trade Identification.

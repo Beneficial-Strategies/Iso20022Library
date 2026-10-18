@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_djQq8Ti8Eeydid5dcNPKvg")]
 [DisplayName("Additional Information")]
-public record AdditionalInformation28
+public partial record AdditionalInformation28
 {
     /// <summary>
     /// Identification of the transaction as known by the account owner. Will be used in a unilateral split to provide the executing party with the account owner identification of each split transaction.

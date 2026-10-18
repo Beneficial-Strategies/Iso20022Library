@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus47Choice
     [IsoId("_6BKTtZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingStatus47Choice_
+    public partial record Reason : PendingStatus47Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has a pending status.

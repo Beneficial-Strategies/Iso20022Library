@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cedlxTi8Eeydid5dcNPKvg")]
 [DisplayName("Securities Trade Details")]
-public record SecuritiesTradeDetails139
+public partial record SecuritiesTradeDetails139
 {
     /// <summary>
     /// Unambiguous identification of the transaction as known by the notification receiver.

@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Quantity82Choice.TransferRate))]
     [JsonDerivedType(typeof(Quantity82Choice.TotalUnitsNumber))]
     [JsonDerivedType(typeof(Quantity82Choice.TransferRate))]
-    public abstract record Quantity82Choice_
+    public abstract partial record Quantity82Choice_
     {
     }
 }

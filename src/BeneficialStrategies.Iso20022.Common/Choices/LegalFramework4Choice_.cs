@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5mw4H5NLEeWGlc8L7oPDIg")]
     [DisplayName("Legal Framework 4 Choice")]
-    public abstract record LegalFramework4Choice_ { }
+    public abstract partial record LegalFramework4Choice_ { }
 }

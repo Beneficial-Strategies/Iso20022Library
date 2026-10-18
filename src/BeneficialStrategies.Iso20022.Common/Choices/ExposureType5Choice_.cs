@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gBPhMfIxEd-dOvqmSLSz5g")]
     [DisplayName("Exposure Type 5 Choice")]
-    public abstract record ExposureType5Choice_ { }
+    public abstract partial record ExposureType5Choice_ { }
 }

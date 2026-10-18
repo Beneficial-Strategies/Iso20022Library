@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_68-ZgXzoEeuEHsEB8Johfw")]
 [DisplayName("Drawdown")]
-public record Drawdown3
+public partial record Drawdown3
 {
     /// <summary>
     /// Previous employment information.

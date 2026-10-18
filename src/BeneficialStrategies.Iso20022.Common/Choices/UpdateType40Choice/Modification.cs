@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType40Choice
     /// <summary>Update expressed as a modification of settlement transaction details.</summary>
     [IsoId("_Y7zw0ZaMEfC2_67yGLymgA")]
     [DisplayName("Modification")]
-    public record Modification : UpdateType40Choice_
+    public partial record Modification : UpdateType40Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Mod")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatusType1Choice
     [IsoId("_IkiWUFNYEeijdq8ilaxyOA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransferStatusType1Choice_
+    public partial record Proprietary : TransferStatusType1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

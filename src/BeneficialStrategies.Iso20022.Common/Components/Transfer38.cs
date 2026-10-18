@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("42a74f68-a2ba-499f-ac3b-0aafaed85cb7")]
 [DisplayName("Transfer38")]
-public record Transfer38
+public partial record Transfer38
 {
     /// <summary>
     /// Unique and unambiguous identifier for the transfer execution, as assigned by the confirming party.

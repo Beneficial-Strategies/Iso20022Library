@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_lB0YQNE5Ed-BzquC8wXy7w_-1087264002")]
 [DisplayName("PEP Or ISA Or Portfolio Transfer Instruction V")]
-public record PEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
+public partial record PEPOrISAOrPortfolioTransferInstructionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

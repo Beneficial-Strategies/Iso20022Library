@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5xlnoZNLEeWGlc8L7oPDIg")]
     [DisplayName("Paired Or Turned Quantity 4 Choice")]
-    public abstract record PairedOrTurnedQuantity4Choice_ { }
+    public abstract partial record PairedOrTurnedQuantity4Choice_ { }
 }

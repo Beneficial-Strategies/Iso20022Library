@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References64Choice
     [IsoId("_5wfiQ2pYEeipaMTLlhaKMQ")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
-    public record OtherReference : References64Choice_
+    public partial record OtherReference : References64Choice_
     {
         /// <summary>
         /// Reference issued by a party to identify an instruction, transaction or a message.

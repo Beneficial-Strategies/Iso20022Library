@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxBasis1Choice
     [IsoId("_rxNZsBuIEeOqSdXzJ0oydA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TaxBasis1Choice_
+    public partial record Proprietary : TaxBasis1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

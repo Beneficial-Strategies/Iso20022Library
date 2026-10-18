@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LlLWcaWgEeatOerspsHe_g")]
 [DisplayName("Quantity And Account")]
-public record QuantityAndAccount59
+public partial record QuantityAndAccount59
 {
     /// <summary>
     /// Denomination of the security to be received or delivered.

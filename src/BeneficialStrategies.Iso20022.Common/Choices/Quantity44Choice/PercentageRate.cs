@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice
     /// </summary>
     [IsoId("_QwEDA03WEeidB49bWZiS0g")]
     [DisplayName("Percentage Rate")]
-    public record PercentageRate : Quantity44Choice_
+    public partial record PercentageRate : Quantity44Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

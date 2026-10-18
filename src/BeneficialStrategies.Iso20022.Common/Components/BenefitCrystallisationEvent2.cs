@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bWw_QZN4EembCsVG-3f_AA")]
 [DisplayName("Benefit Crystallisation Event")]
-public record BenefitCrystallisationEvent2
+public partial record BenefitCrystallisationEvent2
 {
     /// <summary>
     /// Number of the crystallisation event. In the UK market this could be, for example, BCE5, BE5A or BCE5B.

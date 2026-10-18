@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_WBN2AeZlEd-q8fx_Zl_34A")]
 [DisplayName("Document Number")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record DocumentNumber5
+public partial record DocumentNumber5
 {
     /// <summary>
     /// Number used to identify a message or document.

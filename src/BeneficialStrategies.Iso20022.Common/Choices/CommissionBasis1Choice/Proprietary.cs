@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionBasis1Choice
     [IsoId("_ehQOQBuCEeOqSdXzJ0oydA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CommissionBasis1Choice_
+    public partial record Proprietary : CommissionBasis1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

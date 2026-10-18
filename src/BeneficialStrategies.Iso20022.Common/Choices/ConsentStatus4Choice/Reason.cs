@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentStatus4Choice
     [IsoId("_oftdyTzpEeWeNtT0s2RbkQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ConsentStatus4Choice_
+    public partial record Reason : ConsentStatus4Choice_
     {
         /// <summary>
         /// Reason provided for the status.

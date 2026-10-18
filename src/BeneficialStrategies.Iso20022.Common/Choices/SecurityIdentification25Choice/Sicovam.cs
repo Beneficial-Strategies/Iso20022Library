@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
     /// </summary>
     [IsoId("_cH-V0znxEeabspMEjqY5TQ")]
     [DisplayName("Sicovam")]
-    public record Sicovam : SecurityIdentification25Choice_
+    public partial record Sicovam : SecurityIdentification25Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

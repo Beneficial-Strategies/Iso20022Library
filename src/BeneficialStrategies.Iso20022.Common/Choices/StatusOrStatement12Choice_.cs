@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gBH0DTi8Eeydid5dcNPKvg")]
     [DisplayName("Status Or Statement 12 Choice")]
-    public abstract record StatusOrStatement12Choice_ { }
+    public abstract partial record StatusOrStatement12Choice_ { }
 }

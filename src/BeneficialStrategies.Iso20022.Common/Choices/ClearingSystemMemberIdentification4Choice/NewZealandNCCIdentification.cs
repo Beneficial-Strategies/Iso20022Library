@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCY7NIEeejueAciesPMA")]
     [DisplayName("New Zealand NCC Identification")]
-    public record NewZealandNCCIdentification : ClearingSystemMemberIdentification4Choice_
+    public partial record NewZealandNCCIdentification : ClearingSystemMemberIdentification4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

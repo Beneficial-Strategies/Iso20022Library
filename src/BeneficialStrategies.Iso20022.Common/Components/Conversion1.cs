@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__Z0PQE3dEeidB49bWZiS0g")]
 [DisplayName("Conversion")]
-public record Conversion1
+public partial record Conversion1
 {
     /// <summary>
     /// Identification of the target security.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PairedOrTurnedQuantity3Choice
     /// </summary>
     [IsoId("_DzNR0ztCEeWRTLSN0i0tng")]
     [DisplayName("Paired Off Quantity")]
-    public record PairedOffQuantity : PairedOrTurnedQuantity3Choice_
+    public partial record PairedOffQuantity : PairedOrTurnedQuantity3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PairdOffQty")]

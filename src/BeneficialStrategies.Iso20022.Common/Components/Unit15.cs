@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("607716b7-1b36-4700-a221-9e3cd96f2f1f")]
 [DisplayName("Unit15")]
-public record Unit15
+public partial record Unit15
 {
     /// <summary>
     /// Quantity of units or digital tokens.

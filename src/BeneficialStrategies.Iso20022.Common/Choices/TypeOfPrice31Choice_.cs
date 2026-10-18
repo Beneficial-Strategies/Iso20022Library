@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_V-uWUSVlEeWV8IT-SD_UOg")]
     [DisplayName("Type Of Price 31 Choice")]
-    public abstract record TypeOfPrice31Choice_ { }
+    public abstract partial record TypeOfPrice31Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome2Choice
     /// </summary>
     [IsoId("_Qu-j5Np-Ed-ak6NoX_4Aeg_192596703")]
     [DisplayName("Code")]
-    public record Code : PreferenceToIncome2Choice_
+    public partial record Code : PreferenceToIncome2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

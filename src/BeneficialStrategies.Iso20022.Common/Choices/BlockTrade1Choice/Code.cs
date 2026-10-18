@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockTrade1Choice
     /// </summary>
     [IsoId("_QvuKw9p-Ed-ak6NoX_4Aeg_374907643")]
     [DisplayName("Code")]
-    public record Code : BlockTrade1Choice_
+    public partial record Code : BlockTrade1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

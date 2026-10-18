@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClientSide4Choice
     /// </summary>
     [IsoId("_sLxiATqHEeWVrPy0StzzSg")]
     [DisplayName("Code")]
-    public record Code : MarketClientSide4Choice_
+    public partial record Code : MarketClientSide4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

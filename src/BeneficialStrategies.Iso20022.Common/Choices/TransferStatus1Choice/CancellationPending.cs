@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     [IsoId("_o1CqsBwkEeOIveEnnb_1-A")]
     [DisplayName("Cancellation Pending")]
     [IsoXmlTag("CxlPdg")]
-    public record CancellationPending : TransferStatus1Choice_
+    public partial record CancellationPending : TransferStatus1Choice_
     {
         /// <summary>
         /// Reason for the cancellation pending status.

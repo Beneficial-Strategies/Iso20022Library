@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType47Choic
     /// </summary>
     [IsoId("_qwMnsdYYEeiHVOfMzoKxnA")]
     [DisplayName("Code")]
-    public record Code : SecuritiesTransactionType47Choice_
+    public partial record Code : SecuritiesTransactionType47Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TerminationDate4Choice.Code), nameof(TerminationDate4Choice.Code))]
     [IsoId("_ZMYZoTqkEeWyoP0PbocV1Q")]
     [DisplayName("Termination Date 4 Choice")]
-    public abstract record TerminationDate4Choice_ { }
+    public abstract partial record TerminationDate4Choice_ { }
 }

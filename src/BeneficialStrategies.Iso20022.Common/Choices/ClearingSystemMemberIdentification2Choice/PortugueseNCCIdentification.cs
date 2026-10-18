@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TC8Kltp-Ed-ak6NoX_4Aeg_1989940211")]
     [DisplayName("Portuguese NCC Identification")]
-    public record PortugueseNCCIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record PortugueseNCCIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

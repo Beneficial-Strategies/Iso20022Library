@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzmP6dp-Ed-ak6NoX_4Aeg_-2005620583")]
 [DisplayName("Transfer Status And Reason")]
-public record TransferStatusAndReason
+public partial record TransferStatusAndReason
 {
     /// <summary>
     /// Business reference of the transfer instruction.

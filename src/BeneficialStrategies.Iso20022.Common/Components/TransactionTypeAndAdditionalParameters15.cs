@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IJOOAY7YEeaa5_S8lsRKCQ")]
 [DisplayName("Transaction Type And Additional Parameters")]
-public record TransactionTypeAndAdditionalParameters15
+public partial record TransactionTypeAndAdditionalParameters15
 {
     /// <summary>
     /// Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VpKZIHVYEeiiHo4Gse0d2w")]
 [DisplayName("Tax")]
-public record Tax36
+public partial record Tax36
 {
     /// <summary>
     /// Date or quarter of the tax year on which tax for the financial instrument is based or calculated.

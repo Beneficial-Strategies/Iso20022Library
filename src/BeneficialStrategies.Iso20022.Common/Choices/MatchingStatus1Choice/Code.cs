@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus1Choice
     /// </summary>
     [IsoId("_UaaT3Np-Ed-ak6NoX_4Aeg_-1299790832")]
     [DisplayName("Code")]
-    public record Code : MatchingStatus1Choice_
+    public partial record Code : MatchingStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PendingReason79Choice.Proprietary))]
     [JsonDerivedType(typeof(PendingReason79Choice.Code))]
     [JsonDerivedType(typeof(PendingReason79Choice.Proprietary))]
-    public abstract record PendingReason79Choice_
+    public abstract partial record PendingReason79Choice_
     {
     }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LongPostalAddress1Choice
     /// </summary>
     [IsoId("_QG4pJtp-Ed-ak6NoX_4Aeg_-1635487920")]
     [DisplayName("Unstructured")]
-    public record Unstructured : LongPostalAddress1Choice_
+    public partial record Unstructured : LongPostalAddress1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

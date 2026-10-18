@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Tracking1Choice
     /// </summary>
     [IsoId("_QuFMANp-Ed-ak6NoX_4Aeg_-1189148410")]
     [DisplayName("Indicator")]
-    public record Indicator : Tracking1Choice_
+    public partial record Indicator : Tracking1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

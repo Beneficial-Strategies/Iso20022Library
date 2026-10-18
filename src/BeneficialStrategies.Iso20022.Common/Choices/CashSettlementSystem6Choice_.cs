@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CashSettlementSystem6Choice.Proprietary), nameof(CashSettlementSystem6Choice.Proprietary))]
     [IsoId("_etEcMZZ1EfC2_67yGLymgA")]
     [DisplayName("CashSettlementSystem6Choice")]
-    public abstract record CashSettlementSystem6Choice_ { }
+    public abstract partial record CashSettlementSystem6Choice_ { }
 }

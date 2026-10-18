@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification126Choice
     [IsoId("_WuxzU2pVEeipaMTLlhaKMQ")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : PartyIdentification126Choice_
+    public partial record ProprietaryIdentification : PartyIdentification126Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References81Choice
     /// Securities Settlement Transaction Identification.
     /// </summary>
     [DisplayName("Securities Settlement Transaction Identification")]
-    public record SecuritiesSettlementTransactionIdentification : References81Choice_
+    public partial record SecuritiesSettlementTransactionIdentification : References81Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

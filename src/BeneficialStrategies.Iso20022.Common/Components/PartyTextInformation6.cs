@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0GUwgQVLEeq4ZaI1b_-GPA")]
 [DisplayName("Party Text Information")]
-public record PartyTextInformation6
+public partial record PartyTextInformation6
 {
     /// <summary>
     /// Provides declaration details narrative relative to the party.

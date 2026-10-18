@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystemPlace1Choice
     /// <summary>Unique and unambiguous way to identify an organisation.</summary>
     [IsoId("_vRpY45ZhEfCShM_qO0U4ig")]
     [DisplayName("Any BIC")]
-    public record AnyBIC : CashSettlementSystemPlace1Choice_
+    public partial record AnyBIC : CashSettlementSystemPlace1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AnyBIC")]

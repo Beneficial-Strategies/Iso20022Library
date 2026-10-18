@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xDPgIFNgEeijdq8ilaxyOA")]
     [DisplayName("Beneficiary Type 1 Choice")]
-    public abstract record BeneficiaryType1Choice_ { }
+    public abstract partial record BeneficiaryType1Choice_ { }
 }

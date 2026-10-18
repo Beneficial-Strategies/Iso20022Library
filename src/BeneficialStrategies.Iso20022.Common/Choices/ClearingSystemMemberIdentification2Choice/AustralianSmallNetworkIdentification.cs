@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDPFgdp-Ed-ak6NoX_4Aeg_1990860942")]
     [DisplayName("Australian Small Network Identification")]
-    public record AustralianSmallNetworkIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record AustralianSmallNetworkIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Q6vvCNp-Ed-ak6NoX_4Aeg_1503007069")]
 [DisplayName("Extension")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. No removal date recorded.")]
-public record Extension1
+public partial record Extension1
 {
     /// <summary>
     /// Name qualifying the information provided in the Text field, and place where this information should be inserted.

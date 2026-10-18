@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UCM-ETtEEeWRTLSN0i0tng")]
     [DisplayName("Exposure Type 16 Choice")]
-    public abstract record ExposureType16Choice_ { }
+    public abstract partial record ExposureType16Choice_ { }
 }

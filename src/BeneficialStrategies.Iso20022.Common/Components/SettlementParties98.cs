@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ru-0cSqDEeyR9JrVGfaMKw")]
 [DisplayName("Settlement Parties")]
-public record SettlementParties98
+public partial record SettlementParties98
 {
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 1.

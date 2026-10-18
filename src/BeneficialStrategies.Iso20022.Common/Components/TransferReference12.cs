@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1LZXYYi0EeefvMoXmllHqg")]
 [DisplayName("Transfer Reference")]
-public record TransferReference12
+public partial record TransferReference12
 {
     /// <summary>
     /// Unique and unambiguous identifier for the transfer instruction for which the confirmation reversal is sent, as assigned by the instructing party.

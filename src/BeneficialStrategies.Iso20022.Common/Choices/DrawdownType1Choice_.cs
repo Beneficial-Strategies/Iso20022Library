@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_NHMP4FNdEeijdq8ilaxyOA")]
     [DisplayName("Drawdown Type 1 Choice")]
-    public abstract record DrawdownType1Choice_ { }
+    public abstract partial record DrawdownType1Choice_ { }
 }

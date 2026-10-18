@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeOriginator3Choice
     [IsoId("_69UZyTtCEeWRTLSN0i0tng")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TradeOriginator3Choice_
+    public partial record Proprietary : TradeOriginator3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

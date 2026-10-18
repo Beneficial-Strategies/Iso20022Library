@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExemptionReason1Choice
     /// </summary>
     [IsoId("_loHfEBuJEeOqSdXzJ0oydA")]
     [DisplayName("Code")]
-    public record Code : ExemptionReason1Choice_
+    public partial record Code : ExemptionReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

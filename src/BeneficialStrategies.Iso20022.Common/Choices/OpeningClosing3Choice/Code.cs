@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningClosing3Choice
     /// </summary>
     [IsoId("_hE31ETtCEeWRTLSN0i0tng")]
     [DisplayName("Code")]
-    public record Code : OpeningClosing3Choice_
+    public partial record Code : OpeningClosing3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

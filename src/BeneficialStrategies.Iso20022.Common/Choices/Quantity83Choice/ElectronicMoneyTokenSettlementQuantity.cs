@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity83Choice
     /// <summary>Specifies the electronic money token settlement quantity.</summary>
     [IsoId("_YOu-QZZeEfCShM_qO0U4ig")]
     [DisplayName("Electronic Money Token Settlement Quantity")]
-    public record ElectronicMoneyTokenSettlementQuantity : Quantity83Choice_
+    public partial record ElectronicMoneyTokenSettlementQuantity : Quantity83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ElctrncMnyTknSttlmQty")]

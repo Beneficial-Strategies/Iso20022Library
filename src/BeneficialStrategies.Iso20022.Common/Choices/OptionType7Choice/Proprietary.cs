@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionType7Choice
     [IsoId("_5Nai15NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OptionType7Choice_
+    public partial record Proprietary : OptionType7Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

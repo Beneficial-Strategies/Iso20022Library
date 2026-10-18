@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyToBuyOrSell1Choice
     /// </summary>
     [IsoId("_QsvIMtp-Ed-ak6NoX_4Aeg_-894055874")]
     [DisplayName("Currency To Buy")]
-    public record CurrencyToBuy : CurrencyToBuyOrSell1Choice_
+    public partial record CurrencyToBuy : CurrencyToBuyOrSell1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

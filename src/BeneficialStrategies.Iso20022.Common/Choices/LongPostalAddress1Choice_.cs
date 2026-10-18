@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QG4pJdp-Ed-ak6NoX_4Aeg_-1972571676")]
     [DisplayName("Long Postal Address 1 Choice")]
-    public abstract record LongPostalAddress1Choice_ { }
+    public abstract partial record LongPostalAddress1Choice_ { }
 }

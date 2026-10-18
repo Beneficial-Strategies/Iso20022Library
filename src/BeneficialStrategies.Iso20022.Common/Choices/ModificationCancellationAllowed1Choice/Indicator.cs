@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed1
     /// </summary>
     [IsoId("_Qt7bA9p-Ed-ak6NoX_4Aeg_407904256")]
     [DisplayName("Indicator")]
-    public record Indicator : ModificationCancellationAllowed1Choice_
+    public partial record Indicator : ModificationCancellationAllowed1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

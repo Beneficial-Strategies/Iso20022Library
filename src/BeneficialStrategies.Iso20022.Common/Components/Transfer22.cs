@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wucooRgiEeK-_89we2b-bA")]
 [DisplayName("Transfer")]
-public record Transfer22
+public partial record Transfer22
 {
     /// <summary>
     /// Date at which the instructing party places the transfer instruction.

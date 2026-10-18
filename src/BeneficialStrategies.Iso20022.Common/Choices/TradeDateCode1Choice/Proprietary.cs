@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDateCode1Choice
     [IsoId("_QvaowNp-Ed-ak6NoX_4Aeg_1544421125")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TradeDateCode1Choice_
+    public partial record Proprietary : TradeDateCode1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

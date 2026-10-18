@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qs45Ndp-Ed-ak6NoX_4Aeg_-775464350")]
     [DisplayName("Opening Closing 1 Choice")]
-    public abstract record OpeningClosing1Choice_ { }
+    public abstract partial record OpeningClosing1Choice_ { }
 }

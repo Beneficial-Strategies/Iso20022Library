@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NgieEYYeEe-Pv9KR9bv9IA")]
 [DisplayName("Linkages74")]
-public record Linkages74
+public partial record Linkages74
 {
     /// <summary>
     /// Processing Position.

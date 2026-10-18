@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus32Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : SettlementStatus32Choice_
+    public partial record Proprietary : SettlementStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzmP49p-Ed-ak6NoX_4Aeg_413742327")]
 [DisplayName("Transfer Unmatched Status Reason")]
-public record TransferUnmatchedStatusReason1
+public partial record TransferUnmatchedStatusReason1
 {
     /// <summary>
     /// Reason for a rejected status in structured form.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionStatus40Choice
     [IsoId("_ddA4lzi8Eeydid5dcNPKvg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RejectionStatus40Choice_
+    public partial record Reason : RejectionStatus40Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected or repair status.

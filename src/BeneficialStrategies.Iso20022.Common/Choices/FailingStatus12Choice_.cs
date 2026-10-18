@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FailingStatus12Choice.Reason), nameof(FailingStatus12Choice.Reason))]
     [IsoId("_6BKT-ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Failing Status 12 Choice")]
-    public abstract record FailingStatus12Choice_ { }
+    public abstract partial record FailingStatus12Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationCompleteStat
     [IsoId("_U0C70tp-Ed-ak6NoX_4Aeg_-1208524222")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : TransferCancellationCompleteStatusChoice_
+    public partial record Reason : TransferCancellationCompleteStatusChoice_
     {
         /// <summary>
         /// Reason for a complete status in structured form.

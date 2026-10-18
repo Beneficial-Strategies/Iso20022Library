@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus12Choice
     [IsoId("_q5xL6SwREeOEV5XHD-BKpw")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : UnmatchedStatus12Choice_
+    public partial record Reason : UnmatchedStatus12Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has an unmatched status.

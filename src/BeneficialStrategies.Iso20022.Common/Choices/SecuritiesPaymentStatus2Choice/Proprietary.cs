@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesPaymentStatus2Choice
     [IsoId("_QvHt0tp-Ed-ak6NoX_4Aeg_-1729908324")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecuritiesPaymentStatus2Choice_
+    public partial record Proprietary : SecuritiesPaymentStatus2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

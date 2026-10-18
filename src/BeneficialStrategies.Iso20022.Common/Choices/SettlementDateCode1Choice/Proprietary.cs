@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDateCode1Choice
     [IsoId("_QvRe0tp-Ed-ak6NoX_4Aeg_1081738296")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementDateCode1Choice_
+    public partial record Proprietary : SettlementDateCode1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

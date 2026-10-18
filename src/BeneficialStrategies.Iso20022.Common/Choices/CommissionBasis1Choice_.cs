@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_LgZzgRuCEeOqSdXzJ0oydA")]
     [DisplayName("Commission Basis 1 Choice")]
-    public abstract record CommissionBasis1Choice_ { }
+    public abstract partial record CommissionBasis1Choice_ { }
 }

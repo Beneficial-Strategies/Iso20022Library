@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryReturn3Choice
     [IsoId("_MOLBGTtEEeWRTLSN0i0tng")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DeliveryReturn3Choice_
+    public partial record Proprietary : DeliveryReturn3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

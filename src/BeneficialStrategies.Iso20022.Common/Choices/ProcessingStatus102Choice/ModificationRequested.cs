@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus102Choice
     /// <summary>Specifies the modification requested status.</summary>
     [IsoId("4b664b0e-85ca-4039-8231-4c03c817a6fb")]
     [DisplayName("Modification Requested")]
-    public record ModificationRequested : ProcessingStatus102Choice_
+    public partial record ModificationRequested : ProcessingStatus102Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ModReqd")]

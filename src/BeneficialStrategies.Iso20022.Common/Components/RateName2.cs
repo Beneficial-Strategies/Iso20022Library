@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XO3Yc9p-Ed-ak6NoX_4Aeg_1105016861")]
 [DisplayName("Rate Name")]
-public record RateName2
+public partial record RateName2
 {
     /// <summary>
     /// Entity that assigns the identification.

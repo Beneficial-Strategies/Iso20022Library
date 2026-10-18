@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References68Choice
     [IsoId("_HVRNUZGrEem-9Y6mq5ZH3Q")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public record PreviousReference : References68Choice_
+    public partial record PreviousReference : References68Choice_
     {
         /// <summary>
         /// Reference issued by a party to identify an instruction, transaction or a message.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pSYd0FNeEeijdq8ilaxyOA")]
     [DisplayName("Applicable Rules 1 Choice")]
-    public abstract record ApplicableRules1Choice_ { }
+    public abstract partial record ApplicableRules1Choice_ { }
 }

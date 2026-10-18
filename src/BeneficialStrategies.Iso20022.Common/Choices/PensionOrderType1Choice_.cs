@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_7zYaALTpEeiENt6AoDfPXg")]
     [DisplayName("Pension Order Type 1 Choice")]
-    public abstract record PensionOrderType1Choice_ { }
+    public abstract partial record PensionOrderType1Choice_ { }
 }

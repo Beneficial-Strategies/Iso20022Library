@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxBasis1Choice
     /// </summary>
     [IsoId("_kri-kBuIEeOqSdXzJ0oydA")]
     [DisplayName("Code")]
-    public record Code : TaxBasis1Choice_
+    public partial record Code : TaxBasis1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

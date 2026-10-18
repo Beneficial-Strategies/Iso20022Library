@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice
     [IsoId("_ZMtfME3WEeidB49bWZiS0g")]
     [DisplayName("Cash Amount")]
     [IsoXmlTag("CshAmt")]
-    public record CashAmount : Quantity44Choice_
+    public partial record CashAmount : Quantity44Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

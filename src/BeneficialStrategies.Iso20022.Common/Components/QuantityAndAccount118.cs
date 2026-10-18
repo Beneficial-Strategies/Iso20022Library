@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w4istYoiEe-efPejSUAtLw")]
 [DisplayName("Quantity And Account118")]
-public record QuantityAndAccount118
+public partial record QuantityAndAccount118
 {
     /// <summary>
     /// Denomination Choice.

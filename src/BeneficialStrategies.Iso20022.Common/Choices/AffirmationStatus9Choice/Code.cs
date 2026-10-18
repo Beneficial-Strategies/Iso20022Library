@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus9Choice
     /// </summary>
     [IsoId("_5xm1D5NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : AffirmationStatus9Choice_
+    public partial record Code : AffirmationStatus9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

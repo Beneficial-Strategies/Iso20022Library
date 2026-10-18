@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ui6IjNp-Ed-ak6NoX_4Aeg_419282003")]
 [DisplayName("Settlement Type And Identification")]
-public record SettlementTypeAndIdentification1
+public partial record SettlementTypeAndIdentification1
 {
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number22Choice
     [IsoId("_HAL_yznEEeWV5sr121Fc8A")]
     [DisplayName("Long")]
     [IsoXmlTag("Lng")]
-    public record Long : Number22Choice_
+    public partial record Long : Number22Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

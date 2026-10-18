@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_o7e8oSgTEeym1_Zp1BTvEw")]
 [DisplayName("Securities Settlement Transaction Confirmation V")]
-public record SecuritiesSettlementTransactionConfirmationV11 : IOuterRecord
+public partial record SecuritiesSettlementTransactionConfirmationV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

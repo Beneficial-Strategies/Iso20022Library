@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYearChoice
     /// </summary>
     [IsoId("_Rb-Mw9p-Ed-ak6NoX_4Aeg_-59890695")]
     [DisplayName("Specific Previous Years")]
-    public record SpecificPreviousYears : PreviousYearChoice_
+    public partial record SpecificPreviousYears : PreviousYearChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

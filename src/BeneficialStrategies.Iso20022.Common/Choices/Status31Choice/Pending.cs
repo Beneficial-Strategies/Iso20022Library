@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice
     [IsoId("_ym2jx5M6EemKz5EOjv82iQ")]
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
-    public record Pending : Status31Choice_
+    public partial record Pending : Status31Choice_
     {
         /// <summary>
         /// Reason for the cancellation pending status.

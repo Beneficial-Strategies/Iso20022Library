@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType39Choice
     /// Deletion.
     /// </summary>
     [DisplayName("Deletion")]
-    public record Deletion : UpdateType39Choice_
+    public partial record Deletion : UpdateType39Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

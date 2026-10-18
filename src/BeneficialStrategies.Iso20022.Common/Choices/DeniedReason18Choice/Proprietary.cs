@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason18Choice
     [IsoId("_6BLiOZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DeniedReason18Choice_
+    public partial record Proprietary : DeniedReason18Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

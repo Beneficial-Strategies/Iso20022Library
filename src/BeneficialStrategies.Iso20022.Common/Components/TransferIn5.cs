@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Tcg_Mfr3EeCJc7cZxzE2fg")]
 [DisplayName("Transfer In")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TransferIn5
+public partial record TransferIn5
 {
     /// <summary>
     /// General information related to the transfer of a financial instrument.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_A3mRISPwEeWQjryFgN2ITg")]
 [DisplayName("Transfer Out")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2017-03-02.")]
-public record TransferOut18
+public partial record TransferOut18
 {
     /// <summary>
     /// Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.

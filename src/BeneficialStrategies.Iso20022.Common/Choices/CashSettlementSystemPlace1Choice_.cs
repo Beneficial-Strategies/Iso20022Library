@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CashSettlementSystemPlace1Choice.LEI), nameof(CashSettlementSystemPlace1Choice.LEI))]
     [IsoId("_57FSMJZgEfCShM_qO0U4ig")]
     [DisplayName("CashSettlementSystemPlace1Choice")]
-    public abstract record CashSettlementSystemPlace1Choice_ { }
+    public abstract partial record CashSettlementSystemPlace1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType38Choice
     [IsoId("_eZThlzi8Eeydid5dcNPKvg")]
     [DisplayName("Addition")]
     [IsoXmlTag("Addtn")]
-    public record Addition : UpdateType38Choice_
+    public partial record Addition : UpdateType38Choice_
     {
         /// <summary>
         /// Provides settlement type and identification information.

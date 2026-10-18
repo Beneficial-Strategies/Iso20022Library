@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferType1Choice
     [IsoId("_aXV7wE3VEeidB49bWZiS0g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransferType1Choice_
+    public partial record Proprietary : TransferType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

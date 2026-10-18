@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TC8Kkdp-Ed-ak6NoX_4Aeg_1989939747")]
     [DisplayName("Irish NSC Identification")]
-    public record IrishNSCIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record IrishNSCIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

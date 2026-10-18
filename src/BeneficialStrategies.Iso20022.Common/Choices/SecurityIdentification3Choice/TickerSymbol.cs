@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
     /// </summary>
     [IsoId("_Qdr_lNp-Ed-ak6NoX_4Aeg_1064399370")]
     [DisplayName("Ticker Symbol")]
-    public record TickerSymbol : SecurityIdentification3Choice_
+    public partial record TickerSymbol : SecurityIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

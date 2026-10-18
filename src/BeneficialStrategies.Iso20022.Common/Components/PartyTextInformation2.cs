@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PYi8ftp-Ed-ak6NoX_4Aeg_1769478257")]
 [DisplayName("Party Text Information")]
-public record PartyTextInformation2
+public partial record PartyTextInformation2
 {
     /// <summary>
     /// Provides declaration details narrative relative to the party.

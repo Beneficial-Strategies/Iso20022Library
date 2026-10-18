@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Unit1Choice.DigitalTokenUnit))]
     [JsonDerivedType(typeof(Unit1Choice.UnitsNumber))]
     [JsonDerivedType(typeof(Unit1Choice.DigitalTokenUnit))]
-    public abstract record Unit1Choice_
+    public abstract partial record Unit1Choice_
     {
     }
 }

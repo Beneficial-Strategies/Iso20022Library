@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qg7OESwREeOEV5XHD-BKpw")]
     [DisplayName("Unmatched Status 12 Choice")]
-    public abstract record UnmatchedStatus12Choice_ { }
+    public abstract partial record UnmatchedStatus12Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References24Choice
     /// </summary>
     [IsoId("_H-crXf7uEeCvPoRGOxRobQ")]
     [DisplayName("Pool Identification")]
-    public record PoolIdentification : References24Choice_
+    public partial record PoolIdentification : References24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

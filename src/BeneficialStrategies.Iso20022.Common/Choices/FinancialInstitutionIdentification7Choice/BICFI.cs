@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_bdGyQSGOEeW7gKYhAMEFCw")]
     [DisplayName("BICFI")]
-    public record BICFI : FinancialInstitutionIdentification7Choice_
+    public partial record BICFI : FinancialInstitutionIdentification7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

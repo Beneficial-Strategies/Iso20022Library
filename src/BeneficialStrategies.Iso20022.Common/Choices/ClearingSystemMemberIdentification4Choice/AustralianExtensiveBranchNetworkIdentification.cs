@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCg7NIEeejueAciesPMA")]
     [DisplayName("Australian Extensive Branch Network Identification")]
-    public record AustralianExtensiveBranchNetworkIdentification
+    public partial record AustralianExtensiveBranchNetworkIdentification
         : ClearingSystemMemberIdentification4Choice_
     {
         /// <summary>

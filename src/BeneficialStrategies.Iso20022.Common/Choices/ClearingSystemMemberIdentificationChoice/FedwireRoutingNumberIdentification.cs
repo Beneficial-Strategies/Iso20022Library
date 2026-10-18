@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDY2hNp-Ed-ak6NoX_4Aeg_-896562600")]
     [DisplayName("Fedwire Routing Number Identification")]
-    public record FedwireRoutingNumberIdentification : ClearingSystemMemberIdentificationChoice_
+    public partial record FedwireRoutingNumberIdentification : ClearingSystemMemberIdentificationChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

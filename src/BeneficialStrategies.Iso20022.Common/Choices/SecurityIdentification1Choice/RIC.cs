@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification1Choice
     /// </summary>
     [IsoId("_VcIPgdp-Ed-ak6NoX_4Aeg_-371878008")]
     [DisplayName("RIC")]
-    public record RIC : SecurityIdentification1Choice_
+    public partial record RIC : SecurityIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

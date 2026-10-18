@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementSystemMethod1Choice
     [IsoId("_QvkZxtp-Ed-ak6NoX_4Aeg_-1724851228")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementSystemMethod1Choice_
+    public partial record Proprietary : SettlementSystemMethod1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

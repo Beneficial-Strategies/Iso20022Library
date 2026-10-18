@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References48Choice
     [IsoId("_eJY_syYrEeW_ZNn8gbfY7Q")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
-    public record OtherReference : References48Choice_
+    public partial record OtherReference : References48Choice_
     {
         /// <summary>
         /// Message identification of a message. This reference was assigned by the party issuing the message.

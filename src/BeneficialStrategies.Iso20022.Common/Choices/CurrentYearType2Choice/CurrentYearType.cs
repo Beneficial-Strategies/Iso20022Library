@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType2Choice
     /// </summary>
     [IsoId("_3gENYEXfEeGY6MkiuzuPOA_-654795239")]
     [DisplayName("Current Year Type")]
-    public record CurrentYearType : CurrentYearType2Choice_
+    public partial record CurrentYearType : CurrentYearType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

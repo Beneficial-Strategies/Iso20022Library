@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CancelledStatus5Choice.Reason), nameof(CancelledStatus5Choice.Reason))]
     [IsoId("_yFY2QCzbEeOsiuMH68so7Q")]
     [DisplayName("Cancelled Status 5 Choice")]
-    public abstract record CancelledStatus5Choice_ { }
+    public abstract partial record CancelledStatus5Choice_ { }
 }

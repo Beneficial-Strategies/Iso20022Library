@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus44Choice
     [IsoId("_iZ0nU1hgEeS8HfHHd4stCA")]
     [DisplayName("Completed")]
     [IsoXmlTag("Cmpltd")]
-    public record Completed : ProcessingStatus44Choice_
+    public partial record Completed : ProcessingStatus44Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

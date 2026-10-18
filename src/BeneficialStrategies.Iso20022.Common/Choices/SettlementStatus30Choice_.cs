@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_coFnuSW-EeygjNFjAlVoPA")]
     [DisplayName("Settlement Status 30 Choice")]
-    public abstract record SettlementStatus30Choice_ { }
+    public abstract partial record SettlementStatus30Choice_ { }
 }

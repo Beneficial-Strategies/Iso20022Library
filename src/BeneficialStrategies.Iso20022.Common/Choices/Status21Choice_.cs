@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Status21Choice.Pending), nameof(Status21Choice.Pending))]
     [IsoId("_zx7jgSYtEeW_ZNn8gbfY7Q")]
     [DisplayName("Status 21 Choice")]
-    public abstract record Status21Choice_ { }
+    public abstract partial record Status21Choice_ { }
 }

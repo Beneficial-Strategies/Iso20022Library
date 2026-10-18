@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PXzVk9p-Ed-ak6NoX_4Aeg_526061501")]
 [DisplayName("Other Parties")]
-public record OtherParties3
+public partial record OtherParties3
 {
     /// <summary>
     /// Party, either an individual or organisation, whose assets are being invested.

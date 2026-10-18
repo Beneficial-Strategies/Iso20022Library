@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
     [IsoId("_JaoZeygdEey2k_sfZmJz4g")]
     [DisplayName("Total Number")]
     [IsoXmlTag("TtlNb")]
-    public record TotalNumber : NumberCount2Choice_
+    public partial record TotalNumber : NumberCount2Choice_
     {
         /// <summary>
         /// Sequential number of the instruction in a range of linked settlement instructions.

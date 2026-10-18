@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem5Choice
     [IsoId("_5m6BD5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CashSettlementSystem5Choice_
+    public partial record Proprietary : CashSettlementSystem5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

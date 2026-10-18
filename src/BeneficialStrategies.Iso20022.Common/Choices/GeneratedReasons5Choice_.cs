@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_N9GsgTqeEeWyoP0PbocV1Q")]
     [DisplayName("Generated Reasons 5 Choice")]
-    public abstract record GeneratedReasons5Choice_ { }
+    public abstract partial record GeneratedReasons5Choice_ { }
 }

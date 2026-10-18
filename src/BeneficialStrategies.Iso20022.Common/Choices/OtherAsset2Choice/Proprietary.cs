@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAsset2Choice
     [IsoId("__RowI5NBEemQB_8XA98K0Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : OtherAsset2Choice_
+    public partial record Proprietary : OtherAsset2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

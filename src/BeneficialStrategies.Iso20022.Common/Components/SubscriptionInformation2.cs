@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bgNQUU7dEeifNrXGwadPmg")]
 [DisplayName("Subscription Information")]
-public record SubscriptionInformation2
+public partial record SubscriptionInformation2
 {
     /// <summary>
     /// Date of the first subscription in the current year.

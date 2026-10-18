@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qu-j49p-Ed-ak6NoX_4Aeg_306435769")]
     [DisplayName("Preference To Income 2 Choice")]
-    public abstract record PreferenceToIncome2Choice_ { }
+    public abstract partial record PreferenceToIncome2Choice_ { }
 }

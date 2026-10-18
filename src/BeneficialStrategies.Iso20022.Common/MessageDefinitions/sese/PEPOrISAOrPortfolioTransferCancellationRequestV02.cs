@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_j9ueC9E5Ed-BzquC8wXy7w_493377092")]
 [DisplayName("PEP Or ISA Or Portfolio Transfer Cancellation Request V")]
-public record PEPOrISAOrPortfolioTransferCancellationRequestV02 : IOuterRecord
+public partial record PEPOrISAOrPortfolioTransferCancellationRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

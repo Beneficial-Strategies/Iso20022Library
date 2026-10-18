@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tm-gcStKEeOgfbujmhmNAA")]
 [DisplayName("Securities Trade Details")]
-public record SecuritiesTradeDetails37
+public partial record SecuritiesTradeDetails37
 {
     /// <summary>
     /// Market in which a trade transaction has been executed.

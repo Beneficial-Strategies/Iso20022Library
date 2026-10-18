@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatus3Choice
     /// </summary>
     [IsoId("_LrsCZSY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Extended Reason")]
-    public record ExtendedReason : PendingSettlementStatus3Choice_
+    public partial record ExtendedReason : PendingSettlementStatus3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

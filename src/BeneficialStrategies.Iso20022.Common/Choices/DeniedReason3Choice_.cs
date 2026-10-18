@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UW_MZdp-Ed-ak6NoX_4Aeg_660464543")]
     [DisplayName("Denied Reason 3 Choice")]
-    public abstract record DeniedReason3Choice_ { }
+    public abstract partial record DeniedReason3Choice_ { }
 }

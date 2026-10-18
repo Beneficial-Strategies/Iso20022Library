@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwnEd9p-Ed-ak6NoX_4Aeg_-1173422245")]
 [DisplayName("Transfer Reference")]
-public record TransferReference4
+public partial record TransferReference4
 {
     /// <summary>
     /// Identification assigned by the new plan manager to each transfer of asset.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QvaoxNp-Ed-ak6NoX_4Aeg_3419755")]
     [DisplayName("Letter Of Guarantee 1 Choice")]
-    public abstract record LetterOfGuarantee1Choice_ { }
+    public abstract partial record LetterOfGuarantee1Choice_ { }
 }

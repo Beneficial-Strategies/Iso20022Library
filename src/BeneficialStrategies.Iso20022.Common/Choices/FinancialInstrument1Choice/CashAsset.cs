@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
     [IsoId("_vbukwEyGEeir2sRRVd9XhA")]
     [DisplayName("Cash Asset")]
     [IsoXmlTag("CshAsst")]
-    public record CashAsset : FinancialInstrument1Choice_
+    public partial record CashAsset : FinancialInstrument1Choice_
     {
         /// <summary>
         /// Type of cash asset.

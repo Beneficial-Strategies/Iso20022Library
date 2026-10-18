@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType39Choice
     /// Modification.
     /// </summary>
     [DisplayName("Modification")]
-    public record Modification : UpdateType39Choice_
+    public partial record Modification : UpdateType39Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

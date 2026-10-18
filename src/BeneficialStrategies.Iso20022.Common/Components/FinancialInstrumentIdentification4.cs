@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AI9BAZy2Eem54rMzia0iag")]
 [DisplayName("Financial Instrument Identification")]
-public record FinancialInstrumentIdentification4
+public partial record FinancialInstrumentIdentification4
 {
     /// <summary>
     /// Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.

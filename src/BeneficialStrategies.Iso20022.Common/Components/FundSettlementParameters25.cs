@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("c2488515-0642-427f-8f51-30b794660552")]
 [DisplayName("Fund Settlement Parameters25")]
-public record FundSettlementParameters25
+public partial record FundSettlementParameters25
 {
     /// <summary>
     /// Condition under which the order/trade is to be/was executed.

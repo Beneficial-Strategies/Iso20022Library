@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VOHou9p-Ed-ak6NoX_4Aeg_1212568563")]
 [DisplayName("Deliver Information")]
-public record DeliverInformation1
+public partial record DeliverInformation1
 {
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6PWX4E4REeiQHa-q1Uephw")]
     [DisplayName("Tax Reference Party 1 Choice")]
-    public abstract record TaxReferenceParty1Choice_ { }
+    public abstract partial record TaxReferenceParty1Choice_ { }
 }

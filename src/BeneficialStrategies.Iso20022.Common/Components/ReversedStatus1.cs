@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQptldp-Ed-ak6NoX_4Aeg_-1949430355")]
 [DisplayName("Reversed Status")]
-public record ReversedStatus1
+public partial record ReversedStatus1
 {
     /// <summary>
     /// Reason for the reversal status.

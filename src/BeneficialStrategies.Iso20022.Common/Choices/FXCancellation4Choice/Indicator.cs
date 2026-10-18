@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXCancellation4Choice
     /// </summary>
     [IsoId("_8T_Sw5NLEeWGlc8L7oPDIg")]
     [DisplayName("Indicator")]
-    public record Indicator : FXCancellation4Choice_
+    public partial record Indicator : FXCancellation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

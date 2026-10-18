@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ApplicableRules1Choice
     /// </summary>
     [IsoId("_zP4owFNeEeijdq8ilaxyOA")]
     [DisplayName("Code")]
-    public record Code : ApplicableRules1Choice_
+    public partial record Code : ApplicableRules1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

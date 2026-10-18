@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_f99yLTi8Eeydid5dcNPKvg")]
     [DisplayName("Failing Reason 17 Choice")]
-    public abstract record FailingReason17Choice_ { }
+    public abstract partial record FailingReason17Choice_ { }
 }

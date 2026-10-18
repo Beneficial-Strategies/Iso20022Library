@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9f4e9a6d-21be-41d3-a027-b36c24f6f4b4")]
 [DisplayName("Quantity54")]
-public record Quantity54
+public partial record Quantity54
 {
     /// <summary>
     /// Quantity of security transferred.

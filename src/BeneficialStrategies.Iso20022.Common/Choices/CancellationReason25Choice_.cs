@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6BHQsZNLEeWGlc8L7oPDIg")]
     [DisplayName("Cancellation Reason 25 Choice")]
-    public abstract record CancellationReason25Choice_ { }
+    public abstract partial record CancellationReason25Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QwBFsdp-Ed-ak6NoX_4Aeg_92509892")]
     [DisplayName("Beneficial Ownership 1 Choice")]
-    public abstract record BeneficialOwnership1Choice_ { }
+    public abstract partial record BeneficialOwnership1Choice_ { }
 }

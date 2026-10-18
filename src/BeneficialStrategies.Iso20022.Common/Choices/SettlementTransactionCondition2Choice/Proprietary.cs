@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition2C
     [IsoId("_QuYG9dp-Ed-ak6NoX_4Aeg_-450512440")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementTransactionCondition2Choice_
+    public partial record Proprietary : SettlementTransactionCondition2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

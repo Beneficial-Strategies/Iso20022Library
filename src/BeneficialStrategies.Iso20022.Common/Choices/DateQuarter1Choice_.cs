@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(DateQuarter1Choice.Period), nameof(DateQuarter1Choice.Period))]
     [IsoId("_CUTHIKFTEei_VZq-6SQkuQ")]
     [DisplayName("Date Quarter 1 Choice")]
-    public abstract record DateQuarter1Choice_ { }
+    public abstract partial record DateQuarter1Choice_ { }
 }

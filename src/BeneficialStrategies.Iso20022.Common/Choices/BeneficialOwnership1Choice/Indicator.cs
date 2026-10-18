@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficialOwnership1Choice
     /// </summary>
     [IsoId("_QwBFstp-Ed-ak6NoX_4Aeg_-1770498081")]
     [DisplayName("Indicator")]
-    public record Indicator : BeneficialOwnership1Choice_
+    public partial record Indicator : BeneficialOwnership1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

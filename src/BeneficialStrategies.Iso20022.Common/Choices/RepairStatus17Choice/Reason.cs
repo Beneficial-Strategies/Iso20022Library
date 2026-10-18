@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairStatus17Choice
     [IsoId("_6QDE15NLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RepairStatus17Choice_
+    public partial record Reason : RepairStatus17Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a repair status.

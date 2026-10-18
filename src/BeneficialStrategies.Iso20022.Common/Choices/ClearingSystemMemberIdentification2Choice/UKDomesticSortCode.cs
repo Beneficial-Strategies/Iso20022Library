@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TC8Kktp-Ed-ak6NoX_4Aeg_1989939782")]
     [DisplayName("UK Domestic Sort Code")]
-    public record UKDomesticSortCode : ClearingSystemMemberIdentification2Choice_
+    public partial record UKDomesticSortCode : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

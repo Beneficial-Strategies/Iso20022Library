@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus18Choice
     [IsoId("_2dIa8zp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementStatus18Choice_
+    public partial record Proprietary : SettlementStatus18Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

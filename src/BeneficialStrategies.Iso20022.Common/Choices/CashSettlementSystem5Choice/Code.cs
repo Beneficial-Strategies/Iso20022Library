@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem5Choice
     /// </summary>
     [IsoId("_5m6BB5NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : CashSettlementSystem5Choice_
+    public partial record Code : CashSettlementSystem5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

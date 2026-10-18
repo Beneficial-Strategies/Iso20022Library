@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qmk-8RuJEeOqSdXzJ0oydA")]
     [DisplayName("Exemption Reason 1 Choice")]
-    public abstract record ExemptionReason1Choice_ { }
+    public abstract partial record ExemptionReason1Choice_ { }
 }

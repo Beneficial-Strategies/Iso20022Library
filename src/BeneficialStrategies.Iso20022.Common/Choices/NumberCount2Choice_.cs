@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JBmOYSgdEey2k_sfZmJz4g")]
     [DisplayName("Number Count 2 Choice")]
-    public abstract record NumberCount2Choice_ { }
+    public abstract partial record NumberCount2Choice_ { }
 }

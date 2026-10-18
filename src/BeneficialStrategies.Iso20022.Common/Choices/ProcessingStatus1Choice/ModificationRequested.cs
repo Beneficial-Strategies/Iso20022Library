@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus1Choice
     [IsoId("_UVpIktp-Ed-ak6NoX_4Aeg_-1049244953")]
     [DisplayName("Modification Requested")]
     [IsoXmlTag("ModReqd")]
-    public record ModificationRequested : ProcessingStatus1Choice_
+    public partial record ModificationRequested : ProcessingStatus1Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

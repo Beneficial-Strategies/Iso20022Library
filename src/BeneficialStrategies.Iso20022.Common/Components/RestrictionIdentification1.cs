@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3d1RINj7EeiHnvcp3FV_5w")]
 [DisplayName("Restriction Identification")]
-public record RestrictionIdentification1
+public partial record RestrictionIdentification1
 {
     /// <summary>
     /// Restriction identification removal or addition applied on the transaction expressed as a code.

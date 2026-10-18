@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
     [IsoId("_U0fAs9p-Ed-ak6NoX_4Aeg_1742304027")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : TransferCancellationRejectedStatus1Choice_
+    public partial record Reason : TransferCancellationRejectedStatus1Choice_
     {
         /// <summary>
         /// Reason for a rejected status in structured form.

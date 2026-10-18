@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Tracking5Choice.Proprietary), nameof(Tracking5Choice.Proprietary))]
     [IsoId("_5xrt85NLEeWGlc8L7oPDIg")]
     [DisplayName("Tracking 5 Choice")]
-    public abstract record Tracking5Choice_ { }
+    public abstract partial record Tracking5Choice_ { }
 }

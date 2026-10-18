@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References76Choice
     /// </summary>
     [IsoId("_diXS3Ti8Eeydid5dcNPKvg")]
     [DisplayName("Trade Identification")]
-    public record TradeIdentification : References76Choice_
+    public partial record TradeIdentification : References76Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus4Choice
     [IsoId("_C9XfKTq3EeWyoP0PbocV1Q")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : ModificationStatus4Choice_
+    public partial record Reason : ModificationStatus4Choice_
     {
         /// <summary>
         /// Specifies the reason why the transaction is modified.

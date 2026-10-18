@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus8Choice
     /// </summary>
     [IsoId("_Vl2wJ5NSEeWGlc8L7oPDIg")]
     [DisplayName("Consented")]
-    public record Consented : ResponseStatus8Choice_
+    public partial record Consented : ResponseStatus8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cnsntd")]

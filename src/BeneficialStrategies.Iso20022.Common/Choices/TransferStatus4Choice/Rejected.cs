@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     [IsoId("_fmnCeZM5EemKz5EOjv82iQ")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : TransferStatus4Choice_
+    public partial record Rejected : TransferStatus4Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

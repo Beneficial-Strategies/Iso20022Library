@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferUnmatchedStatus4Choice
     /// </summary>
     [IsoId("_k75sI5M5EemKz5EOjv82iQ")]
     [DisplayName("Reason")]
-    public record Reason : TransferUnmatchedStatus4Choice_
+    public partial record Reason : TransferUnmatchedStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

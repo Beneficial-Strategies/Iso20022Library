@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RQ8ogtp-Ed-ak6NoX_4Aeg_1365580031")]
 [DisplayName("PEPISA Transfer")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record PEPISATransfer7
+public partial record PEPISATransfer7
 {
     /// <summary>
     /// Information identifying the primary individual investor, eg, name, address, social security number and date of birth.

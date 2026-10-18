@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XdDqYYZGEe-6cOl7zMpJaA")]
 [DisplayName("Buy In Advice Details2")]
-public record BuyInAdviceDetails2
+public partial record BuyInAdviceDetails2
 {
     /// <summary>
     /// Reference.

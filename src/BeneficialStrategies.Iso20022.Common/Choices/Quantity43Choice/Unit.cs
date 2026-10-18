@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
     [IsoId("_qCevQa5xEeeMy7TnJ3e__g")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public record Unit : Quantity43Choice_
+    public partial record Unit : Quantity43Choice_
     {
         /// <summary>
         /// Quantity expressed as a number, for example, a number of shares.

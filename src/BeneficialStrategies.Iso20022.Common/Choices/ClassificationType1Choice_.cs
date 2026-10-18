@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RdUQk9p-Ed-ak6NoX_4Aeg_-538549826")]
     [DisplayName("Classification Type 1 Choice")]
-    public abstract record ClassificationType1Choice_ { }
+    public abstract partial record ClassificationType1Choice_ { }
 }

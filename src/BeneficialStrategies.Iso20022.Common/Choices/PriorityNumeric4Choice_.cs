@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_rhERsTtDEeWRTLSN0i0tng")]
     [DisplayName("Priority Numeric 4 Choice")]
-    public abstract record PriorityNumeric4Choice_ { }
+    public abstract partial record PriorityNumeric4Choice_ { }
 }

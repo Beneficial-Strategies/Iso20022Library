@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_K0uj29E6Ed-BzquC8wXy7w_569643185")]
 [DisplayName("Transfer Instruction Status Report")]
-public record TransferInstructionStatusReport : IOuterRecord
+public partial record TransferInstructionStatusReport : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

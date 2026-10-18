@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus32Choice
     /// Pending.
     /// </summary>
     [DisplayName("Pending")]
-    public record Pending : SettlementStatus32Choice_
+    public partial record Pending : SettlementStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

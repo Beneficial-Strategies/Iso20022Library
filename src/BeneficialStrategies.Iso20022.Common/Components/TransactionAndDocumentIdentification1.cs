@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qri1ZNp-Ed-ak6NoX_4Aeg_-896139049")]
 [DisplayName("Transaction And Document Identification")]
-public record TransactionAndDocumentIdentification1
+public partial record TransactionAndDocumentIdentification1
 {
     /// <summary>
     /// Unambiguous identification of the transaction as know by the instructing party.

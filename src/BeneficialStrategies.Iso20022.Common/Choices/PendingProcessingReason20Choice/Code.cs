@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason20Choice
     /// <summary>Specifies the reason why the instruction has a pending processing status.</summary>
     [IsoId("628af229-419a-4eed-8824-4269f8086714")]
     [DisplayName("Code")]
-    public record Code : PendingProcessingReason20Choice_
+    public partial record Code : PendingProcessingReason20Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

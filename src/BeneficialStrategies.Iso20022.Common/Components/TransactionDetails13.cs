@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UdigWNp-Ed-ak6NoX_4Aeg_-2016914974")]
 [DisplayName("Transaction Details")]
-public record TransactionDetails13
+public partial record TransactionDetails13
 {
     /// <summary>
     /// Provides transaction type and identification information.

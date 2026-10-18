@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_duzpkSY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Transfer Unmatched Status 3 Choice")]
-    public abstract record TransferUnmatchedStatus3Choice_ { }
+    public abstract partial record TransferUnmatchedStatus3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfRequest1Choice
     [IsoId("_2GjlsNvdEeqxGfKJubfhIw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TypeOfRequest1Choice_
+    public partial record Proprietary : TypeOfRequest1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

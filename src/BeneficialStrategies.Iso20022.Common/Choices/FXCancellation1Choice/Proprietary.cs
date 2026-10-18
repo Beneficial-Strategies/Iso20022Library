@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXCancellation1Choice
     [IsoId("_QtVlI9p-Ed-ak6NoX_4Aeg_615585067")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FXCancellation1Choice_
+    public partial record Proprietary : FXCancellation1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

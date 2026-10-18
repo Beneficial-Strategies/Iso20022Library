@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P_u4Rdp-Ed-ak6NoX_4Aeg_2078050796")]
 [DisplayName("Generic Account Identification")]
-public record GenericAccountIdentification1
+public partial record GenericAccountIdentification1
 {
     /// <summary>
     /// Identification assigned by an institution.

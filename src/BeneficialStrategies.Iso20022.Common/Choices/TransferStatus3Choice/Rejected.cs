@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice
     [IsoId("_aeWNWVNUEeijdq8ilaxyOA")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : TransferStatus3Choice_
+    public partial record Rejected : TransferStatus3Choice_
     {
         /// <summary>
         /// Reason for the rejected status.

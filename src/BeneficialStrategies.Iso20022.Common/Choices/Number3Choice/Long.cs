@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number3Choice
     /// </summary>
     [IsoId("_QrP6dtp-Ed-ak6NoX_4Aeg_1752980794")]
     [DisplayName("Long")]
-    public record Long : Number3Choice_
+    public partial record Long : Number3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

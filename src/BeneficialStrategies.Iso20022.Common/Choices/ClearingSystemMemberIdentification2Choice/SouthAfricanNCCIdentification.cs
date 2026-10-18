@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDF7lNp-Ed-ak6NoX_4Aeg_1990860839")]
     [DisplayName("South African NCC Identification")]
-    public record SouthAfricanNCCIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record SouthAfricanNCCIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.
