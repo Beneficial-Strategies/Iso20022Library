@@ -339,3 +339,32 @@ string msgId      = received.GroupHeader.MessageIdentification;  // "ABC/120928/
 string debtorName = received.PaymentInformation.Debtor.Name!;   // "ABC Corporation"
 int    txCount    = received.PaymentInformation.CreditTransferTransactionInformation.Count; // 1
 ```
+
+### XML from outside: report every problem
+
+`Deserialize` is for XML you trust. It throws on the first value it cannot read, and it does **not** notice a required element that is absent: the record is built with a default value in that member. For XML from a counterparty, use `TryRead`. It never throws for a problem in the document, and it returns either the complete record or the list of everything that is wrong:
+
+```C#
+var result = Iso20022XmlSerializer.TryRead<Beneficial.pain.CustomerCreditTransferInitiationV11>(xml);
+
+if (result.Succeeded)
+{
+    var received = result.Message!;   // complete: every required member is present and valid
+}
+else
+{
+    foreach (DeserializationIssue issue in result.Issues)
+        Console.WriteLine(issue);     // Document/CstmrCdtTrfInitn/GrpHdr/MsgId: RequiredMissing: Required element <MsgId> is missing. (line 4, position 7)
+}
+```
+
+Each issue has a `Path` (element names from the document element, with `[2]` on repeated elements and `/@Ccy` for an attribute), a `Code` (`RequiredMissing`, `BadValue`, `FacetViolation`, `UnknownChoice`, `AmbiguousChoice`, `UnexpectedElement`, `MalformedXml`, `WrongRoot`), the offending `Value`, a `Reason`, and the `Line` and `Position` in the text. An enum value is matched against the ISO codes only, and the reason lists the valid ones.
+
+To read one part of a larger document, for example a party you found inside your own envelope, call `Read` on its element. The namespace is taken from the element, and the issue paths can continue from your own path:
+
+```C#
+var party = Iso20022XmlSerializer.Read<Beneficial.Components.PartyIdentification135>(
+    element, new ReadContext(PathPrefix: "Envelope/Body/"));
+```
+
+`TryRead` and `Read` are new. They work on every message type, but so far they are tested on one (camt.061); see [#19](https://github.com/Beneficial-Strategies/Iso20022Library/issues/19) for the rest of the plan. Until that is finished, keep `Deserialize` for XML you wrote yourself.
