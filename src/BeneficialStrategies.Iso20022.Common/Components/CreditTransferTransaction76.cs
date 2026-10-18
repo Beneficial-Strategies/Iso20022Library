@@ -30,7 +30,7 @@ public record CreditTransferTransaction76
     [IsoId("c1b2745a-0002-0002-0002-89794069a0c7")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, expressed in the currency as ordered by the initiating party.
@@ -222,7 +222,7 @@ public record CreditTransferTransaction76
     [IsoId("c1b2745a-0026-0026-0026-89794069a0c7")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
+    public RemittanceInformation26? RemittanceInformation { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

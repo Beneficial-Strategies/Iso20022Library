@@ -64,7 +64,7 @@ public record AccountSwitchRequestBalanceTransferV06 : IOuterRecord
     /// </summary>
     [DisplayName("New Account")]
     [IsoXmlTag("NewAcct")]
-    public required NewAccount4 NewAccount { get; init; }
+    public required CashAccount43 NewAccount { get; init; }
 
     /// <summary>
     /// Nominated Account.

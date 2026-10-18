@@ -54,7 +54,7 @@ public record DTCCCAPASD1V06 : IOuterRecord
     [IsoId("_LAGyTb5MEeexmbB7KsjCwA")]
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public CorporateActionGeneralInformationSD30? CorporateActionGeneralInformation { get; init; }
+    public CorporateActionGeneralInformationSD31? CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
     /// Information to be extended as supplementary data to underlying security details.
@@ -78,7 +78,7 @@ public record DTCCCAPASD1V06 : IOuterRecord
     [IsoId("_LAGyWb5MEeexmbB7KsjCwA")]
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD18? CorporateActionDetails { get; init; }
+    public CorporateActionSD19? CorporateActionDetails { get; init; }
 
     /// <summary>
     /// Extension block for the information to be extended as corporate action movement securities movement details.

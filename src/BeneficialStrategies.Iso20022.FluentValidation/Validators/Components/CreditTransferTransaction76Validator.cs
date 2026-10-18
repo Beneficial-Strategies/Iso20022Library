@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 /// Provides further details specific to the individual transaction(s) included in the message.
 /// <list type="table">
 ///   <item><term>PaymentIdentification</term><description>PaymentIdentification6 — required (1..1)</description></item>
-///   <item><term>PaymentTypeInformation</term><description>PaymentTypeInformation28 — optional (0..1)</description></item>
+///   <item><term>PaymentTypeInformation</term><description>PaymentTypeInformation26 — optional (0..1)</description></item>
 ///   <item><term>Amount</term><description>AmountType4Choice_ — required (1..1)</description></item>
 ///   <item><term>ChargeBearer</term><description>ChargeBearerType1Code — optional (0..1), closed enum, fully enforced</description></item>
 ///   <item><term>PreviousInstructingAgent1/2/3</term><description>BranchAndFinancialInstitutionIdentification8 — optional (0..1) each</description></item>
@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///   <item><term>InstructionForCreditorAgent</term><description>InstructionForCreditorAgent3 collection — optional (0..n)</description></item>
 ///   <item><term>RegulatoryReporting</term><description>RegulatoryReporting10 collection — optional (0..n)</description></item>
 ///   <item><term>RelatedRemittanceInformation</term><description>RemittanceLocation8 collection — optional (0..n)</description></item>
-///   <item><term>RemittanceInformation</term><description>RemittanceInformation22 — optional (0..1)</description></item>
+///   <item><term>RemittanceInformation</term><description>RemittanceInformation26 — optional (0..1)</description></item>
 ///   <item><term>SupplementaryData</term><description>SupplementaryData1 collection — optional (0..n)</description></item>
 /// </list>
 ///
@@ -50,7 +50,7 @@ public class CreditTransferTransaction76Validator : AbstractValidator<CreditTran
     /// </summary>
     public CreditTransferTransaction76Validator(
         IValidator<PaymentIdentification6> paymentIdentificationValidator,
-        IValidator<PaymentTypeInformation28> paymentTypeInformationValidator,
+        IValidator<PaymentTypeInformation26> paymentTypeInformationValidator,
         IValidator<AmountType4Choice_> amountValidator,
         IValidator<BranchAndFinancialInstitutionIdentification8> agentValidator,
         IValidator<CashAccount40> cashAccountValidator,
@@ -59,7 +59,7 @@ public class CreditTransferTransaction76Validator : AbstractValidator<CreditTran
         IValidator<InstructionForCreditorAgent3> instructionForCreditorAgentValidator,
         IValidator<RegulatoryReporting10> regulatoryReportingValidator,
         IValidator<RemittanceLocation8> relatedRemittanceInformationValidator,
-        IValidator<RemittanceInformation22> remittanceInformationValidator,
+        IValidator<RemittanceInformation26> remittanceInformationValidator,
         IValidator<SupplementaryData1> supplementaryDataValidator
     )
     {
@@ -155,7 +155,7 @@ public class CreditTransferTransaction76Validator : AbstractValidator<CreditTran
     public CreditTransferTransaction76Validator()
         : this(
             new PaymentIdentification6Validator(),
-            new PaymentTypeInformation28Validator(),
+            new PaymentTypeInformation26Validator(),
             new AmountType4Choice_Validator(),
             new BranchAndFinancialInstitutionIdentification8Validator(),
             new CashAccount40Validator(),
@@ -164,7 +164,7 @@ public class CreditTransferTransaction76Validator : AbstractValidator<CreditTran
             new InstructionForCreditorAgent3Validator(),
             new RegulatoryReporting10Validator(),
             new RemittanceLocation8Validator(),
-            new RemittanceInformation22Validator(),
+            new RemittanceInformation26Validator(),
             new SupplementaryData1Validator()
         ) { }
 }

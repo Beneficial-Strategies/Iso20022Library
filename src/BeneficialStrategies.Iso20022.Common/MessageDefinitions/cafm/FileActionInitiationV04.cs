@@ -99,7 +99,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
+    public OriginatorData2? Originator { get; init; }
 
     /// <summary>
     /// Acquirer.
@@ -113,7 +113,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
+    public SenderData1? Sender { get; init; }
 
     /// <summary>
     /// Card.
@@ -127,21 +127,21 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Receiver")]
     [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
+    public ReceiverData1? Receiver { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public PartyIdentification286? Issuer { get; init; }
+    public IssuerData1? Issuer { get; init; }
 
     /// <summary>
     /// Destination.
     /// </summary>
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
+    public DestinationData1? Destination { get; init; }
 
     /// <summary>
     /// Programme.
@@ -246,28 +246,28 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Payer")]
     [IsoXmlTag("Pyer")]
-    public PartyIdentification287? Payer { get; init; }
+    public PayerData1? Payer { get; init; }
 
     /// <summary>
     /// Payee.
     /// </summary>
     [DisplayName("Payee")]
     [IsoXmlTag("Pyee")]
-    public PartyIdentification287? Payee { get; init; }
+    public PayeeData1? Payee { get; init; }
 
     /// <summary>
     /// Token.
     /// </summary>
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
-    public Token2? Token { get; init; }
+    public Token5? Token { get; init; }
 
     /// <summary>
     /// Customer Device.
     /// </summary>
     [DisplayName("Customer Device")]
     [IsoXmlTag("CstmrDvc")]
-    public CustomerDevice5? CustomerDevice { get; init; }
+    public CustomerDevice6? CustomerDevice { get; init; }
 
     /// <summary>
     /// Wallet.
@@ -281,7 +281,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
-    public Cardholder22? Cardholder { get; init; }
+    public Cardholder23? Cardholder { get; init; }
 
     /// <summary>
     /// Jurisdiction.
@@ -302,7 +302,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
 
     /// <summary>
     /// Reconciliation.
@@ -323,7 +323,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
 
     /// <summary>
     /// Private Data.

@@ -52,7 +52,7 @@ public record StaticDataRequestV01 : IOuterRecord
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required Max35Text MessageIdentification { get; init; }
+    public required MessageIdentification MessageIdentification { get; init; }
 
     /// <summary>
     /// Details of the request.

@@ -58,6 +58,19 @@ public class IsoXsdStructureTests
             .Select(x => (x.Tag!, x.Variant))
             .ToArray();
 
+    // the elements of a sequence, with those of a choice or sequence nested in it (a component with an XOR constraint)
+    private static IEnumerable<XmlSchemaElement> Flatten(XmlSchemaGroupBase group)
+    {
+        foreach (var item in group.Items)
+        {
+            if (item is XmlSchemaElement e)
+                yield return e;
+            else if (item is XmlSchemaGroupBase nested)
+                foreach (var x in Flatten(nested))
+                    yield return x;
+        }
+    }
+
     private static void CompareType(XmlSchemaType? xsd, Type clr, string where, Report report)
     {
         if (xsd is not XmlSchemaComplexType complex)
@@ -67,6 +80,9 @@ public class IsoXsdStructureTests
         report.Types++;
 
         var particle = complex.ContentTypeParticle;
+        // older schemas write a choice as the only item of a sequence
+        if (particle is XmlSchemaSequence { Items.Count: 1 } onlyChoice && onlyChoice.Items[0] is XmlSchemaChoice inner)
+            particle = inner;
         if (particle is XmlSchemaChoice choice)
         {
             var elements = choice.Items.OfType<XmlSchemaElement>().ToList();
@@ -105,7 +121,7 @@ public class IsoXsdStructureTests
         var seq = particle as XmlSchemaSequence;
         if (seq is null)
             return; // simple content (amounts) or empty
-        var xsdElements = seq.Items.OfType<XmlSchemaElement>().ToList();
+        var xsdElements = Flatten(seq).ToList();
         if (clr.IsAbstract)
         {
             report.Add("sequence-but-code-has-a-choice", where, clr.Name);

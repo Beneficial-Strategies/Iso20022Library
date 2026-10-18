@@ -214,7 +214,7 @@ public class CreditTransferTransaction73ValidatorTests
         var msg = ValidMessage() with
         {
             RelatedRemittanceInformation = [new RemittanceLocation8()],
-            RemittanceInformation = new RemittanceInformation22(),
+            RemittanceInformation = new RemittanceInformation26(),
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
