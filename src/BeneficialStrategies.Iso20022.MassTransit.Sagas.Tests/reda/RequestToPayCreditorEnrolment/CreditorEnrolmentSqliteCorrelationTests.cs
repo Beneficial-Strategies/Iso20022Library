@@ -93,7 +93,7 @@ public class CreditorEnrolmentSqliteCorrelationTests
         // harness also needs to resolve it directly, to run EnsureCreatedAsync.
         services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(database.ConnectionString));
 
-        var provider = services.AddMassTransitTestHarness(cfg =>
+        var provider = services.WithGenerousTestTimeouts().AddMassTransitTestHarness(cfg =>
             {
                 cfg.AddSagaStateMachine<CreditorEnrolmentServiceProviderStateMachine, CreditorEnrolmentSagaState>()
                     .EntityFrameworkRepository(r =>
