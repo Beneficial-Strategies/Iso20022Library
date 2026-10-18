@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022;
 /// <b>Serialization contract:</b> implementing this interface is what registers a type for
 /// correct treatment by both serializers — no per-type XML attribute is required.
 /// <list type="bullet">
-///   <item><b>XML</b> — <see cref="Serialization.Iso20022XmlSerializer"/> detects
+///   <item><b>XML</b> — <c>Iso20022XmlSerializer</c> (in the BeneficialStrategies.Iso20022 package) detects
 ///     <c>IIsoSimpleValue&lt;T&gt;</c> in <c>IsLeafType</c> and dispatches to the appropriate
 ///     leaf formatter/parser for <typeparamref name="T"/>.</item>
 ///   <item><b>JSON</b> — each implementing struct carries

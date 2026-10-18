@@ -10,7 +10,7 @@ namespace BeneficialStrategies.Iso20022;
 /// <see cref="IIsoTimezoneQualifiedValue"/>).
 /// </summary>
 /// <remarks>
-/// <see cref="Serialization.Iso20022XmlSerializer"/> normally round-trips an
+/// <c>Iso20022XmlSerializer</c> (in the BeneficialStrategies.Iso20022 package) normally round-trips an
 /// <see cref="IIsoSimpleValue{T}"/> leaf generically: parse wire text directly into <c>T</c>,
 /// construct the struct from that native value; format by recursing into <c>Value</c> and
 /// letting the switch in <c>FormatLeaf</c> handle whatever primitive <c>T</c> turns out to be.

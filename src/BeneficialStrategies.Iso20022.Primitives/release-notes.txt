@@ -1,0 +1,2 @@
+0.7.0-alpha
+    The primitive data types, code sets and external codes moved here from BeneficialStrategies.Iso20022 (#26). Namespaces are unchanged.
