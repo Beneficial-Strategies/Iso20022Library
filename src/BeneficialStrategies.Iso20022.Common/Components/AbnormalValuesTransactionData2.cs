@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x6yxOVyGEe24CqbZJK5XxA")]
 [DisplayName("Abnormal Values Transaction Data")]
-public record AbnormalValuesTransactionData2
+public partial record AbnormalValuesTransactionData2
 {
     /// <summary>
     /// Identification of a transaction.

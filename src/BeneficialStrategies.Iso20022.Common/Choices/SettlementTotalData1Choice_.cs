@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_allUdx2lEeqF2P5v-Rtejg")]
     [DisplayName("Settlement Total Data 1 Choice")]
-    public abstract record SettlementTotalData1Choice_ { }
+    public abstract partial record SettlementTotalData1Choice_ { }
 }

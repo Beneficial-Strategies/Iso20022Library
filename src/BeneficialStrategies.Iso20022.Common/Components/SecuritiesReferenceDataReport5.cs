@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G2KSJ35aEea2k7EBUopqxw")]
 [DisplayName("Securities Reference Data Report")]
-public record SecuritiesReferenceDataReport5
+public partial record SecuritiesReferenceDataReport5
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice message.

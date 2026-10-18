@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_1-TtoeUREem3X-64-NKdqg")]
 [DisplayName("CCP Account Position Report V")]
-public record CCPAccountPositionReportV01 : IOuterRecord
+public partial record CCPAccountPositionReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport22Choice
     [IsoId("_zvSsecg3EeuGrNSsxk3B0A")]
     [DisplayName("Position Component")]
     [IsoXmlTag("PosCmpnt")]
-    public record PositionComponent : TradeReport22Choice_
+    public partial record PositionComponent : TradeReport22Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

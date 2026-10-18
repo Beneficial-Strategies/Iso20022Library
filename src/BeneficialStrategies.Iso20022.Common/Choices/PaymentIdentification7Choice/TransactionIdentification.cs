@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
     /// </summary>
     [IsoId("_5uqG8QKxEe2rHs6fbn9-0A")]
     [DisplayName("Transaction Identification")]
-    public record TransactionIdentification : PaymentIdentification7Choice_
+    public partial record TransactionIdentification : PaymentIdentification7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

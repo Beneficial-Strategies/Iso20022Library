@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError4Choice
     [IsoId("_MqM5Q9fiEeqoweZZxm4TPQ")]
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
-    public record CurrencyExchange : ExchangeRateReportOrError4Choice_
+    public partial record CurrencyExchange : ExchangeRateReportOrError4Choice_
     {
         /// <summary>
         /// The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IW-vwLbxEeaqL_M7XFD7PQ")]
 [DisplayName("Liquidity Required And Available")]
-public record LiquidityRequiredAndAvailable1
+public partial record LiquidityRequiredAndAvailable1
 {
     /// <summary>
     /// Flows of resources that are estimated to be available to the CCP on each day of the reporting horizon. That is, balances as of close‐of‐business on day ‘T‐1’, then flows from day ‘T’ of the default to ‘T+5 onwards’.

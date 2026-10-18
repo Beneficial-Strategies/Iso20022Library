@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bhYnwEJ4EeGuetKibuqsKw")]
 [DisplayName("Legal Mandate")]
-public record LegalMandate1
+public partial record LegalMandate1
 {
     /// <summary>
     /// Identifies the legal mandate paragraph in law which gives power to the authority&apos;s request.

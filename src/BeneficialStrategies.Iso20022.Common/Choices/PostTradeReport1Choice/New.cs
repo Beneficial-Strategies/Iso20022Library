@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeReport1Choice
     /// <summary>Post-trade related data report.</summary>
     [IsoId("_w1AjkGIgEfCeoPFCHQnhvA")]
     [DisplayName("New")]
-    public record New : PostTradeReport1Choice_
+    public partial record New : PostTradeReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("New")]

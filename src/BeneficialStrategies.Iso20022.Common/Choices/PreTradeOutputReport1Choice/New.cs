@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreTradeOutputReport1Choice
     /// <summary>Pre-trade output related data report.</summary>
     [IsoId("_kDbIcGIVEfCeoPFCHQnhvA")]
     [DisplayName("New")]
-    public record New : PreTradeOutputReport1Choice_
+    public partial record New : PreTradeOutputReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("New")]

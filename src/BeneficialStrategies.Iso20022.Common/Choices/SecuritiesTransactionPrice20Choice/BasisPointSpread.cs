@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice20Choi
     /// </summary>
     [IsoId("_IaZdh02vEe2Ci6HlmBLbDw")]
     [DisplayName("Basis Point Spread")]
-    public record BasisPointSpread : SecuritiesTransactionPrice20Choice_
+    public partial record BasisPointSpread : SecuritiesTransactionPrice20Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

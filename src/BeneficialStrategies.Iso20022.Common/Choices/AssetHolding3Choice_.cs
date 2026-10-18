@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AssetHolding3Choice.Triparty), nameof(AssetHolding3Choice.Triparty))]
     [IsoId("_eUalMShJEe2H2s7qerne1w")]
     [DisplayName("Asset Holding3Choice")]
-    public abstract record AssetHolding3Choice_ { }
+    public abstract partial record AssetHolding3Choice_ { }
 }

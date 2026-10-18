@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t6sBoFkyEeGeoaLUQk__nA_1677846126")]
 [DisplayName("Card Transaction")]
-public record CardTransaction1
+public partial record CardTransaction1
 {
     /// <summary>
     /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.

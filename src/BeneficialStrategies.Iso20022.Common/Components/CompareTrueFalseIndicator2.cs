@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sHGTUdR7EemZdYGWu384Zw")]
 [DisplayName("Compare True False Indicator")]
-public record CompareTrueFalseIndicator2
+public partial record CompareTrueFalseIndicator2
 {
     /// <summary>
     /// Information for the first side of the transaction.

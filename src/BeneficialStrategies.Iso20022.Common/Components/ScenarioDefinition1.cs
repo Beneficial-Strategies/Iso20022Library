@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b-6ZMKsrEeayv9XxdmMwKQ")]
 [DisplayName("Scenario Definition")]
-public record ScenarioDefinition1
+public partial record ScenarioDefinition1
 {
     /// <summary>
     /// Identification of the stress scenario.

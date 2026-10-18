@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h8xRgR2yEeqF2P5v-Rtejg")]
 [DisplayName("Settlement Fails Report Header")]
-public record SettlementFailsReportHeader2
+public partial record SettlementFailsReportHeader2
 {
     /// <summary>
     /// Provides the reporting timestamp, when the report was submitted from the CSD to the Competent Authority.

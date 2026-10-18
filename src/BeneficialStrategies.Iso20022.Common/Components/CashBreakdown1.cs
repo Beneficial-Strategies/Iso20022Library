@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzKpJEFVEfCGo6pGJ7j7Eg")]
 [DisplayName("Cash Breakdown1")]
-public record CashBreakdown1
+public partial record CashBreakdown1
 {
     /// <summary>
     /// Specifies the note details.

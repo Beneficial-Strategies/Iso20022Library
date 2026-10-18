@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport12Choice
     /// </summary>
     [IsoId("_bQpIgxLBEeqctpBfTmLJnw")]
     [DisplayName("Transaction")]
-    public record Transaction : TradeReport12Choice_
+    public partial record Transaction : TradeReport12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Tx")]

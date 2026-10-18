@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_46oMQE6nEeyEpI66tm807w")]
 [DisplayName("Compare Seniority Type")]
-public record CompareSeniorityType1
+public partial record CompareSeniorityType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

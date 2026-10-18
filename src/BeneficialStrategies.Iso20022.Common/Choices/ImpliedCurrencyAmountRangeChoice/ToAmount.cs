@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
     [IsoId("_PU-EDNp-Ed-ak6NoX_4Aeg_-1249783339")]
     [DisplayName("To Amount")]
     [IsoXmlTag("ToAmt")]
-    public record ToAmount : ImpliedCurrencyAmountRangeChoice_
+    public partial record ToAmount : ImpliedCurrencyAmountRangeChoice_
     {
         /// <summary>
         /// Amount value of the range limit.

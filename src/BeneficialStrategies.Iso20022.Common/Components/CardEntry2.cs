@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GZZGWWREEeSXi86_neFd1g")]
 [DisplayName("Card Entry")]
-public record CardEntry2
+public partial record CardEntry2
 {
     /// <summary>
     /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.

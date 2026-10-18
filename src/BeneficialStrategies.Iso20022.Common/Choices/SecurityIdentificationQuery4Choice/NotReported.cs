@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
     /// </summary>
     [IsoId("_PJPwq5NeEeytjZlcgApf6A")]
     [DisplayName("Not Reported")]
-    public record NotReported : SecurityIdentificationQuery4Choice_
+    public partial record NotReported : SecurityIdentificationQuery4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

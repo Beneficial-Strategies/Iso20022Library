@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationServiceLevel1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : InvestigationServiceLevel1Choice_
+    public partial record Code : InvestigationServiceLevel1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

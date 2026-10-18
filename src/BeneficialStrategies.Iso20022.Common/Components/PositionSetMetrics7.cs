@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dpo_4a5MEeuo-IflVgGqiA")]
 [DisplayName("Position Set Metrics")]
-public record PositionSetMetrics7
+public partial record PositionSetMetrics7
 {
     /// <summary>
     /// Numeric variables calculated on the number of transactions or on market exposures.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kl1m0dMGEem1A4OOmCK97A")]
 [DisplayName("Cash Compare")]
-public record CashCompare1
+public partial record CashCompare1
 {
     /// <summary>
     /// Specifies whether the values defined as active or historic currency and amount are matching or not.

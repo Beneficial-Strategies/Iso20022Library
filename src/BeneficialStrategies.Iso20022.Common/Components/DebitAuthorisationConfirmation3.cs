@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1TU1Ua6uEe2PjM01bHafYg")]
 [DisplayName("Debit Authorisation Confirmation3")]
-public record DebitAuthorisationConfirmation3
+public partial record DebitAuthorisationConfirmation3
 {
     /// <summary>
     /// Debit Authorisation.

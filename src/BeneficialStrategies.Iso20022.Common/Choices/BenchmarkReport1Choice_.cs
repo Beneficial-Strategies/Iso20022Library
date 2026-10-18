@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_P2VfczrWEeedCZZ8dIPp6g")]
     [DisplayName("Benchmark Report 1 Choice")]
-    public abstract record BenchmarkReport1Choice_ { }
+    public abstract partial record BenchmarkReport1Choice_ { }
 }

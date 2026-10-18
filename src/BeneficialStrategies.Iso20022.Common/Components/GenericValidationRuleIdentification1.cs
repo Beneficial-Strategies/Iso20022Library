@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BWCfJdjGEeSD0e0ybx5L5Q")]
 [DisplayName("Generic Validation Rule Identification")]
-public record GenericValidationRuleIdentification1
+public partial record GenericValidationRuleIdentification1
 {
     /// <summary>
     /// Unique and unambiguous identification of a validation rule.

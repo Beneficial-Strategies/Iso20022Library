@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5v7SsRUNEeusI4XK3oQSyg")]
     [DisplayName("Reservation Type 2 Choice")]
-    public abstract record ReservationType2Choice_ { }
+    public abstract partial record ReservationType2Choice_ { }
 }

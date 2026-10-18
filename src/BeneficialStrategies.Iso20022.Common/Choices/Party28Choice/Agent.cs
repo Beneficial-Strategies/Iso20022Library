@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party28Choice
     [IsoId("_cOVCddnSEeS--7IJLPC9lw")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public record Agent : Party28Choice_
+    public partial record Agent : Party28Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.

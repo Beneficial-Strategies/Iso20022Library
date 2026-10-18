@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError5Choice
     [IsoId("_COWPUW4-EeiU9cctagi5ow")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : StandingOrderOrError5Choice_
+    public partial record Report : StandingOrderOrError5Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.

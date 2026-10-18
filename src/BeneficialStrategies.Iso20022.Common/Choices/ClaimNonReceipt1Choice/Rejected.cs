@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice
     /// </summary>
     [IsoId("_w4YfsIjYEeeDW7_wB-eK_g")]
     [DisplayName("Rejected")]
-    public record Rejected : ClaimNonReceipt1Choice_
+    public partial record Rejected : ClaimNonReceipt1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xkY2ATEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Agents6")]
-public record TransactionAgents6
+public partial record TransactionAgents6
 {
     /// <summary>
     /// Instructing Agent.

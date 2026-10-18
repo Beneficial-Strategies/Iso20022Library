@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction4Choice
     [IsoId("_3rWFwXuSEeivKIBRHeTQRQ")]
     [DisplayName("Initiation")]
     [IsoXmlTag("Initn")]
-    public record Initiation : CorrectiveTransaction4Choice_
+    public partial record Initiation : CorrectiveTransaction4Choice_
     {
         /// <summary>
         /// Set of elements used to provide corrective information for the group header of the message under investigation.

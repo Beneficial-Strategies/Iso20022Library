@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper1Choice
     [IsoId("_aEjf4FryEeWN79Bl6BUd3g")]
     [DisplayName("Pulp")]
     [IsoXmlTag("Pulp")]
-    public record Pulp : AssetClassCommodityPaper1Choice_
+    public partial record Pulp : AssetClassCommodityPaper1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

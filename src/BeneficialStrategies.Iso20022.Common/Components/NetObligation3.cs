@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UnyvQUkCEe-KhcStGV4xTg")]
 [DisplayName("Net Obligation3")]
-public record NetObligation3
+public partial record NetObligation3
 {
     /// <summary>
     /// Obligation Identification.

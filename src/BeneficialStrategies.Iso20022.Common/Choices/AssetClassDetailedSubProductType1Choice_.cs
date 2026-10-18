@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_KDl0cI16Eeet3cKIYK84nw")]
     [DisplayName("Asset Class Detailed Sub Product Type 1 Choice")]
-    public abstract record AssetClassDetailedSubProductType1Choice_ { }
+    public abstract partial record AssetClassDetailedSubProductType1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G_S7kYasEeeUws0ZryHQ2w")]
 [DisplayName("Transaction Agents")]
-public record TransactionAgents4
+public partial record TransactionAgents4
 {
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

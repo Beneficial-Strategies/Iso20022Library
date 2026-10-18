@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement3Choice
     /// Reporting Requirement.
     /// </summary>
     [DisplayName("Reporting Requirement")]
-    public record ReportingRequirement : ReportingRequirement3Choice_
+    public partial record ReportingRequirement : ReportingRequirement3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

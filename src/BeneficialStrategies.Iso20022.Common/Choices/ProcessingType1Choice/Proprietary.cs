@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingType1Choice
     /// </summary>
     [IsoId("_705FRKMgEeCJ6YNENx4h-w_619782211")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ProcessingType1Choice_
+    public partial record Proprietary : ProcessingType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

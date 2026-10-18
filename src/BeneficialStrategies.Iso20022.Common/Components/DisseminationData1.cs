@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S9HpkCJmEe2zWP9pqvmqdw")]
 [DisplayName("Dissemination Data")]
-public record DisseminationData1
+public partial record DisseminationData1
 {
     /// <summary>
     /// Trade repository generated unique and random identifier for each publicly disseminated message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification248Choice
     [IsoId("_WAhpkT3YEe2uHKhHp3bXyA")]
     [DisplayName("Legal")]
     [IsoXmlTag("Lgl")]
-    public record Legal : PartyIdentification248Choice_
+    public partial record Legal : PartyIdentification248Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the legal person.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Charges6Choice
     /// Per Type.
     /// </summary>
     [DisplayName("Per Type")]
-    public record PerType : Charges6Choice_
+    public partial record PerType : Charges6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

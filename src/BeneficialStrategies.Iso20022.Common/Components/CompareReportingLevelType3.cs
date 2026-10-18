@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UBV0oa5nEeuo-IflVgGqiA")]
 [DisplayName("Compare Reporting Level Type")]
-public record CompareReportingLevelType3
+public partial record CompareReportingLevelType3
 {
     /// <summary>
     /// Information for the first side of the transaction.

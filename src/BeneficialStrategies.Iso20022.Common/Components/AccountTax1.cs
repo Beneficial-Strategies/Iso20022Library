@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6TYLKJqlEeGSON8vddiWzQ_-1311079011")]
 [DisplayName("Account Tax")]
-public record AccountTax1
+public partial record AccountTax1
 {
     /// <summary>
     /// Defines the calculation method on how the taxes are applied on the account.

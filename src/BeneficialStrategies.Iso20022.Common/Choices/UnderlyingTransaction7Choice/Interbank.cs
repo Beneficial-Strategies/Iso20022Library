@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice
     [IsoId("_ehZ9s9cZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank")]
     [IsoXmlTag("IntrBk")]
-    public record Interbank : UnderlyingTransaction7Choice_
+    public partial record Interbank : UnderlyingTransaction7Choice_
     {
         /// <summary>
         /// Set of elements used to provide information on the original message.

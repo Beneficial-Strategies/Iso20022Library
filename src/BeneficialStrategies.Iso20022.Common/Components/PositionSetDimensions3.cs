@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0xmkFQ1MEeqV4s5SpzR1dQ")]
 [DisplayName("Position Set Dimensions")]
-public record PositionSetDimensions3
+public partial record PositionSetDimensions3
 {
     /// <summary>
     /// Data specific to counterparties and related fields.

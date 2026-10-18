@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qd5I8a5hEeuo-IflVgGqiA")]
 [DisplayName("Compare Clearing Status")]
-public record CompareClearingStatus3
+public partial record CompareClearingStatus3
 {
     /// <summary>
     /// Information for the first side of the transaction.

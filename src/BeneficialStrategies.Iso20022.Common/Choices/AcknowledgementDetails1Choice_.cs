@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_oIaocSzSEeKZfox_pyYpTA")]
     [DisplayName("Acknowledgement Details 1 Choice")]
-    public abstract record AcknowledgementDetails1Choice_ { }
+    public abstract partial record AcknowledgementDetails1Choice_ { }
 }

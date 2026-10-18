@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FQ6Gsax3Eem81-uIvTF5rQ")]
 [DisplayName("Compare Benchmark Curve Name")]
-public record CompareBenchmarkCurveName2
+public partial record CompareBenchmarkCurveName2
 {
     /// <summary>
     /// Information for the first side of the transaction.

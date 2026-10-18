@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_Q-Y94eUUEem3X-64-NKdqg")]
 [DisplayName("CCP Liquidity Stress Testing Definition Report V")]
-public record CCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
+public partial record CCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_PxiCwtE_Ed-BzquC8wXy7w_-313128527")]
 [DisplayName("Reject Case Assignment")]
-public record RejectCaseAssignment : IOuterRecord
+public partial record RejectCaseAssignment : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

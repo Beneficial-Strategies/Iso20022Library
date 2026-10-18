@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l4cXEfreEe2mU4Wi2q3MzQ")]
 [DisplayName("Rejection Statistics9")]
-public record RejectionStatistics9
+public partial record RejectionStatistics9
 {
     /// <summary>
     /// Counterparty Identification.

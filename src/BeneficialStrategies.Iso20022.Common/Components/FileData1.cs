@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6csvISedEe6TQOljeYYeiQ")]
 [DisplayName("File Data1")]
-public record FileData1
+public partial record FileData1
 {
     /// <summary>
     /// Type.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAvailabilityDate1Choice
     /// </summary>
     [IsoId("_VnGekzqwEeWZFYSPlduMhw")]
     [DisplayName("Number Of Days")]
-    public record NumberOfDays : CashAvailabilityDate1Choice_
+    public partial record NumberOfDays : CashAvailabilityDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

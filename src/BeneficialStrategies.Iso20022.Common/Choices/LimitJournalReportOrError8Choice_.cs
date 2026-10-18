@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_toRZlZEhEe-Goq1fIU72qA")]
     [DisplayName("Limit Journal Report Or Error8Choice")]
-    public abstract record LimitJournalReportOrError8Choice_ { }
+    public abstract partial record LimitJournalReportOrError8Choice_ { }
 }

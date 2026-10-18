@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
     /// Unit.
     /// </summary>
     [DisplayName("Unit")]
-    public record Unit : SecuritiesTransactionPrice23Choice_
+    public partial record Unit : SecuritiesTransactionPrice23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

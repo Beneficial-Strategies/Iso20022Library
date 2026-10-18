@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
     [IsoId("_0ORmMbGIEeuSTr8k0UEM8A")]
     [DisplayName("Loan")]
     [IsoXmlTag("Ln")]
-    public record Loan : UnderlyingContract3Choice_
+    public partial record Loan : UnderlyingContract3Choice_
     {
         /// <summary>
         /// Contract document referenced from this loan agreement.

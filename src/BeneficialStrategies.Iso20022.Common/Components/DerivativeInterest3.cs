@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HzdA2X5aEea2k7EBUopqxw")]
 [DisplayName("Derivative Interest")]
-public record DerivativeInterest3
+public partial record DerivativeInterest3
 {
     /// <summary>
     /// Provides the interest rate in number of days, weeks, months or years.

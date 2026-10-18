@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pRKJ0IOrEeWqmeP8QNJBew")]
     [DisplayName("Delivery Interconnection Point 1 Choice")]
-    public abstract record DeliveryInterconnectionPoint1Choice_ { }
+    public abstract partial record DeliveryInterconnectionPoint1Choice_ { }
 }

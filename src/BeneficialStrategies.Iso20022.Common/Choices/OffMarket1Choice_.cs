@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TCpPoNp-Ed-ak6NoX_4Aeg_2009784706")]
     [DisplayName("Off Market 1 Choice")]
-    public abstract record OffMarket1Choice_ { }
+    public abstract partial record OffMarket1Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jPMiIRTjEe61h9tfoUrWyw")]
     [DisplayName("Position Set Aggregated2Choice")]
-    public abstract record PositionSetAggregated2Choice_ { }
+    public abstract partial record PositionSetAggregated2Choice_ { }
 }

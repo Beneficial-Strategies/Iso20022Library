@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbfxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get General Business Information V")]
-public record GetGeneralBusinessInformationV04 : IOuterRecord
+public partial record GetGeneralBusinessInformationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

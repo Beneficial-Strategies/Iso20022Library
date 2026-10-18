@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MVvycJfiEeSfnc-VXAEapg")]
 [DisplayName("Money Market Report Header")]
-public record MoneyMarketReportHeader1
+public partial record MoneyMarketReportHeader1
 {
     /// <summary>
     /// Agent which is subject to reporting requirements.

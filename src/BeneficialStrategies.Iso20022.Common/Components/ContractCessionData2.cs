@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6sqpPzEyEe6g-ffJsqGiSA")]
 [DisplayName("Contract Cession Data2")]
-public record ContractCessionData2
+public partial record ContractCessionData2
 {
     /// <summary>
     /// Party.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XEpRcLVZEeadLcJesEbkTQ")]
 [DisplayName("Open Interest")]
-public record OpenInterest1
+public partial record OpenInterest1
 {
     /// <summary>
     /// Gross notional of product cleared, if applicable.

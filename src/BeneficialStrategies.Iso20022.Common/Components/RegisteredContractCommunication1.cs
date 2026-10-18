@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oDuGMdL6EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract Communication")]
-public record RegisteredContractCommunication1
+public partial record RegisteredContractCommunication1
 {
     /// <summary>
     /// Method by which the registered contract document is exchanged.

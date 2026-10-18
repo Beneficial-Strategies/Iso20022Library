@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_sMkS8FkyEeGeoaLUQk__nA_-161761575")]
 [DisplayName("Unable To Apply V")]
-public record UnableToApplyV04 : IOuterRecord
+public partial record UnableToApplyV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

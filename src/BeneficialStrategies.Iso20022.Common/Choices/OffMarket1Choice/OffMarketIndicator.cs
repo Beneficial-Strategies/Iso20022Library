@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OffMarket1Choice
     /// </summary>
     [IsoId("_TCpPodp-Ed-ak6NoX_4Aeg_2045804810")]
     [DisplayName("Off Market Indicator")]
-    public record OffMarketIndicator : OffMarket1Choice_
+    public partial record OffMarketIndicator : OffMarket1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

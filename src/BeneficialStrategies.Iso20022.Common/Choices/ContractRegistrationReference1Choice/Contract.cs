@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
     [IsoId("_29C6ANM-EeSDLevdaFPXHw")]
     [DisplayName("Contract")]
     [IsoXmlTag("Ctrct")]
-    public record Contract : ContractRegistrationReference1Choice_
+    public partial record Contract : ContractRegistrationReference1Choice_
     {
         /// <summary>
         /// Identifies the document.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Gj3jgTOnEeqX8uoQQ3KffQ")]
 [DisplayName("Settlement Fails Daily Instrument")]
-public record SettlementFailsDailyInstrument3
+public partial record SettlementFailsDailyInstrument3
 {
     /// <summary>
     /// Shares in companies and other securities equivalent to shares in companies, partnerships or other entities, and depositary receipts in respect of share.

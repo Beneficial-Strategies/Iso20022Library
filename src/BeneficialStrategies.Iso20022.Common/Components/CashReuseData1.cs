@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ANAEgI67EeaxxtxaoOwzAg")]
 [DisplayName("Cash Reuse Data")]
-public record CashReuseData1
+public partial record CashReuseData1
 {
     /// <summary>
     /// Provides details on the type and amount of the cash reinvestment in a given currency.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t32wFFkyEeGeoaLUQk__nA_-1574954871")]
 [DisplayName("Payment Return Reason")]
-public record PaymentReturnReason2
+public partial record PaymentReturnReason2
 {
     /// <summary>
     /// Bank transaction code included in the original entry for the transaction.

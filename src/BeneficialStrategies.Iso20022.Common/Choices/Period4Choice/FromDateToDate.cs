@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period4Choice
     [IsoId("_kTJKTpfjEeSfnc-VXAEapg")]
     [DisplayName("From Date To Date")]
     [IsoXmlTag("FrDtToDt")]
-    public record FromDateToDate : Period4Choice_
+    public partial record FromDateToDate : Period4Choice_
     {
         /// <summary>
         /// Date and time at which the range starts.

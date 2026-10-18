@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K3ilUExZEeywvc16MwOPfw")]
 [DisplayName("Compare Max 50 Text")]
-public record CompareMax50Text1
+public partial record CompareMax50Text1
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlblxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Reservation V")]
-public record GetReservationV05 : IOuterRecord
+public partial record GetReservationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

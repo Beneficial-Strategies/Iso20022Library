@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification3Choic
     [IsoId("_S_E3FUgoEeaGKYpLDboHPQ")]
     [DisplayName("Missing Or Incorrect Information")]
     [IsoXmlTag("MssngOrIncrrctInf")]
-    public record MissingOrIncorrectInformation : UnableToApplyJustification3Choice_
+    public partial record MissingOrIncorrectInformation : UnableToApplyJustification3Choice_
     {
         /// <summary>
         /// Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.

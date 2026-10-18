@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_FBT61jU7EeWITbq5W8H-2w")]
     [DisplayName("Option Date Or Period 1 Choice")]
-    public abstract record OptionDateOrPeriod1Choice_ { }
+    public abstract partial record OptionDateOrPeriod1Choice_ { }
 }

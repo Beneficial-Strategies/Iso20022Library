@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zYNkFzEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Search Criteria7")]
-public record LimitSearchCriteria7
+public partial record LimitSearchCriteria7
 {
     /// <summary>
     /// System Identification.

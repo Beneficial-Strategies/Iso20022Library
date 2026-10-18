@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralType22Choice
     /// Specific Collateral.
     /// </summary>
     [DisplayName("Specific Collateral")]
-    public record SpecificCollateral : CollateralType22Choice_
+    public partial record SpecificCollateral : CollateralType22Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError10Choice
     [IsoId("_OYVo43XyEei3jO6riKEVXg")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : BusinessDayReportOrError10Choice_
+    public partial record BusinessError : BusinessDayReportOrError10Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice
     /// </summary>
     [IsoId("_phD1CxbzEeOy-PlRuFSUzQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PaymentStatusCode6Choice_
+    public partial record Proprietary : PaymentStatusCode6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

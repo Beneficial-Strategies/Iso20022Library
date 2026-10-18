@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2oUp8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Billing Cancellation Report3")]
-public record BillingCancellationReport3
+public partial record BillingCancellationReport3
 {
     /// <summary>
     /// Information about legal and regulatory data exchanged between invoicing and paying party.

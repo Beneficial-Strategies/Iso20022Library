@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction2Choice
     [IsoId("_P3XHQJ9XEeGBX4a4yy-WHg_-840378035")]
     [DisplayName("Initiation")]
     [IsoXmlTag("Initn")]
-    public record Initiation : UnderlyingTransaction2Choice_
+    public partial record Initiation : UnderlyingTransaction2Choice_
     {
         /// <summary>
         /// Set of elements used to provide information on the original message.

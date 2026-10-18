@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xR3ioTEyEe6g-ffJsqGiSA")]
 [DisplayName("Supporting Document4")]
-public record SupportingDocument4
+public partial record SupportingDocument4
 {
     /// <summary>
     /// Supporting Document Identification.

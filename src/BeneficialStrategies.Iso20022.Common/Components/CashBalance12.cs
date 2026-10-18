@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6nhacX3sEeibM9CPDGCw0g")]
 [DisplayName("Cash Balance")]
-public record CashBalance12
+public partial record CashBalance12
 {
     /// <summary>
     /// Specifies the nature of a balance.

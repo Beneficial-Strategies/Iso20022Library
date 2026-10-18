@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice
     /// NACE Taxonomy Sector.
     /// </summary>
     [DisplayName("NACE Taxonomy Sector")]
-    public record NACETaxonomySector : IndustrySector3Choice_
+    public partial record NACETaxonomySector : IndustrySector3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

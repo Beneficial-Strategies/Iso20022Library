@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L1MIEExTEeywvc16MwOPfw")]
 [DisplayName("Valuation Matching Criteria")]
-public record ValuationMatchingCriteria1
+public partial record ValuationMatchingCriteria1
 {
     /// <summary>
     /// Specifies whether the information on the contract values are matching or not.

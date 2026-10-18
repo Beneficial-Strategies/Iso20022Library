@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_et5Wt91dEeqxpKDfBZC1vg")]
 [DisplayName("Trade Query Execution Frequency")]
-public record TradeQueryExecutionFrequency3
+public partial record TradeQueryExecutionFrequency3
 {
     /// <summary>
     /// Specifies the frequency type of the trade query execution.

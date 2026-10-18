@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k2wBgQdzEeSPHJIdUs1USg")]
 [DisplayName("Currency Designation")]
-public record CurrencyDesignation1
+public partial record CurrencyDesignation1
 {
     /// <summary>
     /// Specifies whether the currency is settled offshore or onshore.

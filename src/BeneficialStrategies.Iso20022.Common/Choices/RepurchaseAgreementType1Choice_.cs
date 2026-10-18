@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_3-Tf4LbqEeaqL_M7XFD7PQ")]
     [DisplayName("Repurchase Agreement Type 1 Choice")]
-    public abstract record RepurchaseAgreementType1Choice_ { }
+    public abstract partial record RepurchaseAgreementType1Choice_ { }
 }

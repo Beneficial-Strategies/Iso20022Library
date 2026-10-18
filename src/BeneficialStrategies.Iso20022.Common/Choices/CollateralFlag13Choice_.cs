@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_J9q9scg5Eeu4ecZgAYuz5w")]
     [DisplayName("Collateral Flag 13 Choice")]
-    public abstract record CollateralFlag13Choice_ { }
+    public abstract partial record CollateralFlag13Choice_ { }
 }

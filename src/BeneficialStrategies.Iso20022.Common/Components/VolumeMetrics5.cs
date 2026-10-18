@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d5k5U65MEeuo-IflVgGqiA")]
 [DisplayName("Volume Metrics")]
-public record VolumeMetrics5
+public partial record VolumeMetrics5
 {
     /// <summary>
     /// Count of the number of Unique Trade Identifiers.

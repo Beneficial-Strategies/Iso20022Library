@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RqIklNp-Ed-ak6NoX_4Aeg_1327453189")]
 [DisplayName("Proprietary Data")]
-public record ProprietaryData4
+public partial record ProprietaryData4
 {
     /// <summary>
     /// Specifies the type of proprietary document.

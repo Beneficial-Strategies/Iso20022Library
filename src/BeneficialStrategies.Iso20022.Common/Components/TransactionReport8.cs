@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1wbYqTEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Report8")]
-public record TransactionReport8
+public partial record TransactionReport8
 {
     /// <summary>
     /// Payment Identification.

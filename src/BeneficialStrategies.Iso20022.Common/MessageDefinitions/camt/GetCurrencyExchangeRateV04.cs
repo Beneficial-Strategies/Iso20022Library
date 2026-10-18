@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbdxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Currency Exchange Rate V")]
-public record GetCurrencyExchangeRateV04 : IOuterRecord
+public partial record GetCurrencyExchangeRateV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

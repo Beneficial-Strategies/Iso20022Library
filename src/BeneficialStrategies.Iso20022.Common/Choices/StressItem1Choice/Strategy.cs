@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
     [IsoId("_u_O2MKswEeayv9XxdmMwKQ")]
     [DisplayName("Strategy")]
     [IsoXmlTag("Strtgy")]
-    public record Strategy : StressItem1Choice_
+    public partial record Strategy : StressItem1Choice_
     {
         /// <summary>
         /// Unique identifier for the strategy.

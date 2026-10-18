@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_IH7-oSI4Ee2zWP9pqvmqdw")]
     [DisplayName("Financial Party Classification 2 Choice")]
-    public abstract record FinancialPartyClassification2Choice_ { }
+    public abstract partial record FinancialPartyClassification2Choice_ { }
 }

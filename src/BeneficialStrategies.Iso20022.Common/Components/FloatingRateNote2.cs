@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GIEfkaifEeWHO_l3hf2rlA")]
 [DisplayName("Floating Rate Note")]
-public record FloatingRateNote2
+public partial record FloatingRateNote2
 {
     /// <summary>
     /// Underlying reference rate on the basis on which the periodic interest payments are calculated.

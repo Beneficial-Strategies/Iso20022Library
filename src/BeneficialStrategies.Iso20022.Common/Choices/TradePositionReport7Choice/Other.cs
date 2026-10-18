@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_jRLBEeqctpBfTmLJnw")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : TradePositionReport7Choice_
+    public partial record Other : TradePositionReport7Choice_
     {
         /// <summary>
         /// Counterparty data details.

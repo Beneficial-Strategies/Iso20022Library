@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation4Choice
     /// Confirmed.
     /// </summary>
     [DisplayName("Confirmed")]
-    public record Confirmed : TradeConfirmation4Choice_
+    public partial record Confirmed : TradeConfirmation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

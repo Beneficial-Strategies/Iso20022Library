@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
     /// </summary>
     [IsoId("_tKrKca9_EemF0ZVFnxVu4g")]
     [DisplayName("Open")]
-    public record Open : ContractTerm3Choice_
+    public partial record Open : ContractTerm3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

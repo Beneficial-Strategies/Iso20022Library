@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification260Choice
     /// Legal Person.
     /// </summary>
     [DisplayName("Legal Person")]
-    public record LegalPerson : PartyIdentification260Choice_
+    public partial record LegalPerson : PartyIdentification260Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

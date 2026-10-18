@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EquityDerivative3Choice
     /// </summary>
     [IsoId("_hW-FO2lPEeaLAKoEUNsD9g")]
     [DisplayName("Other")]
-    public record Other : EquityDerivative3Choice_
+    public partial record Other : EquityDerivative3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_6iqtkDzdEeGl7N0Cd54dlw")]
 [DisplayName("Information Request Response V")]
-public record InformationRequestResponseV01 : IOuterRecord
+public partial record InformationRequestResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

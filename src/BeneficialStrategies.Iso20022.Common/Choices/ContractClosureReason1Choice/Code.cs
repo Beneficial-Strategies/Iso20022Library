@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractClosureReason1Choice
     /// </summary>
     [IsoId("_0KuyYArAEeWD-cmAqruRjw")]
     [DisplayName("Code")]
-    public record Code : ContractClosureReason1Choice_
+    public partial record Code : ContractClosureReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

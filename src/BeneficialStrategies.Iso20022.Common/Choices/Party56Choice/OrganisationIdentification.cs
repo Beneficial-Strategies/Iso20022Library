@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party56Choice
     /// Organisation Identification.
     /// </summary>
     [DisplayName("Organisation Identification")]
-    public record OrganisationIdentification : Party56Choice_
+    public partial record OrganisationIdentification : Party56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

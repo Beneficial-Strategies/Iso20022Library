@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2MYU4TEyEe6g-ffJsqGiSA")]
 [DisplayName("Registered Contract17")]
-public record RegisteredContract17
+public partial record RegisteredContract17
 {
     /// <summary>
     /// Registered Contract Amendment Identification.

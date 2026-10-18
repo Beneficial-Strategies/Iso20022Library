@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_nI5VVdL9EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record RegisteredContract1
+public partial record RegisteredContract1
 {
     /// <summary>
     /// Unique and unambiguous identification of the contract registration amendment.

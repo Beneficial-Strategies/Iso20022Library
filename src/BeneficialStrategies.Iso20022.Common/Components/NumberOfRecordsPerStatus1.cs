@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4rGw9dHEEeaokquJJ-K6uA")]
 [DisplayName("Number Of Records Per Status")]
-public record NumberOfRecordsPerStatus1
+public partial record NumberOfRecordsPerStatus1
 {
     /// <summary>
     /// Number of individual records contained in the message, detailed per status.

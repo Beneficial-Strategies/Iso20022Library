@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria4Choice
     /// New Criteria.
     /// </summary>
     [DisplayName("New Criteria")]
-    public record NewCriteria : AccountCriteria4Choice_
+    public partial record NewCriteria : AccountCriteria4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

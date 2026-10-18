@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
     /// BICFI.
     /// </summary>
     [DisplayName("BICFI")]
-    public record BICFI : TransactionAmendment1Choice_
+    public partial record BICFI : TransactionAmendment1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice
     /// Original Transaction Number.
     /// </summary>
     [DisplayName("Original Transaction Number")]
-    public record OriginalTransactionNumber : SearchCriteria2Choice_
+    public partial record OriginalTransactionNumber : SearchCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError10Choice
     [IsoId("_OYVo4XXyEei3jO6riKEVXg")]
     [DisplayName("Business Day Information")]
     [IsoXmlTag("BizDayInf")]
-    public record BusinessDayInformation : BusinessDayReportOrError10Choice_
+    public partial record BusinessDayInformation : BusinessDayReportOrError10Choice_
     {
         /// <summary>
         /// Date for which the availability information is provided.

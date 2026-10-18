@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3An4TEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Additional Payment Information V12")]
-public record AdditionalPaymentInformationV12 : IOuterRecord
+public partial record AdditionalPaymentInformationV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

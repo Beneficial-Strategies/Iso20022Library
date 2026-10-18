@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_35TWUFrXEeWN79Bl6BUd3g")]
     [DisplayName("Asset Class Commodity Freight 1 Choice")]
-    public abstract record AssetClassCommodityFreight1Choice_ { }
+    public abstract partial record AssetClassCommodityFreight1Choice_ { }
 }

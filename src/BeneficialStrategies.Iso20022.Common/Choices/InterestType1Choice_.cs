@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SRnbVtp-Ed-ak6NoX_4Aeg_-822918144")]
     [DisplayName("Interest Type 1 Choice")]
-    public abstract record InterestType1Choice_ { }
+    public abstract partial record InterestType1Choice_ { }
 }

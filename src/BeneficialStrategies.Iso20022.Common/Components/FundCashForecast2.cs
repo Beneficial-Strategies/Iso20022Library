@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VBdFudp-Ed-ak6NoX_4Aeg_386757279")]
 [DisplayName("Fund Cash Forecast")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record FundCashForecast2
+public partial record FundCashForecast2
 {
     /// <summary>
     /// Date and, if required, the time, at which the price has been applied.

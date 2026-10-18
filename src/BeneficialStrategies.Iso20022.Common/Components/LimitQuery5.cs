@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zRf4ETEyEe6g-ffJsqGiSA")]
 [DisplayName("Limit Query5")]
-public record LimitQuery5
+public partial record LimitQuery5
 {
     /// <summary>
     /// Query Type.

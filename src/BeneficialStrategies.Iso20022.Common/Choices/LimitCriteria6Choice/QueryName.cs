@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria6Choice
     /// </summary>
     [IsoId("_FMyWY24-EeiU9cctagi5ow")]
     [DisplayName("Query Name")]
-    public record QueryName : LimitCriteria6Choice_
+    public partial record QueryName : LimitCriteria6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

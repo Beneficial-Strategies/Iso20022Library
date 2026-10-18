@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UvqKAKp3EeamNLogr5TkIQ")]
 [DisplayName("Default Fund Requirement")]
-public record DefaultFundRequirement1
+public partial record DefaultFundRequirement1
 {
     /// <summary>
     /// Identification of the clearing member.

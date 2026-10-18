@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_eYI_H22PEei3KuUgpx7Xcw")]
 [DisplayName("Debit Authorisation Response V")]
-public record DebitAuthorisationResponseV05 : IOuterRecord
+public partial record DebitAuthorisationResponseV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

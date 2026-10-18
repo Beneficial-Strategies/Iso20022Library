@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice
     /// </summary>
     [IsoId("__aOTk65OEeuo-IflVgGqiA")]
     [DisplayName("Special")]
-    public record Special : TimeToMaturity2Choice_
+    public partial record Special : TimeToMaturity2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k5ZioWEUEe2P-L9DBerEgA")]
 [DisplayName("Contract Type")]
-public record ContractType14
+public partial record ContractType14
 {
     /// <summary>
     /// Classification of information according to contract type.

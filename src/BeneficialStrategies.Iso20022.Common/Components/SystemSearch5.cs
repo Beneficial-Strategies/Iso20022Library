@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3PXb2TEyEe6g-ffJsqGiSA")]
 [DisplayName("System Search5")]
-public record SystemSearch5
+public partial record SystemSearch5
 {
     /// <summary>
     /// System Identification.

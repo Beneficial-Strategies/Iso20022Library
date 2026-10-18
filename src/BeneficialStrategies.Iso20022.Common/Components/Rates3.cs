@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0_3dUc-nEeufOvGsyZiDWA")]
 [DisplayName("Rates")]
-public record Rates3
+public partial record Rates3
 {
     /// <summary>
     /// Details of the fixed rate.

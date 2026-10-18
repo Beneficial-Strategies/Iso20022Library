@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     [IsoId("_q0jNYK7LEemZxoEFHjN-AQ")]
     [DisplayName("Collateral Reuse")]
     [IsoXmlTag("CollReuse")]
-    public record CollateralReuse : TransactionIdentification1Choice_
+    public partial record CollateralReuse : TransactionIdentification1Choice_
     {
         /// <summary>
         /// Unique code identifying the reporting counterparty.

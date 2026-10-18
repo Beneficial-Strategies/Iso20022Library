@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginType2Choice
     [IsoId("____w8I1rEeet3cKIYK84nw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarginType2Choice_
+    public partial record Proprietary : MarginType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

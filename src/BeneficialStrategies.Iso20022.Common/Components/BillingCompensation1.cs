@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PzSsJqlEeGSON8vddiWzQ_-1213048629")]
 [DisplayName("Billing Compensation")]
-public record BillingCompensation1
+public partial record BillingCompensation1
 {
     /// <summary>
     /// Defines the type of billing compensation.

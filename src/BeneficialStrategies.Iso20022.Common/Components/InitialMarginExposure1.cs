@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XCK8BapzEeamNLogr5TkIQ")]
 [DisplayName("Initial Margin Exposure")]
-public record InitialMarginExposure1
+public partial record InitialMarginExposure1
 {
     /// <summary>
     /// Initial margin requirement for margin account.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nZzFsU-nEeiVsYLJl6hleg")]
     [DisplayName("Commodity Derivative 2 Choice")]
-    public abstract record CommodityDerivative2Choice_ { }
+    public abstract partial record CommodityDerivative2Choice_ { }
 }

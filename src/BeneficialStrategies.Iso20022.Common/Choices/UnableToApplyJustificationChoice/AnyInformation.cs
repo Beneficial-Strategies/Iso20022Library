@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustificationChoice
     /// </summary>
     [IsoId("_VFn0D9p-Ed-ak6NoX_4Aeg_10521356")]
     [DisplayName("Any Information")]
-    public record AnyInformation : UnableToApplyJustificationChoice_
+    public partial record AnyInformation : UnableToApplyJustificationChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

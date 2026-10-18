@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     [IsoId("_8csFMLJUEeaYqc4G3TTwhA")]
     [DisplayName("Unsecured Cash Deposit")]
     [IsoXmlTag("UscrdCshDpst")]
-    public record UnsecuredCashDeposit : Investment1Choice_
+    public partial record UnsecuredCashDeposit : Investment1Choice_
     {
         /// <summary>
         /// Date on which the deposit matures.

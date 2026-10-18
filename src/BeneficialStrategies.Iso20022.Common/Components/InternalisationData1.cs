@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WeS9UO3nEeaWjpoyrnG6Rw")]
 [DisplayName("Internalisation Data")]
-public record InternalisationData1
+public partial record InternalisationData1
 {
     /// <summary>
     /// Aggregated volume and value of settled,  failed, total of internalised settlement instructions performed during the period covered by the report, for financial instruments, types of transactions, types of clients and cash transfers.

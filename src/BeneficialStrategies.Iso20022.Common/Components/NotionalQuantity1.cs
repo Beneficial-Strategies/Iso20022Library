@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8P5WAAbHEeqrW7Meu5r3kQ")]
 [DisplayName("Notional Quantity")]
-public record NotionalQuantity1
+public partial record NotionalQuantity1
 {
     /// <summary>
     /// Number of units of the financial instrument, that is, the nominal value.

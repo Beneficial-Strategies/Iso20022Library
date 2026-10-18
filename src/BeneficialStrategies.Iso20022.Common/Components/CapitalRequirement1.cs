@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ltqioLIfEeaYqc4G3TTwhA")]
 [DisplayName("Capital Requirement")]
-public record CapitalRequirement1
+public partial record CapitalRequirement1
 {
     /// <summary>
     /// Indicates the capital necessary to cover the winding down or restructuring of activities.

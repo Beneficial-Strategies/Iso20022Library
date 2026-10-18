@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentReport1Choice
     /// <summary>Cancellation of a previously sent report, probably because of erroneous data.</summary>
     [IsoId("_fc83MGFSEfC91ZUW7iS7ww")]
     [DisplayName("Cancellation")]
-    public record Cancellation : InstrumentReport1Choice_
+    public partial record Cancellation : InstrumentReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cxl")]

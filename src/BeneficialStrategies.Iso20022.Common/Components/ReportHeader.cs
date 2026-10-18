@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RI5fwNp-Ed-ak6NoX_4Aeg_24374172")]
 [DisplayName("Report Header")]
-public record ReportHeader
+public partial record ReportHeader
 {
     /// <summary>
     /// Identification of the report.

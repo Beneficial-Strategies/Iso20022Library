@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("40cec56e-b22f-436f-9774-349b1a70a720")]
 [DisplayName("Underlying Statement Entry11")]
-public record UnderlyingStatementEntry11
+public partial record UnderlyingStatementEntry11
 {
     /// <summary>
     /// Provides details of the account, for which the original statement was generated.

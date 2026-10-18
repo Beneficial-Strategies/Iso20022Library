@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     [IsoId("_x4yAf7vsEeiLRYqS-r-R-A")]
     [DisplayName("Distillates")]
     [IsoXmlTag("Dstllts")]
-    public record Distillates : AssetClassCommodityEnergy2Choice_
+    public partial record Distillates : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

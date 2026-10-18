@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7Vk6Np-Ed-ak6NoX_4Aeg_934154443")]
 [DisplayName("Additional Parameters")]
-public record AdditionalParameters1
+public partial record AdditionalParameters1
 {
     /// <summary>
     /// Specifies the country.

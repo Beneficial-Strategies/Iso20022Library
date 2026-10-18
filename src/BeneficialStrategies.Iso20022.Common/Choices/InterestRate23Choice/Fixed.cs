@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate23Choice
     [IsoId("_6ao5kVfREeqqKf65rDYWYw")]
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
-    public record Fixed : InterestRate23Choice_
+    public partial record Fixed : InterestRate23Choice_
     {
         /// <summary>
         /// Indicates the per annum rate of the fixed leg(s) of an interest rate contract.

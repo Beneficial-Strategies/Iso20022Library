@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lgGRIYmKEeybbN9emGqfiw")]
 [DisplayName("Received Margin Or Collateral")]
-public record ReceivedMarginOrCollateral6
+public partial record ReceivedMarginOrCollateral6
 {
     /// <summary>
     /// Value of the initial margin received by the reporting counterparty from the other counterparty.

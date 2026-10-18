@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTimeSearch4Choice
     /// </summary>
     [IsoId("_68F8QX3sEeibM9CPDGCw0g")]
     [DisplayName("Date Time")]
-    public record DateTime : DateAndDateTimeSearch4Choice_
+    public partial record DateTime : DateAndDateTimeSearch4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DtTm")]

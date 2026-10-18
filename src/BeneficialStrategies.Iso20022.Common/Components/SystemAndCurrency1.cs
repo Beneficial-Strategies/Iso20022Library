@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HcKF0Im6Eeipw6hHPgB4Sw")]
 [DisplayName("System And Currency")]
-public record SystemAndCurrency1
+public partial record SystemAndCurrency1
 {
     /// <summary>
     /// Unique and unambiguous identification of the system, as assigned by the system administrator.

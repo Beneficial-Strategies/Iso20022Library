@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate20Choice
     [IsoId("_hFv8Eax2Eem81-uIvTF5rQ")]
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
-    public record Fixed : InterestRate20Choice_
+    public partial record Fixed : InterestRate20Choice_
     {
         /// <summary>
         /// Annualised interest rate on the principal amount of the repurchase transaction in accordance with the day count convention.

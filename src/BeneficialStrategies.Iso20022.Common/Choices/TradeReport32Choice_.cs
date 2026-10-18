@@ -51,5 +51,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TradeReport32Choice.Other), nameof(TradeReport32Choice.Other))]
     [IsoId("__e7PwWEUEe2P-L9DBerEgA")]
     [DisplayName("Trade Report 32 Choice")]
-    public abstract record TradeReport32Choice_ { }
+    public abstract partial record TradeReport32Choice_ { }
 }

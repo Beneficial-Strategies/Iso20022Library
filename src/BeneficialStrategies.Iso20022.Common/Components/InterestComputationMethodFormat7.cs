@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YO9D8XitEeqKjIYaFgh_2g")]
 [DisplayName("Interest Computation Method Format")]
-public record InterestComputationMethodFormat7
+public partial record InterestComputationMethodFormat7
 {
     /// <summary>
     /// Standard code to specify the method used to compute accruing interest of a financial instrument.

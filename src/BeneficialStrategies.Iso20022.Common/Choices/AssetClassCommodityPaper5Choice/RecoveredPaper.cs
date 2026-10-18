@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice
     /// Recovered Paper.
     /// </summary>
     [DisplayName("Recovered Paper")]
-    public record RecoveredPaper : AssetClassCommodityPaper5Choice_
+    public partial record RecoveredPaper : AssetClassCommodityPaper5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

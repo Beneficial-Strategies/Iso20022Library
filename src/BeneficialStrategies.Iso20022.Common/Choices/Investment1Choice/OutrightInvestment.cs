@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     [IsoId("_0_ysALLnEeavNMum-T1eEA")]
     [DisplayName("Outright Investment")]
     [IsoXmlTag("OutrghtInvstmt")]
-    public record OutrightInvestment : Investment1Choice_
+    public partial record OutrightInvestment : Investment1Choice_
     {
         /// <summary>
         /// ISIN of the outright investment.

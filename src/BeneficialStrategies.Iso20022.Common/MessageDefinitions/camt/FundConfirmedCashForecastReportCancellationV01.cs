@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_Y7HS6NE-Ed-BzquC8wXy7w_1651868953")]
 [DisplayName("Fund Confirmed Cash Forecast Report Cancellation V")]
-public record FundConfirmedCashForecastReportCancellationV01 : IOuterRecord
+public partial record FundConfirmedCashForecastReportCancellationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

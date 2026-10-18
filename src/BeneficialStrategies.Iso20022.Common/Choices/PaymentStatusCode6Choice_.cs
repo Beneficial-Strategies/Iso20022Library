@@ -33,5 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pIXBKRbzEeOy-PlRuFSUzQ")]
     [DisplayName("Payment Status Code 6 Choice")]
-    public abstract record PaymentStatusCode6Choice_ { }
+    public abstract partial record PaymentStatusCode6Choice_ { }
 }

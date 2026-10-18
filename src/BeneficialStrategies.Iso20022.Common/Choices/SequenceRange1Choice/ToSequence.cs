@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice
     /// </summary>
     [IsoId("_rsIb9Iy3EeeGkvZr3jtnCQ")]
     [DisplayName("To Sequence")]
-    public record ToSequence : SequenceRange1Choice_
+    public partial record ToSequence : SequenceRange1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

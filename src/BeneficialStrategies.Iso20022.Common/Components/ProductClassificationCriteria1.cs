@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hfq2Ux3YEeWNp95x0ENf8w")]
 [DisplayName("Product Classification Criteria")]
-public record ProductClassificationCriteria1
+public partial record ProductClassificationCriteria1
 {
     /// <summary>
     /// Identifier is an ISO 10962 Classification of Financial Instrument (CFI).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
     [IsoId("_16F6Ya1KEemojPqsRBB5Lg")]
     [DisplayName("Repurchase Trade")]
     [IsoXmlTag("RpTrad")]
-    public record RepurchaseTrade : TransactionLoanData17Choice_
+    public partial record RepurchaseTrade : TransactionLoanData17Choice_
     {
         /// <summary>
         /// Unique Trade Identifier (UTI) as agreed with the other counterparty.

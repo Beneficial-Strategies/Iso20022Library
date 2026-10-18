@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InvestigationDataRecord12Choice.ResponseNarrative), nameof(InvestigationDataRecord12Choice.ResponseNarrative))]
     [IsoId("16be93ac-0f22-4db6-ae8f-75981b183529")]
     [DisplayName("Investigation Data Record 12 Choice")]
-    public abstract record InvestigationDataRecord12Choice_ { }
+    public abstract partial record InvestigationDataRecord12Choice_ { }
 }

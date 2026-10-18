@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities4Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : TransactionQuantities4Choice_
+    public partial record Proprietary : TransactionQuantities4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

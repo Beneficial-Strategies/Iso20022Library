@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     [IsoId("_v7YEYdOtEeilDKNlC_3bSg")]
     [DisplayName("Create")]
     [IsoXmlTag("Cret")]
-    public record Create : BenchmarkReport1Choice_
+    public partial record Create : BenchmarkReport1Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice messages.

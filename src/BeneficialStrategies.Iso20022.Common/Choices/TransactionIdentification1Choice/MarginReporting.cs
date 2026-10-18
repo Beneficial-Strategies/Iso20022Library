@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     [IsoId("_pq7S4K7LEemZxoEFHjN-AQ")]
     [DisplayName("Margin Reporting")]
     [IsoXmlTag("MrgnRptg")]
-    public record MarginReporting : TransactionIdentification1Choice_
+    public partial record MarginReporting : TransactionIdentification1Choice_
     {
         /// <summary>
         /// Unique code identifying the reporting counterparty.

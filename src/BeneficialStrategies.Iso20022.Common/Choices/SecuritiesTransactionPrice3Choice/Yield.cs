@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice3Choic
     /// </summary>
     [IsoId("_rdXYBUDWEeWOL-OsSq2h6w")]
     [DisplayName("Yield")]
-    public record Yield : SecuritiesTransactionPrice3Choice_
+    public partial record Yield : SecuritiesTransactionPrice3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

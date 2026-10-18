@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     [IsoId("_id4oJu94EeW7gabYEJmWIA")]
     [DisplayName("Foreign Exchange")]
     [IsoXmlTag("FX")]
-    public record ForeignExchange : AssetClassAttributes1Choice_
+    public partial record ForeignExchange : AssetClassAttributes1Choice_
     {
         /// <summary>
         /// Underlying currency 2 of the currency pair (the currency 1 will be populated in the notional currency).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TH2kh8EkEe66laxnCpxfpw")]
 [DisplayName("Margin Collateral Report5")]
-public record MarginCollateralReport5
+public partial record MarginCollateralReport5
 {
     /// <summary>
     /// Collateral Portfolio Code.

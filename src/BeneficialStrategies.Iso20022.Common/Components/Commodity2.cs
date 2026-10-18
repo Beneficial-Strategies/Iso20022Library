@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l0hO0BYHEeejf-cbr8l5qw")]
 [DisplayName("Commodity")]
-public record Commodity2
+public partial record Commodity2
 {
     /// <summary>
     /// Mark-to-market pre-haircut value.

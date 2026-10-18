@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t6iQoFkyEeGeoaLUQk__nA_2134907969")]
 [DisplayName("Payment Card")]
-public record PaymentCard4
+public partial record PaymentCard4
 {
     /// <summary>
     /// Sensitive data associated with the card performing the transaction.

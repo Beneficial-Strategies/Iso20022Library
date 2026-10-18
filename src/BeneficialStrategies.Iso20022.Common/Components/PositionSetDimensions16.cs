@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jRx8FRTjEe61h9tfoUrWyw")]
 [DisplayName("Position Set Dimensions16")]
-public record PositionSetDimensions16
+public partial record PositionSetDimensions16
 {
     /// <summary>
     /// Counterparty Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OFO6gVm5EeOQYsoJizpkVw")]
 [DisplayName("Trade Settlement")]
-public record TradeSettlement2
+public partial record TradeSettlement2
 {
     /// <summary>
     /// Payment or creditor reference.

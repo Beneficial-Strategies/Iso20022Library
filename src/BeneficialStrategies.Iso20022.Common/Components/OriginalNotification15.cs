@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8UWAUTEsEe6GxLzpkVnWYg")]
 [DisplayName("Original Notification15")]
-public record OriginalNotification15
+public partial record OriginalNotification15
 {
     /// <summary>
     /// Original Message Identification.

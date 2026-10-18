@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QGNppqlEeGSON8vddiWzQ_1919554496")]
 [DisplayName("Billing Rate")]
-public record BillingRate1
+public partial record BillingRate1
 {
     /// <summary>
     /// Defines the type of rate or factor.

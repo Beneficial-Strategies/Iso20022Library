@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThV6p9b6Eeq_l4BJLVUF2Q")]
 [DisplayName("Return Currency Exchange Rate V")]
-public record ReturnCurrencyExchangeRateV05 : IOuterRecord
+public partial record ReturnCurrencyExchangeRateV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

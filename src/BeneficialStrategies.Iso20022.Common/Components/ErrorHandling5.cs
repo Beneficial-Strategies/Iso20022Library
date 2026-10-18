@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q2IvxXhdEeidzqjNEfehPg")]
 [DisplayName("Error Handling")]
-public record ErrorHandling5
+public partial record ErrorHandling5
 {
     /// <summary>
     /// Specification of the error, in coded or proprietary form.

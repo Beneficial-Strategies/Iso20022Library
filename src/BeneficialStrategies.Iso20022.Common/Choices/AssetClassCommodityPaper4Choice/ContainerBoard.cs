@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice
     [IsoId("_FsdvMRZaEe2QNcZTDeoKnQ")]
     [DisplayName("Container Board")]
     [IsoXmlTag("CntnrBrd")]
-    public record ContainerBoard : AssetClassCommodityPaper4Choice_
+    public partial record ContainerBoard : AssetClassCommodityPaper4Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
     /// </summary>
     [IsoId("_1dxAkZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : GeneralBusinessInformationCriteriaDefinition1Choice_
+    public partial record QueryName : GeneralBusinessInformationCriteriaDefinition1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

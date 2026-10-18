@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimeOrBlankQuery1Choice
     [IsoId("_HaZjoWE4Ee2S65ml6YCOtA")]
     [DisplayName("Range")]
     [IsoXmlTag("Rg")]
-    public record Range : DateTimeOrBlankQuery1Choice_
+    public partial record Range : DateTimeOrBlankQuery1Choice_
     {
         /// <summary>
         /// Date and time at which the period starts.

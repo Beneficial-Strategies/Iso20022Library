@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NHRMYX5xEeasY4u9QTizPQ")]
 [DisplayName("Securities Instrument Classification")]
-public record SecuritiesInstrumentClassification2
+public partial record SecuritiesInstrumentClassification2
 {
     /// <summary>
     /// Identifier of the financial instrument classification type code.

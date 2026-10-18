@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_8K8KkJR0Eeeymf3kpbtgrA")]
     [DisplayName("Option Event Type 1 Choice")]
-    public abstract record OptionEventType1Choice_ { }
+    public abstract partial record OptionEventType1Choice_ { }
 }

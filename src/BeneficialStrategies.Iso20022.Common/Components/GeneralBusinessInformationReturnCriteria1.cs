@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1mEoCZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("General Business Information Return Criteria")]
-public record GeneralBusinessInformationReturnCriteria1
+public partial record GeneralBusinessInformationReturnCriteria1
 {
     /// <summary>
     /// Indicates whether the qualifier is requested.

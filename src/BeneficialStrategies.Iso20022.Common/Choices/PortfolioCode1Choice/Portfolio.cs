@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode1Choice
     /// </summary>
     [IsoId("_KN8581fVEeqqKf65rDYWYw")]
     [DisplayName("Portfolio")]
-    public record Portfolio : PortfolioCode1Choice_
+    public partial record Portfolio : PortfolioCode1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

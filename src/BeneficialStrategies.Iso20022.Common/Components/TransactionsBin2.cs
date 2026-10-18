@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mbY-AUD5EeW1yage4PQ__A")]
 [DisplayName("Transactions Bin")]
-public record TransactionsBin2
+public partial record TransactionsBin2
 {
     /// <summary>
     /// Total number of transactions executed for that bin. Transactions that have been cancelled should be excluded from the reported figure.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T-GLS9p-Ed-ak6NoX_4Aeg_-1949574113")]
 [DisplayName("Case Status")]
-public record CaseStatus2
+public partial record CaseStatus2
 {
     /// <summary>
     /// Date and time of the status.

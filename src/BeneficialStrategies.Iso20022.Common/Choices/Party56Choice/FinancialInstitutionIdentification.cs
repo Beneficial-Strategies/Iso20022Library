@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party56Choice
     /// Financial Institution Identification.
     /// </summary>
     [DisplayName("Financial Institution Identification")]
-    public record FinancialInstitutionIdentification : Party56Choice_
+    public partial record FinancialInstitutionIdentification : Party56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

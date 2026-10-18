@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_2zvMIwuAEeqVvtu9Ny8FDA")]
 [DisplayName("Securities Financing Reporting Transaction Reused Collateral Data Report V")]
-public record SecuritiesFinancingReportingTransactionReusedCollateralDataReportV01 : IOuterRecord
+public partial record SecuritiesFinancingReportingTransactionReusedCollateralDataReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9ZdcILC3EeaSl6vJk5Bd8w")]
 [DisplayName("Monthly Result")]
-public record MonthlyResult1
+public partial record MonthlyResult1
 {
     /// <summary>
     /// Total number of accounts subject to backtesting in the month.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_u7i5Q-FWEeSvv6t4Ka7B7A")]
     [DisplayName("Interest Payment Schedule 1 Choice")]
-    public abstract record InterestPaymentSchedule1Choice_ { }
+    public abstract partial record InterestPaymentSchedule1Choice_ { }
 }

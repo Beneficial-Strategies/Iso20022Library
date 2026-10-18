@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
     [IsoId("_xH-zYye0Eei12pGEsJIAeQ")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public record InterestRate : Derivative3Choice_
+    public partial record InterestRate : Derivative3Choice_
     {
         /// <summary>
         /// Specific details on the underlying type of the interest rate derivative.

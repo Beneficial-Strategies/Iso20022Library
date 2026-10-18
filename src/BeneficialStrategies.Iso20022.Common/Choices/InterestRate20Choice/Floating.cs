@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate20Choice
     [IsoId("_hFv8E6x2Eem81-uIvTF5rQ")]
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
-    public record Floating : InterestRate20Choice_
+    public partial record Floating : InterestRate20Choice_
     {
         /// <summary>
         /// Identifies the reference index for the debt instrument.

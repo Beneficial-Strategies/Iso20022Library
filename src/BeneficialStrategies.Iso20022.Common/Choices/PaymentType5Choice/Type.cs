@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentType5Choice
     /// </summary>
     [IsoId("_nQ0J4ekAEemV35DUs8L82Q")]
     [DisplayName("Type")]
-    public record Type : PaymentType5Choice_
+    public partial record Type : PaymentType5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_K19uYbv7EeiLRYqS-r-R-A")]
     [DisplayName("Asset Class Commodity Fertilizer 3 Choice")]
-    public abstract record AssetClassCommodityFertilizer3Choice_ { }
+    public abstract partial record AssetClassCommodityFertilizer3Choice_ { }
 }

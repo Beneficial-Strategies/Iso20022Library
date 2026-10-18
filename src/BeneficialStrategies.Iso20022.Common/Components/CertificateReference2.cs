@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6EHdcbMjEeueudaIbClZbQ")]
 [DisplayName("Certificate Reference")]
-public record CertificateReference2
+public partial record CertificateReference2
 {
     /// <summary>
     /// Unique identification of the underlying payment instruction or statement entry.

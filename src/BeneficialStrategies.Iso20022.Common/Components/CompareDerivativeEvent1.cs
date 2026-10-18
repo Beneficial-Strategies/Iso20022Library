@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GaCT4TIGEe2fXedS_ucFOA")]
 [DisplayName("Compare Derivative Event")]
-public record CompareDerivativeEvent1
+public partial record CompareDerivativeEvent1
 {
     /// <summary>
     /// Information for the first side of the transaction.

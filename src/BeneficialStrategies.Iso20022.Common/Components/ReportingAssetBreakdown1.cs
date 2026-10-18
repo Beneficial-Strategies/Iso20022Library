@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J02CgDWzEemdWfjs3tykFQ")]
 [DisplayName("Reporting Asset Breakdown")]
-public record ReportingAssetBreakdown1
+public partial record ReportingAssetBreakdown1
 {
     /// <summary>
     /// Class of the asset which is a component of the breakdown.

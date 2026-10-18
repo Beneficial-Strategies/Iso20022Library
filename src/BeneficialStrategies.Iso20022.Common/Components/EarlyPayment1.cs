@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T6ZIUVm_EeOQYsoJizpkVw")]
 [DisplayName("Early Payment")]
-public record EarlyPayment1
+public partial record EarlyPayment1
 {
     /// <summary>
     /// Date before which the early payment discount is valid for payment.

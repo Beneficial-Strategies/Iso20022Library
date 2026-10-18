@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u39RcSQTEeWXFu0Jt0z3Xw")]
 [DisplayName("Debt Instrument")]
-public record DebtInstrument2
+public partial record DebtInstrument2
 {
     /// <summary>
     /// Total issued nominal amount in monetary value.

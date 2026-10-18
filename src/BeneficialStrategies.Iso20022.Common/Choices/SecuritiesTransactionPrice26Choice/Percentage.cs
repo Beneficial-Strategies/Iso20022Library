@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
     /// <summary>Price expressed as a rate, that is a percentage.</summary>
     [IsoId("_HT_WE62kEfCfRtNoJv1jFQ")]
     [DisplayName("Percentage")]
-    public record Percentage : SecuritiesTransactionPrice26Choice_
+    public partial record Percentage : SecuritiesTransactionPrice26Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pctg")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PTgkR249EeiU9cctagi5ow")]
 [DisplayName("Account Query")]
-public record AccountQuery3
+public partial record AccountQuery3
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

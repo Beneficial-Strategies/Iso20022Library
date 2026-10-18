@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Branch6Choice
     /// </summary>
     [IsoId("_qhzzw8g4Eeu4ecZgAYuz5w")]
     [DisplayName("Country")]
-    public record Country : Branch6Choice_
+    public partial record Country : Branch6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

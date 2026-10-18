@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xkvGwaRgEeeKoo4sGOxgwA")]
 [DisplayName("Totals Per Bank Transaction Code")]
-public record TotalsPerBankTransactionCode5
+public partial record TotalsPerBankTransactionCode5
 {
     /// <summary>
     /// Number of individual entries for the bank transaction code.

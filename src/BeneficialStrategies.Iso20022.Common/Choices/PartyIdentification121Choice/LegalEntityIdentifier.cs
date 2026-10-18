@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification121Choice
     /// </summary>
     [IsoId("_dFna9ZQVEeiok48Eh9lW9Q")]
     [DisplayName("Legal Entity Identifier")]
-    public record LegalEntityIdentifier : PartyIdentification121Choice_
+    public partial record LegalEntityIdentifier : PartyIdentification121Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OutputData1Choice
     /// <summary>Data related to the auction trading system for the pre-trade output report.</summary>
     [IsoId("_uk_s8GIZEfCeoPFCHQnhvA")]
     [DisplayName("Auction Trading System")]
-    public record AuctionTradingSystem : OutputData1Choice_
+    public partial record AuctionTradingSystem : OutputData1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AuctnTradgSys")]

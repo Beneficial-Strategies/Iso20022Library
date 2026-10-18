@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N2mR1L6ZEemHTLTzJg7M-A")]
 [DisplayName("Settlement Fails Derogation")]
-public record SettlementFailsDerogation1
+public partial record SettlementFailsDerogation1
 {
     /// <summary>
     /// Defines whether the item is eligible for derogation or not.

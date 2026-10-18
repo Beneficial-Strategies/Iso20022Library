@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period11Choice
     /// From To Date Time.
     /// </summary>
     [DisplayName("From To Date Time")]
-    public record FromToDateTime : Period11Choice_
+    public partial record FromToDateTime : Period11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

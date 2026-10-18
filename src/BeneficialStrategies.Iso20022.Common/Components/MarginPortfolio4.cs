@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Unl0AbEtEe63r8FIfzOHCQ")]
 [DisplayName("Margin Portfolio4")]
-public record MarginPortfolio4
+public partial record MarginPortfolio4
 {
     /// <summary>
     /// Initial Margin Portfolio Code.

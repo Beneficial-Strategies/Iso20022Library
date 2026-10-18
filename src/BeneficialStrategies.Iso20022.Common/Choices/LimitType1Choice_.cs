@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(LimitType1Choice.Proprietary), nameof(LimitType1Choice.Proprietary))]
     [IsoId("_79FX8KMgEeCJ6YNENx4h-w_1397757128")]
     [DisplayName("Limit Type 1 Choice")]
-    public abstract record LimitType1Choice_ { }
+    public abstract partial record LimitType1Choice_ { }
 }

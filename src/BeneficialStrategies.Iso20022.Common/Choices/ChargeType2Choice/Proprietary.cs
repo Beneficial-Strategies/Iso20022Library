@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType2Choice
     [IsoId("_RvC5xdp-Ed-ak6NoX_4Aeg_-1554093134")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ChargeType2Choice_
+    public partial record Proprietary : ChargeType2Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

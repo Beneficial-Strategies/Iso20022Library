@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jOPbKaocEemdLtwzt4CWxg")]
 [DisplayName("Quantity")]
-public record Quantity17
+public partial record Quantity17
 {
     /// <summary>
     /// Fair value of the individual collateral component expressed in price currency.

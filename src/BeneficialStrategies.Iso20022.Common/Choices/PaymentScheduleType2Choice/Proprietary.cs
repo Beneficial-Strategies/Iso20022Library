@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScheduleType2Choice
     /// </summary>
     [IsoId("_TYa6U7b1Eeu9Cp6InX88Vw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PaymentScheduleType2Choice_
+    public partial record Proprietary : PaymentScheduleType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

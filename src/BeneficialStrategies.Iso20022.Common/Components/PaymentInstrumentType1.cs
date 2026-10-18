@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KRjfA01KEeGAs6v-iSb2RQ")]
 [DisplayName("Payment Instrument Type")]
-public record PaymentInstrumentType1
+public partial record PaymentInstrumentType1
 {
     /// <summary>
     /// Provides the card number.

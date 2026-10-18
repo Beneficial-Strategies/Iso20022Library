@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes3Ch
     /// </summary>
     [IsoId("_KUIpcYG-EeaalK9UbuVGFw")]
     [DisplayName("Identification")]
-    public record Identification : FinancialInstrumentAttributes3Choice_
+    public partial record Identification : FinancialInstrumentAttributes3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

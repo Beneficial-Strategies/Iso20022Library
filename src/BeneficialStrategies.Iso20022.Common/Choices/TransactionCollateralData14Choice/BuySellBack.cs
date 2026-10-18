@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
     [IsoId("_kyCmM__9Eemefbt-QjTNnA")]
     [DisplayName("Buy Sell Back")]
     [IsoXmlTag("BuySellBck")]
-    public record BuySellBack : TransactionCollateralData14Choice_
+    public partial record BuySellBack : TransactionCollateralData14Choice_
     {
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of cash, securities, or commodities versus collateral for the opening leg (spot leg) of the transaction.

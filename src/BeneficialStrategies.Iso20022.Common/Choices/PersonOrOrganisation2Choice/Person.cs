@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
     [IsoId("_-GX-RQkiEeWGouz230Xp5Q")]
     [DisplayName("Person")]
     [IsoXmlTag("Prsn")]
-    public record Person : PersonOrOrganisation2Choice_
+    public partial record Person : PersonOrOrganisation2Choice_
     {
         /// <summary>
         /// First name of a person (also known as given name).

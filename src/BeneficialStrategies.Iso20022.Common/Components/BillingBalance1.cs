@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6SL4XZqlEeGSON8vddiWzQ_313331951")]
 [DisplayName("Billing Balance")]
-public record BillingBalance1
+public partial record BillingBalance1
 {
     /// <summary>
     /// Defines the type of balance.

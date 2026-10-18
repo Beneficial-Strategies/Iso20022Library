@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice
     /// Requested Compensation.
     /// </summary>
     [DisplayName("Requested Compensation")]
-    public record RequestedCompensation : AdditionalRequestData1Choice_
+    public partial record RequestedCompensation : AdditionalRequestData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

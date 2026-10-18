@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
     /// Queue Identification.
     /// </summary>
     [DisplayName("Queue Identification")]
-    public record QueueIdentification : PaymentIdentification8Choice_
+    public partial record QueueIdentification : PaymentIdentification8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

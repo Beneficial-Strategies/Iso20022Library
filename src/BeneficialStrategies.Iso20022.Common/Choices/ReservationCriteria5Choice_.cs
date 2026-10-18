@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xgiPUQy_Ee2Wmf2RrXviyA")]
     [DisplayName("Reservation Criteria 5 Choice")]
-    public abstract record ReservationCriteria5Choice_ { }
+    public abstract partial record ReservationCriteria5Choice_ { }
 }

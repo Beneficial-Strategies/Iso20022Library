@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xo_pMTEyEe6g-ffJsqGiSA")]
 [DisplayName("Currency Control Header7")]
-public record CurrencyControlHeader7
+public partial record CurrencyControlHeader7
 {
     /// <summary>
     /// Message Identification.

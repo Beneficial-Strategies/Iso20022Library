@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatusReason9Choice
     /// </summary>
     [IsoId("_RXWyidp-Ed-ak6NoX_4Aeg_-1456677506")]
     [DisplayName("Extended Reason")]
-    public record ExtendedReason : RejectedStatusReason9Choice_
+    public partial record ExtendedReason : RejectedStatusReason9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_t6ZGslkyEeGeoaLUQk__nA_-1316380729")]
     [DisplayName("Card Transaction 1 Choice")]
-    public abstract record CardTransaction1Choice_ { }
+    public abstract partial record CardTransaction1Choice_ { }
 }

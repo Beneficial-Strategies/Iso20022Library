@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
     /// Other.
     /// </summary>
     [DisplayName("Other")]
-    public record Other : SecuritiesTransactionPrice23Choice_
+    public partial record Other : SecuritiesTransactionPrice23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

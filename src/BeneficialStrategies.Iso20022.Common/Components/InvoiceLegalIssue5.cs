@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2qnwDTEyEe6g-ffJsqGiSA")]
 [DisplayName("Invoice Legal Issue5")]
-public record InvoiceLegalIssue5
+public partial record InvoiceLegalIssue5
 {
     /// <summary>
     /// Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.

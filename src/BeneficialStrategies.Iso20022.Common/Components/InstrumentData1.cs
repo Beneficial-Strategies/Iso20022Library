@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2HTIMGFSEfC91ZUW7iS7ww")]
 [DisplayName("Instrument Data1")]
-public record InstrumentData1
+public partial record InstrumentData1
 {
     /// <summary>
     /// Data related to the identification of an instrument.

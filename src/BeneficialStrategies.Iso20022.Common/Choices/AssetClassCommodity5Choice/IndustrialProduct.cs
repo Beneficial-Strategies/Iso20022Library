@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice
     /// </summary>
     [IsoId("_owQIO7tIEeiLRYqS-r-R-A")]
     [DisplayName("Industrial Product")]
-    public record IndustrialProduct : AssetClassCommodity5Choice_
+    public partial record IndustrialProduct : AssetClassCommodity5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IndstrlPdct")]

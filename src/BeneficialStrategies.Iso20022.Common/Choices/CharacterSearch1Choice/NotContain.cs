@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice
     /// </summary>
     [IsoId("_GDljV5laEeeE1Ya-LgRsuQ")]
     [DisplayName("Not Contain")]
-    public record NotContain : CharacterSearch1Choice_
+    public partial record NotContain : CharacterSearch1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

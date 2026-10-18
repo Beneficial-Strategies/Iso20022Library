@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData2Choice
     /// Account.
     /// </summary>
     [DisplayName("Account")]
-    public record Account : UnderlyingData2Choice_
+    public partial record Account : UnderlyingData2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

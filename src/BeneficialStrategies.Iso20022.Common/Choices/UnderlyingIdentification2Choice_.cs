@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ko9qBYG-EeaalK9UbuVGFw")]
     [DisplayName("Underlying Identification 2 Choice")]
-    public abstract record UnderlyingIdentification2Choice_ { }
+    public abstract partial record UnderlyingIdentification2Choice_ { }
 }

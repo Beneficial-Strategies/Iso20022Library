@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
     [IsoId("_o0KFY1osEe23K4GXSpBSeg")]
     [DisplayName("Margin Update")]
     [IsoXmlTag("MrgnUpd")]
-    public record MarginUpdate : TradeReport31Choice_
+    public partial record MarginUpdate : TradeReport31Choice_
     {
         /// <summary>
         /// Date and time of submission of the report to the trade repository.

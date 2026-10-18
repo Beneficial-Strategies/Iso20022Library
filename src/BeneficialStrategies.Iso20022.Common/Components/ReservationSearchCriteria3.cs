@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ELOLu24-EeiU9cctagi5ow")]
 [DisplayName("Reservation Search Criteria")]
-public record ReservationSearchCriteria3
+public partial record ReservationSearchCriteria3
 {
     /// <summary>
     /// Identification of a particular cash clearing system.

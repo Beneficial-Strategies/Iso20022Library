@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_izPYoS40Eeuxhbw_aW6haw")]
 [DisplayName("Natural Person Identification")]
-public record NaturalPersonIdentification2
+public partial record NaturalPersonIdentification2
 {
     /// <summary>
     /// Unique and unambiguous identification of the natural person.

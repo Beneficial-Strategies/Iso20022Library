@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError6Choice
     /// Transaction.
     /// </summary>
     [DisplayName("Transaction")]
-    public record Transaction : TransactionOrError6Choice_
+    public partial record Transaction : TransactionOrError6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

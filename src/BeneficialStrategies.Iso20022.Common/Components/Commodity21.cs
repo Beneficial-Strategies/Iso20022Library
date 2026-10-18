@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EvTYIdR8EemZdYGWu384Zw")]
 [DisplayName("Commodity")]
-public record Commodity21
+public partial record Commodity21
 {
     /// <summary>
     /// Specifies whether the values defined asset class commodity are matching or not.

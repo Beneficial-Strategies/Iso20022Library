@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party13Choice
     [IsoId("_6Q10hJqlEeGSON8vddiWzQ_278133168")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public record OrganisationIdentification : Party13Choice_
+    public partial record OrganisationIdentification : Party13Choice_
     {
         /// <summary>
         /// Code allocated to a financial institution or non financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

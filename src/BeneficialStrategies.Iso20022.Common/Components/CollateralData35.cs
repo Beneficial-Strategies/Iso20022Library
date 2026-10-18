@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pzQL4c6fEeuUrZNOIIJRog")]
 [DisplayName("Collateral Data")]
-public record CollateralData35
+public partial record CollateralData35
 {
     /// <summary>
     /// Indication of the type of collateral component.

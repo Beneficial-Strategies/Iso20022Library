@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jf2uIe5NEeCisYr99QEiWA_-2045963141")]
 [DisplayName("Movement Report")]
-public record MovementReport1
+public partial record MovementReport1
 {
     /// <summary>
     /// Identification of the Query message sent to request this statement.

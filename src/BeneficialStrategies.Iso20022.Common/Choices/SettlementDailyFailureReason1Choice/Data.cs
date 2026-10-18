@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDailyFailureReason1Cho
     [IsoId("_UCFuEzOlEeqX8uoQQ3KffQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public record Data : SettlementDailyFailureReason1Choice_
+    public partial record Data : SettlementDailyFailureReason1Choice_
     {
         /// <summary>
         /// Fails due to lack of securities.

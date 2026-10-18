@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData9Choice
     [IsoId("_pgDKsKoMEemdLtwzt4CWxg")]
     [DisplayName("Margin Lending")]
     [IsoXmlTag("MrgnLndg")]
-    public record MarginLending : TransactionLoanData9Choice_
+    public partial record MarginLending : TransactionLoanData9Choice_
     {
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.

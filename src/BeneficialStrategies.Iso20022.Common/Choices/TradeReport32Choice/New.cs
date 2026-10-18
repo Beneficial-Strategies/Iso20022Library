@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     [IsoId("__fyLYWEUEe2P-L9DBerEgA")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public record New : TradeReport32Choice_
+    public partial record New : TradeReport32Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

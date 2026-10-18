@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll4Choice
     /// All Standing Orders.
     /// </summary>
     [DisplayName("All Standing Orders")]
-    public record AllStandingOrders : StandingOrderOrAll4Choice_
+    public partial record AllStandingOrders : StandingOrderOrAll4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

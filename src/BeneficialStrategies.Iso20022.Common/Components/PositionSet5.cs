@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0w3kQQ1MEeqV4s5SpzR1dQ")]
 [DisplayName("Position Set")]
-public record PositionSet5
+public partial record PositionSet5
 {
     /// <summary>
     /// Variables related to derivatives that are used to group derivatives together into positions.

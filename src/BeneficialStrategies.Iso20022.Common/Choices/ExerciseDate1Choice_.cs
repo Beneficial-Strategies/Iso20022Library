@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UR6owAbBEeqrW7Meu5r3kQ")]
     [DisplayName("Exercise Date 1 Choice")]
-    public abstract record ExerciseDate1Choice_ { }
+    public abstract partial record ExerciseDate1Choice_ { }
 }

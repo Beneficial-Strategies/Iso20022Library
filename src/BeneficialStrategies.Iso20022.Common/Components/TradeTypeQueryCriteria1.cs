@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HbKEkN33EemPzZ9FnkQP2A")]
 [DisplayName("Trade Type Query Criteria")]
-public record TradeTypeQueryCriteria1
+public partial record TradeTypeQueryCriteria1
 {
     /// <summary>
     /// Specifies the AND/OR operators as query criteria.

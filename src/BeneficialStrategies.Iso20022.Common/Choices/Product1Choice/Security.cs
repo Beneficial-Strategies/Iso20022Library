@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     [IsoId("_QapNsLVQEeadLcJesEbkTQ")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public record Security : Product1Choice_
+    public partial record Security : Product1Choice_
     {
         /// <summary>
         /// Specifies the ISIN of the collateral.

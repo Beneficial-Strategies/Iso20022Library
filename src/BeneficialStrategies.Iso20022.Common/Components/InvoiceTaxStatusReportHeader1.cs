@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I_Tr4U52Eeaine-lsNAGsA")]
 [DisplayName("Invoice Tax Status Report Header")]
-public record InvoiceTaxStatusReportHeader1
+public partial record InvoiceTaxStatusReportHeader1
 {
     /// <summary>
     /// Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.

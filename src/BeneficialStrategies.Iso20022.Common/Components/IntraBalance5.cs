@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pqQzoTnfEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance")]
-public record IntraBalance5
+public partial record IntraBalance5
 {
     /// <summary>
     /// Total amount of money to be settled.

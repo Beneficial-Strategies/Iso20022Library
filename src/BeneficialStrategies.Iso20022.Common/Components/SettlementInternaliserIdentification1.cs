@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8dG-QO3kEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Identification")]
-public record SettlementInternaliserIdentification1
+public partial record SettlementInternaliserIdentification1
 {
     /// <summary>
     /// Identification code of the settlement internaliser; Legal Entity Identifier (LEI) is a code allocated to a party as described in ISO 17442 &apos;Financial Services - Legal Entity Identifier (LEI)&apos;.

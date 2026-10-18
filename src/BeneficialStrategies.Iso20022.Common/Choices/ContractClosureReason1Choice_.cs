@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_X56BEArAEeWD-cmAqruRjw")]
     [DisplayName("Contract Closure Reason 1 Choice")]
-    public abstract record ContractClosureReason1Choice_ { }
+    public abstract partial record ContractClosureReason1Choice_ { }
 }

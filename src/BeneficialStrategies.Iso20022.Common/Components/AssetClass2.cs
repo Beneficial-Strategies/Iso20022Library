@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hq0pRX5aEea2k7EBUopqxw")]
 [DisplayName("Asset Class")]
-public record AssetClass2
+public partial record AssetClass2
 {
     /// <summary>
     /// The fields in this section should only be populated for instruments that have non-financial instrument of type commodity as underlying.

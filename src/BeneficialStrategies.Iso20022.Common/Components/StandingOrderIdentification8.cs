@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_z8XaKTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Identification8")]
-public record StandingOrderIdentification8
+public partial record StandingOrderIdentification8
 {
     /// <summary>
     /// Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError9Choice
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : StandingOrderOrError9Choice_
+    public partial record OperationalError : StandingOrderOrError9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

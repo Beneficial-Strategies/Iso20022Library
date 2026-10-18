@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SjDJlNp-Ed-ak6NoX_4Aeg_-2020690769")]
 [DisplayName("Fund Cash Out Breakdown")]
-public record FundCashOutBreakdown2
+public partial record FundCashOutBreakdown2
 {
     /// <summary>
     /// Amount of cash flow out, expressed as an amount of money.

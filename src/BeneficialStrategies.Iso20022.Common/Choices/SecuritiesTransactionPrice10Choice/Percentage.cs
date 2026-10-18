@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice10Choi
     /// </summary>
     [IsoId("_QtVs4_9iEea3W_f2lS_aiw")]
     [DisplayName("Percentage")]
-    public record Percentage : SecuritiesTransactionPrice10Choice_
+    public partial record Percentage : SecuritiesTransactionPrice10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

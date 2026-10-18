@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Other C10.
     /// </summary>
     [DisplayName("Other C10")]
-    public record OtherC10 : AssetClassCommodity7Choice_
+    public partial record OtherC10 : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

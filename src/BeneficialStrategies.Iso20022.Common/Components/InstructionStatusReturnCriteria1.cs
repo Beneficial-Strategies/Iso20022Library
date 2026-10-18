@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yd5rQZlbEeeE1Ya-LgRsuQ")]
 [DisplayName("Instruction Status Return Criteria")]
-public record InstructionStatusReturnCriteria1
+public partial record InstructionStatusReturnCriteria1
 {
     /// <summary>
     /// Indicates if the instruction status is requested.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     [IsoId("_1bgUKRZXEe2QNcZTDeoKnQ")]
     [DisplayName("Official Economic Statistics")]
     [IsoXmlTag("OffclEcnmcSttstcs")]
-    public record OfficialEconomicStatistics : AssetClassCommodity6Choice_
+    public partial record OfficialEconomicStatistics : AssetClassCommodity6Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

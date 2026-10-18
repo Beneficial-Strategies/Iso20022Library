@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrBlankQuery2Choice
     /// </summary>
     [IsoId("_cmD8M9GgEeaQk737TH1Fzw")]
     [DisplayName("Not Reported")]
-    public record NotReported : DateOrBlankQuery2Choice_
+    public partial record NotReported : DateOrBlankQuery2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

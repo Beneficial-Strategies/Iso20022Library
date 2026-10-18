@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_onOhMbJVEeaYqc4G3TTwhA")]
 [DisplayName("Repurchase Agreement")]
-public record RepurchaseAgreement2
+public partial record RepurchaseAgreement2
 {
     /// <summary>
     /// Date on which the repurchase agreement matures.

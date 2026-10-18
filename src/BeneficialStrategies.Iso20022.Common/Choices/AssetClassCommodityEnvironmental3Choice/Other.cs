@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     [IsoId("_9cj2p08REe2PGo0mhYCh1g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : AssetClassCommodityEnvironmental3Choice_
+    public partial record Other : AssetClassCommodityEnvironmental3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

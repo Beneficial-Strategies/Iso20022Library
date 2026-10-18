@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W3mxART8Ee61h9tfoUrWyw")]
 [DisplayName("Position Set22")]
-public record PositionSet22
+public partial record PositionSet22
 {
     /// <summary>
     /// Dimensions.

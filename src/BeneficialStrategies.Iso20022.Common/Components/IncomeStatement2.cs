@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ATtogUQUEe-2k_vYsOPbHA")]
 [DisplayName("Income Statement2")]
-public record IncomeStatement2
+public partial record IncomeStatement2
 {
     /// <summary>
     /// Clearing Member Fee.

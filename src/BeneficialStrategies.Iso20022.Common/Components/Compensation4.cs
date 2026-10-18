@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bq8G4dcZEeqRFcf2R4bPBw")]
 [DisplayName("Compensation")]
-public record Compensation4
+public partial record Compensation4
 {
     /// <summary>
     /// Amount of money to be paid in compensation.

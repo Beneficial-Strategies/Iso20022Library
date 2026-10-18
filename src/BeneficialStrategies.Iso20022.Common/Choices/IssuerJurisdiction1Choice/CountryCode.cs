@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice
     /// </summary>
     [IsoId("_wztkoIfXEeu9_PKSQNOmdg")]
     [DisplayName("Country Code")]
-    public record CountryCode : IssuerJurisdiction1Choice_
+    public partial record CountryCode : IssuerJurisdiction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

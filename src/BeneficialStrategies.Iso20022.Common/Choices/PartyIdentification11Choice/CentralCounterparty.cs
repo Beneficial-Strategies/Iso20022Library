@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification11Choice
     /// </summary>
     [IsoId("_QRnScdp-Ed-ak6NoX_4Aeg_-18000759")]
     [DisplayName("Central Counterparty")]
-    public record CentralCounterparty : PartyIdentification11Choice_
+    public partial record CentralCounterparty : PartyIdentification11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

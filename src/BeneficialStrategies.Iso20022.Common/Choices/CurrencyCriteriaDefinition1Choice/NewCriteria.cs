@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
     [IsoId("_H5cuM5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : CurrencyCriteriaDefinition1Choice_
+    public partial record NewCriteria : CurrencyCriteriaDefinition1Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

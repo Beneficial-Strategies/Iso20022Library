@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData12Choice
     [IsoId("_SPuq8__kEemm3skPVSMJQg")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : TradeData12Choice_
+    public partial record Report : TradeData12Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

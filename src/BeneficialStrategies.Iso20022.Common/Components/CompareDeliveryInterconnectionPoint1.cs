@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g-BqME6cEeyEpI66tm807w")]
 [DisplayName("Compare Delivery Interconnection Point")]
-public record CompareDeliveryInterconnectionPoint1
+public partial record CompareDeliveryInterconnectionPoint1
 {
     /// <summary>
     /// Information for the first side of the transaction.

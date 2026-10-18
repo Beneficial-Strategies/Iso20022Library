@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PgTKQdp-Ed-ak6NoX_4Aeg_-1564522942")]
 [DisplayName("Requested Modification")]
-public record RequestedModification
+public partial record RequestedModification
 {
     /// <summary>
     /// Reference relating to a linked payment instruction or agreement which is meaningful to both parties (eg, the content of field 21 in a cover instruction).

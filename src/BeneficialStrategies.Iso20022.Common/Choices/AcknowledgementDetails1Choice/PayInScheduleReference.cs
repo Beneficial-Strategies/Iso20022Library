@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice
     /// </summary>
     [IsoId("_oUQsESzSEeKZfox_pyYpTA")]
     [DisplayName("Pay In Schedule Reference")]
-    public record PayInScheduleReference : AcknowledgementDetails1Choice_
+    public partial record PayInScheduleReference : AcknowledgementDetails1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbbxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Business Day Information V")]
-public record GetBusinessDayInformationV05 : IOuterRecord
+public partial record GetBusinessDayInformationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

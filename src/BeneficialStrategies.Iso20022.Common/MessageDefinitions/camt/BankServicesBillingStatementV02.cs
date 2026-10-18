@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_sHrTETqxEeWZFYSPlduMhw")]
 [DisplayName("Bank Services Billing Statement V")]
-public record BankServicesBillingStatementV02 : IOuterRecord
+public partial record BankServicesBillingStatementV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument48Choice
     /// </summary>
     [IsoId("_HYrJU35aEea2k7EBUopqxw")]
     [DisplayName("LEI")]
-    public record LEI : FinancialInstrument48Choice_
+    public partial record LEI : FinancialInstrument48Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType2Choice
     [IsoId("_XM1TE526Eeuwmdq0KtnICg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public record Cancellation : ReportingTransactionType2Choice_
+    public partial record Cancellation : ReportingTransactionType2Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the transaction.

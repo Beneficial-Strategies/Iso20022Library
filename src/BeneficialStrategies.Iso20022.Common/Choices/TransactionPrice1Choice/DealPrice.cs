@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice1Choice
     [IsoId("_RUrR9dp-Ed-ak6NoX_4Aeg_1070624770")]
     [DisplayName("Deal Price")]
     [IsoXmlTag("DealPric")]
-    public record DealPrice : TransactionPrice1Choice_
+    public partial record DealPrice : TransactionPrice1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

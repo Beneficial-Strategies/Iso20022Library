@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0tAz1zEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Search Criteria5")]
-public record StandingOrderSearchCriteria5
+public partial record StandingOrderSearchCriteria5
 {
     /// <summary>
     /// Key Attributes Indicator.

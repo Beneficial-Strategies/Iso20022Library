@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ContractTerm7Choice.Fixed), nameof(ContractTerm7Choice.Fixed))]
     [IsoId("_xcgx0a5qEeuo-IflVgGqiA")]
     [DisplayName("Contract Term 7 Choice")]
-    public abstract record ContractTerm7Choice_ { }
+    public abstract partial record ContractTerm7Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lZuBYchkEeadgvwNGwK05w")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification168
+public partial record GenericIdentification168
 {
     /// <summary>
     /// Proprietary code that uniquely identifies the object or subject of interest.

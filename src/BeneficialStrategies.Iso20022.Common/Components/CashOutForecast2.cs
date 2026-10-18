@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCWdkNp-Ed-ak6NoX_4Aeg_-2123095495")]
 [DisplayName("Cash Out Forecast")]
-public record CashOutForecast2
+public partial record CashOutForecast2
 {
     /// <summary>
     /// Date on which cash is available.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError8C
     [IsoId("_Z496kTneEem7JZMuWtwtsg")]
     [DisplayName("Modifications")]
     [IsoXmlTag("Mods")]
-    public record Modifications : IntraBalanceOrOperationalError8Choice_
+    public partial record Modifications : IntraBalanceOrOperationalError8Choice_
     {
         /// <summary>
         /// Account to or from which a cash entry is made.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice
     [IsoId("__F7tMePJEea7_eMQH225xA")]
     [DisplayName("Value Defined Attributes")]
     [IsoXmlTag("ValDfndAttrbts")]
-    public record ValueDefinedAttributes : DefinedAttributes1Choice_
+    public partial record ValueDefinedAttributes : DefinedAttributes1Choice_
     {
         /// <summary>
         /// Reference notional amount of the contract.

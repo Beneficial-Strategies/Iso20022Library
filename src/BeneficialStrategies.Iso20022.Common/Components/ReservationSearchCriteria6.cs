@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zxJBeTEyEe6g-ffJsqGiSA")]
 [DisplayName("Reservation Search Criteria6")]
-public record ReservationSearchCriteria6
+public partial record ReservationSearchCriteria6
 {
     /// <summary>
     /// Date Time.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x6_YcO3mEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser")]
-public record SettlementInternaliser1
+public partial record SettlementInternaliser1
 {
     /// <summary>
     /// Identifies the submitting entity and settlement Internaliser of the report.

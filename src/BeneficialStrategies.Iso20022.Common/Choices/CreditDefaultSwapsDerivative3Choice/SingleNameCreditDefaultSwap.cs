@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
     [IsoId("_xfbL0X5eEea2k7EBUopqxw")]
     [DisplayName("Single Name Credit Default Swap")]
     [IsoXmlTag("SnglNmCdtDfltSwp")]
-    public record SingleNameCreditDefaultSwap : CreditDefaultSwapsDerivative3Choice_
+    public partial record SingleNameCreditDefaultSwap : CreditDefaultSwapsDerivative3Choice_
     {
         /// <summary>
         /// Reference entity of a single name credit default swap (CDS) or a derivative on single name CDS.

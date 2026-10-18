@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xynSQSyGEe2xAdY9t5fB3g")]
     [DisplayName("Instrument Identification 6 Choice")]
-    public abstract record InstrumentIdentification6Choice_ { }
+    public abstract partial record InstrumentIdentification6Choice_ { }
 }

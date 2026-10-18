@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_XlRbQV1rEeehlLdFiIrRgQ")]
 [DisplayName("Account Reporting Request V")]
-public record AccountReportingRequestV04 : IOuterRecord
+public partial record AccountReportingRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

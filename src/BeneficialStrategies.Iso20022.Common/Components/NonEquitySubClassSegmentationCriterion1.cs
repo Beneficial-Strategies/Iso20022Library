@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HcjrYGkjEeq2H8ygpnTfYw")]
 [DisplayName("Non Equity Sub Class Segmentation Criterion")]
-public record NonEquitySubClassSegmentationCriterion1
+public partial record NonEquitySubClassSegmentationCriterion1
 {
     /// <summary>
     /// Criteria used to segment classes of derivative instruments into sub classes as per local regulation.

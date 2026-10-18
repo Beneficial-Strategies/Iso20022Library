@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4CRAsSjaEeK1Sbo8NpBROA")]
 [DisplayName("Settlement Parties")]
-public record SettlementParties29
+public partial record SettlementParties29
 {
     /// <summary>
     /// Financial institution from which cash will be transferred.

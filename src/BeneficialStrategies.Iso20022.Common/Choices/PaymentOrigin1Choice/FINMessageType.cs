@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice
     /// </summary>
     [IsoId("_RIwV1dp-Ed-ak6NoX_4Aeg_1910593546")]
     [DisplayName("FIN Message Type")]
-    public record FINMessageType : PaymentOrigin1Choice_
+    public partial record FINMessageType : PaymentOrigin1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

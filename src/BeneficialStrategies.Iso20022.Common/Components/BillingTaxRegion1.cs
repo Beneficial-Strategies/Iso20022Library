@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Th8IpqlEeGSON8vddiWzQ_1934585019")]
 [DisplayName("Billing Tax Region")]
-public record BillingTaxRegion1
+public partial record BillingTaxRegion1
 {
     /// <summary>
     /// Specifies a particular unique zone of taxes assigned by taxing authorities. A tax region number is unique. Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services.

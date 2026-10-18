@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification35Choice
     /// </summary>
     [IsoId("_ZmtSVQ1HEeqV4s5SpzR1dQ")]
     [DisplayName("Index")]
-    public record Index : SecurityIdentification35Choice_
+    public partial record Index : SecurityIdentification35Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

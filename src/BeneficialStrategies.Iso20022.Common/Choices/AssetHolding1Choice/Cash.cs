@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     [IsoId("_9LXRoK_6EeaE9YROwd69hA")]
     [DisplayName("Cash")]
     [IsoXmlTag("Csh")]
-    public record Cash : AssetHolding1Choice_
+    public partial record Cash : AssetHolding1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

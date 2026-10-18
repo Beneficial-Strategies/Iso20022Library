@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SCZ9ILb6EeabfchHYoktpA")]
 [DisplayName("Contract Size")]
-public record ContractSize1
+public partial record ContractSize1
 {
     /// <summary>
     /// Specifies the total quantity of financial product to be delivered as per the terms of the contract.

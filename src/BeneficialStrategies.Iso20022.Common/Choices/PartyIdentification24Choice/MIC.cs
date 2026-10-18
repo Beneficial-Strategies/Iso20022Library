@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification24Choice
     /// </summary>
     [IsoId("_QReIhtp-Ed-ak6NoX_4Aeg_246882827")]
     [DisplayName("MIC")]
-    public record MIC : PartyIdentification24Choice_
+    public partial record MIC : PartyIdentification24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

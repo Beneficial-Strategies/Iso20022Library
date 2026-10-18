@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QyTiIbq9Ee68nbz8Nl_hLQ")]
 [DisplayName("Receipt6")]
-public record Receipt6
+public partial record Receipt6
 {
     /// <summary>
     /// Original Message Identification.

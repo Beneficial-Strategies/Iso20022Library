@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_59y2N5lZEeeE1Ya-LgRsuQ")]
 [DisplayName("Information Qualifier Type")]
-public record InformationQualifierType1
+public partial record InformationQualifierType1
 {
     /// <summary>
     /// Indicates whether the information is formatted.

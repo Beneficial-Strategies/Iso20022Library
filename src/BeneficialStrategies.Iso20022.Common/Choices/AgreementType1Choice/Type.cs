@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementType1Choice
     /// </summary>
     [IsoId("_bYUW0MkeEeeiAIB1i4AlQw")]
     [DisplayName("Type")]
-    public record Type : AgreementType1Choice_
+    public partial record Type : AgreementType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

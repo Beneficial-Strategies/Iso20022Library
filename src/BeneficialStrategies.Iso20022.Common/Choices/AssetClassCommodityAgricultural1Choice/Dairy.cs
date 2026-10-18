@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
     [IsoId("_YkYj4FrBEeWN79Bl6BUd3g")]
     [DisplayName("Dairy")]
     [IsoXmlTag("Dairy")]
-    public record Dairy : AssetClassCommodityAgricultural1Choice_
+    public partial record Dairy : AssetClassCommodityAgricultural1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_VJDih9p-Ed-ak6NoX_4Aeg_964129193")]
 [DisplayName("Case Status")]
-public record CaseStatus
+public partial record CaseStatus
 {
     /// <summary>
     /// Date and time of the status.

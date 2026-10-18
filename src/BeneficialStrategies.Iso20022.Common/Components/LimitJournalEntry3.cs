@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tr-04ZEhEe-Goq1fIU72qA")]
 [DisplayName("Limit Journal Entry3")]
-public record LimitJournalEntry3
+public partial record LimitJournalEntry3
 {
     /// <summary>
     /// Journal Date.

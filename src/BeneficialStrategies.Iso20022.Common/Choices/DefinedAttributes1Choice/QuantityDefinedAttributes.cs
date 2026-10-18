@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice
     [IsoId("__F7tMOPJEea7_eMQH225xA")]
     [DisplayName("Quantity Defined Attributes")]
     [IsoXmlTag("QtyDfndAttrbts")]
-    public record QuantityDefinedAttributes : DefinedAttributes1Choice_
+    public partial record QuantityDefinedAttributes : DefinedAttributes1Choice_
     {
         /// <summary>
         /// Quantity of product defined in the contract.

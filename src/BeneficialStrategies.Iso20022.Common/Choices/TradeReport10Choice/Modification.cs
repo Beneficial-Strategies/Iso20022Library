@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     [IsoId("_38nfU__qEemm3skPVSMJQg")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public record Modification : TradeReport10Choice_
+    public partial record Modification : TradeReport10Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

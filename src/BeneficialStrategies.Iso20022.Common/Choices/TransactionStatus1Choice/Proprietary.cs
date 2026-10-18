@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionStatus1Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : TransactionStatus1Choice_
+    public partial record Proprietary : TransactionStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

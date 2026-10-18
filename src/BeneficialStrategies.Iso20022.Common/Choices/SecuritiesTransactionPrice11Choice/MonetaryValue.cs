@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice11Choi
     [IsoId("_MXso4c1VEem4K5qLxnWwMA")]
     [DisplayName("Monetary Value")]
     [IsoXmlTag("MntryVal")]
-    public record MonetaryValue : SecuritiesTransactionPrice11Choice_
+    public partial record MonetaryValue : SecuritiesTransactionPrice11Choice_
     {
         /// <summary>
         /// Amount of money that results in an increase (positively signed) or decrease (negatively signed), with specification of the currency.

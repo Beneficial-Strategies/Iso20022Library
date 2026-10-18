@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Jzrd8fgxEe-yU4gaFULAeA")]
 [DisplayName("Document28")]
-public record Document28
+public partial record Document28
 {
     /// <summary>
     /// Technical Record Identifier.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
     [IsoId("_o1S5haWvEeqZmriXpMtonA")]
     [DisplayName("Terminated Record")]
     [IsoXmlTag("TermntdRcrd")]
-    public record TerminatedRecord : SecuritiesReferenceDeltaStatusReport5Choice_
+    public partial record TerminatedRecord : SecuritiesReferenceDeltaStatusReport5Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

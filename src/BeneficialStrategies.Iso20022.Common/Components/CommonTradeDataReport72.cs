@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5yJBy5BBEe6Ojt1b3tfu9Q")]
 [DisplayName("Common Trade Data Report72")]
-public record CommonTradeDataReport72
+public partial record CommonTradeDataReport72
 {
     /// <summary>
     /// Contract Data.

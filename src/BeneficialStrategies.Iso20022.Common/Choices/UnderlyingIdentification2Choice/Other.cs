@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification2Choice
     /// </summary>
     [IsoId("_Ky7eQ4G-EeaalK9UbuVGFw")]
     [DisplayName("Other")]
-    public record Other : UnderlyingIdentification2Choice_
+    public partial record Other : UnderlyingIdentification2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Othr")]

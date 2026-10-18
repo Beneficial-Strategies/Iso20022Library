@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SpUJrtp-Ed-ak6NoX_4Aeg_-1123474716")]
 [DisplayName("Adjustment")]
-public record Adjustment5
+public partial record Adjustment5
 {
     /// <summary>
     /// Specifies whether the adjustment must be substracted or added to the total amount.

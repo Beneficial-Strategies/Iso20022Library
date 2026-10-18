@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThV639b6Eeq_l4BJLVUF2Q")]
 [DisplayName("Return Reservation V")]
-public record ReturnReservationV07 : IOuterRecord
+public partial record ReturnReservationV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

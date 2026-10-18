@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification2Choic
     /// </summary>
     [IsoId("_QveapXvSEeWrWYBng3OpVw")]
     [DisplayName("LEI")]
-    public record LEI : CounterpartyIdentification2Choice_
+    public partial record LEI : CounterpartyIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

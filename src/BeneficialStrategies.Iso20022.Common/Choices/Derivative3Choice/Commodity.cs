@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
     [IsoId("_xH-zYSe0Eei12pGEsJIAeQ")]
     [DisplayName("Commodity")]
     [IsoXmlTag("Cmmdty")]
-    public record Commodity : Derivative3Choice_
+    public partial record Commodity : Derivative3Choice_
     {
         /// <summary>
         /// Provides specific information related to commodity derivatives.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BpQX8I-SEe6Ojt1b3tfu9Q")]
 [DisplayName("Option Or Swaption11")]
-public record OptionOrSwaption11
+public partial record OptionOrSwaption11
 {
     /// <summary>
     /// Type.

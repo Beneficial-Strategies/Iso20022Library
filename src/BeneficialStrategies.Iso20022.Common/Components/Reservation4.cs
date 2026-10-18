@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hsth0ZliEeeE1Ya-LgRsuQ")]
 [DisplayName("Reservation")]
-public record Reservation4
+public partial record Reservation4
 {
     /// <summary>
     /// Date and time at which the reservation becomes effective.

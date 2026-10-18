@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractClosureReason1Choice
     /// </summary>
     [IsoId("_4A82AArAEeWD-cmAqruRjw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ContractClosureReason1Choice_
+    public partial record Proprietary : ContractClosureReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

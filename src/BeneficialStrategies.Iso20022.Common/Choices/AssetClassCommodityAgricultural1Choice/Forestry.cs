@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
     [IsoId("_bEnE8FrBEeWN79Bl6BUd3g")]
     [DisplayName("Forestry")]
     [IsoXmlTag("Frstry")]
-    public record Forestry : AssetClassCommodityAgricultural1Choice_
+    public partial record Forestry : AssetClassCommodityAgricultural1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery16Choice
     [IsoId("_noAwEWE3Ee2S65ml6YCOtA")]
     [DisplayName("Ad Hoc Query")]
     [IsoXmlTag("AdHocQry")]
-    public record AdHocQuery : TradeReportQuery16Choice_
+    public partial record AdHocQuery : TradeReportQuery16Choice_
     {
         /// <summary>
         /// Field to define whether the query response file will include all reports submitted for a trade [true]or only the current state of the trade [false].

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData34Choice
     [IsoId("_ArgEc8K3EeuFNp8LZAnorg")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : TradeData34Choice_
+    public partial record Report : TradeData34Choice_
     {
         /// <summary>
         /// Status of the required transactions reconciliation or pairing.

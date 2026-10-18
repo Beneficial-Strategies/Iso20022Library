@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
     [IsoId("_xSzjVye0Eei12pGEsJIAeQ")]
     [DisplayName("Credit Default Swap Index Derivative")]
     [IsoXmlTag("CdtDfltSwpIndxDeriv")]
-    public record CreditDefaultSwapIndexDerivative : CreditDefaultSwapsDerivative4Choice_
+    public partial record CreditDefaultSwapIndexDerivative : CreditDefaultSwapsDerivative4Choice_
     {
         /// <summary>
         /// Derivative on a credit default swap with the ISIN code of the underlying swap.

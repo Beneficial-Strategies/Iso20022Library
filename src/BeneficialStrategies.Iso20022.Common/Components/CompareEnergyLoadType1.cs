@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_95CA8E6cEeyEpI66tm807w")]
 [DisplayName("Compare Energy Load Type")]
-public record CompareEnergyLoadType1
+public partial record CompareEnergyLoadType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

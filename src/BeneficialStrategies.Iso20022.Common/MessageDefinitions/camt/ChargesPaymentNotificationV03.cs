@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_UY1ncTrDEe-thIfLZ94a1w")]
 [DisplayName("Charges Payment Notification V03")]
-public record ChargesPaymentNotificationV03 : IOuterRecord
+public partial record ChargesPaymentNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZdjwgS0WEe2ZUuvBHegNNg")]
     [DisplayName("Direction 4 Choice")]
-    public abstract record Direction4Choice_ { }
+    public abstract partial record Direction4Choice_ { }
 }

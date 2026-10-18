@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ywFBYdSaEemZdYGWu384Zw")]
 [DisplayName("Compare Rate Basis")]
-public record CompareRateBasis2
+public partial record CompareRateBasis2
 {
     /// <summary>
     /// Information for the first side of the transaction.

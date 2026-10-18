@@ -25,5 +25,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MxqLscK8EeuMhqg3CsEu6Q")]
     [DisplayName("Reuse Data Report 6 Choice")]
-    public abstract record ReuseDataReport6Choice_ { }
+    public abstract partial record ReuseDataReport6Choice_ { }
 }

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_b_Ox03hiEeidzqjNEfehPg")]
     [DisplayName("Payment Role 1 Choice")]
-    public abstract record PaymentRole1Choice_ { }
+    public abstract partial record PaymentRole1Choice_ { }
 }

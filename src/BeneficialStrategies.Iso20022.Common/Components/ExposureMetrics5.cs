@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e45Eca5QEeuo-IflVgGqiA")]
 [DisplayName("Exposure Metrics")]
-public record ExposureMetrics5
+public partial record ExposureMetrics5
 {
     /// <summary>
     /// Amount of funds provided as collateral for borrowing the securities or commodities.

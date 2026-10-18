@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__RjHAW49EeiU9cctagi5ow")]
 [DisplayName("Payment Instruction")]
-public record PaymentInstruction32
+public partial record PaymentInstruction32
 {
     /// <summary>
     /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original payment transaction message|Usage: this is the former TransactionReference.

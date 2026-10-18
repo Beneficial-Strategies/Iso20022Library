@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     [IsoId("_FX0FVUDHEeGUr-Tp_ntVFg")]
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
-    public record CustomerIdentification : SearchCriteria1Choice_
+    public partial record CustomerIdentification : SearchCriteria1Choice_
     {
         /// <summary>
         /// Identifies the customer for the investigation.

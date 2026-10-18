@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_imt2X8WJEeiRga8tPu1L4Q")]
 [DisplayName("Position Set Collateral Metrics")]
-public record PositionSetCollateralMetrics1
+public partial record PositionSetCollateralMetrics1
 {
     /// <summary>
     /// Total values by the reporting counterparty to the other counterparty.

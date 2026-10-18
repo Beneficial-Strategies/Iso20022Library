@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5YqYgagAEeW_OId9wS8dsQ")]
 [DisplayName("Option Or Swaption")]
-public record OptionOrSwaption4
+public partial record OptionOrSwaption4
 {
     /// <summary>
     /// Specifies the type of the Option whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).

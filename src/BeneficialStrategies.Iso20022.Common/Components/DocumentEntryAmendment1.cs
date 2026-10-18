@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rOYIcLP4Eeud-ZmjZVm7MA")]
 [DisplayName("Document Entry Amendment")]
-public record DocumentEntryAmendment1
+public partial record DocumentEntryAmendment1
 {
     /// <summary>
     /// Number of correcting entry.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3K7nxTEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Criteria11")]
-public record TransactionCriteria11
+public partial record TransactionCriteria11
 {
     /// <summary>
     /// New Query Name.

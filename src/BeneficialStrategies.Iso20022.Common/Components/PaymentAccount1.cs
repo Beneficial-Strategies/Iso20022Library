@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gOkuQBXsEeejf-cbr8l5qw")]
 [DisplayName("Payment Account")]
-public record PaymentAccount1
+public partial record PaymentAccount1
 {
     /// <summary>
     /// Specifies the currency of the account

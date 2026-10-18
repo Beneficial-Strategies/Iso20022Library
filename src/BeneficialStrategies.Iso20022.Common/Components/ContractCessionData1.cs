@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qkawwLb-Eeu9Cp6InX88Vw")]
 [DisplayName("Contract Cession Data")]
-public record ContractCessionData1
+public partial record ContractCessionData1
 {
     /// <summary>
     /// The party to which the cession is made.

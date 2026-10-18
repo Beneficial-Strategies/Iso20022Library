@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice
     /// </summary>
     [IsoId("_-oyTMYy3EeeGkvZr3jtnCQ")]
     [DisplayName("Not Equal Sequence")]
-    public record NotEqualSequence : SequenceRange1Choice_
+    public partial record NotEqualSequence : SequenceRange1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

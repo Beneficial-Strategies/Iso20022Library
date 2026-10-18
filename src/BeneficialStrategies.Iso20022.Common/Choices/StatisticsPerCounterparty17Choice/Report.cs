@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
     [IsoId("_x82ms1yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : StatisticsPerCounterparty17Choice_
+    public partial record Report : StatisticsPerCounterparty17Choice_
     {
         /// <summary>
         /// Reference date for statistics collection.

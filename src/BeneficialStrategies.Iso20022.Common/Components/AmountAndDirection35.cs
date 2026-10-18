@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mK6yUSmjEeKdFJmzhTDOvQ")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection35
+public partial record AmountAndDirection35
 {
     /// <summary>
     /// Resulting amount of the netted amounts for all debit and credit entries.

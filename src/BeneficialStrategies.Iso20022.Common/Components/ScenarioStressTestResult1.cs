@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vWmhcKs9Eeayv9XxdmMwKQ")]
 [DisplayName("Scenario Stress Test Result")]
-public record ScenarioStressTestResult1
+public partial record ScenarioStressTestResult1
 {
     /// <summary>
     /// Identification of the stressed account.

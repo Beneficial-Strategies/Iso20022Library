@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wx1DhcWEEeiRga8tPu1L4Q")]
 [DisplayName("Position Set Value And Notional")]
-public record PositionSetValueAndNotional1
+public partial record PositionSetValueAndNotional1
 {
     /// <summary>
     /// Aggregations of all notional values of the derivatives pertaining to a position set.

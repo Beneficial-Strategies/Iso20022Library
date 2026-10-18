@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Xq7UAWXpEeap-P22vGV91g")]
     [DisplayName("Underlying Transaction 3 Choice")]
-    public abstract record UnderlyingTransaction3Choice_ { }
+    public abstract partial record UnderlyingTransaction3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sprc0AEcEeCQm6a_G2yO_w_759878882")]
 [DisplayName("Legal Organisation")]
-public record LegalOrganisation1
+public partial record LegalOrganisation1
 {
     /// <summary>
     /// Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun &amp; Bradstreet Identification.

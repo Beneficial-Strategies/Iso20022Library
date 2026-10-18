@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
     /// Percentage.
     /// </summary>
     [DisplayName("Percentage")]
-    public record Percentage : SecuritiesTransactionPrice21Choice_
+    public partial record Percentage : SecuritiesTransactionPrice21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

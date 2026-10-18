@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_AOwV4V1tEeehlLdFiIrRgQ")]
 [DisplayName("Claim Non Receipt V")]
-public record ClaimNonReceiptV06 : IOuterRecord
+public partial record ClaimNonReceiptV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

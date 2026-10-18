@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0AWOcGHcEeGrBqfAqyy96Q")]
 [DisplayName("Request Type")]
-public record RequestType1
+public partial record RequestType1
 {
     /// <summary>
     /// Idetifies the transaction number.

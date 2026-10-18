@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_enNREPsaEemYNq6Sxm5nlg")]
 [DisplayName("Tax Exemption1")]
-public record TaxExemption1
+public partial record TaxExemption1
 {
     /// <summary>
     /// Amount exempted from tax.

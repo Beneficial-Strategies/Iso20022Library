@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QZvopqlEeGSON8vddiWzQ_-1627146001")]
 [DisplayName("Billing Services Amount")]
-public record BillingServicesAmount3
+public partial record BillingServicesAmount3
 {
     /// <summary>
     /// Represents the total of all taxable services in a specific tax region for a specific currency. For example, all taxable services for a tax region in Euro would be totalled here in the Euro currency.

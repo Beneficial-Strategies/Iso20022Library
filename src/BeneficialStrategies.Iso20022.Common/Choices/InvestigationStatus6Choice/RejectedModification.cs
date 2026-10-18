@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice
     /// Rejected Modification.
     /// </summary>
     [DisplayName("Rejected Modification")]
-    public record RejectedModification : InvestigationStatus6Choice_
+    public partial record RejectedModification : InvestigationStatus6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

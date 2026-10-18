@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     /// </summary>
     [IsoId("_lThdZXvyEeanCNPcMT7sSg")]
     [DisplayName("Environmental")]
-    public record Environmental : AssetClassCommodity3Choice_
+    public partial record Environmental : AssetClassCommodity3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Envttl")]

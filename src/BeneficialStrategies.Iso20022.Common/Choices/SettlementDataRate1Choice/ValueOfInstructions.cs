@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDataRate1Choice
     /// </summary>
     [IsoId("_yFQMBcs0EemSav3hRKzWyg")]
     [DisplayName("Value Of Instructions")]
-    public record ValueOfInstructions : SettlementDataRate1Choice_
+    public partial record ValueOfInstructions : SettlementDataRate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

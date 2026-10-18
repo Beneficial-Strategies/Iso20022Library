@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePartyIdentificationQuery11C
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
-    public record Identification : TradePartyIdentificationQuery11Choice_
+    public partial record Identification : TradePartyIdentificationQuery11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

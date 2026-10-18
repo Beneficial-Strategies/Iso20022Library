@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
     [IsoId("_52td0byOEeaUov4jN5X9Qw")]
     [DisplayName("Tranched")]
     [IsoXmlTag("Trnchd")]
-    public record Tranched : TrancheIndicator2Choice_
+    public partial record Tranched : TrancheIndicator2Choice_
     {
         /// <summary>
         /// Indicates the point at which losses in the pool will attach to a particular tranche.

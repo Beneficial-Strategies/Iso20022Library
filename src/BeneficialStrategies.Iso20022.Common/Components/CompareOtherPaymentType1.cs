@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2_WLcE0fEeyQkYR0RbXyEg")]
 [DisplayName("Compare Other Payment Type")]
-public record CompareOtherPaymentType1
+public partial record CompareOtherPaymentType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g64wkfrhEe2mU4Wi2q3MzQ")]
 [DisplayName("Trade Date Time Query Criteria6")]
-public record TradeDateTimeQueryCriteria6
+public partial record TradeDateTimeQueryCriteria6
 {
     /// <summary>
     /// Reporting Date Time.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uoQ2MbTVEee_k7HqaUKERA")]
 [DisplayName("Rate")]
-public record Rate4
+public partial record Rate4
 {
     /// <summary>
     /// Specifies the type of interest rate.

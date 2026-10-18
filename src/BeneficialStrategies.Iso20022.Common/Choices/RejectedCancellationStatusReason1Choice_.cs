@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RXptdNp-Ed-ak6NoX_4Aeg_890850288")]
     [DisplayName("Rejected Cancellation Status Reason 1 Choice")]
-    public abstract record RejectedCancellationStatusReason1Choice_ { }
+    public abstract partial record RejectedCancellationStatusReason1Choice_ { }
 }

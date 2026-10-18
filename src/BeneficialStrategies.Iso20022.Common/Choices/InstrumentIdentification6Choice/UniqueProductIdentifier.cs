@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification6Choice
     /// </summary>
     [IsoId("_xzhRNSyGEe2xAdY9t5fB3g")]
     [DisplayName("Unique Product Identifier")]
-    public record UniqueProductIdentifier : InstrumentIdentification6Choice_
+    public partial record UniqueProductIdentifier : InstrumentIdentification6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("UnqPdctIdr")]

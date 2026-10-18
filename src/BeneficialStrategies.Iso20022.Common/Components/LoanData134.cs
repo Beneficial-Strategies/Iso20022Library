@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F8Sz8cguEeuGrNSsxk3B0A")]
 [DisplayName("Loan Data")]
-public record LoanData134
+public partial record LoanData134
 {
     /// <summary>
     /// Identification of the type of the transaction.

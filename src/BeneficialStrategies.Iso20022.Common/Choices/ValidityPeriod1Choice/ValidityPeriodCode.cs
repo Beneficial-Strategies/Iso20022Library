@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidityPeriod1Choice
     /// Validity Period Code.
     /// </summary>
     [DisplayName("Validity Period Code")]
-    public record ValidityPeriodCode : ValidityPeriod1Choice_
+    public partial record ValidityPeriodCode : ValidityPeriod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

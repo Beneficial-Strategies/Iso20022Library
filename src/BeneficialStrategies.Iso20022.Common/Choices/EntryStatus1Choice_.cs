@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_DICS8IaoEeeUws0ZryHQ2w")]
     [DisplayName("Entry Status 1 Choice")]
-    public abstract record EntryStatus1Choice_ { }
+    public abstract partial record EntryStatus1Choice_ { }
 }

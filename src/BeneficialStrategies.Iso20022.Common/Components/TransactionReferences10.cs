@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("848b7f50-1917-499a-9240-034cbc9fd1c1")]
 [DisplayName("Transaction References10")]
-public record TransactionReferences10
+public partial record TransactionReferences10
 {
     /// <summary>
     /// Point to point reference, as assigned by the instructing party of the underlying message.

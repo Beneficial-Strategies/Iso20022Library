@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_4LK8VURNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Instrument Classification Report V")]
-public record FinancialInstrumentReportingInstrumentClassificationReportV01 : IOuterRecord
+public partial record FinancialInstrumentReportingInstrumentClassificationReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

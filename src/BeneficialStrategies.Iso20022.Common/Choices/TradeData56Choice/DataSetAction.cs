@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
     /// </summary>
     [IsoId("_SBzrAV52Ee2a_-MvhEjKmA")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : TradeData56Choice_
+    public partial record DataSetAction : TradeData56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

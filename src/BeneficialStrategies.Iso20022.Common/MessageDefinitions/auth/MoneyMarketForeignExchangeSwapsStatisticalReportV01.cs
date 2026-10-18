@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_wXy2MZ2SEeW_58xcYxhewg")]
 [DisplayName("Money Market Foreign Exchange Swaps Statistical Report V")]
-public record MoneyMarketForeignExchangeSwapsStatisticalReportV01 : IOuterRecord
+public partial record MoneyMarketForeignExchangeSwapsStatisticalReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

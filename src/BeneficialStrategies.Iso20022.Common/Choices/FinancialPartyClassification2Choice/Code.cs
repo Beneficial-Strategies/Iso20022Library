@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialPartyClassification2Cho
     /// </summary>
     [IsoId("_IJIRcSI4Ee2zWP9pqvmqdw")]
     [DisplayName("Code")]
-    public record Code : FinancialPartyClassification2Choice_
+    public partial record Code : FinancialPartyClassification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

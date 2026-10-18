@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
     [IsoId("_gHkCc8g4Eeu4ecZgAYuz5w")]
     [DisplayName("Buy Sell Back")]
     [IsoXmlTag("BuySellBck")]
-    public record BuySellBack : TransactionLoanData30Choice_
+    public partial record BuySellBack : TransactionLoanData30Choice_
     {
         /// <summary>
         /// Unique trade Identifier (UTI) as agreed with the other counterparty.

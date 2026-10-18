@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_SMNVeNE_Ed-BzquC8wXy7w_-723419751")]
 [DisplayName("Request For Duplicate V")]
-public record RequestForDuplicateV03 : IOuterRecord
+public partial record RequestForDuplicateV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

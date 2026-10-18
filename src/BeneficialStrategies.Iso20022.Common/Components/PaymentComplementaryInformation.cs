@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PgmFMdp-Ed-ak6NoX_4Aeg_-1588306924")]
 [DisplayName("Payment Complementary Information")]
-public record PaymentComplementaryInformation
+public partial record PaymentComplementaryInformation
 {
     /// <summary>
     /// Remittance information.

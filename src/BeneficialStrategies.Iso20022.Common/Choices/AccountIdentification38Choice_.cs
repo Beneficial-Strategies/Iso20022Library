@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AccountIdentification38Choice.CashAccountIdentification), nameof(AccountIdentification38Choice.CashAccountIdentification))]
     [IsoId("_ma_Aj-F6EeWCAvUNsZ5u6g")]
     [DisplayName("AccountIdentification38Choice")]
-    public abstract record AccountIdentification38Choice_ { }
+    public abstract partial record AccountIdentification38Choice_ { }
 }

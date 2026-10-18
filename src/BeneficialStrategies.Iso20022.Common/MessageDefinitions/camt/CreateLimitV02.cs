@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3GHiTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Create Limit V02")]
-public record CreateLimitV02 : IOuterRecord
+public partial record CreateLimitV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

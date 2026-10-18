@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument99Choice
     /// Strategy Instruments.
     /// </summary>
     [DisplayName("Strategy Instruments")]
-    public record StrategyInstruments : FinancialInstrument99Choice_
+    public partial record StrategyInstruments : FinancialInstrument99Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

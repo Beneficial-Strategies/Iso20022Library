@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     [IsoId("_lv0vQK7LEemZxoEFHjN-AQ")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public record Transaction : TransactionIdentification1Choice_
+    public partial record Transaction : TransactionIdentification1Choice_
     {
         /// <summary>
         /// Unique code identifying the reporting counterparty.

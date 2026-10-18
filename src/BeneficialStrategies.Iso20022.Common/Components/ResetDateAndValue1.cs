@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uPjD8CReEe2VuKUpJ7HXPg")]
 [DisplayName("Reset Date And Value")]
-public record ResetDateAndValue1
+public partial record ResetDateAndValue1
 {
     /// <summary>
     /// Indicates the most recent date at which the floating reference rate was reset.

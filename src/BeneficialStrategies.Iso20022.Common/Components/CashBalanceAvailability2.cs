@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TU-Vw9p-Ed-ak6NoX_4Aeg_-168274260")]
 [DisplayName("Cash Balance Availability")]
-public record CashBalanceAvailability2
+public partial record CashBalanceAvailability2
 {
     /// <summary>
     /// Indicates when the amount of money will become available.

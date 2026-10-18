@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyInstructionT
     [IsoId("_em0REzOlEeqX8uoQQ3KffQ")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public record Data : SettlementFailsDailyInstructionType1Choice_
+    public partial record Data : SettlementFailsDailyInstructionType1Choice_
     {
         /// <summary>
         /// Fails due to delivery versus payment (DVP) settlement transactions, covers both delivery versus payment and receive versus payment transactions.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0loGgcKwEeuM4pgP8Vixbg")]
     [DisplayName("Position Set Report 3 Choice")]
-    public abstract record PositionSetReport3Choice_ { }
+    public abstract partial record PositionSetReport3Choice_ { }
 }

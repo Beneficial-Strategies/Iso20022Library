@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThNX09b6Eeq_l4BJLVUF2Q")]
 [DisplayName("Delete Standing Order V")]
-public record DeleteStandingOrderV04 : IOuterRecord
+public partial record DeleteStandingOrderV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

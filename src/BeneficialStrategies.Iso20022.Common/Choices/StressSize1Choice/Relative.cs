@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice
     /// </summary>
     [IsoId("_oy3oUKs1Eeayv9XxdmMwKQ")]
     [DisplayName("Relative")]
-    public record Relative : StressSize1Choice_
+    public partial record Relative : StressSize1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

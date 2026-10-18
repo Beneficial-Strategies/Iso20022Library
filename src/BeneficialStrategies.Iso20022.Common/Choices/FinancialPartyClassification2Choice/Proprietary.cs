@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialPartyClassification2Cho
     [IsoId("_IJIRcyI4Ee2zWP9pqvmqdw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FinancialPartyClassification2Choice_
+    public partial record Proprietary : FinancialPartyClassification2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

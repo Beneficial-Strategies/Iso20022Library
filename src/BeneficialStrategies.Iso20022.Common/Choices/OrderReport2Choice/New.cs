@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderReport2Choice
     /// New.
     /// </summary>
     [DisplayName("New")]
-    public record New : OrderReport2Choice_
+    public partial record New : OrderReport2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

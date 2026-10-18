@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wc1UsSJFEe2zWP9pqvmqdw")]
 [DisplayName("Notional Quantity Legs")]
-public record NotionalQuantityLegs5
+public partial record NotionalQuantityLegs5
 {
     /// <summary>
     /// Aggregate notional quantity of the underlying asset of leg 1 for the term of the transaction. Where the total notional quantity is not known when a new transaction is reported, the total notional quantity is updated as it becomes available.

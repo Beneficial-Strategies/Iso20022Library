@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JZgRUO3nEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Financial Instrument")]
-public record SettlementInternaliserFinancialInstrument1
+public partial record SettlementInternaliserFinancialInstrument1
 {
     /// <summary>
     /// Shares in companies and other securities equivalent to shares in companies, partnerships or other entities, and depositary receipts in respect of share.

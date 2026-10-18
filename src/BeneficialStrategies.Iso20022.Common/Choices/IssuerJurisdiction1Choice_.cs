@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qFVoIIfXEeu9_PKSQNOmdg")]
     [DisplayName("Issuer Jurisdiction 1 Choice")]
-    public abstract record IssuerJurisdiction1Choice_ { }
+    public abstract partial record IssuerJurisdiction1Choice_ { }
 }

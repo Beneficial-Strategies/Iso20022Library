@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B-PU4TngEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance")]
-public record IntraBalance6
+public partial record IntraBalance6
 {
     /// <summary>
     /// Amount of money effectively settled and which will be credited to/debited from the account owner&apos;s cash account. It may differ from the instructed settlement amount based on market tolerance level.

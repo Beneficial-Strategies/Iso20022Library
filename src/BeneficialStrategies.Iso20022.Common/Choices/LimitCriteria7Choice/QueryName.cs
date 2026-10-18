@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria7Choice
     /// Query Name.
     /// </summary>
     [DisplayName("Query Name")]
-    public record QueryName : LimitCriteria7Choice_
+    public partial record QueryName : LimitCriteria7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

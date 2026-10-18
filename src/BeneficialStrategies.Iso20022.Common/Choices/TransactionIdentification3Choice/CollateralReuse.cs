@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
     [IsoId("_hY22BcK4EeuFNp8LZAnorg")]
     [DisplayName("Collateral Reuse")]
     [IsoXmlTag("CollReuse")]
-    public record CollateralReuse : TransactionIdentification3Choice_
+    public partial record CollateralReuse : TransactionIdentification3Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

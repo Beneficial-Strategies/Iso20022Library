@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice
     [IsoId("_zwLKw2lHEeaLAKoEUNsD9g")]
     [DisplayName("Energy")]
     [IsoXmlTag("Nrgy")]
-    public record Energy : CommodityDerivate2Choice_
+    public partial record Energy : CommodityDerivate2Choice_
     {
         /// <summary>
         /// Place where the delivery and the cash settlement of the base product occurs.

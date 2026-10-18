@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_3L9iYY0PEe65bovx6QuVaA")]
 [DisplayName("Derivatives Trade Report V04")]
-public record DerivativesTradeReportV04 : IOuterRecord
+public partial record DerivativesTradeReportV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-EtxyzEsEe6GxLzpkVnWYg")]
 [DisplayName("Original Notification Reference14")]
-public record OriginalNotificationReference14
+public partial record OriginalNotificationReference14
 {
     /// <summary>
     /// Account.

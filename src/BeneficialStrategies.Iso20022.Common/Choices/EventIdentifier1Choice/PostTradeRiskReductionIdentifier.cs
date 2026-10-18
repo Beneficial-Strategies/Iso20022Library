@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
     [IsoId("_tbdG8PbfEeyInphUKJZxtQ")]
     [DisplayName("Post Trade Risk Reduction Identifier")]
     [IsoXmlTag("PstTradRskRdctnIdr")]
-    public record PostTradeRiskReductionIdentifier : EventIdentifier1Choice_
+    public partial record PostTradeRiskReductionIdentifier : EventIdentifier1Choice_
     {
         /// <summary>
         /// Identification of the structurer of the post trade risk reduction identifier.

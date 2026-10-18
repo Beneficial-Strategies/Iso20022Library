@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7oH-8cWBEeijrI2SDYOAOw")]
 [DisplayName("Trade Query Header")]
-public record TradeQueryHeader4
+public partial record TradeQueryHeader4
 {
     /// <summary>
     /// Indicates the day that the query was executed.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria7Choice
     /// New Criteria.
     /// </summary>
     [DisplayName("New Criteria")]
-    public record NewCriteria : LimitCriteria7Choice_
+    public partial record NewCriteria : LimitCriteria7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z5cVsExCEeywvc16MwOPfw")]
 [DisplayName("Compare Financial Instrument Contract Type")]
-public record CompareFinancialInstrumentContractType1
+public partial record CompareFinancialInstrumentContractType1
 {
     /// <summary>
     /// Information for the first side of the transaction.

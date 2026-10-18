@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RYTBoXhdEeidzqjNEfehPg")]
     [DisplayName("Limit Or Error 4 Choice")]
-    public abstract record LimitOrError4Choice_ { }
+    public abstract partial record LimitOrError4Choice_ { }
 }

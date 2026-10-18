@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_W2U3kZ26Eeuwmdq0KtnICg")]
     [DisplayName("Reporting Transaction Type 2 Choice")]
-    public abstract record ReportingTransactionType2Choice_ { }
+    public abstract partial record ReportingTransactionType2Choice_ { }
 }

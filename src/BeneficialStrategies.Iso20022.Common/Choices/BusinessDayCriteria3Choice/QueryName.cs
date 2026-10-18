@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayCriteria3Choice
     /// </summary>
     [IsoId("_yFXaA5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : BusinessDayCriteria3Choice_
+    public partial record QueryName : BusinessDayCriteria3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

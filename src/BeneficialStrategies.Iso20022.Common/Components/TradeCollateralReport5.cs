@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J0zaIVfVEeqqKf65rDYWYw")]
 [DisplayName("Trade Collateral Report")]
-public record TradeCollateralReport5
+public partial record TradeCollateralReport5
 {
     /// <summary>
     /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.

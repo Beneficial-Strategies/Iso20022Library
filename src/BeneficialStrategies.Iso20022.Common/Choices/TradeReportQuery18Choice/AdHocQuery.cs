@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery18Choice
     /// Ad Hoc Query.
     /// </summary>
     [DisplayName("Ad Hoc Query")]
-    public record AdHocQuery : TradeReportQuery18Choice_
+    public partial record AdHocQuery : TradeReportQuery18Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

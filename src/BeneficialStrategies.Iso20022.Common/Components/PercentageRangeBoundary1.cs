@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8Gekh6MgEeCJ6YNENx4h-w_1560024598")]
 [DisplayName("Percentage Range Boundary")]
-public record PercentageRangeBoundary1
+public partial record PercentageRangeBoundary1
 {
     /// <summary>
     /// Percentage rate of the range limit.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7cAW8LVXEeadLcJesEbkTQ")]
 [DisplayName("Financial Instrument")]
-public record FinancialInstrument59
+public partial record FinancialInstrument59
 {
     /// <summary>
     /// Specifies the ISIN of the collateral.

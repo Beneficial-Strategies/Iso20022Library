@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice
     [IsoId("_RhtAUIxnEeap1-whlAlpOw")]
     [DisplayName("Actual")]
     [IsoXmlTag("Actl")]
-    public record Actual : ReuseValue1Choice_
+    public partial record Actual : ReuseValue1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

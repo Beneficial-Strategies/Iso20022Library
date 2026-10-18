@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupportLetterType1Choice
     /// </summary>
     [IsoId("_Nq8hgLbyEeu9Cp6InX88Vw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : SupportLetterType1Choice_
+    public partial record Proprietary : SupportLetterType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

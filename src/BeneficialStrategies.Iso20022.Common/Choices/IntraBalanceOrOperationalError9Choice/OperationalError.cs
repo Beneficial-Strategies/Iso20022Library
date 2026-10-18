@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError9C
     [IsoId("_p-rkcznfEem7JZMuWtwtsg")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : IntraBalanceOrOperationalError9Choice_
+    public partial record OperationalError : IntraBalanceOrOperationalError9Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

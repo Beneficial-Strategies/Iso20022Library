@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError6Choice
     [IsoId("_7tkDoQKxEe2rHs6fbn9-0A")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : TransactionReportOrError6Choice_
+    public partial record BusinessReport : TransactionReportOrError6Choice_
     {
         /// <summary>
         /// Common detailed payment instruction information.

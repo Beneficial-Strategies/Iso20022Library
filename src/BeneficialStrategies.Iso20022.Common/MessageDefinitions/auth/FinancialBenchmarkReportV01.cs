@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_EqCsoPKJEeaz_YGUGLjP6A")]
 [DisplayName("Financial Benchmark Report V")]
-public record FinancialBenchmarkReportV01 : IOuterRecord
+public partial record FinancialBenchmarkReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

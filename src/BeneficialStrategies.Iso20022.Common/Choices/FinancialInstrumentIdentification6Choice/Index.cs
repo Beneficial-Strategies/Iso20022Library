@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
     [IsoId("_Iuqr435aEea2k7EBUopqxw")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
-    public record Index : FinancialInstrumentIdentification6Choice_
+    public partial record Index : FinancialInstrumentIdentification6Choice_
     {
         /// <summary>
         /// Identification of the index on which the financial instrument is based.

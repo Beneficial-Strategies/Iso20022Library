@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HfBSwK_7EeaE9YROwd69hA")]
 [DisplayName("Security Identification And Amount")]
-public record SecurityIdentificationAndAmount1
+public partial record SecurityIdentificationAndAmount1
 {
     /// <summary>
     /// ISIN of the outright investment.

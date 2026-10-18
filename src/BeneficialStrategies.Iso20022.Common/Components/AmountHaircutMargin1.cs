@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3b8rIP_-Eemefbt-QjTNnA")]
 [DisplayName("Amount Haircut Margin")]
-public record AmountHaircutMargin1
+public partial record AmountHaircutMargin1
 {
     /// <summary>
     /// Amount of funds provided as collateral for borrowing the securities or commodities.

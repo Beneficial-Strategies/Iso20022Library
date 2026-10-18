@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lGdtga-tEemF0ZVFnxVu4g")]
 [DisplayName("Security Commodity")]
-public record SecurityCommodity4
+public partial record SecurityCommodity4
 {
     /// <summary>
     /// Data specific to securities being subject to the transaction.

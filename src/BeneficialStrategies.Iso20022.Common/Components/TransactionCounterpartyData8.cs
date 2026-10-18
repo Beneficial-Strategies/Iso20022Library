@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_whK7GbQzEemI67HK7aviyg")]
 [DisplayName("Transaction Counterparty Data")]
-public record TransactionCounterpartyData8
+public partial record TransactionCounterpartyData8
 {
     /// <summary>
     /// Identification of the beneficiary who is subject to the rights and obligations arising from the contract.

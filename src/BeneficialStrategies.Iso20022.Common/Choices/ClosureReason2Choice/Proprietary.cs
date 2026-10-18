@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosureReason2Choice
     /// </summary>
     [IsoId("_72rN8qMgEeCJ6YNENx4h-w_672613014")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ClosureReason2Choice_
+    public partial record Proprietary : ClosureReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

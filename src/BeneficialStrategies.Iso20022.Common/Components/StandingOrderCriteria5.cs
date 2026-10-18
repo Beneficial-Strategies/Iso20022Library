@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0qxYJTEyEe6g-ffJsqGiSA")]
 [DisplayName("Standing Order Criteria5")]
-public record StandingOrderCriteria5
+public partial record StandingOrderCriteria5
 {
     /// <summary>
     /// New Query Name.

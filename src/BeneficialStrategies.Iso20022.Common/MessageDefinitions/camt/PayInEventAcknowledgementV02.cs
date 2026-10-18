@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_eii_URnXEeKKXqHkeUjBbw")]
 [DisplayName("Pay In Event Acknowledgement V")]
-public record PayInEventAcknowledgementV02 : IOuterRecord
+public partial record PayInEventAcknowledgementV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

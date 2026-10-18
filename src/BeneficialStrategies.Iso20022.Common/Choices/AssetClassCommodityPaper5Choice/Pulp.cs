@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper5Choice
     /// Pulp.
     /// </summary>
     [DisplayName("Pulp")]
-    public record Pulp : AssetClassCommodityPaper5Choice_
+    public partial record Pulp : AssetClassCommodityPaper5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

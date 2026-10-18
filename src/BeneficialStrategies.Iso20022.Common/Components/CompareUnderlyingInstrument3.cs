@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eZnNkVo2Ee23K4GXSpBSeg")]
 [DisplayName("Compare Underlying Instrument")]
-public record CompareUnderlyingInstrument3
+public partial record CompareUnderlyingInstrument3
 {
     /// <summary>
     /// Information for the first side of the transaction.

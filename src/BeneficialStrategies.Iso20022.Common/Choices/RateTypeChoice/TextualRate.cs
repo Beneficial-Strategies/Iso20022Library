@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateTypeChoice
     /// </summary>
     [IsoId("_RIwV09p-Ed-ak6NoX_4Aeg_-1267403773")]
     [DisplayName("Textual Rate")]
-    public record TextualRate : RateTypeChoice_
+    public partial record TextualRate : RateTypeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

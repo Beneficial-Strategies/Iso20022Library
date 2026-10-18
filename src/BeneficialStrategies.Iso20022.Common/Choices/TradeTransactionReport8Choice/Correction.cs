@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice
     [IsoId("_bRuGlRLBEeqctpBfTmLJnw")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public record Correction : TradeTransactionReport8Choice_
+    public partial record Correction : TradeTransactionReport8Choice_
     {
         /// <summary>
         /// Counterparty data details.

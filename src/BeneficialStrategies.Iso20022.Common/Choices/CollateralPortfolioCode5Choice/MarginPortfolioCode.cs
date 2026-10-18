@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
     [IsoId("_YxDO0zIDEe2fXedS_ucFOA")]
     [DisplayName("Margin Portfolio Code")]
     [IsoXmlTag("MrgnPrtflCd")]
-    public record MarginPortfolioCode : CollateralPortfolioCode5Choice_
+    public partial record MarginPortfolioCode : CollateralPortfolioCode5Choice_
     {
         /// <summary>
         /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.

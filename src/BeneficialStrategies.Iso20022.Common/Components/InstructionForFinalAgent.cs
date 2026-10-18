@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Prd4cdp-Ed-ak6NoX_4Aeg_-1258143330")]
 [DisplayName("Instruction For Final Agent")]
-public record InstructionForFinalAgent
+public partial record InstructionForFinalAgent
 {
     /// <summary>
     /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the final agent, in coded form.

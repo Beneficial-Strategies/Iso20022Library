@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
     [IsoId("_BSnWY6aUEeqZmriXpMtonA")]
     [DisplayName("Asset Class And Sub Class")]
     [IsoXmlTag("AsstClssAndSubClss")]
-    public record AssetClassAndSubClass : InstrumentOrSubClassIdentification2Choice_
+    public partial record AssetClassAndSubClass : InstrumentOrSubClassIdentification2Choice_
     {
         /// <summary>
         /// Asset class of non-equity instruments to which the result relates

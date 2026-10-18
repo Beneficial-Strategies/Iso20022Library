@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_toznclkyEeGeoaLUQk__nA_-1793756198")]
 [DisplayName("Report Header")]
-public record ReportHeader4
+public partial record ReportHeader4
 {
     /// <summary>
     /// Point to point reference as assigned by the case assigner to unambiguously identify the case status report.

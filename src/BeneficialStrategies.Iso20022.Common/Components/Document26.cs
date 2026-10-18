@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PG2_EeJJEe-5wchdE0oJYw")]
 [DisplayName("Document26")]
-public record Document26
+public partial record Document26
 {
     /// <summary>
     /// Language.

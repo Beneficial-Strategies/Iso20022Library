@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7O3D59jKEeq5MfBBxQig1Q")]
 [DisplayName("Unable To Apply Missing")]
-public record UnableToApplyMissing2
+public partial record UnableToApplyMissing2
 {
     /// <summary>
     /// Specifies which data type is mising in the transaction.

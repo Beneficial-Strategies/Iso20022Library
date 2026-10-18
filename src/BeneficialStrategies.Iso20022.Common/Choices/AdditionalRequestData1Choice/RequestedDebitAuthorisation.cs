@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice
     /// Requested Debit Authorisation.
     /// </summary>
     [DisplayName("Requested Debit Authorisation")]
-    public record RequestedDebitAuthorisation : AdditionalRequestData1Choice_
+    public partial record RequestedDebitAuthorisation : AdditionalRequestData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice
     /// Regulatory Taxonomy Sector.
     /// </summary>
     [DisplayName("Regulatory Taxonomy Sector")]
-    public record RegulatoryTaxonomySector : IndustrySector3Choice_
+    public partial record RegulatoryTaxonomySector : IndustrySector3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

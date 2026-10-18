@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ufZIwM3MEeuiU4QSC_BouQ")]
 [DisplayName("Compare Interest Rate")]
-public record CompareInterestRate1
+public partial record CompareInterestRate1
 {
     /// <summary>
     /// Specifies whether the values defined as active or historic currency and amount are matching or not.

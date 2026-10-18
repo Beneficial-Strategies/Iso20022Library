@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_sNWfAeUTEem3X-64-NKdqg")]
 [DisplayName("CCP Cleared Product Report V")]
-public record CCPClearedProductReportV01 : IOuterRecord
+public partial record CCPClearedProductReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

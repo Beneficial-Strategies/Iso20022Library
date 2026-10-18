@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_GCAHUKfwEeW_OId9wS8dsQ")]
     [DisplayName("Energy Quantity Unit 1 Choice")]
-    public abstract record EnergyQuantityUnit1Choice_ { }
+    public abstract partial record EnergyQuantityUnit1Choice_ { }
 }

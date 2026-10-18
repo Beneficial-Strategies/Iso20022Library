@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ei7XgGIZEfCeoPFCHQnhvA")]
 [DisplayName("Continuous Order Book Data1")]
-public record ContinuousOrderBookData1
+public partial record ContinuousOrderBookData1
 {
     /// <summary>
     /// The CTP shall publish the most recent amongst the dates and times of the best bids and offers entered into the order book that participate in the BBO as reported by the data contributors.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_yw5rkeUTEem3X-64-NKdqg")]
 [DisplayName("CCP Clearing Member Report V")]
-public record CCPClearingMemberReportV01 : IOuterRecord
+public partial record CCPClearingMemberReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

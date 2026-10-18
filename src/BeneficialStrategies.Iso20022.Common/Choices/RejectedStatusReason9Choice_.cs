@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RXWyh9p-Ed-ak6NoX_4Aeg_-1456677531")]
     [DisplayName("Rejected Status Reason 9 Choice")]
-    public abstract record RejectedStatusReason9Choice_ { }
+    public abstract partial record RejectedStatusReason9Choice_ { }
 }

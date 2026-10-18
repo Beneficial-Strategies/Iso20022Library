@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7a2ZUa5hEeuo-IflVgGqiA")]
 [DisplayName("Compare Agreement Type")]
-public record CompareAgreementType2
+public partial record CompareAgreementType2
 {
     /// <summary>
     /// Information for the first side of the transaction.

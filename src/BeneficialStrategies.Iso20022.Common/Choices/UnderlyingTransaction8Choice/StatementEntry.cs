@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction8Choice
     /// Statement Entry.
     /// </summary>
     [DisplayName("Statement Entry")]
-    public record StatementEntry : UnderlyingTransaction8Choice_
+    public partial record StatementEntry : UnderlyingTransaction8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Dv7RIbRDEemPBPgZjF7-nQ")]
 [DisplayName("Master Agreement")]
-public record MasterAgreement6
+public partial record MasterAgreement6
 {
     /// <summary>
     /// Classification of a master agreement.

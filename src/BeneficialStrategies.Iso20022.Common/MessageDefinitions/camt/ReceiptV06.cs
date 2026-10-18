@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jx5UwwKxEe2rHs6fbn9-0A")]
 [DisplayName("Receipt V")]
-public record ReceiptV06 : IOuterRecord
+public partial record ReceiptV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

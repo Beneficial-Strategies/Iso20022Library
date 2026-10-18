@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice
     /// Client.
     /// </summary>
     [DisplayName("Client")]
-    public record Client : ExecutingParty2Choice_
+    public partial record Client : ExecutingParty2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

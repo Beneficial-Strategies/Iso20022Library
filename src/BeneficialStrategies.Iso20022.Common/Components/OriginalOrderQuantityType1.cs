@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uvt1e9p-Ed-ak6NoX_4Aeg_-1430220527")]
 [DisplayName("Original Order Quantity Type")]
-public record OriginalOrderQuantityType1
+public partial record OriginalOrderQuantityType1
 {
     /// <summary>
     /// Order type, expressed as a code.

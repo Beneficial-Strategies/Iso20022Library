@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nkznoXYOEei3jO6riKEVXg")]
 [DisplayName("Cash Balance")]
-public record CashBalance13
+public partial record CashBalance13
 {
     /// <summary>
     /// Currency and amount of money of the cash balance.

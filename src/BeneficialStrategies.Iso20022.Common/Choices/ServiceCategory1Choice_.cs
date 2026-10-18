@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ServiceCategory1Choice.Proprietary))]
     [JsonDerivedType(typeof(ServiceCategory1Choice.Code))]
     [JsonDerivedType(typeof(ServiceCategory1Choice.Proprietary))]
-    public abstract record ServiceCategory1Choice_
+    public abstract partial record ServiceCategory1Choice_
     {
     }
 }

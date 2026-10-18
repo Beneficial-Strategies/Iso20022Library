@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PhHpcbEtEe63r8FIfzOHCQ")]
     [DisplayName("Collateral Portfolio Code6Choice")]
-    public abstract record CollateralPortfolioCode6Choice_ { }
+    public abstract partial record CollateralPortfolioCode6Choice_ { }
 }

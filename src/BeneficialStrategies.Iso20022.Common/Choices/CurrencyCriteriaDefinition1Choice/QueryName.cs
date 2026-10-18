@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
     /// </summary>
     [IsoId("_H5cuMZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Query Name")]
-    public record QueryName : CurrencyCriteriaDefinition1Choice_
+    public partial record QueryName : CurrencyCriteriaDefinition1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

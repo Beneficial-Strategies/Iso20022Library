@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6Q10hpqlEeGSON8vddiWzQ_1451899054")]
     [DisplayName("Billing Rate Identification 1 Choice")]
-    public abstract record BillingRateIdentification1Choice_ { }
+    public abstract partial record BillingRateIdentification1Choice_ { }
 }

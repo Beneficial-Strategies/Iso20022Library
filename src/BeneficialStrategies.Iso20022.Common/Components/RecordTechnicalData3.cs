@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CSn_MVCTEeWchIYf-qgDzg")]
 [DisplayName("Record Technical Data")]
-public record RecordTechnicalData3
+public partial record RecordTechnicalData3
 {
     /// <summary>
     /// Flag to say if there is an inconsistency across all submitting entities records.

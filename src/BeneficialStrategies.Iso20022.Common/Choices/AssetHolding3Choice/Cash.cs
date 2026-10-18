@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice
     /// Cash.
     /// </summary>
     [DisplayName("Cash")]
-    public record Cash : AssetHolding3Choice_
+    public partial record Cash : AssetHolding3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

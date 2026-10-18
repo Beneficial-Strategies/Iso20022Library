@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification3Choice
     /// All Current.
     /// </summary>
     [DisplayName("All Current")]
-    public record AllCurrent : LimitIdentification3Choice_
+    public partial record AllCurrent : LimitIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

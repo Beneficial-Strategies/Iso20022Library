@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MissingData1Choice
     /// </summary>
     [IsoId("_MN6wldjMEeq5MfBBxQig1Q")]
     [DisplayName("Code")]
-    public record Code : MissingData1Choice_
+    public partial record Code : MissingData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

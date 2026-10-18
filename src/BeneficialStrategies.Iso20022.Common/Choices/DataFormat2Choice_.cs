@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q6vvBdp-Ed-ak6NoX_4Aeg_-2133276556")]
     [DisplayName("Data Format 2 Choice")]
-    public abstract record DataFormat2Choice_ { }
+    public abstract partial record DataFormat2Choice_ { }
 }

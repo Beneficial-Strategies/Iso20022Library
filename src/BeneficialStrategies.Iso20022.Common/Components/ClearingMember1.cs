@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l_0jkJXZEeaEh9L5Y0ZaKQ")]
 [DisplayName("Clearing Member")]
-public record ClearingMember1
+public partial record ClearingMember1
 {
     /// <summary>
     /// Identification of the clearing member.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xt9fc8v5EeSxLrW9hropkQ")]
 [DisplayName("Securities Market Report Header")]
-public record SecuritiesMarketReportHeader1
+public partial record SecuritiesMarketReportHeader1
 {
     /// <summary>
     /// Identification of the venue which generates the report.

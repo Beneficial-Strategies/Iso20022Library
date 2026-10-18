@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource5Choice
     /// </summary>
     [IsoId("_n7S8I19NEeS7xuKaq75oiQ")]
     [DisplayName("Proprietary Identification Source")]
-    public record ProprietaryIdentificationSource : IdentificationSource5Choice_
+    public partial record ProprietaryIdentificationSource : IdentificationSource5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

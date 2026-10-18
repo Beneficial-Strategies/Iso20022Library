@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oAv2w1m4EeOQYsoJizpkVw")]
 [DisplayName("Tax Report")]
-public record TaxReport1
+public partial record TaxReport1
 {
     /// <summary>
     /// Basic report details.

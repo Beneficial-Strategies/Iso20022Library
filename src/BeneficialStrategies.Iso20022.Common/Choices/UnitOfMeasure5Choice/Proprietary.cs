@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure5Choice
     [IsoId("_0QQXUPp2EeaQh_7a05rSJQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnitOfMeasure5Choice_
+    public partial record Proprietary : UnitOfMeasure5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

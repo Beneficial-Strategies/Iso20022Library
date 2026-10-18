@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
     [IsoId("_o0KFZVosEe23K4GXSpBSeg")]
     [DisplayName("Error")]
     [IsoXmlTag("Err")]
-    public record Error : TradeReport31Choice_
+    public partial record Error : TradeReport31Choice_
     {
         /// <summary>
         /// Date and time of submission of the report to the trade repository.

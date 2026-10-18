@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dhkbUI0UEemUAO64Q252gQ")]
 [DisplayName("Settlement Fails Participant")]
-public record SettlementFailsParticipant1
+public partial record SettlementFailsParticipant1
 {
     /// <summary>
     /// Legal entity identification of the participant in the securities settlement system.

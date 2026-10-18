@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_In48CNE-Ed-BzquC8wXy7w_1638002708")]
 [DisplayName("Bank To Customer Debit Credit Notification V")]
-public record BankToCustomerDebitCreditNotificationV01 : IOuterRecord
+public partial record BankToCustomerDebitCreditNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

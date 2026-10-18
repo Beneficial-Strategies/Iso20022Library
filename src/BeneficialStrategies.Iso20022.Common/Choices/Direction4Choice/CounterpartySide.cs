@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice
     /// </summary>
     [IsoId("_ZfxXBS0WEe2ZUuvBHegNNg")]
     [DisplayName("Counterparty Side")]
-    public record CounterpartySide : Direction4Choice_
+    public partial record CounterpartySide : Direction4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

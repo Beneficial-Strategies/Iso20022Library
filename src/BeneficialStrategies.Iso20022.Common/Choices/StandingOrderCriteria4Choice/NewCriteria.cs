@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria4Choice
     [IsoId("_gdi6Q9cZEeqRFcf2R4bPBw")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : StandingOrderCriteria4Choice_
+    public partial record NewCriteria : StandingOrderCriteria4Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

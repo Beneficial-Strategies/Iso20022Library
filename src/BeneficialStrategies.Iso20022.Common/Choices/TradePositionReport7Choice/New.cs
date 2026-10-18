@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_gRLBEeqctpBfTmLJnw")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public record New : TradePositionReport7Choice_
+    public partial record New : TradePositionReport7Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

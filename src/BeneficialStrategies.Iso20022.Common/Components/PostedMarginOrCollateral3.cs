@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6UHOsayGEem81-uIvTF5rQ")]
 [DisplayName("Posted Margin Or Collateral")]
-public record PostedMarginOrCollateral3
+public partial record PostedMarginOrCollateral3
 {
     /// <summary>
     /// Value of the initial margin posted by the reporting counterparty to the other counterparty.

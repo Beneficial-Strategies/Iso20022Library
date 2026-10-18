@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVbBtdp-Ed-ak6NoX_4Aeg_-549688189")]
 [DisplayName("Bank Transaction Code Structure")]
-public record BankTransactionCodeStructure4
+public partial record BankTransactionCodeStructure4
 {
     /// <summary>
     /// Set of elements used to provide the domain, the family and the sub-family of the bank transaction code, in a structured and hierarchical format.||Usage: If a specific family or sub-family code cannot be provided, the generic family code defined for the domain or the generic sub-family code defined for the family should be provided.

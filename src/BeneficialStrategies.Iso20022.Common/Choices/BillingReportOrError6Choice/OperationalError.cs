@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingReportOrError6Choice
     /// <summary>Indicates that an operational error has been issued during the processing of the related request.</summary>
     [IsoId("_2jks1TEyEe6g-ffJsqGiSA")]
     [DisplayName("Operational Error")]
-    public record OperationalError : BillingReportOrError6Choice_
+    public partial record OperationalError : BillingReportOrError6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OprlErr")]

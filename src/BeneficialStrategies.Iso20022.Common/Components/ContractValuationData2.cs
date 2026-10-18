@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rIFrmUDWEeWOL-OsSq2h6w")]
 [DisplayName("Contract Valuation Data")]
-public record ContractValuationData2
+public partial record ContractValuationData2
 {
     /// <summary>
     /// Mark to market valuation of the contract, or mark to model valuation. The CCP’s valuation to be used for a cleared trade.

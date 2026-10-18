@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VPaCAPH9Eeaz_YGUGLjP6A")]
 [DisplayName("Status Detail")]
-public record StatusDetail1
+public partial record StatusDetail1
 {
     /// <summary>
     /// Country of the institution relevant for the decision.

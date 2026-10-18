@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData2Choice
     /// Statement Entry.
     /// </summary>
     [DisplayName("Statement Entry")]
-    public record StatementEntry : UnderlyingData2Choice_
+    public partial record StatementEntry : UnderlyingData2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

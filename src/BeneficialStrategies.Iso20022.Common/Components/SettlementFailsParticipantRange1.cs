@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VEBnQI0UEemUAO64Q252gQ")]
 [DisplayName("Settlement Fails Participant Range")]
-public record SettlementFailsParticipantRange1
+public partial record SettlementFailsParticipantRange1
 {
     /// <summary>
     /// Participant with the highest volume of settlement fails.

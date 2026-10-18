@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jORO5O5NEeCisYr99QEiWA_-1135919214")]
 [DisplayName("Limit Amount")]
-public record LimitAmount1
+public partial record LimitAmount1
 {
     /// <summary>
     /// Amount of money of the limit, expressed in an eligible currency.

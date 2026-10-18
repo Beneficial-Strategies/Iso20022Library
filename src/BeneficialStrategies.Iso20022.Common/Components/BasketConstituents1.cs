@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-aZI0QFPEeqUa4noT3P56A")]
 [DisplayName("Basket Constituents")]
-public record BasketConstituents1
+public partial record BasketConstituents1
 {
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.

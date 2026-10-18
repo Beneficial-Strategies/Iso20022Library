@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G165MKtjEfC6tbn8zOl_iw")]
 [DisplayName("Cash Deposit Confirmation1")]
-public record CashDepositConfirmation1
+public partial record CashDepositConfirmation1
 {
     /// <summary>
     /// Confirms the cash received by the cash receiver for a cash deposit request that will be credited to the account.

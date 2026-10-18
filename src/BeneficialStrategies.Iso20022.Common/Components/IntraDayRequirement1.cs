@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vFk_wKp1EeamNLogr5TkIQ")]
 [DisplayName("Intra Day Requirement")]
-public record IntraDayRequirement1
+public partial record IntraDayRequirement1
 {
     /// <summary>
     /// Total aggregate value of collateral called intraday, excluding repayments.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X5DbMExWEeywvc16MwOPfw")]
 [DisplayName("Compare Trade Clearing Obligation")]
-public record CompareTradeClearingObligation1
+public partial record CompareTradeClearingObligation1
 {
     /// <summary>
     /// Information for the first side of the transaction.

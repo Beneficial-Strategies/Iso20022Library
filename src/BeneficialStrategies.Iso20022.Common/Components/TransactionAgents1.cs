@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PyefZdp-Ed-ak6NoX_4Aeg_868982411")]
 [DisplayName("Transaction Agents")]
-public record TransactionAgents1
+public partial record TransactionAgents1
 {
     /// <summary>
     /// Financial institution servicing an account for the debtor.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-xcR9p-Ed-ak6NoX_4Aeg_946629114")]
 [DisplayName("Transaction Details")]
-public record TransactionDetails2
+public partial record TransactionDetails2
 {
     /// <summary>
     /// Unique identification assigned to a trade once it is received or matched by an executing system.

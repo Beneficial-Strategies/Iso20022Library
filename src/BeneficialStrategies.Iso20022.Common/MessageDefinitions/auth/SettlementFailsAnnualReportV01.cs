@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_pq7TsUEXEeqXB_DgAcRqgw")]
 [DisplayName("Settlement Fails Annual Report V")]
-public record SettlementFailsAnnualReportV01 : IOuterRecord
+public partial record SettlementFailsAnnualReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

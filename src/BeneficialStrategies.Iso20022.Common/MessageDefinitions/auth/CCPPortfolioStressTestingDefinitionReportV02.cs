@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_YvvUcTqlEe6GiucvqhDlFQ")]
 [DisplayName("CCP Portfolio Stress Testing Definition Report V02")]
-public record CCPPortfolioStressTestingDefinitionReportV02 : IOuterRecord
+public partial record CCPPortfolioStressTestingDefinitionReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RIwV1Np-Ed-ak6NoX_4Aeg_1623377139")]
     [DisplayName("Payment Origin 1 Choice")]
-    public abstract record PaymentOrigin1Choice_ { }
+    public abstract partial record PaymentOrigin1Choice_ { }
 }

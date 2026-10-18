@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PortfolioCode1Choice.NoCode), nameof(PortfolioCode1Choice.NoCode))]
     [IsoId("_FQG3gHixEeqKjIYaFgh_2g")]
     [DisplayName("Portfolio Code 1 Choice")]
-    public abstract record PortfolioCode1Choice_ { }
+    public abstract partial record PortfolioCode1Choice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice
     /// Customer Identification.
     /// </summary>
     [DisplayName("Customer Identification")]
-    public record CustomerIdentification : SearchCriteria2Choice_
+    public partial record CustomerIdentification : SearchCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

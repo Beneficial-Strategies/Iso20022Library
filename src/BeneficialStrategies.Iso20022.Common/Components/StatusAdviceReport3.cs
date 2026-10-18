@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CUoXKdGdEeaQk737TH1Fzw")]
 [DisplayName("Status Advice Report")]
-public record StatusAdviceReport3
+public partial record StatusAdviceReport3
 {
     /// <summary>
     /// Provides the status for the full message.

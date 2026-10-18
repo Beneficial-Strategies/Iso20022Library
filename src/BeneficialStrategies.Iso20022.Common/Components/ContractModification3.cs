@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SUMURf_kEemm3skPVSMJQg")]
 [DisplayName("Contract Modification")]
-public record ContractModification3
+public partial record ContractModification3
 {
     /// <summary>
     /// Indication of the action type of the transaction.

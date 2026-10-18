@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice
     /// Algorithm.
     /// </summary>
     [DisplayName("Algorithm")]
-    public record Algorithm : ExecutingParty2Choice_
+    public partial record Algorithm : ExecutingParty2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

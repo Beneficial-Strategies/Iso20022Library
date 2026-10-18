@@ -13,5 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Proprietary))]
     [JsonDerivedType(typeof(Code))]
     [JsonDerivedType(typeof(Proprietary))]
-    public abstract record PaymentMethod3Choice_;
+    public abstract partial record PaymentMethod3Choice_;
 }

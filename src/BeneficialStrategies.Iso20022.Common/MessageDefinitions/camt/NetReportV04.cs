@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("039bf4ef-c5d8-415f-9be1-e97dd49d7ccb")]
 [DisplayName("Net Report V04")]
-public record NetReportV04 : IOuterRecord
+public partial record NetReportV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_T-i3M9p-Ed-ak6NoX_4Aeg_-1089125452")]
     [DisplayName("Unable To Apply Justification 2 Choice")]
-    public abstract record UnableToApplyJustification2Choice_ { }
+    public abstract partial record UnableToApplyJustification2Choice_ { }
 }

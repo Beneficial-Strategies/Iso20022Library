@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T6OX4Np-Ed-ak6NoX_4Aeg_325670124")]
 [DisplayName("Proprietary Date")]
-public record ProprietaryDate1
+public partial record ProprietaryDate1
 {
     /// <summary>
     /// Identifies the type of date reported.

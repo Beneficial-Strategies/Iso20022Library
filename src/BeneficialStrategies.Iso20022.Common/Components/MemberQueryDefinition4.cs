@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iR9okXSbEeiH1ZOt2UD8vQ")]
 [DisplayName("Member Query Definition")]
-public record MemberQueryDefinition4
+public partial record MemberQueryDefinition4
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

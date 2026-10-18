@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     [IsoId("_38nfW__qEemm3skPVSMJQg")]
     [DisplayName("Collateral Update")]
     [IsoXmlTag("CollUpd")]
-    public record CollateralUpdate : TradeReport10Choice_
+    public partial record CollateralUpdate : TradeReport10Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

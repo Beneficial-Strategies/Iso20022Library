@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZCkIIPKNEeaz_YGUGLjP6A")]
 [DisplayName("Benchmark Detail")]
-public record BenchmarkDetail1
+public partial record BenchmarkDetail1
 {
     /// <summary>
     /// Full name of the benchmark.

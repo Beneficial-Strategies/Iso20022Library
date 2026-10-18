@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice
     [IsoId("_QWOzu9EdEei798TPbKJMuw")]
     [DisplayName("Proprietary Rejection")]
     [IsoXmlTag("PrtryRjctn")]
-    public record ProprietaryRejection : PaymentStatusReason1Choice_
+    public partial record ProprietaryRejection : PaymentStatusReason1Choice_
     {
         /// <summary>
         /// Defines the reason why the system has rejected the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5UkNxTEyEe6g-ffJsqGiSA")]
 [DisplayName("Limits8")]
-public record Limits8
+public partial record Limits8
 {
     /// <summary>
     /// Current Limit.

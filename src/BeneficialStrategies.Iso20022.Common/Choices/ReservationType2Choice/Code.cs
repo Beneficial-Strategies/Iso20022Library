@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationType2Choice
     /// </summary>
     [IsoId("_5xhOIRUNEeusI4XK3oQSyg")]
     [DisplayName("Code")]
-    public record Code : ReservationType2Choice_
+    public partial record Code : ReservationType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

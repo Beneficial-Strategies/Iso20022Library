@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T-ZtQtp-Ed-ak6NoX_4Aeg_-1114775558")]
 [DisplayName("Case Forwarding Notification")]
-public record CaseForwardingNotification3
+public partial record CaseForwardingNotification3
 {
     /// <summary>
     /// Justification for the forward action.

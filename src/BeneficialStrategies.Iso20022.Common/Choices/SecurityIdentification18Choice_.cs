@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_b9RfIQOJEeWs3sTa9Sj6Lg")]
     [DisplayName("Security Identification 18 Choice")]
-    public abstract record SecurityIdentification18Choice_ { }
+    public abstract partial record SecurityIdentification18Choice_ { }
 }

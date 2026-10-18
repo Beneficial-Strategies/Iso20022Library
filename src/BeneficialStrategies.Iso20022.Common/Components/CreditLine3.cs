@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oZe7n4Z5Eee8r9VKRbnJSg")]
 [DisplayName("Credit Line")]
-public record CreditLine3
+public partial record CreditLine3
 {
     /// <summary>
     /// Indicates whether or not the credit line is included in the balance.

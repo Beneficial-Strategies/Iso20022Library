@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InterestRate8Choice.Floating), nameof(InterestRate8Choice.Floating))]
     [IsoId("_H7ydeX5aEea2k7EBUopqxw")]
     [DisplayName("Interest Rate 8 Choice")]
-    public abstract record InterestRate8Choice_ { }
+    public abstract partial record InterestRate8Choice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wm77UTICEe2fXedS_ucFOA")]
     [DisplayName("Portfolio Code 5 Choice")]
-    public abstract record PortfolioCode5Choice_ { }
+    public abstract partial record PortfolioCode5Choice_ { }
 }

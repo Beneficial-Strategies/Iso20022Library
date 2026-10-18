@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice
     /// </summary>
     [IsoId("_RIwV2Np-Ed-ak6NoX_4Aeg_-1983565483")]
     [DisplayName("Instrument")]
-    public record Instrument : PaymentOrigin1Choice_
+    public partial record Instrument : PaymentOrigin1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

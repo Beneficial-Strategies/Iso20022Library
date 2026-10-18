@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4DvF8K_5EeaE9YROwd69hA")]
 [DisplayName("Asset Holding")]
-public record AssetHolding1
+public partial record AssetHolding1
 {
     /// <summary>
     /// Mark-to-market post-haircut value of the collateral asset holding.

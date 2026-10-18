@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData9Choice
     [IsoId("_cln7oKoMEemdLtwzt4CWxg")]
     [DisplayName("Repurchase Trade")]
     [IsoXmlTag("RpTrad")]
-    public record RepurchaseTrade : TransactionLoanData9Choice_
+    public partial record RepurchaseTrade : TransactionLoanData9Choice_
     {
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F4ikkGIdEfCeoPFCHQnhvA")]
 [DisplayName("Auction Price Data1")]
-public record AuctionPriceData1
+public partial record AuctionPriceData1
 {
     /// <summary>
     /// Lowest auction price.

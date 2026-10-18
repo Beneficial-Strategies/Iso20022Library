@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     [IsoId("_IojKYLVQEeadLcJesEbkTQ")]
     [DisplayName("Derivative")]
     [IsoXmlTag("Deriv")]
-    public record Derivative : Product1Choice_
+    public partial record Derivative : Product1Choice_
     {
         /// <summary>
         /// Hierarchy of classification of a derivative.

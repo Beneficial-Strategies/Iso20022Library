@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
     [IsoId("_glq30SJDEe2zWP9pqvmqdw")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
-    public record Term : QuantityOrTerm1Choice_
+    public partial record Term : QuantityOrTerm1Choice_
     {
         /// <summary>
         /// Number of units of the financial instrument, that is, the nominal value.

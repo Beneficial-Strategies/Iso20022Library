@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType2Choice
     /// </summary>
     [IsoId("_RcH9xNp-Ed-ak6NoX_4Aeg_1127275052")]
     [DisplayName("Proprietary")]
-    public record Proprietary : BalanceType2Choice_
+    public partial record Proprietary : BalanceType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MXZ-8Hy7Eeu1BeE84IrnAQ")]
     [DisplayName("Trading Venue Type 1 Choice")]
-    public abstract record TradingVenueType1Choice_ { }
+    public abstract partial record TradingVenueType1Choice_ { }
 }

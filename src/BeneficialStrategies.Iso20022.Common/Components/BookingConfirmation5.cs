@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_okBbfzrQEe-thIfLZ94a1w")]
 [DisplayName("Booking Confirmation5")]
-public record BookingConfirmation5
+public partial record BookingConfirmation5
 {
     /// <summary>
     /// Amount.

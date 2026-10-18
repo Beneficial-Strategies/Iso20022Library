@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice
     [IsoId("_oZRTXXg-Eeu3kecHd7QKUQ")]
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
-    public record Compression : TradeReport15Choice_
+    public partial record Compression : TradeReport15Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

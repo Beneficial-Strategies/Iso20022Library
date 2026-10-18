@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
     [IsoId("_MzHkQcK8EeuMhqg3CsEu6Q")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public record New : ReuseDataReport6Choice_
+    public partial record New : ReuseDataReport6Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

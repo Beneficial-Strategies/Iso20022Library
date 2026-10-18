@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePartyIdentificationQuery11C
     /// Not Reported.
     /// </summary>
     [DisplayName("Not Reported")]
-    public record NotReported : TradePartyIdentificationQuery11Choice_
+    public partial record NotReported : TradePartyIdentificationQuery11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

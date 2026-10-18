@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUE1CNp-Ed-ak6NoX_4Aeg_408833196")]
 [DisplayName("Batch Information")]
-public record BatchInformation1
+public partial record BatchInformation1
 {
     /// <summary>
     /// Point to point reference assigned by the sending party to unambiguously identify the batch of transactions.

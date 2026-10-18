@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingMethod1Choice
     [IsoId("_6P9Ds5qlEeGSON8vddiWzQ_1047988105")]
     [DisplayName("Method B")]
     [IsoXmlTag("MtdB")]
-    public record MethodB : BillingMethod1Choice_
+    public partial record MethodB : BillingMethod1Choice_
     {
         /// <summary>
         /// Amount of the original charge expressed in the host currency.

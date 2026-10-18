@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mwc6wGIhEfCeoPFCHQnhvA")]
 [DisplayName("Post Trade Data1")]
-public record PostTradeData1
+public partial record PostTradeData1
 {
     /// <summary>
     /// Code used to identify the financial instrument.

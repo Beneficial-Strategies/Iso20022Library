@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
     [IsoId("_Y7YBd5jgEeqkLZLH6DK3UQ")]
     [DisplayName("Monetary Value")]
     [IsoXmlTag("MntryVal")]
-    public record MonetaryValue : FinancialInstrumentQuantity32Choice_
+    public partial record MonetaryValue : FinancialInstrumentQuantity32Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

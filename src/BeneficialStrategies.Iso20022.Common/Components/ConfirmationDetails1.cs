@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SvM2AgEcEeCQm6a_G2yO_w_-502764871")]
 [DisplayName("Confirmation Details")]
-public record ConfirmationDetails1
+public partial record ConfirmationDetails1
 {
     /// <summary>
     /// Reference to the pay in schedule confirmed.

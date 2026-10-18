@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CXmpW1RtEe23M4WgERMsYw")]
     [DisplayName("Underlying Investigation Instrument1Choice")]
-    public abstract record UnderlyingInvestigationInstrument1Choice_ { }
+    public abstract partial record UnderlyingInvestigationInstrument1Choice_ { }
 }

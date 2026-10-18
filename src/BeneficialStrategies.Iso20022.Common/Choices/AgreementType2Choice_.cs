@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Nw6gQS4yEeuxhbw_aW6haw")]
     [DisplayName("Agreement Type 2 Choice")]
-    public abstract record AgreementType2Choice_ { }
+    public abstract partial record AgreementType2Choice_ { }
 }

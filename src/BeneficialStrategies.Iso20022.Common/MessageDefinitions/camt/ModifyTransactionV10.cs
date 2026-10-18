@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3QfbTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Modify Transaction V10")]
-public record ModifyTransactionV10 : IOuterRecord
+public partial record ModifyTransactionV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

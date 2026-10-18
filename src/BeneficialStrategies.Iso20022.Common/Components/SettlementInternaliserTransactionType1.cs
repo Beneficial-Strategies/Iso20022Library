@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZsjzoO3oEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Transaction Type")]
-public record SettlementInternaliserTransactionType1
+public partial record SettlementInternaliserTransactionType1
 {
     /// <summary>
     /// Purchase or sale of securities.

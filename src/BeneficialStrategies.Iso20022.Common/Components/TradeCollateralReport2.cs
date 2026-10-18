@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sh7OIS-_EeWvZpCvNOLJLQ")]
 [DisplayName("Trade Collateral Report")]
-public record TradeCollateralReport2
+public partial record TradeCollateralReport2
 {
     /// <summary>
     /// Information indicating the type of collateral agreement existing between counterparties.

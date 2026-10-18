@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryInterconnectionPoint1Cho
     /// </summary>
     [IsoId("_s36_sIOsEeWqmeP8QNJBew")]
     [DisplayName("Proprietary")]
-    public record Proprietary : DeliveryInterconnectionPoint1Choice_
+    public partial record Proprietary : DeliveryInterconnectionPoint1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

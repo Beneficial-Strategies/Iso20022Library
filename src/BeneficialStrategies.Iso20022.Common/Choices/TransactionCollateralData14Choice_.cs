@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ksszMf_9Eemefbt-QjTNnA")]
     [DisplayName("Transaction Collateral Data 14 Choice")]
-    public abstract record TransactionCollateralData14Choice_ { }
+    public abstract partial record TransactionCollateralData14Choice_ { }
 }

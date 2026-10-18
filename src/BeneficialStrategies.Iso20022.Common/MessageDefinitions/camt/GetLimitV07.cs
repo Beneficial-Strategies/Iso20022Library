@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_jwlbhxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Limit V")]
-public record GetLimitV07 : IOuterRecord
+public partial record GetLimitV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Agricultural.
     /// </summary>
     [DisplayName("Agricultural")]
-    public record Agricultural : AssetClassCommodity7Choice_
+    public partial record Agricultural : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

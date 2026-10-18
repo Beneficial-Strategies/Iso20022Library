@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError5Choice
     [IsoId("_df3BI9cZEeqRFcf2R4bPBw")]
     [DisplayName("Operational Error")]
     [IsoXmlTag("OprlErr")]
-    public record OperationalError : TransactionReportOrError5Choice_
+    public partial record OperationalError : TransactionReportOrError5Choice_
     {
         /// <summary>
         /// Specification of the error, in coded or proprietary form.

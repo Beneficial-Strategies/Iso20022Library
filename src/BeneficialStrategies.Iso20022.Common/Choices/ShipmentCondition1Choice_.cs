@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TISQMLGdEeuSTr8k0UEM8A")]
     [DisplayName("Shipment Condition 1 Choice")]
-    public abstract record ShipmentCondition1Choice_ { }
+    public abstract partial record ShipmentCondition1Choice_ { }
 }

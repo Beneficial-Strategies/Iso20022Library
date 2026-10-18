@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-ZIkAEcEeCQm6a_G2yO_w_-1398499112")]
 [DisplayName("Document General Information")]
-public record DocumentGeneralInformation2
+public partial record DocumentGeneralInformation2
 {
     /// <summary>
     /// Specifies the type of the document, for example commercial invoice.

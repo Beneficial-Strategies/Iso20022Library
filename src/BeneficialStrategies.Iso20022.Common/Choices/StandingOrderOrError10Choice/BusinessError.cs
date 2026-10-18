@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError10Choice
     /// Business Error.
     /// </summary>
     [DisplayName("Business Error")]
-    public record BusinessError : StandingOrderOrError10Choice_
+    public partial record BusinessError : StandingOrderOrError10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

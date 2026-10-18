@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
     [IsoId("_yq1bcQxeEeuoAcnnpX2x_w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UniqueTransactionIdentifier1Choice_
+    public partial record Proprietary : UniqueTransactionIdentifier1Choice_
     {
         /// <summary>
         /// Identification of the lot, according to a data source scheme. Used to indicate which processing to apply to the corresponding market value amount.

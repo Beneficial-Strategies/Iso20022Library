@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0AzLQKszEeayv9XxdmMwKQ")]
 [DisplayName("Stress Item")]
-public record StressItem1
+public partial record StressItem1
 {
     /// <summary>
     /// Set of information relating to major representative product being stressed under the stress scenario.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_IpSbkWkwEeaLAKoEUNsD9g")]
     [DisplayName("Credit")]
-    public record Credit : Derivative2Choice_
+    public partial record Credit : Derivative2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cdt")]

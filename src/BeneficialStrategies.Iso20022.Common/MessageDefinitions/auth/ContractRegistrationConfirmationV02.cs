@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_bf9RvW2PEei3KuUgpx7Xcw")]
 [DisplayName("Contract Registration Confirmation V")]
-public record ContractRegistrationConfirmationV02 : IOuterRecord
+public partial record ContractRegistrationConfirmationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

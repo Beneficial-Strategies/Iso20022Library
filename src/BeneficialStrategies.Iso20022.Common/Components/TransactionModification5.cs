@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B6-nbW4-EeiU9cctagi5ow")]
 [DisplayName("Transaction Modification")]
-public record TransactionModification5
+public partial record TransactionModification5
 {
     /// <summary>
     /// Reference to the instruction related to the payment for which a modification is requested.

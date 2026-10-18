@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError12
     /// Modifications.
     /// </summary>
     [DisplayName("Modifications")]
-    public record Modifications : IntraBalanceOrOperationalError12Choice_
+    public partial record Modifications : IntraBalanceOrOperationalError12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

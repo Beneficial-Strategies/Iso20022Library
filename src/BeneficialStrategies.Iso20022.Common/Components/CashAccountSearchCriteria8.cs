@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6RRGmTEyEe6g-ffJsqGiSA")]
 [DisplayName("Cash Account Search Criteria8")]
-public record CashAccountSearchCriteria8
+public partial record CashAccountSearchCriteria8
 {
     /// <summary>
     /// Account Identification.

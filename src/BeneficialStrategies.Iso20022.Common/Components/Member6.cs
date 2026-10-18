@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W1ihMXSeEeiH1ZOt2UD8vQ")]
 [DisplayName("Member")]
-public record Member6
+public partial record Member6
 {
     /// <summary>
     /// Physical/logical address belonging to a member, segregated from its main address that is used for normal operations. The fund return address is used to route messages that require specific attention/exception handling, for example, returns or rejects.

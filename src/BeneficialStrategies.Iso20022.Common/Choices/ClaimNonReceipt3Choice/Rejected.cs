@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt3Choice
     /// Rejected.
     /// </summary>
     [DisplayName("Rejected")]
-    public record Rejected : ClaimNonReceipt3Choice_
+    public partial record Rejected : ClaimNonReceipt3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

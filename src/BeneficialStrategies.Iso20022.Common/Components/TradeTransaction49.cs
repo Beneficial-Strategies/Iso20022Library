@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fVX4YWEfEe2P-L9DBerEgA")]
 [DisplayName("Trade Transaction")]
-public record TradeTransaction49
+public partial record TradeTransaction49
 {
     /// <summary>
     /// Choice between a Unique Transaction Identifier (UTI) or a proprietary identifier as agreed with the counterparty.

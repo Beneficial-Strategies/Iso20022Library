@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundTransactionOutType
     /// </summary>
     [IsoId("_TMto8RMJEeSopak1K45eVQ")]
     [DisplayName("Code")]
-    public record Code : InvestmentFundTransactionOutType1Choice_
+    public partial record Code : InvestmentFundTransactionOutType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

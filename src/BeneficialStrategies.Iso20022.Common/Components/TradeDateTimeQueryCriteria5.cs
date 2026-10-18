@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_np2jIWE3Ee2S65ml6YCOtA")]
 [DisplayName("Trade Date Time Query Criteria")]
-public record TradeDateTimeQueryCriteria5
+public partial record TradeDateTimeQueryCriteria5
 {
     /// <summary>
     /// Indicates the reporting date and full hour that transaction was reported.

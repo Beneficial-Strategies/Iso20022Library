@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Inflation.
     /// </summary>
     [DisplayName("Inflation")]
-    public record Inflation : AssetClassCommodity7Choice_
+    public partial record Inflation : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

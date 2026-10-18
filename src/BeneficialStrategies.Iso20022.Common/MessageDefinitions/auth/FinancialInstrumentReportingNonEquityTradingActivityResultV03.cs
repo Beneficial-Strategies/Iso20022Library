@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_6jUM0aaTEeqZmriXpMtonA")]
 [DisplayName("Financial Instrument Reporting Non Equity Trading Activity Result V")]
-public record FinancialInstrumentReportingNonEquityTradingActivityResultV03 : IOuterRecord
+public partial record FinancialInstrumentReportingNonEquityTradingActivityResultV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

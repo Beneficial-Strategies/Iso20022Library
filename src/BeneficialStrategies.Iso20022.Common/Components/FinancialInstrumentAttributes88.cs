@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qZQIYMhiEeadgvwNGwK05w")]
 [DisplayName("Financial Instrument Attributes")]
-public record FinancialInstrumentAttributes88
+public partial record FinancialInstrumentAttributes88
 {
     /// <summary>
     /// Specifies fixed contract term, or the maximum contract term cleared.

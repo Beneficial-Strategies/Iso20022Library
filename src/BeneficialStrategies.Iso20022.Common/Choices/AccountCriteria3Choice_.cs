@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PhEfF249EeiU9cctagi5ow")]
     [DisplayName("Account Criteria 3 Choice")]
-    public abstract record AccountCriteria3Choice_ { }
+    public abstract partial record AccountCriteria3Choice_ { }
 }

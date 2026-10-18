@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria4Choice
     /// </summary>
     [IsoId("_gt_xEdcZEeqRFcf2R4bPBw")]
     [DisplayName("Query Name")]
-    public record QueryName : ReservationCriteria4Choice_
+    public partial record QueryName : ReservationCriteria4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

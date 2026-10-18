@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VBwAo9p-Ed-ak6NoX_4Aeg_-855958594")]
 [DisplayName("Fund Cash In Breakdown")]
-public record FundCashInBreakdown1
+public partial record FundCashInBreakdown1
 {
     /// <summary>
     /// Amount of cash flow in, expressed as an amount of money.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Amount4Choice.IncreaseAmount), nameof(Amount4Choice.IncreaseAmount))]
     [IsoId("_wO4M0zH8Ee6mzvR3CHiUhA")]
     [DisplayName("Amount4Choice")]
-    public abstract record Amount4Choice_ { }
+    public abstract partial record Amount4Choice_ { }
 }

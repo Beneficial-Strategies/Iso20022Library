@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S3i5sAEcEeCQm6a_G2yO_w_756219526")]
 [DisplayName("Balance Status")]
-public record BalanceStatus2
+public partial record BalanceStatus2
 {
     /// <summary>
     /// Balance in each currency calculated at the value date and time indicated in the report.

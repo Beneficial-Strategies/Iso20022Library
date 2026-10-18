@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RXWygNp-Ed-ak6NoX_4Aeg_-1224288491")]
 [DisplayName("Report Status And Reason")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record ReportStatusAndReason1
+public partial record ReportStatusAndReason1
 {
     /// <summary>
     /// Provides the identification of the RegulatoryTransactionReport document that was previously sent by the reporting institution.

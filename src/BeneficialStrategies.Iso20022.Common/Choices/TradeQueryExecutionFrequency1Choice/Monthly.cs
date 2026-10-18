@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Cho
     /// </summary>
     [IsoId("_mmTLsNGYEeaQk737TH1Fzw")]
     [DisplayName("Monthly")]
-    public record Monthly : TradeQueryExecutionFrequency1Choice_
+    public partial record Monthly : TradeQueryExecutionFrequency1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

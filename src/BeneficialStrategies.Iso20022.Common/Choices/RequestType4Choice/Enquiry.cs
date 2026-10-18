@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType4Choice
     /// </summary>
     [IsoId("_i375o5IhEeect698_YsnIA")]
     [DisplayName("Enquiry")]
-    public record Enquiry : RequestType4Choice_
+    public partial record Enquiry : RequestType4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

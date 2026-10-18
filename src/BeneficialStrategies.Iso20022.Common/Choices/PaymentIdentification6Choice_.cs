@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AW_FQ24-EeiU9cctagi5ow")]
     [DisplayName("Payment Identification 6 Choice")]
-    public abstract record PaymentIdentification6Choice_ { }
+    public abstract partial record PaymentIdentification6Choice_ { }
 }

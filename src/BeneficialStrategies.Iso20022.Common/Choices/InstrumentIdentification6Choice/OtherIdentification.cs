@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification6Choice
     [IsoId("_xzhRNyyGEe2xAdY9t5fB3g")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public record OtherIdentification : InstrumentIdentification6Choice_
+    public partial record OtherIdentification : InstrumentIdentification6Choice_
     {
         /// <summary>
         /// Indicates other identifier of an underlier.

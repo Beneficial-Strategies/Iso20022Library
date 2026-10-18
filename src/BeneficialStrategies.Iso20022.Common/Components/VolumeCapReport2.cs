@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7YvFaeJBEeWWKb0jFHxViQ")]
 [DisplayName("Volume Cap Report")]
-public record VolumeCapReport2
+public partial record VolumeCapReport2
 {
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and feedback messages.

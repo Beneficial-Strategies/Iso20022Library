@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_YKPckU2HEe-TXNruDFfwPA")]
 [DisplayName("CCP Available Financial Resources Report V02")]
-public record CCPAvailableFinancialResourcesReportV02 : IOuterRecord
+public partial record CCPAvailableFinancialResourcesReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

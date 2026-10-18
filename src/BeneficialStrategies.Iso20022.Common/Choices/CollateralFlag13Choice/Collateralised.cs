@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice
     [IsoId("_J_aqIcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Collateralised")]
     [IsoXmlTag("Collsd")]
-    public record Collateralised : CollateralFlag13Choice_
+    public partial record Collateralised : CollateralFlag13Choice_
     {
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of cash, securities, or commodities versus collateral for the opening leg (spot leg) of the securities financing transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SRxMVdp-Ed-ak6NoX_4Aeg_-1871894733")]
 [DisplayName("Account Interest")]
-public record AccountInterest2
+public partial record AccountInterest2
 {
     /// <summary>
     /// Specifies the type of interest.

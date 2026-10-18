@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9cb13d85-f189-499e-ae47-75a9c98d16d4")]
 [DisplayName("Investigation Data18")]
-public record InvestigationData18
+public partial record InvestigationData18
 {
     /// <summary>
     /// Original investigation sequence as provided in the investigation request.

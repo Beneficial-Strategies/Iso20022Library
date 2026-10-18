@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CXmpWFRtEe23M4WgERMsYw")]
     [DisplayName("Investigation Service Level1Choice")]
-    public abstract record InvestigationServiceLevel1Choice_ { }
+    public abstract partial record InvestigationServiceLevel1Choice_ { }
 }

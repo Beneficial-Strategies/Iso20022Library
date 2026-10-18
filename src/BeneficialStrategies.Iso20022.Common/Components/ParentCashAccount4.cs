@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cTJ9i9cZEeqRFcf2R4bPBw")]
 [DisplayName("Parent Cash Account")]
-public record ParentCashAccount4
+public partial record ParentCashAccount4
 {
     /// <summary>
     /// Defines the parent account level within a hierarchy.

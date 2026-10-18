@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_gun3QSPsEe-T5ffMy2iCzg")]
 [DisplayName("Limit Utilisation Journal Query V01")]
-public record LimitUtilisationJournalQueryV01 : IOuterRecord
+public partial record LimitUtilisationJournalQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

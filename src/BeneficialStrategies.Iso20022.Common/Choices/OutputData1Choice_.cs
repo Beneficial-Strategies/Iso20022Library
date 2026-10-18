@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(OutputData1Choice.AuctionTradingSystem))]
     [JsonDerivedType(typeof(OutputData1Choice.ContinuousOrderBook))]
     [JsonDerivedType(typeof(OutputData1Choice.AuctionTradingSystem))]
-    public abstract record OutputData1Choice_
+    public abstract partial record OutputData1Choice_
     {
     }
 }

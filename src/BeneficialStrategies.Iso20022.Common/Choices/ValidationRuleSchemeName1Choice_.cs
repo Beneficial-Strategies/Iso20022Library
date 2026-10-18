@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_kAjWY9jGEeSD0e0ybx5L5Q")]
     [DisplayName("Validation Rule Scheme Name 1 Choice")]
-    public abstract record ValidationRuleSchemeName1Choice_ { }
+    public abstract partial record ValidationRuleSchemeName1Choice_ { }
 }

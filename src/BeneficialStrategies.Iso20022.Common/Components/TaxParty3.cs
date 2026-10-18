@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SknWoAEcEeCQm6a_G2yO_w_-837981111")]
 [DisplayName("Tax Party")]
-public record TaxParty3
+public partial record TaxParty3
 {
     /// <summary>
     /// Number assigned by a tax authority to an entity.

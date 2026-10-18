@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstrumentReport1Choice.Cancellation))]
     [JsonDerivedType(typeof(InstrumentReport1Choice.New))]
     [JsonDerivedType(typeof(InstrumentReport1Choice.Cancellation))]
-    public abstract record InstrumentReport1Choice_
+    public abstract partial record InstrumentReport1Choice_
     {
     }
 }

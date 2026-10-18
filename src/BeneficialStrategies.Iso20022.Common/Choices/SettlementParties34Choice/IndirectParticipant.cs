@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties34Choice
     /// </summary>
     [IsoId("_viBlU8g4Eeu4ecZgAYuz5w")]
     [DisplayName("Indirect Participant")]
-    public record IndirectParticipant : SettlementParties34Choice_
+    public partial record IndirectParticipant : SettlementParties34Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("IndrctPtcpt")]

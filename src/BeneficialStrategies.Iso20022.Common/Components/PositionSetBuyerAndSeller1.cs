@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xOo7VcWEEeiRga8tPu1L4Q")]
 [DisplayName("Position Set Buyer And Seller")]
-public record PositionSetBuyerAndSeller1
+public partial record PositionSetBuyerAndSeller1
 {
     /// <summary>
     /// Refers to the aggregated data for the buyer counterparty.

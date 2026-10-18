@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ekC-AdR7EemZdYGWu384Zw")]
 [DisplayName("Compare Securities Lending Type")]
-public record CompareSecuritiesLendingType2
+public partial record CompareSecuritiesLendingType2
 {
     /// <summary>
     /// Information for the first side of the transaction.

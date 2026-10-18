@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
     [IsoId("_HQWTw35aEea2k7EBUopqxw")]
     [DisplayName("Basket")]
     [IsoXmlTag("Bskt")]
-    public record Basket : FinancialInstrumentIdentification5Choice_
+    public partial record Basket : FinancialInstrumentIdentification5Choice_
     {
         /// <summary>
         /// Identifies the financial instrument using an ISIN.

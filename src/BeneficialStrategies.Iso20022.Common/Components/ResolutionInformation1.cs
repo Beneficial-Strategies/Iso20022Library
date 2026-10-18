@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QJIE2tp-Ed-ak6NoX_4Aeg_-774810951")]
 [DisplayName("Resolution Information")]
-public record ResolutionInformation1
+public partial record ResolutionInformation1
 {
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent.

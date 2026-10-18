@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CxSDKf_oEemm3skPVSMJQg")]
     [DisplayName("Reconciliation Status 5 Choice")]
-    public abstract record ReconciliationStatus5Choice_ { }
+    public abstract partial record ReconciliationStatus5Choice_ { }
 }

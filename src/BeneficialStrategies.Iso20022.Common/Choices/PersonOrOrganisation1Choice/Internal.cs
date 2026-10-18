@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation1Choice
     /// </summary>
     [IsoId("_W53_AgkhEeWGouz230Xp5Q")]
     [DisplayName("Internal")]
-    public record Internal : PersonOrOrganisation1Choice_
+    public partial record Internal : PersonOrOrganisation1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

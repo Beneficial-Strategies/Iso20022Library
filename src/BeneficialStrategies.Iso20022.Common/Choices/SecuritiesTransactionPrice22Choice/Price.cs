@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice22Choi
     /// </summary>
     [IsoId("_i7UncZiuEe2f7NHvXATP5g")]
     [DisplayName("Price")]
-    public record Price : SecuritiesTransactionPrice22Choice_
+    public partial record Price : SecuritiesTransactionPrice22Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pric")]

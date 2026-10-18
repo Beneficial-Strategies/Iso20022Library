@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a99FF9cZEeqRFcf2R4bPBw")]
 [DisplayName("Cash Account")]
-public record CashAccount41
+public partial record CashAccount41
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

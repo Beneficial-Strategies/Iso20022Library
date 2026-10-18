@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X0ioAZlQEee-Zps0fZQaFQ")]
 [DisplayName("Queue Transaction Identification")]
-public record QueueTransactionIdentification1
+public partial record QueueTransactionIdentification1
 {
     /// <summary>
     /// Identification of the payment queue where the payment instruction resides.

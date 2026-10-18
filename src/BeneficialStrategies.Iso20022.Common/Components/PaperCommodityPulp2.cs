@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QXfHcRZaEe2QNcZTDeoKnQ")]
 [DisplayName("Paper Commodity Pulp")]
-public record PaperCommodityPulp2
+public partial record PaperCommodityPulp2
 {
     /// <summary>
     /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

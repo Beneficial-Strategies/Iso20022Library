@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SkavGa6BEeexrtTFgmVD3Q")]
 [DisplayName("Card Aggregated")]
-public record CardAggregated2
+public partial record CardAggregated2
 {
     /// <summary>
     /// Service in addition to the main service.

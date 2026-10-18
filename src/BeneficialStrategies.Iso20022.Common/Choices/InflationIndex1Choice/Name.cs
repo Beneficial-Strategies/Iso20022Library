@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InflationIndex1Choice
     /// </summary>
     [IsoId("_ZyZ21yS2EeWsI5Sp3-B3zg")]
     [DisplayName("Name")]
-    public record Name : InflationIndex1Choice_
+    public partial record Name : InflationIndex1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_2YFYQJUlEeaYkf5FCqYMeA")]
 [DisplayName("Net Report V")]
-public record NetReportV01 : IOuterRecord
+public partial record NetReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

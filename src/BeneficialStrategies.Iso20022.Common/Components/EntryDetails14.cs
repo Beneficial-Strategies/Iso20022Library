@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D-XNaT3dEe-thIfLZ94a1w")]
 [DisplayName("Entry Details14")]
-public record EntryDetails14
+public partial record EntryDetails14
 {
     /// <summary>
     /// Batch.

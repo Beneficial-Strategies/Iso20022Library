@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_705FQqMgEeCJ6YNENx4h-w_1984754535")]
     [DisplayName("Processing Type 1 Choice")]
-    public abstract record ProcessingType1Choice_ { }
+    public abstract partial record ProcessingType1Choice_ { }
 }

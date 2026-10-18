@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__RflYS1AEeqVb9PEK4pNyA")]
 [DisplayName("Contact")]
-public record Contact9
+public partial record Contact9
 {
     /// <summary>
     /// Name of the party, such as a person or a team, responsible for the report.

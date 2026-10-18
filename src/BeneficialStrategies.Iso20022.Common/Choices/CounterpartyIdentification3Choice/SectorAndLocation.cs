@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
     [IsoId("_ZxnU18EcEea7jLfvGi1PDw")]
     [DisplayName("Sector And Location")]
     [IsoXmlTag("SctrAndLctn")]
-    public record SectorAndLocation : CounterpartyIdentification3Choice_
+    public partial record SectorAndLocation : CounterpartyIdentification3Choice_
     {
         /// <summary>
         /// Represents the counterparty institutional section (such as non-financial corporation, central bank.).

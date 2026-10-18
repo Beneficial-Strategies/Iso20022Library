@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_88-Vca6UEeexrtTFgmVD3Q")]
     [DisplayName("Corrective Transaction 3 Choice")]
-    public abstract record CorrectiveTransaction3Choice_ { }
+    public abstract partial record CorrectiveTransaction3Choice_ { }
 }

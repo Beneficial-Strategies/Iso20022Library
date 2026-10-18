@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_SU5Y2dp-Ed-ak6NoX_4Aeg_-437790811")]
 [DisplayName("Pay In Schedule Items")]
 [Obsolete]
-public record PayInScheduleItems
+public partial record PayInScheduleItems
 {
     /// <summary>
     /// Currency and amount to be paid in.

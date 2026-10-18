@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderReport2Choice
     /// Cancellation.
     /// </summary>
     [DisplayName("Cancellation")]
-    public record Cancellation : OrderReport2Choice_
+    public partial record Cancellation : OrderReport2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

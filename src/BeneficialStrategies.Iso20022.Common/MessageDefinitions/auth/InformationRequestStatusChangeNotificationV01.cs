@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_fQEyMzz1EeGl7N0Cd54dlw")]
 [DisplayName("Information Request Status Change Notification V")]
-public record InformationRequestStatusChangeNotificationV01 : IOuterRecord
+public partial record InformationRequestStatusChangeNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

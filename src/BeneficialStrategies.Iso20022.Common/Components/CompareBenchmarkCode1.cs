@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IaYPcTIQEe2fXedS_ucFOA")]
 [DisplayName("Compare Benchmark Code")]
-public record CompareBenchmarkCode1
+public partial record CompareBenchmarkCode1
 {
     /// <summary>
     /// Information for the first side of the transaction.

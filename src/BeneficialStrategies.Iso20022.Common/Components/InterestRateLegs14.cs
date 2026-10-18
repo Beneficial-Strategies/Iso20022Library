@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O8SFoSJLEe2zWP9pqvmqdw")]
 [DisplayName("Interest Rate Legs")]
-public record InterestRateLegs14
+public partial record InterestRateLegs14
 {
     /// <summary>
     /// Details concerning the rate in the first leg of an interest rate contract.

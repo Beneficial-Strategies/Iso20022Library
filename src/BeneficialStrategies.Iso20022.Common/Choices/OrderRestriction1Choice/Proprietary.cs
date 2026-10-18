@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderRestriction1Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : OrderRestriction1Choice_
+    public partial record Proprietary : OrderRestriction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

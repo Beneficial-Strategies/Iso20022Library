@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice
     [IsoId("_bRuGmRLBEeqctpBfTmLJnw")]
     [DisplayName("Position Component")]
     [IsoXmlTag("PosCmpnt")]
-    public record PositionComponent : TradeTransactionReport8Choice_
+    public partial record PositionComponent : TradeTransactionReport8Choice_
     {
         /// <summary>
         /// Counterparty data details.

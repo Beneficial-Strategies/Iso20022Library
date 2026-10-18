@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError10Choice
     [IsoId("_eIHT8dcZEeqRFcf2R4bPBw")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : ReservationOrError10Choice_
+    public partial record BusinessReport : ReservationOrError10Choice_
     {
         /// <summary>
         /// Report is given for a current reservation.

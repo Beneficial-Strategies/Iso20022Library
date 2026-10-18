@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OWQacLLnEeavNMum-T1eEA")]
 [DisplayName("Other Investment")]
-public record OtherInvestment1
+public partial record OtherInvestment1
 {
     /// <summary>
     /// Text description of the investment.

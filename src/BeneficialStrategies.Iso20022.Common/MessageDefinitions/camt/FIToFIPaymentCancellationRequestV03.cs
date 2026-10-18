@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_DwlbcSGoEeKjd4jizyIDGA")]
 [DisplayName("FI To FI Payment Cancellation Request V")]
-public record FIToFIPaymentCancellationRequestV03 : IOuterRecord
+public partial record FIToFIPaymentCancellationRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

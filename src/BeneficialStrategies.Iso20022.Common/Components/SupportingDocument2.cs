@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6emK1248EeiU9cctagi5ow")]
 [DisplayName("Supporting Document")]
-public record SupportingDocument2
+public partial record SupportingDocument2
 {
     /// <summary>
     /// Unique and unambiguous identification of the supporting document.

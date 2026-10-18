@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ExecutionType1Choice.Event), nameof(ExecutionType1Choice.Event))]
     [IsoId("_75qQhqMgEeCJ6YNENx4h-w_354040007")]
     [DisplayName("Execution Type 1 Choice")]
-    public abstract record ExecutionType1Choice_ { }
+    public abstract partial record ExecutionType1Choice_ { }
 }

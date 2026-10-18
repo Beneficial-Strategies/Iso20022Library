@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xgwFga5SEeuo-IflVgGqiA")]
 [DisplayName("Compare Counterparty Side")]
-public record CompareCounterpartySide2
+public partial record CompareCounterpartySide2
 {
     /// <summary>
     /// Information for the first side of the transaction.

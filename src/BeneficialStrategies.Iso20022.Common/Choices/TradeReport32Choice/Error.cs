@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     [IsoId("__fyLb2EUEe2P-L9DBerEgA")]
     [DisplayName("Error")]
     [IsoXmlTag("Err")]
-    public record Error : TradeReport32Choice_
+    public partial record Error : TradeReport32Choice_
     {
         /// <summary>
         /// Data specific to counterparties and related fields.

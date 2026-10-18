@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6RJWjpqlEeGSON8vddiWzQ_-263337197")]
 [DisplayName("Service Tax Designation")]
-public record ServiceTaxDesignation1
+public partial record ServiceTaxDesignation1
 {
     /// <summary>
     /// Identifies the taxable status of the service.

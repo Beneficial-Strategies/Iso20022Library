@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SXbvdNp-Ed-ak6NoX_4Aeg_1496666102")]
 [DisplayName("Pay In Call Item")]
-public record PayInCallItem
+public partial record PayInCallItem
 {
     /// <summary>
     /// Specifies the currency and amount of the called item.

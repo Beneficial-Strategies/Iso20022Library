@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData32Choice
     [IsoId("_KA3wlcz4EeufhKfUxzsnrQ")]
     [DisplayName("Securities Lending")]
     [IsoXmlTag("SctiesLndg")]
-    public record SecuritiesLending : TransactionLoanData32Choice_
+    public partial record SecuritiesLending : TransactionLoanData32Choice_
     {
         /// <summary>
         /// Specifies whether the transaction was settled using the Delivery-by-Value (DBV) mechanism.

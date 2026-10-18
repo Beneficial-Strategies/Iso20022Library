@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SVWEytp-Ed-ak6NoX_4Aeg_-345262172")]
 [DisplayName("Amount And Currency Exchange Details")]
-public record AmountAndCurrencyExchangeDetails2
+public partial record AmountAndCurrencyExchangeDetails2
 {
     /// <summary>
     /// Identifies the type of amount.

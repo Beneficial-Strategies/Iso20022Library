@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier2Choi
     [IsoId("_cvLxMyyFEe2xAdY9t5fB3g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UniqueTransactionIdentifier2Choice_
+    public partial record Proprietary : UniqueTransactionIdentifier2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

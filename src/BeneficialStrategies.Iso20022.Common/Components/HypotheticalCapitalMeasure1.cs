@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LK-vILb2EeabfchHYoktpA")]
 [DisplayName("Hypothetical Capital Measure")]
-public record HypotheticalCapitalMeasure1
+public partial record HypotheticalCapitalMeasure1
 {
     /// <summary>
     /// Indicates the amount of the total capital requirement all the clearing members are required to hold against their default fund contributions to a central counterparty.

@@ -28,5 +28,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_F7k20ZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("Character Search 1 Choice")]
-    public abstract record CharacterSearch1Choice_ { }
+    public abstract partial record CharacterSearch1Choice_ { }
 }

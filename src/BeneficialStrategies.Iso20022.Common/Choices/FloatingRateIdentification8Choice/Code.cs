@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FloatingRateIdentification8Choic
     /// </summary>
     [IsoId("_IsYmITNoEe2UWZuK9pqFtg")]
     [DisplayName("Code")]
-    public record Code : FloatingRateIdentification8Choice_
+    public partial record Code : FloatingRateIdentification8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

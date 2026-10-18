@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement3Choice
     /// No Reporting Requirement.
     /// </summary>
     [DisplayName("No Reporting Requirement")]
-    public record NoReportingRequirement : ReportingRequirement3Choice_
+    public partial record NoReportingRequirement : ReportingRequirement3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

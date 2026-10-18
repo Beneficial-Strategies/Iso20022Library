@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError5Choice
     [IsoId("_jmCfkXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public record Report : MemberReportOrError5Choice_
+    public partial record Report : MemberReportOrError5Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.

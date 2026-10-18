@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Cleared23Choice.NonCleared), nameof(Cleared23Choice.NonCleared))]
     [IsoId("_zVhWIQtuEe2eQ-C-GTDpFA")]
     [DisplayName("Cleared 23 Choice")]
-    public abstract record Cleared23Choice_ { }
+    public abstract partial record Cleared23Choice_ { }
 }

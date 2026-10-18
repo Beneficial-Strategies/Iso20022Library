@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag10Choice
     /// </summary>
     [IsoId("_gI37UwAAEeqefbt-QjTNnA")]
     [DisplayName("Uncollateralised")]
-    public record Uncollateralised : CollateralFlag10Choice_
+    public partial record Uncollateralised : CollateralFlag10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

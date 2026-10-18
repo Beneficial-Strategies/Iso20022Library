@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UkKfccgyEeuGrNSsxk3B0A")]
     [DisplayName("Security Commodity 7 Choice")]
-    public abstract record SecurityCommodity7Choice_ { }
+    public abstract partial record SecurityCommodity7Choice_ { }
 }

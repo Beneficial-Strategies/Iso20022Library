@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_l0kjsfreEe2mU4Wi2q3MzQ")]
     [DisplayName("Statistics Per Counterparty18Choice")]
-    public abstract record StatisticsPerCounterparty18Choice_ { }
+    public abstract partial record StatisticsPerCounterparty18Choice_ { }
 }

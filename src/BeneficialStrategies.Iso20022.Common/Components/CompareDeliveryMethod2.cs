@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ap1b8dSaEemZdYGWu384Zw")]
 [DisplayName("Compare Delivery Method")]
-public record CompareDeliveryMethod2
+public partial record CompareDeliveryMethod2
 {
     /// <summary>
     /// Information for the first side of the transaction.

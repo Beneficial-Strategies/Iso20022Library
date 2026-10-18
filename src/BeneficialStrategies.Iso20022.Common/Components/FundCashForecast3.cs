@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SjzXgtp-Ed-ak6NoX_4Aeg_1861205426")]
 [DisplayName("Fund Cash Forecast")]
-public record FundCashForecast3
+public partial record FundCashForecast3
 {
     /// <summary>
     /// Unique technical identifier for an instance of a fund cash forecast within a fund cash forecast report as assigned by the issuer of the report.

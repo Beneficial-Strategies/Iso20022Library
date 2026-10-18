@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1da9ETEyEe6g-ffJsqGiSA")]
 [DisplayName("Modification Status Reason3")]
-public record ModificationStatusReason3
+public partial record ModificationStatusReason3
 {
     /// <summary>
     /// Originator.

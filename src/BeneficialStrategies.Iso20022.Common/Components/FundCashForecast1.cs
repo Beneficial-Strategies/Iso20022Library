@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VBTUtNp-Ed-ak6NoX_4Aeg_1030770482")]
 [DisplayName("Fund Cash Forecast")]
-public record FundCashForecast1
+public partial record FundCashForecast1
 {
     /// <summary>
     /// Date and, if required, the time, at which the price has been applied.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData21Choice
     [IsoId("_4Eg3E__qEemm3skPVSMJQg")]
     [DisplayName("Buy Sell Back")]
     [IsoXmlTag("BuySellBck")]
-    public record BuySellBack : TransactionLoanData21Choice_
+    public partial record BuySellBack : TransactionLoanData21Choice_
     {
         /// <summary>
         /// Indication of the cash values to be settled as of the start and maturity date of the transaction.

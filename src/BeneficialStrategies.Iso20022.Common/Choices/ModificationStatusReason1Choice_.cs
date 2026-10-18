@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_L89WiYlsEeePr-EGJjGYzQ")]
     [DisplayName("Modification Status Reason 1 Choice")]
-    public abstract record ModificationStatusReason1Choice_ { }
+    public abstract partial record ModificationStatusReason1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice
     [IsoId("_Bemz8exYEemioJdkOVFBdw")]
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
-    public record Cleared : Cleared12Choice_
+    public partial record Cleared : Cleared12Choice_
     {
         /// <summary>
         /// Indicates that the contract is intended to be cleared.

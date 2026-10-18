@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UuOnttp-Ed-ak6NoX_4Aeg_215969786")]
 [DisplayName("Forecast Parameter")]
-public record ForecastParameter2
+public partial record ForecastParameter2
 {
     /// <summary>
     /// Type of parameter used for grouping the information in a report, eg, country code, currency code, BIC or a user defined parameter.

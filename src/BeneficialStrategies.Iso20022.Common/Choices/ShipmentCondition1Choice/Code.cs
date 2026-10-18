@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentCondition1Choice
     /// </summary>
     [IsoId("_c0JRgLGdEeuSTr8k0UEM8A")]
     [DisplayName("Code")]
-    public record Code : ShipmentCondition1Choice_
+    public partial record Code : ShipmentCondition1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

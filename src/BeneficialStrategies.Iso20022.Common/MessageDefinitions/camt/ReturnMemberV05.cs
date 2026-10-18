@@ -36,7 +36,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_ThV60db6Eeq_l4BJLVUF2Q")]
 [DisplayName("Return Member V")]
-public record ReturnMemberV05 : IOuterRecord
+public partial record ReturnMemberV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

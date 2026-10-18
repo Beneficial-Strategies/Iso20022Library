@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kwwc97tvEeq_cfXrH83Rcw")]
 [DisplayName("Cheque Cancellation Reason")]
-public record ChequeCancellationReason1
+public partial record ChequeCancellationReason1
 {
     /// <summary>
     /// Party that issues the cancellation request.

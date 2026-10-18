@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation1Choice
     /// </summary>
     [IsoId("_gOV-kwkiEeWGouz230Xp5Q")]
     [DisplayName("MIC")]
-    public record MIC : PersonOrOrganisation1Choice_
+    public partial record MIC : PersonOrOrganisation1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

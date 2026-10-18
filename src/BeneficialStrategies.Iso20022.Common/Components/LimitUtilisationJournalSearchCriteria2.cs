@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iz-VUWdSEemVjsmmE4lqKA")]
 [DisplayName("Limit Utilisation Journal Search Criteria2")]
-public record LimitUtilisationJournalSearchCriteria2
+public partial record LimitUtilisationJournalSearchCriteria2
 {
     /// <summary>
     /// Limit Type.

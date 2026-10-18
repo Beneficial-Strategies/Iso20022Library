@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentReport1Choice
     /// <summary>Instrument related data report.</summary>
     [IsoId("_ZFrzIGFSEfC91ZUW7iS7ww")]
     [DisplayName("New")]
-    public record New : InstrumentReport1Choice_
+    public partial record New : InstrumentReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("New")]

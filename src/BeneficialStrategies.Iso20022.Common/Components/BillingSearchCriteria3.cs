@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U3jIcQzWEemZov7BpFCU4Q")]
 [DisplayName("Billing Search Criteria3")]
-public record BillingSearchCriteria3
+public partial record BillingSearchCriteria3
 {
     /// <summary>
     /// Identification of the service or system for which the billing information must be returned.

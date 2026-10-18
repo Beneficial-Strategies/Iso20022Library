@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rtPOiVowEe23K4GXSpBSeg")]
 [DisplayName("Missing Margin Data")]
-public record MissingMarginData2
+public partial record MissingMarginData2
 {
     /// <summary>
     /// Data specific to counterparties and related fields.

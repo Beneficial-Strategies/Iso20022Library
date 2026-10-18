@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-C21gdjKEeq5MfBBxQig1Q")]
 [DisplayName("Unable To Apply Incorrect")]
-public record UnableToApplyIncorrect2
+public partial record UnableToApplyIncorrect2
 {
     /// <summary>
     /// Specifies which data type is incorrect in the transaction.

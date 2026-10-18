@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zGdM0QdEEeSyIPzOZ6VzBQ")]
 [DisplayName("Fund Balance")]
-public record FundBalance1
+public partial record FundBalance1
 {
     /// <summary>
     /// Total number of units from orders placed in units.

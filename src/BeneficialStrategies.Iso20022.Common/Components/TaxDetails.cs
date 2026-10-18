@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RvWbwNp-Ed-ak6NoX_4Aeg_-1792079217")]
 [DisplayName("Tax Details")]
-public record TaxDetails
+public partial record TaxDetails
 {
     /// <summary>
     /// Document issued by first agent on behalf of debtor to report withholding tax to taxing authority.

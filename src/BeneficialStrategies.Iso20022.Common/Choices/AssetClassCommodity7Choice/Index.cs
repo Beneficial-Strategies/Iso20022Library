@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Index.
     /// </summary>
     [DisplayName("Index")]
-    public record Index : AssetClassCommodity7Choice_
+    public partial record Index : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

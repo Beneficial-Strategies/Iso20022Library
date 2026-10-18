@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     [IsoId("_gSTIjZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : SecuritiesTransactionPrice17Choice_
+    public partial record Other : SecuritiesTransactionPrice17Choice_
     {
         /// <summary>
         /// Value of the price.

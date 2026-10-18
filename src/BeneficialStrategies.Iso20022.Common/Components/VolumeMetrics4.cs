@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T23LEIMGEeueDJg7fN5MDw")]
 [DisplayName("Volume Metrics")]
-public record VolumeMetrics4
+public partial record VolumeMetrics4
 {
     /// <summary>
     /// Indication whether reused value is actual or estimated.

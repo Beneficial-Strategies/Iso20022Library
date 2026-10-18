@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SecuritiesTransactionPrice26Choice.Yield))]
     [JsonDerivedType(typeof(SecuritiesTransactionPrice26Choice.BasisPoints))]
     [JsonDerivedType(typeof(SecuritiesTransactionPrice26Choice.NoPrice))]
-    public abstract record SecuritiesTransactionPrice26Choice_
+    public abstract partial record SecuritiesTransactionPrice26Choice_
     {
     }
 }

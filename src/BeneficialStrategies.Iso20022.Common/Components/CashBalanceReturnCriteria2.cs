@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1M2zsXX4Eei3jO6riKEVXg")]
 [DisplayName("Cash Balance Return Criteria")]
-public record CashBalanceReturnCriteria2
+public partial record CashBalanceReturnCriteria2
 {
     /// <summary>
     /// Indicates whether the balance type is requested.

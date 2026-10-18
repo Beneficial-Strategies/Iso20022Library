@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice2Choice
     [IsoId("_Rp-zkNp-Ed-ak6NoX_4Aeg_997208419")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransactionPrice2Choice_
+    public partial record Proprietary : TransactionPrice2Choice_
     {
         /// <summary>
         /// Specifies the type of price.

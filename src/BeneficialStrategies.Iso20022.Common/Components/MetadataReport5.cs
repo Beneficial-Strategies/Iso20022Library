@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JwtpgfgxEe-yU4gaFULAeA")]
 [DisplayName("Metadata Report5")]
-public record MetadataReport5
+public partial record MetadataReport5
 {
     /// <summary>
     /// Submitting Entity.

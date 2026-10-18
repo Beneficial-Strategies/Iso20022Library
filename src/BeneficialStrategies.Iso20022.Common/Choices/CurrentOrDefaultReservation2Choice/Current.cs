@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation2Choi
     [IsoId("_Bxla0W4-EeiU9cctagi5ow")]
     [DisplayName("Current")]
     [IsoXmlTag("Cur")]
-    public record Current : CurrentOrDefaultReservation2Choice_
+    public partial record Current : CurrentOrDefaultReservation2Choice_
     {
         /// <summary>
         /// Unique identification of the reservation.

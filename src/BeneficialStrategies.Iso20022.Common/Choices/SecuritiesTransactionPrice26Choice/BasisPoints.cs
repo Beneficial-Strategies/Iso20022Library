@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice26Choi
     /// <summary>Price expressed as basis points.</summary>
     [IsoId("_HT_WF62kEfCfRtNoJv1jFQ")]
     [DisplayName("Basis Points")]
-    public record BasisPoints : SecuritiesTransactionPrice26Choice_
+    public partial record BasisPoints : SecuritiesTransactionPrice26Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("BsisPts")]

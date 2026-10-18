@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice
     [IsoId("_wnwasTICEe2fXedS_ucFOA")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public record Portfolio : PortfolioCode5Choice_
+    public partial record Portfolio : PortfolioCode5Choice_
     {
         /// <summary>
         /// Unique code determined by the reporting counterparty to identify the portfolio if collateral is reported on a portfolio basis.

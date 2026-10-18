@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QLp0Ztp-Ed-ak6NoX_4Aeg_2077728599")]
 [DisplayName("Currency Exchange")]
-public record CurrencyExchange3
+public partial record CurrencyExchange3
 {
     /// <summary>
     /// Currency of the amount to be converted in a currency conversion.

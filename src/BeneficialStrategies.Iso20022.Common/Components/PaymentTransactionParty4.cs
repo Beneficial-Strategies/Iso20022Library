@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_15w68TEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Transaction Party4")]
-public record PaymentTransactionParty4
+public partial record PaymentTransactionParty4
 {
     /// <summary>
     /// Instructing Agent.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HRG-l24-EeiU9cctagi5ow")]
 [DisplayName("Payment Common")]
-public record PaymentCommon4
+public partial record PaymentCommon4
 {
     /// <summary>
     /// Origin of the payment (be it a member or a system or both).

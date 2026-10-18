@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
     [IsoId("_xG_LsU8SEe2PGo0mhYCh1g")]
     [DisplayName("Grain")]
     [IsoXmlTag("Grn")]
-    public record Grain : AssetClassCommodityAgricultural6Choice_
+    public partial record Grain : AssetClassCommodityAgricultural6Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

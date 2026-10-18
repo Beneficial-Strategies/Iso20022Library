@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueType1Choice
     /// </summary>
     [IsoId("_upJw4Hy7Eeu1BeE84IrnAQ")]
     [DisplayName("On Venue")]
-    public record OnVenue : TradingVenueType1Choice_
+    public partial record OnVenue : TradingVenueType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

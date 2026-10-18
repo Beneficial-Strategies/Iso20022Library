@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery10Choice
     [IsoId("_esoLY91dEeqxpKDfBZC1vg")]
     [DisplayName("Recurrent Query")]
     [IsoXmlTag("RcrntQry")]
-    public record RecurrentQuery : TradeReportQuery10Choice_
+    public partial record RecurrentQuery : TradeReportQuery10Choice_
     {
         /// <summary>
         /// Defines the type of recurrent query which is requested.

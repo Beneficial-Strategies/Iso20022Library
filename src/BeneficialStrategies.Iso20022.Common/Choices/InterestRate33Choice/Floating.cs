@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate33Choice
     [IsoId("_CRCiEyJLEe2zWP9pqvmqdw")]
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
-    public record Floating : InterestRate33Choice_
+    public partial record Floating : InterestRate33Choice_
     {
         /// <summary>
         /// Identifier of the security subject of the transaction

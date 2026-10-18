@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7DweURATEe6N57R8Wekj-w")]
 [DisplayName("Order Identification2")]
-public record OrderIdentification2
+public partial record OrderIdentification2
 {
     /// <summary>
     /// Order Book Identification.

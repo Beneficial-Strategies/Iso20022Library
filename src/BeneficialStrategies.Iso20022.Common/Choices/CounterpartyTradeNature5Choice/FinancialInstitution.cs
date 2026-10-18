@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature5Choice
     /// </summary>
     [IsoId("_97ZDEbsAEea-m5tPqiasmQ")]
     [DisplayName("Financial Institution")]
-    public record FinancialInstitution : CounterpartyTradeNature5Choice_
+    public partial record FinancialInstitution : CounterpartyTradeNature5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

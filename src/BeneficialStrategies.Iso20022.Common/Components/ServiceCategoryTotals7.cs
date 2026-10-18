@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xSxKsUw0EfCpsI1b9uv5FQ")]
 [DisplayName("Service Category Totals7")]
-public record ServiceCategoryTotals7
+public partial record ServiceCategoryTotals7
 {
     /// <summary>
     /// Identification of the customer which is invoiced.

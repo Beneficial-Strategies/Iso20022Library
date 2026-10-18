@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_hb3y8FGkEfC_v5ez7RpMHw")]
 [DisplayName("Cash Deposit Or Withdrawal Status Update V01")]
-public record CashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
+public partial record CashDepositOrWithdrawalStatusUpdateV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

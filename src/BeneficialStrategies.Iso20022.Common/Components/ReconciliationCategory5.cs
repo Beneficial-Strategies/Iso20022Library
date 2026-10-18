@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2PrtoK-8Ee69JssYImngCA")]
 [DisplayName("Reconciliation Category5")]
-public record ReconciliationCategory5
+public partial record ReconciliationCategory5
 {
     /// <summary>
     /// Reporting Type.

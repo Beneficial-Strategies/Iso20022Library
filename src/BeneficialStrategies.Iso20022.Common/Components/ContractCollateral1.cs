@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5ysDEdOOEeSQ_-lmj1tzfw")]
 [DisplayName("Contract Collateral")]
-public record ContractCollateral1
+public partial record ContractCollateral1
 {
     /// <summary>
     /// Total amount of the collateral as defined in the contract.

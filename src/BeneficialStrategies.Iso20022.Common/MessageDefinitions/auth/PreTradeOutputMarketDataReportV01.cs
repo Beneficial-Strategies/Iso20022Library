@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_dilHEGIUEfCeoPFCHQnhvA")]
 [DisplayName("Pre Trade Output Market Data Report V01")]
-public record PreTradeOutputMarketDataReportV01 : IOuterRecord
+public partial record PreTradeOutputMarketDataReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

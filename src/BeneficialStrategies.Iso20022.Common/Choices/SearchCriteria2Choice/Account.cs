@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria2Choice
     /// Account.
     /// </summary>
     [DisplayName("Account")]
-    public record Account : SearchCriteria2Choice_
+    public partial record Account : SearchCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

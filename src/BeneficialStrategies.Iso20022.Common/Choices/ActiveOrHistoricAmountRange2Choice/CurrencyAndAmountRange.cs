@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveOrHistoricAmountRange2Choi
     [IsoId("_PPV2VZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Currency And Amount Range")]
     [IsoXmlTag("CcyAndAmtRg")]
-    public record CurrencyAndAmountRange : ActiveOrHistoricAmountRange2Choice_
+    public partial record CurrencyAndAmountRange : ActiveOrHistoricAmountRange2Choice_
     {
         /// <summary>
         /// Specified amount or amount range.

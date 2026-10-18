@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName6Choice
     /// </summary>
     [IsoId("_ZOcqQSc1EeaCIe3n1Gx9ug")]
     [DisplayName("ISIN")]
-    public record ISIN : BenchmarkCurveName6Choice_
+    public partial record ISIN : BenchmarkCurveName6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

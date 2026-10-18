@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i6SKoO3sEeaWjpoyrnG6Rw")]
 [DisplayName("Internalisation Data Volume")]
-public record InternalisationDataVolume1
+public partial record InternalisationDataVolume1
 {
     /// <summary>
     /// Specifies the aggregated volume of internalised settlement instructions, in terms of:

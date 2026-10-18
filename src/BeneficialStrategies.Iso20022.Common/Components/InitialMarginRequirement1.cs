@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BTNckKpwEeamNLogr5TkIQ")]
 [DisplayName("Initial Margin Requirement")]
-public record InitialMarginRequirement1
+public partial record InitialMarginRequirement1
 {
     /// <summary>
     /// Liability a clearing member has to a central counterparty with respect to potential future exposures.

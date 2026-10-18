@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X7TZMcIrEeirIahpoG2ifA")]
 [DisplayName("Master Agreement")]
-public record MasterAgreement5
+public partial record MasterAgreement5
 {
     /// <summary>
     /// Reference to any master agreement, if existent (such as ISDA Master Agreement; Master Power Purchase and Sale Agreement; International ForEx Master Agreement; European Master Agreement or any local Master Agreements).

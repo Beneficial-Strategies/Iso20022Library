@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation3Choice
     [IsoId("_PQNwEVo3Ee23K4GXSpBSeg")]
     [DisplayName("Confirmed")]
     [IsoXmlTag("Confd")]
-    public record Confirmed : TradeConfirmation3Choice_
+    public partial record Confirmed : TradeConfirmation3Choice_
     {
         /// <summary>
         /// Specifies whether the contract was confirmed electronically or non-electronically.

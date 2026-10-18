@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitType1Choice
     /// </summary>
     [IsoId("_79FX8qMgEeCJ6YNENx4h-w_872165388")]
     [DisplayName("Proprietary")]
-    public record Proprietary : LimitType1Choice_
+    public partial record Proprietary : LimitType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -25,5 +25,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(EquityDerivative3Choice.Other), nameof(EquityDerivative3Choice.Other))]
     [IsoId("_hW-FN2lPEeaLAKoEUNsD9g")]
     [DisplayName("Equity Derivative 3 Choice")]
-    public abstract record EquityDerivative3Choice_ { }
+    public abstract partial record EquityDerivative3Choice_ { }
 }

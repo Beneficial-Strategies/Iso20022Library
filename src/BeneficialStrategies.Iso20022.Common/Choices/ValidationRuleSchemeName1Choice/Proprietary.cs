@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ValidationRuleSchemeName1Choice
     /// </summary>
     [IsoId("_kAjWZdjGEeSD0e0ybx5L5Q")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ValidationRuleSchemeName1Choice_
+    public partial record Proprietary : ValidationRuleSchemeName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

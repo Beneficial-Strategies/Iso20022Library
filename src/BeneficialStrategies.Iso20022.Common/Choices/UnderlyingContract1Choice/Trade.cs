@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
     [IsoId("_x2Ue89LJEeSdq5yU2aaSNw")]
     [DisplayName("Trade")]
     [IsoXmlTag("Trad")]
-    public record Trade : UnderlyingContract1Choice_
+    public partial record Trade : UnderlyingContract1Choice_
     {
         /// <summary>
         /// Contract document referenced from this trade agreement.

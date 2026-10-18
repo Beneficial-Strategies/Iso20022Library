@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__oKQ-QKxEe2rHs6fbn9-0A")]
 [DisplayName("Payment Search")]
-public record PaymentSearch9
+public partial record PaymentSearch9
 {
     /// <summary>
     /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original payment transaction message. |Usage: this is the former transaction reference.

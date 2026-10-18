@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_5aP-IeUTEem3X-64-NKdqg")]
 [DisplayName("CCP Collateral Report V")]
-public record CCPCollateralReportV01 : IOuterRecord
+public partial record CCPCollateralReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

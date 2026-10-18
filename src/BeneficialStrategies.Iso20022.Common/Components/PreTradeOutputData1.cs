@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EoadoGIWEfCeoPFCHQnhvA")]
 [DisplayName("Pre Trade Output Data1")]
-public record PreTradeOutputData1
+public partial record PreTradeOutputData1
 {
     /// <summary>
     /// Code used to identify the financial instrument.

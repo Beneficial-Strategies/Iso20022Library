@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("0e985a49-dfb5-4828-875e-f0232855688a")]
 [DisplayName("Booking Confirmation8")]
-public record BookingConfirmation8
+public partial record BookingConfirmation8
 {
     /// <summary>
     /// Amount of money in the transaction or entry that has debited or credited an account.

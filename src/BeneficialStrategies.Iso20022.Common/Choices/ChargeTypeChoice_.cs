@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RIcz1Np-Ed-ak6NoX_4Aeg_-1267403817")]
     [DisplayName("Charge Type Choice")]
-    public abstract record ChargeTypeChoice_ { }
+    public abstract partial record ChargeTypeChoice_ { }
 }

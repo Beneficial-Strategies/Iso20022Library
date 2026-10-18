@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x9xzwVyGEe24CqbZJK5XxA")]
 [DisplayName("Rejection Statistics")]
-public record RejectionStatistics8
+public partial record RejectionStatistics8
 {
     /// <summary>
     /// Data specific to counterparties and related fields.

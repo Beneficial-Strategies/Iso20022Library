@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure8Choice
     [IsoId("_7nKuQDNlEe2UWZuK9pqFtg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnitOfMeasure8Choice_
+    public partial record Proprietary : UnitOfMeasure8Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

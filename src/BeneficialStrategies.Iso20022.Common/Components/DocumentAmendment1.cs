@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3IeEUNLlEeSDLevdaFPXHw")]
 [DisplayName("Document Amendment")]
-public record DocumentAmendment1
+public partial record DocumentAmendment1
 {
     /// <summary>
     /// Provides the correction sequence number used to identify the amendment.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
     [IsoId("_kyCmN__9Eemefbt-QjTNnA")]
     [DisplayName("Margin Lending")]
     [IsoXmlTag("MrgnLndg")]
-    public record MarginLending : TransactionCollateralData14Choice_
+    public partial record MarginLending : TransactionCollateralData14Choice_
     {
         /// <summary>
         /// Identifier of the security subject of the transaction.

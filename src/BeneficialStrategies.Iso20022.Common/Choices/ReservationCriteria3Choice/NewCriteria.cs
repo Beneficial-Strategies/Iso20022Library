@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria3Choice
     [IsoId("_EBPJRW4-EeiU9cctagi5ow")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : ReservationCriteria3Choice_
+    public partial record NewCriteria : ReservationCriteria3Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

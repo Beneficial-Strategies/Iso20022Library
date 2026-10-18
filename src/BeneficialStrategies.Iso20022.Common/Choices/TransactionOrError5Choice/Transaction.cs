@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError5Choice
     [IsoId("_dnujsdcZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public record Transaction : TransactionOrError5Choice_
+    public partial record Transaction : TransactionOrError5Choice_
     {
         /// <summary>
         /// Destination of the payment (be it a member or a system or both).

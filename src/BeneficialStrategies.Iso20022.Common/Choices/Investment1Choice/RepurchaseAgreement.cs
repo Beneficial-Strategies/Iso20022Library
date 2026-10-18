@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     [IsoId("_AIsK8LJXEeaYqc4G3TTwhA")]
     [DisplayName("Repurchase Agreement")]
     [IsoXmlTag("RpAgrmt")]
-    public record RepurchaseAgreement : Investment1Choice_
+    public partial record RepurchaseAgreement : Investment1Choice_
     {
         /// <summary>
         /// Date on which the repurchase agreement matures.

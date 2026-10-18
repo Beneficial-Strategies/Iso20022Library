@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport21Choice
     [IsoId("_SKn4Z8g2EeuGrNSsxk3B0A")]
     [DisplayName("Trade Update")]
     [IsoXmlTag("TradUpd")]
-    public record TradeUpdate : TradeReport21Choice_
+    public partial record TradeUpdate : TradeReport21Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

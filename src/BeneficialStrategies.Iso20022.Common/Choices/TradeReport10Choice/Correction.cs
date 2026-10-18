@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     [IsoId("_38nfXf_qEemm3skPVSMJQg")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public record Correction : TradeReport10Choice_
+    public partial record Correction : TradeReport10Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

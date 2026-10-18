@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Fertilizer.
     /// </summary>
     [DisplayName("Fertilizer")]
-    public record Fertilizer : AssetClassCommodity7Choice_
+    public partial record Fertilizer : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_70w5pTEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Query Criteria12")]
-public record IntraBalanceQueryCriteria12
+public partial record IntraBalanceQueryCriteria12
 {
     /// <summary>
     /// Modification Request Identification.

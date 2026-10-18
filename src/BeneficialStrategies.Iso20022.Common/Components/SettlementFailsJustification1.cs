@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TKY2UMs0EemSav3hRKzWyg")]
 [DisplayName("Settlement Fails Justification")]
-public record SettlementFailsJustification1
+public partial record SettlementFailsJustification1
 {
     /// <summary>
     /// Specifies the value of settlement fails, which does not exceed the limit value as specified in the local regulation.

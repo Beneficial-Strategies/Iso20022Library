@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_1xNvwNLgEeSdq5yU2aaSNw")]
 [DisplayName("Payment Regulatory Information Notification V")]
-public record PaymentRegulatoryInformationNotificationV01 : IOuterRecord
+public partial record PaymentRegulatoryInformationNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

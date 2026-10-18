@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7KNIxRTuEe61h9tfoUrWyw")]
 [DisplayName("Position Set Buyer And Seller2")]
-public record PositionSetBuyerAndSeller2
+public partial record PositionSetBuyerAndSeller2
 {
     /// <summary>
     /// Buyer.

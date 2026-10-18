@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice
     /// </summary>
     [IsoId("_BzEmOiYyEeWHeosc_5RQEw")]
     [DisplayName("Energy")]
-    public record Energy : AssetClassCommodity2Choice_
+    public partial record Energy : AssetClassCommodity2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

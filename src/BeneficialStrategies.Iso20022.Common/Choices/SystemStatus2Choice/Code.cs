@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemStatus2Choice
     /// </summary>
     [IsoId("_ytFEMRbpEeOy-PlRuFSUzQ")]
     [DisplayName("Code")]
-    public record Code : SystemStatus2Choice_
+    public partial record Code : SystemStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

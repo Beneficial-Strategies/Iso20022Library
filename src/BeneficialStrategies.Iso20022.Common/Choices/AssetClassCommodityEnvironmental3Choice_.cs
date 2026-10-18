@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9bs7AU8REe2PGo0mhYCh1g")]
     [DisplayName("Asset Class Commodity Environmental 3 Choice")]
-    public abstract record AssetClassCommodityEnvironmental3Choice_ { }
+    public abstract partial record AssetClassCommodityEnvironmental3Choice_ { }
 }

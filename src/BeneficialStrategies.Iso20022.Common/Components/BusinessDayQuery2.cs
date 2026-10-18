@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x03f5ZlcEeeE1Ya-LgRsuQ")]
 [DisplayName("Business Day Query")]
-public record BusinessDayQuery2
+public partial record BusinessDayQuery2
 {
     /// <summary>
     /// Specifies the type of matching items to be returned in the response to the query.

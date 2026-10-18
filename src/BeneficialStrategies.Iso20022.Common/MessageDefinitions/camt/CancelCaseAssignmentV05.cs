@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3Cc7zEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Cancel Case Assignment V05")]
-public record CancelCaseAssignmentV05 : IOuterRecord
+public partial record CancelCaseAssignmentV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

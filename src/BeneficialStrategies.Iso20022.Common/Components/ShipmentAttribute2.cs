@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u9kHQbGYEeuSTr8k0UEM8A")]
 [DisplayName("Shipment Attribute")]
-public record ShipmentAttribute2
+public partial record ShipmentAttribute2
 {
     /// <summary>
     /// Shipment conditions.

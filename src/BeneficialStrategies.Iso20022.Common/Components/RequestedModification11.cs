@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9aqIITEsEe6GxLzpkVnWYg")]
 [DisplayName("Requested Modification11")]
-public record RequestedModification11
+public partial record RequestedModification11
 {
     /// <summary>
     /// Instruction Identification.

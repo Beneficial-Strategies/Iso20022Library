@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BNmBYdR7EemZdYGWu384Zw")]
 [DisplayName("Compare Collateral Quality Type")]
-public record CompareCollateralQualityType2
+public partial record CompareCollateralQualityType2
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3P4nTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Modify Limit V08")]
-public record ModifyLimitV08 : IOuterRecord
+public partial record ModifyLimitV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

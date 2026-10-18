@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UwBXetp-Ed-ak6NoX_4Aeg_-853943641")]
 [DisplayName("Investment Fund Transaction Out Type")]
-public record InvestmentFundTransactionOutType1
+public partial record InvestmentFundTransactionOutType1
 {
     /// <summary>
     /// Type of transaction, expressed as a code.

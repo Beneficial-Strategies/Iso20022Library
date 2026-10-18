@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hPeV9frgEe2mU4Wi2q3MzQ")]
 [DisplayName("Trade Query Criteria14")]
-public record TradeQueryCriteria14
+public partial record TradeQueryCriteria14
 {
     /// <summary>
     /// Trade Life Cycle History.

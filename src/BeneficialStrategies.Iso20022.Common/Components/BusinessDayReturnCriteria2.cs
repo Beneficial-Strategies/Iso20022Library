@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_75XVlqMgEeCJ6YNENx4h-w_-59874421")]
 [DisplayName("Business Day Return Criteria")]
-public record BusinessDayReturnCriteria2
+public partial record BusinessDayReturnCriteria2
 {
     /// <summary>
     /// Indicates whether the system date is requested.

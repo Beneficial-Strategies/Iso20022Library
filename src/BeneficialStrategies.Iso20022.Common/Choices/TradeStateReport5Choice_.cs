@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TradeStateReport5Choice.State), nameof(TradeStateReport5Choice.State))]
     [IsoId("_x9GcscK-EeuCIrYISEfoUg")]
     [DisplayName("Trade State Report 5 Choice")]
-    public abstract record TradeStateReport5Choice_ { }
+    public abstract partial record TradeStateReport5Choice_ { }
 }

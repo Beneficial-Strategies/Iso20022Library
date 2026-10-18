@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZVa-kGhoEeaqBY_HJicULw")]
 [DisplayName("Securities Transaction Indicator")]
-public record SecuritiesTransactionIndicator2
+public partial record SecuritiesTransactionIndicator2
 {
     /// <summary>
     /// Indicates whether the transaction was executed under a pre-trade waiver.

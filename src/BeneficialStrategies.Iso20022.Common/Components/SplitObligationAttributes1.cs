@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("989c79b0-c096-45d8-b73c-e0001d518247")]
 [DisplayName("Split Obligation Attributes1")]
-public record SplitObligationAttributes1
+public partial record SplitObligationAttributes1
 {
     /// <summary>
     /// Reference for the split obligation.

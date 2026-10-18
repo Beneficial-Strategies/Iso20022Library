@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
     [IsoId("_hY22AcK4EeuFNp8LZAnorg")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public record Transaction : TransactionIdentification3Choice_
+    public partial record Transaction : TransactionIdentification3Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MMF1181VEem4K5qLxnWwMA")]
 [DisplayName("Commodity")]
-public record Commodity20
+public partial record Commodity20
 {
     /// <summary>
     /// Details on commodities assignments to sectors.

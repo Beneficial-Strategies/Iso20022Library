@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CXmCmFRtEe23M4WgERMsYw")]
 [DisplayName("Investigation Status2")]
-public record InvestigationStatus2
+public partial record InvestigationStatus2
 {
     /// <summary>
     /// Status.

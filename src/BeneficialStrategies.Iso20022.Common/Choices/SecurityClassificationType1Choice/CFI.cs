@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType1Choic
     /// </summary>
     [IsoId("_Q7pG4tp-Ed-ak6NoX_4Aeg_-1460086177")]
     [DisplayName("CFI")]
-    public record CFI : SecurityClassificationType1Choice_
+    public partial record CFI : SecurityClassificationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

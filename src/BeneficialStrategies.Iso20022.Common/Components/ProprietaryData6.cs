@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1gW-cYKYEee7hrXqLO3yQg")]
 [DisplayName("Proprietary Data")]
-public record ProprietaryData6
+public partial record ProprietaryData6
 {
     /// <summary>
     /// Proprietary content.

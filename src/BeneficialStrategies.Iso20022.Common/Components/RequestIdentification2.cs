@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iqWVsVQVEfG3m41zXZkDsg")]
 [DisplayName("Request Identification2")]
-public record RequestIdentification2
+public partial record RequestIdentification2
 {
     /// <summary>
     /// Unique identification for the order.

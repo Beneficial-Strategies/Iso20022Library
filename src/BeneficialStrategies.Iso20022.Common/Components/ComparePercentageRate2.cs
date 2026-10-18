@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-QDcwdR7EemZdYGWu384Zw")]
 [DisplayName("Compare Percentage Rate")]
-public record ComparePercentageRate2
+public partial record ComparePercentageRate2
 {
     /// <summary>
     /// Information for the first side of the transaction.

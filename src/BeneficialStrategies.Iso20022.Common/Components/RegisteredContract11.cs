@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Gyw1EbGJEeuSTr8k0UEM8A")]
 [DisplayName("Registered Contract")]
-public record RegisteredContract11
+public partial record RegisteredContract11
 {
     /// <summary>
     /// Unique identification of the contract registration creation, amendment or closure request.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
     [IsoId("_MzHkRcK8EeuMhqg3CsEu6Q")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public record Correction : ReuseDataReport6Choice_
+    public partial record Correction : ReuseDataReport6Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

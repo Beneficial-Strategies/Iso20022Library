@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassDetailedSubProductType
     /// </summary>
     [IsoId("_ZDUjII16Eeet3cKIYK84nw")]
     [DisplayName("Code")]
-    public record Code : AssetClassDetailedSubProductType1Choice_
+    public partial record Code : AssetClassDetailedSubProductType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

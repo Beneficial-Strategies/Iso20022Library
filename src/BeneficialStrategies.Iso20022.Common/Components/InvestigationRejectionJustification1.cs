@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T-ZtQNp-Ed-ak6NoX_4Aeg_947706668")]
 [DisplayName("Investigation Rejection Justification")]
-public record InvestigationRejectionJustification1
+public partial record InvestigationRejectionJustification1
 {
     /// <summary>
     /// Reason for the rejection of a case assignment, in a coded form.

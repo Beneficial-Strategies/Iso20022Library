@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice
     /// </summary>
     [IsoId("_NxaDAIfYEeu9_PKSQNOmdg")]
     [DisplayName("Other")]
-    public record Other : IssuerJurisdiction1Choice_
+    public partial record Other : IssuerJurisdiction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

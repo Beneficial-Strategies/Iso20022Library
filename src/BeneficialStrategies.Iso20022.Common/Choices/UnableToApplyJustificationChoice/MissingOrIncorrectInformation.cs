@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustificationChoice
     [IsoId("_VFn0ENp-Ed-ak6NoX_4Aeg_478745608")]
     [DisplayName("Missing Or Incorrect Information")]
     [IsoXmlTag("MssngOrIncrrctInf")]
-    public record MissingOrIncorrectInformation : UnableToApplyJustificationChoice_
+    public partial record MissingOrIncorrectInformation : UnableToApplyJustificationChoice_
     {
         /// <summary>
         /// Indicates the missing information.

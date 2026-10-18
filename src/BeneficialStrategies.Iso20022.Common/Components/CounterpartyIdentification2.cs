@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hueBxCPmEem1bPJG0YYPpw")]
 [DisplayName("Counterparty Identification")]
-public record CounterpartyIdentification2
+public partial record CounterpartyIdentification2
 {
     /// <summary>
     /// Identification of the counterparty in the transaction.

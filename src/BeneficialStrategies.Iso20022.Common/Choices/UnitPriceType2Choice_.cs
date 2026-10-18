@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_N23jAQc_EeSyIPzOZ6VzBQ")]
     [DisplayName("Unit Price Type 2 Choice")]
-    public abstract record UnitPriceType2Choice_ { }
+    public abstract partial record UnitPriceType2Choice_ { }
 }

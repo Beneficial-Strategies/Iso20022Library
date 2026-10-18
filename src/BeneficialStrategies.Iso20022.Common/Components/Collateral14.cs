@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hc-tS6idEeWHO_l3hf2rlA")]
 [DisplayName("Collateral")]
-public record Collateral14
+public partial record Collateral14
 {
     /// <summary>
     /// Provides the values of the security pledged as collateral.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityType1Choice
     [IsoId("_4AwGYQaxEeS3lpTattq7hg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : QuantityType1Choice_
+    public partial record Proprietary : QuantityType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

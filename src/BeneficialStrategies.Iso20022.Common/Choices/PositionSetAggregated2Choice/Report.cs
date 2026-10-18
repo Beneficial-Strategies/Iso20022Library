@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated2Choice
     /// Report.
     /// </summary>
     [DisplayName("Report")]
-    public record Report : PositionSetAggregated2Choice_
+    public partial record Report : PositionSetAggregated2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

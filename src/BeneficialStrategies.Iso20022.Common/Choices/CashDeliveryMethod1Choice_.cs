@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CashDeliveryMethod1Choice.Proprietary))]
     [JsonDerivedType(typeof(CashDeliveryMethod1Choice.Code))]
     [JsonDerivedType(typeof(CashDeliveryMethod1Choice.Proprietary))]
-    public abstract record CashDeliveryMethod1Choice_
+    public abstract partial record CashDeliveryMethod1Choice_
     {
     }
 }

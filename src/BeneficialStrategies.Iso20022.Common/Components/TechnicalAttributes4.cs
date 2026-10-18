@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bzI8cXhCEeu3kecHd7QKUQ")]
 [DisplayName("Technical Attributes")]
-public record TechnicalAttributes4
+public partial record TechnicalAttributes4
 {
     /// <summary>
     /// List of possible values for TRs reconciliation purposes.

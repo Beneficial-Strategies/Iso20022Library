@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xQ9M3Uw0EfCpsI1b9uv5FQ")]
 [DisplayName("Invoice Totals8")]
-public record InvoiceTotals8
+public partial record InvoiceTotals8
 {
     /// <summary>
     /// Unique identification of a securities account or cash account belonging to billed customer.

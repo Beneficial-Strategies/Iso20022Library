@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_BRbDkaaUEeqZmriXpMtonA")]
     [DisplayName("Instrument Or Sub Class Identification 2 Choice")]
-    public abstract record InstrumentOrSubClassIdentification2Choice_ { }
+    public abstract partial record InstrumentOrSubClassIdentification2Choice_ { }
 }

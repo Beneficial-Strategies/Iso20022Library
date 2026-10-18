@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kJGBQUThEe-J4uL5kPsWHg")]
 [DisplayName("Cleared Product2")]
-public record ClearedProduct2
+public partial record ClearedProduct2
 {
     /// <summary>
     /// Trading Venue.

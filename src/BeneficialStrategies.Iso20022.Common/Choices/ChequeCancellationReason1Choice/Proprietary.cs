@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChequeCancellationReason1Choice
     /// </summary>
     [IsoId("_kwwc_LtvEeq_cfXrH83Rcw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ChequeCancellationReason1Choice_
+    public partial record Proprietary : ChequeCancellationReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__lXa7249EeiU9cctagi5ow")]
     [DisplayName("Limit Structure 2 Choice")]
-    public abstract record LimitStructure2Choice_ { }
+    public abstract partial record LimitStructure2Choice_ { }
 }

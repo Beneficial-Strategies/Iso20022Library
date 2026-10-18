@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("698216e6-8441-43df-8600-27592010f500")]
 [DisplayName("Original Notification18")]
-public record OriginalNotification18
+public partial record OriginalNotification18
 {
     /// <summary>
     /// Point to point reference, as assigned by the original sender, to unambiguously identify the original notification to receive message.

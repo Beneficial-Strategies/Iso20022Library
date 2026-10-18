@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QGNo5qlEeGSON8vddiWzQ_288570123")]
 [DisplayName("Billing Method")]
-public record BillingMethod4
+public partial record BillingMethod4
 {
     /// <summary>
     /// Specifies the details of the taxable services using tax calculation method C.

@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QKoAqdEdEei798TPbKJMuw")]
     [DisplayName("Payment Status Reason 1 Choice")]
-    public abstract record PaymentStatusReason1Choice_ { }
+    public abstract partial record PaymentStatusReason1Choice_ { }
 }

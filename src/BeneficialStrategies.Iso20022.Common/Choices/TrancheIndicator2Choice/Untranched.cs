@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
     /// </summary>
     [IsoId("_523O0byOEeaUov4jN5X9Qw")]
     [DisplayName("Untranched")]
-    public record Untranched : TrancheIndicator2Choice_
+    public partial record Untranched : TrancheIndicator2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

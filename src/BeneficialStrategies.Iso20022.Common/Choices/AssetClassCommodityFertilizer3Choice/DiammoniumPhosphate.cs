@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
     [IsoId("_K_pO07v7EeiLRYqS-r-R-A")]
     [DisplayName("Diammonium Phosphate")]
     [IsoXmlTag("DmmnmPhspht")]
-    public record DiammoniumPhosphate : AssetClassCommodityFertilizer3Choice_
+    public partial record DiammoniumPhosphate : AssetClassCommodityFertilizer3Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

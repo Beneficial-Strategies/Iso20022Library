@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6TrGE5qlEeGSON8vddiWzQ_2115552253")]
 [DisplayName("Tax Reason")]
-public record TaxReason1
+public partial record TaxReason1
 {
     /// <summary>
     /// Reason why the service is taxed, in a coded form.

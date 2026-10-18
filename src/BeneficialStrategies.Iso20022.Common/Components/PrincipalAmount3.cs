@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-cnGsa5MEeuo-IflVgGqiA")]
 [DisplayName("Principal Amount")]
-public record PrincipalAmount3
+public partial record PrincipalAmount3
 {
     /// <summary>
     /// Cash value to be settled as of the start date of the transaction.

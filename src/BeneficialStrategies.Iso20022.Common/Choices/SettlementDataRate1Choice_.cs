@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yFQMA8s0EemSav3hRKzWyg")]
     [DisplayName("Settlement Data Rate 1 Choice")]
-    public abstract record SettlementDataRate1Choice_ { }
+    public abstract partial record SettlementDataRate1Choice_ { }
 }

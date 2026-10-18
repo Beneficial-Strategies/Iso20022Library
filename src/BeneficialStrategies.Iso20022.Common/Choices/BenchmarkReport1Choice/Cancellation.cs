@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     [IsoId("_P2VfdDrWEeedCZZ8dIPp6g")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public record Cancellation : BenchmarkReport1Choice_
+    public partial record Cancellation : BenchmarkReport1Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice messages.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction3Choice
     [IsoId("_S-5Ek66BEeexrtTFgmVD3Q")]
     [DisplayName("Individual")]
     [IsoXmlTag("Indv")]
-    public record Individual : CardTransaction3Choice_
+    public partial record Individual : CardTransaction3Choice_
     {
         /// <summary>
         /// Data related to an integrated circuit card application.

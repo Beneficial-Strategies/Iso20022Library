@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZFrYoeJJEe-5wchdE0oJYw")]
     [DisplayName("Industry Sector3Choice")]
-    public abstract record IndustrySector3Choice_ { }
+    public abstract partial record IndustrySector3Choice_ { }
 }

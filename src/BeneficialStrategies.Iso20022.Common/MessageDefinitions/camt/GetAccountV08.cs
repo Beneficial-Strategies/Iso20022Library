@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3MN4zEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Get Account V08")]
-public record GetAccountV08 : IOuterRecord
+public partial record GetAccountV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MZWWcD02Ee-thIfLZ94a1w")]
 [DisplayName("Settlement Instruction19")]
-public record SettlementInstruction19
+public partial record SettlementInstruction19
 {
     /// <summary>
     /// Requested Settlement Date.

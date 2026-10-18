@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitJournalReportOrError8Choice
     /// Business Error.
     /// </summary>
     [DisplayName("Business Error")]
-    public record BusinessError : LimitJournalReportOrError8Choice_
+    public partial record BusinessError : LimitJournalReportOrError8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZjhR4NGYEeaQk737TH1Fzw")]
     [DisplayName("Trade Query Execution Frequency 1 Choice")]
-    public abstract record TradeQueryExecutionFrequency1Choice_ { }
+    public abstract partial record TradeQueryExecutionFrequency1Choice_ { }
 }

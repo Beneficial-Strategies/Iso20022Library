@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i3sL4PPYEeS_qLctCs2aRQ")]
 [DisplayName("Party Identification")]
-public record PartyIdentification76
+public partial record PartyIdentification76
 {
     /// <summary>
     /// Identifies the owner of the investment account which is used to acquire or sell financial instruments.

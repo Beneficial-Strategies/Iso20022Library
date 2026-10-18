@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord1Choice
     /// Compensation.
     /// </summary>
     [DisplayName("Compensation")]
-    public record Compensation : InvestigationDataRecord1Choice_
+    public partial record Compensation : InvestigationDataRecord1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
     [IsoId("_tqS1MFkyEeGeoaLUQk__nA_990197898")]
     [DisplayName("Original And Current Face Amount")]
     [IsoXmlTag("OrgnlAndCurFaceAmt")]
-    public record OriginalAndCurrentFaceAmount : TransactionQuantities2Choice_
+    public partial record OriginalAndCurrentFaceAmount : TransactionQuantities2Choice_
     {
         /// <summary>
         /// Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument.

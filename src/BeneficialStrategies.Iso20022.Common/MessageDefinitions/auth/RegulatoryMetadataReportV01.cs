@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// </summary>
 [IsoId("_7a6oofgwEe-yU4gaFULAeA")]
 [DisplayName("Regulatory Metadata Report V01")]
-public record RegulatoryMetadataReportV01 : IOuterRecord
+public partial record RegulatoryMetadataReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

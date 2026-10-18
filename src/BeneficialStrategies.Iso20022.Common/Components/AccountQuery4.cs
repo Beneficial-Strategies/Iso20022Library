@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Kcs4TEyEe6g-ffJsqGiSA")]
 [DisplayName("Account Query4")]
-public record AccountQuery4
+public partial record AccountQuery4
 {
     /// <summary>
     /// Query Type.

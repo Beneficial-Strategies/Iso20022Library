@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_mBwkwfOFEeaS7fYULSI4_Q")]
     [DisplayName("Interest Rate Frequency 2 Choice")]
-    public abstract record InterestRateFrequency2Choice_ { }
+    public abstract partial record InterestRateFrequency2Choice_ { }
 }

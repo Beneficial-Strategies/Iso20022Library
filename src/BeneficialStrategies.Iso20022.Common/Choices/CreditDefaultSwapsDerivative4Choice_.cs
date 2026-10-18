@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xH_acSe0Eei12pGEsJIAeQ")]
     [DisplayName("Credit Default Swaps Derivative 4 Choice")]
-    public abstract record CreditDefaultSwapsDerivative4Choice_ { }
+    public abstract partial record CreditDefaultSwapsDerivative4Choice_ { }
 }

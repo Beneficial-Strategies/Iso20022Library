@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice
     /// Transaction Status.
     /// </summary>
     [DisplayName("Transaction Status")]
-    public record TransactionStatus : InvestigationDataRecord7Choice_
+    public partial record TransactionStatus : InvestigationDataRecord7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

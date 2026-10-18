@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Oo0tENLiEeSdq5yU2aaSNw")]
 [DisplayName("Transaction Certificate")]
-public record TransactionCertificate2
+public partial record TransactionCertificate2
 {
     /// <summary>
     /// Reference of the transaction, that is the underlying payment instruction or statement entry.

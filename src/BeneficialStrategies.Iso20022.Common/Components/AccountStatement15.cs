@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("f2d5db70-d297-4049-9ae1-97fe2c32f5ef")]
 [DisplayName("Account Statement15")]
-public record AccountStatement15
+public partial record AccountStatement15
 {
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.

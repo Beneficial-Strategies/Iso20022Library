@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cqZj4a5hEeuo-IflVgGqiA")]
 [DisplayName("Compare Exposure Type")]
-public record CompareExposureType3
+public partial record CompareExposureType3
 {
     /// <summary>
     /// Information for the first side of the transaction.

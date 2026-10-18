@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ON_m8XY3Ee2HyLKFbMrSWQ")]
 [DisplayName("Compensation Request1")]
-public record CompensationRequest1
+public partial record CompensationRequest1
 {
     /// <summary>
     /// Compensation Account.

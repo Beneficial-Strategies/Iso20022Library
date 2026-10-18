@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_75dzcTEyEe6g-ffJsqGiSA")]
 [DisplayName("Transaction Parties12")]
-public record TransactionParties12
+public partial record TransactionParties12
 {
     /// <summary>
     /// Initiating Party.

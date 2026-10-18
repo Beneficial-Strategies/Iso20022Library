@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QZvpZqlEeGSON8vddiWzQ_856759895")]
 [DisplayName("Billing Statement")]
-public record BillingStatement1
+public partial record BillingStatement1
 {
     /// <summary>
     /// Identification of the customer billing statement.

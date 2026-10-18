@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pRc2MKs_Eeayv9XxdmMwKQ")]
 [DisplayName("Portfolio Stress Test Result")]
-public record PortfolioStressTestResult1
+public partial record PortfolioStressTestResult1
 {
     /// <summary>
     /// Identification of the portfolio.

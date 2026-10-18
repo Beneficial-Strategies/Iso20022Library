@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Rates1Choice
     /// </summary>
     [IsoId("_VdT5QHg2EeuXJdYjLmnO3w")]
     [DisplayName("Floating")]
-    public record Floating : Rates1Choice_
+    public partial record Floating : Rates1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

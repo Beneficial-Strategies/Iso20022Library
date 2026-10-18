@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D6Df4CDwEeahCJeThTBhHA")]
 [DisplayName("Rate Adjustment")]
-public record RateAdjustment1
+public partial record RateAdjustment1
 {
     /// <summary>
     /// Specifies the rate as determined by the rate schedule.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ogYF4RAXEe6N57R8Wekj-w")]
 [DisplayName("Order Data3")]
-public record OrderData3
+public partial record OrderData3
 {
     /// <summary>
     /// Order Identification Data.

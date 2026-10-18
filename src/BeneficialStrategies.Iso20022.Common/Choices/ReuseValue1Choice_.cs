@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReuseValue1Choice.Estimated), nameof(ReuseValue1Choice.Estimated))]
     [IsoId("_MSGu8IxnEeap1-whlAlpOw")]
     [DisplayName("Reuse Value 1 Choice")]
-    public abstract record ReuseValue1Choice_ { }
+    public abstract partial record ReuseValue1Choice_ { }
 }

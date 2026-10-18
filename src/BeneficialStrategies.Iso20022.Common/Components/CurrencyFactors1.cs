@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SvDFDAEcEeCQm6a_G2yO_w_737045003")]
 [DisplayName("Currency Factors")]
-public record CurrencyFactors1
+public partial record CurrencyFactors1
 {
     /// <summary>
     /// Currency of the underlying currency specific amounts and ratios used in the pay-in schedule calculation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e329QJUnEeaYkf5FCqYMeA")]
 [DisplayName("Net Report Data")]
-public record NetReportData1
+public partial record NetReportData1
 {
     /// <summary>
     /// Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.

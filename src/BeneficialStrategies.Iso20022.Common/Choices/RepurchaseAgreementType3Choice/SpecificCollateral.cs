@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice
     [IsoId("_BqvK8eoaEeadseq5W5YLvQ")]
     [DisplayName("Specific Collateral")]
     [IsoXmlTag("SpcfcColl")]
-    public record SpecificCollateral : RepurchaseAgreementType3Choice_
+    public partial record SpecificCollateral : RepurchaseAgreementType3Choice_
     {
         /// <summary>
         /// Identification of collateral placed as security for repo.

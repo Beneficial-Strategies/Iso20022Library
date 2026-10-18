@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Uu-Omtp-Ed-ak6NoX_4Aeg_1656814301")]
 [DisplayName("Fund Detailed Confirmed Cash Forecast Report")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record FundDetailedConfirmedCashForecastReport1
+public partial record FundDetailedConfirmedCashForecastReport1
 {
     /// <summary>
     /// Information related to the cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.

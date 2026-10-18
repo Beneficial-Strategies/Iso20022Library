@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("99acbf70-3b0e-4ba6-b8d3-a9086352e2b8")]
 [DisplayName("Payment Transaction176")]
-public record PaymentTransaction176
+public partial record PaymentTransaction176
 {
     /// <summary>
     /// Unique identification, as assigned by the assigner, to unambiguously identify a cancellation request.

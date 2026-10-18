@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitJournalReportOrError8Choice
     /// Limit Journal.
     /// </summary>
     [DisplayName("Limit Journal")]
-    public record LimitJournal : LimitJournalReportOrError8Choice_
+    public partial record LimitJournal : LimitJournalReportOrError8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NameOrSector1Choice
     /// </summary>
     [IsoId("_6URv4YInEeWA9fc11zJf1Q")]
     [DisplayName("Sector")]
-    public record Sector : NameOrSector1Choice_
+    public partial record Sector : NameOrSector1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ServiceCategory1Choice
     /// <summary>Service category expressed as a proprietary code.</summary>
     [IsoId("_kjVzcJudEey__7eNd9lW5Q")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ServiceCategory1Choice_
+    public partial record Proprietary : ServiceCategory1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

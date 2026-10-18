@@ -13,5 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationResult1Choice
     /// </summary>
     [IsoId("_X3RjXGgkEeGHuf0_3c6vdw")]
     [DisplayName("Result")]
-    public record Result : InvestigationResult1Choice_ { }
+    public partial record Result : InvestigationResult1Choice_ { }
 }

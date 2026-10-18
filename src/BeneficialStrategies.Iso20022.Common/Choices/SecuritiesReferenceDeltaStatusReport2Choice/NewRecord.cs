@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
     [IsoId("_2XC94Hv0EeanCNPcMT7sSg")]
     [DisplayName("New Record")]
     [IsoXmlTag("NewRcrd")]
-    public record NewRecord : SecuritiesReferenceDeltaStatusReport2Choice_
+    public partial record NewRecord : SecuritiesReferenceDeltaStatusReport2Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

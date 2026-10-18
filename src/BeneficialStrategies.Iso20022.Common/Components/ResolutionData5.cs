@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xIfkMTEyEe6g-ffJsqGiSA")]
 [DisplayName("Resolution Data5")]
-public record ResolutionData5
+public partial record ResolutionData5
 {
     /// <summary>
     /// End To End Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nWYekSGkEeqlG_HhjTmcZg")]
 [DisplayName("Settlement Failure Reason")]
-public record SettlementFailureReason3
+public partial record SettlementFailureReason3
 {
     /// <summary>
     /// Average duration of settlement fails as number of days (difference between actual settlement date and intended settlement date, weighted for the value of the settlement fail).

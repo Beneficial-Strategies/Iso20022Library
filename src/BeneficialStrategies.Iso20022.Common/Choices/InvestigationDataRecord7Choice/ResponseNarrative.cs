@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord7Choice
     /// Response Narrative.
     /// </summary>
     [DisplayName("Response Narrative")]
-    public record ResponseNarrative : InvestigationDataRecord7Choice_
+    public partial record ResponseNarrative : InvestigationDataRecord7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PgXwZqlEeGSON8vddiWzQ_-423301635")]
 [DisplayName("Billing Service Parameters")]
-public record BillingServiceParameters1
+public partial record BillingServiceParameters1
 {
     /// <summary>
     /// Specifies the details to fully identify the bank service.

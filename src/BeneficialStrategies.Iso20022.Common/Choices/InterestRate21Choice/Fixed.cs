@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate21Choice
     [IsoId("_GPqvsQ1IEeqV4s5SpzR1dQ")]
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
-    public record Fixed : InterestRate21Choice_
+    public partial record Fixed : InterestRate21Choice_
     {
         /// <summary>
         /// An indication of the fixed rate used.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SupervisingAuthorityIdentificati
     /// </summary>
     [IsoId("_IamycfIAEeaz_YGUGLjP6A")]
     [DisplayName("Proprietary Identification")]
-    public record ProprietaryIdentification : SupervisingAuthorityIdentification1Choice_
+    public partial record ProprietaryIdentification : SupervisingAuthorityIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

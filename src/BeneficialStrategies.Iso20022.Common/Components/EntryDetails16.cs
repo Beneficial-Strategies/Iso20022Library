@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("f37a9c75-bb94-4d3b-9fd4-a92231f41be9")]
 [DisplayName("Entry Details16")]
-public record EntryDetails16
+public partial record EntryDetails16
 {
     /// <summary>
     /// Provides details on batched transactions.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GQMZcIAsEeirUu_C8Wn_0Q")]
 [DisplayName("Statistics Per Action Type")]
-public record StatisticsPerActionType1
+public partial record StatisticsPerActionType1
 {
     /// <summary>
     /// Total number of derivatives which have been reported.

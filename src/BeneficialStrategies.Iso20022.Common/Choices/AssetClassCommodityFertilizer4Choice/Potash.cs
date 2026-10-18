@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
     [IsoId("_idnj9U8REe2PGo0mhYCh1g")]
     [DisplayName("Potash")]
     [IsoXmlTag("Ptsh")]
-    public record Potash : AssetClassCommodityFertilizer4Choice_
+    public partial record Potash : AssetClassCommodityFertilizer4Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

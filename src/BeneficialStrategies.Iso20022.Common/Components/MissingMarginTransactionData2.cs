@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rud9m1owEe23K4GXSpBSeg")]
 [DisplayName("Missing Margin Transaction Data")]
-public record MissingMarginTransactionData2
+public partial record MissingMarginTransactionData2
 {
     /// <summary>
     /// Identification of a transaction.

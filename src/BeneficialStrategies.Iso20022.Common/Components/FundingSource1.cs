@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ispmcMkmEeeiAIB1i4AlQw")]
 [DisplayName("Funding Source")]
-public record FundingSource1
+public partial record FundingSource1
 {
     /// <summary>
     /// Type of a funding used.

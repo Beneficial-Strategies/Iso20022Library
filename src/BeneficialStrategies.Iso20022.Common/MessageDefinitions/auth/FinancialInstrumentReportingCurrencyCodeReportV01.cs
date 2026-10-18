@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_4LK8N0RNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Currency Code Report V")]
-public record FinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
+public partial record FinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

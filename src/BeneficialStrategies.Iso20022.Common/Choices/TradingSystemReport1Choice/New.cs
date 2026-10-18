@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingSystemReport1Choice
     /// <summary>Trading system related data report.</summary>
     [IsoId("_EdSKwGFdEfC-1NkZ9TkdKA")]
     [DisplayName("New")]
-    public record New : TradingSystemReport1Choice_
+    public partial record New : TradingSystemReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("New")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2xf0FTEyEe6g-ffJsqGiSA")]
 [DisplayName("Claim Non Receipt3")]
-public record ClaimNonReceipt3
+public partial record ClaimNonReceipt3
 {
     /// <summary>
     /// Date Processed.

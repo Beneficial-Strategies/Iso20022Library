@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity7Choice
     /// Freight.
     /// </summary>
     [DisplayName("Freight")]
-    public record Freight : AssetClassCommodity7Choice_
+    public partial record Freight : AssetClassCommodity7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

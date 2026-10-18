@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party28Choice
     [IsoId("_cOVCc9nSEeS--7IJLPC9lw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public record Party : Party28Choice_
+    public partial record Party : Party28Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

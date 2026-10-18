@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResidenceLocation1Choice
     /// </summary>
     [IsoId("_6Qsqk5qlEeGSON8vddiWzQ_-2009722376")]
     [DisplayName("Country")]
-    public record Country : ResidenceLocation1Choice_
+    public partial record Country : ResidenceLocation1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aO3y8bqsEe68nbz8Nl_hLQ")]
 [DisplayName("Request Handling3")]
-public record RequestHandling3
+public partial record RequestHandling3
 {
     /// <summary>
     /// Status.

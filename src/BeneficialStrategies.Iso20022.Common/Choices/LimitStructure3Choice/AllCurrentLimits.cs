@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure3Choice
     /// All Current Limits.
     /// </summary>
     [DisplayName("All Current Limits")]
-    public record AllCurrentLimits : LimitStructure3Choice_
+    public partial record AllCurrentLimits : LimitStructure3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IB771ZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("Currency Exchange Search Criteria")]
-public record CurrencyExchangeSearchCriteria1
+public partial record CurrencyExchangeSearchCriteria1
 {
     /// <summary>
     /// Currency of the amount to be converted in a currency conversion.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
     [IsoId("_dMHkAFrBEeWN79Bl6BUd3g")]
     [DisplayName("Live Stock")]
     [IsoXmlTag("LiveStock")]
-    public record LiveStock : AssetClassCommodityAgricultural1Choice_
+    public partial record LiveStock : AssetClassCommodityAgricultural1Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

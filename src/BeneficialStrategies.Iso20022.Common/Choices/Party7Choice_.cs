@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Party7Choice.Agent), nameof(Party7Choice.Agent))]
     [IsoId("_Pa7iF9p-Ed-ak6NoX_4Aeg_2027182418")]
     [DisplayName("Party 7 Choice")]
-    public abstract record Party7Choice_ { }
+    public abstract partial record Party7Choice_ { }
 }

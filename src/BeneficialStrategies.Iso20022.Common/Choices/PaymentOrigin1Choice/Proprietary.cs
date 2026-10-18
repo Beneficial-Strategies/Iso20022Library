@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice
     /// </summary>
     [IsoId("_RIwV19p-Ed-ak6NoX_4Aeg_2038039429")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PaymentOrigin1Choice_
+    public partial record Proprietary : PaymentOrigin1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

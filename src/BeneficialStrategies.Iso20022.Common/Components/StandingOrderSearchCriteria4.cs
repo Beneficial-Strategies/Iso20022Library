@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ge92mdcZEeqRFcf2R4bPBw")]
 [DisplayName("Standing Order Search Criteria")]
-public record StandingOrderSearchCriteria4
+public partial record StandingOrderSearchCriteria4
 {
     /// <summary>
     /// Indicates whether the key fields or business attributes defined within the system must be returned.

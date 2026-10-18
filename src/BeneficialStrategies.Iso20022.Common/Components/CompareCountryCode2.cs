@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QtxKsdR7EemZdYGWu384Zw")]
 [DisplayName("Compare Country Code")]
-public record CompareCountryCode2
+public partial record CompareCountryCode2
 {
     /// <summary>
     /// Information for the first side of the transaction.

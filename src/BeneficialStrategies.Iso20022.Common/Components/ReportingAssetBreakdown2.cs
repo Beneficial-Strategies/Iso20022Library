@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gDSccU2HEe-TXNruDFfwPA")]
 [DisplayName("Reporting Asset Breakdown2")]
-public record ReportingAssetBreakdown2
+public partial record ReportingAssetBreakdown2
 {
     /// <summary>
     /// Reporting Asset Type.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f2qNhUgoEeaGKYpLDboHPQ")]
 [DisplayName("Unable To Apply Incorrect")]
-public record UnableToApplyIncorrect1
+public partial record UnableToApplyIncorrect1
 {
     /// <summary>
     /// Specifies the missing information in a coded form.

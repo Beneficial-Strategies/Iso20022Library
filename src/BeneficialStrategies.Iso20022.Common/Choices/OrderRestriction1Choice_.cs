@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UVj6EGseEe25qph5Y8_eYQ")]
     [DisplayName("Order Restriction1Choice")]
-    public abstract record OrderRestriction1Choice_ { }
+    public abstract partial record OrderRestriction1Choice_ { }
 }

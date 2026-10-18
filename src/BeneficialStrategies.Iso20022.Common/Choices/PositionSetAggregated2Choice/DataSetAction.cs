@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated2Choice
     /// Data Set Action.
     /// </summary>
     [DisplayName("Data Set Action")]
-    public record DataSetAction : PositionSetAggregated2Choice_
+    public partial record DataSetAction : PositionSetAggregated2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

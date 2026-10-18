@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L71BetOJEeSQ_-lmj1tzfw")]
 [DisplayName("Interest Payment Date Range")]
-public record InterestPaymentDateRange1
+public partial record InterestPaymentDateRange1
 {
     /// <summary>
     /// Unique and unambiguous identification of the interest payment schedule.

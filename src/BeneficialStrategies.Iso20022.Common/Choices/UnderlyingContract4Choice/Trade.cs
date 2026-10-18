@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract4Choice
     /// Trade.
     /// </summary>
     [DisplayName("Trade")]
-    public record Trade : UnderlyingContract4Choice_
+    public partial record Trade : UnderlyingContract4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

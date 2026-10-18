@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError10Choice
     /// Standing Order.
     /// </summary>
     [DisplayName("Standing Order")]
-    public record StandingOrder : StandingOrderOrError10Choice_
+    public partial record StandingOrder : StandingOrderOrError10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

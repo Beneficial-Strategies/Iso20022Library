@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     [IsoId("_bWl_gxLBEeqctpBfTmLJnw")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public record Modification : TradePositionReport7Choice_
+    public partial record Modification : TradePositionReport7Choice_
     {
         /// <summary>
         /// Counterparty data details.

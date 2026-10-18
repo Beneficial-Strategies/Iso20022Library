@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType3Choice
     [IsoId("_6eO9VZicEe2f7NHvXATP5g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public record SupplementaryData : ReportingTransactionType3Choice_
+    public partial record SupplementaryData : ReportingTransactionType3Choice_
     {
         /// <summary>
         /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.

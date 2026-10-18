@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x_3RFTEyEe6g-ffJsqGiSA")]
 [DisplayName("Settlement Instruction16")]
-public record SettlementInstruction16
+public partial record SettlementInstruction16
 {
     /// <summary>
     /// Instructing Reimbursement Agent.

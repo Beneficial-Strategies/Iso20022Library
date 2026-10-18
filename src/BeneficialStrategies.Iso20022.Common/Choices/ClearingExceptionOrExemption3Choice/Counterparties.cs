@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingExceptionOrExemption3Cho
     [IsoId("_AjSxc5PuEey0rJ3Gl6WZVA")]
     [DisplayName("Counterparties")]
     [IsoXmlTag("CtrPties")]
-    public record Counterparties : ClearingExceptionOrExemption3Choice_
+    public partial record Counterparties : ClearingExceptionOrExemption3Choice_
     {
         /// <summary>
         /// Identifies the type of clearing exemption or exception that the reporting counterparty has elected.

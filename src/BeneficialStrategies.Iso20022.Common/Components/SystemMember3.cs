@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_htb_MXSbEeiH1ZOt2UD8vQ")]
 [DisplayName("System Member")]
-public record SystemMember3
+public partial record SystemMember3
 {
     /// <summary>
     /// Identification of a particular cash clearing system.

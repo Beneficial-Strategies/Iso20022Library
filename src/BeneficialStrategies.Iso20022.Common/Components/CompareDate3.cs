@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E5bpEa5hEeuo-IflVgGqiA")]
 [DisplayName("Compare Date")]
-public record CompareDate3
+public partial record CompareDate3
 {
     /// <summary>
     /// Information for the first side of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k720LJMsEey8cNcx3imo5Q")]
 [DisplayName("Remittance1")]
-public record Remittance1
+public partial record Remittance1
 {
     /// <summary>
     /// Unstructured.

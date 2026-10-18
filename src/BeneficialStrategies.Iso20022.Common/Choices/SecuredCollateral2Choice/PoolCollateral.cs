@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
     [IsoId("_iZO6BaidEeWHO_l3hf2rlA")]
     [DisplayName("Pool Collateral")]
     [IsoXmlTag("PoolColl")]
-    public record PoolCollateral : SecuredCollateral2Choice_
+    public partial record PoolCollateral : SecuredCollateral2Choice_
     {
         /// <summary>
         /// Nominal amount of the security pledged as collateral. Except for tri-party repos and any other transaction in which the security pledged is not identified via a single ISIN.

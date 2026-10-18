@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nNjvsESrEemM8-DVOYzdVQ")]
 [DisplayName("Liquid Resource Information")]
-public record LiquidResourceInformation1
+public partial record LiquidResourceInformation1
 {
     /// <summary>
     /// Identification of the facility provider.

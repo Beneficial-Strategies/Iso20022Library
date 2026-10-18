@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     [IsoId("_L8Gl0LVQEeadLcJesEbkTQ")]
     [DisplayName("Securities Financing Transaction")]
     [IsoXmlTag("SctiesFincgTx")]
-    public record SecuritiesFinancingTransaction : Product1Choice_
+    public partial record SecuritiesFinancingTransaction : Product1Choice_
     {
         /// <summary>
         /// Specifies attributes of a derivative based on Final ISDA Taxonomy v1.0 and Final ISDA Taxonomy v2.0.

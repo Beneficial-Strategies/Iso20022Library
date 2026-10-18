@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PNc1ZqlEeGSON8vddiWzQ_-1466437811")]
 [DisplayName("Billing Service Common Identification")]
-public record BillingServiceCommonIdentification1
+public partial record BillingServiceCommonIdentification1
 {
     /// <summary>
     /// Defines the issuer of the common code, such as &quot;AFP&quot;.

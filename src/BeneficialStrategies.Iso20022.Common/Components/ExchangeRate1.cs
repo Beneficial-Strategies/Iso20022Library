@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t0booVkyEeGeoaLUQk__nA_667162887")]
 [DisplayName("Exchange Rate")]
-public record ExchangeRate1
+public partial record ExchangeRate1
 {
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.

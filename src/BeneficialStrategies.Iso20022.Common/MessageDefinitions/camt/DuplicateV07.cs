@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3IjtTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Duplicate V07")]
-public record DuplicateV07 : IOuterRecord
+public partial record DuplicateV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

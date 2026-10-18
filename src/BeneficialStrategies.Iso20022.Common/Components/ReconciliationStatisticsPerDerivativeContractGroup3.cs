@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5fxLwVfcEeqZr5K1Woax-g")]
 [DisplayName("Reconciliation Statistics Per Derivative Contract Group")]
-public record ReconciliationStatisticsPerDerivativeContractGroup3
+public partial record ReconciliationStatisticsPerDerivativeContractGroup3
 {
     /// <summary>
     /// Detailed statistics on privately traded over-the-counter derivatives.

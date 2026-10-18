@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Si5_pdp-Ed-ak6NoX_4Aeg_1538517625")]
 [DisplayName("Net Cash Forecast")]
-public record NetCashForecast3
+public partial record NetCashForecast3
 {
     /// <summary>
     /// Net amount of the cash flow, expressed as an amount of money.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_SXbvdtp-Ed-ak6NoX_4Aeg_-759204181")]
 [DisplayName("Report Data1")]
 [Obsolete]
-public record ReportData1
+public partial record ReportData1
 {
     /// <summary>
     /// Identification of the report assigned by the central system.

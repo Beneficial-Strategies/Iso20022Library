@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTotalData1Choice
     /// </summary>
     [IsoId("_4nWe8R2lEeqF2P5v-Rtejg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : SettlementTotalData1Choice_
+    public partial record DataSetAction : SettlementTotalData1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

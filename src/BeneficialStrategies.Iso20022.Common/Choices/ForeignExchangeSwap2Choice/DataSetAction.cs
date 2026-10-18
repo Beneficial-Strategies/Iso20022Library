@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap2Choice
     /// </summary>
     [IsoId("_qm-xUZ2WEeW_58xcYxhewg")]
     [DisplayName("Data Set Action")]
-    public record DataSetAction : ForeignExchangeSwap2Choice_
+    public partial record DataSetAction : ForeignExchangeSwap2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

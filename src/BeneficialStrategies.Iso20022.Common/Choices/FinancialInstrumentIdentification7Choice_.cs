@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_K9o5cYG-EeaalK9UbuVGFw")]
     [DisplayName("Financial Instrument Identification 7 Choice")]
-    public abstract record FinancialInstrumentIdentification7Choice_ { }
+    public abstract partial record FinancialInstrumentIdentification7Choice_ { }
 }

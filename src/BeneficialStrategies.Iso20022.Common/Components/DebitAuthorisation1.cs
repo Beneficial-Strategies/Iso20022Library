@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t4cl-FkyEeGeoaLUQk__nA_820376924")]
 [DisplayName("Debit Authorisation")]
-public record DebitAuthorisation1
+public partial record DebitAuthorisation1
 {
     /// <summary>
     /// Specifies the reason for the cancellation request.

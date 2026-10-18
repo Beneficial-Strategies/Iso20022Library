@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayCriteria3Choice
     [IsoId("_yFXaBZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
     [IsoXmlTag("NewCrit")]
-    public record NewCriteria : BusinessDayCriteria3Choice_
+    public partial record NewCriteria : BusinessDayCriteria3Choice_
     {
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.

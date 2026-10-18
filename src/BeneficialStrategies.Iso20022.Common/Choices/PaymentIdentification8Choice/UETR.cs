@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
-    public record UETR : PaymentIdentification8Choice_
+    public partial record UETR : PaymentIdentification8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

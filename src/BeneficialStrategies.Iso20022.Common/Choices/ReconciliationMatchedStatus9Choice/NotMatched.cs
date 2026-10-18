@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus9Choi
     [IsoId("_AxRVQ8K3EeuFNp8LZAnorg")]
     [DisplayName("Not Matched")]
     [IsoXmlTag("NotMtchd")]
-    public record NotMatched : ReconciliationMatchedStatus9Choice_
+    public partial record NotMatched : ReconciliationMatchedStatus9Choice_
     {
         /// <summary>
         /// First side of the contract that needs to be matched.

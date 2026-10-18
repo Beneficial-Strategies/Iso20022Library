@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RvflsNp-Ed-ak6NoX_4Aeg_-311641782")]
 [DisplayName("Tax Information")]
-public record TaxInformation2
+public partial record TaxInformation2
 {
     /// <summary>
     /// Tax Identification Number of the creditor.

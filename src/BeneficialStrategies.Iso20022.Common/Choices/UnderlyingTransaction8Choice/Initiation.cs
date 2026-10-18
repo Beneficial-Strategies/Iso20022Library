@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction8Choice
     /// Initiation.
     /// </summary>
     [DisplayName("Initiation")]
-    public record Initiation : UnderlyingTransaction8Choice_
+    public partial record Initiation : UnderlyingTransaction8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_wa3m8OPJEea7_eMQH225xA")]
     [DisplayName("Defined Attributes 1 Choice")]
-    public abstract record DefinedAttributes1Choice_ { }
+    public abstract partial record DefinedAttributes1Choice_ { }
 }

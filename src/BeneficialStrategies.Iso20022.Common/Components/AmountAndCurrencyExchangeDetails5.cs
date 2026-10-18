@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mEJhEQ5rEe2xs7BqO31w6w")]
 [DisplayName("Amount And Currency Exchange Details")]
-public record AmountAndCurrencyExchangeDetails5
+public partial record AmountAndCurrencyExchangeDetails5
 {
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.

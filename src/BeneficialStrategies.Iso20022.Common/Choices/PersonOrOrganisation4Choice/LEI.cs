@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice
     /// LEI.
     /// </summary>
     [DisplayName("LEI")]
-    public record LEI : PersonOrOrganisation4Choice_
+    public partial record LEI : PersonOrOrganisation4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

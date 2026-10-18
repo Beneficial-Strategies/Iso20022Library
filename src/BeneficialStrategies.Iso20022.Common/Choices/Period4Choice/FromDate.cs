@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period4Choice
     /// </summary>
     [IsoId("_tC3TeJfjEeSfnc-VXAEapg")]
     [DisplayName("From Date")]
-    public record FromDate : Period4Choice_
+    public partial record FromDate : Period4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

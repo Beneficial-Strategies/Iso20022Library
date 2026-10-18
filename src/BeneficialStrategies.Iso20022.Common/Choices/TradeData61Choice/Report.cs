@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData61Choice
     /// Report.
     /// </summary>
     [DisplayName("Report")]
-    public record Report : TradeData61Choice_
+    public partial record Report : TradeData61Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

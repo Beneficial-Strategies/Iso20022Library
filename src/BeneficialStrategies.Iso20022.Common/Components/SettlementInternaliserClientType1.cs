@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yo3FgO3pEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Client Type")]
-public record SettlementInternaliserClientType1
+public partial record SettlementInternaliserClientType1
 {
     /// <summary>
     /// Professional clients as defined in the relevant legislation.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue2Choice
     [IsoId("_b3cSo8pbEem6kd3Y9uIDqg")]
     [DisplayName("Nominal Value")]
     [IsoXmlTag("NmnlVal")]
-    public record NominalValue : QuantityNominalValue2Choice_
+    public partial record NominalValue : QuantityNominalValue2Choice_
     {
         /// <summary>
         /// Amount of money that results in an increase (positively signed) or decrease (negatively signed), with specification of the currency.

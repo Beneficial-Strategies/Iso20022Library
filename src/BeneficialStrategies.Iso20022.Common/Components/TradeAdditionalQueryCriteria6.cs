@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4eqOvf_lEemm3skPVSMJQg")]
 [DisplayName("Trade Additional Query Criteria")]
-public record TradeAdditionalQueryCriteria6
+public partial record TradeAdditionalQueryCriteria6
 {
     /// <summary>
     /// Code list of the action types allowed as query criteria.

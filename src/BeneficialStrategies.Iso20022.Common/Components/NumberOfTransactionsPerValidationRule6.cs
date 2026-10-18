@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vUlOcU2UEe2bQ-Ksk8mwQg")]
 [DisplayName("Number Of Transactions Per Validation Rule")]
-public record NumberOfTransactionsPerValidationRule6
+public partial record NumberOfTransactionsPerValidationRule6
 {
     /// <summary>
     /// Number of individual reports or transactions sent / received, detailed per status.

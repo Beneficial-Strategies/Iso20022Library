@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zms14Gw0EeWD9e8QDBgUOw")]
 [DisplayName("Securities Non Trading Day Report")]
-public record SecuritiesNonTradingDayReport1
+public partial record SecuritiesNonTradingDayReport1
 {
     /// <summary>
     /// Identification of the specific venue this relates to - operating MIC, segment MIC, NCA

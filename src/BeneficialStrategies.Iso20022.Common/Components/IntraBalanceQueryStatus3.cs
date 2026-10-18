@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vp21kTp9EemwKdP955WBJQ")]
 [DisplayName("Intra Balance Query Status")]
-public record IntraBalanceQueryStatus3
+public partial record IntraBalanceQueryStatus3
 {
     /// <summary>
     /// Defines the status type of query criteria.

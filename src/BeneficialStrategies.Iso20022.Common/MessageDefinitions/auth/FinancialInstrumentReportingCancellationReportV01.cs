@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_u2C60GOfEeqrzPlWMq8k6Q")]
 [DisplayName("Financial Instrument Reporting Cancellation Report V")]
-public record FinancialInstrumentReportingCancellationReportV01 : IOuterRecord
+public partial record FinancialInstrumentReportingCancellationReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

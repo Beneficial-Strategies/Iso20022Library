@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zza3u-FQEeSvv6t4Ka7B7A")]
 [DisplayName("Currency Control Group Status")]
-public record CurrencyControlGroupStatus1
+public partial record CurrencyControlGroupStatus1
 {
     /// <summary>
     /// Original underlying message references for which the status advice is provided.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-66U4eJIEe-5wchdE0oJYw")]
 [DisplayName("Classification Type4")]
-public record ClassificationType4
+public partial record ClassificationType4
 {
     /// <summary>
     /// Legal Framework.

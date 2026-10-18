@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatusReason9Choice
     [IsoId("_RXWyitp-Ed-ak6NoX_4Aeg_-1456677488")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : RejectedStatusReason9Choice_
+    public partial record DataSourceScheme : RejectedStatusReason9Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

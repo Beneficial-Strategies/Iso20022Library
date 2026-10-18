@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionBarrierLevel1Choice
     /// Single.
     /// </summary>
     [DisplayName("Single")]
-    public record Single : OptionBarrierLevel1Choice_
+    public partial record Single : OptionBarrierLevel1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

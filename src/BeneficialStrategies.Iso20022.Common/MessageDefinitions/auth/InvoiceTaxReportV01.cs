@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_B5eQoFmrEeOQYsoJizpkVw")]
 [DisplayName("Invoice Tax Report V")]
-public record InvoiceTaxReportV01 : IOuterRecord
+public partial record InvoiceTaxReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

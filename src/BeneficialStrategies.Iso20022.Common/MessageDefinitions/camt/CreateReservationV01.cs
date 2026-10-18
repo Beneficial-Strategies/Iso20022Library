@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_P8tokckHEem3UrxZgQhVAw")]
 [DisplayName("Create Reservation V")]
-public record CreateReservationV01 : IOuterRecord
+public partial record CreateReservationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

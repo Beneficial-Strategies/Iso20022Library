@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeStateReport2Choice
     [IsoId("_fCvncwAFEeqefbt-QjTNnA")]
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
-    public record State : TradeStateReport2Choice_
+    public partial record State : TradeStateReport2Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

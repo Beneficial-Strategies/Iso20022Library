@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
     [IsoId("_gHkCd8g4Eeu4ecZgAYuz5w")]
     [DisplayName("Margin Lending")]
     [IsoXmlTag("MrgnLndg")]
-    public record MarginLending : TransactionLoanData30Choice_
+    public partial record MarginLending : TransactionLoanData30Choice_
     {
         /// <summary>
         /// Unique trade Identifier (UTI) as agreed with the other counterparty.

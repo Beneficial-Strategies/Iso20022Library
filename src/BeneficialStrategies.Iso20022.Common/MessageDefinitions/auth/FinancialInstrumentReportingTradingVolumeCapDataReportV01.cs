@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 )]
 [IsoId("_4LUGR0RNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Trading Volume Cap Data Report V")]
-public record FinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuterRecord
+public partial record FinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

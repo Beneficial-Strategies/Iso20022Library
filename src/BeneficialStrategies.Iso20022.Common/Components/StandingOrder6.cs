@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_87o_m249EeiU9cctagi5ow")]
 [DisplayName("Standing Order")]
-public record StandingOrder6
+public partial record StandingOrder6
 {
     /// <summary>
     /// Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order.

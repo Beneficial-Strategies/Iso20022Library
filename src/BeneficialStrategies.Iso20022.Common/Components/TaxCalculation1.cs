@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6R49apqlEeGSON8vddiWzQ_163014572")]
 [DisplayName("Tax Calculation")]
-public record TaxCalculation1
+public partial record TaxCalculation1
 {
     /// <summary>
     /// Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region. This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus3Choice
     /// </summary>
     [IsoId("_tyDDAFkyEeGeoaLUQk__nA_1838624790")]
     [DisplayName("Assignment Cancellation Confirmation")]
-    public record AssignmentCancellationConfirmation : InvestigationStatus3Choice_
+    public partial record AssignmentCancellationConfirmation : InvestigationStatus3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

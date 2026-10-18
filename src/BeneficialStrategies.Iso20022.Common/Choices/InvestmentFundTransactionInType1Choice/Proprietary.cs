@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundTransactionInType1
     [IsoId("_YBPc0QaxEeS3lpTattq7hg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InvestmentFundTransactionInType1Choice_
+    public partial record Proprietary : InvestmentFundTransactionInType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0Kkf8LqsEe68nbz8Nl_hLQ")]
     [DisplayName("Request Status1Choice")]
-    public abstract record RequestStatus1Choice_ { }
+    public abstract partial record RequestStatus1Choice_ { }
 }

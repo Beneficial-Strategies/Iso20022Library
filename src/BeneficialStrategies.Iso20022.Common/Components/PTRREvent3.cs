@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CElm0Vo4Ee23K4GXSpBSeg")]
 [DisplayName("PTRR Event")]
-public record PTRREvent3
+public partial record PTRREvent3
 {
     /// <summary>
     /// Indicator of a type of a post trade risk reduction operation for the purpose of reporting.

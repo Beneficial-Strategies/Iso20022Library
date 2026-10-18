@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5w6zAYpbEeyVdPSarESe_A")]
 [DisplayName("Compare Other Payment")]
-public record CompareOtherPayment1
+public partial record CompareOtherPayment1
 {
     /// <summary>
     /// Specifies whether the information on the other payment types are matching or not.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fzdu8cDQEeic67MXUoeXWA")]
 [DisplayName("Payment Cancellation Reason")]
-public record PaymentCancellationReason5
+public partial record PaymentCancellationReason5
 {
     /// <summary>
     /// Party that issues the cancellation request.

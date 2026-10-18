@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat1Choice
     /// </summary>
     [IsoId("_Uys4B9p-Ed-ak6NoX_4Aeg_1454264623")]
     [DisplayName("Unstructured")]
-    public record Unstructured : DataFormat1Choice_
+    public partial record Unstructured : DataFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

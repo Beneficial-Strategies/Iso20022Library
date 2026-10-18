@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
     [IsoId("_nCVaUQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Tranched")]
     [IsoXmlTag("Trnchd")]
-    public record Tranched : TrancheIndicator3Choice_
+    public partial record Tranched : TrancheIndicator3Choice_
     {
         /// <summary>
         /// Indicates the lower point at which the level of losses in the underlying portfolio reduces the notional of the tranche.

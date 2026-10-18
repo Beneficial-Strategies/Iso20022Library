@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xtcK0WnzEea5EcY2TpG1mw")]
 [DisplayName("Tax Report Header")]
-public record TaxReportHeader1
+public partial record TaxReportHeader1
 {
     /// <summary>
     /// Unique message identification.

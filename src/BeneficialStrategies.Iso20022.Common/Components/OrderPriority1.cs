@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mav_UBAUEe6N57R8Wekj-w")]
 [DisplayName("Order Priority1")]
-public record OrderPriority1
+public partial record OrderPriority1
 {
     /// <summary>
     /// Time Stamp.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EuGbEZh6EeyJwbhKOp9Ehg")]
 [DisplayName("Asset Holding3")]
-public record AssetHolding3
+public partial record AssetHolding3
 {
     /// <summary>
     /// Post Haircut Value.

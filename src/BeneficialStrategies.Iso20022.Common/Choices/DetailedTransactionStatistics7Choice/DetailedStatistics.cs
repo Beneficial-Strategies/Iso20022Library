@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics7Ch
     /// Detailed Statistics.
     /// </summary>
     [DisplayName("Detailed Statistics")]
-    public record DetailedStatistics : DetailedTransactionStatistics7Choice_
+    public partial record DetailedStatistics : DetailedTransactionStatistics7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

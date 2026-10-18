@@ -66,5 +66,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CsX6bJrOEeyo0KtkyUQoRg")]
     [DisplayName("Transaction Amendment1Choice")]
-    public abstract record TransactionAmendment1Choice_ { }
+    public abstract partial record TransactionAmendment1Choice_ { }
 }

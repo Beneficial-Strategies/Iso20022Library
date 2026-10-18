@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4iN1MJNkEeytjZlcgApf6A")]
 [DisplayName("UPI Query Criteria")]
-public record UPIQueryCriteria1
+public partial record UPIQueryCriteria1
 {
     /// <summary>
     /// Identification through a unique product identifier.

@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 )]
 [IsoId("_sW_aQlkyEeGeoaLUQk__nA_781357375")]
 [DisplayName("Proprietary Format Investigation V")]
-public record ProprietaryFormatInvestigationV03 : IOuterRecord
+public partial record ProprietaryFormatInvestigationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

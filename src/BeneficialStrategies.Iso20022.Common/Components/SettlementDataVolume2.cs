@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rv5NIY0SEemUAO64Q252gQ")]
 [DisplayName("Settlement Data Volume")]
-public record SettlementDataVolume2
+public partial record SettlementDataVolume2
 {
     /// <summary>
     /// Specifies the aggregated volume of settlement instructions, in terms of failed, settled transactions and total transactions.

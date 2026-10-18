@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5CqQIYaAEee8r9VKRbnJSg")]
 [DisplayName("Reporting Request")]
-public record ReportingRequest4
+public partial record ReportingRequest4
 {
     /// <summary>
     /// Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request.

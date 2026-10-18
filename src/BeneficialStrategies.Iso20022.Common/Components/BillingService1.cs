@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PDr1ZqlEeGSON8vddiWzQ_-1150406183")]
 [DisplayName("Billing Service")]
-public record BillingService1
+public partial record BillingService1
 {
     /// <summary>
     /// Specifies further detailed values for this service.

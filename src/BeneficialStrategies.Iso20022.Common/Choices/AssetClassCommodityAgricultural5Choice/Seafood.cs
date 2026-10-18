@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     [IsoId("_NxHXHbveEeiLRYqS-r-R-A")]
     [DisplayName("Seafood")]
     [IsoXmlTag("Sfd")]
-    public record Seafood : AssetClassCommodityAgricultural5Choice_
+    public partial record Seafood : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

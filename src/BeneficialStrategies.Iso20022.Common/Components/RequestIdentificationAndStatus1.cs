@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JRJXgFGoEfC_v5ez7RpMHw")]
 [DisplayName("Request Identification And Status1")]
-public record RequestIdentificationAndStatus1
+public partial record RequestIdentificationAndStatus1
 {
     /// <summary>
     /// Provides information on the original message.

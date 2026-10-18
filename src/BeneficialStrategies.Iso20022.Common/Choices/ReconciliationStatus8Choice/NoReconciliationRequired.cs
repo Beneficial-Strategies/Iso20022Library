@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationStatus8Choice
     /// </summary>
     [IsoId("_Av6qYcK3EeuFNp8LZAnorg")]
     [DisplayName("No Reconciliation Required")]
-    public record NoReconciliationRequired : ReconciliationStatus8Choice_
+    public partial record NoReconciliationRequired : ReconciliationStatus8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

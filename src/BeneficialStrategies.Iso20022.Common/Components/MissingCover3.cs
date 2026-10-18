@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_txvhAVkyEeGeoaLUQk__nA_85102909")]
 [DisplayName("Missing Cover")]
-public record MissingCover3
+public partial record MissingCover3
 {
     /// <summary>
     /// Indicates whether or not the claim is related to a missing cover.

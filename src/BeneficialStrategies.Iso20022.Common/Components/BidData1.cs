@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mzylAGIaEfCeoPFCHQnhvA")]
 [DisplayName("Bid Data1")]
-public record BidData1
+public partial record BidData1
 {
     /// <summary>
     /// Best bid in continuous order books.

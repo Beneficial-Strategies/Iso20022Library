@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TvjDULtJEeSmENFdxjMqzQ")]
 [DisplayName("Option")]
-public record Option12
+public partial record Option12
 {
     /// <summary>
     /// Identifies whether the instrument has a call option or a put option. If the instrument contains both options, i.e. a call and a put, both the call option and the put option have to be reported.

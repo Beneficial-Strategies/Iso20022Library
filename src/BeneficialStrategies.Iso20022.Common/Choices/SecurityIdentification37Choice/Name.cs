@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification37Choice
     /// </summary>
     [IsoId("_PDXK8zLlEeu9CrLaMVTofw")]
     [DisplayName("Name")]
-    public record Name : SecurityIdentification37Choice_
+    public partial record Name : SecurityIdentification37Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

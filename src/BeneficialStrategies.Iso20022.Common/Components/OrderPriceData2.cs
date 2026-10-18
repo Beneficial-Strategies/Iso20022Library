@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K7FZARA4Ee6N57R8Wekj-w")]
 [DisplayName("Order Price Data2")]
-public record OrderPriceData2
+public partial record OrderPriceData2
 {
     /// <summary>
     /// Limit Price.

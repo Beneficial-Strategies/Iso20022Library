@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__QtDEXZIEe2W3OiCJJKf0A")]
 [DisplayName("Compensation Response1")]
-public record CompensationResponse1
+public partial record CompensationResponse1
 {
     /// <summary>
     /// Granted.

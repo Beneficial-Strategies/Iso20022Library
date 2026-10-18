@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     [IsoId("_DzGLgjrgEeedCZZ8dIPp6g")]
     [DisplayName("Update")]
     [IsoXmlTag("Upd")]
-    public record Update : BenchmarkReport1Choice_
+    public partial record Update : BenchmarkReport1Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice messages.

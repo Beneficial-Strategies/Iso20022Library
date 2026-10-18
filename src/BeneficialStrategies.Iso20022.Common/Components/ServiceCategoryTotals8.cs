@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xLEAMUw0EfCpsI1b9uv5FQ")]
 [DisplayName("Service Category Totals8")]
-public record ServiceCategoryTotals8
+public partial record ServiceCategoryTotals8
 {
     /// <summary>
     /// Unique identification of a securities account or cash account belonging to billed customer.

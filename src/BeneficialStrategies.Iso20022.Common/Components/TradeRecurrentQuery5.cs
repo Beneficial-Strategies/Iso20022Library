@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_esoycd1dEeqxpKDfBZC1vg")]
 [DisplayName("Trade Recurrent Query")]
-public record TradeRecurrentQuery5
+public partial record TradeRecurrentQuery5
 {
     /// <summary>
     /// Defines the type of recurrent query which is requested.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WrPhgAbKEeqrW7Meu5r3kQ")]
 [DisplayName("Notional Amount")]
-public record NotionalAmount1
+public partial record NotionalAmount1
 {
     /// <summary>
     /// Reference amount from which contractual payments are determined.

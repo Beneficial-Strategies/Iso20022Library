@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M_8f0TqFEemJ3KLLPeYl6g")]
 [DisplayName("Cash Sub Balance Type And Quantity Breakdown")]
-public record CashSubBalanceTypeAndQuantityBreakdown3
+public partial record CashSubBalanceTypeAndQuantityBreakdown3
 {
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).

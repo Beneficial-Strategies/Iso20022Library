@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_rsIb84y3EeeGkvZr3jtnCQ")]
     [DisplayName("Sequence Range 1 Choice")]
-    public abstract record SequenceRange1Choice_ { }
+    public abstract partial record SequenceRange1Choice_ { }
 }

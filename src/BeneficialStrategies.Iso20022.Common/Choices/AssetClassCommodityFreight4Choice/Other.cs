@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight4Choic
     [IsoId("_Rn91d08REe2PGo0mhYCh1g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : AssetClassCommodityFreight4Choice_
+    public partial record Other : AssetClassCommodityFreight4Choice_
     {
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.

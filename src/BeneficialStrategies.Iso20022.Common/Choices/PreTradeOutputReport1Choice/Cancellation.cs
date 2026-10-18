@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreTradeOutputReport1Choice
     /// <summary>Cancellation of a previously sent report, probably because of erroneous data.</summary>
     [IsoId("_e66WgGIVEfCeoPFCHQnhvA")]
     [DisplayName("Cancellation")]
-    public record Cancellation : PreTradeOutputReport1Choice_
+    public partial record Cancellation : PreTradeOutputReport1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cxl")]

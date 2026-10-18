@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zwwsHcg3EeuGrNSsxk3B0A")]
 [DisplayName("Counterparty Data")]
-public record CounterpartyData88
+public partial record CounterpartyData88
 {
     /// <summary>
     /// Date and time of submission of the report to the trade repository.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HxiIV5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Currency Criteria Definition 1 Choice")]
-    public abstract record CurrencyCriteriaDefinition1Choice_ { }
+    public abstract partial record CurrencyCriteriaDefinition1Choice_ { }
 }

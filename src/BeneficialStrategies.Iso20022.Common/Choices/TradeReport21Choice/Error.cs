@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport21Choice
     [IsoId("_SKn4Y8g2EeuGrNSsxk3B0A")]
     [DisplayName("Error")]
     [IsoXmlTag("Err")]
-    public record Error : TradeReport21Choice_
+    public partial record Error : TradeReport21Choice_
     {
         /// <summary>
         /// Unique identifier of a record in a message used as part of error management and status advice message.

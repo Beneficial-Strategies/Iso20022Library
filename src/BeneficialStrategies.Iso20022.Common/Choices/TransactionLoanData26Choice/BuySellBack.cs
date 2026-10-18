@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData26Choice
     [IsoId("_3-z243z2EeurrJrNxcsszQ")]
     [DisplayName("Buy Sell Back")]
     [IsoXmlTag("BuySellBck")]
-    public record BuySellBack : TransactionLoanData26Choice_
+    public partial record BuySellBack : TransactionLoanData26Choice_
     {
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.

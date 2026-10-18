@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YdfXJTE_Ee62xuUQ2zyZww")]
 [DisplayName("Billing Tax Region3")]
-public record BillingTaxRegion3
+public partial record BillingTaxRegion3
 {
     /// <summary>
     /// Region Number.

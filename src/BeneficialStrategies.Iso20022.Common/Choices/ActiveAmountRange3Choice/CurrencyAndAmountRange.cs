@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveAmountRange3Choice
     [IsoId("_OvM9tZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Currency And Amount Range")]
     [IsoXmlTag("CcyAndAmtRg")]
-    public record CurrencyAndAmountRange : ActiveAmountRange3Choice_
+    public partial record CurrencyAndAmountRange : ActiveAmountRange3Choice_
     {
         /// <summary>
         /// Specified amount or amount range.

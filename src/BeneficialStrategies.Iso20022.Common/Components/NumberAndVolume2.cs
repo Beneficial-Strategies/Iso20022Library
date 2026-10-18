@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_paGL8WlAEeaLAKoEUNsD9g")]
 [DisplayName("Number And Volume")]
-public record NumberAndVolume2
+public partial record NumberAndVolume2
 {
     /// <summary>
     /// Total number of specific transaction types executed on the reporting day.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_93bgEbtnEeq_cfXrH83Rcw")]
 [DisplayName("Instruction For Cheque Agent")]
-public record InstructionForChequeAgent1
+public partial record InstructionForChequeAgent1
 {
     /// <summary>
     /// Coded information related to the processing of the cheque, intended for the receiving agent.

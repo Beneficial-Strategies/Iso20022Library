@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SZgzG9p-Ed-ak6NoX_4Aeg_-701424478")]
 [DisplayName("Limit")]
-public record Limit2
+public partial record Limit2
 {
     /// <summary>
     /// Minimum transaction amount to be reported in the requested message.

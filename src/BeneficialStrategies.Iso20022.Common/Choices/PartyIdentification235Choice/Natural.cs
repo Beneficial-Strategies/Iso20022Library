@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification235Choice
     [IsoId("_36SD8O9KEemVGdgB8P8uQQ")]
     [DisplayName("Natural")]
     [IsoXmlTag("Ntrl")]
-    public record Natural : PartyIdentification235Choice_
+    public partial record Natural : PartyIdentification235Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of the natural person.

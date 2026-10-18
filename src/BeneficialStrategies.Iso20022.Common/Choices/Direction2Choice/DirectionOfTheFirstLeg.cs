@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction2Choice
     /// </summary>
     [IsoId("_oKFn0Xg-Eeu3kecHd7QKUQ")]
     [DisplayName("Direction Of The First Leg")]
-    public record DirectionOfTheFirstLeg : Direction2Choice_
+    public partial record DirectionOfTheFirstLeg : Direction2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

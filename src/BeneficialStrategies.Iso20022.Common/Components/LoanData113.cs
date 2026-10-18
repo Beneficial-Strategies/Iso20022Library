@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dV4cqWuAEeuBFr93I_HBig")]
 [DisplayName("Loan Data")]
-public record LoanData113
+public partial record LoanData113
 {
     /// <summary>
     /// Unique reference assigned to the transaction to identify the trade.

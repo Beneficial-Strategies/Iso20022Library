@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t3QTIFkyEeGeoaLUQk__nA_923487656")]
 [DisplayName("Cancellation Status Reason")]
-public record CancellationStatusReason2
+public partial record CancellationStatusReason2
 {
     /// <summary>
     /// Party that issues the cancellation status.

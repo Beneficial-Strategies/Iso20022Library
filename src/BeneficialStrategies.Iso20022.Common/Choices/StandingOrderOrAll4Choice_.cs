@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6jk-kTEyEe6g-ffJsqGiSA")]
     [DisplayName("Standing Order Or All4Choice")]
-    public abstract record StandingOrderOrAll4Choice_ { }
+    public abstract partial record StandingOrderOrAll4Choice_ { }
 }
