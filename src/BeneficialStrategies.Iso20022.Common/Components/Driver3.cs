@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Driver3
 {
     /// <summary>
-    /// Additional Data.
+    /// Name.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; }
-
-    /// <summary>
-    /// Additional Identification.
-    /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<TravelDocument2> AdditionalIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Date Of Birth.
-    /// </summary>
-    [DisplayName("Date Of Birth")]
-    [IsoXmlTag("DtOfBirth")]
-    public ISODate? DateOfBirth { get; init; }
-
-    /// <summary>
-    /// Department Number.
-    /// </summary>
-    [DisplayName("Department Number")]
-    [IsoXmlTag("DeptNb")]
-    public Max35Text? DepartmentNumber { get; init; }
-
-    /// <summary>
-    /// Employee Identification.
-    /// </summary>
-    [DisplayName("Employee Identification")]
-    [IsoXmlTag("MplyeeId")]
-    public Max70Text? EmployeeIdentification { get; init; }
-
-    /// <summary>
-    /// Employer.
-    /// </summary>
-    [DisplayName("Employer")]
-    [IsoXmlTag("Mplyr")]
-    public Max70Text? Employer { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Identification.
@@ -66,11 +31,46 @@ public record Driver3
     public Max70Text? Identification { get; init; }
 
     /// <summary>
+    /// License Type.
+    /// </summary>
+    [DisplayName("License Type")]
+    [IsoXmlTag("LicTp")]
+    public Max70Text? LicenseType { get; init; }
+
+    /// <summary>
+    /// License Form.
+    /// </summary>
+    [DisplayName("License Form")]
+    [IsoXmlTag("LicForm")]
+    public PresentationMedium2Code? LicenseForm { get; init; }
+
+    /// <summary>
+    /// License Identification.
+    /// </summary>
+    [DisplayName("License Identification")]
+    [IsoXmlTag("LicId")]
+    public Max70Text? LicenseIdentification { get; init; }
+
+    /// <summary>
     /// License Assigner.
     /// </summary>
     [DisplayName("License Assigner")]
     [IsoXmlTag("LicAssgnr")]
     public LegalStructure1Code? LicenseAssigner { get; init; }
+
+    /// <summary>
+    /// License Issuance Date.
+    /// </summary>
+    [DisplayName("License Issuance Date")]
+    [IsoXmlTag("LicIssncDt")]
+    public ISODate? LicenseIssuanceDate { get; init; }
+
+    /// <summary>
+    /// License Expiration Date.
+    /// </summary>
+    [DisplayName("License Expiration Date")]
+    [IsoXmlTag("LicXprtnDt")]
+    public ISODate? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// License Country.
@@ -94,34 +94,6 @@ public record Driver3
     public ISOCountrySubDivisionCode? LicenseCountrySubDivisionMinor { get; init; }
 
     /// <summary>
-    /// License Expiration Date.
-    /// </summary>
-    [DisplayName("License Expiration Date")]
-    [IsoXmlTag("LicXprtnDt")]
-    public ISODate? LicenseExpirationDate { get; init; }
-
-    /// <summary>
-    /// License Form.
-    /// </summary>
-    [DisplayName("License Form")]
-    [IsoXmlTag("LicForm")]
-    public PresentationMedium2Code? LicenseForm { get; init; }
-
-    /// <summary>
-    /// License Identification.
-    /// </summary>
-    [DisplayName("License Identification")]
-    [IsoXmlTag("LicId")]
-    public Max70Text? LicenseIdentification { get; init; }
-
-    /// <summary>
-    /// License Issuance Date.
-    /// </summary>
-    [DisplayName("License Issuance Date")]
-    [IsoXmlTag("LicIssncDt")]
-    public ISODate? LicenseIssuanceDate { get; init; }
-
-    /// <summary>
     /// License Other Authority.
     /// </summary>
     [DisplayName("License Other Authority")]
@@ -129,16 +101,44 @@ public record Driver3
     public Max16Text? LicenseOtherAuthority { get; init; }
 
     /// <summary>
-    /// License Type.
+    /// Employer.
     /// </summary>
-    [DisplayName("License Type")]
-    [IsoXmlTag("LicTp")]
-    public Max70Text? LicenseType { get; init; }
+    [DisplayName("Employer")]
+    [IsoXmlTag("Mplyr")]
+    public Max70Text? Employer { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Employee Identification.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
+    [DisplayName("Employee Identification")]
+    [IsoXmlTag("MplyeeId")]
+    public Max70Text? EmployeeIdentification { get; init; }
+
+    /// <summary>
+    /// Department Number.
+    /// </summary>
+    [DisplayName("Department Number")]
+    [IsoXmlTag("DeptNb")]
+    public Max35Text? DepartmentNumber { get; init; }
+
+    /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<TravelDocument2> AdditionalIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Date Of Birth.
+    /// </summary>
+    [DisplayName("Date Of Birth")]
+    [IsoXmlTag("DtOfBirth")]
+    public ISODate? DateOfBirth { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public AdditionalData1? AdditionalData { get; init; }
 }

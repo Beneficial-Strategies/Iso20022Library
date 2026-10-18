@@ -24,11 +24,11 @@ public record RegisteredContract16
     public required Max35Text ContractRegistrationAmendmentIdentification { get; init; }
 
     /// <summary>
-    /// Registered Contract Amendment.
+    /// Reporting Party.
     /// </summary>
-    [DisplayName("Registered Contract Amendment")]
-    [IsoXmlTag("RegdCtrctAmdmnt")]
-    public ValueList<RegisteredContract17> RegisteredContractAmendment { get; init; } = [];
+    [DisplayName("Reporting Party")]
+    [IsoXmlTag("RptgPty")]
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
     /// Registration Agent.
@@ -38,11 +38,11 @@ public record RegisteredContract16
     public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
-    /// Reporting Party.
+    /// Registered Contract Amendment.
     /// </summary>
-    [DisplayName("Reporting Party")]
-    [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; }
+    [DisplayName("Registered Contract Amendment")]
+    [IsoXmlTag("RegdCtrctAmdmnt")]
+    public ValueList<RegisteredContract17> RegisteredContractAmendment { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

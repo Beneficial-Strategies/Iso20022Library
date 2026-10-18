@@ -53,53 +53,11 @@ public record AccountHoldingInformationV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Business flow direction (assets to be delivered or received).
-    /// </summary>
-    [DisplayName("Business Flow Direction Type")]
-    [IsoXmlTag("BizFlowDrctnTp")]
-    public BusinessFlowDirectionType1Code? BusinessFlowDirectionType { get; init; }
-
-    /// <summary>
-    /// Additional information that can not be captured in the structured fields and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Identifies the market practice to which the message conforms.
-    /// </summary>
-    [DisplayName("Market Practice Version")]
-    [IsoXmlTag("MktPrctcVrsn")]
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Reference")]
     [IsoXmlTag("MsgRef")]
     public required MessageIdentification1 MessageReference { get; init; }
-
-    /// <summary>
-    /// Account held in the name of a party that is not the name of the beneficial owner of the shares.
-    /// </summary>
-    [DisplayName("Nominee Account")]
-    [IsoXmlTag("NmneeAcct")]
-    public InvestmentAccount69? NomineeAccount { get; init; }
-
-    /// <summary>
-    /// Information identifying the other corporate investors, for example, name and address.
-    /// </summary>
-    [DisplayName("Other Corporate Investor")]
-    [IsoXmlTag("OthrCorpInvstr")]
-    public ValueList<Organisation36> OtherCorporateInvestor { get; init; } = [];
-
-    /// <summary>
-    /// Information identifying the other individual investors, for example, name, address, social security number and date of birth.
-    /// </summary>
-    [DisplayName("Other Individual Investor")]
-    [IsoXmlTag("OthrIndvInvstr")]
-    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -116,11 +74,18 @@ public record AccountHoldingInformationV10 : IOuterRecord
     public AdditionalReference10? PreviousReference { get; init; }
 
     /// <summary>
-    /// Information identifying the primary corporate investor, for example, name and address.
+    /// Reference to a linked message that was previously received.
     /// </summary>
-    [DisplayName("Primary Corporate Investor")]
-    [IsoXmlTag("PmryCorpInvstr")]
-    public Organisation36? PrimaryCorporateInvestor { get; init; }
+    [DisplayName("Related Reference")]
+    [IsoXmlTag("RltdRef")]
+    public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// Business flow direction (assets to be delivered or received).
+    /// </summary>
+    [DisplayName("Business Flow Direction Type")]
+    [IsoXmlTag("BizFlowDrctnTp")]
+    public BusinessFlowDirectionType1Code? BusinessFlowDirectionType { get; init; }
 
     /// <summary>
     /// Information identifying the primary individual investor, for example, name, address, social security number and date of birth.
@@ -130,18 +95,25 @@ public record AccountHoldingInformationV10 : IOuterRecord
     public IndividualPerson8? PrimaryIndividualInvestor { get; init; }
 
     /// <summary>
-    /// Information about the portfolio and assets.
+    /// Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.
     /// </summary>
-    [DisplayName("Product Transfer")]
-    [IsoXmlTag("PdctTrf")]
-    public ValueList<PortfolioTransfer16> ProductTransfer { get; init; } = [];
+    [DisplayName("Secondary Individual Investor")]
+    [IsoXmlTag("ScndryIndvInvstr")]
+    public IndividualPerson8? SecondaryIndividualInvestor { get; init; }
 
     /// <summary>
-    /// Reference to a linked message that was previously received.
+    /// Information identifying the other individual investors, for example, name, address, social security number and date of birth.
     /// </summary>
-    [DisplayName("Related Reference")]
-    [IsoXmlTag("RltdRef")]
-    public AdditionalReference10? RelatedReference { get; init; }
+    [DisplayName("Other Individual Investor")]
+    [IsoXmlTag("OthrIndvInvstr")]
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
+
+    /// <summary>
+    /// Information identifying the primary corporate investor, for example, name and address.
+    /// </summary>
+    [DisplayName("Primary Corporate Investor")]
+    [IsoXmlTag("PmryCorpInvstr")]
+    public Organisation36? PrimaryCorporateInvestor { get; init; }
 
     /// <summary>
     /// Information identifying the secondary corporate investor, for example, name and address.
@@ -151,11 +123,25 @@ public record AccountHoldingInformationV10 : IOuterRecord
     public Organisation36? SecondaryCorporateInvestor { get; init; }
 
     /// <summary>
-    /// Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.
+    /// Information identifying the other corporate investors, for example, name and address.
     /// </summary>
-    [DisplayName("Secondary Individual Investor")]
-    [IsoXmlTag("ScndryIndvInvstr")]
-    public IndividualPerson8? SecondaryIndividualInvestor { get; init; }
+    [DisplayName("Other Corporate Investor")]
+    [IsoXmlTag("OthrCorpInvstr")]
+    public ValueList<Organisation36> OtherCorporateInvestor { get; init; } = [];
+
+    /// <summary>
+    /// Identification of the account owned by the investor at the old plan manager (account servicer).
+    /// </summary>
+    [DisplayName("Transferor Account")]
+    [IsoXmlTag("TrfrAcct")]
+    public required InvestmentAccount69 TransferorAccount { get; init; }
+
+    /// <summary>
+    /// Account held in the name of a party that is not the name of the beneficial owner of the shares.
+    /// </summary>
+    [DisplayName("Nominee Account")]
+    [IsoXmlTag("NmneeAcct")]
+    public InvestmentAccount69? NomineeAccount { get; init; }
 
     /// <summary>
     /// Identification of the institution to which the financial instrument is to be transferred. This may also be known as the new plan manager.
@@ -165,9 +151,23 @@ public record AccountHoldingInformationV10 : IOuterRecord
     public required PartyIdentification132 Transferee { get; init; }
 
     /// <summary>
-    /// Identification of the account owned by the investor at the old plan manager (account servicer).
+    /// Information about the portfolio and assets.
     /// </summary>
-    [DisplayName("Transferor Account")]
-    [IsoXmlTag("TrfrAcct")]
-    public required InvestmentAccount69 TransferorAccount { get; init; }
+    [DisplayName("Product Transfer")]
+    [IsoXmlTag("PdctTrf")]
+    public ValueList<PortfolioTransfer16> ProductTransfer { get; init; } = [];
+
+    /// <summary>
+    /// Identifies the market practice to which the message conforms.
+    /// </summary>
+    [DisplayName("Market Practice Version")]
+    [IsoXmlTag("MktPrctcVrsn")]
+    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
+
+    /// <summary>
+    /// Additional information that can not be captured in the structured fields and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

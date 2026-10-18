@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RetrievalFulfilmentInstructions3
 {
     /// <summary>
+    /// Requested Method.
+    /// </summary>
+    [DisplayName("Requested Method")]
+    [IsoXmlTag("ReqdMtd")]
+    public ValueList<Max35Text> RequestedMethod { get; init; } = [];
+
+    /// <summary>
+    /// Established Method.
+    /// </summary>
+    [DisplayName("Established Method")]
+    [IsoXmlTag("EstblishdMtd")]
+    public ValueList<Max35Text> EstablishedMethod { get; init; } = [];
+
+    /// <summary>
     /// Actual Delivery Method.
     /// </summary>
     [DisplayName("Actual Delivery Method")]
@@ -29,20 +43,6 @@ public record RetrievalFulfilmentInstructions3
     [DisplayName("Contact")]
     [IsoXmlTag("Ctct")]
     public ContactBusiness1? Contact { get; init; }
-
-    /// <summary>
-    /// Established Method.
-    /// </summary>
-    [DisplayName("Established Method")]
-    [IsoXmlTag("EstblishdMtd")]
-    public ValueList<Max35Text> EstablishedMethod { get; init; } = [];
-
-    /// <summary>
-    /// Format.
-    /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public OutputFormat4Code? Format { get; init; }
 
     /// <summary>
     /// Postal Address.
@@ -59,18 +59,18 @@ public record RetrievalFulfilmentInstructions3
     public PartyType19Code? Recipient { get; init; }
 
     /// <summary>
-    /// Requested Method.
-    /// </summary>
-    [DisplayName("Requested Method")]
-    [IsoXmlTag("ReqdMtd")]
-    public ValueList<Max35Text> RequestedMethod { get; init; } = [];
-
-    /// <summary>
     /// Target.
     /// </summary>
     [DisplayName("Target")]
     [IsoXmlTag("Trgt")]
     public ValueList<UserInterface8Code> Target { get; init; } = [];
+
+    /// <summary>
+    /// Format.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public OutputFormat4Code? Format { get; init; }
 
     /// <summary>
     /// Type.

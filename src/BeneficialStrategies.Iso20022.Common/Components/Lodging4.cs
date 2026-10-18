@@ -17,83 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Lodging4
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Arrival.
-    /// </summary>
-    [DisplayName("Arrival")]
-    [IsoXmlTag("Arrvl")]
-    public DepartureOrArrival2? Arrival { get; init; }
-
-    /// <summary>
-    /// Authorised Amount.
-    /// </summary>
-    [DisplayName("Authorised Amount")]
-    [IsoXmlTag("AuthrsdAmt")]
-    public ValueList<AuthorisedAmount2> AuthorisedAmount { get; init; } = [];
-
-    /// <summary>
-    /// Customer Address.
-    /// </summary>
-    [DisplayName("Customer Address")]
-    [IsoXmlTag("CstmrAdr")]
-    public Address2? CustomerAddress { get; init; }
-
-    /// <summary>
-    /// Customer Age.
-    /// </summary>
-    [DisplayName("Customer Age")]
-    [IsoXmlTag("CstmrAge")]
-    public Max2NumericText? CustomerAge { get; init; }
-
-    /// <summary>
-    /// Customer Contact.
-    /// </summary>
-    [DisplayName("Customer Contact")]
-    [IsoXmlTag("CstmrCtct")]
-    public ContactPersonal1? CustomerContact { get; init; }
-
-    /// <summary>
-    /// Customer File Reference Number.
-    /// </summary>
-    [DisplayName("Customer File Reference Number")]
-    [IsoXmlTag("CstmrFileRefNb")]
-    public Max70Text? CustomerFileReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Customer Identification.
-    /// </summary>
-    [DisplayName("Customer Identification")]
-    [IsoXmlTag("CstmrId")]
-    public Credentials3? CustomerIdentification { get; init; }
-
-    /// <summary>
-    /// Customer Name.
-    /// </summary>
-    [DisplayName("Customer Name")]
-    [IsoXmlTag("CstmrNm")]
-    public Max70Text? CustomerName { get; init; }
-
-    /// <summary>
-    /// Departure.
-    /// </summary>
-    [DisplayName("Departure")]
-    [IsoXmlTag("Dprture")]
-    public DepartureOrArrival1? Departure { get; init; }
-
-    /// <summary>
-    /// Duration.
-    /// </summary>
-    [DisplayName("Duration")]
-    [IsoXmlTag("Drtn")]
-    public Max4NumericText? Duration { get; init; }
-
-    /// <summary>
     /// Folio Number.
     /// </summary>
     [DisplayName("Folio Number")]
@@ -101,46 +24,18 @@ public record Lodging4
     public Max35Text? FolioNumber { get; init; }
 
     /// <summary>
-    /// Insurance.
+    /// Property Type.
     /// </summary>
-    [DisplayName("Insurance")]
-    [IsoXmlTag("Insrnc")]
-    public TrueFalseIndicator? Insurance { get; init; }
+    [DisplayName("Property Type")]
+    [IsoXmlTag("PrprtyTp")]
+    public LodgingActivity1Code? PropertyType { get; init; }
 
     /// <summary>
-    /// Insurance Amount.
+    /// Property Other Type.
     /// </summary>
-    [DisplayName("Insurance Amount")]
-    [IsoXmlTag("InsrncAmt")]
-    public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
-
-    /// <summary>
-    /// Line Item.
-    /// </summary>
-    [DisplayName("Line Item")]
-    [IsoXmlTag("LineItm")]
-    public ValueList<LodgingLineItem3> LineItem { get; init; } = [];
-
-    /// <summary>
-    /// Loyalty Programme.
-    /// </summary>
-    [DisplayName("Loyalty Programme")]
-    [IsoXmlTag("LltyPrgrmm")]
-    public ValueList<LoyaltyProgramme4> LoyaltyProgramme { get; init; } = [];
-
-    /// <summary>
-    /// No Show.
-    /// </summary>
-    [DisplayName("No Show")]
-    [IsoXmlTag("NoShow")]
-    public TrueFalseIndicator? NoShow { get; init; }
-
-    /// <summary>
-    /// Number Of Rooms.
-    /// </summary>
-    [DisplayName("Number Of Rooms")]
-    [IsoXmlTag("NbOfRooms")]
-    public Max4NumericText? NumberOfRooms { get; init; }
+    [DisplayName("Property Other Type")]
+    [IsoXmlTag("PrprtyOthrTp")]
+    public Max35Text? PropertyOtherType { get; init; }
 
     /// <summary>
     /// Prestigious Property.
@@ -148,6 +43,27 @@ public record Lodging4
     [DisplayName("Prestigious Property")]
     [IsoXmlTag("PrstgsPrprty")]
     public Max35Text? PrestigiousProperty { get; init; }
+
+    /// <summary>
+    /// Property Name.
+    /// </summary>
+    [DisplayName("Property Name")]
+    [IsoXmlTag("PrprtyNm")]
+    public Max35Text? PropertyName { get; init; }
+
+    /// <summary>
+    /// Property Identification.
+    /// </summary>
+    [DisplayName("Property Identification")]
+    [IsoXmlTag("PrprtyId")]
+    public PartyIdentification285? PropertyIdentification { get; init; }
+
+    /// <summary>
+    /// Property Location.
+    /// </summary>
+    [DisplayName("Property Location")]
+    [IsoXmlTag("PrprtyLctn")]
+    public Location6? PropertyLocation { get; init; }
 
     /// <summary>
     /// Property Assigner.
@@ -178,39 +94,53 @@ public record Lodging4
     public TrueFalseIndicator? PropertyFireSafetyAct { get; init; }
 
     /// <summary>
-    /// Property Identification.
+    /// Customer Name.
     /// </summary>
-    [DisplayName("Property Identification")]
-    [IsoXmlTag("PrprtyId")]
-    public PartyIdentification285? PropertyIdentification { get; init; }
+    [DisplayName("Customer Name")]
+    [IsoXmlTag("CstmrNm")]
+    public Max70Text? CustomerName { get; init; }
 
     /// <summary>
-    /// Property Location.
+    /// Customer Identification.
     /// </summary>
-    [DisplayName("Property Location")]
-    [IsoXmlTag("PrprtyLctn")]
-    public Location6? PropertyLocation { get; init; }
+    [DisplayName("Customer Identification")]
+    [IsoXmlTag("CstmrId")]
+    public Credentials3? CustomerIdentification { get; init; }
 
     /// <summary>
-    /// Property Name.
+    /// Customer File Reference Number.
     /// </summary>
-    [DisplayName("Property Name")]
-    [IsoXmlTag("PrprtyNm")]
-    public Max35Text? PropertyName { get; init; }
+    [DisplayName("Customer File Reference Number")]
+    [IsoXmlTag("CstmrFileRefNb")]
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
 
     /// <summary>
-    /// Property Other Type.
+    /// Customer Age.
     /// </summary>
-    [DisplayName("Property Other Type")]
-    [IsoXmlTag("PrprtyOthrTp")]
-    public Max35Text? PropertyOtherType { get; init; }
+    [DisplayName("Customer Age")]
+    [IsoXmlTag("CstmrAge")]
+    public Max2NumericText? CustomerAge { get; init; }
 
     /// <summary>
-    /// Property Type.
+    /// Customer Address.
     /// </summary>
-    [DisplayName("Property Type")]
-    [IsoXmlTag("PrprtyTp")]
-    public LodgingActivity1Code? PropertyType { get; init; }
+    [DisplayName("Customer Address")]
+    [IsoXmlTag("CstmrAdr")]
+    public Address2? CustomerAddress { get; init; }
+
+    /// <summary>
+    /// Customer Contact.
+    /// </summary>
+    [DisplayName("Customer Contact")]
+    [IsoXmlTag("CstmrCtct")]
+    public ContactPersonal1? CustomerContact { get; init; }
+
+    /// <summary>
+    /// Number Of Rooms.
+    /// </summary>
+    [DisplayName("Number Of Rooms")]
+    [IsoXmlTag("NbOfRooms")]
+    public Max4NumericText? NumberOfRooms { get; init; }
 
     /// <summary>
     /// Room.
@@ -220,11 +150,53 @@ public record Lodging4
     public ValueList<LodgingRoom2> Room { get; init; } = [];
 
     /// <summary>
-    /// Summary Commodity Identification.
+    /// Duration.
     /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
+    [DisplayName("Duration")]
+    [IsoXmlTag("Drtn")]
+    public Max4NumericText? Duration { get; init; }
+
+    /// <summary>
+    /// Arrival.
+    /// </summary>
+    [DisplayName("Arrival")]
+    [IsoXmlTag("Arrvl")]
+    public DepartureOrArrival2? Arrival { get; init; }
+
+    /// <summary>
+    /// Departure.
+    /// </summary>
+    [DisplayName("Departure")]
+    [IsoXmlTag("Dprture")]
+    public DepartureOrArrival1? Departure { get; init; }
+
+    /// <summary>
+    /// No Show.
+    /// </summary>
+    [DisplayName("No Show")]
+    [IsoXmlTag("NoShow")]
+    public TrueFalseIndicator? NoShow { get; init; }
+
+    /// <summary>
+    /// Insurance.
+    /// </summary>
+    [DisplayName("Insurance")]
+    [IsoXmlTag("Insrnc")]
+    public TrueFalseIndicator? Insurance { get; init; }
+
+    /// <summary>
+    /// Insurance Amount.
+    /// </summary>
+    [DisplayName("Insurance Amount")]
+    [IsoXmlTag("InsrncAmt")]
+    public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
+
+    /// <summary>
+    /// Total Tax.
+    /// </summary>
+    [DisplayName("Total Tax")]
+    [IsoXmlTag("TtlTax")]
+    public ValueList<Tax41> TotalTax { get; init; } = [];
 
     /// <summary>
     /// Total Amount.
@@ -234,9 +206,37 @@ public record Lodging4
     public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
 
     /// <summary>
-    /// Total Tax.
+    /// Authorised Amount.
     /// </summary>
-    [DisplayName("Total Tax")]
-    [IsoXmlTag("TtlTax")]
-    public ValueList<Tax41> TotalTax { get; init; } = [];
+    [DisplayName("Authorised Amount")]
+    [IsoXmlTag("AuthrsdAmt")]
+    public ValueList<AuthorisedAmount2> AuthorisedAmount { get; init; } = [];
+
+    /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
+    /// Loyalty Programme.
+    /// </summary>
+    [DisplayName("Loyalty Programme")]
+    [IsoXmlTag("LltyPrgrmm")]
+    public ValueList<LoyaltyProgramme4> LoyaltyProgramme { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Line Item.
+    /// </summary>
+    [DisplayName("Line Item")]
+    [IsoXmlTag("LineItm")]
+    public ValueList<LodgingLineItem3> LineItem { get; init; } = [];
 }

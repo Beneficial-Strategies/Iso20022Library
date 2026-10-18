@@ -18,34 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader119
 {
     /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
-
-    /// <summary>
-    /// Date and time at which the message was created.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
     /// </summary>
     /// <remarks>
@@ -56,9 +28,37 @@ public record GroupHeader119
     public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
     /// Number of individual transactions contained in the message.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     public required Max15NumericText NumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 }

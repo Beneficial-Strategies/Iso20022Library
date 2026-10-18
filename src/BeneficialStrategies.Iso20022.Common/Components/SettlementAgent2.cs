@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementAgent2
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public ValueList<PaymentAccount4> Account { get; init; } = [];
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required LEIIdentifier Identification { get; init; }
+
+    /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public ValueList<PaymentAccount4> Account { get; init; } = [];
 }

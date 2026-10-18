@@ -77,11 +77,11 @@ public record SecuritiesSettlementConditionsModificationRequestV10 : IOuterRecor
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// Account to or from which a securities entry is made.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation26> AdditionalInformation { get; init; } = [];
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -98,11 +98,11 @@ public record SecuritiesSettlementConditionsModificationRequestV10 : IOuterRecor
     public ValueList<RequestDetails31> RequestDetails { get; init; } = [];
 
     /// <summary>
-    /// Account to or from which a securities entry is made.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation26> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

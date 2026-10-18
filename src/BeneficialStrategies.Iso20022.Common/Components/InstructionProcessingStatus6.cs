@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InstructionProcessingStatus6
 {
     /// <summary>
-    /// Additional Information.
+    /// Status.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max350Text? AdditionalInformation { get; init; }
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public required Status11Code Status { get; init; }
 
     /// <summary>
     /// Attendance Card Number.
@@ -31,9 +31,9 @@ public record InstructionProcessingStatus6
     public Max35Text? AttendanceCardNumber { get; init; }
 
     /// <summary>
-    /// Status.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public required Status11Code Status { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max350Text? AdditionalInformation { get; init; }
 }

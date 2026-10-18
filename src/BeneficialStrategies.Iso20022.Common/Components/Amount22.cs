@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Amount22
 {
     /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max35Text? Description { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -29,13 +36,6 @@ public record Amount22
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
     public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Tax.

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorDiagnosticResponse10
 {
     /// <summary>
-    /// Acquirer Available.
-    /// </summary>
-    [DisplayName("Acquirer Available")]
-    [IsoXmlTag("AcqrrAvlbl")]
-    public TrueFalseIndicator? AcquirerAvailable { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -36,4 +29,11 @@ public record AcceptorDiagnosticResponse10
     [DisplayName("TMS Trigger")]
     [IsoXmlTag("TMSTrggr")]
     public TMSTrigger1? TMSTrigger { get; init; }
+
+    /// <summary>
+    /// Acquirer Available.
+    /// </summary>
+    [DisplayName("Acquirer Available")]
+    [IsoXmlTag("AcqrrAvlbl")]
+    public TrueFalseIndicator? AcquirerAvailable { get; init; }
 }

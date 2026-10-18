@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MarginCollateralReport5
 {
     /// <summary>
-    /// Collateralisation Category.
-    /// </summary>
-    [DisplayName("Collateralisation Category")]
-    [IsoXmlTag("CollstnCtgy")]
-    public required CollateralisationType3Code CollateralisationCategory { get; init; }
-
-    /// <summary>
     /// Collateral Portfolio Code.
     /// </summary>
     [DisplayName("Collateral Portfolio Code")]
     [IsoXmlTag("CollPrtflCd")]
     public required CollateralPortfolioCode6Choice_ CollateralPortfolioCode { get; init; }
+
+    /// <summary>
+    /// Collateralisation Category.
+    /// </summary>
+    [DisplayName("Collateralisation Category")]
+    [IsoXmlTag("CollstnCtgy")]
+    public required CollateralisationType3Code CollateralisationCategory { get; init; }
 
     /// <summary>
     /// Time Stamp.

@@ -63,109 +63,18 @@ public record SecuritiesFinancingConfirmationV13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.
+    /// </summary>
+    [DisplayName("Transaction Identification Details")]
+    [IsoXmlTag("TxIdDtls")]
+    public required TransactionTypeAndAdditionalParameters22 TransactionIdentificationDetails { get; init; }
+
+    /// <summary>
     /// Additional parameters for the transaction.
     /// </summary>
     [DisplayName("Additional Parameters")]
     [IsoXmlTag("AddtlParams")]
     public AdditionalParameters24? AdditionalParameters { get; init; }
-
-    /// <summary>
-    /// Cash parties involved in the transaction if different from the securities settlement parties.
-    /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties41? CashParties { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of delivering settlement parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties126? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Digital Payment Settlement.
-    /// </summary>
-    [DisplayName("Digital Payment Settlement")]
-    [IsoXmlTag("DgtlPmtSttlm")]
-    public ValueList<DigitalPaymentSettlement1> DigitalPaymentSettlement { get; init; } = [];
-
-    /// <summary>
-    /// Elements characterising a financial instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Other amounts than the settlement amount.
-    /// </summary>
-    [DisplayName("Other Amounts")]
-    [IsoXmlTag("OthrAmts")]
-    public OtherAmounts47? OtherAmounts { get; init; }
-
-    /// <summary>
-    /// Other business parties relevant to the transaction.
-    /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties43? OtherBusinessParties { get; init; }
-
-    /// <summary>
-    /// Details related to the account and quantity involved in the transaction.
-    /// </summary>
-    [DisplayName("Quantity And Account Details")]
-    [IsoXmlTag("QtyAndAcctDtls")]
-    public required QuantityAndAccount120 QuantityAndAccountDetails { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties126? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Details of the closing of the securities financing transaction.
-    /// </summary>
-    [DisplayName("Securities Financing Details")]
-    [IsoXmlTag("SctiesFincgDtls")]
-    public SecuritiesFinancingTransactionDetails56? SecuritiesFinancingDetails { get; init; }
-
-    /// <summary>
-    /// Amount effectively settled and which will be credited to/debited from the account owner&apos;s cash account. It may differ from the instructed settlement amount based on market tolerance level.
-    /// </summary>
-    [DisplayName("Settled Amount")]
-    [IsoXmlTag("SttldAmt")]
-    public AmountAndDirection94? SettledAmount { get; init; }
-
-    /// <summary>
-    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
-    /// </summary>
-    [DisplayName("Settlement Parameters")]
-    [IsoXmlTag("SttlmParams")]
-    public SettlementDetails228? SettlementParameters { get; init; }
-
-    /// <summary>
-    /// Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.
-    /// </summary>
-    [DisplayName("Standing Settlement Instruction Details")]
-    [IsoXmlTag("StgSttlmInstrDtls")]
-    public StandingSettlementInstruction20? StandingSettlementInstructionDetails { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
     /// Details of the securities financing deal.
@@ -175,9 +84,100 @@ public record SecuritiesFinancingConfirmationV13 : IOuterRecord
     public required SecuritiesTradeDetails115 TradeDetails { get; init; }
 
     /// <summary>
-    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
-    [DisplayName("Transaction Identification Details")]
-    [IsoXmlTag("TxIdDtls")]
-    public required TransactionTypeAndAdditionalParameters22 TransactionIdentificationDetails { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Elements characterising a financial instrument.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Details related to the account and quantity involved in the transaction.
+    /// </summary>
+    [DisplayName("Quantity And Account Details")]
+    [IsoXmlTag("QtyAndAcctDtls")]
+    public required QuantityAndAccount120 QuantityAndAccountDetails { get; init; }
+
+    /// <summary>
+    /// Details of the closing of the securities financing transaction.
+    /// </summary>
+    [DisplayName("Securities Financing Details")]
+    [IsoXmlTag("SctiesFincgDtls")]
+    public SecuritiesFinancingTransactionDetails56? SecuritiesFinancingDetails { get; init; }
+
+    /// <summary>
+    /// Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.
+    /// </summary>
+    [DisplayName("Standing Settlement Instruction Details")]
+    [IsoXmlTag("StgSttlmInstrDtls")]
+    public StandingSettlementInstruction20? StandingSettlementInstructionDetails { get; init; }
+
+    /// <summary>
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
+    /// </summary>
+    [DisplayName("Settlement Parameters")]
+    [IsoXmlTag("SttlmParams")]
+    public SettlementDetails228? SettlementParameters { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties126? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of receiving settlement parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties126? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Cash parties involved in the transaction if different from the securities settlement parties.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties41? CashParties { get; init; }
+
+    /// <summary>
+    /// Amount effectively settled and which will be credited to/debited from the account owner&apos;s cash account. It may differ from the instructed settlement amount based on market tolerance level.
+    /// </summary>
+    [DisplayName("Settled Amount")]
+    [IsoXmlTag("SttldAmt")]
+    public AmountAndDirection94? SettledAmount { get; init; }
+
+    /// <summary>
+    /// Other amounts than the settlement amount.
+    /// </summary>
+    [DisplayName("Other Amounts")]
+    [IsoXmlTag("OthrAmts")]
+    public OtherAmounts47? OtherAmounts { get; init; }
+
+    /// <summary>
+    /// Digital Payment Settlement.
+    /// </summary>
+    [DisplayName("Digital Payment Settlement")]
+    [IsoXmlTag("DgtlPmtSttlm")]
+    public ValueList<DigitalPaymentSettlement1> DigitalPaymentSettlement { get; init; } = [];
+
+    /// <summary>
+    /// Other business parties relevant to the transaction.
+    /// </summary>
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties43? OtherBusinessParties { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

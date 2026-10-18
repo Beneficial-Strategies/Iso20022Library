@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyAuditTrail2
 {
     /// <summary>
-    /// Approving User.
+    /// Record.
     /// </summary>
-    [DisplayName("Approving User")]
-    [IsoXmlTag("ApprvgUsr")]
-    public Max256Text? ApprovingUser { get; init; }
-
-    /// <summary>
-    /// Instructing User.
-    /// </summary>
-    [DisplayName("Instructing User")]
-    [IsoXmlTag("InstgUsr")]
-    public required Max256Text InstructingUser { get; init; }
+    [DisplayName("Record")]
+    [IsoXmlTag("Rcrd")]
+    public ValueList<UpdateLogPartyRecord2Choice_> Record { get; init; } = [];
 
     /// <summary>
     /// Operation Time Stamp.
@@ -38,9 +31,16 @@ public record PartyAuditTrail2
     public required ISODateTime OperationTimeStamp { get; init; }
 
     /// <summary>
-    /// Record.
+    /// Instructing User.
     /// </summary>
-    [DisplayName("Record")]
-    [IsoXmlTag("Rcrd")]
-    public ValueList<UpdateLogPartyRecord2Choice_> Record { get; init; } = [];
+    [DisplayName("Instructing User")]
+    [IsoXmlTag("InstgUsr")]
+    public required Max256Text InstructingUser { get; init; }
+
+    /// <summary>
+    /// Approving User.
+    /// </summary>
+    [DisplayName("Approving User")]
+    [IsoXmlTag("ApprvgUsr")]
+    public Max256Text? ApprovingUser { get; init; }
 }

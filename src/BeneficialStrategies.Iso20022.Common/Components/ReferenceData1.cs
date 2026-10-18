@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReferenceData1
 {
     /// <summary>
-    /// Data.
-    /// </summary>
-    [DisplayName("Data")]
-    [IsoXmlTag("Data")]
-    public required ReferenceDataEnvelope1 Data { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public Max350Text? Type { get; init; }
+
+    /// <summary>
+    /// Data.
+    /// </summary>
+    [DisplayName("Data")]
+    [IsoXmlTag("Data")]
+    public required ReferenceDataEnvelope1 Data { get; init; }
 }

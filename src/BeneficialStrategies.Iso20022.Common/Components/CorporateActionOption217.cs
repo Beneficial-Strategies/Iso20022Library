@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionOption217
 {
     /// <summary>
-    /// Cash Movement Details.
-    /// </summary>
-    [DisplayName("Cash Movement Details")]
-    [IsoXmlTag("CshMvmntDtls")]
-    public ValueList<CashOption91> CashMovementDetails { get; init; } = [];
-
-    /// <summary>
     /// Option Number.
     /// </summary>
     [DisplayName("Option Number")]
@@ -43,4 +36,11 @@ public record CorporateActionOption217
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
     public ValueList<SecuritiesOption76> SecuritiesMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Cash Movement Details.
+    /// </summary>
+    [DisplayName("Cash Movement Details")]
+    [IsoXmlTag("CshMvmntDtls")]
+    public ValueList<CashOption91> CashMovementDetails { get; init; } = [];
 }

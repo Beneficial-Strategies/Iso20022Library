@@ -24,11 +24,11 @@ public record ContractRegistration7
     public required Max35Text ContractRegistrationIdentification { get; init; }
 
     /// <summary>
-    /// Contract Registration Opening.
+    /// Reporting Party.
     /// </summary>
-    [DisplayName("Contract Registration Opening")]
-    [IsoXmlTag("CtrctRegnOpng")]
-    public ValueList<ContractRegistration8> ContractRegistrationOpening { get; init; } = [];
+    [DisplayName("Reporting Party")]
+    [IsoXmlTag("RptgPty")]
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
     /// Registration Agent.
@@ -38,11 +38,11 @@ public record ContractRegistration7
     public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
-    /// Reporting Party.
+    /// Contract Registration Opening.
     /// </summary>
-    [DisplayName("Reporting Party")]
-    [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; }
+    [DisplayName("Contract Registration Opening")]
+    [IsoXmlTag("CtrctRegnOpng")]
+    public ValueList<ContractRegistration8> ContractRegistrationOpening { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

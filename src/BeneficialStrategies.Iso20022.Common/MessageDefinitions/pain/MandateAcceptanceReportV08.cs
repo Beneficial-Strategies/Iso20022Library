@@ -53,16 +53,16 @@ public record MandateAcceptanceReportV08 : IOuterRecord
     public required GroupHeader110 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Acceptance Details.
     /// </summary>
     [DisplayName("Underlying Acceptance Details")]
     [IsoXmlTag("UndrlygAccptncDtls")]
     public ValueList<MandateAcceptance8> UnderlyingAcceptanceDetails { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

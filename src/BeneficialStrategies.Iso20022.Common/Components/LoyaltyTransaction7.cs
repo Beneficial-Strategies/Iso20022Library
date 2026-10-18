@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LoyaltyTransaction7
 {
     /// <summary>
-    /// Currency.
+    /// Sale Transaction Identification.
     /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 
     /// <summary>
     /// Loyalty Transaction Type.
@@ -29,6 +29,20 @@ public record LoyaltyTransaction7
     [DisplayName("Loyalty Transaction Type")]
     [IsoXmlTag("LltyTxTp")]
     public required LoyaltyTransactionType1Code LoyaltyTransactionType { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Total Amount.
+    /// </summary>
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
 
     /// <summary>
     /// Original POI Transaction.
@@ -43,18 +57,4 @@ public record LoyaltyTransaction7
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
     public ValueList<Product6> SaleItem { get; init; } = [];
-
-    /// <summary>
-    /// Sale Transaction Identification.
-    /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Total Amount.
-    /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
 }

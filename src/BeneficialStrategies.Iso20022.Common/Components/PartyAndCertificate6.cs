@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyAndCertificate6
 {
     /// <summary>
-    /// Certificate.
-    /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public Max10KBinary? Certificate { get; init; }
-
-    /// <summary>
     /// Party.
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public required PartyIdentification272 Party { get; init; }
+
+    /// <summary>
+    /// Certificate.
+    /// </summary>
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public Max10KBinary? Certificate { get; init; }
 }

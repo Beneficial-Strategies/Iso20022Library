@@ -17,6 +17,62 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction160
 {
     /// <summary>
+    /// Status Identification.
+    /// </summary>
+    [DisplayName("Status Identification")]
+    [IsoXmlTag("StsId")]
+    public Max35Text? StatusIdentification { get; init; }
+
+    /// <summary>
+    /// Original Instruction Identification.
+    /// </summary>
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    public Max35Text? OriginalInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Transaction Status.
+    /// </summary>
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }
+
+    /// <summary>
+    /// Status Reason Information.
+    /// </summary>
+    [DisplayName("Status Reason Information")]
+    [IsoXmlTag("StsRsnInf")]
+    public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
+
+    /// <summary>
+    /// Charges Information.
+    /// </summary>
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    public ValueList<Charges16> ChargesInformation { get; init; } = [];
+
+    /// <summary>
+    /// Tracker Data.
+    /// </summary>
+    [DisplayName("Tracker Data")]
+    [IsoXmlTag("TrckrData")]
+    public TrackerData7? TrackerData { get; init; }
+
+    /// <summary>
     /// Acceptance Date Time.
     /// </summary>
     [DisplayName("Acceptance Date Time")]
@@ -31,32 +87,11 @@ public record PaymentTransaction160
     public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
-    /// Charges Information.
-    /// </summary>
-    [DisplayName("Charges Information")]
-    [IsoXmlTag("ChrgsInf")]
-    public ValueList<Charges16> ChargesInformation { get; init; } = [];
-
-    /// <summary>
     /// Clearing System Reference.
     /// </summary>
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
     public Max35Text? ClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
-    [DisplayName("Original Instruction Identification")]
-    [IsoXmlTag("OrgnlInstrId")]
-    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -66,44 +101,9 @@ public record PaymentTransaction160
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
-
-    /// <summary>
-    /// Status Identification.
-    /// </summary>
-    [DisplayName("Status Identification")]
-    [IsoXmlTag("StsId")]
-    public Max35Text? StatusIdentification { get; init; }
-
-    /// <summary>
-    /// Status Reason Information.
-    /// </summary>
-    [DisplayName("Status Reason Information")]
-    [IsoXmlTag("StsRsnInf")]
-    public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Tracker Data.
-    /// </summary>
-    [DisplayName("Tracker Data")]
-    [IsoXmlTag("TrckrData")]
-    public TrackerData7? TrackerData { get; init; }
-
-    /// <summary>
-    /// Transaction Status.
-    /// </summary>
-    [DisplayName("Transaction Status")]
-    [IsoXmlTag("TxSts")]
-    public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }
 }

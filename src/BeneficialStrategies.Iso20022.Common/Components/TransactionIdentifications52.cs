@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionIdentifications52
 {
     /// <summary>
-    /// Account Owner Transaction Identification.
-    /// </summary>
-    [DisplayName("Account Owner Transaction Identification")]
-    [IsoXmlTag("AcctOwnrTxId")]
-    public required References44Choice_ AccountOwnerTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Account Servicer Transaction Identification.
     /// </summary>
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
-    /// </summary>
-    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Market Infrastructure Transaction Identification.
@@ -45,11 +31,11 @@ public record TransactionIdentifications52
     public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Nonce Identification.
+    /// Counterparty Market Infrastructure Transaction Identification.
     /// </summary>
-    [DisplayName("Nonce Identification")]
-    [IsoXmlTag("NonceId")]
-    public Max35Text? NonceIdentification { get; init; }
+    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Processor Transaction Identification.
@@ -57,4 +43,18 @@ public record TransactionIdentifications52
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
     public Max35Text? ProcessorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Nonce Identification.
+    /// </summary>
+    [DisplayName("Nonce Identification")]
+    [IsoXmlTag("NonceId")]
+    public Max35Text? NonceIdentification { get; init; }
+
+    /// <summary>
+    /// Account Owner Transaction Identification.
+    /// </summary>
+    [DisplayName("Account Owner Transaction Identification")]
+    [IsoXmlTag("AcctOwnrTxId")]
+    public required References44Choice_ AccountOwnerTransactionIdentification { get; init; }
 }

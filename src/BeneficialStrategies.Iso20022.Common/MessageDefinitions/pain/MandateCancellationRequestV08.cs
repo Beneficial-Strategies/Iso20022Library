@@ -53,16 +53,16 @@ public record MandateCancellationRequestV08 : IOuterRecord
     public required GroupHeader110 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Cancellation Details.
     /// </summary>
     [DisplayName("Underlying Cancellation Details")]
     [IsoXmlTag("UndrlygCxlDtls")]
     public ValueList<MandateCancellation8> UnderlyingCancellationDetails { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

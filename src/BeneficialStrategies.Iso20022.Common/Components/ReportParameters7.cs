@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportParameters7
 {
     /// <summary>
-    /// Activity Indicator.
-    /// </summary>
-    [DisplayName("Activity Indicator")]
-    [IsoXmlTag("ActvtyInd")]
-    public required YesNoIndicator ActivityIndicator { get; init; }
-
-    /// <summary>
-    /// Frequency.
-    /// </summary>
-    [DisplayName("Frequency")]
-    [IsoXmlTag("Frqcy")]
-    public required EventFrequency6Code Frequency { get; init; }
-
-    /// <summary>
     /// Net Position Identification.
     /// </summary>
     [DisplayName("Net Position Identification")]
@@ -45,6 +31,20 @@ public record ReportParameters7
     public required DateAndDateTime2Choice_ ReportDateAndTime { get; init; }
 
     /// <summary>
+    /// Update Type.
+    /// </summary>
+    [DisplayName("Update Type")]
+    [IsoXmlTag("UpdTp")]
+    public required StatementUpdateType1Code UpdateType { get; init; }
+
+    /// <summary>
+    /// Frequency.
+    /// </summary>
+    [DisplayName("Frequency")]
+    [IsoXmlTag("Frqcy")]
+    public required EventFrequency6Code Frequency { get; init; }
+
+    /// <summary>
     /// Report Number.
     /// </summary>
     [DisplayName("Report Number")]
@@ -52,9 +52,9 @@ public record ReportParameters7
     public Exact5NumericText? ReportNumber { get; init; }
 
     /// <summary>
-    /// Update Type.
+    /// Activity Indicator.
     /// </summary>
-    [DisplayName("Update Type")]
-    [IsoXmlTag("UpdTp")]
-    public required StatementUpdateType1Code UpdateType { get; init; }
+    [DisplayName("Activity Indicator")]
+    [IsoXmlTag("ActvtyInd")]
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

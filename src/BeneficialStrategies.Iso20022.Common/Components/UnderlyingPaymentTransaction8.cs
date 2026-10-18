@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UnderlyingPaymentTransaction8
 {
     /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
     /// Original Group Information.
     /// </summary>
     [DisplayName("Original Group Information")]
@@ -36,6 +29,27 @@ public record UnderlyingPaymentTransaction8
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
     public Max35Text? OriginalInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original Transaction Identification.
+    /// </summary>
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    public Max35Text? OriginalTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Original Interbank Settlement Amount.
@@ -52,20 +66,6 @@ public record UnderlyingPaymentTransaction8
     public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Original Service Level.
-    /// </summary>
-    [DisplayName("Original Service Level")]
-    [IsoXmlTag("OrgnlSvcLvl")]
-    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
-
-    /// <summary>
-    /// Original Transaction Identification.
-    /// </summary>
-    [DisplayName("Original Transaction Identification")]
-    [IsoXmlTag("OrgnlTxId")]
-    public Max35Text? OriginalTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Original Transaction Reference.
     /// </summary>
     [DisplayName("Original Transaction Reference")]
@@ -73,9 +73,9 @@ public record UnderlyingPaymentTransaction8
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
-    /// Original UETR.
+    /// Original Service Level.
     /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
+    [DisplayName("Original Service Level")]
+    [IsoXmlTag("OrgnlSvcLvl")]
+    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
 }

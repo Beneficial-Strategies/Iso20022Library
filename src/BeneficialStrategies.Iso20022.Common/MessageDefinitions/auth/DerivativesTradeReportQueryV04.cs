@@ -53,16 +53,16 @@ public record DerivativesTradeReportQueryV04 : IOuterRecord
     public required PartyIdentification121Choice_ RequestingAuthority { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Trade Query Data.
     /// </summary>
     [DisplayName("Trade Query Data")]
     [IsoXmlTag("TradQryData")]
     public required TradeReportQuery17Choice_ TradeQueryData { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

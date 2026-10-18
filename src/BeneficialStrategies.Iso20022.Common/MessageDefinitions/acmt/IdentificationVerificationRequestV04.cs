@@ -53,16 +53,16 @@ public record IdentificationVerificationRequestV04 : IOuterRecord
     public required IdentificationAssignment4 Assignment { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Verification.
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
     public ValueList<IdentificationVerification5> Verification { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

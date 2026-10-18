@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction158
 {
     /// <summary>
-    /// Acceptance Date Time.
+    /// Status Request Identification.
     /// </summary>
-    [DisplayName("Acceptance Date Time")]
-    [IsoXmlTag("AccptncDtTm")]
-    public ISODateTime? AcceptanceDateTime { get; init; }
-
-    /// <summary>
-    /// Clearing System Reference.
-    /// </summary>
-    [DisplayName("Clearing System Reference")]
-    [IsoXmlTag("ClrSysRef")]
-    public Max35Text? ClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
+    [DisplayName("Status Request Identification")]
+    [IsoXmlTag("StsReqId")]
+    public Max35Text? StatusRequestIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -66,18 +38,18 @@ public record PaymentTransaction158
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
     /// Original Transaction Identification.
     /// </summary>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
     public Max35Text? OriginalTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
     /// Original UETR.
@@ -87,11 +59,39 @@ public record PaymentTransaction158
     public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
-    /// Status Request Identification.
+    /// Acceptance Date Time.
     /// </summary>
-    [DisplayName("Status Request Identification")]
-    [IsoXmlTag("StsReqId")]
-    public Max35Text? StatusRequestIdentification { get; init; }
+    [DisplayName("Acceptance Date Time")]
+    [IsoXmlTag("AccptncDtTm")]
+    public ISODateTime? AcceptanceDateTime { get; init; }
+
+    /// <summary>
+    /// Clearing System Reference.
+    /// </summary>
+    [DisplayName("Clearing System Reference")]
+    [IsoXmlTag("ClrSysRef")]
+    public Max35Text? ClearingSystemReference { get; init; }
+
+    /// <summary>
+    /// Instructing Agent.
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Instructed Agent.
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+
+    /// <summary>
+    /// Original Transaction Reference.
+    /// </summary>
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
     /// Supplementary Data.

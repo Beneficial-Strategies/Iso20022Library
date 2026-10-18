@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RetailerEvent6
 {
     /// <summary>
-    /// Additional Event Information.
-    /// </summary>
-    [DisplayName("Additional Event Information")]
-    [IsoXmlTag("AddtlEvtInf")]
-    public Max1025Text? AdditionalEventInformation { get; init; }
-
-    /// <summary>
-    /// Event Context.
-    /// </summary>
-    [DisplayName("Event Context")]
-    [IsoXmlTag("EvtCntxt")]
-    public EventContext6? EventContext { get; init; }
-
-    /// <summary>
     /// Event Time Stamp.
     /// </summary>
     [DisplayName("Event Time Stamp")]
@@ -43,4 +29,18 @@ public record RetailerEvent6
     [DisplayName("Event To Notify")]
     [IsoXmlTag("EvtToNtfy")]
     public required EventToNotify2Code EventToNotify { get; init; }
+
+    /// <summary>
+    /// Event Context.
+    /// </summary>
+    [DisplayName("Event Context")]
+    [IsoXmlTag("EvtCntxt")]
+    public EventContext6? EventContext { get; init; }
+
+    /// <summary>
+    /// Additional Event Information.
+    /// </summary>
+    [DisplayName("Additional Event Information")]
+    [IsoXmlTag("AddtlEvtInf")]
+    public Max1025Text? AdditionalEventInformation { get; init; }
 }

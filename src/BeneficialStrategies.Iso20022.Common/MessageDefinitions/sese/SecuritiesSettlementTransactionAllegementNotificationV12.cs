@@ -61,48 +61,20 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Specifies cash parties in the framework of a corporate action event.
+    /// Unambiguous identification of the transaction as known by the instructing party.
     /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties42? CashParties { get; init; }
-
-    /// <summary>
-    /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
-    /// </summary>
-    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Identifies the chain of delivering settlement parties.
+    /// Provides settlement type and identification information.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties126? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Digital Payment Settlement.
-    /// </summary>
-    [DisplayName("Digital Payment Settlement")]
-    [IsoXmlTag("DgtlPmtSttlm")]
-    public ValueList<DigitalPaymentSettlement1> DigitalPaymentSettlement { get; init; } = [];
-
-    /// <summary>
-    /// Elements characterising a financial instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+    [DisplayName("Settlement Type And Additional Parameters")]
+    [IsoXmlTag("SttlmTpAndAddtlParams")]
+    public required SettlementTypeAndAdditionalParameters12 SettlementTypeAndAdditionalParameters { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -114,67 +86,13 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Other amounts than the settlement amount.
+    /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
-    [DisplayName("Other Amounts")]
-    [IsoXmlTag("OthrAmts")]
-    public OtherAmounts32? OtherAmounts { get; init; }
-
-    /// <summary>
-    /// Other business parties relevant to the transaction.
-    /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties34? OtherBusinessParties { get; init; }
-
-    /// <summary>
-    /// Details related to the account and quantity involved in the transaction.
-    /// </summary>
-    [DisplayName("Quantity And Account Details")]
-    [IsoXmlTag("QtyAndAcctDtls")]
-    public required QuantityAndAccount116 QuantityAndAccountDetails { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties126? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Details of the closing of the securities financing transaction.
-    /// </summary>
-    [DisplayName("Securities Financing Details")]
-    [IsoXmlTag("SctiesFincgDtls")]
-    public SecuritiesFinancingTransactionDetails55? SecuritiesFinancingDetails { get; init; }
-
-    /// <summary>
-    /// Total amount of money to be paid or received in exchange for the securities.
-    /// </summary>
-    [DisplayName("Settlement Amount")]
-    [IsoXmlTag("SttlmAmt")]
-    public AmountAndDirection88? SettlementAmount { get; init; }
-
-    /// <summary>
-    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
-    /// </summary>
-    [DisplayName("Settlement Parameters")]
-    [IsoXmlTag("SttlmParams")]
-    public required SettlementDetails224 SettlementParameters { get; init; }
-
-    /// <summary>
-    /// Provides settlement type and identification information.
-    /// </summary>
-    [DisplayName("Settlement Type And Additional Parameters")]
-    [IsoXmlTag("SttlmTpAndAddtlParams")]
-    public required SettlementTypeAndAdditionalParameters12 SettlementTypeAndAdditionalParameters { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Details of the trade.
@@ -184,11 +102,93 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     public required SecuritiesTradeDetails151 TradeDetails { get; init; }
 
     /// <summary>
-    /// Unambiguous identification of the transaction as known by the instructing party.
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required Max35Text TransactionIdentification { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Elements characterising a financial instrument.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Details related to the account and quantity involved in the transaction.
+    /// </summary>
+    [DisplayName("Quantity And Account Details")]
+    [IsoXmlTag("QtyAndAcctDtls")]
+    public required QuantityAndAccount116 QuantityAndAccountDetails { get; init; }
+
+    /// <summary>
+    /// Details of the closing of the securities financing transaction.
+    /// </summary>
+    [DisplayName("Securities Financing Details")]
+    [IsoXmlTag("SctiesFincgDtls")]
+    public SecuritiesFinancingTransactionDetails55? SecuritiesFinancingDetails { get; init; }
+
+    /// <summary>
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
+    /// </summary>
+    [DisplayName("Settlement Parameters")]
+    [IsoXmlTag("SttlmParams")]
+    public required SettlementDetails224 SettlementParameters { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties126? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of receiving settlement parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties126? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Specifies cash parties in the framework of a corporate action event.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties42? CashParties { get; init; }
+
+    /// <summary>
+    /// Total amount of money to be paid or received in exchange for the securities.
+    /// </summary>
+    [DisplayName("Settlement Amount")]
+    [IsoXmlTag("SttlmAmt")]
+    public AmountAndDirection88? SettlementAmount { get; init; }
+
+    /// <summary>
+    /// Other amounts than the settlement amount.
+    /// </summary>
+    [DisplayName("Other Amounts")]
+    [IsoXmlTag("OthrAmts")]
+    public OtherAmounts32? OtherAmounts { get; init; }
+
+    /// <summary>
+    /// Digital Payment Settlement.
+    /// </summary>
+    [DisplayName("Digital Payment Settlement")]
+    [IsoXmlTag("DgtlPmtSttlm")]
+    public ValueList<DigitalPaymentSettlement1> DigitalPaymentSettlement { get; init; } = [];
+
+    /// <summary>
+    /// Other business parties relevant to the transaction.
+    /// </summary>
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties34? OtherBusinessParties { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

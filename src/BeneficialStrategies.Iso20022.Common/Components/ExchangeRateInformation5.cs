@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ExchangeRateInformation5
 {
     /// <summary>
-    /// Agreement Type.
+    /// Provider.
     /// </summary>
-    [DisplayName("Agreement Type")]
-    [IsoXmlTag("AgrmtTp")]
-    public ExchangeRateAgreementType1Code? AgreementType { get; init; }
-
-    /// <summary>
-    /// Base Currency Code.
-    /// </summary>
-    [DisplayName("Base Currency Code")]
-    [IsoXmlTag("BaseCcyCd")]
-    public ISO3NumericCurrencyCode? BaseCurrencyCode { get; init; }
-
-    /// <summary>
-    /// Counter Currency Code.
-    /// </summary>
-    [DisplayName("Counter Currency Code")]
-    [IsoXmlTag("CntrCcyCd")]
-    public ISO3NumericCurrencyCode? CounterCurrencyCode { get; init; }
-
-    /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// End Point.
-    /// </summary>
-    [DisplayName("End Point")]
-    [IsoXmlTag("EndPt")]
-    public Endpoint1Code? EndPoint { get; init; }
+    [DisplayName("Provider")]
+    [IsoXmlTag("Prvdr")]
+    public Max70Text? Provider { get; init; }
 
     /// <summary>
     /// Identification.
@@ -59,11 +31,25 @@ public record ExchangeRateInformation5
     public Max70Text? Identification { get; init; }
 
     /// <summary>
-    /// Other Agreement Type.
+    /// Date.
     /// </summary>
-    [DisplayName("Other Agreement Type")]
-    [IsoXmlTag("OthrAgrmtTp")]
-    public Max35Text? OtherAgreementType { get; init; }
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
+
+    /// <summary>
+    /// Time.
+    /// </summary>
+    [DisplayName("Time")]
+    [IsoXmlTag("Tm")]
+    public ISOTime? Time { get; init; }
+
+    /// <summary>
+    /// End Point.
+    /// </summary>
+    [DisplayName("End Point")]
+    [IsoXmlTag("EndPt")]
+    public Endpoint1Code? EndPoint { get; init; }
 
     /// <summary>
     /// Other End Point.
@@ -73,18 +59,18 @@ public record ExchangeRateInformation5
     public Max35Text? OtherEndPoint { get; init; }
 
     /// <summary>
-    /// Other Rate Type.
+    /// Counter Currency Code.
     /// </summary>
-    [DisplayName("Other Rate Type")]
-    [IsoXmlTag("OthrRateTp")]
-    public Max35Text? OtherRateType { get; init; }
+    [DisplayName("Counter Currency Code")]
+    [IsoXmlTag("CntrCcyCd")]
+    public ISO3NumericCurrencyCode? CounterCurrencyCode { get; init; }
 
     /// <summary>
-    /// Provider.
+    /// Base Currency Code.
     /// </summary>
-    [DisplayName("Provider")]
-    [IsoXmlTag("Prvdr")]
-    public Max70Text? Provider { get; init; }
+    [DisplayName("Base Currency Code")]
+    [IsoXmlTag("BaseCcyCd")]
+    public ISO3NumericCurrencyCode? BaseCurrencyCode { get; init; }
 
     /// <summary>
     /// Rate.
@@ -94,18 +80,32 @@ public record ExchangeRateInformation5
     public BaseOne25Rate? Rate { get; init; }
 
     /// <summary>
-    /// Rate Lock Applied.
+    /// Rate Type.
     /// </summary>
-    [DisplayName("Rate Lock Applied")]
-    [IsoXmlTag("RateLckApld")]
-    public TrueFalseIndicator? RateLockApplied { get; init; }
+    [DisplayName("Rate Type")]
+    [IsoXmlTag("RateTp")]
+    public ExchangeRateType2Code? RateType { get; init; }
 
     /// <summary>
-    /// Rate Lock Eligible.
+    /// Other Rate Type.
     /// </summary>
-    [DisplayName("Rate Lock Eligible")]
-    [IsoXmlTag("RateLckElgbl")]
-    public TrueFalseIndicator? RateLockEligible { get; init; }
+    [DisplayName("Other Rate Type")]
+    [IsoXmlTag("OthrRateTp")]
+    public Max35Text? OtherRateType { get; init; }
+
+    /// <summary>
+    /// Agreement Type.
+    /// </summary>
+    [DisplayName("Agreement Type")]
+    [IsoXmlTag("AgrmtTp")]
+    public ExchangeRateAgreementType1Code? AgreementType { get; init; }
+
+    /// <summary>
+    /// Other Agreement Type.
+    /// </summary>
+    [DisplayName("Other Agreement Type")]
+    [IsoXmlTag("OthrAgrmtTp")]
+    public Max35Text? OtherAgreementType { get; init; }
 
     /// <summary>
     /// Rate Lock Requested.
@@ -115,16 +115,16 @@ public record ExchangeRateInformation5
     public TrueFalseIndicator? RateLockRequested { get; init; }
 
     /// <summary>
-    /// Rate Type.
+    /// Rate Lock Eligible.
     /// </summary>
-    [DisplayName("Rate Type")]
-    [IsoXmlTag("RateTp")]
-    public ExchangeRateType2Code? RateType { get; init; }
+    [DisplayName("Rate Lock Eligible")]
+    [IsoXmlTag("RateLckElgbl")]
+    public TrueFalseIndicator? RateLockEligible { get; init; }
 
     /// <summary>
-    /// Time.
+    /// Rate Lock Applied.
     /// </summary>
-    [DisplayName("Time")]
-    [IsoXmlTag("Tm")]
-    public ISOTime? Time { get; init; }
+    [DisplayName("Rate Lock Applied")]
+    [IsoXmlTag("RateLckApld")]
+    public TrueFalseIndicator? RateLockApplied { get; init; }
 }

@@ -53,42 +53,11 @@ public record RedemptionBulkOrderConfirmationCancellationInstructionV03 : IOuter
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.
-    /// </summary>
-    [DisplayName("Amendment Indicator")]
-    [IsoXmlTag("AmdmntInd")]
-    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required YesNoIndicator AmendmentIndicator { get; init; }
-
-    /// <summary>
-    /// Information provided when the message is a copy of a previous message.
-    /// </summary>
-    [DisplayName("Copy Details")]
-    [IsoXmlTag("CpyDtls")]
-    public CopyInformation5? CopyDetails { get; init; }
-
-    /// <summary>
-    /// Reference assigned to a set of orders or trades in order to link them together.
-    /// </summary>
-    [DisplayName("Master Reference")]
-    [IsoXmlTag("MstrRef")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? MasterReference { get; init; }
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Identification of the individual order confirmation to be cancelled.
-    /// </summary>
-    [DisplayName("Order References")]
-    [IsoXmlTag("OrdrRefs")]
-    public ValueList<InvestmentFundOrder14> OrderReferences { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -110,4 +79,35 @@ public record RedemptionBulkOrderConfirmationCancellationInstructionV03 : IOuter
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.
+    /// </summary>
+    [DisplayName("Amendment Indicator")]
+    [IsoXmlTag("AmdmntInd")]
+    [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
+    public required YesNoIndicator AmendmentIndicator { get; init; }
+
+    /// <summary>
+    /// Reference assigned to a set of orders or trades in order to link them together.
+    /// </summary>
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? MasterReference { get; init; }
+
+    /// <summary>
+    /// Identification of the individual order confirmation to be cancelled.
+    /// </summary>
+    [DisplayName("Order References")]
+    [IsoXmlTag("OrdrRefs")]
+    public ValueList<InvestmentFundOrder14> OrderReferences { get; init; } = [];
+
+    /// <summary>
+    /// Information provided when the message is a copy of a previous message.
+    /// </summary>
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation5? CopyDetails { get; init; }
 }

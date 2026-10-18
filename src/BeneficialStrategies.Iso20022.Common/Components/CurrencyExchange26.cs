@@ -18,14 +18,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyExchange26
 {
     /// <summary>
-    /// Agent who undertakes the conversion of funds from the unit currency to the quoted currency.
+    /// Currency in which the rate of exchange is expressed in a currency exchange. In the example GBP 1.00 = USD 1.30, the unit currency is GBP.
     /// </summary>
-    /// <remarks>
-    /// Usage: The ForeignExchangeAgent must receive the AgreedRate block unchanged.
-    /// </remarks>
-    [DisplayName("Foreign Exchange Agent")]
-    [IsoXmlTag("FXAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForeignExchangeAgent { get; init; }
+    [DisplayName("Unit Currency")]
+    [IsoXmlTag("UnitCcy")]
+    public ActiveOrHistoricCurrencyCode? UnitCurrency { get; init; }
+
+    /// <summary>
+    /// Currency into which the base (unit) currency is converted. In the example GBP 1.00 = USD 1.30, the unit currency is USD.
+    /// </summary>
+    [DisplayName("Quoted Currency")]
+    [IsoXmlTag("QtdCcy")]
+    public ActiveOrHistoricCurrencyCode? QuotedCurrency { get; init; }
 
     /// <summary>
     /// The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency. (Amount in UnitCurrency * ExchangeRate = Amount in QuotedCurrency)
@@ -42,13 +46,6 @@ public record CurrencyExchange26
     public ISODateTime? QuotationDateTime { get; init; }
 
     /// <summary>
-    /// Currency into which the base (unit) currency is converted. In the example GBP 1.00 = USD 1.30, the unit currency is USD.
-    /// </summary>
-    [DisplayName("Quoted Currency")]
-    [IsoXmlTag("QtdCcy")]
-    public ActiveOrHistoricCurrencyCode? QuotedCurrency { get; init; }
-
-    /// <summary>
     /// Unique identification to unambiguously identify the quote issued by the ForeignExchangeAgent.
     /// </summary>
     /// <remarks>
@@ -59,9 +56,12 @@ public record CurrencyExchange26
     public UUIDv4Identifier? QuoteIdentification { get; init; }
 
     /// <summary>
-    /// Currency in which the rate of exchange is expressed in a currency exchange. In the example GBP 1.00 = USD 1.30, the unit currency is GBP.
+    /// Agent who undertakes the conversion of funds from the unit currency to the quoted currency.
     /// </summary>
-    [DisplayName("Unit Currency")]
-    [IsoXmlTag("UnitCcy")]
-    public ActiveOrHistoricCurrencyCode? UnitCurrency { get; init; }
+    /// <remarks>
+    /// Usage: The ForeignExchangeAgent must receive the AgreedRate block unchanged.
+    /// </remarks>
+    [DisplayName("Foreign Exchange Agent")]
+    [IsoXmlTag("FXAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForeignExchangeAgent { get; init; }
 }

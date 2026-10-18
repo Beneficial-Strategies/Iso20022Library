@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorEnrolmentCancellationReason3
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Originator.
     /// </summary>
     [DisplayName("Originator")]
@@ -36,4 +29,11 @@ public record CreditorEnrolmentCancellationReason3
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required CreditorEnrolmentCancellationReason1Choice_ Reason { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

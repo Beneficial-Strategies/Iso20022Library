@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeStateReport23
 {
     /// <summary>
+    /// Counterparty Specific Data.
+    /// </summary>
+    [DisplayName("Counterparty Specific Data")]
+    [IsoXmlTag("CtrPtySpcfcData")]
+    public ValueList<CounterpartySpecificData36> CounterpartySpecificData { get; init; } = [];
+
+    /// <summary>
     /// Common Trade Data.
     /// </summary>
     [DisplayName("Common Trade Data")]
@@ -24,11 +31,11 @@ public record TradeStateReport23
     public required CommonTradeDataReport72 CommonTradeData { get; init; }
 
     /// <summary>
-    /// Counterparty Specific Data.
+    /// Technical Attributes.
     /// </summary>
-    [DisplayName("Counterparty Specific Data")]
-    [IsoXmlTag("CtrPtySpcfcData")]
-    public ValueList<CounterpartySpecificData36> CounterpartySpecificData { get; init; } = [];
+    [DisplayName("Technical Attributes")]
+    [IsoXmlTag("TechAttrbts")]
+    public TechnicalAttributes5? TechnicalAttributes { get; init; }
 
     /// <summary>
     /// Public Dissemination Data.
@@ -43,11 +50,4 @@ public record TradeStateReport23
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Technical Attributes.
-    /// </summary>
-    [DisplayName("Technical Attributes")]
-    [IsoXmlTag("TechAttrbts")]
-    public TechnicalAttributes5? TechnicalAttributes { get; init; }
 }

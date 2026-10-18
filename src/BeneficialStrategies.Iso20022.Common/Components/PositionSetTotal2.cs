@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PositionSetTotal2
 {
     /// <summary>
+    /// Number Of Trades.
+    /// </summary>
+    [DisplayName("Number Of Trades")]
+    [IsoXmlTag("NbOfTrds")]
+    public Max20PositiveNumber? NumberOfTrades { get; init; }
+
+    /// <summary>
+    /// Positive Value.
+    /// </summary>
+    [DisplayName("Positive Value")]
+    [IsoXmlTag("PostvVal")]
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PositiveValue { get; init; }
+
+    /// <summary>
     /// Negative Value.
     /// </summary>
     [DisplayName("Negative Value")]
@@ -31,24 +45,10 @@ public record PositionSetTotal2
     public NotionalAmountLegs6? Notional { get; init; }
 
     /// <summary>
-    /// Number Of Trades.
-    /// </summary>
-    [DisplayName("Number Of Trades")]
-    [IsoXmlTag("NbOfTrds")]
-    public Max20PositiveNumber? NumberOfTrades { get; init; }
-
-    /// <summary>
     /// Other Payment Amount.
     /// </summary>
     [DisplayName("Other Payment Amount")]
     [IsoXmlTag("OthrPmtAmt")]
     public ValueList<ActiveOrHistoricCurrencyAnd19DecimalAmount> OtherPaymentAmount { get; init; } =
         [];
-
-    /// <summary>
-    /// Positive Value.
-    /// </summary>
-    [DisplayName("Positive Value")]
-    [IsoXmlTag("PostvVal")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PositiveValue { get; init; }
 }

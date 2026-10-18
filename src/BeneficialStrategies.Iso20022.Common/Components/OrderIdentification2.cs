@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrderIdentification2
 {
     /// <summary>
-    /// Date Of Receipt.
-    /// </summary>
-    [DisplayName("Date Of Receipt")]
-    [IsoXmlTag("DtOfRct")]
-    public ISODate? DateOfReceipt { get; init; }
-
-    /// <summary>
-    /// Event Type.
-    /// </summary>
-    [DisplayName("Event Type")]
-    [IsoXmlTag("EvtTp")]
-    public OrderEventType1Choice_? EventType { get; init; }
-
-    /// <summary>
-    /// Financial Instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument")]
-    [IsoXmlTag("FinInstrm")]
-    public required FinancialInstrument99Choice_ FinancialInstrument { get; init; }
-
-    /// <summary>
     /// Order Book Identification.
     /// </summary>
     [DisplayName("Order Book Identification")]
@@ -45,18 +24,11 @@ public record OrderIdentification2
     public required Max35Text OrderBookIdentification { get; init; }
 
     /// <summary>
-    /// Order Identification.
+    /// Sequence Number.
     /// </summary>
-    [DisplayName("Order Identification")]
-    [IsoXmlTag("OrdrId")]
-    public Max50Text? OrderIdentification { get; init; }
-
-    /// <summary>
-    /// Order Restriction.
-    /// </summary>
-    [DisplayName("Order Restriction")]
-    [IsoXmlTag("OrdrRstrctn")]
-    public ValueList<OrderRestriction1Choice_> OrderRestriction { get; init; } = [];
+    [DisplayName("Sequence Number")]
+    [IsoXmlTag("SeqNb")]
+    public required PositiveNumber SequenceNumber { get; init; }
 
     /// <summary>
     /// Priority.
@@ -64,13 +36,6 @@ public record OrderIdentification2
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
     public OrderPriority1? Priority { get; init; }
-
-    /// <summary>
-    /// Sequence Number.
-    /// </summary>
-    [DisplayName("Sequence Number")]
-    [IsoXmlTag("SeqNb")]
-    public required PositiveNumber SequenceNumber { get; init; }
 
     /// <summary>
     /// Time Stamp.
@@ -87,11 +52,25 @@ public record OrderIdentification2
     public required MICIdentifier TradeVenue { get; init; }
 
     /// <summary>
-    /// Validity Date Time.
+    /// Financial Instrument.
     /// </summary>
-    [DisplayName("Validity Date Time")]
-    [IsoXmlTag("VldtyDtTm")]
-    public ISODateTime? ValidityDateTime { get; init; }
+    [DisplayName("Financial Instrument")]
+    [IsoXmlTag("FinInstrm")]
+    public required FinancialInstrument99Choice_ FinancialInstrument { get; init; }
+
+    /// <summary>
+    /// Order Identification.
+    /// </summary>
+    [DisplayName("Order Identification")]
+    [IsoXmlTag("OrdrId")]
+    public Max50Text? OrderIdentification { get; init; }
+
+    /// <summary>
+    /// Date Of Receipt.
+    /// </summary>
+    [DisplayName("Date Of Receipt")]
+    [IsoXmlTag("DtOfRct")]
+    public ISODate? DateOfReceipt { get; init; }
 
     /// <summary>
     /// Validity Period.
@@ -99,4 +78,25 @@ public record OrderIdentification2
     [DisplayName("Validity Period")]
     [IsoXmlTag("VldtyPrd")]
     public ValidityPeriod1Choice_? ValidityPeriod { get; init; }
+
+    /// <summary>
+    /// Order Restriction.
+    /// </summary>
+    [DisplayName("Order Restriction")]
+    [IsoXmlTag("OrdrRstrctn")]
+    public ValueList<OrderRestriction1Choice_> OrderRestriction { get; init; } = [];
+
+    /// <summary>
+    /// Validity Date Time.
+    /// </summary>
+    [DisplayName("Validity Date Time")]
+    [IsoXmlTag("VldtyDtTm")]
+    public ISODateTime? ValidityDateTime { get; init; }
+
+    /// <summary>
+    /// Event Type.
+    /// </summary>
+    [DisplayName("Event Type")]
+    [IsoXmlTag("EvtTp")]
+    public OrderEventType1Choice_? EventType { get; init; }
 }

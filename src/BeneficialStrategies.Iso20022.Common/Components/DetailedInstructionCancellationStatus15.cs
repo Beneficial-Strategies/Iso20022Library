@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DetailedInstructionCancellationStatus15
 {
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public Max35Text? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction Cancellation Status.
-    /// </summary>
-    [DisplayName("Instruction Cancellation Status")]
-    [IsoXmlTag("InstrCxlSts")]
-    public required CancellationStatus32Choice_ InstructionCancellationStatus { get; init; }
-
-    /// <summary>
     /// Single Instruction Cancellation Identification.
     /// </summary>
     [DisplayName("Single Instruction Cancellation Identification")]
@@ -38,9 +24,23 @@ public record DetailedInstructionCancellationStatus15
     public required Max35Text SingleInstructionCancellationIdentification { get; init; }
 
     /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public Max35Text? AccountIdentification { get; init; }
+
+    /// <summary>
     /// Sub Account Identification.
     /// </summary>
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
     public Max35Text? SubAccountIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Cancellation Status.
+    /// </summary>
+    [DisplayName("Instruction Cancellation Status")]
+    [IsoXmlTag("InstrCxlSts")]
+    public required CancellationStatus32Choice_ InstructionCancellationStatus { get; init; }
 }

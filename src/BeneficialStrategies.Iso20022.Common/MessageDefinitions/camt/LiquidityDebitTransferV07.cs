@@ -46,18 +46,18 @@ public record LiquidityDebitTransferV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Liquidity Debit Transfer.
-    /// </summary>
-    [DisplayName("Liquidity Debit Transfer")]
-    [IsoXmlTag("LqdtyDbtTrf")]
-    public required LiquidityDebitTransfer4 LiquidityDebitTransfer { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader1 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Liquidity Debit Transfer.
+    /// </summary>
+    [DisplayName("Liquidity Debit Transfer")]
+    [IsoXmlTag("LqdtyDbtTrf")]
+    public required LiquidityDebitTransfer4 LiquidityDebitTransfer { get; init; }
 
     /// <summary>
     /// Supplementary Data.

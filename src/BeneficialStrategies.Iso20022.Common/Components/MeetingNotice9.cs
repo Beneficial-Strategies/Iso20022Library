@@ -17,74 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MeetingNotice9
 {
     /// <summary>
-    /// Additional Documentation URL Address.
+    /// Meeting Identification.
     /// </summary>
-    [DisplayName("Additional Documentation URL Address")]
-    [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    public ValueList<Max2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
-
-    /// <summary>
-    /// Additional Procedure Details.
-    /// </summary>
-    [DisplayName("Additional Procedure Details")]
-    [IsoXmlTag("AddtlPrcdrDtls")]
-    public ValueList<AdditionalRights4> AdditionalProcedureDetails { get; init; } = [];
-
-    /// <summary>
-    /// Announcement Date.
-    /// </summary>
-    [DisplayName("Announcement Date")]
-    [IsoXmlTag("AnncmntDt")]
-    public DateAndDateTime2Choice_? AnnouncementDate { get; init; }
-
-    /// <summary>
-    /// Attendance.
-    /// </summary>
-    [DisplayName("Attendance")]
-    [IsoXmlTag("Attndnc")]
-    public Attendance2? Attendance { get; init; }
-
-    /// <summary>
-    /// Classification.
-    /// </summary>
-    [DisplayName("Classification")]
-    [IsoXmlTag("Clssfctn")]
-    public MeetingTypeClassification2Choice_? Classification { get; init; }
-
-    /// <summary>
-    /// Contact Person Details.
-    /// </summary>
-    [DisplayName("Contact Person Details")]
-    [IsoXmlTag("CtctPrsnDtls")]
-    public ValueList<MeetingContactPerson3> ContactPersonDetails { get; init; } = [];
-
-    /// <summary>
-    /// Enrolment Deadline.
-    /// </summary>
-    [DisplayName("Enrolment Deadline")]
-    [IsoXmlTag("EnrlmntDdln")]
-    public DateFormat58Choice_? EnrolmentDeadline { get; init; }
-
-    /// <summary>
-    /// Enrolment Market Deadline.
-    /// </summary>
-    [DisplayName("Enrolment Market Deadline")]
-    [IsoXmlTag("EnrlmntMktDdln")]
-    public DateFormat58Choice_? EnrolmentMarketDeadline { get; init; }
-
-    /// <summary>
-    /// Entitlement Fixing Date.
-    /// </summary>
-    [DisplayName("Entitlement Fixing Date")]
-    [IsoXmlTag("EntitlmntFxgDt")]
-    public DateFormat1? EntitlementFixingDate { get; init; }
-
-    /// <summary>
-    /// Event Processing Web Site Address.
-    /// </summary>
-    [DisplayName("Event Processing Web Site Address")]
-    [IsoXmlTag("EvtPrcgWebSiteAdr")]
-    public Max2048Text? EventProcessingWebSiteAddress { get; init; }
+    [DisplayName("Meeting Identification")]
+    [IsoXmlTag("MtgId")]
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// Issuer Meeting Identification.
@@ -94,11 +31,25 @@ public record MeetingNotice9
     public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
-    /// Meeting Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Meeting Identification")]
-    [IsoXmlTag("MtgId")]
-    public required Max35Text MeetingIdentification { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required MeetingType4Code Type { get; init; }
+
+    /// <summary>
+    /// Classification.
+    /// </summary>
+    [DisplayName("Classification")]
+    [IsoXmlTag("Clssfctn")]
+    public MeetingTypeClassification2Choice_? Classification { get; init; }
+
+    /// <summary>
+    /// Announcement Date.
+    /// </summary>
+    [DisplayName("Announcement Date")]
+    [IsoXmlTag("AnncmntDt")]
+    public DateAndDateTime2Choice_? AnnouncementDate { get; init; }
 
     /// <summary>
     /// One Man One Vote Indicator.
@@ -115,46 +66,32 @@ public record MeetingNotice9
     public ValueList<ParticipationMethod2> Participation { get; init; } = [];
 
     /// <summary>
-    /// Proxy Appointment Notification Address.
+    /// Attendance.
     /// </summary>
-    [DisplayName("Proxy Appointment Notification Address")]
-    [IsoXmlTag("PrxyAppntmntNtfctnAdr")]
-    public PostalAddress1? ProxyAppointmentNotificationAddress { get; init; }
+    [DisplayName("Attendance")]
+    [IsoXmlTag("Attndnc")]
+    public Attendance2? Attendance { get; init; }
 
     /// <summary>
-    /// Proxy Choice.
+    /// Additional Documentation URL Address.
     /// </summary>
-    [DisplayName("Proxy Choice")]
-    [IsoXmlTag("PrxyChc")]
-    public Proxy5Choice_? ProxyChoice_ { get; init; }
+    [DisplayName("Additional Documentation URL Address")]
+    [IsoXmlTag("AddtlDcmnttnURLAdr")]
+    public ValueList<Max2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
-    /// Registration Securities Deadline.
+    /// Event Processing Web Site Address.
     /// </summary>
-    [DisplayName("Registration Securities Deadline")]
-    [IsoXmlTag("RegnSctiesDdln")]
-    public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; init; }
+    [DisplayName("Event Processing Web Site Address")]
+    [IsoXmlTag("EvtPrcgWebSiteAdr")]
+    public Max2048Text? EventProcessingWebSiteAddress { get; init; }
 
     /// <summary>
-    /// Registration Securities Market Deadline.
+    /// Additional Procedure Details.
     /// </summary>
-    [DisplayName("Registration Securities Market Deadline")]
-    [IsoXmlTag("RegnSctiesMktDdln")]
-    public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; init; }
-
-    /// <summary>
-    /// Result Publication Date.
-    /// </summary>
-    [DisplayName("Result Publication Date")]
-    [IsoXmlTag("RsltPblctnDt")]
-    public DateFormat3Choice_? ResultPublicationDate { get; init; }
-
-    /// <summary>
-    /// Securities Blocking Period End Date.
-    /// </summary>
-    [DisplayName("Securities Blocking Period End Date")]
-    [IsoXmlTag("SctiesBlckgPrdEndDt")]
-    public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; init; }
+    [DisplayName("Additional Procedure Details")]
+    [IsoXmlTag("AddtlPrcdrDtls")]
+    public ValueList<AdditionalRights4> AdditionalProcedureDetails { get; init; } = [];
 
     /// <summary>
     /// Total Number Of Securities Outstanding.
@@ -171,9 +108,72 @@ public record MeetingNotice9
     public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Proxy Appointment Notification Address.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required MeetingType4Code Type { get; init; }
+    [DisplayName("Proxy Appointment Notification Address")]
+    [IsoXmlTag("PrxyAppntmntNtfctnAdr")]
+    public PostalAddress1? ProxyAppointmentNotificationAddress { get; init; }
+
+    /// <summary>
+    /// Proxy Choice.
+    /// </summary>
+    [DisplayName("Proxy Choice")]
+    [IsoXmlTag("PrxyChc")]
+    public Proxy5Choice_? ProxyChoice_ { get; init; }
+
+    /// <summary>
+    /// Contact Person Details.
+    /// </summary>
+    [DisplayName("Contact Person Details")]
+    [IsoXmlTag("CtctPrsnDtls")]
+    public ValueList<MeetingContactPerson3> ContactPersonDetails { get; init; } = [];
+
+    /// <summary>
+    /// Result Publication Date.
+    /// </summary>
+    [DisplayName("Result Publication Date")]
+    [IsoXmlTag("RsltPblctnDt")]
+    public DateFormat3Choice_? ResultPublicationDate { get; init; }
+
+    /// <summary>
+    /// Securities Blocking Period End Date.
+    /// </summary>
+    [DisplayName("Securities Blocking Period End Date")]
+    [IsoXmlTag("SctiesBlckgPrdEndDt")]
+    public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; init; }
+
+    /// <summary>
+    /// Entitlement Fixing Date.
+    /// </summary>
+    [DisplayName("Entitlement Fixing Date")]
+    [IsoXmlTag("EntitlmntFxgDt")]
+    public DateFormat1? EntitlementFixingDate { get; init; }
+
+    /// <summary>
+    /// Registration Securities Deadline.
+    /// </summary>
+    [DisplayName("Registration Securities Deadline")]
+    [IsoXmlTag("RegnSctiesDdln")]
+    public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; init; }
+
+    /// <summary>
+    /// Registration Securities Market Deadline.
+    /// </summary>
+    [DisplayName("Registration Securities Market Deadline")]
+    [IsoXmlTag("RegnSctiesMktDdln")]
+    public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; init; }
+
+    /// <summary>
+    /// Enrolment Market Deadline.
+    /// </summary>
+    [DisplayName("Enrolment Market Deadline")]
+    [IsoXmlTag("EnrlmntMktDdln")]
+    public DateFormat58Choice_? EnrolmentMarketDeadline { get; init; }
+
+    /// <summary>
+    /// Enrolment Deadline.
+    /// </summary>
+    [DisplayName("Enrolment Deadline")]
+    [IsoXmlTag("EnrlmntDdln")]
+    public DateFormat58Choice_? EnrolmentDeadline { get; init; }
 }

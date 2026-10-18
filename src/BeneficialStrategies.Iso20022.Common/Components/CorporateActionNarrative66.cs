@@ -24,11 +24,11 @@ public record CorporateActionNarrative66
     public ValueList<UpdatedAdditionalInformation19> AdditionalText { get; init; } = [];
 
     /// <summary>
-    /// Certification Breakdown.
+    /// Narrative Version.
     /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public ValueList<UpdatedAdditionalInformation21> CertificationBreakdown { get; init; } = [];
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public ValueList<UpdatedAdditionalInformation19> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Information Conditions.
@@ -45,13 +45,6 @@ public record CorporateActionNarrative66
     public ValueList<UpdatedAdditionalInformation21> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
-    /// Narrative Version.
-    /// </summary>
-    [DisplayName("Narrative Version")]
-    [IsoXmlTag("NrrtvVrsn")]
-    public ValueList<UpdatedAdditionalInformation19> NarrativeVersion { get; init; } = [];
-
-    /// <summary>
     /// Security Restriction.
     /// </summary>
     [DisplayName("Security Restriction")]
@@ -64,4 +57,11 @@ public record CorporateActionNarrative66
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     public ValueList<UpdatedAdditionalInformation21> TaxationConditions { get; init; } = [];
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public ValueList<UpdatedAdditionalInformation21> CertificationBreakdown { get; init; } = [];
 }

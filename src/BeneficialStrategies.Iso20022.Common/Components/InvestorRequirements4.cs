@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestorRequirements4
 {
     /// <summary>
-    /// Minimum Holding Period.
+    /// Return Profile Preservation.
     /// </summary>
-    [DisplayName("Minimum Holding Period")]
-    [IsoXmlTag("MinHldgPrd")]
-    public TimeHorizon2Choice_? MinimumHoldingPeriod { get; init; }
-
-    /// <summary>
-    /// Option Or Leveraged Return Profile.
-    /// </summary>
-    [DisplayName("Option Or Leveraged Return Profile")]
-    [IsoXmlTag("OptnOrLvrgdRtrPrfl")]
-    public TargetMarket1Code? OptionOrLeveragedReturnProfile { get; init; }
-
-    /// <summary>
-    /// Other.
-    /// </summary>
-    [DisplayName("Other")]
-    [IsoXmlTag("Othr")]
-    public ValueList<OtherInvestmentNeed1> Other { get; init; } = [];
-
-    /// <summary>
-    /// Other Specific Investment Need.
-    /// </summary>
-    [DisplayName("Other Specific Investment Need")]
-    [IsoXmlTag("OthrSpcfcInvstmtNeed")]
-    public InvestmentNeed2Choice_? OtherSpecificInvestmentNeed { get; init; }
+    [DisplayName("Return Profile Preservation")]
+    [IsoXmlTag("RtrPrflPrsrvtn")]
+    public TargetMarket1Code? ReturnProfilePreservation { get; init; }
 
     /// <summary>
     /// Return Profile Growth.
@@ -52,6 +31,13 @@ public record InvestorRequirements4
     public TargetMarket1Code? ReturnProfileGrowth { get; init; }
 
     /// <summary>
+    /// Return Profile Income.
+    /// </summary>
+    [DisplayName("Return Profile Income")]
+    [IsoXmlTag("RtrPrflIncm")]
+    public TargetMarket1Code? ReturnProfileIncome { get; init; }
+
+    /// <summary>
     /// Return Profile Hedging.
     /// </summary>
     [DisplayName("Return Profile Hedging")]
@@ -59,11 +45,11 @@ public record InvestorRequirements4
     public TargetMarket1Code? ReturnProfileHedging { get; init; }
 
     /// <summary>
-    /// Return Profile Income.
+    /// Option Or Leveraged Return Profile.
     /// </summary>
-    [DisplayName("Return Profile Income")]
-    [IsoXmlTag("RtrPrflIncm")]
-    public TargetMarket1Code? ReturnProfileIncome { get; init; }
+    [DisplayName("Option Or Leveraged Return Profile")]
+    [IsoXmlTag("OptnOrLvrgdRtrPrfl")]
+    public TargetMarket1Code? OptionOrLeveragedReturnProfile { get; init; }
 
     /// <summary>
     /// Return Profile Pension Scheme Germany.
@@ -73,11 +59,11 @@ public record InvestorRequirements4
     public TargetMarket1Code? ReturnProfilePensionSchemeGermany { get; init; }
 
     /// <summary>
-    /// Return Profile Preservation.
+    /// Minimum Holding Period.
     /// </summary>
-    [DisplayName("Return Profile Preservation")]
-    [IsoXmlTag("RtrPrflPrsrvtn")]
-    public TargetMarket1Code? ReturnProfilePreservation { get; init; }
+    [DisplayName("Minimum Holding Period")]
+    [IsoXmlTag("MinHldgPrd")]
+    public TimeHorizon2Choice_? MinimumHoldingPeriod { get; init; }
 
     /// <summary>
     /// Sustainability Preferences.
@@ -85,4 +71,18 @@ public record InvestorRequirements4
     [DisplayName("Sustainability Preferences")]
     [IsoXmlTag("SstnbltyPrefs")]
     public SustainabilityPreferences2Code? SustainabilityPreferences { get; init; }
+
+    /// <summary>
+    /// Other Specific Investment Need.
+    /// </summary>
+    [DisplayName("Other Specific Investment Need")]
+    [IsoXmlTag("OthrSpcfcInvstmtNeed")]
+    public InvestmentNeed2Choice_? OtherSpecificInvestmentNeed { get; init; }
+
+    /// <summary>
+    /// Other.
+    /// </summary>
+    [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
+    public ValueList<OtherInvestmentNeed1> Other { get; init; } = [];
 }

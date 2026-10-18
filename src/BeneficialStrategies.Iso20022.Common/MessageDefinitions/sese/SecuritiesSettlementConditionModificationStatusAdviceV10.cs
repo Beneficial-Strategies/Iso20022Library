@@ -62,11 +62,25 @@ public record SecuritiesSettlementConditionModificationStatusAdviceV10 : IOuterR
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification of the SecuritiesSettlementConditionsModificationRequest.
+    /// </summary>
+    [DisplayName("Request Reference")]
+    [IsoXmlTag("ReqRef")]
+    public required Max35Text RequestReference { get; init; }
+
+    /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Account to or from which a securities entry is made.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -76,13 +90,6 @@ public record SecuritiesSettlementConditionModificationStatusAdviceV10 : IOuterR
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Provides details on the processing status of the request.
-    /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public required ProcessingStatus85Choice_ ProcessingStatus { get; init; }
-
-    /// <summary>
     /// Details of the request.
     /// </summary>
     [DisplayName("Request Details")]
@@ -90,18 +97,11 @@ public record SecuritiesSettlementConditionModificationStatusAdviceV10 : IOuterR
     public RequestDetails32? RequestDetails { get; init; }
 
     /// <summary>
-    /// Identification of the SecuritiesSettlementConditionsModificationRequest.
+    /// Provides details on the processing status of the request.
     /// </summary>
-    [DisplayName("Request Reference")]
-    [IsoXmlTag("ReqRef")]
-    public required Max35Text RequestReference { get; init; }
-
-    /// <summary>
-    /// Account to or from which a securities entry is made.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public required ProcessingStatus85Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

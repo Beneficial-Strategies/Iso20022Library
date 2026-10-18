@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AdministrativeRequest7
 {
     /// <summary>
-    /// Administrative Service Identification.
+    /// Environment.
     /// </summary>
-    [DisplayName("Administrative Service Identification")]
-    [IsoXmlTag("AdmstvSvcId")]
-    public Max20000Text? AdministrativeServiceIdentification { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
     /// Context.
@@ -31,11 +31,11 @@ public record AdministrativeRequest7
     public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
-    /// Environment.
+    /// Administrative Service Identification.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; }
+    [DisplayName("Administrative Service Identification")]
+    [IsoXmlTag("AdmstvSvcId")]
+    public Max20000Text? AdministrativeServiceIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

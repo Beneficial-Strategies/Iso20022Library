@@ -17,67 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InstrumentLeg7
 {
     /// <summary>
-    /// Leg Calculated Counterparty Currency Last Quantity.
+    /// Leg Side.
     /// </summary>
-    [DisplayName("Leg Calculated Counterparty Currency Last Quantity")]
-    [IsoXmlTag("LegClctdCtrPtyCcyLastQty")]
-    public required ActiveCurrencyAndAmount LegCalculatedCounterpartyCurrencyLastQuantity { get; init; }
-
-    /// <summary>
-    /// Leg Currency.
-    /// </summary>
-    [DisplayName("Leg Currency")]
-    [IsoXmlTag("LegCcy")]
-    public required ActiveCurrencyCode LegCurrency { get; init; }
-
-    /// <summary>
-    /// Leg Forward Points.
-    /// </summary>
-    [DisplayName("Leg Forward Points")]
-    [IsoXmlTag("LegFwdPts")]
-    public required DecimalNumber LegForwardPoints { get; init; }
-
-    /// <summary>
-    /// Leg Last Price.
-    /// </summary>
-    [DisplayName("Leg Last Price")]
-    [IsoXmlTag("LegLastPric")]
-    public required ActiveCurrencyAnd13DecimalAmount LegLastPrice { get; init; }
-
-    /// <summary>
-    /// Leg Order Quantity.
-    /// </summary>
-    [DisplayName("Leg Order Quantity")]
-    [IsoXmlTag("LegOrdrQty")]
-    public required ActiveCurrencyAndAmount LegOrderQuantity { get; init; }
-
-    /// <summary>
-    /// Leg Risk Amount.
-    /// </summary>
-    [DisplayName("Leg Risk Amount")]
-    [IsoXmlTag("LegRskAmt")]
-    public required ActiveCurrencyAndAmount LegRiskAmount { get; init; }
-
-    /// <summary>
-    /// Leg Security Identification.
-    /// </summary>
-    [DisplayName("Leg Security Identification")]
-    [IsoXmlTag("LegSctyId")]
-    public required SecurityIdentification18 LegSecurityIdentification { get; init; }
-
-    /// <summary>
-    /// Leg Settlement Currency.
-    /// </summary>
-    [DisplayName("Leg Settlement Currency")]
-    [IsoXmlTag("LegSttlmCcy")]
-    public required ActiveCurrencyCode LegSettlementCurrency { get; init; }
-
-    /// <summary>
-    /// Leg Settlement Date.
-    /// </summary>
-    [DisplayName("Leg Settlement Date")]
-    [IsoXmlTag("LegSttlmDt")]
-    public required ISODateTime LegSettlementDate { get; init; }
+    [DisplayName("Leg Side")]
+    [IsoXmlTag("LegSd")]
+    public required Side1Code LegSide { get; init; }
 
     /// <summary>
     /// Leg Settlement Type.
@@ -87,18 +31,53 @@ public record InstrumentLeg7
     public required SettlementDate8Code LegSettlementType { get; init; }
 
     /// <summary>
-    /// Leg Side.
+    /// Leg Settlement Date.
     /// </summary>
-    [DisplayName("Leg Side")]
-    [IsoXmlTag("LegSd")]
-    public required Side1Code LegSide { get; init; }
+    [DisplayName("Leg Settlement Date")]
+    [IsoXmlTag("LegSttlmDt")]
+    public required ISODateTime LegSettlementDate { get; init; }
 
     /// <summary>
-    /// Leg Symbol.
+    /// Leg Last Price.
     /// </summary>
-    [DisplayName("Leg Symbol")]
-    [IsoXmlTag("LegSymb")]
-    public required Max35Text LegSymbol { get; init; }
+    [DisplayName("Leg Last Price")]
+    [IsoXmlTag("LegLastPric")]
+    public required ActiveCurrencyAnd13DecimalAmount LegLastPrice { get; init; }
+
+    /// <summary>
+    /// Leg Settlement Currency.
+    /// </summary>
+    [DisplayName("Leg Settlement Currency")]
+    [IsoXmlTag("LegSttlmCcy")]
+    public required ActiveCurrencyCode LegSettlementCurrency { get; init; }
+
+    /// <summary>
+    /// Leg Order Quantity.
+    /// </summary>
+    [DisplayName("Leg Order Quantity")]
+    [IsoXmlTag("LegOrdrQty")]
+    public required ActiveCurrencyAndAmount LegOrderQuantity { get; init; }
+
+    /// <summary>
+    /// Leg Forward Points.
+    /// </summary>
+    [DisplayName("Leg Forward Points")]
+    [IsoXmlTag("LegFwdPts")]
+    public required DecimalNumber LegForwardPoints { get; init; }
+
+    /// <summary>
+    /// Leg Calculated Counterparty Currency Last Quantity.
+    /// </summary>
+    [DisplayName("Leg Calculated Counterparty Currency Last Quantity")]
+    [IsoXmlTag("LegClctdCtrPtyCcyLastQty")]
+    public required ActiveCurrencyAndAmount LegCalculatedCounterpartyCurrencyLastQuantity { get; init; }
+
+    /// <summary>
+    /// Leg Risk Amount.
+    /// </summary>
+    [DisplayName("Leg Risk Amount")]
+    [IsoXmlTag("LegRskAmt")]
+    public required ActiveCurrencyAndAmount LegRiskAmount { get; init; }
 
     /// <summary>
     /// Leg Valuation Rate.
@@ -113,4 +92,25 @@ public record InstrumentLeg7
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
     public required ISODate LegValueDate { get; init; }
+
+    /// <summary>
+    /// Leg Currency.
+    /// </summary>
+    [DisplayName("Leg Currency")]
+    [IsoXmlTag("LegCcy")]
+    public required ActiveCurrencyCode LegCurrency { get; init; }
+
+    /// <summary>
+    /// Leg Symbol.
+    /// </summary>
+    [DisplayName("Leg Symbol")]
+    [IsoXmlTag("LegSymb")]
+    public required Max35Text LegSymbol { get; init; }
+
+    /// <summary>
+    /// Leg Security Identification.
+    /// </summary>
+    [DisplayName("Leg Security Identification")]
+    [IsoXmlTag("LegSctyId")]
+    public required SecurityIdentification18 LegSecurityIdentification { get; init; }
 }

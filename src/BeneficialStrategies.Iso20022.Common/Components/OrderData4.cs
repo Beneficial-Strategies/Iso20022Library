@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrderData4
 {
     /// <summary>
-    /// Client Identification.
+    /// Submitting Entity.
     /// </summary>
-    [DisplayName("Client Identification")]
-    [IsoXmlTag("ClntId")]
-    public PersonOrOrganisation4Choice_? ClientIdentification { get; init; }
+    [DisplayName("Submitting Entity")]
+    [IsoXmlTag("SubmitgNtty")]
+    public LEIIdentifier? SubmittingEntity { get; init; }
 
     /// <summary>
     /// Direct Electronic Access.
@@ -31,18 +31,11 @@ public record OrderData4
     public TrueFalseIndicator? DirectElectronicAccess { get; init; }
 
     /// <summary>
-    /// Executing Person.
+    /// Client Identification.
     /// </summary>
-    [DisplayName("Executing Person")]
-    [IsoXmlTag("ExctgPrsn")]
-    public ExecutingParty2Choice_? ExecutingPerson { get; init; }
-
-    /// <summary>
-    /// Instruction Data.
-    /// </summary>
-    [DisplayName("Instruction Data")]
-    [IsoXmlTag("InstrData")]
-    public OrderInstructionData2? InstructionData { get; init; }
+    [DisplayName("Client Identification")]
+    [IsoXmlTag("ClntId")]
+    public PersonOrOrganisation4Choice_? ClientIdentification { get; init; }
 
     /// <summary>
     /// Investment Decision Person.
@@ -52,11 +45,11 @@ public record OrderData4
     public ExecutingParty2Choice_? InvestmentDecisionPerson { get; init; }
 
     /// <summary>
-    /// Liquidity Provision Activity.
+    /// Executing Person.
     /// </summary>
-    [DisplayName("Liquidity Provision Activity")]
-    [IsoXmlTag("LqdtyPrvsnActvty")]
-    public TrueFalseIndicator? LiquidityProvisionActivity { get; init; }
+    [DisplayName("Executing Person")]
+    [IsoXmlTag("ExctgPrsn")]
+    public ExecutingParty2Choice_? ExecutingPerson { get; init; }
 
     /// <summary>
     /// Non Executing Broker.
@@ -64,6 +57,20 @@ public record OrderData4
     [DisplayName("Non Executing Broker")]
     [IsoXmlTag("NonExctgBrkr")]
     public LEIIdentifier? NonExecutingBroker { get; init; }
+
+    /// <summary>
+    /// Trading Capacity.
+    /// </summary>
+    [DisplayName("Trading Capacity")]
+    [IsoXmlTag("TradgCpcty")]
+    public RegulatoryTradingCapacity1Code? TradingCapacity { get; init; }
+
+    /// <summary>
+    /// Liquidity Provision Activity.
+    /// </summary>
+    [DisplayName("Liquidity Provision Activity")]
+    [IsoXmlTag("LqdtyPrvsnActvty")]
+    public TrueFalseIndicator? LiquidityProvisionActivity { get; init; }
 
     /// <summary>
     /// Order Classification.
@@ -80,18 +87,11 @@ public record OrderData4
     public OrderPriceData2? OrderPrices { get; init; }
 
     /// <summary>
-    /// Submitting Entity.
+    /// Instruction Data.
     /// </summary>
-    [DisplayName("Submitting Entity")]
-    [IsoXmlTag("SubmitgNtty")]
-    public LEIIdentifier? SubmittingEntity { get; init; }
-
-    /// <summary>
-    /// Trading Capacity.
-    /// </summary>
-    [DisplayName("Trading Capacity")]
-    [IsoXmlTag("TradgCpcty")]
-    public RegulatoryTradingCapacity1Code? TradingCapacity { get; init; }
+    [DisplayName("Instruction Data")]
+    [IsoXmlTag("InstrData")]
+    public OrderInstructionData2? InstructionData { get; init; }
 
     /// <summary>
     /// Transaction Data.

@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NotificationItem9
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// End To End Identification.
+    /// </summary>
+    [DisplayName("End To End Identification")]
+    [IsoXmlTag("EndToEndId")]
+    public Max35Text? EndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// UETR.
+    /// </summary>
+    [DisplayName("UETR")]
+    [IsoXmlTag("UETR")]
+    public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -38,11 +59,25 @@ public record NotificationItem9
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
+    /// Related Account.
+    /// </summary>
+    [DisplayName("Related Account")]
+    [IsoXmlTag("RltdAcct")]
+    public CashAccount40? RelatedAccount { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Expected Value Date.
+    /// </summary>
+    [DisplayName("Expected Value Date")]
+    [IsoXmlTag("XpctdValDt")]
+    public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -59,27 +94,6 @@ public record NotificationItem9
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// End To End Identification.
-    /// </summary>
-    [DisplayName("End To End Identification")]
-    [IsoXmlTag("EndToEndId")]
-    public Max35Text? EndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Expected Value Date.
-    /// </summary>
-    [DisplayName("Expected Value Date")]
-    [IsoXmlTag("XpctdValDt")]
-    public ISODate? ExpectedValueDate { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
-
-    /// <summary>
     /// Intermediary Agent.
     /// </summary>
     [DisplayName("Intermediary Agent")]
@@ -94,13 +108,6 @@ public record NotificationItem9
     public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
-    /// Related Account.
-    /// </summary>
-    [DisplayName("Related Account")]
-    [IsoXmlTag("RltdAcct")]
-    public CashAccount40? RelatedAccount { get; init; }
-
-    /// <summary>
     /// Related Remittance Information.
     /// </summary>
     [DisplayName("Related Remittance Information")]
@@ -113,13 +120,6 @@ public record NotificationItem9
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public RemittanceInformation22? RemittanceInformation { get; init; }
-
-    /// <summary>
-    /// UETR.
-    /// </summary>
-    [DisplayName("UETR")]
-    [IsoXmlTag("UETR")]
-    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Underlying Allocation.

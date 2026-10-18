@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionAmounts3
 {
     /// <summary>
+    /// Amount Qualifier.
+    /// </summary>
+    [DisplayName("Amount Qualifier")]
+    [IsoXmlTag("AmtQlfr")]
+    public TypeOfAmount22Code? AmountQualifier { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -24,11 +31,11 @@ public record TransactionAmounts3
     public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Amount Qualifier.
+    /// Currency.
     /// </summary>
-    [DisplayName("Amount Qualifier")]
-    [IsoXmlTag("AmtQlfr")]
-    public TypeOfAmount22Code? AmountQualifier { get; init; }
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public required ISO3NumericCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Cardholder Billing Amount.
@@ -52,20 +59,6 @@ public record TransactionAmounts3
     public BaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
 
     /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public required ISO3NumericCurrencyCode Currency { get; init; }
-
-    /// <summary>
-    /// Detailed Amount.
-    /// </summary>
-    [DisplayName("Detailed Amount")]
-    [IsoXmlTag("DtldAmt")]
-    public ValueList<DetailedAmount22> DetailedAmount { get; init; } = [];
-
-    /// <summary>
     /// Reconciliation Amount.
     /// </summary>
     [DisplayName("Reconciliation Amount")]
@@ -85,4 +78,11 @@ public record TransactionAmounts3
     [DisplayName("Reconciliation Effective Exchange Rate")]
     [IsoXmlTag("RcncltnFctvXchgRate")]
     public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
+
+    /// <summary>
+    /// Detailed Amount.
+    /// </summary>
+    [DisplayName("Detailed Amount")]
+    [IsoXmlTag("DtldAmt")]
+    public ValueList<DetailedAmount22> DetailedAmount { get; init; } = [];
 }

@@ -24,11 +24,11 @@ public record AccountReport36
     public required CustomerAccount5 Account { get; init; }
 
     /// <summary>
-    /// Balance Transfer Account.
+    /// Underlying Master Agreement.
     /// </summary>
-    [DisplayName("Balance Transfer Account")]
-    [IsoXmlTag("BalTrfAcct")]
-    public AccountForAction1? BalanceTransferAccount { get; init; }
+    [DisplayName("Underlying Master Agreement")]
+    [IsoXmlTag("UndrlygMstrAgrmt")]
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 
     /// <summary>
     /// Contract Dates.
@@ -38,18 +38,18 @@ public record AccountReport36
     public AccountContract3? ContractDates { get; init; }
 
     /// <summary>
-    /// Group.
-    /// </summary>
-    [DisplayName("Group")]
-    [IsoXmlTag("Grp")]
-    public ValueList<Group6> Group { get; init; } = [];
-
-    /// <summary>
     /// Mandate.
     /// </summary>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public ValueList<OperationMandate7> Mandate { get; init; } = [];
+
+    /// <summary>
+    /// Group.
+    /// </summary>
+    [DisplayName("Group")]
+    [IsoXmlTag("Grp")]
+    public ValueList<Group6> Group { get; init; } = [];
 
     /// <summary>
     /// Reference Account.
@@ -59,16 +59,16 @@ public record AccountReport36
     public CashAccount40? ReferenceAccount { get; init; }
 
     /// <summary>
+    /// Balance Transfer Account.
+    /// </summary>
+    [DisplayName("Balance Transfer Account")]
+    [IsoXmlTag("BalTrfAcct")]
+    public AccountForAction1? BalanceTransferAccount { get; init; }
+
+    /// <summary>
     /// Transfer Account Servicer Identification.
     /// </summary>
     [DisplayName("Transfer Account Servicer Identification")]
     [IsoXmlTag("TrfAcctSvcrId")]
     public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Underlying Master Agreement.
-    /// </summary>
-    [DisplayName("Underlying Master Agreement")]
-    [IsoXmlTag("UndrlygMstrAgrmt")]
-    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 }

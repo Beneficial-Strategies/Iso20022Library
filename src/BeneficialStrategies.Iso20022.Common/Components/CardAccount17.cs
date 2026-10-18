@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardAccount17
 {
     /// <summary>
-    /// Account Identifier.
+    /// Selection Method.
     /// </summary>
-    [DisplayName("Account Identifier")]
-    [IsoXmlTag("AcctIdr")]
-    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
-
-    /// <summary>
-    /// Account Name.
-    /// </summary>
-    [DisplayName("Account Name")]
-    [IsoXmlTag("AcctNm")]
-    public Max70Text? AccountName { get; init; }
-
-    /// <summary>
-    /// Credit Reference.
-    /// </summary>
-    [DisplayName("Credit Reference")]
-    [IsoXmlTag("CdtRef")]
-    public Max35Text? CreditReference { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
+    [DisplayName("Selection Method")]
+    [IsoXmlTag("SelctnMtd")]
+    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
 
     /// <summary>
     /// Selected Account Type.
@@ -52,11 +31,32 @@ public record CardAccount17
     public CardAccountType3Code? SelectedAccountType { get; init; }
 
     /// <summary>
-    /// Selection Method.
+    /// Account Name.
     /// </summary>
-    [DisplayName("Selection Method")]
-    [IsoXmlTag("SelctnMtd")]
-    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
+    [DisplayName("Account Name")]
+    [IsoXmlTag("AcctNm")]
+    public Max70Text? AccountName { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Account Identifier.
+    /// </summary>
+    [DisplayName("Account Identifier")]
+    [IsoXmlTag("AcctIdr")]
+    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
+
+    /// <summary>
+    /// Credit Reference.
+    /// </summary>
+    [DisplayName("Credit Reference")]
+    [IsoXmlTag("CdtRef")]
+    public Max35Text? CreditReference { get; init; }
 
     /// <summary>
     /// Servicer.

@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesOption114
 {
     /// <summary>
-    /// Charge Indicator.
+    /// Security Details.
     /// </summary>
-    [DisplayName("Charge Indicator")]
-    [IsoXmlTag("ChrgInd")]
-    public YesNoIndicator? ChargeIndicator { get; init; }
-
-    /// <summary>
-    /// Country Of Income Source.
-    /// </summary>
-    [DisplayName("Country Of Income Source")]
-    [IsoXmlTag("CtryOfIncmSrc")]
-    public CountryCode? CountryOfIncomeSource { get; init; }
+    [DisplayName("Security Details")]
+    [IsoXmlTag("SctyDtls")]
+    public required FinancialInstrumentAttributes130 SecurityDetails { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -38,60 +31,11 @@ public record SecuritiesOption114
     public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
-    /// Currency Option.
+    /// Temporary Financial Instrument Indicator.
     /// </summary>
-    [DisplayName("Currency Option")]
-    [IsoXmlTag("CcyOptn")]
-    public ActiveCurrencyCode? CurrencyOption { get; init; }
-
-    /// <summary>
-    /// Date Details.
-    /// </summary>
-    [DisplayName("Date Details")]
-    [IsoXmlTag("DtDtls")]
-    public required SecurityDate20 DateDetails { get; init; }
-
-    /// <summary>
-    /// Entitled Quantity.
-    /// </summary>
-    [DisplayName("Entitled Quantity")]
-    [IsoXmlTag("EntitldQty")]
-    public Quantity51Choice_? EntitledQuantity { get; init; }
-
-    /// <summary>
-    /// Estimated Price Indicator.
-    /// </summary>
-    [DisplayName("Estimated Price Indicator")]
-    [IsoXmlTag("EstmtdPricInd")]
-    public YesNoIndicator? EstimatedPriceIndicator { get; init; }
-
-    /// <summary>
-    /// Exemption Type.
-    /// </summary>
-    [DisplayName("Exemption Type")]
-    [IsoXmlTag("XmptnTp")]
-    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
-
-    /// <summary>
-    /// Fraction Disposition.
-    /// </summary>
-    [DisplayName("Fraction Disposition")]
-    [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
-
-    /// <summary>
-    /// Income Type.
-    /// </summary>
-    [DisplayName("Income Type")]
-    [IsoXmlTag("IncmTp")]
-    public GenericIdentification30? IncomeType { get; init; }
-
-    /// <summary>
-    /// New Securities Issuance Indicator.
-    /// </summary>
-    [DisplayName("New Securities Issuance Indicator")]
-    [IsoXmlTag("NewSctiesIssncInd")]
-    public NewSecuritiesIssuanceType5Code? NewSecuritiesIssuanceIndicator { get; init; }
+    [DisplayName("Temporary Financial Instrument Indicator")]
+    [IsoXmlTag("TempFinInstrmInd")]
+    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; }
 
     /// <summary>
     /// Non Eligible Proceeds Indicator.
@@ -101,6 +45,20 @@ public record SecuritiesOption114
     public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     /// <summary>
+    /// New Securities Issuance Indicator.
+    /// </summary>
+    [DisplayName("New Securities Issuance Indicator")]
+    [IsoXmlTag("NewSctiesIssncInd")]
+    public NewSecuritiesIssuanceType5Code? NewSecuritiesIssuanceIndicator { get; init; }
+
+    /// <summary>
+    /// Income Type.
+    /// </summary>
+    [DisplayName("Income Type")]
+    [IsoXmlTag("IncmTp")]
+    public GenericIdentification30? IncomeType { get; init; }
+
+    /// <summary>
     /// Other Income Type.
     /// </summary>
     [DisplayName("Other Income Type")]
@@ -108,39 +66,18 @@ public record SecuritiesOption114
     public ValueList<GenericIdentification30> OtherIncomeType { get; init; } = [];
 
     /// <summary>
-    /// Price Basis.
+    /// Exemption Type.
     /// </summary>
-    [DisplayName("Price Basis")]
-    [IsoXmlTag("PricBsis")]
-    public DTCBaseDisbursed1Code? PriceBasis { get; init; }
+    [DisplayName("Exemption Type")]
+    [IsoXmlTag("XmptnTp")]
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
 
     /// <summary>
-    /// Price Details.
+    /// Entitled Quantity.
     /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public CorporateActionPrice82? PriceDetails { get; init; }
-
-    /// <summary>
-    /// Rate Details.
-    /// </summary>
-    [DisplayName("Rate Details")]
-    [IsoXmlTag("RateDtls")]
-    public CorporateActionRate129? RateDetails { get; init; }
-
-    /// <summary>
-    /// Reinvestment Income Classification.
-    /// </summary>
-    [DisplayName("Reinvestment Income Classification")]
-    [IsoXmlTag("RinvstmtIncmClssfctn")]
-    public ReinvestmentIncomeClassification2Code? ReinvestmentIncomeClassification { get; init; }
-
-    /// <summary>
-    /// Rounding Factor.
-    /// </summary>
-    [DisplayName("Rounding Factor")]
-    [IsoXmlTag("RndgFctr")]
-    public DecimalNumber? RoundingFactor { get; init; }
+    [DisplayName("Entitled Quantity")]
+    [IsoXmlTag("EntitldQty")]
+    public Quantity51Choice_? EntitledQuantity { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
@@ -150,18 +87,25 @@ public record SecuritiesOption114
     public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
-    /// Security Details.
+    /// Country Of Income Source.
     /// </summary>
-    [DisplayName("Security Details")]
-    [IsoXmlTag("SctyDtls")]
-    public required FinancialInstrumentAttributes130 SecurityDetails { get; init; }
+    [DisplayName("Country Of Income Source")]
+    [IsoXmlTag("CtryOfIncmSrc")]
+    public CountryCode? CountryOfIncomeSource { get; init; }
 
     /// <summary>
-    /// Temporary Financial Instrument Indicator.
+    /// Fraction Disposition.
     /// </summary>
-    [DisplayName("Temporary Financial Instrument Indicator")]
-    [IsoXmlTag("TempFinInstrmInd")]
-    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; }
+    [DisplayName("Fraction Disposition")]
+    [IsoXmlTag("FrctnDspstn")]
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
+
+    /// <summary>
+    /// Currency Option.
+    /// </summary>
+    [DisplayName("Currency Option")]
+    [IsoXmlTag("CcyOptn")]
+    public ActiveCurrencyCode? CurrencyOption { get; init; }
 
     /// <summary>
     /// Trading Period.
@@ -169,4 +113,60 @@ public record SecuritiesOption114
     [DisplayName("Trading Period")]
     [IsoXmlTag("TradgPrd")]
     public Period6Choice_? TradingPeriod { get; init; }
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public required SecurityDate20 DateDetails { get; init; }
+
+    /// <summary>
+    /// Rate Details.
+    /// </summary>
+    [DisplayName("Rate Details")]
+    [IsoXmlTag("RateDtls")]
+    public CorporateActionRate129? RateDetails { get; init; }
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public CorporateActionPrice82? PriceDetails { get; init; }
+
+    /// <summary>
+    /// Price Basis.
+    /// </summary>
+    [DisplayName("Price Basis")]
+    [IsoXmlTag("PricBsis")]
+    public DTCBaseDisbursed1Code? PriceBasis { get; init; }
+
+    /// <summary>
+    /// Estimated Price Indicator.
+    /// </summary>
+    [DisplayName("Estimated Price Indicator")]
+    [IsoXmlTag("EstmtdPricInd")]
+    public YesNoIndicator? EstimatedPriceIndicator { get; init; }
+
+    /// <summary>
+    /// Rounding Factor.
+    /// </summary>
+    [DisplayName("Rounding Factor")]
+    [IsoXmlTag("RndgFctr")]
+    public DecimalNumber? RoundingFactor { get; init; }
+
+    /// <summary>
+    /// Charge Indicator.
+    /// </summary>
+    [DisplayName("Charge Indicator")]
+    [IsoXmlTag("ChrgInd")]
+    public YesNoIndicator? ChargeIndicator { get; init; }
+
+    /// <summary>
+    /// Reinvestment Income Classification.
+    /// </summary>
+    [DisplayName("Reinvestment Income Classification")]
+    [IsoXmlTag("RinvstmtIncmClssfctn")]
+    public ReinvestmentIncomeClassification2Code? ReinvestmentIncomeClassification { get; init; }
 }

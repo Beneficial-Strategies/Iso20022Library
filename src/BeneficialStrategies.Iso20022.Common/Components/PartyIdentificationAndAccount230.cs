@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount230
 {
     /// <summary>
-    /// Additional Information.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public PartyTextInformation1? AdditionalInformation { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification256Choice_ Identification { get; init; }
 
     /// <summary>
     /// Alternate Identification.
@@ -31,11 +31,11 @@ public record PartyIdentificationAndAccount230
     public AlternatePartyIdentification8? AlternateIdentification { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PartyIdentification256Choice_ Identification { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Processing Identification.
@@ -45,9 +45,9 @@ public record PartyIdentificationAndAccount230
     public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public Max35Text? SafekeepingAccount { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public PartyTextInformation1? AdditionalInformation { get; init; }
 }

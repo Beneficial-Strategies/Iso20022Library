@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionData3
 {
     /// <summary>
+    /// Transaction Price.
+    /// </summary>
+    [DisplayName("Transaction Price")]
+    [IsoXmlTag("TxPric")]
+    public SecuritiesTransactionPrice4Choice_? TransactionPrice { get; init; }
+
+    /// <summary>
+    /// Traded Quantity.
+    /// </summary>
+    [DisplayName("Traded Quantity")]
+    [IsoXmlTag("TraddQty")]
+    public FinancialInstrumentQuantity25Choice_? TradedQuantity { get; init; }
+
+    /// <summary>
     /// Passive Or Aggressive Indicator.
     /// </summary>
     [DisplayName("Passive Or Aggressive Indicator")]
@@ -31,23 +45,9 @@ public record TransactionData3
     public Max50Text? StrategyLinkedOrderIdentification { get; init; }
 
     /// <summary>
-    /// Traded Quantity.
-    /// </summary>
-    [DisplayName("Traded Quantity")]
-    [IsoXmlTag("TraddQty")]
-    public FinancialInstrumentQuantity25Choice_? TradedQuantity { get; init; }
-
-    /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     public Max52Text? TransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Price.
-    /// </summary>
-    [DisplayName("Transaction Price")]
-    [IsoXmlTag("TxPric")]
-    public SecuritiesTransactionPrice4Choice_? TransactionPrice { get; init; }
 }

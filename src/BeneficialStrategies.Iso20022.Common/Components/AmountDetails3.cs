@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AmountDetails3
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public TypeOfAmount23Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -31,23 +45,9 @@ public record AmountDetails3
     public CreditDebit3Code? CreditDebit { get; init; }
 
     /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public ValueList<Tax41> Tax { get; init; } = [];
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public TypeOfAmount23Code? Type { get; init; }
 }

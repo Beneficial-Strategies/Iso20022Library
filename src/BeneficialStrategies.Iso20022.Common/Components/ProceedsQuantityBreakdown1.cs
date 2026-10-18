@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProceedsQuantityBreakdown1
 {
     /// <summary>
-    /// Cash Compensation Quantity.
-    /// </summary>
-    [DisplayName("Cash Compensation Quantity")]
-    [IsoXmlTag("CshCompstnQty")]
-    public FinancialInstrumentQuantity18Choice_? CashCompensationQuantity { get; init; }
-
-    /// <summary>
     /// Transfer Of Received Proceeds Quantity.
     /// </summary>
     [DisplayName("Transfer Of Received Proceeds Quantity")]
     [IsoXmlTag("TrfOfRcvdPrcdsQty")]
     public FinancialInstrumentQuantity18Choice_? TransferOfReceivedProceedsQuantity { get; init; }
+
+    /// <summary>
+    /// Cash Compensation Quantity.
+    /// </summary>
+    [DisplayName("Cash Compensation Quantity")]
+    [IsoXmlTag("CshCompstnQty")]
+    public FinancialInstrumentQuantity18Choice_? CashCompensationQuantity { get; init; }
 }

@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PositionSetCollateralDimensions3
 {
     /// <summary>
+    /// Counterparty Identification.
+    /// </summary>
+    [DisplayName("Counterparty Identification")]
+    [IsoXmlTag("CtrPtyId")]
+    public TradeCounterpartyReport20? CounterpartyIdentification { get; init; }
+
+    /// <summary>
     /// Collateral.
     /// </summary>
     [DisplayName("Collateral")]
@@ -24,11 +31,32 @@ public record PositionSetCollateralDimensions3
     public MarginCollateralReport4? Collateral { get; init; }
 
     /// <summary>
-    /// Counterparty Identification.
+    /// Initial Margin Posted Currency.
     /// </summary>
-    [DisplayName("Counterparty Identification")]
-    [IsoXmlTag("CtrPtyId")]
-    public TradeCounterpartyReport20? CounterpartyIdentification { get; init; }
+    [DisplayName("Initial Margin Posted Currency")]
+    [IsoXmlTag("InitlMrgnPstdCcy")]
+    public ActiveOrHistoricCurrencyCode? InitialMarginPostedCurrency { get; init; }
+
+    /// <summary>
+    /// Variation Margin Posted Currency.
+    /// </summary>
+    [DisplayName("Variation Margin Posted Currency")]
+    [IsoXmlTag("VartnMrgnPstdCcy")]
+    public ActiveOrHistoricCurrencyCode? VariationMarginPostedCurrency { get; init; }
+
+    /// <summary>
+    /// Initial Margin Received Currency.
+    /// </summary>
+    [DisplayName("Initial Margin Received Currency")]
+    [IsoXmlTag("InitlMrgnRcvdCcy")]
+    public ActiveOrHistoricCurrencyCode? InitialMarginReceivedCurrency { get; init; }
+
+    /// <summary>
+    /// Variation Margin Received Currency.
+    /// </summary>
+    [DisplayName("Variation Margin Received Currency")]
+    [IsoXmlTag("VartnMrgnRcvdCcy")]
+    public ActiveOrHistoricCurrencyCode? VariationMarginReceivedCurrency { get; init; }
 
     /// <summary>
     /// Excess Collateral Posted Currency.
@@ -43,32 +71,4 @@ public record PositionSetCollateralDimensions3
     [DisplayName("Excess Collateral Received Currency")]
     [IsoXmlTag("XcssCollRcvdCcy")]
     public ActiveOrHistoricCurrencyCode? ExcessCollateralReceivedCurrency { get; init; }
-
-    /// <summary>
-    /// Initial Margin Posted Currency.
-    /// </summary>
-    [DisplayName("Initial Margin Posted Currency")]
-    [IsoXmlTag("InitlMrgnPstdCcy")]
-    public ActiveOrHistoricCurrencyCode? InitialMarginPostedCurrency { get; init; }
-
-    /// <summary>
-    /// Initial Margin Received Currency.
-    /// </summary>
-    [DisplayName("Initial Margin Received Currency")]
-    [IsoXmlTag("InitlMrgnRcvdCcy")]
-    public ActiveOrHistoricCurrencyCode? InitialMarginReceivedCurrency { get; init; }
-
-    /// <summary>
-    /// Variation Margin Posted Currency.
-    /// </summary>
-    [DisplayName("Variation Margin Posted Currency")]
-    [IsoXmlTag("VartnMrgnPstdCcy")]
-    public ActiveOrHistoricCurrencyCode? VariationMarginPostedCurrency { get; init; }
-
-    /// <summary>
-    /// Variation Margin Received Currency.
-    /// </summary>
-    [DisplayName("Variation Margin Received Currency")]
-    [IsoXmlTag("VartnMrgnRcvdCcy")]
-    public ActiveOrHistoricCurrencyCode? VariationMarginReceivedCurrency { get; init; }
 }

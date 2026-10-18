@@ -46,18 +46,18 @@ public record AcceptorAuthorisationResponseV13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Authorisation Response.
-    /// </summary>
-    [DisplayName("Authorisation Response")]
-    [IsoXmlTag("AuthstnRspn")]
-    public required AcceptorAuthorisationResponse13 AuthorisationResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Authorisation Response.
+    /// </summary>
+    [DisplayName("Authorisation Response")]
+    [IsoXmlTag("AuthstnRspn")]
+    public required AcceptorAuthorisationResponse13 AuthorisationResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

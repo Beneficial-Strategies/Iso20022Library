@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMVersionReport1
 {
     /// <summary>
-    /// Configuration Status.
-    /// </summary>
-    [DisplayName("Configuration Status")]
-    [IsoXmlTag("CfgtnSts")]
-    public required ActivationStatus2Code ConfigurationStatus { get; init; }
-
-    /// <summary>
     /// Configuration Version.
     /// </summary>
     [DisplayName("Configuration Version")]
     [IsoXmlTag("CfgtnVrsn")]
     public required Max35Text ConfigurationVersion { get; init; }
+
+    /// <summary>
+    /// Configuration Status.
+    /// </summary>
+    [DisplayName("Configuration Status")]
+    [IsoXmlTag("CfgtnSts")]
+    public required ActivationStatus2Code ConfigurationStatus { get; init; }
 
     /// <summary>
     /// Fail Reason.

@@ -17,32 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ResolutionData5
 {
     /// <summary>
-    /// Charges Information.
-    /// </summary>
-    [DisplayName("Charges Information")]
-    [IsoXmlTag("ChrgsInf")]
-    public ValueList<Charges14> ChargesInformation { get; init; } = [];
-
-    /// <summary>
-    /// Clearing Channel.
-    /// </summary>
-    [DisplayName("Clearing Channel")]
-    [IsoXmlTag("ClrChanl")]
-    public ClearingChannel2Code? ClearingChannel { get; init; }
-
-    /// <summary>
-    /// Compensation.
-    /// </summary>
-    [DisplayName("Compensation")]
-    [IsoXmlTag("Compstn")]
-    public Compensation5? Compensation { get; init; }
-
-    /// <summary>
     /// End To End Identification.
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
     public Max35Text? EndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public Max35Text? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// UETR.
+    /// </summary>
+    [DisplayName("UETR")]
+    [IsoXmlTag("UETR")]
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Interbank Settlement Amount.
@@ -59,16 +52,23 @@ public record ResolutionData5
     public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Clearing Channel.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public Max35Text? TransactionIdentification { get; init; }
+    [DisplayName("Clearing Channel")]
+    [IsoXmlTag("ClrChanl")]
+    public ClearingChannel2Code? ClearingChannel { get; init; }
 
     /// <summary>
-    /// UETR.
+    /// Compensation.
     /// </summary>
-    [DisplayName("UETR")]
-    [IsoXmlTag("UETR")]
-    public UUIDv4Identifier? UETR { get; init; }
+    [DisplayName("Compensation")]
+    [IsoXmlTag("Compstn")]
+    public Compensation5? Compensation { get; init; }
+
+    /// <summary>
+    /// Charges Information.
+    /// </summary>
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    public ValueList<Charges14> ChargesInformation { get; init; } = [];
 }

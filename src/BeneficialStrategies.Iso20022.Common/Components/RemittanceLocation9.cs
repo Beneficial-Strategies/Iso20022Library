@@ -24,18 +24,18 @@ public record RemittanceLocation9
     public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
-    /// Remittance Location Electronic Address.
-    /// </summary>
-    [DisplayName("Remittance Location Electronic Address")]
-    [IsoXmlTag("RmtLctnElctrncAdr")]
-    public Max2048Text? RemittanceLocationElectronicAddress { get; init; }
-
-    /// <summary>
     /// Remittance Location Method.
     /// </summary>
     [DisplayName("Remittance Location Method")]
     [IsoXmlTag("RmtLctnMtd")]
     public RemittanceLocationMethod2Code? RemittanceLocationMethod { get; init; }
+
+    /// <summary>
+    /// Remittance Location Electronic Address.
+    /// </summary>
+    [DisplayName("Remittance Location Electronic Address")]
+    [IsoXmlTag("RmtLctnElctrncAdr")]
+    public Max2048Text? RemittanceLocationElectronicAddress { get; init; }
 
     /// <summary>
     /// Remittance Location Postal Address.

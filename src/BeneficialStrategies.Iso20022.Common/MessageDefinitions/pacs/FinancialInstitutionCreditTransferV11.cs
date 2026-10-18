@@ -46,19 +46,19 @@ public record FinancialInstitutionCreditTransferV11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Group Header.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    public required GroupHeader113 GroupHeader { get; init; }
+
+    /// <summary>
     /// Credit Transfer Transaction Information.
     /// </summary>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
     public ValueList<CreditTransferTransaction62> CreditTransferTransactionInformation { get; init; } =
         [];
-
-    /// <summary>
-    /// Group Header.
-    /// </summary>
-    [DisplayName("Group Header")]
-    [IsoXmlTag("GrpHdr")]
-    public required GroupHeader113 GroupHeader { get; init; }
 
     /// <summary>
     /// Supplementary Data.

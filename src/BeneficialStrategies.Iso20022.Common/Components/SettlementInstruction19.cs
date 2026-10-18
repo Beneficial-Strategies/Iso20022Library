@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementInstruction19
 {
     /// <summary>
-    /// Creditor.
+    /// Requested Settlement Date.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public BranchAndFinancialInstitutionIdentification8? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Requested Settlement Date")]
+    [IsoXmlTag("ReqdSttlmDt")]
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Creditor Agent.
@@ -45,9 +38,16 @@ public record SettlementInstruction19
     public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
-    /// Requested Settlement Date.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Requested Settlement Date")]
-    [IsoXmlTag("ReqdSttlmDt")]
-    public ISODate? RequestedSettlementDate { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public BranchAndFinancialInstitutionIdentification8? Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Account.
+    /// </summary>
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 }

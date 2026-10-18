@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionOptionSD15
 {
     /// <summary>
-    /// Agent Accept Reject Indicator.
+    /// Place And Name.
     /// </summary>
-    [DisplayName("Agent Accept Reject Indicator")]
-    [IsoXmlTag("AgtAccptRjctInd")]
-    public AgentAcceptReject1Code? AgentAcceptRejectIndicator { get; init; }
-
-    /// <summary>
-    /// Back End Odd Lot Quantity Flag.
-    /// </summary>
-    [DisplayName("Back End Odd Lot Quantity Flag")]
-    [IsoXmlTag("BckEndOddLotQtyFlg")]
-    public YesNoIndicator? BackEndOddLotQuantityFlag { get; init; }
-
-    /// <summary>
-    /// Default Option Flag.
-    /// </summary>
-    [DisplayName("Default Option Flag")]
-    [IsoXmlTag("DfltOptnFlg")]
-    public YesNoIndicator? DefaultOptionFlag { get; init; }
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Extended Option Features.
@@ -45,25 +31,11 @@ public record CorporateActionOptionSD15
     public ExtendedOptionFeature1Code? ExtendedOptionFeatures { get; init; }
 
     /// <summary>
-    /// Front End Odd Lot Quantity Flag.
+    /// Default Option Flag.
     /// </summary>
-    [DisplayName("Front End Odd Lot Quantity Flag")]
-    [IsoXmlTag("FrntEndOddLotQtyFlg")]
-    public YesNoIndicator? FrontEndOddLotQuantityFlag { get; init; }
-
-    /// <summary>
-    /// Full Condition Flag.
-    /// </summary>
-    [DisplayName("Full Condition Flag")]
-    [IsoXmlTag("FullCondFlg")]
-    public YesNoIndicator? FullConditionFlag { get; init; }
-
-    /// <summary>
-    /// Number Of Conditions.
-    /// </summary>
-    [DisplayName("Number Of Conditions")]
-    [IsoXmlTag("NbOfConds")]
-    public Max2NumericText? NumberOfConditions { get; init; }
+    [DisplayName("Default Option Flag")]
+    [IsoXmlTag("DfltOptnFlg")]
+    public YesNoIndicator? DefaultOptionFlag { get; init; }
 
     /// <summary>
     /// Optional Dividend Supplementary Data Required Flag.
@@ -73,13 +45,6 @@ public record CorporateActionOptionSD15
     public YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
 
     /// <summary>
-    /// Option Conditions.
-    /// </summary>
-    [DisplayName("Option Conditions")]
-    [IsoXmlTag("OptnConds")]
-    public ValueList<OptionConditions1> OptionConditions { get; init; } = [];
-
-    /// <summary>
     /// Oversubscription Charge Flag.
     /// </summary>
     [DisplayName("Oversubscription Charge Flag")]
@@ -87,39 +52,11 @@ public record CorporateActionOptionSD15
     public YesNoIndicator? OversubscriptionChargeFlag { get; init; }
 
     /// <summary>
-    /// Place And Name.
-    /// </summary>
-    [DisplayName("Place And Name")]
-    [IsoXmlTag("PlcAndNm")]
-    public Max350Text? PlaceAndName { get; init; }
-
-    /// <summary>
-    /// Proration Fraction.
-    /// </summary>
-    [DisplayName("Proration Fraction")]
-    [IsoXmlTag("PrratnFrctn")]
-    public DecimalNumber? ProrationFraction { get; init; }
-
-    /// <summary>
-    /// Proration Rounding Indicator.
-    /// </summary>
-    [DisplayName("Proration Rounding Indicator")]
-    [IsoXmlTag("PrratnRndgInd")]
-    public FractionDispositionType12Code? ProrationRoundingIndicator { get; init; }
-
-    /// <summary>
     /// Protect Charge Flag.
     /// </summary>
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
     public YesNoIndicator? ProtectChargeFlag { get; init; }
-
-    /// <summary>
-    /// RDP Reference Number.
-    /// </summary>
-    [DisplayName("RDP Reference Number")]
-    [IsoXmlTag("RDPRefNb")]
-    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Step Up Charge Flag.
@@ -136,9 +73,72 @@ public record CorporateActionOptionSD15
     public YesNoIndicator? SubscriptionChargeFlag { get; init; }
 
     /// <summary>
+    /// Back End Odd Lot Quantity Flag.
+    /// </summary>
+    [DisplayName("Back End Odd Lot Quantity Flag")]
+    [IsoXmlTag("BckEndOddLotQtyFlg")]
+    public YesNoIndicator? BackEndOddLotQuantityFlag { get; init; }
+
+    /// <summary>
+    /// Front End Odd Lot Quantity Flag.
+    /// </summary>
+    [DisplayName("Front End Odd Lot Quantity Flag")]
+    [IsoXmlTag("FrntEndOddLotQtyFlg")]
+    public YesNoIndicator? FrontEndOddLotQuantityFlag { get; init; }
+
+    /// <summary>
+    /// Full Condition Flag.
+    /// </summary>
+    [DisplayName("Full Condition Flag")]
+    [IsoXmlTag("FullCondFlg")]
+    public YesNoIndicator? FullConditionFlag { get; init; }
+
+    /// <summary>
+    /// RDP Reference Number.
+    /// </summary>
+    [DisplayName("RDP Reference Number")]
+    [IsoXmlTag("RDPRefNb")]
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Number Of Conditions.
+    /// </summary>
+    [DisplayName("Number Of Conditions")]
+    [IsoXmlTag("NbOfConds")]
+    public Max2NumericText? NumberOfConditions { get; init; }
+
+    /// <summary>
     /// Tax Category.
     /// </summary>
     [DisplayName("Tax Category")]
     [IsoXmlTag("TaxCtgy")]
     public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
+
+    /// <summary>
+    /// Proration Rounding Indicator.
+    /// </summary>
+    [DisplayName("Proration Rounding Indicator")]
+    [IsoXmlTag("PrratnRndgInd")]
+    public FractionDispositionType12Code? ProrationRoundingIndicator { get; init; }
+
+    /// <summary>
+    /// Proration Fraction.
+    /// </summary>
+    [DisplayName("Proration Fraction")]
+    [IsoXmlTag("PrratnFrctn")]
+    public DecimalNumber? ProrationFraction { get; init; }
+
+    /// <summary>
+    /// Option Conditions.
+    /// </summary>
+    [DisplayName("Option Conditions")]
+    [IsoXmlTag("OptnConds")]
+    public ValueList<OptionConditions1> OptionConditions { get; init; } = [];
+
+    /// <summary>
+    /// Agent Accept Reject Indicator.
+    /// </summary>
+    [DisplayName("Agent Accept Reject Indicator")]
+    [IsoXmlTag("AgtAccptRjctInd")]
+    public AgentAcceptReject1Code? AgentAcceptRejectIndicator { get; init; }
 }

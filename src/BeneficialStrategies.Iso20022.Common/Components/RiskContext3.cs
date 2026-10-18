@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RiskContext3
 {
     /// <summary>
-    /// Assessment.
-    /// </summary>
-    [DisplayName("Assessment")]
-    [IsoXmlTag("Assmnt")]
-    public ValueList<RiskAssessment3> Assessment { get; init; } = [];
-
-    /// <summary>
     /// Input Data.
     /// </summary>
     [DisplayName("Input Data")]
     [IsoXmlTag("InptData")]
     public ValueList<RiskInputData2> InputData { get; init; } = [];
+
+    /// <summary>
+    /// Assessment.
+    /// </summary>
+    [DisplayName("Assessment")]
+    [IsoXmlTag("Assmnt")]
+    public ValueList<RiskAssessment3> Assessment { get; init; } = [];
 }

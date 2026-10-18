@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AncillaryPurchase3
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Credit Reason Code.
-    /// </summary>
-    [DisplayName("Credit Reason Code")]
-    [IsoXmlTag("CdtRsnCd")]
-    public Max35Text? CreditReasonCode { get; init; }
-
-    /// <summary>
     /// Document Number.
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
     public Max15Text? DocumentNumber { get; init; }
-
-    /// <summary>
-    /// Fee.
-    /// </summary>
-    [DisplayName("Fee")]
-    [IsoXmlTag("Fee")]
-    public ImpliedCurrencyAndAmount? Fee { get; init; }
 
     /// <summary>
     /// Related Document Number.
@@ -73,6 +38,13 @@ public record AncillaryPurchase3
     public Max4Text? ServiceCategoryCode { get; init; }
 
     /// <summary>
+    /// Service Sub Category Code.
+    /// </summary>
+    [DisplayName("Service Sub Category Code")]
+    [IsoXmlTag("SvcSubCtgyCd")]
+    public Max4Text? ServiceSubCategoryCode { get; init; }
+
+    /// <summary>
     /// Service Provider Service Type.
     /// </summary>
     [DisplayName("Service Provider Service Type")]
@@ -80,11 +52,11 @@ public record AncillaryPurchase3
     public Max35Text? ServiceProviderServiceType { get; init; }
 
     /// <summary>
-    /// Service Sub Category Code.
+    /// Credit Reason Code.
     /// </summary>
-    [DisplayName("Service Sub Category Code")]
-    [IsoXmlTag("SvcSubCtgyCd")]
-    public Max4Text? ServiceSubCategoryCode { get; init; }
+    [DisplayName("Credit Reason Code")]
+    [IsoXmlTag("CdtRsnCd")]
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
@@ -94,9 +66,37 @@ public record AncillaryPurchase3
     public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
+    /// Fee.
+    /// </summary>
+    [DisplayName("Fee")]
+    [IsoXmlTag("Fee")]
+    public ImpliedCurrencyAndAmount? Fee { get; init; }
+
+    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public ValueList<Tax41> Tax { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

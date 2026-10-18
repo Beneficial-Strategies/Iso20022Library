@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionPeriod16
 {
     /// <summary>
-    /// Book Closure Period.
+    /// Price Calculation Period.
     /// </summary>
-    [DisplayName("Book Closure Period")]
-    [IsoXmlTag("BookClsrPrd")]
-    public Period6Choice_? BookClosurePeriod { get; init; }
+    [DisplayName("Price Calculation Period")]
+    [IsoXmlTag("PricClctnPrd")]
+    public Period6Choice_? PriceCalculationPeriod { get; init; }
 
     /// <summary>
-    /// Claim Period.
+    /// Interest Period.
     /// </summary>
-    [DisplayName("Claim Period")]
-    [IsoXmlTag("ClmPrd")]
-    public Period6Choice_? ClaimPeriod { get; init; }
-
-    /// <summary>
-    /// Co Depositories Suspension Period.
-    /// </summary>
-    [DisplayName("Co Depositories Suspension Period")]
-    [IsoXmlTag("CoDpstriesSspnsnPrd")]
-    public Period6Choice_? CoDepositoriesSuspensionPeriod { get; init; }
+    [DisplayName("Interest Period")]
+    [IsoXmlTag("IntrstPrd")]
+    public Period6Choice_? InterestPeriod { get; init; }
 
     /// <summary>
     /// Compulsory Purchase Period.
@@ -45,6 +38,13 @@ public record CorporateActionPeriod16
     public Period6Choice_? CompulsoryPurchasePeriod { get; init; }
 
     /// <summary>
+    /// Claim Period.
+    /// </summary>
+    [DisplayName("Claim Period")]
+    [IsoXmlTag("ClmPrd")]
+    public Period6Choice_? ClaimPeriod { get; init; }
+
+    /// <summary>
     /// Depository Suspension Period For Book Entry Transfer.
     /// </summary>
     [DisplayName("Depository Suspension Period For Book Entry Transfer")]
@@ -52,18 +52,18 @@ public record CorporateActionPeriod16
     public Period6Choice_? DepositorySuspensionPeriodForBookEntryTransfer { get; init; }
 
     /// <summary>
-    /// Depository Suspension Period For Deposit.
-    /// </summary>
-    [DisplayName("Depository Suspension Period For Deposit")]
-    [IsoXmlTag("DpstrySspnsnPrdForDpst")]
-    public Period6Choice_? DepositorySuspensionPeriodForDeposit { get; init; }
-
-    /// <summary>
     /// Depository Suspension Period For Deposit At Agent.
     /// </summary>
     [DisplayName("Depository Suspension Period For Deposit At Agent")]
     [IsoXmlTag("DpstrySspnsnPrdForDpstAtAgt")]
     public Period6Choice_? DepositorySuspensionPeriodForDepositAtAgent { get; init; }
+
+    /// <summary>
+    /// Depository Suspension Period For Deposit.
+    /// </summary>
+    [DisplayName("Depository Suspension Period For Deposit")]
+    [IsoXmlTag("DpstrySspnsnPrdForDpst")]
+    public Period6Choice_? DepositorySuspensionPeriodForDeposit { get; init; }
 
     /// <summary>
     /// Depository Suspension Period For Pledge.
@@ -101,25 +101,18 @@ public record CorporateActionPeriod16
     public Period6Choice_? DepositorySuspensionPeriodForWithdrawalInStreetName { get; init; }
 
     /// <summary>
-    /// Fiscal Year Period.
+    /// Book Closure Period.
     /// </summary>
-    [DisplayName("Fiscal Year Period")]
-    [IsoXmlTag("FsclYrPrd")]
-    public Period6Choice_? FiscalYearPeriod { get; init; }
+    [DisplayName("Book Closure Period")]
+    [IsoXmlTag("BookClsrPrd")]
+    public Period6Choice_? BookClosurePeriod { get; init; }
 
     /// <summary>
-    /// Interest Period.
+    /// Co Depositories Suspension Period.
     /// </summary>
-    [DisplayName("Interest Period")]
-    [IsoXmlTag("IntrstPrd")]
-    public Period6Choice_? InterestPeriod { get; init; }
-
-    /// <summary>
-    /// Price Calculation Period.
-    /// </summary>
-    [DisplayName("Price Calculation Period")]
-    [IsoXmlTag("PricClctnPrd")]
-    public Period6Choice_? PriceCalculationPeriod { get; init; }
+    [DisplayName("Co Depositories Suspension Period")]
+    [IsoXmlTag("CoDpstriesSspnsnPrd")]
+    public Period6Choice_? CoDepositoriesSuspensionPeriod { get; init; }
 
     /// <summary>
     /// Split Period.
@@ -127,4 +120,11 @@ public record CorporateActionPeriod16
     [DisplayName("Split Period")]
     [IsoXmlTag("SpltPrd")]
     public Period6Choice_? SplitPeriod { get; init; }
+
+    /// <summary>
+    /// Fiscal Year Period.
+    /// </summary>
+    [DisplayName("Fiscal Year Period")]
+    [IsoXmlTag("FsclYrPrd")]
+    public Period6Choice_? FiscalYearPeriod { get; init; }
 }

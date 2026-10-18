@@ -46,25 +46,11 @@ public record AccountRequestRejectionV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Identification.
+    /// References.
     /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Account Servicer Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Identification")]
-    [IsoXmlTag("AcctSvcrId")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References6 References { get; init; }
 
     /// <summary>
     /// From.
@@ -74,6 +60,20 @@ public record AccountRequestRejectionV04 : IOuterRecord
     public OrganisationIdentification39? From { get; init; }
 
     /// <summary>
+    /// Account Servicer Identification.
+    /// </summary>
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
+
+    /// <summary>
     /// Organisation Identification.
     /// </summary>
     [DisplayName("Organisation Identification")]
@@ -81,11 +81,11 @@ public record AccountRequestRejectionV04 : IOuterRecord
     public required OrganisationIdentification39 OrganisationIdentification { get; init; }
 
     /// <summary>
-    /// References.
+    /// Digital Signature.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References6 References { get; init; }
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

@@ -53,16 +53,16 @@ public record SaleToPOISessionManagementResponseV07 : IOuterRecord
     public required Header41 Header { get; init; }
 
     /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType38? SecurityTrailer { get; init; }
-
-    /// <summary>
     /// Session Management Response.
     /// </summary>
     [DisplayName("Session Management Response")]
     [IsoXmlTag("SsnMgmtRspn")]
     public required SessionManagementResponse8 SessionManagementResponse { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementCategoryTotal3
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
     /// Count.
     /// </summary>
     [DisplayName("Count")]
@@ -31,11 +24,11 @@ public record SettlementCategoryTotal3
     public Number? Count { get; init; }
 
     /// <summary>
-    /// Credit Debit.
+    /// Amount.
     /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Currency.
@@ -45,18 +38,18 @@ public record SettlementCategoryTotal3
     public ISO3NumericCurrencyCode? Currency { get; init; }
 
     /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
     /// Interchange Fee Amount.
     /// </summary>
     [DisplayName("Interchange Fee Amount")]
     [IsoXmlTag("IntrchngFeeAmt")]
     public ImpliedCurrencyAndAmount? InterchangeFeeAmount { get; init; }
-
-    /// <summary>
-    /// Interchange Fee Credit Debit.
-    /// </summary>
-    [DisplayName("Interchange Fee Credit Debit")]
-    [IsoXmlTag("IntrchngFeeCdtDbt")]
-    public CreditDebit3Code? InterchangeFeeCreditDebit { get; init; }
 
     /// <summary>
     /// Interchange Fee Currency.
@@ -66,6 +59,13 @@ public record SettlementCategoryTotal3
     public ISO3NumericCurrencyCode? InterchangeFeeCurrency { get; init; }
 
     /// <summary>
+    /// Interchange Fee Credit Debit.
+    /// </summary>
+    [DisplayName("Interchange Fee Credit Debit")]
+    [IsoXmlTag("IntrchngFeeCdtDbt")]
+    public CreditDebit3Code? InterchangeFeeCreditDebit { get; init; }
+
+    /// <summary>
     /// Processing Fee Amount.
     /// </summary>
     [DisplayName("Processing Fee Amount")]
@@ -73,16 +73,16 @@ public record SettlementCategoryTotal3
     public ImpliedCurrencyAndAmount? ProcessingFeeAmount { get; init; }
 
     /// <summary>
-    /// Processing Fee Credit Debit.
-    /// </summary>
-    [DisplayName("Processing Fee Credit Debit")]
-    [IsoXmlTag("PrcgFeeCdtDbt")]
-    public CreditDebit3Code? ProcessingFeeCreditDebit { get; init; }
-
-    /// <summary>
     /// Processing Fee Currency.
     /// </summary>
     [DisplayName("Processing Fee Currency")]
     [IsoXmlTag("PrcgFeeCcy")]
     public ISO3NumericCurrencyCode? ProcessingFeeCurrency { get; init; }
+
+    /// <summary>
+    /// Processing Fee Credit Debit.
+    /// </summary>
+    [DisplayName("Processing Fee Credit Debit")]
+    [IsoXmlTag("PrcgFeeCdtDbt")]
+    public CreditDebit3Code? ProcessingFeeCreditDebit { get; init; }
 }

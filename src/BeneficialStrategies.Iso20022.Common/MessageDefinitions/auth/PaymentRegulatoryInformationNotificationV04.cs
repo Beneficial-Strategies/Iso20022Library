@@ -53,16 +53,16 @@ public record PaymentRegulatoryInformationNotificationV04 : IOuterRecord
     public required CurrencyControlHeader9 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Transaction Notification.
     /// </summary>
     [DisplayName("Transaction Notification")]
     [IsoXmlTag("TxNtfctn")]
     public ValueList<RegulatoryReportingNotification4> TransactionNotification { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

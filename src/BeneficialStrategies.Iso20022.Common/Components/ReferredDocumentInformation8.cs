@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReferredDocumentInformation8
 {
     /// <summary>
-    /// Line Details.
+    /// Type.
     /// </summary>
-    [DisplayName("Line Details")]
-    [IsoXmlTag("LineDtls")]
-    public ValueList<DocumentLineInformation2> LineDetails { get; init; } = [];
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public DocumentType1? Type { get; init; }
 
     /// <summary>
     /// Number.
@@ -38,9 +38,9 @@ public record ReferredDocumentInformation8
     public DateAndType1? RelatedDate { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Line Details.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public DocumentType1? Type { get; init; }
+    [DisplayName("Line Details")]
+    [IsoXmlTag("LineDtls")]
+    public ValueList<DocumentLineInformation2> LineDetails { get; init; } = [];
 }

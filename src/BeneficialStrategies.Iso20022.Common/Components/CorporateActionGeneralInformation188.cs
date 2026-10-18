@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformation188
 {
     /// <summary>
-    /// Class Action Number.
-    /// </summary>
-    [DisplayName("Class Action Number")]
-    [IsoXmlTag("ClssActnNb")]
-    public RestrictedFINXMax16Text? ClassActionNumber { get; init; }
-
-    /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
@@ -31,16 +24,23 @@ public record CorporateActionGeneralInformation188
     public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Event Type.
-    /// </summary>
-    [DisplayName("Event Type")]
-    [IsoXmlTag("EvtTp")]
-    public required CorporateActionEventType118Choice_ EventType { get; init; }
-
-    /// <summary>
     /// Official Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
     public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Class Action Number.
+    /// </summary>
+    [DisplayName("Class Action Number")]
+    [IsoXmlTag("ClssActnNb")]
+    public RestrictedFINXMax16Text? ClassActionNumber { get; init; }
+
+    /// <summary>
+    /// Event Type.
+    /// </summary>
+    [DisplayName("Event Type")]
+    [IsoXmlTag("EvtTp")]
+    public required CorporateActionEventType118Choice_ EventType { get; init; }
 }

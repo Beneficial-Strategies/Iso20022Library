@@ -24,16 +24,16 @@ public record CollateralValueCriteria4
     public Max35Text? QueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public CollateralValueReturnCriteria1? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public CollateralValueSearchCriteria4? SearchCriteria { get; init; }
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public CollateralValueReturnCriteria1? ReturnCriteria { get; init; }
 }

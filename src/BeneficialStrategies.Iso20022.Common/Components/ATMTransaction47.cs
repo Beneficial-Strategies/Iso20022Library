@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction47
 {
     /// <summary>
-    /// Authorisation Result.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Customer Consent.
+    /// Transaction Status.
     /// </summary>
-    [DisplayName("Customer Consent")]
-    [IsoXmlTag("CstmrCnsnt")]
-    public TrueFalseIndicator? CustomerConsent { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
 
     /// <summary>
     /// Incident.
@@ -52,13 +45,6 @@ public record ATMTransaction47
     public ValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
-    /// Receipt Printed.
-    /// </summary>
-    [DisplayName("Receipt Printed")]
-    [IsoXmlTag("RctPrtd")]
-    public TrueFalseIndicator? ReceiptPrinted { get; init; }
-
-    /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
@@ -73,16 +59,30 @@ public record ATMTransaction47
     public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Receipt Printed.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Receipt Printed")]
+    [IsoXmlTag("RctPrtd")]
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
-    /// Transaction Status.
+    /// Customer Consent.
     /// </summary>
-    [DisplayName("Transaction Status")]
-    [IsoXmlTag("TxSts")]
-    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
+    [DisplayName("Customer Consent")]
+    [IsoXmlTag("CstmrCnsnt")]
+    public TrueFalseIndicator? CustomerConsent { get; init; }
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

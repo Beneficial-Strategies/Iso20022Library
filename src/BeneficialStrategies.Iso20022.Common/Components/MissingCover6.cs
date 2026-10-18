@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MissingCover6
 {
     /// <summary>
-    /// Cover Correction.
-    /// </summary>
-    [DisplayName("Cover Correction")]
-    [IsoXmlTag("CoverCrrctn")]
-    public SettlementInstruction16? CoverCorrection { get; init; }
-
-    /// <summary>
     /// Missing Cover Indicator.
     /// </summary>
     [DisplayName("Missing Cover Indicator")]
     [IsoXmlTag("MssngCoverInd")]
     public required YesNoIndicator MissingCoverIndicator { get; init; }
+
+    /// <summary>
+    /// Cover Correction.
+    /// </summary>
+    [DisplayName("Cover Correction")]
+    [IsoXmlTag("CoverCrrctn")]
+    public SettlementInstruction16? CoverCorrection { get; init; }
 }

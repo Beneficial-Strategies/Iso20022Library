@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountIdentification70
 {
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification127Choice_? AccountOwner { get; init; }
-
-    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public required Max35Text SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification127Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

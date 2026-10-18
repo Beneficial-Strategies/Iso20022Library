@@ -25,6 +25,27 @@ public record CashAccountSearchCriteria8
         [];
 
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ValueList<CashAccountType2Choice_> Type { get; init; } = [];
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
+
+    /// <summary>
+    /// Balance.
+    /// </summary>
+    [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
+    public ValueList<CashBalance14> Balance { get; init; } = [];
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -37,25 +58,4 @@ public record CashAccountSearchCriteria8
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
-
-    /// <summary>
-    /// Balance.
-    /// </summary>
-    [DisplayName("Balance")]
-    [IsoXmlTag("Bal")]
-    public ValueList<CashBalance14> Balance { get; init; } = [];
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ValueList<CashAccountType2Choice_> Type { get; init; } = [];
 }

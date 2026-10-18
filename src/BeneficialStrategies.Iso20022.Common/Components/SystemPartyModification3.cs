@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SystemPartyModification3
 {
     /// <summary>
-    /// Requested Modification.
-    /// </summary>
-    [DisplayName("Requested Modification")]
-    [IsoXmlTag("ReqdMod")]
-    public required SystemPartyModification3Choice_ RequestedModification { get; init; }
-
-    /// <summary>
     /// Scope Indication.
     /// </summary>
     [DisplayName("Scope Indication")]
     [IsoXmlTag("ScpIndctn")]
     public required DataModification1Code ScopeIndication { get; init; }
+
+    /// <summary>
+    /// Requested Modification.
+    /// </summary>
+    [DisplayName("Requested Modification")]
+    [IsoXmlTag("ReqdMod")]
+    public required SystemPartyModification3Choice_ RequestedModification { get; init; }
 }

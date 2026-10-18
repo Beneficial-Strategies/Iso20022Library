@@ -46,18 +46,18 @@ public record AcceptorCancellationRequestV15 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Request.
-    /// </summary>
-    [DisplayName("Cancellation Request")]
-    [IsoXmlTag("CxlReq")]
-    public required AcceptorCancellationRequest15 CancellationRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Cancellation Request.
+    /// </summary>
+    [DisplayName("Cancellation Request")]
+    [IsoXmlTag("CxlReq")]
+    public required AcceptorCancellationRequest15 CancellationRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

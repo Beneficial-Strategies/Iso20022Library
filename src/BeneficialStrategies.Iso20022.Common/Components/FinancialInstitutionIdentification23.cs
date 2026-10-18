@@ -45,16 +45,16 @@ public record FinancialInstitutionIdentification23
     public Max140Text? Name { get; init; }
 
     /// <summary>
-    /// Other.
-    /// </summary>
-    [DisplayName("Other")]
-    [IsoXmlTag("Othr")]
-    public GenericFinancialIdentification1? Other { get; init; }
-
-    /// <summary>
     /// Postal Address.
     /// </summary>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }
+
+    /// <summary>
+    /// Other.
+    /// </summary>
+    [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
+    public GenericFinancialIdentification1? Other { get; init; }
 }

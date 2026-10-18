@@ -17,102 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeLeg13
 {
     /// <summary>
-    /// Allocation Identification.
+    /// Trade Leg Identification.
     /// </summary>
-    [DisplayName("Allocation Identification")]
-    [IsoXmlTag("AllcnId")]
-    public Max35Text? AllocationIdentification { get; init; }
-
-    /// <summary>
-    /// Broker.
-    /// </summary>
-    [DisplayName("Broker")]
-    [IsoXmlTag("Brkr")]
-    public PartyIdentificationAndAccount230? Broker { get; init; }
-
-    /// <summary>
-    /// Buy Sell Indicator.
-    /// </summary>
-    [DisplayName("Buy Sell Indicator")]
-    [IsoXmlTag("BuySellInd")]
-    public required Side1Code BuySellIndicator { get; init; }
-
-    /// <summary>
-    /// Deal Price.
-    /// </summary>
-    [DisplayName("Deal Price")]
-    [IsoXmlTag("DealPric")]
-    public required Price14 DealPrice { get; init; }
-
-    /// <summary>
-    /// Derivative Related Trade.
-    /// </summary>
-    [DisplayName("Derivative Related Trade")]
-    [IsoXmlTag("DerivRltdTrad")]
-    public YesNoIndicator? DerivativeRelatedTrade { get; init; }
-
-    /// <summary>
-    /// Gross Amount.
-    /// </summary>
-    [DisplayName("Gross Amount")]
-    [IsoXmlTag("GrssAmt")]
-    public AmountAndDirection21? GrossAmount { get; init; }
-
-    /// <summary>
-    /// Order Identification.
-    /// </summary>
-    [DisplayName("Order Identification")]
-    [IsoXmlTag("OrdrId")]
-    public Max35Text? OrderIdentification { get; init; }
-
-    /// <summary>
-    /// Place Of Listing.
-    /// </summary>
-    [DisplayName("Place Of Listing")]
-    [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification85? PlaceOfListing { get; init; }
-
-    /// <summary>
-    /// Place Of Trade.
-    /// </summary>
-    [DisplayName("Place Of Trade")]
-    [IsoXmlTag("PlcOfTrad")]
-    public required MarketIdentification84 PlaceOfTrade { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat43Choice_? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Settlement Date.
-    /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public required DateFormat66Choice_ SettlementDate { get; init; }
-
-    /// <summary>
-    /// Trade Date.
-    /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public required ISODate TradeDate { get; init; }
-
-    /// <summary>
-    /// Trade Execution Identification.
-    /// </summary>
-    [DisplayName("Trade Execution Identification")]
-    [IsoXmlTag("TradExctnId")]
-    public Max35Text? TradeExecutionIdentification { get; init; }
+    [DisplayName("Trade Leg Identification")]
+    [IsoXmlTag("TradLegId")]
+    public required Max35Text TradeLegIdentification { get; init; }
 
     /// <summary>
     /// Trade Identification.
@@ -122,67 +31,39 @@ public record TradeLeg13
     public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
-    /// Trade Leg Identification.
+    /// Trade Execution Identification.
     /// </summary>
-    [DisplayName("Trade Leg Identification")]
-    [IsoXmlTag("TradLegId")]
-    public required Max35Text TradeLegIdentification { get; init; }
+    [DisplayName("Trade Execution Identification")]
+    [IsoXmlTag("TradExctnId")]
+    public Max35Text? TradeExecutionIdentification { get; init; }
 
     /// <summary>
-    /// Trade Posting Code.
+    /// Unique Transaction Identifier.
     /// </summary>
-    [DisplayName("Trade Posting Code")]
-    [IsoXmlTag("TradPstngCd")]
-    public TradePosting1Code? TradePostingCode { get; init; }
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
-    /// Trade Quantity.
+    /// Order Identification.
     /// </summary>
-    [DisplayName("Trade Quantity")]
-    [IsoXmlTag("TradQty")]
-    public required FinancialInstrumentQuantity1Choice_ TradeQuantity { get; init; }
+    [DisplayName("Order Identification")]
+    [IsoXmlTag("OrdrId")]
+    public Max35Text? OrderIdentification { get; init; }
 
     /// <summary>
-    /// Trade Registration Origin.
+    /// Allocation Identification.
     /// </summary>
-    [DisplayName("Trade Registration Origin")]
-    [IsoXmlTag("TradRegnOrgn")]
-    public Max35Text? TradeRegistrationOrigin { get; init; }
+    [DisplayName("Allocation Identification")]
+    [IsoXmlTag("AllcnId")]
+    public Max35Text? AllocationIdentification { get; init; }
 
     /// <summary>
-    /// Trade Type.
+    /// Trade Date.
     /// </summary>
-    [DisplayName("Trade Type")]
-    [IsoXmlTag("TradTp")]
-    public required TradeType1Code TradeType { get; init; }
-
-    /// <summary>
-    /// Trading Capacity.
-    /// </summary>
-    [DisplayName("Trading Capacity")]
-    [IsoXmlTag("TradgCpcty")]
-    public required TradingCapacity5Code TradingCapacity { get; init; }
-
-    /// <summary>
-    /// Trading Currency.
-    /// </summary>
-    [DisplayName("Trading Currency")]
-    [IsoXmlTag("TradgCcy")]
-    public CurrencyCode? TradingCurrency { get; init; }
-
-    /// <summary>
-    /// Trading Party.
-    /// </summary>
-    [DisplayName("Trading Party")]
-    [IsoXmlTag("TradgPty")]
-    public required PartyIdentification253Choice_ TradingParty { get; init; }
-
-    /// <summary>
-    /// Trading Party Account.
-    /// </summary>
-    [DisplayName("Trading Party Account")]
-    [IsoXmlTag("TradgPtyAcct")]
-    public SecuritiesAccount19? TradingPartyAccount { get; init; }
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Transaction Date And Time.
@@ -192,9 +73,128 @@ public record TradeLeg13
     public ISODateTime? TransactionDateAndTime { get; init; }
 
     /// <summary>
-    /// Unique Transaction Identifier.
+    /// Settlement Date.
     /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required DateFormat66Choice_ SettlementDate { get; init; }
+
+    /// <summary>
+    /// Trading Currency.
+    /// </summary>
+    [DisplayName("Trading Currency")]
+    [IsoXmlTag("TradgCcy")]
+    public CurrencyCode? TradingCurrency { get; init; }
+
+    /// <summary>
+    /// Buy Sell Indicator.
+    /// </summary>
+    [DisplayName("Buy Sell Indicator")]
+    [IsoXmlTag("BuySellInd")]
+    public required Side1Code BuySellIndicator { get; init; }
+
+    /// <summary>
+    /// Trade Quantity.
+    /// </summary>
+    [DisplayName("Trade Quantity")]
+    [IsoXmlTag("TradQty")]
+    public required FinancialInstrumentQuantity1Choice_ TradeQuantity { get; init; }
+
+    /// <summary>
+    /// Deal Price.
+    /// </summary>
+    [DisplayName("Deal Price")]
+    [IsoXmlTag("DealPric")]
+    public required Price14 DealPrice { get; init; }
+
+    /// <summary>
+    /// Gross Amount.
+    /// </summary>
+    [DisplayName("Gross Amount")]
+    [IsoXmlTag("GrssAmt")]
+    public AmountAndDirection21? GrossAmount { get; init; }
+
+    /// <summary>
+    /// Place Of Trade.
+    /// </summary>
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public required MarketIdentification84 PlaceOfTrade { get; init; }
+
+    /// <summary>
+    /// Place Of Listing.
+    /// </summary>
+    [DisplayName("Place Of Listing")]
+    [IsoXmlTag("PlcOfListg")]
+    public MarketIdentification85? PlaceOfListing { get; init; }
+
+    /// <summary>
+    /// Trade Type.
+    /// </summary>
+    [DisplayName("Trade Type")]
+    [IsoXmlTag("TradTp")]
+    public required TradeType1Code TradeType { get; init; }
+
+    /// <summary>
+    /// Derivative Related Trade.
+    /// </summary>
+    [DisplayName("Derivative Related Trade")]
+    [IsoXmlTag("DerivRltdTrad")]
+    public YesNoIndicator? DerivativeRelatedTrade { get; init; }
+
+    /// <summary>
+    /// Broker.
+    /// </summary>
+    [DisplayName("Broker")]
+    [IsoXmlTag("Brkr")]
+    public PartyIdentificationAndAccount230? Broker { get; init; }
+
+    /// <summary>
+    /// Trading Party.
+    /// </summary>
+    [DisplayName("Trading Party")]
+    [IsoXmlTag("TradgPty")]
+    public required PartyIdentification253Choice_ TradingParty { get; init; }
+
+    /// <summary>
+    /// Trade Registration Origin.
+    /// </summary>
+    [DisplayName("Trade Registration Origin")]
+    [IsoXmlTag("TradRegnOrgn")]
+    public Max35Text? TradeRegistrationOrigin { get; init; }
+
+    /// <summary>
+    /// Trading Party Account.
+    /// </summary>
+    [DisplayName("Trading Party Account")]
+    [IsoXmlTag("TradgPtyAcct")]
+    public SecuritiesAccount19? TradingPartyAccount { get; init; }
+
+    /// <summary>
+    /// Trading Capacity.
+    /// </summary>
+    [DisplayName("Trading Capacity")]
+    [IsoXmlTag("TradgCpcty")]
+    public required TradingCapacity5Code TradingCapacity { get; init; }
+
+    /// <summary>
+    /// Trade Posting Code.
+    /// </summary>
+    [DisplayName("Trade Posting Code")]
+    [IsoXmlTag("TradPstngCd")]
+    public TradePosting1Code? TradePostingCode { get; init; }
+
+    /// <summary>
+    /// Safekeeping Place.
+    /// </summary>
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafekeepingPlaceFormat43Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 }

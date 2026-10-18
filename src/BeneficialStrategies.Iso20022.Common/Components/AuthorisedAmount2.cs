@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AuthorisedAmount2
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
@@ -31,16 +24,23 @@ public record AuthorisedAmount2
     public ISODate? Date { get; init; }
 
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max350Text? Description { get; init; }
-
-    /// <summary>
     /// Time.
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     public ISOTime? Time { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max350Text? Description { get; init; }
 }

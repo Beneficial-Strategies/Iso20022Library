@@ -18,25 +18,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Garnishment4
 {
     /// <summary>
-    /// Date of payment which garnishment was taken from.
+    /// Specifies the type of garnishment.
     /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
-    /// </summary>
-    [DisplayName("Employee Termination Indicator")]
-    [IsoXmlTag("MplyeeTermntnInd")]
-    public TrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
-
-    /// <summary>
-    /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
-    /// </summary>
-    [DisplayName("Family Medical Insurance Indicator")]
-    [IsoXmlTag("FmlyMdclInsrncInd")]
-    public TrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required GarnishmentType1 Type { get; init; }
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.
@@ -60,6 +46,13 @@ public record Garnishment4
     public Max140Text? ReferenceNumber { get; init; }
 
     /// <summary>
+    /// Date of payment which garnishment was taken from.
+    /// </summary>
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
+
+    /// <summary>
     /// Amount of money remitted for the referred document.
     /// </summary>
     [DisplayName("Remitted Amount")]
@@ -67,9 +60,16 @@ public record Garnishment4
     public ActiveOrHistoricCurrencyAndAmount? RemittedAmount { get; init; }
 
     /// <summary>
-    /// Specifies the type of garnishment.
+    /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required GarnishmentType1 Type { get; init; }
+    [DisplayName("Family Medical Insurance Indicator")]
+    [IsoXmlTag("FmlyMdclInsrncInd")]
+    public TrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
+
+    /// <summary>
+    /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
+    /// </summary>
+    [DisplayName("Employee Termination Indicator")]
+    [IsoXmlTag("MplyeeTermntnInd")]
+    public TrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 }

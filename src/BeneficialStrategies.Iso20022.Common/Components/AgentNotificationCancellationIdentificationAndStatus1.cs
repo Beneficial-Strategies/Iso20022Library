@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AgentNotificationCancellationIdentificationAndStatus1
 {
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public ISODateTime? CreationDateTime { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Status.

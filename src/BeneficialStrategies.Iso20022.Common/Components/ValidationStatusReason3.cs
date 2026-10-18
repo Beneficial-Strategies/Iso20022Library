@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ValidationStatusReason3
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Originator.
     /// </summary>
     [DisplayName("Originator")]
@@ -43,4 +36,11 @@ public record ValidationStatusReason3
     [DisplayName("Validation Rule")]
     [IsoXmlTag("VldtnRule")]
     public ValueList<GenericValidationRuleIdentification1> ValidationRule { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

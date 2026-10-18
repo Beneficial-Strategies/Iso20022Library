@@ -46,13 +46,6 @@ public record ATMDiagnosticRequestV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Diagnostic Request.
-    /// </summary>
-    [DisplayName("ATM Diagnostic Request")]
-    [IsoXmlTag("ATMDgnstcReq")]
-    public ATMDiagnosticRequest3? ATMDiagnosticRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMDiagnosticRequestV03 : IOuterRecord
     [DisplayName("Protected ATM Diagnostic Request")]
     [IsoXmlTag("PrtctdATMDgnstcReq")]
     public ContentInformationType10? ProtectedATMDiagnosticRequest { get; init; }
+
+    /// <summary>
+    /// ATM Diagnostic Request.
+    /// </summary>
+    [DisplayName("ATM Diagnostic Request")]
+    [IsoXmlTag("ATMDgnstcReq")]
+    public ATMDiagnosticRequest3? ATMDiagnosticRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

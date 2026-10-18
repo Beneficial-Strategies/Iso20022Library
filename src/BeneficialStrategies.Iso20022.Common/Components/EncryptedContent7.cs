@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EncryptedContent7
 {
     /// <summary>
-    /// Content Encryption Algorithm.
-    /// </summary>
-    [DisplayName("Content Encryption Algorithm")]
-    [IsoXmlTag("CnttNcrptnAlgo")]
-    public AlgorithmIdentification32? ContentEncryptionAlgorithm { get; init; }
-
-    /// <summary>
     /// Content Type.
     /// </summary>
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
     public required ContentType2Code ContentType { get; init; }
+
+    /// <summary>
+    /// Content Encryption Algorithm.
+    /// </summary>
+    [DisplayName("Content Encryption Algorithm")]
+    [IsoXmlTag("CnttNcrptnAlgo")]
+    public AlgorithmIdentification32? ContentEncryptionAlgorithm { get; init; }
 
     /// <summary>
     /// Encrypted Data.

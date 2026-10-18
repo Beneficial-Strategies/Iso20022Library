@@ -18,13 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DirectDebitTransaction12
 {
     /// <summary>
-    /// Credit party that signs the mandate.
-    /// </summary>
-    [DisplayName("Creditor Scheme Identification")]
-    [IsoXmlTag("CdtrSchmeId")]
-    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
-
-    /// <summary>
     /// Provides further details of the direct debit mandate signed between the creditor and the debtor.
     /// </summary>
     [DisplayName("Mandate Related Information")]
@@ -32,11 +25,11 @@ public record DirectDebitTransaction12
     public MandateRelatedInformation16? MandateRelatedInformation { get; init; }
 
     /// <summary>
-    /// Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.
+    /// Credit party that signs the mandate.
     /// </summary>
-    [DisplayName("Pre Notification Date")]
-    [IsoXmlTag("PreNtfctnDt")]
-    public ISODate? PreNotificationDate { get; init; }
+    [DisplayName("Creditor Scheme Identification")]
+    [IsoXmlTag("CdtrSchmeId")]
+    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.
@@ -45,4 +38,11 @@ public record DirectDebitTransaction12
     [DisplayName("Pre Notification Identification")]
     [IsoXmlTag("PreNtfctnId")]
     public Max35Text? PreNotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor's agent.
+    /// </summary>
+    [DisplayName("Pre Notification Date")]
+    [IsoXmlTag("PreNtfctnDt")]
+    public ISODate? PreNotificationDate { get; init; }
 }

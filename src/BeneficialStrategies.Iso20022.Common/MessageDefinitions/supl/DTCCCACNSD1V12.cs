@@ -50,6 +50,34 @@ public record DTCCCACNSD1V12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Page number of the message and continuation indicator to indicate that the multi-parts message is to continue or that the message is the last page of the multi-parts message.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
+
+    /// <summary>
+    /// Notification information to be extended as supplementary data to cancellation advice.
+    /// </summary>
+    [DisplayName("Notification")]
+    [IsoXmlTag("Ntfctn")]
+    public CorporateActionNotificationSD10? Notification { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to general information.
+    /// </summary>
+    [DisplayName("General Information")]
+    [IsoXmlTag("GnlInf")]
+    public CorporateActionGeneralInformationSD56? GeneralInformation { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to underlying security details.
+    /// </summary>
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; }
+
+    /// <summary>
     /// Information to be extended as supplementary data to events linkage.
     /// </summary>
     [DisplayName("Events Linkage")]
@@ -62,32 +90,4 @@ public record DTCCCACNSD1V12 : IOuterRecord
     [DisplayName("External Comments")]
     [IsoXmlTag("XtrnlCmnts")]
     public CorporateActionCancellationSD4? ExternalComments { get; init; }
-
-    /// <summary>
-    /// Information to be extended as supplementary data to general information.
-    /// </summary>
-    [DisplayName("General Information")]
-    [IsoXmlTag("GnlInf")]
-    public CorporateActionGeneralInformationSD56? GeneralInformation { get; init; }
-
-    /// <summary>
-    /// Notification information to be extended as supplementary data to cancellation advice.
-    /// </summary>
-    [DisplayName("Notification")]
-    [IsoXmlTag("Ntfctn")]
-    public CorporateActionNotificationSD10? Notification { get; init; }
-
-    /// <summary>
-    /// Page number of the message and continuation indicator to indicate that the multi-parts message is to continue or that the message is the last page of the multi-parts message.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
-
-    /// <summary>
-    /// Information to be extended as supplementary data to underlying security details.
-    /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; }
 }

@@ -24,18 +24,18 @@ public record TransactionDetails174
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
     /// Block Chain Address Or Wallet.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Delivering Settlement Parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties125? DeliveringSettlementParties { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -45,25 +45,11 @@ public record TransactionDetails174
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Investor.
+    /// Settlement Quantity.
     /// </summary>
-    [DisplayName("Investor")]
-    [IsoXmlTag("Invstr")]
-    public PartyIdentification149? Investor { get; init; }
-
-    /// <summary>
-    /// Receiving Settlement Parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties125? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+    [DisplayName("Settlement Quantity")]
+    [IsoXmlTag("SttlmQty")]
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Settlement Amount.
@@ -73,6 +59,13 @@ public record TransactionDetails174
     public AmountAndDirection51? SettlementAmount { get; init; }
 
     /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
+
+    /// <summary>
     /// Settlement Date.
     /// </summary>
     [DisplayName("Settlement Date")]
@@ -80,16 +73,23 @@ public record TransactionDetails174
     public required SettlementDate19Choice_ SettlementDate { get; init; }
 
     /// <summary>
-    /// Settlement Quantity.
+    /// Delivering Settlement Parties.
     /// </summary>
-    [DisplayName("Settlement Quantity")]
-    [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice_ SettlementQuantity { get; init; }
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties125? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Trade Date.
+    /// Receiving Settlement Parties.
     /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties125? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Investor.
+    /// </summary>
+    [DisplayName("Investor")]
+    [IsoXmlTag("Invstr")]
+    public PartyIdentification149? Investor { get; init; }
 }

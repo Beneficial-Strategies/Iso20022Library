@@ -46,18 +46,18 @@ public record CloseLinkDeletionRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Close Link.
-    /// </summary>
-    [DisplayName("Close Link")]
-    [IsoXmlTag("ClsLk")]
-    public ValueList<CloseLink5> CloseLink { get; init; } = [];
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public MessageHeader1? MessageHeader { get; init; }
+
+    /// <summary>
+    /// Close Link.
+    /// </summary>
+    [DisplayName("Close Link")]
+    [IsoXmlTag("ClsLk")]
+    public ValueList<CloseLink5> CloseLink { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

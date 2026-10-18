@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ClearedProduct2
 {
     /// <summary>
+    /// Trading Venue.
+    /// </summary>
+    [DisplayName("Trading Venue")]
+    [IsoXmlTag("TradgVn")]
+    public ValueList<MICIdentifier> TradingVenue { get; init; } = [];
+
+    /// <summary>
     /// CCP Product Identification.
     /// </summary>
     [DisplayName("CCP Product Identification")]
@@ -24,18 +31,11 @@ public record ClearedProduct2
     public required GenericIdentification168 CCPProductIdentification { get; init; }
 
     /// <summary>
-    /// Cleared Gross Notional Amount.
+    /// Universal Product Identification.
     /// </summary>
-    [DisplayName("Cleared Gross Notional Amount")]
-    [IsoXmlTag("ClrdGrssNtnlAmt")]
-    public required ActiveCurrencyAnd24Amount ClearedGrossNotionalAmount { get; init; }
-
-    /// <summary>
-    /// Open Interest.
-    /// </summary>
-    [DisplayName("Open Interest")]
-    [IsoXmlTag("OpnIntrst")]
-    public required OpenInterest1 OpenInterest { get; init; }
+    [DisplayName("Universal Product Identification")]
+    [IsoXmlTag("UvrslPdctId")]
+    public GenericIdentification168? UniversalProductIdentification { get; init; }
 
     /// <summary>
     /// Product.
@@ -45,6 +45,13 @@ public record ClearedProduct2
     public required Product1Choice_ Product { get; init; }
 
     /// <summary>
+    /// Open Interest.
+    /// </summary>
+    [DisplayName("Open Interest")]
+    [IsoXmlTag("OpnIntrst")]
+    public required OpenInterest1 OpenInterest { get; init; }
+
+    /// <summary>
     /// Trades Cleared.
     /// </summary>
     [DisplayName("Trades Cleared")]
@@ -52,16 +59,9 @@ public record ClearedProduct2
     public NonNegativeNumber? TradesCleared { get; init; }
 
     /// <summary>
-    /// Trading Venue.
+    /// Cleared Gross Notional Amount.
     /// </summary>
-    [DisplayName("Trading Venue")]
-    [IsoXmlTag("TradgVn")]
-    public ValueList<MICIdentifier> TradingVenue { get; init; } = [];
-
-    /// <summary>
-    /// Universal Product Identification.
-    /// </summary>
-    [DisplayName("Universal Product Identification")]
-    [IsoXmlTag("UvrslPdctId")]
-    public GenericIdentification168? UniversalProductIdentification { get; init; }
+    [DisplayName("Cleared Gross Notional Amount")]
+    [IsoXmlTag("ClrdGrssNtnlAmt")]
+    public required ActiveCurrencyAnd24Amount ClearedGrossNotionalAmount { get; init; }
 }

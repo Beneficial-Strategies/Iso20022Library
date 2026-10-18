@@ -17,39 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction49
 {
     /// <summary>
-    /// Account Data.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account Data")]
-    [IsoXmlTag("AcctData")]
-    public CardAccount22? AccountData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Account Information.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Account Information")]
-    [IsoXmlTag("AcctInf")]
-    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
-
-    /// <summary>
-    /// Additional Charge.
-    /// </summary>
-    [DisplayName("Additional Charge")]
-    [IsoXmlTag("AddtlChrg")]
-    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Result.
-    /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public required AuthorisationResult20 AuthorisationResult { get; init; }
-
-    /// <summary>
-    /// Command.
-    /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Completion Required.
@@ -59,46 +38,11 @@ public record ATMTransaction49
     public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
-    /// Currency Conversion Eligibility.
+    /// Account Data.
     /// </summary>
-    [DisplayName("Currency Conversion Eligibility")]
-    [IsoXmlTag("CcyConvsElgblty")]
-    public CurrencyConversion32? CurrencyConversionEligibility { get; init; }
-
-    /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount12? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Limits.
-    /// </summary>
-    [DisplayName("Limits")]
-    [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts6? Limits { get; init; }
-
-    /// <summary>
-    /// Mix.
-    /// </summary>
-    [DisplayName("Mix")]
-    [IsoXmlTag("Mix")]
-    public ValueList<ATMMediaMix1> Mix { get; init; } = [];
-
-    /// <summary>
-    /// Mix Type.
-    /// </summary>
-    [DisplayName("Mix Type")]
-    [IsoXmlTag("MixTp")]
-    public Max35Text? MixType { get; init; }
+    [DisplayName("Account Data")]
+    [IsoXmlTag("AcctData")]
+    public CardAccount22? AccountData { get; init; }
 
     /// <summary>
     /// Protected Account Data.
@@ -106,13 +50,6 @@ public record ATMTransaction49
     [DisplayName("Protected Account Data")]
     [IsoXmlTag("PrtctdAcctData")]
     public ContentInformationType10? ProtectedAccountData { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.
@@ -129,9 +66,72 @@ public record ATMTransaction49
     public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount12? DetailedRequestedAmount { get; init; }
+
+    /// <summary>
+    /// Currency Conversion Eligibility.
+    /// </summary>
+    [DisplayName("Currency Conversion Eligibility")]
+    [IsoXmlTag("CcyConvsElgblty")]
+    public CurrencyConversion32? CurrencyConversionEligibility { get; init; }
+
+    /// <summary>
+    /// Additional Charge.
+    /// </summary>
+    [DisplayName("Additional Charge")]
+    [IsoXmlTag("AddtlChrg")]
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+
+    /// <summary>
+    /// Limits.
+    /// </summary>
+    [DisplayName("Limits")]
+    [IsoXmlTag("Lmts")]
+    public ATMTransactionAmounts6? Limits { get; init; }
+
+    /// <summary>
+    /// Mix Type.
+    /// </summary>
+    [DisplayName("Mix Type")]
+    [IsoXmlTag("MixTp")]
+    public Max35Text? MixType { get; init; }
+
+    /// <summary>
+    /// Mix.
+    /// </summary>
+    [DisplayName("Mix")]
+    [IsoXmlTag("Mix")]
+    public ValueList<ATMMediaMix1> Mix { get; init; } = [];
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public required AuthorisationResult20 AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
+
+    /// <summary>
+    /// Account Information.
+    /// </summary>
+    [DisplayName("Account Information")]
+    [IsoXmlTag("AcctInf")]
+    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
 }

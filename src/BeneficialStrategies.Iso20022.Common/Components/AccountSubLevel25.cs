@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountSubLevel25
 {
     /// <summary>
-    /// Account Holder.
-    /// </summary>
-    [DisplayName("Account Holder")]
-    [IsoXmlTag("AcctHldr")]
-    public required PartyIdentification276 AccountHolder { get; init; }
-
-    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public Max35Text? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Account Holder.
+    /// </summary>
+    [DisplayName("Account Holder")]
+    [IsoXmlTag("AcctHldr")]
+    public required PartyIdentification276 AccountHolder { get; init; }
 
     /// <summary>
     /// Shareholding Balance.

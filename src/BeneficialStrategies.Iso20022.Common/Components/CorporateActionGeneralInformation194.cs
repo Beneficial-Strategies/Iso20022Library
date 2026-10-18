@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformation194
 {
     /// <summary>
-    /// Class Action Number.
-    /// </summary>
-    [DisplayName("Class Action Number")]
-    [IsoXmlTag("ClssActnNb")]
-    public RestrictedFINXMax16Text? ClassActionNumber { get; init; }
-
-    /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
     public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Class Action Number.
+    /// </summary>
+    [DisplayName("Class Action Number")]
+    [IsoXmlTag("ClssActnNb")]
+    public RestrictedFINXMax16Text? ClassActionNumber { get; init; }
 
     /// <summary>
     /// Event Processing Type.
@@ -50,13 +57,6 @@ public record CorporateActionGeneralInformation194
     [DisplayName("Mandatory Voluntary Event Type")]
     [IsoXmlTag("MndtryVlntryEvtTp")]
     public required CorporateActionMandatoryVoluntary4Choice_ MandatoryVoluntaryEventType { get; init; }
-
-    /// <summary>
-    /// Official Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Underlying Security.

@@ -53,18 +53,18 @@ public record MeetingCancellationV10 : IOuterRecord
     public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
-    /// Reason.
-    /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public required MeetingCancellationReason2 Reason { get; init; }
-
-    /// <summary>
     /// Security.
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
     public required SecurityPosition23 Security { get; init; }
+
+    /// <summary>
+    /// Reason.
+    /// </summary>
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public required MeetingCancellationReason2 Reason { get; init; }
 
     /// <summary>
     /// Supplementary Data.

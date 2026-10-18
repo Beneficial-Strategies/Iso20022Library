@@ -46,34 +46,6 @@ public record CorporateActionInstruction002V13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
-    /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountAndBalance62 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative34? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Beneficial Owner Details.
-    /// </summary>
-    [DisplayName("Beneficial Owner Details")]
-    [IsoXmlTag("BnfclOwnrDtls")]
-    public ValueList<PartyIdentification317> BeneficialOwnerDetails { get; init; } = [];
-
-    /// <summary>
-    /// Cancelled Instruction Identification.
-    /// </summary>
-    [DisplayName("Cancelled Instruction Identification")]
-    [IsoXmlTag("CancInstrId")]
-    public DocumentIdentification37? CancelledInstructionIdentification { get; init; }
-
-    /// <summary>
     /// Change Instruction Indicator.
     /// </summary>
     [DisplayName("Change Instruction Indicator")]
@@ -81,25 +53,11 @@ public record CorporateActionInstruction002V13 : IOuterRecord
     public YesNoIndicator? ChangeInstructionIndicator { get; init; }
 
     /// <summary>
-    /// Corporate Action General Information.
+    /// Cancelled Instruction Identification.
     /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation189 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public required CorporateActionOption243 CorporateActionInstruction { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
+    [DisplayName("Cancelled Instruction Identification")]
+    [IsoXmlTag("CancInstrId")]
+    public DocumentIdentification37? CancelledInstructionIdentification { get; init; }
 
     /// <summary>
     /// Instruction Cancellation Request Identification.
@@ -116,11 +74,53 @@ public record CorporateActionInstruction002V13 : IOuterRecord
     public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
+    /// Events Linkage.
+    /// </summary>
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation189 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountAndBalance62 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Beneficial Owner Details.
+    /// </summary>
+    [DisplayName("Beneficial Owner Details")]
+    [IsoXmlTag("BnfclOwnrDtls")]
+    public ValueList<PartyIdentification317> BeneficialOwnerDetails { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action Instruction.
+    /// </summary>
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public required CorporateActionOption243 CorporateActionInstruction { get; init; }
+
+    /// <summary>
     /// Protect Instruction.
     /// </summary>
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction5? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative34? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

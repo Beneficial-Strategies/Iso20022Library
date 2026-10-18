@@ -17,17 +17,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TerminalPackageType5
 {
     /// <summary>
-    /// Package.
-    /// </summary>
-    [DisplayName("Package")]
-    [IsoXmlTag("Packg")]
-    public ValueList<PackageType5> Package { get; init; } = [];
-
-    /// <summary>
     /// POI Component Identification.
     /// </summary>
     [DisplayName("POI Component Identification")]
     [IsoXmlTag("POICmpntId")]
     public ValueList<PointOfInteractionComponentIdentification2> POIComponentIdentification { get; init; } =
         [];
+
+    /// <summary>
+    /// Package.
+    /// </summary>
+    [DisplayName("Package")]
+    [IsoXmlTag("Packg")]
+    public ValueList<PackageType5> Package { get; init; } = [];
 }

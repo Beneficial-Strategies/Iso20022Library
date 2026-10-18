@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ClearingMemberFee1
 {
     /// <summary>
-    /// Clearing Fee.
-    /// </summary>
-    [DisplayName("Clearing Fee")]
-    [IsoXmlTag("ClrFee")]
-    public required ActiveCurrencyAndAmount ClearingFee { get; init; }
-
-    /// <summary>
     /// Clearing Member Identification.
     /// </summary>
     [DisplayName("Clearing Member Identification")]
     [IsoXmlTag("ClrMmbId")]
     public required PartyIdentification118Choice_ ClearingMemberIdentification { get; init; }
+
+    /// <summary>
+    /// Clearing Fee.
+    /// </summary>
+    [DisplayName("Clearing Fee")]
+    [IsoXmlTag("ClrFee")]
+    public required ActiveCurrencyAndAmount ClearingFee { get; init; }
 }

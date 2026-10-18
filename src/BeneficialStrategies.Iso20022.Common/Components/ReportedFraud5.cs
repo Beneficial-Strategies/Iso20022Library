@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportedFraud5
 {
     /// <summary>
-    /// Action.
+    /// Type.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public required FraudReportingAction1Code Action { get; init; }
-
-    /// <summary>
-    /// Case Reference.
-    /// </summary>
-    [DisplayName("Case Reference")]
-    [IsoXmlTag("CaseRef")]
-    public Max35Text? CaseReference { get; init; }
-
-    /// <summary>
-    /// Other Action.
-    /// </summary>
-    [DisplayName("Other Action")]
-    [IsoXmlTag("OthrActn")]
-    public Max35Text? OtherAction { get; init; }
-
-    /// <summary>
-    /// Other Reporting Entity.
-    /// </summary>
-    [DisplayName("Other Reporting Entity")]
-    [IsoXmlTag("OthrRptgNtty")]
-    public Max35Text? OtherReportingEntity { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required FraudType1Code Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -52,11 +31,32 @@ public record ReportedFraud5
     public Max35Text? OtherType { get; init; }
 
     /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public required FraudReportingAction1Code Action { get; init; }
+
+    /// <summary>
+    /// Other Action.
+    /// </summary>
+    [DisplayName("Other Action")]
+    [IsoXmlTag("OthrActn")]
+    public Max35Text? OtherAction { get; init; }
+
+    /// <summary>
     /// Reporting Entity.
     /// </summary>
     [DisplayName("Reporting Entity")]
     [IsoXmlTag("RptgNtty")]
     public required PartyType26Code ReportingEntity { get; init; }
+
+    /// <summary>
+    /// Other Reporting Entity.
+    /// </summary>
+    [DisplayName("Other Reporting Entity")]
+    [IsoXmlTag("OthrRptgNtty")]
+    public Max35Text? OtherReportingEntity { get; init; }
 
     /// <summary>
     /// Submitter Case Reference.
@@ -66,9 +66,9 @@ public record ReportedFraud5
     public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Case Reference.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required FraudType1Code Type { get; init; }
+    [DisplayName("Case Reference")]
+    [IsoXmlTag("CaseRef")]
+    public Max35Text? CaseReference { get; init; }
 }

@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BillingStatement5
 {
     /// <summary>
-    /// Account Characteristics.
+    /// Statement Identification.
     /// </summary>
-    [DisplayName("Account Characteristics")]
-    [IsoXmlTag("AcctChrtcs")]
-    public required CashAccountCharacteristics5 AccountCharacteristics { get; init; }
-
-    /// <summary>
-    /// Balance.
-    /// </summary>
-    [DisplayName("Balance")]
-    [IsoXmlTag("Bal")]
-    public ValueList<BillingBalance1> Balance { get; init; } = [];
-
-    /// <summary>
-    /// Balance Adjustment.
-    /// </summary>
-    [DisplayName("Balance Adjustment")]
-    [IsoXmlTag("BalAdjstmnt")]
-    public ValueList<BalanceAdjustment1> BalanceAdjustment { get; init; } = [];
-
-    /// <summary>
-    /// Compensation.
-    /// </summary>
-    [DisplayName("Compensation")]
-    [IsoXmlTag("Compstn")]
-    public ValueList<BillingCompensation1> Compensation { get; init; } = [];
-
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Currency Exchange.
-    /// </summary>
-    [DisplayName("Currency Exchange")]
-    [IsoXmlTag("CcyXchg")]
-    public ValueList<CurrencyExchange6> CurrencyExchange { get; init; } = [];
+    [DisplayName("Statement Identification")]
+    [IsoXmlTag("StmtId")]
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// From To Date.
@@ -66,32 +31,11 @@ public record BillingStatement5
     public required DatePeriod1 FromToDate { get; init; }
 
     /// <summary>
-    /// Rate Data.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Rate Data")]
-    [IsoXmlTag("RateData")]
-    public ValueList<BillingRate1> RateData { get; init; } = [];
-
-    /// <summary>
-    /// Service.
-    /// </summary>
-    [DisplayName("Service")]
-    [IsoXmlTag("Svc")]
-    public ValueList<BillingService2> Service { get; init; } = [];
-
-    /// <summary>
-    /// Service Adjustment.
-    /// </summary>
-    [DisplayName("Service Adjustment")]
-    [IsoXmlTag("SvcAdjstmnt")]
-    public ValueList<BillingServiceAdjustment1> ServiceAdjustment { get; init; } = [];
-
-    /// <summary>
-    /// Statement Identification.
-    /// </summary>
-    [DisplayName("Statement Identification")]
-    [IsoXmlTag("StmtId")]
-    public required Max35Text StatementIdentification { get; init; }
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Status.
@@ -101,9 +45,65 @@ public record BillingStatement5
     public required BillingStatementStatus1Code Status { get; init; }
 
     /// <summary>
+    /// Account Characteristics.
+    /// </summary>
+    [DisplayName("Account Characteristics")]
+    [IsoXmlTag("AcctChrtcs")]
+    public required CashAccountCharacteristics5 AccountCharacteristics { get; init; }
+
+    /// <summary>
+    /// Rate Data.
+    /// </summary>
+    [DisplayName("Rate Data")]
+    [IsoXmlTag("RateData")]
+    public ValueList<BillingRate1> RateData { get; init; } = [];
+
+    /// <summary>
+    /// Currency Exchange.
+    /// </summary>
+    [DisplayName("Currency Exchange")]
+    [IsoXmlTag("CcyXchg")]
+    public ValueList<CurrencyExchange6> CurrencyExchange { get; init; } = [];
+
+    /// <summary>
+    /// Balance.
+    /// </summary>
+    [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
+    public ValueList<BillingBalance1> Balance { get; init; } = [];
+
+    /// <summary>
+    /// Compensation.
+    /// </summary>
+    [DisplayName("Compensation")]
+    [IsoXmlTag("Compstn")]
+    public ValueList<BillingCompensation1> Compensation { get; init; } = [];
+
+    /// <summary>
+    /// Service.
+    /// </summary>
+    [DisplayName("Service")]
+    [IsoXmlTag("Svc")]
+    public ValueList<BillingService2> Service { get; init; } = [];
+
+    /// <summary>
     /// Tax Region.
     /// </summary>
     [DisplayName("Tax Region")]
     [IsoXmlTag("TaxRgn")]
     public ValueList<BillingTaxRegion3> TaxRegion { get; init; } = [];
+
+    /// <summary>
+    /// Balance Adjustment.
+    /// </summary>
+    [DisplayName("Balance Adjustment")]
+    [IsoXmlTag("BalAdjstmnt")]
+    public ValueList<BalanceAdjustment1> BalanceAdjustment { get; init; } = [];
+
+    /// <summary>
+    /// Service Adjustment.
+    /// </summary>
+    [DisplayName("Service Adjustment")]
+    [IsoXmlTag("SvcAdjstmnt")]
+    public ValueList<BillingServiceAdjustment1> ServiceAdjustment { get; init; } = [];
 }

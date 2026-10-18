@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContractCessionData2
 {
     /// <summary>
-    /// Document Date.
+    /// Party.
     /// </summary>
-    [DisplayName("Document Date")]
-    [IsoXmlTag("DocDt")]
-    public ISODate? DocumentDate { get; init; }
+    [DisplayName("Party")]
+    [IsoXmlTag("Pty")]
+    public required TradeParty6 Party { get; init; }
 
     /// <summary>
     /// Document Number.
@@ -31,9 +31,9 @@ public record ContractCessionData2
     public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
-    /// Party.
+    /// Document Date.
     /// </summary>
-    [DisplayName("Party")]
-    [IsoXmlTag("Pty")]
-    public required TradeParty6 Party { get; init; }
+    [DisplayName("Document Date")]
+    [IsoXmlTag("DocDt")]
+    public ISODate? DocumentDate { get; init; }
 }

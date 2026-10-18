@@ -46,32 +46,11 @@ public record MeetingInstructionStatusV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Confirming Party.
-    /// </summary>
-    [DisplayName("Confirming Party")]
-    [IsoXmlTag("CnfrmgPty")]
-    public required PartyIdentification226Choice_ ConfirmingParty { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
     /// Instruction Type.
     /// </summary>
     [DisplayName("Instruction Type")]
     [IsoXmlTag("InstrTp")]
     public required InstructionType2Choice_ InstructionType { get; init; }
-
-    /// <summary>
-    /// Instruction Type Status.
-    /// </summary>
-    [DisplayName("Instruction Type Status")]
-    [IsoXmlTag("InstrTpSts")]
-    public required InstructionTypeStatus8Choice_ InstructionTypeStatus { get; init; }
 
     /// <summary>
     /// Meeting Reference.
@@ -81,11 +60,39 @@ public record MeetingInstructionStatusV12 : IOuterRecord
     public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Type Status.
+    /// </summary>
+    [DisplayName("Instruction Type Status")]
+    [IsoXmlTag("InstrTpSts")]
+    public required InstructionTypeStatus8Choice_ InstructionTypeStatus { get; init; }
+
+    /// <summary>
     /// Position.
     /// </summary>
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
     public EligiblePosition17? Position { get; init; }
+
+    /// <summary>
+    /// Confirming Party.
+    /// </summary>
+    [DisplayName("Confirming Party")]
+    [IsoXmlTag("CnfrmgPty")]
+    public required PartyIdentification226Choice_ ConfirmingParty { get; init; }
+
+    /// <summary>
+    /// Vote Casting Party.
+    /// </summary>
+    [DisplayName("Vote Casting Party")]
+    [IsoXmlTag("VoteCstgPty")]
+    public required PartyIdentification226Choice_ VoteCastingParty { get; init; }
 
     /// <summary>
     /// Rights Holder.
@@ -100,11 +107,4 @@ public record MeetingInstructionStatusV12 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Vote Casting Party.
-    /// </summary>
-    [DisplayName("Vote Casting Party")]
-    [IsoXmlTag("VoteCstgPty")]
-    public required PartyIdentification226Choice_ VoteCastingParty { get; init; }
 }

@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MetadataReport5
 {
     /// <summary>
+    /// Submitting Entity.
+    /// </summary>
+    [DisplayName("Submitting Entity")]
+    [IsoXmlTag("SubmitgNtty")]
+    public PartyIdentification260Choice_? SubmittingEntity { get; init; }
+
+    /// <summary>
     /// Collection Body.
     /// </summary>
     [DisplayName("Collection Body")]
     [IsoXmlTag("ColltnBody")]
     public GenericIdentification175? CollectionBody { get; init; }
-
-    /// <summary>
-    /// Regulatory Data.
-    /// </summary>
-    [DisplayName("Regulatory Data")]
-    [IsoXmlTag("RgltryData")]
-    public ValueList<Document28> RegulatoryData { get; init; } = [];
-
-    /// <summary>
-    /// Regulatory Data Type.
-    /// </summary>
-    [DisplayName("Regulatory Data Type")]
-    [IsoXmlTag("RgltryDataTp")]
-    public ValueList<ClassificationType4> RegulatoryDataType { get; init; } = [];
 
     /// <summary>
     /// Related Entity.
@@ -52,9 +45,16 @@ public record MetadataReport5
     public ValueList<SecurityIdentification49> RelatedProductIdentifier { get; init; } = [];
 
     /// <summary>
-    /// Submitting Entity.
+    /// Regulatory Data Type.
     /// </summary>
-    [DisplayName("Submitting Entity")]
-    [IsoXmlTag("SubmitgNtty")]
-    public PartyIdentification260Choice_? SubmittingEntity { get; init; }
+    [DisplayName("Regulatory Data Type")]
+    [IsoXmlTag("RgltryDataTp")]
+    public ValueList<ClassificationType4> RegulatoryDataType { get; init; } = [];
+
+    /// <summary>
+    /// Regulatory Data.
+    /// </summary>
+    [DisplayName("Regulatory Data")]
+    [IsoXmlTag("RgltryData")]
+    public ValueList<Document28> RegulatoryData { get; init; } = [];
 }

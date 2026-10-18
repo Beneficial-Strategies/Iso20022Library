@@ -17,25 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FundingService3
 {
     /// <summary>
+    /// Provider.
+    /// </summary>
+    [DisplayName("Provider")]
+    [IsoXmlTag("Prvdr")]
+    public Max35Text? Provider { get; init; }
+
+    /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max35Text? Name { get; init; }
+
+    /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public Max35Text? Reference { get; init; }
+
+    /// <summary>
     /// Business Purpose.
     /// </summary>
     [DisplayName("Business Purpose")]
     [IsoXmlTag("BizPurp")]
     public Max500Text? BusinessPurpose { get; init; }
-
-    /// <summary>
-    /// Claim Assigner.
-    /// </summary>
-    [DisplayName("Claim Assigner")]
-    [IsoXmlTag("ClmAssgnr")]
-    public Max35Text? ClaimAssigner { get; init; }
-
-    /// <summary>
-    /// Claim Credentials.
-    /// </summary>
-    [DisplayName("Claim Credentials")]
-    [IsoXmlTag("ClmCrdntls")]
-    public Max500Text? ClaimCredentials { get; init; }
 
     /// <summary>
     /// Description.
@@ -52,23 +59,16 @@ public record FundingService3
     public ValueList<FundingSource4> FundingSource { get; init; } = [];
 
     /// <summary>
-    /// Name.
+    /// Claim Credentials.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max35Text? Name { get; init; }
+    [DisplayName("Claim Credentials")]
+    [IsoXmlTag("ClmCrdntls")]
+    public Max500Text? ClaimCredentials { get; init; }
 
     /// <summary>
-    /// Provider.
+    /// Claim Assigner.
     /// </summary>
-    [DisplayName("Provider")]
-    [IsoXmlTag("Prvdr")]
-    public Max35Text? Provider { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public Max35Text? Reference { get; init; }
+    [DisplayName("Claim Assigner")]
+    [IsoXmlTag("ClmAssgnr")]
+    public Max35Text? ClaimAssigner { get; init; }
 }

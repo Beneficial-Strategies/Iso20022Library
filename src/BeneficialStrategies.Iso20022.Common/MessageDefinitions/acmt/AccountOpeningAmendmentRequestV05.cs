@@ -46,6 +46,34 @@ public record AccountOpeningAmendmentRequestV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References4 References { get; init; }
+
+    /// <summary>
+    /// From.
+    /// </summary>
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification39? From { get; init; }
+
+    /// <summary>
+    /// Contract Dates.
+    /// </summary>
+    [DisplayName("Contract Dates")]
+    [IsoXmlTag("CtrctDts")]
+    public AccountContract2? ContractDates { get; init; }
+
+    /// <summary>
+    /// Underlying Master Agreement.
+    /// </summary>
+    [DisplayName("Underlying Master Agreement")]
+    [IsoXmlTag("UndrlygMstrAgrmt")]
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -60,32 +88,11 @@ public record AccountOpeningAmendmentRequestV05 : IOuterRecord
     public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
 
     /// <summary>
-    /// Contract Dates.
+    /// Organisation.
     /// </summary>
-    [DisplayName("Contract Dates")]
-    [IsoXmlTag("CtrctDts")]
-    public AccountContract2? ContractDates { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
-
-    /// <summary>
-    /// From.
-    /// </summary>
-    [DisplayName("From")]
-    [IsoXmlTag("Fr")]
-    public OrganisationIdentification39? From { get; init; }
-
-    /// <summary>
-    /// Group.
-    /// </summary>
-    [DisplayName("Group")]
-    [IsoXmlTag("Grp")]
-    public ValueList<Group6> Group { get; init; } = [];
+    [DisplayName("Organisation")]
+    [IsoXmlTag("Org")]
+    public required Organisation42 Organisation { get; init; }
 
     /// <summary>
     /// Mandate.
@@ -95,11 +102,11 @@ public record AccountOpeningAmendmentRequestV05 : IOuterRecord
     public ValueList<OperationMandate7> Mandate { get; init; } = [];
 
     /// <summary>
-    /// Organisation.
+    /// Group.
     /// </summary>
-    [DisplayName("Organisation")]
-    [IsoXmlTag("Org")]
-    public required Organisation42 Organisation { get; init; }
+    [DisplayName("Group")]
+    [IsoXmlTag("Grp")]
+    public ValueList<Group6> Group { get; init; } = [];
 
     /// <summary>
     /// Reference Account.
@@ -109,11 +116,11 @@ public record AccountOpeningAmendmentRequestV05 : IOuterRecord
     public CashAccount40? ReferenceAccount { get; init; }
 
     /// <summary>
-    /// References.
+    /// Digital Signature.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References4 References { get; init; }
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.
@@ -121,11 +128,4 @@ public record AccountOpeningAmendmentRequestV05 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying Master Agreement.
-    /// </summary>
-    [DisplayName("Underlying Master Agreement")]
-    [IsoXmlTag("UndrlygMstrAgrmt")]
-    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 }

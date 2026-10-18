@@ -46,18 +46,18 @@ public record EligibleSecuritiesDeletionRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Eligible Security.
-    /// </summary>
-    [DisplayName("Eligible Security")]
-    [IsoXmlTag("ElgblScty")]
-    public ValueList<EligibleSecurity5> EligibleSecurity { get; init; } = [];
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public MessageHeader1? MessageHeader { get; init; }
+
+    /// <summary>
+    /// Eligible Security.
+    /// </summary>
+    [DisplayName("Eligible Security")]
+    [IsoXmlTag("ElgblScty")]
+    public ValueList<EligibleSecurity5> EligibleSecurity { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

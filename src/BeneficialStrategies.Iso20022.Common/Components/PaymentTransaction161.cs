@@ -17,60 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction161
 {
     /// <summary>
-    /// Acceptance Date Time.
+    /// Status Identification.
     /// </summary>
-    [DisplayName("Acceptance Date Time")]
-    [IsoXmlTag("AccptncDtTm")]
-    public ISODateTime? AcceptanceDateTime { get; init; }
-
-    /// <summary>
-    /// Account Servicer Reference.
-    /// </summary>
-    [DisplayName("Account Servicer Reference")]
-    [IsoXmlTag("AcctSvcrRef")]
-    public Max35Text? AccountServicerReference { get; init; }
-
-    /// <summary>
-    /// Charges Information.
-    /// </summary>
-    [DisplayName("Charges Information")]
-    [IsoXmlTag("ChrgsInf")]
-    public ValueList<Charges16> ChargesInformation { get; init; } = [];
-
-    /// <summary>
-    /// Clearing System Reference.
-    /// </summary>
-    [DisplayName("Clearing System Reference")]
-    [IsoXmlTag("ClrSysRef")]
-    public Max35Text? ClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Effective Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Effective Interbank Settlement Date")]
-    [IsoXmlTag("FctvIntrBkSttlmDt")]
-    public DateAndDateTime2Choice_? EffectiveInterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
+    [DisplayName("Status Identification")]
+    [IsoXmlTag("StsId")]
+    public Max35Text? StatusIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -87,18 +38,18 @@ public record PaymentTransaction161
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
     /// Original Transaction Identification.
     /// </summary>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
     public Max35Text? OriginalTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
     /// Original UETR.
@@ -108,18 +59,11 @@ public record PaymentTransaction161
     public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
-    /// Processing Date.
+    /// Transaction Status.
     /// </summary>
-    [DisplayName("Processing Date")]
-    [IsoXmlTag("PrcgDt")]
-    public DateAndDateTime2Choice_? ProcessingDate { get; init; }
-
-    /// <summary>
-    /// Status Identification.
-    /// </summary>
-    [DisplayName("Status Identification")]
-    [IsoXmlTag("StsId")]
-    public Max35Text? StatusIdentification { get; init; }
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }
 
     /// <summary>
     /// Status Reason Information.
@@ -129,16 +73,72 @@ public record PaymentTransaction161
     public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
 
     /// <summary>
+    /// Charges Information.
+    /// </summary>
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    public ValueList<Charges16> ChargesInformation { get; init; } = [];
+
+    /// <summary>
+    /// Acceptance Date Time.
+    /// </summary>
+    [DisplayName("Acceptance Date Time")]
+    [IsoXmlTag("AccptncDtTm")]
+    public ISODateTime? AcceptanceDateTime { get; init; }
+
+    /// <summary>
+    /// Processing Date.
+    /// </summary>
+    [DisplayName("Processing Date")]
+    [IsoXmlTag("PrcgDt")]
+    public DateAndDateTime2Choice_? ProcessingDate { get; init; }
+
+    /// <summary>
+    /// Effective Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Effective Interbank Settlement Date")]
+    [IsoXmlTag("FctvIntrBkSttlmDt")]
+    public DateAndDateTime2Choice_? EffectiveInterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// Account Servicer Reference.
+    /// </summary>
+    [DisplayName("Account Servicer Reference")]
+    [IsoXmlTag("AcctSvcrRef")]
+    public Max35Text? AccountServicerReference { get; init; }
+
+    /// <summary>
+    /// Clearing System Reference.
+    /// </summary>
+    [DisplayName("Clearing System Reference")]
+    [IsoXmlTag("ClrSysRef")]
+    public Max35Text? ClearingSystemReference { get; init; }
+
+    /// <summary>
+    /// Instructing Agent.
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Instructed Agent.
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+
+    /// <summary>
+    /// Original Transaction Reference.
+    /// </summary>
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Status.
-    /// </summary>
-    [DisplayName("Transaction Status")]
-    [IsoXmlTag("TxSts")]
-    public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }
 }

@@ -46,6 +46,20 @@ public record InformationRequestOpeningV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Investigation Identification.
+    /// </summary>
+    [DisplayName("Investigation Identification")]
+    [IsoXmlTag("InvstgtnId")]
+    public required Max35Text InvestigationIdentification { get; init; }
+
+    /// <summary>
+    /// Legal Mandate Basis.
+    /// </summary>
+    [DisplayName("Legal Mandate Basis")]
+    [IsoXmlTag("LglMndtBsis")]
+    public required LegalMandate1 LegalMandateBasis { get; init; }
+
+    /// <summary>
     /// Confidentiality Status.
     /// </summary>
     [DisplayName("Confidentiality Status")]
@@ -60,25 +74,11 @@ public record InformationRequestOpeningV02 : IOuterRecord
     public DueDate1? DueDate { get; init; }
 
     /// <summary>
-    /// Investigation Identification.
-    /// </summary>
-    [DisplayName("Investigation Identification")]
-    [IsoXmlTag("InvstgtnId")]
-    public required Max35Text InvestigationIdentification { get; init; }
-
-    /// <summary>
     /// Investigation Period.
     /// </summary>
     [DisplayName("Investigation Period")]
     [IsoXmlTag("InvstgtnPrd")]
     public required DateOrDateTimePeriod1Choice_ InvestigationPeriod { get; init; }
-
-    /// <summary>
-    /// Legal Mandate Basis.
-    /// </summary>
-    [DisplayName("Legal Mandate Basis")]
-    [IsoXmlTag("LglMndtBsis")]
-    public required LegalMandate1 LegalMandateBasis { get; init; }
 
     /// <summary>
     /// Search Criteria.

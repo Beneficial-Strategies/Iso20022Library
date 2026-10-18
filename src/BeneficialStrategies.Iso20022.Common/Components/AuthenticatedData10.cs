@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AuthenticatedData10
 {
     /// <summary>
+    /// Version.
+    /// </summary>
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
+
+    /// <summary>
+    /// Recipient.
+    /// </summary>
+    [DisplayName("Recipient")]
+    [IsoXmlTag("Rcpt")]
+    public ValueList<Recipient15Choice_> Recipient { get; init; } = [];
+
+    /// <summary>
+    /// MAC Algorithm.
+    /// </summary>
+    [DisplayName("MAC Algorithm")]
+    [IsoXmlTag("MACAlgo")]
+    public required AlgorithmIdentification31 MACAlgorithm { get; init; }
+
+    /// <summary>
     /// Encapsulated Content.
     /// </summary>
     [DisplayName("Encapsulated Content")]
@@ -29,25 +50,4 @@ public record AuthenticatedData10
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
     public required Max140Binary MAC { get; init; }
-
-    /// <summary>
-    /// MAC Algorithm.
-    /// </summary>
-    [DisplayName("MAC Algorithm")]
-    [IsoXmlTag("MACAlgo")]
-    public required AlgorithmIdentification31 MACAlgorithm { get; init; }
-
-    /// <summary>
-    /// Recipient.
-    /// </summary>
-    [DisplayName("Recipient")]
-    [IsoXmlTag("Rcpt")]
-    public ValueList<Recipient15Choice_> Recipient { get; init; } = [];
-
-    /// <summary>
-    /// Version.
-    /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
 }

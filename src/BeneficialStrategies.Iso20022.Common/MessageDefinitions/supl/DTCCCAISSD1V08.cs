@@ -50,16 +50,16 @@ public record DTCCCAISSD1V08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information to be extended as supplementary data to instruction status message for distribution events.
-    /// </summary>
-    [DisplayName("Distribution Instruction Details")]
-    [IsoXmlTag("DstrbtnInstrDtls")]
-    public DistributionInstructionSD1? DistributionInstructionDetails { get; init; }
-
-    /// <summary>
     /// Information to be extended as supplementary data to instruction status message for reorganisation events.
     /// </summary>
     [DisplayName("Reorganisation Instruction Details")]
     [IsoXmlTag("ReorgInstrDtls")]
     public ReorganisationInstructionSD15? ReorganisationInstructionDetails { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to instruction status message for distribution events.
+    /// </summary>
+    [DisplayName("Distribution Instruction Details")]
+    [IsoXmlTag("DstrbtnInstrDtls")]
+    public DistributionInstructionSD1? DistributionInstructionDetails { get; init; }
 }

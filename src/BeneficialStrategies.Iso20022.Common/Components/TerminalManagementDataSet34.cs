@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TerminalManagementDataSet34
 {
     /// <summary>
-    /// Content.
-    /// </summary>
-    [DisplayName("Content")]
-    [IsoXmlTag("Cntt")]
-    public ManagementPlanContent13? Content { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required DataSetIdentification11 Identification { get; init; }
+
+    /// <summary>
+    /// Sequence Counter.
+    /// </summary>
+    [DisplayName("Sequence Counter")]
+    [IsoXmlTag("SeqCntr")]
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Last Sequence.
@@ -38,9 +38,9 @@ public record TerminalManagementDataSet34
     public TrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
-    /// Sequence Counter.
+    /// Content.
     /// </summary>
-    [DisplayName("Sequence Counter")]
-    [IsoXmlTag("SeqCntr")]
-    public Max9NumericText? SequenceCounter { get; init; }
+    [DisplayName("Content")]
+    [IsoXmlTag("Cntt")]
+    public ManagementPlanContent13? Content { get; init; }
 }

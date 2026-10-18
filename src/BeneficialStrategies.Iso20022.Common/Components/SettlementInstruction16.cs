@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementInstruction16
 {
     /// <summary>
-    /// Instructed Reimbursement Agent.
-    /// </summary>
-    [DisplayName("Instructed Reimbursement Agent")]
-    [IsoXmlTag("InstdRmbrsmntAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedReimbursementAgent { get; init; }
-
-    /// <summary>
-    /// Instructed Reimbursement Agent Account.
-    /// </summary>
-    [DisplayName("Instructed Reimbursement Agent Account")]
-    [IsoXmlTag("InstdRmbrsmntAgtAcct")]
-    public CashAccount40? InstructedReimbursementAgentAccount { get; init; }
-
-    /// <summary>
     /// Instructing Reimbursement Agent.
     /// </summary>
     [DisplayName("Instructing Reimbursement Agent")]
@@ -43,4 +29,18 @@ public record SettlementInstruction16
     [DisplayName("Instructing Reimbursement Agent Account")]
     [IsoXmlTag("InstgRmbrsmntAgtAcct")]
     public CashAccount40? InstructingReimbursementAgentAccount { get; init; }
+
+    /// <summary>
+    /// Instructed Reimbursement Agent.
+    /// </summary>
+    [DisplayName("Instructed Reimbursement Agent")]
+    [IsoXmlTag("InstdRmbrsmntAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedReimbursementAgent { get; init; }
+
+    /// <summary>
+    /// Instructed Reimbursement Agent Account.
+    /// </summary>
+    [DisplayName("Instructed Reimbursement Agent Account")]
+    [IsoXmlTag("InstdRmbrsmntAgtAcct")]
+    public CashAccount40? InstructedReimbursementAgentAccount { get; init; }
 }

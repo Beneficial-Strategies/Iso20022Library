@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Account35
 {
     /// <summary>
-    /// Account Servicer.
-    /// </summary>
-    [DisplayName("Account Servicer")]
-    [IsoXmlTag("AcctSvcr")]
-    public PartyIdentification139? AccountServicer { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// Account Servicer.
+    /// </summary>
+    [DisplayName("Account Servicer")]
+    [IsoXmlTag("AcctSvcr")]
+    public PartyIdentification139? AccountServicer { get; init; }
 }

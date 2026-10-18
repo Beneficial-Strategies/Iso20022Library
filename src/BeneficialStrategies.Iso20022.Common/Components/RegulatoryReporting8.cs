@@ -17,116 +17,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegulatoryReporting8
 {
     /// <summary>
-    /// Additional Reporting Information.
+    /// Trading Side Transaction Reporting.
     /// </summary>
-    [DisplayName("Additional Reporting Information")]
-    [IsoXmlTag("AddtlRptgInf")]
-    public Max210Text? AdditionalReportingInformation { get; init; }
-
-    /// <summary>
-    /// Allocation Indicator.
-    /// </summary>
-    [DisplayName("Allocation Indicator")]
-    [IsoXmlTag("AllcnInd")]
-    public AllocationIndicator1Code? AllocationIndicator { get; init; }
-
-    /// <summary>
-    /// Central Counterparty Clearing House.
-    /// </summary>
-    [DisplayName("Central Counterparty Clearing House")]
-    [IsoXmlTag("CntrlCtrPtyClrHs")]
-    public PartyIdentification242Choice_? CentralCounterpartyClearingHouse { get; init; }
-
-    /// <summary>
-    /// Cleared Product Identification.
-    /// </summary>
-    [DisplayName("Cleared Product Identification")]
-    [IsoXmlTag("ClrdPdctId")]
-    public Max35Text? ClearedProductIdentification { get; init; }
-
-    /// <summary>
-    /// Clearing Broker.
-    /// </summary>
-    [DisplayName("Clearing Broker")]
-    [IsoXmlTag("ClrBrkr")]
-    public PartyIdentification242Choice_? ClearingBroker { get; init; }
-
-    /// <summary>
-    /// Clearing Broker Identification.
-    /// </summary>
-    [DisplayName("Clearing Broker Identification")]
-    [IsoXmlTag("ClrBrkrId")]
-    public ClearingBrokerIdentification1? ClearingBrokerIdentification { get; init; }
-
-    /// <summary>
-    /// Clearing Exception Party.
-    /// </summary>
-    [DisplayName("Clearing Exception Party")]
-    [IsoXmlTag("ClrXcptnPty")]
-    public PartyIdentification242Choice_? ClearingExceptionParty { get; init; }
-
-    /// <summary>
-    /// Clearing Threshold Indicator.
-    /// </summary>
-    [DisplayName("Clearing Threshold Indicator")]
-    [IsoXmlTag("ClrThrshldInd")]
-    public YesNoIndicator? ClearingThresholdIndicator { get; init; }
-
-    /// <summary>
-    /// Clearing Timestamp.
-    /// </summary>
-    [DisplayName("Clearing Timestamp")]
-    [IsoXmlTag("ClrTmstmp")]
-    public ISOTime? ClearingTimestamp { get; init; }
-
-    /// <summary>
-    /// Collateralisation Indicator.
-    /// </summary>
-    [DisplayName("Collateralisation Indicator")]
-    [IsoXmlTag("CollstnInd")]
-    public CollateralisationIndicator1Code? CollateralisationIndicator { get; init; }
-
-    /// <summary>
-    /// Collateral Portfolio Code.
-    /// </summary>
-    [DisplayName("Collateral Portfolio Code")]
-    [IsoXmlTag("CollPrtflCd")]
-    public Max10Text? CollateralPortfolioCode { get; init; }
-
-    /// <summary>
-    /// Collateral Portfolio Indicator.
-    /// </summary>
-    [DisplayName("Collateral Portfolio Indicator")]
-    [IsoXmlTag("CollPrtflInd")]
-    public YesNoIndicator? CollateralPortfolioIndicator { get; init; }
-
-    /// <summary>
-    /// Commercial Or Treasury Financing Indicator.
-    /// </summary>
-    [DisplayName("Commercial Or Treasury Financing Indicator")]
-    [IsoXmlTag("ComrclOrTrsrFincgInd")]
-    public YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
-
-    /// <summary>
-    /// Commissions And Fees.
-    /// </summary>
-    [DisplayName("Commissions And Fees")]
-    [IsoXmlTag("ComssnsAndFees")]
-    public ValueList<FXCommissionOrFee1> CommissionsAndFees { get; init; } = [];
-
-    /// <summary>
-    /// Confirmation Date And Timestamp.
-    /// </summary>
-    [DisplayName("Confirmation Date And Timestamp")]
-    [IsoXmlTag("ConfDtAndTmstmp")]
-    public ISODateTime? ConfirmationDateAndTimestamp { get; init; }
-
-    /// <summary>
-    /// Corporate Sector Indicator.
-    /// </summary>
-    [DisplayName("Corporate Sector Indicator")]
-    [IsoXmlTag("CorpSctrInd")]
-    public CorporateSectorIdentifier1Code? CorporateSectorIndicator { get; init; }
+    [DisplayName("Trading Side Transaction Reporting")]
+    [IsoXmlTag("TradgSdTxRptg")]
+    public ValueList<TradingSideTransactionReporting3> TradingSideTransactionReporting { get; init; } =
+        [];
 
     /// <summary>
     /// Counterparty Side Transaction Reporting.
@@ -137,60 +33,46 @@ public record RegulatoryReporting8
         [];
 
     /// <summary>
-    /// Execution Timestamp.
+    /// Central Counterparty Clearing House.
     /// </summary>
-    [DisplayName("Execution Timestamp")]
-    [IsoXmlTag("ExctnTmstmp")]
-    public DateAndDateTime2Choice_? ExecutionTimestamp { get; init; }
+    [DisplayName("Central Counterparty Clearing House")]
+    [IsoXmlTag("CntrlCtrPtyClrHs")]
+    public PartyIdentification242Choice_? CentralCounterpartyClearingHouse { get; init; }
 
     /// <summary>
-    /// Execution Venue.
+    /// Clearing Broker.
     /// </summary>
-    [DisplayName("Execution Venue")]
-    [IsoXmlTag("ExctnVn")]
-    public Max35Text? ExecutionVenue { get; init; }
+    [DisplayName("Clearing Broker")]
+    [IsoXmlTag("ClrBrkr")]
+    public PartyIdentification242Choice_? ClearingBroker { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Clearing Exception Party.
     /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
+    [DisplayName("Clearing Exception Party")]
+    [IsoXmlTag("ClrXcptnPty")]
+    public PartyIdentification242Choice_? ClearingExceptionParty { get; init; }
 
     /// <summary>
-    /// Financial Nature Of The Counterparty Indicator.
+    /// Clearing Broker Identification.
     /// </summary>
-    [DisplayName("Financial Nature Of The Counterparty Indicator")]
-    [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
-    public YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
+    [DisplayName("Clearing Broker Identification")]
+    [IsoXmlTag("ClrBrkrId")]
+    public ClearingBrokerIdentification1? ClearingBrokerIdentification { get; init; }
 
     /// <summary>
-    /// Intragroup Trade Indicator.
+    /// Clearing Threshold Indicator.
     /// </summary>
-    [DisplayName("Intragroup Trade Indicator")]
-    [IsoXmlTag("NtrgrpTradInd")]
-    public YesNoIndicator? IntragroupTradeIndicator { get; init; }
+    [DisplayName("Clearing Threshold Indicator")]
+    [IsoXmlTag("ClrThrshldInd")]
+    public YesNoIndicator? ClearingThresholdIndicator { get; init; }
 
     /// <summary>
-    /// Link Swap Identification.
+    /// Cleared Product Identification.
     /// </summary>
-    [DisplayName("Link Swap Identification")]
-    [IsoXmlTag("LkSwpId")]
-    public Exact42Text? LinkSwapIdentification { get; init; }
-
-    /// <summary>
-    /// Non Standard Flag.
-    /// </summary>
-    [DisplayName("Non Standard Flag")]
-    [IsoXmlTag("NonStdFlg")]
-    public YesNoIndicator? NonStandardFlag { get; init; }
-
-    /// <summary>
-    /// Portfolio Compression Indicator.
-    /// </summary>
-    [DisplayName("Portfolio Compression Indicator")]
-    [IsoXmlTag("PrtflCmprssnInd")]
-    public YesNoIndicator? PortfolioCompressionIndicator { get; init; }
+    [DisplayName("Cleared Product Identification")]
+    [IsoXmlTag("ClrdPdctId")]
+    public Max35Text? ClearedProductIdentification { get; init; }
 
     /// <summary>
     /// Product Identifier.
@@ -200,6 +82,83 @@ public record RegulatoryReporting8
     public ProductIdentifier3Choice_? ProductIdentifier { get; init; }
 
     /// <summary>
+    /// Allocation Indicator.
+    /// </summary>
+    [DisplayName("Allocation Indicator")]
+    [IsoXmlTag("AllcnInd")]
+    public AllocationIndicator1Code? AllocationIndicator { get; init; }
+
+    /// <summary>
+    /// Collateralisation Indicator.
+    /// </summary>
+    [DisplayName("Collateralisation Indicator")]
+    [IsoXmlTag("CollstnInd")]
+    public CollateralisationIndicator1Code? CollateralisationIndicator { get; init; }
+
+    /// <summary>
+    /// Execution Venue.
+    /// </summary>
+    [DisplayName("Execution Venue")]
+    [IsoXmlTag("ExctnVn")]
+    public Max35Text? ExecutionVenue { get; init; }
+
+    /// <summary>
+    /// Execution Timestamp.
+    /// </summary>
+    [DisplayName("Execution Timestamp")]
+    [IsoXmlTag("ExctnTmstmp")]
+    public DateAndDateTime2Choice_? ExecutionTimestamp { get; init; }
+
+    /// <summary>
+    /// Non Standard Flag.
+    /// </summary>
+    [DisplayName("Non Standard Flag")]
+    [IsoXmlTag("NonStdFlg")]
+    public YesNoIndicator? NonStandardFlag { get; init; }
+
+    /// <summary>
+    /// Link Swap Identification.
+    /// </summary>
+    [DisplayName("Link Swap Identification")]
+    [IsoXmlTag("LkSwpId")]
+    public Exact42Text? LinkSwapIdentification { get; init; }
+
+    /// <summary>
+    /// Financial Nature Of The Counterparty Indicator.
+    /// </summary>
+    [DisplayName("Financial Nature Of The Counterparty Indicator")]
+    [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
+    public YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
+
+    /// <summary>
+    /// Collateral Portfolio Indicator.
+    /// </summary>
+    [DisplayName("Collateral Portfolio Indicator")]
+    [IsoXmlTag("CollPrtflInd")]
+    public YesNoIndicator? CollateralPortfolioIndicator { get; init; }
+
+    /// <summary>
+    /// Collateral Portfolio Code.
+    /// </summary>
+    [DisplayName("Collateral Portfolio Code")]
+    [IsoXmlTag("CollPrtflCd")]
+    public Max10Text? CollateralPortfolioCode { get; init; }
+
+    /// <summary>
+    /// Portfolio Compression Indicator.
+    /// </summary>
+    [DisplayName("Portfolio Compression Indicator")]
+    [IsoXmlTag("PrtflCmprssnInd")]
+    public YesNoIndicator? PortfolioCompressionIndicator { get; init; }
+
+    /// <summary>
+    /// Corporate Sector Indicator.
+    /// </summary>
+    [DisplayName("Corporate Sector Indicator")]
+    [IsoXmlTag("CorpSctrInd")]
+    public CorporateSectorIdentifier1Code? CorporateSectorIndicator { get; init; }
+
+    /// <summary>
     /// Trade With Non EEA Counterparty Indicator.
     /// </summary>
     [DisplayName("Trade With Non EEA Counterparty Indicator")]
@@ -207,10 +166,51 @@ public record RegulatoryReporting8
     public YesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; init; }
 
     /// <summary>
-    /// Trading Side Transaction Reporting.
+    /// Intragroup Trade Indicator.
     /// </summary>
-    [DisplayName("Trading Side Transaction Reporting")]
-    [IsoXmlTag("TradgSdTxRptg")]
-    public ValueList<TradingSideTransactionReporting3> TradingSideTransactionReporting { get; init; } =
-        [];
+    [DisplayName("Intragroup Trade Indicator")]
+    [IsoXmlTag("NtrgrpTradInd")]
+    public YesNoIndicator? IntragroupTradeIndicator { get; init; }
+
+    /// <summary>
+    /// Commercial Or Treasury Financing Indicator.
+    /// </summary>
+    [DisplayName("Commercial Or Treasury Financing Indicator")]
+    [IsoXmlTag("ComrclOrTrsrFincgInd")]
+    public YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Confirmation Date And Timestamp.
+    /// </summary>
+    [DisplayName("Confirmation Date And Timestamp")]
+    [IsoXmlTag("ConfDtAndTmstmp")]
+    public ISODateTime? ConfirmationDateAndTimestamp { get; init; }
+
+    /// <summary>
+    /// Clearing Timestamp.
+    /// </summary>
+    [DisplayName("Clearing Timestamp")]
+    [IsoXmlTag("ClrTmstmp")]
+    public ISOTime? ClearingTimestamp { get; init; }
+
+    /// <summary>
+    /// Commissions And Fees.
+    /// </summary>
+    [DisplayName("Commissions And Fees")]
+    [IsoXmlTag("ComssnsAndFees")]
+    public ValueList<FXCommissionOrFee1> CommissionsAndFees { get; init; } = [];
+
+    /// <summary>
+    /// Additional Reporting Information.
+    /// </summary>
+    [DisplayName("Additional Reporting Information")]
+    [IsoXmlTag("AddtlRptgInf")]
+    public Max210Text? AdditionalReportingInformation { get; init; }
 }

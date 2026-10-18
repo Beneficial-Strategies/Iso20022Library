@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AuctionData2
 {
     /// <summary>
+    /// Trading Phase.
+    /// </summary>
+    [DisplayName("Trading Phase")]
+    [IsoXmlTag("TradgPhs")]
+    public Max50Text? TradingPhase { get; init; }
+
+    /// <summary>
     /// Indicative Auction Price.
     /// </summary>
     [DisplayName("Indicative Auction Price")]
@@ -29,11 +36,4 @@ public record AuctionData2
     [DisplayName("Indicative Auction Volume")]
     [IsoXmlTag("IndctvAuctnVol")]
     public FinancialInstrumentQuantity25Choice_? IndicativeAuctionVolume { get; init; }
-
-    /// <summary>
-    /// Trading Phase.
-    /// </summary>
-    [DisplayName("Trading Phase")]
-    [IsoXmlTag("TradgPhs")]
-    public Max50Text? TradingPhase { get; init; }
 }

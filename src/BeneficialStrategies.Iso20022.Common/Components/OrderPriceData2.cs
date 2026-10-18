@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrderPriceData2
 {
     /// <summary>
-    /// Additional Limit Price.
-    /// </summary>
-    [DisplayName("Additional Limit Price")]
-    [IsoXmlTag("AddtlLmtPric")]
-    public SecuritiesTransactionPrice2Choice_? AdditionalLimitPrice { get; init; }
-
-    /// <summary>
-    /// Currency Second Leg.
-    /// </summary>
-    [DisplayName("Currency Second Leg")]
-    [IsoXmlTag("CcyScndLeg")]
-    public ActiveOrHistoricCurrencyCode? CurrencySecondLeg { get; init; }
-
-    /// <summary>
     /// Limit Price.
     /// </summary>
     [DisplayName("Limit Price")]
     [IsoXmlTag("LmtPric")]
     public SecuritiesTransactionPrice2Choice_? LimitPrice { get; init; }
+
+    /// <summary>
+    /// Stop Price.
+    /// </summary>
+    [DisplayName("Stop Price")]
+    [IsoXmlTag("StopPric")]
+    public SecuritiesTransactionPrice2Choice_? StopPrice { get; init; }
+
+    /// <summary>
+    /// Additional Limit Price.
+    /// </summary>
+    [DisplayName("Additional Limit Price")]
+    [IsoXmlTag("AddtlLmtPric")]
+    public SecuritiesTransactionPrice2Choice_? AdditionalLimitPrice { get; init; }
 
     /// <summary>
     /// Pegged Price.
@@ -45,9 +45,9 @@ public record OrderPriceData2
     public SecuritiesTransactionPrice2Choice_? PeggedPrice { get; init; }
 
     /// <summary>
-    /// Stop Price.
+    /// Currency Second Leg.
     /// </summary>
-    [DisplayName("Stop Price")]
-    [IsoXmlTag("StopPric")]
-    public SecuritiesTransactionPrice2Choice_? StopPrice { get; init; }
+    [DisplayName("Currency Second Leg")]
+    [IsoXmlTag("CcyScndLeg")]
+    public ActiveOrHistoricCurrencyCode? CurrencySecondLeg { get; init; }
 }

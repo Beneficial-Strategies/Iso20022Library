@@ -17,14 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DetailedReportStatistics7
 {
     /// <summary>
-    /// Number Of Reports Rejected Per Error.
-    /// </summary>
-    [DisplayName("Number Of Reports Rejected Per Error")]
-    [IsoXmlTag("NbOfRptsRjctdPerErr")]
-    public ValueList<NumberOfTransactionsPerValidationRule6> NumberOfReportsRejectedPerError { get; init; } =
-        [];
-
-    /// <summary>
     /// Total Number Of Reports.
     /// </summary>
     [DisplayName("Total Number Of Reports")]
@@ -44,4 +36,12 @@ public record DetailedReportStatistics7
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
     public required Max20PositiveNumber TotalNumberOfReportsRejected { get; init; }
+
+    /// <summary>
+    /// Number Of Reports Rejected Per Error.
+    /// </summary>
+    [DisplayName("Number Of Reports Rejected Per Error")]
+    [IsoXmlTag("NbOfRptsRjctdPerErr")]
+    public ValueList<NumberOfTransactionsPerValidationRule6> NumberOfReportsRejectedPerError { get; init; } =
+        [];
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContractRegistration8
 {
     /// <summary>
-    /// Additional Information.
+    /// Contract Registration Opening Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max1025Text? AdditionalInformation { get; init; }
+    [DisplayName("Contract Registration Opening Identification")]
+    [IsoXmlTag("CtrctRegnOpngId")]
+    public required Max35Text ContractRegistrationOpeningIdentification { get; init; }
 
     /// <summary>
-    /// Attachment.
+    /// Priority.
     /// </summary>
-    [DisplayName("Attachment")]
-    [IsoXmlTag("Attchmnt")]
-    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
+    [DisplayName("Priority")]
+    [IsoXmlTag("Prty")]
+    public required Priority2Code Priority { get; init; }
 
     /// <summary>
     /// Contract.
@@ -43,13 +43,6 @@ public record ContractRegistration8
     [DisplayName("Contract Balance")]
     [IsoXmlTag("CtrctBal")]
     public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
-
-    /// <summary>
-    /// Contract Registration Opening Identification.
-    /// </summary>
-    [DisplayName("Contract Registration Opening Identification")]
-    [IsoXmlTag("CtrctRegnOpngId")]
-    public required Max35Text ContractRegistrationOpeningIdentification { get; init; }
 
     /// <summary>
     /// Payment Schedule Type.
@@ -67,11 +60,18 @@ public record ContractRegistration8
         [];
 
     /// <summary>
-    /// Priority.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Priority")]
-    [IsoXmlTag("Prty")]
-    public required Priority2Code Priority { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max1025Text? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Attachment.
+    /// </summary>
+    [DisplayName("Attachment")]
+    [IsoXmlTag("Attchmnt")]
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

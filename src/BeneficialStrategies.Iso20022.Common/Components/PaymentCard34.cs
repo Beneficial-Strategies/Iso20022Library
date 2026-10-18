@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentCard34
 {
     /// <summary>
-    /// Card Issuer Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Card Issuer Identification")]
-    [IsoXmlTag("CardIssrId")]
-    public PartyIdentification139? CardIssuerIdentification { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required CardType1Code Type { get; init; }
 
     /// <summary>
-    /// Card Issuer Name.
+    /// Number.
     /// </summary>
-    [DisplayName("Card Issuer Name")]
-    [IsoXmlTag("CardIssrNm")]
-    public Max35Text? CardIssuerName { get; init; }
-
-    /// <summary>
-    /// Expiry Date.
-    /// </summary>
-    [DisplayName("Expiry Date")]
-    [IsoXmlTag("XpryDt")]
-    public required ISOYearMonth ExpiryDate { get; init; }
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    public required Max35Text Number { get; init; }
 
     /// <summary>
     /// Holder Name.
@@ -45,11 +38,32 @@ public record PaymentCard34
     public required Max35Text HolderName { get; init; }
 
     /// <summary>
-    /// Number.
+    /// Start Date.
     /// </summary>
-    [DisplayName("Number")]
-    [IsoXmlTag("Nb")]
-    public required Max35Text Number { get; init; }
+    [DisplayName("Start Date")]
+    [IsoXmlTag("StartDt")]
+    public ISOYearMonth? StartDate { get; init; }
+
+    /// <summary>
+    /// Expiry Date.
+    /// </summary>
+    [DisplayName("Expiry Date")]
+    [IsoXmlTag("XpryDt")]
+    public required ISOYearMonth ExpiryDate { get; init; }
+
+    /// <summary>
+    /// Card Issuer Name.
+    /// </summary>
+    [DisplayName("Card Issuer Name")]
+    [IsoXmlTag("CardIssrNm")]
+    public Max35Text? CardIssuerName { get; init; }
+
+    /// <summary>
+    /// Card Issuer Identification.
+    /// </summary>
+    [DisplayName("Card Issuer Identification")]
+    [IsoXmlTag("CardIssrId")]
+    public PartyIdentification139? CardIssuerIdentification { get; init; }
 
     /// <summary>
     /// Security Code.
@@ -64,18 +78,4 @@ public record PaymentCard34
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     public Max3Text? SequenceNumber { get; init; }
-
-    /// <summary>
-    /// Start Date.
-    /// </summary>
-    [DisplayName("Start Date")]
-    [IsoXmlTag("StartDt")]
-    public ISOYearMonth? StartDate { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required CardType1Code Type { get; init; }
 }

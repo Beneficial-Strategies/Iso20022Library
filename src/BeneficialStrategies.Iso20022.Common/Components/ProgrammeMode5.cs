@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProgrammeMode5
 {
     /// <summary>
-    /// Additional Identification.
-    /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
-
-    /// <summary>
     /// Applied Identification.
     /// </summary>
     [DisplayName("Applied Identification")]
     [IsoXmlTag("ApldId")]
     public required Max35Text AppliedIdentification { get; init; }
+
+    /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
 }

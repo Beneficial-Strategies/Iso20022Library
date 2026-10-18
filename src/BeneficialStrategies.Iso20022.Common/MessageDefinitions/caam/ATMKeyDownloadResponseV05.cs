@@ -46,13 +46,6 @@ public record ATMKeyDownloadResponseV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Key Download Response.
-    /// </summary>
-    [DisplayName("ATM Key Download Response")]
-    [IsoXmlTag("ATMKeyDwnldRspn")]
-    public ATMKeyDownloadResponse6? ATMKeyDownloadResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMKeyDownloadResponseV05 : IOuterRecord
     [DisplayName("Protected ATM Key Download Response")]
     [IsoXmlTag("PrtctdATMKeyDwnldRspn")]
     public ContentInformationType10? ProtectedATMKeyDownloadResponse { get; init; }
+
+    /// <summary>
+    /// ATM Key Download Response.
+    /// </summary>
+    [DisplayName("ATM Key Download Response")]
+    [IsoXmlTag("ATMKeyDwnldRspn")]
+    public ATMKeyDownloadResponse6? ATMKeyDownloadResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

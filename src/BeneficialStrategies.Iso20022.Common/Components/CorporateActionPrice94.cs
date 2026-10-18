@@ -24,6 +24,13 @@ public record CorporateActionPrice94
     public PriceFormat88Choice_? CashInLieuOfSharePrice { get; init; }
 
     /// <summary>
+    /// Over Subscription Deposit Price.
+    /// </summary>
+    [DisplayName("Over Subscription Deposit Price")]
+    [IsoXmlTag("OverSbcptDpstPric")]
+    public PriceFormat88Choice_? OverSubscriptionDepositPrice { get; init; }
+
+    /// <summary>
     /// Maximum Cash To Instruct.
     /// </summary>
     [DisplayName("Maximum Cash To Instruct")]
@@ -43,11 +50,4 @@ public record CorporateActionPrice94
     [DisplayName("Minimum Multiple Cash To Instruct")]
     [IsoXmlTag("MinMltplCshToInst")]
     public PriceFormat62Choice_? MinimumMultipleCashToInstruct { get; init; }
-
-    /// <summary>
-    /// Over Subscription Deposit Price.
-    /// </summary>
-    [DisplayName("Over Subscription Deposit Price")]
-    [IsoXmlTag("OverSbcptDpstPric")]
-    public PriceFormat88Choice_? OverSubscriptionDepositPrice { get; init; }
 }

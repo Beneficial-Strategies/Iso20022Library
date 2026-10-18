@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OptionOrSwaption11
 {
     /// <summary>
-    /// Barrier Levels.
+    /// Type.
     /// </summary>
-    [DisplayName("Barrier Levels")]
-    [IsoXmlTag("BrrrLvls")]
-    public OptionBarrierLevel1Choice_? BarrierLevels { get; init; }
-
-    /// <summary>
-    /// Call Amount.
-    /// </summary>
-    [DisplayName("Call Amount")]
-    [IsoXmlTag("CallAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? CallAmount { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public OptionType2Code? Type { get; init; }
 
     /// <summary>
     /// Embedded Type.
@@ -38,13 +31,6 @@ public record OptionOrSwaption11
     public EmbeddedType1Code? EmbeddedType { get; init; }
 
     /// <summary>
-    /// Exercise Date.
-    /// </summary>
-    [DisplayName("Exercise Date")]
-    [IsoXmlTag("ExrcDt")]
-    public ExerciseDate1Choice_? ExerciseDate { get; init; }
-
-    /// <summary>
     /// Exercise Style.
     /// </summary>
     [DisplayName("Exercise Style")]
@@ -52,32 +38,11 @@ public record OptionOrSwaption11
     public ValueList<OptionStyle6Code> ExerciseStyle { get; init; } = [];
 
     /// <summary>
-    /// Maturity Date Of Underlying.
+    /// Exercise Date.
     /// </summary>
-    [DisplayName("Maturity Date Of Underlying")]
-    [IsoXmlTag("MtrtyDtOfUndrlyg")]
-    public ISODate? MaturityDateOfUnderlying { get; init; }
-
-    /// <summary>
-    /// Premium Amount.
-    /// </summary>
-    [DisplayName("Premium Amount")]
-    [IsoXmlTag("PrmAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PremiumAmount { get; init; }
-
-    /// <summary>
-    /// Premium Payment Date.
-    /// </summary>
-    [DisplayName("Premium Payment Date")]
-    [IsoXmlTag("PrmPmtDt")]
-    public ISODate? PremiumPaymentDate { get; init; }
-
-    /// <summary>
-    /// Put Amount.
-    /// </summary>
-    [DisplayName("Put Amount")]
-    [IsoXmlTag("PutAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PutAmount { get; init; }
+    [DisplayName("Exercise Date")]
+    [IsoXmlTag("ExrcDt")]
+    public ExerciseDate1Choice_? ExerciseDate { get; init; }
 
     /// <summary>
     /// Strike Price.
@@ -94,9 +59,44 @@ public record OptionOrSwaption11
     public ValueList<Schedule4> StrikePriceSchedule { get; init; } = [];
 
     /// <summary>
-    /// Type.
+    /// Call Amount.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public OptionType2Code? Type { get; init; }
+    [DisplayName("Call Amount")]
+    [IsoXmlTag("CallAmt")]
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? CallAmount { get; init; }
+
+    /// <summary>
+    /// Put Amount.
+    /// </summary>
+    [DisplayName("Put Amount")]
+    [IsoXmlTag("PutAmt")]
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PutAmount { get; init; }
+
+    /// <summary>
+    /// Premium Amount.
+    /// </summary>
+    [DisplayName("Premium Amount")]
+    [IsoXmlTag("PrmAmt")]
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PremiumAmount { get; init; }
+
+    /// <summary>
+    /// Premium Payment Date.
+    /// </summary>
+    [DisplayName("Premium Payment Date")]
+    [IsoXmlTag("PrmPmtDt")]
+    public ISODate? PremiumPaymentDate { get; init; }
+
+    /// <summary>
+    /// Maturity Date Of Underlying.
+    /// </summary>
+    [DisplayName("Maturity Date Of Underlying")]
+    [IsoXmlTag("MtrtyDtOfUndrlyg")]
+    public ISODate? MaturityDateOfUnderlying { get; init; }
+
+    /// <summary>
+    /// Barrier Levels.
+    /// </summary>
+    [DisplayName("Barrier Levels")]
+    [IsoXmlTag("BrrrLvls")]
+    public OptionBarrierLevel1Choice_? BarrierLevels { get; init; }
 }

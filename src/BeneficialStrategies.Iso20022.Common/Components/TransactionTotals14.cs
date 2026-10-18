@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionTotals14
 {
     /// <summary>
-    /// Additional Fee Reconciliation.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Fee Reconciliation")]
-    [IsoXmlTag("AddtlFeeRcncltn")]
-    public ValueList<AdditionalFeeReconciliation3> AdditionalFeeReconciliation { get; init; } = [];
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Checkpoint Reference.
-    /// </summary>
-    [DisplayName("Checkpoint Reference")]
-    [IsoXmlTag("ChckptRef")]
-    public Max35Text? CheckpointReference { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public required Min2Max3NumericText Currency { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date.
@@ -59,6 +31,13 @@ public record TransactionTotals14
     public ISODate? Date { get; init; }
 
     /// <summary>
+    /// Checkpoint Reference.
+    /// </summary>
+    [DisplayName("Checkpoint Reference")]
+    [IsoXmlTag("ChckptRef")]
+    public Max35Text? CheckpointReference { get; init; }
+
+    /// <summary>
     /// Financial.
     /// </summary>
     [DisplayName("Financial")]
@@ -66,16 +45,37 @@ public record TransactionTotals14
     public ValueList<FinancialReconciliation3> Financial { get; init; } = [];
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
-
-    /// <summary>
     /// Message.
     /// </summary>
     [DisplayName("Message")]
     [IsoXmlTag("Msg")]
     public ValueList<MessageReconciliation3> Message { get; init; } = [];
+
+    /// <summary>
+    /// Additional Fee Reconciliation.
+    /// </summary>
+    [DisplayName("Additional Fee Reconciliation")]
+    [IsoXmlTag("AddtlFeeRcncltn")]
+    public ValueList<AdditionalFeeReconciliation3> AdditionalFeeReconciliation { get; init; } = [];
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public required Min2Max3NumericText Currency { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
 }

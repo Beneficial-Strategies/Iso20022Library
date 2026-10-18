@@ -46,11 +46,32 @@ public record AccountRequestAcknowledgementV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References5 References { get; init; }
+
+    /// <summary>
+    /// From.
+    /// </summary>
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification39? From { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Organisation Identification.
+    /// </summary>
+    [DisplayName("Organisation Identification")]
+    [IsoXmlTag("OrgId")]
+    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
 
     /// <summary>
     /// Account Servicer Identification.
@@ -65,27 +86,6 @@ public record AccountRequestAcknowledgementV04 : IOuterRecord
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
     public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
-
-    /// <summary>
-    /// From.
-    /// </summary>
-    [DisplayName("From")]
-    [IsoXmlTag("Fr")]
-    public OrganisationIdentification39? From { get; init; }
-
-    /// <summary>
-    /// Organisation Identification.
-    /// </summary>
-    [DisplayName("Organisation Identification")]
-    [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
-
-    /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References5 References { get; init; }
 
     /// <summary>
     /// Supplementary Data.

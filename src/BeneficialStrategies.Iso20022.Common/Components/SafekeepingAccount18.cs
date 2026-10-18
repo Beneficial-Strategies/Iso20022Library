@@ -24,6 +24,13 @@ public record SafekeepingAccount18
     public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -31,11 +38,11 @@ public record SafekeepingAccount18
     public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Sub Account Identification.
     /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public Max140Text? BlockChainAddressOrWallet { get; init; }
+    [DisplayName("Sub Account Identification")]
+    [IsoXmlTag("SubAcctId")]
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Instructed Balance.
@@ -50,11 +57,4 @@ public record SafekeepingAccount18
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
     public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
-
-    /// <summary>
-    /// Sub Account Identification.
-    /// </summary>
-    [DisplayName("Sub Account Identification")]
-    [IsoXmlTag("SubAcctId")]
-    public Max35Text? SubAccountIdentification { get; init; }
 }

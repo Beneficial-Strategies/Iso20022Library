@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PortfolioTransfer13
 {
     /// <summary>
+    /// Master Reference.
+    /// </summary>
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    public Max35Text? MasterReference { get; init; }
+
+    /// <summary>
+    /// Transfer Instruction Reference.
+    /// </summary>
+    [DisplayName("Transfer Instruction Reference")]
+    [IsoXmlTag("TrfInstrRef")]
+    public required Max35Text TransferInstructionReference { get; init; }
+
+    /// <summary>
+    /// Transfer Completion Identification.
+    /// </summary>
+    [DisplayName("Transfer Completion Identification")]
+    [IsoXmlTag("TrfCmpltnId")]
+    public required Max35Text TransferCompletionIdentification { get; init; }
+
+    /// <summary>
     /// Actual Transfer Date.
     /// </summary>
     [DisplayName("Actual Transfer Date")]
@@ -24,11 +45,11 @@ public record PortfolioTransfer13
     public ISODate? ActualTransferDate { get; init; }
 
     /// <summary>
-    /// Additional Information.
+    /// Portfolio.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
+    [DisplayName("Portfolio")]
+    [IsoXmlTag("Prtfl")]
+    public FundPortfolio7Choice_? Portfolio { get; init; }
 
     /// <summary>
     /// All Other Cash.
@@ -45,35 +66,6 @@ public record PortfolioTransfer13
     public ValueList<CashAll1> CashAll { get; init; } = [];
 
     /// <summary>
-    /// Financial Instrument Asset For Transfer.
-    /// </summary>
-    [DisplayName("Financial Instrument Asset For Transfer")]
-    [IsoXmlTag("FinInstrmAsstForTrf")]
-    public ValueList<FinancialInstrument105> FinancialInstrumentAssetForTransfer { get; init; } =
-        [];
-
-    /// <summary>
-    /// Master Reference.
-    /// </summary>
-    [DisplayName("Master Reference")]
-    [IsoXmlTag("MstrRef")]
-    public Max35Text? MasterReference { get; init; }
-
-    /// <summary>
-    /// Payment Details.
-    /// </summary>
-    [DisplayName("Payment Details")]
-    [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument20? PaymentDetails { get; init; }
-
-    /// <summary>
-    /// Portfolio.
-    /// </summary>
-    [DisplayName("Portfolio")]
-    [IsoXmlTag("Prtfl")]
-    public FundPortfolio7Choice_? Portfolio { get; init; }
-
-    /// <summary>
     /// Residual Cash.
     /// </summary>
     [DisplayName("Residual Cash")]
@@ -88,16 +80,24 @@ public record PortfolioTransfer13
     public ISODate? TaxDate { get; init; }
 
     /// <summary>
-    /// Transfer Completion Identification.
+    /// Payment Details.
     /// </summary>
-    [DisplayName("Transfer Completion Identification")]
-    [IsoXmlTag("TrfCmpltnId")]
-    public required Max35Text TransferCompletionIdentification { get; init; }
+    [DisplayName("Payment Details")]
+    [IsoXmlTag("PmtDtls")]
+    public PaymentInstrument20? PaymentDetails { get; init; }
 
     /// <summary>
-    /// Transfer Instruction Reference.
+    /// Financial Instrument Asset For Transfer.
     /// </summary>
-    [DisplayName("Transfer Instruction Reference")]
-    [IsoXmlTag("TrfInstrRef")]
-    public required Max35Text TransferInstructionReference { get; init; }
+    [DisplayName("Financial Instrument Asset For Transfer")]
+    [IsoXmlTag("FinInstrmAsstForTrf")]
+    public ValueList<FinancialInstrument105> FinancialInstrumentAssetForTransfer { get; init; } =
+        [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

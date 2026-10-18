@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MessageIdentification8
 {
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public Max35Text? MessageIdentification { get; init; }
+
+    /// <summary>
     /// Creation Date Time.
     /// </summary>
     [DisplayName("Creation Date Time")]
@@ -29,11 +36,4 @@ public record MessageIdentification8
     [DisplayName("First Agent")]
     [IsoXmlTag("FrstAgt")]
     public BranchAndFinancialInstitutionIdentification8? FirstAgent { get; init; }
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public Max35Text? MessageIdentification { get; init; }
 }

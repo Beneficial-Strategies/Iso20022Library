@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportRequest7
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required CardPaymentContext30 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -31,11 +24,18 @@ public record ReportRequest7
     public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
-    /// Report Get Totals Request.
+    /// Context.
     /// </summary>
-    [DisplayName("Report Get Totals Request")]
-    [IsoXmlTag("RptGetTtlsReq")]
-    public ReportGetTotalsRequest1? ReportGetTotalsRequest { get; init; }
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required CardPaymentContext30 Context { get; init; }
+
+    /// <summary>
+    /// Service Content.
+    /// </summary>
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService6Code ServiceContent { get; init; }
 
     /// <summary>
     /// Report Transaction Request.
@@ -45,11 +45,11 @@ public record ReportRequest7
     public ReportTransactionRequest1? ReportTransactionRequest { get; init; }
 
     /// <summary>
-    /// Service Content.
+    /// Report Get Totals Request.
     /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService6Code ServiceContent { get; init; }
+    [DisplayName("Report Get Totals Request")]
+    [IsoXmlTag("RptGetTtlsReq")]
+    public ReportGetTotalsRequest1? ReportGetTotalsRequest { get; init; }
 
     /// <summary>
     /// Supplementary Data.

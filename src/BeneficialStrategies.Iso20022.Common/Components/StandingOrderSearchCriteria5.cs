@@ -17,18 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StandingOrderSearchCriteria5
 {
     /// <summary>
+    /// Key Attributes Indicator.
+    /// </summary>
+    [DisplayName("Key Attributes Indicator")]
+    [IsoXmlTag("KeyAttrbtsInd")]
+    public TrueFalseIndicator? KeyAttributesIndicator { get; init; }
+
+    /// <summary>
+    /// Standing Order Identification.
+    /// </summary>
+    [DisplayName("Standing Order Identification")]
+    [IsoXmlTag("StgOrdrId")]
+    public Max35Text? StandingOrderIdentification { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public StandingOrderType1Choice_? Type { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
     public CashAccount40? Account { get; init; }
-
-    /// <summary>
-    /// Associated Pool Account.
-    /// </summary>
-    [DisplayName("Associated Pool Account")]
-    [IsoXmlTag("AssoctdPoolAcct")]
-    public AccountIdentification4Choice_? AssociatedPoolAccount { get; init; }
 
     /// <summary>
     /// Currency.
@@ -38,11 +52,32 @@ public record StandingOrderSearchCriteria5
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Key Attributes Indicator.
+    /// Validity Period.
     /// </summary>
-    [DisplayName("Key Attributes Indicator")]
-    [IsoXmlTag("KeyAttrbtsInd")]
-    public TrueFalseIndicator? KeyAttributesIndicator { get; init; }
+    [DisplayName("Validity Period")]
+    [IsoXmlTag("VldtyPrd")]
+    public DatePeriod2Choice_? ValidityPeriod { get; init; }
+
+    /// <summary>
+    /// System Member.
+    /// </summary>
+    [DisplayName("System Member")]
+    [IsoXmlTag("SysMmb")]
+    public BranchAndFinancialInstitutionIdentification8? SystemMember { get; init; }
+
+    /// <summary>
+    /// Responsible Party.
+    /// </summary>
+    [DisplayName("Responsible Party")]
+    [IsoXmlTag("RspnsblPty")]
+    public BranchAndFinancialInstitutionIdentification8? ResponsibleParty { get; init; }
+
+    /// <summary>
+    /// Associated Pool Account.
+    /// </summary>
+    [DisplayName("Associated Pool Account")]
+    [IsoXmlTag("AssoctdPoolAcct")]
+    public AccountIdentification4Choice_? AssociatedPoolAccount { get; init; }
 
     /// <summary>
     /// Link Set Identification.
@@ -64,41 +99,6 @@ public record StandingOrderSearchCriteria5
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
     public Number? LinkSetOrderSequence { get; init; }
-
-    /// <summary>
-    /// Responsible Party.
-    /// </summary>
-    [DisplayName("Responsible Party")]
-    [IsoXmlTag("RspnsblPty")]
-    public BranchAndFinancialInstitutionIdentification8? ResponsibleParty { get; init; }
-
-    /// <summary>
-    /// Standing Order Identification.
-    /// </summary>
-    [DisplayName("Standing Order Identification")]
-    [IsoXmlTag("StgOrdrId")]
-    public Max35Text? StandingOrderIdentification { get; init; }
-
-    /// <summary>
-    /// System Member.
-    /// </summary>
-    [DisplayName("System Member")]
-    [IsoXmlTag("SysMmb")]
-    public BranchAndFinancialInstitutionIdentification8? SystemMember { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public StandingOrderType1Choice_? Type { get; init; }
-
-    /// <summary>
-    /// Validity Period.
-    /// </summary>
-    [DisplayName("Validity Period")]
-    [IsoXmlTag("VldtyPrd")]
-    public DatePeriod2Choice_? ValidityPeriod { get; init; }
 
     /// <summary>
     /// Zero Sweep Indicator.

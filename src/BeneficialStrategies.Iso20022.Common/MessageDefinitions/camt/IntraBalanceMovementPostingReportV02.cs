@@ -46,27 +46,6 @@ public record IntraBalanceMovementPostingReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cash Account.
-    /// </summary>
-    [DisplayName("Cash Account")]
-    [IsoXmlTag("CshAcct")]
-    public required CashAccount40 CashAccount { get; init; }
-
-    /// <summary>
-    /// Cash Account Owner.
-    /// </summary>
-    [DisplayName("Cash Account Owner")]
-    [IsoXmlTag("CshAcctOwnr")]
-    public SystemPartyIdentification8? CashAccountOwner { get; init; }
-
-    /// <summary>
-    /// Cash Account Servicer.
-    /// </summary>
-    [DisplayName("Cash Account Servicer")]
-    [IsoXmlTag("CshAcctSvcr")]
-    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -86,6 +65,27 @@ public record IntraBalanceMovementPostingReportV02 : IOuterRecord
     [DisplayName("Report General Details")]
     [IsoXmlTag("RptGnlDtls")]
     public required IntraBalanceReport6 ReportGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Cash Account.
+    /// </summary>
+    [DisplayName("Cash Account")]
+    [IsoXmlTag("CshAcct")]
+    public required CashAccount40 CashAccount { get; init; }
+
+    /// <summary>
+    /// Cash Account Owner.
+    /// </summary>
+    [DisplayName("Cash Account Owner")]
+    [IsoXmlTag("CshAcctOwnr")]
+    public SystemPartyIdentification8? CashAccountOwner { get; init; }
+
+    /// <summary>
+    /// Cash Account Servicer.
+    /// </summary>
+    [DisplayName("Cash Account Servicer")]
+    [IsoXmlTag("CshAcctSvcr")]
+    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
     /// Sub Balance.

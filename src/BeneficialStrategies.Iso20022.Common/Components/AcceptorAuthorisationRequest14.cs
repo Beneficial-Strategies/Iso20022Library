@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorAuthorisationRequest14
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required PaymentContext30 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -31,11 +24,11 @@ public record AcceptorAuthorisationRequest14
     public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Context.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required PaymentContext30 Context { get; init; }
 
     /// <summary>
     /// Transaction.
@@ -43,4 +36,11 @@ public record AcceptorAuthorisationRequest14
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public required CardPaymentTransaction139 Transaction { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

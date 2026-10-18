@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyAndAuthorisation6
 {
     /// <summary>
-    /// Authorisation.
-    /// </summary>
-    [DisplayName("Authorisation")]
-    [IsoXmlTag("Authstn")]
-    public required Authorisation2 Authorisation { get; init; }
-
-    /// <summary>
     /// Modification Code.
     /// </summary>
     [DisplayName("Modification Code")]
@@ -43,4 +36,11 @@ public record PartyAndAuthorisation6
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
     public Max15PlusSignedNumericText? SignatureOrder { get; init; }
+
+    /// <summary>
+    /// Authorisation.
+    /// </summary>
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    public required Authorisation2 Authorisation { get; init; }
 }

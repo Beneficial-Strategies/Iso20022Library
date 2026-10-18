@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record VoteParameters9
 {
     /// <summary>
-    /// Additional Voting Requirements.
+    /// Securities Quantity Required To Vote.
     /// </summary>
-    [DisplayName("Additional Voting Requirements")]
-    [IsoXmlTag("AddtlVtngRqrmnts")]
-    public Max350Text? AdditionalVotingRequirements { get; init; }
-
-    /// <summary>
-    /// Beneficial Owner Disclosure.
-    /// </summary>
-    [DisplayName("Beneficial Owner Disclosure")]
-    [IsoXmlTag("BnfclOwnrDsclsr")]
-    public YesNoIndicator? BeneficialOwnerDisclosure { get; init; }
-
-    /// <summary>
-    /// Early Incentive Premium.
-    /// </summary>
-    [DisplayName("Early Incentive Premium")]
-    [IsoXmlTag("EarlyIncntivPrm")]
-    public IncentivePremium6? EarlyIncentivePremium { get; init; }
-
-    /// <summary>
-    /// Early Vote With Premium Deadline.
-    /// </summary>
-    [DisplayName("Early Vote With Premium Deadline")]
-    [IsoXmlTag("EarlyVoteWthPrmDdln")]
-    public DateFormat58Choice_? EarlyVoteWithPremiumDeadline { get; init; }
-
-    /// <summary>
-    /// Incentive Premium.
-    /// </summary>
-    [DisplayName("Incentive Premium")]
-    [IsoXmlTag("IncntivPrm")]
-    public IncentivePremium6? IncentivePremium { get; init; }
+    [DisplayName("Securities Quantity Required To Vote")]
+    [IsoXmlTag("SctiesQtyReqrdToVote")]
+    public FinancialInstrumentQuantity18Choice_? SecuritiesQuantityRequiredToVote { get; init; }
 
     /// <summary>
     /// Partial Vote Allowed.
@@ -57,34 +29,6 @@ public record VoteParameters9
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
     public required YesNoIndicator PartialVoteAllowed { get; init; }
-
-    /// <summary>
-    /// Previous Instruction Invalidity Indicator.
-    /// </summary>
-    [DisplayName("Previous Instruction Invalidity Indicator")]
-    [IsoXmlTag("PrvsInstrInvldtyInd")]
-    public YesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
-
-    /// <summary>
-    /// Revocability Deadline.
-    /// </summary>
-    [DisplayName("Revocability Deadline")]
-    [IsoXmlTag("RvcbltyDdln")]
-    public DateFormat58Choice_? RevocabilityDeadline { get; init; }
-
-    /// <summary>
-    /// Revocability Market Deadline.
-    /// </summary>
-    [DisplayName("Revocability Market Deadline")]
-    [IsoXmlTag("RvcbltyMktDdln")]
-    public DateFormat58Choice_? RevocabilityMarketDeadline { get; init; }
-
-    /// <summary>
-    /// Securities Quantity Required To Vote.
-    /// </summary>
-    [DisplayName("Securities Quantity Required To Vote")]
-    [IsoXmlTag("SctiesQtyReqrdToVote")]
-    public FinancialInstrumentQuantity18Choice_? SecuritiesQuantityRequiredToVote { get; init; }
 
     /// <summary>
     /// Split Vote Allowed.
@@ -115,6 +59,62 @@ public record VoteParameters9
     public VoteMethods5? VoteMethods { get; init; }
 
     /// <summary>
+    /// Voting Ballot Electronic Address.
+    /// </summary>
+    [DisplayName("Voting Ballot Electronic Address")]
+    [IsoXmlTag("VtngBlltElctrncAdr")]
+    public CommunicationAddress11? VotingBallotElectronicAddress { get; init; }
+
+    /// <summary>
+    /// Voting Ballot Request Address.
+    /// </summary>
+    [DisplayName("Voting Ballot Request Address")]
+    [IsoXmlTag("VtngBlltReqAdr")]
+    public PostalAddress1? VotingBallotRequestAddress { get; init; }
+
+    /// <summary>
+    /// Revocability Deadline.
+    /// </summary>
+    [DisplayName("Revocability Deadline")]
+    [IsoXmlTag("RvcbltyDdln")]
+    public DateFormat58Choice_? RevocabilityDeadline { get; init; }
+
+    /// <summary>
+    /// Revocability Market Deadline.
+    /// </summary>
+    [DisplayName("Revocability Market Deadline")]
+    [IsoXmlTag("RvcbltyMktDdln")]
+    public DateFormat58Choice_? RevocabilityMarketDeadline { get; init; }
+
+    /// <summary>
+    /// Beneficial Owner Disclosure.
+    /// </summary>
+    [DisplayName("Beneficial Owner Disclosure")]
+    [IsoXmlTag("BnfclOwnrDsclsr")]
+    public YesNoIndicator? BeneficialOwnerDisclosure { get; init; }
+
+    /// <summary>
+    /// Early Incentive Premium.
+    /// </summary>
+    [DisplayName("Early Incentive Premium")]
+    [IsoXmlTag("EarlyIncntivPrm")]
+    public IncentivePremium6? EarlyIncentivePremium { get; init; }
+
+    /// <summary>
+    /// Incentive Premium.
+    /// </summary>
+    [DisplayName("Incentive Premium")]
+    [IsoXmlTag("IncntivPrm")]
+    public IncentivePremium6? IncentivePremium { get; init; }
+
+    /// <summary>
+    /// Early Vote With Premium Deadline.
+    /// </summary>
+    [DisplayName("Early Vote With Premium Deadline")]
+    [IsoXmlTag("EarlyVoteWthPrmDdln")]
+    public DateFormat58Choice_? EarlyVoteWithPremiumDeadline { get; init; }
+
+    /// <summary>
     /// Vote With Premium Deadline.
     /// </summary>
     [DisplayName("Vote With Premium Deadline")]
@@ -129,16 +129,16 @@ public record VoteParameters9
     public DateFormat58Choice_? VoteWithPremiumMarketDeadline { get; init; }
 
     /// <summary>
-    /// Voting Ballot Electronic Address.
+    /// Additional Voting Requirements.
     /// </summary>
-    [DisplayName("Voting Ballot Electronic Address")]
-    [IsoXmlTag("VtngBlltElctrncAdr")]
-    public CommunicationAddress11? VotingBallotElectronicAddress { get; init; }
+    [DisplayName("Additional Voting Requirements")]
+    [IsoXmlTag("AddtlVtngRqrmnts")]
+    public Max350Text? AdditionalVotingRequirements { get; init; }
 
     /// <summary>
-    /// Voting Ballot Request Address.
+    /// Previous Instruction Invalidity Indicator.
     /// </summary>
-    [DisplayName("Voting Ballot Request Address")]
-    [IsoXmlTag("VtngBlltReqAdr")]
-    public PostalAddress1? VotingBallotRequestAddress { get; init; }
+    [DisplayName("Previous Instruction Invalidity Indicator")]
+    [IsoXmlTag("PrvsInstrInvldtyInd")]
+    public YesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
 }

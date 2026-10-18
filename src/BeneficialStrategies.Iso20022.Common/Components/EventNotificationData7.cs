@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EventNotificationData7
 {
     /// <summary>
+    /// Retailer Event.
+    /// </summary>
+    [DisplayName("Retailer Event")]
+    [IsoXmlTag("RtlrEvt")]
+    public required RetailerEvent7 RetailerEvent { get; init; }
+
+    /// <summary>
+    /// Maintenance Required Flag.
+    /// </summary>
+    [DisplayName("Maintenance Required Flag")]
+    [IsoXmlTag("MntncReqrdFlg")]
+    public TrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
+
+    /// <summary>
     /// Customer Language.
     /// </summary>
     [DisplayName("Customer Language")]
@@ -29,18 +43,4 @@ public record EventNotificationData7
     [DisplayName("Display Output")]
     [IsoXmlTag("DispOutpt")]
     public ActionMessage11? DisplayOutput { get; init; }
-
-    /// <summary>
-    /// Maintenance Required Flag.
-    /// </summary>
-    [DisplayName("Maintenance Required Flag")]
-    [IsoXmlTag("MntncReqrdFlg")]
-    public TrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
-
-    /// <summary>
-    /// Retailer Event.
-    /// </summary>
-    [DisplayName("Retailer Event")]
-    [IsoXmlTag("RtlrEvt")]
-    public required RetailerEvent7 RetailerEvent { get; init; }
 }

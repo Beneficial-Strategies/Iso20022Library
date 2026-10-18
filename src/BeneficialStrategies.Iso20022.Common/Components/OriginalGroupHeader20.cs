@@ -18,13 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalGroupHeader20
 {
     /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
-    [DisplayName("Original Creation Date Time")]
-    [IsoXmlTag("OrgnlCreDtTm")]
-    public ISODateTime? OriginalCreationDateTime { get; init; }
-
-    /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
     /// </summary>
     [DisplayName("Original Message Identification")]
@@ -37,6 +30,13 @@ public record OriginalGroupHeader20
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
     public required Max35Text OriginalMessageNameIdentification { get; init; }
+
+    /// <summary>
+    /// Date and time at which the original message was created.
+    /// </summary>
+    [DisplayName("Original Creation Date Time")]
+    [IsoXmlTag("OrgnlCreDtTm")]
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Provides detailed information on the reversal reason.

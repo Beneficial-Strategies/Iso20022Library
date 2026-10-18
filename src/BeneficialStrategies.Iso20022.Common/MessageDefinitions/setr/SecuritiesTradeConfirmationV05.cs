@@ -61,48 +61,6 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cash parties involved in the specific transaction.
-    /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties33? CashParties { get; init; }
-
-    /// <summary>
-    /// Provides clearing member information.
-    /// </summary>
-    [DisplayName("Clearing Details")]
-    [IsoXmlTag("ClrDtls")]
-    public Clearing5? ClearingDetails { get; init; }
-
-    /// <summary>
-    /// Parties involved in the confirmation of the details of a trade.
-    /// </summary>
-    [DisplayName("Confirmation Parties")]
-    [IsoXmlTag("ConfPties")]
-    public ValueList<ConfirmationParties6> ConfirmationParties { get; init; } = [];
-
-    /// <summary>
-    /// Specifies the chain of delivering settlement parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties59? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Elements characterising a financial instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes124? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Unique and unambiguous identifier of a financial instrument, assigned under a formal or proprietary identification scheme.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
     /// Information that unambiguously identifies an SecuritiesTradeConfirmation message as known by the account owner (or the instructing party acting on its behalf).
     /// </summary>
     [DisplayName("Identification")]
@@ -117,34 +75,6 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public NumberCount1Choice_? NumberCount { get; init; }
 
     /// <summary>
-    /// Other amounts than the settlement amount.
-    /// </summary>
-    [DisplayName("Other Amounts")]
-    [IsoXmlTag("OthrAmts")]
-    public ValueList<OtherAmounts16> OtherAmounts { get; init; } = [];
-
-    /// <summary>
-    /// Other business parties relevant to the transaction.
-    /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties32? OtherBusinessParties { get; init; }
-
-    /// <summary>
-    /// Other prices than the deal price.
-    /// </summary>
-    [DisplayName("Other Prices")]
-    [IsoXmlTag("OthrPrics")]
-    public ValueList<OtherPrices5> OtherPrices { get; init; } = [];
-
-    /// <summary>
-    /// Specifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties59? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
     /// Reference to the transaction identifier issued by a business party and/or market infrastructure. It may also be used to reference a previous transaction, for example, a block/allocation instruction, or tie a set of messages together.
     /// </summary>
     [DisplayName("References")]
@@ -152,18 +82,47 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public ValueList<Linkages76> References { get; init; } = [];
 
     /// <summary>
-    /// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.
+    /// Details of the trade.
     /// </summary>
-    [DisplayName("Regulatory Stipulations")]
-    [IsoXmlTag("RgltryStiptns")]
-    public RegulatoryStipulations1? RegulatoryStipulations { get; init; }
+    [DisplayName("Trade Details")]
+    [IsoXmlTag("TradDtls")]
+    public required Order24 TradeDetails { get; init; }
 
     /// <summary>
-    /// Total amount of money to be paid or received in exchange for the securities. The amount includes the principal with any commissions and fees or accrued interest.
+    /// Unique and unambiguous identifier of a financial instrument, assigned under a formal or proprietary identification scheme.
     /// </summary>
-    [DisplayName("Settlement Amount")]
-    [IsoXmlTag("SttlmAmt")]
-    public AmountAndDirection28? SettlementAmount { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Elements characterising a financial instrument.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes124? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Underlying financial instrument to which an trade confirmation is related.
+    /// </summary>
+    [DisplayName("Underlying Financial Instrument")]
+    [IsoXmlTag("UndrlygFinInstrm")]
+    public ValueList<UnderlyingFinancialInstrument7> UnderlyingFinancialInstrument { get; init; } =
+        [];
+
+    /// <summary>
+    /// Additional restrictions on the financial instrument, related to the stipulation.
+    /// </summary>
+    [DisplayName("Stipulations")]
+    [IsoXmlTag("Stiptns")]
+    public FinancialInstrumentStipulations4? Stipulations { get; init; }
+
+    /// <summary>
+    /// Parties involved in the confirmation of the details of a trade.
+    /// </summary>
+    [DisplayName("Confirmation Parties")]
+    [IsoXmlTag("ConfPties")]
+    public ValueList<ConfirmationParties6> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
@@ -180,25 +139,60 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public StandingSettlementInstruction13? StandingSettlementInstruction { get; init; }
 
     /// <summary>
-    /// Additional restrictions on the financial instrument, related to the stipulation.
+    /// Specifies the chain of delivering settlement parties.
     /// </summary>
-    [DisplayName("Stipulations")]
-    [IsoXmlTag("Stiptns")]
-    public FinancialInstrumentStipulations4? Stipulations { get; init; }
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties59? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// Specifies the chain of receiving settlement parties.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties59? ReceivingSettlementParties { get; init; }
 
     /// <summary>
-    /// Details of the trade.
+    /// Cash parties involved in the specific transaction.
     /// </summary>
-    [DisplayName("Trade Details")]
-    [IsoXmlTag("TradDtls")]
-    public required Order24 TradeDetails { get; init; }
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties33? CashParties { get; init; }
+
+    /// <summary>
+    /// Provides clearing member information.
+    /// </summary>
+    [DisplayName("Clearing Details")]
+    [IsoXmlTag("ClrDtls")]
+    public Clearing5? ClearingDetails { get; init; }
+
+    /// <summary>
+    /// Total amount of money to be paid or received in exchange for the securities. The amount includes the principal with any commissions and fees or accrued interest.
+    /// </summary>
+    [DisplayName("Settlement Amount")]
+    [IsoXmlTag("SttlmAmt")]
+    public AmountAndDirection28? SettlementAmount { get; init; }
+
+    /// <summary>
+    /// Other amounts than the settlement amount.
+    /// </summary>
+    [DisplayName("Other Amounts")]
+    [IsoXmlTag("OthrAmts")]
+    public ValueList<OtherAmounts16> OtherAmounts { get; init; } = [];
+
+    /// <summary>
+    /// Other prices than the deal price.
+    /// </summary>
+    [DisplayName("Other Prices")]
+    [IsoXmlTag("OthrPrics")]
+    public ValueList<OtherPrices5> OtherPrices { get; init; } = [];
+
+    /// <summary>
+    /// Other business parties relevant to the transaction.
+    /// </summary>
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties32? OtherBusinessParties { get; init; }
 
     /// <summary>
     /// Specifies a transaction that the trading parties are agreeing to repurchase, sell back or return the same or similar securities at a later time.
@@ -209,10 +203,16 @@ public record SecuritiesTradeConfirmationV05 : IOuterRecord
     public TwoLegTransactionDetails5? TwoLegTransactionDetails { get; init; }
 
     /// <summary>
-    /// Underlying financial instrument to which an trade confirmation is related.
+    /// Specifies regulatory stipulations that financial institutions must be compliant with in the country, region, and/or area they conduct business.
     /// </summary>
-    [DisplayName("Underlying Financial Instrument")]
-    [IsoXmlTag("UndrlygFinInstrm")]
-    public ValueList<UnderlyingFinancialInstrument7> UnderlyingFinancialInstrument { get; init; } =
-        [];
+    [DisplayName("Regulatory Stipulations")]
+    [IsoXmlTag("RgltryStiptns")]
+    public RegulatoryStipulations1? RegulatoryStipulations { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -46,18 +46,18 @@ public record FinancialInstrumentReportingNonEquityTransparencyDataReportV03 : I
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Non Equity Transparency Data.
-    /// </summary>
-    [DisplayName("Non Equity Transparency Data")]
-    [IsoXmlTag("NonEqtyTrnsprncyData")]
-    public ValueList<TransparencyDataReport21> NonEquityTransparencyData { get; init; } = [];
-
-    /// <summary>
     /// Report Header.
     /// </summary>
     [DisplayName("Report Header")]
     [IsoXmlTag("RptHdr")]
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; }
+
+    /// <summary>
+    /// Non Equity Transparency Data.
+    /// </summary>
+    [DisplayName("Non Equity Transparency Data")]
+    [IsoXmlTag("NonEqtyTrnsprncyData")]
+    public ValueList<TransparencyDataReport21> NonEquityTransparencyData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

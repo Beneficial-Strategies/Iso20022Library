@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportContent2
 {
     /// <summary>
-    /// Formatted Content.
-    /// </summary>
-    [DisplayName("Formatted Content")]
-    [IsoXmlTag("FrmtdCntt")]
-    public required ReportContent2Choice_ FormattedContent { get; init; }
-
-    /// <summary>
     /// Report Line Sequence.
     /// </summary>
     [DisplayName("Report Line Sequence")]
     [IsoXmlTag("RptLineSeq")]
     public Max10NumericText? ReportLineSequence { get; init; }
+
+    /// <summary>
+    /// Formatted Content.
+    /// </summary>
+    [DisplayName("Formatted Content")]
+    [IsoXmlTag("FrmtdCntt")]
+    public required ReportContent2Choice_ FormattedContent { get; init; }
 }

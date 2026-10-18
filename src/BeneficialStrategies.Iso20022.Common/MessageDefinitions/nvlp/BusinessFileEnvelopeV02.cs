@@ -46,13 +46,6 @@ public record BusinessFileEnvelopeV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Application Specifics.
-    /// </summary>
-    [DisplayName("Application Specifics")]
-    [IsoXmlTag("ApplSpcfcs")]
-    public ApplicationSpecifics2? ApplicationSpecifics { get; init; }
-
-    /// <summary>
     /// From.
     /// </summary>
     [DisplayName("From")]
@@ -60,11 +53,11 @@ public record BusinessFileEnvelopeV02 : IOuterRecord
     public GenericIdentification190? From { get; init; }
 
     /// <summary>
-    /// Payload.
+    /// To.
     /// </summary>
-    [DisplayName("Payload")]
-    [IsoXmlTag("Pyld")]
-    public ValueList<BusinessPayload1> Payload { get; init; } = [];
+    [DisplayName("To")]
+    [IsoXmlTag("To")]
+    public GenericIdentification190? To { get; init; }
 
     /// <summary>
     /// Payload Data.
@@ -74,6 +67,13 @@ public record BusinessFileEnvelopeV02 : IOuterRecord
     public required PayloadData3 PayloadData { get; init; }
 
     /// <summary>
+    /// Application Specifics.
+    /// </summary>
+    [DisplayName("Application Specifics")]
+    [IsoXmlTag("ApplSpcfcs")]
+    public ApplicationSpecifics2? ApplicationSpecifics { get; init; }
+
+    /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
@@ -81,16 +81,16 @@ public record BusinessFileEnvelopeV02 : IOuterRecord
     public ValueList<ReferenceData1> Reference { get; init; } = [];
 
     /// <summary>
+    /// Payload.
+    /// </summary>
+    [DisplayName("Payload")]
+    [IsoXmlTag("Pyld")]
+    public ValueList<BusinessPayload1> Payload { get; init; } = [];
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// To.
-    /// </summary>
-    [DisplayName("To")]
-    [IsoXmlTag("To")]
-    public GenericIdentification190? To { get; init; }
 }

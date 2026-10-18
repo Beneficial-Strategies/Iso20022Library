@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContactPersonal1
 {
     /// <summary>
-    /// Business Email.
+    /// Name.
     /// </summary>
-    [DisplayName("Business Email")]
-    [IsoXmlTag("BizEmail")]
-    public Max256Text? BusinessEmail { get; init; }
-
-    /// <summary>
-    /// Business Fax.
-    /// </summary>
-    [DisplayName("Business Fax")]
-    [IsoXmlTag("BizFax")]
-    public PhoneNumber? BusinessFax { get; init; }
-
-    /// <summary>
-    /// Business Phone.
-    /// </summary>
-    [DisplayName("Business Phone")]
-    [IsoXmlTag("BizPhne")]
-    public PhoneNumber? BusinessPhone { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Given Name.
@@ -45,25 +31,11 @@ public record ContactPersonal1
     public Max35Text? GivenName { get; init; }
 
     /// <summary>
-    /// Home Fax.
+    /// Middle Name.
     /// </summary>
-    [DisplayName("Home Fax")]
-    [IsoXmlTag("HomeFax")]
-    public PhoneNumber? HomeFax { get; init; }
-
-    /// <summary>
-    /// Home Phone.
-    /// </summary>
-    [DisplayName("Home Phone")]
-    [IsoXmlTag("HomePhne")]
-    public PhoneNumber? HomePhone { get; init; }
-
-    /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public ISO2ALanguageCode? Language { get; init; }
+    [DisplayName("Middle Name")]
+    [IsoXmlTag("MddlNm")]
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Last Name.
@@ -73,11 +45,18 @@ public record ContactPersonal1
     public Max35Text? LastName { get; init; }
 
     /// <summary>
-    /// Middle Name.
+    /// Home Phone.
     /// </summary>
-    [DisplayName("Middle Name")]
-    [IsoXmlTag("MddlNm")]
-    public Max35Text? MiddleName { get; init; }
+    [DisplayName("Home Phone")]
+    [IsoXmlTag("HomePhne")]
+    public PhoneNumber? HomePhone { get; init; }
+
+    /// <summary>
+    /// Business Phone.
+    /// </summary>
+    [DisplayName("Business Phone")]
+    [IsoXmlTag("BizPhne")]
+    public PhoneNumber? BusinessPhone { get; init; }
 
     /// <summary>
     /// Mobile Phone.
@@ -85,20 +64,6 @@ public record ContactPersonal1
     [DisplayName("Mobile Phone")]
     [IsoXmlTag("MobPhne")]
     public PhoneNumber? MobilePhone { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
-
-    /// <summary>
-    /// Other Email.
-    /// </summary>
-    [DisplayName("Other Email")]
-    [IsoXmlTag("OthrEmail")]
-    public Max256Text? OtherEmail { get; init; }
 
     /// <summary>
     /// Other Phone.
@@ -115,9 +80,44 @@ public record ContactPersonal1
     public Max256Text? PersonalEmail { get; init; }
 
     /// <summary>
+    /// Business Email.
+    /// </summary>
+    [DisplayName("Business Email")]
+    [IsoXmlTag("BizEmail")]
+    public Max256Text? BusinessEmail { get; init; }
+
+    /// <summary>
+    /// Other Email.
+    /// </summary>
+    [DisplayName("Other Email")]
+    [IsoXmlTag("OthrEmail")]
+    public Max256Text? OtherEmail { get; init; }
+
+    /// <summary>
+    /// Home Fax.
+    /// </summary>
+    [DisplayName("Home Fax")]
+    [IsoXmlTag("HomeFax")]
+    public PhoneNumber? HomeFax { get; init; }
+
+    /// <summary>
+    /// Business Fax.
+    /// </summary>
+    [DisplayName("Business Fax")]
+    [IsoXmlTag("BizFax")]
+    public PhoneNumber? BusinessFax { get; init; }
+
+    /// <summary>
     /// URL.
     /// </summary>
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
     public Max256Text? URL { get; init; }
+
+    /// <summary>
+    /// Language.
+    /// </summary>
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public ISO2ALanguageCode? Language { get; init; }
 }

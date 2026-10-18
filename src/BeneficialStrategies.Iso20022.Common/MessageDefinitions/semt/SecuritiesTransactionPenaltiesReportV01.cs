@@ -46,6 +46,27 @@ public record SecuritiesTransactionPenaltiesReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Report Pagination.
+    /// </summary>
+    [DisplayName("Report Pagination")]
+    [IsoXmlTag("RptPgntn")]
+    public Pagination1? ReportPagination { get; init; }
+
+    /// <summary>
+    /// Report General Details.
+    /// </summary>
+    [DisplayName("Report General Details")]
+    [IsoXmlTag("RptGnlDtls")]
+    public required PenaltyReport1 ReportGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -65,27 +86,6 @@ public record SecuritiesTransactionPenaltiesReportV01 : IOuterRecord
     [DisplayName("Penalty")]
     [IsoXmlTag("Pnlty")]
     public ValueList<Penalty4> Penalty { get; init; } = [];
-
-    /// <summary>
-    /// Report General Details.
-    /// </summary>
-    [DisplayName("Report General Details")]
-    [IsoXmlTag("RptGnlDtls")]
-    public required PenaltyReport1 ReportGeneralDetails { get; init; }
-
-    /// <summary>
-    /// Report Pagination.
-    /// </summary>
-    [DisplayName("Report Pagination")]
-    [IsoXmlTag("RptPgntn")]
-    public Pagination1? ReportPagination { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Supplementary Data.

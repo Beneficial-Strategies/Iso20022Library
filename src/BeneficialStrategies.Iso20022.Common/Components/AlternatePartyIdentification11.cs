@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AlternatePartyIdentification11
 {
     /// <summary>
-    /// Alternate Identification.
+    /// Identification Type.
     /// </summary>
-    [DisplayName("Alternate Identification")]
-    [IsoXmlTag("AltrnId")]
-    public required Max35Text AlternateIdentification { get; init; }
+    [DisplayName("Identification Type")]
+    [IsoXmlTag("IdTp")]
+    public required IdentificationType46Choice_ IdentificationType { get; init; }
 
     /// <summary>
     /// Country.
@@ -31,9 +31,9 @@ public record AlternatePartyIdentification11
     public required CountryCode Country { get; init; }
 
     /// <summary>
-    /// Identification Type.
+    /// Alternate Identification.
     /// </summary>
-    [DisplayName("Identification Type")]
-    [IsoXmlTag("IdTp")]
-    public required IdentificationType46Choice_ IdentificationType { get; init; }
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public required Max35Text AlternateIdentification { get; init; }
 }

@@ -46,18 +46,18 @@ public record CollateralValueCreationRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Collateral Value.
-    /// </summary>
-    [DisplayName("Collateral Value")]
-    [IsoXmlTag("CollVal")]
-    public ValueList<CollateralValue5> CollateralValue { get; init; } = [];
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public MessageHeader1? MessageHeader { get; init; }
+
+    /// <summary>
+    /// Collateral Value.
+    /// </summary>
+    [DisplayName("Collateral Value")]
+    [IsoXmlTag("CollVal")]
+    public ValueList<CollateralValue5> CollateralValue { get; init; } = [];
 
     /// <summary>
     /// Party Identification.

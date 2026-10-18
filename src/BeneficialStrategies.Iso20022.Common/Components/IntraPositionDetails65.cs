@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraPositionDetails65
 {
     /// <summary>
-    /// Available Date.
+    /// Settled Quantity.
     /// </summary>
-    [DisplayName("Available Date")]
-    [IsoXmlTag("AvlblDt")]
-    public DateAndDateTime2Choice_? AvailableDate { get; init; }
+    [DisplayName("Settled Quantity")]
+    [IsoXmlTag("SttldQty")]
+    public required FinancialInstrumentQuantity33Choice_ SettledQuantity { get; init; }
 
     /// <summary>
-    /// Balance From.
+    /// Securities Sub Balance Identification.
     /// </summary>
-    [DisplayName("Balance From")]
-    [IsoXmlTag("BalFr")]
-    public required SecuritiesSubBalanceTypeAndQuantityBreakdown5 BalanceFrom { get; init; }
-
-    /// <summary>
-    /// Balance To.
-    /// </summary>
-    [DisplayName("Balance To")]
-    [IsoXmlTag("BalTo")]
-    public required SecuritiesSubBalanceTypeAndQuantityBreakdown5 BalanceTo { get; init; }
+    [DisplayName("Securities Sub Balance Identification")]
+    [IsoXmlTag("SctiesSubBalId")]
+    public GenericIdentification37? SecuritiesSubBalanceIdentification { get; init; }
 
     /// <summary>
     /// Collateral Monitor Amount.
@@ -43,20 +36,6 @@ public record IntraPositionDetails65
     [DisplayName("Collateral Monitor Amount")]
     [IsoXmlTag("CollMntrAmt")]
     public AmountAndDirection44? CollateralMonitorAmount { get; init; }
-
-    /// <summary>
-    /// Corporate Action Event Type.
-    /// </summary>
-    [DisplayName("Corporate Action Event Type")]
-    [IsoXmlTag("CorpActnEvtTp")]
-    public CorporateActionEventType110Choice_? CorporateActionEventType { get; init; }
-
-    /// <summary>
-    /// Instruction Processing Additional Details.
-    /// </summary>
-    [DisplayName("Instruction Processing Additional Details")]
-    [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Previously Settled Quantity.
@@ -73,23 +52,44 @@ public record IntraPositionDetails65
     public FinancialInstrumentQuantity33Choice_? RemainingToBeSettledQuantity { get; init; }
 
     /// <summary>
-    /// Securities Sub Balance Identification.
-    /// </summary>
-    [DisplayName("Securities Sub Balance Identification")]
-    [IsoXmlTag("SctiesSubBalId")]
-    public GenericIdentification37? SecuritiesSubBalanceIdentification { get; init; }
-
-    /// <summary>
-    /// Settled Quantity.
-    /// </summary>
-    [DisplayName("Settled Quantity")]
-    [IsoXmlTag("SttldQty")]
-    public required FinancialInstrumentQuantity33Choice_ SettledQuantity { get; init; }
-
-    /// <summary>
     /// Settlement Date.
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     public required DateAndDateTime2Choice_ SettlementDate { get; init; }
+
+    /// <summary>
+    /// Available Date.
+    /// </summary>
+    [DisplayName("Available Date")]
+    [IsoXmlTag("AvlblDt")]
+    public DateAndDateTime2Choice_? AvailableDate { get; init; }
+
+    /// <summary>
+    /// Corporate Action Event Type.
+    /// </summary>
+    [DisplayName("Corporate Action Event Type")]
+    [IsoXmlTag("CorpActnEvtTp")]
+    public CorporateActionEventType110Choice_? CorporateActionEventType { get; init; }
+
+    /// <summary>
+    /// Balance From.
+    /// </summary>
+    [DisplayName("Balance From")]
+    [IsoXmlTag("BalFr")]
+    public required SecuritiesSubBalanceTypeAndQuantityBreakdown5 BalanceFrom { get; init; }
+
+    /// <summary>
+    /// Balance To.
+    /// </summary>
+    [DisplayName("Balance To")]
+    [IsoXmlTag("BalTo")]
+    public required SecuritiesSubBalanceTypeAndQuantityBreakdown5 BalanceTo { get; init; }
+
+    /// <summary>
+    /// Instruction Processing Additional Details.
+    /// </summary>
+    [DisplayName("Instruction Processing Additional Details")]
+    [IsoXmlTag("InstrPrcgAddtlDtls")]
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CompensationResponse1
 {
     /// <summary>
-    /// Amount Due.
-    /// </summary>
-    [DisplayName("Amount Due")]
-    [IsoXmlTag("AmtDue")]
-    public ActiveCurrencyAndAmount? AmountDue { get; init; }
-
-    /// <summary>
-    /// Expected Value Date.
-    /// </summary>
-    [DisplayName("Expected Value Date")]
-    [IsoXmlTag("XpctdValDt")]
-    public ISODate? ExpectedValueDate { get; init; }
-
-    /// <summary>
     /// Granted.
     /// </summary>
     [DisplayName("Granted")]
@@ -45,13 +31,6 @@ public record CompensationResponse1
     public ActiveCurrencyAndAmount? InitialAmount { get; init; }
 
     /// <summary>
-    /// Interest Rate.
-    /// </summary>
-    [DisplayName("Interest Rate")]
-    [IsoXmlTag("IntrstRate")]
-    public PercentageRate? InterestRate { get; init; }
-
-    /// <summary>
     /// Paid Charges.
     /// </summary>
     [DisplayName("Paid Charges")]
@@ -59,11 +38,32 @@ public record CompensationResponse1
     public ActiveCurrencyAndAmount? PaidCharges { get; init; }
 
     /// <summary>
+    /// Amount Due.
+    /// </summary>
+    [DisplayName("Amount Due")]
+    [IsoXmlTag("AmtDue")]
+    public ActiveCurrencyAndAmount? AmountDue { get; init; }
+
+    /// <summary>
+    /// Expected Value Date.
+    /// </summary>
+    [DisplayName("Expected Value Date")]
+    [IsoXmlTag("XpctdValDt")]
+    public ISODate? ExpectedValueDate { get; init; }
+
+    /// <summary>
     /// Period.
     /// </summary>
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     public DatePeriod2? Period { get; init; }
+
+    /// <summary>
+    /// Interest Rate.
+    /// </summary>
+    [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Reason.

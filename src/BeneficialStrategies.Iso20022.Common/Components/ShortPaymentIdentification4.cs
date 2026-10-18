@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ShortPaymentIdentification4
 {
     /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public required ISODate InterbankSettlementDate { get; init; }
-
-    /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
@@ -43,4 +29,18 @@ public record ShortPaymentIdentification4
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
+    /// Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public required ISODate InterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// Instructing Agent.
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 InstructingAgent { get; init; }
 }

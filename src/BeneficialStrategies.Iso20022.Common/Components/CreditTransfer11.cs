@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditTransfer11
 {
     /// <summary>
-    /// Creditor.
-    /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification132? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public required AccountIdentificationAndName6 CreditorAccount { get; init; }
-
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required FinancialInstitutionIdentification16 CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public AccountIdentificationAndName6? CreditorAgentAccount { get; init; }
-
-    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -99,4 +71,32 @@ public record CreditTransfer11
     [DisplayName("Intermediary Agent2Account")]
     [IsoXmlTag("IntrmyAgt2Acct")]
     public AccountIdentificationAndName6? IntermediaryAgent2Account { get; init; }
+
+    /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required FinancialInstitutionIdentification16 CreditorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor Agent Account.
+    /// </summary>
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public AccountIdentificationAndName6? CreditorAgentAccount { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification132? Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Account.
+    /// </summary>
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public required AccountIdentificationAndName6 CreditorAccount { get; init; }
 }

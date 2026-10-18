@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentBatchTransfer12
 {
     /// <summary>
-    /// Data Set.
-    /// </summary>
-    [DisplayName("Data Set")]
-    [IsoXmlTag("DataSet")]
-    public ValueList<CardPaymentDataSet37> DataSet { get; init; } = [];
-
-    /// <summary>
     /// Transaction Totals.
     /// </summary>
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
+
+    /// <summary>
+    /// Data Set.
+    /// </summary>
+    [DisplayName("Data Set")]
+    [IsoXmlTag("DataSet")]
+    public ValueList<CardPaymentDataSet37> DataSet { get; init; } = [];
 }

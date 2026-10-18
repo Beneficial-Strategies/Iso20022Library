@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyAuditTrailReport4
 {
     /// <summary>
-    /// Date Period.
-    /// </summary>
-    [DisplayName("Date Period")]
-    [IsoXmlTag("DtPrd")]
-    public DatePeriod3Choice_? DatePeriod { get; init; }
-
-    /// <summary>
     /// Party Audit Trail Or Error.
     /// </summary>
     [DisplayName("Party Audit Trail Or Error")]
     [IsoXmlTag("PtyAudtTrlOrErr")]
     public required PartyAuditTrailOrError4Choice_ PartyAuditTrailOrError { get; init; }
+
+    /// <summary>
+    /// Date Period.
+    /// </summary>
+    [DisplayName("Date Period")]
+    [IsoXmlTag("DtPrd")]
+    public DatePeriod3Choice_? DatePeriod { get; init; }
 
     /// <summary>
     /// Party Identification.

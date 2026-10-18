@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityDate25
 {
     /// <summary>
+    /// Posting Date.
+    /// </summary>
+    [DisplayName("Posting Date")]
+    [IsoXmlTag("PstngDt")]
+    public required DateAndDateTime2Choice_ PostingDate { get; init; }
+
+    /// <summary>
     /// Available Date.
     /// </summary>
     [DisplayName("Available Date")]
     [IsoXmlTag("AvlblDt")]
     public DateFormat30Choice_? AvailableDate { get; init; }
+
+    /// <summary>
+    /// Pari Passu Date.
+    /// </summary>
+    [DisplayName("Pari Passu Date")]
+    [IsoXmlTag("PrpssDt")]
+    public DateFormat30Choice_? PariPassuDate { get; init; }
 
     /// <summary>
     /// Dividend Ranking Date.
@@ -38,23 +52,9 @@ public record SecurityDate25
     public DateFormat30Choice_? EarliestPaymentDate { get; init; }
 
     /// <summary>
-    /// Pari Passu Date.
-    /// </summary>
-    [DisplayName("Pari Passu Date")]
-    [IsoXmlTag("PrpssDt")]
-    public DateFormat30Choice_? PariPassuDate { get; init; }
-
-    /// <summary>
     /// Payment Date.
     /// </summary>
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     public DateFormat30Choice_? PaymentDate { get; init; }
-
-    /// <summary>
-    /// Posting Date.
-    /// </summary>
-    [DisplayName("Posting Date")]
-    [IsoXmlTag("PstngDt")]
-    public required DateAndDateTime2Choice_ PostingDate { get; init; }
 }

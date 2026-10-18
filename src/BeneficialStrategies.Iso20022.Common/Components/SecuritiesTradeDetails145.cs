@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesTradeDetails145
 {
     /// <summary>
-    /// Acknowledged Status Time Stamp.
+    /// Trade Identification.
     /// </summary>
-    [DisplayName("Acknowledged Status Time Stamp")]
-    [IsoXmlTag("AckdStsTmStmp")]
-    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
-    /// Affirmation Status.
+    /// Unique Transaction Identifier.
     /// </summary>
-    [DisplayName("Affirmation Status")]
-    [IsoXmlTag("AffirmSts")]
-    public AffirmationStatus8Choice_? AffirmationStatus { get; init; }
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Collateral Transaction Identification.
@@ -38,32 +38,32 @@ public record SecuritiesTradeDetails145
     public ValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
-    /// Currency To Buy Or Sell.
+    /// Place Of Trade.
     /// </summary>
-    [DisplayName("Currency To Buy Or Sell")]
-    [IsoXmlTag("CcyToBuyOrSell")]
-    public CurrencyToBuyOrSell1Choice_? CurrencyToBuyOrSell { get; init; }
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
 
     /// <summary>
-    /// Deal Price.
+    /// Place Of Clearing.
     /// </summary>
-    [DisplayName("Deal Price")]
-    [IsoXmlTag("DealPric")]
-    public Price10? DealPrice { get; init; }
+    [DisplayName("Place Of Clearing")]
+    [IsoXmlTag("PlcOfClr")]
+    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
 
     /// <summary>
-    /// FX Additional Details.
+    /// Trade Date.
     /// </summary>
-    [DisplayName("FX Additional Details")]
-    [IsoXmlTag("FxAddtlDtls")]
-    public Max350Text? FXAdditionalDetails { get; init; }
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     /// <summary>
-    /// Investor Capacity.
+    /// Settlement Date.
     /// </summary>
-    [DisplayName("Investor Capacity")]
-    [IsoXmlTag("InvstrCpcty")]
-    public InvestorCapacity4Choice_? InvestorCapacity { get; init; }
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     /// <summary>
     /// Late Delivery Date.
@@ -73,6 +73,13 @@ public record SecuritiesTradeDetails145
     public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
 
     /// <summary>
+    /// Acknowledged Status Time Stamp.
+    /// </summary>
+    [DisplayName("Acknowledged Status Time Stamp")]
+    [IsoXmlTag("AckdStsTmStmp")]
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+
+    /// <summary>
     /// Matched Status Time Stamp.
     /// </summary>
     [DisplayName("Matched Status Time Stamp")]
@@ -80,11 +87,11 @@ public record SecuritiesTradeDetails145
     public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
-    /// Matching Status.
+    /// Deal Price.
     /// </summary>
-    [DisplayName("Matching Status")]
-    [IsoXmlTag("MtchgSts")]
-    public MatchingStatus27Choice_? MatchingStatus { get; init; }
+    [DisplayName("Deal Price")]
+    [IsoXmlTag("DealPric")]
+    public Price10? DealPrice { get; init; }
 
     /// <summary>
     /// Number Of Days Accrued.
@@ -101,60 +108,11 @@ public record SecuritiesTradeDetails145
     public OpeningClosing3Choice_? OpeningClosing { get; init; }
 
     /// <summary>
-    /// Place Of Clearing.
-    /// </summary>
-    [DisplayName("Place Of Clearing")]
-    [IsoXmlTag("PlcOfClr")]
-    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
-
-    /// <summary>
-    /// Place Of Trade.
-    /// </summary>
-    [DisplayName("Place Of Trade")]
-    [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
-
-    /// <summary>
     /// Reporting.
     /// </summary>
     [DisplayName("Reporting")]
     [IsoXmlTag("Rptg")]
     public ValueList<Reporting6Choice_> Reporting { get; init; } = [];
-
-    /// <summary>
-    /// Settlement Date.
-    /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice_ SettlementDate { get; init; }
-
-    /// <summary>
-    /// Settlement Instruction Processing Additional Details.
-    /// </summary>
-    [DisplayName("Settlement Instruction Processing Additional Details")]
-    [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
-
-    /// <summary>
-    /// Trade Date.
-    /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public Max35Text? TradeIdentification { get; init; }
-
-    /// <summary>
-    /// Trade Originator Role.
-    /// </summary>
-    [DisplayName("Trade Originator Role")]
-    [IsoXmlTag("TradOrgtrRole")]
-    public TradeOriginator3Choice_? TradeOriginatorRole { get; init; }
 
     /// <summary>
     /// Trade Transaction Condition.
@@ -165,6 +123,20 @@ public record SecuritiesTradeDetails145
         [];
 
     /// <summary>
+    /// Investor Capacity.
+    /// </summary>
+    [DisplayName("Investor Capacity")]
+    [IsoXmlTag("InvstrCpcty")]
+    public InvestorCapacity4Choice_? InvestorCapacity { get; init; }
+
+    /// <summary>
+    /// Trade Originator Role.
+    /// </summary>
+    [DisplayName("Trade Originator Role")]
+    [IsoXmlTag("TradOrgtrRole")]
+    public TradeOriginator3Choice_? TradeOriginatorRole { get; init; }
+
+    /// <summary>
     /// Type Of Price.
     /// </summary>
     [DisplayName("Type Of Price")]
@@ -172,9 +144,37 @@ public record SecuritiesTradeDetails145
     public TypeOfPrice29Choice_? TypeOfPrice { get; init; }
 
     /// <summary>
-    /// Unique Transaction Identifier.
+    /// Currency To Buy Or Sell.
     /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    [DisplayName("Currency To Buy Or Sell")]
+    [IsoXmlTag("CcyToBuyOrSell")]
+    public CurrencyToBuyOrSell1Choice_? CurrencyToBuyOrSell { get; init; }
+
+    /// <summary>
+    /// Matching Status.
+    /// </summary>
+    [DisplayName("Matching Status")]
+    [IsoXmlTag("MtchgSts")]
+    public MatchingStatus27Choice_? MatchingStatus { get; init; }
+
+    /// <summary>
+    /// Affirmation Status.
+    /// </summary>
+    [DisplayName("Affirmation Status")]
+    [IsoXmlTag("AffirmSts")]
+    public AffirmationStatus8Choice_? AffirmationStatus { get; init; }
+
+    /// <summary>
+    /// FX Additional Details.
+    /// </summary>
+    [DisplayName("FX Additional Details")]
+    [IsoXmlTag("FxAddtlDtls")]
+    public Max350Text? FXAdditionalDetails { get; init; }
+
+    /// <summary>
+    /// Settlement Instruction Processing Additional Details.
+    /// </summary>
+    [DisplayName("Settlement Instruction Processing Additional Details")]
+    [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

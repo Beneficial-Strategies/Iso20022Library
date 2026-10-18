@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CancelInstruction5
 {
     /// <summary>
-    /// Instructed Position.
-    /// </summary>
-    [DisplayName("Instructed Position")]
-    [IsoXmlTag("InstdPos")]
-    public SafekeepingAccount18? InstructedPosition { get; init; }
-
-    /// <summary>
     /// Single Instruction Identification.
     /// </summary>
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
     public required Max35Text SingleInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Instructed Position.
+    /// </summary>
+    [DisplayName("Instructed Position")]
+    [IsoXmlTag("InstdPos")]
+    public SafekeepingAccount18? InstructedPosition { get; init; }
 }

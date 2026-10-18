@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMService27
 {
     /// <summary>
+    /// Service Reference.
+    /// </summary>
+    [DisplayName("Service Reference")]
+    [IsoXmlTag("SvcRef")]
+    public Max35Text? ServiceReference { get; init; }
+
+    /// <summary>
     /// ATM Service Code.
     /// </summary>
     [DisplayName("ATM Service Code")]
@@ -29,13 +36,6 @@ public record ATMService27
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
     public Max35Text? HostServiceCode { get; init; }
-
-    /// <summary>
-    /// Service Reference.
-    /// </summary>
-    [DisplayName("Service Reference")]
-    [IsoXmlTag("SvcRef")]
-    public Max35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Service Type.

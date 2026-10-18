@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraBalanceCancellation7
 {
     /// <summary>
-    /// Cancellation.
-    /// </summary>
-    [DisplayName("Cancellation")]
-    [IsoXmlTag("Cxl")]
-    public ValueList<IntraBalanceCancellation8> Cancellation { get; init; } = [];
-
-    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -50,4 +43,11 @@ public record IntraBalanceCancellation7
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus69Choice_? ProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Cancellation.
+    /// </summary>
+    [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
+    public ValueList<IntraBalanceCancellation8> Cancellation { get; init; } = [];
 }

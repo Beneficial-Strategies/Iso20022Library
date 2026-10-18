@@ -18,13 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerData7
 {
     /// <summary>
-    /// Amount of money confirmed to the tracking system by the agent.
-    /// </summary>
-    [DisplayName("Confirmed Amount")]
-    [IsoXmlTag("ConfdAmt")]
-    public required ActiveCurrencyAndAmount ConfirmedAmount { get; init; }
-
-    /// <summary>
     /// Point in time when an update to the tracking system has been confirmed.
     /// Usage:
     /// This date can be the point in time when an agent provides a pending status update to the tracking system or when the creditor has been credited and can use the amount of money (as confirmed to the tracking system by the creditor agent).
@@ -32,6 +25,13 @@ public record TrackerData7
     [DisplayName("Confirmed Date")]
     [IsoXmlTag("ConfdDt")]
     public required DateAndDateTime2Choice_ ConfirmedDate { get; init; }
+
+    /// <summary>
+    /// Amount of money confirmed to the tracking system by the agent.
+    /// </summary>
+    [DisplayName("Confirmed Amount")]
+    [IsoXmlTag("ConfdAmt")]
+    public required ActiveCurrencyAndAmount ConfirmedAmount { get; init; }
 
     /// <summary>
     /// Provides tracker transaction information for a specific agent involved in the transaction chain.

@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMContext25
 {
     /// <summary>
-    /// Service.
-    /// </summary>
-    [DisplayName("Service")]
-    [IsoXmlTag("Svc")]
-    public required ATMService27 Service { get; init; }
-
-    /// <summary>
     /// Session Reference.
     /// </summary>
     [DisplayName("Session Reference")]
     [IsoXmlTag("SsnRef")]
     public Max35Text? SessionReference { get; init; }
+
+    /// <summary>
+    /// Service.
+    /// </summary>
+    [DisplayName("Service")]
+    [IsoXmlTag("Svc")]
+    public required ATMService27 Service { get; init; }
 }

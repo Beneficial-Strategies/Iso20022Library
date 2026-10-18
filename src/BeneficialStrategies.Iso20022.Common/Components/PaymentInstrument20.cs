@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentInstrument20
 {
     /// <summary>
-    /// Credit Transfer Details.
-    /// </summary>
-    [DisplayName("Credit Transfer Details")]
-    [IsoXmlTag("CdtTrfDtls")]
-    public CreditTransfer11? CreditTransferDetails { get; init; }
-
-    /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public Max35Text? Reference { get; init; }
+
+    /// <summary>
+    /// Credit Transfer Details.
+    /// </summary>
+    [DisplayName("Credit Transfer Details")]
+    [IsoXmlTag("CdtTrfDtls")]
+    public CreditTransfer11? CreditTransferDetails { get; init; }
 }

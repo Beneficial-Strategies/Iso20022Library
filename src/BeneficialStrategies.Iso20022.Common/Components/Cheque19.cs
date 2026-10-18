@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cheque19
 {
     /// <summary>
-    /// Cheque From.
+    /// Cheque Type.
     /// </summary>
-    [DisplayName("Cheque From")]
-    [IsoXmlTag("ChqFr")]
-    public NameAndAddress18? ChequeFrom { get; init; }
-
-    /// <summary>
-    /// Cheque Maturity Date.
-    /// </summary>
-    [DisplayName("Cheque Maturity Date")]
-    [IsoXmlTag("ChqMtrtyDt")]
-    public ISODate? ChequeMaturityDate { get; init; }
+    [DisplayName("Cheque Type")]
+    [IsoXmlTag("ChqTp")]
+    public ChequeType2Code? ChequeType { get; init; }
 
     /// <summary>
     /// Cheque Number.
@@ -38,18 +31,11 @@ public record Cheque19
     public Max35Text? ChequeNumber { get; init; }
 
     /// <summary>
-    /// Cheque Type.
+    /// Cheque From.
     /// </summary>
-    [DisplayName("Cheque Type")]
-    [IsoXmlTag("ChqTp")]
-    public ChequeType2Code? ChequeType { get; init; }
-
-    /// <summary>
-    /// Deliver To.
-    /// </summary>
-    [DisplayName("Deliver To")]
-    [IsoXmlTag("DlvrTo")]
-    public NameAndAddress18? DeliverTo { get; init; }
+    [DisplayName("Cheque From")]
+    [IsoXmlTag("ChqFr")]
+    public NameAndAddress18? ChequeFrom { get; init; }
 
     /// <summary>
     /// Delivery Method.
@@ -59,11 +45,11 @@ public record Cheque19
     public ChequeDeliveryMethod1Choice_? DeliveryMethod { get; init; }
 
     /// <summary>
-    /// Forms Code.
+    /// Deliver To.
     /// </summary>
-    [DisplayName("Forms Code")]
-    [IsoXmlTag("FrmsCd")]
-    public Max35Text? FormsCode { get; init; }
+    [DisplayName("Deliver To")]
+    [IsoXmlTag("DlvrTo")]
+    public NameAndAddress18? DeliverTo { get; init; }
 
     /// <summary>
     /// Instruction Priority.
@@ -73,6 +59,20 @@ public record Cheque19
     public Priority2Code? InstructionPriority { get; init; }
 
     /// <summary>
+    /// Cheque Maturity Date.
+    /// </summary>
+    [DisplayName("Cheque Maturity Date")]
+    [IsoXmlTag("ChqMtrtyDt")]
+    public ISODate? ChequeMaturityDate { get; init; }
+
+    /// <summary>
+    /// Forms Code.
+    /// </summary>
+    [DisplayName("Forms Code")]
+    [IsoXmlTag("FrmsCd")]
+    public Max35Text? FormsCode { get; init; }
+
+    /// <summary>
     /// Memo Field.
     /// </summary>
     [DisplayName("Memo Field")]
@@ -80,18 +80,18 @@ public record Cheque19
     public SimpleValueList<Max35Text> MemoField { get; init; } = [];
 
     /// <summary>
-    /// Print Location.
-    /// </summary>
-    [DisplayName("Print Location")]
-    [IsoXmlTag("PrtLctn")]
-    public Max35Text? PrintLocation { get; init; }
-
-    /// <summary>
     /// Regional Clearing Zone.
     /// </summary>
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
     public Max35Text? RegionalClearingZone { get; init; }
+
+    /// <summary>
+    /// Print Location.
+    /// </summary>
+    [DisplayName("Print Location")]
+    [IsoXmlTag("PrtLctn")]
+    public Max35Text? PrintLocation { get; init; }
 
     /// <summary>
     /// Signature.

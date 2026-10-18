@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BookingConfirmation5
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; }
-
-    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Booking Date.
-    /// </summary>
-    [DisplayName("Booking Date")]
-    [IsoXmlTag("BookgDt")]
-    public DateAndDateTime2Choice_? BookingDate { get; init; }
-
-    /// <summary>
-    /// Charges.
-    /// </summary>
-    [DisplayName("Charges")]
-    [IsoXmlTag("Chrgs")]
-    public Charges6? Charges { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -59,11 +38,25 @@ public record BookingConfirmation5
     public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Account.
     /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public Max140Text? Reason { get; init; }
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public CashAccount40? Account { get; init; }
+
+    /// <summary>
+    /// Booking Date.
+    /// </summary>
+    [DisplayName("Booking Date")]
+    [IsoXmlTag("BookgDt")]
+    public DateAndDateTime2Choice_? BookingDate { get; init; }
+
+    /// <summary>
+    /// Value Date.
+    /// </summary>
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public required DateAndDateTime2Choice_ ValueDate { get; init; }
 
     /// <summary>
     /// References.
@@ -73,9 +66,16 @@ public record BookingConfirmation5
     public required TransactionReferences6 References { get; init; }
 
     /// <summary>
-    /// Value Date.
+    /// Charges.
     /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public required DateAndDateTime2Choice_ ValueDate { get; init; }
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public Charges6? Charges { get; init; }
+
+    /// <summary>
+    /// Reason.
+    /// </summary>
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public Max140Text? Reason { get; init; }
 }

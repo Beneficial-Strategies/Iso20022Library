@@ -46,13 +46,6 @@ public record ForeignExchangeTradeBulkStatusNotificationV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Message Pagination.
-    /// </summary>
-    [DisplayName("Message Pagination")]
-    [IsoXmlTag("MsgPgntn")]
-    public Pagination1? MessagePagination { get; init; }
-
-    /// <summary>
     /// Status Details.
     /// </summary>
     [DisplayName("Status Details")]
@@ -60,16 +53,23 @@ public record ForeignExchangeTradeBulkStatusNotificationV06 : IOuterRecord
     public required TradeData45 StatusDetails { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Trade Data Report.
     /// </summary>
     [DisplayName("Trade Data Report")]
     [IsoXmlTag("TradDataRpt")]
     public ValueList<TradeDataReport2> TradeDataReport { get; init; } = [];
+
+    /// <summary>
+    /// Message Pagination.
+    /// </summary>
+    [DisplayName("Message Pagination")]
+    [IsoXmlTag("MsgPgntn")]
+    public Pagination1? MessagePagination { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

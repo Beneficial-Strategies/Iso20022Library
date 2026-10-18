@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashAccount43
 {
     /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveOrHistoricCurrencyCode? Currency { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public AccountIdentification4Choice_? Identification { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public CashAccountType2Choice_? Type { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveOrHistoricCurrencyCode? Currency { get; init; }
 
     /// <summary>
     /// Name.
@@ -38,13 +45,6 @@ public record CashAccount43
     public Max70Text? Name { get; init; }
 
     /// <summary>
-    /// Owner.
-    /// </summary>
-    [DisplayName("Owner")]
-    [IsoXmlTag("Ownr")]
-    public PartyIdentification272? Owner { get; init; }
-
-    /// <summary>
     /// Proxy.
     /// </summary>
     [DisplayName("Proxy")]
@@ -52,16 +52,16 @@ public record CashAccount43
     public ProxyAccountIdentification1? Proxy { get; init; }
 
     /// <summary>
+    /// Owner.
+    /// </summary>
+    [DisplayName("Owner")]
+    [IsoXmlTag("Ownr")]
+    public PartyIdentification272? Owner { get; init; }
+
+    /// <summary>
     /// Servicer.
     /// </summary>
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
     public BranchAndFinancialInstitutionIdentification8? Servicer { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public CashAccountType2Choice_? Type { get; init; }
 }

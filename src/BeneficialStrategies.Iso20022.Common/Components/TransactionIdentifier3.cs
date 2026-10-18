@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionIdentifier3
 {
     /// <summary>
-    /// Host Transaction Date Time.
-    /// </summary>
-    [DisplayName("Host Transaction Date Time")]
-    [IsoXmlTag("HstTxDtTm")]
-    public ISODateTime? HostTransactionDateTime { get; init; }
-
-    /// <summary>
     /// Transaction Date Time.
     /// </summary>
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
     public required ISODateTime TransactionDateTime { get; init; }
+
+    /// <summary>
+    /// Host Transaction Date Time.
+    /// </summary>
+    [DisplayName("Host Transaction Date Time")]
+    [IsoXmlTag("HstTxDtTm")]
+    public ISODateTime? HostTransactionDateTime { get; init; }
 
     /// <summary>
     /// Transaction Reference.

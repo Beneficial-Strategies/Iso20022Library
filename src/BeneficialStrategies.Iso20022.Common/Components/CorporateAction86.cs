@@ -17,14 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateAction86
 {
     /// <summary>
-    /// Additional Business Process Indicator.
-    /// </summary>
-    [DisplayName("Additional Business Process Indicator")]
-    [IsoXmlTag("AddtlBizPrcInd")]
-    public ValueList<AdditionalBusinessProcessFormat24Choice_> AdditionalBusinessProcessIndicator { get; init; } =
-        [];
-
-    /// <summary>
     /// Date Details.
     /// </summary>
     [DisplayName("Date Details")]
@@ -37,6 +29,14 @@ public record CorporateAction86
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
     public CorporateActionEventStageFormat15Choice_? EventStage { get; init; }
+
+    /// <summary>
+    /// Additional Business Process Indicator.
+    /// </summary>
+    [DisplayName("Additional Business Process Indicator")]
+    [IsoXmlTag("AddtlBizPrcInd")]
+    public ValueList<AdditionalBusinessProcessFormat24Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
     /// Intermediate Securities Distribution Type.

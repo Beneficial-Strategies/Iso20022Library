@@ -46,19 +46,19 @@ public record FIToFICustomerDirectDebitV11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Group Header.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    public required GroupHeader125 GroupHeader { get; init; }
+
+    /// <summary>
     /// Direct Debit Transaction Information.
     /// </summary>
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
     public ValueList<DirectDebitTransactionInformation31> DirectDebitTransactionInformation { get; init; } =
         [];
-
-    /// <summary>
-    /// Group Header.
-    /// </summary>
-    [DisplayName("Group Header")]
-    [IsoXmlTag("GrpHdr")]
-    public required GroupHeader125 GroupHeader { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -24,41 +24,6 @@ public record RedemptionMultipleExecution6
     public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
-    /// Beneficiary Details.
-    /// </summary>
-    [DisplayName("Beneficiary Details")]
-    [IsoXmlTag("BnfcryDtls")]
-    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
-
-    /// <summary>
-    /// Bulk Cash Settlement Details.
-    /// </summary>
-    [DisplayName("Bulk Cash Settlement Details")]
-    [IsoXmlTag("BlkCshSttlmDtls")]
-    public PaymentTransaction151? BulkCashSettlementDetails { get; init; }
-
-    /// <summary>
-    /// Cancellation Right.
-    /// </summary>
-    [DisplayName("Cancellation Right")]
-    [IsoXmlTag("CxlRght")]
-    public CancellationRight1Choice_? CancellationRight { get; init; }
-
-    /// <summary>
-    /// Individual Execution Details.
-    /// </summary>
-    [DisplayName("Individual Execution Details")]
-    [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<RedemptionExecution17> IndividualExecutionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Investment Account Details.
-    /// </summary>
-    [DisplayName("Investment Account Details")]
-    [IsoXmlTag("InvstmtAcctDtls")]
-    public required InvestmentAccount78 InvestmentAccountDetails { get; init; }
-
-    /// <summary>
     /// Master Reference.
     /// </summary>
     [DisplayName("Master Reference")]
@@ -66,18 +31,18 @@ public record RedemptionMultipleExecution6
     public Max35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Order Date Time.
-    /// </summary>
-    [DisplayName("Order Date Time")]
-    [IsoXmlTag("OrdrDtTm")]
-    public ISODateTime? OrderDateTime { get; init; }
-
-    /// <summary>
     /// Place Of Trade.
     /// </summary>
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
     public PlaceOfTradeIdentification4Choice_? PlaceOfTrade { get; init; }
+
+    /// <summary>
+    /// Order Date Time.
+    /// </summary>
+    [DisplayName("Order Date Time")]
+    [IsoXmlTag("OrdrDtTm")]
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Received Date Time.
@@ -94,9 +59,44 @@ public record RedemptionMultipleExecution6
     public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
+    /// Cancellation Right.
+    /// </summary>
+    [DisplayName("Cancellation Right")]
+    [IsoXmlTag("CxlRght")]
+    public CancellationRight1Choice_? CancellationRight { get; init; }
+
+    /// <summary>
+    /// Investment Account Details.
+    /// </summary>
+    [DisplayName("Investment Account Details")]
+    [IsoXmlTag("InvstmtAcctDtls")]
+    public required InvestmentAccount78 InvestmentAccountDetails { get; init; }
+
+    /// <summary>
+    /// Beneficiary Details.
+    /// </summary>
+    [DisplayName("Beneficiary Details")]
+    [IsoXmlTag("BnfcryDtls")]
+    public ValueList<IndividualPerson32> BeneficiaryDetails { get; init; } = [];
+
+    /// <summary>
+    /// Individual Execution Details.
+    /// </summary>
+    [DisplayName("Individual Execution Details")]
+    [IsoXmlTag("IndvExctnDtls")]
+    public ValueList<RedemptionExecution17> IndividualExecutionDetails { get; init; } = [];
+
+    /// <summary>
     /// Total Settlement Amount.
     /// </summary>
     [DisplayName("Total Settlement Amount")]
     [IsoXmlTag("TtlSttlmAmt")]
     public ActiveCurrencyAndAmount? TotalSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Bulk Cash Settlement Details.
+    /// </summary>
+    [DisplayName("Bulk Cash Settlement Details")]
+    [IsoXmlTag("BlkCshSttlmDtls")]
+    public PaymentTransaction151? BulkCashSettlementDetails { get; init; }
 }

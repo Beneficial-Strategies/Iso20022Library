@@ -46,6 +46,13 @@ public record RequestToPayDebtorActivationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Header.
+    /// </summary>
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required ActivationHeader3 Header { get; init; }
+
+    /// <summary>
     /// Debtor Activation.
     /// </summary>
     [DisplayName("Debtor Activation")]
@@ -58,13 +65,6 @@ public record RequestToPayDebtorActivationRequestV02 : IOuterRecord
     [DisplayName("Electronic Invoice Data")]
     [IsoXmlTag("ElctrncInvcData")]
     public required ElectronicInvoice1 ElectronicInvoiceData { get; init; }
-
-    /// <summary>
-    /// Header.
-    /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required ActivationHeader3 Header { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,11 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionOption239
 {
     /// <summary>
+    /// Option Number.
+    /// </summary>
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public required OptionNumber1Choice_ OptionNumber { get; init; }
+
+    /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption41Choice_ OptionType { get; init; }
+
+    /// <summary>
+    /// Option Features.
+    /// </summary>
+    [DisplayName("Option Features")]
+    [IsoXmlTag("OptnFeatrs")]
+    public OptionFeaturesFormat25Choice_? OptionFeatures { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification127Choice_? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -38,55 +66,6 @@ public record CorporateActionOption239
     public CashAccountIdentification9Choice_? CashAccount { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Instructed Balance.
-    /// </summary>
-    [DisplayName("Instructed Balance")]
-    [IsoXmlTag("InstdBal")]
-    public SignedQuantityFormat11? InstructedBalance { get; init; }
-
-    /// <summary>
-    /// Option Features.
-    /// </summary>
-    [DisplayName("Option Features")]
-    [IsoXmlTag("OptnFeatrs")]
-    public OptionFeaturesFormat25Choice_? OptionFeatures { get; init; }
-
-    /// <summary>
-    /// Option Number.
-    /// </summary>
-    [DisplayName("Option Number")]
-    [IsoXmlTag("OptnNb")]
-    public required OptionNumber1Choice_ OptionNumber { get; init; }
-
-    /// <summary>
-    /// Option Type.
-    /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption41Choice_ OptionType { get; init; }
-
-    /// <summary>
-    /// Protect Balance.
-    /// </summary>
-    [DisplayName("Protect Balance")]
-    [IsoXmlTag("PrtctBal")]
-    public SignedQuantityFormat11? ProtectBalance { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public Max35Text? SafekeepingAccount { get; init; }
-
-    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
@@ -94,18 +73,11 @@ public record CorporateActionOption239
     public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
-    /// Status Cash Amount.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Status Cash Amount")]
-    [IsoXmlTag("StsCshAmt")]
-    public ActiveCurrencyAndAmount? StatusCashAmount { get; init; }
-
-    /// <summary>
-    /// Status Quantity.
-    /// </summary>
-    [DisplayName("Status Quantity")]
-    [IsoXmlTag("StsQty")]
-    public Quantity51Choice_? StatusQuantity { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Total Eligible Balance.
@@ -115,9 +87,37 @@ public record CorporateActionOption239
     public SignedQuantityFormat11? TotalEligibleBalance { get; init; }
 
     /// <summary>
+    /// Instructed Balance.
+    /// </summary>
+    [DisplayName("Instructed Balance")]
+    [IsoXmlTag("InstdBal")]
+    public SignedQuantityFormat11? InstructedBalance { get; init; }
+
+    /// <summary>
     /// Uninstructed Balance.
     /// </summary>
     [DisplayName("Uninstructed Balance")]
     [IsoXmlTag("UinstdBal")]
     public SignedQuantityFormat11? UninstructedBalance { get; init; }
+
+    /// <summary>
+    /// Protect Balance.
+    /// </summary>
+    [DisplayName("Protect Balance")]
+    [IsoXmlTag("PrtctBal")]
+    public SignedQuantityFormat11? ProtectBalance { get; init; }
+
+    /// <summary>
+    /// Status Quantity.
+    /// </summary>
+    [DisplayName("Status Quantity")]
+    [IsoXmlTag("StsQty")]
+    public Quantity51Choice_? StatusQuantity { get; init; }
+
+    /// <summary>
+    /// Status Cash Amount.
+    /// </summary>
+    [DisplayName("Status Cash Amount")]
+    [IsoXmlTag("StsCshAmt")]
+    public ActiveCurrencyAndAmount? StatusCashAmount { get; init; }
 }

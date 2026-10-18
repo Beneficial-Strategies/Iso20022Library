@@ -46,16 +46,16 @@ public record BankServicesBillingStatementV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Billing Statement Group.
-    /// </summary>
-    [DisplayName("Billing Statement Group")]
-    [IsoXmlTag("BllgStmtGrp")]
-    public ValueList<StatementGroup5> BillingStatementGroup { get; init; } = [];
-
-    /// <summary>
     /// Report Header.
     /// </summary>
     [DisplayName("Report Header")]
     [IsoXmlTag("RptHdr")]
     public required ReportHeader6 ReportHeader { get; init; }
+
+    /// <summary>
+    /// Billing Statement Group.
+    /// </summary>
+    [DisplayName("Billing Statement Group")]
+    [IsoXmlTag("BllgStmtGrp")]
+    public ValueList<StatementGroup5> BillingStatementGroup { get; init; } = [];
 }

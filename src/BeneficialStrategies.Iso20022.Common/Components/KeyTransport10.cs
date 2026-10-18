@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record KeyTransport10
 {
     /// <summary>
-    /// Encrypted Key.
+    /// Version.
     /// </summary>
-    [DisplayName("Encrypted Key")]
-    [IsoXmlTag("NcrptdKey")]
-    public required Max5000Binary EncryptedKey { get; init; }
-
-    /// <summary>
-    /// Key Encryption Algorithm.
-    /// </summary>
-    [DisplayName("Key Encryption Algorithm")]
-    [IsoXmlTag("KeyNcrptnAlgo")]
-    public required AlgorithmIdentification35 KeyEncryptionAlgorithm { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Recipient Identification.
@@ -38,9 +31,16 @@ public record KeyTransport10
     public required Recipient13Choice_ RecipientIdentification { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Key Encryption Algorithm.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
+    [DisplayName("Key Encryption Algorithm")]
+    [IsoXmlTag("KeyNcrptnAlgo")]
+    public required AlgorithmIdentification35 KeyEncryptionAlgorithm { get; init; }
+
+    /// <summary>
+    /// Encrypted Key.
+    /// </summary>
+    [DisplayName("Encrypted Key")]
+    [IsoXmlTag("NcrptdKey")]
+    public required Max5000Binary EncryptedKey { get; init; }
 }

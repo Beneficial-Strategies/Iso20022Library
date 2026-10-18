@@ -31,6 +31,13 @@ public record FleetLineItem6
     public required TrueFalseIndicator Fuel { get; init; }
 
     /// <summary>
+    /// Service Type.
+    /// </summary>
+    [DisplayName("Service Type")]
+    [IsoXmlTag("SvcTp")]
+    public FleetServiceType1Code? ServiceType { get; init; }
+
+    /// <summary>
     /// Product Category.
     /// </summary>
     [DisplayName("Product Category")]
@@ -45,18 +52,18 @@ public record FleetLineItem6
     public Max15Text? ProductCode { get; init; }
 
     /// <summary>
+    /// Unit Of Measure.
+    /// </summary>
+    [DisplayName("Unit Of Measure")]
+    [IsoXmlTag("UnitOfMeasr")]
+    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
+    /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     public DecimalNumber? ProductQuantity { get; init; }
-
-    /// <summary>
-    /// Service Type.
-    /// </summary>
-    [DisplayName("Service Type")]
-    [IsoXmlTag("SvcTp")]
-    public FleetServiceType1Code? ServiceType { get; init; }
 
     /// <summary>
     /// Total Amount Excluding Tax.
@@ -71,11 +78,4 @@ public record FleetLineItem6
     [DisplayName("Total Amount Including Tax")]
     [IsoXmlTag("TtlAmtInclgTax")]
     public ImpliedCurrencyAndAmount? TotalAmountIncludingTax { get; init; }
-
-    /// <summary>
-    /// Unit Of Measure.
-    /// </summary>
-    [DisplayName("Unit Of Measure")]
-    [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
 }

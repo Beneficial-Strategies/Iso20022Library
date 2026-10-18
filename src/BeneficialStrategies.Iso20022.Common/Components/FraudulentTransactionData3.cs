@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FraudulentTransactionData3
 {
     /// <summary>
-    /// Alternate Message Reason.
-    /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max35Text> AlternateMessageReason { get; init; } = [];
-
-    /// <summary>
     /// Authorisation.
     /// </summary>
     [DisplayName("Authorisation")]
@@ -36,6 +29,20 @@ public record FraudulentTransactionData3
     [DisplayName("Authorisation Entity")]
     [IsoXmlTag("AuthstnNtty")]
     public PartyType26Code? AuthorisationEntity { get; init; }
+
+    /// <summary>
+    /// Other Authorisation Entity.
+    /// </summary>
+    [DisplayName("Other Authorisation Entity")]
+    [IsoXmlTag("OthrAuthstnNtty")]
+    public Max35Text? OtherAuthorisationEntity { get; init; }
+
+    /// <summary>
+    /// Presentment Cycle.
+    /// </summary>
+    [DisplayName("Presentment Cycle")]
+    [IsoXmlTag("PresntmntCycl")]
+    public Exact1NumericText? PresentmentCycle { get; init; }
 
     /// <summary>
     /// Dispute Condition.
@@ -52,13 +59,6 @@ public record FraudulentTransactionData3
     public ValueList<DisputeReference1> DisputeReference { get; init; } = [];
 
     /// <summary>
-    /// Fraudulent Message.
-    /// </summary>
-    [DisplayName("Fraudulent Message")]
-    [IsoXmlTag("FrdlntMsg")]
-    public Max100KBinary? FraudulentMessage { get; init; }
-
-    /// <summary>
     /// Message Reason.
     /// </summary>
     [DisplayName("Message Reason")]
@@ -66,16 +66,16 @@ public record FraudulentTransactionData3
     public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
-    /// Other Authorisation Entity.
+    /// Alternate Message Reason.
     /// </summary>
-    [DisplayName("Other Authorisation Entity")]
-    [IsoXmlTag("OthrAuthstnNtty")]
-    public Max35Text? OtherAuthorisationEntity { get; init; }
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
-    /// Presentment Cycle.
+    /// Fraudulent Message.
     /// </summary>
-    [DisplayName("Presentment Cycle")]
-    [IsoXmlTag("PresntmntCycl")]
-    public Exact1NumericText? PresentmentCycle { get; init; }
+    [DisplayName("Fraudulent Message")]
+    [IsoXmlTag("FrdlntMsg")]
+    public Max100KBinary? FraudulentMessage { get; init; }
 }

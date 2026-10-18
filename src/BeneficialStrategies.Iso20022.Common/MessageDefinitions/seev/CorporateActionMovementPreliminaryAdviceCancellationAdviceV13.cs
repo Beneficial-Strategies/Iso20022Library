@@ -46,6 +46,20 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV13 : IO
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Movement Preliminary Advice Identification.
+    /// </summary>
+    [DisplayName("Movement Preliminary Advice Identification")]
+    [IsoXmlTag("MvmntPrlimryAdvcId")]
+    public required DocumentIdentification31 MovementPreliminaryAdviceIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation177 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
     /// Account Details.
     /// </summary>
     [DisplayName("Account Details")]
@@ -60,39 +74,11 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV13 : IO
     public CorporateAction71? CorporateActionDetails { get; init; }
 
     /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation177 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Drop Agent.
-    /// </summary>
-    [DisplayName("Drop Agent")]
-    [IsoXmlTag("DrpAgt")]
-    public PartyIdentification120Choice_? DropAgent { get; init; }
-
-    /// <summary>
-    /// Information Agent.
-    /// </summary>
-    [DisplayName("Information Agent")]
-    [IsoXmlTag("InfAgt")]
-    public PartyIdentification120Choice_? InformationAgent { get; init; }
-
-    /// <summary>
     /// Issuer Agent.
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
     public ValueList<PartyIdentification120Choice_> IssuerAgent { get; init; } = [];
-
-    /// <summary>
-    /// Movement Preliminary Advice Identification.
-    /// </summary>
-    [DisplayName("Movement Preliminary Advice Identification")]
-    [IsoXmlTag("MvmntPrlimryAdvcId")]
-    public required DocumentIdentification31 MovementPreliminaryAdviceIdentification { get; init; }
 
     /// <summary>
     /// Paying Agent.
@@ -102,11 +88,11 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV13 : IO
     public ValueList<PartyIdentification120Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
-    /// Physical Securities Agent.
+    /// Sub Paying Agent.
     /// </summary>
-    [DisplayName("Physical Securities Agent")]
-    [IsoXmlTag("PhysSctiesAgt")]
-    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; }
+    [DisplayName("Sub Paying Agent")]
+    [IsoXmlTag("SubPngAgt")]
+    public ValueList<PartyIdentification120Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Registrar.
@@ -123,6 +109,20 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV13 : IO
     public ValueList<PartyIdentification120Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
+    /// Physical Securities Agent.
+    /// </summary>
+    [DisplayName("Physical Securities Agent")]
+    [IsoXmlTag("PhysSctiesAgt")]
+    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; }
+
+    /// <summary>
+    /// Drop Agent.
+    /// </summary>
+    [DisplayName("Drop Agent")]
+    [IsoXmlTag("DrpAgt")]
+    public PartyIdentification120Choice_? DropAgent { get; init; }
+
+    /// <summary>
     /// Solicitation Agent.
     /// </summary>
     [DisplayName("Solicitation Agent")]
@@ -130,11 +130,11 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV13 : IO
     public ValueList<PartyIdentification120Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
-    /// Sub Paying Agent.
+    /// Information Agent.
     /// </summary>
-    [DisplayName("Sub Paying Agent")]
-    [IsoXmlTag("SubPngAgt")]
-    public ValueList<PartyIdentification120Choice_> SubPayingAgent { get; init; } = [];
+    [DisplayName("Information Agent")]
+    [IsoXmlTag("InfAgt")]
+    public PartyIdentification120Choice_? InformationAgent { get; init; }
 
     /// <summary>
     /// Supplementary Data.

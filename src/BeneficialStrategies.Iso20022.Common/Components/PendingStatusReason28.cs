@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PendingStatusReason28
 {
     /// <summary>
-    /// Additional Reason Information.
-    /// </summary>
-    [DisplayName("Additional Reason Information")]
-    [IsoXmlTag("AddtlRsnInf")]
-    public RestrictedFINXMax210Text? AdditionalReasonInformation { get; init; }
-
-    /// <summary>
     /// Reason Code.
     /// </summary>
     [DisplayName("Reason Code")]
     [IsoXmlTag("RsnCd")]
     public required PendingReason68Choice_ ReasonCode { get; init; }
+
+    /// <summary>
+    /// Additional Reason Information.
+    /// </summary>
+    [DisplayName("Additional Reason Information")]
+    [IsoXmlTag("AddtlRsnInf")]
+    public RestrictedFINXMax210Text? AdditionalReasonInformation { get; init; }
 }

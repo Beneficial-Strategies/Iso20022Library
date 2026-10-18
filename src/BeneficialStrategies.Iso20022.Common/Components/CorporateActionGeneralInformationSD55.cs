@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformationSD55
 {
     /// <summary>
-    /// Asset Servicer Processing Flag.
+    /// Place And Name.
     /// </summary>
-    [DisplayName("Asset Servicer Processing Flag")]
-    [IsoXmlTag("AsstSvcrPrcgFlg")]
-    public YesNoIndicator? AssetServicerProcessingFlag { get; init; }
-
-    /// <summary>
-    /// DTCFCP Election Flag.
-    /// </summary>
-    [DisplayName("DTCFCP Election Flag")]
-    [IsoXmlTag("DTCFCPElctnFlg")]
-    public YesNoIndicator? DTCFCPElectionFlag { get; init; }
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Event Group.
@@ -45,18 +38,18 @@ public record CorporateActionGeneralInformationSD55
     public ExtendedEventType6Code? EventType { get; init; }
 
     /// <summary>
+    /// Sub Event Type.
+    /// </summary>
+    [DisplayName("Sub Event Type")]
+    [IsoXmlTag("SubEvtTp")]
+    public DTCCSubEventType11Code? SubEventType { get; init; }
+
+    /// <summary>
     /// Instruction Messaging Eligibility Flag.
     /// </summary>
     [DisplayName("Instruction Messaging Eligibility Flag")]
     [IsoXmlTag("InstrMsggElgbltyFlg")]
     public YesNoIndicator? InstructionMessagingEligibilityFlag { get; init; }
-
-    /// <summary>
-    /// Place And Name.
-    /// </summary>
-    [DisplayName("Place And Name")]
-    [IsoXmlTag("PlcAndNm")]
-    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Redemption Identification.
@@ -66,9 +59,16 @@ public record CorporateActionGeneralInformationSD55
     public Max10NumericText? RedemptionIdentification { get; init; }
 
     /// <summary>
-    /// Sub Event Type.
+    /// DTCFCP Election Flag.
     /// </summary>
-    [DisplayName("Sub Event Type")]
-    [IsoXmlTag("SubEvtTp")]
-    public DTCCSubEventType11Code? SubEventType { get; init; }
+    [DisplayName("DTCFCP Election Flag")]
+    [IsoXmlTag("DTCFCPElctnFlg")]
+    public YesNoIndicator? DTCFCPElectionFlag { get; init; }
+
+    /// <summary>
+    /// Asset Servicer Processing Flag.
+    /// </summary>
+    [DisplayName("Asset Servicer Processing Flag")]
+    [IsoXmlTag("AsstSvcrPrcgFlg")]
+    public YesNoIndicator? AssetServicerProcessingFlag { get; init; }
 }

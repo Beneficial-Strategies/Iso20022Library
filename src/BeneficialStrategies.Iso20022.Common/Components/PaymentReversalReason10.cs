@@ -18,13 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentReversalReason10
 {
     /// <summary>
-    /// Further details on the reversal reason.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Party that issues the reversal.
     /// </summary>
     [DisplayName("Originator")]
@@ -37,4 +30,11 @@ public record PaymentReversalReason10
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReversalReason4Choice_? Reason { get; init; }
+
+    /// <summary>
+    /// Further details on the reversal reason.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

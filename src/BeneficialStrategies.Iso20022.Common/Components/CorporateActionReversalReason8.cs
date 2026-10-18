@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionReversalReason8
 {
     /// <summary>
-    /// Additional Reason Information.
-    /// </summary>
-    [DisplayName("Additional Reason Information")]
-    [IsoXmlTag("AddtlRsnInf")]
-    public Max256Text? AdditionalReasonInformation { get; init; }
-
-    /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required CorporateActionReversalReason10Choice_ Reason { get; init; }
+
+    /// <summary>
+    /// Additional Reason Information.
+    /// </summary>
+    [DisplayName("Additional Reason Information")]
+    [IsoXmlTag("AddtlRsnInf")]
+    public Max256Text? AdditionalReasonInformation { get; init; }
 }

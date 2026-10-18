@@ -53,20 +53,6 @@ public record ResolutionOfInvestigationV14 : IOuterRecord
     public required CaseAssignment6 Assignment { get; init; }
 
     /// <summary>
-    /// Cancellation Details.
-    /// </summary>
-    [DisplayName("Cancellation Details")]
-    [IsoXmlTag("CxlDtls")]
-    public ValueList<UnderlyingTransaction35> CancellationDetails { get; init; } = [];
-
-    /// <summary>
-    /// Resolution Related Information.
-    /// </summary>
-    [DisplayName("Resolution Related Information")]
-    [IsoXmlTag("RsltnRltdInf")]
-    public ResolutionData5? ResolutionRelatedInformation { get; init; }
-
-    /// <summary>
     /// Resolved Case.
     /// </summary>
     [DisplayName("Resolved Case")]
@@ -79,6 +65,20 @@ public record ResolutionOfInvestigationV14 : IOuterRecord
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     public required InvestigationStatus6Choice_ Status { get; init; }
+
+    /// <summary>
+    /// Cancellation Details.
+    /// </summary>
+    [DisplayName("Cancellation Details")]
+    [IsoXmlTag("CxlDtls")]
+    public ValueList<UnderlyingTransaction35> CancellationDetails { get; init; } = [];
+
+    /// <summary>
+    /// Resolution Related Information.
+    /// </summary>
+    [DisplayName("Resolution Related Information")]
+    [IsoXmlTag("RsltnRltdInf")]
+    public ResolutionData5? ResolutionRelatedInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

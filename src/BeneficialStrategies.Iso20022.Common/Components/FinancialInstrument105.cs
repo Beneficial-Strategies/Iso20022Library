@@ -17,81 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialInstrument105
 {
     /// <summary>
-    /// Additional Asset.
+    /// Line Identification.
     /// </summary>
-    [DisplayName("Additional Asset")]
-    [IsoXmlTag("AddtlAsst")]
-    public YesNoIndicator? AdditionalAsset { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Assets Held In Own Name.
-    /// </summary>
-    [DisplayName("Assets Held In Own Name")]
-    [IsoXmlTag("AsstsHeldInOwnNm")]
-    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
-
-    /// <summary>
-    /// Average Acquisition Price.
-    /// </summary>
-    [DisplayName("Average Acquisition Price")]
-    [IsoXmlTag("AvrgAcqstnPric")]
-    public ActiveCurrencyAndAmount? AverageAcquisitionPrice { get; init; }
-
-    /// <summary>
-    /// Business Flow Type.
-    /// </summary>
-    [DisplayName("Business Flow Type")]
-    [IsoXmlTag("BizFlowTp")]
-    public BusinessFlowType1Code? BusinessFlowType { get; init; }
-
-    /// <summary>
-    /// Client Reference.
-    /// </summary>
-    [DisplayName("Client Reference")]
-    [IsoXmlTag("ClntRef")]
-    public AdditionalReference10? ClientReference { get; init; }
-
-    /// <summary>
-    /// Conversion.
-    /// </summary>
-    [DisplayName("Conversion")]
-    [IsoXmlTag("Convs")]
-    public Conversion3? Conversion { get; init; }
-
-    /// <summary>
-    /// Counterparty Reference.
-    /// </summary>
-    [DisplayName("Counterparty Reference")]
-    [IsoXmlTag("CtrPtyRef")]
-    public AdditionalReference10? CounterpartyReference { get; init; }
-
-    /// <summary>
-    /// Crystallisation Details.
-    /// </summary>
-    [DisplayName("Crystallisation Details")]
-    [IsoXmlTag("CrstllstnDtls")]
-    public ValueList<Crystallisation2> CrystallisationDetails { get; init; } = [];
-
-    /// <summary>
-    /// Effective Settlement Date.
-    /// </summary>
-    [DisplayName("Effective Settlement Date")]
-    [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
-
-    /// <summary>
-    /// Effective Transfer Date.
-    /// </summary>
-    [DisplayName("Effective Transfer Date")]
-    [IsoXmlTag("FctvTrfDt")]
-    public DateAndDateTime2Choice_? EffectiveTransferDate { get; init; }
+    [DisplayName("Line Identification")]
+    [IsoXmlTag("LineId")]
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Instrument.
@@ -101,46 +31,11 @@ public record FinancialInstrument105
     public required FinancialInstrument63Choice_ Instrument { get; init; }
 
     /// <summary>
-    /// Intermediary Information.
+    /// Quantity.
     /// </summary>
-    [DisplayName("Intermediary Information")]
-    [IsoXmlTag("IntrmyInf")]
-    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
-
-    /// <summary>
-    /// Latest Valuation.
-    /// </summary>
-    [DisplayName("Latest Valuation")]
-    [IsoXmlTag("LatstValtn")]
-    public DateAndAmount2? LatestValuation { get; init; }
-
-    /// <summary>
-    /// Line Identification.
-    /// </summary>
-    [DisplayName("Line Identification")]
-    [IsoXmlTag("LineId")]
-    public Max35Text? LineIdentification { get; init; }
-
-    /// <summary>
-    /// Not Available.
-    /// </summary>
-    [DisplayName("Not Available")]
-    [IsoXmlTag("NotAvlbl")]
-    public YesNoIndicator? NotAvailable { get; init; }
-
-    /// <summary>
-    /// Original Cost.
-    /// </summary>
-    [DisplayName("Original Cost")]
-    [IsoXmlTag("OrgnlCost")]
-    public ActiveCurrencyAnd13DecimalAmount? OriginalCost { get; init; }
-
-    /// <summary>
-    /// Original Percentage Instructed.
-    /// </summary>
-    [DisplayName("Original Percentage Instructed")]
-    [IsoXmlTag("OrgnlPctgInstd")]
-    public PercentageRate? OriginalPercentageInstructed { get; init; }
+    [DisplayName("Quantity")]
+    [IsoXmlTag("Qty")]
+    public Quantity50? Quantity { get; init; }
 
     /// <summary>
     /// Partial Instructed Quantity.
@@ -150,46 +45,81 @@ public record FinancialInstrument105
     public YesNoIndicator? PartialInstructedQuantity { get; init; }
 
     /// <summary>
-    /// Payment Details.
+    /// Original Percentage Instructed.
     /// </summary>
-    [DisplayName("Payment Details")]
-    [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument20? PaymentDetails { get; init; }
+    [DisplayName("Original Percentage Instructed")]
+    [IsoXmlTag("OrgnlPctgInstd")]
+    public PercentageRate? OriginalPercentageInstructed { get; init; }
 
     /// <summary>
-    /// Quantity.
+    /// Transfer Type.
     /// </summary>
-    [DisplayName("Quantity")]
-    [IsoXmlTag("Qty")]
-    public Quantity50? Quantity { get; init; }
+    [DisplayName("Transfer Type")]
+    [IsoXmlTag("TrfTp")]
+    public required TransferType2Choice_ TransferType { get; init; }
 
     /// <summary>
-    /// Requested Settlement Date.
+    /// Additional Asset.
     /// </summary>
-    [DisplayName("Requested Settlement Date")]
-    [IsoXmlTag("ReqdSttlmDt")]
-    public ISODate? RequestedSettlementDate { get; init; }
+    [DisplayName("Additional Asset")]
+    [IsoXmlTag("AddtlAsst")]
+    public YesNoIndicator? AdditionalAsset { get; init; }
 
     /// <summary>
-    /// Requested Trade Date.
+    /// Not Available.
     /// </summary>
-    [DisplayName("Requested Trade Date")]
-    [IsoXmlTag("ReqdTradDt")]
-    public ISODate? RequestedTradeDate { get; init; }
+    [DisplayName("Not Available")]
+    [IsoXmlTag("NotAvlbl")]
+    public YesNoIndicator? NotAvailable { get; init; }
 
     /// <summary>
-    /// Settlement Parties Details.
+    /// Conversion.
     /// </summary>
-    [DisplayName("Settlement Parties Details")]
-    [IsoXmlTag("SttlmPtiesDtls")]
-    public FundSettlementParameters17? SettlementPartiesDetails { get; init; }
+    [DisplayName("Conversion")]
+    [IsoXmlTag("Convs")]
+    public Conversion3? Conversion { get; init; }
 
     /// <summary>
-    /// Tax Valuation Point.
+    /// Units Details.
     /// </summary>
-    [DisplayName("Tax Valuation Point")]
-    [IsoXmlTag("TaxValtnPt")]
-    public Tax36? TaxValuationPoint { get; init; }
+    [DisplayName("Units Details")]
+    [IsoXmlTag("UnitsDtls")]
+    public ValueList<Unit11> UnitsDetails { get; init; } = [];
+
+    /// <summary>
+    /// Client Reference.
+    /// </summary>
+    [DisplayName("Client Reference")]
+    [IsoXmlTag("ClntRef")]
+    public AdditionalReference10? ClientReference { get; init; }
+
+    /// <summary>
+    /// Counterparty Reference.
+    /// </summary>
+    [DisplayName("Counterparty Reference")]
+    [IsoXmlTag("CtrPtyRef")]
+    public AdditionalReference10? CounterpartyReference { get; init; }
+
+    /// <summary>
+    /// Business Flow Type.
+    /// </summary>
+    [DisplayName("Business Flow Type")]
+    [IsoXmlTag("BizFlowTp")]
+    public BusinessFlowType1Code? BusinessFlowType { get; init; }
+
+    /// <summary>
+    /// Average Acquisition Price.
+    /// </summary>
+    [DisplayName("Average Acquisition Price")]
+    [IsoXmlTag("AvrgAcqstnPric")]
+    public ActiveCurrencyAndAmount? AverageAcquisitionPrice { get; init; }
+
+    /// <summary>
+    /// Transfer Currency.
+    /// </summary>
+    [DisplayName("Transfer Currency")]
+    [IsoXmlTag("TrfCcy")]
+    public ActiveOrHistoricCurrencyCode? TransferCurrency { get; init; }
 
     /// <summary>
     /// Total Book Value.
@@ -199,11 +129,18 @@ public record FinancialInstrument105
     public DateAndAmount2? TotalBookValue { get; init; }
 
     /// <summary>
-    /// Transfer Currency.
+    /// Original Cost.
     /// </summary>
-    [DisplayName("Transfer Currency")]
-    [IsoXmlTag("TrfCcy")]
-    public ActiveOrHistoricCurrencyCode? TransferCurrency { get; init; }
+    [DisplayName("Original Cost")]
+    [IsoXmlTag("OrgnlCost")]
+    public ActiveCurrencyAnd13DecimalAmount? OriginalCost { get; init; }
+
+    /// <summary>
+    /// Latest Valuation.
+    /// </summary>
+    [DisplayName("Latest Valuation")]
+    [IsoXmlTag("LatstValtn")]
+    public DateAndAmount2? LatestValuation { get; init; }
 
     /// <summary>
     /// Transferee Account.
@@ -220,6 +157,76 @@ public record FinancialInstrument105
     public Account28? Transferor { get; init; }
 
     /// <summary>
+    /// Intermediary Information.
+    /// </summary>
+    [DisplayName("Intermediary Information")]
+    [IsoXmlTag("IntrmyInf")]
+    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
+
+    /// <summary>
+    /// Requested Trade Date.
+    /// </summary>
+    [DisplayName("Requested Trade Date")]
+    [IsoXmlTag("ReqdTradDt")]
+    public ISODate? RequestedTradeDate { get; init; }
+
+    /// <summary>
+    /// Requested Settlement Date.
+    /// </summary>
+    [DisplayName("Requested Settlement Date")]
+    [IsoXmlTag("ReqdSttlmDt")]
+    public ISODate? RequestedSettlementDate { get; init; }
+
+    /// <summary>
+    /// Effective Transfer Date.
+    /// </summary>
+    [DisplayName("Effective Transfer Date")]
+    [IsoXmlTag("FctvTrfDt")]
+    public DateAndDateTime2Choice_? EffectiveTransferDate { get; init; }
+
+    /// <summary>
+    /// Effective Settlement Date.
+    /// </summary>
+    [DisplayName("Effective Settlement Date")]
+    [IsoXmlTag("FctvSttlmDt")]
+    public DateAndDateTime2Choice_? EffectiveSettlementDate { get; init; }
+
+    /// <summary>
+    /// Payment Details.
+    /// </summary>
+    [DisplayName("Payment Details")]
+    [IsoXmlTag("PmtDtls")]
+    public PaymentInstrument20? PaymentDetails { get; init; }
+
+    /// <summary>
+    /// Crystallisation Details.
+    /// </summary>
+    [DisplayName("Crystallisation Details")]
+    [IsoXmlTag("CrstllstnDtls")]
+    public ValueList<Crystallisation2> CrystallisationDetails { get; init; } = [];
+
+    /// <summary>
+    /// Tax Valuation Point.
+    /// </summary>
+    [DisplayName("Tax Valuation Point")]
+    [IsoXmlTag("TaxValtnPt")]
+    public Tax36? TaxValuationPoint { get; init; }
+
+    /// <summary>
+    /// Settlement Parties Details.
+    /// </summary>
+    [DisplayName("Settlement Parties Details")]
+    [IsoXmlTag("SttlmPtiesDtls")]
+    public FundSettlementParameters17? SettlementPartiesDetails { get; init; }
+
+    /// <summary>
+    /// Assets Held In Own Name.
+    /// </summary>
+    [DisplayName("Assets Held In Own Name")]
+    [IsoXmlTag("AsstsHeldInOwnNm")]
+    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
+
+    /// <summary>
     /// Transfer Results In Change Of Beneficial Owner.
     /// </summary>
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
@@ -227,16 +234,9 @@ public record FinancialInstrument105
     public YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
 
     /// <summary>
-    /// Transfer Type.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Transfer Type")]
-    [IsoXmlTag("TrfTp")]
-    public required TransferType2Choice_ TransferType { get; init; }
-
-    /// <summary>
-    /// Units Details.
-    /// </summary>
-    [DisplayName("Units Details")]
-    [IsoXmlTag("UnitsDtls")]
-    public ValueList<Unit11> UnitsDetails { get; init; } = [];
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

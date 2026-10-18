@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MaintenanceDelegateAction9
 {
     /// <summary>
-    /// Action.
-    /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<TMSAction12> Action { get; init; } = [];
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Data Set Identification.
-    /// </summary>
-    [DisplayName("Data Set Identification")]
-    [IsoXmlTag("DataSetId")]
-    public DataSetIdentification10? DataSetIdentification { get; init; }
-
-    /// <summary>
     /// Periodic Action.
     /// </summary>
     [DisplayName("Periodic Action")]
     [IsoXmlTag("PrdcActn")]
     public TrueFalseIndicator? PeriodicAction { get; init; }
-
-    /// <summary>
-    /// Re Try.
-    /// </summary>
-    [DisplayName("Re Try")]
-    [IsoXmlTag("ReTry")]
-    public ProcessRetry3? ReTry { get; init; }
 
     /// <summary>
     /// TM Remote Access.
@@ -71,4 +43,32 @@ public record MaintenanceDelegateAction9
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
     public Max35Text? TMSProtocolVersion { get; init; }
+
+    /// <summary>
+    /// Data Set Identification.
+    /// </summary>
+    [DisplayName("Data Set Identification")]
+    [IsoXmlTag("DataSetId")]
+    public DataSetIdentification10? DataSetIdentification { get; init; }
+
+    /// <summary>
+    /// Re Try.
+    /// </summary>
+    [DisplayName("Re Try")]
+    [IsoXmlTag("ReTry")]
+    public ProcessRetry3? ReTry { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<TMSAction12> Action { get; init; } = [];
 }

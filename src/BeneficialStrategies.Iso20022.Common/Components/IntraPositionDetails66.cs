@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraPositionDetails66
 {
     /// <summary>
+    /// Safekeeping Place.
+    /// </summary>
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
     /// Balance From.
     /// </summary>
     [DisplayName("Balance From")]
@@ -29,11 +36,4 @@ public record IntraPositionDetails66
     [DisplayName("Intra Position Movement")]
     [IsoXmlTag("IntraPosMvmnt")]
     public ValueList<IntraPositionMovementDetails21> IntraPositionMovement { get; init; } = [];
-
-    /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 }

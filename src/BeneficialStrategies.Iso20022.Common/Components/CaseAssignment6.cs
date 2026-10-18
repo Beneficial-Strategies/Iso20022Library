@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CaseAssignment6
 {
     /// <summary>
-    /// Assignee.
+    /// Identification.
     /// </summary>
-    [DisplayName("Assignee")]
-    [IsoXmlTag("Assgne")]
-    public required Party50Choice_ Assignee { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Assigner.
@@ -31,16 +31,16 @@ public record CaseAssignment6
     public required Party50Choice_ Assigner { get; init; }
 
     /// <summary>
+    /// Assignee.
+    /// </summary>
+    [DisplayName("Assignee")]
+    [IsoXmlTag("Assgne")]
+    public required Party50Choice_ Assignee { get; init; }
+
+    /// <summary>
     /// Creation Date Time.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
 }

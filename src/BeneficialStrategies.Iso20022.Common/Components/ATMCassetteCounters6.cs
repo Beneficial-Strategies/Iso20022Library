@@ -17,39 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCassetteCounters6
 {
     /// <summary>
+    /// Unit Value.
+    /// </summary>
+    [DisplayName("Unit Value")]
+    [IsoXmlTag("UnitVal")]
+    public ImpliedCurrencyAndAmount? UnitValue { get; init; }
+
+    /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
     public ActiveCurrencyCode? Currency { get; init; }
-
-    /// <summary>
-    /// Current Amount.
-    /// </summary>
-    [DisplayName("Current Amount")]
-    [IsoXmlTag("CurAmt")]
-    public ImpliedCurrencyAndAmount? CurrentAmount { get; init; }
-
-    /// <summary>
-    /// Current Number.
-    /// </summary>
-    [DisplayName("Current Number")]
-    [IsoXmlTag("CurNb")]
-    public required Number CurrentNumber { get; init; }
-
-    /// <summary>
-    /// Flow Totals.
-    /// </summary>
-    [DisplayName("Flow Totals")]
-    [IsoXmlTag("FlowTtls")]
-    public ValueList<ATMCassetteCounters5> FlowTotals { get; init; } = [];
-
-    /// <summary>
-    /// Initial Count.
-    /// </summary>
-    [DisplayName("Initial Count")]
-    [IsoXmlTag("InitlCnt")]
-    public Number? InitialCount { get; init; }
 
     /// <summary>
     /// Media Category.
@@ -59,9 +38,30 @@ public record ATMCassetteCounters6
     public ATMMediaType3Code? MediaCategory { get; init; }
 
     /// <summary>
-    /// Unit Value.
+    /// Initial Count.
     /// </summary>
-    [DisplayName("Unit Value")]
-    [IsoXmlTag("UnitVal")]
-    public ImpliedCurrencyAndAmount? UnitValue { get; init; }
+    [DisplayName("Initial Count")]
+    [IsoXmlTag("InitlCnt")]
+    public Number? InitialCount { get; init; }
+
+    /// <summary>
+    /// Current Number.
+    /// </summary>
+    [DisplayName("Current Number")]
+    [IsoXmlTag("CurNb")]
+    public required Number CurrentNumber { get; init; }
+
+    /// <summary>
+    /// Current Amount.
+    /// </summary>
+    [DisplayName("Current Amount")]
+    [IsoXmlTag("CurAmt")]
+    public ImpliedCurrencyAndAmount? CurrentAmount { get; init; }
+
+    /// <summary>
+    /// Flow Totals.
+    /// </summary>
+    [DisplayName("Flow Totals")]
+    [IsoXmlTag("FlowTtls")]
+    public ValueList<ATMCassetteCounters5> FlowTotals { get; init; } = [];
 }

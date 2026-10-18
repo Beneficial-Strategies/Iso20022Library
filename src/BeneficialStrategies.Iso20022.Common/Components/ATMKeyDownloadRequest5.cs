@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMKeyDownloadRequest5
 {
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required ATMEnvironment15 Environment { get; init; }
+
+    /// <summary>
+    /// Command Result.
+    /// </summary>
+    [DisplayName("Command Result")]
+    [IsoXmlTag("CmdRslt")]
+    public ValueList<ATMCommand15> CommandResult { get; init; } = [];
+
+    /// <summary>
+    /// Command Context.
+    /// </summary>
+    [DisplayName("Command Context")]
+    [IsoXmlTag("CmdCntxt")]
+    public ATMCommand16? CommandContext { get; init; }
+
+    /// <summary>
     /// ATM Security Context.
     /// </summary>
     [DisplayName("ATM Security Context")]
@@ -29,27 +50,6 @@ public record ATMKeyDownloadRequest5
     [DisplayName("ATM Security Parameters")]
     [IsoXmlTag("ATMSctyParams")]
     public required SecurityParameters9 ATMSecurityParameters { get; init; }
-
-    /// <summary>
-    /// Command Context.
-    /// </summary>
-    [DisplayName("Command Context")]
-    [IsoXmlTag("CmdCntxt")]
-    public ATMCommand16? CommandContext { get; init; }
-
-    /// <summary>
-    /// Command Result.
-    /// </summary>
-    [DisplayName("Command Result")]
-    [IsoXmlTag("CmdRslt")]
-    public ValueList<ATMCommand15> CommandResult { get; init; } = [];
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required ATMEnvironment15 Environment { get; init; }
 
     /// <summary>
     /// Host Challenge.

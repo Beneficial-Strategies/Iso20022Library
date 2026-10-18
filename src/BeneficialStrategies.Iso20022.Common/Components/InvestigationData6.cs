@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestigationData6
 {
     /// <summary>
-    /// Enclosed File.
+    /// Original Investigation Sequence.
     /// </summary>
-    [DisplayName("Enclosed File")]
-    [IsoXmlTag("NclsdFile")]
-    public ValueList<Document12> EnclosedFile { get; init; } = [];
+    [DisplayName("Original Investigation Sequence")]
+    [IsoXmlTag("OrgnlInvstgtnSeq")]
+    public Max3Number? OriginalInvestigationSequence { get; init; }
 
     /// <summary>
     /// Original Investigation Reason.
@@ -38,18 +38,11 @@ public record InvestigationData6
     public InvestigationReasonSubType1Choice_? OriginalInvestigationReasonSubType { get; init; }
 
     /// <summary>
-    /// Original Investigation Sequence.
+    /// Response Data.
     /// </summary>
-    [DisplayName("Original Investigation Sequence")]
-    [IsoXmlTag("OrgnlInvstgtnSeq")]
-    public Max3Number? OriginalInvestigationSequence { get; init; }
-
-    /// <summary>
-    /// Related File Data.
-    /// </summary>
-    [DisplayName("Related File Data")]
-    [IsoXmlTag("RltdFileData")]
-    public ValueList<FileData1> RelatedFileData { get; init; } = [];
+    [DisplayName("Response Data")]
+    [IsoXmlTag("RspnData")]
+    public required InvestigationDataRecord7Choice_ ResponseData { get; init; }
 
     /// <summary>
     /// Related Investigation Data.
@@ -59,11 +52,18 @@ public record InvestigationData6
     public RelatedInvestigationData1? RelatedInvestigationData { get; init; }
 
     /// <summary>
-    /// Response Data.
+    /// Enclosed File.
     /// </summary>
-    [DisplayName("Response Data")]
-    [IsoXmlTag("RspnData")]
-    public required InvestigationDataRecord7Choice_ ResponseData { get; init; }
+    [DisplayName("Enclosed File")]
+    [IsoXmlTag("NclsdFile")]
+    public ValueList<Document12> EnclosedFile { get; init; } = [];
+
+    /// <summary>
+    /// Related File Data.
+    /// </summary>
+    [DisplayName("Related File Data")]
+    [IsoXmlTag("RltdFileData")]
+    public ValueList<FileData1> RelatedFileData { get; init; } = [];
 
     /// <summary>
     /// Response Originator.

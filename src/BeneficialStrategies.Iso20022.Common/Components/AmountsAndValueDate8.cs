@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AmountsAndValueDate8
 {
     /// <summary>
-    /// Settlement Date.
-    /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public required ISODate SettlementDate { get; init; }
-
-    /// <summary>
     /// Trading Side Buy Amount.
     /// </summary>
     [DisplayName("Trading Side Buy Amount")]
@@ -36,4 +29,11 @@ public record AmountsAndValueDate8
     [DisplayName("Trading Side Sell Amount")]
     [IsoXmlTag("TradgSdSellAmt")]
     public required CurrencyOrDigitalTokenAmount2Choice_ TradingSideSellAmount { get; init; }
+
+    /// <summary>
+    /// Settlement Date.
+    /// </summary>
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required ISODate SettlementDate { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradePartyIdentification10
 {
     /// <summary>
-    /// Buyer Or Seller Indicator.
-    /// </summary>
-    [DisplayName("Buyer Or Seller Indicator")]
-    [IsoXmlTag("BuyrOrSellrInd")]
-    public required OptionParty1Code BuyerOrSellerIndicator { get; init; }
-
-    /// <summary>
     /// Fund Information.
     /// </summary>
     [DisplayName("Fund Information")]
     [IsoXmlTag("FndInf")]
     public FundIdentification6? FundInformation { get; init; }
+
+    /// <summary>
+    /// Buyer Or Seller Indicator.
+    /// </summary>
+    [DisplayName("Buyer Or Seller Indicator")]
+    [IsoXmlTag("BuyrOrSellrInd")]
+    public required OptionParty1Code BuyerOrSellerIndicator { get; init; }
 
     /// <summary>
     /// Initiator Indicator.
@@ -38,16 +38,16 @@ public record TradePartyIdentification10
     public required OptionParty3Code InitiatorIndicator { get; init; }
 
     /// <summary>
-    /// Submitting Party.
-    /// </summary>
-    [DisplayName("Submitting Party")]
-    [IsoXmlTag("SubmitgPty")]
-    public required PartyIdentificationAndAccount119 SubmittingParty { get; init; }
-
-    /// <summary>
     /// Trade Party Identification.
     /// </summary>
     [DisplayName("Trade Party Identification")]
     [IsoXmlTag("TradPtyId")]
     public required PartyIdentification265 TradePartyIdentification { get; init; }
+
+    /// <summary>
+    /// Submitting Party.
+    /// </summary>
+    [DisplayName("Submitting Party")]
+    [IsoXmlTag("SubmitgPty")]
+    public required PartyIdentificationAndAccount119 SubmittingParty { get; init; }
 }

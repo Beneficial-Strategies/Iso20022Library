@@ -53,16 +53,16 @@ public record MandateCopyRequestV04 : IOuterRecord
     public required GroupHeader110 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Copy Request Details.
     /// </summary>
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
     public ValueList<MandateCopy4> UnderlyingCopyRequestDetails { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

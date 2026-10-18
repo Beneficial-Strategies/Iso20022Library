@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CryptographicKey18
 {
     /// <summary>
-    /// Activation Date.
+    /// Identification.
     /// </summary>
-    [DisplayName("Activation Date")]
-    [IsoXmlTag("ActvtnDt")]
-    public ISODateTime? ActivationDate { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max350Text Identification { get; init; }
 
     /// <summary>
     /// Additional Identification.
@@ -31,39 +31,18 @@ public record CryptographicKey18
     public Max35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
-    /// Additional Management Information.
+    /// Name.
     /// </summary>
-    [DisplayName("Additional Management Information")]
-    [IsoXmlTag("AddtlMgmtInf")]
-    public ValueList<GenericInformation1> AdditionalManagementInformation { get; init; } = [];
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max256Text? Name { get; init; }
 
     /// <summary>
-    /// Component With Authorised Access.
+    /// Security Profile.
     /// </summary>
-    [DisplayName("Component With Authorised Access")]
-    [IsoXmlTag("CmpntWthAuthrsdAccs")]
-    public ValueList<GenericIdentification186> ComponentWithAuthorisedAccess { get; init; } = [];
-
-    /// <summary>
-    /// Deactivation Date.
-    /// </summary>
-    [DisplayName("Deactivation Date")]
-    [IsoXmlTag("DeactvtnDt")]
-    public ISODateTime? DeactivationDate { get; init; }
-
-    /// <summary>
-    /// Function.
-    /// </summary>
-    [DisplayName("Function")]
-    [IsoXmlTag("Fctn")]
-    public ValueList<KeyUsage1Code> Function { get; init; } = [];
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max350Text Identification { get; init; }
+    [DisplayName("Security Profile")]
+    [IsoXmlTag("SctyPrfl")]
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Item Number.
@@ -73,11 +52,39 @@ public record CryptographicKey18
     public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
-    /// Key Check Value.
+    /// Version.
     /// </summary>
-    [DisplayName("Key Check Value")]
-    [IsoXmlTag("KeyChckVal")]
-    public Max35Binary? KeyCheckValue { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public required Max256Text Version { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public CryptographicKeyType3Code? Type { get; init; }
+
+    /// <summary>
+    /// Function.
+    /// </summary>
+    [DisplayName("Function")]
+    [IsoXmlTag("Fctn")]
+    public ValueList<KeyUsage1Code> Function { get; init; } = [];
+
+    /// <summary>
+    /// Activation Date.
+    /// </summary>
+    [DisplayName("Activation Date")]
+    [IsoXmlTag("ActvtnDt")]
+    public ISODateTime? ActivationDate { get; init; }
+
+    /// <summary>
+    /// Deactivation Date.
+    /// </summary>
+    [DisplayName("Deactivation Date")]
+    [IsoXmlTag("DeactvtnDt")]
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Key Value.
@@ -87,11 +94,11 @@ public record CryptographicKey18
     public ContentInformationType39? KeyValue { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Component With Authorised Access.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max256Text? Name { get; init; }
+    [DisplayName("Component With Authorised Access")]
+    [IsoXmlTag("CmpntWthAuthrsdAccs")]
+    public ValueList<GenericIdentification186> ComponentWithAuthorisedAccess { get; init; } = [];
 
     /// <summary>
     /// Protected Component With Authorised Access.
@@ -102,23 +109,16 @@ public record CryptographicKey18
         [];
 
     /// <summary>
-    /// Security Profile.
+    /// Key Check Value.
     /// </summary>
-    [DisplayName("Security Profile")]
-    [IsoXmlTag("SctyPrfl")]
-    public Max35Text? SecurityProfile { get; init; }
+    [DisplayName("Key Check Value")]
+    [IsoXmlTag("KeyChckVal")]
+    public Max35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Additional Management Information.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public CryptographicKeyType3Code? Type { get; init; }
-
-    /// <summary>
-    /// Version.
-    /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public required Max256Text Version { get; init; }
+    [DisplayName("Additional Management Information")]
+    [IsoXmlTag("AddtlMgmtInf")]
+    public ValueList<GenericInformation1> AdditionalManagementInformation { get; init; } = [];
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ClearingControlTotals3
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
     /// Count.
     /// </summary>
     [DisplayName("Count")]
@@ -31,11 +24,11 @@ public record ClearingControlTotals3
     public required Number Count { get; init; }
 
     /// <summary>
-    /// Credit Debit.
+    /// Amount.
     /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
     /// Currency.
@@ -43,4 +36,11 @@ public record ClearingControlTotals3
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
     public ISO3NumericCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
 }

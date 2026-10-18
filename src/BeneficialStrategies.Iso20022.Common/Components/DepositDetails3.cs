@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DepositDetails3
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required CardDepositType1Code Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -29,18 +43,4 @@ public record DepositDetails3
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
     public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required CardDepositType1Code Type { get; init; }
 }

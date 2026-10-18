@@ -32,18 +32,11 @@ public record ReportQuerySearchCriteria3
     public ValueList<CashBalance14> Balance { get; init; } = [];
 
     /// <summary>
-    /// Date Search.
+    /// Report Name.
     /// </summary>
-    [DisplayName("Date Search")]
-    [IsoXmlTag("DtSch")]
-    public DatePeriodSearch1Choice_? DateSearch { get; init; }
-
-    /// <summary>
-    /// Event.
-    /// </summary>
-    [DisplayName("Event")]
-    [IsoXmlTag("Evt")]
-    public EventType1Choice_? Event { get; init; }
+    [DisplayName("Report Name")]
+    [IsoXmlTag("RptNm")]
+    public Max4AlphaNumericText? ReportName { get; init; }
 
     /// <summary>
     /// Message Name Identification.
@@ -60,13 +53,6 @@ public record ReportQuerySearchCriteria3
     public required PartyIdentification136 PartyIdentification { get; init; }
 
     /// <summary>
-    /// Report Name.
-    /// </summary>
-    [DisplayName("Report Name")]
-    [IsoXmlTag("RptNm")]
-    public Max4AlphaNumericText? ReportName { get; init; }
-
-    /// <summary>
     /// Responsible Party Identification.
     /// </summary>
     [DisplayName("Responsible Party Identification")]
@@ -74,9 +60,23 @@ public record ReportQuerySearchCriteria3
     public PartyIdentification136? ResponsiblePartyIdentification { get; init; }
 
     /// <summary>
+    /// Date Search.
+    /// </summary>
+    [DisplayName("Date Search")]
+    [IsoXmlTag("DtSch")]
+    public DatePeriodSearch1Choice_? DateSearch { get; init; }
+
+    /// <summary>
     /// Scheduled Time.
     /// </summary>
     [DisplayName("Scheduled Time")]
     [IsoXmlTag("SchdldTm")]
     public DateTimePeriod1Choice_? ScheduledTime { get; init; }
+
+    /// <summary>
+    /// Event.
+    /// </summary>
+    [DisplayName("Event")]
+    [IsoXmlTag("Evt")]
+    public EventType1Choice_? Event { get; init; }
 }

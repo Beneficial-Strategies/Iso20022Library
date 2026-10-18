@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalTransactionCharacteristics1
 {
     /// <summary>
-    /// Additional Data.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Alternate Message Reason.
-    /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
-
-    /// <summary>
-    /// Message Reason.
-    /// </summary>
-    [DisplayName("Message Reason")]
-    [IsoXmlTag("MsgRsn")]
-    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
-
-    /// <summary>
-    /// Other Transaction Attribute.
-    /// </summary>
-    [DisplayName("Other Transaction Attribute")]
-    [IsoXmlTag("OthrTxAttr")]
-    public Max35Text? OtherTransactionAttribute { get; init; }
-
-    /// <summary>
-    /// Pre Authorisation Time Limit.
-    /// </summary>
-    [DisplayName("Pre Authorisation Time Limit")]
-    [IsoXmlTag("PreAuthstnTmLmt")]
-    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
-
-    /// <summary>
-    /// Transaction Attribute.
-    /// </summary>
-    [DisplayName("Transaction Attribute")]
-    [IsoXmlTag("TxAttr")]
-    public ValueList<TransactionAttribute2Code> TransactionAttribute { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Description.
-    /// </summary>
-    [DisplayName("Transaction Description")]
-    [IsoXmlTag("TxDesc")]
-    public Max1000Text? TransactionDescription { get; init; }
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public ISO8583TransactionTypeCode? TransactionType { get; init; }
 
     /// <summary>
     /// Transaction Sub Type.
@@ -73,9 +31,51 @@ public record OriginalTransactionCharacteristics1
     public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
-    /// Transaction Type.
+    /// Transaction Attribute.
     /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public ISO8583TransactionTypeCode? TransactionType { get; init; }
+    [DisplayName("Transaction Attribute")]
+    [IsoXmlTag("TxAttr")]
+    public ValueList<TransactionAttribute2Code> TransactionAttribute { get; init; } = [];
+
+    /// <summary>
+    /// Other Transaction Attribute.
+    /// </summary>
+    [DisplayName("Other Transaction Attribute")]
+    [IsoXmlTag("OthrTxAttr")]
+    public Max35Text? OtherTransactionAttribute { get; init; }
+
+    /// <summary>
+    /// Message Reason.
+    /// </summary>
+    [DisplayName("Message Reason")]
+    [IsoXmlTag("MsgRsn")]
+    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Alternate Message Reason.
+    /// </summary>
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Pre Authorisation Time Limit.
+    /// </summary>
+    [DisplayName("Pre Authorisation Time Limit")]
+    [IsoXmlTag("PreAuthstnTmLmt")]
+    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
+
+    /// <summary>
+    /// Transaction Description.
+    /// </summary>
+    [DisplayName("Transaction Description")]
+    [IsoXmlTag("TxDesc")]
+    public Max1000Text? TransactionDescription { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

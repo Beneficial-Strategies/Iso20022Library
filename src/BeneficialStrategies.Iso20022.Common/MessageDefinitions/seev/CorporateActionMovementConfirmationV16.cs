@@ -46,60 +46,11 @@ public record CorporateActionMovementConfirmationV16 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountAndBalance58 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative31? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Confirmation Details.
-    /// </summary>
-    [DisplayName("Corporate Action Confirmation Details")]
-    [IsoXmlTag("CorpActnConfDtls")]
-    public required CorporateActionOption233 CorporateActionConfirmationDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction85? CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation179 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<CorporateActionEventReference3> EventsLinkage { get; init; } = [];
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public DocumentIdentification9? InstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Issuer Agent.
-    /// </summary>
-    [DisplayName("Issuer Agent")]
-    [IsoXmlTag("IssrAgt")]
-    public ValueList<PartyIdentification120Choice_> IssuerAgent { get; init; } = [];
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Movement Confirmation Identification.
@@ -109,6 +60,13 @@ public record CorporateActionMovementConfirmationV16 : IOuterRecord
     public Max35Text? MovementConfirmationIdentification { get; init; }
 
     /// <summary>
+    /// Notification Identification.
+    /// </summary>
+    [DisplayName("Notification Identification")]
+    [IsoXmlTag("NtfctnId")]
+    public DocumentIdentification31? NotificationIdentification { get; init; }
+
+    /// <summary>
     /// Movement Preliminary Advice Identification.
     /// </summary>
     [DisplayName("Movement Preliminary Advice Identification")]
@@ -116,11 +74,11 @@ public record CorporateActionMovementConfirmationV16 : IOuterRecord
     public DocumentIdentification31? MovementPreliminaryAdviceIdentification { get; init; }
 
     /// <summary>
-    /// Notification Identification.
+    /// Instruction Identification.
     /// </summary>
-    [DisplayName("Notification Identification")]
-    [IsoXmlTag("NtfctnId")]
-    public DocumentIdentification31? NotificationIdentification { get; init; }
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public DocumentIdentification9? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Other Document Identification.
@@ -130,11 +88,60 @@ public record CorporateActionMovementConfirmationV16 : IOuterRecord
     public ValueList<DocumentIdentification32> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
-    /// Pagination.
+    /// Events Linkage.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<CorporateActionEventReference3> EventsLinkage { get; init; } = [];
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentification15? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation179 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountAndBalance58 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateAction85? CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Confirmation Details.
+    /// </summary>
+    [DisplayName("Corporate Action Confirmation Details")]
+    [IsoXmlTag("CorpActnConfDtls")]
+    public required CorporateActionOption233 CorporateActionConfirmationDetails { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative31? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Issuer Agent.
+    /// </summary>
+    [DisplayName("Issuer Agent")]
+    [IsoXmlTag("IssrAgt")]
+    public ValueList<PartyIdentification120Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Paying Agent.
@@ -156,11 +163,4 @@ public record CorporateActionMovementConfirmationV16 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentification15? TransactionIdentification { get; init; }
 }

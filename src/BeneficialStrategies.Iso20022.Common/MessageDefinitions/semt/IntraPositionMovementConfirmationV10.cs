@@ -46,46 +46,11 @@ public record IntraPositionMovementConfirmationV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification127Choice_? AccountOwner { get; init; }
-
-    /// <summary>
     /// Additional Parameters.
     /// </summary>
     [DisplayName("Additional Parameters")]
     [IsoXmlTag("AddtlParams")]
     public AdditionalParameters33? AdditionalParameters { get; init; }
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Attributes.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Intra Position Details.
-    /// </summary>
-    [DisplayName("Intra Position Details")]
-    [IsoXmlTag("IntraPosDtls")]
-    public required IntraPositionDetails65 IntraPositionDetails { get; init; }
 
     /// <summary>
     /// Linkage.
@@ -95,6 +60,13 @@ public record IntraPositionMovementConfirmationV10 : IOuterRecord
     public Linkages75? Linkage { get; init; }
 
     /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification127Choice_? AccountOwner { get; init; }
+
+    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
@@ -102,11 +74,39 @@ public record IntraPositionMovementConfirmationV10 : IOuterRecord
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Attributes.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Intra Position Details.
+    /// </summary>
+    [DisplayName("Intra Position Details")]
+    [IsoXmlTag("IntraPosDtls")]
+    public required IntraPositionDetails65 IntraPositionDetails { get; init; }
 
     /// <summary>
     /// Supplementary Data.

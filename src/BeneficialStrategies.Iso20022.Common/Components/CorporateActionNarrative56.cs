@@ -24,25 +24,11 @@ public record CorporateActionNarrative56
     public UpdatedAdditionalInformation17? AdditionalText { get; init; }
 
     /// <summary>
-    /// Basket Or Index Information.
+    /// Narrative Version.
     /// </summary>
-    [DisplayName("Basket Or Index Information")]
-    [IsoXmlTag("BsktOrIndxInf")]
-    public UpdatedAdditionalInformation17? BasketOrIndexInformation { get; init; }
-
-    /// <summary>
-    /// Certification Breakdown.
-    /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public UpdatedAdditionalInformation17? CertificationBreakdown { get; init; }
-
-    /// <summary>
-    /// Disclaimer.
-    /// </summary>
-    [DisplayName("Disclaimer")]
-    [IsoXmlTag("Dsclmr")]
-    public UpdatedAdditionalInformation17? Disclaimer { get; init; }
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public UpdatedAdditionalInformation17? NarrativeVersion { get; init; }
 
     /// <summary>
     /// Information Conditions.
@@ -59,11 +45,18 @@ public record CorporateActionNarrative56
     public UpdatedAdditionalInformation17? InformationToComplyWith { get; init; }
 
     /// <summary>
-    /// Narrative Version.
+    /// Taxation Conditions.
     /// </summary>
-    [DisplayName("Narrative Version")]
-    [IsoXmlTag("NrrtvVrsn")]
-    public UpdatedAdditionalInformation17? NarrativeVersion { get; init; }
+    [DisplayName("Taxation Conditions")]
+    [IsoXmlTag("TaxtnConds")]
+    public UpdatedAdditionalInformation17? TaxationConditions { get; init; }
+
+    /// <summary>
+    /// Disclaimer.
+    /// </summary>
+    [DisplayName("Disclaimer")]
+    [IsoXmlTag("Dsclmr")]
+    public UpdatedAdditionalInformation17? Disclaimer { get; init; }
 
     /// <summary>
     /// Party Contact Narrative.
@@ -73,13 +66,6 @@ public record CorporateActionNarrative56
     public UpdatedAdditionalInformation17? PartyContactNarrative { get; init; }
 
     /// <summary>
-    /// Processing Text For Next Intermediary.
-    /// </summary>
-    [DisplayName("Processing Text For Next Intermediary")]
-    [IsoXmlTag("PrcgTxtForNxtIntrmy")]
-    public UpdatedAdditionalInformation17? ProcessingTextForNextIntermediary { get; init; }
-
-    /// <summary>
     /// Registration Details.
     /// </summary>
     [DisplayName("Registration Details")]
@@ -87,9 +73,23 @@ public record CorporateActionNarrative56
     public UpdatedAdditionalInformation17? RegistrationDetails { get; init; }
 
     /// <summary>
-    /// Taxation Conditions.
+    /// Basket Or Index Information.
     /// </summary>
-    [DisplayName("Taxation Conditions")]
-    [IsoXmlTag("TaxtnConds")]
-    public UpdatedAdditionalInformation17? TaxationConditions { get; init; }
+    [DisplayName("Basket Or Index Information")]
+    [IsoXmlTag("BsktOrIndxInf")]
+    public UpdatedAdditionalInformation17? BasketOrIndexInformation { get; init; }
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public UpdatedAdditionalInformation17? CertificationBreakdown { get; init; }
+
+    /// <summary>
+    /// Processing Text For Next Intermediary.
+    /// </summary>
+    [DisplayName("Processing Text For Next Intermediary")]
+    [IsoXmlTag("PrcgTxtForNxtIntrmy")]
+    public UpdatedAdditionalInformation17? ProcessingTextForNextIntermediary { get; init; }
 }

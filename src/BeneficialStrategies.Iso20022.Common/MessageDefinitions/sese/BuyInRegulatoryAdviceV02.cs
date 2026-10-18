@@ -62,18 +62,18 @@ public record BuyInRegulatoryAdviceV02 : IOuterRecord
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Details of the buy-in.
-    /// </summary>
-    [DisplayName("Buy In Attributes")]
-    [IsoXmlTag("BuyInAttrbts")]
-    public ValueList<BuyInAdviceDetails2> BuyInAttributes { get; init; } = [];
-
-    /// <summary>
     /// Account used in the original failing transaction.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public required SecuritiesAccount19 SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Details of the buy-in.
+    /// </summary>
+    [DisplayName("Buy In Attributes")]
+    [IsoXmlTag("BuyInAttrbts")]
+    public ValueList<BuyInAdviceDetails2> BuyInAttributes { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitStructure6
 {
     /// <summary>
-    /// Amount of money of the limit, expressed in an eligible currency.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required Amount2Choice_ Amount { get; init; }
-
-    /// <summary>
-    /// Specifies if a limit is a debit limit or a credit limit.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
-
-    /// <summary>
     /// Identification of the default limit.
     /// </summary>
     [DisplayName("Limit Identification")]
@@ -43,4 +29,18 @@ public record LimitStructure6
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
     public DateAndDateTime2Choice_? StartDateTime { get; init; }
+
+    /// <summary>
+    /// Amount of money of the limit, expressed in an eligible currency.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required Amount2Choice_ Amount { get; init; }
+
+    /// <summary>
+    /// Specifies if a limit is a debit limit or a credit limit.
+    /// </summary>
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 }

@@ -31,25 +31,11 @@ public record TransactionTypeAndAdditionalParameters23
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Common Identification.
+    /// Securities Financing Transaction Type.
     /// </summary>
-    [DisplayName("Common Identification")]
-    [IsoXmlTag("CmonId")]
-    public Max35Text? CommonIdentification { get; init; }
-
-    /// <summary>
-    /// Modification Type.
-    /// </summary>
-    [DisplayName("Modification Type")]
-    [IsoXmlTag("ModTp")]
-    public RepurchaseType21Choice_? ModificationType { get; init; }
-
-    /// <summary>
-    /// Nonce Identification.
-    /// </summary>
-    [DisplayName("Nonce Identification")]
-    [IsoXmlTag("NonceId")]
-    public Max35Text? NonceIdentification { get; init; }
+    [DisplayName("Securities Financing Transaction Type")]
+    [IsoXmlTag("SctiesFincgTxTp")]
+    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
 
     /// <summary>
     /// Payment.
@@ -59,6 +45,20 @@ public record TransactionTypeAndAdditionalParameters23
     public required DeliveryReceiptType2Code Payment { get; init; }
 
     /// <summary>
+    /// Modification Type.
+    /// </summary>
+    [DisplayName("Modification Type")]
+    [IsoXmlTag("ModTp")]
+    public RepurchaseType21Choice_? ModificationType { get; init; }
+
+    /// <summary>
+    /// Common Identification.
+    /// </summary>
+    [DisplayName("Common Identification")]
+    [IsoXmlTag("CmonId")]
+    public Max35Text? CommonIdentification { get; init; }
+
+    /// <summary>
     /// Pool Identification.
     /// </summary>
     [DisplayName("Pool Identification")]
@@ -66,9 +66,9 @@ public record TransactionTypeAndAdditionalParameters23
     public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
-    /// Securities Financing Transaction Type.
+    /// Nonce Identification.
     /// </summary>
-    [DisplayName("Securities Financing Transaction Type")]
-    [IsoXmlTag("SctiesFincgTxTp")]
-    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
+    [DisplayName("Nonce Identification")]
+    [IsoXmlTag("NonceId")]
+    public Max35Text? NonceIdentification { get; init; }
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Document26
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max2048Text? Description { get; init; }
-
-    /// <summary>
-    /// Electronic Seal Reference.
-    /// </summary>
-    [DisplayName("Electronic Seal Reference")]
-    [IsoXmlTag("ElctrncSealRef")]
-    public Max2048Text? ElectronicSealReference { get; init; }
-
-    /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
@@ -45,9 +31,23 @@ public record Document26
     public LanguageVersion1Code? OriginalOrTranslated { get; init; }
 
     /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max2048Text? Description { get; init; }
+
+    /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public required Max2048Text Reference { get; init; }
+
+    /// <summary>
+    /// Electronic Seal Reference.
+    /// </summary>
+    [DisplayName("Electronic Seal Reference")]
+    [IsoXmlTag("ElctrncSealRef")]
+    public Max2048Text? ElectronicSealReference { get; init; }
 }

@@ -17,6 +17,34 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditTransferTransaction65
 {
     /// <summary>
+    /// Payment Identification.
+    /// </summary>
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    public required PaymentIdentification6 PaymentIdentification { get; init; }
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Payment Condition.
+    /// </summary>
+    [DisplayName("Payment Condition")]
+    [IsoXmlTag("PmtCond")]
+    public PaymentCondition2? PaymentCondition { get; init; }
+
+    /// <summary>
+    /// Requested Execution Date.
+    /// </summary>
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -31,6 +59,13 @@ public record CreditTransferTransaction65
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
     /// <summary>
+    /// Mandate Related Information.
+    /// </summary>
+    [DisplayName("Mandate Related Information")]
+    [IsoXmlTag("MndtRltdInf")]
+    public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
+
+    /// <summary>
     /// Cheque Instruction.
     /// </summary>
     [DisplayName("Cheque Instruction")]
@@ -38,46 +73,11 @@ public record CreditTransferTransaction65
     public Cheque19? ChequeInstruction { get; init; }
 
     /// <summary>
-    /// Creditor.
+    /// Ultimate Debtor.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required PartyIdentification272 Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
-
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
-
-    /// <summary>
-    /// Enclosed File.
-    /// </summary>
-    [DisplayName("Enclosed File")]
-    [IsoXmlTag("NclsdFile")]
-    public ValueList<Document15> EnclosedFile { get; init; } = [];
-
-    /// <summary>
-    /// Instruction For Creditor Agent.
-    /// </summary>
-    [DisplayName("Instruction For Creditor Agent")]
-    [IsoXmlTag("InstrForCdtrAgt")]
-    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -101,32 +101,46 @@ public record CreditTransferTransaction65
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
 
     /// <summary>
-    /// Mandate Related Information.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("Mandate Related Information")]
-    [IsoXmlTag("MndtRltdInf")]
-    public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
 
     /// <summary>
-    /// Payment Condition.
+    /// Creditor Agent Account.
     /// </summary>
-    [DisplayName("Payment Condition")]
-    [IsoXmlTag("PmtCond")]
-    public PaymentCondition2? PaymentCondition { get; init; }
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
-    /// Payment Identification.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Payment Identification")]
-    [IsoXmlTag("PmtId")]
-    public required PaymentIdentification6 PaymentIdentification { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required PartyIdentification272 Creditor { get; init; }
 
     /// <summary>
-    /// Payment Type Information.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
+
+    /// <summary>
+    /// Ultimate Creditor.
+    /// </summary>
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    public PartyIdentification272? UltimateCreditor { get; init; }
+
+    /// <summary>
+    /// Instruction For Creditor Agent.
+    /// </summary>
+    [DisplayName("Instruction For Creditor Agent")]
+    [IsoXmlTag("InstrForCdtrAgt")]
+    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
 
     /// <summary>
     /// Purpose.
@@ -143,6 +157,13 @@ public record CreditTransferTransaction65
     public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
 
     /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public TaxData1? Tax { get; init; }
+
+    /// <summary>
     /// Related Remittance Information.
     /// </summary>
     [DisplayName("Related Remittance Information")]
@@ -157,11 +178,11 @@ public record CreditTransferTransaction65
     public RemittanceInformation22? RemittanceInformation { get; init; }
 
     /// <summary>
-    /// Requested Execution Date.
+    /// Enclosed File.
     /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+    [DisplayName("Enclosed File")]
+    [IsoXmlTag("NclsdFile")]
+    public ValueList<Document15> EnclosedFile { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.
@@ -169,25 +190,4 @@ public record CreditTransferTransaction65
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Tax.
-    /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public TaxData1? Tax { get; init; }
-
-    /// <summary>
-    /// Ultimate Creditor.
-    /// </summary>
-    [DisplayName("Ultimate Creditor")]
-    [IsoXmlTag("UltmtCdtr")]
-    public PartyIdentification272? UltimateCreditor { get; init; }
-
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
 }

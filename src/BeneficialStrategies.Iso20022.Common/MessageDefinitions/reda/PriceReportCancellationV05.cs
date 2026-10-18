@@ -46,6 +46,43 @@ public record PriceReportCancellationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required MessageIdentification1 MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Pool Reference.
+    /// </summary>
+    [DisplayName("Pool Reference")]
+    [IsoXmlTag("PoolRef")]
+    public AdditionalReference10? PoolReference { get; init; }
+
+    /// <summary>
+    /// Previous Reference.
+    /// </summary>
+    [DisplayName("Previous Reference")]
+    [IsoXmlTag("PrvsRef")]
+    public AdditionalReference10? PreviousReference { get; init; }
+
+    /// <summary>
+    /// Message Pagination.
+    /// </summary>
+    [DisplayName("Message Pagination")]
+    [IsoXmlTag("MsgPgntn")]
+    public required Pagination1 MessagePagination { get; init; }
+
+    /// <summary>
+    /// Price Report Identification.
+    /// </summary>
+    [DisplayName("Price Report Identification")]
+    [IsoXmlTag("PricRptId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required Max35Text PriceReportIdentification { get; init; }
+
+    /// <summary>
     /// Cancellation Identification.
     /// </summary>
     [DisplayName("Cancellation Identification")]
@@ -64,11 +101,11 @@ public record PriceReportCancellationV05 : IOuterRecord
     public Max350Text? CancellationReason { get; init; }
 
     /// <summary>
-    /// Cancelled Price Valuation Details.
+    /// Expected Price Correction Date.
     /// </summary>
-    [DisplayName("Cancelled Price Valuation Details")]
-    [IsoXmlTag("CancPricValtnDtls")]
-    public ValueList<PriceReport4> CancelledPriceValuationDetails { get; init; } = [];
+    [DisplayName("Expected Price Correction Date")]
+    [IsoXmlTag("XpctdPricCrrctnDt")]
+    public DateAndDateTime1Choice_? ExpectedPriceCorrectionDate { get; init; }
 
     /// <summary>
     /// Complete Price Cancellation.
@@ -79,11 +116,11 @@ public record PriceReportCancellationV05 : IOuterRecord
     public required YesNoIndicator CompletePriceCancellation { get; init; }
 
     /// <summary>
-    /// Expected Price Correction Date.
+    /// Cancelled Price Valuation Details.
     /// </summary>
-    [DisplayName("Expected Price Correction Date")]
-    [IsoXmlTag("XpctdPricCrrctnDt")]
-    public DateAndDateTime1Choice_? ExpectedPriceCorrectionDate { get; init; }
+    [DisplayName("Cancelled Price Valuation Details")]
+    [IsoXmlTag("CancPricValtnDtls")]
+    public ValueList<PriceReport4> CancelledPriceValuationDetails { get; init; } = [];
 
     /// <summary>
     /// Extension.
@@ -91,41 +128,4 @@ public record PriceReportCancellationV05 : IOuterRecord
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
     public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required MessageIdentification1 MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Message Pagination.
-    /// </summary>
-    [DisplayName("Message Pagination")]
-    [IsoXmlTag("MsgPgntn")]
-    public required Pagination1 MessagePagination { get; init; }
-
-    /// <summary>
-    /// Pool Reference.
-    /// </summary>
-    [DisplayName("Pool Reference")]
-    [IsoXmlTag("PoolRef")]
-    public AdditionalReference10? PoolReference { get; init; }
-
-    /// <summary>
-    /// Previous Reference.
-    /// </summary>
-    [DisplayName("Previous Reference")]
-    [IsoXmlTag("PrvsRef")]
-    public AdditionalReference10? PreviousReference { get; init; }
-
-    /// <summary>
-    /// Price Report Identification.
-    /// </summary>
-    [DisplayName("Price Report Identification")]
-    [IsoXmlTag("PricRptId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required Max35Text PriceReportIdentification { get; init; }
 }

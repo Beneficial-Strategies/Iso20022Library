@@ -53,16 +53,16 @@ public record DerivativesTradeStateReportV02 : IOuterRecord
     public required TradeReportHeader4 ReportHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Trade Data.
     /// </summary>
     [DisplayName("Trade Data")]
     [IsoXmlTag("TradData")]
     public required TradeData60Choice_ TradeData { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

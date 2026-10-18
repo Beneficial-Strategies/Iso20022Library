@@ -38,6 +38,13 @@ public record OriginalItemReference7
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
+    /// Related Account.
+    /// </summary>
+    [DisplayName("Related Account")]
+    [IsoXmlTag("RltdAcct")]
+    public CashAccount40? RelatedAccount { get; init; }
+
+    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -64,13 +71,6 @@ public record OriginalItemReference7
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     public Purpose2Choice_? Purpose { get; init; }
-
-    /// <summary>
-    /// Related Account.
-    /// </summary>
-    [DisplayName("Related Account")]
-    [IsoXmlTag("RltdAcct")]
-    public CashAccount40? RelatedAccount { get; init; }
 
     /// <summary>
     /// Related Remittance Information.

@@ -50,32 +50,11 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information to be extended as supplementary data to agent, for example, &quot;issuer agent&quot; and &quot;reselling agent. Used when the required &quot;ISO agent type&quot; exists and only additional details need to be extended.
+    /// Information to be extended as supplementary data to notification general information.
     /// </summary>
-    [DisplayName("Agent")]
-    [IsoXmlTag("Agt")]
-    public ValueList<PartyIdentificationSD6> Agent { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to cash movement details.
-    /// </summary>
-    [DisplayName("Cash Movement Details")]
-    [IsoXmlTag("CshMvmntDtls")]
-    public ValueList<CashOptionSD14> CashMovementDetails { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to corporate action date details.
-    /// </summary>
-    [DisplayName("Corporate Action Date Details")]
-    [IsoXmlTag("CorpActnDtDtls")]
-    public CorporateActionDateSD10? CorporateActionDateDetails { get; init; }
-
-    /// <summary>
-    /// Information to be extended as supplementary data to corporate action details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD27? CorporateActionDetails { get; init; }
+    [DisplayName("Notification General Information")]
+    [IsoXmlTag("NtfctnGnlInf")]
+    public CorporateActionNotificationSD9? NotificationGeneralInformation { get; init; }
 
     /// <summary>
     /// Information to be extended as supplementary data to notification general information.
@@ -85,11 +64,25 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     public CorporateActionGeneralInformationSD55? CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
-    /// Information to be extended as supplementary data to corporate action period.
+    /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
-    [DisplayName("Corporate Action Period Details")]
-    [IsoXmlTag("CorpActnPrdDtls")]
-    public CorporateActionPeriodSD3? CorporateActionPeriodDetails { get; init; }
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public FinancialInstrumentAttributesSD19? UnderlyingSecurity { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to corporate action details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateActionSD27? CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to corporate action date details.
+    /// </summary>
+    [DisplayName("Corporate Action Date Details")]
+    [IsoXmlTag("CorpActnDtDtls")]
+    public CorporateActionDateSD10? CorporateActionDateDetails { get; init; }
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action price details.
@@ -97,6 +90,13 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     [DisplayName("Corporate Action Price Details")]
     [IsoXmlTag("CorpActnPricDtls")]
     public CorporateActionPriceSD4? CorporateActionPriceDetails { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to corporate action period.
+    /// </summary>
+    [DisplayName("Corporate Action Period Details")]
+    [IsoXmlTag("CorpActnPrdDtls")]
+    public CorporateActionPeriodSD3? CorporateActionPeriodDetails { get; init; }
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action rate and amount.
@@ -113,18 +113,11 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     public CorporateActionQuantitySD3? CorporateActionSecuritiesQuantity { get; init; }
 
     /// <summary>
-    /// Information to be extended as supplementary data to new agent. Used when the required ISO agent type does not exist and an entire new component must be generated.
+    /// Information to be extended as supplementary data to option details.
     /// </summary>
-    [DisplayName("New Agent")]
-    [IsoXmlTag("NewAgt")]
-    public ValueList<PartyIdentificationSD5> NewAgent { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to notification general information.
-    /// </summary>
-    [DisplayName("Notification General Information")]
-    [IsoXmlTag("NtfctnGnlInf")]
-    public CorporateActionNotificationSD9? NotificationGeneralInformation { get; init; }
+    [DisplayName("Option Details")]
+    [IsoXmlTag("OptnDtls")]
+    public ValueList<CorporateActionOptionSD16> OptionDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to option date details.
@@ -134,39 +127,11 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     public ValueList<CorporateActionDateSD11> OptionDateDetails { get; init; } = [];
 
     /// <summary>
-    /// Information to be extended as supplementary data to option details.
-    /// </summary>
-    [DisplayName("Option Details")]
-    [IsoXmlTag("OptnDtls")]
-    public ValueList<CorporateActionOptionSD16> OptionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to securities movement for cash in lieu details.
-    /// </summary>
-    [DisplayName("Securities Movement Cash In Lieu Details")]
-    [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
-    public ValueList<CorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; init; } = [];
-
-    /// <summary>
     /// Information to be extended as supplementary data to securities movement details.
     /// </summary>
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
     public ValueList<SecuritiesOptionSD9> SecuritiesMovementDetails { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to securities movement fraction disposition.
-    /// </summary>
-    [DisplayName("Securities Movement Fraction Disposition")]
-    [IsoXmlTag("SctiesMvmntFrctnDspstn")]
-    public ValueList<FractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to securities movement rate details.
-    /// </summary>
-    [DisplayName("Securities Movement Rate Details")]
-    [IsoXmlTag("SctiesMvmntRateDtls")]
-    public ValueList<CorporateActionRateSD12> SecuritiesMovementRateDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement security details.
@@ -176,9 +141,44 @@ public record DTCCCANOCSDDataSD1V18 : IOuterRecord
     public ValueList<FinancialInstrumentAttributesSD16> SecuritiesMovementSecurityDetails { get; init; } = [];
 
     /// <summary>
-    /// Information to be extended as supplementary data to underlying security details.
+    /// Information to be extended as supplementary data to securities movement rate details.
     /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD19? UnderlyingSecurity { get; init; }
+    [DisplayName("Securities Movement Rate Details")]
+    [IsoXmlTag("SctiesMvmntRateDtls")]
+    public ValueList<CorporateActionRateSD12> SecuritiesMovementRateDetails { get; init; } = [];
+
+    /// <summary>
+    /// Information to be extended as supplementary data to securities movement for cash in lieu details.
+    /// </summary>
+    [DisplayName("Securities Movement Cash In Lieu Details")]
+    [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
+    public ValueList<CorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; init; } = [];
+
+    /// <summary>
+    /// Information to be extended as supplementary data to securities movement fraction disposition.
+    /// </summary>
+    [DisplayName("Securities Movement Fraction Disposition")]
+    [IsoXmlTag("SctiesMvmntFrctnDspstn")]
+    public ValueList<FractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; init; } = [];
+
+    /// <summary>
+    /// Information to be extended as supplementary data to cash movement details.
+    /// </summary>
+    [DisplayName("Cash Movement Details")]
+    [IsoXmlTag("CshMvmntDtls")]
+    public ValueList<CashOptionSD14> CashMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Information to be extended as supplementary data to new agent. Used when the required ISO agent type does not exist and an entire new component must be generated.
+    /// </summary>
+    [DisplayName("New Agent")]
+    [IsoXmlTag("NewAgt")]
+    public ValueList<PartyIdentificationSD5> NewAgent { get; init; } = [];
+
+    /// <summary>
+    /// Information to be extended as supplementary data to agent, for example, &quot;issuer agent&quot; and &quot;reselling agent. Used when the required &quot;ISO agent type&quot; exists and only additional details need to be extended.
+    /// </summary>
+    [DisplayName("Agent")]
+    [IsoXmlTag("Agt")]
+    public ValueList<PartyIdentificationSD6> Agent { get; init; } = [];
 }

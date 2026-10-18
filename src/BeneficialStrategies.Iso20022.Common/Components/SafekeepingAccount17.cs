@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SafekeepingAccount17
 {
     /// <summary>
-    /// Account Servicer.
-    /// </summary>
-    [DisplayName("Account Servicer")]
-    [IsoXmlTag("AcctSvcr")]
-    public required PartyIdentification195Choice_ AccountServicer { get; init; }
-
-    /// <summary>
-    /// Account Sub Level.
-    /// </summary>
-    [DisplayName("Account Sub Level")]
-    [IsoXmlTag("AcctSubLvl")]
-    public AccountSubLevel24? AccountSubLevel { get; init; }
-
-    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
@@ -38,11 +24,11 @@ public record SafekeepingAccount17
     public required Max35Text SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Shareholding Balance On Client Account.
+    /// Account Servicer.
     /// </summary>
-    [DisplayName("Shareholding Balance On Client Account")]
-    [IsoXmlTag("ShrhldgBalOnClntAcct")]
-    public required FinancialInstrumentQuantity18Choice_ ShareholdingBalanceOnClientAccount { get; init; }
+    [DisplayName("Account Servicer")]
+    [IsoXmlTag("AcctSvcr")]
+    public required PartyIdentification195Choice_ AccountServicer { get; init; }
 
     /// <summary>
     /// Shareholding Balance On Own Account.
@@ -52,9 +38,23 @@ public record SafekeepingAccount17
     public required FinancialInstrumentQuantity18Choice_ ShareholdingBalanceOnOwnAccount { get; init; }
 
     /// <summary>
+    /// Shareholding Balance On Client Account.
+    /// </summary>
+    [DisplayName("Shareholding Balance On Client Account")]
+    [IsoXmlTag("ShrhldgBalOnClntAcct")]
+    public required FinancialInstrumentQuantity18Choice_ ShareholdingBalanceOnClientAccount { get; init; }
+
+    /// <summary>
     /// Total Shareholding Balance.
     /// </summary>
     [DisplayName("Total Shareholding Balance")]
     [IsoXmlTag("TtlShrhldgBal")]
     public required FinancialInstrumentQuantity18Choice_ TotalShareholdingBalance { get; init; }
+
+    /// <summary>
+    /// Account Sub Level.
+    /// </summary>
+    [DisplayName("Account Sub Level")]
+    [IsoXmlTag("AcctSubLvl")]
+    public AccountSubLevel24? AccountSubLevel { get; init; }
 }

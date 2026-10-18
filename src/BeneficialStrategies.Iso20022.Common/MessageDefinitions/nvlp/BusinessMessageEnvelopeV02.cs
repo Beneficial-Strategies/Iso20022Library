@@ -46,18 +46,18 @@ public record BusinessMessageEnvelopeV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Document.
-    /// </summary>
-    [DisplayName("Document")]
-    [IsoXmlTag("Doc")]
-    public required LaxPayload Document { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public LaxPayload? Header { get; init; }
+
+    /// <summary>
+    /// Document.
+    /// </summary>
+    [DisplayName("Document")]
+    [IsoXmlTag("Doc")]
+    public required LaxPayload Document { get; init; }
 
     /// <summary>
     /// Reference.

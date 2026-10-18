@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RelatedSettlementInstruction2
 {
     /// <summary>
-    /// Proceeds Quantity Breakdown.
-    /// </summary>
-    [DisplayName("Proceeds Quantity Breakdown")]
-    [IsoXmlTag("PrcdsQtyBrkdwn")]
-    public ProceedsQuantityBreakdown1? ProceedsQuantityBreakdown { get; init; }
-
-    /// <summary>
     /// Related Settlement Instruction Identification.
     /// </summary>
     [DisplayName("Related Settlement Instruction Identification")]
@@ -43,4 +36,11 @@ public record RelatedSettlementInstruction2
     [DisplayName("Transfer Of Proceeds Type Indicator")]
     [IsoXmlTag("TrfOfPrcdsTpInd")]
     public TransferOfProceedsType1Code? TransferOfProceedsTypeIndicator { get; init; }
+
+    /// <summary>
+    /// Proceeds Quantity Breakdown.
+    /// </summary>
+    [DisplayName("Proceeds Quantity Breakdown")]
+    [IsoXmlTag("PrcdsQtyBrkdwn")]
+    public ProceedsQuantityBreakdown1? ProceedsQuantityBreakdown { get; init; }
 }

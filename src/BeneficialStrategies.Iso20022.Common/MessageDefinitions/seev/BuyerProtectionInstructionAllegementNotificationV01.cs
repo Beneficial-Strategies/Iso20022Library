@@ -46,6 +46,29 @@ public record BuyerProtectionInstructionAllegementNotificationV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Processor Transaction Identification.
+    /// </summary>
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required Max35Text ProcessorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation195 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Related Settlement Instruction.
+    /// </summary>
+    [DisplayName("Related Settlement Instruction")]
+    [IsoXmlTag("RltdSttlmInstr")]
+    public required RelatedSettlementInstruction3 RelatedSettlementInstruction { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
@@ -58,29 +81,6 @@ public record BuyerProtectionInstructionAllegementNotificationV01 : IOuterRecord
     [DisplayName("Corporate Action Election")]
     [IsoXmlTag("CorpActnElctn")]
     public required CorporateActionElection4 CorporateActionElection { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation195 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Processor Transaction Identification.
-    /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required Max35Text ProcessorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Related Settlement Instruction.
-    /// </summary>
-    [DisplayName("Related Settlement Instruction")]
-    [IsoXmlTag("RltdSttlmInstr")]
-    public required RelatedSettlementInstruction3 RelatedSettlementInstruction { get; init; }
 
     /// <summary>
     /// Supplementary Data.

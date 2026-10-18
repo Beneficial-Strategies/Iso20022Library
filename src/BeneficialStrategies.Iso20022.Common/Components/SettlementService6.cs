@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementService6
 {
     /// <summary>
-    /// Additional Information.
+    /// Type.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalData1> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Cut Off Time.
-    /// </summary>
-    [DisplayName("Cut Off Time")]
-    [IsoXmlTag("CutOffTm")]
-    public ISODateTime? CutOffTime { get; init; }
-
-    /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Deferred.
-    /// </summary>
-    [DisplayName("Deferred")]
-    [IsoXmlTag("Dfrrd")]
-    public TrueFalseIndicator? Deferred { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Identification.
@@ -52,32 +31,25 @@ public record SettlementService6
     public Max35Text? Identification { get; init; }
 
     /// <summary>
-    /// Period.
-    /// </summary>
-    [DisplayName("Period")]
-    [IsoXmlTag("Prd")]
-    public Max35Text? Period { get; init; }
-
-    /// <summary>
-    /// Reporting Entity Identification.
-    /// </summary>
-    [DisplayName("Reporting Entity Identification")]
-    [IsoXmlTag("RptgNttyId")]
-    public Max35Text? ReportingEntityIdentification { get; init; }
-
-    /// <summary>
-    /// Reporting Entity Type.
-    /// </summary>
-    [DisplayName("Reporting Entity Type")]
-    [IsoXmlTag("RptgNttyTp")]
-    public Max35Text? ReportingEntityType { get; init; }
-
-    /// <summary>
     /// Requested Date.
     /// </summary>
     [DisplayName("Requested Date")]
     [IsoXmlTag("ReqdDt")]
     public ISODate? RequestedDate { get; init; }
+
+    /// <summary>
+    /// Deferred.
+    /// </summary>
+    [DisplayName("Deferred")]
+    [IsoXmlTag("Dfrrd")]
+    public TrueFalseIndicator? Deferred { get; init; }
+
+    /// <summary>
+    /// Date.
+    /// </summary>
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Time.
@@ -87,9 +59,37 @@ public record SettlementService6
     public ISOTime? Time { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Period.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
+    [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
+    public Max35Text? Period { get; init; }
+
+    /// <summary>
+    /// Cut Off Time.
+    /// </summary>
+    [DisplayName("Cut Off Time")]
+    [IsoXmlTag("CutOffTm")]
+    public ISODateTime? CutOffTime { get; init; }
+
+    /// <summary>
+    /// Reporting Entity Type.
+    /// </summary>
+    [DisplayName("Reporting Entity Type")]
+    [IsoXmlTag("RptgNttyTp")]
+    public Max35Text? ReportingEntityType { get; init; }
+
+    /// <summary>
+    /// Reporting Entity Identification.
+    /// </summary>
+    [DisplayName("Reporting Entity Identification")]
+    [IsoXmlTag("RptgNttyId")]
+    public Max35Text? ReportingEntityIdentification { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalData1> AdditionalInformation { get; init; } = [];
 }

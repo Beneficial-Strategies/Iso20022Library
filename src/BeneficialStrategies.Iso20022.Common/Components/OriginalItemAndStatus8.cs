@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalItemAndStatus8
 {
     /// <summary>
-    /// Additional Status Information.
+    /// Original Item Identification.
     /// </summary>
-    [DisplayName("Additional Status Information")]
-    [IsoXmlTag("AddtlStsInf")]
-    public Max105Text? AdditionalStatusInformation { get; init; }
+    [DisplayName("Original Item Identification")]
+    [IsoXmlTag("OrgnlItmId")]
+    public required Max35Text OriginalItemIdentification { get; init; }
+
+    /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount.
@@ -45,18 +59,11 @@ public record OriginalItemAndStatus8
     public required NotificationStatus3Code ItemStatus { get; init; }
 
     /// <summary>
-    /// Original End To End Identification.
+    /// Additional Status Information.
     /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Item Identification.
-    /// </summary>
-    [DisplayName("Original Item Identification")]
-    [IsoXmlTag("OrgnlItmId")]
-    public required Max35Text OriginalItemIdentification { get; init; }
+    [DisplayName("Additional Status Information")]
+    [IsoXmlTag("AddtlStsInf")]
+    public Max105Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Original Item Reference.
@@ -64,11 +71,4 @@ public record OriginalItemAndStatus8
     [DisplayName("Original Item Reference")]
     [IsoXmlTag("OrgnlItmRef")]
     public OriginalItemReference7? OriginalItemReference { get; init; }
-
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
 }

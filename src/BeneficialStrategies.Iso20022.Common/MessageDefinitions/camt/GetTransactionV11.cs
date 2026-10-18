@@ -53,16 +53,16 @@ public record GetTransactionV11 : IOuterRecord
     public required MessageHeader9 MessageHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Transaction Query Definition.
     /// </summary>
     [DisplayName("Transaction Query Definition")]
     [IsoXmlTag("TxQryDef")]
     public TransactionQuery8? TransactionQueryDefinition { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

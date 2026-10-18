@@ -46,18 +46,11 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification127Choice_? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
@@ -67,25 +60,11 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Financial Instrument Attributes.
+    /// Number Counts.
     /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Intra Position Details.
-    /// </summary>
-    [DisplayName("Intra Position Details")]
-    [IsoXmlTag("IntraPosDtls")]
-    public required IntraPositionDetails58 IntraPositionDetails { get; init; }
+    [DisplayName("Number Counts")]
+    [IsoXmlTag("NbCounts")]
+    public NumberCount1Choice_? NumberCounts { get; init; }
 
     /// <summary>
     /// Linkages.
@@ -95,11 +74,11 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     public ValueList<Linkages59> Linkages { get; init; } = [];
 
     /// <summary>
-    /// Number Counts.
+    /// Account Owner.
     /// </summary>
-    [DisplayName("Number Counts")]
-    [IsoXmlTag("NbCounts")]
-    public NumberCount1Choice_? NumberCounts { get; init; }
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification127Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
@@ -109,6 +88,13 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
@@ -116,16 +102,30 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Attributes.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Intra Position Details.
+    /// </summary>
+    [DisplayName("Intra Position Details")]
+    [IsoXmlTag("IntraPosDtls")]
+    public required IntraPositionDetails58 IntraPositionDetails { get; init; }
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required Max35Text TransactionIdentification { get; init; }
 }

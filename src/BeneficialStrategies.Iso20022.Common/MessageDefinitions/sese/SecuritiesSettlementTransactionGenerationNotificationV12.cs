@@ -61,60 +61,11 @@ public record SecuritiesSettlementTransactionGenerationNotificationV12 : IOuterR
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information for registration or physical settlement.
+    /// Provides transaction type and identification information.
     /// </summary>
-    [DisplayName("Additional Physical Or Registration Details")]
-    [IsoXmlTag("AddtlPhysOrRegnDtls")]
-    public RegistrationParameters6? AdditionalPhysicalOrRegistrationDetails { get; init; }
-
-    /// <summary>
-    /// Cash parties involved in the transaction if different from the securities settlement parties.
-    /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties41? CashParties { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of delivering settlement parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties126? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Digital Network Fee.
-    /// </summary>
-    [DisplayName("Digital Network Fee")]
-    [IsoXmlTag("DgtlNtwkFee")]
-    public NetworkFee1? DigitalNetworkFee { get; init; }
-
-    /// <summary>
-    /// Elements characterising a financial instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Specifies the reason why the transaction was generated.
-    /// </summary>
-    [DisplayName("Generated Reason")]
-    [IsoXmlTag("GnrtdRsn")]
-    public ValueList<GeneratedReason5> GeneratedReason { get; init; } = [];
-
-    /// <summary>
-    /// Link to another transaction that must be processed after, before or at the same time.
-    /// </summary>
-    [DisplayName("Linkages")]
-    [IsoXmlTag("Lnkgs")]
-    public ValueList<Linkages61> Linkages { get; init; } = [];
+    [DisplayName("Transaction Identification Details")]
+    [IsoXmlTag("TxIdDtls")]
+    public required SettlementTypeAndIdentification29 TransactionIdentificationDetails { get; init; }
 
     /// <summary>
     /// Count of the number of transactions linked.
@@ -124,18 +75,32 @@ public record SecuritiesSettlementTransactionGenerationNotificationV12 : IOuterR
     public NumberCount2Choice_? NumberCounts { get; init; }
 
     /// <summary>
-    /// Other amounts than the settlement amount.
+    /// Link to another transaction that must be processed after, before or at the same time.
     /// </summary>
-    [DisplayName("Other Amounts")]
-    [IsoXmlTag("OthrAmts")]
-    public OtherAmounts45? OtherAmounts { get; init; }
+    [DisplayName("Linkages")]
+    [IsoXmlTag("Lnkgs")]
+    public ValueList<Linkages61> Linkages { get; init; } = [];
 
     /// <summary>
-    /// Other business parties relevant to the transaction.
+    /// Details of the trade.
     /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties43? OtherBusinessParties { get; init; }
+    [DisplayName("Trade Details")]
+    [IsoXmlTag("TradDtls")]
+    public required SecuritiesTradeDetails145 TradeDetails { get; init; }
+
+    /// <summary>
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Elements characterising a financial instrument.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Details related to the account and quantity involved in the transaction.
@@ -145,11 +110,32 @@ public record SecuritiesSettlementTransactionGenerationNotificationV12 : IOuterR
     public ValueList<QuantityAndAccount117> QuantityAndAccountDetails { get; init; } = [];
 
     /// <summary>
+    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
+    /// </summary>
+    [DisplayName("Settlement Parameters")]
+    [IsoXmlTag("SttlmParams")]
+    public required SettlementDetails217 SettlementParameters { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties126? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
     /// Identifies the chain of receiving settlement parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
     public SettlementParties126? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Cash parties involved in the transaction if different from the securities settlement parties.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties41? CashParties { get; init; }
 
     /// <summary>
     /// Total amount of money to be paid or received in exchange for the securities.
@@ -159,11 +145,39 @@ public record SecuritiesSettlementTransactionGenerationNotificationV12 : IOuterR
     public AmountAndDirection94? SettlementAmount { get; init; }
 
     /// <summary>
-    /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
+    /// Other amounts than the settlement amount.
     /// </summary>
-    [DisplayName("Settlement Parameters")]
-    [IsoXmlTag("SttlmParams")]
-    public required SettlementDetails217 SettlementParameters { get; init; }
+    [DisplayName("Other Amounts")]
+    [IsoXmlTag("OthrAmts")]
+    public OtherAmounts45? OtherAmounts { get; init; }
+
+    /// <summary>
+    /// Digital Network Fee.
+    /// </summary>
+    [DisplayName("Digital Network Fee")]
+    [IsoXmlTag("DgtlNtwkFee")]
+    public NetworkFee1? DigitalNetworkFee { get; init; }
+
+    /// <summary>
+    /// Other business parties relevant to the transaction.
+    /// </summary>
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties43? OtherBusinessParties { get; init; }
+
+    /// <summary>
+    /// Information for registration or physical settlement.
+    /// </summary>
+    [DisplayName("Additional Physical Or Registration Details")]
+    [IsoXmlTag("AddtlPhysOrRegnDtls")]
+    public RegistrationParameters6? AdditionalPhysicalOrRegistrationDetails { get; init; }
+
+    /// <summary>
+    /// Specifies the reason why the transaction was generated.
+    /// </summary>
+    [DisplayName("Generated Reason")]
+    [IsoXmlTag("GnrtdRsn")]
+    public ValueList<GeneratedReason5> GeneratedReason { get; init; } = [];
 
     /// <summary>
     /// Status and reason of the transaction.
@@ -178,18 +192,4 @@ public record SecuritiesSettlementTransactionGenerationNotificationV12 : IOuterR
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Details of the trade.
-    /// </summary>
-    [DisplayName("Trade Details")]
-    [IsoXmlTag("TradDtls")]
-    public required SecuritiesTradeDetails145 TradeDetails { get; init; }
-
-    /// <summary>
-    /// Provides transaction type and identification information.
-    /// </summary>
-    [DisplayName("Transaction Identification Details")]
-    [IsoXmlTag("TxIdDtls")]
-    public required SettlementTypeAndIdentification29 TransactionIdentificationDetails { get; init; }
 }

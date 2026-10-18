@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SupportingDocument4
 {
     /// <summary>
+    /// Supporting Document Identification.
+    /// </summary>
+    [DisplayName("Supporting Document Identification")]
+    [IsoXmlTag("SpprtgDocId")]
+    public required Max35Text SupportingDocumentIdentification { get; init; }
+
+    /// <summary>
+    /// Original Request Identification.
+    /// </summary>
+    [DisplayName("Original Request Identification")]
+    [IsoXmlTag("OrgnlReqId")]
+    public Max35Text? OriginalRequestIdentification { get; init; }
+
+    /// <summary>
+    /// Certificate.
+    /// </summary>
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public required DocumentIdentification28 Certificate { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -38,13 +59,6 @@ public record SupportingDocument4
     public DocumentAmendment1? Amendment { get; init; }
 
     /// <summary>
-    /// Certificate.
-    /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public required DocumentIdentification28 Certificate { get; init; }
-
-    /// <summary>
     /// Contract Reference.
     /// </summary>
     [DisplayName("Contract Reference")]
@@ -59,23 +73,9 @@ public record SupportingDocument4
     public ValueList<SupportingDocumentEntry2> Entry { get; init; } = [];
 
     /// <summary>
-    /// Original Request Identification.
-    /// </summary>
-    [DisplayName("Original Request Identification")]
-    [IsoXmlTag("OrgnlReqId")]
-    public Max35Text? OriginalRequestIdentification { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Supporting Document Identification.
-    /// </summary>
-    [DisplayName("Supporting Document Identification")]
-    [IsoXmlTag("SpprtgDocId")]
-    public required Max35Text SupportingDocumentIdentification { get; init; }
 }

@@ -46,18 +46,18 @@ public record InvestigationRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Investigation Data.
-    /// </summary>
-    [DisplayName("Investigation Data")]
-    [IsoXmlTag("InvstgtnData")]
-    public ValueList<InvestigationReason2> InvestigationData { get; init; } = [];
-
-    /// <summary>
     /// Investigation Request.
     /// </summary>
     [DisplayName("Investigation Request")]
     [IsoXmlTag("InvstgtnReq")]
     public required InvestigationRequest2 InvestigationRequest { get; init; }
+
+    /// <summary>
+    /// Investigation Data.
+    /// </summary>
+    [DisplayName("Investigation Data")]
+    [IsoXmlTag("InvstgtnData")]
+    public ValueList<InvestigationReason2> InvestigationData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

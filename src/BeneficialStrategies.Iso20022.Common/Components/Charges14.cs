@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Charges14
 {
     /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
     /// Agent.
     /// </summary>
     [DisplayName("Agent")]
@@ -29,13 +36,6 @@ public record Charges14
     [DisplayName("Agent Account")]
     [IsoXmlTag("AgtAcct")]
     public CashAccount40? AgentAccount { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
     /// Type.

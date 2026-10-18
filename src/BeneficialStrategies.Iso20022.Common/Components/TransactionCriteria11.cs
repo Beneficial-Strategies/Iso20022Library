@@ -24,13 +24,6 @@ public record TransactionCriteria11
     public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public TransactionReturnCriteria5? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
@@ -43,4 +36,11 @@ public record TransactionCriteria11
     [DisplayName("Statement Report")]
     [IsoXmlTag("StmtRpt")]
     public ReportIndicator1Code? StatementReport { get; init; }
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public TransactionReturnCriteria5? ReturnCriteria { get; init; }
 }

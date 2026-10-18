@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardData14
 {
     /// <summary>
-    /// Card Sequence Number.
-    /// </summary>
-    [DisplayName("Card Sequence Number")]
-    [IsoXmlTag("CardSeqNb")]
-    public Min2Max3NumericText? CardSequenceNumber { get; init; }
-
-    /// <summary>
     /// PAN.
     /// </summary>
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     public Max19NumericText? PAN { get; init; }
+
+    /// <summary>
+    /// Card Sequence Number.
+    /// </summary>
+    [DisplayName("Card Sequence Number")]
+    [IsoXmlTag("CardSeqNb")]
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Payment Account Reference.

@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorDiagnosticRequest13
 {
     /// <summary>
-    /// Acquirer Availability Requested.
-    /// </summary>
-    [DisplayName("Acquirer Availability Requested")]
-    [IsoXmlTag("AcqrrAvlbtyReqd")]
-    public TrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment81 Environment { get; init; }
+
+    /// <summary>
+    /// Acquirer Availability Requested.
+    /// </summary>
+    [DisplayName("Acquirer Availability Requested")]
+    [IsoXmlTag("AcqrrAvlbtyReqd")]
+    public TrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
 }

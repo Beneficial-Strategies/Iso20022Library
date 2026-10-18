@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateAction82
 {
     /// <summary>
-    /// Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Corporate Action Event Identification")]
-    [IsoXmlTag("CorpActnEvtId")]
-    public required Max35Text CorporateActionEventIdentification { get; init; }
-
-    /// <summary>
     /// Event Type.
     /// </summary>
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
     public required CorporateActionEventType104Choice_ EventType { get; init; }
+
+    /// <summary>
+    /// Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Corporate Action Event Identification")]
+    [IsoXmlTag("CorpActnEvtId")]
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official Corporate Action Event Identification.

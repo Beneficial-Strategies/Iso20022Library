@@ -46,25 +46,25 @@ public record SecuritiesTransactionPendingReportV15 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
     public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Statement General Details.
+    /// </summary>
+    [DisplayName("Statement General Details")]
+    [IsoXmlTag("StmtGnlDtls")]
+    public required Statement64 StatementGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
@@ -74,11 +74,11 @@ public record SecuritiesTransactionPendingReportV15 : IOuterRecord
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Statement General Details.
+    /// Block Chain Address Or Wallet.
     /// </summary>
-    [DisplayName("Statement General Details")]
-    [IsoXmlTag("StmtGnlDtls")]
-    public required Statement64 StatementGeneralDetails { get; init; }
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Status.

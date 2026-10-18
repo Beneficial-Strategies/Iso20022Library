@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BatchRequest7
 {
     /// <summary>
-    /// Remove All Flag.
-    /// </summary>
-    [DisplayName("Remove All Flag")]
-    [IsoXmlTag("RmvAllFlg")]
-    public TrueFalseIndicator? RemoveAllFlag { get; init; }
-
-    /// <summary>
     /// Sale Batch Identification.
     /// </summary>
     [DisplayName("Sale Batch Identification")]
     [IsoXmlTag("SaleBtchId")]
     public TransactionIdentifier1? SaleBatchIdentification { get; init; }
+
+    /// <summary>
+    /// Remove All Flag.
+    /// </summary>
+    [DisplayName("Remove All Flag")]
+    [IsoXmlTag("RmvAllFlg")]
+    public TrueFalseIndicator? RemoveAllFlag { get; init; }
 
     /// <summary>
     /// Transaction To Perform.

@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountNotification23
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -38,6 +45,27 @@ public record AccountNotification23
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
+    /// Related Account.
+    /// </summary>
+    [DisplayName("Related Account")]
+    [IsoXmlTag("RltdAcct")]
+    public CashAccount40? RelatedAccount { get; init; }
+
+    /// <summary>
+    /// Total Amount.
+    /// </summary>
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? TotalAmount { get; init; }
+
+    /// <summary>
+    /// Expected Value Date.
+    /// </summary>
+    [DisplayName("Expected Value Date")]
+    [IsoXmlTag("XpctdValDt")]
+    public ISODate? ExpectedValueDate { get; init; }
+
+    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -52,20 +80,6 @@ public record AccountNotification23
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// Expected Value Date.
-    /// </summary>
-    [DisplayName("Expected Value Date")]
-    [IsoXmlTag("XpctdValDt")]
-    public ISODate? ExpectedValueDate { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
-
-    /// <summary>
     /// Intermediary Agent.
     /// </summary>
     [DisplayName("Intermediary Agent")]
@@ -78,18 +92,4 @@ public record AccountNotification23
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
     public ValueList<NotificationItem9> Item { get; init; } = [];
-
-    /// <summary>
-    /// Related Account.
-    /// </summary>
-    [DisplayName("Related Account")]
-    [IsoXmlTag("RltdAcct")]
-    public CashAccount40? RelatedAccount { get; init; }
-
-    /// <summary>
-    /// Total Amount.
-    /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? TotalAmount { get; init; }
 }

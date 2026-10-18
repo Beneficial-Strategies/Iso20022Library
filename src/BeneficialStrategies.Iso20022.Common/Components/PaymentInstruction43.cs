@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentInstruction43
 {
     /// <summary>
+    /// Payment Information Identification.
+    /// </summary>
+    [DisplayName("Payment Information Identification")]
+    [IsoXmlTag("PmtInfId")]
+    public required Max35Text PaymentInformationIdentification { get; init; }
+
+    /// <summary>
+    /// Payment Method.
+    /// </summary>
+    [DisplayName("Payment Method")]
+    [IsoXmlTag("PmtMtd")]
+    public required PaymentMethod3Code PaymentMethod { get; init; }
+
+    /// <summary>
     /// Batch Booking.
     /// </summary>
     [DisplayName("Batch Booking")]
@@ -24,25 +38,11 @@ public record PaymentInstruction43
     public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
-    /// Charge Bearer.
+    /// Number Of Transactions.
     /// </summary>
-    [DisplayName("Charge Bearer")]
-    [IsoXmlTag("ChrgBr")]
-    public ChargeBearerType1Code? ChargeBearer { get; init; }
-
-    /// <summary>
-    /// Charges Account.
-    /// </summary>
-    [DisplayName("Charges Account")]
-    [IsoXmlTag("ChrgsAcct")]
-    public CashAccount40? ChargesAccount { get; init; }
-
-    /// <summary>
-    /// Charges Account Agent.
-    /// </summary>
-    [DisplayName("Charges Account Agent")]
-    [IsoXmlTag("ChrgsAcctAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Control Sum.
@@ -52,12 +52,25 @@ public record PaymentInstruction43
     public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
-    /// Credit Transfer Transaction Information.
+    /// Payment Type Information.
     /// </summary>
-    [DisplayName("Credit Transfer Transaction Information")]
-    [IsoXmlTag("CdtTrfTxInf")]
-    public ValueList<CreditTransferTransaction59> CreditTransferTransactionInformation { get; init; } =
-        [];
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Requested Execution Date.
+    /// </summary>
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public required ISODate RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Pooling Adjustment Date.
+    /// </summary>
+    [DisplayName("Pooling Adjustment Date")]
+    [IsoXmlTag("PoolgAdjstmntDt")]
+    public ISODate? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -95,51 +108,38 @@ public record PaymentInstruction43
     public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
-    /// Number Of Transactions.
-    /// </summary>
-    [DisplayName("Number Of Transactions")]
-    [IsoXmlTag("NbOfTxs")]
-    public Max15NumericText? NumberOfTransactions { get; init; }
-
-    /// <summary>
-    /// Payment Information Identification.
-    /// </summary>
-    [DisplayName("Payment Information Identification")]
-    [IsoXmlTag("PmtInfId")]
-    public required Max35Text PaymentInformationIdentification { get; init; }
-
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
-    [DisplayName("Payment Method")]
-    [IsoXmlTag("PmtMtd")]
-    public required PaymentMethod3Code PaymentMethod { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
-
-    /// <summary>
-    /// Pooling Adjustment Date.
-    /// </summary>
-    [DisplayName("Pooling Adjustment Date")]
-    [IsoXmlTag("PoolgAdjstmntDt")]
-    public ISODate? PoolingAdjustmentDate { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public required ISODate RequestedExecutionDate { get; init; }
-
-    /// <summary>
     /// Ultimate Debtor.
     /// </summary>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }
+
+    /// <summary>
+    /// Charge Bearer.
+    /// </summary>
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    public ChargeBearerType1Code? ChargeBearer { get; init; }
+
+    /// <summary>
+    /// Charges Account.
+    /// </summary>
+    [DisplayName("Charges Account")]
+    [IsoXmlTag("ChrgsAcct")]
+    public CashAccount40? ChargesAccount { get; init; }
+
+    /// <summary>
+    /// Charges Account Agent.
+    /// </summary>
+    [DisplayName("Charges Account Agent")]
+    [IsoXmlTag("ChrgsAcctAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
+
+    /// <summary>
+    /// Credit Transfer Transaction Information.
+    /// </summary>
+    [DisplayName("Credit Transfer Transaction Information")]
+    [IsoXmlTag("CdtTrfTxInf")]
+    public ValueList<CreditTransferTransaction59> CreditTransferTransactionInformation { get; init; } =
+        [];
 }

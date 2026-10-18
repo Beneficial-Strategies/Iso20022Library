@@ -60,11 +60,11 @@ public record RequestToModifyPaymentV09 : IOuterRecord
     public Case6? Case { get; init; }
 
     /// <summary>
-    /// Instruction For Assignee.
+    /// Underlying.
     /// </summary>
-    [DisplayName("Instruction For Assignee")]
-    [IsoXmlTag("InstrForAssgne")]
-    public InstructionForAssignee1? InstructionForAssignee { get; init; }
+    [DisplayName("Underlying")]
+    [IsoXmlTag("Undrlyg")]
+    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
 
     /// <summary>
     /// Modification.
@@ -74,16 +74,16 @@ public record RequestToModifyPaymentV09 : IOuterRecord
     public required RequestedModification11 Modification { get; init; }
 
     /// <summary>
+    /// Instruction For Assignee.
+    /// </summary>
+    [DisplayName("Instruction For Assignee")]
+    [IsoXmlTag("InstrForAssgne")]
+    public InstructionForAssignee1? InstructionForAssignee { get; init; }
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying.
-    /// </summary>
-    [DisplayName("Underlying")]
-    [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
 }

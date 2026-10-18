@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountQuery4
 {
     /// <summary>
-    /// Account Criteria.
-    /// </summary>
-    [DisplayName("Account Criteria")]
-    [IsoXmlTag("AcctCrit")]
-    public AccountCriteria4Choice_? AccountCriteria { get; init; }
-
-    /// <summary>
     /// Query Type.
     /// </summary>
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
     public QueryType2Code? QueryType { get; init; }
+
+    /// <summary>
+    /// Account Criteria.
+    /// </summary>
+    [DisplayName("Account Criteria")]
+    [IsoXmlTag("AcctCrit")]
+    public AccountCriteria4Choice_? AccountCriteria { get; init; }
 }

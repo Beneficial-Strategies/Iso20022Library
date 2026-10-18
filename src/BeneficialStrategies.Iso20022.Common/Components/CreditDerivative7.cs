@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditDerivative7
 {
     /// <summary>
-    /// Calculation Basis.
+    /// Seniority.
     /// </summary>
-    [DisplayName("Calculation Basis")]
-    [IsoXmlTag("ClctnBsis")]
-    public Max35Text? CalculationBasis { get; init; }
-
-    /// <summary>
-    /// Index Factor.
-    /// </summary>
-    [DisplayName("Index Factor")]
-    [IsoXmlTag("IndxFctr")]
-    public PercentageRate? IndexFactor { get; init; }
-
-    /// <summary>
-    /// Payment Frequency.
-    /// </summary>
-    [DisplayName("Payment Frequency")]
-    [IsoXmlTag("PmtFrqcy")]
-    public Frequency13Code? PaymentFrequency { get; init; }
+    [DisplayName("Seniority")]
+    [IsoXmlTag("Snrty")]
+    public DebtInstrumentSeniorityType2Code? Seniority { get; init; }
 
     /// <summary>
     /// Reference Party.
@@ -45,11 +31,18 @@ public record CreditDerivative7
     public DerivativePartyIdentification1Choice_? ReferenceParty { get; init; }
 
     /// <summary>
-    /// Seniority.
+    /// Payment Frequency.
     /// </summary>
-    [DisplayName("Seniority")]
-    [IsoXmlTag("Snrty")]
-    public DebtInstrumentSeniorityType2Code? Seniority { get; init; }
+    [DisplayName("Payment Frequency")]
+    [IsoXmlTag("PmtFrqcy")]
+    public Frequency13Code? PaymentFrequency { get; init; }
+
+    /// <summary>
+    /// Calculation Basis.
+    /// </summary>
+    [DisplayName("Calculation Basis")]
+    [IsoXmlTag("ClctnBsis")]
+    public Max35Text? CalculationBasis { get; init; }
 
     /// <summary>
     /// Series.
@@ -59,16 +52,23 @@ public record CreditDerivative7
     public Number? Series { get; init; }
 
     /// <summary>
-    /// Tranche Indicator.
-    /// </summary>
-    [DisplayName("Tranche Indicator")]
-    [IsoXmlTag("TrchInd")]
-    public TrueFalseIndicator? TrancheIndicator { get; init; }
-
-    /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     public Number? Version { get; init; }
+
+    /// <summary>
+    /// Index Factor.
+    /// </summary>
+    [DisplayName("Index Factor")]
+    [IsoXmlTag("IndxFctr")]
+    public PercentageRate? IndexFactor { get; init; }
+
+    /// <summary>
+    /// Tranche Indicator.
+    /// </summary>
+    [DisplayName("Tranche Indicator")]
+    [IsoXmlTag("TrchInd")]
+    public TrueFalseIndicator? TrancheIndicator { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BillingTaxIdentification3
 {
     /// <summary>
-    /// Tax Contact.
+    /// VAT Registration Number.
     /// </summary>
-    [DisplayName("Tax Contact")]
-    [IsoXmlTag("TaxCtct")]
-    public Contact13? TaxContact { get; init; }
+    [DisplayName("VAT Registration Number")]
+    [IsoXmlTag("VATRegnNb")]
+    public Max35Text? VATRegistrationNumber { get; init; }
 
     /// <summary>
     /// Tax Registration Number.
@@ -31,9 +31,9 @@ public record BillingTaxIdentification3
     public Max35Text? TaxRegistrationNumber { get; init; }
 
     /// <summary>
-    /// VAT Registration Number.
+    /// Tax Contact.
     /// </summary>
-    [DisplayName("VAT Registration Number")]
-    [IsoXmlTag("VATRegnNb")]
-    public Max35Text? VATRegistrationNumber { get; init; }
+    [DisplayName("Tax Contact")]
+    [IsoXmlTag("TaxCtct")]
+    public Contact13? TaxContact { get; init; }
 }

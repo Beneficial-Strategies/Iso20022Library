@@ -18,19 +18,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader118
 {
     /// <summary>
-    /// User identification or any user key that allows to check if the initiating party is allowed to initiate transactions from the account specified in the initiation.
-    /// Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side. The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a different party than the initiating party.
+    /// Point to point reference, assigned by the instructing party and sent to the next party in the chain, to unambiguously identify the message.
+    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
     /// </summary>
-    [DisplayName("Authorisation")]
-    [IsoXmlTag("Authstn")]
-    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
-
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -40,11 +33,26 @@ public record GroupHeader118
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
+    /// User identification or any user key that allows to check if the initiating party is allowed to initiate transactions from the account specified in the initiation.
+    /// Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side. The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a different party than the initiating party.
     /// </summary>
-    [DisplayName("Forwarding Agent")]
-    [IsoXmlTag("FwdgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
+
+    /// <summary>
+    /// Number of individual transactions contained in the message.
+    /// </summary>
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    public required Max15NumericText NumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Party that initiates the payment.
@@ -55,17 +63,9 @@ public record GroupHeader118
     public required PartyIdentification272 InitiatingParty { get; init; }
 
     /// <summary>
-    /// Point to point reference, assigned by the instructing party and sent to the next party in the chain, to unambiguously identify the message.
-    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Number of individual transactions contained in the message.
-    /// </summary>
-    [DisplayName("Number Of Transactions")]
-    [IsoXmlTag("NbOfTxs")]
-    public required Max15NumericText NumberOfTransactions { get; init; }
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 }

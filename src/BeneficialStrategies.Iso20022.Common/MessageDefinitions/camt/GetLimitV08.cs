@@ -46,18 +46,18 @@ public record GetLimitV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Limit Query Definition.
-    /// </summary>
-    [DisplayName("Limit Query Definition")]
-    [IsoXmlTag("LmtQryDef")]
-    public LimitQuery5? LimitQueryDefinition { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader9 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Limit Query Definition.
+    /// </summary>
+    [DisplayName("Limit Query Definition")]
+    [IsoXmlTag("LmtQryDef")]
+    public LimitQuery5? LimitQueryDefinition { get; init; }
 
     /// <summary>
     /// Supplementary Data.

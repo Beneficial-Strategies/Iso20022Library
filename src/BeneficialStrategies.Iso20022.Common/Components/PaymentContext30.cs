@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentContext30
 {
     /// <summary>
-    /// Credit Transfer Context.
-    /// </summary>
-    [DisplayName("Credit Transfer Context")]
-    [IsoXmlTag("CdtTrfCntxt")]
-    public CreditTransferContext1? CreditTransferContext { get; init; }
-
-    /// <summary>
-    /// Direct Debit Context.
-    /// </summary>
-    [DisplayName("Direct Debit Context")]
-    [IsoXmlTag("DrctDbtCntxt")]
-    public DirectDebitContext1? DirectDebitContext { get; init; }
-
-    /// <summary>
     /// Payment Context.
     /// </summary>
     [DisplayName("Payment Context")]
@@ -43,4 +29,18 @@ public record PaymentContext30
     [DisplayName("Sale Context")]
     [IsoXmlTag("SaleCntxt")]
     public SaleContext4? SaleContext { get; init; }
+
+    /// <summary>
+    /// Credit Transfer Context.
+    /// </summary>
+    [DisplayName("Credit Transfer Context")]
+    [IsoXmlTag("CdtTrfCntxt")]
+    public CreditTransferContext1? CreditTransferContext { get; init; }
+
+    /// <summary>
+    /// Direct Debit Context.
+    /// </summary>
+    [DisplayName("Direct Debit Context")]
+    [IsoXmlTag("DrctDbtCntxt")]
+    public DirectDebitContext1? DirectDebitContext { get; init; }
 }

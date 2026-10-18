@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalDataElements3
 {
     /// <summary>
-    /// Acquirer Identification.
-    /// </summary>
-    [DisplayName("Acquirer Identification")]
-    [IsoXmlTag("AcqrrId")]
-    public Max11NumericText? AcquirerIdentification { get; init; }
-
-    /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Approval Code.
-    /// </summary>
-    [DisplayName("Approval Code")]
-    [IsoXmlTag("ApprvlCd")]
-    public Exact6AlphaNumericText? ApprovalCode { get; init; }
-
-    /// <summary>
-    /// Conversion Date Time.
-    /// </summary>
-    [DisplayName("Conversion Date Time")]
-    [IsoXmlTag("ConvsDtTm")]
-    public DateTime2? ConversionDateTime { get; init; }
-
-    /// <summary>
     /// Message Class.
     /// </summary>
     [DisplayName("Message Class")]
@@ -59,11 +31,11 @@ public record OriginalDataElements3
     public MessageFunction16Code? MessageFunction { get; init; }
 
     /// <summary>
-    /// Response Code.
+    /// Acquirer Identification.
     /// </summary>
-    [DisplayName("Response Code")]
-    [IsoXmlTag("RspnCd")]
-    public ISO8583ResponseCode? ResponseCode { get; init; }
+    [DisplayName("Acquirer Identification")]
+    [IsoXmlTag("AcqrrId")]
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Sender Identification.
@@ -73,11 +45,11 @@ public record OriginalDataElements3
     public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Amounts.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Transaction Amounts")]
-    [IsoXmlTag("TxAmts")]
-    public OriginalTransactionAmounts3? TransactionAmounts { get; init; }
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public ISO8583TransactionTypeCode? TransactionType { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -87,9 +59,37 @@ public record OriginalDataElements3
     public OriginalTransactionIdentification1? TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Type.
+    /// Conversion Date Time.
     /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public ISO8583TransactionTypeCode? TransactionType { get; init; }
+    [DisplayName("Conversion Date Time")]
+    [IsoXmlTag("ConvsDtTm")]
+    public DateTime2? ConversionDateTime { get; init; }
+
+    /// <summary>
+    /// Transaction Amounts.
+    /// </summary>
+    [DisplayName("Transaction Amounts")]
+    [IsoXmlTag("TxAmts")]
+    public OriginalTransactionAmounts3? TransactionAmounts { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Response Code.
+    /// </summary>
+    [DisplayName("Response Code")]
+    [IsoXmlTag("RspnCd")]
+    public ISO8583ResponseCode? ResponseCode { get; init; }
+
+    /// <summary>
+    /// Approval Code.
+    /// </summary>
+    [DisplayName("Approval Code")]
+    [IsoXmlTag("ApprvlCd")]
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 }

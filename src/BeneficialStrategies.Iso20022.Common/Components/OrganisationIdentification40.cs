@@ -24,18 +24,18 @@ public record OrganisationIdentification40
     public AnyBICDec2014Identifier? AnyBIC { get; init; }
 
     /// <summary>
-    /// Email Address.
-    /// </summary>
-    [DisplayName("Email Address")]
-    [IsoXmlTag("EmailAdr")]
-    public Max256Text? EmailAddress { get; init; }
-
-    /// <summary>
     /// LEI.
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     public LEIIdentifier? LEI { get; init; }
+
+    /// <summary>
+    /// Email Address.
+    /// </summary>
+    [DisplayName("Email Address")]
+    [IsoXmlTag("EmailAdr")]
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Other.

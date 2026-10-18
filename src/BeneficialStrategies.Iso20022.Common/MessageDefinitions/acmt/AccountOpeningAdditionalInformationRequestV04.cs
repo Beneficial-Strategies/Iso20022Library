@@ -46,25 +46,11 @@ public record AccountOpeningAdditionalInformationRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account.
+    /// References.
     /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public required CustomerAccount4 Account { get; init; }
-
-    /// <summary>
-    /// Account Servicer Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Identification")]
-    [IsoXmlTag("AcctSvcrId")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References3 References { get; init; }
 
     /// <summary>
     /// From.
@@ -81,18 +67,18 @@ public record AccountOpeningAdditionalInformationRequestV04 : IOuterRecord
     public required OrganisationIdentification39 OrganisationIdentification { get; init; }
 
     /// <summary>
-    /// References.
+    /// Account.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References3 References { get; init; }
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public required CustomerAccount4 Account { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Account Servicer Identification.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
 
     /// <summary>
     /// Underlying Master Agreement.
@@ -100,4 +86,18 @@ public record AccountOpeningAdditionalInformationRequestV04 : IOuterRecord
     [DisplayName("Underlying Master Agreement")]
     [IsoXmlTag("UndrlygMstrAgrmt")]
     public ContractDocument1? UnderlyingMasterAgreement { get; init; }
+
+    /// <summary>
+    /// Digital Signature.
+    /// </summary>
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

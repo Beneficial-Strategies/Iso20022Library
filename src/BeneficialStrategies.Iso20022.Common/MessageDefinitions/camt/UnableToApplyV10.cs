@@ -60,6 +60,13 @@ public record UnableToApplyV10 : IOuterRecord
     public Case6? Case { get; init; }
 
     /// <summary>
+    /// Underlying.
+    /// </summary>
+    [DisplayName("Underlying")]
+    [IsoXmlTag("Undrlyg")]
+    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
+
+    /// <summary>
     /// Justification.
     /// </summary>
     [DisplayName("Justification")]
@@ -72,11 +79,4 @@ public record UnableToApplyV10 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying.
-    /// </summary>
-    [DisplayName("Underlying")]
-    [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
 }

@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteractionCapabilities10
 {
     /// <summary>
-    /// Approval Code Length.
-    /// </summary>
-    [DisplayName("Approval Code Length")]
-    [IsoXmlTag("ApprvlCdLngth")]
-    public Number? ApprovalCodeLength { get; init; }
-
-    /// <summary>
-    /// Authentication.
-    /// </summary>
-    [DisplayName("Authentication")]
-    [IsoXmlTag("Authntcn")]
-    public ValueList<CardholderVerificationCapability3Code> Authentication { get; init; } = [];
-
-    /// <summary>
-    /// Card Capture Capable.
-    /// </summary>
-    [DisplayName("Card Capture Capable")]
-    [IsoXmlTag("CardCaptrCpbl")]
-    public TrueFalseIndicator? CardCaptureCapable { get; init; }
-
-    /// <summary>
     /// Card Read Data.
     /// </summary>
     [DisplayName("Card Read Data")]
@@ -52,32 +31,11 @@ public record PointOfInteractionCapabilities10
     public ValueList<CardDataReading4Code> CardWriteData { get; init; } = [];
 
     /// <summary>
-    /// Deposited Media.
+    /// Authentication.
     /// </summary>
-    [DisplayName("Deposited Media")]
-    [IsoXmlTag("DpstdMdia")]
-    public ValueList<ATMMediaType4Code> DepositedMedia { get; init; } = [];
-
-    /// <summary>
-    /// Interactive Transactions.
-    /// </summary>
-    [DisplayName("Interactive Transactions")]
-    [IsoXmlTag("IntractvTxs")]
-    public ValueList<Max256Text> InteractiveTransactions { get; init; } = [];
-
-    /// <summary>
-    /// Max Script Length.
-    /// </summary>
-    [DisplayName("Max Script Length")]
-    [IsoXmlTag("MxScrptLngth")]
-    public Number? MaxScriptLength { get; init; }
-
-    /// <summary>
-    /// Message Capabilities.
-    /// </summary>
-    [DisplayName("Message Capabilities")]
-    [IsoXmlTag("MsgCpblties")]
-    public ValueList<DisplayCapabilities5> MessageCapabilities { get; init; } = [];
+    [DisplayName("Authentication")]
+    [IsoXmlTag("Authntcn")]
+    public ValueList<CardholderVerificationCapability3Code> Authentication { get; init; } = [];
 
     /// <summary>
     /// PIN Length Capabilities.
@@ -87,11 +45,25 @@ public record PointOfInteractionCapabilities10
     public Number? PINLengthCapabilities { get; init; }
 
     /// <summary>
-    /// Receipt Printing.
+    /// Approval Code Length.
     /// </summary>
-    [DisplayName("Receipt Printing")]
-    [IsoXmlTag("RctPrtg")]
-    public TrueFalseIndicator? ReceiptPrinting { get; init; }
+    [DisplayName("Approval Code Length")]
+    [IsoXmlTag("ApprvlCdLngth")]
+    public Number? ApprovalCodeLength { get; init; }
+
+    /// <summary>
+    /// Max Script Length.
+    /// </summary>
+    [DisplayName("Max Script Length")]
+    [IsoXmlTag("MxScrptLngth")]
+    public Number? MaxScriptLength { get; init; }
+
+    /// <summary>
+    /// Card Capture Capable.
+    /// </summary>
+    [DisplayName("Card Capture Capable")]
+    [IsoXmlTag("CardCaptrCpbl")]
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Withdrawal Media.
@@ -99,4 +71,32 @@ public record PointOfInteractionCapabilities10
     [DisplayName("Withdrawal Media")]
     [IsoXmlTag("WdrwlMdia")]
     public ValueList<ATMMediaType1Code> WithdrawalMedia { get; init; } = [];
+
+    /// <summary>
+    /// Deposited Media.
+    /// </summary>
+    [DisplayName("Deposited Media")]
+    [IsoXmlTag("DpstdMdia")]
+    public ValueList<ATMMediaType4Code> DepositedMedia { get; init; } = [];
+
+    /// <summary>
+    /// Message Capabilities.
+    /// </summary>
+    [DisplayName("Message Capabilities")]
+    [IsoXmlTag("MsgCpblties")]
+    public ValueList<DisplayCapabilities5> MessageCapabilities { get; init; } = [];
+
+    /// <summary>
+    /// Interactive Transactions.
+    /// </summary>
+    [DisplayName("Interactive Transactions")]
+    [IsoXmlTag("IntractvTxs")]
+    public ValueList<Max256Text> InteractiveTransactions { get; init; } = [];
+
+    /// <summary>
+    /// Receipt Printing.
+    /// </summary>
+    [DisplayName("Receipt Printing")]
+    [IsoXmlTag("RctPrtg")]
+    public TrueFalseIndicator? ReceiptPrinting { get; init; }
 }

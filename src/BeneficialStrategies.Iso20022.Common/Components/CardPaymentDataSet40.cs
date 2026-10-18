@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentDataSet40
 {
     /// <summary>
-    /// Common Data.
-    /// </summary>
-    [DisplayName("Common Data")]
-    [IsoXmlTag("CmonData")]
-    public CommonData14? CommonData { get; init; }
-
-    /// <summary>
     /// Data Set Identification.
     /// </summary>
     [DisplayName("Data Set Identification")]
     [IsoXmlTag("DataSetId")]
     public required DataSetIdentification5 DataSetIdentification { get; init; }
-
-    /// <summary>
-    /// Data Set Initiator.
-    /// </summary>
-    [DisplayName("Data Set Initiator")]
-    [IsoXmlTag("DataSetInitr")]
-    public GenericIdentification176? DataSetInitiator { get; init; }
 
     /// <summary>
     /// Traceability.
@@ -45,11 +31,11 @@ public record CardPaymentDataSet40
     public ValueList<Traceability8> Traceability { get; init; } = [];
 
     /// <summary>
-    /// Transaction.
+    /// Data Set Initiator.
     /// </summary>
-    [DisplayName("Transaction")]
-    [IsoXmlTag("Tx")]
-    public ValueList<CardPaymentDataSetTransaction13Choice_> Transaction { get; init; } = [];
+    [DisplayName("Data Set Initiator")]
+    [IsoXmlTag("DataSetInitr")]
+    public GenericIdentification176? DataSetInitiator { get; init; }
 
     /// <summary>
     /// Transaction Totals.
@@ -57,4 +43,18 @@ public record CardPaymentDataSet40
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
+
+    /// <summary>
+    /// Common Data.
+    /// </summary>
+    [DisplayName("Common Data")]
+    [IsoXmlTag("CmonData")]
+    public CommonData14? CommonData { get; init; }
+
+    /// <summary>
+    /// Transaction.
+    /// </summary>
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    public ValueList<CardPaymentDataSetTransaction13Choice_> Transaction { get; init; } = [];
 }

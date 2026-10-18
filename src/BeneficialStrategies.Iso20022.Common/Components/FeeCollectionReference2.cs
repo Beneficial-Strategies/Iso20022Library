@@ -24,16 +24,16 @@ public record FeeCollectionReference2
     public PartyType32Code? AssignerEntity { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public ValueList<FeeCollectionIdentification1> Identification { get; init; } = [];
-
-    /// <summary>
     /// Other Assigner Entity.
     /// </summary>
     [DisplayName("Other Assigner Entity")]
     [IsoXmlTag("OthrAssgnrNtty")]
     public Max35Text? OtherAssignerEntity { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public ValueList<FeeCollectionIdentification1> Identification { get; init; } = [];
 }

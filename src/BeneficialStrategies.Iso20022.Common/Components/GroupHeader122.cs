@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader122
 {
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
     /// Authorisation.
     /// </summary>
     [DisplayName("Authorisation")]
@@ -31,20 +45,6 @@ public record GroupHeader122
     public CopyDuplicate1Code? CopyIndicator { get; init; }
 
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Forwarding Agent.
-    /// </summary>
-    [DisplayName("Forwarding Agent")]
-    [IsoXmlTag("FwdgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
-
-    /// <summary>
     /// Initiating Party.
     /// </summary>
     [DisplayName("Initiating Party")]
@@ -52,16 +52,16 @@ public record GroupHeader122
     public required PartyIdentification272 InitiatingParty { get; init; }
 
     /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
     /// Message Recipient.
     /// </summary>
     [DisplayName("Message Recipient")]
     [IsoXmlTag("MsgRcpt")]
     public PartyIdentification272? MessageRecipient { get; init; }
+
+    /// <summary>
+    /// Forwarding Agent.
+    /// </summary>
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionPrice96
 {
     /// <summary>
-    /// First Bid Increment Price.
-    /// </summary>
-    [DisplayName("First Bid Increment Price")]
-    [IsoXmlTag("FrstBidIncrmtPric")]
-    public PriceFormat91Choice_? FirstBidIncrementPrice { get; init; }
-
-    /// <summary>
-    /// Last Bid Increment Price.
-    /// </summary>
-    [DisplayName("Last Bid Increment Price")]
-    [IsoXmlTag("LastBidIncrmtPric")]
-    public PriceFormat91Choice_? LastBidIncrementPrice { get; init; }
-
-    /// <summary>
     /// Maximum Price.
     /// </summary>
     [DisplayName("Maximum Price")]
@@ -43,4 +29,18 @@ public record CorporateActionPrice96
     [DisplayName("Minimum Price")]
     [IsoXmlTag("MinPric")]
     public PriceFormat91Choice_? MinimumPrice { get; init; }
+
+    /// <summary>
+    /// First Bid Increment Price.
+    /// </summary>
+    [DisplayName("First Bid Increment Price")]
+    [IsoXmlTag("FrstBidIncrmtPric")]
+    public PriceFormat91Choice_? FirstBidIncrementPrice { get; init; }
+
+    /// <summary>
+    /// Last Bid Increment Price.
+    /// </summary>
+    [DisplayName("Last Bid Increment Price")]
+    [IsoXmlTag("LastBidIncrmtPric")]
+    public PriceFormat91Choice_? LastBidIncrementPrice { get; init; }
 }

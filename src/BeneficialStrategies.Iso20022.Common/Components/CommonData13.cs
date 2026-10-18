@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CommonData13
 {
     /// <summary>
-    /// Additional Service.
+    /// Environment.
     /// </summary>
-    [DisplayName("Additional Service")]
-    [IsoXmlTag("AddtlSvc")]
-    public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public CardPaymentEnvironment80? Environment { get; init; }
 
     /// <summary>
     /// Context.
@@ -31,18 +31,25 @@ public record CommonData13
     public CardPaymentContext30? Context { get; init; }
 
     /// <summary>
-    /// Currency.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public CardPaymentServiceType12Code? TransactionType { get; init; }
 
     /// <summary>
-    /// Environment.
+    /// Additional Service.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public CardPaymentEnvironment80? Environment { get; init; }
+    [DisplayName("Additional Service")]
+    [IsoXmlTag("AddtlSvc")]
+    public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
+
+    /// <summary>
+    /// Service Attribute.
+    /// </summary>
+    [DisplayName("Service Attribute")]
+    [IsoXmlTag("SvcAttr")]
+    public CardPaymentServiceType14Code? ServiceAttribute { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
@@ -59,16 +66,9 @@ public record CommonData13
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Service Attribute.
+    /// Currency.
     /// </summary>
-    [DisplayName("Service Attribute")]
-    [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType14Code? ServiceAttribute { get; init; }
-
-    /// <summary>
-    /// Transaction Type.
-    /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public CardPaymentServiceType12Code? TransactionType { get; init; }
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
 }

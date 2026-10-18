@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalPaymentInstruction49
 {
     /// <summary>
-    /// Cancellation Reason Information.
+    /// Payment Cancellation Identification.
     /// </summary>
-    [DisplayName("Cancellation Reason Information")]
-    [IsoXmlTag("CxlRsnInf")]
-    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
+    [DisplayName("Payment Cancellation Identification")]
+    [IsoXmlTag("PmtCxlId")]
+    public Max35Text? PaymentCancellationIdentification { get; init; }
 
     /// <summary>
     /// Case.
@@ -31,18 +31,11 @@ public record OriginalPaymentInstruction49
     public Case6? Case { get; init; }
 
     /// <summary>
-    /// Control Sum.
+    /// Original Payment Information Identification.
     /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
-
-    /// <summary>
-    /// Number Of Transactions.
-    /// </summary>
-    [DisplayName("Number Of Transactions")]
-    [IsoXmlTag("NbOfTxs")]
-    public Max15NumericText? NumberOfTransactions { get; init; }
+    [DisplayName("Original Payment Information Identification")]
+    [IsoXmlTag("OrgnlPmtInfId")]
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -52,18 +45,18 @@ public record OriginalPaymentInstruction49
     public OriginalGroupInformation29? OriginalGroupInformation { get; init; }
 
     /// <summary>
-    /// Original Payment Information Identification.
+    /// Number Of Transactions.
     /// </summary>
-    [DisplayName("Original Payment Information Identification")]
-    [IsoXmlTag("OrgnlPmtInfId")]
-    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
-    /// Payment Cancellation Identification.
+    /// Control Sum.
     /// </summary>
-    [DisplayName("Payment Cancellation Identification")]
-    [IsoXmlTag("PmtCxlId")]
-    public Max35Text? PaymentCancellationIdentification { get; init; }
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Payment Information Cancellation.
@@ -71,6 +64,13 @@ public record OriginalPaymentInstruction49
     [DisplayName("Payment Information Cancellation")]
     [IsoXmlTag("PmtInfCxl")]
     public GroupCancellationIndicator? PaymentInformationCancellation { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason Information.
+    /// </summary>
+    [DisplayName("Cancellation Reason Information")]
+    [IsoXmlTag("CxlRsnInf")]
+    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Transaction Information.

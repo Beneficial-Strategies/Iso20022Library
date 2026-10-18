@@ -46,25 +46,11 @@ public record AccountAdditionalInformationRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Identification.
+    /// References.
     /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Account Servicer Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Identification")]
-    [IsoXmlTag("AcctSvcrId")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References3 References { get; init; }
 
     /// <summary>
     /// From.
@@ -81,11 +67,25 @@ public record AccountAdditionalInformationRequestV04 : IOuterRecord
     public required OrganisationIdentification39 OrganisationIdentification { get; init; }
 
     /// <summary>
-    /// References.
+    /// Account Servicer Identification.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References3 References { get; init; }
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Digital Signature.
+    /// </summary>
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

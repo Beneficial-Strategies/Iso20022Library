@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionSD26
 {
     /// <summary>
-    /// Certificate Called Amount.
-    /// </summary>
-    [DisplayName("Certificate Called Amount")]
-    [IsoXmlTag("CertClldAmt")]
-    public required DecimalNumber CertificateCalledAmount { get; init; }
-
-    /// <summary>
     /// Certificate Number.
     /// </summary>
     [DisplayName("Certificate Number")]
@@ -36,4 +29,11 @@ public record CorporateActionSD26
     [DisplayName("Certificate Prefix")]
     [IsoXmlTag("CertPrfx")]
     public Max4AlphaNumericText? CertificatePrefix { get; init; }
+
+    /// <summary>
+    /// Certificate Called Amount.
+    /// </summary>
+    [DisplayName("Certificate Called Amount")]
+    [IsoXmlTag("CertClldAmt")]
+    public required DecimalNumber CertificateCalledAmount { get; init; }
 }

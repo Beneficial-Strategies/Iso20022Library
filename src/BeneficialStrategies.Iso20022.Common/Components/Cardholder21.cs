@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cardholder21
 {
     /// <summary>
-    /// Authentication.
-    /// </summary>
-    [DisplayName("Authentication")]
-    [IsoXmlTag("Authntcn")]
-    public ValueList<CardholderAuthentication17> Authentication { get; init; } = [];
-
-    /// <summary>
-    /// Billing Address.
-    /// </summary>
-    [DisplayName("Billing Address")]
-    [IsoXmlTag("BllgAdr")]
-    public PostalAddress22? BillingAddress { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public PersonIdentification15? Identification { get; init; }
-
-    /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public LanguageCode? Language { get; init; }
-
-    /// <summary>
-    /// Mobile Data.
-    /// </summary>
-    [DisplayName("Mobile Data")]
-    [IsoXmlTag("MobData")]
-    public ValueList<MobileData6> MobileData { get; init; } = [];
 
     /// <summary>
     /// Name.
@@ -59,11 +31,18 @@ public record Cardholder21
     public Max45Text? Name { get; init; }
 
     /// <summary>
-    /// Personal Data.
+    /// Language.
     /// </summary>
-    [DisplayName("Personal Data")]
-    [IsoXmlTag("PrsnlData")]
-    public Max70Text? PersonalData { get; init; }
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public LanguageCode? Language { get; init; }
+
+    /// <summary>
+    /// Billing Address.
+    /// </summary>
+    [DisplayName("Billing Address")]
+    [IsoXmlTag("BllgAdr")]
+    public PostalAddress22? BillingAddress { get; init; }
 
     /// <summary>
     /// Shipping Address.
@@ -71,14 +50,6 @@ public record Cardholder21
     [DisplayName("Shipping Address")]
     [IsoXmlTag("ShppgAdr")]
     public PostalAddress22? ShippingAddress { get; init; }
-
-    /// <summary>
-    /// Transaction Verification Result.
-    /// </summary>
-    [DisplayName("Transaction Verification Result")]
-    [IsoXmlTag("TxVrfctnRslt")]
-    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
-        [];
 
     /// <summary>
     /// Trip Number.
@@ -93,4 +64,33 @@ public record Cardholder21
     [DisplayName("Vehicle")]
     [IsoXmlTag("Vhcl")]
     public Vehicle1? Vehicle { get; init; }
+
+    /// <summary>
+    /// Authentication.
+    /// </summary>
+    [DisplayName("Authentication")]
+    [IsoXmlTag("Authntcn")]
+    public ValueList<CardholderAuthentication17> Authentication { get; init; } = [];
+
+    /// <summary>
+    /// Transaction Verification Result.
+    /// </summary>
+    [DisplayName("Transaction Verification Result")]
+    [IsoXmlTag("TxVrfctnRslt")]
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
+
+    /// <summary>
+    /// Personal Data.
+    /// </summary>
+    [DisplayName("Personal Data")]
+    [IsoXmlTag("PrsnlData")]
+    public Max70Text? PersonalData { get; init; }
+
+    /// <summary>
+    /// Mobile Data.
+    /// </summary>
+    [DisplayName("Mobile Data")]
+    [IsoXmlTag("MobData")]
+    public ValueList<MobileData6> MobileData { get; init; } = [];
 }

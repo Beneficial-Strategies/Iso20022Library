@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction46
 {
     /// <summary>
-    /// Account Data.
-    /// </summary>
-    [DisplayName("Account Data")]
-    [IsoXmlTag("AcctData")]
-    public CardAccount20? AccountData { get; init; }
-
-    /// <summary>
     /// Cash Dispensed.
     /// </summary>
     [DisplayName("Cash Dispensed")]
@@ -31,32 +24,11 @@ public record ATMTransaction46
     public TrueFalseIndicator? CashDispensed { get; init; }
 
     /// <summary>
-    /// Currency Conversion Result.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Currency Conversion Result")]
-    [IsoXmlTag("CcyConvsRslt")]
-    public CurrencyConversion32? CurrencyConversionResult { get; init; }
-
-    /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount12? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Protected Account Data.
-    /// </summary>
-    [DisplayName("Protected Account Data")]
-    [IsoXmlTag("PrtctdAcctData")]
-    public ContentInformationType10? ProtectedAccountData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
@@ -66,25 +38,18 @@ public record ATMTransaction46
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Requested Receipt.
+    /// Account Data.
     /// </summary>
-    [DisplayName("Requested Receipt")]
-    [IsoXmlTag("ReqdRct")]
-    public TrueFalseIndicator? RequestedReceipt { get; init; }
+    [DisplayName("Account Data")]
+    [IsoXmlTag("AcctData")]
+    public CardAccount20? AccountData { get; init; }
 
     /// <summary>
-    /// Selected Mix.
+    /// Protected Account Data.
     /// </summary>
-    [DisplayName("Selected Mix")]
-    [IsoXmlTag("SelctdMix")]
-    public ValueList<ATMMediaMix1> SelectedMix { get; init; } = [];
-
-    /// <summary>
-    /// Selected Mix Type.
-    /// </summary>
-    [DisplayName("Selected Mix Type")]
-    [IsoXmlTag("SelctdMixTp")]
-    public Max35Text? SelectedMixType { get; init; }
+    [DisplayName("Protected Account Data")]
+    [IsoXmlTag("PrtctdAcctData")]
+    public ContentInformationType10? ProtectedAccountData { get; init; }
 
     /// <summary>
     /// Total Requested Amount.
@@ -94,9 +59,44 @@ public record ATMTransaction46
     public AmountAndCurrency1? TotalRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount12? DetailedRequestedAmount { get; init; }
+
+    /// <summary>
+    /// Currency Conversion Result.
+    /// </summary>
+    [DisplayName("Currency Conversion Result")]
+    [IsoXmlTag("CcyConvsRslt")]
+    public CurrencyConversion32? CurrencyConversionResult { get; init; }
+
+    /// <summary>
+    /// Selected Mix Type.
+    /// </summary>
+    [DisplayName("Selected Mix Type")]
+    [IsoXmlTag("SelctdMixTp")]
+    public Max35Text? SelectedMixType { get; init; }
+
+    /// <summary>
+    /// Selected Mix.
+    /// </summary>
+    [DisplayName("Selected Mix")]
+    [IsoXmlTag("SelctdMix")]
+    public ValueList<ATMMediaMix1> SelectedMix { get; init; } = [];
+
+    /// <summary>
+    /// Requested Receipt.
+    /// </summary>
+    [DisplayName("Requested Receipt")]
+    [IsoXmlTag("ReqdRct")]
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

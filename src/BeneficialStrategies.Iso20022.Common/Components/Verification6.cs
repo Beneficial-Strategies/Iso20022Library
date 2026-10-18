@@ -17,11 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Verification6
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ExternalAuthenticationMethod1Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Sub Type.
+    /// </summary>
+    [DisplayName("Sub Type")]
+    [IsoXmlTag("SubTp")]
+    public Max35Text? SubType { get; init; }
+
+    /// <summary>
     /// Data.
     /// </summary>
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
     public ValueList<VerificationValue1> Data { get; init; } = [];
+
+    /// <summary>
+    /// PIN Data.
+    /// </summary>
+    [DisplayName("PIN Data")]
+    [IsoXmlTag("PINData")]
+    public PINData1? PINData { get; init; }
 
     /// <summary>
     /// Entity.
@@ -38,27 +66,6 @@ public record Verification6
     public Max35Text? OtherEntity { get; init; }
 
     /// <summary>
-    /// Other Result.
-    /// </summary>
-    [DisplayName("Other Result")]
-    [IsoXmlTag("OthrRslt")]
-    public Max500Text? OtherResult { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// PIN Data.
-    /// </summary>
-    [DisplayName("PIN Data")]
-    [IsoXmlTag("PINData")]
-    public PINData1? PINData { get; init; }
-
-    /// <summary>
     /// Result.
     /// </summary>
     [DisplayName("Result")]
@@ -66,23 +73,16 @@ public record Verification6
     public Verification3Code? Result { get; init; }
 
     /// <summary>
+    /// Other Result.
+    /// </summary>
+    [DisplayName("Other Result")]
+    [IsoXmlTag("OthrRslt")]
+    public Max500Text? OtherResult { get; init; }
+
+    /// <summary>
     /// Result Details.
     /// </summary>
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
     public ValueList<AdditionalData1> ResultDetails { get; init; } = [];
-
-    /// <summary>
-    /// Sub Type.
-    /// </summary>
-    [DisplayName("Sub Type")]
-    [IsoXmlTag("SubTp")]
-    public Max35Text? SubType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ExternalAuthenticationMethod1Code? Type { get; init; }
 }

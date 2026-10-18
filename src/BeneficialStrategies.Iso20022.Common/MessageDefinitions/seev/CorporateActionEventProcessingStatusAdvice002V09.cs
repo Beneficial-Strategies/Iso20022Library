@@ -46,11 +46,18 @@ public record CorporateActionEventProcessingStatusAdvice002V09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Notification Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative19? AdditionalInformation { get; init; }
+    [DisplayName("Notification Identification")]
+    [IsoXmlTag("NtfctnId")]
+    public DocumentIdentification17? NotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Other Document Identification.
+    /// </summary>
+    [DisplayName("Other Document Identification")]
+    [IsoXmlTag("OthrDocId")]
+    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Corporate Action General Information.
@@ -67,18 +74,11 @@ public record CorporateActionEventProcessingStatusAdvice002V09 : IOuterRecord
     public ValueList<EventProcessingStatus8Choice_> EventProcessingStatus { get; init; } = [];
 
     /// <summary>
-    /// Notification Identification.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Notification Identification")]
-    [IsoXmlTag("NtfctnId")]
-    public DocumentIdentification17? NotificationIdentification { get; init; }
-
-    /// <summary>
-    /// Other Document Identification.
-    /// </summary>
-    [DisplayName("Other Document Identification")]
-    [IsoXmlTag("OthrDocId")]
-    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative19? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

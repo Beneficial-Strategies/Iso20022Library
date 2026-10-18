@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StrongCustomerAuthentication2
 {
     /// <summary>
-    /// Delegated Authority.
+    /// Subject To SCA.
     /// </summary>
-    [DisplayName("Delegated Authority")]
-    [IsoXmlTag("DlgtdAuthrty")]
-    public AttestationValue1Code? DelegatedAuthority { get; init; }
+    [DisplayName("Subject To SCA")]
+    [IsoXmlTag("SbjtToSCA")]
+    public TrueFalseIndicator? SubjectToSCA { get; init; }
 
     /// <summary>
     /// Exemption.
@@ -31,18 +31,11 @@ public record StrongCustomerAuthentication2
     public ValueList<Exemption2> Exemption { get; init; } = [];
 
     /// <summary>
-    /// Reason Authentication Not Performed.
+    /// Delegated Authority.
     /// </summary>
-    [DisplayName("Reason Authentication Not Performed")]
-    [IsoXmlTag("RsnAuthntcnNotPrfrmd")]
-    public Max4Text? ReasonAuthenticationNotPerformed { get; init; }
-
-    /// <summary>
-    /// Subject To SCA.
-    /// </summary>
-    [DisplayName("Subject To SCA")]
-    [IsoXmlTag("SbjtToSCA")]
-    public TrueFalseIndicator? SubjectToSCA { get; init; }
+    [DisplayName("Delegated Authority")]
+    [IsoXmlTag("DlgtdAuthrty")]
+    public AttestationValue1Code? DelegatedAuthority { get; init; }
 
     /// <summary>
     /// Waiver.
@@ -50,4 +43,11 @@ public record StrongCustomerAuthentication2
     [DisplayName("Waiver")]
     [IsoXmlTag("Wvr")]
     public AttestationValue1Code? Waiver { get; init; }
+
+    /// <summary>
+    /// Reason Authentication Not Performed.
+    /// </summary>
+    [DisplayName("Reason Authentication Not Performed")]
+    [IsoXmlTag("RsnAuthntcnNotPrfrmd")]
+    public Max4Text? ReasonAuthenticationNotPerformed { get; init; }
 }

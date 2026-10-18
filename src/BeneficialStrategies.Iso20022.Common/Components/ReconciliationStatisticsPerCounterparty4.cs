@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationStatisticsPerCounterparty4
 {
     /// <summary>
-    /// Reconciliation Categories.
-    /// </summary>
-    [DisplayName("Reconciliation Categories")]
-    [IsoXmlTag("RcncltnCtgrs")]
-    public required ReportingRequirement3Choice_ ReconciliationCategories { get; init; }
-
-    /// <summary>
     /// Reference Date.
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     public required ISODate ReferenceDate { get; init; }
+
+    /// <summary>
+    /// Reconciliation Categories.
+    /// </summary>
+    [DisplayName("Reconciliation Categories")]
+    [IsoXmlTag("RcncltnCtgrs")]
+    public required ReportingRequirement3Choice_ ReconciliationCategories { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions.

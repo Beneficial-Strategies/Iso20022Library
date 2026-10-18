@@ -17,11 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContractRegistrationStatement4
 {
     /// <summary>
-    /// Additional Supporting Document Journal.
+    /// Statement Identification.
     /// </summary>
-    [DisplayName("Additional Supporting Document Journal")]
-    [IsoXmlTag("AddtlSpprtgDocJrnl")]
-    public ValueList<SupportingDocument4> AdditionalSupportingDocumentJournal { get; init; } = [];
+    [DisplayName("Statement Identification")]
+    [IsoXmlTag("StmtId")]
+    public Max35Text? StatementIdentification { get; init; }
+
+    /// <summary>
+    /// Reporting Party.
+    /// </summary>
+    [DisplayName("Reporting Party")]
+    [IsoXmlTag("RptgPty")]
+    public required TradeParty6 ReportingParty { get; init; }
+
+    /// <summary>
+    /// Registration Agent.
+    /// </summary>
+    [DisplayName("Registration Agent")]
+    [IsoXmlTag("RegnAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
+
+    /// <summary>
+    /// Reporting Period.
+    /// </summary>
+    [DisplayName("Reporting Period")]
+    [IsoXmlTag("RptgPrd")]
+    public required ReportingPeriod4 ReportingPeriod { get; init; }
 
     /// <summary>
     /// Registered Contract.
@@ -31,11 +52,25 @@ public record ContractRegistrationStatement4
     public required RegisteredContract18 RegisteredContract { get; init; }
 
     /// <summary>
-    /// Registration Agent.
+    /// Transaction Journal.
     /// </summary>
-    [DisplayName("Registration Agent")]
-    [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
+    [DisplayName("Transaction Journal")]
+    [IsoXmlTag("TxJrnl")]
+    public ValueList<TransactionCertificate4> TransactionJournal { get; init; } = [];
+
+    /// <summary>
+    /// Supporting Document Journal.
+    /// </summary>
+    [DisplayName("Supporting Document Journal")]
+    [IsoXmlTag("SpprtgDocJrnl")]
+    public ValueList<SupportingDocument4> SupportingDocumentJournal { get; init; } = [];
+
+    /// <summary>
+    /// Additional Supporting Document Journal.
+    /// </summary>
+    [DisplayName("Additional Supporting Document Journal")]
+    [IsoXmlTag("AddtlSpprtgDocJrnl")]
+    public ValueList<SupportingDocument4> AdditionalSupportingDocumentJournal { get; init; } = [];
 
     /// <summary>
     /// Regulatory Rule Validation.
@@ -46,41 +81,6 @@ public record ContractRegistrationStatement4
         [];
 
     /// <summary>
-    /// Reporting Party.
-    /// </summary>
-    [DisplayName("Reporting Party")]
-    [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; }
-
-    /// <summary>
-    /// Reporting Period.
-    /// </summary>
-    [DisplayName("Reporting Period")]
-    [IsoXmlTag("RptgPrd")]
-    public required ReportingPeriod4 ReportingPeriod { get; init; }
-
-    /// <summary>
-    /// Statement Identification.
-    /// </summary>
-    [DisplayName("Statement Identification")]
-    [IsoXmlTag("StmtId")]
-    public Max35Text? StatementIdentification { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Supporting Document Journal.
-    /// </summary>
-    [DisplayName("Supporting Document Journal")]
-    [IsoXmlTag("SpprtgDocJrnl")]
-    public ValueList<SupportingDocument4> SupportingDocumentJournal { get; init; } = [];
-
-    /// <summary>
     /// Total Contract Turnover Sum.
     /// </summary>
     [DisplayName("Total Contract Turnover Sum")]
@@ -88,9 +88,9 @@ public record ContractRegistrationStatement4
     public required ActiveCurrencyAndAmount TotalContractTurnoverSum { get; init; }
 
     /// <summary>
-    /// Transaction Journal.
+    /// Supplementary Data.
     /// </summary>
-    [DisplayName("Transaction Journal")]
-    [IsoXmlTag("TxJrnl")]
-    public ValueList<TransactionCertificate4> TransactionJournal { get; init; } = [];
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

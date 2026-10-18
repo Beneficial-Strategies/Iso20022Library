@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction50
 {
     /// <summary>
-    /// ICC Related Data.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
@@ -31,11 +31,11 @@ public record ATMTransaction50
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Requested Receipt.
+    /// Total Requested Amount.
     /// </summary>
-    [DisplayName("Requested Receipt")]
-    [IsoXmlTag("ReqdRct")]
-    public TrueFalseIndicator? RequestedReceipt { get; init; }
+    [DisplayName("Total Requested Amount")]
+    [IsoXmlTag("TtlReqdAmt")]
+    public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
 
     /// <summary>
     /// Sub Deposit.
@@ -52,16 +52,16 @@ public record ATMTransaction50
     public AmountAndCurrency1? TotalAmount { get; init; }
 
     /// <summary>
-    /// Total Requested Amount.
+    /// Requested Receipt.
     /// </summary>
-    [DisplayName("Total Requested Amount")]
-    [IsoXmlTag("TtlReqdAmt")]
-    public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
+    [DisplayName("Requested Receipt")]
+    [IsoXmlTag("ReqdRct")]
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// ICC Related Data.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

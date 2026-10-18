@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IdentificationInformation5
 {
     /// <summary>
+    /// Party.
+    /// </summary>
+    [DisplayName("Party")]
+    [IsoXmlTag("Pty")]
+    public PartyIdentification272? Party { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -29,11 +36,4 @@ public record IdentificationInformation5
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
     public BranchAndFinancialInstitutionIdentification8? Agent { get; init; }
-
-    /// <summary>
-    /// Party.
-    /// </summary>
-    [DisplayName("Party")]
-    [IsoXmlTag("Pty")]
-    public PartyIdentification272? Party { get; init; }
 }

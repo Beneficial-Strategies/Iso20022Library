@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeParty6
 {
     /// <summary>
-    /// Legal Organisation.
-    /// </summary>
-    [DisplayName("Legal Organisation")]
-    [IsoXmlTag("LglOrg")]
-    public LegalOrganisation2? LegalOrganisation { get; init; }
-
-    /// <summary>
     /// Party Identification.
     /// </summary>
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
     public required PartyIdentification272 PartyIdentification { get; init; }
+
+    /// <summary>
+    /// Legal Organisation.
+    /// </summary>
+    [DisplayName("Legal Organisation")]
+    [IsoXmlTag("LglOrg")]
+    public LegalOrganisation2? LegalOrganisation { get; init; }
 
     /// <summary>
     /// Tax Party.

@@ -24,18 +24,18 @@ public record CreditTransferContext1
     public TrueFalseIndicator? AutomaticNotificationOfCashMovement { get; init; }
 
     /// <summary>
-    /// Creditor.
+    /// Wait For Notification Before Ending.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification272? Creditor { get; init; }
+    [DisplayName("Wait For Notification Before Ending")]
+    [IsoXmlTag("WaitForNtfctnBfrEndg")]
+    public TrueFalseIndicator? WaitForNotificationBeforeEnding { get; init; }
 
     /// <summary>
-    /// Creditor Account.
+    /// System To Notify.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("System To Notify")]
+    [IsoXmlTag("SysToNtfy")]
+    public Max1025Text? SystemToNotify { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -52,13 +52,6 @@ public record CreditTransferContext1
     public CashAccount40? DebtorAccount { get; init; }
 
     /// <summary>
-    /// Protected Creditor Account.
-    /// </summary>
-    [DisplayName("Protected Creditor Account")]
-    [IsoXmlTag("PrtctdCdtrAcct")]
-    public ContentInformationType39? ProtectedCreditorAccount { get; init; }
-
-    /// <summary>
     /// Protected Debtor Account.
     /// </summary>
     [DisplayName("Protected Debtor Account")]
@@ -66,16 +59,23 @@ public record CreditTransferContext1
     public ContentInformationType39? ProtectedDebtorAccount { get; init; }
 
     /// <summary>
-    /// System To Notify.
+    /// Creditor.
     /// </summary>
-    [DisplayName("System To Notify")]
-    [IsoXmlTag("SysToNtfy")]
-    public Max1025Text? SystemToNotify { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification272? Creditor { get; init; }
 
     /// <summary>
-    /// Wait For Notification Before Ending.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Wait For Notification Before Ending")]
-    [IsoXmlTag("WaitForNtfctnBfrEndg")]
-    public TrueFalseIndicator? WaitForNotificationBeforeEnding { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
+
+    /// <summary>
+    /// Protected Creditor Account.
+    /// </summary>
+    [DisplayName("Protected Creditor Account")]
+    [IsoXmlTag("PrtctdCdtrAcct")]
+    public ContentInformationType39? ProtectedCreditorAccount { get; init; }
 }

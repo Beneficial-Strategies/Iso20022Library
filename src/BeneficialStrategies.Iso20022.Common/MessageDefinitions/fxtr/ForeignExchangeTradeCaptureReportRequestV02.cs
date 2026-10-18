@@ -46,18 +46,11 @@ public record ForeignExchangeTradeCaptureReportRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Query By Period.
+    /// Query Request Identification.
     /// </summary>
-    [DisplayName("Query By Period")]
-    [IsoXmlTag("QryByPrd")]
-    public required TrueFalseIndicator QueryByPeriod { get; init; }
-
-    /// <summary>
-    /// Query End Identification.
-    /// </summary>
-    [DisplayName("Query End Identification")]
-    [IsoXmlTag("QryEndId")]
-    public Max35Text? QueryEndIdentification { get; init; }
+    [DisplayName("Query Request Identification")]
+    [IsoXmlTag("QryReqId")]
+    public required MessageIdentification1 QueryRequestIdentification { get; init; }
 
     /// <summary>
     /// Query Order Status.
@@ -65,6 +58,48 @@ public record ForeignExchangeTradeCaptureReportRequestV02 : IOuterRecord
     [DisplayName("Query Order Status")]
     [IsoXmlTag("QryOrdrSts")]
     public required QueryOrderStatus1Code QueryOrderStatus { get; init; }
+
+    /// <summary>
+    /// Query Type.
+    /// </summary>
+    [DisplayName("Query Type")]
+    [IsoXmlTag("QryTp")]
+    public QueryDataType1Code? QueryType { get; init; }
+
+    /// <summary>
+    /// Query Start Number.
+    /// </summary>
+    [DisplayName("Query Start Number")]
+    [IsoXmlTag("QryStartNb")]
+    public required Max35NumericText QueryStartNumber { get; init; }
+
+    /// <summary>
+    /// Query By Period.
+    /// </summary>
+    [DisplayName("Query By Period")]
+    [IsoXmlTag("QryByPrd")]
+    public required TrueFalseIndicator QueryByPeriod { get; init; }
+
+    /// <summary>
+    /// Query Period.
+    /// </summary>
+    [DisplayName("Query Period")]
+    [IsoXmlTag("QryPrd")]
+    public Period12? QueryPeriod { get; init; }
+
+    /// <summary>
+    /// Query Trade Identification.
+    /// </summary>
+    [DisplayName("Query Trade Identification")]
+    [IsoXmlTag("QryTradId")]
+    public Max35Text? QueryTradeIdentification { get; init; }
+
+    /// <summary>
+    /// Query End Identification.
+    /// </summary>
+    [DisplayName("Query End Identification")]
+    [IsoXmlTag("QryEndId")]
+    public Max35Text? QueryEndIdentification { get; init; }
 
     /// <summary>
     /// Query Page Size.
@@ -79,41 +114,6 @@ public record ForeignExchangeTradeCaptureReportRequestV02 : IOuterRecord
     [DisplayName("Query Parameter Value")]
     [IsoXmlTag("QryParamVal")]
     public Max35Text? QueryParameterValue { get; init; }
-
-    /// <summary>
-    /// Query Period.
-    /// </summary>
-    [DisplayName("Query Period")]
-    [IsoXmlTag("QryPrd")]
-    public Period12? QueryPeriod { get; init; }
-
-    /// <summary>
-    /// Query Request Identification.
-    /// </summary>
-    [DisplayName("Query Request Identification")]
-    [IsoXmlTag("QryReqId")]
-    public required MessageIdentification1 QueryRequestIdentification { get; init; }
-
-    /// <summary>
-    /// Query Start Number.
-    /// </summary>
-    [DisplayName("Query Start Number")]
-    [IsoXmlTag("QryStartNb")]
-    public required Max35NumericText QueryStartNumber { get; init; }
-
-    /// <summary>
-    /// Query Trade Identification.
-    /// </summary>
-    [DisplayName("Query Trade Identification")]
-    [IsoXmlTag("QryTradId")]
-    public Max35Text? QueryTradeIdentification { get; init; }
-
-    /// <summary>
-    /// Query Type.
-    /// </summary>
-    [DisplayName("Query Type")]
-    [IsoXmlTag("QryTp")]
-    public QueryDataType1Code? QueryType { get; init; }
 
     /// <summary>
     /// Supplementary Data.

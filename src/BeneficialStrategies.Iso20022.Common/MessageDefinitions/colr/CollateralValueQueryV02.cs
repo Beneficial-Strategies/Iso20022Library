@@ -46,18 +46,18 @@ public record CollateralValueQueryV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Collateral Value Query Definition.
-    /// </summary>
-    [DisplayName("Collateral Value Query Definition")]
-    [IsoXmlTag("CollValQryDef")]
-    public CollateralValueCriteriaDefinition4Choice_? CollateralValueQueryDefinition { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader3 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Collateral Value Query Definition.
+    /// </summary>
+    [DisplayName("Collateral Value Query Definition")]
+    [IsoXmlTag("CollValQryDef")]
+    public CollateralValueCriteriaDefinition4Choice_? CollateralValueQueryDefinition { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Sale3
 {
     /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
+    /// Loyalty Programme.
+    /// </summary>
+    [DisplayName("Loyalty Programme")]
+    [IsoXmlTag("LltyPrgrmm")]
+    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
+
+    /// <summary>
     /// Adjustment.
     /// </summary>
     [DisplayName("Adjustment")]
@@ -29,18 +43,4 @@ public record Sale3
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
     public ValueList<SaleItem4> LineItem { get; init; } = [];
-
-    /// <summary>
-    /// Loyalty Programme.
-    /// </summary>
-    [DisplayName("Loyalty Programme")]
-    [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
-
-    /// <summary>
-    /// Summary Commodity Identification.
-    /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
 }

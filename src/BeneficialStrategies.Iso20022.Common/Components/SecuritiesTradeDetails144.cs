@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesTradeDetails144
 {
     /// <summary>
-    /// Account Owner Transaction Identification.
+    /// Trade Identification.
     /// </summary>
-    [DisplayName("Account Owner Transaction Identification")]
-    [IsoXmlTag("AcctOwnrTxId")]
-    public ValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public Max35Text? TradeIdentification { get; init; }
+
+    /// <summary>
+    /// Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Collateral Transaction Identification.
@@ -29,6 +36,48 @@ public record SecuritiesTradeDetails144
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
     public ValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Account Owner Transaction Identification.
+    /// </summary>
+    [DisplayName("Account Owner Transaction Identification")]
+    [IsoXmlTag("AcctOwnrTxId")]
+    public ValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Processor Transaction Identification.
+    /// </summary>
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Place Of Trade.
+    /// </summary>
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
+
+    /// <summary>
+    /// Place Of Clearing.
+    /// </summary>
+    [DisplayName("Place Of Clearing")]
+    [IsoXmlTag("PlcOfClr")]
+    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
+
+    /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
+
+    /// <summary>
+    /// Settlement Date.
+    /// </summary>
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required SettlementDate17Choice_ SettlementDate { get; init; }
 
     /// <summary>
     /// Deal Price.
@@ -45,48 +94,6 @@ public record SecuritiesTradeDetails144
     public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
-    /// Place Of Clearing.
-    /// </summary>
-    [DisplayName("Place Of Clearing")]
-    [IsoXmlTag("PlcOfClr")]
-    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
-
-    /// <summary>
-    /// Place Of Trade.
-    /// </summary>
-    [DisplayName("Place Of Trade")]
-    [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
-
-    /// <summary>
-    /// Processor Transaction Identification.
-    /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    public Max35Text? ProcessorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Settlement Date.
-    /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public required SettlementDate17Choice_ SettlementDate { get; init; }
-
-    /// <summary>
-    /// Trade Date.
-    /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public Max35Text? TradeIdentification { get; init; }
-
-    /// <summary>
     /// Trade Transaction Condition.
     /// </summary>
     [DisplayName("Trade Transaction Condition")]
@@ -100,11 +107,4 @@ public record SecuritiesTradeDetails144
     [DisplayName("Type Of Price")]
     [IsoXmlTag("TpOfPric")]
     public TypeOfPrice29Choice_? TypeOfPrice { get; init; }
-
-    /// <summary>
-    /// Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

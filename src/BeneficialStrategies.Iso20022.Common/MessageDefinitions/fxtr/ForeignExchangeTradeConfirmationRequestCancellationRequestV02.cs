@@ -46,20 +46,6 @@ public record ForeignExchangeTradeConfirmationRequestCancellationRequestV02 : IO
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Request Identification.
-    /// </summary>
-    [DisplayName("Cancellation Request Identification")]
-    [IsoXmlTag("CxlReqId")]
-    public MessageIdentification1? CancellationRequestIdentification { get; init; }
-
-    /// <summary>
-    /// Counterparty Role Identification.
-    /// </summary>
-    [DisplayName("Counterparty Role Identification")]
-    [IsoXmlTag("CtrPtyRoleId")]
-    public required TradePartyIdentification9 CounterpartyRoleIdentification { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -67,18 +53,11 @@ public record ForeignExchangeTradeConfirmationRequestCancellationRequestV02 : IO
     public required Header23 Header { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Cancellation Request Identification.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public required Max35Text TradeIdentification { get; init; }
+    [DisplayName("Cancellation Request Identification")]
+    [IsoXmlTag("CxlReqId")]
+    public MessageIdentification1? CancellationRequestIdentification { get; init; }
 
     /// <summary>
     /// Trading Side Identification.
@@ -88,9 +67,30 @@ public record ForeignExchangeTradeConfirmationRequestCancellationRequestV02 : IO
     public required TradePartyIdentification9 TradingSideIdentification { get; init; }
 
     /// <summary>
+    /// Counterparty Role Identification.
+    /// </summary>
+    [DisplayName("Counterparty Role Identification")]
+    [IsoXmlTag("CtrPtyRoleId")]
+    public required TradePartyIdentification9 CounterpartyRoleIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Identification.
+    /// </summary>
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public required Max35Text TradeIdentification { get; init; }
+
+    /// <summary>
     /// Underlying Product Type.
     /// </summary>
     [DisplayName("Underlying Product Type")]
     [IsoXmlTag("UndrlygPdctTp")]
     public required UnderlyingProductIdentifier1Code UnderlyingProductType { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

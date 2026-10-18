@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMKeyDownloadResponse5
 {
     /// <summary>
-    /// ATM Challenge.
+    /// Environment.
     /// </summary>
-    [DisplayName("ATM Challenge")]
-    [IsoXmlTag("ATMChllng")]
-    public Max140Binary? ATMChallenge { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required ATMEnvironment7 Environment { get; init; }
 
     /// <summary>
     /// ATM Security Context.
@@ -31,18 +31,11 @@ public record ATMKeyDownloadResponse5
     public required ATMSecurityContext3 ATMSecurityContext { get; init; }
 
     /// <summary>
-    /// Command.
+    /// ATM Challenge.
     /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand17> Command { get; init; } = [];
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required ATMEnvironment7 Environment { get; init; }
+    [DisplayName("ATM Challenge")]
+    [IsoXmlTag("ATMChllng")]
+    public Max140Binary? ATMChallenge { get; init; }
 
     /// <summary>
     /// Host Security Parameters.
@@ -50,4 +43,11 @@ public record ATMKeyDownloadResponse5
     [DisplayName("Host Security Parameters")]
     [IsoXmlTag("HstSctyParams")]
     public required SecurityParameters10 HostSecurityParameters { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand17> Command { get; init; } = [];
 }

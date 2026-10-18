@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction152
 {
     /// <summary>
-    /// Assignee.
-    /// </summary>
-    [DisplayName("Assignee")]
-    [IsoXmlTag("Assgne")]
-    public Party50Choice_? Assignee { get; init; }
-
-    /// <summary>
-    /// Assigner.
-    /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public Party50Choice_? Assigner { get; init; }
-
-    /// <summary>
     /// Cancellation Status Identification.
     /// </summary>
     [DisplayName("Cancellation Status Identification")]
@@ -38,26 +24,11 @@ public record PaymentTransaction152
     public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
-    /// Cancellation Status Reason Information.
+    /// Resolved Case.
     /// </summary>
-    [DisplayName("Cancellation Status Reason Information")]
-    [IsoXmlTag("CxlStsRsnInf")]
-    public ValueList<CancellationStatusReason5> CancellationStatusReasonInformation { get; init; } =
-        [];
-
-    /// <summary>
-    /// Original Clearing System Reference.
-    /// </summary>
-    [DisplayName("Original Clearing System Reference")]
-    [IsoXmlTag("OrgnlClrSysRef")]
-    public Max35Text? OriginalClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
+    [DisplayName("Resolved Case")]
+    [IsoXmlTag("RslvdCase")]
+    public Case6? ResolvedCase { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -74,6 +45,56 @@ public record PaymentTransaction152
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original Transaction Identification.
+    /// </summary>
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    public Max35Text? OriginalTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Original Clearing System Reference.
+    /// </summary>
+    [DisplayName("Original Clearing System Reference")]
+    [IsoXmlTag("OrgnlClrSysRef")]
+    public Max35Text? OriginalClearingSystemReference { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Transaction Cancellation Status.
+    /// </summary>
+    [DisplayName("Transaction Cancellation Status")]
+    [IsoXmlTag("TxCxlSts")]
+    public CancellationIndividualStatus1Code? TransactionCancellationStatus { get; init; }
+
+    /// <summary>
+    /// Cancellation Status Reason Information.
+    /// </summary>
+    [DisplayName("Cancellation Status Reason Information")]
+    [IsoXmlTag("CxlStsRsnInf")]
+    public ValueList<CancellationStatusReason5> CancellationStatusReasonInformation { get; init; } =
+        [];
+
+    /// <summary>
+    /// Resolution Related Information.
+    /// </summary>
+    [DisplayName("Resolution Related Information")]
+    [IsoXmlTag("RsltnRltdInf")]
+    public ResolutionData5? ResolutionRelatedInformation { get; init; }
+
+    /// <summary>
     /// Original Interbank Settlement Amount.
     /// </summary>
     [DisplayName("Original Interbank Settlement Amount")]
@@ -88,11 +109,18 @@ public record PaymentTransaction152
     public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Original Transaction Identification.
+    /// Assigner.
     /// </summary>
-    [DisplayName("Original Transaction Identification")]
-    [IsoXmlTag("OrgnlTxId")]
-    public Max35Text? OriginalTransactionIdentification { get; init; }
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public Party50Choice_? Assigner { get; init; }
+
+    /// <summary>
+    /// Assignee.
+    /// </summary>
+    [DisplayName("Assignee")]
+    [IsoXmlTag("Assgne")]
+    public Party50Choice_? Assignee { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -100,32 +128,4 @@ public record PaymentTransaction152
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
-
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
-
-    /// <summary>
-    /// Resolution Related Information.
-    /// </summary>
-    [DisplayName("Resolution Related Information")]
-    [IsoXmlTag("RsltnRltdInf")]
-    public ResolutionData5? ResolutionRelatedInformation { get; init; }
-
-    /// <summary>
-    /// Resolved Case.
-    /// </summary>
-    [DisplayName("Resolved Case")]
-    [IsoXmlTag("RslvdCase")]
-    public Case6? ResolvedCase { get; init; }
-
-    /// <summary>
-    /// Transaction Cancellation Status.
-    /// </summary>
-    [DisplayName("Transaction Cancellation Status")]
-    [IsoXmlTag("TxCxlSts")]
-    public CancellationIndividualStatus1Code? TransactionCancellationStatus { get; init; }
 }

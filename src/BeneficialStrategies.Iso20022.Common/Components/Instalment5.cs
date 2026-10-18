@@ -17,48 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Instalment5
 {
     /// <summary>
-    /// Charges.
-    /// </summary>
-    [DisplayName("Charges")]
-    [IsoXmlTag("Chrgs")]
-    public ImpliedCurrencyAndAmount? Charges { get; init; }
-
-    /// <summary>
-    /// Detailed Charges.
-    /// </summary>
-    [DisplayName("Detailed Charges")]
-    [IsoXmlTag("DtldChrgs")]
-    public ValueList<InstalmentAmountDetails1> DetailedCharges { get; init; } = [];
-
-    /// <summary>
-    /// First Amount.
-    /// </summary>
-    [DisplayName("First Amount")]
-    [IsoXmlTag("FrstAmt")]
-    public ImpliedCurrencyAndAmount? FirstAmount { get; init; }
-
-    /// <summary>
-    /// First Payment Date.
-    /// </summary>
-    [DisplayName("First Payment Date")]
-    [IsoXmlTag("FrstPmtDt")]
-    public ISODate? FirstPaymentDate { get; init; }
-
-    /// <summary>
-    /// Grace Period.
-    /// </summary>
-    [DisplayName("Grace Period")]
-    [IsoXmlTag("GracePrd")]
-    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
-
-    /// <summary>
-    /// Instalment Period.
-    /// </summary>
-    [DisplayName("Instalment Period")]
-    [IsoXmlTag("InstlmtPrd")]
-    public Number? InstalmentPeriod { get; init; }
-
-    /// <summary>
     /// Instalment Plan.
     /// </summary>
     [DisplayName("Instalment Plan")]
@@ -66,39 +24,11 @@ public record Instalment5
     public ValueList<InstalmentPlan1Code> InstalmentPlan { get; init; } = [];
 
     /// <summary>
-    /// Interest Rate.
-    /// </summary>
-    [DisplayName("Interest Rate")]
-    [IsoXmlTag("IntrstRate")]
-    public ValueList<InterestRateDetails1> InterestRate { get; init; } = [];
-
-    /// <summary>
-    /// Last Amount.
-    /// </summary>
-    [DisplayName("Last Amount")]
-    [IsoXmlTag("LastAmt")]
-    public ImpliedCurrencyAndAmount? LastAmount { get; init; }
-
-    /// <summary>
-    /// Period Unit.
-    /// </summary>
-    [DisplayName("Period Unit")]
-    [IsoXmlTag("PrdUnit")]
-    public Frequency3Code? PeriodUnit { get; init; }
-
-    /// <summary>
     /// Plan Identification.
     /// </summary>
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
     public Max35Text? PlanIdentification { get; init; }
-
-    /// <summary>
-    /// Plan Notice.
-    /// </summary>
-    [DisplayName("Plan Notice")]
-    [IsoXmlTag("PlanNtce")]
-    public ValueList<ActionMessage11> PlanNotice { get; init; } = [];
 
     /// <summary>
     /// Plan Owner.
@@ -115,11 +45,32 @@ public record Instalment5
     public Number? SequenceNumber { get; init; }
 
     /// <summary>
-    /// Subsequent Amount.
+    /// Period Unit.
     /// </summary>
-    [DisplayName("Subsequent Amount")]
-    [IsoXmlTag("SbsqntAmt")]
-    public ImpliedCurrencyAndAmount? SubsequentAmount { get; init; }
+    [DisplayName("Period Unit")]
+    [IsoXmlTag("PrdUnit")]
+    public Frequency3Code? PeriodUnit { get; init; }
+
+    /// <summary>
+    /// Instalment Period.
+    /// </summary>
+    [DisplayName("Instalment Period")]
+    [IsoXmlTag("InstlmtPrd")]
+    public Number? InstalmentPeriod { get; init; }
+
+    /// <summary>
+    /// Total Number Of Payments.
+    /// </summary>
+    [DisplayName("Total Number Of Payments")]
+    [IsoXmlTag("TtlNbOfPmts")]
+    public Number? TotalNumberOfPayments { get; init; }
+
+    /// <summary>
+    /// First Payment Date.
+    /// </summary>
+    [DisplayName("First Payment Date")]
+    [IsoXmlTag("FrstPmtDt")]
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Total Amount.
@@ -129,9 +80,58 @@ public record Instalment5
     public ActiveCurrencyAndAmount? TotalAmount { get; init; }
 
     /// <summary>
-    /// Total Number Of Payments.
+    /// First Amount.
     /// </summary>
-    [DisplayName("Total Number Of Payments")]
-    [IsoXmlTag("TtlNbOfPmts")]
-    public Number? TotalNumberOfPayments { get; init; }
+    [DisplayName("First Amount")]
+    [IsoXmlTag("FrstAmt")]
+    public ImpliedCurrencyAndAmount? FirstAmount { get; init; }
+
+    /// <summary>
+    /// Subsequent Amount.
+    /// </summary>
+    [DisplayName("Subsequent Amount")]
+    [IsoXmlTag("SbsqntAmt")]
+    public ImpliedCurrencyAndAmount? SubsequentAmount { get; init; }
+
+    /// <summary>
+    /// Last Amount.
+    /// </summary>
+    [DisplayName("Last Amount")]
+    [IsoXmlTag("LastAmt")]
+    public ImpliedCurrencyAndAmount? LastAmount { get; init; }
+
+    /// <summary>
+    /// Charges.
+    /// </summary>
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public ImpliedCurrencyAndAmount? Charges { get; init; }
+
+    /// <summary>
+    /// Detailed Charges.
+    /// </summary>
+    [DisplayName("Detailed Charges")]
+    [IsoXmlTag("DtldChrgs")]
+    public ValueList<InstalmentAmountDetails1> DetailedCharges { get; init; } = [];
+
+    /// <summary>
+    /// Interest Rate.
+    /// </summary>
+    [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
+    public ValueList<InterestRateDetails1> InterestRate { get; init; } = [];
+
+    /// <summary>
+    /// Grace Period.
+    /// </summary>
+    [DisplayName("Grace Period")]
+    [IsoXmlTag("GracePrd")]
+    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
+
+    /// <summary>
+    /// Plan Notice.
+    /// </summary>
+    [DisplayName("Plan Notice")]
+    [IsoXmlTag("PlanNtce")]
+    public ValueList<ActionMessage11> PlanNotice { get; init; } = [];
 }

@@ -17,67 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction149
 {
     /// <summary>
-    /// Charge Bearer.
+    /// Reversal Identification.
     /// </summary>
-    [DisplayName("Charge Bearer")]
-    [IsoXmlTag("ChrgBr")]
-    public ChargeBearerType1Code? ChargeBearer { get; init; }
-
-    /// <summary>
-    /// Charges Information.
-    /// </summary>
-    [DisplayName("Charges Information")]
-    [IsoXmlTag("ChrgsInf")]
-    public ValueList<Charges16> ChargesInformation { get; init; } = [];
-
-    /// <summary>
-    /// Compensation Amount.
-    /// </summary>
-    [DisplayName("Compensation Amount")]
-    [IsoXmlTag("CompstnAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; init; }
-
-    /// <summary>
-    /// Exchange Rate.
-    /// </summary>
-    [DisplayName("Exchange Rate")]
-    [IsoXmlTag("XchgRate")]
-    public BaseOneRate? ExchangeRate { get; init; }
-
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Original Clearing System Reference.
-    /// </summary>
-    [DisplayName("Original Clearing System Reference")]
-    [IsoXmlTag("OrgnlClrSysRef")]
-    public Max35Text? OriginalClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
+    [DisplayName("Reversal Identification")]
+    [IsoXmlTag("RvslId")]
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -94,11 +38,11 @@ public record PaymentTransaction149
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Original Interbank Settlement Amount.
+    /// Original End To End Identification.
     /// </summary>
-    [DisplayName("Original Interbank Settlement Amount")]
-    [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; }
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Identification.
@@ -108,13 +52,6 @@ public record PaymentTransaction149
     public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
-
-    /// <summary>
     /// Original UETR.
     /// </summary>
     [DisplayName("Original UETR")]
@@ -122,25 +59,18 @@ public record PaymentTransaction149
     public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
-    /// Reversal Identification.
+    /// Original Clearing System Reference.
     /// </summary>
-    [DisplayName("Reversal Identification")]
-    [IsoXmlTag("RvslId")]
-    public Max35Text? ReversalIdentification { get; init; }
+    [DisplayName("Original Clearing System Reference")]
+    [IsoXmlTag("OrgnlClrSysRef")]
+    public Max35Text? OriginalClearingSystemReference { get; init; }
 
     /// <summary>
-    /// Reversal Reason Information.
+    /// Original Interbank Settlement Amount.
     /// </summary>
-    [DisplayName("Reversal Reason Information")]
-    [IsoXmlTag("RvslRsnInf")]
-    public ValueList<PaymentReversalReason10> ReversalReasonInformation { get; init; } = [];
-
-    /// <summary>
-    /// Reversed Instructed Amount.
-    /// </summary>
-    [DisplayName("Reversed Instructed Amount")]
-    [IsoXmlTag("RvsdInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? ReversedInstructedAmount { get; init; }
+    [DisplayName("Original Interbank Settlement Amount")]
+    [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; }
 
     /// <summary>
     /// Reversed Interbank Settlement Amount.
@@ -148,6 +78,13 @@ public record PaymentTransaction149
     [DisplayName("Reversed Interbank Settlement Amount")]
     [IsoXmlTag("RvsdIntrBkSttlmAmt")]
     public required ActiveCurrencyAndAmount ReversedInterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Priority.
@@ -162,6 +99,69 @@ public record PaymentTransaction149
     [DisplayName("Settlement Time Indication")]
     [IsoXmlTag("SttlmTmIndctn")]
     public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
+
+    /// <summary>
+    /// Reversed Instructed Amount.
+    /// </summary>
+    [DisplayName("Reversed Instructed Amount")]
+    [IsoXmlTag("RvsdInstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? ReversedInstructedAmount { get; init; }
+
+    /// <summary>
+    /// Exchange Rate.
+    /// </summary>
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    public BaseOneRate? ExchangeRate { get; init; }
+
+    /// <summary>
+    /// Compensation Amount.
+    /// </summary>
+    [DisplayName("Compensation Amount")]
+    [IsoXmlTag("CompstnAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; init; }
+
+    /// <summary>
+    /// Charge Bearer.
+    /// </summary>
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    public ChargeBearerType1Code? ChargeBearer { get; init; }
+
+    /// <summary>
+    /// Charges Information.
+    /// </summary>
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    public ValueList<Charges16> ChargesInformation { get; init; } = [];
+
+    /// <summary>
+    /// Instructing Agent.
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Instructed Agent.
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+
+    /// <summary>
+    /// Reversal Reason Information.
+    /// </summary>
+    [DisplayName("Reversal Reason Information")]
+    [IsoXmlTag("RvslRsnInf")]
+    public ValueList<PaymentReversalReason10> ReversalReasonInformation { get; init; } = [];
+
+    /// <summary>
+    /// Original Transaction Reference.
+    /// </summary>
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
     /// <summary>
     /// Supplementary Data.

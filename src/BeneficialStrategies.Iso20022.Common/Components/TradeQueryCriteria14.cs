@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeQueryCriteria14
 {
     /// <summary>
-    /// Financial Instrument Criteria.
+    /// Trade Life Cycle History.
     /// </summary>
-    [DisplayName("Financial Instrument Criteria")]
-    [IsoXmlTag("FinInstrmCrit")]
-    public TradeSecurityIdentificationQueryCriteria3? FinancialInstrumentCriteria { get; init; }
+    [DisplayName("Trade Life Cycle History")]
+    [IsoXmlTag("TradLifeCyclHstry")]
+    public TrueFalseIndicator? TradeLifeCycleHistory { get; init; }
 
     /// <summary>
     /// Margin Life Cycle History.
@@ -31,18 +31,25 @@ public record TradeQueryCriteria14
     public TrueFalseIndicator? MarginLifeCycleHistory { get; init; }
 
     /// <summary>
-    /// Other Criteria.
-    /// </summary>
-    [DisplayName("Other Criteria")]
-    [IsoXmlTag("OthrCrit")]
-    public TradeAdditionalQueryCriteria9? OtherCriteria { get; init; }
-
-    /// <summary>
     /// Outstanding Trade Indicator.
     /// </summary>
     [DisplayName("Outstanding Trade Indicator")]
     [IsoXmlTag("OutsdngTradInd")]
     public required TrueFalseIndicator OutstandingTradeIndicator { get; init; }
+
+    /// <summary>
+    /// Trade Party Criteria.
+    /// </summary>
+    [DisplayName("Trade Party Criteria")]
+    [IsoXmlTag("TradPtyCrit")]
+    public TradePartyQueryCriteria7? TradePartyCriteria { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Criteria.
+    /// </summary>
+    [DisplayName("Financial Instrument Criteria")]
+    [IsoXmlTag("FinInstrmCrit")]
+    public TradeSecurityIdentificationQueryCriteria3? FinancialInstrumentCriteria { get; init; }
 
     /// <summary>
     /// Time Criteria.
@@ -52,16 +59,9 @@ public record TradeQueryCriteria14
     public TradeDateTimeQueryCriteria6? TimeCriteria { get; init; }
 
     /// <summary>
-    /// Trade Life Cycle History.
+    /// Other Criteria.
     /// </summary>
-    [DisplayName("Trade Life Cycle History")]
-    [IsoXmlTag("TradLifeCyclHstry")]
-    public TrueFalseIndicator? TradeLifeCycleHistory { get; init; }
-
-    /// <summary>
-    /// Trade Party Criteria.
-    /// </summary>
-    [DisplayName("Trade Party Criteria")]
-    [IsoXmlTag("TradPtyCrit")]
-    public TradePartyQueryCriteria7? TradePartyCriteria { get; init; }
+    [DisplayName("Other Criteria")]
+    [IsoXmlTag("OthrCrit")]
+    public TradeAdditionalQueryCriteria9? OtherCriteria { get; init; }
 }

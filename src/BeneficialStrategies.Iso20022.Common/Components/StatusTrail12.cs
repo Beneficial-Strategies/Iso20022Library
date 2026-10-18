@@ -17,11 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatusTrail12
 {
     /// <summary>
-    /// Cancellation Status.
+    /// Status Date.
     /// </summary>
-    [DisplayName("Cancellation Status")]
-    [IsoXmlTag("CxlSts")]
-    public ProcessingStatus86Choice_? CancellationStatus { get; init; }
+    [DisplayName("Status Date")]
+    [IsoXmlTag("StsDt")]
+    public required ISODateTime StatusDate { get; init; }
+
+    /// <summary>
+    /// Sending Organisation Identification.
+    /// </summary>
+    [DisplayName("Sending Organisation Identification")]
+    [IsoXmlTag("SndgOrgId")]
+    public OrganisationIdentification31? SendingOrganisationIdentification { get; init; }
+
+    /// <summary>
+    /// User Identification.
+    /// </summary>
+    [DisplayName("User Identification")]
+    [IsoXmlTag("UsrId")]
+    public Max35Text? UserIdentification { get; init; }
+
+    /// <summary>
+    /// Processing Status.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ProcessingStatus87Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
     /// Inferred Matching Status.
@@ -38,6 +59,13 @@ public record StatusTrail12
     public MatchingStatus25Choice_? MatchingStatus { get; init; }
 
     /// <summary>
+    /// Settlement Status.
+    /// </summary>
+    [DisplayName("Settlement Status")]
+    [IsoXmlTag("SttlmSts")]
+    public SettlementStatus32Choice_? SettlementStatus { get; init; }
+
+    /// <summary>
     /// Modification Processing Status.
     /// </summary>
     [DisplayName("Modification Processing Status")]
@@ -45,18 +73,11 @@ public record StatusTrail12
     public ModificationProcessingStatus10Choice_? ModificationProcessingStatus { get; init; }
 
     /// <summary>
-    /// Processing Status.
+    /// Cancellation Status.
     /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus87Choice_? ProcessingStatus { get; init; }
-
-    /// <summary>
-    /// Sending Organisation Identification.
-    /// </summary>
-    [DisplayName("Sending Organisation Identification")]
-    [IsoXmlTag("SndgOrgId")]
-    public OrganisationIdentification31? SendingOrganisationIdentification { get; init; }
+    [DisplayName("Cancellation Status")]
+    [IsoXmlTag("CxlSts")]
+    public ProcessingStatus86Choice_? CancellationStatus { get; init; }
 
     /// <summary>
     /// Settled.
@@ -66,30 +87,9 @@ public record StatusTrail12
     public ProprietaryReason4? Settled { get; init; }
 
     /// <summary>
-    /// Settlement Status.
-    /// </summary>
-    [DisplayName("Settlement Status")]
-    [IsoXmlTag("SttlmSts")]
-    public SettlementStatus32Choice_? SettlementStatus { get; init; }
-
-    /// <summary>
-    /// Status Date.
-    /// </summary>
-    [DisplayName("Status Date")]
-    [IsoXmlTag("StsDt")]
-    public required ISODateTime StatusDate { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// User Identification.
-    /// </summary>
-    [DisplayName("User Identification")]
-    [IsoXmlTag("UsrId")]
-    public Max35Text? UserIdentification { get; init; }
 }

@@ -24,11 +24,18 @@ public record OrderInstructionData2
     public Side6Code? BuySellIndicator { get; init; }
 
     /// <summary>
-    /// Displayed Quantity.
+    /// Order Validity Status.
     /// </summary>
-    [DisplayName("Displayed Quantity")]
-    [IsoXmlTag("DispdQty")]
-    public FinancialInstrumentQuantity25Choice_? DisplayedQuantity { get; init; }
+    [DisplayName("Order Validity Status")]
+    [IsoXmlTag("OrdrVldtySts")]
+    public OrderStatus10Code? OrderValidityStatus { get; init; }
+
+    /// <summary>
+    /// Order Status.
+    /// </summary>
+    [DisplayName("Order Status")]
+    [IsoXmlTag("OrdrSts")]
+    public ValueList<OrderStatus11Code> OrderStatus { get; init; } = [];
 
     /// <summary>
     /// Initial Quantity.
@@ -36,6 +43,20 @@ public record OrderInstructionData2
     [DisplayName("Initial Quantity")]
     [IsoXmlTag("InitlQty")]
     public FinancialInstrumentQuantity25Choice_? InitialQuantity { get; init; }
+
+    /// <summary>
+    /// Remaining Quantity.
+    /// </summary>
+    [DisplayName("Remaining Quantity")]
+    [IsoXmlTag("RmngQty")]
+    public FinancialInstrumentQuantity25Choice_? RemainingQuantity { get; init; }
+
+    /// <summary>
+    /// Displayed Quantity.
+    /// </summary>
+    [DisplayName("Displayed Quantity")]
+    [IsoXmlTag("DispdQty")]
+    public FinancialInstrumentQuantity25Choice_? DisplayedQuantity { get; init; }
 
     /// <summary>
     /// Minimum Acceptable Quantity.
@@ -52,20 +73,6 @@ public record OrderInstructionData2
     public MinimumExecutable1? MinimumExecutable { get; init; }
 
     /// <summary>
-    /// Order Status.
-    /// </summary>
-    [DisplayName("Order Status")]
-    [IsoXmlTag("OrdrSts")]
-    public ValueList<OrderStatus11Code> OrderStatus { get; init; } = [];
-
-    /// <summary>
-    /// Order Validity Status.
-    /// </summary>
-    [DisplayName("Order Validity Status")]
-    [IsoXmlTag("OrdrVldtySts")]
-    public OrderStatus10Code? OrderValidityStatus { get; init; }
-
-    /// <summary>
     /// Passive Only Indicator.
     /// </summary>
     [DisplayName("Passive Only Indicator")]
@@ -73,11 +80,11 @@ public record OrderInstructionData2
     public TrueFalseIndicator? PassiveOnlyIndicator { get; init; }
 
     /// <summary>
-    /// Remaining Quantity.
+    /// Self Execution Prevention.
     /// </summary>
-    [DisplayName("Remaining Quantity")]
-    [IsoXmlTag("RmngQty")]
-    public FinancialInstrumentQuantity25Choice_? RemainingQuantity { get; init; }
+    [DisplayName("Self Execution Prevention")]
+    [IsoXmlTag("SlfExctnPrvntn")]
+    public TrueFalseIndicator? SelfExecutionPrevention { get; init; }
 
     /// <summary>
     /// Routing Strategy.
@@ -85,11 +92,4 @@ public record OrderInstructionData2
     [DisplayName("Routing Strategy")]
     [IsoXmlTag("RtgStrtgy")]
     public Max50Text? RoutingStrategy { get; init; }
-
-    /// <summary>
-    /// Self Execution Prevention.
-    /// </summary>
-    [DisplayName("Self Execution Prevention")]
-    [IsoXmlTag("SlfExctnPrvntn")]
-    public TrueFalseIndicator? SelfExecutionPrevention { get; init; }
 }

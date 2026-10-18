@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMConfigurationReportComponent1
 {
     /// <summary>
-    /// Active Version.
-    /// </summary>
-    [DisplayName("Active Version")]
-    [IsoXmlTag("ActvVrsn")]
-    public Max35Text? ActiveVersion { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required ATMEnvironment7 Environment { get; init; }
+
+    /// <summary>
+    /// Active Version.
+    /// </summary>
+    [DisplayName("Active Version")]
+    [IsoXmlTag("ActvVrsn")]
+    public Max35Text? ActiveVersion { get; init; }
 
     /// <summary>
     /// Non Active Version.

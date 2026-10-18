@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ManagementPlan13
 {
     /// <summary>
-    /// Data Set.
-    /// </summary>
-    [DisplayName("Data Set")]
-    [IsoXmlTag("DataSet")]
-    public required TerminalManagementDataSet34 DataSet { get; init; }
-
-    /// <summary>
     /// POI Identification.
     /// </summary>
     [DisplayName("POI Identification")]
@@ -36,4 +29,11 @@ public record ManagementPlan13
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
     public required GenericIdentification176 TerminalManagerIdentification { get; init; }
+
+    /// <summary>
+    /// Data Set.
+    /// </summary>
+    [DisplayName("Data Set")]
+    [IsoXmlTag("DataSet")]
+    public required TerminalManagementDataSet34 DataSet { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BatchResponse6
 {
     /// <summary>
-    /// Performed Transaction.
+    /// Sale Batch Identification.
     /// </summary>
-    [DisplayName("Performed Transaction")]
-    [IsoXmlTag("PrfrmdTx")]
-    public ValueList<PerformedTransaction6> PerformedTransaction { get; init; } = [];
+    [DisplayName("Sale Batch Identification")]
+    [IsoXmlTag("SaleBtchId")]
+    public TransactionIdentifier1? SaleBatchIdentification { get; init; }
 
     /// <summary>
     /// POI Batch Identification.
@@ -31,9 +31,9 @@ public record BatchResponse6
     public TransactionIdentifier1? POIBatchIdentification { get; init; }
 
     /// <summary>
-    /// Sale Batch Identification.
+    /// Performed Transaction.
     /// </summary>
-    [DisplayName("Sale Batch Identification")]
-    [IsoXmlTag("SaleBtchId")]
-    public TransactionIdentifier1? SaleBatchIdentification { get; init; }
+    [DisplayName("Performed Transaction")]
+    [IsoXmlTag("PrfrmdTx")]
+    public ValueList<PerformedTransaction6> PerformedTransaction { get; init; } = [];
 }

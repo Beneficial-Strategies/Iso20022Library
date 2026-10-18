@@ -46,13 +46,6 @@ public record ATMExceptionAdviceV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Exception Advice.
-    /// </summary>
-    [DisplayName("ATM Exception Advice")]
-    [IsoXmlTag("ATMXcptnAdvc")]
-    public ATMExceptionAdvice2? ATMExceptionAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMExceptionAdviceV02 : IOuterRecord
     [DisplayName("Protected ATM Exception Advice")]
     [IsoXmlTag("PrtctdATMXcptnAdvc")]
     public ContentInformationType10? ProtectedATMExceptionAdvice { get; init; }
+
+    /// <summary>
+    /// ATM Exception Advice.
+    /// </summary>
+    [DisplayName("ATM Exception Advice")]
+    [IsoXmlTag("ATMXcptnAdvc")]
+    public ATMExceptionAdvice2? ATMExceptionAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

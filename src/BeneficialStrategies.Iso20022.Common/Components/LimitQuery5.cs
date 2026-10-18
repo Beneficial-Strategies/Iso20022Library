@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitQuery5
 {
     /// <summary>
-    /// Limit Criteria.
-    /// </summary>
-    [DisplayName("Limit Criteria")]
-    [IsoXmlTag("LmtCrit")]
-    public LimitCriteria7Choice_? LimitCriteria { get; init; }
-
-    /// <summary>
     /// Query Type.
     /// </summary>
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
     public QueryType2Code? QueryType { get; init; }
+
+    /// <summary>
+    /// Limit Criteria.
+    /// </summary>
+    [DisplayName("Limit Criteria")]
+    [IsoXmlTag("LmtCrit")]
+    public LimitCriteria7Choice_? LimitCriteria { get; init; }
 }

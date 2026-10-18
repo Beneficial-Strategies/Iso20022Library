@@ -54,43 +54,6 @@ public record TransferOutConfirmationV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information related to the account from which the financial instrument was withdrawn.
-    /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required InvestmentAccount82 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Information provided when the message is a copy of a previous message.
-    /// </summary>
-    [DisplayName("Copy Details")]
-    [IsoXmlTag("CpyDtls")]
-    public CopyInformation5? CopyDetails { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Identifies the market practice to which the message conforms.
-    /// </summary>
-    [DisplayName("Market Practice Version")]
-    [IsoXmlTag("MktPrctcVrsn")]
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
-
-    /// <summary>
-    /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
-    /// </summary>
-    [DisplayName("Master Reference")]
-    [IsoXmlTag("MstrRef")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? MasterReference { get; init; }
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -119,11 +82,13 @@ public record TransferOutConfirmationV10 : IOuterRecord
     public AdditionalReference10? RelatedReference { get; init; }
 
     /// <summary>
-    /// Information related to the receiving side of the transfer.
+    /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
-    [DisplayName("Settlement Details")]
-    [IsoXmlTag("SttlmDtls")]
-    public ReceiveInformation23? SettlementDetails { get; init; }
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// General information related to the transfer of the financial instrument.
@@ -131,4 +96,39 @@ public record TransferOutConfirmationV10 : IOuterRecord
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
     public ValueList<Transfer38> TransferDetails { get; init; } = [];
+
+    /// <summary>
+    /// Information related to the account from which the financial instrument was withdrawn.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required InvestmentAccount82 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Information related to the receiving side of the transfer.
+    /// </summary>
+    [DisplayName("Settlement Details")]
+    [IsoXmlTag("SttlmDtls")]
+    public ReceiveInformation23? SettlementDetails { get; init; }
+
+    /// <summary>
+    /// Identifies the market practice to which the message conforms.
+    /// </summary>
+    [DisplayName("Market Practice Version")]
+    [IsoXmlTag("MktPrctcVrsn")]
+    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
+
+    /// <summary>
+    /// Information provided when the message is a copy of a previous message.
+    /// </summary>
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation5? CopyDetails { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

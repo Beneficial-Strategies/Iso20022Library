@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MandateAmendmentReason3
 {
     /// <summary>
-    /// Further details on the amendment request reason.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Party that issues the amendment request.
     /// </summary>
     [DisplayName("Originator")]
@@ -36,4 +29,11 @@ public record MandateAmendmentReason3
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required MandateReason1Choice_ Reason { get; init; }
+
+    /// <summary>
+    /// Further details on the amendment request reason.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

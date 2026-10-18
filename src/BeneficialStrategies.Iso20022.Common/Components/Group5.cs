@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Group5
 {
     /// <summary>
-    /// Group Identification.
-    /// </summary>
-    [DisplayName("Group Identification")]
-    [IsoXmlTag("GrpId")]
-    public required Max4AlphaNumericText GroupIdentification { get; init; }
-
-    /// <summary>
     /// Modification Code.
     /// </summary>
     [DisplayName("Modification Code")]
     [IsoXmlTag("ModCd")]
     public Modification1Code? ModificationCode { get; init; }
+
+    /// <summary>
+    /// Group Identification.
+    /// </summary>
+    [DisplayName("Group Identification")]
+    [IsoXmlTag("GrpId")]
+    public required Max4AlphaNumericText GroupIdentification { get; init; }
 
     /// <summary>
     /// Party.

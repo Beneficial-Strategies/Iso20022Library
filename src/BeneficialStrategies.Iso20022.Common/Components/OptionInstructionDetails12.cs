@@ -17,6 +17,55 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OptionInstructionDetails12
 {
     /// <summary>
+    /// Instruction Identification.
+    /// </summary>
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public required RestrictedFINMax15Text InstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Sequence Number.
+    /// </summary>
+    [DisplayName("Instruction Sequence Number")]
+    [IsoXmlTag("InstrSeqNb")]
+    public Max3NumericText? InstructionSequenceNumber { get; init; }
+
+    /// <summary>
+    /// Protect Indicator.
+    /// </summary>
+    [DisplayName("Protect Indicator")]
+    [IsoXmlTag("PrtctInd")]
+    public ProtectTransactionType2Code? ProtectIndicator { get; init; }
+
+    /// <summary>
+    /// Instruction Quantity.
+    /// </summary>
+    [DisplayName("Instruction Quantity")]
+    [IsoXmlTag("InstrQty")]
+    public required FinancialInstrumentQuantity36Choice_ InstructionQuantity { get; init; }
+
+    /// <summary>
+    /// Instruction Date.
+    /// </summary>
+    [DisplayName("Instruction Date")]
+    [IsoXmlTag("InstrDt")]
+    public required ISODate InstructionDate { get; init; }
+
+    /// <summary>
+    /// Protect Date.
+    /// </summary>
+    [DisplayName("Protect Date")]
+    [IsoXmlTag("PrtctDt")]
+    public ISODate? ProtectDate { get; init; }
+
+    /// <summary>
+    /// Cover Protect Date.
+    /// </summary>
+    [DisplayName("Cover Protect Date")]
+    [IsoXmlTag("CoverPrtctDt")]
+    public ISODate? CoverProtectDate { get; init; }
+
+    /// <summary>
     /// Bid Price.
     /// </summary>
     [DisplayName("Bid Price")]
@@ -31,32 +80,11 @@ public record OptionInstructionDetails12
     public FinancialInstrumentQuantity36Choice_? ConditionalQuantity { get; init; }
 
     /// <summary>
-    /// Cover Protect Date.
-    /// </summary>
-    [DisplayName("Cover Protect Date")]
-    [IsoXmlTag("CoverPrtctDt")]
-    public ISODate? CoverProtectDate { get; init; }
-
-    /// <summary>
     /// Customer Reference.
     /// </summary>
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
     public RestrictedFINMax50Text? CustomerReference { get; init; }
-
-    /// <summary>
-    /// Instruction Date.
-    /// </summary>
-    [DisplayName("Instruction Date")]
-    [IsoXmlTag("InstrDt")]
-    public required ISODate InstructionDate { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public required RestrictedFINMax15Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Instruction Narrative.
@@ -66,37 +94,9 @@ public record OptionInstructionDetails12
     public RestrictedFINXMax350Text? InstructionNarrative { get; init; }
 
     /// <summary>
-    /// Instruction Quantity.
-    /// </summary>
-    [DisplayName("Instruction Quantity")]
-    [IsoXmlTag("InstrQty")]
-    public required FinancialInstrumentQuantity36Choice_ InstructionQuantity { get; init; }
-
-    /// <summary>
-    /// Instruction Sequence Number.
-    /// </summary>
-    [DisplayName("Instruction Sequence Number")]
-    [IsoXmlTag("InstrSeqNb")]
-    public Max3NumericText? InstructionSequenceNumber { get; init; }
-
-    /// <summary>
     /// Instruction Status.
     /// </summary>
     [DisplayName("Instruction Status")]
     [IsoXmlTag("InstrSts")]
     public required InstructionProcessingStatus57Choice_ InstructionStatus { get; init; }
-
-    /// <summary>
-    /// Protect Date.
-    /// </summary>
-    [DisplayName("Protect Date")]
-    [IsoXmlTag("PrtctDt")]
-    public ISODate? ProtectDate { get; init; }
-
-    /// <summary>
-    /// Protect Indicator.
-    /// </summary>
-    [DisplayName("Protect Indicator")]
-    [IsoXmlTag("PrtctInd")]
-    public ProtectTransactionType2Code? ProtectIndicator { get; init; }
 }

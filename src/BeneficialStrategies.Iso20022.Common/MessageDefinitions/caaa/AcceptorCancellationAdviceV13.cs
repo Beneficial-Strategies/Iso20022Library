@@ -46,18 +46,18 @@ public record AcceptorCancellationAdviceV13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Advice.
-    /// </summary>
-    [DisplayName("Cancellation Advice")]
-    [IsoXmlTag("CxlAdvc")]
-    public required AcceptorCancellationAdvice13 CancellationAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Cancellation Advice.
+    /// </summary>
+    [DisplayName("Cancellation Advice")]
+    [IsoXmlTag("CxlAdvc")]
+    public required AcceptorCancellationAdvice13 CancellationAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

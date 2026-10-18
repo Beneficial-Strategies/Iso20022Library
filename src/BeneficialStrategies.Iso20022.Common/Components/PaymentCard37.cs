@@ -17,6 +17,34 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentCard37
 {
     /// <summary>
+    /// Card Data Entry Mode.
+    /// </summary>
+    [DisplayName("Card Data Entry Mode")]
+    [IsoXmlTag("CardDataNtryMd")]
+    public required CardDataReading1Code CardDataEntryMode { get; init; }
+
+    /// <summary>
+    /// Fallback Indicator.
+    /// </summary>
+    [DisplayName("Fallback Indicator")]
+    [IsoXmlTag("FllbckInd")]
+    public TrueFalseIndicator? FallbackIndicator { get; init; }
+
+    /// <summary>
+    /// Protected Card Data.
+    /// </summary>
+    [DisplayName("Protected Card Data")]
+    [IsoXmlTag("PrtctdCardData")]
+    public ContentInformationType10? ProtectedCardData { get; init; }
+
+    /// <summary>
+    /// Plain Card Data.
+    /// </summary>
+    [DisplayName("Plain Card Data")]
+    [IsoXmlTag("PlainCardData")]
+    public PlainCardData24? PlainCardData { get; init; }
+
+    /// <summary>
     /// Card Country Code.
     /// </summary>
     [DisplayName("Card Country Code")]
@@ -31,37 +59,9 @@ public record PaymentCard37
     public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
-    /// Card Data Entry Mode.
-    /// </summary>
-    [DisplayName("Card Data Entry Mode")]
-    [IsoXmlTag("CardDataNtryMd")]
-    public required CardDataReading1Code CardDataEntryMode { get; init; }
-
-    /// <summary>
     /// Electronic Purse Balance.
     /// </summary>
     [DisplayName("Electronic Purse Balance")]
     [IsoXmlTag("ElctrncPrsBal")]
     public CurrencyAndAmount? ElectronicPurseBalance { get; init; }
-
-    /// <summary>
-    /// Fallback Indicator.
-    /// </summary>
-    [DisplayName("Fallback Indicator")]
-    [IsoXmlTag("FllbckInd")]
-    public TrueFalseIndicator? FallbackIndicator { get; init; }
-
-    /// <summary>
-    /// Plain Card Data.
-    /// </summary>
-    [DisplayName("Plain Card Data")]
-    [IsoXmlTag("PlainCardData")]
-    public PlainCardData24? PlainCardData { get; init; }
-
-    /// <summary>
-    /// Protected Card Data.
-    /// </summary>
-    [DisplayName("Protected Card Data")]
-    [IsoXmlTag("PrtctdCardData")]
-    public ContentInformationType10? ProtectedCardData { get; init; }
 }

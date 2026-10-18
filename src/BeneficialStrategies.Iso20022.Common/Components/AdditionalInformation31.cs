@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AdditionalInformation31
 {
     /// <summary>
-    /// Additional Data.
+    /// Numeric.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public Max350Text? AdditionalData { get; init; }
+    [DisplayName("Numeric")]
+    [IsoXmlTag("Nmrc")]
+    public Max35NumericText? Numeric { get; init; }
 
     /// <summary>
     /// Alpha Numeric.
@@ -31,9 +31,9 @@ public record AdditionalInformation31
     public Max350Text? AlphaNumeric { get; init; }
 
     /// <summary>
-    /// Numeric.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Numeric")]
-    [IsoXmlTag("Nmrc")]
-    public Max35NumericText? Numeric { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public Max350Text? AdditionalData { get; init; }
 }

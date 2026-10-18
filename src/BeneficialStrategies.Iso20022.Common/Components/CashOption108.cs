@@ -17,60 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashOption108
 {
     /// <summary>
-    /// Amount Details.
-    /// </summary>
-    [DisplayName("Amount Details")]
-    [IsoXmlTag("AmtDtls")]
-    public CorporateActionAmounts71? AmountDetails { get; init; }
-
-    /// <summary>
-    /// Country Of Income Source.
-    /// </summary>
-    [DisplayName("Country Of Income Source")]
-    [IsoXmlTag("CtryOfIncmSrc")]
-    public CountryCode? CountryOfIncomeSource { get; init; }
-
-    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public required CreditDebitCode CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Date Details.
-    /// </summary>
-    [DisplayName("Date Details")]
-    [IsoXmlTag("DtDtls")]
-    public required CorporateActionDate84 DateDetails { get; init; }
-
-    /// <summary>
-    /// Estimated Rate Indicator.
-    /// </summary>
-    [DisplayName("Estimated Rate Indicator")]
-    [IsoXmlTag("EstmtdRateInd")]
-    public YesNoIndicator? EstimatedRateIndicator { get; init; }
-
-    /// <summary>
-    /// Exemption Type.
-    /// </summary>
-    [DisplayName("Exemption Type")]
-    [IsoXmlTag("XmptnTp")]
-    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
-
-    /// <summary>
-    /// Foreign Exchange Details.
-    /// </summary>
-    [DisplayName("Foreign Exchange Details")]
-    [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms39? ForeignExchangeDetails { get; init; }
-
-    /// <summary>
-    /// Income Type.
-    /// </summary>
-    [DisplayName("Income Type")]
-    [IsoXmlTag("IncmTp")]
-    public GenericIdentification30? IncomeType { get; init; }
 
     /// <summary>
     /// Non Eligible Proceeds Indicator.
@@ -80,11 +31,11 @@ public record CashOption108
     public NonEligibleProceedsIndicator5Choice_? NonEligibleProceedsIndicator { get; init; }
 
     /// <summary>
-    /// NRA Tax Reportable Indicator.
+    /// Income Type.
     /// </summary>
-    [DisplayName("NRA Tax Reportable Indicator")]
-    [IsoXmlTag("NRATaxRptblInd")]
-    public YesNoIndicator? NRATaxReportableIndicator { get; init; }
+    [DisplayName("Income Type")]
+    [IsoXmlTag("IncmTp")]
+    public GenericIdentification30? IncomeType { get; init; }
 
     /// <summary>
     /// Other Income Type.
@@ -94,6 +45,13 @@ public record CashOption108
     public ValueList<GenericIdentification30> OtherIncomeType { get; init; } = [];
 
     /// <summary>
+    /// Exemption Type.
+    /// </summary>
+    [DisplayName("Exemption Type")]
+    [IsoXmlTag("XmptnTp")]
+    public ValueList<GenericIdentification30> ExemptionType { get; init; } = [];
+
+    /// <summary>
     /// Price Calculation Method.
     /// </summary>
     [DisplayName("Price Calculation Method")]
@@ -101,11 +59,46 @@ public record CashOption108
     public PriceCalculationMethod2Choice_? PriceCalculationMethod { get; init; }
 
     /// <summary>
-    /// Price Details.
+    /// Country Of Income Source.
     /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public PriceDetails39? PriceDetails { get; init; }
+    [DisplayName("Country Of Income Source")]
+    [IsoXmlTag("CtryOfIncmSrc")]
+    public CountryCode? CountryOfIncomeSource { get; init; }
+
+    /// <summary>
+    /// Amount Details.
+    /// </summary>
+    [DisplayName("Amount Details")]
+    [IsoXmlTag("AmtDtls")]
+    public CorporateActionAmounts71? AmountDetails { get; init; }
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public required CorporateActionDate84 DateDetails { get; init; }
+
+    /// <summary>
+    /// Foreign Exchange Details.
+    /// </summary>
+    [DisplayName("Foreign Exchange Details")]
+    [IsoXmlTag("FXDtls")]
+    public ForeignExchangeTerms39? ForeignExchangeDetails { get; init; }
+
+    /// <summary>
+    /// Estimated Rate Indicator.
+    /// </summary>
+    [DisplayName("Estimated Rate Indicator")]
+    [IsoXmlTag("EstmtdRateInd")]
+    public YesNoIndicator? EstimatedRateIndicator { get; init; }
+
+    /// <summary>
+    /// NRA Tax Reportable Indicator.
+    /// </summary>
+    [DisplayName("NRA Tax Reportable Indicator")]
+    [IsoXmlTag("NRATaxRptblInd")]
+    public YesNoIndicator? NRATaxReportableIndicator { get; init; }
 
     /// <summary>
     /// Rate And Amount Details.
@@ -113,4 +106,11 @@ public record CashOption108
     [DisplayName("Rate And Amount Details")]
     [IsoXmlTag("RateAndAmtDtls")]
     public Rate44? RateAndAmountDetails { get; init; }
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public PriceDetails39? PriceDetails { get; init; }
 }

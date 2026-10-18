@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OperationMandate7
 {
     /// <summary>
-    /// Applicable Channel.
-    /// </summary>
-    [DisplayName("Applicable Channel")]
-    [IsoXmlTag("AplblChanl")]
-    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = [];
-
-    /// <summary>
-    /// Bank Operation.
-    /// </summary>
-    [DisplayName("Bank Operation")]
-    [IsoXmlTag("BkOpr")]
-    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
-
-    /// <summary>
-    /// End Date.
-    /// </summary>
-    [DisplayName("End Date")]
-    [IsoXmlTag("EndDt")]
-    public ISODate? EndDate { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -45,11 +24,11 @@ public record OperationMandate7
     public required Max35Text Identification { get; init; }
 
     /// <summary>
-    /// Mandate Holder.
+    /// Applicable Channel.
     /// </summary>
-    [DisplayName("Mandate Holder")]
-    [IsoXmlTag("MndtHldr")]
-    public ValueList<PartyAndAuthorisation7> MandateHolder { get; init; } = [];
+    [DisplayName("Applicable Channel")]
+    [IsoXmlTag("AplblChanl")]
+    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = [];
 
     /// <summary>
     /// Required Signature Number.
@@ -66,9 +45,30 @@ public record OperationMandate7
     public required YesNoIndicator SignatureOrderIndicator { get; init; }
 
     /// <summary>
+    /// Mandate Holder.
+    /// </summary>
+    [DisplayName("Mandate Holder")]
+    [IsoXmlTag("MndtHldr")]
+    public ValueList<PartyAndAuthorisation7> MandateHolder { get; init; } = [];
+
+    /// <summary>
+    /// Bank Operation.
+    /// </summary>
+    [DisplayName("Bank Operation")]
+    [IsoXmlTag("BkOpr")]
+    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
+
+    /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     public ISODate? StartDate { get; init; }
+
+    /// <summary>
+    /// End Date.
+    /// </summary>
+    [DisplayName("End Date")]
+    [IsoXmlTag("EndDt")]
+    public ISODate? EndDate { get; init; }
 }

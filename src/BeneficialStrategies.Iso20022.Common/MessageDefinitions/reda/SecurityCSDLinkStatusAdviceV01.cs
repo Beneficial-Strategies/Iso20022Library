@@ -53,18 +53,18 @@ public record SecurityCSDLinkStatusAdviceV01 : IOuterRecord
     public MessageHeader12? MessageHeader { get; init; }
 
     /// <summary>
-    /// Security CSD Link Identification.
-    /// </summary>
-    [DisplayName("Security CSD Link Identification")]
-    [IsoXmlTag("SctyCSDLkId")]
-    public SecurityCSDLink9? SecurityCSDLinkIdentification { get; init; }
-
-    /// <summary>
     /// Security CSD Link Status.
     /// </summary>
     [DisplayName("Security CSD Link Status")]
     [IsoXmlTag("SctyCSDLkSts")]
     public required CSDLinkStatus1 SecurityCSDLinkStatus { get; init; }
+
+    /// <summary>
+    /// Security CSD Link Identification.
+    /// </summary>
+    [DisplayName("Security CSD Link Identification")]
+    [IsoXmlTag("SctyCSDLkId")]
+    public SecurityCSDLink9? SecurityCSDLinkIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

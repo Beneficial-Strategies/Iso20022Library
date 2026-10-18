@@ -17,18 +17,53 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentInstruction46
 {
     /// <summary>
-    /// Charge Bearer.
+    /// Payment Information Identification.
     /// </summary>
-    [DisplayName("Charge Bearer")]
-    [IsoXmlTag("ChrgBr")]
-    public ChargeBearerType1Code? ChargeBearer { get; init; }
+    [DisplayName("Payment Information Identification")]
+    [IsoXmlTag("PmtInfId")]
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
-    /// Credit Transfer Transaction.
+    /// Payment Method.
     /// </summary>
-    [DisplayName("Credit Transfer Transaction")]
-    [IsoXmlTag("CdtTrfTx")]
-    public ValueList<CreditTransferTransaction65> CreditTransferTransaction { get; init; } = [];
+    [DisplayName("Payment Method")]
+    [IsoXmlTag("PmtMtd")]
+    public required PaymentMethod7Code PaymentMethod { get; init; }
+
+    /// <summary>
+    /// Requested Advice Type.
+    /// </summary>
+    [DisplayName("Requested Advice Type")]
+    [IsoXmlTag("ReqdAdvcTp")]
+    public AdviceType1? RequestedAdviceType { get; init; }
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Requested Execution Date.
+    /// </summary>
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Expiry Date.
+    /// </summary>
+    [DisplayName("Expiry Date")]
+    [IsoXmlTag("XpryDt")]
+    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
+
+    /// <summary>
+    /// Payment Condition.
+    /// </summary>
+    [DisplayName("Payment Condition")]
+    [IsoXmlTag("PmtCond")]
+    public PaymentCondition2? PaymentCondition { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -59,58 +94,23 @@ public record PaymentInstruction46
     public CashAccount40? DebtorAgentAccount { get; init; }
 
     /// <summary>
-    /// Expiry Date.
-    /// </summary>
-    [DisplayName("Expiry Date")]
-    [IsoXmlTag("XpryDt")]
-    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
-
-    /// <summary>
-    /// Payment Condition.
-    /// </summary>
-    [DisplayName("Payment Condition")]
-    [IsoXmlTag("PmtCond")]
-    public PaymentCondition2? PaymentCondition { get; init; }
-
-    /// <summary>
-    /// Payment Information Identification.
-    /// </summary>
-    [DisplayName("Payment Information Identification")]
-    [IsoXmlTag("PmtInfId")]
-    public Max35Text? PaymentInformationIdentification { get; init; }
-
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
-    [DisplayName("Payment Method")]
-    [IsoXmlTag("PmtMtd")]
-    public required PaymentMethod7Code PaymentMethod { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
-
-    /// <summary>
-    /// Requested Advice Type.
-    /// </summary>
-    [DisplayName("Requested Advice Type")]
-    [IsoXmlTag("ReqdAdvcTp")]
-    public AdviceType1? RequestedAdviceType { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
-
-    /// <summary>
     /// Ultimate Debtor.
     /// </summary>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }
+
+    /// <summary>
+    /// Charge Bearer.
+    /// </summary>
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    public ChargeBearerType1Code? ChargeBearer { get; init; }
+
+    /// <summary>
+    /// Credit Transfer Transaction.
+    /// </summary>
+    [DisplayName("Credit Transfer Transaction")]
+    [IsoXmlTag("CdtTrfTx")]
+    public ValueList<CreditTransferTransaction65> CreditTransferTransaction { get; init; } = [];
 }

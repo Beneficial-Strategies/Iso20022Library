@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyStatement3
 {
     /// <summary>
-    /// Change.
-    /// </summary>
-    [DisplayName("Change")]
-    [IsoXmlTag("Chng")]
-    public ValueList<PartyReferenceDataChange3> Change { get; init; } = [];
-
-    /// <summary>
     /// System Date.
     /// </summary>
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     public required ISODate SystemDate { get; init; }
+
+    /// <summary>
+    /// Change.
+    /// </summary>
+    [DisplayName("Change")]
+    [IsoXmlTag("Chng")]
+    public ValueList<PartyReferenceDataChange3> Change { get; init; } = [];
 }

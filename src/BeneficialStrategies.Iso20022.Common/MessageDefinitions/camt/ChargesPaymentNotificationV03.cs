@@ -46,18 +46,18 @@ public record ChargesPaymentNotificationV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Charges.
-    /// </summary>
-    [DisplayName("Charges")]
-    [IsoXmlTag("Chrgs")]
-    public required Charges5Choice_ Charges { get; init; }
-
-    /// <summary>
     /// Group Header.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader126 GroupHeader { get; init; }
+
+    /// <summary>
+    /// Charges.
+    /// </summary>
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public required Charges5Choice_ Charges { get; init; }
 
     /// <summary>
     /// Supplementary Data.

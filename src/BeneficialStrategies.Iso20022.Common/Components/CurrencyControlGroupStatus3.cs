@@ -24,18 +24,18 @@ public record CurrencyControlGroupStatus3
     public required OriginalMessage7 OriginalReferences { get; init; }
 
     /// <summary>
-    /// Registration Agent.
-    /// </summary>
-    [DisplayName("Registration Agent")]
-    [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
-
-    /// <summary>
     /// Reporting Party.
     /// </summary>
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
     public required TradeParty6 ReportingParty { get; init; }
+
+    /// <summary>
+    /// Registration Agent.
+    /// </summary>
+    [DisplayName("Registration Agent")]
+    [IsoXmlTag("RegnAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Reporting Period.
@@ -52,16 +52,16 @@ public record CurrencyControlGroupStatus3
     public StatisticalReportingStatus1Code? Status { get; init; }
 
     /// <summary>
-    /// Status Date Time.
-    /// </summary>
-    [DisplayName("Status Date Time")]
-    [IsoXmlTag("StsDtTm")]
-    public ISODateTime? StatusDateTime { get; init; }
-
-    /// <summary>
     /// Status Reason.
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
     public ValueList<ValidationStatusReason3> StatusReason { get; init; } = [];
+
+    /// <summary>
+    /// Status Date Time.
+    /// </summary>
+    [DisplayName("Status Date Time")]
+    [IsoXmlTag("StsDtTm")]
+    public ISODateTime? StatusDateTime { get; init; }
 }

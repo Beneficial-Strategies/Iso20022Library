@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMReconciliationOperation1
 {
     /// <summary>
-    /// Additional Transaction Information.
+    /// Type Of Operation.
     /// </summary>
-    [DisplayName("Additional Transaction Information")]
-    [IsoXmlTag("AddtlTxInf")]
-    public Max140Text? AdditionalTransactionInformation { get; init; }
+    [DisplayName("Type Of Operation")]
+    [IsoXmlTag("TpOfOpr")]
+    public ATMOperation2Code? TypeOfOperation { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Reconciliation Identification.
+    /// </summary>
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// ATM Totals.
@@ -38,18 +52,11 @@ public record ATMReconciliationOperation1
     public ValueList<ATMCassette3> Cassette { get; init; } = [];
 
     /// <summary>
-    /// Incident.
+    /// Transaction Totals.
     /// </summary>
-    [DisplayName("Incident")]
-    [IsoXmlTag("Incdnt")]
-    public ValueList<FailureReason9Code> Incident { get; init; } = [];
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public required Max35Text ReconciliationIdentification { get; init; }
+    [DisplayName("Transaction Totals")]
+    [IsoXmlTag("TxTtls")]
+    public ValueList<ATMTotals3> TransactionTotals { get; init; } = [];
 
     /// <summary>
     /// Retained Card.
@@ -59,23 +66,16 @@ public record ATMReconciliationOperation1
     public Number? RetainedCard { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Additional Transaction Information.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Additional Transaction Information")]
+    [IsoXmlTag("AddtlTxInf")]
+    public Max140Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
-    /// Transaction Totals.
+    /// Incident.
     /// </summary>
-    [DisplayName("Transaction Totals")]
-    [IsoXmlTag("TxTtls")]
-    public ValueList<ATMTotals3> TransactionTotals { get; init; } = [];
-
-    /// <summary>
-    /// Type Of Operation.
-    /// </summary>
-    [DisplayName("Type Of Operation")]
-    [IsoXmlTag("TpOfOpr")]
-    public ATMOperation2Code? TypeOfOperation { get; init; }
+    [DisplayName("Incident")]
+    [IsoXmlTag("Incdnt")]
+    public ValueList<FailureReason9Code> Incident { get; init; } = [];
 }

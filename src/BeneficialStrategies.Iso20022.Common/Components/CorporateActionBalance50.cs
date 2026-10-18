@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionBalance50
 {
     /// <summary>
+    /// Total Eligible Balance.
+    /// </summary>
+    [DisplayName("Total Eligible Balance")]
+    [IsoXmlTag("TtlElgblBal")]
+    public required Quantity49Choice_ TotalEligibleBalance { get; init; }
+
+    /// <summary>
+    /// Uninstructed Balance.
+    /// </summary>
+    [DisplayName("Uninstructed Balance")]
+    [IsoXmlTag("UinstdBal")]
+    public required BalanceFormat11Choice_ UninstructedBalance { get; init; }
+
+    /// <summary>
+    /// Total Instructed Balance Details.
+    /// </summary>
+    [DisplayName("Total Instructed Balance Details")]
+    [IsoXmlTag("TtlInstdBalDtls")]
+    public required InstructedBalance20 TotalInstructedBalanceDetails { get; init; }
+
+    /// <summary>
     /// Blocked Balance.
     /// </summary>
     [DisplayName("Blocked Balance")]
@@ -45,20 +66,6 @@ public record CorporateActionBalance50
     public SignedQuantityFormat10? CollateralOutBalance { get; init; }
 
     /// <summary>
-    /// In Transshipment Balance.
-    /// </summary>
-    [DisplayName("In Transshipment Balance")]
-    [IsoXmlTag("InTrnsShipmntBal")]
-    public SignedQuantityFormat10? InTransshipmentBalance { get; init; }
-
-    /// <summary>
-    /// Obligated Balance.
-    /// </summary>
-    [DisplayName("Obligated Balance")]
-    [IsoXmlTag("OblgtdBal")]
-    public SignedQuantityFormat10? ObligatedBalance { get; init; }
-
-    /// <summary>
     /// On Loan Balance.
     /// </summary>
     [DisplayName("On Loan Balance")]
@@ -71,27 +78,6 @@ public record CorporateActionBalance50
     [DisplayName("Out For Registration Balance")]
     [IsoXmlTag("OutForRegnBal")]
     public SignedQuantityFormat10? OutForRegistrationBalance { get; init; }
-
-    /// <summary>
-    /// Pending Delivery Balance.
-    /// </summary>
-    [DisplayName("Pending Delivery Balance")]
-    [IsoXmlTag("PdgDlvryBal")]
-    public ValueList<PendingBalance7> PendingDeliveryBalance { get; init; } = [];
-
-    /// <summary>
-    /// Pending Receipt Balance.
-    /// </summary>
-    [DisplayName("Pending Receipt Balance")]
-    [IsoXmlTag("PdgRctBal")]
-    public ValueList<PendingBalance7> PendingReceiptBalance { get; init; } = [];
-
-    /// <summary>
-    /// Registered Balance.
-    /// </summary>
-    [DisplayName("Registered Balance")]
-    [IsoXmlTag("RegdBal")]
-    public SignedQuantityFormat10? RegisteredBalance { get; init; }
 
     /// <summary>
     /// Settlement Position Balance.
@@ -108,20 +94,6 @@ public record CorporateActionBalance50
     public SignedQuantityFormat10? StreetPositionBalance { get; init; }
 
     /// <summary>
-    /// Total Eligible Balance.
-    /// </summary>
-    [DisplayName("Total Eligible Balance")]
-    [IsoXmlTag("TtlElgblBal")]
-    public required Quantity49Choice_ TotalEligibleBalance { get; init; }
-
-    /// <summary>
-    /// Total Instructed Balance Details.
-    /// </summary>
-    [DisplayName("Total Instructed Balance Details")]
-    [IsoXmlTag("TtlInstdBalDtls")]
-    public required InstructedBalance20 TotalInstructedBalanceDetails { get; init; }
-
-    /// <summary>
     /// Trade Date Position Balance.
     /// </summary>
     [DisplayName("Trade Date Position Balance")]
@@ -129,9 +101,37 @@ public record CorporateActionBalance50
     public SignedQuantityFormat10? TradeDatePositionBalance { get; init; }
 
     /// <summary>
-    /// Uninstructed Balance.
+    /// In Transshipment Balance.
     /// </summary>
-    [DisplayName("Uninstructed Balance")]
-    [IsoXmlTag("UinstdBal")]
-    public required BalanceFormat11Choice_ UninstructedBalance { get; init; }
+    [DisplayName("In Transshipment Balance")]
+    [IsoXmlTag("InTrnsShipmntBal")]
+    public SignedQuantityFormat10? InTransshipmentBalance { get; init; }
+
+    /// <summary>
+    /// Registered Balance.
+    /// </summary>
+    [DisplayName("Registered Balance")]
+    [IsoXmlTag("RegdBal")]
+    public SignedQuantityFormat10? RegisteredBalance { get; init; }
+
+    /// <summary>
+    /// Obligated Balance.
+    /// </summary>
+    [DisplayName("Obligated Balance")]
+    [IsoXmlTag("OblgtdBal")]
+    public SignedQuantityFormat10? ObligatedBalance { get; init; }
+
+    /// <summary>
+    /// Pending Delivery Balance.
+    /// </summary>
+    [DisplayName("Pending Delivery Balance")]
+    [IsoXmlTag("PdgDlvryBal")]
+    public ValueList<PendingBalance7> PendingDeliveryBalance { get; init; } = [];
+
+    /// <summary>
+    /// Pending Receipt Balance.
+    /// </summary>
+    [DisplayName("Pending Receipt Balance")]
+    [IsoXmlTag("PdgRctBal")]
+    public ValueList<PendingBalance7> PendingReceiptBalance { get; init; } = [];
 }

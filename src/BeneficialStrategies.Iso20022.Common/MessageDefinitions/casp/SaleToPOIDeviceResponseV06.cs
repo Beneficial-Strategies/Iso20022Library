@@ -46,18 +46,18 @@ public record SaleToPOIDeviceResponseV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Device Response.
-    /// </summary>
-    [DisplayName("Device Response")]
-    [IsoXmlTag("DvcRspn")]
-    public required DeviceResponse7 DeviceResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Device Response.
+    /// </summary>
+    [DisplayName("Device Response")]
+    [IsoXmlTag("DvcRspn")]
+    public required DeviceResponse7 DeviceResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

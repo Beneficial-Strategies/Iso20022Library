@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader116
 {
     /// <summary>
-    /// Additional Information.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max500Text? AdditionalInformation { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
@@ -31,11 +31,11 @@ public record GroupHeader116
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Message Recipient.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Message Recipient")]
+    [IsoXmlTag("MsgRcpt")]
+    public PartyIdentification272? MessageRecipient { get; init; }
 
     /// <summary>
     /// Message Pagination.
@@ -45,16 +45,16 @@ public record GroupHeader116
     public Pagination1? MessagePagination { get; init; }
 
     /// <summary>
-    /// Message Recipient.
-    /// </summary>
-    [DisplayName("Message Recipient")]
-    [IsoXmlTag("MsgRcpt")]
-    public PartyIdentification272? MessageRecipient { get; init; }
-
-    /// <summary>
     /// Original Business Query.
     /// </summary>
     [DisplayName("Original Business Query")]
     [IsoXmlTag("OrgnlBizQry")]
     public OriginalBusinessQuery1? OriginalBusinessQuery { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max500Text? AdditionalInformation { get; init; }
 }

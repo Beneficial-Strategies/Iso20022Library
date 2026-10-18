@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RequestHandling4
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max140Text? Description { get; init; }
-
-    /// <summary>
     /// Status.
     /// </summary>
     [DisplayName("Status")]
@@ -36,4 +29,11 @@ public record RequestHandling4
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
     public StatusReasonInformation14? StatusReason { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max140Text? Description { get; init; }
 }

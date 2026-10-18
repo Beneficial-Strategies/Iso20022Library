@@ -24,25 +24,11 @@ public record CorporateActionNarrative65
     public ValueList<UpdatedAdditionalInformation26> AdditionalText { get; init; } = [];
 
     /// <summary>
-    /// Basket Or Index Information.
+    /// Narrative Version.
     /// </summary>
-    [DisplayName("Basket Or Index Information")]
-    [IsoXmlTag("BsktOrIndxInf")]
-    public ValueList<UpdatedAdditionalInformation26> BasketOrIndexInformation { get; init; } = [];
-
-    /// <summary>
-    /// Certification Breakdown.
-    /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public ValueList<UpdatedAdditionalInformation26> CertificationBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Disclaimer.
-    /// </summary>
-    [DisplayName("Disclaimer")]
-    [IsoXmlTag("Dsclmr")]
-    public ValueList<UpdatedAdditionalInformation26> Disclaimer { get; init; } = [];
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public ValueList<UpdatedAdditionalInformation26> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Information Conditions.
@@ -59,11 +45,18 @@ public record CorporateActionNarrative65
     public ValueList<UpdatedAdditionalInformation26> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
-    /// Narrative Version.
+    /// Taxation Conditions.
     /// </summary>
-    [DisplayName("Narrative Version")]
-    [IsoXmlTag("NrrtvVrsn")]
-    public ValueList<UpdatedAdditionalInformation26> NarrativeVersion { get; init; } = [];
+    [DisplayName("Taxation Conditions")]
+    [IsoXmlTag("TaxtnConds")]
+    public ValueList<UpdatedAdditionalInformation26> TaxationConditions { get; init; } = [];
+
+    /// <summary>
+    /// Disclaimer.
+    /// </summary>
+    [DisplayName("Disclaimer")]
+    [IsoXmlTag("Dsclmr")]
+    public ValueList<UpdatedAdditionalInformation26> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Party Contact Narrative.
@@ -73,14 +66,6 @@ public record CorporateActionNarrative65
     public ValueList<UpdatedAdditionalInformation26> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
-    /// Processing Text For Next Intermediary.
-    /// </summary>
-    [DisplayName("Processing Text For Next Intermediary")]
-    [IsoXmlTag("PrcgTxtForNxtIntrmy")]
-    public ValueList<UpdatedAdditionalInformation26> ProcessingTextForNextIntermediary { get; init; } =
-        [];
-
-    /// <summary>
     /// Registration Details.
     /// </summary>
     [DisplayName("Registration Details")]
@@ -88,11 +73,18 @@ public record CorporateActionNarrative65
     public ValueList<UpdatedAdditionalInformation26> RegistrationDetails { get; init; } = [];
 
     /// <summary>
-    /// Taxation Conditions.
+    /// Basket Or Index Information.
     /// </summary>
-    [DisplayName("Taxation Conditions")]
-    [IsoXmlTag("TaxtnConds")]
-    public ValueList<UpdatedAdditionalInformation26> TaxationConditions { get; init; } = [];
+    [DisplayName("Basket Or Index Information")]
+    [IsoXmlTag("BsktOrIndxInf")]
+    public ValueList<UpdatedAdditionalInformation26> BasketOrIndexInformation { get; init; } = [];
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public ValueList<UpdatedAdditionalInformation26> CertificationBreakdown { get; init; } = [];
 
     /// <summary>
     /// URL Address.
@@ -100,4 +92,12 @@ public record CorporateActionNarrative65
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     public ValueList<UpdatedURLlnformation7> URLAddress { get; init; } = [];
+
+    /// <summary>
+    /// Processing Text For Next Intermediary.
+    /// </summary>
+    [DisplayName("Processing Text For Next Intermediary")]
+    [IsoXmlTag("PrcgTxtForNxtIntrmy")]
+    public ValueList<UpdatedAdditionalInformation26> ProcessingTextForNextIntermediary { get; init; } =
+        [];
 }

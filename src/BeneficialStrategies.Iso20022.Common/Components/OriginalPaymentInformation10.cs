@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalPaymentInformation10
 {
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required TransactionReferences8 References { get; init; }
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -24,25 +38,25 @@ public record OriginalPaymentInformation10
     public AmountType3Choice_? Amount { get; init; }
 
     /// <summary>
-    /// Creditor.
+    /// Exchange Rate Information.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification272? Creditor { get; init; }
+    [DisplayName("Exchange Rate Information")]
+    [IsoXmlTag("XchgRateInf")]
+    public ExchangeRate1? ExchangeRateInformation { get; init; }
 
     /// <summary>
-    /// Creditor Account.
+    /// Requested Execution Date.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Requested Collection Date.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
+    [DisplayName("Requested Collection Date")]
+    [IsoXmlTag("ReqdColltnDt")]
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -66,37 +80,23 @@ public record OriginalPaymentInformation10
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// Exchange Rate Information.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Exchange Rate Information")]
-    [IsoXmlTag("XchgRateInf")]
-    public ExchangeRate1? ExchangeRateInformation { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification272? Creditor { get; init; }
 
     /// <summary>
-    /// Payment Type Information.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
-    /// References.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required TransactionReferences8 References { get; init; }
-
-    /// <summary>
-    /// Requested Collection Date.
-    /// </summary>
-    [DisplayName("Requested Collection Date")]
-    [IsoXmlTag("ReqdColltnDt")]
-    public ISODate? RequestedCollectionDate { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 }

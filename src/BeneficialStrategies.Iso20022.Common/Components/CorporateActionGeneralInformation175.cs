@@ -31,6 +31,13 @@ public record CorporateActionGeneralInformation175
     public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
     /// Event Processing Type.
     /// </summary>
     [DisplayName("Event Processing Type")]
@@ -50,13 +57,6 @@ public record CorporateActionGeneralInformation175
     [DisplayName("Mandatory Voluntary Event Type")]
     [IsoXmlTag("MndtryVlntryEvtTp")]
     public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
-
-    /// <summary>
-    /// Official Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Underlying Security.

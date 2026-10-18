@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionPrice88
 {
     /// <summary>
-    /// Generic Cash Price Paid Per Product.
-    /// </summary>
-    [DisplayName("Generic Cash Price Paid Per Product")]
-    [IsoXmlTag("GncCshPricPdPerPdct")]
-    public PriceFormat77Choice_? GenericCashPricePaidPerProduct { get; init; }
-
-    /// <summary>
-    /// Generic Cash Price Received Per Product.
-    /// </summary>
-    [DisplayName("Generic Cash Price Received Per Product")]
-    [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    public PriceFormat78Choice_? GenericCashPriceReceivedPerProduct { get; init; }
-
-    /// <summary>
     /// Indicative Or Market Price.
     /// </summary>
     [DisplayName("Indicative Or Market Price")]
@@ -43,4 +29,18 @@ public record CorporateActionPrice88
     [DisplayName("Issue Price")]
     [IsoXmlTag("IssePric")]
     public PriceFormat77Choice_? IssuePrice { get; init; }
+
+    /// <summary>
+    /// Generic Cash Price Received Per Product.
+    /// </summary>
+    [DisplayName("Generic Cash Price Received Per Product")]
+    [IsoXmlTag("GncCshPricRcvdPerPdct")]
+    public PriceFormat78Choice_? GenericCashPriceReceivedPerProduct { get; init; }
+
+    /// <summary>
+    /// Generic Cash Price Paid Per Product.
+    /// </summary>
+    [DisplayName("Generic Cash Price Paid Per Product")]
+    [IsoXmlTag("GncCshPricPdPerPdct")]
+    public PriceFormat77Choice_? GenericCashPricePaidPerProduct { get; init; }
 }

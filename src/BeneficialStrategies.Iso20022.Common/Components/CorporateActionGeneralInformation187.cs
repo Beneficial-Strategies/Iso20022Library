@@ -24,6 +24,13 @@ public record CorporateActionGeneralInformation187
     public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
     /// Event Type.
     /// </summary>
     [DisplayName("Event Type")]
@@ -36,11 +43,4 @@ public record CorporateActionGeneralInformation187
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public SecurityIdentification21? FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Official Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 }

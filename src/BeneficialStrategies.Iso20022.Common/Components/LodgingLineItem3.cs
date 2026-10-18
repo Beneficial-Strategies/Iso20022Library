@@ -17,60 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LodgingLineItem3
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Duration.
-    /// </summary>
-    [DisplayName("Duration")]
-    [IsoXmlTag("Drtn")]
-    public Max4NumericText? Duration { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Post Check Out.
-    /// </summary>
-    [DisplayName("Post Check Out")]
-    [IsoXmlTag("PstChckOut")]
-    public TrueFalseIndicator? PostCheckOut { get; init; }
-
-    /// <summary>
-    /// Sub Total Amount.
-    /// </summary>
-    [DisplayName("Sub Total Amount")]
-    [IsoXmlTag("SubTtlAmt")]
-    public ImpliedCurrencyAndAmount? SubTotalAmount { get; init; }
-
-    /// <summary>
-    /// Tax.
-    /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public ValueList<Tax41> Tax { get; init; } = [];
 
     /// <summary>
     /// Time.
@@ -87,9 +38,58 @@ public record LodgingLineItem3
     public LodgingService1Code? Type { get; init; }
 
     /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Post Check Out.
+    /// </summary>
+    [DisplayName("Post Check Out")]
+    [IsoXmlTag("PstChckOut")]
+    public TrueFalseIndicator? PostCheckOut { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
     /// Unit Amount.
     /// </summary>
     [DisplayName("Unit Amount")]
     [IsoXmlTag("UnitAmt")]
     public ImpliedCurrencyAndAmount? UnitAmount { get; init; }
+
+    /// <summary>
+    /// Duration.
+    /// </summary>
+    [DisplayName("Duration")]
+    [IsoXmlTag("Drtn")]
+    public Max4NumericText? Duration { get; init; }
+
+    /// <summary>
+    /// Sub Total Amount.
+    /// </summary>
+    [DisplayName("Sub Total Amount")]
+    [IsoXmlTag("SubTtlAmt")]
+    public ImpliedCurrencyAndAmount? SubTotalAmount { get; init; }
+
+    /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public ValueList<Tax41> Tax { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

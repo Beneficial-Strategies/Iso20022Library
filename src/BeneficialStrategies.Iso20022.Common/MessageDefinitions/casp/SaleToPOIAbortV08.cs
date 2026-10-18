@@ -46,18 +46,18 @@ public record SaleToPOIAbortV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Abort.
-    /// </summary>
-    [DisplayName("Abort")]
-    [IsoXmlTag("Abrt")]
-    public required SystemAbort9 Abort { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Abort.
+    /// </summary>
+    [DisplayName("Abort")]
+    [IsoXmlTag("Abrt")]
+    public required SystemAbort9 Abort { get; init; }
 
     /// <summary>
     /// Security Trailer.

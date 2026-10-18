@@ -46,6 +46,27 @@ public record IntraBalanceMovementPendingReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public DocumentIdentification51? Identification { get; init; }
+
+    /// <summary>
+    /// Pagination.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Report General Details.
+    /// </summary>
+    [DisplayName("Report General Details")]
+    [IsoXmlTag("RptGnlDtls")]
+    public required IntraBalanceReport6 ReportGeneralDetails { get; init; }
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -67,30 +88,9 @@ public record IntraBalanceMovementPendingReportV02 : IOuterRecord
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public DocumentIdentification51? Identification { get; init; }
-
-    /// <summary>
     /// Movements.
     /// </summary>
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
     public ValueList<IntraBalancePending5> Movements { get; init; } = [];
-
-    /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
-    /// Report General Details.
-    /// </summary>
-    [DisplayName("Report General Details")]
-    [IsoXmlTag("RptGnlDtls")]
-    public required IntraBalanceReport6 ReportGeneralDetails { get; init; }
 }

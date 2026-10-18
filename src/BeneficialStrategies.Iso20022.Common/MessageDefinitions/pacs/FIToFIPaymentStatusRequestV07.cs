@@ -71,16 +71,16 @@ public record FIToFIPaymentStatusRequestV07 : IOuterRecord
     public ValueList<OriginalGroupInformation27> OriginalGroupInformation { get; init; } = [];
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Information concerning the original transaction, to which the status request message refers.
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction171> TransactionInformation { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

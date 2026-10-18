@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification275
 {
     /// <summary>
-    /// Activity Indicator.
+    /// Name And Address.
     /// </summary>
-    [DisplayName("Activity Indicator")]
-    [IsoXmlTag("ActvtyInd")]
-    public ActivityIndicator1Choice_? ActivityIndicator { get; init; }
-
-    /// <summary>
-    /// Country Of Incorporation.
-    /// </summary>
-    [DisplayName("Country Of Incorporation")]
-    [IsoXmlTag("CtryOfIncorprtn")]
-    public CountryCode? CountryOfIncorporation { get; init; }
+    [DisplayName("Name And Address")]
+    [IsoXmlTag("NmAndAdr")]
+    public required NameAndAddress17 NameAndAddress { get; init; }
 
     /// <summary>
     /// Email Address.
@@ -45,25 +38,11 @@ public record PartyIdentification275
     public required PartyIdentification198Choice_ Identification { get; init; }
 
     /// <summary>
-    /// Investor Type.
+    /// Country Of Incorporation.
     /// </summary>
-    [DisplayName("Investor Type")]
-    [IsoXmlTag("InvstrTp")]
-    public InvestorType1Choice_? InvestorType { get; init; }
-
-    /// <summary>
-    /// Name And Address.
-    /// </summary>
-    [DisplayName("Name And Address")]
-    [IsoXmlTag("NmAndAdr")]
-    public required NameAndAddress17 NameAndAddress { get; init; }
-
-    /// <summary>
-    /// Ownership.
-    /// </summary>
-    [DisplayName("Ownership")]
-    [IsoXmlTag("Ownrsh")]
-    public Ownership1? Ownership { get; init; }
+    [DisplayName("Country Of Incorporation")]
+    [IsoXmlTag("CtryOfIncorprtn")]
+    public CountryCode? CountryOfIncorporation { get; init; }
 
     /// <summary>
     /// Year Of Incorporation.
@@ -71,4 +50,25 @@ public record PartyIdentification275
     [DisplayName("Year Of Incorporation")]
     [IsoXmlTag("YrOfIncorprtn")]
     public ISOYear? YearOfIncorporation { get; init; }
+
+    /// <summary>
+    /// Activity Indicator.
+    /// </summary>
+    [DisplayName("Activity Indicator")]
+    [IsoXmlTag("ActvtyInd")]
+    public ActivityIndicator1Choice_? ActivityIndicator { get; init; }
+
+    /// <summary>
+    /// Investor Type.
+    /// </summary>
+    [DisplayName("Investor Type")]
+    [IsoXmlTag("InvstrTp")]
+    public InvestorType1Choice_? InvestorType { get; init; }
+
+    /// <summary>
+    /// Ownership.
+    /// </summary>
+    [DisplayName("Ownership")]
+    [IsoXmlTag("Ownrsh")]
+    public Ownership1? Ownership { get; init; }
 }

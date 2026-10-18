@@ -46,11 +46,11 @@ public record BatchTransferInitiationV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Batch Checksum.
+    /// Header.
     /// </summary>
-    [DisplayName("Batch Checksum")]
-    [IsoXmlTag("BtchChcksm")]
-    public Max35Binary? BatchChecksum { get; init; }
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header72 Header { get; init; }
 
     /// <summary>
     /// Batch Identification.
@@ -58,6 +58,83 @@ public record BatchTransferInitiationV04 : IOuterRecord
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
     public Max70Text? BatchIdentification { get; init; }
+
+    /// <summary>
+    /// Original Batch Identification.
+    /// </summary>
+    [DisplayName("Original Batch Identification")]
+    [IsoXmlTag("OrgnlBtchId")]
+    public Max70Text? OriginalBatchIdentification { get; init; }
+
+    /// <summary>
+    /// Number Of Messages.
+    /// </summary>
+    [DisplayName("Number Of Messages")]
+    [IsoXmlTag("NbOfMsgs")]
+    public Number? NumberOfMessages { get; init; }
+
+    /// <summary>
+    /// Batch Checksum.
+    /// </summary>
+    [DisplayName("Batch Checksum")]
+    [IsoXmlTag("BtchChcksm")]
+    public Max35Binary? BatchChecksum { get; init; }
+
+    /// <summary>
+    /// Request Acknowledgement.
+    /// </summary>
+    [DisplayName("Request Acknowledgement")]
+    [IsoXmlTag("ReqAck")]
+    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
+
+    /// <summary>
+    /// Originator.
+    /// </summary>
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public PartyIdentification286? Originator { get; init; }
+
+    /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ProgrammeMode6? Programme { get; init; }
+
+    /// <summary>
+    /// System Trace Audit Number.
+    /// </summary>
+    [DisplayName("System Trace Audit Number")]
+    [IsoXmlTag("SysTracAudtNb")]
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
+
+    /// <summary>
+    /// Transmission Date Time.
+    /// </summary>
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public ISODateTime? TransmissionDateTime { get; init; }
+
+    /// <summary>
+    /// Retrieval Reference Number.
+    /// </summary>
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Clearing Batch Data.
@@ -74,18 +151,11 @@ public record BatchTransferInitiationV04 : IOuterRecord
     public ClearingControlTotals3? ClearingControlTotals { get; init; }
 
     /// <summary>
-    /// Destination.
+    /// Record.
     /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
-    /// Header.
-    /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header72 Header { get; init; }
+    [DisplayName("Record")]
+    [IsoXmlTag("Rcrd")]
+    public ValueList<Record4> Record { get; init; } = [];
 
     /// <summary>
     /// Jurisdiction.
@@ -95,74 +165,11 @@ public record BatchTransferInitiationV04 : IOuterRecord
     public Jurisdiction2? Jurisdiction { get; init; }
 
     /// <summary>
-    /// Life Cycle Identification.
+    /// Settlement Service.
     /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
-
-    /// <summary>
-    /// Number Of Messages.
-    /// </summary>
-    [DisplayName("Number Of Messages")]
-    [IsoXmlTag("NbOfMsgs")]
-    public Number? NumberOfMessages { get; init; }
-
-    /// <summary>
-    /// Original Batch Identification.
-    /// </summary>
-    [DisplayName("Original Batch Identification")]
-    [IsoXmlTag("OrgnlBtchId")]
-    public Max70Text? OriginalBatchIdentification { get; init; }
-
-    /// <summary>
-    /// Original Response Code.
-    /// </summary>
-    [DisplayName("Original Response Code")]
-    [IsoXmlTag("OrgnlRspnCd")]
-    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
-
-    /// <summary>
-    /// Originator.
-    /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
-
-    /// <summary>
-    /// Private Data.
-    /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
-
-    /// <summary>
-    /// Processing Result.
-    /// </summary>
-    [DisplayName("Processing Result")]
-    [IsoXmlTag("PrcgRslt")]
-    public ProcessingResult32? ProcessingResult { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode6? Programme { get; init; }
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
 
     /// <summary>
     /// Reconciliation.
@@ -172,25 +179,39 @@ public record BatchTransferInitiationV04 : IOuterRecord
     public Reconciliation5? Reconciliation { get; init; }
 
     /// <summary>
-    /// Record.
+    /// Original Response Code.
     /// </summary>
-    [DisplayName("Record")]
-    [IsoXmlTag("Rcrd")]
-    public ValueList<Record4> Record { get; init; } = [];
+    [DisplayName("Original Response Code")]
+    [IsoXmlTag("OrgnlRspnCd")]
+    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
 
     /// <summary>
-    /// Request Acknowledgement.
+    /// Processing Result.
     /// </summary>
-    [DisplayName("Request Acknowledgement")]
-    [IsoXmlTag("ReqAck")]
-    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
+    [DisplayName("Processing Result")]
+    [IsoXmlTag("PrcgRslt")]
+    public ProcessingResult32? ProcessingResult { get; init; }
 
     /// <summary>
-    /// Retrieval Reference Number.
+    /// Protected Data.
     /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ATICALaxProcessing? PrivateData { get; init; }
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ATICALaxProcessing? NationalData { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -198,25 +219,4 @@ public record BatchTransferInitiationV04 : IOuterRecord
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
-
-    /// <summary>
-    /// System Trace Audit Number.
-    /// </summary>
-    [DisplayName("System Trace Audit Number")]
-    [IsoXmlTag("SysTracAudtNb")]
-    public Max12NumericText? SystemTraceAuditNumber { get; init; }
-
-    /// <summary>
-    /// Transmission Date Time.
-    /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public ISODateTime? TransmissionDateTime { get; init; }
 }

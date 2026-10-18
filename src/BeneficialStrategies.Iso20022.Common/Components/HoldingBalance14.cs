@@ -31,16 +31,16 @@ public record HoldingBalance14
     public required SecuritiesEntryType2Code BalanceType { get; init; }
 
     /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafekeepingPlaceFormat42Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Date.
+    /// </summary>
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
 }

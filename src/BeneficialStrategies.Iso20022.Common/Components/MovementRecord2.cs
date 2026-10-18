@@ -18,13 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MovementRecord2
 {
     /// <summary>
-    /// Amount of money requested by the instructing agent for settlement at the market infrastructure in a single movement record entry.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required AmountAndDirection5 Amount { get; init; }
-
-    /// <summary>
     /// Unique identification, as assigned by the instructing agent, and sent to the market infrastructure to unambiguously identify the specific movement record (transaction) within a settlement request.
     /// </summary>
     /// <remarks>
@@ -33,6 +26,34 @@ public record MovementRecord2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// An index to identify the individual movement record entry.
+    /// </summary>
+    [DisplayName("Sequence Number")]
+    [IsoXmlTag("SeqNb")]
+    public Number? SequenceNumber { get; init; }
+
+    /// <summary>
+    /// Amount of money requested by the instructing agent for settlement at the market infrastructure in a single movement record entry.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required AmountAndDirection5 Amount { get; init; }
+
+    /// <summary>
+    /// Agent in whose account the funds settle on behalf of the participant.
+    /// </summary>
+    [DisplayName("Settlement Agent")]
+    [IsoXmlTag("SttlmAgt")]
+    public PartyIdentification272? SettlementAgent { get; init; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the settlement agent.
+    /// </summary>
+    [DisplayName("Settlement Agent Account")]
+    [IsoXmlTag("SttlmAgtAcct")]
+    public CashAccount40? SettlementAgentAccount { get; init; }
 
     /// <summary>
     /// Identification of a participant on behalf of which the settlement agent instructs the market infrastructure to settle the obligations using accounts held in the settlement service.
@@ -54,25 +75,4 @@ public record MovementRecord2
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public Max35Text? Reference { get; init; }
-
-    /// <summary>
-    /// An index to identify the individual movement record entry.
-    /// </summary>
-    [DisplayName("Sequence Number")]
-    [IsoXmlTag("SeqNb")]
-    public Number? SequenceNumber { get; init; }
-
-    /// <summary>
-    /// Agent in whose account the funds settle on behalf of the participant.
-    /// </summary>
-    [DisplayName("Settlement Agent")]
-    [IsoXmlTag("SttlmAgt")]
-    public PartyIdentification272? SettlementAgent { get; init; }
-
-    /// <summary>
-    /// Unambiguous identification of the account of the settlement agent.
-    /// </summary>
-    [DisplayName("Settlement Agent Account")]
-    [IsoXmlTag("SttlmAgtAcct")]
-    public CashAccount40? SettlementAgentAccount { get; init; }
 }

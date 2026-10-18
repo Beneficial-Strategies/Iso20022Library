@@ -46,18 +46,18 @@ public record AccountLinkCreationRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Link.
-    /// </summary>
-    [DisplayName("Account Link")]
-    [IsoXmlTag("AcctLk")]
-    public ValueList<AccountLink7> AccountLink { get; init; } = [];
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public MessageHeader1? MessageHeader { get; init; }
+
+    /// <summary>
+    /// Account Link.
+    /// </summary>
+    [DisplayName("Account Link")]
+    [IsoXmlTag("AcctLk")]
+    public ValueList<AccountLink7> AccountLink { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

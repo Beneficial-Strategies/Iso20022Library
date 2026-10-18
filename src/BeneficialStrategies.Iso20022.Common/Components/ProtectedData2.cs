@@ -24,16 +24,16 @@ public record ProtectedData2
     public required ContentType3Code ContentType { get; init; }
 
     /// <summary>
-    /// Encrypted Data.
-    /// </summary>
-    [DisplayName("Encrypted Data")]
-    [IsoXmlTag("NcrptdData")]
-    public EncryptedData2? EncryptedData { get; init; }
-
-    /// <summary>
     /// Enveloped Data.
     /// </summary>
     [DisplayName("Enveloped Data")]
     [IsoXmlTag("EnvlpdData")]
     public EnvelopedData12? EnvelopedData { get; init; }
+
+    /// <summary>
+    /// Encrypted Data.
+    /// </summary>
+    [DisplayName("Encrypted Data")]
+    [IsoXmlTag("NcrptdData")]
+    public EncryptedData2? EncryptedData { get; init; }
 }

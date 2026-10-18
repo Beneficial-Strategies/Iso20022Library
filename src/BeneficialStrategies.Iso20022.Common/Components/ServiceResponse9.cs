@@ -17,11 +17,60 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ServiceResponse9
 {
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment81 Environment { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required PaymentContext30 Context { get; init; }
+
+    /// <summary>
+    /// Service Content.
+    /// </summary>
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService3Code ServiceContent { get; init; }
+
+    /// <summary>
+    /// Payment Response.
+    /// </summary>
+    [DisplayName("Payment Response")]
+    [IsoXmlTag("PmtRspn")]
+    public PaymentResponse7? PaymentResponse { get; init; }
+
+    /// <summary>
+    /// Reversal Response.
+    /// </summary>
+    [DisplayName("Reversal Response")]
+    [IsoXmlTag("RvslRspn")]
+    public ReversalResponse9? ReversalResponse { get; init; }
+
+    /// <summary>
     /// Balance Inquiry Response.
     /// </summary>
     [DisplayName("Balance Inquiry Response")]
     [IsoXmlTag("BalNqryRspn")]
     public BalanceInquiryResponse6? BalanceInquiryResponse { get; init; }
+
+    /// <summary>
+    /// Loyalty Response.
+    /// </summary>
+    [DisplayName("Loyalty Response")]
+    [IsoXmlTag("LltyRspn")]
+    public LoyaltyResponse3? LoyaltyResponse { get; init; }
+
+    /// <summary>
+    /// Stored Value Response.
+    /// </summary>
+    [DisplayName("Stored Value Response")]
+    [IsoXmlTag("StordValRspn")]
+    public StoredValueResponse8? StoredValueResponse { get; init; }
 
     /// <summary>
     /// Batch Response.
@@ -38,60 +87,11 @@ public record ServiceResponse9
     public CardAcquisitionResponse3? CardAcquisitionResponse { get; init; }
 
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required PaymentContext30 Context { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment81 Environment { get; init; }
-
-    /// <summary>
-    /// Loyalty Response.
-    /// </summary>
-    [DisplayName("Loyalty Response")]
-    [IsoXmlTag("LltyRspn")]
-    public LoyaltyResponse3? LoyaltyResponse { get; init; }
-
-    /// <summary>
-    /// Payment Response.
-    /// </summary>
-    [DisplayName("Payment Response")]
-    [IsoXmlTag("PmtRspn")]
-    public PaymentResponse7? PaymentResponse { get; init; }
-
-    /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
     public required ResponseType11 Response { get; init; }
-
-    /// <summary>
-    /// Reversal Response.
-    /// </summary>
-    [DisplayName("Reversal Response")]
-    [IsoXmlTag("RvslRspn")]
-    public ReversalResponse9? ReversalResponse { get; init; }
-
-    /// <summary>
-    /// Service Content.
-    /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService3Code ServiceContent { get; init; }
-
-    /// <summary>
-    /// Stored Value Response.
-    /// </summary>
-    [DisplayName("Stored Value Response")]
-    [IsoXmlTag("StordValRspn")]
-    public StoredValueResponse8? StoredValueResponse { get; init; }
 
     /// <summary>
     /// Supplementary Data.

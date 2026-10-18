@@ -20,16 +20,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RemittanceInformation22
 {
     /// <summary>
-    /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.
-    /// </summary>
-    [DisplayName("Structured")]
-    [IsoXmlTag("Strd")]
-    public ValueList<StructuredRemittanceInformation18> Structured { get; init; } = [];
-
-    /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
     public ValueList<Max140Text> Unstructured { get; init; } = [];
+
+    /// <summary>
+    /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.
+    /// </summary>
+    [DisplayName("Structured")]
+    [IsoXmlTag("Strd")]
+    public ValueList<StructuredRemittanceInformation18> Structured { get; init; } = [];
 }

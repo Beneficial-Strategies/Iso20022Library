@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatusReport14
 {
     /// <summary>
-    /// Data Set.
+    /// POI Identification.
     /// </summary>
-    [DisplayName("Data Set")]
-    [IsoXmlTag("DataSet")]
-    public required StatusReportDataSetRequest6 DataSet { get; init; }
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public required GenericIdentification176 POIIdentification { get; init; }
 
     /// <summary>
     /// Initiating Trigger.
@@ -31,16 +31,16 @@ public record StatusReport14
     public TriggerInformation2? InitiatingTrigger { get; init; }
 
     /// <summary>
-    /// POI Identification.
-    /// </summary>
-    [DisplayName("POI Identification")]
-    [IsoXmlTag("POIId")]
-    public required GenericIdentification176 POIIdentification { get; init; }
-
-    /// <summary>
     /// Terminal Manager Identification.
     /// </summary>
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
     public required GenericIdentification176 TerminalManagerIdentification { get; init; }
+
+    /// <summary>
+    /// Data Set.
+    /// </summary>
+    [DisplayName("Data Set")]
+    [IsoXmlTag("DataSet")]
+    public required StatusReportDataSetRequest6 DataSet { get; init; }
 }

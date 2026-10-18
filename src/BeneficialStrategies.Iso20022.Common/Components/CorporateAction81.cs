@@ -17,77 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateAction81
 {
     /// <summary>
-    /// Accrued Interest Indicator.
-    /// </summary>
-    [DisplayName("Accrued Interest Indicator")]
-    [IsoXmlTag("AcrdIntrstInd")]
-    public YesNoIndicator? AccruedInterestIndicator { get; init; }
-
-    /// <summary>
-    /// Additional Business Process Indicator.
-    /// </summary>
-    [DisplayName("Additional Business Process Indicator")]
-    [IsoXmlTag("AddtlBizPrcInd")]
-    public ValueList<AdditionalBusinessProcessFormat22Choice_> AdditionalBusinessProcessIndicator { get; init; } =
-        [];
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative63? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Capital Gain In Out Indicator.
-    /// </summary>
-    [DisplayName("Capital Gain In Out Indicator")]
-    [IsoXmlTag("CptlGnInOutInd")]
-    public CapitalGainFormat4Choice_? CapitalGainInOutIndicator { get; init; }
-
-    /// <summary>
-    /// Certification Breakdown Indicator.
-    /// </summary>
-    [DisplayName("Certification Breakdown Indicator")]
-    [IsoXmlTag("CertfctnBrkdwnInd")]
-    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
-
-    /// <summary>
-    /// Certification Type.
-    /// </summary>
-    [DisplayName("Certification Type")]
-    [IsoXmlTag("CertfctnTp")]
-    public CertificationTypeFormat4Choice_? CertificationType { get; init; }
-
-    /// <summary>
-    /// Change Type.
-    /// </summary>
-    [DisplayName("Change Type")]
-    [IsoXmlTag("ChngTp")]
-    public ValueList<CorporateActionChangeTypeFormat8Choice_> ChangeType { get; init; } = [];
-
-    /// <summary>
-    /// Charges Applied Indicator.
-    /// </summary>
-    [DisplayName("Charges Applied Indicator")]
-    [IsoXmlTag("ChrgsApldInd")]
-    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
-
-    /// <summary>
-    /// Consent Type.
-    /// </summary>
-    [DisplayName("Consent Type")]
-    [IsoXmlTag("CnsntTp")]
-    public ConsentTypeFormat5Choice_? ConsentType { get; init; }
-
-    /// <summary>
-    /// Coupon Number.
-    /// </summary>
-    [DisplayName("Coupon Number")]
-    [IsoXmlTag("CpnNb")]
-    public ValueList<IdentificationFormat4Choice_> CouponNumber { get; init; } = [];
-
-    /// <summary>
     /// Date Details.
     /// </summary>
     [DisplayName("Date Details")]
@@ -95,39 +24,32 @@ public record CorporateAction81
     public CorporateActionDate96? DateDetails { get; init; }
 
     /// <summary>
-    /// Dividend Type.
+    /// Period Details.
     /// </summary>
-    [DisplayName("Dividend Type")]
-    [IsoXmlTag("DvddTp")]
-    public DividendTypeFormat10Choice_? DividendType { get; init; }
+    [DisplayName("Period Details")]
+    [IsoXmlTag("PrdDtls")]
+    public CorporateActionPeriod15? PeriodDetails { get; init; }
 
     /// <summary>
-    /// Election Type.
+    /// Rate And Amount Details.
     /// </summary>
-    [DisplayName("Election Type")]
-    [IsoXmlTag("ElctnTp")]
-    public ElectionTypeFormat4Choice_? ElectionType { get; init; }
+    [DisplayName("Rate And Amount Details")]
+    [IsoXmlTag("RateAndAmtDtls")]
+    public CorporateActionRate110? RateAndAmountDetails { get; init; }
 
     /// <summary>
-    /// Event Sequence Type.
+    /// Price Details.
     /// </summary>
-    [DisplayName("Event Sequence Type")]
-    [IsoXmlTag("EvtSeqTp")]
-    public EventSequenceTypeFormat2Choice_? EventSequenceType { get; init; }
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public CorporateActionPrice80? PriceDetails { get; init; }
 
     /// <summary>
-    /// Event Stage.
+    /// Securities Quantity.
     /// </summary>
-    [DisplayName("Event Stage")]
-    [IsoXmlTag("EvtStag")]
-    public ValueList<CorporateActionEventStageFormat20Choice_> EventStage { get; init; } = [];
-
-    /// <summary>
-    /// Information Type.
-    /// </summary>
-    [DisplayName("Information Type")]
-    [IsoXmlTag("InfTp")]
-    public InformationTypeFormat5Choice_? InformationType { get; init; }
+    [DisplayName("Securities Quantity")]
+    [IsoXmlTag("SctiesQty")]
+    public CorporateActionQuantity14? SecuritiesQuantity { get; init; }
 
     /// <summary>
     /// Interest Accrued Number Of Days.
@@ -137,11 +59,39 @@ public record CorporateAction81
     public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
-    /// Intermediate Securities Distribution Type.
+    /// Coupon Number.
     /// </summary>
-    [DisplayName("Intermediate Securities Distribution Type")]
-    [IsoXmlTag("IntrmdtSctiesDstrbtnTp")]
-    public IntermediateSecuritiesDistributionTypeFormat18Choice_? IntermediateSecuritiesDistributionType { get; init; }
+    [DisplayName("Coupon Number")]
+    [IsoXmlTag("CpnNb")]
+    public ValueList<IdentificationFormat4Choice_> CouponNumber { get; init; } = [];
+
+    /// <summary>
+    /// Certification Breakdown Indicator.
+    /// </summary>
+    [DisplayName("Certification Breakdown Indicator")]
+    [IsoXmlTag("CertfctnBrkdwnInd")]
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
+
+    /// <summary>
+    /// Charges Applied Indicator.
+    /// </summary>
+    [DisplayName("Charges Applied Indicator")]
+    [IsoXmlTag("ChrgsApldInd")]
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
+
+    /// <summary>
+    /// Restriction Indicator.
+    /// </summary>
+    [DisplayName("Restriction Indicator")]
+    [IsoXmlTag("RstrctnInd")]
+    public YesNoIndicator? RestrictionIndicator { get; init; }
+
+    /// <summary>
+    /// Accrued Interest Indicator.
+    /// </summary>
+    [DisplayName("Accrued Interest Indicator")]
+    [IsoXmlTag("AcrdIntrstInd")]
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Letter Of Guaranteed Delivery Indicator.
@@ -151,18 +101,25 @@ public record CorporateAction81
     public YesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
 
     /// <summary>
-    /// Lottery Type.
+    /// Shareholder Rights Directive Indicator.
     /// </summary>
-    [DisplayName("Lottery Type")]
-    [IsoXmlTag("LtryTp")]
-    public LotteryTypeFormat5Choice_? LotteryType { get; init; }
+    [DisplayName("Shareholder Rights Directive Indicator")]
+    [IsoXmlTag("ShrhldrRghtsDrctvInd")]
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
-    /// New Place Of Incorporation.
+    /// Dividend Type.
     /// </summary>
-    [DisplayName("New Place Of Incorporation")]
-    [IsoXmlTag("NewPlcOfIncorprtn")]
-    public RestrictedFINXMax350Text? NewPlaceOfIncorporation { get; init; }
+    [DisplayName("Dividend Type")]
+    [IsoXmlTag("DvddTp")]
+    public DividendTypeFormat10Choice_? DividendType { get; init; }
+
+    /// <summary>
+    /// Event Sequence Type.
+    /// </summary>
+    [DisplayName("Event Sequence Type")]
+    [IsoXmlTag("EvtSeqTp")]
+    public EventSequenceTypeFormat2Choice_? EventSequenceType { get; init; }
 
     /// <summary>
     /// Occurrence Type.
@@ -179,27 +136,6 @@ public record CorporateAction81
     public ValueList<OfferTypeFormat13Choice_> OfferType { get; init; } = [];
 
     /// <summary>
-    /// Period Details.
-    /// </summary>
-    [DisplayName("Period Details")]
-    [IsoXmlTag("PrdDtls")]
-    public CorporateActionPeriod15? PeriodDetails { get; init; }
-
-    /// <summary>
-    /// Price Details.
-    /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public CorporateActionPrice80? PriceDetails { get; init; }
-
-    /// <summary>
-    /// Rate And Amount Details.
-    /// </summary>
-    [DisplayName("Rate And Amount Details")]
-    [IsoXmlTag("RateAndAmtDtls")]
-    public CorporateActionRate110? RateAndAmountDetails { get; init; }
-
-    /// <summary>
     /// Renounceable Entitlement Status Type.
     /// </summary>
     [DisplayName("Renounceable Entitlement Status Type")]
@@ -207,25 +143,40 @@ public record CorporateAction81
     public RenounceableEntitlementStatusTypeFormat4Choice_? RenounceableEntitlementStatusType { get; init; }
 
     /// <summary>
-    /// Restriction Indicator.
+    /// Event Stage.
     /// </summary>
-    [DisplayName("Restriction Indicator")]
-    [IsoXmlTag("RstrctnInd")]
-    public YesNoIndicator? RestrictionIndicator { get; init; }
+    [DisplayName("Event Stage")]
+    [IsoXmlTag("EvtStag")]
+    public ValueList<CorporateActionEventStageFormat20Choice_> EventStage { get; init; } = [];
 
     /// <summary>
-    /// Securities Quantity.
+    /// Additional Business Process Indicator.
     /// </summary>
-    [DisplayName("Securities Quantity")]
-    [IsoXmlTag("SctiesQty")]
-    public CorporateActionQuantity14? SecuritiesQuantity { get; init; }
+    [DisplayName("Additional Business Process Indicator")]
+    [IsoXmlTag("AddtlBizPrcInd")]
+    public ValueList<AdditionalBusinessProcessFormat22Choice_> AdditionalBusinessProcessIndicator { get; init; } =
+        [];
 
     /// <summary>
-    /// Shareholder Rights Directive Indicator.
+    /// Change Type.
     /// </summary>
-    [DisplayName("Shareholder Rights Directive Indicator")]
-    [IsoXmlTag("ShrhldrRghtsDrctvInd")]
-    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    [DisplayName("Change Type")]
+    [IsoXmlTag("ChngTp")]
+    public ValueList<CorporateActionChangeTypeFormat8Choice_> ChangeType { get; init; } = [];
+
+    /// <summary>
+    /// Intermediate Securities Distribution Type.
+    /// </summary>
+    [DisplayName("Intermediate Securities Distribution Type")]
+    [IsoXmlTag("IntrmdtSctiesDstrbtnTp")]
+    public IntermediateSecuritiesDistributionTypeFormat18Choice_? IntermediateSecuritiesDistributionType { get; init; }
+
+    /// <summary>
+    /// Capital Gain In Out Indicator.
+    /// </summary>
+    [DisplayName("Capital Gain In Out Indicator")]
+    [IsoXmlTag("CptlGnInOutInd")]
+    public CapitalGainFormat4Choice_? CapitalGainInOutIndicator { get; init; }
 
     /// <summary>
     /// Taxable Income Per Share Calculated.
@@ -235,10 +186,59 @@ public record CorporateAction81
     public TaxableIncomePerShareCalculatedFormat4Choice_? TaxableIncomePerShareCalculated { get; init; }
 
     /// <summary>
+    /// Election Type.
+    /// </summary>
+    [DisplayName("Election Type")]
+    [IsoXmlTag("ElctnTp")]
+    public ElectionTypeFormat4Choice_? ElectionType { get; init; }
+
+    /// <summary>
+    /// Lottery Type.
+    /// </summary>
+    [DisplayName("Lottery Type")]
+    [IsoXmlTag("LtryTp")]
+    public LotteryTypeFormat5Choice_? LotteryType { get; init; }
+
+    /// <summary>
+    /// Certification Type.
+    /// </summary>
+    [DisplayName("Certification Type")]
+    [IsoXmlTag("CertfctnTp")]
+    public CertificationTypeFormat4Choice_? CertificationType { get; init; }
+
+    /// <summary>
+    /// Consent Type.
+    /// </summary>
+    [DisplayName("Consent Type")]
+    [IsoXmlTag("CnsntTp")]
+    public ConsentTypeFormat5Choice_? ConsentType { get; init; }
+
+    /// <summary>
+    /// Information Type.
+    /// </summary>
+    [DisplayName("Information Type")]
+    [IsoXmlTag("InfTp")]
+    public InformationTypeFormat5Choice_? InformationType { get; init; }
+
+    /// <summary>
     /// Tax On Non Distributed Proceeds Indicator.
     /// </summary>
     [DisplayName("Tax On Non Distributed Proceeds Indicator")]
     [IsoXmlTag("TaxOnNonDstrbtdPrcdsInd")]
     public ValueList<GenericIdentification47> TaxOnNonDistributedProceedsIndicator { get; init; } =
         [];
+
+    /// <summary>
+    /// New Place Of Incorporation.
+    /// </summary>
+    [DisplayName("New Place Of Incorporation")]
+    [IsoXmlTag("NewPlcOfIncorprtn")]
+    public RestrictedFINXMax350Text? NewPlaceOfIncorporation { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative63? AdditionalInformation { get; init; }
 }

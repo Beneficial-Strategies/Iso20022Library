@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrderData3
 {
     /// <summary>
+    /// Order Identification Data.
+    /// </summary>
+    [DisplayName("Order Identification Data")]
+    [IsoXmlTag("OrdrIdData")]
+    public required OrderIdentification2 OrderIdentificationData { get; init; }
+
+    /// <summary>
     /// Auction Data.
     /// </summary>
     [DisplayName("Auction Data")]
@@ -29,11 +36,4 @@ public record OrderData3
     [DisplayName("Order Data")]
     [IsoXmlTag("OrdrData")]
     public OrderData4? OrderData { get; init; }
-
-    /// <summary>
-    /// Order Identification Data.
-    /// </summary>
-    [DisplayName("Order Identification Data")]
-    [IsoXmlTag("OrdrIdData")]
-    public required OrderIdentification2 OrderIdentificationData { get; init; }
 }

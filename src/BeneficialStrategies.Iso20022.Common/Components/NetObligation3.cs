@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NetObligation3
 {
     /// <summary>
+    /// Obligation Identification.
+    /// </summary>
+    [DisplayName("Obligation Identification")]
+    [IsoXmlTag("OblgtnId")]
+    public required Max35Text ObligationIdentification { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -24,25 +31,11 @@ public record NetObligation3
     public required ActiveCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Counterparty Netting Identification.
+    /// Participant Netting Identification.
     /// </summary>
-    [DisplayName("Counterparty Netting Identification")]
-    [IsoXmlTag("CtrPtyNetgId")]
-    public required NettingIdentification2Choice_ CounterpartyNettingIdentification { get; init; }
-
-    /// <summary>
-    /// Counterparty Settlement Instructions.
-    /// </summary>
-    [DisplayName("Counterparty Settlement Instructions")]
-    [IsoXmlTag("CtrPtySttlmInstrs")]
-    public SettlementParties120? CounterpartySettlementInstructions { get; init; }
-
-    /// <summary>
-    /// Net Service Counterparty Identification.
-    /// </summary>
-    [DisplayName("Net Service Counterparty Identification")]
-    [IsoXmlTag("NetSvcCtrPtyId")]
-    public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; }
+    [DisplayName("Participant Netting Identification")]
+    [IsoXmlTag("PtcptNetgId")]
+    public required NettingIdentification2Choice_ ParticipantNettingIdentification { get; init; }
 
     /// <summary>
     /// Obligation Direction.
@@ -52,18 +45,25 @@ public record NetObligation3
     public required PaymentReceipt1Code ObligationDirection { get; init; }
 
     /// <summary>
-    /// Obligation Identification.
+    /// Counterparty Netting Identification.
     /// </summary>
-    [DisplayName("Obligation Identification")]
-    [IsoXmlTag("OblgtnId")]
-    public required Max35Text ObligationIdentification { get; init; }
+    [DisplayName("Counterparty Netting Identification")]
+    [IsoXmlTag("CtrPtyNetgId")]
+    public required NettingIdentification2Choice_ CounterpartyNettingIdentification { get; init; }
 
     /// <summary>
-    /// Participant Netting Identification.
+    /// Net Service Counterparty Identification.
     /// </summary>
-    [DisplayName("Participant Netting Identification")]
-    [IsoXmlTag("PtcptNetgId")]
-    public required NettingIdentification2Choice_ ParticipantNettingIdentification { get; init; }
+    [DisplayName("Net Service Counterparty Identification")]
+    [IsoXmlTag("NetSvcCtrPtyId")]
+    public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; }
+
+    /// <summary>
+    /// Counterparty Settlement Instructions.
+    /// </summary>
+    [DisplayName("Counterparty Settlement Instructions")]
+    [IsoXmlTag("CtrPtySttlmInstrs")]
+    public SettlementParties120? CounterpartySettlementInstructions { get; init; }
 
     /// <summary>
     /// Payment Clearing Centre.

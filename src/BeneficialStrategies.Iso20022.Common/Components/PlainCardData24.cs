@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PlainCardData24
 {
     /// <summary>
+    /// PAN.
+    /// </summary>
+    [DisplayName("PAN")]
+    [IsoXmlTag("PAN")]
+    public Min8Max28NumericText? PAN { get; init; }
+
+    /// <summary>
     /// Card Sequence Number.
     /// </summary>
     [DisplayName("Card Sequence Number")]
@@ -36,13 +43,6 @@ public record PlainCardData24
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     public Max10DateText? ExpiryDate { get; init; }
-
-    /// <summary>
-    /// PAN.
-    /// </summary>
-    [DisplayName("PAN")]
-    [IsoXmlTag("PAN")]
-    public Min8Max28NumericText? PAN { get; init; }
 
     /// <summary>
     /// Track1.

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DriverInParty3
 {
     /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
+
+    /// <summary>
     /// Address.
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     public Address2? Address { get; init; }
-
-    /// <summary>
-    /// Age.
-    /// </summary>
-    [DisplayName("Age")]
-    [IsoXmlTag("Age")]
-    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Contact.
@@ -45,6 +45,13 @@ public record DriverInParty3
     public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
+    /// Age.
+    /// </summary>
+    [DisplayName("Age")]
+    [IsoXmlTag("Age")]
+    public Max2NumericText? Age { get; init; }
+
+    /// <summary>
     /// Driver Credential.
     /// </summary>
     [DisplayName("Driver Credential")]
@@ -52,11 +59,46 @@ public record DriverInParty3
     public ValueList<TravelDocument2> DriverCredential { get; init; } = [];
 
     /// <summary>
+    /// License Type.
+    /// </summary>
+    [DisplayName("License Type")]
+    [IsoXmlTag("LicTp")]
+    public Max70Text? LicenseType { get; init; }
+
+    /// <summary>
+    /// License Form.
+    /// </summary>
+    [DisplayName("License Form")]
+    [IsoXmlTag("LicForm")]
+    public PresentationMedium2Code? LicenseForm { get; init; }
+
+    /// <summary>
+    /// License Identification.
+    /// </summary>
+    [DisplayName("License Identification")]
+    [IsoXmlTag("LicId")]
+    public Max70Text? LicenseIdentification { get; init; }
+
+    /// <summary>
     /// License Assigner.
     /// </summary>
     [DisplayName("License Assigner")]
     [IsoXmlTag("LicAssgnr")]
     public LegalStructure1Code? LicenseAssigner { get; init; }
+
+    /// <summary>
+    /// License Issuance Date.
+    /// </summary>
+    [DisplayName("License Issuance Date")]
+    [IsoXmlTag("LicIssncDt")]
+    public ISODate? LicenseIssuanceDate { get; init; }
+
+    /// <summary>
+    /// License Expiration Date.
+    /// </summary>
+    [DisplayName("License Expiration Date")]
+    [IsoXmlTag("LicXprtnDt")]
+    public ISODate? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// License Country.
@@ -80,51 +122,9 @@ public record DriverInParty3
     public ISOCountrySubDivisionCode? LicenseCountrySubDivisionMinor { get; init; }
 
     /// <summary>
-    /// License Expiration Date.
-    /// </summary>
-    [DisplayName("License Expiration Date")]
-    [IsoXmlTag("LicXprtnDt")]
-    public ISODate? LicenseExpirationDate { get; init; }
-
-    /// <summary>
-    /// License Form.
-    /// </summary>
-    [DisplayName("License Form")]
-    [IsoXmlTag("LicForm")]
-    public PresentationMedium2Code? LicenseForm { get; init; }
-
-    /// <summary>
-    /// License Identification.
-    /// </summary>
-    [DisplayName("License Identification")]
-    [IsoXmlTag("LicId")]
-    public Max70Text? LicenseIdentification { get; init; }
-
-    /// <summary>
-    /// License Issuance Date.
-    /// </summary>
-    [DisplayName("License Issuance Date")]
-    [IsoXmlTag("LicIssncDt")]
-    public ISODate? LicenseIssuanceDate { get; init; }
-
-    /// <summary>
     /// License Other Authority.
     /// </summary>
     [DisplayName("License Other Authority")]
     [IsoXmlTag("LicOthrAuthrty")]
     public Max16Text? LicenseOtherAuthority { get; init; }
-
-    /// <summary>
-    /// License Type.
-    /// </summary>
-    [DisplayName("License Type")]
-    [IsoXmlTag("LicTp")]
-    public Max70Text? LicenseType { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
 }

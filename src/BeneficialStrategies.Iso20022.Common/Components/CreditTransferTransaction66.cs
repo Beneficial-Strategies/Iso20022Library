@@ -18,6 +18,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditTransferTransaction66
 {
     /// <summary>
+    /// Unique identification, as assigned by a sending party, to unambiguously identify the credit instruction within the message.
+    /// </summary>
+    [DisplayName("Credit Identification")]
+    [IsoXmlTag("CdtId")]
+    public required Max35Text CreditIdentification { get; init; }
+
+    /// <summary>
     /// Identifies whether a single entry per individual direct debit transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.
     /// </summary>
     /// <remarks>
@@ -28,54 +35,32 @@ public record CreditTransferTransaction66
     public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
-    /// Unique identification, as assigned by a sending party, to unambiguously identify the credit instruction within the message.
+    /// Further specifies the type of transaction.
     /// </summary>
-    [DisplayName("Credit Identification")]
-    [IsoXmlTag("CdtId")]
-    public required Max35Text CreditIdentification { get; init; }
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
 
     /// <summary>
-    /// Financial institution that receives an amount of money from the financial institutional debtor.
+    /// Amount of money moved between the instructing agent and the instructed agent.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required BranchAndFinancialInstitutionIdentification8 Creditor { get; init; }
+    [DisplayName("Total Interbank Settlement Amount")]
+    [IsoXmlTag("TtlIntrBkSttlmAmt")]
+    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
 
     /// <summary>
-    /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Financial institution servicing an account for the creditor.
+    /// Provides information on the occurred settlement time(s) of the payment transaction.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
-
-    /// <summary>
-    /// Provides information on the individual debit transaction(s) included in the message.
-    /// </summary>
-    [DisplayName("Direct Debit Transaction Information")]
-    [IsoXmlTag("DrctDbtTxInf")]
-    public ValueList<DirectDebitTransactionInformation33> DirectDebitTransactionInformation { get; init; } =
-        [];
-
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
@@ -85,18 +70,11 @@ public record CreditTransferTransaction66
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
-    /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
     /// </summary>
-    [DisplayName("Instruction For Creditor Agent")]
-    [IsoXmlTag("InstrForCdtrAgt")]
-    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
-
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the creditor's agent.
@@ -150,32 +128,32 @@ public record CreditTransferTransaction66
     public CashAccount40? IntermediaryAgent3Account { get; init; }
 
     /// <summary>
-    /// Further specifies the type of transaction.
+    /// Financial institution servicing an account for the creditor.
     /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Provides information on the occurred settlement time(s) of the payment transaction.
+    /// Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.
     /// </summary>
-    [DisplayName("Settlement Time Indication")]
-    [IsoXmlTag("SttlmTmIndctn")]
-    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// Financial institution that receives an amount of money from the financial institutional debtor.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required BranchAndFinancialInstitutionIdentification8 Creditor { get; init; }
 
     /// <summary>
-    /// Amount of money moved between the instructing agent and the instructed agent.
+    /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
     /// </summary>
-    [DisplayName("Total Interbank Settlement Amount")]
-    [IsoXmlTag("TtlIntrBkSttlmAmt")]
-    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Ultimate financial institution to which an amount of money is due.
@@ -183,4 +161,26 @@ public record CreditTransferTransaction66
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public BranchAndFinancialInstitutionIdentification8? UltimateCreditor { get; init; }
+
+    /// <summary>
+    /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
+    /// </summary>
+    [DisplayName("Instruction For Creditor Agent")]
+    [IsoXmlTag("InstrForCdtrAgt")]
+    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
+
+    /// <summary>
+    /// Provides information on the individual debit transaction(s) included in the message.
+    /// </summary>
+    [DisplayName("Direct Debit Transaction Information")]
+    [IsoXmlTag("DrctDbtTxInf")]
+    public ValueList<DirectDebitTransactionInformation33> DirectDebitTransactionInformation { get; init; } =
+        [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

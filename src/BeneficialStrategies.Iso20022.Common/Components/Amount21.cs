@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Amount21
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public CarRentalServiceType2Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -36,18 +50,4 @@ public record Amount21
     [DisplayName("Customer Notified")]
     [IsoXmlTag("CstmrNtfd")]
     public TrueFalseIndicator? CustomerNotified { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public CarRentalServiceType2Code? Type { get; init; }
 }

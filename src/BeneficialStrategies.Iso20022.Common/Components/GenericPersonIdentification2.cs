@@ -24,16 +24,16 @@ public record GenericPersonIdentification2
     public required Max256Text Identification { get; init; }
 
     /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public Max35Text? Issuer { get; init; }
-
-    /// <summary>
     /// Scheme Name.
     /// </summary>
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public PersonIdentificationSchemeName1Choice_? SchemeName { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public Max35Text? Issuer { get; init; }
 }

@@ -46,6 +46,13 @@ public record ForeignExchangeTradeConfirmationStatusAdviceV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Header.
+    /// </summary>
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header23 Header { get; init; }
+
+    /// <summary>
     /// Advice Identification.
     /// </summary>
     [DisplayName("Advice Identification")]
@@ -53,11 +60,11 @@ public record ForeignExchangeTradeConfirmationStatusAdviceV02 : IOuterRecord
     public MessageIdentification1? AdviceIdentification { get; init; }
 
     /// <summary>
-    /// Confirmation Information.
+    /// Trading Side Identification.
     /// </summary>
-    [DisplayName("Confirmation Information")]
-    [IsoXmlTag("ConfInf")]
-    public required Confirmation1 ConfirmationInformation { get; init; }
+    [DisplayName("Trading Side Identification")]
+    [IsoXmlTag("TradgSdId")]
+    public required TradePartyIdentification9 TradingSideIdentification { get; init; }
 
     /// <summary>
     /// Counterparty Side Identification.
@@ -67,11 +74,18 @@ public record ForeignExchangeTradeConfirmationStatusAdviceV02 : IOuterRecord
     public required TradePartyIdentification10 CounterpartySideIdentification { get; init; }
 
     /// <summary>
-    /// Header.
+    /// Trade Detail.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header23 Header { get; init; }
+    [DisplayName("Trade Detail")]
+    [IsoXmlTag("TradDtl")]
+    public required Trade8 TradeDetail { get; init; }
+
+    /// <summary>
+    /// Confirmation Information.
+    /// </summary>
+    [DisplayName("Confirmation Information")]
+    [IsoXmlTag("ConfInf")]
+    public required Confirmation1 ConfirmationInformation { get; init; }
 
     /// <summary>
     /// Reference.
@@ -86,18 +100,4 @@ public record ForeignExchangeTradeConfirmationStatusAdviceV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Detail.
-    /// </summary>
-    [DisplayName("Trade Detail")]
-    [IsoXmlTag("TradDtl")]
-    public required Trade8 TradeDetail { get; init; }
-
-    /// <summary>
-    /// Trading Side Identification.
-    /// </summary>
-    [DisplayName("Trading Side Identification")]
-    [IsoXmlTag("TradgSdId")]
-    public required TradePartyIdentification9 TradingSideIdentification { get; init; }
 }

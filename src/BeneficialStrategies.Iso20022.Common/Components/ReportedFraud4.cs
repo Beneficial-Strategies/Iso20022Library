@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportedFraud4
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required FraudType1Code Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Action.
     /// </summary>
     [DisplayName("Action")]
@@ -24,11 +38,32 @@ public record ReportedFraud4
     public required FraudReportingAction1Code Action { get; init; }
 
     /// <summary>
-    /// Arrest.
+    /// Other Action.
     /// </summary>
-    [DisplayName("Arrest")]
-    [IsoXmlTag("Arrst")]
-    public TrueFalseIndicator? Arrest { get; init; }
+    [DisplayName("Other Action")]
+    [IsoXmlTag("OthrActn")]
+    public Max35Text? OtherAction { get; init; }
+
+    /// <summary>
+    /// Reporting Entity.
+    /// </summary>
+    [DisplayName("Reporting Entity")]
+    [IsoXmlTag("RptgNtty")]
+    public required PartyType26Code ReportingEntity { get; init; }
+
+    /// <summary>
+    /// Other Reporting Entity.
+    /// </summary>
+    [DisplayName("Other Reporting Entity")]
+    [IsoXmlTag("OthrRptgNtty")]
+    public Max35Text? OtherReportingEntity { get; init; }
+
+    /// <summary>
+    /// Compromised Credential.
+    /// </summary>
+    [DisplayName("Compromised Credential")]
+    [IsoXmlTag("CmprmsdCrdntl")]
+    public ValueList<AuthenticationMethod12Code> CompromisedCredential { get; init; } = [];
 
     /// <summary>
     /// Cardholder Reporting Date.
@@ -36,6 +71,27 @@ public record ReportedFraud4
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
     public ISODate? CardholderReportingDate { get; init; }
+
+    /// <summary>
+    /// Confirmation Reporting Date.
+    /// </summary>
+    [DisplayName("Confirmation Reporting Date")]
+    [IsoXmlTag("ConfRptgDt")]
+    public ISODate? ConfirmationReportingDate { get; init; }
+
+    /// <summary>
+    /// Submitter Case Reference.
+    /// </summary>
+    [DisplayName("Submitter Case Reference")]
+    [IsoXmlTag("SubmitrCaseRef")]
+    public Max35Text? SubmitterCaseReference { get; init; }
+
+    /// <summary>
+    /// Market Segment.
+    /// </summary>
+    [DisplayName("Market Segment")]
+    [IsoXmlTag("MktSgmt")]
+    public Max35Text? MarketSegment { get; init; }
 
     /// <summary>
     /// Case Locator Number.
@@ -52,18 +108,11 @@ public record ReportedFraud4
     public Max35Text? CaseReference { get; init; }
 
     /// <summary>
-    /// Compromised Credential.
+    /// Arrest.
     /// </summary>
-    [DisplayName("Compromised Credential")]
-    [IsoXmlTag("CmprmsdCrdntl")]
-    public ValueList<AuthenticationMethod12Code> CompromisedCredential { get; init; } = [];
-
-    /// <summary>
-    /// Confirmation Reporting Date.
-    /// </summary>
-    [DisplayName("Confirmation Reporting Date")]
-    [IsoXmlTag("ConfRptgDt")]
-    public ISODate? ConfirmationReportingDate { get; init; }
+    [DisplayName("Arrest")]
+    [IsoXmlTag("Arrst")]
+    public TrueFalseIndicator? Arrest { get; init; }
 
     /// <summary>
     /// Investigation Status.
@@ -71,53 +120,4 @@ public record ReportedFraud4
     [DisplayName("Investigation Status")]
     [IsoXmlTag("InvstgtnSts")]
     public Max256Text? InvestigationStatus { get; init; }
-
-    /// <summary>
-    /// Market Segment.
-    /// </summary>
-    [DisplayName("Market Segment")]
-    [IsoXmlTag("MktSgmt")]
-    public Max35Text? MarketSegment { get; init; }
-
-    /// <summary>
-    /// Other Action.
-    /// </summary>
-    [DisplayName("Other Action")]
-    [IsoXmlTag("OthrActn")]
-    public Max35Text? OtherAction { get; init; }
-
-    /// <summary>
-    /// Other Reporting Entity.
-    /// </summary>
-    [DisplayName("Other Reporting Entity")]
-    [IsoXmlTag("OthrRptgNtty")]
-    public Max35Text? OtherReportingEntity { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Reporting Entity.
-    /// </summary>
-    [DisplayName("Reporting Entity")]
-    [IsoXmlTag("RptgNtty")]
-    public required PartyType26Code ReportingEntity { get; init; }
-
-    /// <summary>
-    /// Submitter Case Reference.
-    /// </summary>
-    [DisplayName("Submitter Case Reference")]
-    [IsoXmlTag("SubmitrCaseRef")]
-    public Max35Text? SubmitterCaseReference { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required FraudType1Code Type { get; init; }
 }

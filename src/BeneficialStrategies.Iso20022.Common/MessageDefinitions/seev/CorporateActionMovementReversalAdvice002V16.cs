@@ -46,55 +46,6 @@ public record CorporateActionMovementReversalAdvice002V16 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
-    /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountAndBalance54 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative35? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Confirmation Details.
-    /// </summary>
-    [DisplayName("Corporate Action Confirmation Details")]
-    [IsoXmlTag("CorpActnConfDtls")]
-    public required CorporateActionOption246 CorporateActionConfirmationDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction78? CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation193 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
-
-    /// <summary>
-    /// Issuer Agent.
-    /// </summary>
-    [DisplayName("Issuer Agent")]
-    [IsoXmlTag("IssrAgt")]
-    public ValueList<PartyIdentification137Choice_> IssuerAgent { get; init; } = [];
-
-    /// <summary>
     /// Movement Confirmation Identification.
     /// </summary>
     [DisplayName("Movement Confirmation Identification")]
@@ -109,11 +60,11 @@ public record CorporateActionMovementReversalAdvice002V16 : IOuterRecord
     public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
-    /// Paying Agent.
+    /// Events Linkage.
     /// </summary>
-    [DisplayName("Paying Agent")]
-    [IsoXmlTag("PngAgt")]
-    public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Reversal Reason.
@@ -121,6 +72,62 @@ public record CorporateActionMovementReversalAdvice002V16 : IOuterRecord
     [DisplayName("Reversal Reason")]
     [IsoXmlTag("RvslRsn")]
     public CorporateActionReversalReason10? ReversalReason { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentification1? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation193 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountAndBalance54 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateAction78? CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Confirmation Details.
+    /// </summary>
+    [DisplayName("Corporate Action Confirmation Details")]
+    [IsoXmlTag("CorpActnConfDtls")]
+    public required CorporateActionOption246 CorporateActionConfirmationDetails { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative35? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Issuer Agent.
+    /// </summary>
+    [DisplayName("Issuer Agent")]
+    [IsoXmlTag("IssrAgt")]
+    public ValueList<PartyIdentification137Choice_> IssuerAgent { get; init; } = [];
+
+    /// <summary>
+    /// Paying Agent.
+    /// </summary>
+    [DisplayName("Paying Agent")]
+    [IsoXmlTag("PngAgt")]
+    public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub Paying Agent.
@@ -135,11 +142,4 @@ public record CorporateActionMovementReversalAdvice002V16 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentification1? TransactionIdentification { get; init; }
 }

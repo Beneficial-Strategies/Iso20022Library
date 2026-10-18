@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DirectDebitInstructionDetails3
 {
     /// <summary>
+    /// Mandate Identification.
+    /// </summary>
+    [DisplayName("Mandate Identification")]
+    [IsoXmlTag("MndtId")]
+    public required Max35Text MandateIdentification { get; init; }
+
+    /// <summary>
     /// Automated Direct Debit Instruction Indicator.
     /// </summary>
     [DisplayName("Automated Direct Debit Instruction Indicator")]
@@ -24,18 +31,18 @@ public record DirectDebitInstructionDetails3
     public YesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; init; }
 
     /// <summary>
-    /// Creditor.
-    /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required PartyIdentification272 Creditor { get; init; }
-
-    /// <summary>
     /// Direct Debit Transferable Indicator.
     /// </summary>
     [DisplayName("Direct Debit Transferable Indicator")]
     [IsoXmlTag("DrctDbtTrfblInd")]
     public YesNoIndicator? DirectDebitTransferableIndicator { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required PartyIdentification272 Creditor { get; init; }
 
     /// <summary>
     /// Last Collection Currency Amount.
@@ -50,13 +57,6 @@ public record DirectDebitInstructionDetails3
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
     public ISODate? LastCollectionDate { get; init; }
-
-    /// <summary>
-    /// Mandate Identification.
-    /// </summary>
-    [DisplayName("Mandate Identification")]
-    [IsoXmlTag("MndtId")]
-    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Other Details.

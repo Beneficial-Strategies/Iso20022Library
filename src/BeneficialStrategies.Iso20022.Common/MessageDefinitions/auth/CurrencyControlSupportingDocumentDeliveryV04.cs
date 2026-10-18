@@ -53,16 +53,16 @@ public record CurrencyControlSupportingDocumentDeliveryV04 : IOuterRecord
     public required CurrencyControlHeader9 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Supporting Document.
     /// </summary>
     [DisplayName("Supporting Document")]
     [IsoXmlTag("SpprtgDoc")]
     public ValueList<SupportingDocument4> SupportingDocument { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

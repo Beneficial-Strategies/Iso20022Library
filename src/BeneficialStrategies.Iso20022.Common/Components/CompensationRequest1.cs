@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CompensationRequest1
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ActiveCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
     /// Compensation Account.
     /// </summary>
     [DisplayName("Compensation Account")]
     [IsoXmlTag("CompstnAcct")]
     public CashAccount40? CompensationAccount { get; init; }
+
+    /// <summary>
+    /// Period.
+    /// </summary>
+    [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
+    public required DatePeriod2 Period { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ActiveCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Expected Value Date.
@@ -43,13 +50,6 @@ public record CompensationRequest1
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
     public PercentageRate? InterestRate { get; init; }
-
-    /// <summary>
-    /// Period.
-    /// </summary>
-    [DisplayName("Period")]
-    [IsoXmlTag("Prd")]
-    public required DatePeriod2 Period { get; init; }
 
     /// <summary>
     /// Reason.

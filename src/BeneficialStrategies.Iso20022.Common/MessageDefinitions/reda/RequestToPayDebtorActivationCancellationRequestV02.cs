@@ -46,18 +46,18 @@ public record RequestToPayDebtorActivationCancellationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Data.
-    /// </summary>
-    [DisplayName("Cancellation Data")]
-    [IsoXmlTag("CxlData")]
-    public ValueList<DebtorActivationCancellation3> CancellationData { get; init; } = [];
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required ActivationHeader3 Header { get; init; }
+
+    /// <summary>
+    /// Cancellation Data.
+    /// </summary>
+    [DisplayName("Cancellation Data")]
+    [IsoXmlTag("CxlData")]
+    public ValueList<DebtorActivationCancellation3> CancellationData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

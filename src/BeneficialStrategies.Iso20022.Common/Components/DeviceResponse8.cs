@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DeviceResponse8
 {
     /// <summary>
-    /// Card Reader Application Protocol Data Unit Response.
+    /// Environment.
     /// </summary>
-    [DisplayName("Card Reader Application Protocol Data Unit Response")]
-    [IsoXmlTag("CardRdrApplPrtcolDataUnitRspn")]
-    public DeviceSendApplicationProtocolDataUnitCardReaderResponse1? CardReaderApplicationProtocolDataUnitResponse { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public CardPaymentEnvironment81? Environment { get; init; }
 
     /// <summary>
     /// Context.
@@ -31,25 +31,18 @@ public record DeviceResponse8
     public PaymentContext30? Context { get; init; }
 
     /// <summary>
+    /// Service Content.
+    /// </summary>
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService9Code ServiceContent { get; init; }
+
+    /// <summary>
     /// Display Response.
     /// </summary>
     [DisplayName("Display Response")]
     [IsoXmlTag("DispRspn")]
     public DeviceDisplayResponse2? DisplayResponse { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public CardPaymentEnvironment81? Environment { get; init; }
-
-    /// <summary>
-    /// Initialisation Card Reader Response.
-    /// </summary>
-    [DisplayName("Initialisation Card Reader Response")]
-    [IsoXmlTag("InitlstnCardRdrRspn")]
-    public DeviceInitialisationCardReaderResponse2? InitialisationCardReaderResponse { get; init; }
 
     /// <summary>
     /// Input Response.
@@ -66,13 +59,6 @@ public record DeviceResponse8
     public DevicePrintResponse1? PrintResponse { get; init; }
 
     /// <summary>
-    /// Response.
-    /// </summary>
-    [DisplayName("Response")]
-    [IsoXmlTag("Rspn")]
-    public required ResponseType11 Response { get; init; }
-
-    /// <summary>
     /// Secure Input Response.
     /// </summary>
     [DisplayName("Secure Input Response")]
@@ -80,18 +66,18 @@ public record DeviceResponse8
     public DeviceSecureInputResponse6? SecureInputResponse { get; init; }
 
     /// <summary>
-    /// Service Content.
+    /// Initialisation Card Reader Response.
     /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService9Code ServiceContent { get; init; }
+    [DisplayName("Initialisation Card Reader Response")]
+    [IsoXmlTag("InitlstnCardRdrRspn")]
+    public DeviceInitialisationCardReaderResponse2? InitialisationCardReaderResponse { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Card Reader Application Protocol Data Unit Response.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Card Reader Application Protocol Data Unit Response")]
+    [IsoXmlTag("CardRdrApplPrtcolDataUnitRspn")]
+    public DeviceSendApplicationProtocolDataUnitCardReaderResponse1? CardReaderApplicationProtocolDataUnitResponse { get; init; }
 
     /// <summary>
     /// Transmission Response.
@@ -99,4 +85,18 @@ public record DeviceResponse8
     [DisplayName("Transmission Response")]
     [IsoXmlTag("TrnsmssnRspn")]
     public DeviceTransmitMessageResponse1? TransmissionResponse { get; init; }
+
+    /// <summary>
+    /// Response.
+    /// </summary>
+    [DisplayName("Response")]
+    [IsoXmlTag("Rspn")]
+    public required ResponseType11 Response { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

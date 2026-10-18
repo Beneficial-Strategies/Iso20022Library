@@ -24,32 +24,67 @@ public record OriginalTransactionReference40
     public AmountType4Choice_? Amount { get; init; }
 
     /// <summary>
-    /// Creditor.
+    /// Requested Execution Date.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required PartyIdentification272 Creditor { get; init; }
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
-    /// Creditor Account.
+    /// Expiry Date.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Expiry Date")]
+    [IsoXmlTag("XpryDt")]
+    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Payment Condition.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
+    [DisplayName("Payment Condition")]
+    [IsoXmlTag("PmtCond")]
+    public PaymentCondition2? PaymentCondition { get; init; }
 
     /// <summary>
-    /// Creditor Agent Account.
+    /// Payment Type Information.
     /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Payment Method.
+    /// </summary>
+    [DisplayName("Payment Method")]
+    [IsoXmlTag("PmtMtd")]
+    public PaymentMethod4Code? PaymentMethod { get; init; }
+
+    /// <summary>
+    /// Mandate Related Information.
+    /// </summary>
+    [DisplayName("Mandate Related Information")]
+    [IsoXmlTag("MndtRltdInf")]
+    public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
+
+    /// <summary>
+    /// Remittance Information.
+    /// </summary>
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    public RemittanceInformation22? RemittanceInformation { get; init; }
+
+    /// <summary>
+    /// Enclosed File.
+    /// </summary>
+    [DisplayName("Enclosed File")]
+    [IsoXmlTag("NclsdFile")]
+    public ValueList<Document15> EnclosedFile { get; init; } = [];
+
+    /// <summary>
+    /// Ultimate Debtor.
+    /// </summary>
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -80,60 +115,32 @@ public record OriginalTransactionReference40
     public CashAccount40? DebtorAgentAccount { get; init; }
 
     /// <summary>
-    /// Enclosed File.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("Enclosed File")]
-    [IsoXmlTag("NclsdFile")]
-    public ValueList<Document15> EnclosedFile { get; init; } = [];
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
 
     /// <summary>
-    /// Expiry Date.
+    /// Creditor Agent Account.
     /// </summary>
-    [DisplayName("Expiry Date")]
-    [IsoXmlTag("XpryDt")]
-    public DateAndDateTime2Choice_? ExpiryDate { get; init; }
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
-    /// Mandate Related Information.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Mandate Related Information")]
-    [IsoXmlTag("MndtRltdInf")]
-    public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required PartyIdentification272 Creditor { get; init; }
 
     /// <summary>
-    /// Payment Condition.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Payment Condition")]
-    [IsoXmlTag("PmtCond")]
-    public PaymentCondition2? PaymentCondition { get; init; }
-
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
-    [DisplayName("Payment Method")]
-    [IsoXmlTag("PmtMtd")]
-    public PaymentMethod4Code? PaymentMethod { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
-
-    /// <summary>
-    /// Remittance Information.
-    /// </summary>
-    [DisplayName("Remittance Information")]
-    [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.
@@ -141,11 +148,4 @@ public record OriginalTransactionReference40
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification272? UltimateCreditor { get; init; }
-
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
 }

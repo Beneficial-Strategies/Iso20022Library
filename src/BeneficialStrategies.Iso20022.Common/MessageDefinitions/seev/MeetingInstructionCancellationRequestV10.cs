@@ -46,13 +46,6 @@ public record MeetingInstructionCancellationRequestV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
     /// Meeting Instruction Identification.
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
@@ -67,11 +60,11 @@ public record MeetingInstructionCancellationRequestV10 : IOuterRecord
     public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// To Be Cancelled Instruction.
@@ -79,4 +72,11 @@ public record MeetingInstructionCancellationRequestV10 : IOuterRecord
     [DisplayName("To Be Cancelled Instruction")]
     [IsoXmlTag("ToBeCancInstr")]
     public ValueList<CancelInstruction5> ToBeCancelledInstruction { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

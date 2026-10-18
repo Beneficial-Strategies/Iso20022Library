@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MarginReportData9
 {
     /// <summary>
-    /// Collateral.
+    /// Reporting Time Stamp.
     /// </summary>
-    [DisplayName("Collateral")]
-    [IsoXmlTag("Coll")]
-    public required MarginCollateralReport5 Collateral { get; init; }
+    [DisplayName("Reporting Time Stamp")]
+    [IsoXmlTag("RptgTmStmp")]
+    public ISODateTime? ReportingTimeStamp { get; init; }
 
     /// <summary>
     /// Counterparty Identification.
@@ -31,25 +31,25 @@ public record MarginReportData9
     public required TradeCounterpartyReport20 CounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// Counterparty Rating Threshold Indicator.
-    /// </summary>
-    [DisplayName("Counterparty Rating Threshold Indicator")]
-    [IsoXmlTag("CtrPtyRatgThrshldInd")]
-    public TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
-
-    /// <summary>
-    /// Counterparty Rating Trigger Indicator.
-    /// </summary>
-    [DisplayName("Counterparty Rating Trigger Indicator")]
-    [IsoXmlTag("CtrPtyRatgTrggrInd")]
-    public TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
-
-    /// <summary>
     /// Event Date.
     /// </summary>
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     public ISODate? EventDate { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public UniqueTransactionIdentifier2Choice_? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Collateral.
+    /// </summary>
+    [DisplayName("Collateral")]
+    [IsoXmlTag("Coll")]
+    public required MarginCollateralReport5 Collateral { get; init; }
 
     /// <summary>
     /// Posted Margin Or Collateral.
@@ -66,18 +66,18 @@ public record MarginReportData9
     public ReceivedMarginOrCollateral6? ReceivedMarginOrCollateral { get; init; }
 
     /// <summary>
-    /// Reporting Time Stamp.
+    /// Counterparty Rating Trigger Indicator.
     /// </summary>
-    [DisplayName("Reporting Time Stamp")]
-    [IsoXmlTag("RptgTmStmp")]
-    public ISODateTime? ReportingTimeStamp { get; init; }
+    [DisplayName("Counterparty Rating Trigger Indicator")]
+    [IsoXmlTag("CtrPtyRatgTrggrInd")]
+    public TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Counterparty Rating Threshold Indicator.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Counterparty Rating Threshold Indicator")]
+    [IsoXmlTag("CtrPtyRatgThrshldInd")]
+    public TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
 
     /// <summary>
     /// Technical Attributes.
@@ -87,9 +87,9 @@ public record MarginReportData9
     public TechnicalAttributes6? TechnicalAttributes { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Supplementary Data.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public UniqueTransactionIdentifier2Choice_? TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

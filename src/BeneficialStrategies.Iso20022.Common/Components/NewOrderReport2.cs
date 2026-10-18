@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NewOrderReport2
 {
     /// <summary>
-    /// Order.
-    /// </summary>
-    [DisplayName("Order")]
-    [IsoXmlTag("Ordr")]
-    public ValueList<OrderData3> Order { get; init; } = [];
-
-    /// <summary>
     /// Report Identification.
     /// </summary>
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
     public required Max140Text ReportIdentification { get; init; }
+
+    /// <summary>
+    /// Order.
+    /// </summary>
+    [DisplayName("Order")]
+    [IsoXmlTag("Ordr")]
+    public ValueList<OrderData3> Order { get; init; } = [];
 }

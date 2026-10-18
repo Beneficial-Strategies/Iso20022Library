@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCassette3
 {
     /// <summary>
-    /// Cassette Status.
+    /// Physical Identification.
     /// </summary>
-    [DisplayName("Cassette Status")]
-    [IsoXmlTag("CssttSts")]
-    public ATMCassetteStatus1Code? CassetteStatus { get; init; }
+    [DisplayName("Physical Identification")]
+    [IsoXmlTag("PhysId")]
+    public Max35Text? PhysicalIdentification { get; init; }
 
     /// <summary>
     /// Logical Identification.
@@ -31,32 +31,18 @@ public record ATMCassette3
     public required Max35Text LogicalIdentification { get; init; }
 
     /// <summary>
-    /// Media Counters.
-    /// </summary>
-    [DisplayName("Media Counters")]
-    [IsoXmlTag("MdiaCntrs")]
-    public ValueList<ATMCassetteCounters6> MediaCounters { get; init; } = [];
-
-    /// <summary>
-    /// Media Type.
-    /// </summary>
-    [DisplayName("Media Type")]
-    [IsoXmlTag("MdiaTp")]
-    public ATMMediaType4Code? MediaType { get; init; }
-
-    /// <summary>
-    /// Physical Identification.
-    /// </summary>
-    [DisplayName("Physical Identification")]
-    [IsoXmlTag("PhysId")]
-    public Max35Text? PhysicalIdentification { get; init; }
-
-    /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     public Max35Text? SerialNumber { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ATMCassetteType1Code Type { get; init; }
 
     /// <summary>
     /// Sub Type.
@@ -66,9 +52,23 @@ public record ATMCassette3
     public ValueList<ATMNoteType1Code> SubType { get; init; } = [];
 
     /// <summary>
-    /// Type.
+    /// Media Type.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ATMCassetteType1Code Type { get; init; }
+    [DisplayName("Media Type")]
+    [IsoXmlTag("MdiaTp")]
+    public ATMMediaType4Code? MediaType { get; init; }
+
+    /// <summary>
+    /// Media Counters.
+    /// </summary>
+    [DisplayName("Media Counters")]
+    [IsoXmlTag("MdiaCntrs")]
+    public ValueList<ATMCassetteCounters6> MediaCounters { get; init; } = [];
+
+    /// <summary>
+    /// Cassette Status.
+    /// </summary>
+    [DisplayName("Cassette Status")]
+    [IsoXmlTag("CssttSts")]
+    public ATMCassetteStatus1Code? CassetteStatus { get; init; }
 }

@@ -24,18 +24,18 @@ public record CurrencyControlPackageStatus3
     public required Max35Text PackageIdentification { get; init; }
 
     /// <summary>
-    /// Record Status.
-    /// </summary>
-    [DisplayName("Record Status")]
-    [IsoXmlTag("RcrdSts")]
-    public ValueList<CurrencyControlRecordStatus3> RecordStatus { get; init; } = [];
-
-    /// <summary>
     /// Status.
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     public required StatisticalReportingStatus1Code Status { get; init; }
+
+    /// <summary>
+    /// Status Reason.
+    /// </summary>
+    [DisplayName("Status Reason")]
+    [IsoXmlTag("StsRsn")]
+    public ValueList<ValidationStatusReason3> StatusReason { get; init; } = [];
 
     /// <summary>
     /// Status Date Time.
@@ -45,9 +45,9 @@ public record CurrencyControlPackageStatus3
     public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
-    /// Status Reason.
+    /// Record Status.
     /// </summary>
-    [DisplayName("Status Reason")]
-    [IsoXmlTag("StsRsn")]
-    public ValueList<ValidationStatusReason3> StatusReason { get; init; } = [];
+    [DisplayName("Record Status")]
+    [IsoXmlTag("RcrdSts")]
+    public ValueList<CurrencyControlRecordStatus3> RecordStatus { get; init; } = [];
 }

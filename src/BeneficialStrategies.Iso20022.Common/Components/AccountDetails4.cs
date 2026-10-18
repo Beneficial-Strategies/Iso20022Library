@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountDetails4
 {
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max70Text? Identification { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
@@ -36,4 +29,11 @@ public record AccountDetails4
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public ISO8583AccountTypeCode? Type { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max70Text? Identification { get; init; }
 }

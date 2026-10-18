@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Linkages74
 {
     /// <summary>
-    /// Message Number.
-    /// </summary>
-    [DisplayName("Message Number")]
-    [IsoXmlTag("MsgNb")]
-    public DocumentNumber5Choice_? MessageNumber { get; init; }
-
-    /// <summary>
     /// Processing Position.
     /// </summary>
     [DisplayName("Processing Position")]
     [IsoXmlTag("PrcgPos")]
     public ProcessingPosition8Choice_? ProcessingPosition { get; init; }
+
+    /// <summary>
+    /// Message Number.
+    /// </summary>
+    [DisplayName("Message Number")]
+    [IsoXmlTag("MsgNb")]
+    public DocumentNumber5Choice_? MessageNumber { get; init; }
 
     /// <summary>
     /// Reference.

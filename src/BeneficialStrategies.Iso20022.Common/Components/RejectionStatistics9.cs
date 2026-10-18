@@ -24,16 +24,16 @@ public record RejectionStatistics9
     public required CounterpartyData92 CounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// Derivative Statistics.
-    /// </summary>
-    [DisplayName("Derivative Statistics")]
-    [IsoXmlTag("DerivSttstcs")]
-    public required DetailedTransactionStatistics7Choice_ DerivativeStatistics { get; init; }
-
-    /// <summary>
     /// Report Statistics.
     /// </summary>
     [DisplayName("Report Statistics")]
     [IsoXmlTag("RptSttstcs")]
     public required DetailedReportStatistics7 ReportStatistics { get; init; }
+
+    /// <summary>
+    /// Derivative Statistics.
+    /// </summary>
+    [DisplayName("Derivative Statistics")]
+    [IsoXmlTag("DerivSttstcs")]
+    public required DetailedTransactionStatistics7Choice_ DerivativeStatistics { get; init; }
 }

@@ -31,11 +31,11 @@ public record References30
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Common Identification.
+    /// Market Infrastructure Transaction Identification.
     /// </summary>
-    [DisplayName("Common Identification")]
-    [IsoXmlTag("CmonId")]
-    public Max35Text? CommonIdentification { get; init; }
+    [DisplayName("Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("MktInfrstrctrTxId")]
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Counterparty Market Infrastructure Transaction Identification.
@@ -45,11 +45,11 @@ public record References30
     public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Processor Transaction Identification.
     /// </summary>
-    [DisplayName("Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("MktInfrstrctrTxId")]
-    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Pool Identification.
@@ -59,11 +59,11 @@ public record References30
     public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
-    /// Processor Transaction Identification.
+    /// Common Identification.
     /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    public Max35Text? ProcessorTransactionIdentification { get; init; }
+    [DisplayName("Common Identification")]
+    [IsoXmlTag("CmonId")]
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Trade Identification.

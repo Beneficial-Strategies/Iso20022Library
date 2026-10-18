@@ -24,18 +24,18 @@ public record CorporateActionGeneralInformation189
     public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Event Type.
-    /// </summary>
-    [DisplayName("Event Type")]
-    [IsoXmlTag("EvtTp")]
-    public required CorporateActionEventType119Choice_ EventType { get; init; }
-
-    /// <summary>
     /// Official Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
     public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Event Type.
+    /// </summary>
+    [DisplayName("Event Type")]
+    [IsoXmlTag("EvtTp")]
+    public required CorporateActionEventType119Choice_ EventType { get; init; }
 
     /// <summary>
     /// Underlying Security.

@@ -46,39 +46,11 @@ public record AgentCANotificationAdviceV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative2? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Agent Information.
-    /// </summary>
-    [DisplayName("Agent Information")]
-    [IsoXmlTag("AgtInf")]
-    public ValueList<CorporateActionAgent2> AgentInformation { get; init; } = [];
-
-    /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public required CorporateAction83 CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation172 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Option Details.
-    /// </summary>
-    [DisplayName("Corporate Action Option Details")]
-    [IsoXmlTag("CorpActnOptnDtls")]
-    public ValueList<CorporateActionOption235> CorporateActionOptionDetails { get; init; } = [];
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Notification General Information.
@@ -88,16 +60,44 @@ public record AgentCANotificationAdviceV02 : IOuterRecord
     public required CorporateActionNotification12 NotificationGeneralInformation { get; init; }
 
     /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
-
-    /// <summary>
     /// Previous Notification Identification.
     /// </summary>
     [DisplayName("Previous Notification Identification")]
     [IsoXmlTag("PrvsNtfctnId")]
     public DocumentIdentification31? PreviousNotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Agent Information.
+    /// </summary>
+    [DisplayName("Agent Information")]
+    [IsoXmlTag("AgtInf")]
+    public ValueList<CorporateActionAgent2> AgentInformation { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation172 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public required CorporateAction83 CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Option Details.
+    /// </summary>
+    [DisplayName("Corporate Action Option Details")]
+    [IsoXmlTag("CorpActnOptnDtls")]
+    public ValueList<CorporateActionOption235> CorporateActionOptionDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative2? AdditionalInformation { get; init; }
 }

@@ -24,6 +24,13 @@ public record CollateralValueSearchCriteria4
     public AccountIdentification4Choice_? CashAccountIdentification { get; init; }
 
     /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
+
+    /// <summary>
     /// Cash Account Owner.
     /// </summary>
     [DisplayName("Cash Account Owner")]
@@ -36,13 +43,6 @@ public record CollateralValueSearchCriteria4
     [DisplayName("Cash Account Servicer")]
     [IsoXmlTag("CshAcctSvcr")]
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ValueList<ActiveOrHistoricCurrencyCode> Currency { get; init; } = [];
 
     /// <summary>
     /// Financial Instrument Identification.

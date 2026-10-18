@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityIdentification48
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max140Text? Description { get; init; }
-
-    /// <summary>
     /// ISIN.
     /// </summary>
     [DisplayName("ISIN")]
@@ -36,4 +29,11 @@ public record SecurityIdentification48
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
     public ValueList<OtherIdentification1> OtherIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max140Text? Description { get; init; }
 }

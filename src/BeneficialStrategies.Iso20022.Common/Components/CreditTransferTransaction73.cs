@@ -90,22 +90,6 @@ public record CreditTransferTransaction73
     public ActiveOrHistoricCurrencyAndAmount? InstructedAmount { get; init; }
 
     /// <summary>
-    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
-    /// </summary>
-    [IsoId("d64d5a68-0008-0008-0008-12844122abcc")]
-    [DisplayName("Charge Bearer")]
-    [IsoXmlTag("ChrgBr")]
-    public required ChargeBearerType1Code ChargeBearer { get; init; }
-
-    /// <summary>
-    /// Provides information on the charges to be paid by the charge bearer(s) related to the payment transaction.
-    /// </summary>
-    [IsoId("d64d5a68-0009-0009-0009-12844122abcc")]
-    [DisplayName("Charges Information")]
-    [IsoXmlTag("ChrgsInf")]
-    public ValueList<Charges16> ChargesInformation { get; init; } = [];
-
-    /// <summary>
     /// Exchange rate as agreed between the two parties.
     /// </summary>
     [IsoId("d64d5a68-0010-0010-0010-12844122abcc")]
@@ -120,6 +104,22 @@ public record CreditTransferTransaction73
     [DisplayName("Agreed Rate")]
     [IsoXmlTag("AgrdRate")]
     public CurrencyExchange26? AgreedRate { get; init; }
+
+    /// <summary>
+    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
+    /// </summary>
+    [IsoId("d64d5a68-0008-0008-0008-12844122abcc")]
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    public required ChargeBearerType1Code ChargeBearer { get; init; }
+
+    /// <summary>
+    /// Provides information on the charges to be paid by the charge bearer(s) related to the payment transaction.
+    /// </summary>
+    [IsoId("d64d5a68-0009-0009-0009-12844122abcc")]
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    public ValueList<Charges16> ChargesInformation { get; init; } = [];
 
     /// <summary>
     /// Provides further details of the mandate signed between the creditor and the debtor.
@@ -246,6 +246,24 @@ public record CreditTransferTransaction73
     public CashAccount40? IntermediaryAgent3Account { get; init; }
 
     /// <summary>
+    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
+    /// </summary>
+    [IsoId("d64d5a68-0028-0028-0028-12844122abcc")]
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
+
+    /// <summary>
+    /// Party that initiates the payment.
+    /// </summary>
+    /// <remarks>
+    /// Usage: This can be either the debtor or a party that initiates the credit transfer on behalf of the debtor.
+    /// </remarks>
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public PartyIdentification272? InitiatingParty { get; init; }
+
+    /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
     /// </summary>
     [IsoId("d64d5a68-0024-0024-0024-12844122abcc")]
@@ -276,24 +294,6 @@ public record CreditTransferTransaction73
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
-
-    /// <summary>
-    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
-    /// </summary>
-    [IsoId("d64d5a68-0028-0028-0028-12844122abcc")]
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
-
-    /// <summary>
-    /// Party that initiates the payment.
-    /// </summary>
-    /// <remarks>
-    /// Usage: This can be either the debtor or a party that initiates the credit transfer on behalf of the debtor.
-    /// </remarks>
-    [DisplayName("Initiating Party")]
-    [IsoXmlTag("InitgPty")]
-    public PartyIdentification272? InitiatingParty { get; init; }
 
     /// <summary>
     /// Financial institution servicing an account for the creditor.

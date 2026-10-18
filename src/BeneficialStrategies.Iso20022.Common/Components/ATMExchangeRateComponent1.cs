@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMExchangeRateComponent1
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max256Text? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Exchange Rate.
     /// </summary>
     [DisplayName("Exchange Rate")]
@@ -36,4 +29,11 @@ public record ATMExchangeRateComponent1
     [DisplayName("Publish Date")]
     [IsoXmlTag("PblshDt")]
     public required ISODateTime PublishDate { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max256Text? AdditionalInformation { get; init; }
 }

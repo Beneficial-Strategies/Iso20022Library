@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMDepositedMediaItem1
 {
     /// <summary>
-    /// Additional Data.
+    /// Media Identification.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<GenericInformation1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Code Line.
-    /// </summary>
-    [DisplayName("Code Line")]
-    [IsoXmlTag("CdLine")]
-    public Max70Text? CodeLine { get; init; }
-
-    /// <summary>
-    /// Code Line Format.
-    /// </summary>
-    [DisplayName("Code Line Format")]
-    [IsoXmlTag("CdLineFrmt")]
-    public CheckCodeLine1Code? CodeLineFormat { get; init; }
-
-    /// <summary>
-    /// Confidence Level.
-    /// </summary>
-    [DisplayName("Confidence Level")]
-    [IsoXmlTag("CnfdncLvl")]
-    public PercentageRate? ConfidenceLevel { get; init; }
+    [DisplayName("Media Identification")]
+    [IsoXmlTag("MdiaId")]
+    public Max70Text? MediaIdentification { get; init; }
 
     /// <summary>
     /// Count.
@@ -52,6 +31,13 @@ public record ATMDepositedMediaItem1
     public Number? Count { get; init; }
 
     /// <summary>
+    /// Unit Value.
+    /// </summary>
+    [DisplayName("Unit Value")]
+    [IsoXmlTag("UnitVal")]
+    public ImpliedCurrencyAndAmount? UnitValue { get; init; }
+
+    /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
@@ -59,32 +45,18 @@ public record ATMDepositedMediaItem1
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Media Identification.
+    /// Code Line Format.
     /// </summary>
-    [DisplayName("Media Identification")]
-    [IsoXmlTag("MdiaId")]
-    public Max70Text? MediaIdentification { get; init; }
+    [DisplayName("Code Line Format")]
+    [IsoXmlTag("CdLineFrmt")]
+    public CheckCodeLine1Code? CodeLineFormat { get; init; }
 
     /// <summary>
-    /// Media Status.
+    /// Code Line.
     /// </summary>
-    [DisplayName("Media Status")]
-    [IsoXmlTag("MdiaSts")]
-    public ATMMediaStatus1Code? MediaStatus { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public Max70Text? Reference { get; init; }
-
-    /// <summary>
-    /// Rejected Reason.
-    /// </summary>
-    [DisplayName("Rejected Reason")]
-    [IsoXmlTag("RjctdRsn")]
-    public Max70Text? RejectedReason { get; init; }
+    [DisplayName("Code Line")]
+    [IsoXmlTag("CdLine")]
+    public Max70Text? CodeLine { get; init; }
 
     /// <summary>
     /// Scanned Value.
@@ -94,9 +66,37 @@ public record ATMDepositedMediaItem1
     public ImpliedCurrencyAndAmount? ScannedValue { get; init; }
 
     /// <summary>
-    /// Unit Value.
+    /// Confidence Level.
     /// </summary>
-    [DisplayName("Unit Value")]
-    [IsoXmlTag("UnitVal")]
-    public ImpliedCurrencyAndAmount? UnitValue { get; init; }
+    [DisplayName("Confidence Level")]
+    [IsoXmlTag("CnfdncLvl")]
+    public PercentageRate? ConfidenceLevel { get; init; }
+
+    /// <summary>
+    /// Media Status.
+    /// </summary>
+    [DisplayName("Media Status")]
+    [IsoXmlTag("MdiaSts")]
+    public ATMMediaStatus1Code? MediaStatus { get; init; }
+
+    /// <summary>
+    /// Rejected Reason.
+    /// </summary>
+    [DisplayName("Rejected Reason")]
+    [IsoXmlTag("RjctdRsn")]
+    public Max70Text? RejectedReason { get; init; }
+
+    /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public Max70Text? Reference { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<GenericInformation1> AdditionalData { get; init; } = [];
 }

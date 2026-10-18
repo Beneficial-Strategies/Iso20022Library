@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Quantity50
 {
     /// <summary>
+    /// Unit.
+    /// </summary>
+    [DisplayName("Unit")]
+    [IsoXmlTag("Unit")]
+    public DecimalNumber? Unit { get; init; }
+
+    /// <summary>
+    /// Percentage Rate.
+    /// </summary>
+    [DisplayName("Percentage Rate")]
+    [IsoXmlTag("PctgRate")]
+    public PercentageRate? PercentageRate { get; init; }
+
+    /// <summary>
+    /// Face Amount.
+    /// </summary>
+    [DisplayName("Face Amount")]
+    [IsoXmlTag("FaceAmt")]
+    public ImpliedCurrencyAndAmount? FaceAmount { get; init; }
+
+    /// <summary>
     /// Amortised Value.
     /// </summary>
     [DisplayName("Amortised Value")]
@@ -31,30 +52,9 @@ public record Quantity50
     public ActiveCurrencyAnd13DecimalAmount? CashAmount { get; init; }
 
     /// <summary>
-    /// Face Amount.
-    /// </summary>
-    [DisplayName("Face Amount")]
-    [IsoXmlTag("FaceAmt")]
-    public ImpliedCurrencyAndAmount? FaceAmount { get; init; }
-
-    /// <summary>
     /// Other Asset.
     /// </summary>
     [DisplayName("Other Asset")]
     [IsoXmlTag("OthrAsst")]
     public Max35Text? OtherAsset { get; init; }
-
-    /// <summary>
-    /// Percentage Rate.
-    /// </summary>
-    [DisplayName("Percentage Rate")]
-    [IsoXmlTag("PctgRate")]
-    public PercentageRate? PercentageRate { get; init; }
-
-    /// <summary>
-    /// Unit.
-    /// </summary>
-    [DisplayName("Unit")]
-    [IsoXmlTag("Unit")]
-    public DecimalNumber? Unit { get; init; }
 }

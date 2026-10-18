@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionDate104
 {
     /// <summary>
-    /// Borrower Stock Lending Deadline.
+    /// Early Response Deadline.
     /// </summary>
-    [DisplayName("Borrower Stock Lending Deadline")]
-    [IsoXmlTag("BrrwrStockLndgDdln")]
-    public ValueList<BorrowerLendingDeadline5> BorrowerStockLendingDeadline { get; init; } = [];
+    [DisplayName("Early Response Deadline")]
+    [IsoXmlTag("EarlyRspnDdln")]
+    public DateFormat43Choice_? EarlyResponseDeadline { get; init; }
 
     /// <summary>
     /// Cover Expiration Deadline.
@@ -31,39 +31,11 @@ public record CorporateActionDate104
     public DateFormat43Choice_? CoverExpirationDeadline { get; init; }
 
     /// <summary>
-    /// Depository Cover Expiration Date.
+    /// Protect Deadline.
     /// </summary>
-    [DisplayName("Depository Cover Expiration Date")]
-    [IsoXmlTag("DpstryCoverXprtnDt")]
-    public DateFormat43Choice_? DepositoryCoverExpirationDate { get; init; }
-
-    /// <summary>
-    /// Documentation Deadline.
-    /// </summary>
-    [DisplayName("Documentation Deadline")]
-    [IsoXmlTag("DcmnttnDdln")]
-    public DateFormat43Choice_? DocumentationDeadline { get; init; }
-
-    /// <summary>
-    /// Early Response Deadline.
-    /// </summary>
-    [DisplayName("Early Response Deadline")]
-    [IsoXmlTag("EarlyRspnDdln")]
-    public DateFormat43Choice_? EarlyResponseDeadline { get; init; }
-
-    /// <summary>
-    /// End Of Securities Blocking Period.
-    /// </summary>
-    [DisplayName("End Of Securities Blocking Period")]
-    [IsoXmlTag("EndOfSctiesBlckgPrd")]
-    public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; init; }
-
-    /// <summary>
-    /// Expiry Date.
-    /// </summary>
-    [DisplayName("Expiry Date")]
-    [IsoXmlTag("XpryDt")]
-    public DateFormat43Choice_? ExpiryDate { get; init; }
+    [DisplayName("Protect Deadline")]
+    [IsoXmlTag("PrtctDdln")]
+    public DateFormat43Choice_? ProtectDeadline { get; init; }
 
     /// <summary>
     /// Market Deadline.
@@ -73,18 +45,32 @@ public record CorporateActionDate104
     public DateFormat43Choice_? MarketDeadline { get; init; }
 
     /// <summary>
-    /// Protect Deadline.
-    /// </summary>
-    [DisplayName("Protect Deadline")]
-    [IsoXmlTag("PrtctDdln")]
-    public DateFormat43Choice_? ProtectDeadline { get; init; }
-
-    /// <summary>
     /// Response Deadline.
     /// </summary>
     [DisplayName("Response Deadline")]
     [IsoXmlTag("RspnDdln")]
     public DateFormat44Choice_? ResponseDeadline { get; init; }
+
+    /// <summary>
+    /// Expiry Date.
+    /// </summary>
+    [DisplayName("Expiry Date")]
+    [IsoXmlTag("XpryDt")]
+    public DateFormat43Choice_? ExpiryDate { get; init; }
+
+    /// <summary>
+    /// Subscription Cost Debit Date.
+    /// </summary>
+    [DisplayName("Subscription Cost Debit Date")]
+    [IsoXmlTag("SbcptCostDbtDt")]
+    public DateFormat43Choice_? SubscriptionCostDebitDate { get; init; }
+
+    /// <summary>
+    /// Depository Cover Expiration Date.
+    /// </summary>
+    [DisplayName("Depository Cover Expiration Date")]
+    [IsoXmlTag("DpstryCoverXprtnDt")]
+    public DateFormat43Choice_? DepositoryCoverExpirationDate { get; init; }
 
     /// <summary>
     /// Stock Lending Deadline.
@@ -94,9 +80,23 @@ public record CorporateActionDate104
     public DateFormat43Choice_? StockLendingDeadline { get; init; }
 
     /// <summary>
-    /// Subscription Cost Debit Date.
+    /// Borrower Stock Lending Deadline.
     /// </summary>
-    [DisplayName("Subscription Cost Debit Date")]
-    [IsoXmlTag("SbcptCostDbtDt")]
-    public DateFormat43Choice_? SubscriptionCostDebitDate { get; init; }
+    [DisplayName("Borrower Stock Lending Deadline")]
+    [IsoXmlTag("BrrwrStockLndgDdln")]
+    public ValueList<BorrowerLendingDeadline5> BorrowerStockLendingDeadline { get; init; } = [];
+
+    /// <summary>
+    /// End Of Securities Blocking Period.
+    /// </summary>
+    [DisplayName("End Of Securities Blocking Period")]
+    [IsoXmlTag("EndOfSctiesBlckgPrd")]
+    public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; init; }
+
+    /// <summary>
+    /// Documentation Deadline.
+    /// </summary>
+    [DisplayName("Documentation Deadline")]
+    [IsoXmlTag("DcmnttnDdln")]
+    public DateFormat43Choice_? DocumentationDeadline { get; init; }
 }

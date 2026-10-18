@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TravelAgencyPackage2
 {
     /// <summary>
-    /// Credit Card Slip Number.
+    /// Reservation Number.
     /// </summary>
-    [DisplayName("Credit Card Slip Number")]
-    [IsoXmlTag("CdtCardSlipNb")]
-    public Max35Text? CreditCardSlipNumber { get; init; }
+    [DisplayName("Reservation Number")]
+    [IsoXmlTag("RsvatnNb")]
+    public Max35Text? ReservationNumber { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max70Text? Type { get; init; }
+
+    /// <summary>
+    /// Number In Party.
+    /// </summary>
+    [DisplayName("Number In Party")]
+    [IsoXmlTag("NbInPty")]
+    public Max10NumericText? NumberInParty { get; init; }
 
     /// <summary>
     /// Customer Reference.
@@ -45,11 +59,11 @@ public record TravelAgencyPackage2
     public Max35Text? DeliveryOrderNumber { get; init; }
 
     /// <summary>
-    /// Fee.
+    /// Credit Card Slip Number.
     /// </summary>
-    [DisplayName("Fee")]
-    [IsoXmlTag("Fee")]
-    public ImpliedCurrencyAndAmount? Fee { get; init; }
+    [DisplayName("Credit Card Slip Number")]
+    [IsoXmlTag("CdtCardSlipNb")]
+    public Max35Text? CreditCardSlipNumber { get; init; }
 
     /// <summary>
     /// Insurance.
@@ -66,23 +80,9 @@ public record TravelAgencyPackage2
     public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
 
     /// <summary>
-    /// Number In Party.
+    /// Fee.
     /// </summary>
-    [DisplayName("Number In Party")]
-    [IsoXmlTag("NbInPty")]
-    public Max10NumericText? NumberInParty { get; init; }
-
-    /// <summary>
-    /// Reservation Number.
-    /// </summary>
-    [DisplayName("Reservation Number")]
-    [IsoXmlTag("RsvatnNb")]
-    public Max35Text? ReservationNumber { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max70Text? Type { get; init; }
+    [DisplayName("Fee")]
+    [IsoXmlTag("Fee")]
+    public ImpliedCurrencyAndAmount? Fee { get; init; }
 }

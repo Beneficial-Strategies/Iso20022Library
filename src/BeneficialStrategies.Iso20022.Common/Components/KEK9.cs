@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record KEK9
 {
     /// <summary>
-    /// Encrypted Key.
+    /// Version.
     /// </summary>
-    [DisplayName("Encrypted Key")]
-    [IsoXmlTag("NcrptdKey")]
-    public Max500Binary? EncryptedKey { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// KEK Identification.
@@ -38,9 +38,9 @@ public record KEK9
     public required AlgorithmIdentification32 KeyEncryptionAlgorithm { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Encrypted Key.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
+    [DisplayName("Encrypted Key")]
+    [IsoXmlTag("NcrptdKey")]
+    public Max500Binary? EncryptedKey { get; init; }
 }

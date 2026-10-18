@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReversalResponse9
 {
     /// <summary>
-    /// Issuer Reference Data.
+    /// Sale Transaction Identification.
     /// </summary>
-    [DisplayName("Issuer Reference Data")]
-    [IsoXmlTag("IssrRefData")]
-    public Max140Text? IssuerReferenceData { get; init; }
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; }
 
     /// <summary>
-    /// POI Reconciliation Identification.
+    /// Sale Reference Identification.
     /// </summary>
-    [DisplayName("POI Reconciliation Identification")]
-    [IsoXmlTag("POIRcncltnId")]
-    public Max35Text? POIReconciliationIdentification { get; init; }
+    [DisplayName("Sale Reference Identification")]
+    [IsoXmlTag("SaleRefId")]
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// POI Transaction Identification.
@@ -38,11 +38,18 @@ public record ReversalResponse9
     public required TransactionIdentifier1 POITransactionIdentification { get; init; }
 
     /// <summary>
-    /// Receipt.
+    /// POI Reconciliation Identification.
     /// </summary>
-    [DisplayName("Receipt")]
-    [IsoXmlTag("Rct")]
-    public ValueList<PaymentReceipt6> Receipt { get; init; } = [];
+    [DisplayName("POI Reconciliation Identification")]
+    [IsoXmlTag("POIRcncltnId")]
+    public Max35Text? POIReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Issuer Reference Data.
+    /// </summary>
+    [DisplayName("Issuer Reference Data")]
+    [IsoXmlTag("IssrRefData")]
+    public Max140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Reversal Transaction Result.
@@ -59,16 +66,9 @@ public record ReversalResponse9
     public ImpliedCurrencyAndAmount? ReversedAmount { get; init; }
 
     /// <summary>
-    /// Sale Reference Identification.
+    /// Receipt.
     /// </summary>
-    [DisplayName("Sale Reference Identification")]
-    [IsoXmlTag("SaleRefId")]
-    public Max35Text? SaleReferenceIdentification { get; init; }
-
-    /// <summary>
-    /// Sale Transaction Identification.
-    /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; }
+    [DisplayName("Receipt")]
+    [IsoXmlTag("Rct")]
+    public ValueList<PaymentReceipt6> Receipt { get; init; } = [];
 }

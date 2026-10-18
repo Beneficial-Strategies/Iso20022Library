@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Location6
 {
     /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
-
-    /// <summary>
     /// Code.
     /// </summary>
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     public Max35Text? Code { get; init; }
+
+    /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Description.
@@ -38,11 +38,11 @@ public record Location6
     public Max256Text? Description { get; init; }
 
     /// <summary>
-    /// Local Currency.
+    /// Address.
     /// </summary>
-    [DisplayName("Local Currency")]
-    [IsoXmlTag("LclCcy")]
-    public ISO3NumericCurrencyCode? LocalCurrency { get; init; }
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
 
     /// <summary>
     /// Local Time Zone.
@@ -52,9 +52,9 @@ public record Location6
     public Max70Text? LocalTimeZone { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Local Currency.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max35Text? Name { get; init; }
+    [DisplayName("Local Currency")]
+    [IsoXmlTag("LclCcy")]
+    public ISO3NumericCurrencyCode? LocalCurrency { get; init; }
 }

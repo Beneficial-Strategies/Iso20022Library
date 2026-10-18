@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentTransaction132
 {
     /// <summary>
-    /// Action.
+    /// Authorisation Result.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action15> Action { get; init; } = [];
-
-    /// <summary>
-    /// Additional Available Product.
-    /// </summary>
-    [DisplayName("Additional Available Product")]
-    [IsoXmlTag("AddtlAvlblPdct")]
-    public ValueList<Product5> AdditionalAvailableProduct { get; init; } = [];
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public required AuthorisationResult17 AuthorisationResult { get; init; }
 
     /// <summary>
     /// Allowed Product Code.
@@ -38,11 +31,18 @@ public record CardPaymentTransaction132
     public ValueList<Product4> AllowedProductCode { get; init; } = [];
 
     /// <summary>
-    /// Authorisation Result.
+    /// Not Allowed Product Code.
     /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public required AuthorisationResult17 AuthorisationResult { get; init; }
+    [DisplayName("Not Allowed Product Code")]
+    [IsoXmlTag("NotAllwdPdctCd")]
+    public ValueList<Product4> NotAllowedProductCode { get; init; } = [];
+
+    /// <summary>
+    /// Additional Available Product.
+    /// </summary>
+    [DisplayName("Additional Available Product")]
+    [IsoXmlTag("AddtlAvlblPdct")]
+    public ValueList<Product5> AdditionalAvailableProduct { get; init; } = [];
 
     /// <summary>
     /// Balance.
@@ -52,23 +52,23 @@ public record CardPaymentTransaction132
     public AmountAndDirection93? Balance { get; init; }
 
     /// <summary>
-    /// Currency Conversion Eligibility.
-    /// </summary>
-    [DisplayName("Currency Conversion Eligibility")]
-    [IsoXmlTag("CcyConvsElgblty")]
-    public CurrencyConversion29? CurrencyConversionEligibility { get; init; }
-
-    /// <summary>
-    /// Not Allowed Product Code.
-    /// </summary>
-    [DisplayName("Not Allowed Product Code")]
-    [IsoXmlTag("NotAllwdPdctCd")]
-    public ValueList<Product4> NotAllowedProductCode { get; init; } = [];
-
-    /// <summary>
     /// Protected Balance.
     /// </summary>
     [DisplayName("Protected Balance")]
     [IsoXmlTag("PrtctdBal")]
     public ContentInformationType40? ProtectedBalance { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action15> Action { get; init; } = [];
+
+    /// <summary>
+    /// Currency Conversion Eligibility.
+    /// </summary>
+    [DisplayName("Currency Conversion Eligibility")]
+    [IsoXmlTag("CcyConvsElgblty")]
+    public CurrencyConversion29? CurrencyConversionEligibility { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalData17
 {
     /// <summary>
-    /// Encoding Format.
-    /// </summary>
-    [DisplayName("Encoding Format")]
-    [IsoXmlTag("NcodgFrmt")]
-    public Max35Text? EncodingFormat { get; init; }
-
-    /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
     public required ISOMax3ALanguageCode Language { get; init; }
+
+    /// <summary>
+    /// Encoding Format.
+    /// </summary>
+    [DisplayName("Encoding Format")]
+    [IsoXmlTag("NcodgFrmt")]
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Text Message.

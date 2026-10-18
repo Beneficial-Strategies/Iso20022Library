@@ -46,18 +46,18 @@ public record AcceptorConfigurationUpdateV14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acceptor Configuration.
-    /// </summary>
-    [DisplayName("Acceptor Configuration")]
-    [IsoXmlTag("AccptrCfgtn")]
-    public required AcceptorConfiguration14 AcceptorConfiguration { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required TMSHeader1 Header { get; init; }
+
+    /// <summary>
+    /// Acceptor Configuration.
+    /// </summary>
+    [DisplayName("Acceptor Configuration")]
+    [IsoXmlTag("AccptrCfgtn")]
+    public required AcceptorConfiguration14 AcceptorConfiguration { get; init; }
 
     /// <summary>
     /// Security Trailer.

@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FileData1
 {
     /// <summary>
-    /// File Location Electronic Address.
+    /// Type.
     /// </summary>
-    [DisplayName("File Location Electronic Address")]
-    [IsoXmlTag("FileLctnElctrncAdr")]
-    public Max2048Text? FileLocationElectronicAddress { get; init; }
-
-    /// <summary>
-    /// File Name.
-    /// </summary>
-    [DisplayName("File Name")]
-    [IsoXmlTag("FileNm")]
-    public Max140Text? FileName { get; init; }
-
-    /// <summary>
-    /// Format.
-    /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public DocumentFormat1Choice_? Format { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public DocumentType1Choice_? Type { get; init; }
 
     /// <summary>
     /// Identification.
@@ -52,6 +38,20 @@ public record FileData1
     public DateAndDateTime2Choice_? IssueDate { get; init; }
 
     /// <summary>
+    /// Format.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public DocumentFormat1Choice_? Format { get; init; }
+
+    /// <summary>
+    /// File Name.
+    /// </summary>
+    [DisplayName("File Name")]
+    [IsoXmlTag("FileNm")]
+    public Max140Text? FileName { get; init; }
+
+    /// <summary>
     /// Network Reference.
     /// </summary>
     [DisplayName("Network Reference")]
@@ -59,9 +59,9 @@ public record FileData1
     public Max140Text? NetworkReference { get; init; }
 
     /// <summary>
-    /// Type.
+    /// File Location Electronic Address.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public DocumentType1Choice_? Type { get; init; }
+    [DisplayName("File Location Electronic Address")]
+    [IsoXmlTag("FileLctnElctrncAdr")]
+    public Max2048Text? FileLocationElectronicAddress { get; init; }
 }

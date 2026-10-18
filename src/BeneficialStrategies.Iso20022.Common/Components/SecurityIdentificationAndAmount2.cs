@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityIdentificationAndAmount2
 {
     /// <summary>
-    /// Debt Issuer Type.
-    /// </summary>
-    [DisplayName("Debt Issuer Type")]
-    [IsoXmlTag("DebtIssrTp")]
-    public DebtIssuerType1Code? DebtIssuerType { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Type.
-    /// </summary>
-    [DisplayName("Financial Instrument Type")]
-    [IsoXmlTag("FinInstrmTp")]
-    public required ProductType6Code FinancialInstrumentType { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -43,4 +29,18 @@ public record SecurityIdentificationAndAmount2
     [DisplayName("Market Value")]
     [IsoXmlTag("MktVal")]
     public required ActiveCurrencyAnd24Amount MarketValue { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Type.
+    /// </summary>
+    [DisplayName("Financial Instrument Type")]
+    [IsoXmlTag("FinInstrmTp")]
+    public required ProductType6Code FinancialInstrumentType { get; init; }
+
+    /// <summary>
+    /// Debt Issuer Type.
+    /// </summary>
+    [DisplayName("Debt Issuer Type")]
+    [IsoXmlTag("DebtIssrTp")]
+    public DebtIssuerType1Code? DebtIssuerType { get; init; }
 }

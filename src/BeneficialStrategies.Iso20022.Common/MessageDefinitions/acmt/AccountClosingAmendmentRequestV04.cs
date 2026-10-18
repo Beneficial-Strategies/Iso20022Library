@@ -46,6 +46,20 @@ public record AccountClosingAmendmentRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References4 References { get; init; }
+
+    /// <summary>
+    /// From.
+    /// </summary>
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification39? From { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
@@ -60,11 +74,11 @@ public record AccountClosingAmendmentRequestV04 : IOuterRecord
     public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
 
     /// <summary>
-    /// Balance Transfer Account.
+    /// Organisation Identification.
     /// </summary>
-    [DisplayName("Balance Transfer Account")]
-    [IsoXmlTag("BalTrfAcct")]
-    public AccountForAction1? BalanceTransferAccount { get; init; }
+    [DisplayName("Organisation Identification")]
+    [IsoXmlTag("OrgId")]
+    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
 
     /// <summary>
     /// Contract Dates.
@@ -74,39 +88,11 @@ public record AccountClosingAmendmentRequestV04 : IOuterRecord
     public AccountContract4? ContractDates { get; init; }
 
     /// <summary>
-    /// Digital Signature.
+    /// Balance Transfer Account.
     /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
-
-    /// <summary>
-    /// From.
-    /// </summary>
-    [DisplayName("From")]
-    [IsoXmlTag("Fr")]
-    public OrganisationIdentification39? From { get; init; }
-
-    /// <summary>
-    /// Organisation Identification.
-    /// </summary>
-    [DisplayName("Organisation Identification")]
-    [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
-
-    /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References4 References { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Balance Transfer Account")]
+    [IsoXmlTag("BalTrfAcct")]
+    public AccountForAction1? BalanceTransferAccount { get; init; }
 
     /// <summary>
     /// Transfer Account Servicer Identification.
@@ -114,4 +100,18 @@ public record AccountClosingAmendmentRequestV04 : IOuterRecord
     [DisplayName("Transfer Account Servicer Identification")]
     [IsoXmlTag("TrfAcctSvcrId")]
     public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; }
+
+    /// <summary>
+    /// Digital Signature.
+    /// </summary>
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

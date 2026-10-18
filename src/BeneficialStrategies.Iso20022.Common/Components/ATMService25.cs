@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMService25
 {
     /// <summary>
-    /// ATM Service Code.
-    /// </summary>
-    [DisplayName("ATM Service Code")]
-    [IsoXmlTag("ATMSvcCd")]
-    public Max35Text? ATMServiceCode { get; init; }
-
-    /// <summary>
     /// Service Reference.
     /// </summary>
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
     public Max35Text? ServiceReference { get; init; }
+
+    /// <summary>
+    /// ATM Service Code.
+    /// </summary>
+    [DisplayName("ATM Service Code")]
+    [IsoXmlTag("ATMSvcCd")]
+    public Max35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Service Type.

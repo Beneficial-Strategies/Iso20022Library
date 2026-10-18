@@ -46,11 +46,18 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
+
+    /// <summary>
+    /// Vote Execution Confirmation Identification.
+    /// </summary>
+    [DisplayName("Vote Execution Confirmation Identification")]
+    [IsoXmlTag("VoteExctnConfId")]
+    public Max35Text? VoteExecutionConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Meeting Instruction Identification.
@@ -67,25 +74,11 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
-    /// Pagination.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Vote Execution Confirmation Identification.
-    /// </summary>
-    [DisplayName("Vote Execution Confirmation Identification")]
-    [IsoXmlTag("VoteExctnConfId")]
-    public Max35Text? VoteExecutionConfirmationIdentification { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Vote Instructions.
@@ -100,4 +93,11 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     [DisplayName("Vote Instructions Confirmation URL Address")]
     [IsoXmlTag("VoteInstrsConfURLAdr")]
     public Max2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

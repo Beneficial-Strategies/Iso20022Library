@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FXSupplementaryData2
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required AmountType4Choice_ Amount { get; init; }
-
-    /// <summary>
     /// Debtor Account.
     /// </summary>
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public required CashAccount38 DebtorAccount { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required AmountType4Choice_ Amount { get; init; }
 
     /// <summary>
     /// Exchange Rate Information.

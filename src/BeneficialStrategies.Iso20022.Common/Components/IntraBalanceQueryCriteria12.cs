@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraBalanceQueryCriteria12
 {
     /// <summary>
+    /// Modification Request Identification.
+    /// </summary>
+    [DisplayName("Modification Request Identification")]
+    [IsoXmlTag("ModReqId")]
+    public ValueList<Max35Text> ModificationRequestIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Processing Status.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ValueList<ModificationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -38,13 +52,6 @@ public record IntraBalanceQueryCriteria12
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
-
-    /// <summary>
     /// Message Originator.
     /// </summary>
     [DisplayName("Message Originator")]
@@ -52,16 +59,9 @@ public record IntraBalanceQueryCriteria12
     public ValueList<SystemPartyIdentification8> MessageOriginator { get; init; } = [];
 
     /// <summary>
-    /// Modification Request Identification.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Modification Request Identification")]
-    [IsoXmlTag("ModReqId")]
-    public ValueList<Max35Text> ModificationRequestIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Processing Status.
-    /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public ValueList<ModificationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 }

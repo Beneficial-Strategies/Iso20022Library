@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EncryptedDataElement2
 {
     /// <summary>
-    /// Clear Text Format.
+    /// Identification.
     /// </summary>
-    [DisplayName("Clear Text Format")]
-    [IsoXmlTag("ClearTxtFrmt")]
-    public EncryptedDataFormat1Code? ClearTextFormat { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Data.
@@ -31,11 +31,11 @@ public record EncryptedDataElement2
     public required EncryptedData2Choice_ Data { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Clear Text Format.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
+    [DisplayName("Clear Text Format")]
+    [IsoXmlTag("ClearTxtFrmt")]
+    public EncryptedDataFormat1Code? ClearTextFormat { get; init; }
 
     /// <summary>
     /// Other Clear Text Format.

@@ -46,6 +46,20 @@ public record SettlementObligationReportV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Report Parameters.
+    /// </summary>
+    [DisplayName("Report Parameters")]
+    [IsoXmlTag("RptParams")]
+    public required ReportParameters8 ReportParameters { get; init; }
+
+    /// <summary>
+    /// Pagination.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
     /// Clearing Member.
     /// </summary>
     [DisplayName("Clearing Member")]
@@ -67,25 +81,11 @@ public record SettlementObligationReportV04 : IOuterRecord
     public SecuritiesAccount19? DeliveryAccount { get; init; }
 
     /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
     /// Report Details.
     /// </summary>
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
     public ValueList<Report7> ReportDetails { get; init; } = [];
-
-    /// <summary>
-    /// Report Parameters.
-    /// </summary>
-    [DisplayName("Report Parameters")]
-    [IsoXmlTag("RptParams")]
-    public required ReportParameters8 ReportParameters { get; init; }
 
     /// <summary>
     /// Settlement Parties.

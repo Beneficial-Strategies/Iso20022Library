@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentDataSet38
 {
     /// <summary>
+    /// Transaction Sequence Counter.
+    /// </summary>
+    [DisplayName("Transaction Sequence Counter")]
+    [IsoXmlTag("TxSeqCntr")]
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
+
+    /// <summary>
+    /// Transaction Response.
+    /// </summary>
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public required ResponseType10 TransactionResponse { get; init; }
+
+    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -29,18 +43,4 @@ public record CardPaymentDataSet38
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public required CardPaymentTransactionAdviceResponse5 Transaction { get; init; }
-
-    /// <summary>
-    /// Transaction Response.
-    /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public required ResponseType10 TransactionResponse { get; init; }
-
-    /// <summary>
-    /// Transaction Sequence Counter.
-    /// </summary>
-    [DisplayName("Transaction Sequence Counter")]
-    [IsoXmlTag("TxSeqCntr")]
-    public required Max9NumericText TransactionSequenceCounter { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RemittanceInformation23
 {
     /// <summary>
-    /// Original Payment Information.
-    /// </summary>
-    [DisplayName("Original Payment Information")]
-    [IsoXmlTag("OrgnlPmtInf")]
-    public required OriginalPaymentInformation10 OriginalPaymentInformation { get; init; }
-
-    /// <summary>
     /// Remittance Identification.
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
     public Max35Text? RemittanceIdentification { get; init; }
+
+    /// <summary>
+    /// Unstructured.
+    /// </summary>
+    [DisplayName("Unstructured")]
+    [IsoXmlTag("Ustrd")]
+    public ValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Structured.
@@ -38,9 +38,9 @@ public record RemittanceInformation23
     public ValueList<StructuredRemittanceInformation18> Structured { get; init; } = [];
 
     /// <summary>
-    /// Unstructured.
+    /// Original Payment Information.
     /// </summary>
-    [DisplayName("Unstructured")]
-    [IsoXmlTag("Ustrd")]
-    public ValueList<Max140Text> Unstructured { get; init; } = [];
+    [DisplayName("Original Payment Information")]
+    [IsoXmlTag("OrgnlPmtInf")]
+    public required OriginalPaymentInformation10 OriginalPaymentInformation { get; init; }
 }

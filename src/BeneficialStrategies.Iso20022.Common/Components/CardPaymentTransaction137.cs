@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentTransaction137
 {
     /// <summary>
+    /// Sale Reference Identification.
+    /// </summary>
+    [DisplayName("Sale Reference Identification")]
+    [IsoXmlTag("SaleRefId")]
+    public Max35Text? SaleReferenceIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier1 TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Initiator Transaction Identification.
     /// </summary>
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
     public Max35Text? InitiatorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Interchange Data.
-    /// </summary>
-    [DisplayName("Interchange Data")]
-    [IsoXmlTag("IntrchngData")]
-    public Max140Text? InterchangeData { get; init; }
-
-    /// <summary>
-    /// Merchant Reference Data.
-    /// </summary>
-    [DisplayName("Merchant Reference Data")]
-    [IsoXmlTag("MrchntRefData")]
-    public Max70Text? MerchantReferenceData { get; init; }
 
     /// <summary>
     /// Recipient Transaction Identification.
@@ -52,11 +52,11 @@ public record CardPaymentTransaction137
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Sale Reference Identification.
+    /// Interchange Data.
     /// </summary>
-    [DisplayName("Sale Reference Identification")]
-    [IsoXmlTag("SaleRefId")]
-    public Max35Text? SaleReferenceIdentification { get; init; }
+    [DisplayName("Interchange Data")]
+    [IsoXmlTag("IntrchngData")]
+    public Max140Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Transaction Details.
@@ -66,9 +66,9 @@ public record CardPaymentTransaction137
     public required CardPaymentTransactionDetails53 TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Merchant Reference Data.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier1 TransactionIdentification { get; init; }
+    [DisplayName("Merchant Reference Data")]
+    [IsoXmlTag("MrchntRefData")]
+    public Max70Text? MerchantReferenceData { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MandateSuspension4
 {
     /// <summary>
-    /// Original Mandate.
+    /// Suspension Request Identification.
     /// </summary>
-    [DisplayName("Original Mandate")]
-    [IsoXmlTag("OrgnlMndt")]
-    public required OriginalMandate10Choice_ OriginalMandate { get; init; }
+    [DisplayName("Suspension Request Identification")]
+    [IsoXmlTag("SspnsnReqId")]
+    public required Max35Text SuspensionRequestIdentification { get; init; }
 
     /// <summary>
     /// Original Message Information.
@@ -31,13 +31,6 @@ public record MandateSuspension4
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Suspension Reason.
     /// </summary>
     [DisplayName("Suspension Reason")]
@@ -45,9 +38,16 @@ public record MandateSuspension4
     public required MandateSuspensionReason3 SuspensionReason { get; init; }
 
     /// <summary>
-    /// Suspension Request Identification.
+    /// Original Mandate.
     /// </summary>
-    [DisplayName("Suspension Request Identification")]
-    [IsoXmlTag("SspnsnReqId")]
-    public required Max35Text SuspensionRequestIdentification { get; init; }
+    [DisplayName("Original Mandate")]
+    [IsoXmlTag("OrgnlMndt")]
+    public required OriginalMandate10Choice_ OriginalMandate { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

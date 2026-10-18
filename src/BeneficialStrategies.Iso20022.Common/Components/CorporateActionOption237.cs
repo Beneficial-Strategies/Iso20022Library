@@ -17,11 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionOption237
 {
     /// <summary>
-    /// Additional Information.
+    /// Option Number.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative32? AdditionalInformation { get; init; }
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public required OptionNumber1Choice_ OptionNumber { get; init; }
+
+    /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption40Choice_ OptionType { get; init; }
+
+    /// <summary>
+    /// Option Features.
+    /// </summary>
+    [DisplayName("Option Features")]
+    [IsoXmlTag("OptnFeatrs")]
+    public OptionFeaturesFormat25Choice_? OptionFeatures { get; init; }
+
+    /// <summary>
+    /// Fraction Disposition.
+    /// </summary>
+    [DisplayName("Fraction Disposition")]
+    [IsoXmlTag("FrctnDspstn")]
+    public FractionDispositionType28Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Change Type.
@@ -31,11 +52,18 @@ public record CorporateActionOption237
     public ValueList<CorporateActionChangeTypeFormat6Choice_> ChangeType { get; init; } = [];
 
     /// <summary>
-    /// Currency Option.
+    /// Eligible For Collateral Indicator.
     /// </summary>
-    [DisplayName("Currency Option")]
-    [IsoXmlTag("CcyOptn")]
-    public ActiveCurrencyCode? CurrencyOption { get; init; }
+    [DisplayName("Eligible For Collateral Indicator")]
+    [IsoXmlTag("ElgblForCollInd")]
+    public YesNoIndicator? EligibleForCollateralIndicator { get; init; }
+
+    /// <summary>
+    /// Solicitation Dealer Fee Indicator.
+    /// </summary>
+    [DisplayName("Solicitation Dealer Fee Indicator")]
+    [IsoXmlTag("SlctnDealrFeeInd")]
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 
     /// <summary>
     /// Currency To Buy.
@@ -52,67 +80,11 @@ public record CorporateActionOption237
     public ActiveCurrencyCode? CurrencyToSell { get; init; }
 
     /// <summary>
-    /// Eligible For Collateral Indicator.
+    /// Currency Option.
     /// </summary>
-    [DisplayName("Eligible For Collateral Indicator")]
-    [IsoXmlTag("ElgblForCollInd")]
-    public YesNoIndicator? EligibleForCollateralIndicator { get; init; }
-
-    /// <summary>
-    /// Execution Requested Date Time.
-    /// </summary>
-    [DisplayName("Execution Requested Date Time")]
-    [IsoXmlTag("ExctnReqdDtTm")]
-    public DateAndDateTime2Choice_? ExecutionRequestedDateTime { get; init; }
-
-    /// <summary>
-    /// Fraction Disposition.
-    /// </summary>
-    [DisplayName("Fraction Disposition")]
-    [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType28Choice_? FractionDisposition { get; init; }
-
-    /// <summary>
-    /// Option Features.
-    /// </summary>
-    [DisplayName("Option Features")]
-    [IsoXmlTag("OptnFeatrs")]
-    public OptionFeaturesFormat25Choice_? OptionFeatures { get; init; }
-
-    /// <summary>
-    /// Option Number.
-    /// </summary>
-    [DisplayName("Option Number")]
-    [IsoXmlTag("OptnNb")]
-    public required OptionNumber1Choice_ OptionNumber { get; init; }
-
-    /// <summary>
-    /// Option Type.
-    /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption40Choice_ OptionType { get; init; }
-
-    /// <summary>
-    /// Price Details.
-    /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public CorporateActionPrice88? PriceDetails { get; init; }
-
-    /// <summary>
-    /// Rate And Amount Details.
-    /// </summary>
-    [DisplayName("Rate And Amount Details")]
-    [IsoXmlTag("RateAndAmtDtls")]
-    public CorporateActionRate127? RateAndAmountDetails { get; init; }
-
-    /// <summary>
-    /// Securities Quantity Or Instructed Amount.
-    /// </summary>
-    [DisplayName("Securities Quantity Or Instructed Amount")]
-    [IsoXmlTag("SctiesQtyOrInstdAmt")]
-    public required SecuritiesQuantityOrAmount6Choice_ SecuritiesQuantityOrInstructedAmount { get; init; }
+    [DisplayName("Currency Option")]
+    [IsoXmlTag("CcyOptn")]
+    public ActiveCurrencyCode? CurrencyOption { get; init; }
 
     /// <summary>
     /// Security Identification.
@@ -122,6 +94,34 @@ public record CorporateActionOption237
     public SecurityIdentification19? SecurityIdentification { get; init; }
 
     /// <summary>
+    /// Securities Quantity Or Instructed Amount.
+    /// </summary>
+    [DisplayName("Securities Quantity Or Instructed Amount")]
+    [IsoXmlTag("SctiesQtyOrInstdAmt")]
+    public required SecuritiesQuantityOrAmount6Choice_ SecuritiesQuantityOrInstructedAmount { get; init; }
+
+    /// <summary>
+    /// Execution Requested Date Time.
+    /// </summary>
+    [DisplayName("Execution Requested Date Time")]
+    [IsoXmlTag("ExctnReqdDtTm")]
+    public DateAndDateTime2Choice_? ExecutionRequestedDateTime { get; init; }
+
+    /// <summary>
+    /// Rate And Amount Details.
+    /// </summary>
+    [DisplayName("Rate And Amount Details")]
+    [IsoXmlTag("RateAndAmtDtls")]
+    public CorporateActionRate127? RateAndAmountDetails { get; init; }
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public CorporateActionPrice88? PriceDetails { get; init; }
+
+    /// <summary>
     /// Shareholder Number.
     /// </summary>
     [DisplayName("Shareholder Number")]
@@ -129,9 +129,9 @@ public record CorporateActionOption237
     public Max25Text? ShareholderNumber { get; init; }
 
     /// <summary>
-    /// Solicitation Dealer Fee Indicator.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Solicitation Dealer Fee Indicator")]
-    [IsoXmlTag("SlctnDealrFeeInd")]
-    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative32? AdditionalInformation { get; init; }
 }

@@ -17,32 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditTransferTransaction68
 {
     /// <summary>
-    /// Creditor.
+    /// Payment Identification.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required PartyIdentification272 Creditor { get; init; }
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    public PaymentIdentification13? PaymentIdentification { get; init; }
 
     /// <summary>
-    /// Creditor Account.
+    /// Payment Type Information.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Ultimate Debtor.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
 
     /// <summary>
-    /// Creditor Agent Account.
+    /// Initiating Party.
     /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public PartyIdentification272? InitiatingParty { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -71,90 +71,6 @@ public record CreditTransferTransaction68
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
-
-    /// <summary>
-    /// Initiating Party.
-    /// </summary>
-    [DisplayName("Initiating Party")]
-    [IsoXmlTag("InitgPty")]
-    public PartyIdentification272? InitiatingParty { get; init; }
-
-    /// <summary>
-    /// Instructed Amount.
-    /// </summary>
-    [DisplayName("Instructed Amount")]
-    [IsoXmlTag("InstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? InstructedAmount { get; init; }
-
-    /// <summary>
-    /// Instruction For Creditor Agent.
-    /// </summary>
-    [DisplayName("Instruction For Creditor Agent")]
-    [IsoXmlTag("InstrForCdtrAgt")]
-    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
-
-    /// <summary>
-    /// Instruction For Next Agent.
-    /// </summary>
-    [DisplayName("Instruction For Next Agent")]
-    [IsoXmlTag("InstrForNxtAgt")]
-    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
-
-    /// <summary>
-    /// Intermediary Agent1.
-    /// </summary>
-    [DisplayName("Intermediary Agent1")]
-    [IsoXmlTag("IntrmyAgt1")]
-    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent1 { get; init; }
-
-    /// <summary>
-    /// Intermediary Agent1Account.
-    /// </summary>
-    [DisplayName("Intermediary Agent1Account")]
-    [IsoXmlTag("IntrmyAgt1Acct")]
-    public CashAccount40? IntermediaryAgent1Account { get; init; }
-
-    /// <summary>
-    /// Intermediary Agent2.
-    /// </summary>
-    [DisplayName("Intermediary Agent2")]
-    [IsoXmlTag("IntrmyAgt2")]
-    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent2 { get; init; }
-
-    /// <summary>
-    /// Intermediary Agent2Account.
-    /// </summary>
-    [DisplayName("Intermediary Agent2Account")]
-    [IsoXmlTag("IntrmyAgt2Acct")]
-    public CashAccount40? IntermediaryAgent2Account { get; init; }
-
-    /// <summary>
-    /// Intermediary Agent3.
-    /// </summary>
-    [DisplayName("Intermediary Agent3")]
-    [IsoXmlTag("IntrmyAgt3")]
-    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
-
-    /// <summary>
-    /// Intermediary Agent3Account.
-    /// </summary>
-    [DisplayName("Intermediary Agent3Account")]
-    [IsoXmlTag("IntrmyAgt3Acct")]
-    public CashAccount40? IntermediaryAgent3Account { get; init; }
-
-    /// <summary>
-    /// Payment Identification.
-    /// </summary>
-    [DisplayName("Payment Identification")]
-    [IsoXmlTag("PmtId")]
-    public PaymentIdentification13? PaymentIdentification { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
 
     /// <summary>
     /// Previous Instructing Agent1.
@@ -199,25 +115,74 @@ public record CreditTransferTransaction68
     public CashAccount40? PreviousInstructingAgent3Account { get; init; }
 
     /// <summary>
-    /// Purpose.
+    /// Intermediary Agent1.
     /// </summary>
-    [DisplayName("Purpose")]
-    [IsoXmlTag("Purp")]
-    public Purpose2Choice_? Purpose { get; init; }
+    [DisplayName("Intermediary Agent1")]
+    [IsoXmlTag("IntrmyAgt1")]
+    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent1 { get; init; }
 
     /// <summary>
-    /// Remittance Information.
+    /// Intermediary Agent1Account.
     /// </summary>
-    [DisplayName("Remittance Information")]
-    [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
+    [DisplayName("Intermediary Agent1Account")]
+    [IsoXmlTag("IntrmyAgt1Acct")]
+    public CashAccount40? IntermediaryAgent1Account { get; init; }
 
     /// <summary>
-    /// Tax.
+    /// Intermediary Agent2.
     /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public TaxData1? Tax { get; init; }
+    [DisplayName("Intermediary Agent2")]
+    [IsoXmlTag("IntrmyAgt2")]
+    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent2 { get; init; }
+
+    /// <summary>
+    /// Intermediary Agent2Account.
+    /// </summary>
+    [DisplayName("Intermediary Agent2Account")]
+    [IsoXmlTag("IntrmyAgt2Acct")]
+    public CashAccount40? IntermediaryAgent2Account { get; init; }
+
+    /// <summary>
+    /// Intermediary Agent3.
+    /// </summary>
+    [DisplayName("Intermediary Agent3")]
+    [IsoXmlTag("IntrmyAgt3")]
+    public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
+
+    /// <summary>
+    /// Intermediary Agent3Account.
+    /// </summary>
+    [DisplayName("Intermediary Agent3Account")]
+    [IsoXmlTag("IntrmyAgt3Acct")]
+    public CashAccount40? IntermediaryAgent3Account { get; init; }
+
+    /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor Agent Account.
+    /// </summary>
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required PartyIdentification272 Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Account.
+    /// </summary>
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.
@@ -227,9 +192,44 @@ public record CreditTransferTransaction68
     public PartyIdentification272? UltimateCreditor { get; init; }
 
     /// <summary>
-    /// Ultimate Debtor.
+    /// Instruction For Creditor Agent.
     /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
+    [DisplayName("Instruction For Creditor Agent")]
+    [IsoXmlTag("InstrForCdtrAgt")]
+    public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
+
+    /// <summary>
+    /// Instruction For Next Agent.
+    /// </summary>
+    [DisplayName("Instruction For Next Agent")]
+    [IsoXmlTag("InstrForNxtAgt")]
+    public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
+
+    /// <summary>
+    /// Purpose.
+    /// </summary>
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Purpose2Choice_? Purpose { get; init; }
+
+    /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public TaxData1? Tax { get; init; }
+
+    /// <summary>
+    /// Remittance Information.
+    /// </summary>
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    public RemittanceInformation22? RemittanceInformation { get; init; }
+
+    /// <summary>
+    /// Instructed Amount.
+    /// </summary>
+    [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? InstructedAmount { get; init; }
 }

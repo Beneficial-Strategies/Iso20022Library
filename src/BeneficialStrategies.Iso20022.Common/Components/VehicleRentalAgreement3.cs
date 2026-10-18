@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record VehicleRentalAgreement3
 {
     /// <summary>
-    /// Additional Amount.
+    /// Number.
     /// </summary>
-    [DisplayName("Additional Amount")]
-    [IsoXmlTag("AddtlAmt")]
-    public ValueList<Amount21> AdditionalAmount { get; init; } = [];
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Adjusted.
@@ -31,18 +31,18 @@ public record VehicleRentalAgreement3
     public TrueFalseIndicator? Adjusted { get; init; }
 
     /// <summary>
-    /// Check In Date.
+    /// Rental Location.
     /// </summary>
-    [DisplayName("Check In Date")]
-    [IsoXmlTag("ChckInDt")]
-    public ISODate? CheckInDate { get; init; }
+    [DisplayName("Rental Location")]
+    [IsoXmlTag("RntlLctn")]
+    public Address2? RentalLocation { get; init; }
 
     /// <summary>
-    /// Check In Time.
+    /// Pickup Location.
     /// </summary>
-    [DisplayName("Check In Time")]
-    [IsoXmlTag("ChckInTm")]
-    public ISOTime? CheckInTime { get; init; }
+    [DisplayName("Pickup Location")]
+    [IsoXmlTag("PckpLctn")]
+    public ValueList<Address2> PickupLocation { get; init; } = [];
 
     /// <summary>
     /// Check Out Date.
@@ -59,18 +59,25 @@ public record VehicleRentalAgreement3
     public ISOTime? CheckOutTime { get; init; }
 
     /// <summary>
-    /// Class.
+    /// Return Location.
     /// </summary>
-    [DisplayName("Class")]
-    [IsoXmlTag("Clss")]
-    public Max35Text? Class { get; init; }
+    [DisplayName("Return Location")]
+    [IsoXmlTag("RtrLctn")]
+    public Address2? ReturnLocation { get; init; }
 
     /// <summary>
-    /// Discount Programme.
+    /// Check In Date.
     /// </summary>
-    [DisplayName("Discount Programme")]
-    [IsoXmlTag("DscntPrgrmm")]
-    public ValueList<Discount3> DiscountProgramme { get; init; } = [];
+    [DisplayName("Check In Date")]
+    [IsoXmlTag("ChckInDt")]
+    public ISODate? CheckInDate { get; init; }
+
+    /// <summary>
+    /// Check In Time.
+    /// </summary>
+    [DisplayName("Check In Time")]
+    [IsoXmlTag("ChckInTm")]
+    public ISOTime? CheckInTime { get; init; }
 
     /// <summary>
     /// Duration.
@@ -80,25 +87,11 @@ public record VehicleRentalAgreement3
     public Max4NumericText? Duration { get; init; }
 
     /// <summary>
-    /// Estimated Tax.
+    /// Class.
     /// </summary>
-    [DisplayName("Estimated Tax")]
-    [IsoXmlTag("EstmtdTax")]
-    public ValueList<Tax41> EstimatedTax { get; init; } = [];
-
-    /// <summary>
-    /// Insurance.
-    /// </summary>
-    [DisplayName("Insurance")]
-    [IsoXmlTag("Insrnc")]
-    public TrueFalseIndicator? Insurance { get; init; }
-
-    /// <summary>
-    /// Loyalty Programme.
-    /// </summary>
-    [DisplayName("Loyalty Programme")]
-    [IsoXmlTag("LltyPrgrmm")]
-    public ValueList<LoyaltyProgramme5> LoyaltyProgramme { get; init; } = [];
+    [DisplayName("Class")]
+    [IsoXmlTag("Clss")]
+    public Max35Text? Class { get; init; }
 
     /// <summary>
     /// Make.
@@ -115,20 +108,6 @@ public record VehicleRentalAgreement3
     public Max35NumericText? Model { get; init; }
 
     /// <summary>
-    /// Number.
-    /// </summary>
-    [DisplayName("Number")]
-    [IsoXmlTag("Nb")]
-    public Max35Text? Number { get; init; }
-
-    /// <summary>
-    /// Pickup Location.
-    /// </summary>
-    [DisplayName("Pickup Location")]
-    [IsoXmlTag("PckpLctn")]
-    public ValueList<Address2> PickupLocation { get; init; } = [];
-
-    /// <summary>
     /// Registration Number.
     /// </summary>
     [DisplayName("Registration Number")]
@@ -136,18 +115,11 @@ public record VehicleRentalAgreement3
     public Max35Text? RegistrationNumber { get; init; }
 
     /// <summary>
-    /// Rental Details.
+    /// Travel Distance.
     /// </summary>
-    [DisplayName("Rental Details")]
-    [IsoXmlTag("RntlDtls")]
-    public RentalDetails3? RentalDetails { get; init; }
-
-    /// <summary>
-    /// Rental Location.
-    /// </summary>
-    [DisplayName("Rental Location")]
-    [IsoXmlTag("RntlLctn")]
-    public Address2? RentalLocation { get; init; }
+    [DisplayName("Travel Distance")]
+    [IsoXmlTag("TrvlDstnc")]
+    public Distance1? TravelDistance { get; init; }
 
     /// <summary>
     /// Rental Rate.
@@ -157,16 +129,44 @@ public record VehicleRentalAgreement3
     public ValueList<RentalRate2> RentalRate { get; init; } = [];
 
     /// <summary>
-    /// Return Location.
+    /// Rental Details.
     /// </summary>
-    [DisplayName("Return Location")]
-    [IsoXmlTag("RtrLctn")]
-    public Address2? ReturnLocation { get; init; }
+    [DisplayName("Rental Details")]
+    [IsoXmlTag("RntlDtls")]
+    public RentalDetails3? RentalDetails { get; init; }
 
     /// <summary>
-    /// Travel Distance.
+    /// Insurance.
     /// </summary>
-    [DisplayName("Travel Distance")]
-    [IsoXmlTag("TrvlDstnc")]
-    public Distance1? TravelDistance { get; init; }
+    [DisplayName("Insurance")]
+    [IsoXmlTag("Insrnc")]
+    public TrueFalseIndicator? Insurance { get; init; }
+
+    /// <summary>
+    /// Additional Amount.
+    /// </summary>
+    [DisplayName("Additional Amount")]
+    [IsoXmlTag("AddtlAmt")]
+    public ValueList<Amount21> AdditionalAmount { get; init; } = [];
+
+    /// <summary>
+    /// Estimated Tax.
+    /// </summary>
+    [DisplayName("Estimated Tax")]
+    [IsoXmlTag("EstmtdTax")]
+    public ValueList<Tax41> EstimatedTax { get; init; } = [];
+
+    /// <summary>
+    /// Discount Programme.
+    /// </summary>
+    [DisplayName("Discount Programme")]
+    [IsoXmlTag("DscntPrgrmm")]
+    public ValueList<Discount3> DiscountProgramme { get; init; } = [];
+
+    /// <summary>
+    /// Loyalty Programme.
+    /// </summary>
+    [DisplayName("Loyalty Programme")]
+    [IsoXmlTag("LltyPrgrmm")]
+    public ValueList<LoyaltyProgramme5> LoyaltyProgramme { get; init; } = [];
 }

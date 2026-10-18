@@ -26,13 +26,6 @@ public record PaymentCondition2
     public TrueFalseIndicator? AmountModificationAllowed { get; init; }
 
     /// <summary>
-    /// Penalty to be applied for a delayed payment, that is when the payment is made after the requested execution date.
-    /// </summary>
-    [DisplayName("Delay Penalty")]
-    [IsoXmlTag("DelyPnlty")]
-    public Max140Text? DelayPenalty { get; init; }
-
-    /// <summary>
     /// Indicates if the debtor is allowed to pay before the requested execution date.
     /// Usage: When element is not present, the default value is "Not Applicable".
     /// </summary>
@@ -41,12 +34,11 @@ public record PaymentCondition2
     public TrueFalseIndicator? EarlyPaymentAllowed { get; init; }
 
     /// <summary>
-    /// Indicates if a payment guarantee is requested, assuming a payment guarantee contract exists between the different actors.
-    /// Usage: When element is not present, the default value is "Not Applicable".
+    /// Penalty to be applied for a delayed payment, that is when the payment is made after the requested execution date.
     /// </summary>
-    [DisplayName("Guaranteed Payment Requested")]
-    [IsoXmlTag("GrntedPmtReqd")]
-    public TrueFalseIndicator? GuaranteedPaymentRequested { get; init; }
+    [DisplayName("Delay Penalty")]
+    [IsoXmlTag("DelyPnlty")]
+    public Max140Text? DelayPenalty { get; init; }
 
     /// <summary>
     /// Discount rate applied for immediate payment upon receipt of the request.
@@ -54,4 +46,12 @@ public record PaymentCondition2
     [DisplayName("Immediate Payment Rebate")]
     [IsoXmlTag("ImdtPmtRbt")]
     public AmountOrRate1Choice_? ImmediatePaymentRebate { get; init; }
+
+    /// <summary>
+    /// Indicates if a payment guarantee is requested, assuming a payment guarantee contract exists between the different actors.
+    /// Usage: When element is not present, the default value is "Not Applicable".
+    /// </summary>
+    [DisplayName("Guaranteed Payment Requested")]
+    [IsoXmlTag("GrntedPmtReqd")]
+    public TrueFalseIndicator? GuaranteedPaymentRequested { get; init; }
 }

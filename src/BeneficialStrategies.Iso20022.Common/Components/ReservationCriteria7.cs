@@ -24,16 +24,16 @@ public record ReservationCriteria7
     public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public ReservationReturnCriteria1? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public ValueList<ReservationSearchCriteria6> SearchCriteria { get; init; } = [];
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public ReservationReturnCriteria1? ReturnCriteria { get; init; }
 }

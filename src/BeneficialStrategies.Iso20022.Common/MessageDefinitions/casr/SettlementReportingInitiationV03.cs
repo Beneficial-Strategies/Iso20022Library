@@ -46,32 +46,39 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acquirer Settlement Totals.
+    /// Header.
     /// </summary>
-    [DisplayName("Acquirer Settlement Totals")]
-    [IsoXmlTag("AcqrrSttlmTtls")]
-    public SettlementCategoryTotal3? AcquirerSettlementTotals { get; init; }
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header71 Header { get; init; }
 
     /// <summary>
-    /// Additional Data.
+    /// Settlement Institution.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+    [DisplayName("Settlement Institution")]
+    [IsoXmlTag("SttlmInstn")]
+    public PartyIdentification286? SettlementInstitution { get; init; }
 
     /// <summary>
-    /// Additional Fee.
+    /// Originator.
     /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
-    /// Alternate Message Reason.
+    /// Sender.
     /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public PartyIdentification286? Sender { get; init; }
+
+    /// <summary>
+    /// Receiver.
+    /// </summary>
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
     /// Destination.
@@ -88,74 +95,11 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public FinancialInstitution9? FinancialInstitution { get; init; }
 
     /// <summary>
-    /// Funds Transfer Amount.
-    /// </summary>
-    [DisplayName("Funds Transfer Amount")]
-    [IsoXmlTag("FndsTrfAmt")]
-    public Amount17? FundsTransferAmount { get; init; }
-
-    /// <summary>
-    /// Header.
-    /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header71 Header { get; init; }
-
-    /// <summary>
-    /// Issuer Settlement Totals.
-    /// </summary>
-    [DisplayName("Issuer Settlement Totals")]
-    [IsoXmlTag("IssrSttlmTtls")]
-    public SettlementCategoryTotal3? IssuerSettlementTotals { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// Message Reason.
-    /// </summary>
-    [DisplayName("Message Reason")]
-    [IsoXmlTag("MsgRsn")]
-    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
-
-    /// <summary>
-    /// Originator.
-    /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
-
-    /// <summary>
     /// Other Institution.
     /// </summary>
     [DisplayName("Other Institution")]
     [IsoXmlTag("OthrInstn")]
     public PartyIdentification285? OtherInstitution { get; init; }
-
-    /// <summary>
-    /// Other Settlement Report Type.
-    /// </summary>
-    [DisplayName("Other Settlement Report Type")]
-    [IsoXmlTag("OthrSttlmRptTp")]
-    public Max35Text? OtherSettlementReportType { get; init; }
-
-    /// <summary>
-    /// Other Settlement Totals.
-    /// </summary>
-    [DisplayName("Other Settlement Totals")]
-    [IsoXmlTag("OthrSttlmTtls")]
-    public SettlementCategoryTotal3? OtherSettlementTotals { get; init; }
 
     /// <summary>
     /// Programme.
@@ -165,25 +109,18 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public ValueList<ProgrammeMode5> Programme { get; init; } = [];
 
     /// <summary>
-    /// Protected Data.
+    /// System Trace Audit Number.
     /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    [DisplayName("System Trace Audit Number")]
+    [IsoXmlTag("SysTracAudtNb")]
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
-    /// Receiver.
+    /// Transmission Date Time.
     /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation4? Reconciliation { get; init; }
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Retrieval Reference Number.
@@ -193,25 +130,11 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
-    /// Security Trailer.
+    /// Life Cycle Identification.
     /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Institution.
-    /// </summary>
-    [DisplayName("Settlement Institution")]
-    [IsoXmlTag("SttlmInstn")]
-    public PartyIdentification286? SettlementInstitution { get; init; }
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Settlement Report Type.
@@ -221,25 +144,46 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public required SettlementReportType1Code SettlementReportType { get; init; }
 
     /// <summary>
-    /// Settlement Service.
+    /// Other Settlement Report Type.
     /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService6? SettlementService { get; init; }
+    [DisplayName("Other Settlement Report Type")]
+    [IsoXmlTag("OthrSttlmRptTp")]
+    public Max35Text? OtherSettlementReportType { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Message Reason.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Message Reason")]
+    [IsoXmlTag("MsgRsn")]
+    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
-    /// System Trace Audit Number.
+    /// Alternate Message Reason.
     /// </summary>
-    [DisplayName("System Trace Audit Number")]
-    [IsoXmlTag("SysTracAudtNb")]
-    public required Max12NumericText SystemTraceAuditNumber { get; init; }
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Acquirer Settlement Totals.
+    /// </summary>
+    [DisplayName("Acquirer Settlement Totals")]
+    [IsoXmlTag("AcqrrSttlmTtls")]
+    public SettlementCategoryTotal3? AcquirerSettlementTotals { get; init; }
+
+    /// <summary>
+    /// Issuer Settlement Totals.
+    /// </summary>
+    [DisplayName("Issuer Settlement Totals")]
+    [IsoXmlTag("IssrSttlmTtls")]
+    public SettlementCategoryTotal3? IssuerSettlementTotals { get; init; }
+
+    /// <summary>
+    /// Other Settlement Totals.
+    /// </summary>
+    [DisplayName("Other Settlement Totals")]
+    [IsoXmlTag("OthrSttlmTtls")]
+    public SettlementCategoryTotal3? OtherSettlementTotals { get; init; }
 
     /// <summary>
     /// Total Settlement Amount.
@@ -249,6 +193,41 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public SettlementCategoryTotal2? TotalSettlementAmount { get; init; }
 
     /// <summary>
+    /// Funds Transfer Amount.
+    /// </summary>
+    [DisplayName("Funds Transfer Amount")]
+    [IsoXmlTag("FndsTrfAmt")]
+    public Amount17? FundsTransferAmount { get; init; }
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService6? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation4? Reconciliation { get; init; }
+
+    /// <summary>
     /// Transaction Description.
     /// </summary>
     [DisplayName("Transaction Description")]
@@ -256,9 +235,30 @@ public record SettlementReportingInitiationV03 : IOuterRecord
     public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
-    /// Transmission Date Time.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public required ISODateTime TransmissionDateTime { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

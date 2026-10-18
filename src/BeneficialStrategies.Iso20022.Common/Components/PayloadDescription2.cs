@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PayloadDescription2
 {
     /// <summary>
-    /// Application Specifics.
-    /// </summary>
-    [DisplayName("Application Specifics")]
-    [IsoXmlTag("ApplSpcfcs")]
-    public ApplicationSpecifics1? ApplicationSpecifics { get; init; }
-
-    /// <summary>
-    /// Manifest Data.
-    /// </summary>
-    [DisplayName("Manifest Data")]
-    [IsoXmlTag("MnfstData")]
-    public ValueList<ManifestData2> ManifestData { get; init; } = [];
-
-    /// <summary>
     /// Payload Data.
     /// </summary>
     [DisplayName("Payload Data")]
@@ -38,9 +24,23 @@ public record PayloadDescription2
     public required PayloadData2 PayloadData { get; init; }
 
     /// <summary>
+    /// Application Specifics.
+    /// </summary>
+    [DisplayName("Application Specifics")]
+    [IsoXmlTag("ApplSpcfcs")]
+    public ApplicationSpecifics1? ApplicationSpecifics { get; init; }
+
+    /// <summary>
     /// Payload Type.
     /// </summary>
     [DisplayName("Payload Type")]
     [IsoXmlTag("PyldTp")]
     public required Max256Text PayloadType { get; init; }
+
+    /// <summary>
+    /// Manifest Data.
+    /// </summary>
+    [DisplayName("Manifest Data")]
+    [IsoXmlTag("MnfstData")]
+    public ValueList<ManifestData2> ManifestData { get; init; } = [];
 }

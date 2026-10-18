@@ -46,18 +46,11 @@ public record MeetingResultDisseminationV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CommunicationAddress11? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Meeting Reference.
-    /// </summary>
-    [DisplayName("Meeting Reference")]
-    [IsoXmlTag("MtgRef")]
-    public required MeetingReference10 MeetingReference { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Meeting Result Dissemination Identification.
@@ -74,25 +67,18 @@ public record MeetingResultDisseminationV09 : IOuterRecord
     public required NotificationType2Code MeetingResultsDisseminationType { get; init; }
 
     /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
-
-    /// <summary>
-    /// Participation.
-    /// </summary>
-    [DisplayName("Participation")]
-    [IsoXmlTag("Prtcptn")]
-    public Participation5? Participation { get; init; }
-
-    /// <summary>
     /// Previous Meeting Results Dissemination Identification.
     /// </summary>
     [DisplayName("Previous Meeting Results Dissemination Identification")]
     [IsoXmlTag("PrvsMtgRsltsDssmntnId")]
     public Max35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
+
+    /// <summary>
+    /// Meeting Reference.
+    /// </summary>
+    [DisplayName("Meeting Reference")]
+    [IsoXmlTag("MtgRef")]
+    public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
     /// Security.
@@ -102,16 +88,30 @@ public record MeetingResultDisseminationV09 : IOuterRecord
     public required SecurityPosition19 Security { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Vote Result.
     /// </summary>
     [DisplayName("Vote Result")]
     [IsoXmlTag("VoteRslt")]
     public required Vote20 VoteResult { get; init; }
+
+    /// <summary>
+    /// Participation.
+    /// </summary>
+    [DisplayName("Participation")]
+    [IsoXmlTag("Prtcptn")]
+    public Participation5? Participation { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CommunicationAddress11? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

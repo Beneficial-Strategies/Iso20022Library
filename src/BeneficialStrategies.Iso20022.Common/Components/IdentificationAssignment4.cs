@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IdentificationAssignment4
 {
     /// <summary>
-    /// Assignee.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Assignee")]
-    [IsoXmlTag("Assgne")]
-    public required Party50Choice_ Assignee { get; init; }
-
-    /// <summary>
-    /// Assigner.
-    /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public required Party50Choice_ Assigner { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
@@ -52,9 +45,16 @@ public record IdentificationAssignment4
     public BranchAndFinancialInstitutionIdentification8? FirstAgent { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Assigner.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public required Party50Choice_ Assigner { get; init; }
+
+    /// <summary>
+    /// Assignee.
+    /// </summary>
+    [DisplayName("Assignee")]
+    [IsoXmlTag("Assgne")]
+    public required Party50Choice_ Assignee { get; init; }
 }

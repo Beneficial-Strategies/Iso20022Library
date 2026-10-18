@@ -17,18 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerInvestigationRequestStatus3
 {
     /// <summary>
-    /// Additional Information.
+    /// Status.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public required InvestigationRequestStatus1Choice_ Status { get; init; }
 
     /// <summary>
-    /// Instructed Agent.
+    /// Status Reason.
     /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+    [DisplayName("Status Reason")]
+    [IsoXmlTag("StsRsn")]
+    public ValueList<InvestigationRequestStatusReason1Choice_> StatusReason { get; init; } = [];
+
+    /// <summary>
+    /// Status Date.
+    /// </summary>
+    [DisplayName("Status Date")]
+    [IsoXmlTag("StsDt")]
+    public DateAndDateTime2Choice_? StatusDate { get; init; }
+
+    /// <summary>
+    /// Tracker Informing Party.
+    /// </summary>
+    [DisplayName("Tracker Informing Party")]
+    [IsoXmlTag("TrckrInfrmgPty")]
+    public TrackerPartyIdentification3? TrackerInformingParty { get; init; }
+
+    /// <summary>
+    /// Tracker Informed Party.
+    /// </summary>
+    [DisplayName("Tracker Informed Party")]
+    [IsoXmlTag("TrckrInfrmdPty")]
+    public TrackerPartyIdentification3? TrackerInformedParty { get; init; }
+
+    /// <summary>
+    /// Tracked Message Identification.
+    /// </summary>
+    [DisplayName("Tracked Message Identification")]
+    [IsoXmlTag("TrckdMsgId")]
+    public OriginalBusinessInstruction4? TrackedMessageIdentification { get; init; }
 
     /// <summary>
     /// Investigation Identification.
@@ -36,6 +64,13 @@ public record TrackerInvestigationRequestStatus3
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
     public InvestigationIdentification1? InvestigationIdentification { get; init; }
+
+    /// <summary>
+    /// Instructed Agent.
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
     /// Investigation Requestor.
@@ -52,44 +87,9 @@ public record TrackerInvestigationRequestStatus3
     public Party50Choice_? InvestigationResponder { get; init; }
 
     /// <summary>
-    /// Status.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public required InvestigationRequestStatus1Choice_ Status { get; init; }
-
-    /// <summary>
-    /// Status Date.
-    /// </summary>
-    [DisplayName("Status Date")]
-    [IsoXmlTag("StsDt")]
-    public DateAndDateTime2Choice_? StatusDate { get; init; }
-
-    /// <summary>
-    /// Status Reason.
-    /// </summary>
-    [DisplayName("Status Reason")]
-    [IsoXmlTag("StsRsn")]
-    public ValueList<InvestigationRequestStatusReason1Choice_> StatusReason { get; init; } = [];
-
-    /// <summary>
-    /// Tracked Message Identification.
-    /// </summary>
-    [DisplayName("Tracked Message Identification")]
-    [IsoXmlTag("TrckdMsgId")]
-    public OriginalBusinessInstruction4? TrackedMessageIdentification { get; init; }
-
-    /// <summary>
-    /// Tracker Informed Party.
-    /// </summary>
-    [DisplayName("Tracker Informed Party")]
-    [IsoXmlTag("TrckrInfrmdPty")]
-    public TrackerPartyIdentification3? TrackerInformedParty { get; init; }
-
-    /// <summary>
-    /// Tracker Informing Party.
-    /// </summary>
-    [DisplayName("Tracker Informing Party")]
-    [IsoXmlTag("TrckrInfrmgPty")]
-    public TrackerPartyIdentification3? TrackerInformingParty { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

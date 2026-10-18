@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCustomerProfile6
 {
     /// <summary>
+    /// Retrieval Mode.
+    /// </summary>
+    [DisplayName("Retrieval Mode")]
+    [IsoXmlTag("RtrvlMd")]
+    public required ATMCustomerProfile1Code RetrievalMode { get; init; }
+
+    /// <summary>
+    /// Profile Reference.
+    /// </summary>
+    [DisplayName("Profile Reference")]
+    [IsoXmlTag("PrflRef")]
+    public Max35Text? ProfileReference { get; init; }
+
+    /// <summary>
     /// Customer Identification.
     /// </summary>
     [DisplayName("Customer Identification")]
@@ -29,18 +43,4 @@ public record ATMCustomerProfile6
     [DisplayName("Preferred Language")]
     [IsoXmlTag("PrefrdLang")]
     public LanguageCode? PreferredLanguage { get; init; }
-
-    /// <summary>
-    /// Profile Reference.
-    /// </summary>
-    [DisplayName("Profile Reference")]
-    [IsoXmlTag("PrflRef")]
-    public Max35Text? ProfileReference { get; init; }
-
-    /// <summary>
-    /// Retrieval Mode.
-    /// </summary>
-    [DisplayName("Retrieval Mode")]
-    [IsoXmlTag("RtrvlMd")]
-    public required ATMCustomerProfile1Code RetrievalMode { get; init; }
 }

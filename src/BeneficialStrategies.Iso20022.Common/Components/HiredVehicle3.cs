@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record HiredVehicle3
 {
     /// <summary>
-    /// Company Name.
-    /// </summary>
-    [DisplayName("Company Name")]
-    [IsoXmlTag("CpnyNm")]
-    public Max70Text? CompanyName { get; init; }
-
-    /// <summary>
     /// Company Type.
     /// </summary>
     [DisplayName("Company Type")]
@@ -31,18 +24,25 @@ public record HiredVehicle3
     public Max35Text? CompanyType { get; init; }
 
     /// <summary>
-    /// Destination Address.
+    /// Company Name.
     /// </summary>
-    [DisplayName("Destination Address")]
-    [IsoXmlTag("DstnAdr")]
-    public Address2? DestinationAddress { get; init; }
+    [DisplayName("Company Name")]
+    [IsoXmlTag("CpnyNm")]
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
-    /// Destination Name And Location.
+    /// Type Of Vehicle.
     /// </summary>
-    [DisplayName("Destination Name And Location")]
-    [IsoXmlTag("DstnNmAndLctn")]
-    public Max99Text? DestinationNameAndLocation { get; init; }
+    [DisplayName("Type Of Vehicle")]
+    [IsoXmlTag("TpOfVhcl")]
+    public Max35Text? TypeOfVehicle { get; init; }
+
+    /// <summary>
+    /// Vehicle Identification.
+    /// </summary>
+    [DisplayName("Vehicle Identification")]
+    [IsoXmlTag("VhclId")]
+    public Max35Text? VehicleIdentification { get; init; }
 
     /// <summary>
     /// Driver Identification.
@@ -59,16 +59,16 @@ public record HiredVehicle3
     public Max35Text? DriverTaxIdentification { get; init; }
 
     /// <summary>
-    /// Type Of Vehicle.
+    /// Destination Name And Location.
     /// </summary>
-    [DisplayName("Type Of Vehicle")]
-    [IsoXmlTag("TpOfVhcl")]
-    public Max35Text? TypeOfVehicle { get; init; }
+    [DisplayName("Destination Name And Location")]
+    [IsoXmlTag("DstnNmAndLctn")]
+    public Max99Text? DestinationNameAndLocation { get; init; }
 
     /// <summary>
-    /// Vehicle Identification.
+    /// Destination Address.
     /// </summary>
-    [DisplayName("Vehicle Identification")]
-    [IsoXmlTag("VhclId")]
-    public Max35Text? VehicleIdentification { get; init; }
+    [DisplayName("Destination Address")]
+    [IsoXmlTag("DstnAdr")]
+    public Address2? DestinationAddress { get; init; }
 }

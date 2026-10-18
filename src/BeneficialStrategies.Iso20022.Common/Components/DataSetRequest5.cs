@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DataSetRequest5
 {
     /// <summary>
-    /// Delegation Proof.
-    /// </summary>
-    [DisplayName("Delegation Proof")]
-    [IsoXmlTag("DlgtnProof")]
-    public Max5000Binary? DelegationProof { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -38,11 +31,11 @@ public record DataSetRequest5
     public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
-    /// Protected Delegation Proof.
+    /// TM Challenge.
     /// </summary>
-    [DisplayName("Protected Delegation Proof")]
-    [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType39? ProtectedDelegationProof { get; init; }
+    [DisplayName("TM Challenge")]
+    [IsoXmlTag("TMChllng")]
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Session Key.
@@ -52,9 +45,16 @@ public record DataSetRequest5
     public CryptographicKey18? SessionKey { get; init; }
 
     /// <summary>
-    /// TM Challenge.
+    /// Delegation Proof.
     /// </summary>
-    [DisplayName("TM Challenge")]
-    [IsoXmlTag("TMChllng")]
-    public Max140Binary? TMChallenge { get; init; }
+    [DisplayName("Delegation Proof")]
+    [IsoXmlTag("DlgtnProof")]
+    public Max5000Binary? DelegationProof { get; init; }
+
+    /// <summary>
+    /// Protected Delegation Proof.
+    /// </summary>
+    [DisplayName("Protected Delegation Proof")]
+    [IsoXmlTag("PrtctdDlgtnProof")]
+    public ContentInformationType39? ProtectedDelegationProof { get; init; }
 }

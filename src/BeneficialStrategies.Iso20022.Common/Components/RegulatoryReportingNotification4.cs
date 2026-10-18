@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegulatoryReportingNotification4
 {
     /// <summary>
+    /// Transaction Notification Identification.
+    /// </summary>
+    [DisplayName("Transaction Notification Identification")]
+    [IsoXmlTag("TxNtfctnId")]
+    public required Max35Text TransactionNotificationIdentification { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -36,11 +43,4 @@ public record RegulatoryReportingNotification4
     [DisplayName("Transaction Certificate")]
     [IsoXmlTag("TxCert")]
     public ValueList<TransactionCertificate4> TransactionCertificate { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Notification Identification.
-    /// </summary>
-    [DisplayName("Transaction Notification Identification")]
-    [IsoXmlTag("TxNtfctnId")]
-    public required Max35Text TransactionNotificationIdentification { get; init; }
 }

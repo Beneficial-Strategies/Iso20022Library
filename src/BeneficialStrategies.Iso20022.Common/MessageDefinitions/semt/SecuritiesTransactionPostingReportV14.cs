@@ -46,39 +46,25 @@ public record SecuritiesTransactionPostingReportV14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet4? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Details.
-    /// </summary>
-    [DisplayName("Financial Instrument Details")]
-    [IsoXmlTag("FinInstrmDtls")]
-    public ValueList<FinancialInstrumentDetails48> FinancialInstrumentDetails { get; init; } = [];
-
-    /// <summary>
-    /// Intermediary Information.
-    /// </summary>
-    [DisplayName("Intermediary Information")]
-    [IsoXmlTag("IntrmyInf")]
-    public ValueList<Intermediary44> IntermediaryInformation { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
     public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Statement General Details.
+    /// </summary>
+    [DisplayName("Statement General Details")]
+    [IsoXmlTag("StmtGnlDtls")]
+    public required Statement79 StatementGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
@@ -88,11 +74,25 @@ public record SecuritiesTransactionPostingReportV14 : IOuterRecord
     public SecuritiesAccount36? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Statement General Details.
+    /// Block Chain Address Or Wallet.
     /// </summary>
-    [DisplayName("Statement General Details")]
-    [IsoXmlTag("StmtGnlDtls")]
-    public required Statement79 StatementGeneralDetails { get; init; }
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet4? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Intermediary Information.
+    /// </summary>
+    [DisplayName("Intermediary Information")]
+    [IsoXmlTag("IntrmyInf")]
+    public ValueList<Intermediary44> IntermediaryInformation { get; init; } = [];
+
+    /// <summary>
+    /// Financial Instrument Details.
+    /// </summary>
+    [DisplayName("Financial Instrument Details")]
+    [IsoXmlTag("FinInstrmDtls")]
+    public ValueList<FinancialInstrumentDetails48> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Sub Account Details.

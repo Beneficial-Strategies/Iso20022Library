@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RateTypeAndPercentageRate19
 {
     /// <summary>
-    /// Rate.
-    /// </summary>
-    [DisplayName("Rate")]
-    [IsoXmlTag("Rate")]
-    public required decimal Rate { get; init; }
-
-    /// <summary>
     /// Rate Type.
     /// </summary>
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
     public required DeemedRateType2Choice_ RateType { get; init; }
+
+    /// <summary>
+    /// Rate.
+    /// </summary>
+    [DisplayName("Rate")]
+    [IsoXmlTag("Rate")]
+    public required decimal Rate { get; init; }
 }

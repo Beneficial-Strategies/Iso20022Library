@@ -46,13 +46,6 @@ public record SecuritiesSettlementConditionsModificationRequestReportV01 : IOute
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Modifications.
-    /// </summary>
-    [DisplayName("Modifications")]
-    [IsoXmlTag("Mods")]
-    public ValueList<SecuritiesModification2> Modifications { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -65,6 +58,13 @@ public record SecuritiesSettlementConditionsModificationRequestReportV01 : IOute
     [DisplayName("Report General Details")]
     [IsoXmlTag("RptGnlDtls")]
     public required SecuritiesTransactionReport5 ReportGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Modifications.
+    /// </summary>
+    [DisplayName("Modifications")]
+    [IsoXmlTag("Mods")]
+    public ValueList<SecuritiesModification2> Modifications { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

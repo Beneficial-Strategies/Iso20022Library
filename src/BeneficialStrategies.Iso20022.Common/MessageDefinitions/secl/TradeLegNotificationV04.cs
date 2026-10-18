@@ -46,25 +46,18 @@ public record TradeLegNotificationV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Clearing Account.
-    /// </summary>
-    [DisplayName("Clearing Account")]
-    [IsoXmlTag("ClrAcct")]
-    public required SecuritiesAccount18 ClearingAccount { get; init; }
-
-    /// <summary>
-    /// Clearing Details.
-    /// </summary>
-    [DisplayName("Clearing Details")]
-    [IsoXmlTag("ClrDtls")]
-    public Clearing7? ClearingDetails { get; init; }
-
-    /// <summary>
     /// Clearing Member.
     /// </summary>
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
     public required PartyIdentification253Choice_ ClearingMember { get; init; }
+
+    /// <summary>
+    /// Clearing Account.
+    /// </summary>
+    [DisplayName("Clearing Account")]
+    [IsoXmlTag("ClrAcct")]
+    public required SecuritiesAccount18 ClearingAccount { get; init; }
 
     /// <summary>
     /// Delivery Account.
@@ -81,6 +74,20 @@ public record TradeLegNotificationV04 : IOuterRecord
     public PartyIdentificationAndAccount227? NonClearingMember { get; init; }
 
     /// <summary>
+    /// Clearing Details.
+    /// </summary>
+    [DisplayName("Clearing Details")]
+    [IsoXmlTag("ClrDtls")]
+    public Clearing7? ClearingDetails { get; init; }
+
+    /// <summary>
+    /// Trade Leg Details.
+    /// </summary>
+    [DisplayName("Trade Leg Details")]
+    [IsoXmlTag("TradLegDtls")]
+    public required TradeLeg11 TradeLegDetails { get; init; }
+
+    /// <summary>
     /// Settlement Details.
     /// </summary>
     [DisplayName("Settlement Details")]
@@ -93,11 +100,4 @@ public record TradeLegNotificationV04 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Leg Details.
-    /// </summary>
-    [DisplayName("Trade Leg Details")]
-    [IsoXmlTag("TradLegDtls")]
-    public required TradeLeg11 TradeLegDetails { get; init; }
 }

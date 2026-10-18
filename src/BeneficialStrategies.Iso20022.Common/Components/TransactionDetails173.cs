@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionDetails173
 {
     /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Delivering Settlement Parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties125? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
@@ -38,11 +24,11 @@ public record TransactionDetails173
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Investor.
+    /// Securities Movement Type.
     /// </summary>
-    [DisplayName("Investor")]
-    [IsoXmlTag("Invstr")]
-    public PartyIdentification149? Investor { get; init; }
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 
     /// <summary>
     /// Payment.
@@ -52,11 +38,11 @@ public record TransactionDetails173
     public required DeliveryReceiptType2Code Payment { get; init; }
 
     /// <summary>
-    /// Receiving Settlement Parties.
+    /// Settlement Quantity.
     /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties125? ReceivingSettlementParties { get; init; }
+    [DisplayName("Settlement Quantity")]
+    [IsoXmlTag("SttlmQty")]
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
@@ -66,11 +52,11 @@ public record TransactionDetails173
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Securities Movement Type.
+    /// Block Chain Address Or Wallet.
     /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Settlement Amount.
@@ -87,16 +73,30 @@ public record TransactionDetails173
     public required SettlementDate19Choice_ SettlementDate { get; init; }
 
     /// <summary>
-    /// Settlement Quantity.
-    /// </summary>
-    [DisplayName("Settlement Quantity")]
-    [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice_ SettlementQuantity { get; init; }
-
-    /// <summary>
     /// Trade Date.
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     public TradeDate8Choice_? TradeDate { get; init; }
+
+    /// <summary>
+    /// Delivering Settlement Parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties125? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Receiving Settlement Parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties125? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Investor.
+    /// </summary>
+    [DisplayName("Investor")]
+    [IsoXmlTag("Invstr")]
+    public PartyIdentification149? Investor { get; init; }
 }

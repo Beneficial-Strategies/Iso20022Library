@@ -46,13 +46,6 @@ public record ATMReconciliationAcknowledgementV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Reconciliation Acknowledgement.
-    /// </summary>
-    [DisplayName("ATM Reconciliation Acknowledgement")]
-    [IsoXmlTag("ATMRcncltnAck")]
-    public ATMReconciliationAcknowledgement3? ATMReconciliationAcknowledgement { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMReconciliationAcknowledgementV03 : IOuterRecord
     [DisplayName("Protected ATM Reconciliation Acknowledgement")]
     [IsoXmlTag("PrtctdATMRcncltnAck")]
     public ContentInformationType10? ProtectedATMReconciliationAcknowledgement { get; init; }
+
+    /// <summary>
+    /// ATM Reconciliation Acknowledgement.
+    /// </summary>
+    [DisplayName("ATM Reconciliation Acknowledgement")]
+    [IsoXmlTag("ATMRcncltnAck")]
+    public ATMReconciliationAcknowledgement3? ATMReconciliationAcknowledgement { get; init; }
 
     /// <summary>
     /// Security Trailer.

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NonFinancialRequestContentComponent5
 {
     /// <summary>
-    /// Additional Request.
-    /// </summary>
-    [DisplayName("Additional Request")]
-    [IsoXmlTag("AddtlReq")]
-    public ValueList<ExternallyDefinedData5> AdditionalRequest { get; init; } = [];
-
-    /// <summary>
     /// Non Financial Request Type.
     /// </summary>
     [DisplayName("Non Financial Request Type")]
@@ -36,4 +29,11 @@ public record NonFinancialRequestContentComponent5
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public CardPaymentTransaction139? Transaction { get; init; }
+
+    /// <summary>
+    /// Additional Request.
+    /// </summary>
+    [DisplayName("Additional Request")]
+    [IsoXmlTag("AddtlReq")]
+    public ValueList<ExternallyDefinedData5> AdditionalRequest { get; init; } = [];
 }

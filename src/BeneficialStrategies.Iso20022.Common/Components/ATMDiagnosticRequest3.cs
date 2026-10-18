@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMDiagnosticRequest3
 {
     /// <summary>
-    /// ATM Global Status.
-    /// </summary>
-    [DisplayName("ATM Global Status")]
-    [IsoXmlTag("ATMGblSts")]
-    public required ATMStatus2 ATMGlobalStatus { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required ATMEnvironment9 Environment { get; init; }
+
+    /// <summary>
+    /// ATM Global Status.
+    /// </summary>
+    [DisplayName("ATM Global Status")]
+    [IsoXmlTag("ATMGblSts")]
+    public required ATMStatus2 ATMGlobalStatus { get; init; }
 }

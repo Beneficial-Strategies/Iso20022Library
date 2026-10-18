@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ParentCashAccount5
 {
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required CashAccount40 Identification { get; init; }
-
-    /// <summary>
     /// Level.
     /// </summary>
     [DisplayName("Level")]
     [IsoXmlTag("Lvl")]
     public AccountLevel1Code? Level { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required CashAccount40 Identification { get; init; }
 
     /// <summary>
     /// Servicer.

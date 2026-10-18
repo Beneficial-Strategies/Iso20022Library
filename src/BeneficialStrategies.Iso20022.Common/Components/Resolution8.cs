@@ -17,32 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Resolution8
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public ValueList<ItemDescription2> Description { get; init; } = [];
-
-    /// <summary>
-    /// Entitlement.
-    /// </summary>
-    [DisplayName("Entitlement")]
-    [IsoXmlTag("Entitlmnt")]
-    public Entitlement1Choice_? Entitlement { get; init; }
-
-    /// <summary>
-    /// For Information Only.
-    /// </summary>
-    [DisplayName("For Information Only")]
-    [IsoXmlTag("ForInfOnly")]
-    public required YesNoIndicator ForInformationOnly { get; init; }
-
-    /// <summary>
     /// Issuer Label.
     /// </summary>
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
     public required Max35Text IssuerLabel { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public ValueList<ItemDescription2> Description { get; init; } = [];
 
     /// <summary>
     /// Listing Group Resolution Label.
@@ -52,25 +38,25 @@ public record Resolution8
     public Max35Text? ListingGroupResolutionLabel { get; init; }
 
     /// <summary>
-    /// Management Recommendation.
+    /// Type.
     /// </summary>
-    [DisplayName("Management Recommendation")]
-    [IsoXmlTag("MgmtRcmmndtn")]
-    public VoteInstruction5Code? ManagementRecommendation { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ResolutionType2Code? Type { get; init; }
 
     /// <summary>
-    /// Notifying Party Recommendation.
+    /// For Information Only.
     /// </summary>
-    [DisplayName("Notifying Party Recommendation")]
-    [IsoXmlTag("NtifngPtyRcmmndtn")]
-    public VoteInstruction5Code? NotifyingPartyRecommendation { get; init; }
+    [DisplayName("For Information Only")]
+    [IsoXmlTag("ForInfOnly")]
+    public required YesNoIndicator ForInformationOnly { get; init; }
 
     /// <summary>
-    /// Right To Withdraw Indicator.
+    /// Vote Type.
     /// </summary>
-    [DisplayName("Right To Withdraw Indicator")]
-    [IsoXmlTag("RghtToWdrwInd")]
-    public YesNoIndicator? RightToWithdrawIndicator { get; init; }
+    [DisplayName("Vote Type")]
+    [IsoXmlTag("VoteTp")]
+    public VoteType1Code? VoteType { get; init; }
 
     /// <summary>
     /// Status.
@@ -87,18 +73,11 @@ public record Resolution8
     public YesNoIndicator? SubmittedBySecurityHolder { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Right To Withdraw Indicator.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ResolutionType2Code? Type { get; init; }
-
-    /// <summary>
-    /// URL Address.
-    /// </summary>
-    [DisplayName("URL Address")]
-    [IsoXmlTag("URLAdr")]
-    public Max2048Text? URLAddress { get; init; }
+    [DisplayName("Right To Withdraw Indicator")]
+    [IsoXmlTag("RghtToWdrwInd")]
+    public YesNoIndicator? RightToWithdrawIndicator { get; init; }
 
     /// <summary>
     /// Vote Instruction Type.
@@ -108,11 +87,25 @@ public record Resolution8
     public ValueList<VoteInstructionType1> VoteInstructionType { get; init; } = [];
 
     /// <summary>
-    /// Vote Type.
+    /// Management Recommendation.
     /// </summary>
-    [DisplayName("Vote Type")]
-    [IsoXmlTag("VoteTp")]
-    public VoteType1Code? VoteType { get; init; }
+    [DisplayName("Management Recommendation")]
+    [IsoXmlTag("MgmtRcmmndtn")]
+    public VoteInstruction5Code? ManagementRecommendation { get; init; }
+
+    /// <summary>
+    /// Notifying Party Recommendation.
+    /// </summary>
+    [DisplayName("Notifying Party Recommendation")]
+    [IsoXmlTag("NtifngPtyRcmmndtn")]
+    public VoteInstruction5Code? NotifyingPartyRecommendation { get; init; }
+
+    /// <summary>
+    /// Entitlement.
+    /// </summary>
+    [DisplayName("Entitlement")]
+    [IsoXmlTag("Entitlmnt")]
+    public Entitlement1Choice_? Entitlement { get; init; }
 
     /// <summary>
     /// Voting Rights Threshold For Approval.
@@ -120,4 +113,11 @@ public record Resolution8
     [DisplayName("Voting Rights Threshold For Approval")]
     [IsoXmlTag("VtngRghtsThrshldForApprvl")]
     public ValueList<VotingRightsThreshold2> VotingRightsThresholdForApproval { get; init; } = [];
+
+    /// <summary>
+    /// URL Address.
+    /// </summary>
+    [DisplayName("URL Address")]
+    [IsoXmlTag("URLAdr")]
+    public Max2048Text? URLAddress { get; init; }
 }

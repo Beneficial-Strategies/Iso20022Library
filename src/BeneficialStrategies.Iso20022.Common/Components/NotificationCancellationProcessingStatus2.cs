@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NotificationCancellationProcessingStatus2
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max350Text? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Status.
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     public required ProcessedStatus2Format1Choice_ Status { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max350Text? AdditionalInformation { get; init; }
 }

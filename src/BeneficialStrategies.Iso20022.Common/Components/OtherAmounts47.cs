@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OtherAmounts47
 {
     /// <summary>
-    /// Accrued Capitalisation Amount.
-    /// </summary>
-    [DisplayName("Accrued Capitalisation Amount")]
-    [IsoXmlTag("AcrdCptlstnAmt")]
-    public AmountAndDirection44? AccruedCapitalisationAmount { get; init; }
-
-    /// <summary>
     /// Accrued Interest Amount.
     /// </summary>
     [DisplayName("Accrued Interest Amount")]
     [IsoXmlTag("AcrdIntrstAmt")]
     public AmountAndDirection44? AccruedInterestAmount { get; init; }
-
-    /// <summary>
-    /// Book Value.
-    /// </summary>
-    [DisplayName("Book Value")]
-    [IsoXmlTag("BookVal")]
-    public AmountAndDirection44? BookValue { get; init; }
 
     /// <summary>
     /// Charges Fees.
@@ -45,18 +31,18 @@ public record OtherAmounts47
     public AmountAndDirection44? ChargesFees { get; init; }
 
     /// <summary>
-    /// Consumption Tax.
-    /// </summary>
-    [DisplayName("Consumption Tax")]
-    [IsoXmlTag("CsmptnTax")]
-    public AmountAndDirection44? ConsumptionTax { get; init; }
-
-    /// <summary>
     /// Country National Federal Tax.
     /// </summary>
     [DisplayName("Country National Federal Tax")]
     [IsoXmlTag("CtryNtlFdrlTax")]
     public AmountAndDirection44? CountryNationalFederalTax { get; init; }
+
+    /// <summary>
+    /// Trade Amount.
+    /// </summary>
+    [DisplayName("Trade Amount")]
+    [IsoXmlTag("TradAmt")]
+    public AmountAndDirection44? TradeAmount { get; init; }
 
     /// <summary>
     /// Executing Broker Amount.
@@ -73,11 +59,11 @@ public record OtherAmounts47
     public AmountAndDirection44? IssueDiscountAllowance { get; init; }
 
     /// <summary>
-    /// Local Broker Commission.
+    /// Payment Levy Tax.
     /// </summary>
-    [DisplayName("Local Broker Commission")]
-    [IsoXmlTag("LclBrkrComssn")]
-    public AmountAndDirection44? LocalBrokerCommission { get; init; }
+    [DisplayName("Payment Levy Tax")]
+    [IsoXmlTag("PmtLevyTax")]
+    public AmountAndDirection44? PaymentLevyTax { get; init; }
 
     /// <summary>
     /// Local Tax.
@@ -87,25 +73,18 @@ public record OtherAmounts47
     public AmountAndDirection44? LocalTax { get; init; }
 
     /// <summary>
+    /// Local Broker Commission.
+    /// </summary>
+    [DisplayName("Local Broker Commission")]
+    [IsoXmlTag("LclBrkrComssn")]
+    public AmountAndDirection44? LocalBrokerCommission { get; init; }
+
+    /// <summary>
     /// Margin.
     /// </summary>
     [DisplayName("Margin")]
     [IsoXmlTag("Mrgn")]
     public AmountAndDirection44? Margin { get; init; }
-
-    /// <summary>
-    /// Net Gain Loss.
-    /// </summary>
-    [DisplayName("Net Gain Loss")]
-    [IsoXmlTag("NetGnLoss")]
-    public AmountAndDirection44? NetGainLoss { get; init; }
-
-    /// <summary>
-    /// Network Fee.
-    /// </summary>
-    [DisplayName("Network Fee")]
-    [IsoXmlTag("NtwkFee")]
-    public AmountAndDirection44? NetworkFee { get; init; }
 
     /// <summary>
     /// Other.
@@ -115,25 +94,11 @@ public record OtherAmounts47
     public AmountAndDirection44? Other { get; init; }
 
     /// <summary>
-    /// Payment Levy Tax.
-    /// </summary>
-    [DisplayName("Payment Levy Tax")]
-    [IsoXmlTag("PmtLevyTax")]
-    public AmountAndDirection44? PaymentLevyTax { get; init; }
-
-    /// <summary>
     /// Regulatory Amount.
     /// </summary>
     [DisplayName("Regulatory Amount")]
     [IsoXmlTag("RgltryAmt")]
     public AmountAndDirection44? RegulatoryAmount { get; init; }
-
-    /// <summary>
-    /// Research Fee.
-    /// </summary>
-    [DisplayName("Research Fee")]
-    [IsoXmlTag("RsrchFee")]
-    public AmountAndDirection44? ResearchFee { get; init; }
 
     /// <summary>
     /// Shipping Amount.
@@ -164,11 +129,11 @@ public record OtherAmounts47
     public AmountAndDirection44? StockExchangeTax { get; init; }
 
     /// <summary>
-    /// Trade Amount.
+    /// Transfer Tax.
     /// </summary>
-    [DisplayName("Trade Amount")]
-    [IsoXmlTag("TradAmt")]
-    public AmountAndDirection44? TradeAmount { get; init; }
+    [DisplayName("Transfer Tax")]
+    [IsoXmlTag("TrfTax")]
+    public AmountAndDirection44? TransferTax { get; init; }
 
     /// <summary>
     /// Transaction Tax.
@@ -176,13 +141,6 @@ public record OtherAmounts47
     [DisplayName("Transaction Tax")]
     [IsoXmlTag("TxTax")]
     public AmountAndDirection44? TransactionTax { get; init; }
-
-    /// <summary>
-    /// Transfer Tax.
-    /// </summary>
-    [DisplayName("Transfer Tax")]
-    [IsoXmlTag("TrfTax")]
-    public AmountAndDirection44? TransferTax { get; init; }
 
     /// <summary>
     /// Value Added Tax.
@@ -197,4 +155,46 @@ public record OtherAmounts47
     [DisplayName("Withholding Tax")]
     [IsoXmlTag("WhldgTax")]
     public AmountAndDirection44? WithholdingTax { get; init; }
+
+    /// <summary>
+    /// Net Gain Loss.
+    /// </summary>
+    [DisplayName("Net Gain Loss")]
+    [IsoXmlTag("NetGnLoss")]
+    public AmountAndDirection44? NetGainLoss { get; init; }
+
+    /// <summary>
+    /// Consumption Tax.
+    /// </summary>
+    [DisplayName("Consumption Tax")]
+    [IsoXmlTag("CsmptnTax")]
+    public AmountAndDirection44? ConsumptionTax { get; init; }
+
+    /// <summary>
+    /// Accrued Capitalisation Amount.
+    /// </summary>
+    [DisplayName("Accrued Capitalisation Amount")]
+    [IsoXmlTag("AcrdCptlstnAmt")]
+    public AmountAndDirection44? AccruedCapitalisationAmount { get; init; }
+
+    /// <summary>
+    /// Book Value.
+    /// </summary>
+    [DisplayName("Book Value")]
+    [IsoXmlTag("BookVal")]
+    public AmountAndDirection44? BookValue { get; init; }
+
+    /// <summary>
+    /// Research Fee.
+    /// </summary>
+    [DisplayName("Research Fee")]
+    [IsoXmlTag("RsrchFee")]
+    public AmountAndDirection44? ResearchFee { get; init; }
+
+    /// <summary>
+    /// Network Fee.
+    /// </summary>
+    [DisplayName("Network Fee")]
+    [IsoXmlTag("NtwkFee")]
+    public AmountAndDirection44? NetworkFee { get; init; }
 }

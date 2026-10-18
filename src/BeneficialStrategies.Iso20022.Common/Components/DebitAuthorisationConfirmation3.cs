@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DebitAuthorisationConfirmation3
 {
     /// <summary>
-    /// Account.
+    /// Debit Authorisation.
     /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; }
+    [DisplayName("Debit Authorisation")]
+    [IsoXmlTag("DbtAuthstn")]
+    public required TrueFalseIndicator DebitAuthorisation { get; init; }
 
     /// <summary>
     /// Amount To Debit.
@@ -31,25 +31,11 @@ public record DebitAuthorisationConfirmation3
     public ActiveCurrencyAndAmount? AmountToDebit { get; init; }
 
     /// <summary>
-    /// Common Transaction Identification.
+    /// Account.
     /// </summary>
-    [DisplayName("Common Transaction Identification")]
-    [IsoXmlTag("CmonTxId")]
-    public Max52Text? CommonTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Debit Authorisation.
-    /// </summary>
-    [DisplayName("Debit Authorisation")]
-    [IsoXmlTag("DbtAuthstn")]
-    public required TrueFalseIndicator DebitAuthorisation { get; init; }
-
-    /// <summary>
-    /// Reason.
-    /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public Max140Text? Reason { get; init; }
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public CashAccount40? Account { get; init; }
 
     /// <summary>
     /// Value Date To Debit.
@@ -57,4 +43,18 @@ public record DebitAuthorisationConfirmation3
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     public ISODate? ValueDateToDebit { get; init; }
+
+    /// <summary>
+    /// Common Transaction Identification.
+    /// </summary>
+    [DisplayName("Common Transaction Identification")]
+    [IsoXmlTag("CmonTxId")]
+    public Max52Text? CommonTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Reason.
+    /// </summary>
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public Max140Text? Reason { get; init; }
 }

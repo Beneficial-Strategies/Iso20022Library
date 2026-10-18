@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Statement86
 {
     /// <summary>
-    /// Activity Indicator.
+    /// Statement Identification.
     /// </summary>
-    [DisplayName("Activity Indicator")]
-    [IsoXmlTag("ActvtyInd")]
-    public required YesNoIndicator ActivityIndicator { get; init; }
+    [DisplayName("Statement Identification")]
+    [IsoXmlTag("StmtId")]
+    public required Max35Text StatementIdentification { get; init; }
+
+    /// <summary>
+    /// Statement Date And Time.
+    /// </summary>
+    [DisplayName("Statement Date And Time")]
+    [IsoXmlTag("StmtDtAndTm")]
+    public required DateAndDateTime2Choice_ StatementDateAndTime { get; init; }
+
+    /// <summary>
+    /// Update Type.
+    /// </summary>
+    [DisplayName("Update Type")]
+    [IsoXmlTag("UpdTp")]
+    public required StatementUpdateType1Code UpdateType { get; init; }
 
     /// <summary>
     /// Frequency.
@@ -38,23 +52,9 @@ public record Statement86
     public Exact5NumericText? ReportNumber { get; init; }
 
     /// <summary>
-    /// Statement Date And Time.
+    /// Activity Indicator.
     /// </summary>
-    [DisplayName("Statement Date And Time")]
-    [IsoXmlTag("StmtDtAndTm")]
-    public required DateAndDateTime2Choice_ StatementDateAndTime { get; init; }
-
-    /// <summary>
-    /// Statement Identification.
-    /// </summary>
-    [DisplayName("Statement Identification")]
-    [IsoXmlTag("StmtId")]
-    public required Max35Text StatementIdentification { get; init; }
-
-    /// <summary>
-    /// Update Type.
-    /// </summary>
-    [DisplayName("Update Type")]
-    [IsoXmlTag("UpdTp")]
-    public required StatementUpdateType1Code UpdateType { get; init; }
+    [DisplayName("Activity Indicator")]
+    [IsoXmlTag("ActvtyInd")]
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTotals4
 {
     /// <summary>
-    /// ATM Balance.
+    /// Media Type.
     /// </summary>
-    [DisplayName("ATM Balance")]
-    [IsoXmlTag("ATMBal")]
-    public ImpliedCurrencyAndAmount? ATMBalance { get; init; }
-
-    /// <summary>
-    /// ATM Balance Number.
-    /// </summary>
-    [DisplayName("ATM Balance Number")]
-    [IsoXmlTag("ATMBalNb")]
-    public Number? ATMBalanceNumber { get; init; }
-
-    /// <summary>
-    /// ATM Current.
-    /// </summary>
-    [DisplayName("ATM Current")]
-    [IsoXmlTag("ATMCur")]
-    public ImpliedCurrencyAndAmount? ATMCurrent { get; init; }
-
-    /// <summary>
-    /// ATM Current Number.
-    /// </summary>
-    [DisplayName("ATM Current Number")]
-    [IsoXmlTag("ATMCurNb")]
-    public Number? ATMCurrentNumber { get; init; }
+    [DisplayName("Media Type")]
+    [IsoXmlTag("MdiaTp")]
+    public ATMMediaType4Code? MediaType { get; init; }
 
     /// <summary>
     /// Currency.
@@ -52,9 +31,30 @@ public record ATMTotals4
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Media Type.
+    /// ATM Balance.
     /// </summary>
-    [DisplayName("Media Type")]
-    [IsoXmlTag("MdiaTp")]
-    public ATMMediaType4Code? MediaType { get; init; }
+    [DisplayName("ATM Balance")]
+    [IsoXmlTag("ATMBal")]
+    public ImpliedCurrencyAndAmount? ATMBalance { get; init; }
+
+    /// <summary>
+    /// ATM Current.
+    /// </summary>
+    [DisplayName("ATM Current")]
+    [IsoXmlTag("ATMCur")]
+    public ImpliedCurrencyAndAmount? ATMCurrent { get; init; }
+
+    /// <summary>
+    /// ATM Balance Number.
+    /// </summary>
+    [DisplayName("ATM Balance Number")]
+    [IsoXmlTag("ATMBalNb")]
+    public Number? ATMBalanceNumber { get; init; }
+
+    /// <summary>
+    /// ATM Current Number.
+    /// </summary>
+    [DisplayName("ATM Current Number")]
+    [IsoXmlTag("ATMCurNb")]
+    public Number? ATMCurrentNumber { get; init; }
 }

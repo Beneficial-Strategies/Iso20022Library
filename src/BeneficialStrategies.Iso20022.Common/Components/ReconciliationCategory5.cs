@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationCategory5
 {
     /// <summary>
-    /// Further Modification.
+    /// Reporting Type.
     /// </summary>
-    [DisplayName("Further Modification")]
-    [IsoXmlTag("FrthrMod")]
-    public required YesNoIndicator FurtherModification { get; init; }
+    [DisplayName("Reporting Type")]
+    [IsoXmlTag("RptgTp")]
+    public required TradeRepositoryReportingType1Code ReportingType { get; init; }
 
     /// <summary>
     /// Pairing.
@@ -38,11 +38,11 @@ public record ReconciliationCategory5
     public required ReconciliationStatus1Code Reconciliation { get; init; }
 
     /// <summary>
-    /// Reporting Type.
+    /// Valuation Reconciliation.
     /// </summary>
-    [DisplayName("Reporting Type")]
-    [IsoXmlTag("RptgTp")]
-    public required TradeRepositoryReportingType1Code ReportingType { get; init; }
+    [DisplayName("Valuation Reconciliation")]
+    [IsoXmlTag("ValtnRcncltn")]
+    public required ReconciliationStatus2Code ValuationReconciliation { get; init; }
 
     /// <summary>
     /// Revived.
@@ -52,9 +52,9 @@ public record ReconciliationCategory5
     public required YesNoIndicator Revived { get; init; }
 
     /// <summary>
-    /// Valuation Reconciliation.
+    /// Further Modification.
     /// </summary>
-    [DisplayName("Valuation Reconciliation")]
-    [IsoXmlTag("ValtnRcncltn")]
-    public required ReconciliationStatus2Code ValuationReconciliation { get; init; }
+    [DisplayName("Further Modification")]
+    [IsoXmlTag("FrthrMod")]
+    public required YesNoIndicator FurtherModification { get; init; }
 }

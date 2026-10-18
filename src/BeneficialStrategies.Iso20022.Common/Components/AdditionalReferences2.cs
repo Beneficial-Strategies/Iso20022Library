@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AdditionalReferences2
 {
     /// <summary>
-    /// Message Name.
-    /// </summary>
-    [DisplayName("Message Name")]
-    [IsoXmlTag("MsgNm")]
-    public Max35Text? MessageName { get; init; }
-
-    /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public required Max35Text Reference { get; init; }
+
+    /// <summary>
+    /// Message Name.
+    /// </summary>
+    [DisplayName("Message Name")]
+    [IsoXmlTag("MsgNm")]
+    public Max35Text? MessageName { get; init; }
 
     /// <summary>
     /// Reference Issuer.

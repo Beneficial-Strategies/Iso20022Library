@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification274
 {
     /// <summary>
-    /// Contact Details.
-    /// </summary>
-    [DisplayName("Contact Details")]
-    [IsoXmlTag("CtctDtls")]
-    public Contact13? ContactDetails { get; init; }
-
-    /// <summary>
-    /// Country Of Residence.
-    /// </summary>
-    [DisplayName("Country Of Residence")]
-    [IsoXmlTag("CtryOfRes")]
-    public CountryCode? CountryOfResidence { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public PersonIdentification18? Identification { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
@@ -50,4 +29,25 @@ public record PartyIdentification274
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public PersonIdentification18? Identification { get; init; }
+
+    /// <summary>
+    /// Country Of Residence.
+    /// </summary>
+    [DisplayName("Country Of Residence")]
+    [IsoXmlTag("CtryOfRes")]
+    public CountryCode? CountryOfResidence { get; init; }
+
+    /// <summary>
+    /// Contact Details.
+    /// </summary>
+    [DisplayName("Contact Details")]
+    [IsoXmlTag("CtctDtls")]
+    public Contact13? ContactDetails { get; init; }
 }

@@ -46,13 +46,6 @@ public record ATMDepositCompletionAdviceV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Deposit Completion Advice.
-    /// </summary>
-    [DisplayName("ATM Deposit Completion Advice")]
-    [IsoXmlTag("ATMDpstCmpltnAdvc")]
-    public ATMDepositCompletionAdvice2? ATMDepositCompletionAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMDepositCompletionAdviceV02 : IOuterRecord
     [DisplayName("Protected ATM Deposit Completion Advice")]
     [IsoXmlTag("PrtctdATMDpstCmpltnAdvc")]
     public ContentInformationType10? ProtectedATMDepositCompletionAdvice { get; init; }
+
+    /// <summary>
+    /// ATM Deposit Completion Advice.
+    /// </summary>
+    [DisplayName("ATM Deposit Completion Advice")]
+    [IsoXmlTag("ATMDpstCmpltnAdvc")]
+    public ATMDepositCompletionAdvice2? ATMDepositCompletionAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

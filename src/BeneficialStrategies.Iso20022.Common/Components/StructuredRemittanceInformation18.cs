@@ -20,39 +20,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StructuredRemittanceInformation18
 {
     /// <summary>
-    /// Additional information, in free text form, to complement the structured remittance information.
+    /// Provides the identification and the content of the referred document.
     /// </summary>
-    [DisplayName("Additional Remittance Information")]
-    [IsoXmlTag("AddtlRmtInf")]
-    public SimpleValueList<Max140Text> AdditionalRemittanceInformation { get; init; } = [];
-
-    /// <summary>
-    /// Reference information provided by the creditor to allow the identification of the underlying documents.
-    /// </summary>
-    [DisplayName("Creditor Reference Information")]
-    [IsoXmlTag("CdtrRefInf")]
-    public CreditorReferenceInformation3? CreditorReferenceInformation { get; init; }
-
-    /// <summary>
-    /// Provides remittance information about a payment for garnishment-related purposes.
-    /// </summary>
-    [DisplayName("Garnishment Remittance")]
-    [IsoXmlTag("GrnshmtRmt")]
-    public Garnishment4? GarnishmentRemittance { get; init; }
-
-    /// <summary>
-    /// Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.
-    /// </summary>
-    [DisplayName("Invoicee")]
-    [IsoXmlTag("Invcee")]
-    public PartyIdentification272? Invoicee { get; init; }
-
-    /// <summary>
-    /// Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.
-    /// </summary>
-    [DisplayName("Invoicer")]
-    [IsoXmlTag("Invcr")]
-    public PartyIdentification272? Invoicer { get; init; }
+    [DisplayName("Referred Document Information")]
+    [IsoXmlTag("RfrdDocInf")]
+    public ValueList<ReferredDocumentInformation8> ReferredDocumentInformation { get; init; } = [];
 
     /// <summary>
     /// Provides details on the amounts of the referred document.
@@ -62,11 +34,25 @@ public record StructuredRemittanceInformation18
     public RemittanceAmount4? ReferredDocumentAmount { get; init; }
 
     /// <summary>
-    /// Provides the identification and the content of the referred document.
+    /// Reference information provided by the creditor to allow the identification of the underlying documents.
     /// </summary>
-    [DisplayName("Referred Document Information")]
-    [IsoXmlTag("RfrdDocInf")]
-    public ValueList<ReferredDocumentInformation8> ReferredDocumentInformation { get; init; } = [];
+    [DisplayName("Creditor Reference Information")]
+    [IsoXmlTag("CdtrRefInf")]
+    public CreditorReferenceInformation3? CreditorReferenceInformation { get; init; }
+
+    /// <summary>
+    /// Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.
+    /// </summary>
+    [DisplayName("Invoicer")]
+    [IsoXmlTag("Invcr")]
+    public PartyIdentification272? Invoicer { get; init; }
+
+    /// <summary>
+    /// Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.
+    /// </summary>
+    [DisplayName("Invoicee")]
+    [IsoXmlTag("Invcee")]
+    public PartyIdentification272? Invoicee { get; init; }
 
     /// <summary>
     /// Provides remittance information about a payment made for tax-related purposes.
@@ -74,4 +60,18 @@ public record StructuredRemittanceInformation18
     [DisplayName("Tax Remittance")]
     [IsoXmlTag("TaxRmt")]
     public TaxData1? TaxRemittance { get; init; }
+
+    /// <summary>
+    /// Provides remittance information about a payment for garnishment-related purposes.
+    /// </summary>
+    [DisplayName("Garnishment Remittance")]
+    [IsoXmlTag("GrnshmtRmt")]
+    public Garnishment4? GarnishmentRemittance { get; init; }
+
+    /// <summary>
+    /// Additional information, in free text form, to complement the structured remittance information.
+    /// </summary>
+    [DisplayName("Additional Remittance Information")]
+    [IsoXmlTag("AddtlRmtInf")]
+    public SimpleValueList<Max140Text> AdditionalRemittanceInformation { get; init; } = [];
 }

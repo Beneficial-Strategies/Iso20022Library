@@ -46,20 +46,6 @@ public record IntraPositionMovementPendingReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public SystemPartyIdentification8? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Movements.
-    /// </summary>
-    [DisplayName("Movements")]
-    [IsoXmlTag("Mvmnts")]
-    public ValueList<IntraPositionPending11> Movements { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -74,9 +60,23 @@ public record IntraPositionMovementPendingReportV01 : IOuterRecord
     public required IntraPositionReport7 ReportGeneralDetails { get; init; }
 
     /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public SystemPartyIdentification8? AccountOwner { get; init; }
+
+    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public required SecuritiesAccount19 SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Movements.
+    /// </summary>
+    [DisplayName("Movements")]
+    [IsoXmlTag("Mvmnts")]
+    public ValueList<IntraPositionPending11> Movements { get; init; } = [];
 }

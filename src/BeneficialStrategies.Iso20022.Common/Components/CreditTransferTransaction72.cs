@@ -217,14 +217,6 @@ public record CreditTransferTransaction72
     public PartyIdentification272? UltimateCreditor { get; init; }
 
     /// <summary>
-    /// Underlying reason for the payment transaction.
-    /// </summary>
-    [IsoId("83c0d23e-0026-0026-0026-26b345a59881")]
-    [DisplayName("Purpose")]
-    [IsoXmlTag("Purp")]
-    public Purpose2Choice_? Purpose { get; init; }
-
-    /// <summary>
     /// Further instructions concerning the processing of the payment instruction.
     /// </summary>
     [IsoId("83c0d23e-0027-0027-0027-26b345a59881")]
@@ -239,6 +231,14 @@ public record CreditTransferTransaction72
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
     public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
+
+    /// <summary>
+    /// Underlying reason for the payment transaction.
+    /// </summary>
+    [IsoId("83c0d23e-0026-0026-0026-26b345a59881")]
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Tax information.

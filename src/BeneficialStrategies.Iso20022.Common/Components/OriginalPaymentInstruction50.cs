@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalPaymentInstruction50
 {
     /// <summary>
-    /// Batch Booking.
+    /// Reversal Payment Information Identification.
     /// </summary>
-    [DisplayName("Batch Booking")]
-    [IsoXmlTag("BtchBookg")]
-    public BatchBookingIndicator? BatchBooking { get; init; }
-
-    /// <summary>
-    /// Original Control Sum.
-    /// </summary>
-    [DisplayName("Original Control Sum")]
-    [IsoXmlTag("OrgnlCtrlSum")]
-    public DecimalNumber? OriginalControlSum { get; init; }
-
-    /// <summary>
-    /// Original Number Of Transactions.
-    /// </summary>
-    [DisplayName("Original Number Of Transactions")]
-    [IsoXmlTag("OrgnlNbOfTxs")]
-    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
+    [DisplayName("Reversal Payment Information Identification")]
+    [IsoXmlTag("RvslPmtInfId")]
+    public Max35Text? ReversalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Original Payment Information Identification.
@@ -45,18 +31,32 @@ public record OriginalPaymentInstruction50
     public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
+    /// Original Number Of Transactions.
+    /// </summary>
+    [DisplayName("Original Number Of Transactions")]
+    [IsoXmlTag("OrgnlNbOfTxs")]
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Original Control Sum.
+    /// </summary>
+    [DisplayName("Original Control Sum")]
+    [IsoXmlTag("OrgnlCtrlSum")]
+    public DecimalNumber? OriginalControlSum { get; init; }
+
+    /// <summary>
+    /// Batch Booking.
+    /// </summary>
+    [DisplayName("Batch Booking")]
+    [IsoXmlTag("BtchBookg")]
+    public BatchBookingIndicator? BatchBooking { get; init; }
+
+    /// <summary>
     /// Payment Information Reversal.
     /// </summary>
     [DisplayName("Payment Information Reversal")]
     [IsoXmlTag("PmtInfRvsl")]
     public TrueFalseIndicator? PaymentInformationReversal { get; init; }
-
-    /// <summary>
-    /// Reversal Payment Information Identification.
-    /// </summary>
-    [DisplayName("Reversal Payment Information Identification")]
-    [IsoXmlTag("RvslPmtInfId")]
-    public Max35Text? ReversalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Reversal Reason Information.

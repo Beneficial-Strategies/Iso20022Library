@@ -47,116 +47,11 @@ public record ReconciliationResponseV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header71 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// Original Response Code.
-    /// </summary>
-    [DisplayName("Original Response Code")]
-    [IsoXmlTag("OrgnlRspnCd")]
-    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
-
-    /// <summary>
-    /// Originator.
-    /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
-
-    /// <summary>
-    /// Other Reconciliation Activity Type.
-    /// </summary>
-    [DisplayName("Other Reconciliation Activity Type")]
-    [IsoXmlTag("OthrRcncltnActvtyTp")]
-    public Max35Text? OtherReconciliationActivityType { get; init; }
-
-    /// <summary>
-    /// Other Reconciliation Type.
-    /// </summary>
-    [DisplayName("Other Reconciliation Type")]
-    [IsoXmlTag("OthrRcncltnTp")]
-    public Max35Text? OtherReconciliationType { get; init; }
-
-    /// <summary>
-    /// Processing Result.
-    /// </summary>
-    [DisplayName("Processing Result")]
-    [IsoXmlTag("PrcgRslt")]
-    public ProcessingResult26? ProcessingResult { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ValueList<ProgrammeMode5> Programme { get; init; } = [];
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
-
-    /// <summary>
-    /// Receiver.
-    /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation4? Reconciliation { get; init; }
-
-    /// <summary>
-    /// Reconciliation Activity Type.
-    /// </summary>
-    [DisplayName("Reconciliation Activity Type")]
-    [IsoXmlTag("RcncltnActvtyTp")]
-    public ReconciliationActivityType1Code? ReconciliationActivityType { get; init; }
 
     /// <summary>
     /// Reconciliation Function.
@@ -166,11 +61,18 @@ public record ReconciliationResponseV04 : IOuterRecord
     public required ReconciliationFunction1Code ReconciliationFunction { get; init; }
 
     /// <summary>
-    /// Reconciliation Totals.
+    /// Reconciliation Activity Type.
     /// </summary>
-    [DisplayName("Reconciliation Totals")]
-    [IsoXmlTag("RcncltnTtls")]
-    public ValueList<TransactionTotals14> ReconciliationTotals { get; init; } = [];
+    [DisplayName("Reconciliation Activity Type")]
+    [IsoXmlTag("RcncltnActvtyTp")]
+    public ReconciliationActivityType1Code? ReconciliationActivityType { get; init; }
+
+    /// <summary>
+    /// Other Reconciliation Activity Type.
+    /// </summary>
+    [DisplayName("Other Reconciliation Activity Type")]
+    [IsoXmlTag("OthrRcncltnActvtyTp")]
+    public Max35Text? OtherReconciliationActivityType { get; init; }
 
     /// <summary>
     /// Reconciliation Type.
@@ -180,6 +82,13 @@ public record ReconciliationResponseV04 : IOuterRecord
     public required CardServiceType4Code ReconciliationType { get; init; }
 
     /// <summary>
+    /// Other Reconciliation Type.
+    /// </summary>
+    [DisplayName("Other Reconciliation Type")]
+    [IsoXmlTag("OthrRcncltnTp")]
+    public Max35Text? OtherReconciliationType { get; init; }
+
+    /// <summary>
     /// Requested Currency.
     /// </summary>
     [DisplayName("Requested Currency")]
@@ -187,18 +96,11 @@ public record ReconciliationResponseV04 : IOuterRecord
     public ValueList<Exact3NumericText> RequestedCurrency { get; init; } = [];
 
     /// <summary>
-    /// Retrieval Reference Number.
+    /// Originator.
     /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
     /// Sender.
@@ -208,18 +110,25 @@ public record ReconciliationResponseV04 : IOuterRecord
     public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
-    /// Settlement Service.
+    /// Receiver.
     /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService6? SettlementService { get; init; }
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Destination.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ValueList<ProgrammeMode5> Programme { get; init; } = [];
 
     /// <summary>
     /// System Trace Audit Number.
@@ -234,4 +143,95 @@ public record ReconciliationResponseV04 : IOuterRecord
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
     public ISODateTime? TransmissionDateTime { get; init; }
+
+    /// <summary>
+    /// Retrieval Reference Number.
+    /// </summary>
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Reconciliation Totals.
+    /// </summary>
+    [DisplayName("Reconciliation Totals")]
+    [IsoXmlTag("RcncltnTtls")]
+    public ValueList<TransactionTotals14> ReconciliationTotals { get; init; } = [];
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService6? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation4? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Processing Result.
+    /// </summary>
+    [DisplayName("Processing Result")]
+    [IsoXmlTag("PrcgRslt")]
+    public ProcessingResult26? ProcessingResult { get; init; }
+
+    /// <summary>
+    /// Original Response Code.
+    /// </summary>
+    [DisplayName("Original Response Code")]
+    [IsoXmlTag("OrgnlRspnCd")]
+    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

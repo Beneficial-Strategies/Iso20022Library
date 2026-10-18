@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DetailedInstructionStatus21
 {
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public Max35Text? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction Status.
-    /// </summary>
-    [DisplayName("Instruction Status")]
-    [IsoXmlTag("InstrSts")]
-    public required InstructionStatus13Choice_ InstructionStatus { get; init; }
-
-    /// <summary>
     /// Single Instruction Identification.
     /// </summary>
     [DisplayName("Single Instruction Identification")]
@@ -38,9 +24,23 @@ public record DetailedInstructionStatus21
     public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public Max35Text? AccountIdentification { get; init; }
+
+    /// <summary>
     /// Sub Account Identification.
     /// </summary>
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
     public Max35Text? SubAccountIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Status.
+    /// </summary>
+    [DisplayName("Instruction Status")]
+    [IsoXmlTag("InstrSts")]
+    public required InstructionStatus13Choice_ InstructionStatus { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FleetLineItem5
 {
     /// <summary>
-    /// Discount Amount.
-    /// </summary>
-    [DisplayName("Discount Amount")]
-    [IsoXmlTag("DscntAmt")]
-    public ImpliedCurrencyAndAmount? DiscountAmount { get; init; }
-
-    /// <summary>
     /// Fuel.
     /// </summary>
     [DisplayName("Fuel")]
     [IsoXmlTag("Fuel")]
     public required TrueFalseIndicator Fuel { get; init; }
+
+    /// <summary>
+    /// Service Type.
+    /// </summary>
+    [DisplayName("Service Type")]
+    [IsoXmlTag("SvcTp")]
+    public FleetServiceType1Code? ServiceType { get; init; }
 
     /// <summary>
     /// Fuel Brand Code.
@@ -38,18 +38,11 @@ public record FleetLineItem5
     public Max4Text? FuelBrandCode { get; init; }
 
     /// <summary>
-    /// Non Taxable.
+    /// Product Code.
     /// </summary>
-    [DisplayName("Non Taxable")]
-    [IsoXmlTag("NonTaxbl")]
-    public TrueFalseIndicator? NonTaxable { get; init; }
-
-    /// <summary>
-    /// Other Unit Of Measure.
-    /// </summary>
-    [DisplayName("Other Unit Of Measure")]
-    [IsoXmlTag("OthrUnitOfMeasr")]
-    public Max35Text? OtherUnitOfMeasure { get; init; }
+    [DisplayName("Product Code")]
+    [IsoXmlTag("PdctCd")]
+    public Max4Text? ProductCode { get; init; }
 
     /// <summary>
     /// Product Category.
@@ -59,11 +52,11 @@ public record FleetLineItem5
     public Max35Text? ProductCategory { get; init; }
 
     /// <summary>
-    /// Product Code.
+    /// Product Qualifier.
     /// </summary>
-    [DisplayName("Product Code")]
-    [IsoXmlTag("PdctCd")]
-    public Max4Text? ProductCode { get; init; }
+    [DisplayName("Product Qualifier")]
+    [IsoXmlTag("PdctQlfr")]
+    public Max6Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// Product Code Assigner.
@@ -73,11 +66,32 @@ public record FleetLineItem5
     public Max35Text? ProductCodeAssigner { get; init; }
 
     /// <summary>
-    /// Product Qualifier.
+    /// Unit Price Tax.
     /// </summary>
-    [DisplayName("Product Qualifier")]
-    [IsoXmlTag("PdctQlfr")]
-    public Max6Text? ProductQualifier { get; init; }
+    [DisplayName("Unit Price Tax")]
+    [IsoXmlTag("UnitPricTax")]
+    public TrueFalseIndicator? UnitPriceTax { get; init; }
+
+    /// <summary>
+    /// Unit Price.
+    /// </summary>
+    [DisplayName("Unit Price")]
+    [IsoXmlTag("UnitPric")]
+    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
+
+    /// <summary>
+    /// Unit Of Measure.
+    /// </summary>
+    [DisplayName("Unit Of Measure")]
+    [IsoXmlTag("UnitOfMeasr")]
+    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
+    /// <summary>
+    /// Other Unit Of Measure.
+    /// </summary>
+    [DisplayName("Other Unit Of Measure")]
+    [IsoXmlTag("OthrUnitOfMeasr")]
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Product Quantity.
@@ -87,11 +101,18 @@ public record FleetLineItem5
     public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
-    /// Service Type.
+    /// Discount Amount.
     /// </summary>
-    [DisplayName("Service Type")]
-    [IsoXmlTag("SvcTp")]
-    public FleetServiceType1Code? ServiceType { get; init; }
+    [DisplayName("Discount Amount")]
+    [IsoXmlTag("DscntAmt")]
+    public ImpliedCurrencyAndAmount? DiscountAmount { get; init; }
+
+    /// <summary>
+    /// Non Taxable.
+    /// </summary>
+    [DisplayName("Non Taxable")]
+    [IsoXmlTag("NonTaxbl")]
+    public TrueFalseIndicator? NonTaxable { get; init; }
 
     /// <summary>
     /// Tax.
@@ -113,25 +134,4 @@ public record FleetLineItem5
     [DisplayName("Total Amount Including Tax")]
     [IsoXmlTag("TtlAmtInclgTax")]
     public ImpliedCurrencyAndAmount? TotalAmountIncludingTax { get; init; }
-
-    /// <summary>
-    /// Unit Of Measure.
-    /// </summary>
-    [DisplayName("Unit Of Measure")]
-    [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
-
-    /// <summary>
-    /// Unit Price.
-    /// </summary>
-    [DisplayName("Unit Price")]
-    [IsoXmlTag("UnitPric")]
-    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
-
-    /// <summary>
-    /// Unit Price Tax.
-    /// </summary>
-    [DisplayName("Unit Price Tax")]
-    [IsoXmlTag("UnitPricTax")]
-    public TrueFalseIndicator? UnitPriceTax { get; init; }
 }

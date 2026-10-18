@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestigationResponse9
 {
     /// <summary>
-    /// Investigation Data.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Investigation Data")]
-    [IsoXmlTag("InvstgtnData")]
-    public ValueList<InvestigationData6> InvestigationData { get; init; } = [];
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Responder Investigation Identification.
+    /// </summary>
+    [DisplayName("Responder Investigation Identification")]
+    [IsoXmlTag("RspndrInvstgtnId")]
+    public Max35Text? ResponderInvestigationIdentification { get; init; }
 
     /// <summary>
     /// Investigation Status.
@@ -31,13 +38,6 @@ public record InvestigationResponse9
     public required InvestigationStatus2 InvestigationStatus { get; init; }
 
     /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
     /// Next Responder.
     /// </summary>
     [DisplayName("Next Responder")]
@@ -45,9 +45,9 @@ public record InvestigationResponse9
     public Party40Choice_? NextResponder { get; init; }
 
     /// <summary>
-    /// Responder Investigation Identification.
+    /// Investigation Data.
     /// </summary>
-    [DisplayName("Responder Investigation Identification")]
-    [IsoXmlTag("RspndrInvstgtnId")]
-    public Max35Text? ResponderInvestigationIdentification { get; init; }
+    [DisplayName("Investigation Data")]
+    [IsoXmlTag("InvstgtnData")]
+    public ValueList<InvestigationData6> InvestigationData { get; init; } = [];
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionRate127
 {
     /// <summary>
-    /// Oversubscription Rate.
-    /// </summary>
-    [DisplayName("Oversubscription Rate")]
-    [IsoXmlTag("OvrsbcptRate")]
-    public RateAndAmountFormat59Choice_? OversubscriptionRate { get; init; }
-
-    /// <summary>
     /// Proposed Rate.
     /// </summary>
     [DisplayName("Proposed Rate")]
@@ -31,11 +24,11 @@ public record CorporateActionRate127
     public decimal? ProposedRate { get; init; }
 
     /// <summary>
-    /// Requested Second Level Tax Rate.
+    /// Oversubscription Rate.
     /// </summary>
-    [DisplayName("Requested Second Level Tax Rate")]
-    [IsoXmlTag("ReqdScndLvlTaxRate")]
-    public ValueList<RateAndAmountFormat55Choice_> RequestedSecondLevelTaxRate { get; init; } = [];
+    [DisplayName("Oversubscription Rate")]
+    [IsoXmlTag("OvrsbcptRate")]
+    public RateAndAmountFormat59Choice_? OversubscriptionRate { get; init; }
 
     /// <summary>
     /// Requested Withholding Tax Rate.
@@ -43,4 +36,11 @@ public record CorporateActionRate127
     [DisplayName("Requested Withholding Tax Rate")]
     [IsoXmlTag("ReqdWhldgTaxRate")]
     public ValueList<RateAndAmountFormat55Choice_> RequestedWithholdingTaxRate { get; init; } = [];
+
+    /// <summary>
+    /// Requested Second Level Tax Rate.
+    /// </summary>
+    [DisplayName("Requested Second Level Tax Rate")]
+    [IsoXmlTag("ReqdScndLvlTaxRate")]
+    public ValueList<RateAndAmountFormat55Choice_> RequestedSecondLevelTaxRate { get; init; } = [];
 }

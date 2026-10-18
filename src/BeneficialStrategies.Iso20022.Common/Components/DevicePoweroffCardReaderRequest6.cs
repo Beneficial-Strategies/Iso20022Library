@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DevicePoweroffCardReaderRequest6
 {
     /// <summary>
-    /// Display Output.
-    /// </summary>
-    [DisplayName("Display Output")]
-    [IsoXmlTag("DispOutpt")]
-    public ActionMessage11? DisplayOutput { get; init; }
-
-    /// <summary>
     /// Power Off Maximum Waiting Time.
     /// </summary>
     [DisplayName("Power Off Maximum Waiting Time")]
     [IsoXmlTag("PwrOffMaxWtgTm")]
     public Number? PowerOffMaximumWaitingTime { get; init; }
+
+    /// <summary>
+    /// Display Output.
+    /// </summary>
+    [DisplayName("Display Output")]
+    [IsoXmlTag("DispOutpt")]
+    public ActionMessage11? DisplayOutput { get; init; }
 }

@@ -46,18 +46,18 @@ public record AcceptorCurrencyConversionRequestV11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Currency Conversion Request.
-    /// </summary>
-    [DisplayName("Currency Conversion Request")]
-    [IsoXmlTag("CcyConvsReq")]
-    public required AcceptorCurrencyConversionRequest11 CurrencyConversionRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Currency Conversion Request.
+    /// </summary>
+    [DisplayName("Currency Conversion Request")]
+    [IsoXmlTag("CcyConvsReq")]
+    public required AcceptorCurrencyConversionRequest11 CurrencyConversionRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

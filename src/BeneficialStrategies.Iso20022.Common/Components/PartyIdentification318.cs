@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification318
 {
     /// <summary>
-    /// Alternate Identification.
-    /// </summary>
-    [DisplayName("Alternate Identification")]
-    [IsoXmlTag("AltrnId")]
-    public ValueList<AlternatePartyIdentification9> AlternateIdentification { get; init; } = [];
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -36,4 +29,11 @@ public record PartyIdentification318
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
     public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+
+    /// <summary>
+    /// Alternate Identification.
+    /// </summary>
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public ValueList<AlternatePartyIdentification9> AlternateIdentification { get; init; } = [];
 }

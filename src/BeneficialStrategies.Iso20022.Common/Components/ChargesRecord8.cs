@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ChargesRecord8
 {
     /// <summary>
-    /// Agent.
-    /// </summary>
-    [DisplayName("Agent")]
-    [IsoXmlTag("Agt")]
-    public BranchAndFinancialInstitutionIdentification8? Agent { get; init; }
-
-    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Bearer.
-    /// </summary>
-    [DisplayName("Bearer")]
-    [IsoXmlTag("Br")]
-    public ChargeBearerType1Code? Bearer { get; init; }
-
-    /// <summary>
-    /// Charge Included Indicator.
-    /// </summary>
-    [DisplayName("Charge Included Indicator")]
-    [IsoXmlTag("ChrgInclInd")]
-    public ChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -52,18 +31,11 @@ public record ChargesRecord8
     public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
-    /// Rate.
+    /// Charge Included Indicator.
     /// </summary>
-    [DisplayName("Rate")]
-    [IsoXmlTag("Rate")]
-    public PercentageRate? Rate { get; init; }
-
-    /// <summary>
-    /// Tax.
-    /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public TaxCharges2? Tax { get; init; }
+    [DisplayName("Charge Included Indicator")]
+    [IsoXmlTag("ChrgInclInd")]
+    public ChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
 
     /// <summary>
     /// Type.
@@ -71,4 +43,32 @@ public record ChargesRecord8
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public ChargeType3Choice_? Type { get; init; }
+
+    /// <summary>
+    /// Rate.
+    /// </summary>
+    [DisplayName("Rate")]
+    [IsoXmlTag("Rate")]
+    public PercentageRate? Rate { get; init; }
+
+    /// <summary>
+    /// Bearer.
+    /// </summary>
+    [DisplayName("Bearer")]
+    [IsoXmlTag("Br")]
+    public ChargeBearerType1Code? Bearer { get; init; }
+
+    /// <summary>
+    /// Agent.
+    /// </summary>
+    [DisplayName("Agent")]
+    [IsoXmlTag("Agt")]
+    public BranchAndFinancialInstitutionIdentification8? Agent { get; init; }
+
+    /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public TaxCharges2? Tax { get; init; }
 }

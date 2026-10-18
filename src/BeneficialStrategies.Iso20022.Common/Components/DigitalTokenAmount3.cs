@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DigitalTokenAmount3
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max30Text? Description { get; init; }
-
-    /// <summary>
     /// Identifier.
     /// </summary>
     [DisplayName("Identifier")]
@@ -36,4 +29,11 @@ public record DigitalTokenAmount3
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
     public required Max30DecimalNumber Unit { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max30Text? Description { get; init; }
 }

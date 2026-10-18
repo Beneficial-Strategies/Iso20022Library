@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SystemAbort7
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required CardPaymentContext30 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -31,11 +24,11 @@ public record SystemAbort7
     public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Context.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
     /// System Abort.
@@ -43,4 +36,11 @@ public record SystemAbort7
     [DisplayName("System Abort")]
     [IsoXmlTag("SysAbrt")]
     public required AbortData6 SystemAbort { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

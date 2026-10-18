@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyControlRecordStatus3
 {
     /// <summary>
-    /// Document Identification.
-    /// </summary>
-    [DisplayName("Document Identification")]
-    [IsoXmlTag("DocId")]
-    public DocumentIdentification28? DocumentIdentification { get; init; }
-
-    /// <summary>
     /// Record Identification.
     /// </summary>
     [DisplayName("Record Identification")]
@@ -38,6 +31,13 @@ public record CurrencyControlRecordStatus3
     public required StatisticalReportingStatus1Code Status { get; init; }
 
     /// <summary>
+    /// Status Reason.
+    /// </summary>
+    [DisplayName("Status Reason")]
+    [IsoXmlTag("StsRsn")]
+    public ValueList<ValidationStatusReason3> StatusReason { get; init; } = [];
+
+    /// <summary>
     /// Status Date Time.
     /// </summary>
     [DisplayName("Status Date Time")]
@@ -45,9 +45,9 @@ public record CurrencyControlRecordStatus3
     public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
-    /// Status Reason.
+    /// Document Identification.
     /// </summary>
-    [DisplayName("Status Reason")]
-    [IsoXmlTag("StsRsn")]
-    public ValueList<ValidationStatusReason3> StatusReason { get; init; } = [];
+    [DisplayName("Document Identification")]
+    [IsoXmlTag("DocId")]
+    public DocumentIdentification28? DocumentIdentification { get; init; }
 }

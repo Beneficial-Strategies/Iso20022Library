@@ -53,18 +53,18 @@ public record IdentificationModificationAdviceV04 : IOuterRecord
     public required IdentificationAssignment4 Assignment { get; init; }
 
     /// <summary>
-    /// Modification.
-    /// </summary>
-    [DisplayName("Modification")]
-    [IsoXmlTag("Mod")]
-    public ValueList<IdentificationModification5> Modification { get; init; } = [];
-
-    /// <summary>
     /// Original Transaction Reference.
     /// </summary>
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference43? OriginalTransactionReference { get; init; }
+
+    /// <summary>
+    /// Modification.
+    /// </summary>
+    [DisplayName("Modification")]
+    [IsoXmlTag("Mod")]
+    public ValueList<IdentificationModification5> Modification { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

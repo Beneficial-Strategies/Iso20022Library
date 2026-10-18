@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorConfiguration13
 {
     /// <summary>
-    /// Data Set.
+    /// Terminal Manager Identification.
     /// </summary>
-    [DisplayName("Data Set")]
-    [IsoXmlTag("DataSet")]
-    public ValueList<AcceptorConfigurationDataSet5> DataSet { get; init; } = [];
+    [DisplayName("Terminal Manager Identification")]
+    [IsoXmlTag("TermnlMgrId")]
+    public required GenericIdentification176 TerminalManagerIdentification { get; init; }
 
     /// <summary>
     /// POI Group Identification.
@@ -31,9 +31,9 @@ public record AcceptorConfiguration13
     public ValueList<Max35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
-    /// Terminal Manager Identification.
+    /// Data Set.
     /// </summary>
-    [DisplayName("Terminal Manager Identification")]
-    [IsoXmlTag("TermnlMgrId")]
-    public required GenericIdentification176 TerminalManagerIdentification { get; init; }
+    [DisplayName("Data Set")]
+    [IsoXmlTag("DataSet")]
+    public ValueList<AcceptorConfigurationDataSet5> DataSet { get; init; } = [];
 }

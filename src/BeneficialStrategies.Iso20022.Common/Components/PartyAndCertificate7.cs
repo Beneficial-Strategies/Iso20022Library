@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyAndCertificate7
 {
     /// <summary>
-    /// Certificate.
-    /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public Max10KBinary? Certificate { get; init; }
-
-    /// <summary>
     /// Modification Code.
     /// </summary>
     [DisplayName("Modification Code")]
@@ -36,4 +29,11 @@ public record PartyAndCertificate7
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public required PartyIdentification272 Party { get; init; }
+
+    /// <summary>
+    /// Certificate.
+    /// </summary>
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public Max10KBinary? Certificate { get; init; }
 }

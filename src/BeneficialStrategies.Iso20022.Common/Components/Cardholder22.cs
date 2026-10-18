@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cardholder22
 {
     /// <summary>
-    /// Additional Data.
+    /// Name.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public CardholderName3? Name { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public ValueList<Credentials3> Identification { get; init; } = [];
 
     /// <summary>
     /// Address.
@@ -52,11 +59,11 @@ public record Cardholder22
     public TrueFalseIndicator? HighValue { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public ValueList<Credentials3> Identification { get; init; } = [];
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Local Data.
@@ -64,11 +71,4 @@ public record Cardholder22
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
     public LocalData13? LocalData { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public CardholderName3? Name { get; init; }
 }

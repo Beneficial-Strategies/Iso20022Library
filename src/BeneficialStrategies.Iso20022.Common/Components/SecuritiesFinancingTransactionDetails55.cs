@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesFinancingTransactionDetails55
 {
     /// <summary>
-    /// Accrued Interest Amount.
+    /// Securities Financing Trade Identification.
     /// </summary>
-    [DisplayName("Accrued Interest Amount")]
-    [IsoXmlTag("AcrdIntrstAmt")]
-    public AmountAndDirection21? AccruedInterestAmount { get; init; }
+    [DisplayName("Securities Financing Trade Identification")]
+    [IsoXmlTag("SctiesFincgTradId")]
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
+
+    /// <summary>
+    /// Securities Financing Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Securities Financing Unique Transaction Identifier")]
+    [IsoXmlTag("SctiesFincgUnqTxIdr")]
+    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Closing Leg Identification.
@@ -31,11 +38,18 @@ public record SecuritiesFinancingTransactionDetails55
     public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
-    /// Interest Payment.
+    /// Termination Date.
     /// </summary>
-    [DisplayName("Interest Payment")]
-    [IsoXmlTag("IntrstPmt")]
-    public YesNoIndicator? InterestPayment { get; init; }
+    [DisplayName("Termination Date")]
+    [IsoXmlTag("TermntnDt")]
+    public TerminationDate6Choice_? TerminationDate { get; init; }
+
+    /// <summary>
+    /// Rate Type.
+    /// </summary>
+    [DisplayName("Rate Type")]
+    [IsoXmlTag("RateTp")]
+    public RateType35Choice_? RateType { get; init; }
 
     /// <summary>
     /// Legal Framework.
@@ -52,11 +66,18 @@ public record SecuritiesFinancingTransactionDetails55
     public YesNoIndicator? MaturityDateModification { get; init; }
 
     /// <summary>
-    /// Rate Type.
+    /// Interest Payment.
     /// </summary>
-    [DisplayName("Rate Type")]
-    [IsoXmlTag("RateTp")]
-    public RateType35Choice_? RateType { get; init; }
+    [DisplayName("Interest Payment")]
+    [IsoXmlTag("IntrstPmt")]
+    public YesNoIndicator? InterestPayment { get; init; }
+
+    /// <summary>
+    /// Variable Rate Support.
+    /// </summary>
+    [DisplayName("Variable Rate Support")]
+    [IsoXmlTag("VarblRateSpprt")]
+    public RateName1? VariableRateSupport { get; init; }
 
     /// <summary>
     /// Repurchase Rate.
@@ -66,32 +87,18 @@ public record SecuritiesFinancingTransactionDetails55
     public Rate2? RepurchaseRate { get; init; }
 
     /// <summary>
-    /// Second Leg Narrative.
+    /// Transaction Call Delay.
     /// </summary>
-    [DisplayName("Second Leg Narrative")]
-    [IsoXmlTag("ScndLegNrrtv")]
-    public Max140Text? SecondLegNarrative { get; init; }
+    [DisplayName("Transaction Call Delay")]
+    [IsoXmlTag("TxCallDely")]
+    public Exact3NumericText? TransactionCallDelay { get; init; }
 
     /// <summary>
-    /// Securities Financing Trade Identification.
+    /// Accrued Interest Amount.
     /// </summary>
-    [DisplayName("Securities Financing Trade Identification")]
-    [IsoXmlTag("SctiesFincgTradId")]
-    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
-
-    /// <summary>
-    /// Securities Financing Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Securities Financing Unique Transaction Identifier")]
-    [IsoXmlTag("SctiesFincgUnqTxIdr")]
-    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
-
-    /// <summary>
-    /// Termination Date.
-    /// </summary>
-    [DisplayName("Termination Date")]
-    [IsoXmlTag("TermntnDt")]
-    public TerminationDate6Choice_? TerminationDate { get; init; }
+    [DisplayName("Accrued Interest Amount")]
+    [IsoXmlTag("AcrdIntrstAmt")]
+    public AmountAndDirection21? AccruedInterestAmount { get; init; }
 
     /// <summary>
     /// Termination Transaction Amount.
@@ -101,16 +108,9 @@ public record SecuritiesFinancingTransactionDetails55
     public AmountAndDirection21? TerminationTransactionAmount { get; init; }
 
     /// <summary>
-    /// Transaction Call Delay.
+    /// Second Leg Narrative.
     /// </summary>
-    [DisplayName("Transaction Call Delay")]
-    [IsoXmlTag("TxCallDely")]
-    public Exact3NumericText? TransactionCallDelay { get; init; }
-
-    /// <summary>
-    /// Variable Rate Support.
-    /// </summary>
-    [DisplayName("Variable Rate Support")]
-    [IsoXmlTag("VarblRateSpprt")]
-    public RateName1? VariableRateSupport { get; init; }
+    [DisplayName("Second Leg Narrative")]
+    [IsoXmlTag("ScndLegNrrtv")]
+    public Max140Text? SecondLegNarrative { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCustomerProfile7
 {
     /// <summary>
-    /// Allowed Services.
+    /// Profile Reference.
     /// </summary>
-    [DisplayName("Allowed Services")]
-    [IsoXmlTag("AllwdSvcs")]
-    public ValueList<ATMService28> AllowedServices { get; init; } = [];
+    [DisplayName("Profile Reference")]
+    [IsoXmlTag("PrflRef")]
+    public Max35Text? ProfileReference { get; init; }
 
     /// <summary>
     /// Customer Identification.
@@ -38,9 +38,9 @@ public record ATMCustomerProfile7
     public Max70Text? ProfileDescription { get; init; }
 
     /// <summary>
-    /// Profile Reference.
+    /// Allowed Services.
     /// </summary>
-    [DisplayName("Profile Reference")]
-    [IsoXmlTag("PrflRef")]
-    public Max35Text? ProfileReference { get; init; }
+    [DisplayName("Allowed Services")]
+    [IsoXmlTag("AllwdSvcs")]
+    public ValueList<ATMService28> AllowedServices { get; init; } = [];
 }

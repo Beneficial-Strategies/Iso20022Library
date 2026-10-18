@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesSettlementTransactionDetails56
 {
     /// <summary>
-    /// Additional Physical Or Registration Details.
+    /// Settlement Type And Additional Parameters.
     /// </summary>
-    [DisplayName("Additional Physical Or Registration Details")]
-    [IsoXmlTag("AddtlPhysOrRegnDtls")]
-    public RegistrationParameters6? AdditionalPhysicalOrRegistrationDetails { get; init; }
+    [DisplayName("Settlement Type And Additional Parameters")]
+    [IsoXmlTag("SttlmTpAndAddtlParams")]
+    public SettlementTypeAndAdditionalParameters13? SettlementTypeAndAdditionalParameters { get; init; }
 
     /// <summary>
-    /// Cash Parties.
+    /// Linkages.
     /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties41? CashParties { get; init; }
+    [DisplayName("Linkages")]
+    [IsoXmlTag("Lnkgs")]
+    public ValueList<Linkages63> Linkages { get; init; } = [];
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Trade Details.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties98? DeliveringSettlementParties { get; init; }
+    [DisplayName("Trade Details")]
+    [IsoXmlTag("TradDtls")]
+    public SecuritiesTradeDetails146? TradeDetails { get; init; }
 
     /// <summary>
     /// Financial Instrument Attributes.
@@ -45,11 +45,53 @@ public record SecuritiesSettlementTransactionDetails56
     public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
-    /// Linkages.
+    /// Quantity And Account Details.
     /// </summary>
-    [DisplayName("Linkages")]
-    [IsoXmlTag("Lnkgs")]
-    public ValueList<Linkages63> Linkages { get; init; } = [];
+    [DisplayName("Quantity And Account Details")]
+    [IsoXmlTag("QtyAndAcctDtls")]
+    public QuantityAndAccount118? QuantityAndAccountDetails { get; init; }
+
+    /// <summary>
+    /// Settlement Parameters.
+    /// </summary>
+    [DisplayName("Settlement Parameters")]
+    [IsoXmlTag("SttlmParams")]
+    public SettlementDetails218? SettlementParameters { get; init; }
+
+    /// <summary>
+    /// Standing Settlement Instruction Details.
+    /// </summary>
+    [DisplayName("Standing Settlement Instruction Details")]
+    [IsoXmlTag("StgSttlmInstrDtls")]
+    public StandingSettlementInstruction20? StandingSettlementInstructionDetails { get; init; }
+
+    /// <summary>
+    /// Delivering Settlement Parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties98? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Receiving Settlement Parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties98? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Cash Parties.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties41? CashParties { get; init; }
+
+    /// <summary>
+    /// Settlement Amount.
+    /// </summary>
+    [DisplayName("Settlement Amount")]
+    [IsoXmlTag("SttlmAmt")]
+    public AmountAndDirection95? SettlementAmount { get; init; }
 
     /// <summary>
     /// Other Amounts.
@@ -66,46 +108,11 @@ public record SecuritiesSettlementTransactionDetails56
     public OtherParties43? OtherBusinessParties { get; init; }
 
     /// <summary>
-    /// Quantity And Account Details.
+    /// Additional Physical Or Registration Details.
     /// </summary>
-    [DisplayName("Quantity And Account Details")]
-    [IsoXmlTag("QtyAndAcctDtls")]
-    public QuantityAndAccount118? QuantityAndAccountDetails { get; init; }
-
-    /// <summary>
-    /// Receiving Settlement Parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties98? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Settlement Amount.
-    /// </summary>
-    [DisplayName("Settlement Amount")]
-    [IsoXmlTag("SttlmAmt")]
-    public AmountAndDirection95? SettlementAmount { get; init; }
-
-    /// <summary>
-    /// Settlement Parameters.
-    /// </summary>
-    [DisplayName("Settlement Parameters")]
-    [IsoXmlTag("SttlmParams")]
-    public SettlementDetails218? SettlementParameters { get; init; }
-
-    /// <summary>
-    /// Settlement Type And Additional Parameters.
-    /// </summary>
-    [DisplayName("Settlement Type And Additional Parameters")]
-    [IsoXmlTag("SttlmTpAndAddtlParams")]
-    public SettlementTypeAndAdditionalParameters13? SettlementTypeAndAdditionalParameters { get; init; }
-
-    /// <summary>
-    /// Standing Settlement Instruction Details.
-    /// </summary>
-    [DisplayName("Standing Settlement Instruction Details")]
-    [IsoXmlTag("StgSttlmInstrDtls")]
-    public StandingSettlementInstruction20? StandingSettlementInstructionDetails { get; init; }
+    [DisplayName("Additional Physical Or Registration Details")]
+    [IsoXmlTag("AddtlPhysOrRegnDtls")]
+    public RegistrationParameters6? AdditionalPhysicalOrRegistrationDetails { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -113,11 +120,4 @@ public record SecuritiesSettlementTransactionDetails56
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Details.
-    /// </summary>
-    [DisplayName("Trade Details")]
-    [IsoXmlTag("TradDtls")]
-    public SecuritiesTradeDetails146? TradeDetails { get; init; }
 }

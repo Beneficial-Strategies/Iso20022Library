@@ -24,25 +24,11 @@ public record ATMEnvironment21
     public Acquirer7? Acquirer { get; init; }
 
     /// <summary>
-    /// ATM.
-    /// </summary>
-    [DisplayName("ATM")]
-    [IsoXmlTag("ATM")]
-    public required AutomatedTellerMachine2 ATM { get; init; }
-
-    /// <summary>
     /// ATM Manager.
     /// </summary>
     [DisplayName("ATM Manager")]
     [IsoXmlTag("ATMMgr")]
     public Acquirer8? ATMManager { get; init; }
-
-    /// <summary>
-    /// Customer.
-    /// </summary>
-    [DisplayName("Customer")]
-    [IsoXmlTag("Cstmr")]
-    public required ATMCustomer9 Customer { get; init; }
 
     /// <summary>
     /// Hosting Entity.
@@ -52,11 +38,18 @@ public record ATMEnvironment21
     public TerminalHosting1? HostingEntity { get; init; }
 
     /// <summary>
-    /// Plain Card Data.
+    /// ATM.
     /// </summary>
-    [DisplayName("Plain Card Data")]
-    [IsoXmlTag("PlainCardData")]
-    public PlainCardData24? PlainCardData { get; init; }
+    [DisplayName("ATM")]
+    [IsoXmlTag("ATM")]
+    public required AutomatedTellerMachine2 ATM { get; init; }
+
+    /// <summary>
+    /// Customer.
+    /// </summary>
+    [DisplayName("Customer")]
+    [IsoXmlTag("Cstmr")]
+    public required ATMCustomer9 Customer { get; init; }
 
     /// <summary>
     /// Protected Card Data.
@@ -64,4 +57,11 @@ public record ATMEnvironment21
     [DisplayName("Protected Card Data")]
     [IsoXmlTag("PrtctdCardData")]
     public ContentInformationType10? ProtectedCardData { get; init; }
+
+    /// <summary>
+    /// Plain Card Data.
+    /// </summary>
+    [DisplayName("Plain Card Data")]
+    [IsoXmlTag("PlainCardData")]
+    public PlainCardData24? PlainCardData { get; init; }
 }

@@ -17,11 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Contact14
 {
     /// <summary>
-    /// Department.
+    /// Name Prefix.
     /// </summary>
-    [DisplayName("Department")]
-    [IsoXmlTag("Dept")]
-    public Max70Text? Department { get; init; }
+    [DisplayName("Name Prefix")]
+    [IsoXmlTag("NmPrfx")]
+    public NamePrefix2Code? NamePrefix { get; init; }
+
+    /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max140Text? Name { get; init; }
+
+    /// <summary>
+    /// Phone Number.
+    /// </summary>
+    [DisplayName("Phone Number")]
+    [IsoXmlTag("PhneNb")]
+    public PhoneNumber? PhoneNumber { get; init; }
+
+    /// <summary>
+    /// Mobile Number.
+    /// </summary>
+    [DisplayName("Mobile Number")]
+    [IsoXmlTag("MobNb")]
+    public PhoneNumber? MobileNumber { get; init; }
+
+    /// <summary>
+    /// Fax Number.
+    /// </summary>
+    [DisplayName("Fax Number")]
+    [IsoXmlTag("FaxNb")]
+    public PhoneNumber? FaxNumber { get; init; }
+
+    /// <summary>
+    /// URL Address.
+    /// </summary>
+    [DisplayName("URL Address")]
+    [IsoXmlTag("URLAdr")]
+    public Max2048Text? URLAddress { get; init; }
 
     /// <summary>
     /// Email Address.
@@ -38,60 +73,11 @@ public record Contact14
     public Max35Text? EmailPurpose { get; init; }
 
     /// <summary>
-    /// Fax Number.
-    /// </summary>
-    [DisplayName("Fax Number")]
-    [IsoXmlTag("FaxNb")]
-    public PhoneNumber? FaxNumber { get; init; }
-
-    /// <summary>
     /// Job Title.
     /// </summary>
     [DisplayName("Job Title")]
     [IsoXmlTag("JobTitl")]
     public Max35Text? JobTitle { get; init; }
-
-    /// <summary>
-    /// Mobile Number.
-    /// </summary>
-    [DisplayName("Mobile Number")]
-    [IsoXmlTag("MobNb")]
-    public PhoneNumber? MobileNumber { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max140Text? Name { get; init; }
-
-    /// <summary>
-    /// Name Prefix.
-    /// </summary>
-    [DisplayName("Name Prefix")]
-    [IsoXmlTag("NmPrfx")]
-    public NamePrefix2Code? NamePrefix { get; init; }
-
-    /// <summary>
-    /// Other.
-    /// </summary>
-    [DisplayName("Other")]
-    [IsoXmlTag("Othr")]
-    public ValueList<OtherContact1> Other { get; init; } = [];
-
-    /// <summary>
-    /// Phone Number.
-    /// </summary>
-    [DisplayName("Phone Number")]
-    [IsoXmlTag("PhneNb")]
-    public PhoneNumber? PhoneNumber { get; init; }
-
-    /// <summary>
-    /// Preferred Method.
-    /// </summary>
-    [DisplayName("Preferred Method")]
-    [IsoXmlTag("PrefrdMtd")]
-    public PreferredContactMethod2Code? PreferredMethod { get; init; }
 
     /// <summary>
     /// Responsibility.
@@ -101,11 +87,25 @@ public record Contact14
     public Max35Text? Responsibility { get; init; }
 
     /// <summary>
-    /// URL Address.
+    /// Department.
     /// </summary>
-    [DisplayName("URL Address")]
-    [IsoXmlTag("URLAdr")]
-    public Max2048Text? URLAddress { get; init; }
+    [DisplayName("Department")]
+    [IsoXmlTag("Dept")]
+    public Max70Text? Department { get; init; }
+
+    /// <summary>
+    /// Other.
+    /// </summary>
+    [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
+    public ValueList<OtherContact1> Other { get; init; } = [];
+
+    /// <summary>
+    /// Preferred Method.
+    /// </summary>
+    [DisplayName("Preferred Method")]
+    [IsoXmlTag("PrefrdMtd")]
+    public PreferredContactMethod2Code? PreferredMethod { get; init; }
 
     /// <summary>
     /// Valid From.

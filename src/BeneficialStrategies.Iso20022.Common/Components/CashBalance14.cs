@@ -17,12 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashBalance14
 {
     /// <summary>
-    /// Counterparty Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Counterparty Identification")]
-    [IsoXmlTag("CtrPtyId")]
-    public ValueList<BranchAndFinancialInstitutionIdentification8> CounterpartyIdentification { get; init; } =
-        [];
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ValueList<BalanceType11Choice_> Type { get; init; } = [];
 
     /// <summary>
     /// Counterparty Type.
@@ -32,18 +31,12 @@ public record CashBalance14
     public required BalanceCounterparty1Code CounterpartyType { get; init; }
 
     /// <summary>
-    /// Processing Date.
+    /// Counterparty Identification.
     /// </summary>
-    [DisplayName("Processing Date")]
-    [IsoXmlTag("PrcgDt")]
-    public DateAndDateTimeSearch4Choice_? ProcessingDate { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ValueList<BalanceType11Choice_> Type { get; init; } = [];
+    [DisplayName("Counterparty Identification")]
+    [IsoXmlTag("CtrPtyId")]
+    public ValueList<BranchAndFinancialInstitutionIdentification8> CounterpartyIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Value Date.
@@ -51,4 +44,11 @@ public record CashBalance14
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     public ValueList<DateAndDateTimeSearch4Choice_> ValueDate { get; init; } = [];
+
+    /// <summary>
+    /// Processing Date.
+    /// </summary>
+    [DisplayName("Processing Date")]
+    [IsoXmlTag("PrcgDt")]
+    public DateAndDateTimeSearch4Choice_? ProcessingDate { get; init; }
 }

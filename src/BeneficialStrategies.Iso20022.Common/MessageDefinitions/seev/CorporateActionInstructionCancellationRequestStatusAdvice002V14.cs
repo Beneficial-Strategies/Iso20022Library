@@ -46,11 +46,18 @@ public record CorporateActionInstructionCancellationRequestStatusAdvice002V14 : 
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Instruction Cancellation Request Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative19? AdditionalInformation { get; init; }
+    [DisplayName("Instruction Cancellation Request Identification")]
+    [IsoXmlTag("InstrCxlReqId")]
+    public DocumentIdentification17? InstructionCancellationRequestIdentification { get; init; }
+
+    /// <summary>
+    /// Other Document Identification.
+    /// </summary>
+    [DisplayName("Other Document Identification")]
+    [IsoXmlTag("OthrDocId")]
+    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Corporate Action General Information.
@@ -58,20 +65,6 @@ public record CorporateActionInstructionCancellationRequestStatusAdvice002V14 : 
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
     public required CorporateActionGeneralInformation186 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public CorporateActionOption241? CorporateActionInstruction { get; init; }
-
-    /// <summary>
-    /// Instruction Cancellation Request Identification.
-    /// </summary>
-    [DisplayName("Instruction Cancellation Request Identification")]
-    [IsoXmlTag("InstrCxlReqId")]
-    public DocumentIdentification17? InstructionCancellationRequestIdentification { get; init; }
 
     /// <summary>
     /// Instruction Cancellation Request Status.
@@ -82,11 +75,11 @@ public record CorporateActionInstructionCancellationRequestStatusAdvice002V14 : 
         [];
 
     /// <summary>
-    /// Other Document Identification.
+    /// Corporate Action Instruction.
     /// </summary>
-    [DisplayName("Other Document Identification")]
-    [IsoXmlTag("OthrDocId")]
-    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public CorporateActionOption241? CorporateActionInstruction { get; init; }
 
     /// <summary>
     /// Protect Instruction.
@@ -94,6 +87,13 @@ public record CorporateActionInstructionCancellationRequestStatusAdvice002V14 : 
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction8? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative19? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

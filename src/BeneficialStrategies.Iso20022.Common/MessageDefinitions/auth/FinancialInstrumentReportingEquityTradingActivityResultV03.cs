@@ -46,18 +46,18 @@ public record FinancialInstrumentReportingEquityTradingActivityResultV03 : IOute
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Equity Transparency Data.
-    /// </summary>
-    [DisplayName("Equity Transparency Data")]
-    [IsoXmlTag("EqtyTrnsprncyData")]
-    public ValueList<TransparencyDataReport22> EquityTransparencyData { get; init; } = [];
-
-    /// <summary>
     /// Report Header.
     /// </summary>
     [DisplayName("Report Header")]
     [IsoXmlTag("RptHdr")]
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; }
+
+    /// <summary>
+    /// Equity Transparency Data.
+    /// </summary>
+    [DisplayName("Equity Transparency Data")]
+    [IsoXmlTag("EqtyTrnsprncyData")]
+    public ValueList<TransparencyDataReport22> EquityTransparencyData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

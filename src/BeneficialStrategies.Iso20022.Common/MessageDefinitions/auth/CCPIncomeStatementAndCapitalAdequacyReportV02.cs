@@ -46,6 +46,13 @@ public record CCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Income Statement.
+    /// </summary>
+    [DisplayName("Income Statement")]
+    [IsoXmlTag("IncmStmt")]
+    public required IncomeStatement2 IncomeStatement { get; init; }
+
+    /// <summary>
     /// Capital Requirements.
     /// </summary>
     [DisplayName("Capital Requirements")]
@@ -53,18 +60,11 @@ public record CCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
     public required CapitalRequirement1 CapitalRequirements { get; init; }
 
     /// <summary>
-    /// Hypothetical Capital Measure.
+    /// Total Capital.
     /// </summary>
-    [DisplayName("Hypothetical Capital Measure")]
-    [IsoXmlTag("HpthtclCptlMeasr")]
-    public ValueList<HypotheticalCapitalMeasure1> HypotheticalCapitalMeasure { get; init; } = [];
-
-    /// <summary>
-    /// Income Statement.
-    /// </summary>
-    [DisplayName("Income Statement")]
-    [IsoXmlTag("IncmStmt")]
-    public required IncomeStatement2 IncomeStatement { get; init; }
+    [DisplayName("Total Capital")]
+    [IsoXmlTag("TtlCptl")]
+    public required ActiveCurrencyAndAmount TotalCapital { get; init; }
 
     /// <summary>
     /// Liquid Financial Resources.
@@ -74,16 +74,16 @@ public record CCPIncomeStatementAndCapitalAdequacyReportV02 : IOuterRecord
     public required ActiveCurrencyAndAmount LiquidFinancialResources { get; init; }
 
     /// <summary>
+    /// Hypothetical Capital Measure.
+    /// </summary>
+    [DisplayName("Hypothetical Capital Measure")]
+    [IsoXmlTag("HpthtclCptlMeasr")]
+    public ValueList<HypotheticalCapitalMeasure1> HypotheticalCapitalMeasure { get; init; } = [];
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Total Capital.
-    /// </summary>
-    [DisplayName("Total Capital")]
-    [IsoXmlTag("TtlCptl")]
-    public required ActiveCurrencyAndAmount TotalCapital { get; init; }
 }

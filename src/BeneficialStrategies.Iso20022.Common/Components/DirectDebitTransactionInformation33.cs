@@ -18,6 +18,62 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DirectDebitTransactionInformation33
 {
     /// <summary>
+    /// References used for a payment instruction.
+    /// </summary>
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    public required PaymentIdentification13 PaymentIdentification { get; init; }
+
+    /// <summary>
+    /// Specifies the type of transaction.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Amount of money moved between the instructing agent and the instructed agent.
+    /// </summary>
+    [DisplayName("Interbank Settlement Amount")]
+    [IsoXmlTag("IntrBkSttlmAmt")]
+    public required ActiveCurrencyAndAmount InterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
+    /// </summary>
+    [DisplayName("Settlement Priority")]
+    [IsoXmlTag("SttlmPrty")]
+    public Priority3Code? SettlementPriority { get; init; }
+
+    /// <summary>
+    /// Provides information on the occurred settlement time(s) of the payment transaction.
+    /// </summary>
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
+
+    /// <summary>
+    /// Provides information on the requested settlement time(s) of the payment instruction.
+    /// </summary>
+    [DisplayName("Settlement Time Request")]
+    [IsoXmlTag("SttlmTmReq")]
+    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
+
+    /// <summary>
+    /// Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.
+    /// </summary>
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public BranchAndFinancialInstitutionIdentification8? UltimateDebtor { get; init; }
+
+    /// <summary>
     /// Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -53,34 +109,6 @@ public record DirectDebitTransactionInformation33
     public Max210Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
-    /// Amount of money moved between the instructing agent and the instructed agent.
-    /// </summary>
-    [DisplayName("Interbank Settlement Amount")]
-    [IsoXmlTag("IntrBkSttlmAmt")]
-    public required ActiveCurrencyAndAmount InterbankSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// References used for a payment instruction.
-    /// </summary>
-    [DisplayName("Payment Identification")]
-    [IsoXmlTag("PmtId")]
-    public required PaymentIdentification13 PaymentIdentification { get; init; }
-
-    /// <summary>
-    /// Specifies the type of transaction.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
-
-    /// <summary>
     /// Underlying reason for the payment transaction.
     /// </summary>
     /// <remarks>
@@ -96,32 +124,4 @@ public record DirectDebitTransactionInformation33
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public RemittanceInformation2? RemittanceInformation { get; init; }
-
-    /// <summary>
-    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
-    /// </summary>
-    [DisplayName("Settlement Priority")]
-    [IsoXmlTag("SttlmPrty")]
-    public Priority3Code? SettlementPriority { get; init; }
-
-    /// <summary>
-    /// Provides information on the occurred settlement time(s) of the payment transaction.
-    /// </summary>
-    [DisplayName("Settlement Time Indication")]
-    [IsoXmlTag("SttlmTmIndctn")]
-    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
-
-    /// <summary>
-    /// Provides information on the requested settlement time(s) of the payment instruction.
-    /// </summary>
-    [DisplayName("Settlement Time Request")]
-    [IsoXmlTag("SttlmTmReq")]
-    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
-
-    /// <summary>
-    /// Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public BranchAndFinancialInstitutionIdentification8? UltimateDebtor { get; init; }
 }

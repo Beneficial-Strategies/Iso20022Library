@@ -24,18 +24,18 @@ public record Equalisation3
     public ActiveCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
+    /// Rate.
+    /// </summary>
+    [DisplayName("Rate")]
+    [IsoXmlTag("Rate")]
+    public PercentageRate? Rate { get; init; }
+
+    /// <summary>
     /// Equalisation Methodology Type.
     /// </summary>
     [DisplayName("Equalisation Methodology Type")]
     [IsoXmlTag("EqulstnMthdlgyTp")]
     public ValueList<EqualisationMethodologyType2> EqualisationMethodologyType { get; init; } = [];
-
-    /// <summary>
-    /// Gross Asset Value.
-    /// </summary>
-    [DisplayName("Gross Asset Value")]
-    [IsoXmlTag("GrssAsstVal")]
-    public ActiveOrHistoricCurrencyAndAmount? GrossAssetValue { get; init; }
 
     /// <summary>
     /// High Watermark.
@@ -45,9 +45,9 @@ public record Equalisation3
     public ActiveOrHistoricCurrencyAndAmount? HighWatermark { get; init; }
 
     /// <summary>
-    /// Rate.
+    /// Gross Asset Value.
     /// </summary>
-    [DisplayName("Rate")]
-    [IsoXmlTag("Rate")]
-    public PercentageRate? Rate { get; init; }
+    [DisplayName("Gross Asset Value")]
+    [IsoXmlTag("GrssAsstVal")]
+    public ActiveOrHistoricCurrencyAndAmount? GrossAssetValue { get; init; }
 }

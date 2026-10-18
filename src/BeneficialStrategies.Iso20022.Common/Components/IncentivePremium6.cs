@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IncentivePremium6
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required PriceRateOrAmount8Choice_ Amount { get; init; }
-
-    /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
@@ -31,11 +24,11 @@ public record IncentivePremium6
     public Max350Text? Description { get; init; }
 
     /// <summary>
-    /// Payment Date.
+    /// Amount.
     /// </summary>
-    [DisplayName("Payment Date")]
-    [IsoXmlTag("PmtDt")]
-    public DateFormat3Choice_? PaymentDate { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required PriceRateOrAmount8Choice_ Amount { get; init; }
 
     /// <summary>
     /// Type.
@@ -43,4 +36,11 @@ public record IncentivePremium6
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required IncentivePremiumType2Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Payment Date.
+    /// </summary>
+    [DisplayName("Payment Date")]
+    [IsoXmlTag("PmtDt")]
+    public DateFormat3Choice_? PaymentDate { get; init; }
 }

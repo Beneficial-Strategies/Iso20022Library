@@ -45,13 +45,6 @@ public record IntraBalanceModification8
     public ProcessingStatus71Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Request Details.
-    /// </summary>
-    [DisplayName("Request Details")]
-    [IsoXmlTag("ReqDtls")]
-    public RequestDetails22? RequestDetails { get; init; }
-
-    /// <summary>
     /// Request Reference.
     /// </summary>
     [DisplayName("Request Reference")]
@@ -64,6 +57,13 @@ public record IntraBalanceModification8
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
     public ISODateTime? StatusDate { get; init; }
+
+    /// <summary>
+    /// Request Details.
+    /// </summary>
+    [DisplayName("Request Details")]
+    [IsoXmlTag("ReqDtls")]
+    public RequestDetails22? RequestDetails { get; init; }
 
     /// <summary>
     /// Underlying Intra Balance.

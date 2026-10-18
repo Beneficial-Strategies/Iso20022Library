@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount227
 {
     /// <summary>
-    /// Additional Information.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public PartyTextInformation1? AdditionalInformation { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification254Choice_ Identification { get; init; }
 
     /// <summary>
     /// Alternate Identification.
@@ -31,16 +31,16 @@ public record PartyIdentificationAndAccount227
     public AlternatePartyIdentification4? AlternateIdentification { get; init; }
 
     /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public PartyTextInformation1? AdditionalInformation { get; init; }
+
+    /// <summary>
     /// Clearing Account.
     /// </summary>
     [DisplayName("Clearing Account")]
     [IsoXmlTag("ClrAcct")]
     public SecuritiesAccount18? ClearingAccount { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PartyIdentification254Choice_ Identification { get; init; }
 }

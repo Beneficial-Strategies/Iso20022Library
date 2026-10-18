@@ -17,67 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Trade9
 {
     /// <summary>
-    /// Associated Trade Reference.
+    /// Trade Identification.
     /// </summary>
-    [DisplayName("Associated Trade Reference")]
-    [IsoXmlTag("AssoctdTradRef")]
-    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
-
-    /// <summary>
-    /// Clearing Method.
-    /// </summary>
-    [DisplayName("Clearing Method")]
-    [IsoXmlTag("ClrMtd")]
-    public required ClearingMethod1Code ClearingMethod { get; init; }
-
-    /// <summary>
-    /// Foreign Exchange Details.
-    /// </summary>
-    [DisplayName("Foreign Exchange Details")]
-    [IsoXmlTag("FXDtls")]
-    public Trade10? ForeignExchangeDetails { get; init; }
-
-    /// <summary>
-    /// Foreign Exchange Trade Product.
-    /// </summary>
-    [DisplayName("Foreign Exchange Trade Product")]
-    [IsoXmlTag("FXTradPdct")]
-    public required UnderlyingProductIdentifier1Code ForeignExchangeTradeProduct { get; init; }
-
-    /// <summary>
-    /// Place Of Confirmation.
-    /// </summary>
-    [DisplayName("Place Of Confirmation")]
-    [IsoXmlTag("PlcOfConf")]
-    public AnyBICDec2014Identifier? PlaceOfConfirmation { get; init; }
-
-    /// <summary>
-    /// Product Identification.
-    /// </summary>
-    [DisplayName("Product Identification")]
-    [IsoXmlTag("PdctId")]
-    public SecurityIdentification38Choice_? ProductIdentification { get; init; }
-
-    /// <summary>
-    /// Settlement Currency.
-    /// </summary>
-    [DisplayName("Settlement Currency")]
-    [IsoXmlTag("SttlmCcy")]
-    public ActiveCurrencyCode? SettlementCurrency { get; init; }
-
-    /// <summary>
-    /// Swap Leg.
-    /// </summary>
-    [DisplayName("Swap Leg")]
-    [IsoXmlTag("SwpLeg")]
-    public ValueList<InstrumentLeg7> SwapLeg { get; init; } = [];
-
-    /// <summary>
-    /// Symbol.
-    /// </summary>
-    [DisplayName("Symbol")]
-    [IsoXmlTag("Symb")]
-    public Max35Text? Symbol { get; init; }
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Trade Date.
@@ -87,11 +31,11 @@ public record Trade9
     public required ISODate TradeDate { get; init; }
 
     /// <summary>
-    /// Trade Identification.
+    /// Foreign Exchange Trade Product.
     /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public required Max35Text TradeIdentification { get; init; }
+    [DisplayName("Foreign Exchange Trade Product")]
+    [IsoXmlTag("FXTradPdct")]
+    public required UnderlyingProductIdentifier1Code ForeignExchangeTradeProduct { get; init; }
 
     /// <summary>
     /// Trading Currency.
@@ -99,6 +43,13 @@ public record Trade9
     [DisplayName("Trading Currency")]
     [IsoXmlTag("TradgCcy")]
     public ActiveCurrencyCode? TradingCurrency { get; init; }
+
+    /// <summary>
+    /// Settlement Currency.
+    /// </summary>
+    [DisplayName("Settlement Currency")]
+    [IsoXmlTag("SttlmCcy")]
+    public ActiveCurrencyCode? SettlementCurrency { get; init; }
 
     /// <summary>
     /// Trading Method.
@@ -113,4 +64,53 @@ public record Trade9
     [DisplayName("Trading Mode")]
     [IsoXmlTag("TradgMd")]
     public required TradingModeType1Code TradingMode { get; init; }
+
+    /// <summary>
+    /// Clearing Method.
+    /// </summary>
+    [DisplayName("Clearing Method")]
+    [IsoXmlTag("ClrMtd")]
+    public required ClearingMethod1Code ClearingMethod { get; init; }
+
+    /// <summary>
+    /// Symbol.
+    /// </summary>
+    [DisplayName("Symbol")]
+    [IsoXmlTag("Symb")]
+    public Max35Text? Symbol { get; init; }
+
+    /// <summary>
+    /// Place Of Confirmation.
+    /// </summary>
+    [DisplayName("Place Of Confirmation")]
+    [IsoXmlTag("PlcOfConf")]
+    public AnyBICDec2014Identifier? PlaceOfConfirmation { get; init; }
+
+    /// <summary>
+    /// Foreign Exchange Details.
+    /// </summary>
+    [DisplayName("Foreign Exchange Details")]
+    [IsoXmlTag("FXDtls")]
+    public Trade10? ForeignExchangeDetails { get; init; }
+
+    /// <summary>
+    /// Swap Leg.
+    /// </summary>
+    [DisplayName("Swap Leg")]
+    [IsoXmlTag("SwpLeg")]
+    public ValueList<InstrumentLeg7> SwapLeg { get; init; } = [];
+
+    /// <summary>
+    /// Product Identification.
+    /// </summary>
+    [DisplayName("Product Identification")]
+    [IsoXmlTag("PdctId")]
+    public SecurityIdentification38Choice_? ProductIdentification { get; init; }
+
+    /// <summary>
+    /// Associated Trade Reference.
+    /// </summary>
+    [DisplayName("Associated Trade Reference")]
+    [IsoXmlTag("AssoctdTradRef")]
+    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 }

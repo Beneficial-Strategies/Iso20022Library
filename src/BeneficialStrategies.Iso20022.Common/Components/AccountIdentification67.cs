@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountIdentification67
 {
     /// <summary>
-    /// Account Owner.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification136Choice_? AccountOwner { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -31,19 +31,11 @@ public record AccountIdentification67
     public RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Corporate Action Event And Balance.
+    /// Account Owner.
     /// </summary>
-    [DisplayName("Corporate Action Event And Balance")]
-    [IsoXmlTag("CorpActnEvtAndBal")]
-    public ValueList<CorporateActionEventAndBalance25> CorporateActionEventAndBalance { get; init; } =
-        [];
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification136Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
@@ -51,4 +43,12 @@ public record AccountIdentification67
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafekeepingPlaceFormat32Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Corporate Action Event And Balance.
+    /// </summary>
+    [DisplayName("Corporate Action Event And Balance")]
+    [IsoXmlTag("CorpActnEvtAndBal")]
+    public ValueList<CorporateActionEventAndBalance25> CorporateActionEventAndBalance { get; init; } =
+        [];
 }

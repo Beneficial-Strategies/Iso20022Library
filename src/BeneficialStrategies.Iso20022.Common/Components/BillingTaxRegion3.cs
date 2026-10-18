@@ -17,11 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BillingTaxRegion3
 {
     /// <summary>
+    /// Region Number.
+    /// </summary>
+    [DisplayName("Region Number")]
+    [IsoXmlTag("RgnNb")]
+    public required Max40Text RegionNumber { get; init; }
+
+    /// <summary>
+    /// Region Name.
+    /// </summary>
+    [DisplayName("Region Name")]
+    [IsoXmlTag("RgnNm")]
+    public required Max40Text RegionName { get; init; }
+
+    /// <summary>
     /// Customer Tax Identification.
     /// </summary>
     [DisplayName("Customer Tax Identification")]
     [IsoXmlTag("CstmrTaxId")]
     public required Max40Text CustomerTaxIdentification { get; init; }
+
+    /// <summary>
+    /// Point Date.
+    /// </summary>
+    [DisplayName("Point Date")]
+    [IsoXmlTag("PtDt")]
+    public ISODate? PointDate { get; init; }
+
+    /// <summary>
+    /// Sending Financial Institution.
+    /// </summary>
+    [DisplayName("Sending Financial Institution")]
+    [IsoXmlTag("SndgFI")]
+    public BillingTaxIdentification3? SendingFinancialInstitution { get; init; }
 
     /// <summary>
     /// Invoice Number.
@@ -36,34 +64,6 @@ public record BillingTaxRegion3
     [DisplayName("Method C")]
     [IsoXmlTag("MtdC")]
     public BillingMethod4? MethodC { get; init; }
-
-    /// <summary>
-    /// Point Date.
-    /// </summary>
-    [DisplayName("Point Date")]
-    [IsoXmlTag("PtDt")]
-    public ISODate? PointDate { get; init; }
-
-    /// <summary>
-    /// Region Name.
-    /// </summary>
-    [DisplayName("Region Name")]
-    [IsoXmlTag("RgnNm")]
-    public required Max40Text RegionName { get; init; }
-
-    /// <summary>
-    /// Region Number.
-    /// </summary>
-    [DisplayName("Region Number")]
-    [IsoXmlTag("RgnNb")]
-    public required Max40Text RegionNumber { get; init; }
-
-    /// <summary>
-    /// Sending Financial Institution.
-    /// </summary>
-    [DisplayName("Sending Financial Institution")]
-    [IsoXmlTag("SndgFI")]
-    public BillingTaxIdentification3? SendingFinancialInstitution { get; init; }
 
     /// <summary>
     /// Settlement Amount.

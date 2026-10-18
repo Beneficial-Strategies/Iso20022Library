@@ -46,6 +46,13 @@ public record IntraBalanceMovementModificationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public DocumentIdentification51? Identification { get; init; }
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -67,13 +74,6 @@ public record IntraBalanceMovementModificationRequestV02 : IOuterRecord
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public DocumentIdentification51? Identification { get; init; }
-
-    /// <summary>
     /// Request Details.
     /// </summary>
     [DisplayName("Request Details")]
@@ -81,16 +81,16 @@ public record IntraBalanceMovementModificationRequestV02 : IOuterRecord
     public ValueList<RequestDetails22> RequestDetails { get; init; } = [];
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Intra Balance.
     /// </summary>
     [DisplayName("Underlying Intra Balance")]
     [IsoXmlTag("UndrlygIntraBal")]
     public IntraBalance5? UnderlyingIntraBalance { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

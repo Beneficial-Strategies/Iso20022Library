@@ -53,6 +53,13 @@ public record PartyModificationRequestV02 : IOuterRecord
     public MessageHeader1? MessageHeader { get; init; }
 
     /// <summary>
+    /// System Party Identification.
+    /// </summary>
+    [DisplayName("System Party Identification")]
+    [IsoXmlTag("SysPtyId")]
+    public required SystemPartyIdentification8 SystemPartyIdentification { get; init; }
+
+    /// <summary>
     /// Modification.
     /// </summary>
     [DisplayName("Modification")]
@@ -65,11 +72,4 @@ public record PartyModificationRequestV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// System Party Identification.
-    /// </summary>
-    [DisplayName("System Party Identification")]
-    [IsoXmlTag("SysPtyId")]
-    public required SystemPartyIdentification8 SystemPartyIdentification { get; init; }
 }

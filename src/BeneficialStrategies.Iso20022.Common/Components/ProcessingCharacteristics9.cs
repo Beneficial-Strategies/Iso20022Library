@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProcessingCharacteristics9
 {
     /// <summary>
-    /// Additional Information.
+    /// Dealing Currency Accepted.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
+    [DisplayName("Dealing Currency Accepted")]
+    [IsoXmlTag("DealgCcyAccptd")]
+    public ValueList<ActiveCurrencyCode> DealingCurrencyAccepted { get; init; } = [];
+
+    /// <summary>
+    /// Switch Authorisation.
+    /// </summary>
+    [DisplayName("Switch Authorisation")]
+    [IsoXmlTag("SwtchAuthstn")]
+    public Forms1? SwitchAuthorisation { get; init; }
 
     /// <summary>
     /// Amount Indicator.
@@ -31,39 +38,25 @@ public record ProcessingCharacteristics9
     public YesNoIndicator? AmountIndicator { get; init; }
 
     /// <summary>
-    /// Deal Confirmation Time.
+    /// Units Indicator.
     /// </summary>
-    [DisplayName("Deal Confirmation Time")]
-    [IsoXmlTag("DealConfTm")]
-    public ISOTime? DealConfirmationTime { get; init; }
+    [DisplayName("Units Indicator")]
+    [IsoXmlTag("UnitsInd")]
+    public YesNoIndicator? UnitsIndicator { get; init; }
 
     /// <summary>
-    /// Deal Confirmation Time Frame.
+    /// Rounding.
     /// </summary>
-    [DisplayName("Deal Confirmation Time Frame")]
-    [IsoXmlTag("DealConfTmFrame")]
-    public TimeFrame8? DealConfirmationTimeFrame { get; init; }
+    [DisplayName("Rounding")]
+    [IsoXmlTag("Rndg")]
+    public RoundingDirection2Code? Rounding { get; init; }
 
     /// <summary>
-    /// Dealing Currency Accepted.
+    /// Main Fund Order Desk Location.
     /// </summary>
-    [DisplayName("Dealing Currency Accepted")]
-    [IsoXmlTag("DealgCcyAccptd")]
-    public ValueList<ActiveCurrencyCode> DealingCurrencyAccepted { get; init; } = [];
-
-    /// <summary>
-    /// Dealing Cut Off Time.
-    /// </summary>
-    [DisplayName("Dealing Cut Off Time")]
-    [IsoXmlTag("DealgCutOffTm")]
-    public ISOTime? DealingCutOffTime { get; init; }
-
-    /// <summary>
-    /// Dealing Cut Off Time Frame.
-    /// </summary>
-    [DisplayName("Dealing Cut Off Time Frame")]
-    [IsoXmlTag("DealgCutOffTmFrame")]
-    public TimeFrame9? DealingCutOffTimeFrame { get; init; }
+    [DisplayName("Main Fund Order Desk Location")]
+    [IsoXmlTag("MainFndOrdrDskLctn")]
+    public MainFundOrderDeskLocation1? MainFundOrderDeskLocation { get; init; }
 
     /// <summary>
     /// Dealing Frequency.
@@ -80,25 +73,39 @@ public record ProcessingCharacteristics9
     public Max350Text? DealingFrequencyDescription { get; init; }
 
     /// <summary>
+    /// Dealing Cut Off Time.
+    /// </summary>
+    [DisplayName("Dealing Cut Off Time")]
+    [IsoXmlTag("DealgCutOffTm")]
+    public ISOTime? DealingCutOffTime { get; init; }
+
+    /// <summary>
+    /// Dealing Cut Off Time Frame.
+    /// </summary>
+    [DisplayName("Dealing Cut Off Time Frame")]
+    [IsoXmlTag("DealgCutOffTmFrame")]
+    public TimeFrame9? DealingCutOffTimeFrame { get; init; }
+
+    /// <summary>
+    /// Deal Confirmation Time.
+    /// </summary>
+    [DisplayName("Deal Confirmation Time")]
+    [IsoXmlTag("DealConfTm")]
+    public ISOTime? DealConfirmationTime { get; init; }
+
+    /// <summary>
+    /// Deal Confirmation Time Frame.
+    /// </summary>
+    [DisplayName("Deal Confirmation Time Frame")]
+    [IsoXmlTag("DealConfTmFrame")]
+    public TimeFrame8? DealConfirmationTimeFrame { get; init; }
+
+    /// <summary>
     /// Limited Period.
     /// </summary>
     [DisplayName("Limited Period")]
     [IsoXmlTag("LtdPrd")]
     public Max350Text? LimitedPeriod { get; init; }
-
-    /// <summary>
-    /// Main Fund Order Desk Location.
-    /// </summary>
-    [DisplayName("Main Fund Order Desk Location")]
-    [IsoXmlTag("MainFndOrdrDskLctn")]
-    public MainFundOrderDeskLocation1? MainFundOrderDeskLocation { get; init; }
-
-    /// <summary>
-    /// Rounding.
-    /// </summary>
-    [DisplayName("Rounding")]
-    [IsoXmlTag("Rndg")]
-    public RoundingDirection2Code? Rounding { get; init; }
 
     /// <summary>
     /// Settlement Cycle.
@@ -108,16 +115,9 @@ public record ProcessingCharacteristics9
     public TimeFrame8Choice_? SettlementCycle { get; init; }
 
     /// <summary>
-    /// Switch Authorisation.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Switch Authorisation")]
-    [IsoXmlTag("SwtchAuthstn")]
-    public Forms1? SwitchAuthorisation { get; init; }
-
-    /// <summary>
-    /// Units Indicator.
-    /// </summary>
-    [DisplayName("Units Indicator")]
-    [IsoXmlTag("UnitsInd")]
-    public YesNoIndicator? UnitsIndicator { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

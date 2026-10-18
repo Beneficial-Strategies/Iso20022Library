@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportTransactionResponse6
 {
     /// <summary>
+    /// Report Full Size.
+    /// </summary>
+    [DisplayName("Report Full Size")]
+    [IsoXmlTag("RptFullSz")]
+    public required PositiveNumber ReportFullSize { get; init; }
+
+    /// <summary>
     /// Block Start.
     /// </summary>
     [DisplayName("Block Start")]
@@ -29,13 +36,6 @@ public record ReportTransactionResponse6
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
     public required PositiveNumber BlockStop { get; init; }
-
-    /// <summary>
-    /// Report Full Size.
-    /// </summary>
-    [DisplayName("Report Full Size")]
-    [IsoXmlTag("RptFullSz")]
-    public required PositiveNumber ReportFullSize { get; init; }
 
     /// <summary>
     /// Transaction Report.

@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCommand14
 {
     /// <summary>
-    /// Additional Reason Information.
+    /// Type.
     /// </summary>
-    [DisplayName("Additional Reason Information")]
-    [IsoXmlTag("AddtlRsnInf")]
-    public Max70Text? AdditionalReasonInformation { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ATMCommand7Code Type { get; init; }
 
     /// <summary>
-    /// Command Identification.
+    /// Urgency.
     /// </summary>
-    [DisplayName("Command Identification")]
-    [IsoXmlTag("CmdId")]
-    public ATMCommandIdentification1? CommandIdentification { get; init; }
-
-    /// <summary>
-    /// Command Parameters.
-    /// </summary>
-    [DisplayName("Command Parameters")]
-    [IsoXmlTag("CmdParams")]
-    public ATMCommandParameters3Choice_? CommandParameters { get; init; }
+    [DisplayName("Urgency")]
+    [IsoXmlTag("Urgcy")]
+    public required TMSContactLevel2Code Urgency { get; init; }
 
     /// <summary>
     /// Date Time.
@@ -43,6 +36,13 @@ public record ATMCommand14
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     public ISODateTime? DateTime { get; init; }
+
+    /// <summary>
+    /// Command Identification.
+    /// </summary>
+    [DisplayName("Command Identification")]
+    [IsoXmlTag("CmdId")]
+    public ATMCommandIdentification1? CommandIdentification { get; init; }
 
     /// <summary>
     /// Reason.
@@ -59,16 +59,16 @@ public record ATMCommand14
     public ValueList<ATMCommandReason1Code> TraceReason { get; init; } = [];
 
     /// <summary>
-    /// Type.
+    /// Additional Reason Information.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ATMCommand7Code Type { get; init; }
+    [DisplayName("Additional Reason Information")]
+    [IsoXmlTag("AddtlRsnInf")]
+    public Max70Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
-    /// Urgency.
+    /// Command Parameters.
     /// </summary>
-    [DisplayName("Urgency")]
-    [IsoXmlTag("Urgcy")]
-    public required TMSContactLevel2Code Urgency { get; init; }
+    [DisplayName("Command Parameters")]
+    [IsoXmlTag("CmdParams")]
+    public ATMCommandParameters3Choice_? CommandParameters { get; init; }
 }

@@ -17,25 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ChargesPerTransactionRecord3
 {
     /// <summary>
-    /// Additional Information.
+    /// Record Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max140Text? AdditionalInformation { get; init; }
+    [DisplayName("Record Identification")]
+    [IsoXmlTag("RcrdId")]
+    public Max35Text? RecordIdentification { get; init; }
 
     /// <summary>
-    /// Charges Account Agent.
+    /// Charges Requestor.
     /// </summary>
-    [DisplayName("Charges Account Agent")]
-    [IsoXmlTag("ChrgsAcctAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
+    [DisplayName("Charges Requestor")]
+    [IsoXmlTag("ChrgsRqstr")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
 
     /// <summary>
-    /// Charges Account Agent Account.
+    /// Underlying Transaction.
     /// </summary>
-    [DisplayName("Charges Account Agent Account")]
-    [IsoXmlTag("ChrgsAcctAgtAcct")]
-    public CashAccount40? ChargesAccountAgentAccount { get; init; }
+    [DisplayName("Underlying Transaction")]
+    [IsoXmlTag("UndrlygTx")]
+    public required TransactionReferences7 UnderlyingTransaction { get; init; }
+
+    /// <summary>
+    /// Total Charges Per Record.
+    /// </summary>
+    [DisplayName("Total Charges Per Record")]
+    [IsoXmlTag("TtlChrgsPerRcrd")]
+    public TotalCharges8? TotalChargesPerRecord { get; init; }
 
     /// <summary>
     /// Charges Breakdown.
@@ -45,11 +52,11 @@ public record ChargesPerTransactionRecord3
     public ValueList<ChargesBreakdown1> ChargesBreakdown { get; init; } = [];
 
     /// <summary>
-    /// Charges Requestor.
+    /// Value Date.
     /// </summary>
-    [DisplayName("Charges Requestor")]
-    [IsoXmlTag("ChrgsRqstr")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     /// <summary>
     /// Debtor Agent.
@@ -66,6 +73,20 @@ public record ChargesPerTransactionRecord3
     public CashAccount40? DebtorAgentAccount { get; init; }
 
     /// <summary>
+    /// Charges Account Agent.
+    /// </summary>
+    [DisplayName("Charges Account Agent")]
+    [IsoXmlTag("ChrgsAcctAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
+
+    /// <summary>
+    /// Charges Account Agent Account.
+    /// </summary>
+    [DisplayName("Charges Account Agent Account")]
+    [IsoXmlTag("ChrgsAcctAgtAcct")]
+    public CashAccount40? ChargesAccountAgentAccount { get; init; }
+
+    /// <summary>
     /// Instruction For Instructed Agent.
     /// </summary>
     [DisplayName("Instruction For Instructed Agent")]
@@ -73,30 +94,9 @@ public record ChargesPerTransactionRecord3
     public InstructionForInstructedAgent1? InstructionForInstructedAgent { get; init; }
 
     /// <summary>
-    /// Record Identification.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Record Identification")]
-    [IsoXmlTag("RcrdId")]
-    public Max35Text? RecordIdentification { get; init; }
-
-    /// <summary>
-    /// Total Charges Per Record.
-    /// </summary>
-    [DisplayName("Total Charges Per Record")]
-    [IsoXmlTag("TtlChrgsPerRcrd")]
-    public TotalCharges8? TotalChargesPerRecord { get; init; }
-
-    /// <summary>
-    /// Underlying Transaction.
-    /// </summary>
-    [DisplayName("Underlying Transaction")]
-    [IsoXmlTag("UndrlygTx")]
-    public required TransactionReferences7 UnderlyingTransaction { get; init; }
-
-    /// <summary>
-    /// Value Date.
-    /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice_? ValueDate { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max140Text? AdditionalInformation { get; init; }
 }

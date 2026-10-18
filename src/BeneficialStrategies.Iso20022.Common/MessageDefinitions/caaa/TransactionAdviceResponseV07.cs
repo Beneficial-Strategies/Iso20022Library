@@ -53,16 +53,16 @@ public record TransactionAdviceResponseV07 : IOuterRecord
     public required Header70 Header { get; init; }
 
     /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType37? SecurityTrailer { get; init; }
-
-    /// <summary>
     /// Transaction Advice Response.
     /// </summary>
     [DisplayName("Transaction Advice Response")]
     [IsoXmlTag("TxAdvcRspn")]
     public required AcceptorCompletionAdviceResponse14 TransactionAdviceResponse { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType37? SecurityTrailer { get; init; }
 }

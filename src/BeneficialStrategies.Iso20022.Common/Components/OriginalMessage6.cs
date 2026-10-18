@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalMessage6
 {
     /// <summary>
-    /// Original Creation Date Time.
+    /// Original Sender.
     /// </summary>
-    [DisplayName("Original Creation Date Time")]
-    [IsoXmlTag("OrgnlCreDtTm")]
-    public ISODateTime? OriginalCreationDateTime { get; init; }
+    [DisplayName("Original Sender")]
+    [IsoXmlTag("OrgnlSndr")]
+    public Party50Choice_? OriginalSender { get; init; }
 
     /// <summary>
     /// Original Message Identification.
@@ -38,6 +38,13 @@ public record OriginalMessage6
     public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
+    /// Original Creation Date Time.
+    /// </summary>
+    [DisplayName("Original Creation Date Time")]
+    [IsoXmlTag("OrgnlCreDtTm")]
+    public ISODateTime? OriginalCreationDateTime { get; init; }
+
+    /// <summary>
     /// Original Package Identification.
     /// </summary>
     [DisplayName("Original Package Identification")]
@@ -50,11 +57,4 @@ public record OriginalMessage6
     [DisplayName("Original Record Identification")]
     [IsoXmlTag("OrgnlRcrdId")]
     public required Max35Text OriginalRecordIdentification { get; init; }
-
-    /// <summary>
-    /// Original Sender.
-    /// </summary>
-    [DisplayName("Original Sender")]
-    [IsoXmlTag("OrgnlSndr")]
-    public Party50Choice_? OriginalSender { get; init; }
 }

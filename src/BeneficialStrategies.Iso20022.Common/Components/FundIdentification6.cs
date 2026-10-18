@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FundIdentification6
 {
     /// <summary>
+    /// Fund Identification.
+    /// </summary>
+    [DisplayName("Fund Identification")]
+    [IsoXmlTag("FndId")]
+    public required Max35Text FundIdentification { get; init; }
+
+    /// <summary>
     /// Account Identification With Custodian.
     /// </summary>
     [DisplayName("Account Identification With Custodian")]
@@ -29,11 +36,4 @@ public record FundIdentification6
     [DisplayName("Custodian Identification")]
     [IsoXmlTag("CtdnId")]
     public PartyIdentification251Choice_? CustodianIdentification { get; init; }
-
-    /// <summary>
-    /// Fund Identification.
-    /// </summary>
-    [DisplayName("Fund Identification")]
-    [IsoXmlTag("FndId")]
-    public required Max35Text FundIdentification { get; init; }
 }

@@ -46,18 +46,32 @@ public record ForeignExchangeTradeConfirmationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Confirmation Type.
-    /// </summary>
-    [DisplayName("Confirmation Type")]
-    [IsoXmlTag("ConfTp")]
-    public required ConfirmationRequest1Code ConfirmationType { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header23 Header { get; init; }
+
+    /// <summary>
+    /// Request Identification.
+    /// </summary>
+    [DisplayName("Request Identification")]
+    [IsoXmlTag("ReqId")]
+    public required MessageIdentification1 RequestIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Detail.
+    /// </summary>
+    [DisplayName("Trade Detail")]
+    [IsoXmlTag("TradDtl")]
+    public required Trade9 TradeDetail { get; init; }
+
+    /// <summary>
+    /// Confirmation Type.
+    /// </summary>
+    [DisplayName("Confirmation Type")]
+    [IsoXmlTag("ConfTp")]
+    public required ConfirmationRequest1Code ConfirmationType { get; init; }
 
     /// <summary>
     /// Query Period.
@@ -81,23 +95,9 @@ public record ForeignExchangeTradeConfirmationRequestV02 : IOuterRecord
     public required QueryTradeStatus1Code QueryTradeStatus { get; init; }
 
     /// <summary>
-    /// Request Identification.
-    /// </summary>
-    [DisplayName("Request Identification")]
-    [IsoXmlTag("ReqId")]
-    public required MessageIdentification1 RequestIdentification { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Detail.
-    /// </summary>
-    [DisplayName("Trade Detail")]
-    [IsoXmlTag("TradDtl")]
-    public required Trade9 TradeDetail { get; init; }
 }

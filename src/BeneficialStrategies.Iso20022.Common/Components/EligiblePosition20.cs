@@ -24,18 +24,18 @@ public record EligiblePosition20
     public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification231Choice_? AccountOwner { get; init; }
-
-    /// <summary>
     /// Block Chain Address Or Wallet.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
     public Max140Text? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Holding Balance.

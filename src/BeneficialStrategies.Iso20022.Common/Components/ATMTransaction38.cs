@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction38
 {
     /// <summary>
-    /// Account From.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account From")]
-    [IsoXmlTag("AcctFr")]
-    public CardAccount20? AccountFrom { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Account To.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Account To")]
-    [IsoXmlTag("AcctTo")]
-    public ValueList<CardAccount20> AccountTo { get; init; } = [];
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Creditor Label.
@@ -45,32 +45,18 @@ public record ATMTransaction38
     public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount17? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Instant Transfer Program.
-    /// </summary>
-    [DisplayName("Instant Transfer Program")]
-    [IsoXmlTag("InstntTrfPrgm")]
-    public Max35Text? InstantTransferProgram { get; init; }
-
-    /// <summary>
     /// Payment Reference.
     /// </summary>
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
     public Max35Text? PaymentReference { get; init; }
+
+    /// <summary>
+    /// Account From.
+    /// </summary>
+    [DisplayName("Account From")]
+    [IsoXmlTag("AcctFr")]
+    public CardAccount20? AccountFrom { get; init; }
 
     /// <summary>
     /// Protected Account From.
@@ -80,39 +66,18 @@ public record ATMTransaction38
     public ContentInformationType10? ProtectedAccountFrom { get; init; }
 
     /// <summary>
+    /// Account To.
+    /// </summary>
+    [DisplayName("Account To")]
+    [IsoXmlTag("AcctTo")]
+    public ValueList<CardAccount20> AccountTo { get; init; } = [];
+
+    /// <summary>
     /// Protected Account To.
     /// </summary>
     [DisplayName("Protected Account To")]
     [IsoXmlTag("PrtctdAcctTo")]
     public ContentInformationType10? ProtectedAccountTo { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Recurring Transfer.
-    /// </summary>
-    [DisplayName("Recurring Transfer")]
-    [IsoXmlTag("RcrngTrf")]
-    public RecurringTransaction3? RecurringTransfer { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public ISODate? RequestedExecutionDate { get; init; }
-
-    /// <summary>
-    /// Requested Receipt.
-    /// </summary>
-    [DisplayName("Requested Receipt")]
-    [IsoXmlTag("ReqdRct")]
-    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Total Requested Amount.
@@ -122,9 +87,44 @@ public record ATMTransaction38
     public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount17? DetailedRequestedAmount { get; init; }
+
+    /// <summary>
+    /// Requested Execution Date.
+    /// </summary>
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public ISODate? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Instant Transfer Program.
+    /// </summary>
+    [DisplayName("Instant Transfer Program")]
+    [IsoXmlTag("InstntTrfPrgm")]
+    public Max35Text? InstantTransferProgram { get; init; }
+
+    /// <summary>
+    /// Recurring Transfer.
+    /// </summary>
+    [DisplayName("Recurring Transfer")]
+    [IsoXmlTag("RcrngTrf")]
+    public RecurringTransaction3? RecurringTransfer { get; init; }
+
+    /// <summary>
+    /// Requested Receipt.
+    /// </summary>
+    [DisplayName("Requested Receipt")]
+    [IsoXmlTag("ReqdRct")]
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

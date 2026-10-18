@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashAccountCharacteristics5
 {
     /// <summary>
-    /// Account Balance Currency Code.
-    /// </summary>
-    [DisplayName("Account Balance Currency Code")]
-    [IsoXmlTag("AcctBalCcyCd")]
-    public required ActiveOrHistoricCurrencyCode AccountBalanceCurrencyCode { get; init; }
-
-    /// <summary>
     /// Account Level.
     /// </summary>
     [DisplayName("Account Level")]
     [IsoXmlTag("AcctLvl")]
     public required AccountLevel2Code AccountLevel { get; init; }
+
+    /// <summary>
+    /// Cash Account.
+    /// </summary>
+    [DisplayName("Cash Account")]
+    [IsoXmlTag("CshAcct")]
+    public required CashAccount40 CashAccount { get; init; }
 
     /// <summary>
     /// Account Servicer.
@@ -38,18 +38,11 @@ public record CashAccountCharacteristics5
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
-    /// Account Servicer Contact.
+    /// Parent Account.
     /// </summary>
-    [DisplayName("Account Servicer Contact")]
-    [IsoXmlTag("AcctSvcrCtct")]
-    public required Contact13 AccountServicerContact { get; init; }
-
-    /// <summary>
-    /// Cash Account.
-    /// </summary>
-    [DisplayName("Cash Account")]
-    [IsoXmlTag("CshAcct")]
-    public required CashAccount40 CashAccount { get; init; }
+    [DisplayName("Parent Account")]
+    [IsoXmlTag("PrntAcct")]
+    public ParentCashAccount5? ParentAccount { get; init; }
 
     /// <summary>
     /// Compensation Method.
@@ -73,25 +66,18 @@ public record CashAccountCharacteristics5
     public ISODate? DelayedDebitDate { get; init; }
 
     /// <summary>
-    /// Host Currency Code.
-    /// </summary>
-    [DisplayName("Host Currency Code")]
-    [IsoXmlTag("HstCcyCd")]
-    public ActiveOrHistoricCurrencyCode? HostCurrencyCode { get; init; }
-
-    /// <summary>
-    /// Parent Account.
-    /// </summary>
-    [DisplayName("Parent Account")]
-    [IsoXmlTag("PrntAcct")]
-    public ParentCashAccount5? ParentAccount { get; init; }
-
-    /// <summary>
     /// Settlement Advice.
     /// </summary>
     [DisplayName("Settlement Advice")]
     [IsoXmlTag("SttlmAdvc")]
     public Max105Text? SettlementAdvice { get; init; }
+
+    /// <summary>
+    /// Account Balance Currency Code.
+    /// </summary>
+    [DisplayName("Account Balance Currency Code")]
+    [IsoXmlTag("AcctBalCcyCd")]
+    public required ActiveOrHistoricCurrencyCode AccountBalanceCurrencyCode { get; init; }
 
     /// <summary>
     /// Settlement Currency Code.
@@ -101,9 +87,23 @@ public record CashAccountCharacteristics5
     public ActiveOrHistoricCurrencyCode? SettlementCurrencyCode { get; init; }
 
     /// <summary>
+    /// Host Currency Code.
+    /// </summary>
+    [DisplayName("Host Currency Code")]
+    [IsoXmlTag("HstCcyCd")]
+    public ActiveOrHistoricCurrencyCode? HostCurrencyCode { get; init; }
+
+    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public AccountTax1? Tax { get; init; }
+
+    /// <summary>
+    /// Account Servicer Contact.
+    /// </summary>
+    [DisplayName("Account Servicer Contact")]
+    [IsoXmlTag("AcctSvcrCtct")]
+    public required Contact13 AccountServicerContact { get; init; }
 }

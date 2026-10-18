@@ -46,88 +46,11 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification78Choice_ AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative65? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction87? CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation194 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Option Details.
-    /// </summary>
-    [DisplayName("Corporate Action Option Details")]
-    [IsoXmlTag("CorpActnOptnDtls")]
-    public ValueList<CorporateActionOption247> CorporateActionOptionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Drop Agent.
-    /// </summary>
-    [DisplayName("Drop Agent")]
-    [IsoXmlTag("DrpAgt")]
-    public PartyIdentification137Choice_? DropAgent { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
-
-    /// <summary>
-    /// Information Agent.
-    /// </summary>
-    [DisplayName("Information Agent")]
-    [IsoXmlTag("InfAgt")]
-    public PartyIdentification137Choice_? InformationAgent { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public DocumentIdentification17? InstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Intermediate Security.
-    /// </summary>
-    [DisplayName("Intermediate Security")]
-    [IsoXmlTag("IntrmdtScty")]
-    public FinancialInstrumentAttributes117? IntermediateSecurity { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public PartyIdentification151Choice_? Issuer { get; init; }
-
-    /// <summary>
-    /// Issuer Agent.
-    /// </summary>
-    [DisplayName("Issuer Agent")]
-    [IsoXmlTag("IssrAgt")]
-    public ValueList<PartyIdentification151Choice_> IssuerAgent { get; init; } = [];
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Notification General Information.
@@ -137,11 +60,18 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public required CorporateActionNotification11 NotificationGeneralInformation { get; init; }
 
     /// <summary>
-    /// Offeror.
+    /// Previous Notification Identification.
     /// </summary>
-    [DisplayName("Offeror")]
-    [IsoXmlTag("Offerr")]
-    public ValueList<PartyIdentification151Choice_> Offeror { get; init; } = [];
+    [DisplayName("Previous Notification Identification")]
+    [IsoXmlTag("PrvsNtfctnId")]
+    public DocumentIdentification37? PreviousNotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Identification.
+    /// </summary>
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public DocumentIdentification17? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Other Document Identification.
@@ -151,11 +81,60 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
-    /// Pagination.
+    /// Events Linkage.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation194 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountIdentification78Choice_ AccountDetails { get; init; }
+
+    /// <summary>
+    /// Intermediate Security.
+    /// </summary>
+    [DisplayName("Intermediate Security")]
+    [IsoXmlTag("IntrmdtScty")]
+    public FinancialInstrumentAttributes117? IntermediateSecurity { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateAction87? CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Option Details.
+    /// </summary>
+    [DisplayName("Corporate Action Option Details")]
+    [IsoXmlTag("CorpActnOptnDtls")]
+    public ValueList<CorporateActionOption247> CorporateActionOptionDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative65? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Issuer Agent.
+    /// </summary>
+    [DisplayName("Issuer Agent")]
+    [IsoXmlTag("IssrAgt")]
+    public ValueList<PartyIdentification151Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Paying Agent.
@@ -165,18 +144,11 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
-    /// Physical Securities Agent.
+    /// Sub Paying Agent.
     /// </summary>
-    [DisplayName("Physical Securities Agent")]
-    [IsoXmlTag("PhysSctiesAgt")]
-    public PartyIdentification137Choice_? PhysicalSecuritiesAgent { get; init; }
-
-    /// <summary>
-    /// Previous Notification Identification.
-    /// </summary>
-    [DisplayName("Previous Notification Identification")]
-    [IsoXmlTag("PrvsNtfctnId")]
-    public DocumentIdentification37? PreviousNotificationIdentification { get; init; }
+    [DisplayName("Sub Paying Agent")]
+    [IsoXmlTag("SubPngAgt")]
+    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Registrar.
@@ -193,6 +165,20 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
+    /// Physical Securities Agent.
+    /// </summary>
+    [DisplayName("Physical Securities Agent")]
+    [IsoXmlTag("PhysSctiesAgt")]
+    public PartyIdentification137Choice_? PhysicalSecuritiesAgent { get; init; }
+
+    /// <summary>
+    /// Drop Agent.
+    /// </summary>
+    [DisplayName("Drop Agent")]
+    [IsoXmlTag("DrpAgt")]
+    public PartyIdentification137Choice_? DropAgent { get; init; }
+
+    /// <summary>
     /// Solicitation Agent.
     /// </summary>
     [DisplayName("Solicitation Agent")]
@@ -200,18 +186,25 @@ public record CorporateActionNotification002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
-    /// Sub Paying Agent.
+    /// Information Agent.
     /// </summary>
-    [DisplayName("Sub Paying Agent")]
-    [IsoXmlTag("SubPngAgt")]
-    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
+    [DisplayName("Information Agent")]
+    [IsoXmlTag("InfAgt")]
+    public PartyIdentification137Choice_? InformationAgent { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Issuer.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public PartyIdentification151Choice_? Issuer { get; init; }
+
+    /// <summary>
+    /// Offeror.
+    /// </summary>
+    [DisplayName("Offeror")]
+    [IsoXmlTag("Offerr")]
+    public ValueList<PartyIdentification151Choice_> Offeror { get; init; } = [];
 
     /// <summary>
     /// Transfer Agent.
@@ -219,4 +212,11 @@ public record CorporateActionNotification002V15 : IOuterRecord
     [DisplayName("Transfer Agent")]
     [IsoXmlTag("TrfAgt")]
     public PartyIdentification151Choice_? TransferAgent { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

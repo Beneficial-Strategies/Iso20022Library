@@ -46,13 +46,6 @@ public record ATMConfigurationReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Configuration Report.
-    /// </summary>
-    [DisplayName("ATM Configuration Report")]
-    [IsoXmlTag("ATMCfgtnRpt")]
-    public ATMConfigurationReportComponent1? ATMConfigurationReport { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMConfigurationReportV01 : IOuterRecord
     [DisplayName("Protected ATM Configuration Report")]
     [IsoXmlTag("PrtctdATMCfgtnRpt")]
     public ContentInformationType10? ProtectedATMConfigurationReport { get; init; }
+
+    /// <summary>
+    /// ATM Configuration Report.
+    /// </summary>
+    [DisplayName("ATM Configuration Report")]
+    [IsoXmlTag("ATMCfgtnRpt")]
+    public ATMConfigurationReportComponent1? ATMConfigurationReport { get; init; }
 
     /// <summary>
     /// Security Trailer.

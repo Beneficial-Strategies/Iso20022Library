@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SaleItem4
 {
     /// <summary>
+    /// Product Type.
+    /// </summary>
+    [DisplayName("Product Type")]
+    [IsoXmlTag("PdctTp")]
+    public Max35Text? ProductType { get; init; }
+
+    /// <summary>
+    /// Product Code.
+    /// </summary>
+    [DisplayName("Product Code")]
+    [IsoXmlTag("PdctCd")]
+    public Max70Text? ProductCode { get; init; }
+
+    /// <summary>
+    /// Product Code Type.
+    /// </summary>
+    [DisplayName("Product Code Type")]
+    [IsoXmlTag("PdctCdTp")]
+    public ProductCodeType1Code? ProductCodeType { get; init; }
+
+    /// <summary>
     /// Additional Product Code.
     /// </summary>
     [DisplayName("Additional Product Code")]
@@ -31,74 +52,11 @@ public record SaleItem4
     public Max35Text? AdditionalProductCodeType { get; init; }
 
     /// <summary>
-    /// Adjusted Amount.
-    /// </summary>
-    [DisplayName("Adjusted Amount")]
-    [IsoXmlTag("AdjstdAmt")]
-    public ImpliedCurrencyAndAmount? AdjustedAmount { get; init; }
-
-    /// <summary>
-    /// Adjustment.
-    /// </summary>
-    [DisplayName("Adjustment")]
-    [IsoXmlTag("Adjstmnt")]
-    public ValueList<Adjustment14> Adjustment { get; init; } = [];
-
-    /// <summary>
-    /// Insurance Amount.
-    /// </summary>
-    [DisplayName("Insurance Amount")]
-    [IsoXmlTag("InsrncAmt")]
-    public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
-
-    /// <summary>
-    /// Insurance Indicator.
-    /// </summary>
-    [DisplayName("Insurance Indicator")]
-    [IsoXmlTag("InsrncInd")]
-    public TrueFalseIndicator? InsuranceIndicator { get; init; }
-
-    /// <summary>
-    /// Non Adjusted Total Amount.
-    /// </summary>
-    [DisplayName("Non Adjusted Total Amount")]
-    [IsoXmlTag("NonAdjstdTtlAmt")]
-    public ImpliedCurrencyAndAmount? NonAdjustedTotalAmount { get; init; }
-
-    /// <summary>
-    /// Non Adjusted Unit Price.
-    /// </summary>
-    [DisplayName("Non Adjusted Unit Price")]
-    [IsoXmlTag("NonAdjstdUnitPric")]
-    public ImpliedCurrencyAndAmount? NonAdjustedUnitPrice { get; init; }
-
-    /// <summary>
-    /// Other Unit Of Measure.
-    /// </summary>
-    [DisplayName("Other Unit Of Measure")]
-    [IsoXmlTag("OthrUnitOfMeasr")]
-    public Max35Text? OtherUnitOfMeasure { get; init; }
-
-    /// <summary>
-    /// Product Code.
-    /// </summary>
-    [DisplayName("Product Code")]
-    [IsoXmlTag("PdctCd")]
-    public Max70Text? ProductCode { get; init; }
-
-    /// <summary>
     /// Product Code Modifier.
     /// </summary>
     [DisplayName("Product Code Modifier")]
     [IsoXmlTag("PdctCdModfr")]
     public DecimalNumber? ProductCodeModifier { get; init; }
-
-    /// <summary>
-    /// Product Code Type.
-    /// </summary>
-    [DisplayName("Product Code Type")]
-    [IsoXmlTag("PdctCdTp")]
-    public ProductCodeType1Code? ProductCodeType { get; init; }
 
     /// <summary>
     /// Product Description.
@@ -108,6 +66,20 @@ public record SaleItem4
     public Max140Text? ProductDescription { get; init; }
 
     /// <summary>
+    /// Unit Of Measure.
+    /// </summary>
+    [DisplayName("Unit Of Measure")]
+    [IsoXmlTag("UnitOfMeasr")]
+    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
+    /// <summary>
+    /// Other Unit Of Measure.
+    /// </summary>
+    [DisplayName("Other Unit Of Measure")]
+    [IsoXmlTag("OthrUnitOfMeasr")]
+    public Max35Text? OtherUnitOfMeasure { get; init; }
+
+    /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
@@ -115,11 +87,46 @@ public record SaleItem4
     public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
-    /// Product Type.
+    /// Non Adjusted Unit Price.
     /// </summary>
-    [DisplayName("Product Type")]
-    [IsoXmlTag("PdctTp")]
-    public Max35Text? ProductType { get; init; }
+    [DisplayName("Non Adjusted Unit Price")]
+    [IsoXmlTag("NonAdjstdUnitPric")]
+    public ImpliedCurrencyAndAmount? NonAdjustedUnitPrice { get; init; }
+
+    /// <summary>
+    /// Non Adjusted Total Amount.
+    /// </summary>
+    [DisplayName("Non Adjusted Total Amount")]
+    [IsoXmlTag("NonAdjstdTtlAmt")]
+    public ImpliedCurrencyAndAmount? NonAdjustedTotalAmount { get; init; }
+
+    /// <summary>
+    /// Adjustment.
+    /// </summary>
+    [DisplayName("Adjustment")]
+    [IsoXmlTag("Adjstmnt")]
+    public ValueList<Adjustment14> Adjustment { get; init; } = [];
+
+    /// <summary>
+    /// Adjusted Amount.
+    /// </summary>
+    [DisplayName("Adjusted Amount")]
+    [IsoXmlTag("AdjstdAmt")]
+    public ImpliedCurrencyAndAmount? AdjustedAmount { get; init; }
+
+    /// <summary>
+    /// Insurance Indicator.
+    /// </summary>
+    [DisplayName("Insurance Indicator")]
+    [IsoXmlTag("InsrncInd")]
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
+
+    /// <summary>
+    /// Insurance Amount.
+    /// </summary>
+    [DisplayName("Insurance Amount")]
+    [IsoXmlTag("InsrncAmt")]
+    public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
 
     /// <summary>
     /// Tax.
@@ -134,11 +141,4 @@ public record SaleItem4
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
     public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
-
-    /// <summary>
-    /// Unit Of Measure.
-    /// </summary>
-    [DisplayName("Unit Of Measure")]
-    [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
 }

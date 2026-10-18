@@ -18,6 +18,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorReferenceInformation3
 {
     /// <summary>
+    /// Specifies the type of creditor reference.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public CreditorReferenceType3? Type { get; init; }
+
+    /// <summary>
     /// Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.
     /// Usage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.
     /// If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.
@@ -25,11 +32,4 @@ public record CreditorReferenceInformation3
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public Max35Text? Reference { get; init; }
-
-    /// <summary>
-    /// Specifies the type of creditor reference.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public CreditorReferenceType3? Type { get; init; }
 }

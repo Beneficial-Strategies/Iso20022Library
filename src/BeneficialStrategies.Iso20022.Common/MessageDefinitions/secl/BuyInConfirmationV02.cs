@@ -46,11 +46,13 @@ public record BuyInConfirmationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Buy In Details.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Buy In Details")]
-    [IsoXmlTag("BuyInDtls")]
-    public required BuyIn2 BuyInDetails { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Clearing Member.
@@ -58,6 +60,13 @@ public record BuyInConfirmationV02 : IOuterRecord
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
     public required PartyIdentification35Choice_ ClearingMember { get; init; }
+
+    /// <summary>
+    /// Buy In Details.
+    /// </summary>
+    [DisplayName("Buy In Details")]
+    [IsoXmlTag("BuyInDtls")]
+    public required BuyIn2 BuyInDetails { get; init; }
 
     /// <summary>
     /// Original Settlement Obligation.
@@ -72,13 +81,4 @@ public record BuyInConfirmationV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? TransactionIdentification { get; init; }
 }

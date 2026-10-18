@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardAccount20
 {
     /// <summary>
-    /// Account Identifier.
+    /// Selection Method.
     /// </summary>
-    [DisplayName("Account Identifier")]
-    [IsoXmlTag("AcctIdr")]
-    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
+    [DisplayName("Selection Method")]
+    [IsoXmlTag("SelctnMtd")]
+    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
+
+    /// <summary>
+    /// Selected Account Type.
+    /// </summary>
+    [DisplayName("Selected Account Type")]
+    [IsoXmlTag("SelctdAcctTp")]
+    public CardAccountType3Code? SelectedAccountType { get; init; }
 
     /// <summary>
     /// Account Name.
@@ -45,18 +52,11 @@ public record CardAccount20
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Selected Account Type.
+    /// Account Identifier.
     /// </summary>
-    [DisplayName("Selected Account Type")]
-    [IsoXmlTag("SelctdAcctTp")]
-    public CardAccountType3Code? SelectedAccountType { get; init; }
-
-    /// <summary>
-    /// Selection Method.
-    /// </summary>
-    [DisplayName("Selection Method")]
-    [IsoXmlTag("SelctnMtd")]
-    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
+    [DisplayName("Account Identifier")]
+    [IsoXmlTag("AcctIdr")]
+    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
 
     /// <summary>
     /// Servicer.

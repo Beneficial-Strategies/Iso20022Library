@@ -18,18 +18,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RemittanceLocationData2
 {
     /// <summary>
-    /// Electronic address to which an agent is to send the remittance information.
-    /// </summary>
-    [DisplayName("Electronic Address")]
-    [IsoXmlTag("ElctrncAdr")]
-    public Max2048Text? ElectronicAddress { get; init; }
-
-    /// <summary>
     /// Method used to deliver the remittance advice information.
     /// </summary>
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
     public required RemittanceLocationMethod2Code Method { get; init; }
+
+    /// <summary>
+    /// Electronic address to which an agent is to send the remittance information.
+    /// </summary>
+    [DisplayName("Electronic Address")]
+    [IsoXmlTag("ElctrncAdr")]
+    public Max2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
     /// Postal address to which an agent is to send the remittance information.

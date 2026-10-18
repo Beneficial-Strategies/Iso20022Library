@@ -24,11 +24,11 @@ public record SubAccountIdentification73
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Activity Indicator.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Activity Indicator")]
-    [IsoXmlTag("ActvtyInd")]
-    public required YesNoIndicator ActivityIndicator { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount25? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -38,16 +38,16 @@ public record SubAccountIdentification73
     public BlockChainAddressWallet2? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
+    /// Activity Indicator.
+    /// </summary>
+    [DisplayName("Activity Indicator")]
+    [IsoXmlTag("ActvtyInd")]
+    public required YesNoIndicator ActivityIndicator { get; init; }
+
+    /// <summary>
     /// Financial Instrument Details.
     /// </summary>
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
     public ValueList<FinancialInstrumentDetails46> FinancialInstrumentDetails { get; init; } = [];
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount25? SafekeepingAccount { get; init; }
 }

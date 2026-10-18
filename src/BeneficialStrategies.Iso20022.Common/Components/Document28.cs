@@ -17,18 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Document28
 {
     /// <summary>
-    /// Data Record.
+    /// Technical Record Identifier.
     /// </summary>
-    [DisplayName("Data Record")]
-    [IsoXmlTag("DataRcrd")]
-    public SupplementaryDataEnvelope1? DataRecord { get; init; }
+    [DisplayName("Technical Record Identifier")]
+    [IsoXmlTag("TechRcrdIdr")]
+    public Max140Text? TechnicalRecordIdentifier { get; init; }
 
     /// <summary>
-    /// Document Reference.
+    /// Version.
     /// </summary>
-    [DisplayName("Document Reference")]
-    [IsoXmlTag("DocRef")]
-    public ValueList<Document26> DocumentReference { get; init; } = [];
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public PositiveNumber? Version { get; init; }
+
+    /// <summary>
+    /// Submission Type.
+    /// </summary>
+    [DisplayName("Submission Type")]
+    [IsoXmlTag("SubmissnTp")]
+    public TransactionOperationType13Code? SubmissionType { get; init; }
+
+    /// <summary>
+    /// Related Entity.
+    /// </summary>
+    [DisplayName("Related Entity")]
+    [IsoXmlTag("RltdNtty")]
+    public ValueList<PartyIdentification260Choice_> RelatedEntity { get; init; } = [];
+
+    /// <summary>
+    /// Regulatory Data Type.
+    /// </summary>
+    [DisplayName("Regulatory Data Type")]
+    [IsoXmlTag("RgltryDataTp")]
+    public ValueList<ClassificationType4> RegulatoryDataType { get; init; } = [];
+
+    /// <summary>
+    /// Voluntary.
+    /// </summary>
+    [DisplayName("Voluntary")]
+    [IsoXmlTag("Vlntry")]
+    public TrueFalseIndicator? Voluntary { get; init; }
 
     /// <summary>
     /// Historical Data.
@@ -38,18 +66,11 @@ public record Document28
     public TrueFalseIndicator? HistoricalData { get; init; }
 
     /// <summary>
-    /// Home Country.
+    /// Related Period.
     /// </summary>
-    [DisplayName("Home Country")]
-    [IsoXmlTag("HomeCtry")]
-    public CountryCode? HomeCountry { get; init; }
-
-    /// <summary>
-    /// Host Country.
-    /// </summary>
-    [DisplayName("Host Country")]
-    [IsoXmlTag("HstCtry")]
-    public ValueList<CountryCode> HostCountry { get; init; } = [];
+    [DisplayName("Related Period")]
+    [IsoXmlTag("RltdPrd")]
+    public Period4Choice_? RelatedPeriod { get; init; }
 
     /// <summary>
     /// Personal Data.
@@ -66,25 +87,25 @@ public record Document28
     public Period4Choice_? PublicationPeriod { get; init; }
 
     /// <summary>
-    /// Regulatory Data Type.
+    /// Submission Date Time.
     /// </summary>
-    [DisplayName("Regulatory Data Type")]
-    [IsoXmlTag("RgltryDataTp")]
-    public ValueList<ClassificationType4> RegulatoryDataType { get; init; } = [];
+    [DisplayName("Submission Date Time")]
+    [IsoXmlTag("SubmissnDtTm")]
+    public ISODateTime? SubmissionDateTime { get; init; }
 
     /// <summary>
-    /// Related Entity.
+    /// Home Country.
     /// </summary>
-    [DisplayName("Related Entity")]
-    [IsoXmlTag("RltdNtty")]
-    public ValueList<PartyIdentification260Choice_> RelatedEntity { get; init; } = [];
+    [DisplayName("Home Country")]
+    [IsoXmlTag("HomeCtry")]
+    public CountryCode? HomeCountry { get; init; }
 
     /// <summary>
-    /// Related Period.
+    /// Host Country.
     /// </summary>
-    [DisplayName("Related Period")]
-    [IsoXmlTag("RltdPrd")]
-    public Period4Choice_? RelatedPeriod { get; init; }
+    [DisplayName("Host Country")]
+    [IsoXmlTag("HstCtry")]
+    public ValueList<CountryCode> HostCountry { get; init; } = [];
 
     /// <summary>
     /// Related Product Identifier.
@@ -94,6 +115,13 @@ public record Document28
     public ValueList<SecurityIdentification49> RelatedProductIdentifier { get; init; } = [];
 
     /// <summary>
+    /// Document Reference.
+    /// </summary>
+    [DisplayName("Document Reference")]
+    [IsoXmlTag("DocRef")]
+    public ValueList<Document26> DocumentReference { get; init; } = [];
+
+    /// <summary>
     /// Related Regulatory Data.
     /// </summary>
     [DisplayName("Related Regulatory Data")]
@@ -101,37 +129,9 @@ public record Document28
     public ValueList<GenericIdentification190> RelatedRegulatoryData { get; init; } = [];
 
     /// <summary>
-    /// Submission Date Time.
+    /// Data Record.
     /// </summary>
-    [DisplayName("Submission Date Time")]
-    [IsoXmlTag("SubmissnDtTm")]
-    public ISODateTime? SubmissionDateTime { get; init; }
-
-    /// <summary>
-    /// Submission Type.
-    /// </summary>
-    [DisplayName("Submission Type")]
-    [IsoXmlTag("SubmissnTp")]
-    public TransactionOperationType13Code? SubmissionType { get; init; }
-
-    /// <summary>
-    /// Technical Record Identifier.
-    /// </summary>
-    [DisplayName("Technical Record Identifier")]
-    [IsoXmlTag("TechRcrdIdr")]
-    public Max140Text? TechnicalRecordIdentifier { get; init; }
-
-    /// <summary>
-    /// Version.
-    /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public PositiveNumber? Version { get; init; }
-
-    /// <summary>
-    /// Voluntary.
-    /// </summary>
-    [DisplayName("Voluntary")]
-    [IsoXmlTag("Vlntry")]
-    public TrueFalseIndicator? Voluntary { get; init; }
+    [DisplayName("Data Record")]
+    [IsoXmlTag("DataRcrd")]
+    public SupplementaryDataEnvelope1? DataRecord { get; init; }
 }

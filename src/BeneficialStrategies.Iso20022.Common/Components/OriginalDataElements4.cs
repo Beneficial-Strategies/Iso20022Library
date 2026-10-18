@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalDataElements4
 {
     /// <summary>
-    /// Acquirer Identification.
-    /// </summary>
-    [DisplayName("Acquirer Identification")]
-    [IsoXmlTag("AcqrrId")]
-    public Max11NumericText? AcquirerIdentification { get; init; }
-
-    /// <summary>
     /// Message Class.
     /// </summary>
     [DisplayName("Message Class")]
@@ -38,11 +31,11 @@ public record OriginalDataElements4
     public MessageFunction16Code? MessageFunction { get; init; }
 
     /// <summary>
-    /// Response Code.
+    /// Acquirer Identification.
     /// </summary>
-    [DisplayName("Response Code")]
-    [IsoXmlTag("RspnCd")]
-    public ISO8583ResponseCode? ResponseCode { get; init; }
+    [DisplayName("Acquirer Identification")]
+    [IsoXmlTag("AcqrrId")]
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Sender Identification.
@@ -52,6 +45,13 @@ public record OriginalDataElements4
     public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
+    /// Transaction Type.
+    /// </summary>
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public ISO8583TransactionTypeCode? TransactionType { get; init; }
+
+    /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
@@ -59,9 +59,9 @@ public record OriginalDataElements4
     public OriginalTransactionIdentification1? TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Type.
+    /// Response Code.
     /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public ISO8583TransactionTypeCode? TransactionType { get; init; }
+    [DisplayName("Response Code")]
+    [IsoXmlTag("RspnCd")]
+    public ISO8583ResponseCode? ResponseCode { get; init; }
 }

@@ -24,6 +24,20 @@ public record SubAccountIdentification71
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount25? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet2? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Activity Indicator.
     /// </summary>
     [DisplayName("Activity Indicator")]
@@ -36,18 +50,4 @@ public record SubAccountIdentification71
     [DisplayName("Balance For Sub Account")]
     [IsoXmlTag("BalForSubAcct")]
     public ValueList<AggregateBalanceInformation46> BalanceForSubAccount { get; init; } = [];
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet2? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount25? SafekeepingAccount { get; init; }
 }

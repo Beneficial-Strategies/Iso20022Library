@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportResponse8
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required PaymentContext30 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -31,11 +24,18 @@ public record ReportResponse8
     public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
-    /// Report Get Totals Response.
+    /// Context.
     /// </summary>
-    [DisplayName("Report Get Totals Response")]
-    [IsoXmlTag("RptGetTtlsRspn")]
-    public ReportGetTotalsResponse2? ReportGetTotalsResponse { get; init; }
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required PaymentContext30 Context { get; init; }
+
+    /// <summary>
+    /// Service Content.
+    /// </summary>
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService7Code ServiceContent { get; init; }
 
     /// <summary>
     /// Report Transaction Response.
@@ -45,18 +45,18 @@ public record ReportResponse8
     public ReportTransactionResponse7? ReportTransactionResponse { get; init; }
 
     /// <summary>
+    /// Report Get Totals Response.
+    /// </summary>
+    [DisplayName("Report Get Totals Response")]
+    [IsoXmlTag("RptGetTtlsRspn")]
+    public ReportGetTotalsResponse2? ReportGetTotalsResponse { get; init; }
+
+    /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
     public required ResponseType11 Response { get; init; }
-
-    /// <summary>
-    /// Service Content.
-    /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService7Code ServiceContent { get; init; }
 
     /// <summary>
     /// Supplementary Data.

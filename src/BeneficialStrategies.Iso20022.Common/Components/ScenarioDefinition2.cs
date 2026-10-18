@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ScenarioDefinition2
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max2000Text? Description { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -50,4 +43,11 @@ public record ScenarioDefinition2
     [DisplayName("Stress Item")]
     [IsoXmlTag("StrssItm")]
     public ValueList<StressItem1> StressItem { get; init; } = [];
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max2000Text? Description { get; init; }
 }

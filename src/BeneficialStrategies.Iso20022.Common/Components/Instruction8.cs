@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Instruction8
 {
     /// <summary>
-    /// Account Details.
+    /// Single Instruction Identification.
     /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required SafekeepingAccount19 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Meeting Attendee.
-    /// </summary>
-    [DisplayName("Meeting Attendee")]
-    [IsoXmlTag("MtgAttndee")]
-    public ValueList<IndividualPerson41> MeetingAttendee { get; init; } = [];
-
-    /// <summary>
-    /// Proxy.
-    /// </summary>
-    [DisplayName("Proxy")]
-    [IsoXmlTag("Prxy")]
-    public Proxy12? Proxy { get; init; }
+    [DisplayName("Single Instruction Identification")]
+    [IsoXmlTag("SnglInstrId")]
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Requested Execution Date.
@@ -45,18 +31,25 @@ public record Instruction8
     public ISODateTime? RequestedExecutionDate { get; init; }
 
     /// <summary>
-    /// Single Instruction Identification.
+    /// Vote Execution Confirmation.
     /// </summary>
-    [DisplayName("Single Instruction Identification")]
-    [IsoXmlTag("SnglInstrId")]
-    public required Max35Text SingleInstructionIdentification { get; init; }
+    [DisplayName("Vote Execution Confirmation")]
+    [IsoXmlTag("VoteExctnConf")]
+    public required YesNoIndicator VoteExecutionConfirmation { get; init; }
 
     /// <summary>
-    /// Specific Instruction Request.
+    /// Account Details.
     /// </summary>
-    [DisplayName("Specific Instruction Request")]
-    [IsoXmlTag("SpcfcInstrReq")]
-    public SpecificInstructionRequest4? SpecificInstructionRequest { get; init; }
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required SafekeepingAccount19 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Proxy.
+    /// </summary>
+    [DisplayName("Proxy")]
+    [IsoXmlTag("Prxy")]
+    public Proxy12? Proxy { get; init; }
 
     /// <summary>
     /// Vote Details.
@@ -66,9 +59,16 @@ public record Instruction8
     public VoteDetails6? VoteDetails { get; init; }
 
     /// <summary>
-    /// Vote Execution Confirmation.
+    /// Meeting Attendee.
     /// </summary>
-    [DisplayName("Vote Execution Confirmation")]
-    [IsoXmlTag("VoteExctnConf")]
-    public required YesNoIndicator VoteExecutionConfirmation { get; init; }
+    [DisplayName("Meeting Attendee")]
+    [IsoXmlTag("MtgAttndee")]
+    public ValueList<IndividualPerson41> MeetingAttendee { get; init; } = [];
+
+    /// <summary>
+    /// Specific Instruction Request.
+    /// </summary>
+    [DisplayName("Specific Instruction Request")]
+    [IsoXmlTag("SpcfcInstrReq")]
+    public SpecificInstructionRequest4? SpecificInstructionRequest { get; init; }
 }

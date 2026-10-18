@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ActionMessage11
 {
     /// <summary>
-    /// Format.
+    /// Message Destination.
     /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public OutputFormat3Code? Format { get; init; }
+    [DisplayName("Message Destination")]
+    [IsoXmlTag("MsgDstn")]
+    public required UserInterface4Code MessageDestination { get; init; }
 
     /// <summary>
     /// Information Qualifier.
@@ -29,6 +29,13 @@ public record ActionMessage11
     [DisplayName("Information Qualifier")]
     [IsoXmlTag("InfQlfr")]
     public InformationQualify1Code? InformationQualifier { get; init; }
+
+    /// <summary>
+    /// Format.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public OutputFormat3Code? Format { get; init; }
 
     /// <summary>
     /// Message Content.
@@ -45,20 +52,6 @@ public record ActionMessage11
     public ContentInformationType38? MessageContentSignature { get; init; }
 
     /// <summary>
-    /// Message Destination.
-    /// </summary>
-    [DisplayName("Message Destination")]
-    [IsoXmlTag("MsgDstn")]
-    public required UserInterface4Code MessageDestination { get; init; }
-
-    /// <summary>
-    /// Minimum Display Time.
-    /// </summary>
-    [DisplayName("Minimum Display Time")]
-    [IsoXmlTag("MinDispTm")]
-    public Number? MinimumDisplayTime { get; init; }
-
-    /// <summary>
     /// Output Barcode.
     /// </summary>
     [DisplayName("Output Barcode")]
@@ -71,4 +64,11 @@ public record ActionMessage11
     [DisplayName("Response Required Flag")]
     [IsoXmlTag("RspnReqrdFlg")]
     public TrueFalseIndicator? ResponseRequiredFlag { get; init; }
+
+    /// <summary>
+    /// Minimum Display Time.
+    /// </summary>
+    [DisplayName("Minimum Display Time")]
+    [IsoXmlTag("MinDispTm")]
+    public Number? MinimumDisplayTime { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestmentAccount78
 {
     /// <summary>
-    /// Account Designation.
-    /// </summary>
-    [DisplayName("Account Designation")]
-    [IsoXmlTag("AcctDsgnt")]
-    public Max35Text? AccountDesignation { get; init; }
-
-    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
@@ -38,6 +31,20 @@ public record InvestmentAccount78
     public Max35Text? AccountName { get; init; }
 
     /// <summary>
+    /// Account Designation.
+    /// </summary>
+    [DisplayName("Account Designation")]
+    [IsoXmlTag("AcctDsgnt")]
+    public Max35Text? AccountDesignation { get; init; }
+
+    /// <summary>
+    /// Owner Identification.
+    /// </summary>
+    [DisplayName("Owner Identification")]
+    [IsoXmlTag("OwnrId")]
+    public ValueList<PartyIdentification139> OwnerIdentification { get; init; } = [];
+
+    /// <summary>
     /// Account Servicer.
     /// </summary>
     [DisplayName("Account Servicer")]
@@ -50,13 +57,6 @@ public record InvestmentAccount78
     [DisplayName("Order Originator Eligibility")]
     [IsoXmlTag("OrdrOrgtrElgblty")]
     public OrderOriginatorEligibility1Code? OrderOriginatorEligibility { get; init; }
-
-    /// <summary>
-    /// Owner Identification.
-    /// </summary>
-    [DisplayName("Owner Identification")]
-    [IsoXmlTag("OwnrId")]
-    public ValueList<PartyIdentification139> OwnerIdentification { get; init; } = [];
 
     /// <summary>
     /// Sub Account Details.

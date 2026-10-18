@@ -24,18 +24,18 @@ public record CorporateActionRate126
     public RateAndAmountFormat57Choice_? AdditionalTax { get; init; }
 
     /// <summary>
-    /// Bid Interval.
-    /// </summary>
-    [DisplayName("Bid Interval")]
-    [IsoXmlTag("BidIntrvl")]
-    public RateAndAmountFormat58Choice_? BidInterval { get; init; }
-
-    /// <summary>
     /// Gross Distribution Rate.
     /// </summary>
     [DisplayName("Gross Distribution Rate")]
     [IsoXmlTag("GrssDstrbtnRate")]
     public ValueList<GrossDividendRateFormat36Choice_> GrossDistributionRate { get; init; } = [];
+
+    /// <summary>
+    /// Net Distribution Rate.
+    /// </summary>
+    [DisplayName("Net Distribution Rate")]
+    [IsoXmlTag("NetDstrbtnRate")]
+    public ValueList<NetDividendRateFormat38Choice_> NetDistributionRate { get; init; } = [];
 
     /// <summary>
     /// Gross Interest Rate Used For Payment.
@@ -46,13 +46,6 @@ public record CorporateActionRate126
         [];
 
     /// <summary>
-    /// Issuer Declared Exchange Rate.
-    /// </summary>
-    [DisplayName("Issuer Declared Exchange Rate")]
-    [IsoXmlTag("IssrDclrdXchgRate")]
-    public ForeignExchangeTerms38? IssuerDeclaredExchangeRate { get; init; }
-
-    /// <summary>
     /// Maximum Allowed Oversubscription Rate.
     /// </summary>
     [DisplayName("Maximum Allowed Oversubscription Rate")]
@@ -60,18 +53,18 @@ public record CorporateActionRate126
     public RateFormat24Choice_? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
-    /// Net Distribution Rate.
-    /// </summary>
-    [DisplayName("Net Distribution Rate")]
-    [IsoXmlTag("NetDstrbtnRate")]
-    public ValueList<NetDividendRateFormat38Choice_> NetDistributionRate { get; init; } = [];
-
-    /// <summary>
     /// Proration Rate.
     /// </summary>
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
     public RateFormat24Choice_? ProrationRate { get; init; }
+
+    /// <summary>
+    /// Withholding Tax Rate.
+    /// </summary>
+    [DisplayName("Withholding Tax Rate")]
+    [IsoXmlTag("WhldgTaxRate")]
+    public ValueList<RateAndAmountFormat56Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Second Level Tax.
@@ -89,6 +82,13 @@ public record CorporateActionRate126
         [];
 
     /// <summary>
+    /// Issuer Declared Exchange Rate.
+    /// </summary>
+    [DisplayName("Issuer Declared Exchange Rate")]
+    [IsoXmlTag("IssrDclrdXchgRate")]
+    public ForeignExchangeTerms38? IssuerDeclaredExchangeRate { get; init; }
+
+    /// <summary>
     /// Tax On Income.
     /// </summary>
     [DisplayName("Tax On Income")]
@@ -96,9 +96,9 @@ public record CorporateActionRate126
     public RateAndAmountFormat57Choice_? TaxOnIncome { get; init; }
 
     /// <summary>
-    /// Withholding Tax Rate.
+    /// Bid Interval.
     /// </summary>
-    [DisplayName("Withholding Tax Rate")]
-    [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat56Choice_> WithholdingTaxRate { get; init; } = [];
+    [DisplayName("Bid Interval")]
+    [IsoXmlTag("BidIntrvl")]
+    public RateAndAmountFormat58Choice_? BidInterval { get; init; }
 }

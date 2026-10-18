@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MaintenanceDelegationRequest11
 {
     /// <summary>
+    /// TM Identification.
+    /// </summary>
+    [DisplayName("TM Identification")]
+    [IsoXmlTag("TMId")]
+    public required GenericIdentification176 TMIdentification { get; init; }
+
+    /// <summary>
     /// Master TM Identification.
     /// </summary>
     [DisplayName("Master TM Identification")]
     [IsoXmlTag("MstrTMId")]
     public GenericIdentification176? MasterTMIdentification { get; init; }
-
-    /// <summary>
-    /// Requested Delegation.
-    /// </summary>
-    [DisplayName("Requested Delegation")]
-    [IsoXmlTag("ReqdDlgtn")]
-    public ValueList<MaintenanceDelegation19> RequestedDelegation { get; init; } = [];
-
-    /// <summary>
-    /// TM Challenge Value.
-    /// </summary>
-    [DisplayName("TM Challenge Value")]
-    [IsoXmlTag("TMChllngVal")]
-    public required Max140Binary TMChallengeValue { get; init; }
 
     /// <summary>
     /// TM Date Time.
@@ -45,9 +38,16 @@ public record MaintenanceDelegationRequest11
     public required ISODateTime TMDateTime { get; init; }
 
     /// <summary>
-    /// TM Identification.
+    /// TM Challenge Value.
     /// </summary>
-    [DisplayName("TM Identification")]
-    [IsoXmlTag("TMId")]
-    public required GenericIdentification176 TMIdentification { get; init; }
+    [DisplayName("TM Challenge Value")]
+    [IsoXmlTag("TMChllngVal")]
+    public required Max140Binary TMChallengeValue { get; init; }
+
+    /// <summary>
+    /// Requested Delegation.
+    /// </summary>
+    [DisplayName("Requested Delegation")]
+    [IsoXmlTag("ReqdDlgtn")]
+    public ValueList<MaintenanceDelegation19> RequestedDelegation { get; init; } = [];
 }

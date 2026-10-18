@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountAndParties3
 {
     /// <summary>
-    /// Authority Request Type.
-    /// </summary>
-    [DisplayName("Authority Request Type")]
-    [IsoXmlTag("AuthrtyReqTp")]
-    public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -36,4 +29,11 @@ public record AccountAndParties3
     [DisplayName("Investigated Parties")]
     [IsoXmlTag("InvstgtdPties")]
     public required InvestigatedParties1Choice_ InvestigatedParties { get; init; }
+
+    /// <summary>
+    /// Authority Request Type.
+    /// </summary>
+    [DisplayName("Authority Request Type")]
+    [IsoXmlTag("AuthrtyReqTp")]
+    public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
 }

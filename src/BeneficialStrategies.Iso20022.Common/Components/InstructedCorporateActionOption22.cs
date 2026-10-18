@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InstructedCorporateActionOption22
 {
     /// <summary>
-    /// Default Action.
+    /// Option Number.
     /// </summary>
-    [DisplayName("Default Action")]
-    [IsoXmlTag("DfltActn")]
-    public DefaultProcessingOrStandingInstruction2Choice_? DefaultAction { get; init; }
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
-    /// Event Deadlines.
+    /// Option Type.
     /// </summary>
-    [DisplayName("Event Deadlines")]
-    [IsoXmlTag("EvtDdlns")]
-    public required CorporateActionEventDeadlines4 EventDeadlines { get; init; }
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption36Choice_ OptionType { get; init; }
 
     /// <summary>
     /// Instructed Balance.
@@ -36,6 +36,13 @@ public record InstructedCorporateActionOption22
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
     public required BalanceFormat14Choice_ InstructedBalance { get; init; }
+
+    /// <summary>
+    /// Default Action.
+    /// </summary>
+    [DisplayName("Default Action")]
+    [IsoXmlTag("DfltActn")]
+    public DefaultProcessingOrStandingInstruction2Choice_? DefaultAction { get; init; }
 
     /// <summary>
     /// Option Accepted Instructed Balance.
@@ -52,32 +59,11 @@ public record InstructedCorporateActionOption22
     public SignedQuantityFormat13? OptionCancelledInstructionBalance { get; init; }
 
     /// <summary>
-    /// Option Instruction Details.
-    /// </summary>
-    [DisplayName("Option Instruction Details")]
-    [IsoXmlTag("OptnInstrDtls")]
-    public ValueList<OptionInstructionDetails12> OptionInstructionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Option Number.
-    /// </summary>
-    [DisplayName("Option Number")]
-    [IsoXmlTag("OptnNb")]
-    public Exact3NumericText? OptionNumber { get; init; }
-
-    /// <summary>
     /// Option Pending Instruction Balance.
     /// </summary>
     [DisplayName("Option Pending Instruction Balance")]
     [IsoXmlTag("OptnPdgInstrBal")]
     public SignedQuantityFormat13? OptionPendingInstructionBalance { get; init; }
-
-    /// <summary>
-    /// Option Protect Instruction Balance.
-    /// </summary>
-    [DisplayName("Option Protect Instruction Balance")]
-    [IsoXmlTag("OptnPrtctInstrBal")]
-    public SignedQuantityFormat13? OptionProtectInstructionBalance { get; init; }
 
     /// <summary>
     /// Option Rejected Instruction Balance.
@@ -94,9 +80,23 @@ public record InstructedCorporateActionOption22
     public SignedQuantityFormat16? OptionReturnedInstructedBalance { get; init; }
 
     /// <summary>
-    /// Option Type.
+    /// Option Protect Instruction Balance.
     /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption36Choice_ OptionType { get; init; }
+    [DisplayName("Option Protect Instruction Balance")]
+    [IsoXmlTag("OptnPrtctInstrBal")]
+    public SignedQuantityFormat13? OptionProtectInstructionBalance { get; init; }
+
+    /// <summary>
+    /// Event Deadlines.
+    /// </summary>
+    [DisplayName("Event Deadlines")]
+    [IsoXmlTag("EvtDdlns")]
+    public required CorporateActionEventDeadlines4 EventDeadlines { get; init; }
+
+    /// <summary>
+    /// Option Instruction Details.
+    /// </summary>
+    [DisplayName("Option Instruction Details")]
+    [IsoXmlTag("OptnInstrDtls")]
+    public ValueList<OptionInstructionDetails12> OptionInstructionDetails { get; init; } = [];
 }

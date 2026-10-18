@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeConfirmation5
 {
     /// <summary>
-    /// Time Stamp.
-    /// </summary>
-    [DisplayName("Time Stamp")]
-    [IsoXmlTag("TmStmp")]
-    public ISODateTime? TimeStamp { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required TradeConfirmationType1Code Type { get; init; }
+
+    /// <summary>
+    /// Time Stamp.
+    /// </summary>
+    [DisplayName("Time Stamp")]
+    [IsoXmlTag("TmStmp")]
+    public ISODateTime? TimeStamp { get; init; }
 }

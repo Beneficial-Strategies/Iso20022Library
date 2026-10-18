@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AdjustmentCompensation1
 {
     /// <summary>
-    /// Amount Due.
+    /// Initial Amount.
     /// </summary>
-    [DisplayName("Amount Due")]
-    [IsoXmlTag("AmtDue")]
-    public required ActiveCurrencyAndAmount AmountDue { get; init; }
-
-    /// <summary>
-    /// Compensation Account.
-    /// </summary>
-    [DisplayName("Compensation Account")]
-    [IsoXmlTag("CompstnAcct")]
-    public CashAccount40? CompensationAccount { get; init; }
-
-    /// <summary>
-    /// Compensation Agent.
-    /// </summary>
-    [DisplayName("Compensation Agent")]
-    [IsoXmlTag("CompstnAgt")]
-    public BranchAndFinancialInstitutionIdentification6? CompensationAgent { get; init; }
+    [DisplayName("Initial Amount")]
+    [IsoXmlTag("InitlAmt")]
+    public ActiveCurrencyAndAmount? InitialAmount { get; init; }
 
     /// <summary>
     /// Due Charges.
@@ -45,18 +31,25 @@ public record AdjustmentCompensation1
     public ActiveCurrencyAndAmount? DueCharges { get; init; }
 
     /// <summary>
-    /// Initial Amount.
+    /// Amount Due.
     /// </summary>
-    [DisplayName("Initial Amount")]
-    [IsoXmlTag("InitlAmt")]
-    public ActiveCurrencyAndAmount? InitialAmount { get; init; }
+    [DisplayName("Amount Due")]
+    [IsoXmlTag("AmtDue")]
+    public required ActiveCurrencyAndAmount AmountDue { get; init; }
 
     /// <summary>
-    /// Interest Rate.
+    /// Compensation Agent.
     /// </summary>
-    [DisplayName("Interest Rate")]
-    [IsoXmlTag("IntrstRate")]
-    public PercentageRate? InterestRate { get; init; }
+    [DisplayName("Compensation Agent")]
+    [IsoXmlTag("CompstnAgt")]
+    public BranchAndFinancialInstitutionIdentification6? CompensationAgent { get; init; }
+
+    /// <summary>
+    /// Compensation Account.
+    /// </summary>
+    [DisplayName("Compensation Account")]
+    [IsoXmlTag("CompstnAcct")]
+    public CashAccount40? CompensationAccount { get; init; }
 
     /// <summary>
     /// Period.
@@ -64,6 +57,13 @@ public record AdjustmentCompensation1
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     public DatePeriod5? Period { get; init; }
+
+    /// <summary>
+    /// Interest Rate.
+    /// </summary>
+    [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Reason.

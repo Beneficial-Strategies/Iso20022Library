@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BalanceTransfer5
 {
     /// <summary>
-    /// Balance Transfer Funding Limit.
+    /// Balance Transfer Reference.
     /// </summary>
-    [DisplayName("Balance Transfer Funding Limit")]
-    [IsoXmlTag("BalTrfFndgLmt")]
-    public BalanceTransferFundingLimit1? BalanceTransferFundingLimit { get; init; }
+    [DisplayName("Balance Transfer Reference")]
+    [IsoXmlTag("BalTrfRef")]
+    public BalanceTransferReference1? BalanceTransferReference { get; init; }
 
     /// <summary>
     /// Balance Transfer Method.
@@ -31,9 +31,9 @@ public record BalanceTransfer5
     public SettlementMethod5Choice_? BalanceTransferMethod { get; init; }
 
     /// <summary>
-    /// Balance Transfer Reference.
+    /// Balance Transfer Funding Limit.
     /// </summary>
-    [DisplayName("Balance Transfer Reference")]
-    [IsoXmlTag("BalTrfRef")]
-    public BalanceTransferReference1? BalanceTransferReference { get; init; }
+    [DisplayName("Balance Transfer Funding Limit")]
+    [IsoXmlTag("BalTrfFndgLmt")]
+    public BalanceTransferFundingLimit1? BalanceTransferFundingLimit { get; init; }
 }

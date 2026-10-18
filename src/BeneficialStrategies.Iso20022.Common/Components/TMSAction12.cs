@@ -17,96 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TMSAction12
 {
     /// <summary>
-    /// Additional Information.
+    /// Type.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Additional Process.
-    /// </summary>
-    [DisplayName("Additional Process")]
-    [IsoXmlTag("AddtlPrc")]
-    public ValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
-        [];
-
-    /// <summary>
-    /// Component Type.
-    /// </summary>
-    [DisplayName("Component Type")]
-    [IsoXmlTag("CmpntTp")]
-    public ValueList<DataSetCategory18Code> ComponentType { get; init; } = [];
-
-    /// <summary>
-    /// Data Set Identification.
-    /// </summary>
-    [DisplayName("Data Set Identification")]
-    [IsoXmlTag("DataSetId")]
-    public DataSetIdentification10? DataSetIdentification { get; init; }
-
-    /// <summary>
-    /// Delegation Proof.
-    /// </summary>
-    [DisplayName("Delegation Proof")]
-    [IsoXmlTag("DlgtnProof")]
-    public Max5000Binary? DelegationProof { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Definition.
-    /// </summary>
-    [DisplayName("Delegation Scope Definition")]
-    [IsoXmlTag("DlgtnScpDef")]
-    public Max3000Binary? DelegationScopeDefinition { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Identification.
-    /// </summary>
-    [DisplayName("Delegation Scope Identification")]
-    [IsoXmlTag("DlgtnScpId")]
-    public Max35Text? DelegationScopeIdentification { get; init; }
-
-    /// <summary>
-    /// Device Request.
-    /// </summary>
-    [DisplayName("Device Request")]
-    [IsoXmlTag("DvcReq")]
-    public DeviceRequest7? DeviceRequest { get; init; }
-
-    /// <summary>
-    /// Error Action.
-    /// </summary>
-    [DisplayName("Error Action")]
-    [IsoXmlTag("ErrActn")]
-    public ValueList<ErrorAction5> ErrorAction { get; init; } = [];
-
-    /// <summary>
-    /// Key.
-    /// </summary>
-    [DisplayName("Key")]
-    [IsoXmlTag("Key")]
-    public ValueList<KEKIdentifier5> Key { get; init; } = [];
-
-    /// <summary>
-    /// Key Encipherment Certificate.
-    /// </summary>
-    [DisplayName("Key Encipherment Certificate")]
-    [IsoXmlTag("KeyNcphrmntCert")]
-    public ValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
-
-    /// <summary>
-    /// Message Item.
-    /// </summary>
-    [DisplayName("Message Item")]
-    [IsoXmlTag("MsgItm")]
-    public ValueList<MessageItemCondition2> MessageItem { get; init; } = [];
-
-    /// <summary>
-    /// Protected Delegation Proof.
-    /// </summary>
-    [DisplayName("Protected Delegation Proof")]
-    [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType39? ProtectedDelegationProof { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required TerminalManagementAction5Code Type { get; init; }
 
     /// <summary>
     /// Remote Access.
@@ -116,11 +31,11 @@ public record TMSAction12
     public NetworkParameters7? RemoteAccess { get; init; }
 
     /// <summary>
-    /// Re Try.
+    /// Key.
     /// </summary>
-    [DisplayName("Re Try")]
-    [IsoXmlTag("ReTry")]
-    public ProcessRetry3? ReTry { get; init; }
+    [DisplayName("Key")]
+    [IsoXmlTag("Key")]
+    public ValueList<KEKIdentifier5> Key { get; init; } = [];
 
     /// <summary>
     /// Terminal Manager Identification.
@@ -128,20 +43,6 @@ public record TMSAction12
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
     public GenericIdentification176? TerminalManagerIdentification { get; init; }
-
-    /// <summary>
-    /// Time Condition.
-    /// </summary>
-    [DisplayName("Time Condition")]
-    [IsoXmlTag("TmCond")]
-    public ProcessTiming5? TimeCondition { get; init; }
-
-    /// <summary>
-    /// TM Challenge.
-    /// </summary>
-    [DisplayName("TM Challenge")]
-    [IsoXmlTag("TMChllng")]
-    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// TMS Protocol.
@@ -158,6 +59,48 @@ public record TMSAction12
     public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
+    /// Data Set Identification.
+    /// </summary>
+    [DisplayName("Data Set Identification")]
+    [IsoXmlTag("DataSetId")]
+    public DataSetIdentification10? DataSetIdentification { get; init; }
+
+    /// <summary>
+    /// Component Type.
+    /// </summary>
+    [DisplayName("Component Type")]
+    [IsoXmlTag("CmpntTp")]
+    public ValueList<DataSetCategory18Code> ComponentType { get; init; } = [];
+
+    /// <summary>
+    /// Delegation Scope Identification.
+    /// </summary>
+    [DisplayName("Delegation Scope Identification")]
+    [IsoXmlTag("DlgtnScpId")]
+    public Max35Text? DelegationScopeIdentification { get; init; }
+
+    /// <summary>
+    /// Delegation Scope Definition.
+    /// </summary>
+    [DisplayName("Delegation Scope Definition")]
+    [IsoXmlTag("DlgtnScpDef")]
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
+
+    /// <summary>
+    /// Delegation Proof.
+    /// </summary>
+    [DisplayName("Delegation Proof")]
+    [IsoXmlTag("DlgtnProof")]
+    public Max5000Binary? DelegationProof { get; init; }
+
+    /// <summary>
+    /// Protected Delegation Proof.
+    /// </summary>
+    [DisplayName("Protected Delegation Proof")]
+    [IsoXmlTag("PrtctdDlgtnProof")]
+    public ContentInformationType39? ProtectedDelegationProof { get; init; }
+
+    /// <summary>
     /// Trigger.
     /// </summary>
     [DisplayName("Trigger")]
@@ -165,9 +108,66 @@ public record TMSAction12
     public required TerminalManagementActionTrigger1Code Trigger { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Additional Process.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required TerminalManagementAction5Code Type { get; init; }
+    [DisplayName("Additional Process")]
+    [IsoXmlTag("AddtlPrc")]
+    public ValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
+
+    /// <summary>
+    /// Re Try.
+    /// </summary>
+    [DisplayName("Re Try")]
+    [IsoXmlTag("ReTry")]
+    public ProcessRetry3? ReTry { get; init; }
+
+    /// <summary>
+    /// Time Condition.
+    /// </summary>
+    [DisplayName("Time Condition")]
+    [IsoXmlTag("TmCond")]
+    public ProcessTiming5? TimeCondition { get; init; }
+
+    /// <summary>
+    /// TM Challenge.
+    /// </summary>
+    [DisplayName("TM Challenge")]
+    [IsoXmlTag("TMChllng")]
+    public Max140Binary? TMChallenge { get; init; }
+
+    /// <summary>
+    /// Key Encipherment Certificate.
+    /// </summary>
+    [DisplayName("Key Encipherment Certificate")]
+    [IsoXmlTag("KeyNcphrmntCert")]
+    public ValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+
+    /// <summary>
+    /// Error Action.
+    /// </summary>
+    [DisplayName("Error Action")]
+    [IsoXmlTag("ErrActn")]
+    public ValueList<ErrorAction5> ErrorAction { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
+
+    /// <summary>
+    /// Message Item.
+    /// </summary>
+    [DisplayName("Message Item")]
+    [IsoXmlTag("MsgItm")]
+    public ValueList<MessageItemCondition2> MessageItem { get; init; } = [];
+
+    /// <summary>
+    /// Device Request.
+    /// </summary>
+    [DisplayName("Device Request")]
+    [IsoXmlTag("DvcReq")]
+    public DeviceRequest7? DeviceRequest { get; init; }
 }

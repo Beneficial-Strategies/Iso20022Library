@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReturnIndicator2
 {
     /// <summary>
-    /// Additional Information.
+    /// Response Period.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max500Text? AdditionalInformation { get; init; }
+    [DisplayName("Response Period")]
+    [IsoXmlTag("RspnPrd")]
+    public DateOrDateTimePeriod1Choice_? ResponsePeriod { get; init; }
 
     /// <summary>
     /// Authority Request Type.
@@ -38,9 +38,9 @@ public record ReturnIndicator2
     public required InvestigationResult1Choice_ InvestigationResult { get; init; }
 
     /// <summary>
-    /// Response Period.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Response Period")]
-    [IsoXmlTag("RspnPrd")]
-    public DateOrDateTimePeriod1Choice_? ResponsePeriod { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max500Text? AdditionalInformation { get; init; }
 }

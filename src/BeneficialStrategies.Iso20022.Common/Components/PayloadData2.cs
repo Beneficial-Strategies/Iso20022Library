@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PayloadData2
 {
     /// <summary>
-    /// Creation Date And Time.
-    /// </summary>
-    [DisplayName("Creation Date And Time")]
-    [IsoXmlTag("CreDtAndTm")]
-    public required ISODateTime CreationDateAndTime { get; init; }
-
-    /// <summary>
     /// Payload Identifier.
     /// </summary>
     [DisplayName("Payload Identifier")]
     [IsoXmlTag("PyldIdr")]
     public required Max35Text PayloadIdentifier { get; init; }
+
+    /// <summary>
+    /// Creation Date And Time.
+    /// </summary>
+    [DisplayName("Creation Date And Time")]
+    [IsoXmlTag("CreDtAndTm")]
+    public required ISODateTime CreationDateAndTime { get; init; }
 
     /// <summary>
     /// Possible Duplicate Flag.

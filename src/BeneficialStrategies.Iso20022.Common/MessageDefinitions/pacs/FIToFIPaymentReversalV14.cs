@@ -71,16 +71,16 @@ public record FIToFIPaymentReversalV14 : IOuterRecord
     public OriginalGroupHeader20? OriginalGroupInformation { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Information concerning the original transactions, to which the reversal message refers.
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction182> TransactionInformation { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

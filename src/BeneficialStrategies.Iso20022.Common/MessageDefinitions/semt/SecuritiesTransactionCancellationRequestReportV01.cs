@@ -46,13 +46,6 @@ public record SecuritiesTransactionCancellationRequestReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellations.
-    /// </summary>
-    [DisplayName("Cancellations")]
-    [IsoXmlTag("Cxls")]
-    public ValueList<SecuritiesCancellation2> Cancellations { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -65,6 +58,13 @@ public record SecuritiesTransactionCancellationRequestReportV01 : IOuterRecord
     [DisplayName("Report General Details")]
     [IsoXmlTag("RptGnlDtls")]
     public required SecuritiesTransactionReport5 ReportGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Cancellations.
+    /// </summary>
+    [DisplayName("Cancellations")]
+    [IsoXmlTag("Cxls")]
+    public ValueList<SecuritiesCancellation2> Cancellations { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

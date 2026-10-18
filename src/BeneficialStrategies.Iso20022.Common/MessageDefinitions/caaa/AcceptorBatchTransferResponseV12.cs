@@ -46,18 +46,18 @@ public record AcceptorBatchTransferResponseV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Batch Transfer Response.
-    /// </summary>
-    [DisplayName("Batch Transfer Response")]
-    [IsoXmlTag("BtchTrfRspn")]
-    public required CardPaymentBatchTransferResponse11 BatchTransferResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header56 Header { get; init; }
+
+    /// <summary>
+    /// Batch Transfer Response.
+    /// </summary>
+    [DisplayName("Batch Transfer Response")]
+    [IsoXmlTag("BtchTrfRspn")]
+    public required CardPaymentBatchTransferResponse11 BatchTransferResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

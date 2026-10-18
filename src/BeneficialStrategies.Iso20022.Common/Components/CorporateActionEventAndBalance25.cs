@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionEventAndBalance25
 {
     /// <summary>
-    /// Balance.
-    /// </summary>
-    [DisplayName("Balance")]
-    [IsoXmlTag("Bal")]
-    public CorporateActionBalance49? Balance { get; init; }
-
-    /// <summary>
     /// General Information.
     /// </summary>
     [DisplayName("General Information")]
@@ -31,16 +24,23 @@ public record CorporateActionEventAndBalance25
     public required EventInformation16 GeneralInformation { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Security.
     /// </summary>
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
     public required SecurityIdentification20 UnderlyingSecurity { get; init; }
+
+    /// <summary>
+    /// Balance.
+    /// </summary>
+    [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
+    public CorporateActionBalance49? Balance { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

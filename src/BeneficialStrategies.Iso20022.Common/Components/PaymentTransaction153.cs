@@ -24,26 +24,11 @@ public record PaymentTransaction153
     public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
-    /// Cancellation Status Reason Information.
+    /// Resolved Case.
     /// </summary>
-    [DisplayName("Cancellation Status Reason Information")]
-    [IsoXmlTag("CxlStsRsnInf")]
-    public ValueList<CancellationStatusReason5> CancellationStatusReasonInformation { get; init; } =
-        [];
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Instructed Amount.
-    /// </summary>
-    [DisplayName("Original Instructed Amount")]
-    [IsoXmlTag("OrgnlInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
+    [DisplayName("Resolved Case")]
+    [IsoXmlTag("RslvdCase")]
+    public Case6? ResolvedCase { get; init; }
 
     /// <summary>
     /// Original Instruction Identification.
@@ -53,32 +38,18 @@ public record PaymentTransaction153
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Original Requested Collection Date.
+    /// Original End To End Identification.
     /// </summary>
-    [DisplayName("Original Requested Collection Date")]
-    [IsoXmlTag("OrgnlReqdColltnDt")]
-    public ISODate? OriginalRequestedCollectionDate { get; init; }
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
-    /// Original Requested Execution Date.
+    /// UETR.
     /// </summary>
-    [DisplayName("Original Requested Execution Date")]
-    [IsoXmlTag("OrgnlReqdExctnDt")]
-    public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; }
-
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
-
-    /// <summary>
-    /// Resolved Case.
-    /// </summary>
-    [DisplayName("Resolved Case")]
-    [IsoXmlTag("RslvdCase")]
-    public Case6? ResolvedCase { get; init; }
+    [DisplayName("UETR")]
+    [IsoXmlTag("UETR")]
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Transaction Cancellation Status.
@@ -88,9 +59,38 @@ public record PaymentTransaction153
     public CancellationIndividualStatus1Code? TransactionCancellationStatus { get; init; }
 
     /// <summary>
-    /// UETR.
+    /// Cancellation Status Reason Information.
     /// </summary>
-    [DisplayName("UETR")]
-    [IsoXmlTag("UETR")]
-    public UUIDv4Identifier? UETR { get; init; }
+    [DisplayName("Cancellation Status Reason Information")]
+    [IsoXmlTag("CxlStsRsnInf")]
+    public ValueList<CancellationStatusReason5> CancellationStatusReasonInformation { get; init; } =
+        [];
+
+    /// <summary>
+    /// Original Instructed Amount.
+    /// </summary>
+    [DisplayName("Original Instructed Amount")]
+    [IsoXmlTag("OrgnlInstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
+
+    /// <summary>
+    /// Original Requested Execution Date.
+    /// </summary>
+    [DisplayName("Original Requested Execution Date")]
+    [IsoXmlTag("OrgnlReqdExctnDt")]
+    public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Original Requested Collection Date.
+    /// </summary>
+    [DisplayName("Original Requested Collection Date")]
+    [IsoXmlTag("OrgnlReqdColltnDt")]
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
+
+    /// <summary>
+    /// Original Transaction Reference.
+    /// </summary>
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 }

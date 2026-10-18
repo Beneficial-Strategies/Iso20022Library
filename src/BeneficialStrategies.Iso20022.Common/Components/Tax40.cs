@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Tax40
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required TaxType3Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Informative Amount.
+    /// </summary>
+    [DisplayName("Informative Amount")]
+    [IsoXmlTag("InftvAmt")]
+    public ActiveCurrencyAndAmount? InformativeAmount { get; init; }
+
+    /// <summary>
+    /// Informative Rate.
+    /// </summary>
+    [DisplayName("Informative Rate")]
+    [IsoXmlTag("InftvRate")]
+    public PercentageRate? InformativeRate { get; init; }
+
+    /// <summary>
     /// Country.
     /// </summary>
     [DisplayName("Country")]
@@ -38,20 +59,6 @@ public record Tax40
     public ExemptionReason1Choice_? ExemptionReason { get; init; }
 
     /// <summary>
-    /// Informative Amount.
-    /// </summary>
-    [DisplayName("Informative Amount")]
-    [IsoXmlTag("InftvAmt")]
-    public ActiveCurrencyAndAmount? InformativeAmount { get; init; }
-
-    /// <summary>
-    /// Informative Rate.
-    /// </summary>
-    [DisplayName("Informative Rate")]
-    [IsoXmlTag("InftvRate")]
-    public PercentageRate? InformativeRate { get; init; }
-
-    /// <summary>
     /// Recipient Identification.
     /// </summary>
     [DisplayName("Recipient Identification")]
@@ -64,11 +71,4 @@ public record Tax40
     [DisplayName("Tax Calculation Details")]
     [IsoXmlTag("TaxClctnDtls")]
     public TaxCalculationInformation10? TaxCalculationDetails { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required TaxType3Choice_ Type { get; init; }
 }

@@ -31,25 +31,11 @@ public record ApplicationParameters13
     public required Max35Text ApplicationIdentification { get; init; }
 
     /// <summary>
-    /// Encrypted Parameters.
+    /// Version.
     /// </summary>
-    [DisplayName("Encrypted Parameters")]
-    [IsoXmlTag("NcrptdParams")]
-    public ContentInformationType40? EncryptedParameters { get; init; }
-
-    /// <summary>
-    /// Offset End.
-    /// </summary>
-    [DisplayName("Offset End")]
-    [IsoXmlTag("OffsetEnd")]
-    public PositiveNumber? OffsetEnd { get; init; }
-
-    /// <summary>
-    /// Offset Start.
-    /// </summary>
-    [DisplayName("Offset Start")]
-    [IsoXmlTag("OffsetStart")]
-    public PositiveNumber? OffsetStart { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Parameter Format Identifier.
@@ -59,13 +45,6 @@ public record ApplicationParameters13
     public Max8Text? ParameterFormatIdentifier { get; init; }
 
     /// <summary>
-    /// Parameters.
-    /// </summary>
-    [DisplayName("Parameters")]
-    [IsoXmlTag("Params")]
-    public ValueList<Max100KBinary> Parameters { get; init; } = [];
-
-    /// <summary>
     /// Parameters Length.
     /// </summary>
     [DisplayName("Parameters Length")]
@@ -73,9 +52,30 @@ public record ApplicationParameters13
     public PositiveNumber? ParametersLength { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Offset Start.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Max256Text? Version { get; init; }
+    [DisplayName("Offset Start")]
+    [IsoXmlTag("OffsetStart")]
+    public PositiveNumber? OffsetStart { get; init; }
+
+    /// <summary>
+    /// Offset End.
+    /// </summary>
+    [DisplayName("Offset End")]
+    [IsoXmlTag("OffsetEnd")]
+    public PositiveNumber? OffsetEnd { get; init; }
+
+    /// <summary>
+    /// Parameters.
+    /// </summary>
+    [DisplayName("Parameters")]
+    [IsoXmlTag("Params")]
+    public ValueList<Max100KBinary> Parameters { get; init; } = [];
+
+    /// <summary>
+    /// Encrypted Parameters.
+    /// </summary>
+    [DisplayName("Encrypted Parameters")]
+    [IsoXmlTag("NcrptdParams")]
+    public ContentInformationType40? EncryptedParameters { get; init; }
 }

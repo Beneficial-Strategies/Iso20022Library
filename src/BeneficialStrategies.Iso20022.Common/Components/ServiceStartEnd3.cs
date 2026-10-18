@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ServiceStartEnd3
 {
     /// <summary>
+    /// Location.
+    /// </summary>
+    [DisplayName("Location")]
+    [IsoXmlTag("Lctn")]
+    public Max35Text? Location { get; init; }
+
+    /// <summary>
+    /// Location Code.
+    /// </summary>
+    [DisplayName("Location Code")]
+    [IsoXmlTag("LctnCd")]
+    public Max35Text? LocationCode { get; init; }
+
+    /// <summary>
     /// Address.
     /// </summary>
     [DisplayName("Address")]
@@ -38,6 +52,20 @@ public record ServiceStartEnd3
     public ISODateTime? DateAndTime { get; init; }
 
     /// <summary>
+    /// Time Segment.
+    /// </summary>
+    [DisplayName("Time Segment")]
+    [IsoXmlTag("TmSgmt")]
+    public TimeSegment1Code? TimeSegment { get; init; }
+
+    /// <summary>
+    /// Journey Type.
+    /// </summary>
+    [DisplayName("Journey Type")]
+    [IsoXmlTag("JrnyTp")]
+    public JourneyType1Code? JourneyType { get; init; }
+
+    /// <summary>
     /// Journey Data.
     /// </summary>
     [DisplayName("Journey Data")]
@@ -50,32 +78,4 @@ public record ServiceStartEnd3
     [DisplayName("Journey Date And Time")]
     [IsoXmlTag("JrnyDtAndTm")]
     public ISODateTime? JourneyDateAndTime { get; init; }
-
-    /// <summary>
-    /// Journey Type.
-    /// </summary>
-    [DisplayName("Journey Type")]
-    [IsoXmlTag("JrnyTp")]
-    public JourneyType1Code? JourneyType { get; init; }
-
-    /// <summary>
-    /// Location.
-    /// </summary>
-    [DisplayName("Location")]
-    [IsoXmlTag("Lctn")]
-    public Max35Text? Location { get; init; }
-
-    /// <summary>
-    /// Location Code.
-    /// </summary>
-    [DisplayName("Location Code")]
-    [IsoXmlTag("LctnCd")]
-    public Max35Text? LocationCode { get; init; }
-
-    /// <summary>
-    /// Time Segment.
-    /// </summary>
-    [DisplayName("Time Segment")]
-    [IsoXmlTag("TmSgmt")]
-    public TimeSegment1Code? TimeSegment { get; init; }
 }

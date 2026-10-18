@@ -17,11 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteractionComponent17
 {
     /// <summary>
-    /// Assessment.
+    /// Type.
     /// </summary>
-    [DisplayName("Assessment")]
-    [IsoXmlTag("Assmnt")]
-    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required POIComponentType7Code Type { get; init; }
+
+    /// <summary>
+    /// Sub Type Information.
+    /// </summary>
+    [DisplayName("Sub Type Information")]
+    [IsoXmlTag("SubTpInf")]
+    public Max70Text? SubTypeInformation { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
+
+    /// <summary>
+    /// Status.
+    /// </summary>
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public PointOfInteractionComponentStatus3? Status { get; init; }
+
+    /// <summary>
+    /// Standard Compliance.
+    /// </summary>
+    [DisplayName("Standard Compliance")]
+    [IsoXmlTag("StdCmplc")]
+    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
 
     /// <summary>
     /// Characteristics.
@@ -31,11 +59,11 @@ public record PointOfInteractionComponent17
     public PointOfInteractionComponentCharacteristics10? Characteristics { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Assessment.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
+    [DisplayName("Assessment")]
+    [IsoXmlTag("Assmnt")]
+    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
 
     /// <summary>
     /// Package.
@@ -50,32 +78,4 @@ public record PointOfInteractionComponent17
     [DisplayName("Probe Value")]
     [IsoXmlTag("PrbVal")]
     public Max35Binary? ProbeValue { get; init; }
-
-    /// <summary>
-    /// Standard Compliance.
-    /// </summary>
-    [DisplayName("Standard Compliance")]
-    [IsoXmlTag("StdCmplc")]
-    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
-
-    /// <summary>
-    /// Status.
-    /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public PointOfInteractionComponentStatus3? Status { get; init; }
-
-    /// <summary>
-    /// Sub Type Information.
-    /// </summary>
-    [DisplayName("Sub Type Information")]
-    [IsoXmlTag("SubTpInf")]
-    public Max70Text? SubTypeInformation { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required POIComponentType7Code Type { get; init; }
 }

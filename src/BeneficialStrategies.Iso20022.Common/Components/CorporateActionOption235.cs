@@ -17,32 +17,53 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionOption235
 {
     /// <summary>
-    /// Acceptance Priority Level.
+    /// Option Number.
     /// </summary>
-    [DisplayName("Acceptance Priority Level")]
-    [IsoXmlTag("AccptncPrtyLvl")]
-    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
-    /// Additional Information.
+    /// Option Type.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative66? AdditionalInformation { get; init; }
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption37Choice_ OptionType { get; init; }
 
     /// <summary>
-    /// Cash Movement Details.
+    /// Fraction Disposition.
     /// </summary>
-    [DisplayName("Cash Movement Details")]
-    [IsoXmlTag("CshMvmntDtls")]
-    public ValueList<CashOption108> CashMovementDetails { get; init; } = [];
+    [DisplayName("Fraction Disposition")]
+    [IsoXmlTag("FrctnDspstn")]
+    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
 
     /// <summary>
-    /// Certification Breakdown Indicator.
+    /// Offer Type.
     /// </summary>
-    [DisplayName("Certification Breakdown Indicator")]
-    [IsoXmlTag("CertfctnBrkdwnInd")]
-    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    [DisplayName("Offer Type")]
+    [IsoXmlTag("OfferTp")]
+    public ValueList<OfferTypeFormat14Choice_> OfferType { get; init; } = [];
+
+    /// <summary>
+    /// Option Features.
+    /// </summary>
+    [DisplayName("Option Features")]
+    [IsoXmlTag("OptnFeatrs")]
+    public ValueList<OptionFeaturesFormat28Choice_> OptionFeatures { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Option Features.
+    /// </summary>
+    [DisplayName("Supplementary Option Features")]
+    [IsoXmlTag("SplmtryOptnFeatrs")]
+    public ValueList<ExtendedOptionFeature2Code> SupplementaryOptionFeatures { get; init; } = [];
+
+    /// <summary>
+    /// Option Availability Status.
+    /// </summary>
+    [DisplayName("Option Availability Status")]
+    [IsoXmlTag("OptnAvlbtySts")]
+    public OptionAvailabilityStatus3Choice_? OptionAvailabilityStatus { get; init; }
 
     /// <summary>
     /// Certification Breakdown Type.
@@ -60,13 +81,6 @@ public record CorporateActionOption235
     public ActiveCurrencyCode? CurrencyOption { get; init; }
 
     /// <summary>
-    /// Date Details.
-    /// </summary>
-    [DisplayName("Date Details")]
-    [IsoXmlTag("DtDtls")]
-    public CorporateActionDate104? DateDetails { get; init; }
-
-    /// <summary>
     /// Default Option Indicator.
     /// </summary>
     [DisplayName("Default Option Indicator")]
@@ -74,53 +88,25 @@ public record CorporateActionOption235
     public required YesNoIndicator DefaultOptionIndicator { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Acceptance Priority Level.
     /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
+    [DisplayName("Acceptance Priority Level")]
+    [IsoXmlTag("AccptncPrtyLvl")]
+    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
 
     /// <summary>
-    /// Fraction Disposition.
+    /// Certification Breakdown Indicator.
     /// </summary>
-    [DisplayName("Fraction Disposition")]
-    [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType26Choice_? FractionDisposition { get; init; }
+    [DisplayName("Certification Breakdown Indicator")]
+    [IsoXmlTag("CertfctnBrkdwnInd")]
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
-    /// Offer Type.
+    /// Withdrawal Allowed Indicator.
     /// </summary>
-    [DisplayName("Offer Type")]
-    [IsoXmlTag("OfferTp")]
-    public ValueList<OfferTypeFormat14Choice_> OfferType { get; init; } = [];
-
-    /// <summary>
-    /// Option Availability Status.
-    /// </summary>
-    [DisplayName("Option Availability Status")]
-    [IsoXmlTag("OptnAvlbtySts")]
-    public OptionAvailabilityStatus3Choice_? OptionAvailabilityStatus { get; init; }
-
-    /// <summary>
-    /// Option Features.
-    /// </summary>
-    [DisplayName("Option Features")]
-    [IsoXmlTag("OptnFeatrs")]
-    public ValueList<OptionFeaturesFormat28Choice_> OptionFeatures { get; init; } = [];
-
-    /// <summary>
-    /// Option Number.
-    /// </summary>
-    [DisplayName("Option Number")]
-    [IsoXmlTag("OptnNb")]
-    public required Exact3NumericText OptionNumber { get; init; }
-
-    /// <summary>
-    /// Option Type.
-    /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption37Choice_ OptionType { get; init; }
+    [DisplayName("Withdrawal Allowed Indicator")]
+    [IsoXmlTag("WdrwlAllwdInd")]
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 
     /// <summary>
     /// Oversubscription Charge Indicator.
@@ -130,11 +116,53 @@ public record CorporateActionOption235
     public YesNoIndicator? OversubscriptionChargeIndicator { get; init; }
 
     /// <summary>
+    /// Protect Charge Indicator.
+    /// </summary>
+    [DisplayName("Protect Charge Indicator")]
+    [IsoXmlTag("PrtctChrgInd")]
+    public YesNoIndicator? ProtectChargeIndicator { get; init; }
+
+    /// <summary>
+    /// Subscription Charge Indicator.
+    /// </summary>
+    [DisplayName("Subscription Charge Indicator")]
+    [IsoXmlTag("SbcptChrgInd")]
+    public YesNoIndicator? SubscriptionChargeIndicator { get; init; }
+
+    /// <summary>
+    /// Step Up Charge Indicator.
+    /// </summary>
+    [DisplayName("Step Up Charge Indicator")]
+    [IsoXmlTag("StepUpChrgInd")]
+    public YesNoIndicator? StepUpChargeIndicator { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public CorporateActionDate104? DateDetails { get; init; }
+
+    /// <summary>
     /// Period Details.
     /// </summary>
     [DisplayName("Period Details")]
     [IsoXmlTag("PrdDtls")]
     public CorporateActionPeriod12? PeriodDetails { get; init; }
+
+    /// <summary>
+    /// Rate And Amount Details.
+    /// </summary>
+    [DisplayName("Rate And Amount Details")]
+    [IsoXmlTag("RateAndAmtDtls")]
+    public CorporateActionRate124? RateAndAmountDetails { get; init; }
 
     /// <summary>
     /// Price Details.
@@ -144,11 +172,32 @@ public record CorporateActionOption235
     public CorporateActionPrice87? PriceDetails { get; init; }
 
     /// <summary>
+    /// Securities Quantity.
+    /// </summary>
+    [DisplayName("Securities Quantity")]
+    [IsoXmlTag("SctiesQty")]
+    public SecuritiesOption81? SecuritiesQuantity { get; init; }
+
+    /// <summary>
+    /// Tax Category.
+    /// </summary>
+    [DisplayName("Tax Category")]
+    [IsoXmlTag("TaxCtgy")]
+    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
+
+    /// <summary>
     /// Proration Below Minimum Quantity.
     /// </summary>
     [DisplayName("Proration Below Minimum Quantity")]
     [IsoXmlTag("PrratnBlwMinQty")]
     public ProrationBelowMinimumQuantity2Choice_? ProrationBelowMinimumQuantity { get; init; }
+
+    /// <summary>
+    /// Proration Rounding Indicator.
+    /// </summary>
+    [DisplayName("Proration Rounding Indicator")]
+    [IsoXmlTag("PrratnRndgInd")]
+    public FractionDispositionType12Code? ProrationRoundingIndicator { get; init; }
 
     /// <summary>
     /// Proration Fraction.
@@ -165,27 +214,6 @@ public record CorporateActionOption235
     public ProrationReturnQuantityTreatment1Code? ProrationReturnMinimumQuantityTreatment { get; init; }
 
     /// <summary>
-    /// Proration Rounding Indicator.
-    /// </summary>
-    [DisplayName("Proration Rounding Indicator")]
-    [IsoXmlTag("PrratnRndgInd")]
-    public FractionDispositionType12Code? ProrationRoundingIndicator { get; init; }
-
-    /// <summary>
-    /// Protect Charge Indicator.
-    /// </summary>
-    [DisplayName("Protect Charge Indicator")]
-    [IsoXmlTag("PrtctChrgInd")]
-    public YesNoIndicator? ProtectChargeIndicator { get; init; }
-
-    /// <summary>
-    /// Rate And Amount Details.
-    /// </summary>
-    [DisplayName("Rate And Amount Details")]
-    [IsoXmlTag("RateAndAmtDtls")]
-    public CorporateActionRate124? RateAndAmountDetails { get; init; }
-
-    /// <summary>
     /// Securities Movement Details.
     /// </summary>
     [DisplayName("Securities Movement Details")]
@@ -193,44 +221,16 @@ public record CorporateActionOption235
     public ValueList<SecuritiesOption114> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
-    /// Securities Quantity.
+    /// Cash Movement Details.
     /// </summary>
-    [DisplayName("Securities Quantity")]
-    [IsoXmlTag("SctiesQty")]
-    public SecuritiesOption81? SecuritiesQuantity { get; init; }
+    [DisplayName("Cash Movement Details")]
+    [IsoXmlTag("CshMvmntDtls")]
+    public ValueList<CashOption108> CashMovementDetails { get; init; } = [];
 
     /// <summary>
-    /// Step Up Charge Indicator.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Step Up Charge Indicator")]
-    [IsoXmlTag("StepUpChrgInd")]
-    public YesNoIndicator? StepUpChargeIndicator { get; init; }
-
-    /// <summary>
-    /// Subscription Charge Indicator.
-    /// </summary>
-    [DisplayName("Subscription Charge Indicator")]
-    [IsoXmlTag("SbcptChrgInd")]
-    public YesNoIndicator? SubscriptionChargeIndicator { get; init; }
-
-    /// <summary>
-    /// Supplementary Option Features.
-    /// </summary>
-    [DisplayName("Supplementary Option Features")]
-    [IsoXmlTag("SplmtryOptnFeatrs")]
-    public ValueList<ExtendedOptionFeature2Code> SupplementaryOptionFeatures { get; init; } = [];
-
-    /// <summary>
-    /// Tax Category.
-    /// </summary>
-    [DisplayName("Tax Category")]
-    [IsoXmlTag("TaxCtgy")]
-    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
-
-    /// <summary>
-    /// Withdrawal Allowed Indicator.
-    /// </summary>
-    [DisplayName("Withdrawal Allowed Indicator")]
-    [IsoXmlTag("WdrwlAllwdInd")]
-    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative66? AdditionalInformation { get; init; }
 }

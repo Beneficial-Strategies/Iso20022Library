@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardData11
 {
     /// <summary>
-    /// Additional Data.
+    /// PAN.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("PAN")]
+    [IsoXmlTag("PAN")]
+    public Max19NumericText? PAN { get; init; }
+
+    /// <summary>
+    /// Protected PAN.
+    /// </summary>
+    [DisplayName("Protected PAN")]
+    [IsoXmlTag("PrtctdPAN")]
+    public TrueFalseIndicator? ProtectedPAN { get; init; }
 
     /// <summary>
     /// Card Sequence Number.
@@ -29,13 +36,6 @@ public record CardData11
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     public Min2Max3NumericText? CardSequenceNumber { get; init; }
-
-    /// <summary>
-    /// Country.
-    /// </summary>
-    [DisplayName("Country")]
-    [IsoXmlTag("Ctry")]
-    public ISO3NumericCountryCode? Country { get; init; }
 
     /// <summary>
     /// Effective Date.
@@ -50,55 +50,6 @@ public record CardData11
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     public ISOYearMonth? ExpiryDate { get; init; }
-
-    /// <summary>
-    /// PAN.
-    /// </summary>
-    [DisplayName("PAN")]
-    [IsoXmlTag("PAN")]
-    public Max19NumericText? PAN { get; init; }
-
-    /// <summary>
-    /// PAN Account Range.
-    /// </summary>
-    [DisplayName("PAN Account Range")]
-    [IsoXmlTag("PANAcctRg")]
-    public Max19NumericText? PANAccountRange { get; init; }
-
-    /// <summary>
-    /// Payment Account Reference.
-    /// </summary>
-    [DisplayName("Payment Account Reference")]
-    [IsoXmlTag("PmtAcctRef")]
-    public Max35Text? PaymentAccountReference { get; init; }
-
-    /// <summary>
-    /// Portfolio Identifier.
-    /// </summary>
-    [DisplayName("Portfolio Identifier")]
-    [IsoXmlTag("PrtflIdr")]
-    public Max35Text? PortfolioIdentifier { get; init; }
-
-    /// <summary>
-    /// Product Sub Type.
-    /// </summary>
-    [DisplayName("Product Sub Type")]
-    [IsoXmlTag("PdctSubTp")]
-    public Max35Text? ProductSubType { get; init; }
-
-    /// <summary>
-    /// Product Type.
-    /// </summary>
-    [DisplayName("Product Type")]
-    [IsoXmlTag("PdctTp")]
-    public Max35Text? ProductType { get; init; }
-
-    /// <summary>
-    /// Protected PAN.
-    /// </summary>
-    [DisplayName("Protected PAN")]
-    [IsoXmlTag("PrtctdPAN")]
-    public TrueFalseIndicator? ProtectedPAN { get; init; }
 
     /// <summary>
     /// Service Code.
@@ -127,4 +78,53 @@ public record CardData11
     [DisplayName("Track3")]
     [IsoXmlTag("Trck3")]
     public Max104Text? Track3 { get; init; }
+
+    /// <summary>
+    /// Payment Account Reference.
+    /// </summary>
+    [DisplayName("Payment Account Reference")]
+    [IsoXmlTag("PmtAcctRef")]
+    public Max35Text? PaymentAccountReference { get; init; }
+
+    /// <summary>
+    /// PAN Account Range.
+    /// </summary>
+    [DisplayName("PAN Account Range")]
+    [IsoXmlTag("PANAcctRg")]
+    public Max19NumericText? PANAccountRange { get; init; }
+
+    /// <summary>
+    /// Country.
+    /// </summary>
+    [DisplayName("Country")]
+    [IsoXmlTag("Ctry")]
+    public ISO3NumericCountryCode? Country { get; init; }
+
+    /// <summary>
+    /// Product Type.
+    /// </summary>
+    [DisplayName("Product Type")]
+    [IsoXmlTag("PdctTp")]
+    public Max35Text? ProductType { get; init; }
+
+    /// <summary>
+    /// Product Sub Type.
+    /// </summary>
+    [DisplayName("Product Sub Type")]
+    [IsoXmlTag("PdctSubTp")]
+    public Max35Text? ProductSubType { get; init; }
+
+    /// <summary>
+    /// Portfolio Identifier.
+    /// </summary>
+    [DisplayName("Portfolio Identifier")]
+    [IsoXmlTag("PrtflIdr")]
+    public Max35Text? PortfolioIdentifier { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -46,18 +46,18 @@ public record GetAccountV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Query Definition.
-    /// </summary>
-    [DisplayName("Account Query Definition")]
-    [IsoXmlTag("AcctQryDef")]
-    public AccountQuery4? AccountQueryDefinition { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader9 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Account Query Definition.
+    /// </summary>
+    [DisplayName("Account Query Definition")]
+    [IsoXmlTag("AcctQryDef")]
+    public AccountQuery4? AccountQueryDefinition { get; init; }
 
     /// <summary>
     /// Supplementary Data.

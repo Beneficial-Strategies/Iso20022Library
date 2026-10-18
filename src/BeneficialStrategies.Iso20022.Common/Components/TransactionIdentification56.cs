@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionIdentification56
 {
     /// <summary>
-    /// Associated Data.
+    /// Purchase Identifier Type.
     /// </summary>
-    [DisplayName("Associated Data")]
-    [IsoXmlTag("AssoctdData")]
-    public TrueFalseIndicator? AssociatedData { get; init; }
-
-    /// <summary>
-    /// Associated Data Destination.
-    /// </summary>
-    [DisplayName("Associated Data Destination")]
-    [IsoXmlTag("AssoctdDataDstn")]
-    public Max35Text? AssociatedDataDestination { get; init; }
-
-    /// <summary>
-    /// Associated Data Reference.
-    /// </summary>
-    [DisplayName("Associated Data Reference")]
-    [IsoXmlTag("AssoctdDataRef")]
-    public Max70Text? AssociatedDataReference { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
+    [DisplayName("Purchase Identifier Type")]
+    [IsoXmlTag("PurchsIdrTp")]
+    public PurchaseIdentifierType2Code? PurchaseIdentifierType { get; init; }
 
     /// <summary>
     /// Other Purchase Identifier Type.
@@ -59,18 +38,11 @@ public record TransactionIdentification56
     public Max99Text? PurchaseIdentifier { get; init; }
 
     /// <summary>
-    /// Purchase Identifier Type.
+    /// Transmission Date Time.
     /// </summary>
-    [DisplayName("Purchase Identifier Type")]
-    [IsoXmlTag("PurchsIdrTp")]
-    public PurchaseIdentifierType2Code? PurchaseIdentifierType { get; init; }
-
-    /// <summary>
-    /// Retrieval Reference Number.
-    /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// System Trace Audit Number.
@@ -80,9 +52,37 @@ public record TransactionIdentification56
     public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
-    /// Transmission Date Time.
+    /// Retrieval Reference Number.
     /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public required ISODateTime TransmissionDateTime { get; init; }
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Associated Data.
+    /// </summary>
+    [DisplayName("Associated Data")]
+    [IsoXmlTag("AssoctdData")]
+    public TrueFalseIndicator? AssociatedData { get; init; }
+
+    /// <summary>
+    /// Associated Data Reference.
+    /// </summary>
+    [DisplayName("Associated Data Reference")]
+    [IsoXmlTag("AssoctdDataRef")]
+    public Max70Text? AssociatedDataReference { get; init; }
+
+    /// <summary>
+    /// Associated Data Destination.
+    /// </summary>
+    [DisplayName("Associated Data Destination")]
+    [IsoXmlTag("AssoctdDataDstn")]
+    public Max35Text? AssociatedDataDestination { get; init; }
 }

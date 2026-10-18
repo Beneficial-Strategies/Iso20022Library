@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SystemSearch5
 {
     /// <summary>
-    /// Account Identification.
+    /// System Identification.
     /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Country.
-    /// </summary>
-    [DisplayName("Country")]
-    [IsoXmlTag("Ctry")]
-    public CountryCode? Country { get; init; }
+    [DisplayName("System Identification")]
+    [IsoXmlTag("SysId")]
+    public ValueList<ClearingSystemIdentification3Choice_> SystemIdentification { get; init; } = [];
 
     /// <summary>
     /// Member Identification.
@@ -39,9 +32,16 @@ public record SystemSearch5
         [];
 
     /// <summary>
-    /// System Identification.
+    /// Country.
     /// </summary>
-    [DisplayName("System Identification")]
-    [IsoXmlTag("SysId")]
-    public ValueList<ClearingSystemIdentification3Choice_> SystemIdentification { get; init; } = [];
+    [DisplayName("Country")]
+    [IsoXmlTag("Ctry")]
+    public CountryCode? Country { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 }

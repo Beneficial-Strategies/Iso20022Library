@@ -46,34 +46,6 @@ public record MeetingEntitlementNotificationV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Eligibility.
-    /// </summary>
-    [DisplayName("Eligibility")]
-    [IsoXmlTag("Elgblty")]
-    public required EligibilityDates1 Eligibility { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public required PartyIdentification129Choice_ Issuer { get; init; }
-
-    /// <summary>
-    /// Meeting Attendee.
-    /// </summary>
-    [DisplayName("Meeting Attendee")]
-    [IsoXmlTag("MtgAttndee")]
-    public PartyIdentification232Choice_? MeetingAttendee { get; init; }
-
-    /// <summary>
-    /// Meeting Reference.
-    /// </summary>
-    [DisplayName("Meeting Reference")]
-    [IsoXmlTag("MtgRef")]
-    public required MeetingReference10 MeetingReference { get; init; }
-
-    /// <summary>
     /// Notification Type.
     /// </summary>
     [DisplayName("Notification Type")]
@@ -88,11 +60,18 @@ public record MeetingEntitlementNotificationV10 : IOuterRecord
     public Max35Text? PreviousEntitlementNotificationIdentification { get; init; }
 
     /// <summary>
-    /// Proxy.
+    /// Meeting Reference.
     /// </summary>
-    [DisplayName("Proxy")]
-    [IsoXmlTag("Prxy")]
-    public PartyIdentification232Choice_? Proxy { get; init; }
+    [DisplayName("Meeting Reference")]
+    [IsoXmlTag("MtgRef")]
+    public required MeetingReference10 MeetingReference { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public required PartyIdentification129Choice_ Issuer { get; init; }
 
     /// <summary>
     /// Security.
@@ -100,6 +79,27 @@ public record MeetingEntitlementNotificationV10 : IOuterRecord
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
     public required SecurityPosition21 Security { get; init; }
+
+    /// <summary>
+    /// Eligibility.
+    /// </summary>
+    [DisplayName("Eligibility")]
+    [IsoXmlTag("Elgblty")]
+    public required EligibilityDates1 Eligibility { get; init; }
+
+    /// <summary>
+    /// Meeting Attendee.
+    /// </summary>
+    [DisplayName("Meeting Attendee")]
+    [IsoXmlTag("MtgAttndee")]
+    public PartyIdentification232Choice_? MeetingAttendee { get; init; }
+
+    /// <summary>
+    /// Proxy.
+    /// </summary>
+    [DisplayName("Proxy")]
+    [IsoXmlTag("Prxy")]
+    public PartyIdentification232Choice_? Proxy { get; init; }
 
     /// <summary>
     /// Supplementary Data.

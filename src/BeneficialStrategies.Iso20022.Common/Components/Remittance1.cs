@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Remittance1
 {
     /// <summary>
-    /// Related.
+    /// Unstructured.
     /// </summary>
-    [DisplayName("Related")]
-    [IsoXmlTag("Rltd")]
-    public ValueList<RemittanceLocation7> Related { get; init; } = [];
+    [DisplayName("Unstructured")]
+    [IsoXmlTag("Ustrd")]
+    public ValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Structured.
@@ -31,9 +31,9 @@ public record Remittance1
     public ValueList<StructuredRemittanceInformation16> Structured { get; init; } = [];
 
     /// <summary>
-    /// Unstructured.
+    /// Related.
     /// </summary>
-    [DisplayName("Unstructured")]
-    [IsoXmlTag("Ustrd")]
-    public ValueList<Max140Text> Unstructured { get; init; } = [];
+    [DisplayName("Related")]
+    [IsoXmlTag("Rltd")]
+    public ValueList<RemittanceLocation7> Related { get; init; } = [];
 }

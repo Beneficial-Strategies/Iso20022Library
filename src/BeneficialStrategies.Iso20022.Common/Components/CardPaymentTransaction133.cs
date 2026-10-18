@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentTransaction133
 {
     /// <summary>
-    /// Action.
-    /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action15> Action { get; init; } = [];
-
-    /// <summary>
     /// Authorisation Result.
     /// </summary>
     [DisplayName("Authorisation Result")]
     [IsoXmlTag("AuthstnRslt")]
     public required AuthorisationResult19 AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action15> Action { get; init; } = [];
 }

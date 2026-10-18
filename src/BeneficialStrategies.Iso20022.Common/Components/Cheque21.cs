@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cheque21
 {
     /// <summary>
-    /// Drawee Identification.
-    /// </summary>
-    [DisplayName("Drawee Identification")]
-    [IsoXmlTag("DrweeId")]
-    public FinancialInstitutionIdentification15? DraweeIdentification { get; init; }
-
-    /// <summary>
-    /// Drawer Identification.
-    /// </summary>
-    [DisplayName("Drawer Identification")]
-    [IsoXmlTag("DrwrId")]
-    public PartyIdentification139? DrawerIdentification { get; init; }
-
-    /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
@@ -43,4 +29,18 @@ public record Cheque21
     [DisplayName("Payee Identification")]
     [IsoXmlTag("PyeeId")]
     public required PartyIdentification139 PayeeIdentification { get; init; }
+
+    /// <summary>
+    /// Drawee Identification.
+    /// </summary>
+    [DisplayName("Drawee Identification")]
+    [IsoXmlTag("DrweeId")]
+    public FinancialInstitutionIdentification15? DraweeIdentification { get; init; }
+
+    /// <summary>
+    /// Drawer Identification.
+    /// </summary>
+    [DisplayName("Drawer Identification")]
+    [IsoXmlTag("DrwrId")]
+    public PartyIdentification139? DrawerIdentification { get; init; }
 }

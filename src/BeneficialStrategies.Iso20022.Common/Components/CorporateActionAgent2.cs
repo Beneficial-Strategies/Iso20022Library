@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionAgent2
 {
     /// <summary>
-    /// Information Agent.
-    /// </summary>
-    [DisplayName("Information Agent")]
-    [IsoXmlTag("InfAgt")]
-    public PartyIdentification289? InformationAgent { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public PartyIdentification289? Issuer { get; init; }
-
-    /// <summary>
     /// Issuer Agent.
     /// </summary>
     [DisplayName("Issuer Agent")]
@@ -43,13 +29,6 @@ public record CorporateActionAgent2
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
     public PartyIdentification289? PayingAgent { get; init; }
-
-    /// <summary>
-    /// Redemption Agent.
-    /// </summary>
-    [DisplayName("Redemption Agent")]
-    [IsoXmlTag("RedAgt")]
-    public PartyIdentification289? RedemptionAgent { get; init; }
 
     /// <summary>
     /// Registrar.
@@ -73,9 +52,30 @@ public record CorporateActionAgent2
     public PartyIdentification289? SolicitationAgent { get; init; }
 
     /// <summary>
+    /// Information Agent.
+    /// </summary>
+    [DisplayName("Information Agent")]
+    [IsoXmlTag("InfAgt")]
+    public PartyIdentification289? InformationAgent { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public PartyIdentification289? Issuer { get; init; }
+
+    /// <summary>
     /// Transfer Agent.
     /// </summary>
     [DisplayName("Transfer Agent")]
     [IsoXmlTag("TrfAgt")]
     public PartyIdentification289? TransferAgent { get; init; }
+
+    /// <summary>
+    /// Redemption Agent.
+    /// </summary>
+    [DisplayName("Redemption Agent")]
+    [IsoXmlTag("RedAgt")]
+    public PartyIdentification289? RedemptionAgent { get; init; }
 }

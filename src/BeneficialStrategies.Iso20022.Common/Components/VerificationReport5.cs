@@ -24,11 +24,11 @@ public record VerificationReport5
     public required Max35Text OriginalIdentification { get; init; }
 
     /// <summary>
-    /// Original Party And Account Identification.
+    /// Verification.
     /// </summary>
-    [DisplayName("Original Party And Account Identification")]
-    [IsoXmlTag("OrgnlPtyAndAcctId")]
-    public IdentificationInformation5? OriginalPartyAndAccountIdentification { get; init; }
+    [DisplayName("Verification")]
+    [IsoXmlTag("Vrfctn")]
+    public required IdentificationVerificationIndicator Verification { get; init; }
 
     /// <summary>
     /// Reason.
@@ -38,16 +38,16 @@ public record VerificationReport5
     public VerificationReason1Choice_? Reason { get; init; }
 
     /// <summary>
+    /// Original Party And Account Identification.
+    /// </summary>
+    [DisplayName("Original Party And Account Identification")]
+    [IsoXmlTag("OrgnlPtyAndAcctId")]
+    public IdentificationInformation5? OriginalPartyAndAccountIdentification { get; init; }
+
+    /// <summary>
     /// Updated Party And Account Identification.
     /// </summary>
     [DisplayName("Updated Party And Account Identification")]
     [IsoXmlTag("UpdtdPtyAndAcctId")]
     public IdentificationInformation5? UpdatedPartyAndAccountIdentification { get; init; }
-
-    /// <summary>
-    /// Verification.
-    /// </summary>
-    [DisplayName("Verification")]
-    [IsoXmlTag("Vrfctn")]
-    public required IdentificationVerificationIndicator Verification { get; init; }
 }

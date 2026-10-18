@@ -46,46 +46,11 @@ public record MeetingNotificationV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateEventNarrative4? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<MeetingEventReference1> EventsLinkage { get; init; } = [];
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public required IssuerInformation3 Issuer { get; init; }
-
-    /// <summary>
-    /// Issuer Agent.
-    /// </summary>
-    [DisplayName("Issuer Agent")]
-    [IsoXmlTag("IssrAgt")]
-    public IssuerAgent3? IssuerAgent { get; init; }
-
-    /// <summary>
-    /// Meeting.
-    /// </summary>
-    [DisplayName("Meeting")]
-    [IsoXmlTag("Mtg")]
-    public required MeetingNotice9 Meeting { get; init; }
-
-    /// <summary>
-    /// Meeting Details.
-    /// </summary>
-    [DisplayName("Meeting Details")]
-    [IsoXmlTag("MtgDtls")]
-    public required Meeting7 MeetingDetails { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Notification General Information.
@@ -102,25 +67,39 @@ public record MeetingNotificationV12 : IOuterRecord
     public NotificationUpdate2? NotificationUpdate { get; init; }
 
     /// <summary>
-    /// Pagination.
+    /// Events Linkage.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<MeetingEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
-    /// Power Of Attorney Requirements.
+    /// Meeting.
     /// </summary>
-    [DisplayName("Power Of Attorney Requirements")]
-    [IsoXmlTag("PwrOfAttnyRqrmnts")]
-    public PowerOfAttorneyRequirements4? PowerOfAttorneyRequirements { get; init; }
+    [DisplayName("Meeting")]
+    [IsoXmlTag("Mtg")]
+    public required MeetingNotice9 Meeting { get; init; }
 
     /// <summary>
-    /// Resolution.
+    /// Meeting Details.
     /// </summary>
-    [DisplayName("Resolution")]
-    [IsoXmlTag("Rsltn")]
-    public Resolution8? Resolution { get; init; }
+    [DisplayName("Meeting Details")]
+    [IsoXmlTag("MtgDtls")]
+    public required Meeting7 MeetingDetails { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public required IssuerInformation3 Issuer { get; init; }
+
+    /// <summary>
+    /// Issuer Agent.
+    /// </summary>
+    [DisplayName("Issuer Agent")]
+    [IsoXmlTag("IssrAgt")]
+    public IssuerAgent3? IssuerAgent { get; init; }
 
     /// <summary>
     /// Security.
@@ -130,11 +109,11 @@ public record MeetingNotificationV12 : IOuterRecord
     public required SecurityPosition20 Security { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Resolution.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Resolution")]
+    [IsoXmlTag("Rsltn")]
+    public Resolution8? Resolution { get; init; }
 
     /// <summary>
     /// Vote.
@@ -142,4 +121,25 @@ public record MeetingNotificationV12 : IOuterRecord
     [DisplayName("Vote")]
     [IsoXmlTag("Vote")]
     public VoteParameters9? Vote { get; init; }
+
+    /// <summary>
+    /// Power Of Attorney Requirements.
+    /// </summary>
+    [DisplayName("Power Of Attorney Requirements")]
+    [IsoXmlTag("PwrOfAttnyRqrmnts")]
+    public PowerOfAttorneyRequirements4? PowerOfAttorneyRequirements { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateEventNarrative4? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

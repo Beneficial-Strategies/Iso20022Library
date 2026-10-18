@@ -24,16 +24,16 @@ public record StandingOrderCriteria5
     public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public StandingOrderReturnCriteria1? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public ValueList<StandingOrderSearchCriteria5> SearchCriteria { get; init; } = [];
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public StandingOrderReturnCriteria1? ReturnCriteria { get; init; }
 }

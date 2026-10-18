@@ -46,18 +46,18 @@ public record SaleToPOIDeviceRequestV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Device Request.
-    /// </summary>
-    [DisplayName("Device Request")]
-    [IsoXmlTag("DvcReq")]
-    public required DeviceRequest9 DeviceRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Device Request.
+    /// </summary>
+    [DisplayName("Device Request")]
+    [IsoXmlTag("DvcReq")]
+    public required DeviceRequest9 DeviceRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

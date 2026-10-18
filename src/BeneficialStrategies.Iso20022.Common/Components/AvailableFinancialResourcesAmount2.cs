@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AvailableFinancialResourcesAmount2
 {
     /// <summary>
-    /// CCP Skin In The Game.
-    /// </summary>
-    [DisplayName("CCP Skin In The Game")]
-    [IsoXmlTag("CCPSkinInTheGame")]
-    public ValueList<ReportingAssetBreakdown2> CCPSkinInTheGame { get; init; } = [];
-
-    /// <summary>
-    /// Other Default Fund Contribution.
-    /// </summary>
-    [DisplayName("Other Default Fund Contribution")]
-    [IsoXmlTag("OthrDfltFndCntrbtn")]
-    public required ActiveCurrencyAndAmount OtherDefaultFundContribution { get; init; }
-
-    /// <summary>
     /// Total Initial Margin.
     /// </summary>
     [DisplayName("Total Initial Margin")]
@@ -43,6 +29,20 @@ public record AvailableFinancialResourcesAmount2
     [DisplayName("Total Prefunded Default Fund")]
     [IsoXmlTag("TtlPrfnddDfltFnd")]
     public required ActiveCurrencyAndAmount TotalPrefundedDefaultFund { get; init; }
+
+    /// <summary>
+    /// CCP Skin In The Game.
+    /// </summary>
+    [DisplayName("CCP Skin In The Game")]
+    [IsoXmlTag("CCPSkinInTheGame")]
+    public ValueList<ReportingAssetBreakdown2> CCPSkinInTheGame { get; init; } = [];
+
+    /// <summary>
+    /// Other Default Fund Contribution.
+    /// </summary>
+    [DisplayName("Other Default Fund Contribution")]
+    [IsoXmlTag("OthrDfltFndCntrbtn")]
+    public required ActiveCurrencyAndAmount OtherDefaultFundContribution { get; init; }
 
     /// <summary>
     /// Unfunded Member Commitment.

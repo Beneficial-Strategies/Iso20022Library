@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RemittanceLocation10
 {
     /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required TransactionReferences8 References { get; init; }
-
-    /// <summary>
     /// Remittance Identification.
     /// </summary>
     [DisplayName("Remittance Identification")]
@@ -36,4 +29,11 @@ public record RemittanceLocation10
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
     public ValueList<RemittanceLocationData2> RemittanceLocationDetails { get; init; } = [];
+
+    /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required TransactionReferences8 References { get; init; }
 }

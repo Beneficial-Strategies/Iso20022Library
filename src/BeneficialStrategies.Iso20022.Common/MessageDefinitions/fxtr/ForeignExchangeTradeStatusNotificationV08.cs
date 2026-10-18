@@ -46,6 +46,13 @@ public record ForeignExchangeTradeStatusNotificationV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Trade Data.
+    /// </summary>
+    [DisplayName("Trade Data")]
+    [IsoXmlTag("TradData")]
+    public required TradeData15 TradeData { get; init; }
+
+    /// <summary>
     /// Regulatory Reporting.
     /// </summary>
     [DisplayName("Regulatory Reporting")]
@@ -58,11 +65,4 @@ public record ForeignExchangeTradeStatusNotificationV08 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Data.
-    /// </summary>
-    [DisplayName("Trade Data")]
-    [IsoXmlTag("TradData")]
-    public required TradeData15 TradeData { get; init; }
 }

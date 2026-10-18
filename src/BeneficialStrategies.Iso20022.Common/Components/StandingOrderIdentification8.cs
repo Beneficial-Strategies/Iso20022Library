@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StandingOrderIdentification8
 {
     /// <summary>
+    /// Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
+
+    /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
     /// </summary>
     [DisplayName("Account")]
@@ -29,11 +36,4 @@ public record StandingOrderIdentification8
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
 }

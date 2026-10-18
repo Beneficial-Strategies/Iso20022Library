@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PriceInformation30
 {
     /// <summary>
-    /// Quotation Date.
-    /// </summary>
-    [DisplayName("Quotation Date")]
-    [IsoXmlTag("QtnDt")]
-    public DateAndDateTime2Choice_? QuotationDate { get; init; }
-
-    /// <summary>
-    /// Source Of Price.
-    /// </summary>
-    [DisplayName("Source Of Price")]
-    [IsoXmlTag("SrcOfPric")]
-    public MarketIdentification98? SourceOfPrice { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required TypeOfPrice48Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Value Type.
+    /// </summary>
+    [DisplayName("Value Type")]
+    [IsoXmlTag("ValTp")]
+    public required YieldedOrValueType1Choice_ ValueType { get; init; }
 
     /// <summary>
     /// Value.
@@ -45,9 +38,16 @@ public record PriceInformation30
     public required PriceRateOrAmountOrUnknown2Choice_ Value { get; init; }
 
     /// <summary>
-    /// Value Type.
+    /// Source Of Price.
     /// </summary>
-    [DisplayName("Value Type")]
-    [IsoXmlTag("ValTp")]
-    public required YieldedOrValueType1Choice_ ValueType { get; init; }
+    [DisplayName("Source Of Price")]
+    [IsoXmlTag("SrcOfPric")]
+    public MarketIdentification98? SourceOfPrice { get; init; }
+
+    /// <summary>
+    /// Quotation Date.
+    /// </summary>
+    [DisplayName("Quotation Date")]
+    [IsoXmlTag("QtnDt")]
+    public DateAndDateTime2Choice_? QuotationDate { get; init; }
 }

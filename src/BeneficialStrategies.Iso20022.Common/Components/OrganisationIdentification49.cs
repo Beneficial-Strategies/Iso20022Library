@@ -17,40 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrganisationIdentification49
 {
     /// <summary>
-    /// Alternate Organisation Identification.
-    /// </summary>
-    [DisplayName("Alternate Organisation Identification")]
-    [IsoXmlTag("AltrnOrgId")]
-    public ValueList<GenericOrganisationIdentification3> AlternateOrganisationIdentification { get; init; } =
-        [];
-
-    /// <summary>
-    /// Entity Size.
-    /// </summary>
-    [DisplayName("Entity Size")]
-    [IsoXmlTag("NttySz")]
-    public ExternalEntitySize1Code? EntitySize { get; init; }
-
-    /// <summary>
-    /// Entity Type.
-    /// </summary>
-    [DisplayName("Entity Type")]
-    [IsoXmlTag("NttyTp")]
-    public ExternalEntityType1Code? EntityType { get; init; }
-
-    /// <summary>
     /// LEI.
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     public LEIIdentifier? LEI { get; init; }
-
-    /// <summary>
-    /// NPI.
-    /// </summary>
-    [DisplayName("NPI")]
-    [IsoXmlTag("NPI")]
-    public NPIIdentifier? NPI { get; init; }
 
     /// <summary>
     /// Organisation Name.
@@ -60,11 +31,12 @@ public record OrganisationIdentification49
     public ValueList<PartyName5> OrganisationName { get; init; } = [];
 
     /// <summary>
-    /// Person Name.
+    /// Alternate Organisation Identification.
     /// </summary>
-    [DisplayName("Person Name")]
-    [IsoXmlTag("PrsnNm")]
-    public ValueList<Max500Text> PersonName { get; init; } = [];
+    [DisplayName("Alternate Organisation Identification")]
+    [IsoXmlTag("AltrnOrgId")]
+    public ValueList<GenericOrganisationIdentification3> AlternateOrganisationIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Registered Country.
@@ -74,9 +46,37 @@ public record OrganisationIdentification49
     public CountryCode? RegisteredCountry { get; init; }
 
     /// <summary>
+    /// Entity Size.
+    /// </summary>
+    [DisplayName("Entity Size")]
+    [IsoXmlTag("NttySz")]
+    public ExternalEntitySize1Code? EntitySize { get; init; }
+
+    /// <summary>
     /// Sector.
     /// </summary>
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     public ValueList<IndustrySector3Choice_> Sector { get; init; } = [];
+
+    /// <summary>
+    /// Person Name.
+    /// </summary>
+    [DisplayName("Person Name")]
+    [IsoXmlTag("PrsnNm")]
+    public ValueList<Max500Text> PersonName { get; init; } = [];
+
+    /// <summary>
+    /// NPI.
+    /// </summary>
+    [DisplayName("NPI")]
+    [IsoXmlTag("NPI")]
+    public NPIIdentifier? NPI { get; init; }
+
+    /// <summary>
+    /// Entity Type.
+    /// </summary>
+    [DisplayName("Entity Type")]
+    [IsoXmlTag("NttyTp")]
+    public ExternalEntityType1Code? EntityType { get; init; }
 }

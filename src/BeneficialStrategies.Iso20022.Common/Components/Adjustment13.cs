@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Adjustment13
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
+
+    /// <summary>
     /// Additional Type.
     /// </summary>
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
     public Max35Text? AdditionalType { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Description.
@@ -38,11 +38,11 @@ public record Adjustment13
     public Max70Text? Description { get; init; }
 
     /// <summary>
-    /// Percentage.
+    /// Reason.
     /// </summary>
-    [DisplayName("Percentage")]
-    [IsoXmlTag("Pctg")]
-    public PercentageRate? Percentage { get; init; }
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public Max35Text? Reason { get; init; }
 
     /// <summary>
     /// Promotion Code.
@@ -52,11 +52,18 @@ public record Adjustment13
     public Max35Text? PromotionCode { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Percentage.
     /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public Max35Text? Reason { get; init; }
+    [DisplayName("Percentage")]
+    [IsoXmlTag("Pctg")]
+    public PercentageRate? Percentage { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Tax On Original Amount.
@@ -64,11 +71,4 @@ public record Adjustment13
     [DisplayName("Tax On Original Amount")]
     [IsoXmlTag("TaxOnOrgnlAmt")]
     public TrueFalseIndicator? TaxOnOriginalAmount { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
 }

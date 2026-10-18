@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashParties41
 {
     /// <summary>
-    /// Creditor.
-    /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentificationAndAccount223? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public PartyIdentificationAndAccount224? CreditorAgent { get; init; }
-
-    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -43,6 +29,20 @@ public record CashParties41
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public PartyIdentificationAndAccount224? DebtorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentificationAndAccount223? Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public PartyIdentificationAndAccount224? CreditorAgent { get; init; }
 
     /// <summary>
     /// Intermediary.

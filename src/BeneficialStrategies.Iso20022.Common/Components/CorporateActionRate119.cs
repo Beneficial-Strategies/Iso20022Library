@@ -31,6 +31,13 @@ public record CorporateActionRate119
     public ValueList<GrossDividendRateFormat36Choice_> GrossDistributionRate { get; init; } = [];
 
     /// <summary>
+    /// Net Distribution Rate.
+    /// </summary>
+    [DisplayName("Net Distribution Rate")]
+    [IsoXmlTag("NetDstrbtnRate")]
+    public ValueList<NetDividendRateFormat38Choice_> NetDistributionRate { get; init; } = [];
+
+    /// <summary>
     /// Gross Interest Rate Used For Payment.
     /// </summary>
     [DisplayName("Gross Interest Rate Used For Payment")]
@@ -46,18 +53,18 @@ public record CorporateActionRate119
     public RateFormat24Choice_? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
-    /// Net Distribution Rate.
-    /// </summary>
-    [DisplayName("Net Distribution Rate")]
-    [IsoXmlTag("NetDstrbtnRate")]
-    public ValueList<NetDividendRateFormat38Choice_> NetDistributionRate { get; init; } = [];
-
-    /// <summary>
     /// Proration Rate.
     /// </summary>
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
     public RateFormat24Choice_? ProrationRate { get; init; }
+
+    /// <summary>
+    /// Withholding Tax Rate.
+    /// </summary>
+    [DisplayName("Withholding Tax Rate")]
+    [IsoXmlTag("WhldgTaxRate")]
+    public ValueList<RateAndAmountFormat56Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Second Level Tax.
@@ -80,11 +87,4 @@ public record CorporateActionRate119
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
     public RateAndAmountFormat57Choice_? TaxOnIncome { get; init; }
-
-    /// <summary>
-    /// Withholding Tax Rate.
-    /// </summary>
-    [DisplayName("Withholding Tax Rate")]
-    [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat56Choice_> WithholdingTaxRate { get; init; } = [];
 }

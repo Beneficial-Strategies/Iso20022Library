@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Exemption2
 {
     /// <summary>
-    /// Reason Not Honored.
-    /// </summary>
-    [DisplayName("Reason Not Honored")]
-    [IsoXmlTag("RsnNotHnrd")]
-    public ValueList<Max4Text> ReasonNotHonored { get; init; } = [];
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
@@ -36,4 +29,11 @@ public record Exemption2
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     public required AttestationValue1Code Value { get; init; }
+
+    /// <summary>
+    /// Reason Not Honored.
+    /// </summary>
+    [DisplayName("Reason Not Honored")]
+    [IsoXmlTag("RsnNotHnrd")]
+    public ValueList<Max4Text> ReasonNotHonored { get; init; } = [];
 }

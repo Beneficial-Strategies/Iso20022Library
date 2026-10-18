@@ -46,18 +46,18 @@ public record AcquirerToAcceptorBatchFileExchangeV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Body Element.
-    /// </summary>
-    [DisplayName("Body Element")]
-    [IsoXmlTag("BodyElmt")]
-    public ValueList<AcquirerToAcceptorFileBody1> BodyElement { get; init; } = [];
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header56 Header { get; init; }
+
+    /// <summary>
+    /// Body Element.
+    /// </summary>
+    [DisplayName("Body Element")]
+    [IsoXmlTag("BodyElmt")]
+    public ValueList<AcquirerToAcceptorFileBody1> BodyElement { get; init; } = [];
 
     /// <summary>
     /// Response.

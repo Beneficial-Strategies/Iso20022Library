@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ValueForMoney1
 {
     /// <summary>
-    /// Assessment Of Value Required Under COLLUK.
-    /// </summary>
-    [DisplayName("Assessment Of Value Required Under COLLUK")]
-    [IsoXmlTag("AssmntOfValReqrdUdrCOLLUK")]
-    public AssessmentOfValueRequiredUnderCOLLUKType1Code? AssessmentOfValueRequiredUnderCOLLUK { get; init; }
-
-    /// <summary>
     /// EMT Data Reporting VFMUK.
     /// </summary>
     [DisplayName("EMT Data Reporting VFMUK")]
@@ -31,18 +24,11 @@ public record ValueForMoney1
     public EMTDataReportingVFMUKType1Code? EMTDataReportingVFMUK { get; init; }
 
     /// <summary>
-    /// Further Information UK.
+    /// Assessment Of Value Required Under COLLUK.
     /// </summary>
-    [DisplayName("Further Information UK")]
-    [IsoXmlTag("FrthrInfUK")]
-    public Max350Text? FurtherInformationUK { get; init; }
-
-    /// <summary>
-    /// Other Review Related To Value And Or Charges UK.
-    /// </summary>
-    [DisplayName("Other Review Related To Value And Or Charges UK")]
-    [IsoXmlTag("OthrRvwRltdToValAndOrChrgsUK")]
-    public OtherReviewRelatedToValueAndOrChargesUKType1Code? OtherReviewRelatedToValueAndOrChargesUK { get; init; }
+    [DisplayName("Assessment Of Value Required Under COLLUK")]
+    [IsoXmlTag("AssmntOfValReqrdUdrCOLLUK")]
+    public AssessmentOfValueRequiredUnderCOLLUKType1Code? AssessmentOfValueRequiredUnderCOLLUK { get; init; }
 
     /// <summary>
     /// Outcome Of COLL Assessment Of Value UK.
@@ -57,6 +43,20 @@ public record ValueForMoney1
     [DisplayName("Outcome Of PRIN Value Assessment Or Review UK")]
     [IsoXmlTag("OutcmOfPRINValAssmntOrRvwUK")]
     public OutcomeOfPRINValueAssessmentOrReviewUKType1Code? OutcomeOfPRINValueAssessmentOrReviewUK { get; init; }
+
+    /// <summary>
+    /// Other Review Related To Value And Or Charges UK.
+    /// </summary>
+    [DisplayName("Other Review Related To Value And Or Charges UK")]
+    [IsoXmlTag("OthrRvwRltdToValAndOrChrgsUK")]
+    public OtherReviewRelatedToValueAndOrChargesUKType1Code? OtherReviewRelatedToValueAndOrChargesUK { get; init; }
+
+    /// <summary>
+    /// Further Information UK.
+    /// </summary>
+    [DisplayName("Further Information UK")]
+    [IsoXmlTag("FrthrInfUK")]
+    public Max350Text? FurtherInformationUK { get; init; }
 
     /// <summary>
     /// Review Date UK.

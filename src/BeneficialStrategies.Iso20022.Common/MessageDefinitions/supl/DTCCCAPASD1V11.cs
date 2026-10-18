@@ -50,6 +50,20 @@ public record DTCCCAPASD1V11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Information to be extended as supplementary data to corporate action general information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public CorporateActionGeneralInformationSD58? CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to underlying security details.
+    /// </summary>
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
+
+    /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details.
     /// </summary>
     [DisplayName("Corporate Action Balance Details")]
@@ -64,11 +78,12 @@ public record DTCCCAPASD1V11 : IOuterRecord
     public CorporateActionSD18? CorporateActionDetails { get; init; }
 
     /// <summary>
-    /// Information to be extended as supplementary data to corporate action general information.
+    /// Information to be extended as supplementary data to corporate action movement securities movement details.
     /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public CorporateActionGeneralInformationSD58? CorporateActionGeneralInformation { get; init; }
+    [DisplayName("Corporate Action Movement Securities Movement Details")]
+    [IsoXmlTag("CorpActnMvmntSctiesMvmntDtls")]
+    public ValueList<CorporateActionMovementSecuritiesMovementDetailsSD5> CorporateActionMovementSecuritiesMovementDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action movement cash movement details.
@@ -79,24 +94,9 @@ public record DTCCCAPASD1V11 : IOuterRecord
         [];
 
     /// <summary>
-    /// Information to be extended as supplementary data to corporate action movement securities movement details.
-    /// </summary>
-    [DisplayName("Corporate Action Movement Securities Movement Details")]
-    [IsoXmlTag("CorpActnMvmntSctiesMvmntDtls")]
-    public ValueList<CorporateActionMovementSecuritiesMovementDetailsSD5> CorporateActionMovementSecuritiesMovementDetails { get; init; } =
-        [];
-
-    /// <summary>
     /// Information to be extended as supplementary data to corporate action option details.
     /// </summary>
     [DisplayName("Option Transaction Details")]
     [IsoXmlTag("OptnTxDtls")]
     public ValueList<OptionTransactionDetailsSD3> OptionTransactionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to underlying security details.
-    /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
 }

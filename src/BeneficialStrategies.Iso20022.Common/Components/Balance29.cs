@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Balance29
 {
     /// <summary>
-    /// Amount.
+    /// Type.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Balance Date.
-    /// </summary>
-    [DisplayName("Balance Date")]
-    [IsoXmlTag("BalDt")]
-    public ISODate? BalanceDate { get; init; }
-
-    /// <summary>
-    /// Cardholder Currency.
-    /// </summary>
-    [DisplayName("Cardholder Currency")]
-    [IsoXmlTag("CrdhldrCcy")]
-    public TrueFalseIndicator? CardholderCurrency { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required BalanceType15Code Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -59,9 +31,37 @@ public record Balance29
     public Max35Text? OtherType { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Amount.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required BalanceType15Code Type { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ISO3NumericCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
+    /// Cardholder Currency.
+    /// </summary>
+    [DisplayName("Cardholder Currency")]
+    [IsoXmlTag("CrdhldrCcy")]
+    public TrueFalseIndicator? CardholderCurrency { get; init; }
+
+    /// <summary>
+    /// Balance Date.
+    /// </summary>
+    [DisplayName("Balance Date")]
+    [IsoXmlTag("BalDt")]
+    public ISODate? BalanceDate { get; init; }
 }

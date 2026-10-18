@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LoyaltyProgramme5
 {
     /// <summary>
-    /// Balance.
-    /// </summary>
-    [DisplayName("Balance")]
-    [IsoXmlTag("Bal")]
-    public Max10NumericText? Balance { get; init; }
-
-    /// <summary>
     /// Eligibility.
     /// </summary>
     [DisplayName("Eligibility")]
@@ -31,18 +24,18 @@ public record LoyaltyProgramme5
     public ValueList<TrueFalseIndicator> Eligibility { get; init; } = [];
 
     /// <summary>
-    /// Expiration Date.
-    /// </summary>
-    [DisplayName("Expiration Date")]
-    [IsoXmlTag("XprtnDt")]
-    public ISODate? ExpirationDate { get; init; }
-
-    /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     public Max35Text? Issuer { get; init; }
+
+    /// <summary>
+    /// Member Name.
+    /// </summary>
+    [DisplayName("Member Name")]
+    [IsoXmlTag("MmbNm")]
+    public CardholderName3? MemberName { get; init; }
 
     /// <summary>
     /// Member Address.
@@ -59,13 +52,6 @@ public record LoyaltyProgramme5
     public Max35Text? MemberIdentification { get; init; }
 
     /// <summary>
-    /// Member Name.
-    /// </summary>
-    [DisplayName("Member Name")]
-    [IsoXmlTag("MmbNm")]
-    public CardholderName3? MemberName { get; init; }
-
-    /// <summary>
     /// Member Status.
     /// </summary>
     [DisplayName("Member Status")]
@@ -73,11 +59,11 @@ public record LoyaltyProgramme5
     public Max35Text? MemberStatus { get; init; }
 
     /// <summary>
-    /// Other Value Type.
+    /// Expiration Date.
     /// </summary>
-    [DisplayName("Other Value Type")]
-    [IsoXmlTag("OthrValTp")]
-    public Max35Text? OtherValueType { get; init; }
+    [DisplayName("Expiration Date")]
+    [IsoXmlTag("XprtnDt")]
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Value.
@@ -85,6 +71,20 @@ public record LoyaltyProgramme5
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     public Max10NumericText? Value { get; init; }
+
+    /// <summary>
+    /// Value Type.
+    /// </summary>
+    [DisplayName("Value Type")]
+    [IsoXmlTag("ValTp")]
+    public LoyaltyValueType1Code? ValueType { get; init; }
+
+    /// <summary>
+    /// Other Value Type.
+    /// </summary>
+    [DisplayName("Other Value Type")]
+    [IsoXmlTag("OthrValTp")]
+    public Max35Text? OtherValueType { get; init; }
 
     /// <summary>
     /// Value To Credit.
@@ -101,9 +101,9 @@ public record LoyaltyProgramme5
     public Max10NumericText? ValueToDebit { get; init; }
 
     /// <summary>
-    /// Value Type.
+    /// Balance.
     /// </summary>
-    [DisplayName("Value Type")]
-    [IsoXmlTag("ValTp")]
-    public LoyaltyValueType1Code? ValueType { get; init; }
+    [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
+    public Max10NumericText? Balance { get; init; }
 }

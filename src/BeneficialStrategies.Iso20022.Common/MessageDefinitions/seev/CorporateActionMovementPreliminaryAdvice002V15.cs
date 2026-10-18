@@ -46,88 +46,11 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification52Choice_ AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative62? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction77? CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation168 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Movement Details.
-    /// </summary>
-    [DisplayName("Corporate Action Movement Details")]
-    [IsoXmlTag("CorpActnMvmntDtls")]
-    public ValueList<CorporateActionOption226> CorporateActionMovementDetails { get; init; } = [];
-
-    /// <summary>
-    /// Drop Agent.
-    /// </summary>
-    [DisplayName("Drop Agent")]
-    [IsoXmlTag("DrpAgt")]
-    public PartyIdentification137Choice_? DropAgent { get; init; }
-
-    /// <summary>
-    /// Events Linkage.
-    /// </summary>
-    [DisplayName("Events Linkage")]
-    [IsoXmlTag("EvtsLkg")]
-    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
-
-    /// <summary>
-    /// Information Agent.
-    /// </summary>
-    [DisplayName("Information Agent")]
-    [IsoXmlTag("InfAgt")]
-    public PartyIdentification137Choice_? InformationAgent { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public DocumentIdentification17? InstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public PartyIdentification151Choice_? Issuer { get; init; }
-
-    /// <summary>
-    /// Issuer Agent.
-    /// </summary>
-    [DisplayName("Issuer Agent")]
-    [IsoXmlTag("IssrAgt")]
-    public ValueList<PartyIdentification151Choice_> IssuerAgent { get; init; } = [];
-
-    /// <summary>
-    /// Movement Confirmation Identification.
-    /// </summary>
-    [DisplayName("Movement Confirmation Identification")]
-    [IsoXmlTag("MvmntConfId")]
-    public DocumentIdentification37? MovementConfirmationIdentification { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Movement Preliminary Advice General Information.
@@ -137,6 +60,13 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public required CorporateActionPreliminaryAdviceType5 MovementPreliminaryAdviceGeneralInformation { get; init; }
 
     /// <summary>
+    /// Previous Movement Preliminary Advice Identification.
+    /// </summary>
+    [DisplayName("Previous Movement Preliminary Advice Identification")]
+    [IsoXmlTag("PrvsMvmntPrlimryAdvcId")]
+    public DocumentIdentification37? PreviousMovementPreliminaryAdviceIdentification { get; init; }
+
+    /// <summary>
     /// Notification Identification.
     /// </summary>
     [DisplayName("Notification Identification")]
@@ -144,11 +74,18 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public DocumentIdentification37? NotificationIdentification { get; init; }
 
     /// <summary>
-    /// Offeror.
+    /// Movement Confirmation Identification.
     /// </summary>
-    [DisplayName("Offeror")]
-    [IsoXmlTag("Offerr")]
-    public ValueList<PartyIdentification151Choice_> Offeror { get; init; } = [];
+    [DisplayName("Movement Confirmation Identification")]
+    [IsoXmlTag("MvmntConfId")]
+    public DocumentIdentification37? MovementConfirmationIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Identification.
+    /// </summary>
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public DocumentIdentification17? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Other Document Identification.
@@ -158,11 +95,60 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
-    /// Pagination.
+    /// Events Linkage.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Events Linkage")]
+    [IsoXmlTag("EvtsLkg")]
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
+
+    /// <summary>
+    /// Reversal Reason.
+    /// </summary>
+    [DisplayName("Reversal Reason")]
+    [IsoXmlTag("RvslRsn")]
+    public CorporateActionReversalReason6? ReversalReason { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation168 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountIdentification52Choice_ AccountDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateAction77? CorporateActionDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Movement Details.
+    /// </summary>
+    [DisplayName("Corporate Action Movement Details")]
+    [IsoXmlTag("CorpActnMvmntDtls")]
+    public ValueList<CorporateActionOption226> CorporateActionMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative62? AdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Issuer Agent.
+    /// </summary>
+    [DisplayName("Issuer Agent")]
+    [IsoXmlTag("IssrAgt")]
+    public ValueList<PartyIdentification151Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Paying Agent.
@@ -172,18 +158,11 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
-    /// Physical Securities Agent.
+    /// Sub Paying Agent.
     /// </summary>
-    [DisplayName("Physical Securities Agent")]
-    [IsoXmlTag("PhysSctiesAgt")]
-    public PartyIdentification137Choice_? PhysicalSecuritiesAgent { get; init; }
-
-    /// <summary>
-    /// Previous Movement Preliminary Advice Identification.
-    /// </summary>
-    [DisplayName("Previous Movement Preliminary Advice Identification")]
-    [IsoXmlTag("PrvsMvmntPrlimryAdvcId")]
-    public DocumentIdentification37? PreviousMovementPreliminaryAdviceIdentification { get; init; }
+    [DisplayName("Sub Paying Agent")]
+    [IsoXmlTag("SubPngAgt")]
+    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Registrar.
@@ -200,11 +179,18 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
-    /// Reversal Reason.
+    /// Physical Securities Agent.
     /// </summary>
-    [DisplayName("Reversal Reason")]
-    [IsoXmlTag("RvslRsn")]
-    public CorporateActionReversalReason6? ReversalReason { get; init; }
+    [DisplayName("Physical Securities Agent")]
+    [IsoXmlTag("PhysSctiesAgt")]
+    public PartyIdentification137Choice_? PhysicalSecuritiesAgent { get; init; }
+
+    /// <summary>
+    /// Drop Agent.
+    /// </summary>
+    [DisplayName("Drop Agent")]
+    [IsoXmlTag("DrpAgt")]
+    public PartyIdentification137Choice_? DropAgent { get; init; }
 
     /// <summary>
     /// Solicitation Agent.
@@ -214,11 +200,11 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     public ValueList<PartyIdentification137Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
-    /// Sub Paying Agent.
+    /// Information Agent.
     /// </summary>
-    [DisplayName("Sub Paying Agent")]
-    [IsoXmlTag("SubPngAgt")]
-    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
+    [DisplayName("Information Agent")]
+    [IsoXmlTag("InfAgt")]
+    public PartyIdentification137Choice_? InformationAgent { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -226,6 +212,20 @@ public record CorporateActionMovementPreliminaryAdvice002V15 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public PartyIdentification151Choice_? Issuer { get; init; }
+
+    /// <summary>
+    /// Offeror.
+    /// </summary>
+    [DisplayName("Offeror")]
+    [IsoXmlTag("Offerr")]
+    public ValueList<PartyIdentification151Choice_> Offeror { get; init; } = [];
 
     /// <summary>
     /// Transfer Agent.

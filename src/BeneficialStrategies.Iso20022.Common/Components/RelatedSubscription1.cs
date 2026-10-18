@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RelatedSubscription1
 {
     /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public required AdditionalReference11 Reference { get; init; }
+
+    /// <summary>
+    /// Related Quantity.
+    /// </summary>
+    [DisplayName("Related Quantity")]
+    [IsoXmlTag("RltdQty")]
+    public DecimalNumber? RelatedQuantity { get; init; }
+
+    /// <summary>
+    /// Related Amount.
+    /// </summary>
+    [DisplayName("Related Amount")]
+    [IsoXmlTag("RltdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? RelatedAmount { get; init; }
+
+    /// <summary>
     /// Contingent Liquidation Per Unit.
     /// </summary>
     [DisplayName("Contingent Liquidation Per Unit")]
@@ -36,25 +57,4 @@ public record RelatedSubscription1
     [DisplayName("Equalisation Credit Per Unit")]
     [IsoXmlTag("EqulstnCdtPerUnit")]
     public ActiveOrHistoricCurrencyAndAmount? EqualisationCreditPerUnit { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public required AdditionalReference11 Reference { get; init; }
-
-    /// <summary>
-    /// Related Amount.
-    /// </summary>
-    [DisplayName("Related Amount")]
-    [IsoXmlTag("RltdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? RelatedAmount { get; init; }
-
-    /// <summary>
-    /// Related Quantity.
-    /// </summary>
-    [DisplayName("Related Quantity")]
-    [IsoXmlTag("RltdQty")]
-    public DecimalNumber? RelatedQuantity { get; init; }
 }

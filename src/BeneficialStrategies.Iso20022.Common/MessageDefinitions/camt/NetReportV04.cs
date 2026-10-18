@@ -46,18 +46,18 @@ public record NetReportV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Net Obligation.
-    /// </summary>
-    [DisplayName("Net Obligation")]
-    [IsoXmlTag("NetOblgtn")]
-    public ValueList<NetObligation4> NetObligation { get; init; } = [];
-
-    /// <summary>
     /// Net Report Data.
     /// </summary>
     [DisplayName("Net Report Data")]
     [IsoXmlTag("NetRptData")]
     public required NetReportData2 NetReportData { get; init; }
+
+    /// <summary>
+    /// Net Service Participant Identification.
+    /// </summary>
+    [DisplayName("Net Service Participant Identification")]
+    [IsoXmlTag("NetSvcPtcptId")]
+    public required PartyIdentification242Choice_ NetServiceParticipantIdentification { get; init; }
 
     /// <summary>
     /// Net Service Counterparty Identification.
@@ -67,11 +67,11 @@ public record NetReportV04 : IOuterRecord
     public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// Net Service Participant Identification.
+    /// Net Obligation.
     /// </summary>
-    [DisplayName("Net Service Participant Identification")]
-    [IsoXmlTag("NetSvcPtcptId")]
-    public required PartyIdentification242Choice_ NetServiceParticipantIdentification { get; init; }
+    [DisplayName("Net Obligation")]
+    [IsoXmlTag("NetOblgtn")]
+    public ValueList<NetObligation4> NetObligation { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

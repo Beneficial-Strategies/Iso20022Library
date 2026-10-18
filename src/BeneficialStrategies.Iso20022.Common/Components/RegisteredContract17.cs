@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegisteredContract17
 {
     /// <summary>
-    /// Additional Information.
+    /// Registered Contract Amendment Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max1025Text? AdditionalInformation { get; init; }
+    [DisplayName("Registered Contract Amendment Identification")]
+    [IsoXmlTag("RegdCtrctAmdmntId")]
+    public required Max35Text RegisteredContractAmendmentIdentification { get; init; }
 
     /// <summary>
-    /// Attachment.
+    /// Original Registered Contract Identification.
     /// </summary>
-    [DisplayName("Attachment")]
-    [IsoXmlTag("Attchmnt")]
-    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
+    [DisplayName("Original Registered Contract Identification")]
+    [IsoXmlTag("OrgnlRegdCtrctId")]
+    public required Max35Text OriginalRegisteredContractIdentification { get; init; }
+
+    /// <summary>
+    /// Priority.
+    /// </summary>
+    [DisplayName("Priority")]
+    [IsoXmlTag("Prty")]
+    public required Priority2Code Priority { get; init; }
 
     /// <summary>
     /// Contract.
@@ -45,13 +52,6 @@ public record RegisteredContract17
     public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
-    /// Original Registered Contract Identification.
-    /// </summary>
-    [DisplayName("Original Registered Contract Identification")]
-    [IsoXmlTag("OrgnlRegdCtrctId")]
-    public required Max35Text OriginalRegisteredContractIdentification { get; init; }
-
-    /// <summary>
     /// Payment Schedule Type.
     /// </summary>
     [DisplayName("Payment Schedule Type")]
@@ -59,18 +59,18 @@ public record RegisteredContract17
     public PaymentScheduleType2Choice_? PaymentScheduleType { get; init; }
 
     /// <summary>
-    /// Priority.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Priority")]
-    [IsoXmlTag("Prty")]
-    public required Priority2Code Priority { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
-    /// Registered Contract Amendment Identification.
+    /// Attachment.
     /// </summary>
-    [DisplayName("Registered Contract Amendment Identification")]
-    [IsoXmlTag("RegdCtrctAmdmntId")]
-    public required Max35Text RegisteredContractAmendmentIdentification { get; init; }
+    [DisplayName("Attachment")]
+    [IsoXmlTag("Attchmnt")]
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

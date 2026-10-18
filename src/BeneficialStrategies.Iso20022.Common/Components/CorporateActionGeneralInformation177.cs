@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformation177
 {
     /// <summary>
-    /// Class Action Number.
-    /// </summary>
-    [DisplayName("Class Action Number")]
-    [IsoXmlTag("ClssActnNb")]
-    public Max35Text? ClassActionNumber { get; init; }
-
-    /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
     public required Max35Text CorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Class Action Number.
+    /// </summary>
+    [DisplayName("Class Action Number")]
+    [IsoXmlTag("ClssActnNb")]
+    public Max35Text? ClassActionNumber { get; init; }
 
     /// <summary>
     /// Event Type.
@@ -38,13 +45,6 @@ public record CorporateActionGeneralInformation177
     public required CorporateActionEventType108Choice_ EventType { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
     /// Mandatory Voluntary Event Type.
     /// </summary>
     [DisplayName("Mandatory Voluntary Event Type")]
@@ -52,9 +52,9 @@ public record CorporateActionGeneralInformation177
     public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
 
     /// <summary>
-    /// Official Corporate Action Event Identification.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 }

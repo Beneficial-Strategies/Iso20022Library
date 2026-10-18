@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentRequest7
 {
     /// <summary>
-    /// Loyalty Data.
-    /// </summary>
-    [DisplayName("Loyalty Data")]
-    [IsoXmlTag("LltyData")]
-    public ValueList<LoyaltyRequestData3> LoyaltyData { get; init; } = [];
-
-    /// <summary>
     /// Payment Transaction.
     /// </summary>
     [DisplayName("Payment Transaction")]
     [IsoXmlTag("PmtTx")]
     public PaymentTransaction165? PaymentTransaction { get; init; }
+
+    /// <summary>
+    /// Loyalty Data.
+    /// </summary>
+    [DisplayName("Loyalty Data")]
+    [IsoXmlTag("LltyData")]
+    public ValueList<LoyaltyRequestData3> LoyaltyData { get; init; } = [];
 }

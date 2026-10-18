@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionAmounts70
 {
     /// <summary>
-    /// Non Refunded Amount.
-    /// </summary>
-    [DisplayName("Non Refunded Amount")]
-    [IsoXmlTag("NonRfnddAmt")]
-    public RestrictedFINImpliedCurrencyAndAmount? NonRefundedAmount { get; init; }
-
-    /// <summary>
     /// Refunded Amount.
     /// </summary>
     [DisplayName("Refunded Amount")]
     [IsoXmlTag("RfnddAmt")]
     public RestrictedFINImpliedCurrencyAndAmount? RefundedAmount { get; init; }
+
+    /// <summary>
+    /// Non Refunded Amount.
+    /// </summary>
+    [DisplayName("Non Refunded Amount")]
+    [IsoXmlTag("NonRfnddAmt")]
+    public RestrictedFINImpliedCurrencyAndAmount? NonRefundedAmount { get; init; }
 }

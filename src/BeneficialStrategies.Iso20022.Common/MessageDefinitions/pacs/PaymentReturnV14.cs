@@ -60,16 +60,16 @@ public record PaymentReturnV14 : IOuterRecord
     public OriginalGroupHeader19? OriginalGroupInformation { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Transaction Information.
     /// </summary>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction163> TransactionInformation { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

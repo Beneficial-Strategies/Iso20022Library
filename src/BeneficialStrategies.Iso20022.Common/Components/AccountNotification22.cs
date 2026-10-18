@@ -17,74 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountNotification22
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public required CashAccount43 Account { get; init; }
-
-    /// <summary>
-    /// Additional Notification Information.
-    /// </summary>
-    [DisplayName("Additional Notification Information")]
-    [IsoXmlTag("AddtlNtfctnInf")]
-    public Max500Text? AdditionalNotificationInformation { get; init; }
-
-    /// <summary>
-    /// Copy Duplicate Indicator.
-    /// </summary>
-    [DisplayName("Copy Duplicate Indicator")]
-    [IsoXmlTag("CpyDplctInd")]
-    public CopyDuplicate1Code? CopyDuplicateIndicator { get; init; }
-
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public ISODateTime? CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Electronic Sequence Number.
-    /// </summary>
-    [DisplayName("Electronic Sequence Number")]
-    [IsoXmlTag("ElctrncSeqNb")]
-    public Number? ElectronicSequenceNumber { get; init; }
-
-    /// <summary>
-    /// Entry.
-    /// </summary>
-    [DisplayName("Entry")]
-    [IsoXmlTag("Ntry")]
-    public ValueList<ReportEntry14> Entry { get; init; } = [];
-
-    /// <summary>
-    /// From To Date.
-    /// </summary>
-    [DisplayName("From To Date")]
-    [IsoXmlTag("FrToDt")]
-    public DateTimePeriod1? FromToDate { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max35Text Identification { get; init; }
-
-    /// <summary>
-    /// Interest.
-    /// </summary>
-    [DisplayName("Interest")]
-    [IsoXmlTag("Intrst")]
-    public ValueList<AccountInterest4> Interest { get; init; } = [];
-
-    /// <summary>
-    /// Legal Sequence Number.
-    /// </summary>
-    [DisplayName("Legal Sequence Number")]
-    [IsoXmlTag("LglSeqNb")]
-    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Notification Pagination.
@@ -94,11 +31,11 @@ public record AccountNotification22
     public Pagination1? NotificationPagination { get; init; }
 
     /// <summary>
-    /// Related Account.
+    /// Electronic Sequence Number.
     /// </summary>
-    [DisplayName("Related Account")]
-    [IsoXmlTag("RltdAcct")]
-    public CashAccount40? RelatedAccount { get; init; }
+    [DisplayName("Electronic Sequence Number")]
+    [IsoXmlTag("ElctrncSeqNb")]
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Reporting Sequence.
@@ -108,6 +45,34 @@ public record AccountNotification22
     public SequenceRange1Choice_? ReportingSequence { get; init; }
 
     /// <summary>
+    /// Legal Sequence Number.
+    /// </summary>
+    [DisplayName("Legal Sequence Number")]
+    [IsoXmlTag("LglSeqNb")]
+    public Number? LegalSequenceNumber { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public ISODateTime? CreationDateTime { get; init; }
+
+    /// <summary>
+    /// From To Date.
+    /// </summary>
+    [DisplayName("From To Date")]
+    [IsoXmlTag("FrToDt")]
+    public DateTimePeriod1? FromToDate { get; init; }
+
+    /// <summary>
+    /// Copy Duplicate Indicator.
+    /// </summary>
+    [DisplayName("Copy Duplicate Indicator")]
+    [IsoXmlTag("CpyDplctInd")]
+    public CopyDuplicate1Code? CopyDuplicateIndicator { get; init; }
+
+    /// <summary>
     /// Reporting Source.
     /// </summary>
     [DisplayName("Reporting Source")]
@@ -115,9 +80,44 @@ public record AccountNotification22
     public ReportingSource1Choice_? ReportingSource { get; init; }
 
     /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public required CashAccount43 Account { get; init; }
+
+    /// <summary>
+    /// Related Account.
+    /// </summary>
+    [DisplayName("Related Account")]
+    [IsoXmlTag("RltdAcct")]
+    public CashAccount40? RelatedAccount { get; init; }
+
+    /// <summary>
+    /// Interest.
+    /// </summary>
+    [DisplayName("Interest")]
+    [IsoXmlTag("Intrst")]
+    public ValueList<AccountInterest4> Interest { get; init; } = [];
+
+    /// <summary>
     /// Transactions Summary.
     /// </summary>
     [DisplayName("Transactions Summary")]
     [IsoXmlTag("TxsSummry")]
     public TotalTransactions6? TransactionsSummary { get; init; }
+
+    /// <summary>
+    /// Entry.
+    /// </summary>
+    [DisplayName("Entry")]
+    [IsoXmlTag("Ntry")]
+    public ValueList<ReportEntry14> Entry { get; init; } = [];
+
+    /// <summary>
+    /// Additional Notification Information.
+    /// </summary>
+    [DisplayName("Additional Notification Information")]
+    [IsoXmlTag("AddtlNtfctnInf")]
+    public Max500Text? AdditionalNotificationInformation { get; init; }
 }

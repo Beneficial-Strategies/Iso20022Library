@@ -17,41 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraPositionMovementDetails21
 {
     /// <summary>
-    /// Acknowledged Status Time Stamp.
-    /// </summary>
-    [DisplayName("Acknowledged Status Time Stamp")]
-    [IsoXmlTag("AckdStsTmStmp")]
-    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
-
-    /// <summary>
-    /// Available Date.
-    /// </summary>
-    [DisplayName("Available Date")]
-    [IsoXmlTag("AvlblDt")]
-    public DateAndDateTime2Choice_? AvailableDate { get; init; }
-
-    /// <summary>
-    /// Balance To.
-    /// </summary>
-    [DisplayName("Balance To")]
-    [IsoXmlTag("BalTo")]
-    public required SecuritiesBalanceType6Choice_ BalanceTo { get; init; }
-
-    /// <summary>
-    /// Collateral Monitor Amount.
-    /// </summary>
-    [DisplayName("Collateral Monitor Amount")]
-    [IsoXmlTag("CollMntrAmt")]
-    public AmountAndDirection44? CollateralMonitorAmount { get; init; }
-
-    /// <summary>
-    /// Corporate Action Event Type.
-    /// </summary>
-    [DisplayName("Corporate Action Event Type")]
-    [IsoXmlTag("CorpActnEvtTp")]
-    public CorporateActionEventType110Choice_? CorporateActionEventType { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -59,11 +24,11 @@ public record IntraPositionMovementDetails21
     public References72Choice_? Identification { get; init; }
 
     /// <summary>
-    /// Instruction Processing Additional Details.
+    /// Settled Quantity.
     /// </summary>
-    [DisplayName("Instruction Processing Additional Details")]
-    [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
+    [DisplayName("Settled Quantity")]
+    [IsoXmlTag("SttldQty")]
+    public required FinancialInstrumentQuantity33Choice_ SettledQuantity { get; init; }
 
     /// <summary>
     /// Previously Settled Quantity.
@@ -87,11 +52,11 @@ public record IntraPositionMovementDetails21
     public GenericIdentification37? SecuritiesSubBalanceIdentification { get; init; }
 
     /// <summary>
-    /// Settled Quantity.
+    /// Balance To.
     /// </summary>
-    [DisplayName("Settled Quantity")]
-    [IsoXmlTag("SttldQty")]
-    public required FinancialInstrumentQuantity33Choice_ SettledQuantity { get; init; }
+    [DisplayName("Balance To")]
+    [IsoXmlTag("BalTo")]
+    public required SecuritiesBalanceType6Choice_ BalanceTo { get; init; }
 
     /// <summary>
     /// Settlement Date.
@@ -99,6 +64,41 @@ public record IntraPositionMovementDetails21
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     public required DateAndDateTime2Choice_ SettlementDate { get; init; }
+
+    /// <summary>
+    /// Available Date.
+    /// </summary>
+    [DisplayName("Available Date")]
+    [IsoXmlTag("AvlblDt")]
+    public DateAndDateTime2Choice_? AvailableDate { get; init; }
+
+    /// <summary>
+    /// Acknowledged Status Time Stamp.
+    /// </summary>
+    [DisplayName("Acknowledged Status Time Stamp")]
+    [IsoXmlTag("AckdStsTmStmp")]
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+
+    /// <summary>
+    /// Corporate Action Event Type.
+    /// </summary>
+    [DisplayName("Corporate Action Event Type")]
+    [IsoXmlTag("CorpActnEvtTp")]
+    public CorporateActionEventType110Choice_? CorporateActionEventType { get; init; }
+
+    /// <summary>
+    /// Collateral Monitor Amount.
+    /// </summary>
+    [DisplayName("Collateral Monitor Amount")]
+    [IsoXmlTag("CollMntrAmt")]
+    public AmountAndDirection44? CollateralMonitorAmount { get; init; }
+
+    /// <summary>
+    /// Instruction Processing Additional Details.
+    /// </summary>
+    [DisplayName("Instruction Processing Additional Details")]
+    [IsoXmlTag("InstrPrcgAddtlDtls")]
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Supplementary Data.

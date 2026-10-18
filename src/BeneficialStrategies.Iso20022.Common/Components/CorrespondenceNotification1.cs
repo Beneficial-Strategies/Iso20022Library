@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorrespondenceNotification1
 {
     /// <summary>
-    /// Enclosed File.
+    /// Sender Notification Identification.
     /// </summary>
-    [DisplayName("Enclosed File")]
-    [IsoXmlTag("NclsdFile")]
-    public ValueList<Document15> EnclosedFile { get; init; } = [];
-
-    /// <summary>
-    /// Notification Narrative.
-    /// </summary>
-    [DisplayName("Notification Narrative")]
-    [IsoXmlTag("NtfctnNrrtv")]
-    public ValueList<Max2000Text> NotificationNarrative { get; init; } = [];
-
-    /// <summary>
-    /// Notification Sub Type.
-    /// </summary>
-    [DisplayName("Notification Sub Type")]
-    [IsoXmlTag("NtfctnSubTp")]
-    public NotificationSubType1Choice_? NotificationSubType { get; init; }
+    [DisplayName("Sender Notification Identification")]
+    [IsoXmlTag("SndrNtfctnId")]
+    public required Max35Text SenderNotificationIdentification { get; init; }
 
     /// <summary>
     /// Notification Type.
@@ -45,16 +31,30 @@ public record CorrespondenceNotification1
     public required NotificationType1Choice_ NotificationType { get; init; }
 
     /// <summary>
+    /// Notification Sub Type.
+    /// </summary>
+    [DisplayName("Notification Sub Type")]
+    [IsoXmlTag("NtfctnSubTp")]
+    public NotificationSubType1Choice_? NotificationSubType { get; init; }
+
+    /// <summary>
+    /// Notification Narrative.
+    /// </summary>
+    [DisplayName("Notification Narrative")]
+    [IsoXmlTag("NtfctnNrrtv")]
+    public ValueList<Max2000Text> NotificationNarrative { get; init; } = [];
+
+    /// <summary>
+    /// Enclosed File.
+    /// </summary>
+    [DisplayName("Enclosed File")]
+    [IsoXmlTag("NclsdFile")]
+    public ValueList<Document15> EnclosedFile { get; init; } = [];
+
+    /// <summary>
     /// Related Notification Data.
     /// </summary>
     [DisplayName("Related Notification Data")]
     [IsoXmlTag("RltdNtfctnData")]
     public ValueList<RelatedNotificationData1> RelatedNotificationData { get; init; } = [];
-
-    /// <summary>
-    /// Sender Notification Identification.
-    /// </summary>
-    [DisplayName("Sender Notification Identification")]
-    [IsoXmlTag("SndrNtfctnId")]
-    public required Max35Text SenderNotificationIdentification { get; init; }
 }

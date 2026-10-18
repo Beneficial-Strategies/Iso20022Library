@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount225
 {
     /// <summary>
-    /// Alternate Identification.
+    /// Identification.
     /// </summary>
-    [DisplayName("Alternate Identification")]
-    [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification120Choice_ Identification { get; init; }
 
     /// <summary>
     /// Cash Account.
@@ -31,16 +31,16 @@ public record PartyIdentificationAndAccount225
     public CashAccountIdentification9Choice_? CashAccount { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PartyIdentification120Choice_ Identification { get; init; }
-
-    /// <summary>
     /// Processing Identification.
     /// </summary>
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
     public Max35Text? ProcessingIdentification { get; init; }
+
+    /// <summary>
+    /// Alternate Identification.
+    /// </summary>
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
 }

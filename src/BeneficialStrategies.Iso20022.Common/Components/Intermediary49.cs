@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Intermediary49
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public Account35? Account { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required PartyIdentification139 Identification { get; init; }
+
+    /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public Account35? Account { get; init; }
 
     /// <summary>
     /// Order Originator Eligibility.
@@ -38,16 +38,16 @@ public record Intermediary49
     public OrderOriginatorEligibility1Code? OrderOriginatorEligibility { get; init; }
 
     /// <summary>
-    /// Role.
-    /// </summary>
-    [DisplayName("Role")]
-    [IsoXmlTag("Role")]
-    public InvestmentFundRole2Choice_? Role { get; init; }
-
-    /// <summary>
     /// Trading Party Capacity.
     /// </summary>
     [DisplayName("Trading Party Capacity")]
     [IsoXmlTag("TradgPtyCpcty")]
     public TradingCapacity8Code? TradingPartyCapacity { get; init; }
+
+    /// <summary>
+    /// Role.
+    /// </summary>
+    [DisplayName("Role")]
+    [IsoXmlTag("Role")]
+    public InvestmentFundRole2Choice_? Role { get; init; }
 }

@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StoredValueRequest7
 {
     /// <summary>
-    /// Data.
-    /// </summary>
-    [DisplayName("Data")]
-    [IsoXmlTag("Data")]
-    public ValueList<StoredValueData7> Data { get; init; } = [];
-
-    /// <summary>
     /// Sale Transaction Identification.
     /// </summary>
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
     public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Data.
+    /// </summary>
+    [DisplayName("Data")]
+    [IsoXmlTag("Data")]
+    public ValueList<StoredValueData7> Data { get; init; } = [];
 }

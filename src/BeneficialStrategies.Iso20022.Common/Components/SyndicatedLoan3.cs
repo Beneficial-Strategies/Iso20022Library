@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SyndicatedLoan3
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ActiveCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
     /// Borrower.
     /// </summary>
     [DisplayName("Borrower")]
     [IsoXmlTag("Brrwr")]
     public required TradeParty6 Borrower { get; init; }
-
-    /// <summary>
-    /// Exchange Rate Information.
-    /// </summary>
-    [DisplayName("Exchange Rate Information")]
-    [IsoXmlTag("XchgRateInf")]
-    public ExchangeRate1? ExchangeRateInformation { get; init; }
 
     /// <summary>
     /// Lender.
@@ -45,9 +31,23 @@ public record SyndicatedLoan3
     public TradeParty6? Lender { get; init; }
 
     /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ActiveCurrencyAndAmount? Amount { get; init; }
+
+    /// <summary>
     /// Share.
     /// </summary>
     [DisplayName("Share")]
     [IsoXmlTag("Shr")]
     public PercentageRate? Share { get; init; }
+
+    /// <summary>
+    /// Exchange Rate Information.
+    /// </summary>
+    [DisplayName("Exchange Rate Information")]
+    [IsoXmlTag("XchgRateInf")]
+    public ExchangeRate1? ExchangeRateInformation { get; init; }
 }

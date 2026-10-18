@@ -46,18 +46,18 @@ public record OrderBookReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Order Report.
-    /// </summary>
-    [DisplayName("Order Report")]
-    [IsoXmlTag("OrdrRpt")]
-    public ValueList<OrderReport2Choice_> OrderReport { get; init; } = [];
-
-    /// <summary>
     /// Report Header.
     /// </summary>
     [DisplayName("Report Header")]
     [IsoXmlTag("RptHdr")]
     public required SecuritiesMarketReportHeader3 ReportHeader { get; init; }
+
+    /// <summary>
+    /// Order Report.
+    /// </summary>
+    [DisplayName("Order Report")]
+    [IsoXmlTag("OrdrRpt")]
+    public ValueList<OrderReport2Choice_> OrderReport { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.
