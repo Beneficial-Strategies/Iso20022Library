@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "entryCount": 1295,
+    "entryCount": 1298,
     "generatedFrom": "spec-snapshot.tsv",
     "snapshotDate": "2026-09-04"
   },
@@ -1821,6 +1821,22 @@
       "status": null,
       "validatorFile": "Validators/Components/ChargesRecord5Validator.cs"
     },
+    "Cheque19": {
+      "checksum": "DA7AD9619CD51204",
+      "isoId": "_4oDGATEyEe6g-ffJsqGiSA",
+      "recordType": "MSGCOMP",
+      "removalDate": null,
+      "status": null,
+      "validatorFile": "Validators/Components/Cheque19Validator.cs"
+    },
+    "ChequeDeliveryMethod1Choice_": {
+      "checksum": "1EBB941EE4E64410",
+      "isoId": "_QbwF5tp-Ed-ak6NoX_4Aeg_258234806",
+      "recordType": "CHOICE",
+      "removalDate": null,
+      "status": null,
+      "validatorFile": "Validators/Choices/ChequeDeliveryMethod1Choice_Validator.cs"
+    },
     "ClassificationType4": {
       "checksum": "6CC35D173855F891",
       "isoId": "_-66U4eJIEe-5wchdE0oJYw",
@@ -3516,6 +3532,14 @@
       "removalDate": null,
       "status": null,
       "validatorFile": "Validators/Components/ExchangeConfiguration9Validator.cs"
+    },
+    "ExchangeRate1": {
+      "checksum": "6693918D2BB971CA",
+      "isoId": "_t0booVkyEeGeoaLUQk__nA_667162887",
+      "recordType": "MSGCOMP",
+      "removalDate": null,
+      "status": null,
+      "validatorFile": "Validators/Components/ExchangeRate1Validator.cs"
     },
     "ExecutionType1Choice_": {
       "checksum": "21581FFBC09512C1",

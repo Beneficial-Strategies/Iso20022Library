@@ -32,7 +32,7 @@ public record MultipleForeignExchangeSD1V01 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "MltplFrgnXchgSd1";
+    public const string XmlTag = "MltplFXSD1";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.

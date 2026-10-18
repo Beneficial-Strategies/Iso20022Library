@@ -28,7 +28,7 @@ public record CustomerPaymentReversalV12 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "pain.007.001.01";
+    public const string XmlTag = "CstmrPmtRvsl";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
