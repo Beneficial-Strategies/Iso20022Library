@@ -32,7 +32,7 @@ public sealed class Iso20022SimpleValueJsonConverter<T> : JsonConverter<T>
         {
             throw new JsonException(fmt.Message, ex);
         }
-        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is ArgumentNullException)
+        catch (System.Reflection.TargetInvocationException ex) when (ex.InnerException is System.ArgumentNullException)
         {
             // Should never happen (we checked for null above), but guard anyway.
             throw new JsonException($"Unexpected null constructing {typeof(T).Name}.", ex);

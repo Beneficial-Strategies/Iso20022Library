@@ -232,6 +232,20 @@ SDK.
 `BeneficialStrategies.Iso20022.FluentValidation` via `src/Directory.Build.props` (`<Version>` and
 the rest of the shared package metadata) — see "Multi-Package Repository Strategy" below for why.
 
+**The exception: `BeneficialStrategies.Iso20022.Primitives` also targets `netstandard2.0`** (#26), so that .NET Framework
+4.6.1+, Mono 5.4+ and Unity can take the primitive types without the records (`Common` and the packages above it stay
+net8.0 + net10.0). `netstandard2.0` is one build for all of those. What it costs:
+* three packages that flow to a consumer of that build only: `System.Text.Json` (not in the box), `Portable.System.DateTimeOnly`
+  (`ISODate`, `ISOTime` and the Gregorian types expose `DateOnly` and `TimeOnly`, which .NET Framework lacks) and
+  `Microsoft.Bcl.HashCode`;
+* `Polyfill` (build-time only, `PrivateAssets=all`, nothing leaks into the API) supplies the language-support attributes and the
+  methods the code uses; `Framework/NetStandardPolyfills.cs` maps `ArgumentNullException.ThrowIfNull` (a global using alias in that
+  build only, so type tests for the exception write `System.ArgumentNullException`);
+* no `ReadOnlySpan` overloads of `Parse` (use `Substring`), and `LangVersion` is `latest`.
+Its tests run on .NET Framework 4.8 (`Primitives.Tests` adds `net48` on Windows; the `primitives-net48` CI job). Code in `Primitives`
+must keep compiling for `netstandard2.0`: build it (`dotnet build src/BeneficialStrategies.Iso20022.Primitives`) after a change.
+`Iso20022PrimitiveJsonOptions` holds the JSON converters of the primitives alone.
+
 ### Build Performance (Known, Not a Misconfiguration)
 
 A clean or touch-any-file build of `BeneficialStrategies.Iso20022.Common` takes roughly 80-100
