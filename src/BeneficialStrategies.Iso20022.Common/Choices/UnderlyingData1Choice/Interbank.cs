@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
         [DisplayName("Original Interbank Settlement Date")]
         [IsoXmlTag("OrgnlIntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? OriginalInterbankSettlementDate { get; init; }
+        public ISODate? OriginalInterbankSettlementDate { get; init; }
 
         /// <summary>
         /// Key elements used to identify the original transaction that is being referred to.

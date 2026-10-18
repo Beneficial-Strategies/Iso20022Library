@@ -21,7 +21,7 @@ public record TradeData44
     /// </summary>
     [DisplayName("Current Settlement Date")]
     [IsoXmlTag("CurSttlmDt")]
-    public DateOnly? CurrentSettlementDate { get; init; }
+    public ISODate? CurrentSettlementDate { get; init; }
 
     /// <summary>
     /// Current Status Date Time.
@@ -56,7 +56,7 @@ public record TradeData44
     /// </summary>
     [DisplayName("New Settlement Date")]
     [IsoXmlTag("NewSttlmDt")]
-    public DateOnly? NewSettlementDate { get; init; }
+    public ISODate? NewSettlementDate { get; init; }
 
     /// <summary>
     /// Originator Reference.

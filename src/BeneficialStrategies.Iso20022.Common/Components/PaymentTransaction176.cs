@@ -78,7 +78,7 @@ public record PaymentTransaction176
     [IsoId("cb4c92f9-e34d-4bf1-a7c9-2a00daa1cc71")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
-    public DateOnly? OriginalRequestedCollectionDate { get; init; }
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Provides detailed information on the cancellation reason.

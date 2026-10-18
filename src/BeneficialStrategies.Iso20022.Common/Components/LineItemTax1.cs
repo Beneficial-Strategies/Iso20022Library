@@ -39,7 +39,7 @@ public record LineItemTax1
     [DisplayName("Tax Point Date")]
     [IsoXmlTag("TaxPtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TaxPointDate { get; init; }
+    public ISODate? TaxPointDate { get; init; }
 
     /// <summary>
     /// Rate used to calculate the amount of this tax, levy or duty.

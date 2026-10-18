@@ -23,7 +23,7 @@ public record SecurityDate22
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PostingDate { get; init; }
+    public required ISODate PostingDate { get; init; }
 
     /// <summary>
     /// Date/time at which securities become available for trading, for example first dealing date.

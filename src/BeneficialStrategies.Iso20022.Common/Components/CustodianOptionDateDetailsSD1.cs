@@ -33,7 +33,7 @@ public record CustodianOptionDateDetailsSD1
     [DisplayName("Agent Deadline Date")]
     [IsoXmlTag("AgtDdlnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AgentDeadlineDate { get; init; }
+    public ISODate? AgentDeadlineDate { get; init; }
 
     /// <summary>
     /// Custodian deadline time for the option instructions. Applicable to custodian service only.

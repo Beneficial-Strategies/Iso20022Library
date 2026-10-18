@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice
         [DisplayName("System Date")]
         [IsoXmlTag("SysDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly SystemDate { get; init; }
+        public required ISODate SystemDate { get; init; }
 
         /// <summary>
         /// Status of the system.

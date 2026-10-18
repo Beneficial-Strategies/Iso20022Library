@@ -133,7 +133,7 @@ public record TradeTransaction27
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EffectiveDate { get; init; }
+    public ISODate? EffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the original date of expiry of the reported contract.
@@ -144,7 +144,7 @@ public record TradeTransaction27
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Indicates the date in the case of an early termination of the reported contract.
@@ -153,7 +153,7 @@ public record TradeTransaction27
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 
     /// <summary>
     /// Indicates the date of settlement of the underlying.
@@ -161,7 +161,7 @@ public record TradeTransaction27
     [IsoId("_yUUJvw1JEeqV4s5SpzR1dQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SimpleValueList<DateOnly> SettlementDate { get; init; } = [];
+    public SimpleValueList<ISODate> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the Master agreement.

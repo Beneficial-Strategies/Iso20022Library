@@ -113,7 +113,7 @@ public record Order24
     [DisplayName("Order Booking Date")]
     [IsoXmlTag("OrdrBookgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OrderBookingDate { get; init; }
+    public ISODate? OrderBookingDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.|Used with fixed income for municipal new issue markets.

@@ -23,7 +23,7 @@ public record InterestCalculation5
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly CalculationDate { get; init; }
+    public required ISODate CalculationDate { get; init; }
 
     /// <summary>
     /// Provides the identification of the collateral account.

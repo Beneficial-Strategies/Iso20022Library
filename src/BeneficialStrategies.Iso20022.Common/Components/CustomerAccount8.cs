@@ -134,7 +134,7 @@ public record CustomerAccount8
     [IsoId("_afv5C2bcEembdtOObkYAHQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
-    public DateOnly? ClosingDate { get; init; }
+    public ISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Restriction on capability or operations allowed.
@@ -150,5 +150,5 @@ public record CustomerAccount8
     [IsoId("_afv5D2bcEembdtOObkYAHQ")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
-    public DateOnly? OpeningDate { get; init; }
+    public ISODate? OpeningDate { get; init; }
 }

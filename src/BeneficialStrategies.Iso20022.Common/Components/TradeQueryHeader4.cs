@@ -23,7 +23,7 @@ public record TradeQueryHeader4
     [DisplayName("Query Execution Date")]
     [IsoXmlTag("QryExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? QueryExecutionDate { get; init; }
+    public ISODate? QueryExecutionDate { get; init; }
 
     /// <summary>
     /// Page number of the message (within the report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.

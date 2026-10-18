@@ -47,7 +47,7 @@ public record Trade3
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the valuation rate used for the trade.
@@ -81,7 +81,7 @@ public record Trade3
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Measurement of the amount of the trade values converted in the US dollars.
@@ -114,7 +114,7 @@ public record Trade3
     [DisplayName("Fixing Date")]
     [IsoXmlTag("FxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FixingDate { get; init; }
+    public ISODate? FixingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the spot trade is produced by the option.

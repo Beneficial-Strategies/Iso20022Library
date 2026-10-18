@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty1Choice
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly ReferenceDate { get; init; }
+        public required ISODate ReferenceDate { get; init; }
 
         /// <summary>
         /// Data specific to counterparties and related fields.

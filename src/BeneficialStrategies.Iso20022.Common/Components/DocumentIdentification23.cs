@@ -33,7 +33,7 @@ public record DocumentIdentification23
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfIssue { get; init; }
+    public ISODate? DateOfIssue { get; init; }
 
     /// <summary>
     /// Identification of buyer order line item.

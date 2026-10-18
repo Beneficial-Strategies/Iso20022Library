@@ -69,7 +69,7 @@ public record TransferStatusAndReason5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Date on which the document, for example, the application form, was sent.
@@ -78,7 +78,7 @@ public record TransferStatusAndReason5
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SendOutDate { get; init; }
+    public ISODate? SendOutDate { get; init; }
 
     /// <summary>
     /// Number of units to be transferred.

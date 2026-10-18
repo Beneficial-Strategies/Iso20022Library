@@ -85,7 +85,7 @@ public record CardIndividualTransaction1
     [DisplayName("Validation Date")]
     [IsoXmlTag("VldtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidationDate { get; init; }
+    public ISODate? ValidationDate { get; init; }
 
     /// <summary>
     /// Sequential number of the validation of the cash deposit.

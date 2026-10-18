@@ -62,7 +62,7 @@ public record Transfer38
     [IsoId("abe9a551-7127-4a82-9dbc-f944f043c599")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -94,7 +94,7 @@ public record Transfer38
     [IsoId("fd6f3b1e-58ed-4682-aeb8-49149d583d4e")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.
@@ -182,7 +182,7 @@ public record Transfer38
     [IsoId("820fa702-2ae0-4805-b10c-384bfe61b6d7")]
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
-    public DateOnly? AverageDate { get; init; }
+    public ISODate? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -190,7 +190,7 @@ public record Transfer38
     [IsoId("887ecd01-91d2-4c20-811b-ebe8e5f5b098")]
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
-    public DateOnly? NewAverageDate { get; init; }
+    public ISODate? NewAverageDate { get; init; }
 
     /// <summary>
     /// Currency used to transfer the holdings. Some transfer agents register holdings grouped by currency in addition to using the ISIN for multi-currency fund shares.

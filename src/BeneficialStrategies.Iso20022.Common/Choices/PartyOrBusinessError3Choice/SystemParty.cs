@@ -47,7 +47,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice
         [DisplayName("Opening Date")]
         [IsoXmlTag("OpngDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? OpeningDate { get; init; }
+        public ISODate? OpeningDate { get; init; }
 
         /// <summary>
         /// Specifies the closing date of the party.
@@ -56,7 +56,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice
         [DisplayName("Closing Date")]
         [IsoXmlTag("ClsgDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ClosingDate { get; init; }
+        public ISODate? ClosingDate { get; init; }
 
         /// <summary>
         /// Specifies the type classification of the party.

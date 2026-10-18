@@ -56,7 +56,7 @@ public record OptionOrSwaption11
     /// </summary>
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
-    public DateOnly? MaturityDateOfUnderlying { get; init; }
+    public ISODate? MaturityDateOfUnderlying { get; init; }
 
     /// <summary>
     /// Premium Amount.
@@ -70,7 +70,7 @@ public record OptionOrSwaption11
     /// </summary>
     [DisplayName("Premium Payment Date")]
     [IsoXmlTag("PrmPmtDt")]
-    public DateOnly? PremiumPaymentDate { get; init; }
+    public ISODate? PremiumPaymentDate { get; init; }
 
     /// <summary>
     /// Put Amount.

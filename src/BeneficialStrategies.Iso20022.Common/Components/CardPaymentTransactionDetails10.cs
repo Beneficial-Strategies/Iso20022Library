@@ -55,7 +55,7 @@ public record CardPaymentTransactionDetails10
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidityDate { get; init; }
+    public ISODate? ValidityDate { get; init; }
 
     /// <summary>
     /// Reason to process an online authorisation.

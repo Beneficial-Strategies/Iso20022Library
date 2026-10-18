@@ -23,7 +23,7 @@ public record CompareDate2
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Value1 { get; init; }
+    public ISODate? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareDate2
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Value2 { get; init; }
+    public ISODate? Value2 { get; init; }
 }

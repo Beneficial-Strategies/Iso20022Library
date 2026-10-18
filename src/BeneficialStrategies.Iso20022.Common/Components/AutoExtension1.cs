@@ -31,7 +31,7 @@ public record AutoExtension1
     [DisplayName("Final Expiry Date")]
     [IsoXmlTag("FnlXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FinalExpiryDate { get; init; }
+    public ISODate? FinalExpiryDate { get; init; }
 
     /// <summary>
     /// Details related to the notification of the end of the period for notification of non-extension of the expiry date.

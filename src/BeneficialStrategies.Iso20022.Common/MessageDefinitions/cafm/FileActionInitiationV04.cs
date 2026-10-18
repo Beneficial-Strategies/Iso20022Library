@@ -64,7 +64,7 @@ public record FileActionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
-    public DateOnly? ActionDate { get; init; }
+    public ISODate? ActionDate { get; init; }
 
     /// <summary>
     /// Additional Fee.

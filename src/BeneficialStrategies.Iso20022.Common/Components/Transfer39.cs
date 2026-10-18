@@ -62,7 +62,7 @@ public record Transfer39
     [IsoId("f97bd3c4-dea7-4187-87e9-c2cb0f1ace73")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the investor signed the transfer order form.
@@ -70,7 +70,7 @@ public record Transfer39
     [IsoId("f2b158ff-c9fa-4fb4-8c0b-35ca06f28b0e")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.

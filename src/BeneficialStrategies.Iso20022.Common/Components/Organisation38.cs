@@ -67,7 +67,7 @@ public record Organisation38
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Number assigned by a tax authority to an entity.

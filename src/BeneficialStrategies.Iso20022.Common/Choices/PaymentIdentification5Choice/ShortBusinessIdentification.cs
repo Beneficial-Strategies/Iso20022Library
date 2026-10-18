@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [DisplayName("Inter Bank Settlement Date")]
         [IsoXmlTag("IntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly InterBankSettlementDate { get; init; }
+        public required ISODate InterBankSettlementDate { get; init; }
 
         /// <summary>
         /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

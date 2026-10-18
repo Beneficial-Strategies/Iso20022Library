@@ -51,7 +51,7 @@ public record NetReportData1
     [DisplayName("Report Date")]
     [IsoXmlTag("RptDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReportDate { get; init; }
+    public required ISODate ReportDate { get; init; }
 
     /// <summary>
     /// Specifies the value date for the trades used in the generation of the net report.
@@ -60,7 +60,7 @@ public record NetReportData1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Specifies the type of net report, indicating how the obligations have been calculated.

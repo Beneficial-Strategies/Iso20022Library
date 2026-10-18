@@ -47,5 +47,5 @@ public record AmountPricePerFinancialInstrumentQuantity9
     [DisplayName("Price Fixing Date")]
     [IsoXmlTag("PricFxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PriceFixingDate { get; init; }
+    public required ISODate PriceFixingDate { get; init; }
 }

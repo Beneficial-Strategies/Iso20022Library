@@ -23,7 +23,7 @@ public record DateAndPlaceOfBirth1
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly BirthDate { get; init; }
+    public required ISODate BirthDate { get; init; }
 
     /// <summary>
     /// Province where a person was born.

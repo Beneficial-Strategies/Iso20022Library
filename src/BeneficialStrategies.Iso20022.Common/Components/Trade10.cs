@@ -56,7 +56,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Fixing Date")]
     [IsoXmlTag("FxgDt")]
-    public DateOnly? FixingDate { get; init; }
+    public ISODate? FixingDate { get; init; }
 
     /// <summary>
     /// Forward Points.
@@ -98,7 +98,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Type.
@@ -119,5 +119,5 @@ public record Trade10
     /// </summary>
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 }

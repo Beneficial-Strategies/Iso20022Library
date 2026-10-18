@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
         [DisplayName("Collateral Value Date")]
         [IsoXmlTag("CollValDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? CollateralValueDate { get; init; }
+        public ISODate? CollateralValueDate { get; init; }
 
         /// <summary>
         /// Indication of the type of collateral component.

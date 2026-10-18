@@ -48,7 +48,7 @@ public record YieldCalculation6
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Period on which the calculation is based.

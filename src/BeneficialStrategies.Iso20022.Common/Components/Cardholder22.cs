@@ -42,7 +42,7 @@ public record Cardholder22
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// High Value.

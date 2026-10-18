@@ -23,7 +23,7 @@ public record ResendSearchCriteria2
     [DisplayName("Business Date")]
     [IsoXmlTag("BizDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BusinessDate { get; init; }
+    public ISODate? BusinessDate { get; init; }
 
     /// <summary>
     /// Independent counter for message sequence, which is available once per party technical address.|Specifies the identification sequence number for a specific couple sender/receiver.

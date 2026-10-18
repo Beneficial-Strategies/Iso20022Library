@@ -38,7 +38,7 @@ public record HoldBackInformation5
     [IsoId("f73682b2-34e0-4e68-815d-2030bf272168")]
     [DisplayName("Expected Release Date")]
     [IsoXmlTag("XpctdRlsDt")]
-    public DateOnly? ExpectedReleaseDate { get; init; }
+    public ISODate? ExpectedReleaseDate { get; init; }
 
     /// <summary>
     /// New identification of the security.

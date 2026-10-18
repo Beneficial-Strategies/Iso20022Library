@@ -51,7 +51,7 @@ public record Organisation20
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EstablishedDate { get; init; }
+    public ISODate? EstablishedDate { get; init; }
 
     /// <summary>
     /// Registration number for the organisation.
@@ -78,7 +78,7 @@ public record Organisation20
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Taxation unique reference number.

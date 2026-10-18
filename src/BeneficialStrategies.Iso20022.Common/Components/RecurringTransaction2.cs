@@ -76,7 +76,7 @@ public record RecurringTransaction2
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Cumulative amount of all the instalments.

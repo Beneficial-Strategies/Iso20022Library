@@ -49,7 +49,7 @@ public record RequestedModification
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedExecutionDate { get; init; }
+    public ISODate? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -58,7 +58,7 @@ public record RequestedModification
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDate { get; init; }
+    public ISODate? ValueDate { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent.

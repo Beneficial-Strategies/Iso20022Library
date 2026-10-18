@@ -30,7 +30,7 @@ public record Unit14
     [IsoId("739db2a6-05db-4f05-8190-6f9d442508cb")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public DateOnly? OrderDate { get; init; }
+    public ISODate? OrderDate { get; init; }
 
     /// <summary>
     /// Date the investor purchased the financial instrument.
@@ -38,7 +38,7 @@ public record Unit14
     [IsoId("8dc01c1b-b5d9-474e-beb1-5b722ff9b192")]
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
-    public DateOnly? AcquisitionDate { get; init; }
+    public ISODate? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security that is delivered.

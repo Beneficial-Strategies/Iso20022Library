@@ -41,7 +41,7 @@ public record CorporateActionEventReferenceSD2
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly LinkAddedDate { get; init; }
+    public required ISODate LinkAddedDate { get; init; }
 
     /// <summary>
     /// Events can be linked together. This date represents the date on which the link was modified.
@@ -50,5 +50,5 @@ public record CorporateActionEventReferenceSD2
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LinkModifiedDate { get; init; }
+    public ISODate? LinkModifiedDate { get; init; }
 }

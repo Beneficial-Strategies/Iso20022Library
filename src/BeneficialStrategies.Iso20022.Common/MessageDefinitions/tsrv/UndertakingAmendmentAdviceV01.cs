@@ -72,7 +72,7 @@ public record UndertakingAmendmentAdviceV01 : IOuterRecord
     [DisplayName("Date Of Advice")]
     [IsoXmlTag("DtOfAdvc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateOfAdvice { get; init; }
+    public required ISODate DateOfAdvice { get; init; }
 
     /// <summary>
     /// Details related to the advice of the proposed amended undertaking.

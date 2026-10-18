@@ -51,7 +51,7 @@ public record AlternateIdentification4
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssueDate { get; init; }
+    public ISODate? IssueDate { get; init; }
 
     /// <summary>
     /// Date at which the identification expires.
@@ -60,7 +60,7 @@ public record AlternateIdentification4
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpiryDate { get; init; }
+    public ISODate? ExpiryDate { get; init; }
 
     /// <summary>
     /// Country that issued the identification document.

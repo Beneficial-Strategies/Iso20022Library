@@ -144,7 +144,7 @@ public record PaymentSearch7
     [IsoId("_VShXXZlQEee-Zps0fZQaFQ")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public SimpleValueList<DateOnly> InterbankSettlementDate { get; init; } = [];
+    public SimpleValueList<ISODate> InterbankSettlementDate { get; init; } = [];
 
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.|Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.|It can be included in several messages related to the transaction.|Usage: this is the former RelatedReference.

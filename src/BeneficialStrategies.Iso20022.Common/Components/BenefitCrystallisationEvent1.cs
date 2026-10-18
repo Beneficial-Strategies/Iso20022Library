@@ -41,7 +41,7 @@ public record BenefitCrystallisationEvent1
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EventDate { get; init; }
+    public ISODate? EventDate { get; init; }
 
     /// <summary>
     /// Amount of the crystallisation event.

@@ -39,7 +39,7 @@ public record TransactionCertificateContract1
     [DisplayName("Expected Shipment Date")]
     [IsoXmlTag("XpctdShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpectedShipmentDate { get; init; }
+    public ISODate? ExpectedShipmentDate { get; init; }
 
     /// <summary>
     /// Expected advance payment (or prepayment) return date in case counterparty will not deliver the goods/services.
@@ -48,7 +48,7 @@ public record TransactionCertificateContract1
     [DisplayName("Expected Advance Payment Return Date")]
     [IsoXmlTag("XpctdAdvncPmtRtrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpectedAdvancePaymentReturnDate { get; init; }
+    public ISODate? ExpectedAdvancePaymentReturnDate { get; init; }
 
     /// <summary>
     /// Further details on the transaction certificate contract.

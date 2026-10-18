@@ -23,7 +23,7 @@ public record TradeReportHeader4
     [DisplayName("Report Execution Date")]
     [IsoXmlTag("RptExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ReportExecutionDate { get; init; }
+    public ISODate? ReportExecutionDate { get; init; }
 
     /// <summary>
     /// Page number of the message (within the report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.

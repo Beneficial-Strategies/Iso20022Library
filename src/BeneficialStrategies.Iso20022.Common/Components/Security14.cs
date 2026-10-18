@@ -84,7 +84,7 @@ public record Security14
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Maturity { get; init; }
+    public ISODate? Maturity { get; init; }
 
     /// <summary>
     /// Data on the securities issuer.

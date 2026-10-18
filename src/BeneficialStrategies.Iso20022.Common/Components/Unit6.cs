@@ -31,7 +31,7 @@ public record Unit6
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AcquisitionDate { get; init; }
+    public ISODate? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security that is delivered.

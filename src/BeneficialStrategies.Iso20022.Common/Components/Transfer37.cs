@@ -67,7 +67,7 @@ public record Transfer37
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -100,7 +100,7 @@ public record Transfer37
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.
@@ -193,7 +193,7 @@ public record Transfer37
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AverageDate { get; init; }
+    public ISODate? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -202,7 +202,7 @@ public record Transfer37
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? NewAverageDate { get; init; }
+    public ISODate? NewAverageDate { get; init; }
 
     /// <summary>
     /// Currency used to transfer the holdings. Some transfer agents register holdings grouped by currency in addition to using the ISIN for multi-currency fund shares.

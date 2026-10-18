@@ -47,7 +47,7 @@ public record DirectDebitTransactionInformation10
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
@@ -89,7 +89,7 @@ public record DirectDebitTransactionInformation10
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedCollectionDate { get; init; }
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Set of elements providing information specific to the direct debit mandate.

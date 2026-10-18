@@ -23,7 +23,7 @@ public record DatePeriod1
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FromDate { get; init; }
+    public ISODate? FromDate { get; init; }
 
     /// <summary>
     /// End date of the range.
@@ -32,5 +32,5 @@ public record DatePeriod1
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ToDate { get; init; }
+    public required ISODate ToDate { get; init; }
 }

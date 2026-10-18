@@ -23,7 +23,7 @@ public record CardNotReceivedDetails1
     [DisplayName("Date Of Card Mailed")]
     [IsoXmlTag("DtOfCardMld")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateOfCardMailed { get; init; }
+    public required ISODate DateOfCardMailed { get; init; }
 
     /// <summary>
     /// Address where card was mailed to.
@@ -60,7 +60,7 @@ public record CardNotReceivedDetails1
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 
     /// <summary>
     /// Indicates whether card provides a Card Security Code.

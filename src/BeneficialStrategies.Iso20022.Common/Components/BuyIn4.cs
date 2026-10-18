@@ -40,7 +40,7 @@ public record BuyIn4
     [DisplayName("Cancellation Limit Date")]
     [IsoXmlTag("CxlLmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CancellationLimitDate { get; init; }
+    public ISODate? CancellationLimitDate { get; init; }
 
     /// <summary>
     /// Identifies the date by which the buy-in operation is reversed by the CCP.
@@ -49,5 +49,5 @@ public record BuyIn4
     [DisplayName("Buy In Reversion Date")]
     [IsoXmlTag("BuyInRvrsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BuyInReversionDate { get; init; }
+    public ISODate? BuyInReversionDate { get; init; }
 }

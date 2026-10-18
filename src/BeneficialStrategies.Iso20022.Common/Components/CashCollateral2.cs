@@ -66,7 +66,7 @@ public record CashCollateral2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Valuation date of the cash taken as collateral.
@@ -75,7 +75,7 @@ public record CashCollateral2
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDate { get; init; }
+    public ISODate? ValueDate { get; init; }
 
     /// <summary>
     /// Exchange rate.

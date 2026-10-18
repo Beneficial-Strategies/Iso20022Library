@@ -59,7 +59,7 @@ public record MeetingNotice4
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AnnouncementDate { get; init; }
+    public ISODate? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Indicates whether physical participation to the meeting is required in order to be allowed to vote.

@@ -40,7 +40,7 @@ public record Issuance5
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssueDate { get; init; }
+    public ISODate? IssueDate { get; init; }
 
     /// <summary>
     /// Date/time, as announced by the issuer, at which the securities will be issued.
@@ -58,7 +58,7 @@ public record Issuance5
     [DisplayName("ISIN Valid From")]
     [IsoXmlTag("ISINVldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ISINValidFrom { get; init; }
+    public ISODate? ISINValidFrom { get; init; }
 
     /// <summary>
     /// Legal entity that has the right to issue securities.

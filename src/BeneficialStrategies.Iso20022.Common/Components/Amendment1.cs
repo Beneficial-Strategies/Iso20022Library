@@ -33,7 +33,7 @@ public record Amendment1
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateOfIssuance { get; init; }
+    public required ISODate DateOfIssuance { get; init; }
 
     /// <summary>
     /// Identification of the undertaking.

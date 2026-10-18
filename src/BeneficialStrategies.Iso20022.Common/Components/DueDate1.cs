@@ -23,7 +23,7 @@ public record DueDate1
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DueDate { get; init; }
+    public ISODate? DueDate { get; init; }
 
     /// <summary>
     /// Specifies the reason why the authority needs the information on due date.

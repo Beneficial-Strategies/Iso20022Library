@@ -33,7 +33,7 @@ public record MandateRelatedInformation13
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfSignature { get; init; }
+    public ISODate? DateOfSignature { get; init; }
 
     /// <summary>
     /// Image of scanned signed mandate.

@@ -61,5 +61,5 @@ public record IndividualPerson4
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BirthDate { get; init; }
+    public ISODate? BirthDate { get; init; }
 }

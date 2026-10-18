@@ -48,7 +48,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcGuR9Ee-NFYIkYc90gw")]
     [DisplayName("Requested Value Date")]
     [IsoXmlTag("ReqdValDt")]
-    public required DateOnly RequestedValueDate { get; init; }
+    public required ISODate RequestedValueDate { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which cash will be withdrawn.

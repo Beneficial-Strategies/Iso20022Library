@@ -33,7 +33,7 @@ public record SupportingDocumentRequestOrLetter3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Sender of the request or letter.
@@ -104,7 +104,7 @@ public record SupportingDocumentRequestOrLetter3
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DueDate { get; init; }
+    public ISODate? DueDate { get; init; }
 
     /// <summary>
     /// Documents provided as attachments to the supporting document request or letter.

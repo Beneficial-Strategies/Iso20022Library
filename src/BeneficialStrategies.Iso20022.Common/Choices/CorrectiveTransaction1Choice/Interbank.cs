@@ -69,6 +69,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
         [DisplayName("Interbank Settlement Date")]
         [IsoXmlTag("IntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly InterbankSettlementDate { get; init; }
+        public required ISODate InterbankSettlementDate { get; init; }
     }
 }

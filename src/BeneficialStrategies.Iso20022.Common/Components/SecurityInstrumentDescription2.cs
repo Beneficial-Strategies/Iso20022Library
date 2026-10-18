@@ -50,7 +50,7 @@ public record SecurityInstrumentDescription2
     [DisplayName("Exercise Date")]
     [IsoXmlTag("ExrcDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExerciseDate { get; init; }
+    public ISODate? ExerciseDate { get; init; }
 
     /// <summary>
     /// Maturity date/time at which an interest bearing security becomes due.
@@ -59,7 +59,7 @@ public record SecurityInstrumentDescription2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).

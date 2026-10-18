@@ -56,7 +56,7 @@ public record Trade7
     /// </summary>
     [DisplayName("Date Confirmed")]
     [IsoXmlTag("DtConfd")]
-    public DateOnly? DateConfirmed { get; init; }
+    public ISODate? DateConfirmed { get; init; }
 
     /// <summary>
     /// Deal Ticket Identification.

@@ -91,7 +91,7 @@ public record Drawdown2
     [DisplayName("Pension Commencement Lump Sum Date")]
     [IsoXmlTag("PnsnCmcmntLumpSumDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PensionCommencementLumpSumDate { get; init; }
+    public ISODate? PensionCommencementLumpSumDate { get; init; }
 
     /// <summary>
     /// Indicates there have been multiple pension commencement lump sum (PCLS) payments.
@@ -143,7 +143,7 @@ public record Drawdown2
     [DisplayName("Flexible Drawdown Triggered Date")]
     [IsoXmlTag("FlxblDrwdwnTrggrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FlexibleDrawdownTriggeredDate { get; init; }
+    public ISODate? FlexibleDrawdownTriggeredDate { get; init; }
 
     /// <summary>
     /// Additional information about the drawdown.

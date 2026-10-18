@@ -83,7 +83,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Date/Time on which the posting /draft of the securities took place.

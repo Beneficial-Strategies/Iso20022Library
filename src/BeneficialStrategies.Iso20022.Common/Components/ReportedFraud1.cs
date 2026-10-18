@@ -85,7 +85,7 @@ public record ReportedFraud1
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CardholderReportingDate { get; init; }
+    public ISODate? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Date fraud was confirmed by the cardholder.
@@ -94,7 +94,7 @@ public record ReportedFraud1
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ConfirmationReportingDate { get; init; }
+    public ISODate? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Reference to the case as provided by the submitter.

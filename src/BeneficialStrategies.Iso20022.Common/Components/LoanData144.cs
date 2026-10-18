@@ -31,7 +31,7 @@ public record LoanData144
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly MaturityDate { get; init; }
+    public required ISODate MaturityDate { get; init; }
 
     /// <summary>
     /// Unique trade Identifier (UTI) as agreed with the other counterparty.
@@ -50,7 +50,7 @@ public record LoanData144
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Indicates whether clearing of contract has taken place.
@@ -93,7 +93,7 @@ public record LoanData144
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Termination date in the case of a full early termination of the reported transaction.
@@ -102,7 +102,7 @@ public record LoanData144
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 
     /// <summary>
     /// Indication whether the transaction is subject to a general collateral arrangement. -‘true’ shall be populated for general collateral. General collateral specifies a collateral arrangement for a repurchase transaction in which the security lender may choose the security to provide as collateral with the cash provider amongst a relatively wide range of securities meeting predefined criteria.

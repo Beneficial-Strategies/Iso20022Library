@@ -40,7 +40,7 @@ public record OtherPayment5
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PaymentDate { get; init; }
+    public ISODate? PaymentDate { get; init; }
 
     /// <summary>
     /// Identifies the payer of the other payment amount.

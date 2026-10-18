@@ -75,7 +75,7 @@ public record Transfer33
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -100,7 +100,7 @@ public record Transfer33
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Specifies the reason for the assets transfer.
@@ -167,7 +167,7 @@ public record Transfer33
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AverageDate { get; init; }
+    public ISODate? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -176,7 +176,7 @@ public record Transfer33
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? NewAverageDate { get; init; }
+    public ISODate? NewAverageDate { get; init; }
 
     /// <summary>
     /// Identifies the currency to be used to transfer the holdings.

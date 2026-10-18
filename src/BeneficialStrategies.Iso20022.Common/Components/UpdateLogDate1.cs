@@ -23,7 +23,7 @@ public record UpdateLogDate1
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly Old { get; init; }
+    public required ISODate Old { get; init; }
 
     /// <summary>
     /// New value after the update.
@@ -32,5 +32,5 @@ public record UpdateLogDate1
     [DisplayName("New")]
     [IsoXmlTag("New")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly New { get; init; }
+    public required ISODate New { get; init; }
 }

@@ -54,7 +54,7 @@ public record OriginalItemAndStatus9
     [IsoId("09d5a351-0451-4cd3-bb3d-5c4abf456d3d")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateOnly? ExpectedValueDate { get; init; }
+    public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Specifies the status of the notification item.

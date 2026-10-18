@@ -7,7 +7,8 @@ namespace BeneficialStrategies.Iso20022;
 /// be reconstructed by formatting <c>Value</c> alone — typically because <c>Value</c> is itself
 /// a composite (a tuple or record, as with <c>xs:gYearMonth</c> or <c>xs:duration</c>), or
 /// because extra lexical information sits alongside it (an optional timezone suffix, as with
-/// <see cref="IIsoTimezoneQualifiedValue"/>).
+/// <see cref="IIsoTimezoneQualifiedValue"/>), or because the lexical grammar of the ISO type is narrower than what
+/// the parser of <c>T</c> accepts (<c>ISODate</c> is <c>YYYY-MM-DD</c> only; <c>DateOnly.Parse</c> also reads <c>10/18/2026</c>).
 /// </summary>
 /// <remarks>
 /// <c>Iso20022XmlSerializer</c> (in the BeneficialStrategies.Iso20022 package) normally round-trips an

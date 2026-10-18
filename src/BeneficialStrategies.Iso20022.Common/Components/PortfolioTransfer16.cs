@@ -70,7 +70,7 @@ public record PortfolioTransfer16
     [IsoId("297819d9-e6b8-45f9-9fdf-703273017c30")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public DateOnly? TaxDate { get; init; }
+    public ISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Asset to be transferred.

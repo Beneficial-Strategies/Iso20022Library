@@ -358,7 +358,7 @@ public record Context28
     [IsoId("_hE6oW2l2EfCyxsm1jzUNug")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -366,7 +366,7 @@ public record Context28
     [IsoId("_hE6oY2l2EfCyxsm1jzUNug")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Reserved for private data.

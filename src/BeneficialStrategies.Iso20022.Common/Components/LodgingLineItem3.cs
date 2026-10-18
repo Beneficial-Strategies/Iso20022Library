@@ -35,7 +35,7 @@ public record LodgingLineItem3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Duration.

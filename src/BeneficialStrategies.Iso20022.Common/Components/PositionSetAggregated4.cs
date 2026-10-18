@@ -49,5 +49,5 @@ public record PositionSetAggregated4
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required DateOnly ReferenceDate { get; init; }
+    public required ISODate ReferenceDate { get; init; }
 }

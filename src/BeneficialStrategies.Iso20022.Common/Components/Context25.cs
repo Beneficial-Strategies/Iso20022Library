@@ -286,7 +286,7 @@ public record Context25
     [IsoId("_nfvt4RTYEfC_aaedwHHlmw")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -294,7 +294,7 @@ public record Context25
     [IsoId("_nfvt4xTYEfC_aaedwHHlmw")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Indicates a chip data fallback.

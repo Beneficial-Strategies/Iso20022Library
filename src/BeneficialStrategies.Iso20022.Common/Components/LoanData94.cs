@@ -33,7 +33,7 @@ public record LoanData94
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -76,7 +76,7 @@ public record LoanData94
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDate { get; init; }
+    public ISODate? ValueDate { get; init; }
 
     /// <summary>
     /// Minimum number of business days that one of the counterparties has to inform about the termination of the transaction.
@@ -94,7 +94,7 @@ public record LoanData94
     [DisplayName("Earliest Call Back Date")]
     [IsoXmlTag("EarlstCallBckDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EarliestCallBackDate { get; init; }
+    public ISODate? EarliestCallBackDate { get; init; }
 
     /// <summary>
     /// Indication whether the secured financing transaction is subject to a general or special collateral arrangement.
@@ -152,5 +152,5 @@ public record LoanData94
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 }

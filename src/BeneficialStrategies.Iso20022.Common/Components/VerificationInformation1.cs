@@ -59,7 +59,7 @@ public record VerificationInformation1
     [DisplayName("Validity End Date")]
     [IsoXmlTag("VldtyEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidityEndDate { get; init; }
+    public ISODate? ValidityEndDate { get; init; }
 
     /// <summary>
     /// Contains end time of the verification that has been performed.

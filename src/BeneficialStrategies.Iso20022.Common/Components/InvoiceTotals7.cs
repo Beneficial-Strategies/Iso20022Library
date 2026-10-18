@@ -46,7 +46,7 @@ public record InvoiceTotals7
     [IsoId("_xItPx0w0EfCpsI1b9uv5FQ")]
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
-    public required DateOnly PaymentDueDate { get; init; }
+    public required ISODate PaymentDueDate { get; init; }
 
     /// <summary>
     /// Cash account from which the fees are paid.

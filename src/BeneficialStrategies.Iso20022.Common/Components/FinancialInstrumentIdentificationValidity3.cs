@@ -31,5 +31,5 @@ public record FinancialInstrumentIdentificationValidity3
     [DisplayName("ISIN Valid From")]
     [IsoXmlTag("ISINVldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ISINValidFrom { get; init; }
+    public ISODate? ISINValidFrom { get; init; }
 }

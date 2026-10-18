@@ -41,7 +41,7 @@ public record LetterIntent1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// End date stated on the letter of intent.
@@ -50,5 +50,5 @@ public record LetterIntent1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 }

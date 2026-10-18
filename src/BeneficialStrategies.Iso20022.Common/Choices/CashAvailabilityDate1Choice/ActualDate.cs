@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAvailabilityDate1Choice
         /// </summary>
         [IsoXmlTag("ActlDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly Value { get; init; }
+        public required ISODate Value { get; init; }
     }
 }

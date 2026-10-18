@@ -41,7 +41,7 @@ public record ReferredDocumentInformation4
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RelatedDate { get; init; }
+    public ISODate? RelatedDate { get; init; }
 
     /// <summary>
     /// Set of elements used to provide the content of the referred document line.

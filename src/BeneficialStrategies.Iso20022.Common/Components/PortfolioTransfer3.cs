@@ -53,7 +53,7 @@ public record PortfolioTransfer3
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedTransferDate { get; init; }
+    public ISODate? RequestedTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.

@@ -23,7 +23,7 @@ public record EffectiveDate1
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EffectiveDate { get; init; }
+    public required ISODate EffectiveDate { get; init; }
 
     /// <summary>
     /// Specifies how the SSI update effective date is to be applied.

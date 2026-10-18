@@ -63,7 +63,7 @@ public record TransparencyDataReport11
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ReportingDate { get; init; }
+    public ISODate? ReportingDate { get; init; }
 
     /// <summary>
     /// Specifies the classification of the equity instrument.

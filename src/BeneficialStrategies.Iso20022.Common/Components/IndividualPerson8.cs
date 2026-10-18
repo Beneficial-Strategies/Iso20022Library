@@ -69,7 +69,7 @@ public record IndividualPerson8
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BirthDate { get; init; }
+    public ISODate? BirthDate { get; init; }
 
     /// <summary>
     /// Number assigned by a social security agency.

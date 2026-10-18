@@ -40,7 +40,7 @@ public record DebitAuthorisationConfirmation2
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDateToDebit { get; init; }
+    public ISODate? ValueDateToDebit { get; init; }
 
     /// <summary>
     /// Specifies the reason for the debit authorisation request.

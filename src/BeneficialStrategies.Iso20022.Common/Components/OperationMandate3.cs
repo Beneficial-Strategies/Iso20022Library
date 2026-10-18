@@ -88,7 +88,7 @@ public record OperationMandate3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// Is the date when the mandate stops to be valid.
@@ -97,5 +97,5 @@ public record OperationMandate3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 }

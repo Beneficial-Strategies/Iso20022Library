@@ -23,7 +23,7 @@ public record InvoiceLineItem1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Invoice order date.
@@ -32,7 +32,7 @@ public record InvoiceLineItem1
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OrderDate { get; init; }
+    public ISODate? OrderDate { get; init; }
 
     /// <summary>
     /// Contains the corporate contract number.
@@ -51,7 +51,7 @@ public record InvoiceLineItem1
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ShippingDate { get; init; }
+    public ISODate? ShippingDate { get; init; }
 
     /// <summary>
     /// Rebilling indicator.

@@ -21,7 +21,7 @@ public record DetailedStatisticsPerCounterparty19
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required DateOnly ReferenceDate { get; init; }
+    public required ISODate ReferenceDate { get; init; }
 
     /// <summary>
     /// Rejection Statistics.

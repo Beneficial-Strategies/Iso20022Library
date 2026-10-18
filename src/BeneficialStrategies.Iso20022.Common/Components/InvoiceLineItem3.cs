@@ -63,7 +63,7 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Description.
@@ -98,7 +98,7 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public DateOnly? OrderDate { get; init; }
+    public ISODate? OrderDate { get; init; }
 
     /// <summary>
     /// Other Unit Of Measure.
@@ -140,7 +140,7 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
-    public DateOnly? ShippingDate { get; init; }
+    public ISODate? ShippingDate { get; init; }
 
     /// <summary>
     /// Ship To Industry Code.

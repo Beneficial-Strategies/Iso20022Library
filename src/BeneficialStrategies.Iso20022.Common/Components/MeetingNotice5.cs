@@ -59,7 +59,7 @@ public record MeetingNotice5
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AnnouncementDate { get; init; }
+    public ISODate? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Method of voting participation to the general meeting and related voting deadline per method of participation.

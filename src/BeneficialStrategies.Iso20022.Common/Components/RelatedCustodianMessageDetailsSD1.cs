@@ -53,7 +53,7 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Received Date")]
     [IsoXmlTag("RcvdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReceivedDate { get; init; }
+    public required ISODate ReceivedDate { get; init; }
 
     /// <summary>
     /// Time of day that the ISO message was received from the custodian. Applicable to custodian service only.

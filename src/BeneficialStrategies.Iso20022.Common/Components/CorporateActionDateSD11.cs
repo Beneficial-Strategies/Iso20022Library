@@ -89,5 +89,5 @@ public record CorporateActionDateSD11
     [DisplayName("DTC Earliest Payment Date")]
     [IsoXmlTag("DTCEarlstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DTCEarliestPaymentDate { get; init; }
+    public ISODate? DTCEarliestPaymentDate { get; init; }
 }

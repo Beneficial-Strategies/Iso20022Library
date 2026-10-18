@@ -53,7 +53,7 @@ public record BillingTaxRegion1
     [DisplayName("Point Date")]
     [IsoXmlTag("PtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PointDate { get; init; }
+    public ISODate? PointDate { get; init; }
 
     /// <summary>
     /// Tax information that relates to the sending financial institution.

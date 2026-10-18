@@ -32,5 +32,5 @@ public record RateAdjustment1
     [DisplayName("Adjustment Date")]
     [IsoXmlTag("AdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly AdjustmentDate { get; init; }
+    public required ISODate AdjustmentDate { get; init; }
 }

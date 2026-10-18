@@ -78,5 +78,5 @@ public record CorrectiveInterbankTransaction3
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly InterbankSettlementDate { get; init; }
+    public required ISODate InterbankSettlementDate { get; init; }
 }

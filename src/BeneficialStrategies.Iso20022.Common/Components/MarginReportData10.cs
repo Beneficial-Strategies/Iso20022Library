@@ -56,7 +56,7 @@ public record MarginReportData10
     /// </summary>
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
-    public DateOnly? EventDate { get; init; }
+    public ISODate? EventDate { get; init; }
 
     /// <summary>
     /// Posted Margin Or Collateral.

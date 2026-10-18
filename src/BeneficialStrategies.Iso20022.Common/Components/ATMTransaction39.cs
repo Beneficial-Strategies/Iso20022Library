@@ -119,7 +119,7 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Proposed Execution Date")]
     [IsoXmlTag("PropsdExctnDt")]
-    public DateOnly? ProposedExecutionDate { get; init; }
+    public ISODate? ProposedExecutionDate { get; init; }
 
     /// <summary>
     /// Protected Account From.
@@ -154,7 +154,7 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateOnly? RequestedExecutionDate { get; init; }
+    public ISODate? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.

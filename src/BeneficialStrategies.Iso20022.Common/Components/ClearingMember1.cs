@@ -56,7 +56,7 @@ public record ClearingMember1
     [DisplayName("Membership Valid From")]
     [IsoXmlTag("MmbshVldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly MembershipValidFrom { get; init; }
+    public required ISODate MembershipValidFrom { get; init; }
 
     /// <summary>
     /// Date on which the clearing member is no longer a member in any clearing services protected by the default waterfall as defined by the CCP’s rules. Typically this will be the day the clearing member’s default fund contribution is repaid or they are no longer contractually subject to rights of assessment.
@@ -65,7 +65,7 @@ public record ClearingMember1
     [DisplayName("Membership Valid To")]
     [IsoXmlTag("MmbshVldTo")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MembershipValidTo { get; init; }
+    public ISODate? MembershipValidTo { get; init; }
 
     /// <summary>
     /// Identification of another clearing member or institution that acts as sponsor to the clearing member, undertaking certain of its obligations at the central counterparty on its behalf. These obligations typically include, but are not limited to, making default fund contributions and participating in default auctions.

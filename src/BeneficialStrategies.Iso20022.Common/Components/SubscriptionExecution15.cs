@@ -142,7 +142,7 @@ public record SubscriptionExecution15
     [IsoId("2470d032-0320-4601-8e7f-75c1c83d7e7c")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

@@ -28,5 +28,5 @@ public record PartyStatement3
     /// </summary>
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
-    public required DateOnly SystemDate { get; init; }
+    public required ISODate SystemDate { get; init; }
 }

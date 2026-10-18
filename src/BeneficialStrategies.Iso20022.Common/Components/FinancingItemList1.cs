@@ -33,7 +33,7 @@ public record FinancingItemList1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Reference to related documents for example to original assignment in a status response or retry.
@@ -50,7 +50,7 @@ public record FinancingItemList1
     [DisplayName("Amount Cut Off Date")]
     [IsoXmlTag("AmtCutOffDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AmountCutOffDate { get; init; }
+    public ISODate? AmountCutOffDate { get; init; }
 
     /// <summary>
     /// Party to which the list is assigned.

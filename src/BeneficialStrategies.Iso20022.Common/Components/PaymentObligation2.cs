@@ -55,7 +55,7 @@ public record PaymentObligation2
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ExpiryDate { get; init; }
+    public required ISODate ExpiryDate { get; init; }
 
     /// <summary>
     /// Rules which apply to the BPO (Bank Payment Obligation).

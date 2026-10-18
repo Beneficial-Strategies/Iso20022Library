@@ -21,7 +21,7 @@ public record ContractCessionData2
     /// </summary>
     [DisplayName("Document Date")]
     [IsoXmlTag("DocDt")]
-    public DateOnly? DocumentDate { get; init; }
+    public ISODate? DocumentDate { get; init; }
 
     /// <summary>
     /// Document Number.

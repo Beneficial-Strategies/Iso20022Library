@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
         [DisplayName("Old")]
         [IsoXmlTag("Od")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly Old { get; init; }
+        public required ISODate Old { get; init; }
 
         /// <summary>
         /// New value after the update.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
         [DisplayName("New")]
         [IsoXmlTag("New")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly New { get; init; }
+        public required ISODate New { get; init; }
     }
 }

@@ -35,7 +35,7 @@ public record SettlementService5
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Deferred.
@@ -91,7 +91,7 @@ public record SettlementService5
     /// </summary>
     [DisplayName("Requested Date")]
     [IsoXmlTag("ReqdDt")]
-    public DateOnly? RequestedDate { get; init; }
+    public ISODate? RequestedDate { get; init; }
 
     /// <summary>
     /// Time.

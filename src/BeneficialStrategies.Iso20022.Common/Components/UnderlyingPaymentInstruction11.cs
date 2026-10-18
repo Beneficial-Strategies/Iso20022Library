@@ -78,7 +78,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtE7vHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public DateOnly? RequestedCollectionDate { get; init; }
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

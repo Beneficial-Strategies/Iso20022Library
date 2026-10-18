@@ -23,7 +23,7 @@ public record Period15
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly StartDate { get; init; }
+    public required ISODate StartDate { get; init; }
 
     /// <summary>
     /// Date on which the range ends.
@@ -32,5 +32,5 @@ public record Period15
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EndDate { get; init; }
+    public required ISODate EndDate { get; init; }
 }

@@ -57,7 +57,7 @@ public record CorporateActionMovement1
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly RequestedExecutionDate { get; init; }
+    public required ISODate RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Identification of the party that owns the account.

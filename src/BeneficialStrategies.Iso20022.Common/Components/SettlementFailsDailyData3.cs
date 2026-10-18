@@ -23,7 +23,7 @@ public record SettlementFailsDailyData3
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReportingDate { get; init; }
+    public required ISODate ReportingDate { get; init; }
 
     /// <summary>
     /// Data related to the failed settlement instructions for the reporting date.

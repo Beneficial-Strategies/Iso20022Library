@@ -70,7 +70,7 @@ public record DriverInParty4
     [IsoId("_ZoVBl1N6EfC0lMwgjvMClw")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Age of driver.
@@ -126,7 +126,7 @@ public record DriverInParty4
     [IsoId("_ZoVBpVN6EfC0lMwgjvMClw")]
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public DateOnly? LicenseIssuanceDate { get; init; }
+    public ISODate? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of the driving license (if and when relevant).
@@ -134,7 +134,7 @@ public record DriverInParty4
     [IsoId("_ZoVBp1N6EfC0lMwgjvMClw")]
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public DateOnly? LicenseExpirationDate { get; init; }
+    public ISODate? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the driver license.

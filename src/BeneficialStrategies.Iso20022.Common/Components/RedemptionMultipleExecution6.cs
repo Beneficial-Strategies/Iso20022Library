@@ -91,7 +91,7 @@ public record RedemptionMultipleExecution6
     /// </summary>
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total Settlement Amount.

@@ -145,5 +145,5 @@ public record TransactionContext1
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 }

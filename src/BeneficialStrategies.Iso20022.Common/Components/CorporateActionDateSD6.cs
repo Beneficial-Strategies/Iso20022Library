@@ -33,5 +33,5 @@ public record CorporateActionDateSD6
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LotteryDate { get; init; }
+    public ISODate? LotteryDate { get; init; }
 }

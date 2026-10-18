@@ -23,7 +23,7 @@ public record EarlyPayment1
     [DisplayName("Early Payment Date")]
     [IsoXmlTag("EarlyPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EarlyPaymentDate { get; init; }
+    public required ISODate EarlyPaymentDate { get; init; }
 
     /// <summary>
     /// Discount percent for early payment.

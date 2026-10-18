@@ -61,7 +61,7 @@ public record Cardholder19
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Identifies a cardholder that is a highly valued individual (e.g., Very Important Person).

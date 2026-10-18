@@ -33,6 +33,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference2Ch
         [DisplayName("Date Of Issue")]
         [IsoXmlTag("DtOfIsse")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? DateOfIssue { get; init; }
+        public ISODate? DateOfIssue { get; init; }
     }
 }

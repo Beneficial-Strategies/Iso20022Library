@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [DisplayName("Requested Execution Date")]
         [IsoXmlTag("ReqdExctnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? RequestedExecutionDate { get; init; }
+        public ISODate? RequestedExecutionDate { get; init; }
 
         /// <summary>
         /// Date at which the creditor requests the amount of money to be collected from the debtor.
@@ -78,6 +78,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [DisplayName("Requested Collection Date")]
         [IsoXmlTag("ReqdColltnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? RequestedCollectionDate { get; init; }
+        public ISODate? RequestedCollectionDate { get; init; }
     }
 }

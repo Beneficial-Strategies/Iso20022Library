@@ -39,7 +39,7 @@ public record IntentToPay1
     [DisplayName("Expected Payment Date")]
     [IsoXmlTag("XpctdPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ExpectedPaymentDate { get; init; }
+    public required ISODate ExpectedPaymentDate { get; init; }
 
     /// <summary>
     /// Specifies the beneficiary&apos;s account information.

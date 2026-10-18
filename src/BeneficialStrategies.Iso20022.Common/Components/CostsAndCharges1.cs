@@ -23,7 +23,7 @@ public record CostsAndCharges1
     [DisplayName("Ex Ante Reference Date")]
     [IsoXmlTag("ExAnteRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExAnteReferenceDate { get; init; }
+    public ISODate? ExAnteReferenceDate { get; init; }
 
     /// <summary>
     /// Reference date applicable to all ex post cost and charge disclosures. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 08120.
@@ -32,7 +32,7 @@ public record CostsAndCharges1
     [DisplayName("Ex Post Reference Date")]
     [IsoXmlTag("ExPstRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExPostReferenceDate { get; init; }
+    public ISODate? ExPostReferenceDate { get; init; }
 
     /// <summary>
     /// Individual cost or charge associated with the distribution of selling of the financial instrument. This may be one-off or recurring. This may be ex ante (intended) or post ante (actual).

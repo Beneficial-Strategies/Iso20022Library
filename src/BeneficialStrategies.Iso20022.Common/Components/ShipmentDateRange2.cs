@@ -32,7 +32,7 @@ public record ShipmentDateRange2
     [DisplayName("Earliest Shipment Date")]
     [IsoXmlTag("EarlstShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EarliestShipmentDate { get; init; }
+    public ISODate? EarliestShipmentDate { get; init; }
 
     /// <summary>
     /// Latest date whereby the goods must be shipped.
@@ -41,5 +41,5 @@ public record ShipmentDateRange2
     [DisplayName("Latest Shipment Date")]
     [IsoXmlTag("LatstShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LatestShipmentDate { get; init; }
+    public ISODate? LatestShipmentDate { get; init; }
 }

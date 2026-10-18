@@ -46,7 +46,7 @@ public record TripLeg4
     [IsoId("_2id1J0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
-    public DateOnly? TicketIssueDate { get; init; }
+    public ISODate? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Location where ticket was issued.

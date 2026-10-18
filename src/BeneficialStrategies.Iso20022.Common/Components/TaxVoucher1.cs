@@ -146,7 +146,7 @@ public record TaxVoucher1
     [DisplayName("Bargain Date")]
     [IsoXmlTag("BrgnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BargainDate { get; init; }
+    public ISODate? BargainDate { get; init; }
 
     /// <summary>
     /// Settlement date of the DRIP purchase transaction.
@@ -155,7 +155,7 @@ public record TaxVoucher1
     [DisplayName("Bargain Settlement Date")]
     [IsoXmlTag("BrgnSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BargainSettlementDate { get; init; }
+    public ISODate? BargainSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of stamp duty.

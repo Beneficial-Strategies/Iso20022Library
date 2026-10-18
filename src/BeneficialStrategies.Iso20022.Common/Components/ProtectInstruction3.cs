@@ -41,5 +41,5 @@ public record ProtectInstruction3
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ProtectDate { get; init; }
+    public ISODate? ProtectDate { get; init; }
 }

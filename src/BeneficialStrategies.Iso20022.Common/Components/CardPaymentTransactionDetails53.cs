@@ -189,5 +189,5 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
-    public DateOnly? ValidityDate { get; init; }
+    public ISODate? ValidityDate { get; init; }
 }

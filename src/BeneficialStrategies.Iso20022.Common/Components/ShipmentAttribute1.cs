@@ -31,7 +31,7 @@ public record ShipmentAttribute1
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpectedDate { get; init; }
+    public ISODate? ExpectedDate { get; init; }
 
     /// <summary>
     /// Country in which the counter party is located.

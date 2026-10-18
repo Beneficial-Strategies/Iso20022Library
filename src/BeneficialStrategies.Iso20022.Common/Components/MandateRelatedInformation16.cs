@@ -36,7 +36,7 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
-    public DateOnly? DateOfSignature { get; init; }
+    public ISODate? DateOfSignature { get; init; }
 
     /// <summary>
     /// Additional security provisions, such as a digital signature, as provided by the debtor.
@@ -50,14 +50,14 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
-    public DateOnly? FinalCollectionDate { get; init; }
+    public ISODate? FinalCollectionDate { get; init; }
 
     /// <summary>
     /// Date of the first collection of a direct debit as per the mandate.
     /// </summary>
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
-    public DateOnly? FirstCollectionDate { get; init; }
+    public ISODate? FirstCollectionDate { get; init; }
 
     /// <summary>
     /// Regularity with which direct debit instructions are to be created and processed.

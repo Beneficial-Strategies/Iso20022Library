@@ -31,7 +31,7 @@ public record TradeSettlement2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DueDate { get; init; }
+    public ISODate? DueDate { get; init; }
 
     /// <summary>
     /// Payable amount with currency code.
@@ -56,7 +56,7 @@ public record TradeSettlement2
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DeliveryDate { get; init; }
+    public ISODate? DeliveryDate { get; init; }
 
     /// <summary>
     /// Period during which delivery executed or agreed invoicing period.

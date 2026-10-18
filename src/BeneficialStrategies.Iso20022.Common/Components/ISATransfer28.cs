@@ -77,7 +77,7 @@ public record ISATransfer28
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ActualTransferDate { get; init; }
+    public ISODate? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Specifies what must be done with cash in the account that is awaiting investment.

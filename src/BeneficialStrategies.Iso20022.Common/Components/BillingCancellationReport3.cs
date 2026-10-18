@@ -38,7 +38,7 @@ public record BillingCancellationReport3
     [IsoId("_2qnwBTEyEe6g-ffJsqGiSA")]
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
-    public required DateOnly InvoiceDate { get; init; }
+    public required ISODate InvoiceDate { get; init; }
 
     /// <summary>
     /// Identification of the billing report.

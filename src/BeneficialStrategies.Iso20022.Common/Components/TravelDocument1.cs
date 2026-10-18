@@ -59,7 +59,7 @@ public record TravelDocument1
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssuanceDate { get; init; }
+    public ISODate? IssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of travel document (if and when relevant).
@@ -68,7 +68,7 @@ public record TravelDocument1
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the travel document.

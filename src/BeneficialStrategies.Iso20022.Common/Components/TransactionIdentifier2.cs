@@ -24,7 +24,7 @@ public record TransactionIdentifier2
     [DisplayName("Reconciliation Date")]
     [IsoXmlTag("RcncltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReconciliationDate { get; init; }
+    public required ISODate ReconciliationDate { get; init; }
 
     /// <summary>
     /// Identification of the reconciliation.

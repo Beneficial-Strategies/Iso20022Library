@@ -35,5 +35,5 @@ public record TradeRecurrentQuery7
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public required DateOnly ValidUntil { get; init; }
+    public required ISODate ValidUntil { get; init; }
 }

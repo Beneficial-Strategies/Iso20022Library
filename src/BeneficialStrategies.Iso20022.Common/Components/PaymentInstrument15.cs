@@ -41,7 +41,7 @@ public record PaymentInstrument15
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PaymentDate { get; init; }
+    public ISODate? PaymentDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

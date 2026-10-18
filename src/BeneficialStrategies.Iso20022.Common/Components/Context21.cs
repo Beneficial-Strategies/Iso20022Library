@@ -42,7 +42,7 @@ public record Context21
     /// </summary>
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// Card Data Entry Mode.
@@ -77,7 +77,7 @@ public record Context21
     /// </summary>
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Deferred Delivery.

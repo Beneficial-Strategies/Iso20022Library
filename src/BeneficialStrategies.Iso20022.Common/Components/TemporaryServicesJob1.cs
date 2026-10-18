@@ -43,7 +43,7 @@ public record TemporaryServicesJob1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// Duration of the job expressed in number of days.
@@ -61,5 +61,5 @@ public record TemporaryServicesJob1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 }

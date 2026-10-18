@@ -23,7 +23,7 @@ public record UndertakingTermination3
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EffectiveDate { get; init; }
+    public required ISODate EffectiveDate { get; init; }
 
     /// <summary>
     /// Reason for the termination.

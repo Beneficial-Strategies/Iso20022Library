@@ -33,7 +33,7 @@ public record LoanData86
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EventDate { get; init; }
+    public ISODate? EventDate { get; init; }
 
     /// <summary>
     /// Termination date in the case of a full early termination of the SFT.
@@ -42,5 +42,5 @@ public record LoanData86
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 }

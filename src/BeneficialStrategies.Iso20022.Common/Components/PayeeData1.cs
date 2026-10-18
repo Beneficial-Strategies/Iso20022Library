@@ -142,7 +142,7 @@ public record PayeeData1
     [IsoId("_XwZRwyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Alias name of the payee.

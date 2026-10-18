@@ -190,7 +190,7 @@ public record VehicleRentalService4
     [IsoId("_sQu4_kh-EfCMZJtj4J7UGQ")]
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
-    public DateOnly? CheckOutDate { get; init; }
+    public ISODate? CheckOutDate { get; init; }
 
     /// <summary>
     /// Time the vehicle was picked-up by the customer.  In the case of a no-show transaction or a prepaid transaction, this contains the scheduled pickup time.
@@ -214,7 +214,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5AEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
-    public DateOnly? CheckInDate { get; init; }
+    public ISODate? CheckInDate { get; init; }
 
     /// <summary>
     /// Time when the vehicle was returned to the rental agency.

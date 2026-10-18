@@ -30,5 +30,5 @@ public record ExpectedExecutionDetails5
     [IsoId("1deacae2-46a2-49c9-91ea-04e5f33075c8")]
     [DisplayName("Expected Cash Settlement Date")]
     [IsoXmlTag("XpctdCshSttlmDt")]
-    public DateOnly? ExpectedCashSettlementDate { get; init; }
+    public ISODate? ExpectedCashSettlementDate { get; init; }
 }

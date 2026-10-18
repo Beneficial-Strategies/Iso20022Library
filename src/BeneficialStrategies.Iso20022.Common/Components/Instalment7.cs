@@ -78,7 +78,7 @@ public record Instalment7
     [IsoId("_ydRdP7ZnEfCUZfsQO4rYeA")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Cumulative amount of all the instalments.

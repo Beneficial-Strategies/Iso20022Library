@@ -94,7 +94,7 @@ public record PaymentTransaction175
     [IsoId("83e9c75d-f7a6-481c-8227-01a7e51eed22")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
-    public DateOnly? OriginalRequestedCollectionDate { get; init; }
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

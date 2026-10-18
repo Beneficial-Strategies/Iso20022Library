@@ -32,5 +32,5 @@ public record MoneyPurchaseAnnualAllowance1
     [DisplayName("Triggered Date")]
     [IsoXmlTag("TrggrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TriggeredDate { get; init; }
+    public ISODate? TriggeredDate { get; init; }
 }

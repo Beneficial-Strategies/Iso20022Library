@@ -34,7 +34,7 @@ public record UpdatedAdditionalInformation2
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? UpdateDate { get; init; }
+    public ISODate? UpdateDate { get; init; }
 
     /// <summary>
     /// Provides additional textual information.

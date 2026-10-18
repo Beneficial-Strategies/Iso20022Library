@@ -47,7 +47,7 @@ public record CardPaymentTransactionDetails25
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidityDate { get; init; }
+    public ISODate? ValidityDate { get; init; }
 
     /// <summary>
     /// Type of cardholder account used for the transaction.

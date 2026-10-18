@@ -190,7 +190,7 @@ public record FinancialInstrument112
     [IsoId("51781afb-300c-4955-9a2e-55ac9632a374")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public DateOnly? RequestedTradeDate { get; init; }
+    public ISODate? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date on which the securities were to be exchanged at the ICSD or CSD.
@@ -198,7 +198,7 @@ public record FinancialInstrument112
     [IsoId("88e8beab-0588-4907-9265-f3f901078926")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.

@@ -41,7 +41,7 @@ public record FundReferenceDataReport2
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly GeneralReferenceDate { get; init; }
+    public required ISODate GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Identification of the security.

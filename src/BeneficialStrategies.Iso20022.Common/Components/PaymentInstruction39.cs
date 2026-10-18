@@ -84,7 +84,7 @@ public record PaymentInstruction39
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly RequestedCollectionDate { get; init; }
+    public required ISODate RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.

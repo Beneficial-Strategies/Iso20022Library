@@ -23,7 +23,7 @@ public record RegisteredContractAmendment1
     [DisplayName("Amendment Date")]
     [IsoXmlTag("AmdmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly AmendmentDate { get; init; }
+    public required ISODate AmendmentDate { get; init; }
 
     /// <summary>
     /// Reference of the amendment document.
@@ -40,7 +40,7 @@ public record RegisteredContractAmendment1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// Reason for the amendment.

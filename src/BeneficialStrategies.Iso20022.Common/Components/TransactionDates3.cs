@@ -32,7 +32,7 @@ public record TransactionDates3
     [DisplayName("Trade Activity Contractual Settlement Date")]
     [IsoXmlTag("TradActvtyCtrctlSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeActivityContractualSettlementDate { get; init; }
+    public ISODate? TradeActivityContractualSettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the trade was executed.
@@ -41,7 +41,7 @@ public record TransactionDates3
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -50,7 +50,7 @@ public record TransactionDates3
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Start date of the underlying transaction, such as a treasury transaction, an investment plan.
@@ -59,7 +59,7 @@ public record TransactionDates3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// End date of the underlying transaction, such as a treasury transaction, an investment plan.
@@ -68,7 +68,7 @@ public record TransactionDates3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 
     /// <summary>
     /// Date and time of the underlying transaction.

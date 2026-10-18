@@ -145,7 +145,7 @@ public class AccountNotification26Validator : AbstractValidator<AccountNotificat
         // already `required`; no validator exists for this type, but cross-field consistency
         // with Item/Amount is enforced above (TotalAmountAndAmount1Rule/2Rule).
 
-        // ExpectedValueDate: ISODate (0..1), backed by System.DateOnly — no sub-constraints to
+        // ExpectedValueDate: ISODate (0..1), a struct that checks its own format — no sub-constraints to
         // enforce for an optional scalar beyond the presence rule above. No further rule needed.
 
         // AccountOwner, Debtor: Party50Choice_ (0..1). Both variants reviewed:

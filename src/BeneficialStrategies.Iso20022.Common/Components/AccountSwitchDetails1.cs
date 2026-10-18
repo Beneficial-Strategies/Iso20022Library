@@ -53,7 +53,7 @@ public record AccountSwitchDetails1
     [DisplayName("Switch Date")]
     [IsoXmlTag("SwtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SwitchDate { get; init; }
+    public ISODate? SwitchDate { get; init; }
 
     /// <summary>
     /// Indicates whether the account switch is a full switch or a partial switch.

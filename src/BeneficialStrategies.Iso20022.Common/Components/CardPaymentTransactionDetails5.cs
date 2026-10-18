@@ -39,7 +39,7 @@ public record CardPaymentTransactionDetails5
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidityDate { get; init; }
+    public ISODate? ValidityDate { get; init; }
 
     /// <summary>
     /// Data related to an integrated circuit card application.

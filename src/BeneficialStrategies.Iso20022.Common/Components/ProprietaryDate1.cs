@@ -33,7 +33,7 @@ public record ProprietaryDate1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly Date { get; init; }
+    public required ISODate Date { get; init; }
 
     /// <summary>
     /// Date and time in ISO format.

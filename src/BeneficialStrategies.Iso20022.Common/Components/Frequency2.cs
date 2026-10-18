@@ -30,7 +30,7 @@ public record Frequency2
     [IsoId("_a2kSg7pVEfCPZvweyV2nEg")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public required DateOnly StartDate { get; init; }
+    public required ISODate StartDate { get; init; }
 
     /// <summary>
     /// Information about when the payment arrangement will end.

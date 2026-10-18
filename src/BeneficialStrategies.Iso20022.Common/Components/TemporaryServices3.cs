@@ -126,14 +126,14 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Job End Date")]
     [IsoXmlTag("JobEndDt")]
-    public DateOnly? JobEndDate { get; init; }
+    public ISODate? JobEndDate { get; init; }
 
     /// <summary>
     /// Job Start Date.
     /// </summary>
     [DisplayName("Job Start Date")]
     [IsoXmlTag("JobStartDt")]
-    public DateOnly? JobStartDate { get; init; }
+    public ISODate? JobStartDate { get; init; }
 
     /// <summary>
     /// Miscellaneous Expenses.
@@ -175,5 +175,5 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Week Ending")]
     [IsoXmlTag("WkEndg")]
-    public DateOnly? WeekEnding { get; init; }
+    public ISODate? WeekEnding { get; init; }
 }

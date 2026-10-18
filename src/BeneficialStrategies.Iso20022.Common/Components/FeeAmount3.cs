@@ -56,7 +56,7 @@ public record FeeAmount3
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ConversionDate { get; init; }
+    public ISODate? ConversionDate { get; init; }
 
     /// <summary>
     /// Time at which the exchange rate effective.

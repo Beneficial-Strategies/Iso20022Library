@@ -134,7 +134,7 @@ public record TemporaryServices4
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-jbst")]
     [DisplayName("Job Start Date")]
     [IsoXmlTag("JobStartDt")]
-    public DateOnly? JobStartDate { get; init; }
+    public ISODate? JobStartDate { get; init; }
 
     /// <summary>
     /// Duration of the job expressed in number of days. 
@@ -150,7 +150,7 @@ public record TemporaryServices4
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-jben")]
     [DisplayName("Job End Date")]
     [IsoXmlTag("JobEndDt")]
-    public DateOnly? JobEndDate { get; init; }
+    public ISODate? JobEndDate { get; init; }
 
     /// <summary>
     /// Indicates whether or not the fee for the individual working in a temporary capacity is a flat|rate.
@@ -190,7 +190,7 @@ public record TemporaryServices4
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-wken")]
     [DisplayName("Week Ending")]
     [IsoXmlTag("WkEndg")]
-    public DateOnly? WeekEnding { get; init; }
+    public ISODate? WeekEnding { get; init; }
 
     /// <summary>
     /// Contains rate details of the temporary service charges. 

@@ -44,7 +44,7 @@ public record TransparencyDataReport15
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ReportingDate { get; init; }
+    public ISODate? ReportingDate { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.

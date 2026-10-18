@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
         [DisplayName("Expected Date")]
         [IsoXmlTag("XpctdDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ExpectedDate { get; init; }
+        public ISODate? ExpectedDate { get; init; }
 
         /// <summary>
         /// Latest date whereby the amount must be paid.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
         [DisplayName("Due Date")]
         [IsoXmlTag("DueDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? DueDate { get; init; }
+        public ISODate? DueDate { get; init; }
     }
 }

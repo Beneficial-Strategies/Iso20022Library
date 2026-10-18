@@ -94,7 +94,7 @@ public record ShippingPackage4
     [IsoId("_tIpbjUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Pickup Date")]
     [IsoXmlTag("PckpDt")]
-    public DateOnly? PickupDate { get; init; }
+    public ISODate? PickupDate { get; init; }
 
     /// <summary>
     /// Contains the time the package is picked up.
@@ -142,7 +142,7 @@ public record ShippingPackage4
     [IsoId("_tIpbmUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
-    public DateOnly? DeliveryDate { get; init; }
+    public ISODate? DeliveryDate { get; init; }
 
     /// <summary>
     /// Contains the package delivery time.

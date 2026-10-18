@@ -134,7 +134,7 @@ public record Contact5
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 
     /// <summary>
     /// Ending validity date for the contact.
@@ -143,5 +143,5 @@ public record Contact5
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidTo { get; init; }
+    public ISODate? ValidTo { get; init; }
 }

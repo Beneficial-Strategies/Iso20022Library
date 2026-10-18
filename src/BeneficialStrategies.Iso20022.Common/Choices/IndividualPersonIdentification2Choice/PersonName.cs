@@ -61,6 +61,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification2C
         [DisplayName("Birth Date")]
         [IsoXmlTag("BirthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? BirthDate { get; init; }
+        public ISODate? BirthDate { get; init; }
     }
 }

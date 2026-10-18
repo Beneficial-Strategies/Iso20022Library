@@ -54,7 +54,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX2a8wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
-    public required DateOnly InstructionDate { get; init; }
+    public required ISODate InstructionDate { get; init; }
 
     /// <summary>
     /// Date of the client protect instruction.
@@ -62,7 +62,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX268wEfCx2aBifPEdRg")]
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
-    public DateOnly? ProtectDate { get; init; }
+    public ISODate? ProtectDate { get; init; }
 
     /// <summary>
     /// Date of the cover protect instruction.
@@ -70,7 +70,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX3a8wEfCx2aBifPEdRg")]
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
-    public DateOnly? CoverProtectDate { get; init; }
+    public ISODate? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Bid price of the instruction.

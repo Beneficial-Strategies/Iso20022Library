@@ -47,7 +47,7 @@ public record InterestRateDerivative5
     [DisplayName("Underlying Swap Maturity Date")]
     [IsoXmlTag("UndrlygSwpMtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? UnderlyingSwapMaturityDate { get; init; }
+    public ISODate? UnderlyingSwapMaturityDate { get; init; }
 
     /// <summary>
     /// Populated to define the inflation index.

@@ -33,7 +33,7 @@ public record MandateRelatedInformation11
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfSignature { get; init; }
+    public ISODate? DateOfSignature { get; init; }
 
     /// <summary>
     /// Indicator notifying whether the underlying mandate is amended or not.
@@ -69,7 +69,7 @@ public record MandateRelatedInformation11
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FirstCollectionDate { get; init; }
+    public ISODate? FirstCollectionDate { get; init; }
 
     /// <summary>
     /// Date of the final collection of a direct debit as per the mandate.
@@ -78,7 +78,7 @@ public record MandateRelatedInformation11
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FinalCollectionDate { get; init; }
+    public ISODate? FinalCollectionDate { get; init; }
 
     /// <summary>
     /// Regularity with which direct debit instructions are to be created and processed.

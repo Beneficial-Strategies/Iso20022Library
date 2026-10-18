@@ -23,7 +23,7 @@ public record AccountStatementDetails1
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TransactionDate { get; init; }
+    public required ISODate TransactionDate { get; init; }
 
     /// <summary>
     /// True indicates transaction is pending.
@@ -43,7 +43,7 @@ public record AccountStatementDetails1
     [DisplayName("Transaction Posting Date")]
     [IsoXmlTag("TxPstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransactionPostingDate { get; init; }
+    public ISODate? TransactionPostingDate { get; init; }
 
     /// <summary>
     /// Amount of the transaction.

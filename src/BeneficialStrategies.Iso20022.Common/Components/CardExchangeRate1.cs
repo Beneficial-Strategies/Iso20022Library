@@ -38,7 +38,7 @@ public record CardExchangeRate1
     [IsoId("_feWfNSH1EfCkq6-p7S3J1Q")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// The time the exchange rate data is effective.

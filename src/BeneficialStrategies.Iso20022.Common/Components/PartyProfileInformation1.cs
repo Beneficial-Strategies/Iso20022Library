@@ -80,7 +80,7 @@ public record PartyProfileInformation1
     [DisplayName("Checking Date")]
     [IsoXmlTag("ChckngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CheckingDate { get; init; }
+    public ISODate? CheckingDate { get; init; }
 
     /// <summary>
     /// Specifies how frequently the check is performed.
@@ -97,7 +97,7 @@ public record PartyProfileInformation1
     [DisplayName("Next Revision Date")]
     [IsoXmlTag("NxtRvsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? NextRevisionDate { get; init; }
+    public ISODate? NextRevisionDate { get; init; }
 
     /// <summary>
     /// Limits between which a person&apos;s salary is estimated.

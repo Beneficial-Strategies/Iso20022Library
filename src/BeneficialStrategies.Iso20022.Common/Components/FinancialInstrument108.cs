@@ -166,7 +166,7 @@ public record FinancialInstrument108
     [IsoId("060082ef-f7af-47ab-a1b8-3481b8daf65b")]
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
-    public DateOnly? RequestedTransferDate { get; init; }
+    public ISODate? RequestedTransferDate { get; init; }
 
     /// <summary>
     /// Date to be used as the trade date when securities are settled through an ICSD or CSD.
@@ -174,7 +174,7 @@ public record FinancialInstrument108
     [IsoId("4f02462b-d70a-4718-a581-3931d0eed4aa")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public DateOnly? RequestedTradeDate { get; init; }
+    public ISODate? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged at the ICSD or CSD.
@@ -182,7 +182,7 @@ public record FinancialInstrument108
     [IsoId("1c5ab094-c3b7-4d57-be02-9b8d465be950")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

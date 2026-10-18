@@ -32,7 +32,7 @@ public record LoanContractTranche1
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ExpectedDate { get; init; }
+    public required ISODate ExpectedDate { get; init; }
 
     /// <summary>
     /// Amount of the tranche as defined in the loan contract.
@@ -49,7 +49,7 @@ public record LoanContractTranche1
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DueDate { get; init; }
+    public ISODate? DueDate { get; init; }
 
     /// <summary>
     /// Loan tranche duration in a coded form.

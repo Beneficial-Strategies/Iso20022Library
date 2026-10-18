@@ -102,7 +102,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdNz1-EfCQAqQ9lolFUg")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Amount of the first payment when different from the subsequent payments.

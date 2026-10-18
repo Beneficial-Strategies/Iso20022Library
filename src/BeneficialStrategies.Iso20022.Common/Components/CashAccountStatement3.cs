@@ -22,7 +22,7 @@ public record CashAccountStatement3
     [IsoId("_dFQq4OTXEfC01pKpYIyMTA")]
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
-    public required DateOnly SystemDate { get; init; }
+    public required ISODate SystemDate { get; init; }
 
     /// <summary>
     /// Provides information on the actual change occurred to the cash account.

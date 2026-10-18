@@ -76,5 +76,5 @@ public record Balance28
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BalanceDate { get; init; }
+    public ISODate? BalanceDate { get; init; }
 }

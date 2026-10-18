@@ -22,7 +22,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-stdt")]
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
-    public DateOnly? StartDateTime { get; init; }
+    public ISODate? StartDateTime { get; init; }
 
     /// <summary>
     /// Describes the period (such as peak or off peak) of the phone call.

@@ -134,7 +134,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ValidFrom { get; init; }
+        public ISODate? ValidFrom { get; init; }
 
         /// <summary>
         /// Ending validity date for the contact.
@@ -143,6 +143,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid To")]
         [IsoXmlTag("VldTo")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ValidTo { get; init; }
+        public ISODate? ValidTo { get; init; }
     }
 }

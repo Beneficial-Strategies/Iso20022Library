@@ -60,7 +60,7 @@ public record ReuseDataReportNew3
     [DisplayName("Event Day")]
     [IsoXmlTag("EvtDay")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDay { get; init; }
+    public required ISODate EventDay { get; init; }
 
     /// <summary>
     /// Information on funding sources used to finance margin loans.

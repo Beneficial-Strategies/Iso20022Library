@@ -31,7 +31,7 @@ public record OpeningConditions1
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValuationDate { get; init; }
+    public required ISODate ValuationDate { get; init; }
 
     /// <summary>
     /// Specifies the rate source associated with the non deliverable trade.

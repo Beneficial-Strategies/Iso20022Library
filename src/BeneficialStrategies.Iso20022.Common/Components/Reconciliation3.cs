@@ -34,7 +34,7 @@ public record Reconciliation3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.  Refer to ISO8583:2003 Field 29

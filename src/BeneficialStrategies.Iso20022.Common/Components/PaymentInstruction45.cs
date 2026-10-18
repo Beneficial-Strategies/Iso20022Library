@@ -134,7 +134,7 @@ public record PaymentInstruction45
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public required DateOnly RequestedCollectionDate { get; init; }
+    public required ISODate RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.

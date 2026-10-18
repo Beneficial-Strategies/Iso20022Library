@@ -42,7 +42,7 @@ public record ShortPaymentIdentification3
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly InterbankSettlementDate { get; init; }
+    public required ISODate InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

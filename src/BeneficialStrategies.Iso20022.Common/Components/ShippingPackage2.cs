@@ -41,7 +41,7 @@ public record ShippingPackage2
     [DisplayName("Pickup Date")]
     [IsoXmlTag("PckpDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PickupDate { get; init; }
+    public ISODate? PickupDate { get; init; }
 
     /// <summary>
     /// Contains the time the package is picked up.

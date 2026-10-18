@@ -38,7 +38,7 @@ public record BeneficiaryDrawdown2
     [IsoId("fbeef981-e754-42c2-8686-5a74c48e8783")]
     [DisplayName("Date Of Death")]
     [IsoXmlTag("DtOfDth")]
-    public DateOnly? DateOfDeath { get; init; }
+    public ISODate? DateOfDeath { get; init; }
 
     /// <summary>
     /// Date on which the new beneficiary was designated.
@@ -46,7 +46,7 @@ public record BeneficiaryDrawdown2
     [IsoId("ee24e9c6-da87-4795-8174-de46d3e404c9")]
     [DisplayName("Date Designated To Beneficiary")]
     [IsoXmlTag("DtDsgntdToBnfcry")]
-    public DateOnly? DateDesignatedToBeneficiary { get; init; }
+    public ISODate? DateDesignatedToBeneficiary { get; init; }
 
     /// <summary>
     /// Additional information about the recipient of the drawdown.

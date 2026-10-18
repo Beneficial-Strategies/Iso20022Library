@@ -110,5 +110,5 @@ public record OriginalDataElements6
     [IsoId("_KW-qkCH6EfCkq6-p7S3J1Q")]
     [DisplayName("Deferred Settlement Date")]
     [IsoXmlTag("DfrrdSttlmDt")]
-    public DateOnly? DeferredSettlementDate { get; init; }
+    public ISODate? DeferredSettlementDate { get; init; }
 }

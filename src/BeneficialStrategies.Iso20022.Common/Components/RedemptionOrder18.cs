@@ -94,7 +94,7 @@ public record RedemptionOrder18
     [IsoId("a7578a8b-d50b-4777-92a9-df6fa5482fdd")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

@@ -23,7 +23,7 @@ public record RepurchaseAgreement2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly MaturityDate { get; init; }
+    public required ISODate MaturityDate { get; init; }
 
     /// <summary>
     /// Specifies the repurchase price at maturity of the repo.

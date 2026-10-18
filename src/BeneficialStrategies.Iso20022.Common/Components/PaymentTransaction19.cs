@@ -31,7 +31,7 @@ public record PaymentTransaction19
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
     /// Choice between types of payment instrument, ie, credit transfer, cheque, payment card, investment cash account or direct debit.

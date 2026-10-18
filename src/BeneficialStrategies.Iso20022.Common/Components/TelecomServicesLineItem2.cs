@@ -23,7 +23,7 @@ public record TelecomServicesLineItem2
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDateTime { get; init; }
+    public ISODate? StartDateTime { get; init; }
 
     /// <summary>
     /// Describes the period (such as peak or off peak) of the phone call.

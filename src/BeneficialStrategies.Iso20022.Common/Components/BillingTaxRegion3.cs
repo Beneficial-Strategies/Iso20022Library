@@ -42,7 +42,7 @@ public record BillingTaxRegion3
     /// </summary>
     [DisplayName("Point Date")]
     [IsoXmlTag("PtDt")]
-    public DateOnly? PointDate { get; init; }
+    public ISODate? PointDate { get; init; }
 
     /// <summary>
     /// Region Name.

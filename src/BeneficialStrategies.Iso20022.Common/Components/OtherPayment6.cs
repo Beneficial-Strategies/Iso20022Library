@@ -28,7 +28,7 @@ public record OtherPayment6
     /// </summary>
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
-    public DateOnly? PaymentDate { get; init; }
+    public ISODate? PaymentDate { get; init; }
 
     /// <summary>
     /// Payment Payer.

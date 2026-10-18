@@ -31,7 +31,7 @@ public record ReportData1
     [IsoId("_SXk5YNp-Ed-ak6NoX_4Aeg_628613877")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Date and time on which the report is generated.

@@ -41,7 +41,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Approved Date")]
     [IsoXmlTag("ApprvdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ApprovedDate { get; init; }
+    public ISODate? ApprovedDate { get; init; }
 
     /// <summary>
     /// Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.
@@ -50,7 +50,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Match Date")]
     [IsoXmlTag("MtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MatchDate { get; init; }
+    public ISODate? MatchDate { get; init; }
 
     /// <summary>
     /// Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system.
@@ -59,7 +59,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Active Until Date")]
     [IsoXmlTag("ActvUntilDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ActiveUntilDate { get; init; }
+    public ISODate? ActiveUntilDate { get; init; }
 
     /// <summary>
     /// Start date and end date of the service level agreement.

@@ -112,5 +112,5 @@ public record InstrumentLeg7
     /// </summary>
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
-    public required DateOnly LegValueDate { get; init; }
+    public required ISODate LegValueDate { get; init; }
 }

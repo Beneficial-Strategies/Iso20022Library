@@ -414,7 +414,7 @@ public record Context26
     [IsoId("_xVmHuyduEfCJ9IDAfAjwLA")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -422,7 +422,7 @@ public record Context26
     [IsoId("_xVmHwyduEfCJ9IDAfAjwLA")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Contains network or scheme calculated maximum processing date when the clearing will occur.

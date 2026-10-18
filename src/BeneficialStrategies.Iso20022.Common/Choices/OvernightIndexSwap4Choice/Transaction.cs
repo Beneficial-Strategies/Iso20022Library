@@ -109,7 +109,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap4Choice
         [DisplayName("Start Date")]
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly StartDate { get; init; }
+        public required ISODate StartDate { get; init; }
 
         /// <summary>
         /// Last date of the term over which the compounded overnight rate is calculated.
@@ -118,7 +118,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap4Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly MaturityDate { get; init; }
+        public required ISODate MaturityDate { get; init; }
 
         /// <summary>
         /// Fixed rate used for the calculation of the overnight index swap pay out.

@@ -115,7 +115,7 @@ public record InvestmentAccountOwnershipInformation16
     [DisplayName("FATCA Reporting Date")]
     [IsoXmlTag("FATCARptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FATCAReportingDate { get; init; }
+    public ISODate? FATCAReportingDate { get; init; }
 
     /// <summary>
     /// Type of Common Reporting Standard (CRS) form submitted by the investor or account owner.
@@ -140,7 +140,7 @@ public record InvestmentAccountOwnershipInformation16
     [DisplayName("CRS Reporting Date")]
     [IsoXmlTag("CRSRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CRSReportingDate { get; init; }
+    public ISODate? CRSReportingDate { get; init; }
 
     /// <summary>
     /// Alternative identification, for example, national registration identification number, passport number, tax identification number. This may be an account number used to further identify the beneficial owner, for example, a Central Provident Fund (CFP) account as required for Singapore.

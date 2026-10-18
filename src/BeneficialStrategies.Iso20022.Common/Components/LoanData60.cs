@@ -23,7 +23,7 @@ public record LoanData60
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Unique trade Identifier (UTI) as agreed with the other counterparty.

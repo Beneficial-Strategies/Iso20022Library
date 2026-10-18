@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
         [DisplayName("Date Of Signature")]
         [IsoXmlTag("DtOfSgntr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? DateOfSignature { get; init; }
+        public ISODate? DateOfSignature { get; init; }
 
         /// <summary>
         /// Date on which the credit transfer mandate has been verified.
@@ -68,7 +68,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
         [DisplayName("First Payment Date")]
         [IsoXmlTag("FrstPmtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? FirstPaymentDate { get; init; }
+        public ISODate? FirstPaymentDate { get; init; }
 
         /// <summary>
         /// Date of the final payment of a recurrent credit transfer as per the mandate.
@@ -77,7 +77,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
         [DisplayName("Final Payment Date")]
         [IsoXmlTag("FnlPmtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? FinalPaymentDate { get; init; }
+        public ISODate? FinalPaymentDate { get; init; }
 
         /// <summary>
         /// Regularity with which credit transfer instructions are to be created and processed.

@@ -148,7 +148,7 @@ public record TransactionContext9
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -157,7 +157,7 @@ public record TransactionContext9
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Additional transaction context data.

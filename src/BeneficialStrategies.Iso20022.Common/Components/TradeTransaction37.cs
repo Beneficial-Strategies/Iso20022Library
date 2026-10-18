@@ -134,7 +134,7 @@ public record TradeTransaction37
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EffectiveDate { get; init; }
+    public ISODate? EffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date at which obligations under the derivative transaction stop being effective, as included in the confirmation.|
@@ -146,7 +146,7 @@ public record TradeTransaction37
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Indicates the effective date of the early termination of the reported derivative transaction.
@@ -155,7 +155,7 @@ public record TradeTransaction37
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EarlyTerminationDate { get; init; }
+    public ISODate? EarlyTerminationDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date, as per the contract, by which all transfer of cash or assets should take place and the counterparties should no longer have any outstanding obligations to each other.||
@@ -164,7 +164,7 @@ public record TradeTransaction37
     [IsoId("_Df6g33hQEeu3kecHd7QKUQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SimpleValueList<DateOnly> SettlementDate { get; init; } = [];
+    public SimpleValueList<ISODate> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.
