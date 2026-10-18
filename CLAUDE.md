@@ -270,18 +270,28 @@ The files are maintained directly (see "How the code is maintained" above). Clau
 ### Directory Structure
 
 ```
-src/BeneficialStrategies.Iso20022.Common/
-├── Framework/           # Hand-written base interfaces and helpers
+src/BeneficialStrategies.Iso20022.Primitives/   # no reference to Common; same root namespace
+├── SimpleTypes/         # Primitive data types (structs)
+├── Codesets/            # Enums (code sets) and external code structs
+├── Amounts/             # Amount types
+├── ExternalSchema/      # External schema references (empty markers)
+├── UserDefined/         # User-defined content placeholders (empty markers)
+├── Metadata/            # Attribute definitions
+└── Framework/           # IIso* interfaces, IsoSimpleType attributes, Iso20022FormatException, and the JSON converters the types name
+
+src/BeneficialStrategies.Iso20022.Common/       # references Primitives
+├── Framework/           # Serializers, the registry, the reader, value lists, IOuterRecord
 ├── Components/          # Message components (12,653 types)
 ├── Choices/             # Polymorphic choice types
-├── Codesets/            # Enums (code sets) (3,774 types)
-├── Amounts/             # Amount types
-├── ExternalSchema/      # External schema references
-├── UserDefined/         # User-defined content placeholders
-├── Metadata/            # Attribute definitions
 └── MessageDefinitions/  # Top-level message type files
     └── [business areas]/    # 36 business area folders (pain, pacs, camt, seev, etc.)
+
+src/Shared/PrimitiveAliases.cs   # the Iso* aliases of the primitives, linked into every project that names them
 ```
+
+The primitives live in their own assembly so that an implementer can take them without the records. Nothing in `Primitives` may
+reference `Common`: build `Primitives` alone to check. Their tests are in `BeneficialStrategies.Iso20022.Primitives.Tests` (which
+references `Common` only for `Iso20022JsonSerializerOptions`). A new alias goes in `src/Shared/PrimitiveAliases.cs`.
 
 ### Business Area Abbreviations
 
@@ -506,6 +516,7 @@ in the base contract test and add their own test methods alongside it.
 All NuGet packages produced by Beneficial Strategies that depend on each other live in this
 single repository. The planned packages include (at minimum):
 
+- `BeneficialStrategies.Iso20022.Primitives` — the primitive data types, code sets and external codes (no records; `BeneficialStrategies.Iso20022` depends on it)
 - `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
 - `BeneficialStrategies.Iso20022.MassTransit.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages (named with the engine in the package id, not just `.Sagas`, since an NServiceBus-based sagas package is a plausible future sibling and this disambiguates on NuGet and in code from day one)
 - `BeneficialStrategies.Iso20022.MassTransit` (planned, not yet started) — a thin adapter package
@@ -534,7 +545,7 @@ single repository. The planned packages include (at minimum):
 - **Simpler developer experience** — one clone, one `dotnet build`, everything works.
 
 Each package retains its own `.csproj` with its own `<PackageId>` and `<Version>`. CI packs and
-publishes them in dependency order (ISO 20022 library first, then Sagas).
+publishes them in dependency order (Primitives, then the ISO 20022 library, then FluentValidation).
 
 ### Code generation for framework-specific siblings — considered, declined for now
 

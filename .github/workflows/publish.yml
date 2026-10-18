@@ -22,6 +22,14 @@ jobs:
       # frameworks via downloaded reference packs, no need to install multiple SDK versions
       # side by side just to pack. See src/global.json and CLAUDE.md "Target Framework Policy".
 
+      # Primitives first: Common's ProjectReference to it becomes a PackageReference pinned to the same Version.
+      - name: Build and pack (BeneficialStrategies.Iso20022.Primitives)
+        run: |
+          cd src
+          dotnet pack BeneficialStrategies.Iso20022.Primitives \
+            -c Release \
+            --output ./nupkg
+
       - name: Build and pack (BeneficialStrategies.Iso20022)
         run: |
           cd src

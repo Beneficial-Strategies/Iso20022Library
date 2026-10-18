@@ -26,9 +26,10 @@ from pathlib import Path
 MAJOR_LABELS = {"breaking-change"}
 MINOR_LABELS = {"enhancement", "message-support", "snapshot-sync"}
 SKIP_LABELS = {"no-release-notes"}
-AREA_PACKAGES = {"area:core": {"core"}, "area:validation": {"validation"}}   # no area label: every published package
+AREA_PACKAGES = {"area:core": {"core"}, "area:primitives": {"primitives"}, "area:validation": {"validation"}}   # no area label: every published package
 IGNORED_AREAS = {"area:sagas"}                                               # not published
 NOTE_FILES = {
+    "primitives": "src/BeneficialStrategies.Iso20022.Primitives/release-notes.txt",
     "core": "src/BeneficialStrategies.Iso20022.Common/release-notes.txt",
     "validation": "src/BeneficialStrategies.Iso20022.FluentValidation/release-notes.txt",
 }
@@ -122,8 +123,7 @@ def render_block(version, entries, package):
     mine = [e for e in entries if package in e["packages"]]
     lines = [version]
     if not mine:
-        other = "validators" if package == "core" else "message model"
-        lines.append(f"    No changes to this package's {'message model' if package == 'core' else 'validators'}; released in lockstep with the {other}.")
+        lines.append("    No changes to this package; released in lockstep with the others.")
     for key, heading in CATEGORIES:
         for e in (x for x in mine if x["category"] == key):
             text = e["text"].rstrip(".")
