@@ -484,6 +484,15 @@ as before.
 | JSON | `[JsonConverter(typeof(Iso20022ExternalCodeJsonConverter<T>))]` on class | Same converter, generic over T | Same converter |
 | Error | `Iso20022FormatException` from ctor → wrapped as `JsonException` / `InvalidOperationException` | ← same | ← same |
 
+#### Equality never exceeds the wire text
+
+A primitive's equality (`Equals`, `==`, `GetHashCode`) must not be finer than what its serialized form preserves: two values
+are equal if and only if they are written as the same text, or the type is coarser than its text on purpose (a `decimal`
+reads `1.0` and `1.00` as one number). A type must not keep state that the text drops, such as a timezone for a format that has no
+timezone, because two values would be unequal yet write identically. `ISOTime` and `ISODateTime` carry a timezone because
+their formats include one; `ISODate`'s format is `YYYY-MM-DD`, so it has none and a text with a timezone is refused.
+`SimpleValueNativeScalarContractTests` states the rule as a test.
+
 #### Contract Test Registration
 
 Every `IIsoSimpleValue<T>` type must have an entry in the contract test data source in

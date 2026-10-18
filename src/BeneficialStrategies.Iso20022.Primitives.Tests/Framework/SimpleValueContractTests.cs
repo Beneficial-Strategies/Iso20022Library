@@ -1916,6 +1916,84 @@ public abstract class SimpleValueCompositeIntContractTests<TStruct>
 
 // ── Meta-test: every IIsoSimpleValue<T> type must have a concrete test class ──
 
+// ── Native value whose every instance is valid, with a wire text of its own ─────
+
+/// <summary>
+/// Contract for a struct over a native value that is always valid (a <c>DateOnly</c>), read from and written as one lexical
+/// form, with no timezone or other extra state. It also holds the rule that equality is never finer than the wire text: two values
+/// are equal if and only if they are written as the same text.
+/// </summary>
+/// <typeparam name="TStruct">The primitive struct under test.</typeparam>
+/// <typeparam name="TValue">The native value type.</typeparam>
+public abstract class SimpleValueNativeScalarContractTests<TStruct, TValue>
+    where TStruct : struct, IIsoSimpleValue<TValue>, IEquatable<TStruct>
+    where TValue : struct
+{
+    /// <summary>A native value.</summary>
+    protected abstract TValue ValidNativeSample { get; }
+
+    /// <summary>The wire text of <see cref="ValidNativeSample"/>.</summary>
+    protected abstract string ValidNativeSampleWire { get; }
+
+    /// <summary>A native value different from <see cref="ValidNativeSample"/>.</summary>
+    protected abstract TValue OtherNativeSample { get; }
+
+    /// <summary>The wire text of <see cref="OtherNativeSample"/>.</summary>
+    protected abstract string OtherNativeSampleWire { get; }
+
+    private static TStruct FromNative(TValue v) =>
+        (TStruct)(typeof(TStruct).GetConstructor([typeof(TValue)])?.Invoke([v])
+            ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a ({typeof(TValue).Name}) constructor."));
+
+    private static TStruct FromWire(string s) =>
+        (TStruct)(typeof(TStruct).GetConstructor([typeof(string)])?.Invoke([s])
+            ?? throw new InvalidOperationException($"{typeof(TStruct).Name} is missing a (string) constructor."));
+
+    [Fact]
+    public void NativeAndWireConstruction_AgreeAndWriteTheWireText()
+    {
+        var native = FromNative(ValidNativeSample);
+        var wire = FromWire(ValidNativeSampleWire);
+        Assert.Equal(ValidNativeSample, native.Value);
+        Assert.Equal(native, wire);
+        Assert.Equal(ValidNativeSampleWire, native.ToString());
+        Assert.Equal(ValidNativeSampleWire, wire.ToString());
+    }
+
+    [Fact]
+    public void WireConstruction_NotTheLexicalForm_ThrowsFormatException()
+    {
+        var ex = Assert.Throws<TargetInvocationException>(() => typeof(TStruct).GetConstructor([typeof(string)])!.Invoke(["not-a-value"]));
+        Assert.IsType<Iso20022FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void EqualityIsNeverFinerThanTheWireText()
+    {
+        var a = FromNative(ValidNativeSample);
+        var other = FromNative(OtherNativeSample);
+
+        // the same wire text is the same value ...
+        Assert.True(a.Equals(FromWire(ValidNativeSampleWire)));
+        Assert.Equal(a.GetHashCode(), FromWire(ValidNativeSampleWire).GetHashCode());
+
+        // ... and values that are not equal are written differently
+        Assert.False(a.Equals(other));
+        Assert.NotEqual(ValidNativeSampleWire, OtherNativeSampleWire);
+        Assert.Equal(OtherNativeSampleWire, other.ToString());
+    }
+
+    [Fact]
+    public void JsonWritesTheWireTextAndReadsItBack()
+    {
+        var instance = FromNative(ValidNativeSample);
+        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        Assert.Equal($"\"{ValidNativeSampleWire}\"", json);
+        Assert.Equal(instance, JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+        Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<TStruct>("\"not-a-value\"", Iso20022JsonSerializerOptions.Default));
+    }
+}
+
 /// <summary>
 /// Verifies that every <see cref="IIsoSimpleValue{T}"/> type in the production assembly
 /// has a corresponding concrete subclass of <see cref="SimpleValueContractTests{TStruct,TValue}"/>
