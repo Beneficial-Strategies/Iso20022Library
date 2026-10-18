@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType12Choice
     /// </summary>
     [IsoId("_ozHvw_YREd-STaetCa3CBw")]
     [DisplayName("Code")]
-    public record Code : FractionDispositionType12Choice_
+    public partial record Code : FractionDispositionType12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

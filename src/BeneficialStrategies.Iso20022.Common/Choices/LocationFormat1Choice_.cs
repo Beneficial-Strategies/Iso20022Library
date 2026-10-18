@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RXD3l9p-Ed-ak6NoX_4Aeg_-341096000")]
     [DisplayName("Location Format 1 Choice")]
-    public abstract record LocationFormat1Choice_ { }
+    public abstract partial record LocationFormat1Choice_ { }
 }

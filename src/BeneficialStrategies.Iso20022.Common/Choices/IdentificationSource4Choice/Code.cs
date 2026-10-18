@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource4Choice
     /// </summary>
     [IsoId("_uPv-YggWEeCVlvYcV4HKqQ")]
     [DisplayName("Code")]
-    public record Code : IdentificationSource4Choice_
+    public partial record Code : IdentificationSource4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

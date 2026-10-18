@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ro8Rw9p-Ed-ak6NoX_4Aeg_1933759381")]
     [DisplayName("Share Ranking 1 Format Choice")]
-    public abstract record ShareRanking1FormatChoice_ { }
+    public abstract partial record ShareRanking1FormatChoice_ { }
 }

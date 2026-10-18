@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat12Choice
     [IsoId("_KUd0GxuyEeyhRdHRjakS2w")]
     [DisplayName("Part Way Period Units")]
     [IsoXmlTag("PartWayPrdUnits")]
-    public record PartWayPeriodUnits : BalanceFormat12Choice_
+    public partial record PartWayPeriodUnits : BalanceFormat12Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

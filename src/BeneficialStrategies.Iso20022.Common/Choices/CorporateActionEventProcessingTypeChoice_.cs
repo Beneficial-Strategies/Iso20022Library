@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q4g6aNp-Ed-ak6NoX_4Aeg_944669894")]
     [DisplayName("Corporate Action Event Processing Type Choice")]
-    public abstract record CorporateActionEventProcessingTypeChoice_ { }
+    public abstract partial record CorporateActionEventProcessingTypeChoice_ { }
 }

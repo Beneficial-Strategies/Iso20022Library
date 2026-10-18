@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption13Choice
     [IsoId("_wyvtMQrAEeGFLZ_5tFfOnw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionOption13Choice_
+    public partial record Proprietary : CorporateActionOption13Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

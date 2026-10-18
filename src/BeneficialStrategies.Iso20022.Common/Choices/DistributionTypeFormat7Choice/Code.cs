@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionTypeFormat7Choice
     /// </summary>
     [IsoId("_4xLzIUEFEeWVgfuHGaKtRQ")]
     [DisplayName("Code")]
-    public record Code : DistributionTypeFormat7Choice_
+    public partial record Code : DistributionTypeFormat7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

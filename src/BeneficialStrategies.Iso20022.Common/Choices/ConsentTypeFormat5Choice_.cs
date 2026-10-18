@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5Whf5KQEeWHWpTQn1FFVg")]
     [DisplayName("Consent Type Format 5 Choice")]
-    public abstract record ConsentTypeFormat5Choice_ { }
+    public abstract partial record ConsentTypeFormat5Choice_ { }
 }

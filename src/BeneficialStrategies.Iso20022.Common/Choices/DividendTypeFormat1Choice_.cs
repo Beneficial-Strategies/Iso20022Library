@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q36dctp-Ed-ak6NoX_4Aeg_-2059778608")]
     [DisplayName("Dividend Type Format 1 Choice")]
-    public abstract record DividendTypeFormat1Choice_ { }
+    public abstract partial record DividendTypeFormat1Choice_ { }
 }

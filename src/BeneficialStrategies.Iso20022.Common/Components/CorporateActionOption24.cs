@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x4ldAezdEd-Z2q4-Bbm3ZA")]
 [DisplayName("Corporate Action Option")]
-public record CorporateActionOption24
+public partial record CorporateActionOption24
 {
     /// <summary>
     /// Number identifying the available corporate action options.

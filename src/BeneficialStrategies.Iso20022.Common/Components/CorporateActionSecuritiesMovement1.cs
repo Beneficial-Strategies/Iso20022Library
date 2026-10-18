@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_UIYIptp-Ed-ak6NoX_4Aeg_1464286927")]
 [DisplayName("Corporate Action Securities Movement")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record CorporateActionSecuritiesMovement1
+public partial record CorporateActionSecuritiesMovement1
 {
     /// <summary>
     /// Date and time of the posting.

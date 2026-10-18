@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus7Choice
     /// Pending.
     /// </summary>
     [DisplayName("Pending")]
-    public record Pending : EventProcessingStatus7Choice_
+    public partial record Pending : EventProcessingStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

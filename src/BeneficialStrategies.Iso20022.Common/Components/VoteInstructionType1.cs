@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ScucEK4JEemG7MmivSuE5g")]
 [DisplayName("Vote Instruction Type")]
-public record VoteInstructionType1
+public partial record VoteInstructionType1
 {
     /// <summary>
     /// Vote option allowed at the resolution level.

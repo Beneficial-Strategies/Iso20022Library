@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice
     /// </summary>
     [IsoId("_vMYu9fNBEeqRfth943bvEA")]
     [DisplayName("Per Attendee")]
-    public record PerAttendee : IncentivePremiumType2Choice_
+    public partial record PerAttendee : IncentivePremiumType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

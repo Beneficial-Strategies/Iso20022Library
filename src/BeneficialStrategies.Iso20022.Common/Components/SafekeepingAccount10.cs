@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Kgz_FfNmEeqRfth943bvEA")]
 [DisplayName("Safekeeping Account")]
-public record SafekeepingAccount10
+public partial record SafekeepingAccount10
 {
     /// <summary>
     /// Unique and unambiguous identification of the securities account between the account owner and the account servicer.

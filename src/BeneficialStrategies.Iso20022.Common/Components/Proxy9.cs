@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fWW5K_M7EeqRfth943bvEA")]
 [DisplayName("Proxy")]
-public record Proxy9
+public partial record Proxy9
 {
     /// <summary>
     /// Type of proxy.

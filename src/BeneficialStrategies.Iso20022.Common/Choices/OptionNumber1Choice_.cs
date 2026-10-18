@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(OptionNumber1Choice.Code), nameof(OptionNumber1Choice.Code))]
     [IsoId("_Q1O84dp-Ed-ak6NoX_4Aeg_-1276805181")]
     [DisplayName("Option Number 1 Choice")]
-    public abstract record OptionNumber1Choice_ { }
+    public abstract partial record OptionNumber1Choice_ { }
 }

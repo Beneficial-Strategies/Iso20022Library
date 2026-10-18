@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType108Choic
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : CorporateActionEventType108Choice_
+    public partial record Code : CorporateActionEventType108Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

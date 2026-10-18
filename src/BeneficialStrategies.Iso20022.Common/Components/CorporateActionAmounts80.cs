@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oFtI0KNVEfC9id413JK-Ig")]
 [DisplayName("Corporate Action Amounts80")]
-public record CorporateActionAmounts80
+public partial record CorporateActionAmounts80
 {
     /// <summary>
     /// For partial prerefunding events, amount that the Issuer is refunding to an earlier maturity date which is guaranteed and deposited in escrow.

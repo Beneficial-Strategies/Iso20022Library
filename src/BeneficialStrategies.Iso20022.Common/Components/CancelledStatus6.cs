@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tVgDcZzmEe-DHYbvdRjdbA")]
 [DisplayName("Cancelled Status6")]
-public record CancelledStatus6
+public partial record CancelledStatus6
 {
     /// <summary>
     /// Cancelled Quantity.

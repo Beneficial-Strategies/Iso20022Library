@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus4Choice
     [IsoId("_RCpGx9p-Ed-ak6NoX_4Aeg_-1261069059")]
     [DisplayName("Rejection Status")]
     [IsoXmlTag("RjctnSts")]
-    public record RejectionStatus : InstructionStatus4Choice_
+    public partial record RejectionStatus : InstructionStatus4Choice_
     {
         /// <summary>
         /// Reason advising the rejection of the instruction.

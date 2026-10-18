@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus12Choice
     /// Processing Status.
     /// </summary>
     [DisplayName("Processing Status")]
-    public record ProcessingStatus : InstructionStatus12Choice_
+    public partial record ProcessingStatus : InstructionStatus12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

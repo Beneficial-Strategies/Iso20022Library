@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PcEnwVxyEe6fgZt44_IqFA")]
 [DisplayName("Vote20")]
-public record Vote20
+public partial record Vote20
 {
     /// <summary>
     /// Issuer Label.

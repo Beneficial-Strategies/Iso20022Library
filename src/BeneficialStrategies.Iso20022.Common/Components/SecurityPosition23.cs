@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6o_TuY-9Ee-COKgew96POA")]
 [DisplayName("Security Position23")]
-public record SecurityPosition23
+public partial record SecurityPosition23
 {
     /// <summary>
     /// Financial Instrument Identification.

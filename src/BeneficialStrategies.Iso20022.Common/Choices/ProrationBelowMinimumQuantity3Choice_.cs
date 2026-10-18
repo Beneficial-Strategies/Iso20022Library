@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProrationBelowMinimumQuantity3Choice.Proprietary))]
     [JsonDerivedType(typeof(ProrationBelowMinimumQuantity3Choice.Code))]
     [JsonDerivedType(typeof(ProrationBelowMinimumQuantity3Choice.Proprietary))]
-    public abstract record ProrationBelowMinimumQuantity3Choice_
+    public abstract partial record ProrationBelowMinimumQuantity3Choice_
     {
     }
 }

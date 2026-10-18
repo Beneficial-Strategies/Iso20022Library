@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c7P-kK-4EemJ1NnLPsTFaw")]
     [DisplayName("Vote 13 Choice")]
-    public abstract record Vote13Choice_ { }
+    public abstract partial record Vote13Choice_ { }
 }

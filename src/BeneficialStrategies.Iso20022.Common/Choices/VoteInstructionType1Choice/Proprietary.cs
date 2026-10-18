@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType1Choice
     [IsoId("_fOSNkK4KEemG7MmivSuE5g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : VoteInstructionType1Choice_
+    public partial record Proprietary : VoteInstructionType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

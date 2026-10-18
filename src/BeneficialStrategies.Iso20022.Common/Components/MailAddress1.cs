@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__InD0BrmEeyhRdHRjakS2w")]
 [DisplayName("Mail Address")]
-public record MailAddress1
+public partial record MailAddress1
 {
     /// <summary>
     /// Physical mail address for correspondance.

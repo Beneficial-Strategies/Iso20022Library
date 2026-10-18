@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_c5WhE5KQEeWHWpTQn1FFVg")]
     [DisplayName("Taxable Income Per Share Calculated Format 4 Choice")]
-    public abstract record TaxableIncomePerShareCalculatedFormat4Choice_ { }
+    public abstract partial record TaxableIncomePerShareCalculatedFormat4Choice_ { }
 }

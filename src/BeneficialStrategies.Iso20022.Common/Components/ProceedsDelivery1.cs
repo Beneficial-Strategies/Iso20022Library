@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UK6fTNp-Ed-ak6NoX_4Aeg_-1336818380")]
 [DisplayName("Proceeds Delivery")]
-public record ProceedsDelivery1
+public partial record ProceedsDelivery1
 {
     /// <summary>
     /// identification of the securities account to which the securities have to be delivered.

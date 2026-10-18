@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_74Va0Qx0EeKMmbvHOtE4SA")]
 [DisplayName("Corporate Action Movement Preliminary Advice V")]
-public record CorporateActionMovementPreliminaryAdviceV04 : IOuterRecord
+public partial record CorporateActionMovementPreliminaryAdviceV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

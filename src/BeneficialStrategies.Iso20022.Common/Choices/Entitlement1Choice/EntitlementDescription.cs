@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice
     /// </summary>
     [IsoId("_RDromNp-Ed-ak6NoX_4Aeg_362471815")]
     [DisplayName("Entitlement Description")]
-    public record EntitlementDescription : Entitlement1Choice_
+    public partial record EntitlementDescription : Entitlement1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

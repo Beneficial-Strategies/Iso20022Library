@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus12Choice
     /// Pending.
     /// </summary>
     [DisplayName("Pending")]
-    public record Pending : InstructionStatus12Choice_
+    public partial record Pending : InstructionStatus12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

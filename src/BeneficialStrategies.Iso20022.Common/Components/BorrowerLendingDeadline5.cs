@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a5bfp7XDEeiTob_PrFFUxA")]
 [DisplayName("Borrower Lending Deadline")]
-public record BorrowerLendingDeadline5
+public partial record BorrowerLendingDeadline5
 {
     /// <summary>
     /// Date/time set as the deadline to respond, with instructions, to an outstanding event for which the underlying security is out on loan.

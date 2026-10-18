@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eXYv2a7QEemG7MmivSuE5g")]
 [DisplayName("Event Status")]
-public record EventStatus1
+public partial record EventStatus1
 {
     /// <summary>
     /// Specifies whether the details provided about an event are complete or incomplete.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus7Choice
     /// Proprietary Status.
     /// </summary>
     [DisplayName("Proprietary Status")]
-    public record ProprietaryStatus : EventProcessingStatus7Choice_
+    public partial record ProprietaryStatus : EventProcessingStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

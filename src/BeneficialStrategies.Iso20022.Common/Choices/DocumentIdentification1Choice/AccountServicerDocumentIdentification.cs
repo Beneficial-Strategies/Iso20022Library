@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification1Choice
     /// </summary>
     [IsoId("_ThCb1tp-Ed-ak6NoX_4Aeg_-1641444932")]
     [DisplayName("Account Servicer Document Identification")]
-    public record AccountServicerDocumentIdentification : DocumentIdentification1Choice_
+    public partial record AccountServicerDocumentIdentification : DocumentIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

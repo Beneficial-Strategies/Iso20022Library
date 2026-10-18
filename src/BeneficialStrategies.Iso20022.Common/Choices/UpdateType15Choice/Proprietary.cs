@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType15Choice
     [IsoId("_Xt8p1TeQEeWm5uvLSn0jEw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UpdateType15Choice_
+    public partial record Proprietary : UpdateType15Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

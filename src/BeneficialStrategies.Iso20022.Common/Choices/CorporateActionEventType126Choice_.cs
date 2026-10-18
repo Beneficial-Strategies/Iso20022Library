@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CorporateActionEventType126Choice.ExtendedCorporateEventType), nameof(CorporateActionEventType126Choice.ExtendedCorporateEventType))]
     [IsoId("_tqMIQaNZEfC9id413JK-Ig")]
     [DisplayName("Corporate Action Event Type 126 Choice")]
-    public abstract record CorporateActionEventType126Choice_ { }
+    public abstract partial record CorporateActionEventType126Choice_ { }
 }

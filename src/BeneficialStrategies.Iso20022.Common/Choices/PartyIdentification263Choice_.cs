@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IndividualOwnerIdentification), nameof(IndividualOwnerIdentification))]
     [KnownType(typeof(LEI))]
     [JsonDerivedType(typeof(LEI), nameof(LEI))]
-    public abstract record PartyIdentification263Choice_;
+    public abstract partial record PartyIdentification263Choice_;
 }

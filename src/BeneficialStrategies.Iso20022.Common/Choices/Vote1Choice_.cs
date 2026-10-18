@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rb-Mx9p-Ed-ak6NoX_4Aeg_4445857")]
     [DisplayName("Vote 1 Choice")]
-    public abstract record Vote1Choice_ { }
+    public abstract partial record Vote1Choice_ { }
 }

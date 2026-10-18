@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus84Choice
     /// <summary>Specifies the reason for the pending status.</summary>
     [IsoId("_RlhDQbMVEfCEXew4g5B5oA")]
     [DisplayName("Reason")]
-    public record Reason : PendingStatus84Choice_
+    public partial record Reason : PendingStatus84Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

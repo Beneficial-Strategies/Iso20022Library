@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cta-E5KQEeWHWpTQn1FFVg")]
     [DisplayName("Intermediate Securities Distribution Type Format 18 Choice")]
-    public abstract record IntermediateSecuritiesDistributionTypeFormat18Choice_ { }
+    public abstract partial record IntermediateSecuritiesDistributionTypeFormat18Choice_ { }
 }

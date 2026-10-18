@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus51Cho
     /// Proprietary Status.
     /// </summary>
     [DisplayName("Proprietary Status")]
-    public record ProprietaryStatus : InstructionProcessingStatus51Choice_
+    public partial record ProprietaryStatus : InstructionProcessingStatus51Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

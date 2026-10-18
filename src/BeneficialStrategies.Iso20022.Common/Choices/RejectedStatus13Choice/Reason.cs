@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus13Choice
     [IsoId("_jCm_OVhYEeSewsfsZR0hxA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RejectedStatus13Choice_
+    public partial record Reason : RejectedStatus13Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction or instruction cancellation has been rejected.

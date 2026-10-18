@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JmgaIfM-EeqRfth943bvEA")]
 [DisplayName("Language Specified Narrative")]
-public record LanguageSpecifiedNarrative1
+public partial record LanguageSpecifiedNarrative1
 {
     /// <summary>
     /// Language used to provide additional information and using the ISO 639-1 language code standard.

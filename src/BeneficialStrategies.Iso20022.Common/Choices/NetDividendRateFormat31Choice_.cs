@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SR2f4Zb9Eee8S7xwGG7Veg")]
     [DisplayName("Net Dividend Rate Format 31 Choice")]
-    public abstract record NetDividendRateFormat31Choice_ { }
+    public abstract partial record NetDividendRateFormat31Choice_ { }
 }

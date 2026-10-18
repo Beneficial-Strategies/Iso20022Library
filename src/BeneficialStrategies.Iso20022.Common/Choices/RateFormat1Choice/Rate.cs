@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat1Choice
     /// </summary>
     [IsoId("_UPh5h9p-Ed-ak6NoX_4Aeg_-1534892501")]
     [DisplayName("Rate")]
-    public record Rate : RateFormat1Choice_
+    public partial record Rate : RateFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

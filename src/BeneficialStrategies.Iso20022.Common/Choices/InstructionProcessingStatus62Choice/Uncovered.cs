@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
     /// <summary>Cover protect instruction accepted but has not fully covered the protect instruction.</summary>
     [IsoId("_H9hed68wEfCx2aBifPEdRg")]
     [DisplayName("Uncovered")]
-    public record Uncovered : InstructionProcessingStatus62Choice_
+    public partial record Uncovered : InstructionProcessingStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Ucvrd")]

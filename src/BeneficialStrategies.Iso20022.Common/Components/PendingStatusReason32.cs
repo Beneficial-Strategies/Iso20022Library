@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AJ9f0d8FEe-NrtAAlrBEgQ")]
 [DisplayName("Pending Status Reason32")]
-public record PendingStatusReason32
+public partial record PendingStatusReason32
 {
     /// <summary>
     /// Specifies the reason why the buyer protection instruction's processing is pending.

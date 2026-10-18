@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PZJZa9p-Ed-ak6NoX_4Aeg_-1506311102")]
 [DisplayName("Alternate Party Identification")]
-public record AlternatePartyIdentification2
+public partial record AlternatePartyIdentification2
 {
     /// <summary>
     /// Specifies the type of alternate identification of the party identified.

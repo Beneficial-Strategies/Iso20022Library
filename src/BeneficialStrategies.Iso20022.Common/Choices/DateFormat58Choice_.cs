@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(DateFormat58Choice.DateCode), nameof(DateFormat58Choice.DateCode))]
     [IsoId("_kmLOfa09EemDtrWpq90Ckg")]
     [DisplayName("Date Format 58 Choice")]
-    public abstract record DateFormat58Choice_ { }
+    public abstract partial record DateFormat58Choice_ { }
 }

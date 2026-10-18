@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJRggtp-Ed-ak6NoX_4Aeg_-1393093293")]
 [DisplayName("Entitlement")]
-public record Entitlement1
+public partial record Entitlement1
 {
     /// <summary>
     /// Identification of the party that owns the account.

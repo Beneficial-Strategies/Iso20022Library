@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus32Choice
     /// Pending Cancellation.
     /// </summary>
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : CancellationStatus32Choice_
+    public partial record PendingCancellation : CancellationStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

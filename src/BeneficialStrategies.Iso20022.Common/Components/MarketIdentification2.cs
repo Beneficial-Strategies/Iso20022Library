@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_URxVOdp-Ed-ak6NoX_4Aeg_-1818595308")]
 [DisplayName("Market Identification")]
-public record MarketIdentification2
+public partial record MarketIdentification2
 {
     /// <summary>
     /// Specifies the type of market.

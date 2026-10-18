@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus30Cho
     [IsoId("_komx1ZwsEeazcsnODTksnQ")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
-    public record StandingInstruction : InstructionProcessingStatus30Choice_
+    public partial record StandingInstruction : InstructionProcessingStatus30Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

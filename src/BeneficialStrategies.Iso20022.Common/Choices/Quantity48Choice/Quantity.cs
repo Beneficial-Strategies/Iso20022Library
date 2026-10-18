@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity48Choice
     /// </summary>
     [IsoId("_KADDMRuyEeyhRdHRjakS2w")]
     [DisplayName("Quantity")]
-    public record Quantity : Quantity48Choice_
+    public partial record Quantity : Quantity48Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Qty")]

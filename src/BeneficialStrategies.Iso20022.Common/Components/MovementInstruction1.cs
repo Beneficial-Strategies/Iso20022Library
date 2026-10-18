@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RirRtdp-Ed-ak6NoX_4Aeg_-1983038422")]
 [DisplayName("Movement Instruction")]
-public record MovementInstruction1
+public partial record MovementInstruction1
 {
     /// <summary>
     /// Provides general information about the movement.

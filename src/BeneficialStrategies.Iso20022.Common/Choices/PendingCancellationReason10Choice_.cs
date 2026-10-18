@@ -13,5 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Proprietary))]
     [JsonDerivedType(typeof(Code))]
     [JsonDerivedType(typeof(Proprietary))]
-    public abstract record PendingCancellationReason10Choice_;
+    public abstract partial record PendingCancellationReason10Choice_;
 }

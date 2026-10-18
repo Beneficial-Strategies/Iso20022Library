@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
     [IsoId("_RirRtNp-Ed-ak6NoX_4Aeg_1204907770")]
     [DisplayName("Rejected Status")]
     [IsoXmlTag("RjctdSts")]
-    public record RejectedStatus : StandingInstructionCancellationStatus1Choice_
+    public partial record RejectedStatus : StandingInstructionCancellationStatus1Choice_
     {
         /// <summary>
         /// The rejection reason.

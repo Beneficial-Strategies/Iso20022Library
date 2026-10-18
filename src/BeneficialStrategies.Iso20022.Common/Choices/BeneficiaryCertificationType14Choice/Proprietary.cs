@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType14Ch
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : BeneficiaryCertificationType14Choice_
+    public partial record Proprietary : BeneficiaryCertificationType14Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

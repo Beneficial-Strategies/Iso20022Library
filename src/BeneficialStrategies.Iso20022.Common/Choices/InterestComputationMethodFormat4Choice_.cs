@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_atvUATm6EeWV5sr121Fc8A")]
     [DisplayName("Interest Computation Method Format 4 Choice")]
-    public abstract record InterestComputationMethodFormat4Choice_ { }
+    public abstract partial record InterestComputationMethodFormat4Choice_ { }
 }

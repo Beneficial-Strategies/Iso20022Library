@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Kd9BzUEEEeWVgfuHGaKtRQ")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate45
+public partial record CorporateActionDate45
 {
     /// <summary>
     /// Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.

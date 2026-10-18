@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tfs_F9p-Ed-ak6NoX_4Aeg_780421229")]
 [DisplayName("Corporate Action Period")]
-public record CorporateActionPeriod1
+public partial record CorporateActionPeriod1
 {
     /// <summary>
     /// Period during which the specified option, or all options of the event, remains valid, eg, offer period.

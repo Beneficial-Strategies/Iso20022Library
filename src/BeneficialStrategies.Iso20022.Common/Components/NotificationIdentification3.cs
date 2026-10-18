@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NmlK4UGZEeWqy4niLuXETA")]
 [DisplayName("Notification Identification")]
-public record NotificationIdentification3
+public partial record NotificationIdentification3
 {
     /// <summary>
     /// Unique identifier of the last notification document (message) assigned by the sender of the document.

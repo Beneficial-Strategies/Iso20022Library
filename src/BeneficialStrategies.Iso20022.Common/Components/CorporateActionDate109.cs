@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XDQtMKAXEe-6zfgb2Rwrlw")]
 [DisplayName("Corporate Action Date109")]
-public record CorporateActionDate109
+public partial record CorporateActionDate109
 {
     /// <summary>
     /// Cover Expiration Deadline.

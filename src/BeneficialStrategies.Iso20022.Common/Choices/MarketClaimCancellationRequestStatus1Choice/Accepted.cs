@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     [IsoId("_1TcqZ9x4EeqESbVR5AloZQ")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : MarketClaimCancellationRequestStatus1Choice_
+    public partial record Accepted : MarketClaimCancellationRequestStatus1Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

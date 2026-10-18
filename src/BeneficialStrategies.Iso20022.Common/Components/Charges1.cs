@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ruv-1dp-Ed-ak6NoX_4Aeg_-799598981")]
 [DisplayName("Charges")]
-public record Charges1
+public partial record Charges1
 {
     /// <summary>
     /// Type of charges.

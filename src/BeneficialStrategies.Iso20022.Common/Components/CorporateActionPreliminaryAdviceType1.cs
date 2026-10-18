@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QxNYhdp-Ed-ak6NoX_4Aeg_206813968")]
 [DisplayName("Corporate Action Preliminary Advice Type")]
-public record CorporateActionPreliminaryAdviceType1
+public partial record CorporateActionPreliminaryAdviceType1
 {
     /// <summary>
     /// Type of movement preliminary advice ie. new or replacement.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType10Choice
     [IsoId("_XZY5VeHEEd-1Ktb5rVaajw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FractionDispositionType10Choice_
+    public partial record Proprietary : FractionDispositionType10Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

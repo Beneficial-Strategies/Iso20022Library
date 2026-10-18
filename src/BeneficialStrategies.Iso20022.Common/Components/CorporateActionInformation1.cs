@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TdxFY9p-Ed-ak6NoX_4Aeg_1155832018")]
 [DisplayName("Corporate Action Information")]
-public record CorporateActionInformation1
+public partial record CorporateActionInformation1
 {
     /// <summary>
     /// Identification of the issuer agent.

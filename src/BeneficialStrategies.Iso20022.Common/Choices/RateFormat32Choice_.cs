@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RateFormat32Choice.NotSpecifiedRate))]
     [JsonDerivedType(typeof(RateFormat32Choice.Rate))]
     [JsonDerivedType(typeof(RateFormat32Choice.NotSpecifiedRate))]
-    public abstract record RateFormat32Choice_
+    public abstract partial record RateFormat32Choice_
     {
     }
 }

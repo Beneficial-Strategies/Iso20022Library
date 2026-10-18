@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus2Choice
     /// Rejected Status.
     /// </summary>
     [DisplayName("Rejected Status")]
-    public record RejectedStatus : NotificationAdviceStatus2Choice_
+    public partial record RejectedStatus : NotificationAdviceStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CfMJYeGaEd-1Ktb5rVaajw")]
 [DisplayName("Securities Option")]
-public record SecuritiesOption15
+public partial record SecuritiesOption15
 {
     /// <summary>
     /// Maximum quantity (or lot) of financial instrument that must be exercised or tendered.

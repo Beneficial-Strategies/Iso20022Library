@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_22xaAPM8EeqRfth943bvEA")]
 [DisplayName("Item Description")]
-public record ItemDescription1
+public partial record ItemDescription1
 {
     /// <summary>
     /// Language used to provide a description of the item and specified in the ISO 639-1 language code standard.

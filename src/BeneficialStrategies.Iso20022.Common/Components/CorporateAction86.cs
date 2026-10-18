@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kv5W45t3Ee-wQIOX0djF2w")]
 [DisplayName("Corporate Action86")]
-public record CorporateAction86
+public partial record CorporateAction86
 {
     /// <summary>
     /// Date Details.

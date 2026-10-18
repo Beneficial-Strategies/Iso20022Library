@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason67Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : PendingReason67Choice_
+    public partial record Proprietary : PendingReason67Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

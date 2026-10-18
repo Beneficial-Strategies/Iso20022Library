@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TR6-KdEwEd-BzquC8wXy7w_1831735017")]
 [DisplayName("Agent CA Standing Instruction Request V")]
-public record AgentCAStandingInstructionRequestV01 : IOuterRecord
+public partial record AgentCAStandingInstructionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

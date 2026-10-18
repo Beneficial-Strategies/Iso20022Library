@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat53Choice
     /// Country.
     /// </summary>
     [DisplayName("Country")]
-    public record Country : SafekeepingPlaceFormat53Choice_
+    public partial record Country : SafekeepingPlaceFormat53Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

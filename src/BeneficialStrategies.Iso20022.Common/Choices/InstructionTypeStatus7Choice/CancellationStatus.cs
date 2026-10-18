@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus7Choice
     /// Cancellation Status.
     /// </summary>
     [DisplayName("Cancellation Status")]
-    public record CancellationStatus : InstructionTypeStatus7Choice_
+    public partial record CancellationStatus : InstructionTypeStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

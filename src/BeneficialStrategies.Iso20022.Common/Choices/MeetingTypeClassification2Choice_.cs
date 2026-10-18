@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_edv9767NEemG7MmivSuE5g")]
     [DisplayName("Meeting Type Classification 2 Choice")]
-    public abstract record MeetingTypeClassification2Choice_ { }
+    public abstract partial record MeetingTypeClassification2Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_QyGwZNp-Ed-ak6NoX_4Aeg_-1849748090")]
     [DisplayName("Accepted")]
-    public record Accepted : InstructionCancellationRequestStatus1Choice_
+    public partial record Accepted : InstructionCancellationRequestStatus1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Accptd")]

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q08B89p-Ed-ak6NoX_4Aeg_-1040584730")]
     [DisplayName("Temporary Financial Instrument Indicator 1 Choice")]
-    public abstract record TemporaryFinancialInstrumentIndicator1Choice_ { }
+    public abstract partial record TemporaryFinancialInstrumentIndicator1Choice_ { }
 }

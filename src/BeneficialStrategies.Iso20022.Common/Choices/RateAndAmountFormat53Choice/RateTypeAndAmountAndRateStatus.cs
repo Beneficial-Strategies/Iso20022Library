@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat53Choice
     [IsoId("_6juhe9BaEee0mNiKMkpGNQ")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : RateAndAmountFormat53Choice_
+    public partial record RateTypeAndAmountAndRateStatus : RateAndAmountFormat53Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

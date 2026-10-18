@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// <summary>Provides status information related to a cancellation request accepted for further processing.</summary>
     [IsoId("_c8L7KaKvEfCHi7w3_0pcpw")]
     [DisplayName("Accepted")]
-    public record Accepted : InstructionCancellationRequestStatus21Choice_
+    public partial record Accepted : InstructionCancellationRequestStatus21Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Accptd")]

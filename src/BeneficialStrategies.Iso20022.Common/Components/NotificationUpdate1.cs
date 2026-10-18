@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLJsVK7REemG7MmivSuE5g")]
 [DisplayName("Notification Update")]
-public record NotificationUpdate1
+public partial record NotificationUpdate1
 {
     /// <summary>
     /// Identification of a previously sent meeting notification message.

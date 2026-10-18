@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateValueType2FormatChoice
     [IsoId("_Rn5I5tp-Ed-ak6NoX_4Aeg_-895977984")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RateValueType2FormatChoice_
+    public partial record Proprietary : RateValueType2FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

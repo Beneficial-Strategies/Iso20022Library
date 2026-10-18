@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateStatus4Choice
     /// </summary>
     [IsoId("_cj9gA5KQEeWHWpTQn1FFVg")]
     [DisplayName("Code")]
-    public record Code : RateStatus4Choice_
+    public partial record Code : RateStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

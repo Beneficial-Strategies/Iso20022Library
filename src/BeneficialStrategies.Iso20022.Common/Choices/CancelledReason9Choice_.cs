@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9HM5U0GWEeWqy4niLuXETA")]
     [DisplayName("Cancelled Reason 9 Choice")]
-    public abstract record CancelledReason9Choice_ { }
+    public abstract partial record CancelledReason9Choice_ { }
 }

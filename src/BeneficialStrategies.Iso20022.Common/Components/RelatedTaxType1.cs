@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UPYvktp-Ed-ak6NoX_4Aeg_1950331335")]
 [DisplayName("Related Tax Type")]
-public record RelatedTaxType1
+public partial record RelatedTaxType1
 {
     /// <summary>
     /// Specifies the type of tax.

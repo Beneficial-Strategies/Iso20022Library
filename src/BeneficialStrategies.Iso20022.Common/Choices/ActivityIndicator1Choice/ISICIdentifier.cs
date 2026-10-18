@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice
     /// ISIC Identifier.
     /// </summary>
     [DisplayName("ISIC Identifier")]
-    public record ISICIdentifier : ActivityIndicator1Choice_
+    public partial record ISICIdentifier : ActivityIndicator1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

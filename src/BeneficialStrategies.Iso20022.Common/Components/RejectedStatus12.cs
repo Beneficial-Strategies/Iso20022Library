@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tOTPRZzmEe-DHYbvdRjdbA")]
 [DisplayName("Rejected Status12")]
-public record RejectedStatus12
+public partial record RejectedStatus12
 {
     /// <summary>
     /// Rejected Quantity.

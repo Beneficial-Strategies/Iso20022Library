@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4FpMcd72Ee-NrtAAlrBEgQ")]
 [DisplayName("Related Settlement Instruction4")]
-public record RelatedSettlementInstruction4
+public partial record RelatedSettlementInstruction4
 {
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository.

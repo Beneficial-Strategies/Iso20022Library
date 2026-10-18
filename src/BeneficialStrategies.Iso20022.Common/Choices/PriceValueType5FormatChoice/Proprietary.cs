@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceValueType5FormatChoice
     [IsoId("_RnAYGNp-Ed-ak6NoX_4Aeg_-121428450")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PriceValueType5FormatChoice_
+    public partial record Proprietary : PriceValueType5FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

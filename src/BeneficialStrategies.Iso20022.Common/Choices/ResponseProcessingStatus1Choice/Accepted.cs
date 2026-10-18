@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseProcessingStatus1Choice
     [IsoId("_lOZu8IeUEemJ1cSJJmVYRQ")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : ResponseProcessingStatus1Choice_
+    public partial record Accepted : ResponseProcessingStatus1Choice_
     {
         /// <summary>
         /// Reason not specified.

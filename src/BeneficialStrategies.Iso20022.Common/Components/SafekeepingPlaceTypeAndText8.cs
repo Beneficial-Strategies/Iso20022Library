@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5V6N6znTEeWV5sr121Fc8A")]
 [DisplayName("Safekeeping Place Type And Text")]
-public record SafekeepingPlaceTypeAndText8
+public partial record SafekeepingPlaceTypeAndText8
 {
     /// <summary>
     /// Place of safekeeping as a code.

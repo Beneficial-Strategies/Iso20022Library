@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus31Choice
     /// Detailed Cancellation Status.
     /// </summary>
     [DisplayName("Detailed Cancellation Status")]
-    public record DetailedCancellationStatus : CancellationStatus31Choice_
+    public partial record DetailedCancellationStatus : CancellationStatus31Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

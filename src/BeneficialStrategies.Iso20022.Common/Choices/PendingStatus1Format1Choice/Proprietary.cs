@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus1Format1Choice
     /// <summary>Pending status of the notification advice in a proprietary form.</summary>
     [IsoId("_pRDtcaUdEfCnE_wCEfCqTA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PendingStatus1Format1Choice_
+    public partial record Proprietary : PendingStatus1Format1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

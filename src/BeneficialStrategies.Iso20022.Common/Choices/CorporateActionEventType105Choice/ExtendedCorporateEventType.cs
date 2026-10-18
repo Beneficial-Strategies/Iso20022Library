@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType105Choic
     /// Extended Corporate Event Type.
     /// </summary>
     [DisplayName("Extended Corporate Event Type")]
-    public record ExtendedCorporateEventType : CorporateActionEventType105Choice_
+    public partial record ExtendedCorporateEventType : CorporateActionEventType105Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

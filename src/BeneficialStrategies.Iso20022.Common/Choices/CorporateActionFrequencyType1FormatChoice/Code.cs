@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionFrequencyType1For
     /// </summary>
     [IsoId("_RmZ7INp-Ed-ak6NoX_4Aeg_1510389883")]
     [DisplayName("Code")]
-    public record Code : CorporateActionFrequencyType1FormatChoice_
+    public partial record Code : CorporateActionFrequencyType1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

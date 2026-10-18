@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_peWYrzi7Eeydid5dcNPKvg")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : InstructionCancellationRequestStatus14Choice_
+    public partial record PendingCancellation : InstructionCancellationRequestStatus14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxl")]

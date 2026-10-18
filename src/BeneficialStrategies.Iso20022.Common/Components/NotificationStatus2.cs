@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jMDpUXF2EeSuDsBOD9TlUw")]
 [DisplayName("Notification Status")]
-public record NotificationStatus2
+public partial record NotificationStatus2
 {
     /// <summary>
     /// Status to define if the occurrence of the event contained in the notification is confirmed or unconfirmed.

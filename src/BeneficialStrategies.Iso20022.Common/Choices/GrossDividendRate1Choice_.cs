@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UPO-mdp-Ed-ak6NoX_4Aeg_1360546700")]
     [DisplayName("Gross Dividend Rate 1 Choice")]
-    public abstract record GrossDividendRate1Choice_ { }
+    public abstract partial record GrossDividendRate1Choice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType116Choic
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : CorporateActionEventType116Choice_
+    public partial record Proprietary : CorporateActionEventType116Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

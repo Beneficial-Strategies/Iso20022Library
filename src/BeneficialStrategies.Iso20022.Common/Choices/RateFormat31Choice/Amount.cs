@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice
     /// <summary>Specifies the amount.</summary>
     [IsoId("_IJ18AKjuEfCG_LQaXOxwew")]
     [DisplayName("Amount")]
-    public record Amount : RateFormat31Choice_
+    public partial record Amount : RateFormat31Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Amt")]

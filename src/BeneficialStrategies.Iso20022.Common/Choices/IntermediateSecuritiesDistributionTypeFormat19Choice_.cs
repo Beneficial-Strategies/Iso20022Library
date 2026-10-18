@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IntermediateSecuritiesDistributionTypeFormat19Choice.Proprietary), nameof(IntermediateSecuritiesDistributionTypeFormat19Choice.Proprietary))]
     [IsoId("_qWCWYaRKEfC9EJoPPbbyNQ")]
     [DisplayName("Intermediate Securities Distribution Type Format 19 Choice")]
-    public abstract record IntermediateSecuritiesDistributionTypeFormat19Choice_ { }
+    public abstract partial record IntermediateSecuritiesDistributionTypeFormat19Choice_ { }
 }

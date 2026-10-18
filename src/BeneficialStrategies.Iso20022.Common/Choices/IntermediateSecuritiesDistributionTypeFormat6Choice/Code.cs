@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
     /// </summary>
     [IsoId("_x8Lwk-AZEd-D2OAFXdoRmA")]
     [DisplayName("Code")]
-    public record Code : IntermediateSecuritiesDistributionTypeFormat6Choice_
+    public partial record Code : IntermediateSecuritiesDistributionTypeFormat6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

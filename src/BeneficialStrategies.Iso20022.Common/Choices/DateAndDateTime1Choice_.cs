@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Axs_MNokEeC60axPepSq7g_-1588891689")]
     [DisplayName("Date And Date Time 1 Choice")]
-    public abstract record DateAndDateTime1Choice_ { }
+    public abstract partial record DateAndDateTime1Choice_ { }
 }

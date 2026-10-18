@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus8Choice
     /// Complete.
     /// </summary>
     [DisplayName("Complete")]
-    public record Complete : EventProcessingStatus8Choice_
+    public partial record Complete : EventProcessingStatus8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

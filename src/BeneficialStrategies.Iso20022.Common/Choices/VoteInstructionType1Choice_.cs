@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_93OiQK4JEemG7MmivSuE5g")]
     [DisplayName("Vote Instruction Type 1 Choice")]
-    public abstract record VoteInstructionType1Choice_ { }
+    public abstract partial record VoteInstructionType1Choice_ { }
 }

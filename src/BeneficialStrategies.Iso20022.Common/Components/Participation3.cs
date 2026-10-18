@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TlEANNp-Ed-ak6NoX_4Aeg_578416366")]
 [DisplayName("Participation")]
-public record Participation3
+public partial record Participation3
 {
     /// <summary>
     /// Number of rights admitted to the vote.

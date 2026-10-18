@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : IssuerOfferorTaxabilityIndicator2Choice_
+    public partial record Proprietary : IssuerOfferorTaxabilityIndicator2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

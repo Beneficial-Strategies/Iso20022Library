@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_cscswLbgEe-NMoTZ6Byg6A")]
 [DisplayName("Buyer Protection Instruction Report V01")]
-public record BuyerProtectionInstructionReportV01 : IOuterRecord
+public partial record BuyerProtectionInstructionReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Vote17Choice.VoteForAllAgendaResolutions))]
     [JsonDerivedType(typeof(Vote17Choice.VotePerAgendaResolution))]
     [JsonDerivedType(typeof(Vote17Choice.VoteForAllAgendaResolutions))]
-    public abstract record Vote17Choice_
+    public abstract partial record Vote17Choice_
     {
     }
 }

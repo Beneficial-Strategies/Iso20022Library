@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ciBrAVthEeSwKe7KuKvXhg")]
 [DisplayName("Issuer Agent")]
-public record IssuerAgent2
+public partial record IssuerAgent2
 {
     /// <summary>
     /// Identifies issuer agent.

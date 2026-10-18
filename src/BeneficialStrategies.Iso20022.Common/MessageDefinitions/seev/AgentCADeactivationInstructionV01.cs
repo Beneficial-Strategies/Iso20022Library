@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TMHRHdEwEd-BzquC8wXy7w_1150162088")]
 [DisplayName("Agent CA Deactivation Instruction V")]
-public record AgentCADeactivationInstructionV01 : IOuterRecord
+public partial record AgentCADeactivationInstructionV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

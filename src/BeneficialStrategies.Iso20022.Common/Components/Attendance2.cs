@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eX9h8fNhEeqRfth943bvEA")]
 [DisplayName("Attendance")]
-public record Attendance2
+public partial record Attendance2
 {
     /// <summary>
     /// Conditions for physical admittance to the general meeting.

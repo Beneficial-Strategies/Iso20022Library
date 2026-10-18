@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_p-eGg473EfCbNJ3GwkFTcw")]
 [DisplayName("Forwarded Status1")]
-public record ForwardedStatus1
+public partial record ForwardedStatus1
 {
     /// <summary>
     /// Quantity of instructed securities previously accepted has now been forwarded along the chain.

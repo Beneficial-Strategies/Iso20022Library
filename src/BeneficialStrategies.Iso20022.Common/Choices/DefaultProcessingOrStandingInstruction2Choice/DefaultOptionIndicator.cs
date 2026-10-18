@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
     /// Default Option Indicator.
     /// </summary>
     [DisplayName("Default Option Indicator")]
-    public record DefaultOptionIndicator : DefaultProcessingOrStandingInstruction2Choice_
+    public partial record DefaultOptionIndicator : DefaultProcessingOrStandingInstruction2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UpdateType2Choice.Proprietary), nameof(UpdateType2Choice.Proprietary))]
     [IsoId("_QxXJh9p-Ed-ak6NoX_4Aeg_-903172755")]
     [DisplayName("Update Type 2 Choice")]
-    public abstract record UpdateType2Choice_ { }
+    public abstract partial record UpdateType2Choice_ { }
 }

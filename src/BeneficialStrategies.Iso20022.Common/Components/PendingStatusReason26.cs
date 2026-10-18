@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P-uFEVx2Ee6fgZt44_IqFA")]
 [DisplayName("Pending Status Reason26")]
-public record PendingStatusReason26
+public partial record PendingStatusReason26
 {
     /// <summary>
     /// Reason Code.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_q9LvwS87EeKNZpaVtgp8Wg")]
     [DisplayName("Offer Type Format 3 Choice")]
-    public abstract record OfferTypeFormat3Choice_ { }
+    public abstract partial record OfferTypeFormat3Choice_ { }
 }

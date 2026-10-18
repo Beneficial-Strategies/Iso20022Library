@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification111Choice
     /// </summary>
     [IsoId("_ckEN8ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Country")]
-    public record Country : PartyIdentification111Choice_
+    public partial record Country : PartyIdentification111Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

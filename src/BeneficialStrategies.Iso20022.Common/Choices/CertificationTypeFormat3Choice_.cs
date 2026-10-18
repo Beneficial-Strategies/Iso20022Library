@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bZ7v0UEGEeWVgfuHGaKtRQ")]
     [DisplayName("Certification Type Format 3 Choice")]
-    public abstract record CertificationTypeFormat3Choice_ { }
+    public abstract partial record CertificationTypeFormat3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QDwctNp-Ed-ak6NoX_4Aeg_-1972067649")]
 [DisplayName("Person Identification")]
-public record PersonIdentification2
+public partial record PersonIdentification2
 {
     /// <summary>
     /// Number assigned by a license authority to a driver&apos;s license.

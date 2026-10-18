@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_YoEpa64cEemG7MmivSuE5g")]
     [DisplayName("Vote 4 Choice")]
-    public abstract record Vote4Choice_ { }
+    public abstract partial record Vote4Choice_ { }
 }

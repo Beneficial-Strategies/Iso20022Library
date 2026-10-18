@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TNAo_tEwEd-BzquC8wXy7w_1507742806")]
 [DisplayName("Agent CA Election Amendment Request V")]
-public record AgentCAElectionAmendmentRequestV01 : IOuterRecord
+public partial record AgentCAElectionAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

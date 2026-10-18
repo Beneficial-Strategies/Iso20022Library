@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q2IUxdp-Ed-ak6NoX_4Aeg_1134486617")]
     [DisplayName("Ratio Format 5 Choice")]
-    public abstract record RatioFormat5Choice_ { }
+    public abstract partial record RatioFormat5Choice_ { }
 }

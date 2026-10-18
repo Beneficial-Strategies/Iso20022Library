@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason7Ch
     /// </summary>
     [IsoId("_WfigUF99Ee262vCSVgjImg")]
     [DisplayName("Code")]
-    public record Code : CorporateActionReversalReason7Choice_
+    public partial record Code : CorporateActionReversalReason7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

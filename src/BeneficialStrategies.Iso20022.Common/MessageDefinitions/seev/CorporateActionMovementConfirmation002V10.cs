@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_8GYek_fREeiNZp_PtLohLw")]
 [DisplayName("Corporate Action Movement Confirmation 002 V")]
-public record CorporateActionMovementConfirmation002V10 : IOuterRecord
+public partial record CorporateActionMovementConfirmation002V10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

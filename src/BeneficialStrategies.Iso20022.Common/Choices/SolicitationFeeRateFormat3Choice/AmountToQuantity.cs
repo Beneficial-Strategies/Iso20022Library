@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat3Choice
     [IsoId("_3xmf4uwOEd-sn-FiNtktcA")]
     [DisplayName("Amount To Quantity")]
     [IsoXmlTag("AmtToQty")]
-    public record AmountToQuantity : SolicitationFeeRateFormat3Choice_
+    public partial record AmountToQuantity : SolicitationFeeRateFormat3Choice_
     {
         /// <summary>
         /// Cash amount.

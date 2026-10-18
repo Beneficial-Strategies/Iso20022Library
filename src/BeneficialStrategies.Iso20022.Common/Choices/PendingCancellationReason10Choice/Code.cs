@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason10Choic
     /// <summary>Standard code to specify the reason why a cancellation request sent for the related instruction is pending.</summary>
     [IsoId("_hPBtsaLNEfCHi7w3_0pcpw")]
     [DisplayName("Code")]
-    public record Code : PendingCancellationReason10Choice_
+    public partial record Code : PendingCancellationReason10Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

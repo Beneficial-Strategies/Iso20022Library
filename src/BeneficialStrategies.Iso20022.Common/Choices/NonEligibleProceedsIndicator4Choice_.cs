@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cthE85KQEeWHWpTQn1FFVg")]
     [DisplayName("Non Eligible Proceeds Indicator 4 Choice")]
-    public abstract record NonEligibleProceedsIndicator4Choice_ { }
+    public abstract partial record NonEligibleProceedsIndicator4Choice_ { }
 }

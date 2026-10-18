@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmjsItp-Ed-ak6NoX_4Aeg_220367712")]
     [DisplayName("Failed Settlement Reason 1 Format Choice")]
-    public abstract record FailedSettlementReason1FormatChoice_ { }
+    public abstract partial record FailedSettlementReason1FormatChoice_ { }
 }

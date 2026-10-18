@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9QWS-67OEemG7MmivSuE5g")]
 [DisplayName("Notification General Information")]
-public record NotificationGeneralInformation1
+public partial record NotificationGeneralInformation1
 {
     /// <summary>
     /// Type of notification.

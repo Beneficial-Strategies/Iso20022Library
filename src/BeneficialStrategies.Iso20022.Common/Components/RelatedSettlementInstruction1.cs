@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oefNAC2sEeuVt5XRmyhHiA")]
 [DisplayName("Related Settlement Instruction")]
-public record RelatedSettlementInstruction1
+public partial record RelatedSettlementInstruction1
 {
     /// <summary>
     /// Unambiguous identification of the related settlement instruction assigned by the account holder.

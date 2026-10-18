@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3-_EcV6YEeSyc4g_pm5hbw")]
 [DisplayName("Power Of Attorney Requirements")]
-public record PowerOfAttorneyRequirements3
+public partial record PowerOfAttorneyRequirements3
 {
     /// <summary>
     /// Specifies whether the power of attorney needs to be validated by some authority.

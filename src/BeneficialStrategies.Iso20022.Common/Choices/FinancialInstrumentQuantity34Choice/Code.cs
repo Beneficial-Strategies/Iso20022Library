@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity34Cho
     /// </summary>
     [IsoId("_lhWKOxu0EeyhRdHRjakS2w")]
     [DisplayName("Code")]
-    public record Code : FinancialInstrumentQuantity34Choice_
+    public partial record Code : FinancialInstrumentQuantity34Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

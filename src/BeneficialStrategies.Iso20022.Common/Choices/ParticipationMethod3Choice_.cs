@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XZhU5RrlEeyhRdHRjakS2w")]
     [DisplayName("Participation Method 3 Choice")]
-    public abstract record ParticipationMethod3Choice_ { }
+    public abstract partial record ParticipationMethod3Choice_ { }
 }

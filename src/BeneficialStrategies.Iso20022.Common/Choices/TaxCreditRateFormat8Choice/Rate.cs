@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat8Choice
     /// </summary>
     [IsoId("_XFqMVUEIEeWVgfuHGaKtRQ")]
     [DisplayName("Rate")]
-    public record Rate : TaxCreditRateFormat8Choice_
+    public partial record Rate : TaxCreditRateFormat8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

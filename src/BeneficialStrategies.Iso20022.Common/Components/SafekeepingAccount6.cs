@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_HjiCdVtiEeSwKe7KuKvXhg")]
 [DisplayName("Safekeeping Account")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
-public record SafekeepingAccount6
+public partial record SafekeepingAccount6
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

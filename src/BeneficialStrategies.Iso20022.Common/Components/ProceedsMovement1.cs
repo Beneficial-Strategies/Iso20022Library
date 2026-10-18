@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ri1Csdp-Ed-ak6NoX_4Aeg_1504216884")]
 [DisplayName("Proceeds Movement")]
-public record ProceedsMovement1
+public partial record ProceedsMovement1
 {
     /// <summary>
     /// Provides information about the movement of the cash proceeds.

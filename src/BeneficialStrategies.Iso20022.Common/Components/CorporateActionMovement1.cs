@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UIh5p9p-Ed-ak6NoX_4Aeg_378115287")]
 [DisplayName("Corporate Action Movement")]
-public record CorporateActionMovement1
+public partial record CorporateActionMovement1
 {
     /// <summary>
     /// Type of movement instruction.

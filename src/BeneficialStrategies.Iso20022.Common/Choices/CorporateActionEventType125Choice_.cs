@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CorporateActionEventType125Choice.Proprietary), nameof(CorporateActionEventType125Choice.Proprietary))]
     [IsoId("_zrf3Id_MEe-Ned3-G07x_A")]
     [DisplayName("Corporate Action Event Type 125 Choice")]
-    public abstract record CorporateActionEventType125Choice_ { }
+    public abstract partial record CorporateActionEventType125Choice_ { }
 }

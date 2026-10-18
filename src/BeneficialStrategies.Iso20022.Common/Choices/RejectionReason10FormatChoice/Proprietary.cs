@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason10FormatChoice
     [IsoId("_RoC549p-Ed-ak6NoX_4Aeg_299898877")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RejectionReason10FormatChoice_
+    public partial record Proprietary : RejectionReason10FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

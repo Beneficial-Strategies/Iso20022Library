@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason5Choice
     [IsoId("_2t4r6YluEeavwKddCbm3hg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PendingCancellationReason5Choice_
+    public partial record Proprietary : PendingCancellationReason5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

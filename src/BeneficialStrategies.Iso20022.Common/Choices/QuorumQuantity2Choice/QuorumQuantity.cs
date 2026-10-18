@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity2Choice
     /// Quorum Quantity.
     /// </summary>
     [DisplayName("Quorum Quantity")]
-    public record QuorumQuantity : QuorumQuantity2Choice_
+    public partial record QuorumQuantity : QuorumQuantity2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

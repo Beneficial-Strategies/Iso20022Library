@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xhMHQa6XEees_ufOy2ci-g")]
 [DisplayName("Pagination")]
-public record Pagination1
+public partial record Pagination1
 {
     /// <summary>
     /// Page number.

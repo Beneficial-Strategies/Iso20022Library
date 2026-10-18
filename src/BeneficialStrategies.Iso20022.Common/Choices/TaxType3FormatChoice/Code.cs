@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType3FormatChoice
     /// </summary>
     [IsoId("_RpFbstp-Ed-ak6NoX_4Aeg_1866583881")]
     [DisplayName("Code")]
-    public record Code : TaxType3FormatChoice_
+    public partial record Code : TaxType3FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

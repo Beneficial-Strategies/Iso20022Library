@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_y2LgkEmeEe-NocYul3BKXQ")]
     [DisplayName("Corporate Action Processing Status7Choice")]
-    public abstract record CorporateActionProcessingStatus7Choice_ { }
+    public abstract partial record CorporateActionProcessingStatus7Choice_ { }
 }

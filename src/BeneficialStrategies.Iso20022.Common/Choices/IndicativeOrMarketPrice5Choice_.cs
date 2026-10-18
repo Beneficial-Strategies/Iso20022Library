@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_oc_1ceEJEd-udr336SN7mQ")]
     [DisplayName("Indicative Or Market Price 5 Choice")]
-    public abstract record IndicativeOrMarketPrice5Choice_ { }
+    public abstract partial record IndicativeOrMarketPrice5Choice_ { }
 }

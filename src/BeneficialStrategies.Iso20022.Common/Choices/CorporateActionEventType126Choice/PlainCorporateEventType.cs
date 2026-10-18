@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType126Choic
     /// <summary>Type of corporate action event.</summary>
     [IsoId("_txvhwaNZEfC9id413JK-Ig")]
     [DisplayName("Plain Corporate Event Type")]
-    public record PlainCorporateEventType : CorporateActionEventType126Choice_
+    public partial record PlainCorporateEventType : CorporateActionEventType126Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PlainCorpEvtTp")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QUmVCNp-Ed-ak6NoX_4Aeg_1997970663")]
 [DisplayName("Included Account")]
-public record IncludedAccount1
+public partial record IncludedAccount1
 {
     /// <summary>
     /// Identification of the securities account.

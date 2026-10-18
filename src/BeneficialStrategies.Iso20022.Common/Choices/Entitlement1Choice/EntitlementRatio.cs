@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice
     /// </summary>
     [IsoId("_RDrol9p-Ed-ak6NoX_4Aeg_362471814")]
     [DisplayName("Entitlement Ratio")]
-    public record EntitlementRatio : Entitlement1Choice_
+    public partial record EntitlementRatio : Entitlement1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat14Choice
     [IsoId("_piui6Ti7Eeydid5dcNPKvg")]
     [DisplayName("Eligible Balance")]
     [IsoXmlTag("ElgblBal")]
-    public record EligibleBalance : BalanceFormat14Choice_
+    public partial record EligibleBalance : BalanceFormat14Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

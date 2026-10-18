@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account8Choice
     /// </summary>
     [IsoId("_Q4z1U9p-Ed-ak6NoX_4Aeg_-1681750947")]
     [DisplayName("Charges Account")]
-    public record ChargesAccount : Account8Choice_
+    public partial record ChargesAccount : Account8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ChrgsAcct")]

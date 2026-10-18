@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UKdzVdp-Ed-ak6NoX_4Aeg_-227934218")]
 [DisplayName("Global Distribution Request")]
-public record GlobalDistributionRequest1
+public partial record GlobalDistributionRequest1
 {
     /// <summary>
     /// Indicates wether is message is an advice or pre-advice.

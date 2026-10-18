@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c5XIRZKQEeWHWpTQn1FFVg")]
 [DisplayName("Updated UR Llnformation")]
-public record UpdatedURLlnformation3
+public partial record UpdatedURLlnformation3
 {
     /// <summary>
     /// Specifies the amendments made to the narrative since the last message.

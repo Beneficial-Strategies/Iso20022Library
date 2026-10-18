@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat4Choice
     [IsoId("_Yew_M0EGEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LotteryTypeFormat4Choice_
+    public partial record Proprietary : LotteryTypeFormat4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

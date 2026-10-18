@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat28Choice
     [IsoId("_ojrGeWpXEeipaMTLlhaKMQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SafekeepingPlaceFormat28Choice_
+    public partial record Proprietary : SafekeepingPlaceFormat28Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__KUE-bKiEemux5trsZcCpw")]
     [DisplayName("Pending Cancellation Status 10 Choice")]
-    public abstract record PendingCancellationStatus10Choice_ { }
+    public abstract partial record PendingCancellationStatus10Choice_ { }
 }

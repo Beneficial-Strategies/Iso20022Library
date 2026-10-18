@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PendingStatus), nameof(PendingStatus))]
     [KnownType(typeof(AcceptedWithWarningStatus))]
     [JsonDerivedType(typeof(AcceptedWithWarningStatus), nameof(AcceptedWithWarningStatus))]
-    public abstract record NotificationAdviceStatus4Choice_;
+    public abstract partial record NotificationAdviceStatus4Choice_;
 }

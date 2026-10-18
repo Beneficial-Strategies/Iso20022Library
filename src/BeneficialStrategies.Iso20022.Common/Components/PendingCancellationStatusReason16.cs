@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IEV4Aa8wEfCx2aBifPEdRg")]
 [DisplayName("Pending Cancellation Status Reason16")]
-public record PendingCancellationStatusReason16
+public partial record PendingCancellationStatusReason16
 {
     /// <summary>
     /// Specifies the reason why the cancellation request is pending.

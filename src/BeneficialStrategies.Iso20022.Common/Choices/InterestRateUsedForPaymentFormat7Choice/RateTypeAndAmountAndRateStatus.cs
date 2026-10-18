@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     [IsoId("_VV7UI0EIEeWVgfuHGaKtRQ")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : InterestRateUsedForPaymentFormat7Choice_
+    public partial record RateTypeAndAmountAndRateStatus : InterestRateUsedForPaymentFormat7Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

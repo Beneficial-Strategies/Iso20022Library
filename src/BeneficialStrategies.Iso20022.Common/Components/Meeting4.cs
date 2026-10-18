@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_S8SuwVuAEeSmO6RkXg92Lg")]
 [DisplayName("Meeting")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record Meeting4
+public partial record Meeting4
 {
     /// <summary>
     /// Date and time at which the meeting will take place.

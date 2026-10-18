@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_4baRtX_4Ee-h086v0qPiyQ")]
 [DisplayName("Corporate Action Event Processing Status Advice V09")]
-public record CorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
+public partial record CorporateActionEventProcessingStatusAdviceV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

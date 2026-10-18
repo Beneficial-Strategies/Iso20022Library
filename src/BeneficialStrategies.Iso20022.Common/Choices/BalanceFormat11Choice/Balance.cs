@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat11Choice
     [IsoId("_JWK_wRuyEeyhRdHRjakS2w")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public record Balance : BalanceFormat11Choice_
+    public partial record Balance : BalanceFormat11Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

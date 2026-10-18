@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat66Choice
     [IsoId("_PSmiExuyEeyhRdHRjakS2w")]
     [DisplayName("Amount Price Per Amount")]
     [IsoXmlTag("AmtPricPerAmt")]
-    public record AmountPricePerAmount : PriceFormat66Choice_
+    public partial record AmountPricePerAmount : PriceFormat66Choice_
     {
         /// <summary>
         /// Type of amount price.

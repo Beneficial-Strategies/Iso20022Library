@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_iOMVYFSTEempisJfoIfvvQ")]
     [DisplayName("Request Share Held Date 1 Choice")]
-    public abstract record RequestShareHeldDate1Choice_ { }
+    public abstract partial record RequestShareHeldDate1Choice_ { }
 }

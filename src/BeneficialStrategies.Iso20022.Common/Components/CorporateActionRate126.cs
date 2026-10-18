@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3asQQYV4Ee-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Rate126")]
-public record CorporateActionRate126
+public partial record CorporateActionRate126
 {
     /// <summary>
     /// Additional Tax.

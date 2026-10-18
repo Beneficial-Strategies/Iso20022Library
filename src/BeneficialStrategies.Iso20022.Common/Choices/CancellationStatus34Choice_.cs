@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CancellationStatus34Choice.DetailedCancellationStatus), nameof(CancellationStatus34Choice.DetailedCancellationStatus))]
     [IsoId("_czhuwa8uEfCx2aBifPEdRg")]
     [DisplayName("CancellationStatus34Choice")]
-    public abstract record CancellationStatus34Choice_ { }
+    public abstract partial record CancellationStatus34Choice_ { }
 }

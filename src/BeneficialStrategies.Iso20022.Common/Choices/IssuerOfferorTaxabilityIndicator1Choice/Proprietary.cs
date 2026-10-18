@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
     [IsoId("_hlkcEIlzEeavwKddCbm3hg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : IssuerOfferorTaxabilityIndicator1Choice_
+    public partial record Proprietary : IssuerOfferorTaxabilityIndicator1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

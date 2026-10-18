@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnedReason2Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : ReturnedReason2Choice_
+    public partial record Code : ReturnedReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

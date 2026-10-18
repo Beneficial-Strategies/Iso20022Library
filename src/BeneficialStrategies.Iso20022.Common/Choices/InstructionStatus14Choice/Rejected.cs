@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus14Choice
     /// <summary>Status advising on the rejection of the instruction and on the reason for the rejection.</summary>
     [IsoId("_EFISw6jVEfCzuLlmLrhIvA")]
     [DisplayName("Rejected")]
-    public record Rejected : InstructionStatus14Choice_
+    public partial record Rejected : InstructionStatus14Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType105Choic
     /// Plain Corporate Event Type.
     /// </summary>
     [DisplayName("Plain Corporate Event Type")]
-    public record PlainCorporateEventType : CorporateActionEventType105Choice_
+    public partial record PlainCorporateEventType : CorporateActionEventType105Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

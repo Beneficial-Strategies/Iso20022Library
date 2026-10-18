@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_fiXWcYudEe-ia-YMBhg53w")]
     [DisplayName("Default Processing Or Standing Instruction2Choice")]
-    public abstract record DefaultProcessingOrStandingInstruction2Choice_ { }
+    public abstract partial record DefaultProcessingOrStandingInstruction2Choice_ { }
 }

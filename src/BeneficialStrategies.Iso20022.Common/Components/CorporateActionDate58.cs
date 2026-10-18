@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c5MxD5KQEeWHWpTQn1FFVg")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate58
+public partial record CorporateActionDate58
 {
     /// <summary>
     /// Date/time at which the issuer announced that a corporate action event will occur.

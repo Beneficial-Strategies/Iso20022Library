@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat1
     /// </summary>
     [IsoId("_M4dnUdD7Eeetfps_dpxRmg")]
     [DisplayName("Code")]
-    public record Code : AdditionalBusinessProcessFormat16Choice_
+    public partial record Code : AdditionalBusinessProcessFormat16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

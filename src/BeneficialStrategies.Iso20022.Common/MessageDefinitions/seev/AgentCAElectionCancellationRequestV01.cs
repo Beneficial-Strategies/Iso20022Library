@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TNTj4NEwEd-BzquC8wXy7w_-1473498229")]
 [DisplayName("Agent CA Election Cancellation Request V")]
-public record AgentCAElectionCancellationRequestV01 : IOuterRecord
+public partial record AgentCAElectionCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

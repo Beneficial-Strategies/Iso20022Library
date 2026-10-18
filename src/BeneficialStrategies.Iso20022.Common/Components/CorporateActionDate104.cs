@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_serYIYFmEe-L4fccMJVoAw")]
 [DisplayName("Corporate Action Date104")]
-public record CorporateActionDate104
+public partial record CorporateActionDate104
 {
     /// <summary>
     /// Early Response Deadline.

@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Vote18Choice.GlobalVoteInstruction))]
     [JsonDerivedType(typeof(Vote18Choice.VoteInstruction))]
     [JsonDerivedType(typeof(Vote18Choice.GlobalVoteInstruction))]
-    public abstract record Vote18Choice_
+    public abstract partial record Vote18Choice_
     {
     }
 }

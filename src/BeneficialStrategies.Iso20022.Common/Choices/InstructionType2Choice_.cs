@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5chpEbmwEemdEs93hOkPKA")]
     [DisplayName("Instruction Type 2 Choice")]
-    public abstract record InstructionType2Choice_ { }
+    public abstract partial record InstructionType2Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HGObUVtiEeSwKe7KuKvXhg")]
 [DisplayName("Instruction")]
-public record Instruction3
+public partial record Instruction3
 {
     /// <summary>
     /// Identifies the detailed instruction.

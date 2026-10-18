@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus58Choice
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
-    public record Reason : RejectedStatus58Choice_
+    public partial record Reason : RejectedStatus58Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

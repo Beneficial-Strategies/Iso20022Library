@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UPYvmNp-Ed-ak6NoX_4Aeg_1659440967")]
     [DisplayName("Net Dividend Rate 1 Choice")]
-    public abstract record NetDividendRate1Choice_ { }
+    public abstract partial record NetDividendRate1Choice_ { }
 }

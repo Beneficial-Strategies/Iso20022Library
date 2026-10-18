@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kvec6Tq5EeWQ1Y7f8kds2A")]
 [DisplayName("Signed Quantity Format")]
-public record SignedQuantityFormat6
+public partial record SignedQuantityFormat6
 {
     /// <summary>
     /// Sign of the quantity of security.

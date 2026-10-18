@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ParticipationMethod1Choice
     [IsoId("_APX1cK32EemG7MmivSuE5g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ParticipationMethod1Choice_
+    public partial record Proprietary : ParticipationMethod1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SxQ8AbIXEemux5trsZcCpw")]
 [DisplayName("Incentive Premium")]
-public record IncentivePremium4
+public partial record IncentivePremium4
 {
     /// <summary>
     /// Description of the premium.

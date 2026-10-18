@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RiPM1dp-Ed-ak6NoX_4Aeg_-2034263409")]
     [DisplayName("Corporate Action Movement Status 1 Choice")]
-    public abstract record CorporateActionMovementStatus1Choice_ { }
+    public abstract partial record CorporateActionMovementStatus1Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account9Choice
     /// </summary>
     [IsoId("_XY2a5Np-Ed-ak6NoX_4Aeg_1986494181")]
     [DisplayName("Cash Account")]
-    public record CashAccount : Account9Choice_
+    public partial record CashAccount : Account9Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CshAcct")]

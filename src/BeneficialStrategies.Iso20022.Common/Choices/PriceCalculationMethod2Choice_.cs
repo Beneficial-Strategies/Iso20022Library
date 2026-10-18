@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_HlKRQ6GoEe-4O7NbwmwJkQ")]
     [DisplayName("Price Calculation Method2Choice")]
-    public abstract record PriceCalculationMethod2Choice_ { }
+    public abstract partial record PriceCalculationMethod2Choice_ { }
 }

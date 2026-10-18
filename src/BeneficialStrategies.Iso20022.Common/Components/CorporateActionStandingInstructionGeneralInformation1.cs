@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJkbdNp-Ed-ak6NoX_4Aeg_1871445103")]
 [DisplayName("Corporate Action Standing Instruction General Information")]
-public record CorporateActionStandingInstructionGeneralInformation1
+public partial record CorporateActionStandingInstructionGeneralInformation1
 {
     /// <summary>
     /// Type of standing instruction.

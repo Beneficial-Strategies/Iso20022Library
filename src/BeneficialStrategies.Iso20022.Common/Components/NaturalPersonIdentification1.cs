@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BInyYId6EemJ1cSJJmVYRQ")]
 [DisplayName("Natural Person Identification")]
-public record NaturalPersonIdentification1
+public partial record NaturalPersonIdentification1
 {
     /// <summary>
     /// Natural person local identification.

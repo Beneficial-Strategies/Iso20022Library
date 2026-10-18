@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventSequenceTypeFormat2Choice
     [IsoId("_6UsaKfyVEeiKOe8GCUL1Lg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : EventSequenceTypeFormat2Choice_
+    public partial record Proprietary : EventSequenceTypeFormat2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

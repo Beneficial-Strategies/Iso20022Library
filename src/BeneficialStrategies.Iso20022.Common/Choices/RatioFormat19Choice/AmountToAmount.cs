@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat19Choice
     [IsoId("_8MHPrUEKEeWVgfuHGaKtRQ")]
     [DisplayName("Amount To Amount")]
     [IsoXmlTag("AmtToAmt")]
-    public record AmountToAmount : RatioFormat19Choice_
+    public partial record AmountToAmount : RatioFormat19Choice_
     {
         /// <summary>
         /// Numerator of the quotient of amounts.

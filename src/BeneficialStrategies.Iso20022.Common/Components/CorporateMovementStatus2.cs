@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ri-zttp-Ed-ak6NoX_4Aeg_728771721")]
 [DisplayName("Corporate Movement Status")]
-public record CorporateMovementStatus2
+public partial record CorporateMovementStatus2
 {
     /// <summary>
     /// Provides information about the processing status of the cancellation request.

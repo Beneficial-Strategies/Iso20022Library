@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TdKoc9p-Ed-ak6NoX_4Aeg_281523718")]
 [DisplayName("Corporate Action")]
-public record CorporateAction2
+public partial record CorporateAction2
 {
     /// <summary>
     /// Stage in the corporate action event life cycle.

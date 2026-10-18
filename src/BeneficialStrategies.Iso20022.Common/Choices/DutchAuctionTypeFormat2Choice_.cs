@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_t5KOQaAUEe-BUYcGJFWBWA")]
     [DisplayName("Dutch Auction Type Format2Choice")]
-    public abstract record DutchAuctionTypeFormat2Choice_ { }
+    public abstract partial record DutchAuctionTypeFormat2Choice_ { }
 }

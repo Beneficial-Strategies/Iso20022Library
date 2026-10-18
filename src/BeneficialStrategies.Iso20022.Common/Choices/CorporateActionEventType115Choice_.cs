@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jhlJJ5t3Ee-wQIOX0djF2w")]
     [DisplayName("Corporate Action Event Type115Choice")]
-    public abstract record CorporateActionEventType115Choice_ { }
+    public abstract partial record CorporateActionEventType115Choice_ { }
 }

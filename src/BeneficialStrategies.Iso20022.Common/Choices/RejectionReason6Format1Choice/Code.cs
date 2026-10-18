@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason6Format1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : RejectionReason6Format1Choice_
+    public partial record Code : RejectionReason6Format1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

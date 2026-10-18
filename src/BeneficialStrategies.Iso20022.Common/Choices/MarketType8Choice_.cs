@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(MarketType8Choice.Proprietary), nameof(MarketType8Choice.Proprietary))]
     [IsoId("_Ql4SQtp-Ed-ak6NoX_4Aeg_1045554562")]
     [DisplayName("Market Type 8 Choice")]
-    public abstract record MarketType8Choice_ { }
+    public abstract partial record MarketType8Choice_ { }
 }

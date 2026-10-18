@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account12Choice
     /// Tax Account.
     /// </summary>
     [DisplayName("Tax Account")]
-    public record TaxAccount : Account12Choice_
+    public partial record TaxAccount : Account12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

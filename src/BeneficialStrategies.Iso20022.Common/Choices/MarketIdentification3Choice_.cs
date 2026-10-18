@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AcingtokEeC60axPepSq7g_278659251")]
     [DisplayName("Market Identification 3 Choice")]
-    public abstract record MarketIdentification3Choice_ { }
+    public abstract partial record MarketIdentification3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QDA1xdp-Ed-ak6NoX_4Aeg_-729109084")]
 [DisplayName("Individual Person")]
-public record IndividualPerson14
+public partial record IndividualPerson14
 {
     /// <summary>
     /// Name received at birth, eg, maiden name.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Account12Choice
     /// Charges Account.
     /// </summary>
     [DisplayName("Charges Account")]
-    public record ChargesAccount : Account12Choice_
+    public partial record ChargesAccount : Account12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

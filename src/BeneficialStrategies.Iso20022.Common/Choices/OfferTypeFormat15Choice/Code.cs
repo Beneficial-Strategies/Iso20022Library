@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat15Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : OfferTypeFormat15Choice_
+    public partial record Code : OfferTypeFormat15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

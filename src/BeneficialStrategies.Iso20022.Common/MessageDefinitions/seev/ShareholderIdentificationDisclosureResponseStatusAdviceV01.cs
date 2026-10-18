@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_NCNMYHC5EemNhNOCZKENuw")]
 [DisplayName("Shareholder Identification Disclosure Response Status Advice V")]
-public record ShareholderIdentificationDisclosureResponseStatusAdviceV01 : IOuterRecord
+public partial record ShareholderIdentificationDisclosureResponseStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

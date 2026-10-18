@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s2Ll2qGqEe-4O7NbwmwJkQ")]
 [DisplayName("Returned Status Reason2")]
-public record ReturnedStatusReason2
+public partial record ReturnedStatusReason2
 {
     /// <summary>
     /// Reason Code.

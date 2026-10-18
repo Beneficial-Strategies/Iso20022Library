@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QDnStdp-Ed-ak6NoX_4Aeg_-2124213178")]
 [DisplayName("Contact Person")]
-public record ContactPerson1
+public partial record ContactPerson1
 {
     /// <summary>
     /// Provides additional information regarding the party, eg, the contact unit or person responsible for the transaction identified in the message.

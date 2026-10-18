@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus8Choice
     /// <summary>Status of the instruction.</summary>
     [IsoId("_D2yUwajVEfCzuLlmLrhIvA")]
     [DisplayName("Instruction Status")]
-    public record InstructionStatus : InstructionTypeStatus8Choice_
+    public partial record InstructionStatus : InstructionTypeStatus8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("InstrSts")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
     [IsoId("_RiPM19p-Ed-ak6NoX_4Aeg_-1878187408")]
     [DisplayName("Failed Status")]
     [IsoXmlTag("FaildSts")]
-    public record FailedStatus : CorporateActionMovementStatus1Choice_
+    public partial record FailedStatus : CorporateActionMovementStatus1Choice_
     {
         /// <summary>
         /// Identification of the agent account.

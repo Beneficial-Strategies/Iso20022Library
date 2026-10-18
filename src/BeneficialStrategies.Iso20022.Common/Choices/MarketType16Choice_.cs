@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cj_VWZKQEeWHWpTQn1FFVg")]
     [DisplayName("Market Type 16 Choice")]
-    public abstract record MarketType16Choice_ { }
+    public abstract partial record MarketType16Choice_ { }
 }

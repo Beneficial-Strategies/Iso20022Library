@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Code), nameof(Code))]
     [KnownType(typeof(Proprietary))]
     [JsonDerivedType(typeof(Proprietary), nameof(Proprietary))]
-    public abstract record OfferTypeFormat17Choice_;
+    public abstract partial record OfferTypeFormat17Choice_;
 }

@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PendingCancellation), nameof(PendingCancellation))]
     [KnownType(typeof(ProprietaryStatus))]
     [JsonDerivedType(typeof(ProprietaryStatus), nameof(ProprietaryStatus))]
-    public abstract record MarketClaimCancellationRequestStatus3Choice_;
+    public abstract partial record MarketClaimCancellationRequestStatus3Choice_;
 }

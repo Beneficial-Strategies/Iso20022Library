@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat38Choice
     [IsoId("_ahHhPeXsEemEj48jhmlA0Q")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : GrossDividendRateFormat38Choice_
+    public partial record RateTypeAndAmountAndRateStatus : GrossDividendRateFormat38Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification76Choice
     /// Accounts List And Balance Details.
     /// </summary>
     [DisplayName("Accounts List And Balance Details")]
-    public record AccountsListAndBalanceDetails : AccountIdentification76Choice_
+    public partial record AccountsListAndBalanceDetails : AccountIdentification76Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

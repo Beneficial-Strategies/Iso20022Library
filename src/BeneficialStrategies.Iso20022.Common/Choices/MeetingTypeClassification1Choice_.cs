@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RDrokNp-Ed-ak6NoX_4Aeg_843703595")]
     [DisplayName("Meeting Type Classification 1 Choice")]
-    public abstract record MeetingTypeClassification1Choice_ { }
+    public abstract partial record MeetingTypeClassification1Choice_ { }
 }

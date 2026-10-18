@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
     /// <summary>Instruction has not been completed.</summary>
     [IsoId("_H9hea68wEfCx2aBifPEdRg")]
     [DisplayName("Pending")]
-    public record Pending : InstructionProcessingStatus62Choice_
+    public partial record Pending : InstructionProcessingStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

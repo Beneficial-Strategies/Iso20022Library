@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cheMk5KQEeWHWpTQn1FFVg")]
     [DisplayName("Corporate Action Change Type Format 7 Choice")]
-    public abstract record CorporateActionChangeTypeFormat7Choice_ { }
+    public abstract partial record CorporateActionChangeTypeFormat7Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType9Cho
     /// </summary>
     [IsoId("_UQaTEfiyEeSjz7lzcp5lWQ")]
     [DisplayName("Code")]
-    public record Code : BeneficiaryCertificationType9Choice_
+    public partial record Code : BeneficiaryCertificationType9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

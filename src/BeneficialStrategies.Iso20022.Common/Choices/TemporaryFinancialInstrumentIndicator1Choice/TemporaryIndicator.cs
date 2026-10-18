@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndi
     /// </summary>
     [IsoId("_Q08B9Np-Ed-ak6NoX_4Aeg_-953773850")]
     [DisplayName("Temporary Indicator")]
-    public record TemporaryIndicator : TemporaryFinancialInstrumentIndicator1Choice_
+    public partial record TemporaryIndicator : TemporaryFinancialInstrumentIndicator1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

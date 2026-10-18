@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tf_6BNp-Ed-ak6NoX_4Aeg_-532082484")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate2
+public partial record CorporateActionRate2
 {
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.

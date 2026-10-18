@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRightCode1Choice
     [IsoId("_RDieoNp-Ed-ak6NoX_4Aeg_1874759869")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AdditionalRightCode1Choice_
+    public partial record Proprietary : AdditionalRightCode1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

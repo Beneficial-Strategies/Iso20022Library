@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedWithWarningStatus1Format
     /// <summary>Standard code to specify to express the processing status of the notification advice.</summary>
     [IsoId("__1hY4aUdEfCnE_wCEfCqTA")]
     [DisplayName("Code")]
-    public record Code : AcceptedWithWarningStatus1Format1Choice_
+    public partial record Code : AcceptedWithWarningStatus1Format1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

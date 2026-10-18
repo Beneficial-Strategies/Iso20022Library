@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat15Choic
     /// Amount To Quantity.
     /// </summary>
     [DisplayName("Amount To Quantity")]
-    public record AmountToQuantity : SolicitationFeeRateFormat15Choice_
+    public partial record AmountToQuantity : SolicitationFeeRateFormat15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure3Choice
     /// Safekeeping Account And Holdings.
     /// </summary>
     [DisplayName("Safekeeping Account And Holdings")]
-    public record SafekeepingAccountAndHoldings : Disclosure3Choice_
+    public partial record SafekeepingAccountAndHoldings : Disclosure3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

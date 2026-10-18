@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingPosition22Choice
     [IsoId("_Vye1r5qLEeWcAIE4lEkF_Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ProcessingPosition22Choice_
+    public partial record Proprietary : ProcessingPosition22Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

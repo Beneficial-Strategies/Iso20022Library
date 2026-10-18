@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionRejectionStatus1Choic
     /// </summary>
     [IsoId("_RCfVxtp-Ed-ak6NoX_4Aeg_-867514428")]
     [DisplayName("Code")]
-    public record Code : InstructionRejectionStatus1Choice_
+    public partial record Code : InstructionRejectionStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

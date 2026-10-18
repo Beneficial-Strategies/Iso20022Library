@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jINvYeaPEd-q8fx_Zl_34A")]
     [DisplayName("Account Identification 12 Choice")]
-    public abstract record AccountIdentification12Choice_ { }
+    public abstract partial record AccountIdentification12Choice_ { }
 }

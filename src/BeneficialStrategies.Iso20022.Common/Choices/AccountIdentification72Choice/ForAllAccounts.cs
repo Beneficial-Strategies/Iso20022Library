@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification72Choice
     /// For All Accounts.
     /// </summary>
     [DisplayName("For All Accounts")]
-    public record ForAllAccounts : AccountIdentification72Choice_
+    public partial record ForAllAccounts : AccountIdentification72Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

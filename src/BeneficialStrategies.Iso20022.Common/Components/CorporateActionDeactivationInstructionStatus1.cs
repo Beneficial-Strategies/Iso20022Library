@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RjRuptp-Ed-ak6NoX_4Aeg_491823442")]
 [DisplayName("Corporate Action Deactivation Instruction Status")]
-public record CorporateActionDeactivationInstructionStatus1
+public partial record CorporateActionDeactivationInstructionStatus1
 {
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

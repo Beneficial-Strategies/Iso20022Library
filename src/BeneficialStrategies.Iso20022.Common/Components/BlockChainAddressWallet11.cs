@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y6JfAaDcEe-CRv8HNM1RKw")]
 [DisplayName("Block Chain Address Wallet11")]
-public record BlockChainAddressWallet11
+public partial record BlockChainAddressWallet11
 {
     /// <summary>
     /// Identification.

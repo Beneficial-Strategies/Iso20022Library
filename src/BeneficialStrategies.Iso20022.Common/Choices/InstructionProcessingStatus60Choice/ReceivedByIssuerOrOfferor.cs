@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus60Cho
     /// <summary>Instruction has been received and accepted by the issuer or offeror.</summary>
     [IsoId("_rt3LRY74EfCbNJ3GwkFTcw")]
     [DisplayName("Received By Issuer Or Offeror")]
-    public record ReceivedByIssuerOrOfferor : InstructionProcessingStatus60Choice_
+    public partial record ReceivedByIssuerOrOfferor : InstructionProcessingStatus60Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RcvdByIssrOrOfferr")]

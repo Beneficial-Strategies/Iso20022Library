@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cfqOtZKQEeWHWpTQn1FFVg")]
 [DisplayName("Statement")]
-public record Statement48
+public partial record Statement48
 {
     /// <summary>
     /// Indicates whether the statement contains missing instructions only or all instructions.

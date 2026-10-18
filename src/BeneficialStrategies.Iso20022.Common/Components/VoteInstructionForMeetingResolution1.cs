@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TLJEUNp-Ed-ak6NoX_4Aeg_1597899369")]
 [DisplayName("Vote Instruction For Meeting Resolution")]
-public record VoteInstructionForMeetingResolution1
+public partial record VoteInstructionForMeetingResolution1
 {
     /// <summary>
     /// Specifies the vote recommendation for resolutions added during the meeting.

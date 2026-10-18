@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShareRanking1FormatChoice
     /// </summary>
     [IsoId("_Ro8RxNp-Ed-ak6NoX_4Aeg_1569147900")]
     [DisplayName("Code")]
-    public record Code : ShareRanking1FormatChoice_
+    public partial record Code : ShareRanking1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

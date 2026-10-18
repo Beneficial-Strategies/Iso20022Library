@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_UI-lk9p-Ed-ak6NoX_4Aeg_1684857484")]
 [DisplayName("Cash Movement")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
-public record CashMovement1
+public partial record CashMovement1
 {
     /// <summary>
     /// Identification of the movement.

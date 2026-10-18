@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x14REatmEfCqjuqNaaNXgw")]
 [DisplayName("Corporate Action Period17")]
-public record CorporateActionPeriod17
+public partial record CorporateActionPeriod17
 {
     /// <summary>
     /// Period during which the interest rate applicable to the coupon payment has been calculated.

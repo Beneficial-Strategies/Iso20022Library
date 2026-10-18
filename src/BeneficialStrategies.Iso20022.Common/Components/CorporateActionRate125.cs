@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3LzgLYV4Ee-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Rate125")]
-public record CorporateActionRate125
+public partial record CorporateActionRate125
 {
     /// <summary>
     /// Additional Quantity For Subscribed Resultant Securities.

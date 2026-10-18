@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RCpGxdp-Ed-ak6NoX_4Aeg_-1718693015")]
     [DisplayName("Instruction Status 4 Choice")]
-    public abstract record InstructionStatus4Choice_ { }
+    public abstract partial record InstructionStatus4Choice_ { }
 }

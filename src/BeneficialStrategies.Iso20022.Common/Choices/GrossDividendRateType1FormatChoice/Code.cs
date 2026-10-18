@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateType1FormatChoi
     /// </summary>
     [IsoId("_Rms2ENp-Ed-ak6NoX_4Aeg_-8475313")]
     [DisplayName("Code")]
-    public record Code : GrossDividendRateType1FormatChoice_
+    public partial record Code : GrossDividendRateType1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

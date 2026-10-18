@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SQINmNp-Ed-ak6NoX_4Aeg_-1249584584")]
 [DisplayName("Cash Account")]
-public record CashAccount18
+public partial record CashAccount18
 {
     /// <summary>
     /// Specifies whether the value is a debit or credit.

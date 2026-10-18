@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DcqX4YV6Ee-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Price84")]
-public record CorporateActionPrice84
+public partial record CorporateActionPrice84
 {
     /// <summary>
     /// Cash In Lieu Of Share Price.

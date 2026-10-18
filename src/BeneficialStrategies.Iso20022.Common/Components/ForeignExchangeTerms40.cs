@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7NBgIYV9Ee-ufOxNNkEXmg")]
 [DisplayName("Foreign Exchange Terms40")]
-public record ForeignExchangeTerms40
+public partial record ForeignExchangeTerms40
 {
     /// <summary>
     /// Unit Currency.

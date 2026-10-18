@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod2Choice
     [IsoId("_l61PQbQVEeemgtANb5gbCw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public record Date : DateOrDateTimePeriod2Choice_
+    public partial record Date : DateOrDateTimePeriod2Choice_
     {
         /// <summary>
         /// Start date of the range.

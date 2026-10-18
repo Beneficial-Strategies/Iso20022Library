@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(DateCode19Choice.Proprietary), nameof(DateCode19Choice.Proprietary))]
     [IsoId("_KEW2E0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Date Code 19 Choice")]
-    public abstract record DateCode19Choice_ { }
+    public abstract partial record DateCode19Choice_ { }
 }

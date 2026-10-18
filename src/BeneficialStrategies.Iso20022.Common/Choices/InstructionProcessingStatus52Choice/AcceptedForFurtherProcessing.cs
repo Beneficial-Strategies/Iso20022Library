@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus52Cho
     /// Accepted For Further Processing.
     /// </summary>
     [DisplayName("Accepted For Further Processing")]
-    public record AcceptedForFurtherProcessing : InstructionProcessingStatus52Choice_
+    public partial record AcceptedForFurtherProcessing : InstructionProcessingStatus52Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

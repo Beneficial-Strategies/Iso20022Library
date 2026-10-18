@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType78Choice
     /// </summary>
     [IsoId("_ZvuggeXsEemEj48jhmlA0Q")]
     [DisplayName("Code")]
-    public record Code : RateType78Choice_
+    public partial record Code : RateType78Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification43Choice
     [IsoId("__2YHG_fDEeiNZp_PtLohLw")]
     [DisplayName("Accounts List")]
     [IsoXmlTag("AcctsList")]
-    public record AccountsList : AccountIdentification43Choice_
+    public partial record AccountsList : AccountIdentification43Choice_
     {
         /// <summary>
         /// Account where financial instruments are maintained.

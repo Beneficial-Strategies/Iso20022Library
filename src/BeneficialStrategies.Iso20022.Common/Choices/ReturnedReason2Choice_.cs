@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ohK2UIS_Ee-1WeOqsw_6eA")]
     [DisplayName("Returned Reason2Choice")]
-    public abstract record ReturnedReason2Choice_ { }
+    public abstract partial record ReturnedReason2Choice_ { }
 }

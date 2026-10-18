@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus31Choice
     /// Global Cancellation Status.
     /// </summary>
     [DisplayName("Global Cancellation Status")]
-    public record GlobalCancellationStatus : CancellationStatus31Choice_
+    public partial record GlobalCancellationStatus : CancellationStatus31Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

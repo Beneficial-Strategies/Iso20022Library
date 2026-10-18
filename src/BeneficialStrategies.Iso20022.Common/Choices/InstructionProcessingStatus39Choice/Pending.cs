@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus39Cho
     /// </summary>
     [IsoId("_Pl7SXAVSEeqjd8n6wD9JVw")]
     [DisplayName("Pending")]
-    public record Pending : InstructionProcessingStatus39Choice_
+    public partial record Pending : InstructionProcessingStatus39Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

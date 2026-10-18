@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionChangeTypeFormat8
     [IsoId("_c5V6dZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CorporateActionChangeTypeFormat8Choice_
+    public partial record Proprietary : CorporateActionChangeTypeFormat8Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

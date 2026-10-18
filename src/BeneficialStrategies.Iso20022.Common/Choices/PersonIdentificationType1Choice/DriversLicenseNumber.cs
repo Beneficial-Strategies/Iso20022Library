@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
     /// </summary>
     [IsoId("_QEW5ltp-Ed-ak6NoX_4Aeg_-1181116211")]
     [DisplayName("Drivers License Number")]
-    public record DriversLicenseNumber : PersonIdentificationType1Choice_
+    public partial record DriversLicenseNumber : PersonIdentificationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

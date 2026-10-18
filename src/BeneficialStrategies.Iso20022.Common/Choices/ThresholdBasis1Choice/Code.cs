@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ThresholdBasis1Choice
     /// </summary>
     [IsoId("_4JOLYBuMEeyhRdHRjakS2w")]
     [DisplayName("Code")]
-    public record Code : ThresholdBasis1Choice_
+    public partial record Code : ThresholdBasis1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

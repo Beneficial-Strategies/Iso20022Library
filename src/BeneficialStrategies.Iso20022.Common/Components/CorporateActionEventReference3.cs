@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_n8yzsznYEeWLJsP1cO-amg")]
 [DisplayName("Corporate Action Event Reference")]
-public record CorporateActionEventReference3
+public partial record CorporateActionEventReference3
 {
     /// <summary>
     /// Identification of the linked corporate action event.

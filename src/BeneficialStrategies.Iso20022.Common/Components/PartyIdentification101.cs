@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_chc-k5KQEeWHWpTQn1FFVg")]
 [DisplayName("Party Identification")]
-public record PartyIdentification101
+public partial record PartyIdentification101
 {
     /// <summary>
     /// Party that is the beneficial owner of the specified quantity of securities.

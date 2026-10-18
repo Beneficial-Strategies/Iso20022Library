@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_65NzW5SbEeeh5JjedkaA_g")]
 [DisplayName("Corporate Action Cancellation Advice V")]
-public record CorporateActionCancellationAdviceV08 : IOuterRecord
+public partial record CorporateActionCancellationAdviceV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

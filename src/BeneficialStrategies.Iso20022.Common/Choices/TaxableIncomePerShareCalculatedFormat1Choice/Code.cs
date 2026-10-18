@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculatedF
     /// </summary>
     [IsoId("_Q3K2ltp-Ed-ak6NoX_4Aeg_-1453152735")]
     [DisplayName("Code")]
-    public record Code : TaxableIncomePerShareCalculatedFormat1Choice_
+    public partial record Code : TaxableIncomePerShareCalculatedFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

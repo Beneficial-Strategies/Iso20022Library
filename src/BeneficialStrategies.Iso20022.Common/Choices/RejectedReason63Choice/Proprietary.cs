@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason63Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : RejectedReason63Choice_
+    public partial record Proprietary : RejectedReason63Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

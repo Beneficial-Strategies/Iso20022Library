@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RlNoVdp-Ed-ak6NoX_4Aeg_1541470017")]
 [DisplayName("Corporate Action Movement Rejection Status")]
-public record CorporateActionMovementRejectionStatus2
+public partial record CorporateActionMovementRejectionStatus2
 {
     /// <summary>
     /// The rejection reason.

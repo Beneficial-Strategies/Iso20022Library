@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification196Choice
     [IsoId("_8gnOcDtnEemIf7eyjCwinw")]
     [DisplayName("Legal Person")]
     [IsoXmlTag("LglPrsn")]
-    public record LegalPerson : PartyIdentification196Choice_
+    public partial record LegalPerson : PartyIdentification196Choice_
     {
         /// <summary>
         /// Name and address of the party.

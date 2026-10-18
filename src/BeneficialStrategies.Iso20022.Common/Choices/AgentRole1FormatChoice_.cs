@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RlgjR9p-Ed-ak6NoX_4Aeg_1472150836")]
     [DisplayName("Agent Role 1 Format Choice")]
-    public abstract record AgentRole1FormatChoice_ { }
+    public abstract partial record AgentRole1FormatChoice_ { }
 }

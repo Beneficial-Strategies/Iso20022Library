@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason56Choice
     /// </summary>
     [IsoId("_NpuWZl99Ee262vCSVgjImg")]
     [DisplayName("Code")]
-    public record Code : RejectedReason56Choice_
+    public partial record Code : RejectedReason56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

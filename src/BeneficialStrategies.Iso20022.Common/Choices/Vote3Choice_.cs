@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_hx10Z166EeSjaerr_EM7AQ")]
     [DisplayName("Vote 3 Choice")]
-    public abstract record Vote3Choice_ { }
+    public abstract partial record Vote3Choice_ { }
 }

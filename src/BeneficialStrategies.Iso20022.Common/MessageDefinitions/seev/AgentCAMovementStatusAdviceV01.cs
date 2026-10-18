@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TQurWdEwEd-BzquC8wXy7w_-1045499600")]
 [DisplayName("Agent CA Movement Status Advice V")]
-public record AgentCAMovementStatusAdviceV01 : IOuterRecord
+public partial record AgentCAMovementStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rYo9IZcIEee8S7xwGG7Veg")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate91
+public partial record CorporateActionRate91
 {
     /// <summary>
     /// Annualised interest rate of a financial instrument used to calculate the actual interest rate of the coupon or the accrued interest.

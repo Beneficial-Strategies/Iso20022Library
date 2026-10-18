@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus54Cho
     /// Default Action.
     /// </summary>
     [DisplayName("Default Action")]
-    public record DefaultAction : InstructionProcessingStatus54Choice_
+    public partial record DefaultAction : InstructionProcessingStatus54Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

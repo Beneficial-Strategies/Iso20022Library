@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ctfP95KQEeWHWpTQn1FFVg")]
 [DisplayName("Securities Option")]
-public record SecuritiesOption56
+public partial record SecuritiesOption56
 {
     /// <summary>
     /// Maximum quantity of financial instrument that may be instructed.

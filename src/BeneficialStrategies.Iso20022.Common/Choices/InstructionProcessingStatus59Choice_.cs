@@ -19,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionProcessingStatus59Choice.ProprietaryStatus), nameof(InstructionProcessingStatus59Choice.ProprietaryStatus))]
     [IsoId("_j6NGgd75Ee-NrtAAlrBEgQ")]
     [DisplayName("Instruction Processing Status 59 Choice")]
-    public abstract record InstructionProcessingStatus59Choice_ { }
+    public abstract partial record InstructionProcessingStatus59Choice_ { }
 }

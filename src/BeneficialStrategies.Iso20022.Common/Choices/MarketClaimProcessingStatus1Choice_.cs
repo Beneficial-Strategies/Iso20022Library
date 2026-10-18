@@ -41,5 +41,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_YGaIftx4EeqESbVR5AloZQ")]
     [DisplayName("Market Claim Processing Status 1 Choice")]
-    public abstract record MarketClaimProcessingStatus1Choice_ { }
+    public abstract partial record MarketClaimProcessingStatus1Choice_ { }
 }

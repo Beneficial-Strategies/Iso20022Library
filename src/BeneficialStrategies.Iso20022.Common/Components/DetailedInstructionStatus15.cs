@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l2hzAfNmEeqRfth943bvEA")]
 [DisplayName("Detailed Instruction Status")]
-public record DetailedInstructionStatus15
+public partial record DetailedInstructionStatus15
 {
     /// <summary>
     /// Identification of the specific individual instruction from the original meeting instruction message for which the confirmation is provided.

@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_mmNNYNsFEeqmdMJWobugpw")]
 [DisplayName("Market Claim Cancellation Request V")]
-public record MarketClaimCancellationRequestV01 : IOuterRecord
+public partial record MarketClaimCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

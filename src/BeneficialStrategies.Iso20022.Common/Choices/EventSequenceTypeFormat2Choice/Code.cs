@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventSequenceTypeFormat2Choice
     /// </summary>
     [IsoId("_6UsaIfyVEeiKOe8GCUL1Lg")]
     [DisplayName("Code")]
-    public record Code : EventSequenceTypeFormat2Choice_
+    public partial record Code : EventSequenceTypeFormat2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

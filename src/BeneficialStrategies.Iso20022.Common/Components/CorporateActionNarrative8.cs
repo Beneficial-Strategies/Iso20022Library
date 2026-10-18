@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ULqGIdp-Ed-ak6NoX_4Aeg_-819428560")]
 [DisplayName("Corporate Action Narrative")]
-public record CorporateActionNarrative8
+public partial record CorporateActionNarrative8
 {
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason8FormatChoice
     /// </summary>
     [IsoId("_Roovw9p-Ed-ak6NoX_4Aeg_274039681")]
     [DisplayName("Code")]
-    public record Code : RejectionReason8FormatChoice_
+    public partial record Code : RejectionReason8FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

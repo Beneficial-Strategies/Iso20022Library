@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RjkpkNp-Ed-ak6NoX_4Aeg_-1988452432")]
 [DisplayName("Individual Movement Status")]
-public record IndividualMovementStatus1
+public partial record IndividualMovementStatus1
 {
     /// <summary>
     /// Identification of the movement.

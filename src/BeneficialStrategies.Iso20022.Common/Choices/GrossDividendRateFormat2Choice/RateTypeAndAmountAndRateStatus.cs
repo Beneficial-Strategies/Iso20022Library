@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat2Choice
     [IsoId("_UNAJ-Np-Ed-ak6NoX_4Aeg_-1557223642")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : GrossDividendRateFormat2Choice_
+    public partial record RateTypeAndAmountAndRateStatus : GrossDividendRateFormat2Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

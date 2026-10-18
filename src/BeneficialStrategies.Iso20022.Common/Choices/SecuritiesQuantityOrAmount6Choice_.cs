@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Np2b7RuyEeyhRdHRjakS2w")]
     [DisplayName("Securities Quantity Or Amount 6 Choice")]
-    public abstract record SecuritiesQuantityOrAmount6Choice_ { }
+    public abstract partial record SecuritiesQuantityOrAmount6Choice_ { }
 }

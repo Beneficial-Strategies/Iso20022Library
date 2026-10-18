@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus6FormatChoice
     [IsoId("_RnmN99p-Ed-ak6NoX_4Aeg_-1064962645")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ProcessedStatus6FormatChoice_
+    public partial record Proprietary : ProcessedStatus6FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

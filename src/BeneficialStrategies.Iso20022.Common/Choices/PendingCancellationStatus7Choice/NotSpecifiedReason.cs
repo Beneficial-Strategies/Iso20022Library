@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus7Choice
     /// </summary>
     [IsoId("_1-IC4YluEeavwKddCbm3hg")]
     [DisplayName("Not Specified Reason")]
-    public record NotSpecifiedReason : PendingCancellationStatus7Choice_
+    public partial record NotSpecifiedReason : PendingCancellationStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

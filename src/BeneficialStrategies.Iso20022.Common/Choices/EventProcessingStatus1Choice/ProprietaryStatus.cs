@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus1Choice
     [IsoId("_Qx8_YNp-Ed-ak6NoX_4Aeg_1493935136")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public record ProprietaryStatus : EventProcessingStatus1Choice_
+    public partial record ProprietaryStatus : EventProcessingStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

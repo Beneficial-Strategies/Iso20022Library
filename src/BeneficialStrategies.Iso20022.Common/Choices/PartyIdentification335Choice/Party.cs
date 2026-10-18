@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification335Choice
     /// <summary>Party identification.</summary>
     [IsoId("_YdfbsanVEfC5VNwixU6YfQ")]
     [DisplayName("Party")]
-    public record Party : PartyIdentification335Choice_
+    public partial record Party : PartyIdentification335Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pty")]

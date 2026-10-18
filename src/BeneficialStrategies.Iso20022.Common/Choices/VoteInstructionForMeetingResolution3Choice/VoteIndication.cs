@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
     /// </summary>
     [IsoId("_n0rhA64dEemG7MmivSuE5g")]
     [DisplayName("Vote Indication")]
-    public record VoteIndication : VoteInstructionForMeetingResolution3Choice_
+    public partial record VoteIndication : VoteInstructionForMeetingResolution3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("VoteIndctn")]

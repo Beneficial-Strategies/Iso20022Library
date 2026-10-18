@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionTypeStatus8Choice.CancellationStatus), nameof(InstructionTypeStatus8Choice.CancellationStatus))]
     [IsoId("_DunQMajVEfCzuLlmLrhIvA")]
     [DisplayName("Instruction Type Status 8 Choice")]
-    public abstract record InstructionTypeStatus8Choice_ { }
+    public abstract partial record InstructionTypeStatus8Choice_ { }
 }

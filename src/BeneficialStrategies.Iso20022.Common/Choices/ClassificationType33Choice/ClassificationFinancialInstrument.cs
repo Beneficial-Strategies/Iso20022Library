@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType33Choice
     /// </summary>
     [IsoId("_chVpxZKQEeWHWpTQn1FFVg")]
     [DisplayName("Classification Financial Instrument")]
-    public record ClassificationFinancialInstrument : ClassificationType33Choice_
+    public partial record ClassificationFinancialInstrument : ClassificationType33Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

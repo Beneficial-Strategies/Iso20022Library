@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-sr-USeTEeOXAt_43VmZGw")]
 [DisplayName("Corporate Action Amounts")]
-public record CorporateActionAmounts28
+public partial record CorporateActionAmounts28
 {
     /// <summary>
     /// Amount of money before any deductions and allowances have been made.

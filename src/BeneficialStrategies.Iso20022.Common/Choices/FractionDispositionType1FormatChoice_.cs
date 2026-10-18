@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RmjsJdp-Ed-ak6NoX_4Aeg_-689292712")]
     [DisplayName("Fraction Disposition Type 1 Format Choice")]
-    public abstract record FractionDispositionType1FormatChoice_ { }
+    public abstract partial record FractionDispositionType1FormatChoice_ { }
 }

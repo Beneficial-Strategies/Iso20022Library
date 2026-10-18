@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_UIO-sNp-Ed-ak6NoX_4Aeg_-697458395")]
 [DisplayName("Underlying Security Movement")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record UnderlyingSecurityMovement1
+public partial record UnderlyingSecurityMovement1
 {
     /// <summary>
     /// Identification of the financial instrument.

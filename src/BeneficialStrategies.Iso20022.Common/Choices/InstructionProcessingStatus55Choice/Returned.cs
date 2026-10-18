@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
     /// Returned.
     /// </summary>
     [DisplayName("Returned")]
-    public record Returned : InstructionProcessingStatus55Choice_
+    public partial record Returned : InstructionProcessingStatus55Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9vkikWKMEe6iKbrXdnOlfA")]
     [DisplayName("Option Features Format29Choice")]
-    public abstract record OptionFeaturesFormat29Choice_ { }
+    public abstract partial record OptionFeaturesFormat29Choice_ { }
 }

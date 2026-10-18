@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
     /// Forwarded.
     /// </summary>
     [DisplayName("Forwarded")]
-    public record Forwarded : InstructionProcessingStatus55Choice_
+    public partial record Forwarded : InstructionProcessingStatus55Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_y6LIHZb7Eee8S7xwGG7Veg")]
     [DisplayName("Gross Dividend Rate Format 27 Choice")]
-    public abstract record GrossDividendRateFormat27Choice_ { }
+    public abstract partial record GrossDividendRateFormat27Choice_ { }
 }

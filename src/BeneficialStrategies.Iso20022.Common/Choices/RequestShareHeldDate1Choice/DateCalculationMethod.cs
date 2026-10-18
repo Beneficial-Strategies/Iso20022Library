@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestShareHeldDate1Choice
     /// </summary>
     [IsoId("_zKTRMFSTEempisJfoIfvvQ")]
     [DisplayName("Date Calculation Method")]
-    public record DateCalculationMethod : RequestShareHeldDate1Choice_
+    public partial record DateCalculationMethod : RequestShareHeldDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

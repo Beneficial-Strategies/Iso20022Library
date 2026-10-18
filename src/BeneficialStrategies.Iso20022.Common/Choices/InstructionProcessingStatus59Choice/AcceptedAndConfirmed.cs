@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus59Cho
     /// <summary>Provides status information related to a buyer instruction request that is accepted and confirmed (matched by the counterparty).</summary>
     [IsoId("_j-yrmd75Ee-NrtAAlrBEgQ")]
     [DisplayName("Accepted And Confirmed")]
-    public record AcceptedAndConfirmed : InstructionProcessingStatus59Choice_
+    public partial record AcceptedAndConfirmed : InstructionProcessingStatus59Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AccptdAndConfd")]

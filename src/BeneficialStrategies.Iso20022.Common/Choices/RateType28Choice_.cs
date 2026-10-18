@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RateType28Choice.Proprietary), nameof(RateType28Choice.Proprietary))]
     [IsoId("_qA9pECeGEeOXAt_43VmZGw")]
     [DisplayName("Rate Type 28 Choice")]
-    public abstract record RateType28Choice_ { }
+    public abstract partial record RateType28Choice_ { }
 }

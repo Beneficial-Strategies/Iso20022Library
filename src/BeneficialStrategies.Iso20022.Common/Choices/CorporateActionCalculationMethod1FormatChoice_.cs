@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rl9PM9p-Ed-ak6NoX_4Aeg_-384222870")]
     [DisplayName("Corporate Action Calculation Method 1 Format Choice")]
-    public abstract record CorporateActionCalculationMethod1FormatChoice_ { }
+    public abstract partial record CorporateActionCalculationMethod1FormatChoice_ { }
 }

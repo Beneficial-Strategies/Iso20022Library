@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat30Choice
     /// </summary>
     [IsoId("_7AmnBZb8Eee8S7xwGG7Veg")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : GrossDividendRateFormat30Choice_
+    public partial record NotSpecifiedRate : GrossDividendRateFormat30Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

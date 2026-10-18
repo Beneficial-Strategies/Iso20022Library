@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qn8A0aAdEe-6zfgb2Rwrlw")]
     [DisplayName("Bid Range Type2Choice")]
-    public abstract record BidRangeType2Choice_ { }
+    public abstract partial record BidRangeType2Choice_ { }
 }

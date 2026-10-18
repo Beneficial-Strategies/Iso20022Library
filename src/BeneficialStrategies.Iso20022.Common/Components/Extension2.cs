@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QzJSNdp-Ed-ak6NoX_4Aeg_251191216")]
 [DisplayName("Extension")]
-public record Extension2
+public partial record Extension2
 {
     /// <summary>
     /// Name qualifying the information provided in the Text field, and place where this information should be inserted.

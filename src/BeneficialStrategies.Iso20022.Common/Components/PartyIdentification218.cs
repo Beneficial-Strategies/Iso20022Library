@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q9aTcz6BEemPvNTzinB5Vw")]
 [DisplayName("Party Identification")]
-public record PartyIdentification218
+public partial record PartyIdentification218
 {
     /// <summary>
     /// Role played by the third party.

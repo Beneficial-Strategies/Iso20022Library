@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus8Choice
     /// Reconciled.
     /// </summary>
     [DisplayName("Reconciled")]
-    public record Reconciled : EventProcessingStatus8Choice_
+    public partial record Reconciled : EventProcessingStatus8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

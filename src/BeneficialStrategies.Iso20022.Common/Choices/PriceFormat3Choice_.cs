@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PriceFormat3Choice.Rate), nameof(PriceFormat3Choice.Rate))]
     [IsoId("_Qa2uAtp-Ed-ak6NoX_4Aeg_-1480216475")]
     [DisplayName("Price Format 3 Choice")]
-    public abstract record PriceFormat3Choice_ { }
+    public abstract partial record PriceFormat3Choice_ { }
 }

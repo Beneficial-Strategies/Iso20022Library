@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus57Cho
     /// Uncovered.
     /// </summary>
     [DisplayName("Uncovered")]
-    public record Uncovered : InstructionProcessingStatus57Choice_
+    public partial record Uncovered : InstructionProcessingStatus57Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

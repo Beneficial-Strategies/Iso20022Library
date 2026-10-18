@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat43Choice
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
-    public record Amount : GrossDividendRateFormat43Choice_
+    public partial record Amount : GrossDividendRateFormat43Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

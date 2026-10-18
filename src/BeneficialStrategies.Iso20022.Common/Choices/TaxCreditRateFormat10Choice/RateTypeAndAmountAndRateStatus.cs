@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat10Choice
     [IsoId("_ctjhQZKQEeWHWpTQn1FFVg")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : TaxCreditRateFormat10Choice_
+    public partial record RateTypeAndAmountAndRateStatus : TaxCreditRateFormat10Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

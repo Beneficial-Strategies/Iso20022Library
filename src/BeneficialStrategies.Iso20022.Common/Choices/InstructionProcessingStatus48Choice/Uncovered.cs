@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus48Cho
     [IsoId("_pf9iZzi7Eeydid5dcNPKvg")]
     [DisplayName("Uncovered")]
     [IsoXmlTag("Ucvrd")]
-    public record Uncovered : InstructionProcessingStatus48Choice_
+    public partial record Uncovered : InstructionProcessingStatus48Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat1Choice
     /// </summary>
     [IsoId("_Q1FL5dp-Ed-ak6NoX_4Aeg_26925540")]
     [DisplayName("Code")]
-    public record Code : OptionFeaturesFormat1Choice_
+    public partial record Code : OptionFeaturesFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

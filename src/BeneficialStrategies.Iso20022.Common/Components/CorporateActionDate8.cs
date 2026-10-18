@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TY_6KNp-Ed-ak6NoX_4Aeg_-402338190")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate8
+public partial record CorporateActionDate8
 {
     /// <summary>
     /// Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).

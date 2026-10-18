@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingEventReference1Choice
     /// </summary>
     [IsoId("__b3CGq7rEemG7MmivSuE5g")]
     [DisplayName("Linked Meeting Identification")]
-    public record LinkedMeetingIdentification : MeetingEventReference1Choice_
+    public partial record LinkedMeetingIdentification : MeetingEventReference1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

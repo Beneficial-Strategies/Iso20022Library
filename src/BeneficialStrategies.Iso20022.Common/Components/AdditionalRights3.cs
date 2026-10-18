@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k8fcwa09EemDtrWpq90Ckg")]
 [DisplayName("Additional Rights")]
-public record AdditionalRights3
+public partial record AdditionalRights3
 {
     /// <summary>
     /// Specific rights granted to the shareholders that can be exercised at shareholders meetings, for example, the right to ask questions, the right to add items to the agenda or table draft resolutions.

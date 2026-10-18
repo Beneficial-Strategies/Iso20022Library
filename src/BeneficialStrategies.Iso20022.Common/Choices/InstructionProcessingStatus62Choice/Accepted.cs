@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus62Cho
     /// <summary>Instruction is accepted.</summary>
     [IsoId("_H9heUa8wEfCx2aBifPEdRg")]
     [DisplayName("Accepted")]
-    public record Accepted : InstructionProcessingStatus62Choice_
+    public partial record Accepted : InstructionProcessingStatus62Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Accptd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y866oajNEfCzuLlmLrhIvA")]
 [DisplayName("Meeting Reference11")]
-public record MeetingReference11
+public partial record MeetingReference11
 {
     /// <summary>
     /// Identification assigned to the general meeting by the party that provides the meeting notification.

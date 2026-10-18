@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification15Choic
     /// Block Chain Cash Wallet.
     /// </summary>
     [DisplayName("Block Chain Cash Wallet")]
-    public record BlockChainCashWallet : CashAccountIdentification15Choice_
+    public partial record BlockChainCashWallet : CashAccountIdentification15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

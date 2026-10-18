@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9IxHga4OEemG7MmivSuE5g")]
 [DisplayName("Issuer Information")]
-public record IssuerInformation3
+public partial record IssuerInformation3
 {
     /// <summary>
     /// Unique and unambiguous way to identify the organisation.

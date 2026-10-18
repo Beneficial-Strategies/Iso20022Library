@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_UIO-tNp-Ed-ak6NoX_4Aeg_1695017809")]
 [DisplayName("Security Movement")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record SecurityMovement1
+public partial record SecurityMovement1
 {
     /// <summary>
     /// Identification of the movement.

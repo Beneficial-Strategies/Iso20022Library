@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rms2Fdp-Ed-ak6NoX_4Aeg_1767480666")]
     [DisplayName("Lottery Type 1 Format Choice")]
-    public abstract record LotteryType1FormatChoice_ { }
+    public abstract partial record LotteryType1FormatChoice_ { }
 }

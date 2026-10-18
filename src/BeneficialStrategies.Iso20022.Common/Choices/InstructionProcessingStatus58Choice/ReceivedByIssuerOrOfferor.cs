@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus58Cho
     /// Received By Issuer Or Offeror.
     /// </summary>
     [DisplayName("Received By Issuer Or Offeror")]
-    public record ReceivedByIssuerOrOfferor : InstructionProcessingStatus58Choice_
+    public partial record ReceivedByIssuerOrOfferor : InstructionProcessingStatus58Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

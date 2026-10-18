@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus17Choic
     /// <summary>Reason for the pending cancellation status.</summary>
     [IsoId("_dZcQyd8QEe-NrtAAlrBEgQ")]
     [DisplayName("Reason")]
-    public record Reason : PendingCancellationStatus17Choice_
+    public partial record Reason : PendingCancellationStatus17Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BH4C0IYfEe-haozGYc1X7Q")]
 [DisplayName("Proceeds Quantity Breakdown1")]
-public record ProceedsQuantityBreakdown1
+public partial record ProceedsQuantityBreakdown1
 {
     /// <summary>
     /// Transfer Of Received Proceeds Quantity.

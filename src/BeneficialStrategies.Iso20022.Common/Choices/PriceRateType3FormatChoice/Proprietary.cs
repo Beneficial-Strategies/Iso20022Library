@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateType3FormatChoice
     [IsoId("_RnAYFdp-Ed-ak6NoX_4Aeg_-1977418657")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PriceRateType3FormatChoice_
+    public partial record Proprietary : PriceRateType3FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

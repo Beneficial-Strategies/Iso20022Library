@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModalityOfCounting1Choice
     /// </summary>
     [IsoId("_eYiLAK-vEemJ1NnLPsTFaw")]
     [DisplayName("Code")]
-    public record Code : ModalityOfCounting1Choice_
+    public partial record Code : ModalityOfCounting1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

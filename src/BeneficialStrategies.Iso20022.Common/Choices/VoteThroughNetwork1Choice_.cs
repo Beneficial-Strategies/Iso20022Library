@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qNpVMDT7Ee2tRf29bleifQ")]
     [DisplayName("Vote Through Network 1 Choice")]
-    public abstract record VoteThroughNetwork1Choice_ { }
+    public abstract partial record VoteThroughNetwork1Choice_ { }
 }

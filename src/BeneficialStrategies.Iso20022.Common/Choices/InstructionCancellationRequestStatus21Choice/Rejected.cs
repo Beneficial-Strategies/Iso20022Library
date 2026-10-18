@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// <summary>Provides status information related to a cancellation request rejected for further processing due to system (data) reasons.</summary>
     [IsoId("_c8L7MaKvEfCHi7w3_0pcpw")]
     [DisplayName("Rejected")]
-    public record Rejected : InstructionCancellationRequestStatus21Choice_
+    public partial record Rejected : InstructionCancellationRequestStatus21Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
     /// <summary>Proprietary status information.</summary>
     [IsoId("_G1D_Q7MaEfCEXew4g5B5oA")]
     [DisplayName("Proprietary Status")]
-    public record ProprietaryStatus : MarketClaimProcessingStatus2Choice_
+    public partial record ProprietaryStatus : MarketClaimProcessingStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PrtrySts")]

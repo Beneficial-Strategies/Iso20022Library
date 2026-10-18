@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RirRstp-Ed-ak6NoX_4Aeg_-1572447804")]
     [DisplayName("Standing Instruction Cancellation Status 1 Choice")]
-    public abstract record StandingInstructionCancellationStatus1Choice_ { }
+    public abstract partial record StandingInstructionCancellationStatus1Choice_ { }
 }

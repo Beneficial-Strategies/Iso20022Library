@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification2Choice
     /// </summary>
     [IsoId("_XK10Etp-Ed-ak6NoX_4Aeg_1009207657")]
     [DisplayName("Description")]
-    public record Description : MarketIdentification2Choice_
+    public partial record Description : MarketIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

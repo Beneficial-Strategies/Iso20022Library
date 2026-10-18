@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2ToMQDQOEe2o-K1dwNg8Gg")]
 [DisplayName("Corporate Action Amounts")]
-public record CorporateActionAmounts60
+public partial record CorporateActionAmounts60
 {
     /// <summary>
     /// Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.

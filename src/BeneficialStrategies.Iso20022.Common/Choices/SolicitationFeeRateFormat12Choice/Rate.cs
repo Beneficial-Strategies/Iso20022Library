@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat12Choic
     /// Rate.
     /// </summary>
     [DisplayName("Rate")]
-    public record Rate : SolicitationFeeRateFormat12Choice_
+    public partial record Rate : SolicitationFeeRateFormat12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

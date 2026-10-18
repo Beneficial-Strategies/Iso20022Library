@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat1Choice
     [IsoId("_Q4EOc9p-Ed-ak6NoX_4Aeg_-871534930")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : IdentificationFormat1Choice_
+    public partial record ProprietaryIdentification : IdentificationFormat1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

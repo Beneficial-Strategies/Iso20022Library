@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period6Choice
     [IsoId("_joeDs7QYEeeKRKrD60ELBQ")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public record Period : Period6Choice_
+    public partial record Period : Period6Choice_
     {
         /// <summary>
         /// Date and time at which the range starts.

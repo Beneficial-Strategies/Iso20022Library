@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatus8Choice
     [IsoId("_4nT4eUGUEeWqy4niLuXETA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AcceptedStatus8Choice_
+    public partial record Reason : AcceptedStatus8Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction or instruction cancellation has been accepted.

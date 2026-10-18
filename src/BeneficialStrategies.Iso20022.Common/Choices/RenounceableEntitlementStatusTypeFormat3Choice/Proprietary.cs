@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableEntitlementStatusTyp
     [IsoId("_7EiSo0EBEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RenounceableEntitlementStatusTypeFormat3Choice_
+    public partial record Proprietary : RenounceableEntitlementStatusTypeFormat3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

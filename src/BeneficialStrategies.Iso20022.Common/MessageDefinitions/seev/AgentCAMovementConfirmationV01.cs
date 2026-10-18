@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TOf2vdEwEd-BzquC8wXy7w_550595772")]
 [DisplayName("Agent CA Movement Confirmation V")]
-public record AgentCAMovementConfirmationV01 : IOuterRecord
+public partial record AgentCAMovementConfirmationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

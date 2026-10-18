@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus7
     /// Event Information Status.
     /// </summary>
     [DisplayName("Event Information Status")]
-    public record EventInformationStatus : CorporateActionProcessingStatus7Choice_
+    public partial record EventInformationStatus : CorporateActionProcessingStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

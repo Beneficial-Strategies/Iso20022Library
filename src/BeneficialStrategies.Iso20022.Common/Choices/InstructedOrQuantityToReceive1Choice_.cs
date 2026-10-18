@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UHCr6dp-Ed-ak6NoX_4Aeg_-1969996831")]
     [DisplayName("Instructed Or Quantity To Receive 1 Choice")]
-    public abstract record InstructedOrQuantityToReceive1Choice_ { }
+    public abstract partial record InstructedOrQuantityToReceive1Choice_ { }
 }

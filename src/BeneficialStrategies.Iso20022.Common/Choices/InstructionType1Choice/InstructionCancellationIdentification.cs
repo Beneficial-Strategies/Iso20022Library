@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice
     [IsoId("_RCWL1tp-Ed-ak6NoX_4Aeg_2114144001")]
     [DisplayName("Instruction Cancellation Identification")]
     [IsoXmlTag("InstrCxlId")]
-    public record InstructionCancellationIdentification : InstructionType1Choice_
+    public partial record InstructionCancellationIdentification : InstructionType1Choice_
     {
         /// <summary>
         /// String of characters that uniquely identifies a message.

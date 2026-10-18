@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UOVmvNp-Ed-ak6NoX_4Aeg_465502986")]
     [DisplayName("Tax Credit Rate Format 1 Choice")]
-    public abstract record TaxCreditRateFormat1Choice_ { }
+    public abstract partial record TaxCreditRateFormat1Choice_ { }
 }

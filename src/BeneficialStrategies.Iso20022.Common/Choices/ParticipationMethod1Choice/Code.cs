@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ParticipationMethod1Choice
     /// </summary>
     [IsoId("_vfpIwK31EemG7MmivSuE5g")]
     [DisplayName("Code")]
-    public record Code : ParticipationMethod1Choice_
+    public partial record Code : ParticipationMethod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

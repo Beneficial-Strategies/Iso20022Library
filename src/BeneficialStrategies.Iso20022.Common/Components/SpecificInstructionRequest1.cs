@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVH95Np-Ed-ak6NoX_4Aeg_-1758177157")]
 [DisplayName("Specific Instruction Request")]
-public record SpecificInstructionRequest1
+public partial record SpecificInstructionRequest1
 {
     /// <summary>
     /// Request to register for participation to the meeting.

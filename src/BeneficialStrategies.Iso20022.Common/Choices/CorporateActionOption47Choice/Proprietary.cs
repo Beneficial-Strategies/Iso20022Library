@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption47Choice
     /// <summary>Proprietary identification of the type of corporate action options.</summary>
     [IsoId("_Rh4CBQ7VEfC-6PbsYHIdig")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CorporateActionOption47Choice_
+    public partial record Proprietary : CorporateActionOption47Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

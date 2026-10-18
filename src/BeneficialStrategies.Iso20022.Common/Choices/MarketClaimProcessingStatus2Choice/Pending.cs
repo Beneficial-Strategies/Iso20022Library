@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus2Choi
     /// <summary>Instruction processing is pending.</summary>
     [IsoId("_G1D_ObMaEfCEXew4g5B5oA")]
     [DisplayName("Pending")]
-    public record Pending : MarketClaimProcessingStatus2Choice_
+    public partial record Pending : MarketClaimProcessingStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

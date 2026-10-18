@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat2
     /// <summary>Standard code to specify the additional business process linked to a corporate action event.</summary>
     [IsoId("_beEykaNYEfC9id413JK-Ig")]
     [DisplayName("Code")]
-    public record Code : AdditionalBusinessProcessFormat25Choice_
+    public partial record Code : AdditionalBusinessProcessFormat25Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

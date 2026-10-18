@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jkicELXIEeiTob_PrFFUxA")]
     [DisplayName("Event Sequence Type Format 1 Choice")]
-    public abstract record EventSequenceTypeFormat1Choice_ { }
+    public abstract partial record EventSequenceTypeFormat1Choice_ { }
 }

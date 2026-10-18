@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_W4fbIUGZEeWqy4niLuXETA")]
     [DisplayName("Deadline Code 3 Choice")]
-    public abstract record DeadlineCode3Choice_ { }
+    public abstract partial record DeadlineCode3Choice_ { }
 }

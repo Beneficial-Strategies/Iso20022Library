@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OLYZnc3xEee5nJBZsW8MFQ")]
 [DisplayName("Corporate Action General Information")]
-public record CorporateActionGeneralInformation131
+public partial record CorporateActionGeneralInformation131
 {
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJbRgdp-Ed-ak6NoX_4Aeg_1924787885")]
 [DisplayName("Cash Entitlement")]
-public record CashEntitlement1
+public partial record CashEntitlement1
 {
     /// <summary>
     /// Entitled cash amount.

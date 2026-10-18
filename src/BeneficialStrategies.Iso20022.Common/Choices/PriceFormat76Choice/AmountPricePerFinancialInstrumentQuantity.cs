@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat76Choice
     /// Amount Price Per Financial Instrument Quantity.
     /// </summary>
     [DisplayName("Amount Price Per Financial Instrument Quantity")]
-    public record AmountPricePerFinancialInstrumentQuantity : PriceFormat76Choice_
+    public partial record AmountPricePerFinancialInstrumentQuantity : PriceFormat76Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

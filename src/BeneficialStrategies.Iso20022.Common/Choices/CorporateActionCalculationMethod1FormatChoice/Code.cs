@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionCalculationMethod
     /// </summary>
     [IsoId("_Rl9PNNp-Ed-ak6NoX_4Aeg_-550005822")]
     [DisplayName("Code")]
-    public record Code : CorporateActionCalculationMethod1FormatChoice_
+    public partial record Code : CorporateActionCalculationMethod1FormatChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

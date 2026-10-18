@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D3ShFffQEeiNZp_PtLohLw")]
 [DisplayName("Statement")]
-public record Statement75
+public partial record Statement75
 {
     /// <summary>
     /// Indicates whether the statement is a balance only notification or if it includes missing instructions only or all instructions.

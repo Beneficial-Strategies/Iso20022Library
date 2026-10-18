@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_skuzP83wEee5nJBZsW8MFQ")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate93
+public partial record CorporateActionRate93
 {
     /// <summary>
     /// Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription.

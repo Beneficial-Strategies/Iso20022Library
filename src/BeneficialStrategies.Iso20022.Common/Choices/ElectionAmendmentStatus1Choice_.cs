@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RiiHxdp-Ed-ak6NoX_4Aeg_1987378998")]
     [DisplayName("Election Amendment Status 1 Choice")]
-    public abstract record ElectionAmendmentStatus1Choice_ { }
+    public abstract partial record ElectionAmendmentStatus1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat35Choice
     [IsoId("_k9oDF83xEee5nJBZsW8MFQ")]
     [DisplayName("Rate Type And Amount And Rate Status")]
     [IsoXmlTag("RateTpAndAmtAndRateSts")]
-    public record RateTypeAndAmountAndRateStatus : NetDividendRateFormat35Choice_
+    public partial record RateTypeAndAmountAndRateStatus : NetDividendRateFormat35Choice_
     {
         /// <summary>
         /// Value expressed as a rate type.

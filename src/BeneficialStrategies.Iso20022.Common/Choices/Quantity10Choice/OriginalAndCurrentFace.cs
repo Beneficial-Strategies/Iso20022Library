@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity10Choice
     [IsoId("_WsJF5dp-Ed-ak6NoX_4Aeg_-845510532")]
     [DisplayName("Original And Current Face")]
     [IsoXmlTag("OrgnlAndCurFace")]
-    public record OriginalAndCurrentFace : Quantity10Choice_
+    public partial record OriginalAndCurrentFace : Quantity10Choice_
     {
         /// <summary>
         /// Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument.

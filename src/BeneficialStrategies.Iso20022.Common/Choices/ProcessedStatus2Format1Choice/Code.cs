@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessedStatus2Format1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : ProcessedStatus2Format1Choice_
+    public partial record Code : ProcessedStatus2Format1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

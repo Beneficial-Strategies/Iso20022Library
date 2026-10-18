@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice16Choice
     /// Indicative Price.
     /// </summary>
     [DisplayName("Indicative Price")]
-    public record IndicativePrice : IndicativeOrMarketPrice16Choice_
+    public partial record IndicativePrice : IndicativeOrMarketPrice16Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

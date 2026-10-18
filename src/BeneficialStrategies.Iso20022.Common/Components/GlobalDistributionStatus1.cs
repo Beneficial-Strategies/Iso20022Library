@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ri-zsNp-Ed-ak6NoX_4Aeg_-2092963403")]
 [DisplayName("Global Distribution Status")]
-public record GlobalDistributionStatus1
+public partial record GlobalDistributionStatus1
 {
     /// <summary>
     /// Provides information about the processing status of the global movement.

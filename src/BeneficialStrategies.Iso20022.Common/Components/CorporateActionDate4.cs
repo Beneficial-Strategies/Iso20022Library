@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TfaEIdp-Ed-ak6NoX_4Aeg_-1443525698")]
 [DisplayName("Corporate Action Date")]
-public record CorporateActionDate4
+public partial record CorporateActionDate4
 {
     /// <summary>
     /// Date/time at which the coupons are to be/were submitted for payment of interest.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8FEVwfM6EeqRfth943bvEA")]
 [DisplayName("Meeting")]
-public record Meeting6
+public partial record Meeting6
 {
     /// <summary>
     /// Date and time at which the meeting will take place.

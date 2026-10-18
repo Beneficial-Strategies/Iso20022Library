@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4i27UDqqEemL_ewJY9QP1g")]
 [DisplayName("Account Sub Level")]
-public record AccountSubLevel20
+public partial record AccountSubLevel20
 {
     /// <summary>
     /// Account where financial instruments are maintained. Account serviced by the responding intermediary for an account holder.

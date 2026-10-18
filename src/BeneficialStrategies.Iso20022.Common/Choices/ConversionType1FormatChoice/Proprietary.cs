@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConversionType1FormatChoice
     [IsoId("_Rl9PMtp-Ed-ak6NoX_4Aeg_-346025187")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ConversionType1FormatChoice_
+    public partial record Proprietary : ConversionType1FormatChoice_
     {
         /// <summary>
         /// Identification assigned by an institution.

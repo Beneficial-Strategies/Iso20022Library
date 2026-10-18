@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jWq525t3Ee-wQIOX0djF2w")]
     [DisplayName("Event Processing Status8Choice")]
-    public abstract record EventProcessingStatus8Choice_ { }
+    public abstract partial record EventProcessingStatus8Choice_ { }
 }

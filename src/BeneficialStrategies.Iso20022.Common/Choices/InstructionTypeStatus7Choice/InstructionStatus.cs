@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus7Choice
     /// Instruction Status.
     /// </summary>
     [DisplayName("Instruction Status")]
-    public record InstructionStatus : InstructionTypeStatus7Choice_
+    public partial record InstructionStatus : InstructionTypeStatus7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

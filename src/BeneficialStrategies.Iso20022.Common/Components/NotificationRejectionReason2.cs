@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m059MVuzEe6gDOpEK7Q4ig")]
 [DisplayName("Notification Rejection Reason2")]
-public record NotificationRejectionReason2
+public partial record NotificationRejectionReason2
 {
     /// <summary>
     /// Reason.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_chVpw5KQEeWHWpTQn1FFVg")]
     [DisplayName("Classification Type 33 Choice")]
-    public abstract record ClassificationType33Choice_ { }
+    public abstract partial record ClassificationType33Choice_ { }
 }

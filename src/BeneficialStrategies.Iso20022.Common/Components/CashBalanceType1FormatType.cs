@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rl0FQdp-Ed-ak6NoX_4Aeg_-1191454030")]
 [DisplayName("Cash Balance Type 1 Format Type")]
-public record CashBalanceType1FormatType
+public partial record CashBalanceType1FormatType
 {
     /// <summary>
     /// Standard code to specify the type of cash balance.

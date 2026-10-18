@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculatedF
     [IsoId("_Q3K2l9p-Ed-ak6NoX_4Aeg_-1453152711")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TaxableIncomePerShareCalculatedFormat1Choice_
+    public partial record Proprietary : TaxableIncomePerShareCalculatedFormat1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

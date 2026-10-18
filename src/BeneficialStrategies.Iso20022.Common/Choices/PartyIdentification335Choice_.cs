@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Account), nameof(Account))]
     [KnownType(typeof(Party))]
     [JsonDerivedType(typeof(Party), nameof(Party))]
-    public abstract record PartyIdentification335Choice_;
+    public abstract partial record PartyIdentification335Choice_;
 }

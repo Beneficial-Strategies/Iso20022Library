@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MlQUUfNsEeqRfth943bvEA")]
 [DisplayName("Instruction Processing Status")]
-public record InstructionProcessingStatus5
+public partial record InstructionProcessingStatus5
 {
     /// <summary>
     /// Status code.

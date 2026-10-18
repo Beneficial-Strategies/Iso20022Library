@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat5Choice
     /// </summary>
     [IsoId("_RbJwERLsEeKJ5uSjVyVvug")]
     [DisplayName("Rate")]
-    public record Rate : SolicitationFeeRateFormat5Choice_
+    public partial record Rate : SolicitationFeeRateFormat5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

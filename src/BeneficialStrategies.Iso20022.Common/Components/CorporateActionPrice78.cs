@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_plYOuTi7Eeydid5dcNPKvg")]
 [DisplayName("Corporate Action Price")]
-public record CorporateActionPrice78
+public partial record CorporateActionPrice78
 {
     /// <summary>
     /// Cash disbursement in lieu of equities; usually in lieu of fractional quantity.

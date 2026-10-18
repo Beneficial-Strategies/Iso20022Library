@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R_R3k475EfCbNJ3GwkFTcw")]
 [DisplayName("Received By Issuer Or Offeror Status1")]
-public record ReceivedByIssuerOrOfferorStatus1
+public partial record ReceivedByIssuerOrOfferorStatus1
 {
     /// <summary>
     /// Quantity of instructed securities previously accepted has now been accepted by the Issuer.

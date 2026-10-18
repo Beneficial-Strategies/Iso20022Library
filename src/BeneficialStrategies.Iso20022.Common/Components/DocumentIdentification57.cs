@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eyx9sRSDEfCR0f9NGJICbA")]
 [DisplayName("Document Identification57")]
-public record DocumentIdentification57
+public partial record DocumentIdentification57
 {
     /// <summary>
     /// Identification of the related buyer protection instruction document for which the status is provided.

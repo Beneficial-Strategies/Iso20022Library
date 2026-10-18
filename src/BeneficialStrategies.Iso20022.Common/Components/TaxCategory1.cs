@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3WHcEOaPEei5aPS232E3Mw")]
 [DisplayName("Tax Category")]
-public record TaxCategory1
+public partial record TaxCategory1
 {
     /// <summary>
     /// Tax category identification.

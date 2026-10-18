@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
     /// Standing Instruction.
     /// </summary>
     [DisplayName("Standing Instruction")]
-    public record StandingInstruction : InstructionProcessingStatus55Choice_
+    public partial record StandingInstruction : InstructionProcessingStatus55Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

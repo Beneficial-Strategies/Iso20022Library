@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType36Choice
     [IsoId("_O2CDBUEJEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RateType36Choice_
+    public partial record Proprietary : RateType36Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

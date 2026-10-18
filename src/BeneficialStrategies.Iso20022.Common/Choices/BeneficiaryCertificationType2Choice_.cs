@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QzTDNdp-Ed-ak6NoX_4Aeg_-1272152318")]
     [DisplayName("Beneficiary Certification Type 2 Choice")]
-    public abstract record BeneficiaryCertificationType2Choice_ { }
+    public abstract partial record BeneficiaryCertificationType2Choice_ { }
 }

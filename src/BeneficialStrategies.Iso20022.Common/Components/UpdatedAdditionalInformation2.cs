@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Q1O859p-Ed-ak6NoX_4Aeg_-2143304293")]
 [DisplayName("Updated Additional Information")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
-public record UpdatedAdditionalInformation2
+public partial record UpdatedAdditionalInformation2
 {
     /// <summary>
     /// Specifies the amendments made to the narrative since the last message.

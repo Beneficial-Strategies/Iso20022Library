@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jhlJSZt3Ee-wQIOX0djF2w")]
     [DisplayName("Instruction Cancellation Request Status18Choice")]
-    public abstract record InstructionCancellationRequestStatus18Choice_ { }
+    public abstract partial record InstructionCancellationRequestStatus18Choice_ { }
 }

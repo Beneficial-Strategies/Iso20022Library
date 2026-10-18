@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DutchAuctionTypeFormat1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : DutchAuctionTypeFormat1Choice_
+    public partial record Code : DutchAuctionTypeFormat1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

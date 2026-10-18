@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IsmedRuyEeyhRdHRjakS2w")]
 [DisplayName("Corporate Action Balance Details")]
-public record CorporateActionBalanceDetails41
+public partial record CorporateActionBalanceDetails41
 {
     /// <summary>
     /// Balance to which the payment applies (less or equal to the total eligible balance).

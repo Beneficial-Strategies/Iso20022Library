@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ThresholdBasis1Choice
     [IsoId("_925f4BuMEeyhRdHRjakS2w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ThresholdBasis1Choice_
+    public partial record Proprietary : ThresholdBasis1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

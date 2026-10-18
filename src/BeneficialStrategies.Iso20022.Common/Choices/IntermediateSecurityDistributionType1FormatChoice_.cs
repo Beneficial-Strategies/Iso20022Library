@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Rms2Etp-Ed-ak6NoX_4Aeg_-820578542")]
     [DisplayName("Intermediate Security Distribution Type 1 Format Choice")]
-    public abstract record IntermediateSecurityDistributionType1FormatChoice_ { }
+    public abstract partial record IntermediateSecurityDistributionType1FormatChoice_ { }
 }

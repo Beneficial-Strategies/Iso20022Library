@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UIrqo9p-Ed-ak6NoX_4Aeg_2140472900")]
 [DisplayName("Failed Movement")]
-public record FailedMovement1
+public partial record FailedMovement1
 {
     /// <summary>
     /// Amount of cash.

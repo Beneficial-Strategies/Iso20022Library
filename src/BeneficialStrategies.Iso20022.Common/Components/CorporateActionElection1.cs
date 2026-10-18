@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UJuMftp-Ed-ak6NoX_4Aeg_599123828")]
 [DisplayName("Corporate Action Election")]
-public record CorporateActionElection1
+public partial record CorporateActionElection1
 {
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

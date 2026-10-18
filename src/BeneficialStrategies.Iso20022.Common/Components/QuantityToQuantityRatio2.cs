@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WjNMUNp-Ed-ak6NoX_4Aeg_511377656")]
 [DisplayName("Quantity To Quantity Ratio")]
-public record QuantityToQuantityRatio2
+public partial record QuantityToQuantityRatio2
 {
     /// <summary>
     /// Numerator of the quotient of quantities.

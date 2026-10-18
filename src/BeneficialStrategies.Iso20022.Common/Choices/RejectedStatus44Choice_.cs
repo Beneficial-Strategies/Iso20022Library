@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RejectedStatus44Choice.Reason), nameof(RejectedStatus44Choice.Reason))]
     [IsoId("_htjMqRrpEeyhRdHRjakS2w")]
     [DisplayName("Rejected Status 44 Choice")]
-    public abstract record RejectedStatus44Choice_ { }
+    public abstract partial record RejectedStatus44Choice_ { }
 }

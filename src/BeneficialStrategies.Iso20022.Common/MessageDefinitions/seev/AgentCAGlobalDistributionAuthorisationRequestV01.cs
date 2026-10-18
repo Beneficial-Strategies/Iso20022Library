@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_TNwP1dEwEd-BzquC8wXy7w_690310315")]
 [DisplayName("Agent CA Global Distribution Authorisation Request V")]
-public record AgentCAGlobalDistributionAuthorisationRequestV01 : IOuterRecord
+public partial record AgentCAGlobalDistributionAuthorisationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

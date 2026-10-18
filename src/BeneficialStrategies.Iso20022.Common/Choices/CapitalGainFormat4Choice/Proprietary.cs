@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CapitalGainFormat4Choice
     [IsoId("_c5V6sZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CapitalGainFormat4Choice_
+    public partial record Proprietary : CapitalGainFormat4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

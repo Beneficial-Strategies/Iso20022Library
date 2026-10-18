@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cheNB5KQEeWHWpTQn1FFVg")]
 [DisplayName("Corporate Action Rate")]
-public record CorporateActionRate73
+public partial record CorporateActionRate73
 {
     /// <summary>
     /// Rate proposed in a remarketing of variable rate notes.

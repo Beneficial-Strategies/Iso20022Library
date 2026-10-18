@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVa40Np-Ed-ak6NoX_4Aeg_-5632894")]
 [DisplayName("Amend Information")]
-public record AmendInformation2
+public partial record AmendInformation2
 {
     /// <summary>
     /// Identifies the MeetingResultDissemination essage to be amended.

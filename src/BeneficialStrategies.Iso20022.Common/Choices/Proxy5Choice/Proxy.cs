@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy5Choice
     [IsoId("_iTU-wRrfEeyhRdHRjakS2w")]
     [DisplayName("Proxy")]
     [IsoXmlTag("Prxy")]
-    public record Proxy : Proxy5Choice_
+    public partial record Proxy : Proxy5Choice_
     {
         /// <summary>
         /// Specifies how to register the proxy.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CFucIFuKEe6gDOpEK7Q4ig")]
 [DisplayName("Agent Notification Cancellation Identification And Status1")]
-public record AgentNotificationCancellationIdentificationAndStatus1
+public partial record AgentNotificationCancellationIdentificationAndStatus1
 {
     /// <summary>
     /// Identification.

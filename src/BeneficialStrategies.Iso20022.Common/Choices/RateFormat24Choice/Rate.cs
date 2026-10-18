@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat24Choice
     /// Rate.
     /// </summary>
     [DisplayName("Rate")]
-    public record Rate : RateFormat24Choice_
+    public partial record Rate : RateFormat24Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

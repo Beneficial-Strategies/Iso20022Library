@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity18Choice
     [IsoId("_L9-5JTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Original And Current Face Amount")]
     [IsoXmlTag("OrgnlAndCurFaceAmt")]
-    public record OriginalAndCurrentFaceAmount : Quantity18Choice_
+    public partial record OriginalAndCurrentFaceAmount : Quantity18Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

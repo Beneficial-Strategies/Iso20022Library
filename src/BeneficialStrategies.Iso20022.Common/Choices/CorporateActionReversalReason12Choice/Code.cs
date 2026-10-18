@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason12C
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : CorporateActionReversalReason12Choice_
+    public partial record Code : CorporateActionReversalReason12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

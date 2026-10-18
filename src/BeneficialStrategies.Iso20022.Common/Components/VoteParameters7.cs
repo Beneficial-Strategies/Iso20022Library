@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uWr-wRrmEeyhRdHRjakS2w")]
 [DisplayName("Vote Parameters")]
-public record VoteParameters7
+public partial record VoteParameters7
 {
     /// <summary>
     /// Number of holdings required for a vote.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yPzIUUGKEeWqy4niLuXETA")]
     [DisplayName("Corporate Action Event Stage Format 14 Choice")]
-    public abstract record CorporateActionEventStageFormat14Choice_ { }
+    public abstract partial record CorporateActionEventStageFormat14Choice_ { }
 }

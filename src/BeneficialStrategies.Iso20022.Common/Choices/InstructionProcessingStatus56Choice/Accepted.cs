@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus56Cho
     /// Accepted.
     /// </summary>
     [DisplayName("Accepted")]
-    public record Accepted : InstructionProcessingStatus56Choice_
+    public partial record Accepted : InstructionProcessingStatus56Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote2Choice
     [IsoId("_RDPjutp-Ed-ak6NoX_4Aeg_116941373")]
     [DisplayName("Vote Instruction")]
     [IsoXmlTag("VoteInstr")]
-    public record VoteInstruction : Vote2Choice_
+    public partial record VoteInstruction : Vote2Choice_
     {
         /// <summary>
         /// Numbering of the resolution as specified by the issuer or its agent.

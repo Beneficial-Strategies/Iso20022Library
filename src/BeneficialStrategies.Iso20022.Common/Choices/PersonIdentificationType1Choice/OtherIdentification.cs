@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
     [IsoId("_QEW5mdp-Ed-ak6NoX_4Aeg_-315280529")]
     [DisplayName("Other Identification")]
     [IsoXmlTag("OthrId")]
-    public record OtherIdentification : PersonIdentificationType1Choice_
+    public partial record OtherIdentification : PersonIdentificationType1Choice_
     {
         /// <summary>
         /// Identifier issued to a person for which no specific identifier has been defined.

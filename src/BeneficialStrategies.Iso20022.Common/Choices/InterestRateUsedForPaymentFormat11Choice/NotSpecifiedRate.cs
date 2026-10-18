@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     /// Not Specified Rate.
     /// </summary>
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : InterestRateUsedForPaymentFormat11Choice_
+    public partial record NotSpecifiedRate : InterestRateUsedForPaymentFormat11Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.seev;
 )]
 [IsoId("_bfXkswVSEeqjd8n6wD9JVw")]
 [DisplayName("Corporate Action Instruction 002 V")]
-public record CorporateActionInstruction002V10 : IOuterRecord
+public partial record CorporateActionInstruction002V10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

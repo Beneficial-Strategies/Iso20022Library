@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XZkHAYWBEe-ufOxNNkEXmg")]
 [DisplayName("Pending Status1")]
-public record PendingStatus1
+public partial record PendingStatus1
 {
     /// <summary>
     /// Pending Quantity.

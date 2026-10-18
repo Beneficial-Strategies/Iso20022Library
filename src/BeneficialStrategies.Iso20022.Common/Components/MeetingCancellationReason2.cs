@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RCMa19p-Ed-ak6NoX_4Aeg_1000768570")]
 [DisplayName("Meeting Cancellation Reason")]
-public record MeetingCancellationReason2
+public partial record MeetingCancellationReason2
 {
     /// <summary>
     /// Reason for cancelling a meeting.

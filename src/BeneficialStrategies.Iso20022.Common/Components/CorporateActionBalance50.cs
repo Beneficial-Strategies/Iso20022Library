@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kUdGdYVQEe-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Balance50")]
-public record CorporateActionBalance50
+public partial record CorporateActionBalance50
 {
     /// <summary>
     /// Total Eligible Balance.

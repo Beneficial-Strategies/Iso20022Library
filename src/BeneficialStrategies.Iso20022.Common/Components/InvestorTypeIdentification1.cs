@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ki8AAKnUEfC5VNwixU6YfQ")]
 [DisplayName("Investor Type Identification1")]
-public record InvestorTypeIdentification1
+public partial record InvestorTypeIdentification1
 {
     /// <summary>
     /// Types of investor in relation to a corporate event.

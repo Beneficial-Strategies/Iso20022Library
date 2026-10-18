@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_D-CdM5SmEeeh5JjedkaA_g")]
     [DisplayName("Deemed Rate Type 1 Choice")]
-    public abstract record DeemedRateType1Choice_ { }
+    public abstract partial record DeemedRateType1Choice_ { }
 }

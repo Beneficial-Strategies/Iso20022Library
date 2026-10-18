@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PendingStatus63Choice.Reason), nameof(PendingStatus63Choice.Reason))]
     [IsoId("_fvRkkRHpEeuE0Pnt-OcNOA")]
     [DisplayName("Pending Status 63 Choice")]
-    public abstract record PendingStatus63Choice_ { }
+    public abstract partial record PendingStatus63Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification234Choice
     [IsoId("_F-iyOR9REeuFz_FaCzCLgQ")]
     [DisplayName("Individual Owner Identification")]
     [IsoXmlTag("IndvOwnrId")]
-    public record IndividualOwnerIdentification : PartyIdentification234Choice_
+    public partial record IndividualOwnerIdentification : PartyIdentification234Choice_
     {
         /// <summary>
         /// Specifies the type of alternate identification of the party identified.

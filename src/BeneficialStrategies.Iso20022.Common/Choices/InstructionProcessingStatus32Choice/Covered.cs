@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus32Cho
     [IsoId("_mWrV0LtVEeilsanBGAzy4A")]
     [DisplayName("Covered")]
     [IsoXmlTag("Cvrd")]
-    public record Covered : InstructionProcessingStatus32Choice_
+    public partial record Covered : InstructionProcessingStatus32Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus59Cho
     /// <summary>Provides status information related to a pending instruction.</summary>
     [IsoId("_j-yrqd75Ee-NrtAAlrBEgQ")]
     [DisplayName("Pending")]
-    public record Pending : InstructionProcessingStatus59Choice_
+    public partial record Pending : InstructionProcessingStatus59Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

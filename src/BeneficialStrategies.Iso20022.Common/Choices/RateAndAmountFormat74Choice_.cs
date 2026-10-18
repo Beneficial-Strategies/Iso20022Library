@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nLgeIZt3Ee-wQIOX0djF2w")]
     [DisplayName("Rate And Amount Format74Choice")]
-    public abstract record RateAndAmountFormat74Choice_ { }
+    public abstract partial record RateAndAmountFormat74Choice_ { }
 }

@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_nLnyc5t3Ee-wQIOX0djF2w")]
     [DisplayName("Solicitation Fee Rate Format15Choice")]
-    public abstract record SolicitationFeeRateFormat15Choice_ { }
+    public abstract partial record SolicitationFeeRateFormat15Choice_ { }
 }

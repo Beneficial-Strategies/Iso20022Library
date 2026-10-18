@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice
     /// <summary>Specifies the rate.</summary>
     [IsoId("__Ha5QajtEfCG_LQaXOxwew")]
     [DisplayName("Rate")]
-    public record Rate : RateFormat31Choice_
+    public partial record Rate : RateFormat31Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rate")]

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeemedRateType2Choice
     /// </summary>
     [IsoId("_sH2RMdBbEee0mNiKMkpGNQ")]
     [DisplayName("Code")]
-    public record Code : DeemedRateType2Choice_
+    public partial record Code : DeemedRateType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus2Choice
     [IsoId("_RCy3wtp-Ed-ak6NoX_4Aeg_1583587402")]
     [DisplayName("Rejection Status")]
     [IsoXmlTag("RjctnSts")]
-    public record RejectionStatus : CancellationStatus2Choice_
+    public partial record RejectionStatus : CancellationStatus2Choice_
     {
         /// <summary>
         /// Reason advising the rejection of the instruction cancellation request.

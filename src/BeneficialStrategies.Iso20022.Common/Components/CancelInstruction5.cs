@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4Y5gUY-9Ee-COKgew96POA")]
 [DisplayName("Cancel Instruction5")]
-public record CancelInstruction5
+public partial record CancelInstruction5
 {
     /// <summary>
     /// Single Instruction Identification.

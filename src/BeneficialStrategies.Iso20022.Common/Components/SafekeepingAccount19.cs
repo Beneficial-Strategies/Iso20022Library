@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6iIdw4-9Ee-COKgew96POA")]
 [DisplayName("Safekeeping Account19")]
-public record SafekeepingAccount19
+public partial record SafekeepingAccount19
 {
     /// <summary>
     /// Account Identification.

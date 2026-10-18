@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_g3ipUTq2EeWQ1Y7f8kds2A")]
     [DisplayName("Option Style 8 Choice")]
-    public abstract record OptionStyle8Choice_ { }
+    public abstract partial record OptionStyle8Choice_ { }
 }

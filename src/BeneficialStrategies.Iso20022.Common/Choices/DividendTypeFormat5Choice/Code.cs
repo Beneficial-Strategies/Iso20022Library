@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat5Choice
     /// </summary>
     [IsoId("_debt0yXfEeO4bIO_HtGo9Q")]
     [DisplayName("Code")]
-    public record Code : DividendTypeFormat5Choice_
+    public partial record Code : DividendTypeFormat5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

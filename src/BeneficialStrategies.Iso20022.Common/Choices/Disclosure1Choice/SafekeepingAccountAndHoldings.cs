@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure1Choice
     [IsoId("_WtmescANEembi_x1QDJfxw")]
     [DisplayName("Safekeeping Account And Holdings")]
     [IsoXmlTag("SfkpgAcctAndHldgs")]
-    public record SafekeepingAccountAndHoldings : Disclosure1Choice_
+    public partial record SafekeepingAccountAndHoldings : Disclosure1Choice_
     {
         /// <summary>
         /// Account where financial instruments are maintained. Account held by the responding intermediary with its account servicer.

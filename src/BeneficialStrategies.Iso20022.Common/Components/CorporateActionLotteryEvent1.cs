@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ogGV4JSbEfCQbtmJ-bHX4Q")]
 [DisplayName("Corporate Action Lottery Event1")]
-public record CorporateActionLotteryEvent1
+public partial record CorporateActionLotteryEvent1
 {
     /// <summary>
     /// Specifies the type of lottery announced.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Proxy1Choice.ProxyNotAllowed), nameof(Proxy1Choice.ProxyNotAllowed))]
     [IsoId("_RD1ZkNp-Ed-ak6NoX_4Aeg_754984045")]
     [DisplayName("Proxy 1 Choice")]
-    public abstract record Proxy1Choice_ { }
+    public abstract partial record Proxy1Choice_ { }
 }

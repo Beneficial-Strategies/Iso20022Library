@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice
     [IsoId("_vMYu8_NBEeqRfth943bvEA")]
     [DisplayName("Per Vote")]
     [IsoXmlTag("PerVote")]
-    public record PerVote : IncentivePremiumType2Choice_
+    public partial record PerVote : IncentivePremiumType2Choice_
     {
         /// <summary>
         /// Types of vote instruction allowed for resolutions to be voted on in general meeting.

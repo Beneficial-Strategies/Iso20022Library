@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount4Choic
     [IsoId("_ICF6E7XQEeiTob_PrFFUxA")]
     [DisplayName("Instructed Amount")]
     [IsoXmlTag("InstdAmt")]
-    public record InstructedAmount : SecuritiesQuantityOrAmount4Choice_
+    public partial record InstructedAmount : SecuritiesQuantityOrAmount4Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

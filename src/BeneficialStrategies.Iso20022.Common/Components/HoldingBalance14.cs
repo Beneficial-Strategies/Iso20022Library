@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4SCqdY-9Ee-COKgew96POA")]
 [DisplayName("Holding Balance14")]
-public record HoldingBalance14
+public partial record HoldingBalance14
 {
     /// <summary>
     /// Balance.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cHKO1bKjEemux5trsZcCpw")]
     [DisplayName("Pending Cancellation Reason 7 Choice")]
-    public abstract record PendingCancellationReason7Choice_ { }
+    public abstract partial record PendingCancellationReason7Choice_ { }
 }

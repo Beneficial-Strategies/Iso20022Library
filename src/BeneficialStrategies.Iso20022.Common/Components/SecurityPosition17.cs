@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mnrDYTRTEe2id-MjcNoBdw")]
 [DisplayName("Security Position")]
-public record SecurityPosition17
+public partial record SecurityPosition17
 {
     /// <summary>
     /// Identification of the security, as assigned under a formal or proprietary identification scheme.

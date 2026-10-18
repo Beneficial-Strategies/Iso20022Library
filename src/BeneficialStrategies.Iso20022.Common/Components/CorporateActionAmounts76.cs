@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nLmlJZt3Ee-wQIOX0djF2w")]
 [DisplayName("Corporate Action Amounts76")]
-public record CorporateActionAmounts76
+public partial record CorporateActionAmounts76
 {
     /// <summary>
     /// Gross Amount.
