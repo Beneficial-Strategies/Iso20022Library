@@ -22,6 +22,10 @@ This library [covers all currently defined messages](../../doc/Scope-Statement.m
 - **Multiplicity-correct** — where a field allows multiple values, it's a collection; where it's optional, it's nullable.
 - **Strongly-typed identifiers** — industry-specific identifiers like CUSIP, SEDOL, IBAN, and BIC are strongly typed, not bare strings; because the implementation is strongly-typed all the way down to the primitives, dirty data that doesn't fit the ISO 20022 spec can never be introduced into your system in the first place.
 
+## Only the primitives
+
+The primitive data types, code sets and external codes (`Max35Text`, `ActiveCurrencyCode`, the amounts and the rest) are in their own package, [`BeneficialStrategies.Iso20022.Primitives`](../BeneficialStrategies.Iso20022.Primitives/README.md), which this package depends on. Take that one alone if you want the types in your own model and not the message records. The namespaces are the same in both.
+
 ## What's notably missing
 
 - XML Schema Validation

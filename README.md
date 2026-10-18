@@ -7,6 +7,7 @@ A family of .NET libraries for working with the [ISO 20022](https://iso20022.org
 | Package | Status | Description |
 |---|---|---|
 | [`BeneficialStrategies.Iso20022`](src/BeneficialStrategies.Iso20022.Common/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022) | The full ISO 20022 message domain model — 3,339 message types as immutable, strongly-typed C# records, with XML and JSON serialization. |
+| [`BeneficialStrategies.Iso20022.Primitives`](src/BeneficialStrategies.Iso20022.Primitives/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.Primitives) | The ISO 20022 primitive data types, code sets and external codes with their format validation and JSON converters, without the message records. `BeneficialStrategies.Iso20022` depends on it. |
 | [`BeneficialStrategies.Iso20022.FluentValidation`](src/BeneficialStrategies.Iso20022.FluentValidation/README.md) | [Published](https://www.nuget.org/packages/BeneficialStrategies.Iso20022.FluentValidation) | FluentValidation validators enforcing ISO 20022 spec-level constraints the C# type system alone can't express. |
 | [`BeneficialStrategies.Iso20022.MassTransit.Sagas`](src/BeneficialStrategies.Iso20022.MassTransit.Sagas/README.md) | Work in progress — not published | A MassTransit saga toolkit for ISO 20022 message flows (currently: Request-to-Pay). Investigative, not yet released. |
 
@@ -19,7 +20,7 @@ This library is free and permissively licensed, and it is **looking for support*
 If your company builds on it, or you want to see an area kept up to date, there are several ways to help:
 
 - **Sponsor or fund maintenance.** Write to [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com) to talk about it.
-- **Co-maintain an area.** The areas are the message model and serializers (`area:core`), the validators (`area:validation`) and the saga toolkit (`area:sagas`). Issues labelled [`maintainer-wanted`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/maintainer-wanted) say where it would make the difference most.
+- **Co-maintain an area.** The areas are the message model and serializers (`area:core`), the primitive types and code sets (`area:primitives`), the validators (`area:validation`) and the saga toolkit (`area:sagas`). Issues labelled [`maintainer-wanted`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/maintainer-wanted) say where it would make the difference most.
 - **Pick up an issue.** [`help wanted`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/help%20wanted) and [`good first issue`](https://github.com/Beneficial-Strategies/Iso20022Library/labels/good%20first%20issue) are chosen to be doable without knowing the whole code base.
 - **Bring real messages.** Valid, anonymised samples from your scheme turn into round-trip tests and decide which messages come next.
 - **Report precisely.** A bug with a [failing unit test](CONTRIBUTING.md#reporting-a-bug) is usually fixed fastest.
