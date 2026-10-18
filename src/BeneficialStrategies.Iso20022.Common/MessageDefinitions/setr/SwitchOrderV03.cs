@@ -79,7 +79,7 @@ public record SwitchOrderV03 : IOuterRecord
     [IsoId("_8jfn9dE7Ed-BzquC8wXy7w_743595041")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -95,7 +95,7 @@ public record SwitchOrderV03 : IOuterRecord
     [IsoId("_8jpY8NE7Ed-BzquC8wXy7w_-2137463604")]
     [DisplayName("Switch Order Details")]
     [IsoXmlTag("SwtchOrdrDtls")]
-    public required SwitchOrder4 SwitchOrderDetails { get; init; }
+    public ValueList<SwitchOrder4> SwitchOrderDetails { get; init; } = [];
 
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
@@ -111,5 +111,5 @@ public record SwitchOrderV03 : IOuterRecord
     [IsoId("_8jpY8tE7Ed-BzquC8wXy7w_956001907")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

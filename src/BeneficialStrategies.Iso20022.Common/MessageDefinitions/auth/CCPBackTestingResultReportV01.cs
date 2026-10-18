@@ -55,7 +55,7 @@ public record CCPBackTestingResultReportV01 : IOuterRecord
     [IsoId("_mLRn2eUTEem3X-64-NKdqg")]
     [DisplayName("Monthly Result")]
     [IsoXmlTag("MnthlyRslt")]
-    public required MonthlyResult1 MonthlyResult { get; init; }
+    public ValueList<MonthlyResult1> MonthlyResult { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPBackTestingResultReportV01 : IOuterRecord
     [IsoId("_mLRn2-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

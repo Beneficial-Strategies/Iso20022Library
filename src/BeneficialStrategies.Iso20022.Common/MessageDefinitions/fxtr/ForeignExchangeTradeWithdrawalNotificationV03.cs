@@ -95,5 +95,5 @@ public record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoId("_GJJnaS53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

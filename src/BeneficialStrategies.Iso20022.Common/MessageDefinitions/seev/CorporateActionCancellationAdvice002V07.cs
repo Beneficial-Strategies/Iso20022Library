@@ -94,7 +94,7 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KJZwtEeazcsnODTksnQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification104Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -102,7 +102,7 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KJ5wtEeazcsnODTksnQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification104Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -110,7 +110,7 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KKZwtEeazcsnODTksnQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification104Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -126,7 +126,7 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KLZwtEeazcsnODTksnQ")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification104Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -150,7 +150,7 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KM5wtEeazcsnODTksnQ")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification104Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -166,5 +166,5 @@ public record CorporateActionCancellationAdvice002V07 : IOuterRecord
     [IsoId("_lA9KN5wtEeazcsnODTksnQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -83,5 +83,5 @@ public record CaseStatusReportRequestV03 : IOuterRecord
     [IsoId("_sVgMgVkyEeGeoaLUQk__nA_-1985293714")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

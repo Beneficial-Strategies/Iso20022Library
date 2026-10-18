@@ -55,7 +55,7 @@ public record SecuritiesFinancingReportingMissingCollateralRequestV01 : IOuterRe
     [IsoId("_2zvL-QuAEeqVvtu9Ny8FDA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TradeTransactionIdentification6 TransactionIdentification { get; init; }
+    public ValueList<TradeTransactionIdentification6> TransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record SecuritiesFinancingReportingMissingCollateralRequestV01 : IOuterRe
     [IsoId("_2zvL-wuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

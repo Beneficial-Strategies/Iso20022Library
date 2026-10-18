@@ -77,5 +77,5 @@ public record IdentificationModificationAdviceV01 : IOuterRecord
     [IsoId("_sSPRSGtdEeCY4-KZ9JEyUQ_791312082")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public required IdentificationModification1 Modification { get; init; }
+    public ValueList<IdentificationModification1> Modification { get; init; } = [];
 }

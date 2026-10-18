@@ -71,5 +71,5 @@ public record GetStandingOrderV03 : IOuterRecord
     [IsoId("_jwlbpRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

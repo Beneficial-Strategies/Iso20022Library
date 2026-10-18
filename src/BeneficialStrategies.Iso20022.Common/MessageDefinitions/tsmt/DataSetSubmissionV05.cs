@@ -73,7 +73,7 @@ public record DataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-dwgGEeSeS5xdjFfOTw")]
     [DisplayName("Related Transaction References")]
     [IsoXmlTag("RltdTxRefs")]
-    public required DataSetSubmissionReferences3 RelatedTransactionReferences { get; init; }
+    public ValueList<DataSetSubmissionReferences3> RelatedTransactionReferences { get; init; } = [];
 
     /// <summary>
     /// This reference must be used for all data sets belonging to the same submission group.
@@ -137,7 +137,7 @@ public record DataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-hwgGEeSeS5xdjFfOTw")]
     [DisplayName("Certificate Data Set")]
     [IsoXmlTag("CertDataSet")]
-    public CertificateDataSet2? CertificateDataSet { get; init; }
+    public ValueList<CertificateDataSet2> CertificateDataSet { get; init; } = [];
 
     /// <summary>
     /// Other certificate information that is submitted to the matching application for processing.
@@ -145,5 +145,5 @@ public record DataSetSubmissionV05 : IOuterRecord
     [IsoId("_h2S-iQgGEeSeS5xdjFfOTw")]
     [DisplayName("Other Certificate Data Set")]
     [IsoXmlTag("OthrCertDataSet")]
-    public OtherCertificateDataSet2? OtherCertificateDataSet { get; init; }
+    public ValueList<OtherCertificateDataSet2> OtherCertificateDataSet { get; init; } = [];
 }

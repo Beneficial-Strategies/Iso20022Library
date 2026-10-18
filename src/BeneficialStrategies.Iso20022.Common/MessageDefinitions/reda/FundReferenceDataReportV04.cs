@@ -71,7 +71,7 @@ public record FundReferenceDataReportV04 : IOuterRecord
     [IsoId("_16QE1ZDiEem7fvtoGpNpow")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference10? PreviousReference { get; init; }
+    public ValueList<AdditionalReference10> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -97,5 +97,5 @@ public record FundReferenceDataReportV04 : IOuterRecord
     [IsoId("_16QE25DiEem7fvtoGpNpow")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public required FundReferenceDataReport2 Report { get; init; }
+    public ValueList<FundReferenceDataReport2> Report { get; init; } = [];
 }

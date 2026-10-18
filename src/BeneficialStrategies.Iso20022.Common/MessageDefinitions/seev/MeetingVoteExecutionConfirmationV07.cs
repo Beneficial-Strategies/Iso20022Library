@@ -86,7 +86,7 @@ public record MeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77SfEkEeqRfth943bvEA")]
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
-    public DetailedInstructionStatus15? VoteInstructions { get; init; }
+    public ValueList<DetailedInstructionStatus15> VoteInstructions { get; init; } = [];
 
     /// <summary>
     /// Address to use over the www (HTTP) service where the confirmations of the vote instructions can be found.
@@ -104,5 +104,5 @@ public record MeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoId("_sV77TfEkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

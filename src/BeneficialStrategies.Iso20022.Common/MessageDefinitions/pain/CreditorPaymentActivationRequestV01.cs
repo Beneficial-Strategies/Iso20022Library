@@ -65,5 +65,5 @@ public record CreditorPaymentActivationRequestV01 : IOuterRecord
     [IsoId("_GWSDl9EvEd-BzquC8wXy7w_1980087289")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstruction5 PaymentInformation { get; init; }
+    public ValueList<PaymentInstruction5> PaymentInformation { get; init; } = [];
 }

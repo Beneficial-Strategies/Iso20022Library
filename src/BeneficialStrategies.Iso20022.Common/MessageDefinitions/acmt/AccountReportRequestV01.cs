@@ -82,7 +82,7 @@ public record AccountReportRequestV01 : IOuterRecord
     [IsoId("_vMh7_NE9Ed-BzquC8wXy7w_1166554158")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies target and/or actual dates.
@@ -98,5 +98,5 @@ public record AccountReportRequestV01 : IOuterRecord
     [IsoId("_vMrs8dE9Ed-BzquC8wXy7w_1658266551")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

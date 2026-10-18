@@ -108,7 +108,7 @@ public record PortfolioTransferInstructionV06 : IOuterRecord
     [IsoId("_5biYOwgLEeSFYfyUKDXKaw")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, for example, name and address.
@@ -132,7 +132,7 @@ public record PortfolioTransferInstructionV06 : IOuterRecord
     [IsoId("_5biYQQgLEeSFYfyUKDXKaw")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation4? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation4> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -172,7 +172,7 @@ public record PortfolioTransferInstructionV06 : IOuterRecord
     [IsoId("_5biYSwgLEeSFYfyUKDXKaw")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public required ISATransfer18 ProductTransfer { get; init; }
+    public ValueList<ISATransfer18> ProductTransfer { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -188,5 +188,5 @@ public record PortfolioTransferInstructionV06 : IOuterRecord
     [IsoId("_5biYTwgLEeSFYfyUKDXKaw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -55,7 +55,7 @@ public record CCPCollateralReportV01 : IOuterRecord
     [IsoId("_5aP-KeUTEem3X-64-NKdqg")]
     [DisplayName("Collateral Account Owner")]
     [IsoXmlTag("CollAcctOwnr")]
-    public required CollateralAccount4 CollateralAccountOwner { get; init; }
+    public ValueList<CollateralAccount4> CollateralAccountOwner { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPCollateralReportV01 : IOuterRecord
     [IsoId("_5aP-K-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

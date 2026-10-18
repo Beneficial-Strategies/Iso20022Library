@@ -288,14 +288,14 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// National Data.
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Security Trailer.

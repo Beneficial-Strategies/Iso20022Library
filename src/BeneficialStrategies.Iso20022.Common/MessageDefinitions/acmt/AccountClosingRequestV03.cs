@@ -119,7 +119,7 @@ public record AccountClosingRequestV03 : IOuterRecord
     [IsoId("_bf9RRW2PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature3? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature3> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -127,5 +127,5 @@ public record AccountClosingRequestV03 : IOuterRecord
     [IsoId("_bf9RR22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

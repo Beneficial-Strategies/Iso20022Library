@@ -117,7 +117,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdQEZtEwEd-BzquC8wXy7w_1091783642")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification10Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -125,7 +125,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdQEZ9EwEd-BzquC8wXy7w_94711289")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification10Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -133,7 +133,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdZOUNEwEd-BzquC8wXy7w_-902361064")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification10Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -149,7 +149,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdZOUtEwEd-BzquC8wXy7w_-595683180")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification10Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -173,7 +173,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdZOVdEwEd-BzquC8wXy7w_-1592755533")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification10Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -189,5 +189,5 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV01 : IO
     [IsoId("_TdZOV9EwEd-BzquC8wXy7w_708067057")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

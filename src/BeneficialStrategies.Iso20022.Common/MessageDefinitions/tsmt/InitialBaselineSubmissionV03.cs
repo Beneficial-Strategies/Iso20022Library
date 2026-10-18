@@ -94,7 +94,7 @@ public record InitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TetNE8Ed-BzquC8wXy7w_-1224817819")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
-    public ContactIdentification1? BuyerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> BuyerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the organisation of the seller.
@@ -102,7 +102,7 @@ public record InitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TetdE8Ed-BzquC8wXy7w_-1224817896")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
-    public ContactIdentification1? SellerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> SellerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the buyer&apos;s bank.
@@ -110,7 +110,7 @@ public record InitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4TettE8Ed-BzquC8wXy7w_-1224817416")]
     [DisplayName("Buyer Bank Contact Person")]
     [IsoXmlTag("BuyrBkCtctPrsn")]
-    public required ContactIdentification1 BuyerBankContactPerson { get; init; }
+    public ValueList<ContactIdentification1> BuyerBankContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the seller&apos;s bank.
@@ -118,7 +118,7 @@ public record InitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4Tet9E8Ed-BzquC8wXy7w_-1224817493")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
-    public required ContactIdentification1 SellerBankContactPerson { get; init; }
+    public ValueList<ContactIdentification1> SellerBankContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in another bank than seller or buyer&apos;s bank.
@@ -126,5 +126,5 @@ public record InitialBaselineSubmissionV03 : IOuterRecord
     [IsoId("_p4dPsNE8Ed-BzquC8wXy7w_1151862285")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
-    public ContactIdentification3? OtherBankContactPerson { get; init; }
+    public ValueList<ContactIdentification3> OtherBankContactPerson { get; init; } = [];
 }

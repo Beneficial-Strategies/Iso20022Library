@@ -55,7 +55,7 @@ public record CCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_Q-Y96eUUEem3X-64-NKdqg")]
     [DisplayName("Liquidity Stress Scenario Definition")]
     [IsoXmlTag("LqdtyStrssScnroDef")]
-    public required LiquidityStressScenarioDefinition1 LiquidityStressScenarioDefinition { get; init; }
+    public ValueList<LiquidityStressScenarioDefinition1> LiquidityStressScenarioDefinition { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPLiquidityStressTestingDefinitionReportV01 : IOuterRecord
     [IsoId("_Q-Y96-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

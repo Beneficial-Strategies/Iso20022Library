@@ -82,7 +82,7 @@ public record FundEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_DQeV6QasEeSrXeb3pHPmbg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -90,7 +90,7 @@ public record FundEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_DQeV6wasEeSrXeb3pHPmbg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -106,7 +106,7 @@ public record FundEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_TYM-QQc3EeSyIPzOZ6VzBQ")]
     [DisplayName("Fund Or Sub Fund Details")]
     [IsoXmlTag("FndOrSubFndDtls")]
-    public Fund1? FundOrSubFundDetails { get; init; }
+    public ValueList<Fund1> FundOrSubFundDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of transactions in shares in an investment fund, for example, subscriptions, redemptions or switches.
@@ -114,7 +114,7 @@ public record FundEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_DQeV7wasEeSrXeb3pHPmbg")]
     [DisplayName("Estimated Fund Cash Forecast Details")]
     [IsoXmlTag("EstmtdFndCshFcstDtls")]
-    public EstimatedFundCashForecast6? EstimatedFundCashForecastDetails { get; init; }
+    public ValueList<EstimatedFundCashForecast6> EstimatedFundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated net cash as a result of the cash-in and cash-out flows.
@@ -130,5 +130,5 @@ public record FundEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_DQeV8wasEeSrXeb3pHPmbg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

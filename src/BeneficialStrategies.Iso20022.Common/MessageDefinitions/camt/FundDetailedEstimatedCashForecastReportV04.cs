@@ -81,7 +81,7 @@ public record FundDetailedEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_IaBCmQasEeSrXeb3pHPmbg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -89,7 +89,7 @@ public record FundDetailedEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_IaBCmwasEeSrXeb3pHPmbg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -113,7 +113,7 @@ public record FundDetailedEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_IaBCnwasEeSrXeb3pHPmbg")]
     [DisplayName("Estimated Fund Cash Forecast Details")]
     [IsoXmlTag("EstmtdFndCshFcstDtls")]
-    public required EstimatedFundCashForecast5 EstimatedFundCashForecastDetails { get; init; }
+    public ValueList<EstimatedFundCashForecast5> EstimatedFundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated net cash as a result of the cash-in and cash-out flows specified in the fund cash forecast details.
@@ -129,5 +129,5 @@ public record FundDetailedEstimatedCashForecastReportV04 : IOuterRecord
     [IsoId("_IaBCowasEeSrXeb3pHPmbg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

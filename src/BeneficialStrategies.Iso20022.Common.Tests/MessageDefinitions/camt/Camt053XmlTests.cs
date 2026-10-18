@@ -87,11 +87,11 @@ public class Camt053XmlTests
         );
 
         var stmt = result.Statement;
-        Assert.Equal(ExpectedStmtId, stmt.Identification);
-        Assert.Equal(2, stmt.Balance.Count);
+        Assert.Equal(ExpectedStmtId, stmt[0].Identification);
+        Assert.Equal(2, stmt[0].Balance.Count);
 
         // Balance 1 — Opening Booked
-        var bal1 = stmt.Balance[0];
+        var bal1 = stmt[0].Balance[0];
         var balCode1 = Assert.IsType<BalTypeCode>(bal1.Type.CodeOrProprietary);
         Assert.Equal(ExternalBalanceType1Code.OpeningBooked, balCode1.Value);
         Assert.Equal("EUR", bal1.Amount.Currency);
@@ -99,7 +99,7 @@ public class Camt053XmlTests
         Assert.Equal(CreditDebitCode.Credit, bal1.CreditDebitIndicator);
 
         // Balance 2 — Closing Booked
-        var bal2 = stmt.Balance[1];
+        var bal2 = stmt[0].Balance[1];
         var balCode2 = Assert.IsType<BalTypeCode>(bal2.Type.CodeOrProprietary);
         Assert.Equal(ExternalBalanceType1Code.ClosingBooked, balCode2.Value);
         Assert.Equal("EUR", bal2.Amount.Currency);
@@ -119,15 +119,15 @@ public class Camt053XmlTests
         );
 
         var stmt = result.Statement;
-        Assert.Equal(2, stmt.Entry.Count);
+        Assert.Equal(2, stmt[0].Entry.Count);
 
-        var entry1 = stmt.Entry[0];
+        var entry1 = stmt[0].Entry[0];
         Assert.Equal(CreditDebitCode.Credit, entry1.CreditDebitIndicator);
         Assert.Equal("EUR", entry1.Amount.Currency);
         Assert.Equal(47_250.00m, entry1.Amount.Amount);
         Assert.IsType<EntryStatusCode>(entry1.Status);
 
-        var entry2 = stmt.Entry[1];
+        var entry2 = stmt[0].Entry[1];
         Assert.Equal(CreditDebitCode.Debit, entry2.CreditDebitIndicator);
         Assert.Equal("EUR", entry2.Amount.Currency);
         Assert.Equal(47_250.00m, entry2.Amount.Amount);
@@ -144,7 +144,7 @@ public class Camt053XmlTests
             LoadEmbeddedXml()
         );
 
-        var creditEntry = result.Statement.Entry[0];
+        var creditEntry = result.Statement[0].Entry[0];
         Assert.NotEmpty(creditEntry.EntryDetails);
 
         var entryDetails = creditEntry.EntryDetails[0];
@@ -168,7 +168,7 @@ public class Camt053XmlTests
             LoadEmbeddedXml()
         );
 
-        var txDtls = result.Statement.Entry[0].EntryDetails[0].TransactionDetails[0];
+        var txDtls = result.Statement[0].Entry[0].EntryDetails[0].TransactionDetails[0];
         Assert.NotNull(txDtls.RemittanceInformation);
         Assert.Equal(2, txDtls.RemittanceInformation.Unstructured.Count);
     }
@@ -192,17 +192,17 @@ public class Camt053XmlTests
         Assert.Equal(ExpectedMsgRcptName, result.GroupHeader.MessageRecipient?.Name);
 
         // Balances
-        Assert.Equal(2, result.Statement.Balance.Count);
-        Assert.Equal(ExpectedOpeningBalance, result.Statement.Balance[0].Amount.Amount);
-        Assert.Equal(ExpectedClosingBalance, result.Statement.Balance[1].Amount.Amount);
+        Assert.Equal(2, result.Statement[0].Balance.Count);
+        Assert.Equal(ExpectedOpeningBalance, result.Statement[0].Balance[0].Amount.Amount);
+        Assert.Equal(ExpectedClosingBalance, result.Statement[0].Balance[1].Amount.Amount);
 
         // Entries
-        Assert.Equal(2, result.Statement.Entry.Count);
-        Assert.Equal(CreditDebitCode.Credit, result.Statement.Entry[0].CreditDebitIndicator);
-        Assert.Equal(CreditDebitCode.Debit, result.Statement.Entry[1].CreditDebitIndicator);
+        Assert.Equal(2, result.Statement[0].Entry.Count);
+        Assert.Equal(CreditDebitCode.Credit, result.Statement[0].Entry[0].CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Debit, result.Statement[0].Entry[1].CreditDebitIndicator);
 
         // Transaction details — UETR survives round-trip
-        var txDtls = result.Statement.Entry[0].EntryDetails[0].TransactionDetails[0];
+        var txDtls = result.Statement[0].Entry[0].EntryDetails[0].TransactionDetails[0];
         Assert.Equal(ExpectedUetr, txDtls.References?.UETR);
 
         // Remittance lines survive

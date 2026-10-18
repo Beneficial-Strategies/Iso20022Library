@@ -55,7 +55,7 @@ public record CCPClearingMemberReportV01 : IOuterRecord
     [IsoId("_yw5rmeUTEem3X-64-NKdqg")]
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
-    public required ClearingMember1 ClearingMember { get; init; }
+    public ValueList<ClearingMember1> ClearingMember { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPClearingMemberReportV01 : IOuterRecord
     [IsoId("_yw5rm-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

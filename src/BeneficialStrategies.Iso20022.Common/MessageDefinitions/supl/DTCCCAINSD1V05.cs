@@ -55,7 +55,7 @@ public record DTCCCAINSD1V05 : IOuterRecord
     [IsoId("_b_h_EeaHEei5aPS232E3Mw")]
     [DisplayName("Optional Dividend")]
     [IsoXmlTag("OptnlDvdd")]
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; }
+    public ValueList<OptionalDividendAccountQuantitySD3> OptionalDividend { get; init; } = [];
 
     /// <summary>
     /// DTC (The Depository Trust Corporation) tax exempt service election.
@@ -63,7 +63,7 @@ public record DTCCCAINSD1V05 : IOuterRecord
     [IsoId("_b_h_GeaHEei5aPS232E3Mw")]
     [DisplayName("Tax Exempt")]
     [IsoXmlTag("TaxXmpt")]
-    public TaxExemptQuantitySD2? TaxExempt { get; init; }
+    public ValueList<TaxExemptQuantitySD2> TaxExempt { get; init; } = [];
 
     /// <summary>
     /// Tax category number assigned on the announcement to provide a breakdown at a category level on the inbound instruction to determine tax treatment as required by issuers, their agents, or tax authorities.
@@ -81,7 +81,7 @@ public record DTCCCAINSD1V05 : IOuterRecord
     [IsoId("_b_h_IeaHEei5aPS232E3Mw")]
     [DisplayName("Wire Instruction")]
     [IsoXmlTag("WireInstr")]
-    public WireInstructionSD3? WireInstruction { get; init; }
+    public ValueList<WireInstructionSD3> WireInstruction { get; init; } = [];
 
     /// <summary>
     /// Supplementary data extending corporate action reorganisation instruction message with corporate action elements not covered in the standard message.

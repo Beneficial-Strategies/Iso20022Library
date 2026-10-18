@@ -152,7 +152,7 @@ public record DeltaReportV03 : IOuterRecord
     [IsoId("_nsYZs9E8Ed-BzquC8wXy7w_1762925773")]
     [DisplayName("Updated Element")]
     [IsoXmlTag("UpdtdElmt")]
-    public required ComparisonResult2 UpdatedElement { get; init; }
+    public ValueList<ComparisonResult2> UpdatedElement { get; init; } = [];
 
     /// <summary>
     /// Information on the next processing step required.

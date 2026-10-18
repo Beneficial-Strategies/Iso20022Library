@@ -108,7 +108,7 @@ public record SecuritiesStatementQueryV01 : IOuterRecord
     [IsoId("_MhD16NFSEd-BzquC8wXy7w_-249593211")]
     [DisplayName("Additional Query Parameters")]
     [IsoXmlTag("AddtlQryParams")]
-    public AdditionalQueryParameters1? AdditionalQueryParameters { get; init; }
+    public ValueList<AdditionalQueryParameters1> AdditionalQueryParameters { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.
@@ -132,5 +132,5 @@ public record SecuritiesStatementQueryV01 : IOuterRecord
     [IsoId("_MhNm4tFSEd-BzquC8wXy7w_-1947152215")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

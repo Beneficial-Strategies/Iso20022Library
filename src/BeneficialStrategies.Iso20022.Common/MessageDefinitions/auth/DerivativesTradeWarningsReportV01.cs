@@ -63,5 +63,5 @@ public record DerivativesTradeWarningsReportV01 : IOuterRecord
     [IsoId("_pVW9s2mFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

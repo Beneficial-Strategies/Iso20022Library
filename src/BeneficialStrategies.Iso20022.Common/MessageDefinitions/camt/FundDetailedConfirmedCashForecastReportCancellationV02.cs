@@ -83,7 +83,7 @@ public record FundDetailedConfirmedCashForecastReportCancellationV02 : IOuterRec
     [IsoId("_bV8WkdE-Ed-BzquC8wXy7w_2091851925")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.

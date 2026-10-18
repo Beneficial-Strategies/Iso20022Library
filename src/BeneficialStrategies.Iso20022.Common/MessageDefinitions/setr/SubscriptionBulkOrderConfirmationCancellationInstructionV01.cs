@@ -89,7 +89,7 @@ public record SubscriptionBulkOrderConfirmationCancellationInstructionV01 : IOut
     [IsoId("_ygggENE7Ed-BzquC8wXy7w_1700720004")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.

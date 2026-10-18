@@ -77,7 +77,7 @@ public record MeetingInstructionV07 : IOuterRecord
     [IsoId("_ucYQwPKxEeqRfth943bvEA")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification32? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification32> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// The position of the instructing party and the action that it wants to take.
@@ -85,7 +85,7 @@ public record MeetingInstructionV07 : IOuterRecord
     [IsoId("_sVyKWfEkEeqRfth943bvEA")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
-    public required Instruction5 Instruction { get; init; }
+    public ValueList<Instruction5> Instruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
@@ -93,5 +93,5 @@ public record MeetingInstructionV07 : IOuterRecord
     [IsoId("_sVyKW_EkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

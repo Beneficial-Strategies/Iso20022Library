@@ -100,5 +100,5 @@ public record SecurityMaintenanceRequestV01 : IOuterRecord
     [IsoId("_wEnt8ZIzEeuAlLVx8pyt3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -63,7 +63,7 @@ public record ResendRequestV01 : IOuterRecord
     [IsoId("_5xUipZb3Eee4htziCyV8eA")]
     [DisplayName("Resend Search Criteria")]
     [IsoXmlTag("RsndSchCrit")]
-    public required ResendSearchCriteria2 ResendSearchCriteria { get; init; }
+    public ValueList<ResendSearchCriteria2> ResendSearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ResendRequestV01 : IOuterRecord
     [IsoId("_5xUip5b3Eee4htziCyV8eA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

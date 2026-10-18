@@ -74,10 +74,7 @@ public class GetGeneralBusinessInformationV04Validator : AbstractValidator<GetGe
                 RuleFor(x => x.GeneralBusinessInformationQueryDefinition)
                     .SetValidator(generalBusinessInformationQueryDefinitionValidator!)
         );
-        When(
-            x => x.SupplementaryData is not null,
-            () => RuleFor(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!)
-        );
+        RuleForEach(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!);
     }
 
     /// <summary>

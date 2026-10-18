@@ -98,5 +98,5 @@ public record PortfolioTransferNotificationV04 : IOuterRecord
     [IsoId("_YSMWIQCTEeW_3KiG8SEjHA")]
     [DisplayName("Transfer Notification Details")]
     [IsoXmlTag("TrfNtfctnDtls")]
-    public SecuritiesTradeDetails48? TransferNotificationDetails { get; init; }
+    public ValueList<SecuritiesTradeDetails48> TransferNotificationDetails { get; init; } = [];
 }

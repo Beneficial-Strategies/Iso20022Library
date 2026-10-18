@@ -112,5 +112,5 @@ public record SecuritiesSettlementTransactionAuditTrailReport002V05 : IOuterReco
     [IsoId("_dsyZnji8Eeydid5dcNPKvg")]
     [DisplayName("Status Trail")]
     [IsoXmlTag("StsTrl")]
-    public StatusTrail11? StatusTrail { get; init; }
+    public ValueList<StatusTrail11> StatusTrail { get; init; } = [];
 }

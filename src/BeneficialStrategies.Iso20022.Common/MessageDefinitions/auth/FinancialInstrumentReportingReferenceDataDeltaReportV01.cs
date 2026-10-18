@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingReferenceDataDeltaReportV01 : IOuterRe
     [IsoId("_4LUGLURNEee7JdgA9zPESA")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
-    public SecuritiesReferenceDeltaStatusReport2Choice_? FinancialInstrument { get; init; }
+    public ValueList<SecuritiesReferenceDeltaStatusReport2Choice_> FinancialInstrument { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingReferenceDataDeltaReportV01 : IOuterRe
     [IsoId("_4LUGL0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

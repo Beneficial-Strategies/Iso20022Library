@@ -83,10 +83,10 @@ public class Camt054XmlTests
         );
 
         var ntfctn = result.Notification;
-        Assert.Equal(ExpectedNtfctnId, ntfctn.Identification);
-        Assert.Equal(2, ntfctn.Entry.Count);
-        Assert.Equal(CreditDebitCode.Credit, ntfctn.Entry[0].CreditDebitIndicator);
-        Assert.Equal(CreditDebitCode.Credit, ntfctn.Entry[1].CreditDebitIndicator);
+        Assert.Equal(ExpectedNtfctnId, ntfctn[0].Identification);
+        Assert.Equal(2, ntfctn[0].Entry.Count);
+        Assert.Equal(CreditDebitCode.Credit, ntfctn[0].Entry[0].CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Credit, ntfctn[0].Entry[1].CreditDebitIndicator);
     }
 
     /// <summary>
@@ -100,7 +100,7 @@ public class Camt054XmlTests
             LoadEmbeddedXml()
         );
 
-        var entry1 = result.Notification.Entry[0];
+        var entry1 = result.Notification[0].Entry[0];
         Assert.NotEmpty(entry1.EntryDetails);
 
         var txDtls = entry1.EntryDetails[0].TransactionDetails[0];
@@ -119,7 +119,7 @@ public class Camt054XmlTests
             LoadEmbeddedXml()
         );
 
-        var entry2 = result.Notification.Entry[1];
+        var entry2 = result.Notification[0].Entry[1];
         Assert.NotEmpty(entry2.EntryDetails);
 
         var txDtls = entry2.EntryDetails[0].TransactionDetails[0];
@@ -140,7 +140,7 @@ public class Camt054XmlTests
             LoadEmbeddedXml()
         );
 
-        var txDtls = result.Notification.Entry[0].EntryDetails[0].TransactionDetails[0];
+        var txDtls = result.Notification[0].Entry[0].EntryDetails[0].TransactionDetails[0];
         Assert.NotNull(txDtls.RemittanceInformation);
         Assert.Equal(2, txDtls.RemittanceInformation.Unstructured.Count);
     }
@@ -164,17 +164,17 @@ public class Camt054XmlTests
         Assert.Equal(ExpectedMsgRcptName, result.GroupHeader.MessageRecipient?.Name);
 
         // Entries
-        Assert.Equal(2, result.Notification.Entry.Count);
-        Assert.Equal(CreditDebitCode.Credit, result.Notification.Entry[0].CreditDebitIndicator);
-        Assert.Equal(CreditDebitCode.Credit, result.Notification.Entry[1].CreditDebitIndicator);
-        Assert.Equal(47_250.00m, result.Notification.Entry[0].Amount.Amount);
-        Assert.Equal(12_500.00m, result.Notification.Entry[1].Amount.Amount);
+        Assert.Equal(2, result.Notification[0].Entry.Count);
+        Assert.Equal(CreditDebitCode.Credit, result.Notification[0].Entry[0].CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Credit, result.Notification[0].Entry[1].CreditDebitIndicator);
+        Assert.Equal(47_250.00m, result.Notification[0].Entry[0].Amount.Amount);
+        Assert.Equal(12_500.00m, result.Notification[0].Entry[1].Amount.Amount);
 
         // UETRs survive round-trip
-        var tx1 = result.Notification.Entry[0].EntryDetails[0].TransactionDetails[0];
+        var tx1 = result.Notification[0].Entry[0].EntryDetails[0].TransactionDetails[0];
         Assert.Equal(ExpectedEntry1Uetr, tx1.References?.UETR);
 
-        var tx2 = result.Notification.Entry[1].EntryDetails[0].TransactionDetails[0];
+        var tx2 = result.Notification[0].Entry[1].EntryDetails[0].TransactionDetails[0];
         Assert.Equal(ExpectedEntry2Uetr, tx2.References?.UETR);
 
         // Remittance lines survive

@@ -69,7 +69,7 @@ public record ActivityReportRequestV03 : IOuterRecord
     [IsoId("_iE0UQtE8Ed-BzquC8wXy7w_1228841591")]
     [DisplayName("Entities To Be Reported")]
     [IsoXmlTag("NttiesToBeRptd")]
-    public BICIdentification1? EntitiesToBeReported { get; init; }
+    public ValueList<BICIdentification1> EntitiesToBeReported { get; init; } = [];
 
     /// <summary>
     /// Specifies the period for which activities have to be reported.

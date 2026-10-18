@@ -93,7 +93,7 @@ public record IntraBalanceMovementModificationRequestV01 : IOuterRecord
     [IsoId("_DLtLFTncEem7JZMuWtwtsg")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required RequestDetails22 RequestDetails { get; init; }
+    public ValueList<RequestDetails22> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Original intra-balance movement transaction details.
@@ -109,5 +109,5 @@ public record IntraBalanceMovementModificationRequestV01 : IOuterRecord
     [IsoId("_DLtLGTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

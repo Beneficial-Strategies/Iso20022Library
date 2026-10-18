@@ -93,7 +93,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvK199Ee262vCSVgjImg")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification137Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -101,7 +101,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvLV99Ee262vCSVgjImg")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification137Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -109,7 +109,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvL199Ee262vCSVgjImg")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification137Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -125,7 +125,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvM199Ee262vCSVgjImg")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification137Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// Trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -149,7 +149,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvOV99Ee262vCSVgjImg")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification137Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// Trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -165,5 +165,5 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdvice002V12 :
     [IsoId("_SeCvPV99Ee262vCSVgjImg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

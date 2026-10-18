@@ -105,7 +105,7 @@ public record TransferOutCancellationRequestV08 : IOuterRecord
     [IsoId("_jg5WcYiyEeefvMoXmllHqg")]
     [DisplayName("Transfer References")]
     [IsoXmlTag("TrfRefs")]
-    public required TransferReference11 TransferReferences { get; init; }
+    public ValueList<TransferReference11> TransferReferences { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.

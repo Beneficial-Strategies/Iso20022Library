@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRecord
     [IsoId("_4LUGJURNEee7JdgA9zPESA")]
     [DisplayName("Non Working Day")]
     [IsoXmlTag("NonWorkgDay")]
-    public required SecuritiesNonTradingDayReport1 NonWorkingDay { get; init; }
+    public ValueList<SecuritiesNonTradingDayReport1> NonWorkingDay { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRecord
     [IsoId("_4LUGJ0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

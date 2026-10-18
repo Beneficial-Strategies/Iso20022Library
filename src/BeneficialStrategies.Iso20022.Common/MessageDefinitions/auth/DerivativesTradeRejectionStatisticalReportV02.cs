@@ -63,5 +63,5 @@ public record DerivativesTradeRejectionStatisticalReportV02 : IOuterRecord
     [IsoId("_F_KeBd1bEeqxpKDfBZC1vg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

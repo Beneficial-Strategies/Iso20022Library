@@ -117,5 +117,5 @@ public record CorporateActionInstructionCancellationRequestV01 : IOuterRecord
     [IsoId("_TWGThNEwEd-BzquC8wXy7w_342767527")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

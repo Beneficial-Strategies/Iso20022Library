@@ -111,5 +111,5 @@ public record InterestPaymentStatementV03 : IOuterRecord
     [IsoId("_7gWbBVnNEeSPgY23yCMQSQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

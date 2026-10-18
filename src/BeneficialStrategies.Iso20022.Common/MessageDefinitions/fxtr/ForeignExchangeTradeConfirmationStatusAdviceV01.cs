@@ -115,5 +115,5 @@ public record ForeignExchangeTradeConfirmationStatusAdviceV01 : IOuterRecord
     [IsoId("_Ab9F4KHmEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

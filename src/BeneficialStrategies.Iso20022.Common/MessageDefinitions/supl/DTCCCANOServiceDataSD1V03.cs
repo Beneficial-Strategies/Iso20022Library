@@ -63,7 +63,7 @@ public record DTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PgAsjL3EeKU9IrkkToqcw_1207093876")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReferenceSD2? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReferenceSD2> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action notification.
@@ -103,7 +103,7 @@ public record DTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKoDL3EeKU9IrkkToqcw_531596542")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public CorporateActionOptionSD5? OptionDetails { get; init; }
+    public ValueList<CorporateActionOptionSD5> OptionDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement details.
@@ -111,7 +111,7 @@ public record DTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKoTL3EeKU9IrkkToqcw_-1504539626")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOptionSD4? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOptionSD4> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement security details.
@@ -119,7 +119,7 @@ public record DTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKojL3EeKU9IrkkToqcw_-86950323")]
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
-    public FinancialInstrumentAttributesSD5? SecuritiesMovementSecurityDetails { get; init; }
+    public ValueList<FinancialInstrumentAttributesSD5> SecuritiesMovementSecurityDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as cash movement supplementary data.
@@ -127,5 +127,5 @@ public record DTCCCANOServiceDataSD1V03 : IOuterRecord
     [IsoId("_1PpKozL3EeKU9IrkkToqcw_565166861")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOptionSD5? CashMovementDetails { get; init; }
+    public ValueList<CashOptionSD5> CashMovementDetails { get; init; } = [];
 }

@@ -187,5 +187,5 @@ public record BusinessApplicationHeaderV02 : IOuterRecord
     [IsoId("_6wX5a8h7Eei73Ywzx0CAAg")]
     [DisplayName("Related")]
     [IsoXmlTag("Rltd")]
-    public BusinessApplicationHeader5? Related { get; init; }
+    public ValueList<BusinessApplicationHeader5> Related { get; init; } = [];
 }

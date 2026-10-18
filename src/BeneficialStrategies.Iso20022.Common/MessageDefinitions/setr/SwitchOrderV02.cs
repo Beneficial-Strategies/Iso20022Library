@@ -75,7 +75,7 @@ public record SwitchOrderV02 : IOuterRecord
     [IsoId("_8JIAI9E7Ed-BzquC8wXy7w_-61918547")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Information related to the switch order.
@@ -109,5 +109,5 @@ public record SwitchOrderV02 : IOuterRecord
     [IsoId("_8JRKEdE7Ed-BzquC8wXy7w_72236090")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -63,7 +63,7 @@ public record ContractRegistrationClosureRequestV02 : IOuterRecord
     [IsoId("_bf9RyW2PEei3KuUgpx7Xcw")]
     [DisplayName("Registered Contract Closure")]
     [IsoXmlTag("RegdCtrctClsr")]
-    public required RegisteredContract6 RegisteredContractClosure { get; init; }
+    public ValueList<RegisteredContract6> RegisteredContractClosure { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ContractRegistrationClosureRequestV02 : IOuterRecord
     [IsoId("_bf9R0W2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

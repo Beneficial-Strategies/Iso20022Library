@@ -82,5 +82,5 @@ public record ShareholderIdentificationDisclosureResponseCancellationAdviceV01 :
     [IsoId("_1__BQbRAEem2T48lBgJbww")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

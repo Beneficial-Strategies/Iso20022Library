@@ -96,7 +96,7 @@ public record SecuritiesFinancingInstructionV06 : IOuterRecord
     [IsoId("_YSMWuQCTEeW_3KiG8SEjHA")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages37? Linkages { get; init; }
+    public ValueList<Linkages37> Linkages { get; init; } = [];
 
     /// <summary>
     /// Details of the securities financing deal.
@@ -208,5 +208,5 @@ public record SecuritiesFinancingInstructionV06 : IOuterRecord
     [IsoId("_YSMW1QCTEeW_3KiG8SEjHA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

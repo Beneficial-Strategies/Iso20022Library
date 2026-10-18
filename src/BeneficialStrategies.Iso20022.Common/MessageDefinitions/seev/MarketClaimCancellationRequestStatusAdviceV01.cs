@@ -97,5 +97,5 @@ public record MarketClaimCancellationRequestStatusAdviceV01 : IOuterRecord
     [IsoId("_S5Y80SgaEeuYwc3diVMizA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

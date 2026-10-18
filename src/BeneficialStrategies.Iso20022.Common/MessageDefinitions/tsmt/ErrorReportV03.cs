@@ -118,7 +118,7 @@ public record ErrorReportV03 : IOuterRecord
     [IsoId("_oHNUgdE8Ed-BzquC8wXy7w_-1686098797")]
     [DisplayName("Error Description")]
     [IsoXmlTag("ErrDesc")]
-    public required ValidationResult3 ErrorDescription { get; init; }
+    public ValueList<ValidationResult3> ErrorDescription { get; init; } = [];
 
     /// <summary>
     /// Information on the next processing step required.

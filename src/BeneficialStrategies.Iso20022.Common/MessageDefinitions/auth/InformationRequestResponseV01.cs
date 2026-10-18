@@ -96,7 +96,7 @@ public record InformationRequestResponseV01 : IOuterRecord
     [IsoId("_UbboITzuEeGl7N0Cd54dlw")]
     [DisplayName("Return Indicator")]
     [IsoXmlTag("RtrInd")]
-    public required ReturnIndicator1 ReturnIndicator { get; init; }
+    public ValueList<ReturnIndicator1> ReturnIndicator { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -104,5 +104,5 @@ public record InformationRequestResponseV01 : IOuterRecord
     [IsoId("_ICHsnzzvEeGl7N0Cd54dlw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -77,7 +77,7 @@ public record FIToFIPaymentReversalV03 : IOuterRecord
     [IsoId("_sHMqwVkyEeGeoaLUQk__nA_623458799")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransaction36? TransactionInformation { get; init; }
+    public ValueList<PaymentTransaction36> TransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -85,5 +85,5 @@ public record FIToFIPaymentReversalV03 : IOuterRecord
     [IsoId("_sHWbwFkyEeGeoaLUQk__nA_319943093")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

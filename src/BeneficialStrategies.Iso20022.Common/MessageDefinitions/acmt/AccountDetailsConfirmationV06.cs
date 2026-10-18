@@ -174,7 +174,7 @@ public record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_JMKmwSFoEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AccountRestrictions1? AdditionalInformation { get; init; }
+    public ValueList<AccountRestrictions1> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -190,5 +190,5 @@ public record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoId("_9y4qbx8KEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

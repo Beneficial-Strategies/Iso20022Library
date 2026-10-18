@@ -82,5 +82,5 @@ public record CreateReservationV01 : IOuterRecord
     [IsoId("_P8tonckHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

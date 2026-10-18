@@ -67,7 +67,7 @@ public record IdentificationVerificationRequestV03 : IOuterRecord
     [IsoId("_dgnUFQyYEeukGOovyT2RcQ")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public required IdentificationVerification4 Verification { get; init; }
+    public ValueList<IdentificationVerification4> Verification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -75,5 +75,5 @@ public record IdentificationVerificationRequestV03 : IOuterRecord
     [IsoId("_dgnUFgyYEeukGOovyT2RcQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

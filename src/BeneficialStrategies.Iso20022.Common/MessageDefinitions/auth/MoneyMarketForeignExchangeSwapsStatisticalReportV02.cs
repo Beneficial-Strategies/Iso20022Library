@@ -71,5 +71,5 @@ public record MoneyMarketForeignExchangeSwapsStatisticalReportV02 : IOuterRecord
     [IsoId("_9ugiV8EOEea7jLfvGi1PDw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

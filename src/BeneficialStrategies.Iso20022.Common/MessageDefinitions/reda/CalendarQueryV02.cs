@@ -63,7 +63,7 @@ public record CalendarQueryV02 : IOuterRecord
     [IsoId("_DRJNKluDEe29lKnE5APnfA")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public CalendarSearchCriteria1? SearchCriteria { get; init; }
+    public ValueList<CalendarSearchCriteria1> SearchCriteria { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record CalendarQueryV02 : IOuterRecord
     [IsoId("_DRJNK1uDEe29lKnE5APnfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

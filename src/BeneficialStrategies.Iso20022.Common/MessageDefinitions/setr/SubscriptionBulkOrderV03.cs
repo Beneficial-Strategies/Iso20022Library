@@ -76,7 +76,7 @@ public record SubscriptionBulkOrderV03 : IOuterRecord
     [IsoId("_0KwbaNE7Ed-BzquC8wXy7w_-742336956")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// General information related to the order.
@@ -110,5 +110,5 @@ public record SubscriptionBulkOrderV03 : IOuterRecord
     [IsoId("_0K6MY9E7Ed-BzquC8wXy7w_2036865617")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

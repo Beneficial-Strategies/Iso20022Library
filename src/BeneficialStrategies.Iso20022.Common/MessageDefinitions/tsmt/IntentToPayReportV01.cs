@@ -67,5 +67,5 @@ public record IntentToPayReportV01 : IOuterRecord
     [IsoId("_quPoN9E8Ed-BzquC8wXy7w_747097845")]
     [DisplayName("Reported Items")]
     [IsoXmlTag("RptdItms")]
-    public ReportLine1? ReportedItems { get; init; }
+    public ValueList<ReportLine1> ReportedItems { get; init; } = [];
 }

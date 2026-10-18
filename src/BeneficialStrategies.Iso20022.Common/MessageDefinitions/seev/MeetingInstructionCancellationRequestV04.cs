@@ -98,7 +98,7 @@ public record MeetingInstructionCancellationRequestV04 : IOuterRecord
     [IsoId("_TnrLstEwEd-BzquC8wXy7w_738498553")]
     [DisplayName("Instructed Position")]
     [IsoXmlTag("InstdPos")]
-    public SafekeepingAccount4? InstructedPosition { get; init; }
+    public ValueList<SafekeepingAccount4> InstructedPosition { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -106,5 +106,5 @@ public record MeetingInstructionCancellationRequestV04 : IOuterRecord
     [IsoId("_TnrLs9EwEd-BzquC8wXy7w_-554493875")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

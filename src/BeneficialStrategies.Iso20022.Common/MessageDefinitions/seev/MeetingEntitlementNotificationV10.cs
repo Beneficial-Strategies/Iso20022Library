@@ -78,7 +78,9 @@ public record MeetingEntitlementNotificationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public required SecurityPosition21 Security { get; init; }
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition21> Security { get; init; } = [];
 
     /// <summary>
     /// Eligibility.

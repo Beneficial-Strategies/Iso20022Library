@@ -98,7 +98,7 @@ public record AccountExcludedMandateMaintenanceRequestV01 : IOuterRecord
     [IsoId("_pzuEMdE9Ed-BzquC8wXy7w_1958240607")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public required Organisation6 Organisation { get; init; }
+    public ValueList<Organisation6> Organisation { get; init; } = [];
 
     /// <summary>
     /// Contains additional information related to the message.
@@ -114,5 +114,5 @@ public record AccountExcludedMandateMaintenanceRequestV01 : IOuterRecord
     [IsoId("_pzuEM9E9Ed-BzquC8wXy7w_538629891")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

@@ -85,5 +85,5 @@ public record SecurityDeletionRequestV01 : IOuterRecord
     [IsoId("_jTumxR62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

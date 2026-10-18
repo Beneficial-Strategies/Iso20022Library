@@ -96,7 +96,7 @@ public record SubscriptionBulkOrderCancellationRequestV04 : IOuterRecord
     [IsoId("_MioCs1AYEea5nPE5ezGuuw")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
-    public required InvestmentFundOrder9 OrderReferences { get; init; }
+    public ValueList<InvestmentFundOrder9> OrderReferences { get; init; } = [];
 
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

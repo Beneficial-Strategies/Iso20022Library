@@ -77,7 +77,7 @@ public record SwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7t2ZY9E7Ed-BzquC8wXy7w_1364526959")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -93,7 +93,7 @@ public record SwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7t2ZZdE7Ed-BzquC8wXy7w_-1882952026")]
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
-    public required SwitchExecution4 SwitchExecutionDetails { get; init; }
+    public ValueList<SwitchExecution4> SwitchExecutionDetails { get; init; } = [];
 
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
@@ -109,5 +109,5 @@ public record SwitchOrderConfirmationV03 : IOuterRecord
     [IsoId("_7uAKYdE7Ed-BzquC8wXy7w_746903959")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

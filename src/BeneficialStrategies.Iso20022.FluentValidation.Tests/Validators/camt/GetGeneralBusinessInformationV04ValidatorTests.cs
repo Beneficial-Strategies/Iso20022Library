@@ -34,7 +34,7 @@ public class GetGeneralBusinessInformationV04ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            SupplementaryData = new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() },
+            SupplementaryData = [new SupplementaryData1 { Envelope = new SupplementaryDataEnvelope1() }],
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }

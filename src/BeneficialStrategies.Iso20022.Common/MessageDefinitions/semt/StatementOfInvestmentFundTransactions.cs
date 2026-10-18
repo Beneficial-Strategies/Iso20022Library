@@ -67,7 +67,7 @@ public record StatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MXrQbNFSEd-BzquC8wXy7w_1597856875")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference2? PreviousReference { get; init; }
+    public ValueList<AdditionalReference2> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -75,7 +75,7 @@ public record StatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MXrQbdFSEd-BzquC8wXy7w_1600624521")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference2? RelatedReference { get; init; }
+    public ValueList<AdditionalReference2> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -107,7 +107,7 @@ public record StatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aU9FSEd-BzquC8wXy7w_-591358864")]
     [DisplayName("Transaction On Account")]
     [IsoXmlTag("TxOnAcct")]
-    public InvestmentFundTransactionsByFund1? TransactionOnAccount { get; init; }
+    public ValueList<InvestmentFundTransactionsByFund1> TransactionOnAccount { get; init; } = [];
 
     /// <summary>
     /// The sub-account of the safekeeping or investment account.
@@ -115,7 +115,7 @@ public record StatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aVNFSEd-BzquC8wXy7w_-645201789")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification4? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification4> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -123,5 +123,5 @@ public record StatementOfInvestmentFundTransactions : IOuterRecord
     [IsoId("_MX0aVdFSEd-BzquC8wXy7w_364441815")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

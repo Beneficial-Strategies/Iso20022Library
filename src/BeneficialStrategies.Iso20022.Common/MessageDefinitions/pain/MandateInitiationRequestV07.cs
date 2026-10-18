@@ -71,7 +71,7 @@ public record MandateInitiationRequestV07 : IOuterRecord
     [IsoId("_rUYN6dcBEeq_l4BJLVUF2Q")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public required Mandate19 Mandate { get; init; }
+    public ValueList<Mandate19> Mandate { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record MandateInitiationRequestV07 : IOuterRecord
     [IsoId("_rUYN69cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

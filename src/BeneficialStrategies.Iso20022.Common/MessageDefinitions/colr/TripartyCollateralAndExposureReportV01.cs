@@ -93,7 +93,7 @@ public record TripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM4Ss7EeySlt9bF77XfA")]
     [DisplayName("Exposure Type Aggregation")]
     [IsoXmlTag("XpsrTpAggtn")]
-    public ExposureTypeAggregation3? ExposureTypeAggregation { get; init; }
+    public ValueList<ExposureTypeAggregation3> ExposureTypeAggregation { get; init; } = [];
 
     /// <summary>
     /// Specifies the valuation details per counterparty aggregation.
@@ -101,7 +101,7 @@ public record TripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM4ys7EeySlt9bF77XfA")]
     [DisplayName("Counterparty Aggregation")]
     [IsoXmlTag("CtrPtyAggtn")]
-    public CounterpartyAggregation3? CounterpartyAggregation { get; init; }
+    public ValueList<CounterpartyAggregation3> CounterpartyAggregation { get; init; } = [];
 
     /// <summary>
     /// Specifies the transaction,  the collateral and related valuation details.
@@ -109,7 +109,7 @@ public record TripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM5Ss7EeySlt9bF77XfA")]
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
-    public Transaction124? Transactions { get; init; }
+    public ValueList<Transaction124> Transactions { get; init; } = [];
 
     /// <summary>
     /// Total valuation amounts provided in the base currency of the account
@@ -125,5 +125,5 @@ public record TripartyCollateralAndExposureReportV01 : IOuterRecord
     [IsoId("_2uaM6Ss7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

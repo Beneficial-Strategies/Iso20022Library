@@ -73,7 +73,7 @@ public record AccountRequestRejectionV01 : IOuterRecord
     [IsoId("_woeVg9E9Ed-BzquC8wXy7w_-730305383")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountForAction1? AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Identifier for an organisation.
@@ -81,7 +81,7 @@ public record AccountRequestRejectionV01 : IOuterRecord
     [IsoId("_woeVhNE9Ed-BzquC8wXy7w_1969662038")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -89,5 +89,5 @@ public record AccountRequestRejectionV01 : IOuterRecord
     [IsoId("_woeVhdE9Ed-BzquC8wXy7w_2030179826")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

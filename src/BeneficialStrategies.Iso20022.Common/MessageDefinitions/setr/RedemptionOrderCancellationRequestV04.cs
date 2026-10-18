@@ -96,7 +96,7 @@ public record RedemptionOrderCancellationRequestV04 : IOuterRecord
     [IsoId("_Ox6es0TpEeaFv6weEmLwpA")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
-    public required InvestmentFundOrder9 OrderReferences { get; init; }
+    public ValueList<InvestmentFundOrder9> OrderReferences { get; init; } = [];
 
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

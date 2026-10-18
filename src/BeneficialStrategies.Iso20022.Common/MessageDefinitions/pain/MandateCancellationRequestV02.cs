@@ -79,5 +79,5 @@ public record MandateCancellationRequestV02 : IOuterRecord
     [IsoId("_r0kpsFkyEeGeoaLUQk__nA_-961186885")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

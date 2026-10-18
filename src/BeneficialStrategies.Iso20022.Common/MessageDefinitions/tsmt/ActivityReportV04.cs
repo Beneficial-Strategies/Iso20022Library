@@ -77,5 +77,5 @@ public record ActivityReportV04 : IOuterRecord
     [IsoId("_fPCaaefGEeKNfc-Rw_dPYg")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public ActivityReportItems3? Report { get; init; }
+    public ValueList<ActivityReportItems3> Report { get; init; } = [];
 }

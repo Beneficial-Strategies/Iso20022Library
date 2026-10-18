@@ -55,5 +55,5 @@ public record DTCCCANODerivativeSD1V03 : IOuterRecord
     [IsoId("_1OJ85TL3EeKU9IrkkToqcw_778471175")]
     [DisplayName("Corporate Action Notification")]
     [IsoXmlTag("CorpActnNtfctn")]
-    public CorporateActionNotificationSD2? CorporateActionNotification { get; init; }
+    public ValueList<CorporateActionNotificationSD2> CorporateActionNotification { get; init; } = [];
 }

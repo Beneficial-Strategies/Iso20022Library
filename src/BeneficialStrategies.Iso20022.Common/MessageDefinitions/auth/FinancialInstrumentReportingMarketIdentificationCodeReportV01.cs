@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingMarketIdentificationCodeReportV01 : IO
     [IsoId("_4LK8Z0RNEee7JdgA9zPESA")]
     [DisplayName("Market Identification")]
     [IsoXmlTag("MktId")]
-    public required MarketIdentification92 MarketIdentification { get; init; }
+    public ValueList<MarketIdentification92> MarketIdentification { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingMarketIdentificationCodeReportV01 : IO
     [IsoId("_4LK8aURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

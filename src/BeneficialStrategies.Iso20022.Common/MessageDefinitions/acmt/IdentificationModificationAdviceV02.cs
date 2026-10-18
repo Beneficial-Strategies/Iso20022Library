@@ -77,7 +77,7 @@ public record IdentificationModificationAdviceV02 : IOuterRecord
     [IsoId("_sZFE8VkyEeGeoaLUQk__nA_2000152843")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public required IdentificationModification2 Modification { get; init; }
+    public ValueList<IdentificationModification2> Modification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -85,5 +85,5 @@ public record IdentificationModificationAdviceV02 : IOuterRecord
     [IsoId("_sZO18FkyEeGeoaLUQk__nA_606246720")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

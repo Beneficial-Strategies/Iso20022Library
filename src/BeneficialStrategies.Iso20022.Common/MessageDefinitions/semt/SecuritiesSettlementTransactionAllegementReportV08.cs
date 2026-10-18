@@ -98,5 +98,5 @@ public record SecuritiesSettlementTransactionAllegementReportV08 : IOuterRecord
     [IsoId("_HSdIX9BoEeihG9bKfarOOA")]
     [DisplayName("Allegement Details")]
     [IsoXmlTag("AllgmtDtls")]
-    public SecuritiesTradeDetails95? AllegementDetails { get; init; }
+    public ValueList<SecuritiesTradeDetails95> AllegementDetails { get; init; } = [];
 }

@@ -109,7 +109,7 @@ public class Pain002ExamplesTests
         {
             GroupHeader = CreateGroupHeader("DEUTDEFF/240315/PAI002/00003"),
             OriginalGroupInformationAndStatus = CreateOriginalGroupInfo(),
-            OriginalPaymentInformationAndStatus = CreateOriginalPaymentInfo(
+            OriginalPaymentInformationAndStatus = [CreateOriginalPaymentInfo(
                 ExternalPaymentGroupStatus1Code.Rejected
             ) with
             {
@@ -130,18 +130,18 @@ public class Pain002ExamplesTests
                             ["Creditor account FR7630006000011234567890189 was closed on 2024-01-31."],
                     }],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal(
             ExternalPaymentGroupStatus1Code.Rejected,
-            message.OriginalPaymentInformationAndStatus!.PaymentInformationStatus
+            message.OriginalPaymentInformationAndStatus![0].PaymentInformationStatus
         );
         Assert.IsType<Code>(
             message
                 .OriginalPaymentInformationAndStatus
-                .TransactionInformationAndStatus![0]
+                [0].TransactionInformationAndStatus![0]
                 .StatusReasonInformation![0]
                 .Reason
         );
@@ -159,7 +159,7 @@ public class Pain002ExamplesTests
         {
             GroupHeader = CreateGroupHeader("DEUTDEFF/240315/PAI002/00004"),
             OriginalGroupInformationAndStatus = CreateOriginalGroupInfo(),
-            OriginalPaymentInformationAndStatus = CreateOriginalPaymentInfo(
+            OriginalPaymentInformationAndStatus = [CreateOriginalPaymentInfo(
                 ExternalPaymentGroupStatus1Code.Rejected
             ) with
             {
@@ -175,14 +175,14 @@ public class Pain002ExamplesTests
                             ["Single-payment limit EUR 50,000 exceeded. Contact your relationship manager."],
                     }],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
             message
                 .OriginalPaymentInformationAndStatus!
-                .TransactionInformationAndStatus![0]
+                [0].TransactionInformationAndStatus![0]
                 .StatusReasonInformation![0]
                 .Reason
         );
@@ -203,7 +203,7 @@ public class Pain002ExamplesTests
             {
                 GroupStatus = ExternalPaymentGroupStatus1Code.AcceptedWithChange,
             },
-            OriginalPaymentInformationAndStatus = new OriginalPaymentInstruction45
+            OriginalPaymentInformationAndStatus = [new OriginalPaymentInstruction45
             {
                 OriginalPaymentInformationIdentification = "ACME/240315/PMTINF/001",
                 TransactionInformationAndStatus = [new PaymentTransaction144
@@ -213,7 +213,7 @@ public class Pain002ExamplesTests
                     TransactionStatus = ExternalPaymentTransactionStatus1Code.Pending,
                     AcceptanceDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
@@ -221,7 +221,7 @@ public class Pain002ExamplesTests
             ExternalPaymentTransactionStatus1Code.Pending,
             message
                 .OriginalPaymentInformationAndStatus!
-                .TransactionInformationAndStatus![0]
+                [0].TransactionInformationAndStatus![0]
                 .TransactionStatus
         );
     }

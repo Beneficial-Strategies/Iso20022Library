@@ -64,7 +64,7 @@ public record InvoiceTaxReportStatusAdviceV01 : IOuterRecord
     [IsoId("_PM8n8E54Eeaine-lsNAGsA")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
-    public InvoiceTaxReportTransactionStatus1? TransactionStatus { get; init; }
+    public ValueList<InvoiceTaxReportTransactionStatus1> TransactionStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific
@@ -73,5 +73,5 @@ public record InvoiceTaxReportStatusAdviceV01 : IOuterRecord
     [IsoId("_XlusIE2ZEea-HpmqkM55Lg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -76,7 +76,7 @@ public record FundDetailedConfirmedCashForecastReportCancellationV01 : IOuterRec
     [IsoId("_a2gBg9E-Ed-BzquC8wXy7w_809025064")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// The FundDetailedConfirmedCashForecastReport to be cancelled.

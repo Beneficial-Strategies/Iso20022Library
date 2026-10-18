@@ -83,7 +83,7 @@ public record AccountClosingAmendmentRequestV01 : IOuterRecord
     [IsoId("_nlaZkdE9Ed-BzquC8wXy7w_1006271356")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies target dates.
@@ -115,5 +115,5 @@ public record AccountClosingAmendmentRequestV01 : IOuterRecord
     [IsoId("_nlaZldE9Ed-BzquC8wXy7w_-944215031")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

@@ -127,7 +127,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasM12lEeOb__BffbPEig")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public CorporateActionOptionSD9? OptionDetails { get; init; }
+    public ValueList<CorporateActionOptionSD9> OptionDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement details.
@@ -135,7 +135,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasNV2lEeOb__BffbPEig")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOptionSD6? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOptionSD6> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement security details.
@@ -143,7 +143,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasN12lEeOb__BffbPEig")]
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
-    public FinancialInstrumentAttributesSD3? SecuritiesMovementSecurityDetails { get; init; }
+    public ValueList<FinancialInstrumentAttributesSD3> SecuritiesMovementSecurityDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement rate details.
@@ -151,7 +151,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasOV2lEeOb__BffbPEig")]
     [DisplayName("Securities Movement Rate Details")]
     [IsoXmlTag("SctiesMvmntRateDtls")]
-    public CorporateActionRateSD7? SecuritiesMovementRateDetails { get; init; }
+    public ValueList<CorporateActionRateSD7> SecuritiesMovementRateDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement cash in lieu.
@@ -159,7 +159,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasO12lEeOb__BffbPEig")]
     [DisplayName("Securities Movement Cash In Lieu Details")]
     [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
-    public CorporateActionPriceSD2? SecuritiesMovementCashInLieuDetails { get; init; }
+    public ValueList<CorporateActionPriceSD2> SecuritiesMovementCashInLieuDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement fraction disposition.
@@ -167,7 +167,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasPV2lEeOb__BffbPEig")]
     [DisplayName("Securities Movement Fraction Disposition")]
     [IsoXmlTag("SctiesMvmntFrctnDspstn")]
-    public FractionDispositionTypeSD2? SecuritiesMovementFractionDisposition { get; init; }
+    public ValueList<FractionDispositionTypeSD2> SecuritiesMovementFractionDisposition { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to cash movement details.
@@ -175,7 +175,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasP12lEeOb__BffbPEig")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOptionSD7? CashMovementDetails { get; init; }
+    public ValueList<CashOptionSD7> CashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information to agent details (to message agent like &quot;issuer agent&quot;, &quot;reselling agent&quot;, etc). Used when required &quot;ISO agent type&quot; exists and only additional details need to be extended.
@@ -183,7 +183,7 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasQV2lEeOb__BffbPEig")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public PartyIdentificationSD2? Agent { get; init; }
+    public ValueList<PartyIdentificationSD2> Agent { get; init; } = [];
 
     /// <summary>
     /// Information to be extended new agent block. Used when required ISO Agent Type does not exist and entire new component must be generated.
@@ -191,5 +191,5 @@ public record DTCCCANOMarketDataSD1V06 : IOuterRecord
     [IsoId("_eaasQ12lEeOb__BffbPEig")]
     [DisplayName("New Agent")]
     [IsoXmlTag("NewAgt")]
-    public PartyIdentificationSD1? NewAgent { get; init; }
+    public ValueList<PartyIdentificationSD1> NewAgent { get; init; } = [];
 }

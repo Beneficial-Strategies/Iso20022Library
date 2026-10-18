@@ -99,7 +99,7 @@ public record MeetingVoteExecutionConfirmationV04 : IOuterRecord
     [IsoId("_TuY3stEwEd-BzquC8wXy7w_-2084020635")]
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
-    public required DetailedInstructionStatus9 VoteInstructions { get; init; }
+    public ValueList<DetailedInstructionStatus9> VoteInstructions { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -107,5 +107,5 @@ public record MeetingVoteExecutionConfirmationV04 : IOuterRecord
     [IsoId("_TuY3s9EwEd-BzquC8wXy7w_1171570217")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

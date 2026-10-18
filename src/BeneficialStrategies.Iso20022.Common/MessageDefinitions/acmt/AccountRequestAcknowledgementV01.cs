@@ -66,7 +66,7 @@ public record AccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT99NE9Ed-BzquC8wXy7w_-800492608")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountForAction1? AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Identifier for an organisation.
@@ -74,7 +74,7 @@ public record AccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT99dE9Ed-BzquC8wXy7w_297553784")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. |.
@@ -90,5 +90,5 @@ public record AccountRequestAcknowledgementV01 : IOuterRecord
     [IsoId("_wMT999E9Ed-BzquC8wXy7w_1931364103")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

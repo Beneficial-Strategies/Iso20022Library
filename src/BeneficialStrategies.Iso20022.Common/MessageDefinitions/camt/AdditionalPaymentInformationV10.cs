@@ -98,5 +98,5 @@ public record AdditionalPaymentInformationV10 : IOuterRecord
     [IsoId("_Lv9JgcP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -129,5 +129,5 @@ public record SecuritiesStatusOrStatementQueryStatusAdviceV01 : IOuterRecord
     [IsoId("__zKT0tE5Ed-BzquC8wXy7w_1981475286")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

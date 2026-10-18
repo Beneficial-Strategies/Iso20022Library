@@ -63,7 +63,7 @@ public record RequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBv-HzEeqbls7Gk4-ckA")]
     [DisplayName("Amendment Data")]
     [IsoXmlTag("AmdmntData")]
-    public required DebtorActivationAmendment3 AmendmentData { get; init; }
+    public ValueList<DebtorActivationAmendment3> AmendmentData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record RequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBweHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

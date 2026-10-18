@@ -90,7 +90,7 @@ public record BuyInRegulatoryAdviceResponseV01 : IOuterRecord
     [IsoId("_4Pp1QZwYEeqtp-LOti013g")]
     [DisplayName("Buy In Attributes")]
     [IsoXmlTag("BuyInAttrbts")]
-    public BuyInAdviceDetails1? BuyInAttributes { get; init; }
+    public ValueList<BuyInAdviceDetails1> BuyInAttributes { get; init; } = [];
 
     /// <summary>
     /// Provides details on the processing status of the advice.
@@ -106,5 +106,5 @@ public record BuyInRegulatoryAdviceResponseV01 : IOuterRecord
     [IsoId("_DFqLA5wYEeqtp-LOti013g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

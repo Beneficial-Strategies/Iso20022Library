@@ -98,7 +98,7 @@ public record CustomerPaymentCancellationRequestV10 : IOuterRecord
     [IsoId("_IBiykdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction30 Underlying { get; init; }
+    public ValueList<UnderlyingTransaction30> Underlying { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -106,5 +106,5 @@ public record CustomerPaymentCancellationRequestV10 : IOuterRecord
     [IsoId("_IBiyk9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

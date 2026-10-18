@@ -77,7 +77,7 @@ public record FIToFIPaymentStatusReportV04 : IOuterRecord
     [IsoId("_sJIkcVkyEeGeoaLUQk__nA_1699173194")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransaction33? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransaction33> TransactionInformationAndStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -85,5 +85,5 @@ public record FIToFIPaymentStatusReportV04 : IOuterRecord
     [IsoId("_sJSVcFkyEeGeoaLUQk__nA_1609143706")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

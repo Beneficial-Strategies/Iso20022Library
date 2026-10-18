@@ -71,5 +71,5 @@ public record CCPAvailableFinancialResourcesReportV01 : IOuterRecord
     [IsoId("_omGWbeUREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

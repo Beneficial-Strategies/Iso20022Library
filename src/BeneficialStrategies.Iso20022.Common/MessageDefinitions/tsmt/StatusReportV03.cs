@@ -75,5 +75,5 @@ public record StatusReportV03 : IOuterRecord
     [IsoId("_1C-AW9E8Ed-BzquC8wXy7w_-145028829")]
     [DisplayName("Reported Items")]
     [IsoXmlTag("RptdItms")]
-    public StatusReportItems2? ReportedItems { get; init; }
+    public ValueList<StatusReportItems2> ReportedItems { get; init; } = [];
 }

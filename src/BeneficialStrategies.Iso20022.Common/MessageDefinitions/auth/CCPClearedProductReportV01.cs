@@ -55,7 +55,7 @@ public record CCPClearedProductReportV01 : IOuterRecord
     [IsoId("_sNWfCeUTEem3X-64-NKdqg")]
     [DisplayName("Cleared Product")]
     [IsoXmlTag("ClrdPdct")]
-    public required ClearedProduct1 ClearedProduct { get; init; }
+    public ValueList<ClearedProduct1> ClearedProduct { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPClearedProductReportV01 : IOuterRecord
     [IsoId("_sNWfC-UTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

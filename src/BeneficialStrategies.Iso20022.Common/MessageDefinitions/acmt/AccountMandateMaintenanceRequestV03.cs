@@ -90,7 +90,7 @@ public record AccountMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bf9RC22PEei3KuUgpx7Xcw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required AccountForAction1 AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
@@ -114,7 +114,7 @@ public record AccountMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bf9REW2PEei3KuUgpx7Xcw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public required OperationMandate5 Mandate { get; init; }
+    public ValueList<OperationMandate5> Mandate { get; init; } = [];
 
     /// <summary>
     /// Definition of a group of parties.
@@ -122,7 +122,7 @@ public record AccountMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bf9RE22PEei3KuUgpx7Xcw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
-    public Group3? Group { get; init; }
+    public ValueList<Group3> Group { get; init; } = [];
 
     /// <summary>
     /// Contains additional information related to the message.
@@ -138,7 +138,7 @@ public record AccountMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bf9RF22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature3? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature3> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -146,5 +146,5 @@ public record AccountMandateMaintenanceRequestV03 : IOuterRecord
     [IsoId("_bf9RGW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

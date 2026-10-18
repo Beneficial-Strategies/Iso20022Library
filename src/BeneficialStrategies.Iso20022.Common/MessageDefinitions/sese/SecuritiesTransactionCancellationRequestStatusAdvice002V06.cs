@@ -99,5 +99,5 @@ public record SecuritiesTransactionCancellationRequestStatusAdvice002V06 : IOute
     [IsoId("_YTI0jyAeEeuyDZ-ukt4YRg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

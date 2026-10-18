@@ -70,7 +70,7 @@ public record MandateSuspensionRequestV03 : IOuterRecord
     [IsoId("_rUYOOdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
-    public required MandateSuspension3 UnderlyingSuspensionDetails { get; init; }
+    public ValueList<MandateSuspension3> UnderlyingSuspensionDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -78,5 +78,5 @@ public record MandateSuspensionRequestV03 : IOuterRecord
     [IsoId("_rUYOO9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -66,5 +66,5 @@ public record AccountReportingRequestV02 : IOuterRecord
     [IsoId("_seAcYGtdEeCY4-KZ9JEyUQ_308674707")]
     [DisplayName("Reporting Request")]
     [IsoXmlTag("RptgReq")]
-    public required ReportingRequest2 ReportingRequest { get; init; }
+    public ValueList<ReportingRequest2> ReportingRequest { get; init; } = [];
 }

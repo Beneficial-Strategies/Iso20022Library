@@ -106,7 +106,7 @@ public record FeeCollectionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Fee Collection Reference")]
     [IsoXmlTag("FeeColltnRef")]
-    public FeeCollectionReference2? FeeCollectionReference { get; init; }
+    public ValueList<FeeCollectionReference2> FeeCollectionReference { get; init; } = [];
 
     /// <summary>
     /// Header.
@@ -134,7 +134,7 @@ public record FeeCollectionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Original Data Elements.
@@ -155,7 +155,7 @@ public record FeeCollectionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Processing Result.

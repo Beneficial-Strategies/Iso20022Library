@@ -134,7 +134,7 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ATICALaxProcessing? AdditionalInformation { get; init; }
+    public SimpleValueList<ATICALaxProcessing> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Token.
@@ -148,7 +148,7 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Cardholder")]
     [IsoXmlTag("Crdhldr")]
-    public Cardholder22? Cardholder { get; init; }
+    public ValueList<Cardholder22> Cardholder { get; init; } = [];
 
     /// <summary>
     /// Jurisdiction.
@@ -190,14 +190,14 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// National Data.
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Security Trailer.

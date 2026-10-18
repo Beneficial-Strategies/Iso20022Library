@@ -77,7 +77,7 @@ public record MeetingInstructionV06 : IOuterRecord
     [IsoId("_yXBbj6yREemMosWmlQ33EA")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
-    public required Instruction4 Instruction { get; init; }
+    public ValueList<Instruction4> Instruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
@@ -85,5 +85,5 @@ public record MeetingInstructionV06 : IOuterRecord
     [IsoId("_yXBbkayREemMosWmlQ33EA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

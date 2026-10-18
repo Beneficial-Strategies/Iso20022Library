@@ -70,7 +70,7 @@ public record CorporateActionInstructionCancellationRequestStatusAdviceV06 : IOu
     [IsoId("_Rc5qFTm_EeWENZE2jGFgGw")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification33? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification33> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -86,7 +86,7 @@ public record CorporateActionInstructionCancellationRequestStatusAdviceV06 : IOu
     [IsoId("_Rc5qGTm_EeWENZE2jGFgGw")]
     [DisplayName("Instruction Cancellation Request Status")]
     [IsoXmlTag("InstrCxlReqSts")]
-    public required InstructionCancellationRequestStatus9Choice_ InstructionCancellationRequestStatus { get; init; }
+    public ValueList<InstructionCancellationRequestStatus9Choice_> InstructionCancellationRequestStatus { get; init; } = [];
 
     /// <summary>
     /// Information about the corporate action option.
@@ -110,5 +110,5 @@ public record CorporateActionInstructionCancellationRequestStatusAdviceV06 : IOu
     [IsoId("_Rc5qHzm_EeWENZE2jGFgGw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -145,5 +145,5 @@ public record SecuritiesFinancingModificationInstructionV08 : IOuterRecord
     [IsoId("_57PSLSpzEeyR9JrVGfaMKw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

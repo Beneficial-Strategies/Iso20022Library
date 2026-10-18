@@ -77,7 +77,7 @@ public record ModifyTransactionV08 : IOuterRecord
     [IsoId("_jwlb7RbvEeiyVv5j1vf1VQ")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public required TransactionModification5 Modification { get; init; }
+    public ValueList<TransactionModification5> Modification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -85,5 +85,5 @@ public record ModifyTransactionV08 : IOuterRecord
     [IsoId("_jwlb7xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

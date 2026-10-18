@@ -71,5 +71,5 @@ public record BankToCustomerAccountReportV02 : IOuterRecord
     [IsoId("_II5S5dE-Ed-BzquC8wXy7w_620541423")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public required AccountReport11 Report { get; init; }
+    public ValueList<AccountReport11> Report { get; init; } = [];
 }

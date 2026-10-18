@@ -157,7 +157,7 @@ public class ImmutableValueListJsonConverterTests
         var original = new BankToCustomerStatementV11
         {
             GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-001",
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
@@ -175,7 +175,7 @@ public class ImmutableValueListJsonConverterTests
                 Entry = [Camt053ExamplesTests.CreateCreditEntry(
                     new Code { Value = ExternalEntryStatus1Code.Booked }
                 )],
-            },
+            }],
         };
 
         var json = JsonSerializer.Serialize(original, Options);
@@ -186,11 +186,11 @@ public class ImmutableValueListJsonConverterTests
             original.GroupHeader.MessageIdentification,
             result.GroupHeader.MessageIdentification
         );
-        Assert.Equal(2, result.Statement.Balance.Count);
-        Assert.Equal(905_500.00m, result.Statement.Balance[0].Amount.Amount);
+        Assert.Equal(2, result.Statement[0].Balance.Count);
+        Assert.Equal(905_500.00m, result.Statement[0].Balance[0].Amount.Amount);
 
         // Verify choice type round-tripped with correct concrete variant
-        var status = Assert.IsType<Code>(result.Statement.Entry![0].Status);
+        var status = Assert.IsType<Code>(result.Statement[0].Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Booked, status.Value);
     }
 }

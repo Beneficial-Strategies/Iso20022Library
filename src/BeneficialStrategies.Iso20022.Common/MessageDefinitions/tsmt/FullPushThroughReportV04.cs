@@ -120,7 +120,7 @@ public record FullPushThroughReportV04 : IOuterRecord
     [IsoId("_9e9AY9NTEeK-v49t1oWkNA")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
-    public ContactIdentification1? BuyerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> BuyerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the organisation of the seller.
@@ -128,7 +128,7 @@ public record FullPushThroughReportV04 : IOuterRecord
     [IsoId("_9e9AZdNTEeK-v49t1oWkNA")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
-    public ContactIdentification1? SellerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> SellerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the buyer&apos;s bank.
@@ -136,7 +136,7 @@ public record FullPushThroughReportV04 : IOuterRecord
     [IsoId("_9e9AZ9NTEeK-v49t1oWkNA")]
     [DisplayName("Buyer Bank Contact Person")]
     [IsoXmlTag("BuyrBkCtctPrsn")]
-    public ContactIdentification1? BuyerBankContactPerson { get; init; }
+    public ValueList<ContactIdentification1> BuyerBankContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the seller&apos;s bank.
@@ -144,7 +144,7 @@ public record FullPushThroughReportV04 : IOuterRecord
     [IsoId("_9e9AadNTEeK-v49t1oWkNA")]
     [DisplayName("Seller Bank Contact Person")]
     [IsoXmlTag("SellrBkCtctPrsn")]
-    public ContactIdentification1? SellerBankContactPerson { get; init; }
+    public ValueList<ContactIdentification1> SellerBankContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in another bank than the seller or buyer&apos;s bank.
@@ -152,7 +152,7 @@ public record FullPushThroughReportV04 : IOuterRecord
     [IsoId("_9e9Aa9NTEeK-v49t1oWkNA")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
-    public ContactIdentification3? OtherBankContactPerson { get; init; }
+    public ValueList<ContactIdentification3> OtherBankContactPerson { get; init; } = [];
 
     /// <summary>
     /// Information on the next processing step required.

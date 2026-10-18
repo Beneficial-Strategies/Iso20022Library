@@ -93,5 +93,5 @@ public record SystemEventAcknowledgementV01 : IOuterRecord
     [IsoId("_E4uhVy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

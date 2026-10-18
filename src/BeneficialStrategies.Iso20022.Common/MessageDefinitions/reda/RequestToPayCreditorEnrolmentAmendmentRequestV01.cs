@@ -64,7 +64,7 @@ public record RequestToPayCreditorEnrolmentAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBl-HzEeqbls7Gk4-ckA")]
     [DisplayName("Amendment Data")]
     [IsoXmlTag("AmdmntData")]
-    public required CreditorEnrolmentAmendment3 AmendmentData { get; init; }
+    public ValueList<CreditorEnrolmentAmendment3> AmendmentData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -72,5 +72,5 @@ public record RequestToPayCreditorEnrolmentAmendmentRequestV01 : IOuterRecord
     [IsoId("_rNNBmeHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -92,7 +92,7 @@ public record ReversalOfTransferOutConfirmationV08 : IOuterRecord
     [IsoId("_sQ9zAYi0EeefvMoXmllHqg")]
     [DisplayName("Reversal References")]
     [IsoXmlTag("RvslRefs")]
-    public required TransferReference12 ReversalReferences { get; init; }
+    public ValueList<TransferReference12> ReversalReferences { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.

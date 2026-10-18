@@ -75,14 +75,14 @@ public class Pacs008ExamplesTests
         var message = new FIToFICustomerCreditTransferV11
         {
             GroupHeader = CreateGroupHeader(),
-            CreditTransferTransactionInformation = CreateCreditTransfer(),
+            CreditTransferTransactionInformation = [CreateCreditTransfer()],
         };
 
         Assert.NotNull(message);
         Assert.Equal("pacs.008.001.11", FIToFICustomerCreditTransferV11.IsoIdentifier);
         Assert.Equal(
             Iso20022TestData.Uetr,
-            message.CreditTransferTransactionInformation.PaymentIdentification.UETR
+            message.CreditTransferTransactionInformation[0].PaymentIdentification.UETR
         );
     }
 
@@ -102,15 +102,15 @@ public class Pacs008ExamplesTests
         var message = new FIToFICustomerCreditTransferV11
         {
             GroupHeader = CreateGroupHeader(),
-            CreditTransferTransactionInformation = CreateCreditTransfer() with
+            CreditTransferTransactionInformation = [CreateCreditTransfer() with
             {
                 Creditor = creditorWithLei,
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<OrganisationIdentification>(
-            message.CreditTransferTransactionInformation.Creditor!.Identification
+            message.CreditTransferTransactionInformation[0].Creditor!.Identification
         );
     }
 
@@ -136,15 +136,15 @@ public class Pacs008ExamplesTests
         var message = new FIToFICustomerCreditTransferV11
         {
             GroupHeader = CreateGroupHeader(),
-            CreditTransferTransactionInformation = CreateCreditTransfer() with
+            CreditTransferTransactionInformation = [CreateCreditTransfer() with
             {
                 DebtorAccount = nonIbanAccount,
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Other>(
-            message.CreditTransferTransactionInformation.DebtorAccount!.Identification
+            message.CreditTransferTransactionInformation[0].DebtorAccount!.Identification
         );
     }
 
@@ -164,10 +164,10 @@ public class Pacs008ExamplesTests
         var message = new FIToFICustomerCreditTransferV11
         {
             GroupHeader = coverGroupHeader,
-            CreditTransferTransactionInformation = CreateCreditTransfer() with
+            CreditTransferTransactionInformation = [CreateCreditTransfer() with
             {
                 IntermediaryAgent1 = Iso20022TestData.CorrespondentAgent,
-            },
+            }],
         };
 
         Assert.NotNull(message);

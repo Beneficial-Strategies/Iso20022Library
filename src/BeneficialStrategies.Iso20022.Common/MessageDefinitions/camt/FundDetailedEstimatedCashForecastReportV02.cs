@@ -67,7 +67,7 @@ public record FundDetailedEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_c0afstE-Ed-BzquC8wXy7w_-987110045")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -75,7 +75,7 @@ public record FundDetailedEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_c0afs9E-Ed-BzquC8wXy7w_-1294642974")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.||.
@@ -83,7 +83,7 @@ public record FundDetailedEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_c0aftNE-Ed-BzquC8wXy7w_-3558952")]
     [DisplayName("Estimated Fund Cash Forecast Details")]
     [IsoXmlTag("EstmtdFndCshFcstDtls")]
-    public required EstimatedFundCashForecast2 EstimatedFundCashForecastDetails { get; init; }
+    public ValueList<EstimatedFundCashForecast2> EstimatedFundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -91,5 +91,5 @@ public record FundDetailedEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_c0aftdE-Ed-BzquC8wXy7w_-816260566")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

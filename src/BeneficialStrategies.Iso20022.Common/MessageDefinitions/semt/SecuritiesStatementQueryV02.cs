@@ -101,7 +101,7 @@ public record SecuritiesStatementQueryV02 : IOuterRecord
     [IsoId("_Cj8xHdtZEd-RF5yaMAVhAw")]
     [DisplayName("Additional Query Parameters")]
     [IsoXmlTag("AddtlQryParams")]
-    public AdditionalQueryParameters3? AdditionalQueryParameters { get; init; }
+    public ValueList<AdditionalQueryParameters3> AdditionalQueryParameters { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -109,5 +109,5 @@ public record SecuritiesStatementQueryV02 : IOuterRecord
     [IsoId("_Cj8xI9tZEd-RF5yaMAVhAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

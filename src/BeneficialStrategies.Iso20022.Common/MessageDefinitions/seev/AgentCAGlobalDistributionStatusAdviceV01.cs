@@ -94,5 +94,5 @@ public record AgentCAGlobalDistributionStatusAdviceV01 : IOuterRecord
     [IsoId("_TN5ZytEwEd-BzquC8wXy7w_-1885018018")]
     [DisplayName("Individual Movement Status")]
     [IsoXmlTag("IndvMvmntSts")]
-    public required IndividualMovementStatus1 IndividualMovementStatus { get; init; }
+    public ValueList<IndividualMovementStatus1> IndividualMovementStatus { get; init; } = [];
 }

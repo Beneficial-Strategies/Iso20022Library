@@ -71,5 +71,5 @@ public record SettlementFailsAnnualReportV01 : IOuterRecord
     [IsoId("_pq7Tt0EXEeqXB_DgAcRqgw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

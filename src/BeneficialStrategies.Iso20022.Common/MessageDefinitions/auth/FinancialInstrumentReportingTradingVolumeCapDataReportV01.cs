@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuter
     [IsoId("_4LUGS0RNEee7JdgA9zPESA")]
     [DisplayName("Volume Cap Data")]
     [IsoXmlTag("VolCapData")]
-    public required VolumeCapReport1 VolumeCapData { get; init; }
+    public ValueList<VolumeCapReport1> VolumeCapData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuter
     [IsoId("_4LUGTURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -103,7 +103,7 @@ public record SettlementObligationReportV03 : IOuterRecord
     [IsoId("_suRVXS9dEeS94oXWDaBauA")]
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
-    public required Report5 ReportDetails { get; init; }
+    public ValueList<Report5> ReportDetails { get; init; } = [];
 
     /// <summary>
     /// Provides details about the receiving parties involved in the settlement chain.
@@ -119,5 +119,5 @@ public record SettlementObligationReportV03 : IOuterRecord
     [IsoId("_suRVYS9dEeS94oXWDaBauA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

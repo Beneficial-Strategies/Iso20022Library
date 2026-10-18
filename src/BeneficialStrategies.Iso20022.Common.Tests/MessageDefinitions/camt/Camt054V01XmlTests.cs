@@ -57,7 +57,7 @@ public class Camt054V01XmlTests
             LoadEmbeddedXml()
         );
 
-        Assert.Equal(ExpectedNtfctnId, result.Notification.Identification);
+        Assert.Equal(ExpectedNtfctnId, result.Notification[0].Identification);
     }
 
     [Fact]
@@ -74,6 +74,6 @@ public class Camt054V01XmlTests
 
         Assert.Equal(ExpectedMsgId, result.GroupHeader.MessageIdentification);
         Assert.Equal(ExpectedMsgRcptName, result.GroupHeader.MessageRecipient?.Name);
-        Assert.Equal(ExpectedNtfctnId, result.Notification.Identification);
+        Assert.Equal(ExpectedNtfctnId, result.Notification[0].Identification);
     }
 }

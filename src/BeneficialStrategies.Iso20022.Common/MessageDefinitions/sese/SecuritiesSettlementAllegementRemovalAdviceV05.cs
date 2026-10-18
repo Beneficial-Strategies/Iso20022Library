@@ -107,5 +107,5 @@ public record SecuritiesSettlementAllegementRemovalAdviceV05 : IOuterRecord
     [IsoId("_Rj8ncwyQEeuG8M5giQ2e0w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

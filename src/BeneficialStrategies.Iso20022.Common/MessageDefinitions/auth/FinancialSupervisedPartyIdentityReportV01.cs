@@ -56,7 +56,7 @@ public record FinancialSupervisedPartyIdentityReportV01 : IOuterRecord
     [IsoId("_DehT8fH1Eeaz_YGUGLjP6A")]
     [DisplayName("Party Data")]
     [IsoXmlTag("PtyData")]
-    public required PartyReport1Choice_ PartyData { get; init; }
+    public ValueList<PartyReport1Choice_> PartyData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -64,5 +64,5 @@ public record FinancialSupervisedPartyIdentityReportV01 : IOuterRecord
     [IsoId("_nAykQTbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -66,7 +66,7 @@ public record InvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTA3-AOSNFX-822450")]
     [DisplayName("Reconciliation List")]
     [IsoXmlTag("RcncltnList")]
-    public required ReconciliationList1 ReconciliationList { get; init; }
+    public ValueList<ReconciliationList1> ReconciliationList { get; init; } = [];
 
     /// <summary>
     /// Specifies the number of reconciliation lists.
@@ -101,5 +101,5 @@ public record InvoicePaymentReconciliationStatusV01 : IOuterRecord
     [IsoId("_OTgzNTEx-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

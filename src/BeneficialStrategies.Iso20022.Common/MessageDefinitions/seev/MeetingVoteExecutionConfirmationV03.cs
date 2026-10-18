@@ -99,5 +99,5 @@ public record MeetingVoteExecutionConfirmationV03 : IOuterRecord
     [IsoId("_TuFVttEwEd-BzquC8wXy7w_1618914221")]
     [DisplayName("Vote Instructions")]
     [IsoXmlTag("VoteInstrs")]
-    public required DetailedInstructionStatus9 VoteInstructions { get; init; }
+    public ValueList<DetailedInstructionStatus9> VoteInstructions { get; init; } = [];
 }

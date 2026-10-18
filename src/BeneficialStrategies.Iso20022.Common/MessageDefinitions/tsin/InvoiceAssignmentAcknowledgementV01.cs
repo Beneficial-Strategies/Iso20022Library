@@ -66,7 +66,7 @@ public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTAw-AOSNFX-8224507")]
     [DisplayName("Payment Status List")]
     [IsoXmlTag("PmtStsList")]
-    public required FinancingItemList1 PaymentStatusList { get; init; }
+    public ValueList<FinancingItemList1> PaymentStatusList { get; init; } = [];
 
     /// <summary>
     /// Number of payment information lists as control value.
@@ -101,5 +101,5 @@ public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNTA0-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

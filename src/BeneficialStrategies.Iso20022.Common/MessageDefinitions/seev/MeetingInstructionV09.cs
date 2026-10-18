@@ -95,7 +95,7 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoId("_J-5jgDUAEe2tRf29bleifQ")]
     [DisplayName("Instruction Cancellation Request Identification")]
     [IsoXmlTag("InstrCxlReqId")]
-    public MeetingInstructionCancellation1? InstructionCancellationRequestIdentification { get; init; }
+    public ValueList<MeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the message and individual instruction(s) for which the cancellation was requested.
@@ -103,7 +103,7 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoId("_bAVEMDUAEe2tRf29bleifQ")]
     [DisplayName("Cancelled Instruction Identification")]
     [IsoXmlTag("CancInstrId")]
-    public MeetingInstructionIdentification1? CancelledInstructionIdentification { get; init; }
+    public ValueList<MeetingInstructionIdentification1> CancelledInstructionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of other messages/documents as well as the messages/documents number.
@@ -111,7 +111,7 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHuzQ7Ee22Z83HpR5E8w")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification32? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification32> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// The position of the instructing party and the action that it wants to take.
@@ -119,7 +119,7 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHvTQ7Ee22Z83HpR5E8w")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
-    public required Instruction7 Instruction { get; init; }
+    public ValueList<Instruction7> Instruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
@@ -127,5 +127,5 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoId("_nIzHvzQ7Ee22Z83HpR5E8w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

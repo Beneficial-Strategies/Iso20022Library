@@ -76,7 +76,7 @@ public record RequestForOrderStatusReportV03 : IOuterRecord
     [IsoId("_wy_OWtE7Ed-BzquC8wXy7w_1331513937")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference4 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference4> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -84,5 +84,5 @@ public record RequestForOrderStatusReportV03 : IOuterRecord
     [IsoId("_wy_OW9E7Ed-BzquC8wXy7w_-800406650")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

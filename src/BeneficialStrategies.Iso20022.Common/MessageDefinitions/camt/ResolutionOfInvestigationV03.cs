@@ -100,7 +100,7 @@ public record ResolutionOfInvestigationV03 : IOuterRecord
     [IsoId("_WF8nI9E_Ed-BzquC8wXy7w_1371778702")]
     [DisplayName("Cancellation Details")]
     [IsoXmlTag("CxlDtls")]
-    public UnderlyingTransaction3? CancellationDetails { get; init; }
+    public ValueList<UnderlyingTransaction3> CancellationDetails { get; init; } = [];
 
     /// <summary>
     /// Details on the underlying statement entry.

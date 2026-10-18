@@ -75,5 +75,5 @@ public record UndertakingAmendmentV01 : IOuterRecord
     [IsoId("_9gAzeHltEeG7BsjMvd1mEw_1718202663")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature2? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = [];
 }

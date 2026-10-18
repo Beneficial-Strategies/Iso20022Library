@@ -105,5 +105,5 @@ public record UnableToApplyV06 : IOuterRecord
     [IsoId("_nNMjjaqDEeeMmtkfa8-zPg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

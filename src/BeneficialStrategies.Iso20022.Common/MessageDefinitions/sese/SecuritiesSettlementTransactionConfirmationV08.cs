@@ -195,5 +195,5 @@ public record SecuritiesSettlementTransactionConfirmationV08 : IOuterRecord
     [IsoId("_8D63k6zwEeeBIMhGLpLUsQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -73,7 +73,7 @@ public record BusinessMessageEnvelopeV01 : IOuterRecord
     [IsoId("_vln_FgJ9Ee2o0-v8T2Svrw")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public Reference22? Reference { get; init; }
+    public ValueList<Reference22> Reference { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
@@ -81,5 +81,5 @@ public record BusinessMessageEnvelopeV01 : IOuterRecord
     [IsoId("_vln_FwJ9Ee2o0-v8T2Svrw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -64,7 +64,7 @@ public record ChequePresentmentNotificationV01 : IOuterRecord
     [IsoId("_tGFUsbtlEeq_cfXrH83Rcw")]
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
-    public required Cheque13 Cheque { get; init; }
+    public ValueList<Cheque13> Cheque { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -72,5 +72,5 @@ public record ChequePresentmentNotificationV01 : IOuterRecord
     [IsoId("_V-H6o7tlEeq_cfXrH83Rcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

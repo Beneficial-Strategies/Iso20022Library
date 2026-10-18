@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingNonEquityTransparencyDataReportV02 : I
     [IsoId("_MC2uYScFEeiPcf9yet9QmA")]
     [DisplayName("Non Equity Transparency Data")]
     [IsoXmlTag("NonEqtyTrnsprncyData")]
-    public required TransparencyDataReport16 NonEquityTransparencyData { get; init; }
+    public ValueList<TransparencyDataReport16> NonEquityTransparencyData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingNonEquityTransparencyDataReportV02 : I
     [IsoId("_MC2uYycFEeiPcf9yet9QmA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

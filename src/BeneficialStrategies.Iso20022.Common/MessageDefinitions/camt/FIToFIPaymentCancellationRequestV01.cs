@@ -91,5 +91,5 @@ public record FIToFIPaymentCancellationRequestV01 : IOuterRecord
     [IsoId("_YcuGvNE-Ed-BzquC8wXy7w_390093571")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction2 Underlying { get; init; }
+    public ValueList<UnderlyingTransaction2> Underlying { get; init; } = [];
 }

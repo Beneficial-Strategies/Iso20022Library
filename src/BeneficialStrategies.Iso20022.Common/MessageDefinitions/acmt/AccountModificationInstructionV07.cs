@@ -181,7 +181,7 @@ public record AccountModificationInstructionV07 : IOuterRecord
     [IsoId("__kmtb0NDEeaknIuOb43xYQ")]
     [DisplayName("Modified Additional Information")]
     [IsoXmlTag("ModfdAddtlInf")]
-    public ModificationScope35? ModifiedAdditionalInformation { get; init; }
+    public ValueList<ModificationScope35> ModifiedAdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -197,5 +197,5 @@ public record AccountModificationInstructionV07 : IOuterRecord
     [IsoId("__kmtc0NDEeaknIuOb43xYQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

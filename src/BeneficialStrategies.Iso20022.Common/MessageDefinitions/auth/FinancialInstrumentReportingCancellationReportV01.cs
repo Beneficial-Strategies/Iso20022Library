@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingCancellationReportV01 : IOuterRecord
     [IsoId("_iu4fQGOgEeqrzPlWMq8k6Q")]
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
-    public required SecuritiesReferenceDataReport7 CancellationData { get; init; }
+    public ValueList<SecuritiesReferenceDataReport7> CancellationData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingCancellationReportV01 : IOuterRecord
     [IsoId("_vRvi4GOgEeqrzPlWMq8k6Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

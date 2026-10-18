@@ -63,7 +63,7 @@ public record RequestToPayDebtorActivationRequestV01 : IOuterRecord
     [IsoId("_rNNB0eHzEeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation")]
     [IsoXmlTag("DbtrActvtn")]
-    public required DebtorActivation3 DebtorActivation { get; init; }
+    public ValueList<DebtorActivation3> DebtorActivation { get; init; } = [];
 
     /// <summary>
     /// Further data related to the electronic invoice (e-invoice).
@@ -79,5 +79,5 @@ public record RequestToPayDebtorActivationRequestV01 : IOuterRecord
     [IsoId("_rNNB1eHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

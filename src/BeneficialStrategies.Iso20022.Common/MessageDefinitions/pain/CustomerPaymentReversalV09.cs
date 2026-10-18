@@ -76,7 +76,7 @@ public record CustomerPaymentReversalV09 : IOuterRecord
     [IsoId("_eYI_122PEei3KuUgpx7Xcw")]
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
-    public OriginalPaymentInstruction33? OriginalPaymentInformationAndReversal { get; init; }
+    public ValueList<OriginalPaymentInstruction33> OriginalPaymentInformationAndReversal { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -84,5 +84,5 @@ public record CustomerPaymentReversalV09 : IOuterRecord
     [IsoId("_eYI_2W2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

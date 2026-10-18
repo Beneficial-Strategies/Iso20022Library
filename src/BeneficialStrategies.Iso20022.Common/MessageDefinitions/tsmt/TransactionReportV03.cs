@@ -75,5 +75,5 @@ public record TransactionReportV03 : IOuterRecord
     [IsoId("_2U6wYdE8Ed-BzquC8wXy7w_-1389761189")]
     [DisplayName("Reported Items")]
     [IsoXmlTag("RptdItms")]
-    public TransactionReportItems3? ReportedItems { get; init; }
+    public ValueList<TransactionReportItems3> ReportedItems { get; init; } = [];
 }

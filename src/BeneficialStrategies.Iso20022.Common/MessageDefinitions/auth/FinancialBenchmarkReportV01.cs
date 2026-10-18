@@ -55,7 +55,7 @@ public record FinancialBenchmarkReportV01 : IOuterRecord
     [IsoId("_mm5ioTrVEeedCZZ8dIPp6g")]
     [DisplayName("Benchmark Data")]
     [IsoXmlTag("BchmkData")]
-    public required BenchmarkReport1Choice_ BenchmarkData { get; init; }
+    public ValueList<BenchmarkReport1Choice_> BenchmarkData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialBenchmarkReportV01 : IOuterRecord
     [IsoId("_rFkoUTbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

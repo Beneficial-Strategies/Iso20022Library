@@ -55,7 +55,7 @@ public record DemandRefusalNotificationV01 : IOuterRecord
     [IsoId("_9iijAXltEeG7BsjMvd1mEw_1591105840")]
     [DisplayName("Demand Refusal Notification Details")]
     [IsoXmlTag("DmndRfslNtfctnDtls")]
-    public DemandRefusal1? DemandRefusalNotificationDetails { get; init; }
+    public ValueList<DemandRefusal1> DemandRefusalNotificationDetails { get; init; } = [];
 
     /// <summary>
     /// Digital signature of the notification.

@@ -88,7 +88,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhq923Ed-KAqAOGQOnnw")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification13? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification13> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -96,7 +96,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhrd23Ed-KAqAOGQOnnw")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference1? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -136,7 +136,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOht923Ed-KAqAOGQOnnw")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption19? CorporateActionOptionDetails { get; init; }
+    public ValueList<CorporateActionOption19> CorporateActionOptionDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.
@@ -152,7 +152,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhv923Ed-KAqAOGQOnnw")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification47Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification47Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -160,7 +160,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhwd23Ed-KAqAOGQOnnw")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification47Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification47Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -168,7 +168,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhw923Ed-KAqAOGQOnnw")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification47Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification47Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -184,7 +184,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhx923Ed-KAqAOGQOnnw")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification47Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification47Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -208,7 +208,7 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOhzd23Ed-KAqAOGQOnnw")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification47Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification47Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -224,5 +224,5 @@ public record CorporateActionNotificationV02 : IOuterRecord
     [IsoId("_EWOh0d23Ed-KAqAOGQOnnw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

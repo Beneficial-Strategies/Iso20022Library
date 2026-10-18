@@ -71,7 +71,7 @@ public record AccountRequestAcknowledgementV02 : IOuterRecord
     [IsoId("_gDPu9w1TEeKGXqvMN6jpiw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountForAction1? AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Identifier for an organisation.
@@ -95,7 +95,7 @@ public record AccountRequestAcknowledgementV02 : IOuterRecord
     [IsoId("_gDPvAw1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature2? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -103,5 +103,5 @@ public record AccountRequestAcknowledgementV02 : IOuterRecord
     [IsoId("_KLrdIA4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

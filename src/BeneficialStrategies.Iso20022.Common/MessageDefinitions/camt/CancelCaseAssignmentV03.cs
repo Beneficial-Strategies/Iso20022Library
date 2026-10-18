@@ -84,5 +84,5 @@ public record CancelCaseAssignmentV03 : IOuterRecord
     [IsoId("_sXvoMVkyEeGeoaLUQk__nA_1037902582")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

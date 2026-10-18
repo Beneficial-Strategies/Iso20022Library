@@ -217,5 +217,5 @@ public record SecuritiesSettlementTransactionReversalAdviceV01 : IOuterRecord
     [IsoId("_8taq5dE5Ed-BzquC8wXy7w_1204263615")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

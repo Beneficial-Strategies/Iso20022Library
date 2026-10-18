@@ -96,5 +96,5 @@ public record IntraPositionMovementPostingReport002V08 : IOuterRecord
     [IsoId("_LTEN4AVVEeqjd8n6wD9JVw")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
-    public FinancialInstrumentDetails36? FinancialInstrument { get; init; }
+    public ValueList<FinancialInstrumentDetails36> FinancialInstrument { get; init; } = [];
 }

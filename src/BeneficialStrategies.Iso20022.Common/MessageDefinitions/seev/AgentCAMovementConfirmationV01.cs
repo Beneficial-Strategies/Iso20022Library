@@ -102,7 +102,7 @@ public record AgentCAMovementConfirmationV01 : IOuterRecord
     [IsoId("_TOpApdEwEd-BzquC8wXy7w_1725377056")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public CorporateActionSecuritiesMovement1? SecuritiesMovementDetails { get; init; }
+    public ValueList<CorporateActionSecuritiesMovement1> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information about the cash movement.
@@ -110,5 +110,5 @@ public record AgentCAMovementConfirmationV01 : IOuterRecord
     [IsoId("_TQR_YNEwEd-BzquC8wXy7w_-1609125049")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashMovement3? CashMovementDetails { get; init; }
+    public ValueList<CashMovement3> CashMovementDetails { get; init; } = [];
 }

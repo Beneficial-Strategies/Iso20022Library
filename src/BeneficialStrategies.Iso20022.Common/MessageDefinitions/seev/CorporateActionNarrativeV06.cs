@@ -93,5 +93,5 @@ public record CorporateActionNarrativeV06 : IOuterRecord
     [IsoId("_eOj-T-6TEeqc-LCjwLsUVg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

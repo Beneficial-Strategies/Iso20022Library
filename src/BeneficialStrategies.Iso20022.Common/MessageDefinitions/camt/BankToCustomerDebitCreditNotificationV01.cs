@@ -74,5 +74,5 @@ public record BankToCustomerDebitCreditNotificationV01 : IOuterRecord
     [IsoId("_IoCF8NE-Ed-BzquC8wXy7w_296135544")]
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
-    public required AccountNotification1 Notification { get; init; }
+    public ValueList<AccountNotification1> Notification { get; init; } = [];
 }

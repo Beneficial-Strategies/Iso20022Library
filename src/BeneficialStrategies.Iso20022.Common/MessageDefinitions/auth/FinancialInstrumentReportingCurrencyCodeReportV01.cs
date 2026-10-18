@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
     [IsoId("_4LK8OURNEee7JdgA9zPESA")]
     [DisplayName("Currency Data")]
     [IsoXmlTag("CcyData")]
-    public required SecuritiesCurrencyIdentification2 CurrencyData { get; init; }
+    public ValueList<SecuritiesCurrencyIdentification2> CurrencyData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingCurrencyCodeReportV01 : IOuterRecord
     [IsoId("_4LK8O0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

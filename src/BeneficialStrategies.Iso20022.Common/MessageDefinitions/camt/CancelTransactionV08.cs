@@ -97,5 +97,5 @@ public record CancelTransactionV08 : IOuterRecord
     [IsoId("_tLlRicDOEeic67MXUoeXWA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

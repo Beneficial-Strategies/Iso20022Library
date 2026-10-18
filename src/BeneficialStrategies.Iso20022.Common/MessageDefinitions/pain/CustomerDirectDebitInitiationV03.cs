@@ -73,7 +73,7 @@ public record CustomerDirectDebitInitiationV03 : IOuterRecord
     [IsoId("_r3HAUFkyEeGeoaLUQk__nA_1112381093")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstruction7 PaymentInformation { get; init; }
+    public ValueList<PaymentInstruction7> PaymentInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -81,5 +81,5 @@ public record CustomerDirectDebitInitiationV03 : IOuterRecord
     [IsoId("_r3Z7QFkyEeGeoaLUQk__nA_192811312")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

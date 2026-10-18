@@ -87,7 +87,7 @@ public record DTCCCAPASD1V08 : IOuterRecord
     [IsoId("_x6QSIQB6EeqouY-yI_q3qQ")]
     [DisplayName("Corporate Action Movement Securities Movement Details")]
     [IsoXmlTag("CorpActnMvmntSctiesMvmntDtls")]
-    public CorporateActionMovementSecuritiesMovementDetailsSD5? CorporateActionMovementSecuritiesMovementDetails { get; init; }
+    public ValueList<CorporateActionMovementSecuritiesMovementDetailsSD5> CorporateActionMovementSecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Extension block for the information to be extended as corporate action movement cash movement details.
@@ -95,7 +95,7 @@ public record DTCCCAPASD1V08 : IOuterRecord
     [IsoId("_x6QSKQB6EeqouY-yI_q3qQ")]
     [DisplayName("Corporate Action Movement Cash Movement Details")]
     [IsoXmlTag("CorpActnMvmntCshMvmntDtls")]
-    public CorporateActionMovementCashMovementDetailsSD5? CorporateActionMovementCashMovementDetails { get; init; }
+    public ValueList<CorporateActionMovementCashMovementDetailsSD5> CorporateActionMovementCashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action option details.
@@ -103,5 +103,5 @@ public record DTCCCAPASD1V08 : IOuterRecord
     [IsoId("_x6QSMQB6EeqouY-yI_q3qQ")]
     [DisplayName("Option Transaction Details")]
     [IsoXmlTag("OptnTxDtls")]
-    public OptionTransactionDetailsSD3? OptionTransactionDetails { get; init; }
+    public ValueList<OptionTransactionDetailsSD3> OptionTransactionDetails { get; init; } = [];
 }

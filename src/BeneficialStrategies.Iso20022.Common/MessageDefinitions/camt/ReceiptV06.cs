@@ -71,7 +71,7 @@ public record ReceiptV06 : IOuterRecord
     [IsoId("_jx5UzQKxEe2rHs6fbn9-0A")]
     [DisplayName("Receipt Details")]
     [IsoXmlTag("RctDtls")]
-    public required Receipt4 ReceiptDetails { get; init; }
+    public ValueList<Receipt4> ReceiptDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record ReceiptV06 : IOuterRecord
     [IsoId("_jx5UzwKxEe2rHs6fbn9-0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

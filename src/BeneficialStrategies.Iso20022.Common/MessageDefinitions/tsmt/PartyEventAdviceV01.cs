@@ -66,7 +66,7 @@ public record PartyEventAdviceV01 : IOuterRecord
     [IsoId("_OTgzNTE0-AOSNFX-8224507")]
     [DisplayName("Event Notice")]
     [IsoXmlTag("EvtNtce")]
-    public required EventDescription1 EventNotice { get; init; }
+    public ValueList<EventDescription1> EventNotice { get; init; } = [];
 
     /// <summary>
     /// Number of events as control value.
@@ -83,5 +83,5 @@ public record PartyEventAdviceV01 : IOuterRecord
     [IsoId("_OTgzNTE2-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

@@ -68,7 +68,7 @@ public record RequestForTransferStatusReportV06 : IOuterRecord
     [IsoId("_UWPwNYZMEeemXK0UETsSiA")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference11 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference11> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -84,5 +84,5 @@ public record RequestForTransferStatusReportV06 : IOuterRecord
     [IsoId("_UWPwOYZMEeemXK0UETsSiA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

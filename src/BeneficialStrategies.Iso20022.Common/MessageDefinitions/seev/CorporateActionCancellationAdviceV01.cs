@@ -109,7 +109,7 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WBdEwEd-BzquC8wXy7w_-1577810223")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification10Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -117,7 +117,7 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WBtEwEd-BzquC8wXy7w_-1527937239")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification10Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -125,7 +125,7 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS0WB9EwEd-BzquC8wXy7w_-1469758174")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification10Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -141,7 +141,7 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HAdEwEd-BzquC8wXy7w_827404384")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification10Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -165,7 +165,7 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HBNEwEd-BzquC8wXy7w_838487177")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification10Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -181,5 +181,5 @@ public record CorporateActionCancellationAdviceV01 : IOuterRecord
     [IsoId("_TS-HBtEwEd-BzquC8wXy7w_-1922281510")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

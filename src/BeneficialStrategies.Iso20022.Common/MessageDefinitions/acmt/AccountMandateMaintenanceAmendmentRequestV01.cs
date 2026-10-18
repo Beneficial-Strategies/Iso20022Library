@@ -84,7 +84,7 @@ public record AccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVAtE9Ed-BzquC8wXy7w_604759008")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required AccountForAction1 AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. |.
@@ -100,7 +100,7 @@ public record AccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBNE9Ed-BzquC8wXy7w_142996449")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Information specifying the account mandate.
@@ -108,7 +108,7 @@ public record AccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBdE9Ed-BzquC8wXy7w_-1737493661")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate1? Mandate { get; init; }
+    public ValueList<OperationMandate1> Mandate { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -116,5 +116,5 @@ public record AccountMandateMaintenanceAmendmentRequestV01 : IOuterRecord
     [IsoId("_rHnVBtE9Ed-BzquC8wXy7w_629134464")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

@@ -79,7 +79,7 @@ public record DTCCCACNSD1V08 : IOuterRecord
     [IsoId("_b_Y1T-aHEei5aPS232E3Mw")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionCancellationSD3? EventsLinkage { get; init; }
+    public ValueList<CorporateActionCancellationSD3> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as external comments to cancellation advice.

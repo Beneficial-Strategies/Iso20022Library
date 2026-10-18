@@ -107,7 +107,7 @@ public record PortfolioTransferInstructionV09 : IOuterRecord
     [IsoId("_63prC0yFEeir2sRRVd9XhA")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, for example, name and address.
@@ -131,7 +131,7 @@ public record PortfolioTransferInstructionV09 : IOuterRecord
     [IsoId("_63prEUyFEeir2sRRVd9XhA")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation36? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation36> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of the account owned by the investor at the old plan manager (account servicer).
@@ -163,7 +163,7 @@ public record PortfolioTransferInstructionV09 : IOuterRecord
     [IsoId("_63prGUyFEeir2sRRVd9XhA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary43? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary43> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Information about the portfolio and assets.
@@ -171,7 +171,7 @@ public record PortfolioTransferInstructionV09 : IOuterRecord
     [IsoId("_63prHUyFEeir2sRRVd9XhA")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public required PortfolioTransfer3 ProductTransfer { get; init; }
+    public ValueList<PortfolioTransfer3> ProductTransfer { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -187,5 +187,5 @@ public record PortfolioTransferInstructionV09 : IOuterRecord
     [IsoId("_63prIUyFEeir2sRRVd9XhA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

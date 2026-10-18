@@ -100,7 +100,7 @@ public record MarginReportV02 : IOuterRecord
     [IsoId("_-h7Yc6MOEeCojJW5vEuTEQ_963665572")]
     [DisplayName("Report Details")]
     [IsoXmlTag("RptDtls")]
-    public required MarginReport2 ReportDetails { get; init; }
+    public ValueList<MarginReport2> ReportDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can&apos;t be captured in the structured fields and/or any other specific block.
@@ -108,5 +108,5 @@ public record MarginReportV02 : IOuterRecord
     [IsoId("_-h7YdKMOEeCojJW5vEuTEQ_-33406781")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -86,7 +86,7 @@ public record MeetingInstructionCancellationRequestV06 : IOuterRecord
     [IsoId("_u_uMQK-aEemJ1NnLPsTFaw")]
     [DisplayName("To Be Cancelled Instruction")]
     [IsoXmlTag("ToBeCancInstr")]
-    public CancelInstruction1? ToBeCancelledInstruction { get; init; }
+    public ValueList<CancelInstruction1> ToBeCancelledInstruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
@@ -94,5 +94,5 @@ public record MeetingInstructionCancellationRequestV06 : IOuterRecord
     [IsoId("_yXBbdayREemMosWmlQ33EA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

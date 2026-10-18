@@ -63,7 +63,7 @@ public record CurrencyControlRequestOrLetterV03 : IOuterRecord
     [IsoId("_Nz8aux3pEeuiRvbpCaJe6A")]
     [DisplayName("Request Or Letter")]
     [IsoXmlTag("ReqOrLttr")]
-    public required SupportingDocumentRequestOrLetter3 RequestOrLetter { get; init; }
+    public ValueList<SupportingDocumentRequestOrLetter3> RequestOrLetter { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record CurrencyControlRequestOrLetterV03 : IOuterRecord
     [IsoId("_Nz8avR3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

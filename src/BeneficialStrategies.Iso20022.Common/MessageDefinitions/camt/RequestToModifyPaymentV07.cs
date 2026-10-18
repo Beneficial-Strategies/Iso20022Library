@@ -124,5 +124,5 @@ public record RequestToModifyPaymentV07 : IOuterRecord
     [IsoId("_LwBa88P_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

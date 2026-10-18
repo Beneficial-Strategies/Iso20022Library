@@ -70,5 +70,5 @@ public record BankToCustomerStatementV02 : IOuterRecord
     [IsoId("_KDhzmtE-Ed-BzquC8wXy7w_1379675376")]
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
-    public required AccountStatement2 Statement { get; init; }
+    public ValueList<AccountStatement2> Statement { get; init; } = [];
 }

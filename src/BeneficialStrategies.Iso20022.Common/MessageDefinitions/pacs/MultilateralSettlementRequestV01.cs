@@ -65,7 +65,7 @@ public record MultilateralSettlementRequestV01 : IOuterRecord
     [IsoId("_vsvOhQcYEeyTDbUIoCmuCw")]
     [DisplayName("Settlement Request")]
     [IsoXmlTag("SttlmReq")]
-    public required MultilateralSettlementRequest2 SettlementRequest { get; init; }
+    public ValueList<MultilateralSettlementRequest2> SettlementRequest { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

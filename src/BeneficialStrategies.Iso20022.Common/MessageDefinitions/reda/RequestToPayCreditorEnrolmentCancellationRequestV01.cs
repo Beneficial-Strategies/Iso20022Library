@@ -64,7 +64,7 @@ public record RequestToPayCreditorEnrolmentCancellationRequestV01 : IOuterRecord
     [IsoId("_rNNBoeHzEeqbls7Gk4-ckA")]
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
-    public required CreditorEnrolmentCancellation2 CancellationData { get; init; }
+    public ValueList<CreditorEnrolmentCancellation2> CancellationData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -72,5 +72,5 @@ public record RequestToPayCreditorEnrolmentCancellationRequestV01 : IOuterRecord
     [IsoId("_rNNBo-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

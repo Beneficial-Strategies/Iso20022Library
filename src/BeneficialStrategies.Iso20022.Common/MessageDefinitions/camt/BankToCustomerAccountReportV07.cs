@@ -71,7 +71,7 @@ public record BankToCustomerAccountReportV07 : IOuterRecord
     [IsoId("_XlRbUV1rEeehlLdFiIrRgQ")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public required AccountReport22 Report { get; init; }
+    public ValueList<AccountReport22> Report { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record BankToCustomerAccountReportV07 : IOuterRecord
     [IsoId("_XlRbU11rEeehlLdFiIrRgQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

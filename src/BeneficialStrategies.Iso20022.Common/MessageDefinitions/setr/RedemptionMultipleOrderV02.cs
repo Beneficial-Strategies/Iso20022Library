@@ -76,7 +76,7 @@ public record RedemptionMultipleOrderV02 : IOuterRecord
     [IsoId("_rxRn-tE7Ed-BzquC8wXy7w_760033651")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// General information related to the order.
@@ -110,5 +110,5 @@ public record RedemptionMultipleOrderV02 : IOuterRecord
     [IsoId("_rxax49E7Ed-BzquC8wXy7w_1076965137")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

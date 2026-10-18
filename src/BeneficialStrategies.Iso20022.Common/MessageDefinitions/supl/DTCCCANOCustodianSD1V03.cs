@@ -63,5 +63,5 @@ public record DTCCCANOCustodianSD1V03 : IOuterRecord
     [IsoId("_1LK6UDL3EeKU9IrkkToqcw_780588655")]
     [DisplayName("Custodian Option Date Details")]
     [IsoXmlTag("CtdnOptnDtDtls")]
-    public CustodianOptionDateDetailsSD1? CustodianOptionDateDetails { get; init; }
+    public ValueList<CustodianOptionDateDetailsSD1> CustodianOptionDateDetails { get; init; } = [];
 }

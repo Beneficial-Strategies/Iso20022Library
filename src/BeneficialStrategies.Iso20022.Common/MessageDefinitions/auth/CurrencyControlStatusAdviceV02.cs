@@ -66,7 +66,7 @@ public record CurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SB22PEei3KuUgpx7Xcw")]
     [DisplayName("Group Status")]
     [IsoXmlTag("GrpSts")]
-    public required CurrencyControlGroupStatus2 GroupStatus { get; init; }
+    public ValueList<CurrencyControlGroupStatus2> GroupStatus { get; init; } = [];
 
     /// <summary>
     /// Provides the status of the package in the message, which may contain the individual records.
@@ -74,7 +74,7 @@ public record CurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SCW2PEei3KuUgpx7Xcw")]
     [DisplayName("Package Status")]
     [IsoXmlTag("PackgSts")]
-    public CurrencyControlPackageStatus2? PackageStatus { get; init; }
+    public ValueList<CurrencyControlPackageStatus2> PackageStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -82,5 +82,5 @@ public record CurrencyControlStatusAdviceV02 : IOuterRecord
     [IsoId("_bf9SC22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

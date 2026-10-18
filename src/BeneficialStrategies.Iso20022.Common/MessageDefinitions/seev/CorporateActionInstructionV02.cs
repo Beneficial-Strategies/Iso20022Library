@@ -88,7 +88,7 @@ public record CorporateActionInstructionV02 : IOuterRecord
     [IsoId("_z2q9-d3BEd-KAqAOGQOnnw")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification13? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification13> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -96,7 +96,7 @@ public record CorporateActionInstructionV02 : IOuterRecord
     [IsoId("_z2q9-93BEd-KAqAOGQOnnw")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference1? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -120,7 +120,7 @@ public record CorporateActionInstructionV02 : IOuterRecord
     [IsoId("_z2q-Ad3BEd-KAqAOGQOnnw")]
     [DisplayName("Beneficial Owner Details")]
     [IsoXmlTag("BnfclOwnrDtls")]
-    public PartyIdentification50? BeneficialOwnerDetails { get; init; }
+    public ValueList<PartyIdentification50> BeneficialOwnerDetails { get; init; } = [];
 
     /// <summary>
     /// Information about the corporate action instruction.
@@ -144,5 +144,5 @@ public record CorporateActionInstructionV02 : IOuterRecord
     [IsoId("_z2q-C93BEd-KAqAOGQOnnw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

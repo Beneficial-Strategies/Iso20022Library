@@ -63,7 +63,7 @@ public record MoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
     [IsoId("_1P-hFaieEeWHO_l3hf2rlA")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
-    public MoneyMarketTransactionStatus2? TransactionStatus { get; init; }
+    public ValueList<MoneyMarketTransactionStatus2> TransactionStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record MoneyMarketStatisticalReportStatusAdviceV01 : IOuterRecord
     [IsoId("_1P-hF6ieEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

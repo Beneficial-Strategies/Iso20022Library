@@ -70,7 +70,7 @@ public record ReversalOfTransferOutConfirmationV05 : IOuterRecord
     [IsoId("_30-1BRXfEeOocOqSQt5Jbw")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public References15? References { get; init; }
+    public ValueList<References15> References { get; init; } = [];
 
     /// <summary>
     /// Choice between reversal by reference or by reversal details.

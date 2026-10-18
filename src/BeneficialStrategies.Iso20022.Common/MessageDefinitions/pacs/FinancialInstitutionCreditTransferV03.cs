@@ -69,7 +69,7 @@ public record FinancialInstitutionCreditTransferV03 : IOuterRecord
     [IsoId("_sCIkkFkyEeGeoaLUQk__nA_-863147686")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
-    public required CreditTransferTransaction4 CreditTransferTransactionInformation { get; init; }
+    public ValueList<CreditTransferTransaction4> CreditTransferTransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -77,5 +77,5 @@ public record FinancialInstitutionCreditTransferV03 : IOuterRecord
     [IsoId("_sCRugFkyEeGeoaLUQk__nA_-1339774506")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -83,5 +83,5 @@ public record StaticDataRequestV02 : IOuterRecord
     [IsoId("_EPiaUC53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

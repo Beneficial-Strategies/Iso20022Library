@@ -104,7 +104,7 @@ public record AgentCANotificationAdviceV01 : IOuterRecord
     [IsoId("_TRLXQ9EwEd-BzquC8wXy7w_-153062975")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption1? CorporateActionOptionDetails { get; init; }
+    public ValueList<CorporateActionOption1> CorporateActionOptionDetails { get; init; } = [];
 
     /// <summary>
     /// Provides information about the contact responsible for the transaction identified in the message.
@@ -112,7 +112,7 @@ public record AgentCANotificationAdviceV01 : IOuterRecord
     [IsoId("_TRLXRNEwEd-BzquC8wXy7w_1561246672")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
-    public ContactPerson1? ContactDetails { get; init; }
+    public ValueList<ContactPerson1> ContactDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.

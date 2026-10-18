@@ -103,5 +103,5 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 
     [IsoId("_0ZsLgglIEeGATtfOBToyew_755556512")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

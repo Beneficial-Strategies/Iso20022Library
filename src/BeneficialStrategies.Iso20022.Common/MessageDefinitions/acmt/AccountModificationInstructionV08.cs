@@ -105,7 +105,7 @@ public record AccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxr5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Account Parties")]
     [IsoXmlTag("ModfdAcctPties")]
-    public AccountParties18? ModifiedAccountParties { get; init; }
+    public ValueList<AccountParties18> ModifiedAccountParties { get; init; } = [];
 
     /// <summary>
     /// Information related to intermediaries to be inserted, updated or deleted.
@@ -113,7 +113,7 @@ public record AccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxsZDiEem7fvtoGpNpow")]
     [DisplayName("Modified Intermediaries")]
     [IsoXmlTag("ModfdIntrmies")]
-    public ModificationScope40? ModifiedIntermediaries { get; init; }
+    public ValueList<ModificationScope40> ModifiedIntermediaries { get; init; } = [];
 
     /// <summary>
     /// Information related to referral information to be inserted, updated or deleted.
@@ -177,7 +177,7 @@ public record AccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxv5DiEem7fvtoGpNpow")]
     [DisplayName("Modified Additional Information")]
     [IsoXmlTag("ModfdAddtlInf")]
-    public ModificationScope45? ModifiedAdditionalInformation { get; init; }
+    public ValueList<ModificationScope45> ModifiedAdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -193,5 +193,5 @@ public record AccountModificationInstructionV08 : IOuterRecord
     [IsoId("_nayxw5DiEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

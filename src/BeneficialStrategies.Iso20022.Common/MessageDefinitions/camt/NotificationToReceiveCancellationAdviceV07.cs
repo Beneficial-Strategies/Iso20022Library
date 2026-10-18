@@ -74,5 +74,5 @@ public record NotificationToReceiveCancellationAdviceV07 : IOuterRecord
     [IsoId("_dvOm2dcBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

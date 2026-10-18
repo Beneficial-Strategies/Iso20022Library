@@ -71,5 +71,5 @@ public record AccountSwitchTechnicalRejectionV01 : IOuterRecord
     [IsoId("_x2EGwA8EEeeJ4ZumUkzG4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

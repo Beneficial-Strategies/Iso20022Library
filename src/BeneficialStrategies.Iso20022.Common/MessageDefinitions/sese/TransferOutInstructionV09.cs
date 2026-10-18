@@ -101,7 +101,7 @@ public record TransferOutInstructionV09 : IOuterRecord
     [IsoId("_InLI4ZDhEem7fvtoGpNpow")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
-    public required Transfer36 TransferDetails { get; init; }
+    public ValueList<Transfer36> TransferDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the account from which the financial instrument is to be withdrawn.
@@ -141,5 +141,5 @@ public record TransferOutInstructionV09 : IOuterRecord
     [IsoId("_InLI65DhEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

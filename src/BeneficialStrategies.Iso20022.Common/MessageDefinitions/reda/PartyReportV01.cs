@@ -72,5 +72,5 @@ public record PartyReportV01 : IOuterRecord
     [IsoId("_6SbBK5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

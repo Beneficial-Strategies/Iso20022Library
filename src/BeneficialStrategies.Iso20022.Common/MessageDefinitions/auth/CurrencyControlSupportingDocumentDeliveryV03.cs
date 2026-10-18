@@ -63,7 +63,7 @@ public record CurrencyControlSupportingDocumentDeliveryV03 : IOuterRecord
     [IsoId("_Nz8azR3pEeuiRvbpCaJe6A")]
     [DisplayName("Supporting Document")]
     [IsoXmlTag("SpprtgDoc")]
-    public required SupportingDocument3 SupportingDocument { get; init; }
+    public ValueList<SupportingDocument3> SupportingDocument { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record CurrencyControlSupportingDocumentDeliveryV03 : IOuterRecord
     [IsoId("_Nz8azx3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

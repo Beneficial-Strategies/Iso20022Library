@@ -100,7 +100,7 @@ public record SecuritiesTransactionPostingReport002V06 : IOuterRecord
     [IsoId("_8bfoNZNLEeWGlc8L7oPDIg")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrumentDetails23? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrumentDetails23> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Details at sub-account level.
@@ -108,5 +108,5 @@ public record SecuritiesTransactionPostingReport002V06 : IOuterRecord
     [IsoId("_8bfoN5NLEeWGlc8L7oPDIg")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification47? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification47> SubAccountDetails { get; init; } = [];
 }

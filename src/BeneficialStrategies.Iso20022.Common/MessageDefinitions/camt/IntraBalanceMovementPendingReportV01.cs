@@ -108,5 +108,5 @@ public record IntraBalanceMovementPendingReportV01 : IOuterRecord
     [IsoId("_DLtLMTncEem7JZMuWtwtsg")]
     [DisplayName("Movements")]
     [IsoXmlTag("Mvmnts")]
-    public IntraBalancePending5? Movements { get; init; }
+    public ValueList<IntraBalancePending5> Movements { get; init; } = [];
 }

@@ -95,7 +95,7 @@ public record TradeLegStatementV03 : IOuterRecord
     [IsoId("_DlZuOS0mEeSRe9rElPHBfg")]
     [DisplayName("Statement Details")]
     [IsoXmlTag("StmtDtls")]
-    public required TradeLegStatement3 StatementDetails { get; init; }
+    public ValueList<TradeLegStatement3> StatementDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -103,5 +103,5 @@ public record TradeLegStatementV03 : IOuterRecord
     [IsoId("_DlZuOy0mEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

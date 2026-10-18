@@ -74,5 +74,5 @@ public record CustomerDirectDebitInitiationV01 : IOuterRecord
     [IsoId("_GWuvh9EvEd-BzquC8wXy7w_144917422")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstructionInformation2 PaymentInformation { get; init; }
+    public ValueList<PaymentInstructionInformation2> PaymentInformation { get; init; } = [];
 }

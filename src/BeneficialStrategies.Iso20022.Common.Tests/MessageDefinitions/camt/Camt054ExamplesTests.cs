@@ -108,18 +108,18 @@ public class Camt054ExamplesTests
         var message = new BankToCustomerDebitCreditNotificationV11
         {
             GroupHeader = CreateGroupHeader(),
-            Notification = new AccountNotification21
+            Notification = [new AccountNotification21
             {
                 Identification = "GLOBALSUPPLY-NTFN-20240315-001",
                 Account = CreateNotificationAccount(),
                 Entry = [CreateIncomingCreditEntry()],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.054.001.11", BankToCustomerDebitCreditNotificationV11.IsoIdentifier);
-        Assert.Equal(CreditDebitCode.Credit, message.Notification.Entry![0].CreditDebitIndicator);
-        Assert.IsType<Code>(message.Notification.Entry[0].Status);
+        Assert.Equal(CreditDebitCode.Credit, message.Notification[0].Entry![0].CreditDebitIndicator);
+        Assert.IsType<Code>(message.Notification[0].Entry[0].Status);
     }
 
     /// <summary>
@@ -138,7 +138,7 @@ public class Camt054ExamplesTests
                 CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(5),
                 MessageRecipient = Iso20022TestData.Debtor,
             },
-            Notification = new AccountNotification21
+            Notification = [new AccountNotification21
             {
                 Identification = "DEUTDEFF-ACME-NTFN-20240315-001",
                 Account = new CashAccount41
@@ -192,11 +192,11 @@ public class Camt054ExamplesTests
                         }],
                     }],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.Equal(CreditDebitCode.Debit, message.Notification.Entry![0].CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Debit, message.Notification[0].Entry![0].CreditDebitIndicator);
     }
 
     /// <summary>
@@ -211,7 +211,7 @@ public class Camt054ExamplesTests
         var message = new BankToCustomerDebitCreditNotificationV11
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM054/00002"),
-            Notification = new AccountNotification21
+            Notification = [new AccountNotification21
             {
                 Identification = "GLOBALSUPPLY-NTFN-20240315-INST",
                 Account = CreateNotificationAccount(),
@@ -219,11 +219,11 @@ public class Camt054ExamplesTests
                 {
                     Status = new Code { Value = ExternalEntryStatus1Code.Pending },
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        var status = Assert.IsType<Code>(message.Notification.Entry![0].Status);
+        var status = Assert.IsType<Code>(message.Notification[0].Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Pending, status.Value);
     }
 
@@ -238,7 +238,7 @@ public class Camt054ExamplesTests
         var message = new BankToCustomerDebitCreditNotificationV11
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM054/00003"),
-            Notification = new AccountNotification21
+            Notification = [new AccountNotification21
             {
                 Identification = "GLOBALSUPPLY-NTFN-20240315-PROP",
                 Account = CreateNotificationAccount(),
@@ -246,10 +246,10 @@ public class Camt054ExamplesTests
                 {
                     Status = new Proprietary { Value = "BNPFR-CREDITING" },
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.Notification.Entry![0].Status);
+        Assert.IsType<Proprietary>(message.Notification[0].Entry![0].Status);
     }
 }

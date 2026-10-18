@@ -71,5 +71,5 @@ public record DeleteStandingOrderV03 : IOuterRecord
     [IsoId("_jwlbZRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

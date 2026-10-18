@@ -76,5 +76,5 @@ public record CustomerCreditTransferInitiationV03 : IOuterRecord
     [IsoId("_GWk-i9EvEd-BzquC8wXy7w_-916171020")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstructionInformation3 PaymentInformation { get; init; }
+    public ValueList<PaymentInstructionInformation3> PaymentInformation { get; init; } = [];
 }

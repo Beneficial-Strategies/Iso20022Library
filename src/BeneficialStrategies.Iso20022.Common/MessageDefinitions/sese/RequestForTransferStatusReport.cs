@@ -61,5 +61,5 @@ public record RequestForTransferStatusReport : IOuterRecord
     [IsoId("_nnEjSdE5Ed-BzquC8wXy7w_-359483453")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference1 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference1> RequestDetails { get; init; } = [];
 }

@@ -109,7 +109,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeI1NNEwEd-BzquC8wXy7w_-576128180")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification13? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification13> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -117,7 +117,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeI1NdEwEd-BzquC8wXy7w_1397891250")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference1? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Reason for the reversal.
@@ -149,7 +149,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmMdEwEd-BzquC8wXy7w_-1840834741")]
     [DisplayName("Corporate Action Movement Details")]
     [IsoXmlTag("CorpActnMvmntDtls")]
-    public CorporateActionOption10? CorporateActionMovementDetails { get; init; }
+    public ValueList<CorporateActionOption10> CorporateActionMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.
@@ -181,7 +181,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmNdEwEd-BzquC8wXy7w_1118516589")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification10Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -189,7 +189,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmNtEwEd-BzquC8wXy7w_1390957641")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification10Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -197,7 +197,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TeSmN9EwEd-BzquC8wXy7w_1432514283")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification10Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -213,7 +213,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXMdEwEd-BzquC8wXy7w_-157068985")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification10Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -237,7 +237,7 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXNNEwEd-BzquC8wXy7w_-145987139")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification10Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -253,5 +253,5 @@ public record CorporateActionMovementPreliminaryAdviceV01 : IOuterRecord
     [IsoId("_TecXNtEwEd-BzquC8wXy7w_733410265")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

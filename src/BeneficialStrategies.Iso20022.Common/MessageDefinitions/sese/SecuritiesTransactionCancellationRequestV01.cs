@@ -106,5 +106,5 @@ public record SecuritiesTransactionCancellationRequestV01 : IOuterRecord
     [IsoId("_EdLy8dE6Ed-BzquC8wXy7w_2033219671")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

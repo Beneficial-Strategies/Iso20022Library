@@ -75,5 +75,5 @@ public record IntraBalanceMovementModificationQueryV01 : IOuterRecord
     [IsoId("_DLtK1zncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

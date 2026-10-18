@@ -83,5 +83,5 @@ public record InvestmentFundReportRequestV02 : IOuterRecord
     [IsoId("_Zsax3NEvEd-BzquC8wXy7w_436796647")]
     [DisplayName("Fund Processing Passport Report")]
     [IsoXmlTag("FPPRpt")]
-    public required FundParameters3Choice_ FundProcessingPassportReport { get; init; }
+    public ValueList<FundParameters3Choice_> FundProcessingPassportReport { get; init; } = [];
 }

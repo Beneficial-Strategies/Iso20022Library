@@ -131,5 +131,5 @@ public record SecuritiesSettlementConditionModificationStatusAdviceV01 : IOuterR
     [IsoId("_1M3DhdE5Ed-BzquC8wXy7w_-1483229932")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

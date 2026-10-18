@@ -99,7 +99,7 @@ public record AgentCAMovementInstructionV01 : IOuterRecord
     [IsoId("_TQlhYtEwEd-BzquC8wXy7w_-380692038")]
     [DisplayName("Underlying Securities Movement Details")]
     [IsoXmlTag("UndrlygSctiesMvmntDtls")]
-    public UnderlyingSecurityMovement1? UnderlyingSecuritiesMovementDetails { get; init; }
+    public ValueList<UnderlyingSecurityMovement1> UnderlyingSecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the movement of the underlying cash.
@@ -107,7 +107,7 @@ public record AgentCAMovementInstructionV01 : IOuterRecord
     [IsoId("_TQlhY9EwEd-BzquC8wXy7w_940386448")]
     [DisplayName("Underlying Cash Movement Details")]
     [IsoXmlTag("UndrlygCshMvmntDtls")]
-    public CashMovement2? UnderlyingCashMovementDetails { get; init; }
+    public ValueList<CashMovement2> UnderlyingCashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the movement of the CA proceeds.

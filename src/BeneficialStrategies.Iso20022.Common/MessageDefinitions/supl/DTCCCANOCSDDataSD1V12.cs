@@ -127,7 +127,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR5QB6EeqouY-yI_q3qQ")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public CorporateActionOptionSD13? OptionDetails { get; init; }
+    public ValueList<CorporateActionOptionSD13> OptionDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to option date details.
@@ -135,7 +135,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR5wB6EeqouY-yI_q3qQ")]
     [DisplayName("Option Date Details")]
     [IsoXmlTag("OptnDtDtls")]
-    public CorporateActionDateSD11? OptionDateDetails { get; init; }
+    public ValueList<CorporateActionDateSD11> OptionDateDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement details.
@@ -143,7 +143,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR6QB6EeqouY-yI_q3qQ")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOptionSD9? SecuritiesMovementDetails { get; init; }
+    public ValueList<SecuritiesOptionSD9> SecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement security details.
@@ -151,7 +151,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR6wB6EeqouY-yI_q3qQ")]
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
-    public FinancialInstrumentAttributesSD16? SecuritiesMovementSecurityDetails { get; init; }
+    public ValueList<FinancialInstrumentAttributesSD16> SecuritiesMovementSecurityDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement rate details.
@@ -159,7 +159,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR7QB6EeqouY-yI_q3qQ")]
     [DisplayName("Securities Movement Rate Details")]
     [IsoXmlTag("SctiesMvmntRateDtls")]
-    public CorporateActionRateSD10? SecuritiesMovementRateDetails { get; init; }
+    public ValueList<CorporateActionRateSD10> SecuritiesMovementRateDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as securities movement cash in lieu supplementary data.
@@ -167,7 +167,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR7wB6EeqouY-yI_q3qQ")]
     [DisplayName("Securities Movement Cash In Lieu Details")]
     [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
-    public CorporateActionPriceSD5? SecuritiesMovementCashInLieuDetails { get; init; }
+    public ValueList<CorporateActionPriceSD5> SecuritiesMovementCashInLieuDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to securities movement fraction disposition.
@@ -175,7 +175,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR8QB6EeqouY-yI_q3qQ")]
     [DisplayName("Securities Movement Fraction Disposition")]
     [IsoXmlTag("SctiesMvmntFrctnDspstn")]
-    public FractionDispositionTypeSD3? SecuritiesMovementFractionDisposition { get; init; }
+    public ValueList<FractionDispositionTypeSD3> SecuritiesMovementFractionDisposition { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to cash movement details.
@@ -183,7 +183,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR8wB6EeqouY-yI_q3qQ")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOptionSD11? CashMovementDetails { get; init; }
+    public ValueList<CashOptionSD11> CashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended new agent block. Used when required ISO agent type does not exist and entire new component must be generated.
@@ -191,7 +191,7 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR9QB6EeqouY-yI_q3qQ")]
     [DisplayName("New Agent")]
     [IsoXmlTag("NewAgt")]
-    public PartyIdentificationSD5? NewAgent { get; init; }
+    public ValueList<PartyIdentificationSD5> NewAgent { get; init; } = [];
 
     /// <summary>
     /// Provides additional information to agent details (to message agent like &quot;issuer agent&quot;, &quot;reselling agent&quot;). Used when required &quot;ISO agent type&quot; exists and only additional details need to be extended.
@@ -199,5 +199,5 @@ public record DTCCCANOCSDDataSD1V12 : IOuterRecord
     [IsoId("_x6QR9wB6EeqouY-yI_q3qQ")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public PartyIdentificationSD6? Agent { get; init; }
+    public ValueList<PartyIdentificationSD6> Agent { get; init; } = [];
 }

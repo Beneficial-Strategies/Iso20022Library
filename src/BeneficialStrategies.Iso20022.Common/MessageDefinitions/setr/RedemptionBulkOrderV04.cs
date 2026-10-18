@@ -77,7 +77,7 @@ public record RedemptionBulkOrderV04 : IOuterRecord
     [IsoId("_AaSJDTbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference8? PreviousReference { get; init; }
+    public ValueList<AdditionalReference8> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// General information related to the orders.
@@ -101,5 +101,5 @@ public record RedemptionBulkOrderV04 : IOuterRecord
     [IsoId("_AaSJFTbLEead9bDRE_1DAQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -201,5 +201,5 @@ public record SecuritiesSettlementTransactionAllegementNotificationV01 : IOuterR
     [IsoId("_2aWKVdE5Ed-BzquC8wXy7w_162477103")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

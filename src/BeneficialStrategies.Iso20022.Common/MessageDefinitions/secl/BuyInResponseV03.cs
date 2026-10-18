@@ -87,5 +87,5 @@ public record BuyInResponseV03 : IOuterRecord
     [IsoId("_2_0tyS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

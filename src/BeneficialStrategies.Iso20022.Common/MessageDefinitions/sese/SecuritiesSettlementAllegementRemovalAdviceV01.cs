@@ -97,5 +97,5 @@ public record SecuritiesSettlementAllegementRemovalAdviceV01 : IOuterRecord
     [IsoId("_xiBJcNE5Ed-BzquC8wXy7w_-1731414035")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

@@ -98,5 +98,5 @@ public record MeetingInstructionCancellationRequestV03 : IOuterRecord
     [IsoId("_TnYQxtEwEd-BzquC8wXy7w_-920672368")]
     [DisplayName("Instructed Position")]
     [IsoXmlTag("InstdPos")]
-    public SafekeepingAccount4? InstructedPosition { get; init; }
+    public ValueList<SafekeepingAccount4> InstructedPosition { get; init; } = [];
 }

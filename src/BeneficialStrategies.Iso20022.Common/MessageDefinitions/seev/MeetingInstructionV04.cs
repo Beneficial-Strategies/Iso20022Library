@@ -92,7 +92,7 @@ public record MeetingInstructionV04 : IOuterRecord
     [IsoId("_TrG6MdEwEd-BzquC8wXy7w_-1116418800")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
-    public required Instruction2 Instruction { get; init; }
+    public ValueList<Instruction2> Instruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -100,5 +100,5 @@ public record MeetingInstructionV04 : IOuterRecord
     [IsoId("_TrG6MtEwEd-BzquC8wXy7w_1093292958")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

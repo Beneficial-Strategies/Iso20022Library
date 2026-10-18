@@ -85,7 +85,7 @@ public record IntraBalanceMovementInstructionV01 : IOuterRecord
     [IsoId("_DLtKwzncEem7JZMuWtwtsg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages57? Linkages { get; init; }
+    public ValueList<Linkages57> Linkages { get; init; } = [];
 
     /// <summary>
     /// Account to or from which an entry is made.
@@ -125,5 +125,5 @@ public record IntraBalanceMovementInstructionV01 : IOuterRecord
     [IsoId("_DLtKyTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

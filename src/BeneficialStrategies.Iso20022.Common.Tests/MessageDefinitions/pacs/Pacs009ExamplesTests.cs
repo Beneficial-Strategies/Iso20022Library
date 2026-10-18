@@ -63,7 +63,7 @@ public class Pacs009ExamplesTests
         var message = new FinancialInstitutionCreditTransferV10
         {
             GroupHeader = CreateGroupHeader(),
-            CreditTransferTransactionInformation = CreateFiTransfer() with
+            CreditTransferTransactionInformation = [CreateFiTransfer() with
             {
                 DebtorAccount = new CashAccount40
                 {
@@ -75,7 +75,7 @@ public class Pacs009ExamplesTests
                     Identification = new IBAN { Value = "FR7630006000011234567890189" },
                     Name = "BNP Paribas EUR Nostro",
                 },
-            },
+            }],
         };
 
         Assert.NotNull(message);
@@ -99,7 +99,7 @@ public class Pacs009ExamplesTests
                 InstructingAgent = Iso20022TestData.DebtorAgent,
                 InstructedAgent = Iso20022TestData.CorrespondentAgent,
             },
-            CreditTransferTransactionInformation = new CreditTransferTransaction56
+            CreditTransferTransactionInformation = [new CreditTransferTransaction56
             {
                 PaymentIdentification = new PaymentIdentification13
                 {
@@ -115,7 +115,7 @@ public class Pacs009ExamplesTests
                 InterbankSettlementDate = Iso20022TestData.SettlementDate,
                 Debtor = Iso20022TestData.DebtorAgent,
                 Creditor = Iso20022TestData.CorrespondentAgent,
-            },
+            }],
         };
 
         Assert.NotNull(message);
@@ -155,18 +155,18 @@ public class Pacs009ExamplesTests
                 InstructingAgent = chipsAgent,
                 InstructedAgent = Iso20022TestData.CorrespondentAgent,
             },
-            CreditTransferTransactionInformation = CreateFiTransfer() with
+            CreditTransferTransactionInformation = [CreateFiTransfer() with
             {
                 Debtor = chipsAgent,
                 Creditor = Iso20022TestData.CorrespondentAgent,
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.NotNull(
             message
                 .CreditTransferTransactionInformation
-                .Debtor
+                [0].Debtor
                 .FinancialInstitutionIdentification
                 .ClearingSystemMemberIdentification
         );

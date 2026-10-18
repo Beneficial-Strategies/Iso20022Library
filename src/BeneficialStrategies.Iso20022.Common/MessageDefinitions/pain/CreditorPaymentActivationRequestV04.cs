@@ -63,7 +63,7 @@ public record CreditorPaymentActivationRequestV04 : IOuterRecord
     [IsoId("_BK4QR0_HEeSNduMozFyRUg")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstruction17 PaymentInformation { get; init; }
+    public ValueList<PaymentInstruction17> PaymentInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record CreditorPaymentActivationRequestV04 : IOuterRecord
     [IsoId("_BK4QSU_HEeSNduMozFyRUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

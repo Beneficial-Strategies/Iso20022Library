@@ -94,7 +94,7 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skkay83wEee5nJBZsW8MFQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification38? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of another corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -102,7 +102,7 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skkazc3wEee5nJBZsW8MFQ")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference4? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -150,7 +150,7 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skka2c3wEee5nJBZsW8MFQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification104Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -158,7 +158,7 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skka283wEee5nJBZsW8MFQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification104Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -166,7 +166,7 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skka3c3wEee5nJBZsW8MFQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification104Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -174,5 +174,5 @@ public record CorporateActionMovementConfirmation002V09 : IOuterRecord
     [IsoId("_skka383wEee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

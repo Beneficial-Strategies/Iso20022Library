@@ -63,7 +63,7 @@ public record ContractRegistrationRequestV01 : IOuterRecord
     [IsoId("_Wc_y0NLIEeSdq5yU2aaSNw")]
     [DisplayName("Contract Registration")]
     [IsoXmlTag("CtrctRegn")]
-    public required ContractRegistration1 ContractRegistration { get; init; }
+    public ValueList<ContractRegistration1> ContractRegistration { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ContractRegistrationRequestV01 : IOuterRecord
     [IsoId("_FG1DUdLrEeSDLevdaFPXHw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

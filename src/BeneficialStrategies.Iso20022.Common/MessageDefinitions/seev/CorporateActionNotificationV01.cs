@@ -95,7 +95,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tid7ldEwEd-BzquC8wXy7w_445037986")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification13? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification13> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -103,7 +103,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tid7ltEwEd-BzquC8wXy7w_-389165945")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference1? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -143,7 +143,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_TinFhNEwEd-BzquC8wXy7w_911531207")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption3? CorporateActionOptionDetails { get; init; }
+    public ValueList<CorporateActionOption3> CorporateActionOptionDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.
@@ -175,7 +175,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gNEwEd-BzquC8wXy7w_-1199401353")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification10Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -183,7 +183,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gdEwEd-BzquC8wXy7w_-1118133055")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification10Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -191,7 +191,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2gtEwEd-BzquC8wXy7w_-1060874704")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification10Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -207,7 +207,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2hNEwEd-BzquC8wXy7w_1812738203")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification10Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -231,7 +231,7 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Tiw2h9EwEd-BzquC8wXy7w_-727538695")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification10Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification10Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -247,5 +247,5 @@ public record CorporateActionNotificationV01 : IOuterRecord
     [IsoId("_Ti6AcNEwEd-BzquC8wXy7w_-726561126")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

@@ -109,5 +109,5 @@ public record IntraBalanceMovementPostingReportV01 : IOuterRecord
     [IsoId("_DLtLSTncEem7JZMuWtwtsg")]
     [DisplayName("Sub Balance")]
     [IsoXmlTag("SubBal")]
-    public IntraBalancePosting5? SubBalance { get; init; }
+    public ValueList<IntraBalancePosting5> SubBalance { get; init; } = [];
 }

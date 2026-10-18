@@ -94,5 +94,5 @@ public record AccountManagementStatusReportV04 : IOuterRecord
     [IsoId("_TcpB4SP0EeO-CsDf20Q5hg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

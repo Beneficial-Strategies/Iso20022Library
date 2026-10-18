@@ -63,7 +63,7 @@ public record ModifyLimitV07 : IOuterRecord
     [IsoId("_jwlbwxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Limit Details")]
     [IsoXmlTag("LmtDtls")]
-    public LimitStructure3? LimitDetails { get; init; }
+    public ValueList<LimitStructure3> LimitDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ModifyLimitV07 : IOuterRecord
     [IsoId("_jwlbxRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

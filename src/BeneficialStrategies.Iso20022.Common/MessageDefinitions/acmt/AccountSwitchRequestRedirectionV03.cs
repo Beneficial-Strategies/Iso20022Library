@@ -87,5 +87,5 @@ public record AccountSwitchRequestRedirectionV03 : IOuterRecord
     [IsoId("_KOlm2dcDEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

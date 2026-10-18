@@ -63,7 +63,7 @@ public record NettingCutOffReferenceDataUpdateRequestV02 : IOuterRecord
     [IsoId("_mJe8cQM-Ee2nqoJcXIhTdw")]
     [DisplayName("Netting Cut Off Request")]
     [IsoXmlTag("NetgCutOffReq")]
-    public required NettingCutOff2 NettingCutOffRequest { get; init; }
+    public ValueList<NettingCutOff2> NettingCutOffRequest { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record NettingCutOffReferenceDataUpdateRequestV02 : IOuterRecord
     [IsoId("_mJe8cwM-Ee2nqoJcXIhTdw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

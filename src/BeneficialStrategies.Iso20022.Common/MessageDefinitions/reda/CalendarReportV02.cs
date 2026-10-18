@@ -71,5 +71,5 @@ public record CalendarReportV02 : IOuterRecord
     [IsoId("_DRJNLluDEe29lKnE5APnfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

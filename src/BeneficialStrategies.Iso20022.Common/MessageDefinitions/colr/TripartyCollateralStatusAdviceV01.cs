@@ -133,7 +133,7 @@ public record TripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNBSs7EeySlt9bF77XfA")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
-    public SecuritiesMovement8? SecuritiesMovement { get; init; }
+    public ValueList<SecuritiesMovement8> SecuritiesMovement { get; init; } = [];
 
     /// <summary>
     ///  Cash movement.
@@ -141,7 +141,7 @@ public record TripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNBys7EeySlt9bF77XfA")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
-    public CashMovement7? CashMovement { get; init; }
+    public ValueList<CashMovement7> CashMovement { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -149,5 +149,5 @@ public record TripartyCollateralStatusAdviceV01 : IOuterRecord
     [IsoId("_2uaNCSs7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

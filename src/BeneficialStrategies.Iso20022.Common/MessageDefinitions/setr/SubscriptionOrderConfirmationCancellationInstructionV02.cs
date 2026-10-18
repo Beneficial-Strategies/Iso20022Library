@@ -74,7 +74,7 @@ public record SubscriptionOrderConfirmationCancellationInstructionV02 : IOuterRe
     [IsoId("_Aab7ZTbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference8? PreviousReference { get; init; }
+    public ValueList<AdditionalReference8> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -109,7 +109,7 @@ public record SubscriptionOrderConfirmationCancellationInstructionV02 : IOuterRe
     [IsoId("_iyhMU1AYEea5nPE5ezGuuw")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
-    public required InvestmentFundOrder11 OrderReferences { get; init; }
+    public ValueList<InvestmentFundOrder11> OrderReferences { get; init; } = [];
 
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

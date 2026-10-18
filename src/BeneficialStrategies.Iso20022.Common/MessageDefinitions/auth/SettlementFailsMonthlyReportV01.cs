@@ -71,7 +71,7 @@ public record SettlementFailsMonthlyReportV01 : IOuterRecord
     [IsoId("_pq7Tv0EXEeqXB_DgAcRqgw")]
     [DisplayName("Daily Data")]
     [IsoXmlTag("DalyData")]
-    public required SettlementFailsDailyData3 DailyData { get; init; }
+    public ValueList<SettlementFailsDailyData3> DailyData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record SettlementFailsMonthlyReportV01 : IOuterRecord
     [IsoId("_pq7TwUEXEeqXB_DgAcRqgw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

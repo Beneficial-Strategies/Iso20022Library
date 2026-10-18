@@ -103,7 +103,7 @@ public record PortfolioTransferNotificationV01 : IOuterRecord
     [IsoId("_mEIJ0dE5Ed-BzquC8wXy7w_1616227938")]
     [DisplayName("Transfer Notification Details")]
     [IsoXmlTag("TrfNtfctnDtls")]
-    public SecuritiesTradeDetails7? TransferNotificationDetails { get; init; }
+    public ValueList<SecuritiesTradeDetails7> TransferNotificationDetails { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

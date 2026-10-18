@@ -63,7 +63,7 @@ public record InvoiceTaxReportV01 : IOuterRecord
     [IsoId("_DiX4YFm8EeOQYsoJizpkVw")]
     [DisplayName("Tax Report")]
     [IsoXmlTag("TaxRpt")]
-    public required TaxReport1 TaxReport { get; init; }
+    public ValueList<TaxReport1> TaxReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record InvoiceTaxReportV01 : IOuterRecord
     [IsoId("_YqO7oEjvEeaOe8w0NJ11wQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

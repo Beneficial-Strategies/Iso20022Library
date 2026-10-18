@@ -63,7 +63,7 @@ public record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
     [IsoId("_rNNBteHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Enrolment And Status")]
     [IsoXmlTag("OrgnlEnrlmntAndSts")]
-    public required EnrolmentStatus2 OriginalEnrolmentAndStatus { get; init; }
+    public ValueList<EnrolmentStatus2> OriginalEnrolmentAndStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
     [IsoId("_rNNBt-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

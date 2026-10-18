@@ -97,5 +97,5 @@ public record DebitAuthorisationRequestV04 : IOuterRecord
     [IsoId("_sT3NwlkyEeGeoaLUQk__nA_55870901")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

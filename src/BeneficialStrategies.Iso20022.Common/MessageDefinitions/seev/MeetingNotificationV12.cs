@@ -85,7 +85,9 @@ public record MeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Details")]
     [IsoXmlTag("MtgDtls")]
-    public required Meeting7 MeetingDetails { get; init; }
+    [MinLength(1)]
+    [MaxLength(5)]
+    public ValueList<Meeting7> MeetingDetails { get; init; } = [];
 
     /// <summary>
     /// Issuer.
@@ -99,21 +101,27 @@ public record MeetingNotificationV12 : IOuterRecord
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public IssuerAgent3? IssuerAgent { get; init; }
+    [MinLength(0)]
+    [MaxLength(10)]
+    public ValueList<IssuerAgent3> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Security.
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public required SecurityPosition20 Security { get; init; }
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition20> Security { get; init; } = [];
 
     /// <summary>
     /// Resolution.
     /// </summary>
     [DisplayName("Resolution")]
     [IsoXmlTag("Rsltn")]
-    public Resolution8? Resolution { get; init; }
+    [MinLength(0)]
+    [MaxLength(1000)]
+    public ValueList<Resolution8> Resolution { get; init; } = [];
 
     /// <summary>
     /// Vote.

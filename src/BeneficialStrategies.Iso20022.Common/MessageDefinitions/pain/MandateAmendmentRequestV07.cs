@@ -72,7 +72,7 @@ public record MandateAmendmentRequestV07 : IOuterRecord
     [IsoId("_rUYN-dcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying Amendment Details")]
     [IsoXmlTag("UndrlygAmdmntDtls")]
-    public required MandateAmendment7 UnderlyingAmendmentDetails { get; init; }
+    public ValueList<MandateAmendment7> UnderlyingAmendmentDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -80,5 +80,5 @@ public record MandateAmendmentRequestV07 : IOuterRecord
     [IsoId("_rUYN-9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

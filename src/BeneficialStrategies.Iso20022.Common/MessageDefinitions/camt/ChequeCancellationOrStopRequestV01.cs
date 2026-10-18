@@ -63,7 +63,7 @@ public record ChequeCancellationOrStopRequestV01 : IOuterRecord
     [IsoId("_euIoobtuEeq_cfXrH83Rcw")]
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
-    public required Cheque15 Cheque { get; init; }
+    public ValueList<Cheque15> Cheque { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ChequeCancellationOrStopRequestV01 : IOuterRecord
     [IsoId("_U-kiI7tlEeq_cfXrH83Rcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

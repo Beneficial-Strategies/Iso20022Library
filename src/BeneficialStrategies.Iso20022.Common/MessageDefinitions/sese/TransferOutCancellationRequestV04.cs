@@ -69,7 +69,7 @@ public record TransferOutCancellationRequestV04 : IOuterRecord
     [IsoId("_EmP9BxgCEeKqWJINzXcn5g")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public required References11 References { get; init; }
+    public ValueList<References11> References { get; init; } = [];
 
     /// <summary>
     /// Choice between cancellation by reference or by transfer details.

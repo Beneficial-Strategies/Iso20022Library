@@ -104,7 +104,7 @@ public record SecuritiesBalanceTransparencyReportV02 : IOuterRecord
     [IsoId("_LMa23VTQEeatgN-VQ0eFlQ")]
     [DisplayName("Safekeeping Account And Holdings")]
     [IsoXmlTag("SfkpgAcctAndHldgs")]
-    public SafekeepingAccount7? SafekeepingAccountAndHoldings { get; init; }
+    public ValueList<SafekeepingAccount7> SafekeepingAccountAndHoldings { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -112,5 +112,5 @@ public record SecuritiesBalanceTransparencyReportV02 : IOuterRecord
     [IsoId("_LMa231TQEeatgN-VQ0eFlQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

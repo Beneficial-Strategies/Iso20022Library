@@ -155,5 +155,5 @@ public record IntraPositionMovementInstructionV01 : IOuterRecord
     [IsoId("_MeiGVNFSEd-BzquC8wXy7w_-177108198")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

@@ -63,7 +63,7 @@ public record DTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGyr75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Balance Details")]
     [IsoXmlTag("TtlInstdBalOptnBalDtls")]
-    public CorporateActionInstructedBalanceOptionBalanceDetailsSD2? TotalInstructedBalanceOptionBalanceDetails { get; init; }
+    public ValueList<CorporateActionInstructedBalanceOptionBalanceDetailsSD2> TotalInstructedBalanceOptionBalanceDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details at option instruction details level. Option level instruction details are referenced by unique instruction identification, instruction date, quantity and status of instruction.
@@ -71,7 +71,7 @@ public record DTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGysb5MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Instruction Details")]
     [IsoXmlTag("TtlInstdBalOptnInstrDtls")]
-    public CorporateActionInstructedBalanceOptionInstructionDetailsSD2? TotalInstructedBalanceOptionInstructionDetails { get; init; }
+    public ValueList<CorporateActionInstructedBalanceOptionInstructionDetailsSD2> TotalInstructedBalanceOptionInstructionDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details at option protect instruction details level.
@@ -79,5 +79,5 @@ public record DTCCCASTSD1V02 : IOuterRecord
     [IsoId("_LAGys75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Protect Instruction Details")]
     [IsoXmlTag("TtlInstdBalOptnPrtctInstrDtls")]
-    public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2? TotalInstructedBalanceOptionProtectInstructionDetails { get; init; }
+    public ValueList<CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2> TotalInstructedBalanceOptionProtectInstructionDetails { get; init; } = [];
 }

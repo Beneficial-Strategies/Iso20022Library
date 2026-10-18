@@ -71,7 +71,7 @@ public record PartyModificationRequestV01 : IOuterRecord
     [IsoId("_xJQSq5eREeen_cyMrluY4w")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public required SystemPartyModification2 Modification { get; init; }
+    public ValueList<SystemPartyModification2> Modification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record PartyModificationRequestV01 : IOuterRecord
     [IsoId("_xJQSrZeREeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

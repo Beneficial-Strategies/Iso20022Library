@@ -74,5 +74,5 @@ public record NotificationToReceiveV05 : IOuterRecord
     [IsoId("_pmmdhzqxEeWZFYSPlduMhw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

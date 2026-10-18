@@ -129,5 +129,5 @@ public record MarketClaimCreationV01 : IOuterRecord
     [IsoId("_hhuxcdsGEeqmdMJWobugpw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -72,7 +72,7 @@ public record RequestForOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_v72yAdE7Ed-BzquC8wXy7w_-374664944")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference5 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference5> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -80,5 +80,5 @@ public record RequestForOrderConfirmationStatusReportV01 : IOuterRecord
     [IsoId("_v72yAtE7Ed-BzquC8wXy7w_-2086704739")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

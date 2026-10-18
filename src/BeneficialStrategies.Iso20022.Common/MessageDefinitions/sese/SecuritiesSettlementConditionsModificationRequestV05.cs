@@ -95,7 +95,7 @@ public record SecuritiesSettlementConditionsModificationRequestV05 : IOuterRecor
     [IsoId("_69HWVSRTEeON6sEIseGaUg")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required RequestDetails13 RequestDetails { get; init; }
+    public ValueList<RequestDetails13> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -103,7 +103,7 @@ public record SecuritiesSettlementConditionsModificationRequestV05 : IOuterRecor
     [IsoId("_69HWVyRTEeON6sEIseGaUg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation9? AdditionalInformation { get; init; }
+    public ValueList<AdditionalInformation9> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -111,5 +111,5 @@ public record SecuritiesSettlementConditionsModificationRequestV05 : IOuterRecor
     [IsoId("_69HWWSRTEeON6sEIseGaUg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

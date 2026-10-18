@@ -70,7 +70,7 @@ public record FIToFICustomerDirectDebitV05 : IOuterRecord
     [IsoId("_fTgL_xPeEeSVo-TFVwFHvA")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
-    public required DirectDebitTransactionInformation17 DirectDebitTransactionInformation { get; init; }
+    public ValueList<DirectDebitTransactionInformation17> DirectDebitTransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -78,5 +78,5 @@ public record FIToFICustomerDirectDebitV05 : IOuterRecord
     [IsoId("_fTgMARPeEeSVo-TFVwFHvA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

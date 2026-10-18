@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingTransactionReportV03 : IOuterRecord
     [IsoId("_YfqlNQxPEe6IZ4NJLf_INA")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required ReportingTransactionType3Choice_ Transaction { get; init; }
+    public ValueList<ReportingTransactionType3Choice_> Transaction { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingTransactionReportV03 : IOuterRecord
     [IsoId("_YfrMQQxPEe6IZ4NJLf_INA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }
