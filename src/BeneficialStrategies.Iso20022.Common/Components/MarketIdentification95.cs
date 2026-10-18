@@ -133,7 +133,7 @@ public record MarketIdentification95
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CreationDate { get; init; }
+    public ISODate? CreationDate { get; init; }
 
     /// <summary>
     /// Details the validity of the specific record.
@@ -150,7 +150,7 @@ public record MarketIdentification95
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StatusDate { get; init; }
+    public ISODate? StatusDate { get; init; }
 
     /// <summary>
     /// Date when this record was last modified.

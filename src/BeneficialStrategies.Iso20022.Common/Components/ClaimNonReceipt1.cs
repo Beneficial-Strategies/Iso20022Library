@@ -23,7 +23,7 @@ public record ClaimNonReceipt1
     [DisplayName("Date Processed")]
     [IsoXmlTag("DtPrcd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateProcessed { get; init; }
+    public required ISODate DateProcessed { get; init; }
 
     /// <summary>
     /// Specifies the next party the original payment instruction was sent to.

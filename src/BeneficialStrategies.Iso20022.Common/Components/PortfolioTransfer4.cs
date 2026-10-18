@@ -53,7 +53,7 @@ public record PortfolioTransfer4
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ActualTransferDate { get; init; }
+    public ISODate? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -94,7 +94,7 @@ public record PortfolioTransfer4
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TaxDate { get; init; }
+    public ISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

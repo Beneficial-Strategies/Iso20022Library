@@ -127,7 +127,7 @@ public record PaymentInstruction44
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public DateOnly? PoolingAdjustmentDate { get; init; }
+    public ISODate? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Requested Advice Type.

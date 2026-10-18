@@ -51,7 +51,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Derivative Publication Date")]
     [IsoXmlTag("DerivPblctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DerivativePublicationDate { get; init; }
+    public ISODate? DerivativePublicationDate { get; init; }
 
     /// <summary>
     /// Effective date of the adjustment to the derivative contract.
@@ -60,7 +60,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Derivative Adjustment Date")]
     [IsoXmlTag("DerivAdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DerivativeAdjustmentDate { get; init; }
+    public required ISODate DerivativeAdjustmentDate { get; init; }
 
     /// <summary>
     /// Method (usually a formula) that will be used to calculate the adjustment factor that will be applied to the derivative to account for the impact of a corporate action event on the underlying equity.

@@ -33,7 +33,7 @@ public record LoanData92
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -76,7 +76,7 @@ public record LoanData92
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDate { get; init; }
+    public ISODate? ValueDate { get; init; }
 
     /// <summary>
     /// Indication whether the secured financing transaction is subject to a general collateral arrangement.
@@ -151,5 +151,5 @@ public record LoanData92
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 }

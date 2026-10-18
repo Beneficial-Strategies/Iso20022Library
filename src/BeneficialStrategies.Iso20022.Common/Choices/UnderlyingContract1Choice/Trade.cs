@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly MaturityDate { get; init; }
+        public required ISODate MaturityDate { get; init; }
 
         /// <summary>
         /// Indicates whether the contract duration is extended or not.
@@ -77,7 +77,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
         [DisplayName("Start Date")]
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly StartDate { get; init; }
+        public required ISODate StartDate { get; init; }
 
         /// <summary>
         /// Currency in which the trade is being settled.

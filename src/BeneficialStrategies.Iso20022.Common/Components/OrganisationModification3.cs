@@ -84,7 +84,7 @@ public record OrganisationModification3
     /// </summary>
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Representative Officer.

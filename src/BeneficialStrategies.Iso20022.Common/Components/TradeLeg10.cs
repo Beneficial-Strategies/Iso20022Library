@@ -73,7 +73,7 @@ public record TradeLeg10
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TradeDate { get; init; }
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Date and time used to determine the price applicable to a trade. If the trade is registered &quot;after market&quot; hours, the trading price will the price of the day but the actual trade date will be the next working day.

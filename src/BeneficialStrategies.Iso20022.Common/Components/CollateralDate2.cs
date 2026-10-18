@@ -23,7 +23,7 @@ public record CollateralDate2
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Date/time at which the instructing party requests the instruction to be executed.
@@ -40,5 +40,5 @@ public record CollateralDate2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 }

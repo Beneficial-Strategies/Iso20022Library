@@ -51,7 +51,7 @@ public record GenericIdentification82
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssueDate { get; init; }
+    public ISODate? IssueDate { get; init; }
 
     /// <summary>
     /// Date at which the identification expires.
@@ -60,7 +60,7 @@ public record GenericIdentification82
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpiryDate { get; init; }
+    public ISODate? ExpiryDate { get; init; }
 
     /// <summary>
     /// Name of the state, county or country sub-division that issued the identification document.

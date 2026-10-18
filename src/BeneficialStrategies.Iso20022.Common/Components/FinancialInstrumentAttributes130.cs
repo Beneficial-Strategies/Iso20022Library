@@ -42,14 +42,14 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
-    public DateOnly? ConversionDate { get; init; }
+    public ISODate? ConversionDate { get; init; }
 
     /// <summary>
     /// Dated Date.
     /// </summary>
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
-    public DateOnly? DatedDate { get; init; }
+    public ISODate? DatedDate { get; init; }
 
     /// <summary>
     /// Day Count Basis.
@@ -77,7 +77,7 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
-    public DateOnly? FloatingRateFixingDate { get; init; }
+    public ISODate? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
@@ -91,7 +91,7 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public DateOnly? IssueDate { get; init; }
+    public ISODate? IssueDate { get; init; }
 
     /// <summary>
     /// Issue Price.
@@ -105,7 +105,7 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Minimum Multiple Quantity To Instruct.
@@ -133,14 +133,14 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
-    public DateOnly? NextCallableDate { get; init; }
+    public ISODate? NextCallableDate { get; init; }
 
     /// <summary>
     /// Next Coupon Date.
     /// </summary>
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
-    public DateOnly? NextCouponDate { get; init; }
+    public ISODate? NextCouponDate { get; init; }
 
     /// <summary>
     /// Next Factor.
@@ -182,5 +182,5 @@ public record FinancialInstrumentAttributes130
     /// </summary>
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
-    public DateOnly? PutableDate { get; init; }
+    public ISODate? PutableDate { get; init; }
 }

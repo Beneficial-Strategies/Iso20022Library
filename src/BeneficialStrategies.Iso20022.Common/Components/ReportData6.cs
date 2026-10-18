@@ -53,7 +53,7 @@ public record ReportData6
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Time of the report.

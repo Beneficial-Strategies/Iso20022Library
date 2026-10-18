@@ -71,7 +71,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
         [DisplayName("Next Roll Date")]
         [IsoXmlTag("NxtRollDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? NextRollDate { get; init; }
+        public ISODate? NextRollDate { get; init; }
 
         /// <summary>
         /// Currency in which the notional is denominated.

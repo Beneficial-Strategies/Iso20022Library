@@ -86,7 +86,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [DisplayName("Requested Collection Date")]
         [IsoXmlTag("ReqdColltnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? RequestedCollectionDate { get; init; }
+        public ISODate? RequestedCollectionDate { get; init; }
 
         /// <summary>
         /// Key elements used to identify the original transaction that is being referred to.

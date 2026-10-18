@@ -41,7 +41,7 @@ public record UnderlyingTradeTransaction1
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransactionDate { get; init; }
+    public ISODate? TransactionDate { get; init; }
 
     /// <summary>
     /// Date the tender closes.
@@ -50,7 +50,7 @@ public record UnderlyingTradeTransaction1
     [DisplayName("Tender Closing Date")]
     [IsoXmlTag("TndrClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TenderClosingDate { get; init; }
+    public ISODate? TenderClosingDate { get; init; }
 
     /// <summary>
     /// Amount of the underlying transaction.

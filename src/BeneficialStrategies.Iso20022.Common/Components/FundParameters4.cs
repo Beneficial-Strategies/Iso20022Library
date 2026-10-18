@@ -39,7 +39,7 @@ public record FundParameters4
     [DisplayName("Date From")]
     [IsoXmlTag("DtFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateFrom { get; init; }
+    public ISODate? DateFrom { get; init; }
 
     /// <summary>
     /// Country where the fund has legal domicile as reflected in the ISIN classification.

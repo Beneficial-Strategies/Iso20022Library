@@ -38,7 +38,7 @@ public record EligibleCounterpart3
     [IsoId("_wwg4xWc-EemvNLufWGIVOQ")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public required DateOnly ValidFrom { get; init; }
+    public required ISODate ValidFrom { get; init; }
 
     /// <summary>
     /// Date until when the eligible counterpart is valid.
@@ -46,7 +46,7 @@ public record EligibleCounterpart3
     [IsoId("_wwg4x2c-EemvNLufWGIVOQ")]
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
-    public DateOnly? ValidTo { get; init; }
+    public ISODate? ValidTo { get; init; }
 
     /// <summary>
     /// Defines the type of eligibility.

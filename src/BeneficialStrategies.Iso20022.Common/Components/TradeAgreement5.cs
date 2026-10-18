@@ -23,7 +23,7 @@ public record TradeAgreement5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TradeDate { get; init; }
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Reference to the identification of the notification for which the status is given, as assigned by the participant that submitted the foreign exchange trade.

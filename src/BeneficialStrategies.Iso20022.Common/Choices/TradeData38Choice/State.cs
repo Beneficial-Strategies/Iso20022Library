@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData38Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly EventDate { get; init; }
+        public required ISODate EventDate { get; init; }
 
         /// <summary>
         /// Set of information specific to counterparties of the reported transaction.

@@ -98,7 +98,7 @@ public record FundReferenceDataReport5
     /// </summary>
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
-    public required DateOnly GeneralReferenceDate { get; init; }
+    public required ISODate GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Identification.

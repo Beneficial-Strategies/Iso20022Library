@@ -41,5 +41,5 @@ public record Dispute1
     [DisplayName("Dispute Date")]
     [IsoXmlTag("DsptDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DisputeDate { get; init; }
+    public required ISODate DisputeDate { get; init; }
 }

@@ -23,7 +23,7 @@ public record TransactionIdentification16
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly LocalDate { get; init; }
+    public required ISODate LocalDate { get; init; }
 
     /// <summary>
     /// Local time the transaction takes place at the card acceptor location.

@@ -41,5 +41,5 @@ public record ReferredDocumentInformation3
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RelatedDate { get; init; }
+    public ISODate? RelatedDate { get; init; }
 }

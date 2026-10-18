@@ -83,7 +83,7 @@ public record SettlementData2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the status of a settlement eg rejected, settled or awaiting authorisation.

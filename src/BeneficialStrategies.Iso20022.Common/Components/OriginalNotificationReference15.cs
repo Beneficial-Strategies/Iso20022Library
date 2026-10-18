@@ -62,7 +62,7 @@ public record OriginalNotificationReference15
     [IsoId("7c07fc52-63e8-4535-a54f-d68a66c630fb")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateOnly? ExpectedValueDate { get; init; }
+    public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

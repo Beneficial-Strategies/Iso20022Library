@@ -34,7 +34,7 @@ public record Instalment2
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PaymentDueDate { get; init; }
+    public required ISODate PaymentDueDate { get; init; }
 
     /// <summary>
     /// Amount of a single instalment related to an invoice.

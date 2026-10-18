@@ -35,7 +35,7 @@ public record CardNotReceivedDetails3
     /// </summary>
     [DisplayName("Date Mailed")]
     [IsoXmlTag("DtMld")]
-    public required DateOnly DateMailed { get; init; }
+    public required ISODate DateMailed { get; init; }
 
     /// <summary>
     /// Mailed From Postal Code.
@@ -63,5 +63,5 @@ public record CardNotReceivedDetails3
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 }

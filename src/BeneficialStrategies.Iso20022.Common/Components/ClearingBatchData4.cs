@@ -38,7 +38,7 @@ public record ClearingBatchData4
     [IsoId("_SzfhZ279EfC68Y4jZPNEug")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Number of transactions to clear.

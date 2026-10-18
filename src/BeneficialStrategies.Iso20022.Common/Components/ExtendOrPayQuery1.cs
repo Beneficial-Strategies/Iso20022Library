@@ -39,7 +39,7 @@ public record ExtendOrPayQuery1
     [DisplayName("Requested Expiry Date")]
     [IsoXmlTag("ReqdXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly RequestedExpiryDate { get; init; }
+    public required ISODate RequestedExpiryDate { get; init; }
 
     /// <summary>
     /// Details of the instructions from the bank.

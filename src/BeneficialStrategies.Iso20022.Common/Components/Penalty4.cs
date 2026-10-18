@@ -78,7 +78,7 @@ public record Penalty4
     [IsoId("_xQ9UXagzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Reference of the penalty payment.

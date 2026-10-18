@@ -51,7 +51,7 @@ public record ClearingBatchData2
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ClearingDate { get; init; }
+    public ISODate? ClearingDate { get; init; }
 
     /// <summary>
     /// Clearing totals of the batch file.

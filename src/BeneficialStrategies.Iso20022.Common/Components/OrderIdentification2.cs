@@ -21,7 +21,7 @@ public record OrderIdentification2
     /// </summary>
     [DisplayName("Date Of Receipt")]
     [IsoXmlTag("DtOfRct")]
-    public DateOnly? DateOfReceipt { get; init; }
+    public ISODate? DateOfReceipt { get; init; }
 
     /// <summary>
     /// Event Type.

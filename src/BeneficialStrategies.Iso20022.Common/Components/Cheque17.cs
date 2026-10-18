@@ -63,7 +63,7 @@ public record Cheque17
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Payee.
@@ -98,7 +98,7 @@ public record Cheque17
     /// </summary>
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
-    public DateOnly? StaleDate { get; init; }
+    public ISODate? StaleDate { get; init; }
 
     /// <summary>
     /// Value Date.

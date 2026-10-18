@@ -56,7 +56,7 @@ public record TradeDateTimeQueryCriteria6
     /// </summary>
     [DisplayName("Historical As Of Date")]
     [IsoXmlTag("HstrclAsOfDt")]
-    public DateOnly? HistoricalAsOfDate { get; init; }
+    public ISODate? HistoricalAsOfDate { get; init; }
 
     /// <summary>
     /// Maturity Date.

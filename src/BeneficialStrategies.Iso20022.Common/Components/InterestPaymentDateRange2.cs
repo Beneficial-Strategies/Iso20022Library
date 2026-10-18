@@ -41,7 +41,7 @@ public record InterestPaymentDateRange2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DueDate { get; init; }
+    public required ISODate DueDate { get; init; }
 
     /// <summary>
     /// Further details on the interest payments.

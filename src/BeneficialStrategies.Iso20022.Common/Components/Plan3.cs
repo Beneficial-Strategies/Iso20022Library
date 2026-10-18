@@ -70,7 +70,7 @@ public record Plan3
     /// </summary>
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Grace Period Unit Type.

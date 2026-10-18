@@ -24,7 +24,7 @@ public record ReconciliationList1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly Date { get; init; }
+    public required ISODate Date { get; init; }
 
     /// <summary>
     /// Reference to related documents for example to original assignment in a status response or retry.
@@ -81,7 +81,7 @@ public record ReconciliationList1
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PaymentDate { get; init; }
+    public required ISODate PaymentDate { get; init; }
 
     /// <summary>
     /// Terms of the payment.

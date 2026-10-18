@@ -70,7 +70,7 @@ public record PaymentInstruction49
     [IsoId("d03bf662-c758-406c-8201-ae0ae2165526")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public required DateOnly RequestedExecutionDate { get; init; }
+    public required ISODate RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.
@@ -78,7 +78,7 @@ public record PaymentInstruction49
     [IsoId("1895b157-f762-4de8-bcf4-1684628847c2")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public DateOnly? PoolingAdjustmentDate { get; init; }
+    public ISODate? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

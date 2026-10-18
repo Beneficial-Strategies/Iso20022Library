@@ -31,7 +31,7 @@ public record NonDeliverableForwardValuationConditions2
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValuationDate { get; init; }
+    public required ISODate ValuationDate { get; init; }
 
     /// <summary>
     /// Free format text that may contain valuation information such as the place, the time or the source of the rate.

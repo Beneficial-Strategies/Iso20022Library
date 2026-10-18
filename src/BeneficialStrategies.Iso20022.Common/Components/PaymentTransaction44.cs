@@ -97,7 +97,7 @@ public record PaymentTransaction44
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the returned transaction.

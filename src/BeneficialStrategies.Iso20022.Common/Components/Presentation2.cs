@@ -31,5 +31,5 @@ public record Presentation2
     [DisplayName("Beneficiary Presentation Date")]
     [IsoXmlTag("BnfcryPresntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BeneficiaryPresentationDate { get; init; }
+    public ISODate? BeneficiaryPresentationDate { get; init; }
 }

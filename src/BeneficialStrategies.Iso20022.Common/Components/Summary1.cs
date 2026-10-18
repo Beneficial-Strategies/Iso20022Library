@@ -80,7 +80,7 @@ public record Summary1
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Provides the more details on the valuation of the collateral that is posted.

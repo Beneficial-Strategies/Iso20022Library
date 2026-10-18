@@ -47,7 +47,7 @@ public record CreditTransferTransactionInformation3
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Provides information on the occurred settlement time(s) of the payment transaction.

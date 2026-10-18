@@ -22,7 +22,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIwUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Invoice order date.
@@ -30,7 +30,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIw0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public DateOnly? OrderDate { get; init; }
+    public ISODate? OrderDate { get; init; }
 
     /// <summary>
     /// Contains the corporate contract number.
@@ -46,7 +46,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIx0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
-    public DateOnly? ShippingDate { get; init; }
+    public ISODate? ShippingDate { get; init; }
 
     /// <summary>
     /// Rebilling indicator.

@@ -56,7 +56,7 @@ public record ResolutionData5
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Transaction Identification.

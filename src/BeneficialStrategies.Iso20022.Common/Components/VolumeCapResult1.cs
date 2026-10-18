@@ -40,7 +40,7 @@ public record VolumeCapResult1
     [DisplayName("Last Update Date")]
     [IsoXmlTag("LastUpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LastUpdateDate { get; init; }
+    public ISODate? LastUpdateDate { get; init; }
 
     /// <summary>
     /// Total traded volume of the instrument in this specific reporting period.

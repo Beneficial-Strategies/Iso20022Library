@@ -68,7 +68,7 @@ public record QualifiedDocumentInformation1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Identification of the version of the document or element. This may be used as a control value to indicate a specific version.

@@ -83,7 +83,7 @@ public record AccountManagementStatusAndReason5
     [DisplayName("FATCA Reporting Date")]
     [IsoXmlTag("FATCARptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FATCAReportingDate { get; init; }
+    public ISODate? FATCAReportingDate { get; init; }
 
     /// <summary>
     /// Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.
@@ -92,5 +92,5 @@ public record AccountManagementStatusAndReason5
     [DisplayName("CRS Reporting Date")]
     [IsoXmlTag("CRSRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CRSReportingDate { get; init; }
+    public ISODate? CRSReportingDate { get; init; }
 }

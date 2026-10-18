@@ -54,7 +54,7 @@ public record SettlementService7
     [IsoId("_otjG2RUJEfC_aaedwHHlmw")]
     [DisplayName("Deferred Date")]
     [IsoXmlTag("DfrrdDt")]
-    public DateOnly? DeferredDate { get; init; }
+    public ISODate? DeferredDate { get; init; }
 
     /// <summary>
     /// Actual date of settlement.
@@ -62,7 +62,7 @@ public record SettlementService7
     [IsoId("_otjG3RUJEfC_aaedwHHlmw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Actual time of settlement.

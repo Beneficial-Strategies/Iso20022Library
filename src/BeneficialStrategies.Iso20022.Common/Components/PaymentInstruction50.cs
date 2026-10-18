@@ -78,7 +78,7 @@ public record PaymentInstruction50
     [IsoId("90ab1a25-d3b0-44af-b707-657686a70954")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public required DateOnly RequestedCollectionDate { get; init; }
+    public required ISODate RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.

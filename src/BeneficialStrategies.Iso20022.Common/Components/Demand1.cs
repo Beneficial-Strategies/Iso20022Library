@@ -103,7 +103,7 @@ public record Demand1
     [DisplayName("Requested Expiry Date")]
     [IsoXmlTag("ReqdXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedExpiryDate { get; init; }
+    public ISODate? RequestedExpiryDate { get; init; }
 
     /// <summary>
     /// Document(s) presented for examination.

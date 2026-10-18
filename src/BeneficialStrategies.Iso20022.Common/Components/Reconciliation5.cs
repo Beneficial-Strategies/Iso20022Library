@@ -30,7 +30,7 @@ public record Reconciliation5
     [IsoId("_bmMec625EfCKbLfqFyM0kg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.

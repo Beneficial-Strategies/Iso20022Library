@@ -35,7 +35,7 @@ public record ShippingPackage3
     /// </summary>
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
-    public DateOnly? DeliveryDate { get; init; }
+    public ISODate? DeliveryDate { get; init; }
 
     /// <summary>
     /// Delivery Instructions.
@@ -91,7 +91,7 @@ public record ShippingPackage3
     /// </summary>
     [DisplayName("Pickup Date")]
     [IsoXmlTag("PckpDt")]
-    public DateOnly? PickupDate { get; init; }
+    public ISODate? PickupDate { get; init; }
 
     /// <summary>
     /// Pickup Time.

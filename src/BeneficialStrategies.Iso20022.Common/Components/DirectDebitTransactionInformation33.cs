@@ -64,7 +64,7 @@ public record DirectDebitTransactionInformation33
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// References used for a payment instruction.

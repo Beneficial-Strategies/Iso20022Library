@@ -80,7 +80,7 @@ public record IndividualPerson27
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BirthDate { get; init; }
+    public ISODate? BirthDate { get; init; }
 
     /// <summary>
     /// Country where the person was born.
@@ -175,7 +175,7 @@ public record IndividualPerson27
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DeathDate { get; init; }
+    public ISODate? DeathDate { get; init; }
 
     /// <summary>
     /// Civil status of the individual person.

@@ -71,7 +71,7 @@ public record GroupHeader125
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.

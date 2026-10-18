@@ -70,7 +70,7 @@ public record Cheque20
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Original Instruction Identification.
@@ -98,5 +98,5 @@ public record Cheque20
     /// </summary>
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
-    public DateOnly? StaleDate { get; init; }
+    public ISODate? StaleDate { get; init; }
 }

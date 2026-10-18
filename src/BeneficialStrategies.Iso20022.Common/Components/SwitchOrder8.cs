@@ -86,7 +86,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-reqd-0001-0009-44d8780df86b")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -102,7 +102,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-cash-0001-0011-44d8780df86b")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
         [DisplayName("Unadjusted Effective Date")]
         [IsoXmlTag("UadjstdFctvDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly UnadjustedEffectiveDate { get; init; }
+        public required ISODate UnadjustedEffectiveDate { get; init; }
 
         /// <summary>
         /// Indicates the end date agreed in the derivative transaction without adjustment.
@@ -49,6 +49,6 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
         [DisplayName("Unadjusted End Date")]
         [IsoXmlTag("UadjstdEndDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? UnadjustedEndDate { get; init; }
+        public ISODate? UnadjustedEndDate { get; init; }
     }
 }

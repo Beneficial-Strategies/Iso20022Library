@@ -91,7 +91,7 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Payment Schedule.
@@ -133,7 +133,7 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// Syndicated Loan.

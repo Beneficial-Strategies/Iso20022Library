@@ -127,14 +127,14 @@ public record PaymentInstruction43
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public DateOnly? PoolingAdjustmentDate { get; init; }
+    public ISODate? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public required DateOnly RequestedExecutionDate { get; init; }
+    public required ISODate RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Ultimate Debtor.

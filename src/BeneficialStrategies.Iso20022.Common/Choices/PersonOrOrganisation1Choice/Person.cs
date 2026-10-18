@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation1Choice
         [DisplayName("Birth Date")]
         [IsoXmlTag("BirthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly BirthDate { get; init; }
+        public required ISODate BirthDate { get; init; }
 
         /// <summary>
         /// Unique identification of a person, as assigned by an institution, using an identification scheme.

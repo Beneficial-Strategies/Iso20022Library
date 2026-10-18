@@ -21,7 +21,7 @@ public record Participation6
     /// </summary>
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
-    public DateOnly? CalculationDate { get; init; }
+    public ISODate? CalculationDate { get; init; }
 
     /// <summary>
     /// Percentage Of Voting Rights.

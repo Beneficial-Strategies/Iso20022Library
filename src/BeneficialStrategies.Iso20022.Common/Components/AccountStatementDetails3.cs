@@ -77,7 +77,7 @@ public record AccountStatementDetails3
     /// </summary>
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
-    public DateOnly? PostingDate { get; init; }
+    public ISODate? PostingDate { get; init; }
 
     /// <summary>
     /// Short Description.
@@ -91,5 +91,5 @@ public record AccountStatementDetails3
     /// </summary>
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
-    public required DateOnly TransactionDate { get; init; }
+    public required ISODate TransactionDate { get; init; }
 }

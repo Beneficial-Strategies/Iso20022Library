@@ -28,7 +28,7 @@ public record TelecomServices3
     /// </summary>
     [DisplayName("Billing End")]
     [IsoXmlTag("BllgEnd")]
-    public DateOnly? BillingEnd { get; init; }
+    public ISODate? BillingEnd { get; init; }
 
     /// <summary>
     /// Billing Event.
@@ -42,7 +42,7 @@ public record TelecomServices3
     /// </summary>
     [DisplayName("Billing Start")]
     [IsoXmlTag("BllgStart")]
-    public DateOnly? BillingStart { get; init; }
+    public ISODate? BillingStart { get; init; }
 
     /// <summary>
     /// Customer Account Number.

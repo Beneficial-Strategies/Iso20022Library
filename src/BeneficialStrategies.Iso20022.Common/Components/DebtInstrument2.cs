@@ -31,7 +31,7 @@ public record DebtInstrument2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Nominal value of each instrument. If not available, the minimum traded value should be populated.

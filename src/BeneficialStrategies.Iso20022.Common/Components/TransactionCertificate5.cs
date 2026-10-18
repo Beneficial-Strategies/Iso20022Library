@@ -31,7 +31,7 @@ public record TransactionCertificate5
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TransactionDate { get; init; }
+    public required ISODate TransactionDate { get; init; }
 
     /// <summary>
     /// Type of the transaction.

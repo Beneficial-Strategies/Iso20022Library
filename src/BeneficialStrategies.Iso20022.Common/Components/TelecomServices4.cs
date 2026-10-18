@@ -46,7 +46,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blst")]
     [DisplayName("Billing Start")]
     [IsoXmlTag("BlgStart")]
-    public DateOnly? BillingStart { get; init; }
+    public ISODate? BillingStart { get; init; }
 
     /// <summary>
     /// Contains the billing period end date for telecommunication or related services.
@@ -54,7 +54,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blen")]
     [DisplayName("Billing End")]
     [IsoXmlTag("BlgEnd")]
-    public DateOnly? BillingEnd { get; init; }
+    public ISODate? BillingEnd { get; init; }
 
     /// <summary>
     /// Summary of the charges associated with the billing event.

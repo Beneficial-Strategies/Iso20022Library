@@ -77,7 +77,7 @@ public record GroupHeader96
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.

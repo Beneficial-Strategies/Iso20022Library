@@ -23,7 +23,7 @@ public record Schedule1
     [DisplayName("Unadjusted Effective Date")]
     [IsoXmlTag("UadjstdFctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly UnadjustedEffectiveDate { get; init; }
+    public required ISODate UnadjustedEffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the end date agreed in the derivative transaction without adjustment.
@@ -32,7 +32,7 @@ public record Schedule1
     [DisplayName("Unadjusted End Date")]
     [IsoXmlTag("UadjstdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? UnadjustedEndDate { get; init; }
+    public ISODate? UnadjustedEndDate { get; init; }
 
     /// <summary>
     /// Indicates the price per derivative excluding, where applicable: fees, taxes or commissions.

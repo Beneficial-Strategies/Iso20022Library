@@ -102,7 +102,7 @@ public record TransferStatusAndReason8
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged or were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -111,7 +111,7 @@ public record TransferStatusAndReason8
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the document, for example, the application form, was sent.
@@ -120,7 +120,7 @@ public record TransferStatusAndReason8
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SendOutDate { get; init; }
+    public ISODate? SendOutDate { get; init; }
 
     /// <summary>
     /// Date on which cash is available.
@@ -129,7 +129,7 @@ public record TransferStatusAndReason8
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Number of units to be transferred.

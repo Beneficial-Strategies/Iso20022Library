@@ -41,5 +41,5 @@ public record ContractCessionData1
     [DisplayName("Document Date")]
     [IsoXmlTag("DocDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DocumentDate { get; init; }
+    public ISODate? DocumentDate { get; init; }
 }

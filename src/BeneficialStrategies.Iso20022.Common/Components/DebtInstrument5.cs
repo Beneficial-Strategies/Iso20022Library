@@ -31,5 +31,5 @@ public record DebtInstrument5
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssuanceDate { get; init; }
+    public required ISODate IssuanceDate { get; init; }
 }

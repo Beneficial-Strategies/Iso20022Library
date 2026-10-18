@@ -28,7 +28,7 @@ public record SupportingDocumentRequestOrLetter4
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Description.
@@ -42,7 +42,7 @@ public record SupportingDocumentRequestOrLetter4
     /// </summary>
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
-    public DateOnly? DueDate { get; init; }
+    public ISODate? DueDate { get; init; }
 
     /// <summary>
     /// Original References.

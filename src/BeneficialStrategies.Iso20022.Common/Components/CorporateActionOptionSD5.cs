@@ -50,5 +50,5 @@ public record CorporateActionOptionSD5
     [DisplayName("New Share Dispatched Date")]
     [IsoXmlTag("NewShrDsptchdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? NewShareDispatchedDate { get; init; }
+    public ISODate? NewShareDispatchedDate { get; init; }
 }

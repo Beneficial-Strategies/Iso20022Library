@@ -77,7 +77,7 @@ public record TransactionIdentification54
     /// </summary>
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
-    public DateOnly? LocalDate { get; init; }
+    public ISODate? LocalDate { get; init; }
 
     /// <summary>
     /// Local Time.

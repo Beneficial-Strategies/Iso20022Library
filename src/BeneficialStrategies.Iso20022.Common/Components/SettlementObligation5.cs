@@ -51,7 +51,7 @@ public record SettlementObligation5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Specifies the quantity related to the settlement obligation.
@@ -92,7 +92,7 @@ public record SettlementObligation5
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Indicates if the obligation will result in a receive or a delivery of securities.

@@ -42,7 +42,7 @@ public record CorporateActionSD20
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LotteryDate { get; init; }
+    public ISODate? LotteryDate { get; init; }
 
     /// <summary>
     /// For Reorganization events, date at which instructions will be accepted by agent for payment.
@@ -51,5 +51,5 @@ public record CorporateActionSD20
     [DisplayName("Process To Date")]
     [IsoXmlTag("PrcToDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ProcessToDate { get; init; }
+    public ISODate? ProcessToDate { get; init; }
 }

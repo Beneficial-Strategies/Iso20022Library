@@ -73,7 +73,7 @@ public record PaymentObligation1
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ExpiryDate { get; init; }
+    public required ISODate ExpiryDate { get; init; }
 
     /// <summary>
     /// Country of which the law governs the bank payment obligation.

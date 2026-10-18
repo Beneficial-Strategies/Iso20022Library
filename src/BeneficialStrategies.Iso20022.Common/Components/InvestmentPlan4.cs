@@ -42,7 +42,7 @@ public record InvestmentPlan4
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly StartDate { get; init; }
+    public required ISODate StartDate { get; init; }
 
     /// <summary>
     /// Date the investment plan stops.
@@ -51,7 +51,7 @@ public record InvestmentPlan4
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 
     /// <summary>
     /// Currency and amount of the periodical payments.

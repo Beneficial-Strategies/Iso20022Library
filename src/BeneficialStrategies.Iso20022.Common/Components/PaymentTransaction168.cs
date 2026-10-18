@@ -87,7 +87,7 @@ public record PaymentTransaction168
     [IsoId("33131e4e-9c19-4e58-9c67-956b6629e43c")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public DateOnly? OriginalInterbankSettlementDate { get; init; }
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the type of the return transaction.
@@ -111,7 +111,7 @@ public record PaymentTransaction168
     [IsoId("9b7c1ccb-7bb5-4480-9a32-32ff02e77181")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.

@@ -70,7 +70,7 @@ public record NotificationItem9
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateOnly? ExpectedValueDate { get; init; }
+    public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Identification.

@@ -70,7 +70,7 @@ public record CashAccountCharacteristics5
     /// </summary>
     [DisplayName("Delayed Debit Date")]
     [IsoXmlTag("DelydDbtDt")]
-    public DateOnly? DelayedDebitDate { get; init; }
+    public ISODate? DelayedDebitDate { get; init; }
 
     /// <summary>
     /// Host Currency Code.

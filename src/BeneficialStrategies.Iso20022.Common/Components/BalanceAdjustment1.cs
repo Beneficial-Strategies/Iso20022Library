@@ -57,7 +57,7 @@ public record BalanceAdjustment1
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ErrorDate { get; init; }
+    public ISODate? ErrorDate { get; init; }
 
     /// <summary>
     /// Date on which the error was corrected in the cash account. If the date is not know then use the last day of the month in which the error was corrected.
@@ -66,7 +66,7 @@ public record BalanceAdjustment1
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PostingDate { get; init; }
+    public required ISODate PostingDate { get; init; }
 
     /// <summary>
     /// Number of days within the period to which the adjustment applies.

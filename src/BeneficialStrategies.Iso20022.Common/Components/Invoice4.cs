@@ -30,7 +30,7 @@ public record Invoice4
     [IsoId("_gL9aE0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.

@@ -105,7 +105,7 @@ public record ATMTransaction38
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateOnly? RequestedExecutionDate { get; init; }
+    public ISODate? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Requested Receipt.

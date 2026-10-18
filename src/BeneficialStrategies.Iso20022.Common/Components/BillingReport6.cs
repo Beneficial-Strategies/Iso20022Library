@@ -38,7 +38,7 @@ public record BillingReport6
     [IsoId("_2mCyBTEyEe6g-ffJsqGiSA")]
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
-    public required DateOnly InvoiceDate { get; init; }
+    public required ISODate InvoiceDate { get; init; }
 
     /// <summary>
     /// Unique identification of the billing report.

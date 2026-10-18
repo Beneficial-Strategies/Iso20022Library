@@ -23,7 +23,7 @@ public record OpeningData2
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TradeDate { get; init; }
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Refers to the identification of a notification assigned by the trading side.

@@ -33,7 +33,7 @@ public record LoanData95
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -76,7 +76,7 @@ public record LoanData95
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ValueDate { get; init; }
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Indication whether the transaction is subject to a general collateral arrangement. -‘true’ shall be populated for general collateral. General collateral specifies a collateral arrangement for a repurchase transaction in which the security lender may choose the security to provide as collateral with the cash provider amongst a relatively wide range of securities meeting predefined criteria.
@@ -135,7 +135,7 @@ public record LoanData95
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 
     /// <summary>
     /// Price of unit of collateral component, including accrued interest for interest-bearing securities.

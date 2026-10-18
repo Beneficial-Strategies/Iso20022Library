@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice
         [DisplayName("Start Date")]
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly StartDate { get; init; }
+        public required ISODate StartDate { get; init; }
 
         /// <summary>
         /// Specifies the regularity of the trigger date.

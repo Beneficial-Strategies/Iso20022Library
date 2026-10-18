@@ -56,7 +56,7 @@ public record LongPaymentIdentification4
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public required DateOnly InterbankSettlementDate { get; init; }
+    public required ISODate InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Payment Method.

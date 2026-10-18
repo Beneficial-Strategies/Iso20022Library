@@ -58,7 +58,7 @@ public record OptionInstructionDetails4
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly InstructionDate { get; init; }
+    public required ISODate InstructionDate { get; init; }
 
     /// <summary>
     /// Date of the client protect instruction.
@@ -67,7 +67,7 @@ public record OptionInstructionDetails4
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ProtectDate { get; init; }
+    public ISODate? ProtectDate { get; init; }
 
     /// <summary>
     /// Date of the cover protect Instruction
@@ -76,7 +76,7 @@ public record OptionInstructionDetails4
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CoverProtectDate { get; init; }
+    public ISODate? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Bid price of the instruction.

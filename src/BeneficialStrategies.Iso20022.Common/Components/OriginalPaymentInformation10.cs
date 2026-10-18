@@ -91,7 +91,7 @@ public record OriginalPaymentInformation10
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public DateOnly? RequestedCollectionDate { get; init; }
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.

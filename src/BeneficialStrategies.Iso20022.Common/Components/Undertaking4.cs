@@ -60,7 +60,7 @@ public record Undertaking4
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfIssuance { get; init; }
+    public ISODate? DateOfIssuance { get; init; }
 
     /// <summary>
     /// Party asked to advise the requested local undertaking to the beneficiary or to another advising party at the request of the local undertaking issuer.

@@ -69,7 +69,7 @@ public record LoanContract3
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Indicates whether the contract duration is extended or not.
@@ -88,7 +88,7 @@ public record LoanContract3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 
     /// <summary>
     /// Currency in which the loan is being settled.

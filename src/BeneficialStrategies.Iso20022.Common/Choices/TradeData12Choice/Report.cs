@@ -49,7 +49,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData12Choice
         [DisplayName("Event Day")]
         [IsoXmlTag("EvtDay")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly EventDay { get; init; }
+        public required ISODate EventDay { get; init; }
 
         /// <summary>
         /// Date and time of submission of the report to the entitled receiver.

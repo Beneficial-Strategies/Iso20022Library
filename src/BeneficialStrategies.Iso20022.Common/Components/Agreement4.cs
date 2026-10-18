@@ -43,7 +43,7 @@ public record Agreement4
     [DisplayName("Agreement Date")]
     [IsoXmlTag("AgrmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly AgreementDate { get; init; }
+    public required ISODate AgreementDate { get; init; }
 
     /// <summary>
     /// Denomination currency as specified in the collateral agreement.

@@ -33,7 +33,7 @@ public record DeceasedStatusSD1
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DeathDate { get; init; }
+    public ISODate? DeathDate { get; init; }
 
     /// <summary>
     /// Death certificate number of the beneficial owner.

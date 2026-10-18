@@ -65,7 +65,7 @@ public record Transfer34
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the investor signed the transfer order form.
@@ -74,7 +74,7 @@ public record Transfer34
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.

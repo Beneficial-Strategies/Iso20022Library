@@ -21,7 +21,7 @@ public record IndividualPerson44
     /// </summary>
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
-    public DateOnly? BirthDate { get; init; }
+    public ISODate? BirthDate { get; init; }
 
     /// <summary>
     /// Citizenship Information.

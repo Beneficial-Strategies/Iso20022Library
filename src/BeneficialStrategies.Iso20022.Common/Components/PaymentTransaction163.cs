@@ -77,7 +77,7 @@ public record PaymentTransaction163
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Original Clearing System Reference.
@@ -119,7 +119,7 @@ public record PaymentTransaction163
     /// </summary>
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public DateOnly? OriginalInterbankSettlementDate { get; init; }
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Original Transaction Identification.

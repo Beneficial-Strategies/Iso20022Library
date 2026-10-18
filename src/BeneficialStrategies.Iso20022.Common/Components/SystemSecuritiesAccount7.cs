@@ -49,7 +49,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly OpeningDate { get; init; }
+    public required ISODate OpeningDate { get; init; }
 
     /// <summary>
     /// Legal closing date of the securities account.
@@ -58,7 +58,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ClosingDate { get; init; }
+    public ISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account is on hold or not.

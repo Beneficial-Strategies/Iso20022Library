@@ -70,7 +70,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78j7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public DateOnly? OriginalInterbankSettlementDate { get; init; }
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

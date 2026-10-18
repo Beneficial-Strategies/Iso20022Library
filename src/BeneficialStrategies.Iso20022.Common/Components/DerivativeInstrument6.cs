@@ -25,7 +25,7 @@ public record DerivativeInstrument6
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpiryDate { get; init; }
+    public ISODate? ExpiryDate { get; init; }
 
     /// <summary>
     /// Number of units of the underlying instrument represented by a single derivative contract.

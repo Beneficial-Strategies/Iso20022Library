@@ -42,7 +42,7 @@ public record Instalment5
     /// </summary>
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Grace Period.

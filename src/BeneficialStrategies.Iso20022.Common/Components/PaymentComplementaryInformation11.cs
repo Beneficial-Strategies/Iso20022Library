@@ -133,7 +133,7 @@ public record PaymentComplementaryInformation11
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -252,7 +252,7 @@ public record PaymentComplementaryInformation11
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public DateOnly? RequestedCollectionDate { get; init; }
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.

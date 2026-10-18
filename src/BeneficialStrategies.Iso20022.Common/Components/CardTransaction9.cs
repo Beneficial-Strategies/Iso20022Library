@@ -39,7 +39,7 @@ public record CardTransaction9
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InterBankSettlementDate { get; init; }
+    public ISODate? InterBankSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time of the transaction.

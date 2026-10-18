@@ -94,7 +94,7 @@ public record SubscriptionOrder17
     [IsoId("a999f09b-65b3-46d0-9dc4-1b08148b05cc")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

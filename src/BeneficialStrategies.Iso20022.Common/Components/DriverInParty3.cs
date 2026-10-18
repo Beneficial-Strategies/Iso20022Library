@@ -42,7 +42,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Driver Credential.
@@ -84,7 +84,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public DateOnly? LicenseExpirationDate { get; init; }
+    public ISODate? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// License Form.
@@ -105,7 +105,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public DateOnly? LicenseIssuanceDate { get; init; }
+    public ISODate? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// License Other Authority.

@@ -51,7 +51,7 @@ public record Transfer2
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TradeDate { get; init; }
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Total quantity of securities settled.

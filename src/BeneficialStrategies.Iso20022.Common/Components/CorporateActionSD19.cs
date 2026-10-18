@@ -33,7 +33,7 @@ public record CorporateActionSD19
     [DisplayName("Record Date")]
     [IsoXmlTag("RcrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RecordDate { get; init; }
+    public ISODate? RecordDate { get; init; }
 
     /// <summary>
     /// Date/time at which the movement was due to take place (cash and/or securities).
@@ -50,7 +50,7 @@ public record CorporateActionSD19
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LotteryDate { get; init; }
+    public ISODate? LotteryDate { get; init; }
 
     /// <summary>
     /// Specifies the type of lottery announced.

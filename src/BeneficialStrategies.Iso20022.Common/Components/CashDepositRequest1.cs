@@ -47,7 +47,7 @@ public record CashDepositRequest1
     [IsoId("_NjfqYeOzEe-NFYIkYc90gw")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public required DateOnly ExpectedValueDate { get; init; }
+    public required ISODate ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which cash will be deposited.

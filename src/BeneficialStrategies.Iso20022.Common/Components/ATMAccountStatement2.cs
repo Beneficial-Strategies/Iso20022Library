@@ -23,7 +23,7 @@ public record ATMAccountStatement2
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransactionDate { get; init; }
+    public ISODate? TransactionDate { get; init; }
 
     /// <summary>
     /// Value date of the transaction.
@@ -32,7 +32,7 @@ public record ATMAccountStatement2
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValueDate { get; init; }
+    public ISODate? ValueDate { get; init; }
 
     /// <summary>
     /// Short text to display or print for the statement.

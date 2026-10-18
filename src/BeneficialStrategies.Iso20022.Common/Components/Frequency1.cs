@@ -32,7 +32,7 @@ public record Frequency1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly StartDate { get; init; }
+    public required ISODate StartDate { get; init; }
 
     /// <summary>
     /// Information about when the payment arrangement will end.

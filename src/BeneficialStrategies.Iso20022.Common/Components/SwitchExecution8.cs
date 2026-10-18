@@ -118,7 +118,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-reqd-0001-0013-cbedd3f4632d")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -134,7 +134,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-cash-0001-0015-cbedd3f4632d")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

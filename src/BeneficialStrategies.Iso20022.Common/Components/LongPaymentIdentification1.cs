@@ -41,7 +41,7 @@ public record LongPaymentIdentification1
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly InterBankSettlementDate { get; init; }
+    public required ISODate InterBankSettlementDate { get; init; }
 
     /// <summary>
     /// Message type with which the instruction has been initiated.

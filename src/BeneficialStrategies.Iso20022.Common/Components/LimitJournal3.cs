@@ -21,7 +21,7 @@ public record LimitJournal3
     /// </summary>
     [DisplayName("Journal Activity Date")]
     [IsoXmlTag("JrnlActvtyDt")]
-    public required DateOnly JournalActivityDate { get; init; }
+    public required ISODate JournalActivityDate { get; init; }
 
     /// <summary>
     /// Journal Entry.

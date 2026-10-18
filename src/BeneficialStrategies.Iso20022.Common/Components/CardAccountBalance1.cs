@@ -62,5 +62,5 @@ public record CardAccountBalance1
     [IsoId("_hp7l7RQTEfC1ZfCQz0xB3g")]
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
-    public DateOnly? BalanceDate { get; init; }
+    public ISODate? BalanceDate { get; init; }
 }

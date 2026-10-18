@@ -39,5 +39,5 @@ public record AmountsAndValueDate2
     [DisplayName("Final Settlement Date")]
     [IsoXmlTag("FnlSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly FinalSettlementDate { get; init; }
+    public required ISODate FinalSettlementDate { get; init; }
 }

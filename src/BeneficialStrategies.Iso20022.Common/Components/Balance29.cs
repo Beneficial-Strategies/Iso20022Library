@@ -28,7 +28,7 @@ public record Balance29
     /// </summary>
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
-    public DateOnly? BalanceDate { get; init; }
+    public ISODate? BalanceDate { get; init; }
 
     /// <summary>
     /// Cardholder Currency.

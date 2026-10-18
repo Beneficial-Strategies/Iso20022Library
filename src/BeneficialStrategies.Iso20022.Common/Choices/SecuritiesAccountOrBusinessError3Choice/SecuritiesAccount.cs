@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrBusinessError
         [DisplayName("Opening Date")]
         [IsoXmlTag("OpngDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? OpeningDate { get; init; }
+        public ISODate? OpeningDate { get; init; }
 
         /// <summary>
         /// Legal closing date of the securities account.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrBusinessError
         [DisplayName("Closing Date")]
         [IsoXmlTag("ClsgDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ClosingDate { get; init; }
+        public ISODate? ClosingDate { get; init; }
 
         /// <summary>
         /// Indicates whether the securities account is on hold or not.

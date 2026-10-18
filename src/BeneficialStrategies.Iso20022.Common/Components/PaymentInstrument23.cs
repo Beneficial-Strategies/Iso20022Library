@@ -38,7 +38,7 @@ public record PaymentInstrument23
     [IsoId("f5400023-26a8-4af0-bc3e-16c62aaeaba4")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
-    public DateOnly? PaymentDate { get; init; }
+    public ISODate? PaymentDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

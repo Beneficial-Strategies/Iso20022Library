@@ -78,7 +78,7 @@ public record UnderlyingPaymentTransaction6
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly OriginalInterbankSettlementDate { get; init; }
+    public required ISODate OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

@@ -21,7 +21,7 @@ public record ClaimNonReceipt3
     /// </summary>
     [DisplayName("Date Processed")]
     [IsoXmlTag("DtPrcd")]
-    public required DateOnly DateProcessed { get; init; }
+    public required ISODate DateProcessed { get; init; }
 
     /// <summary>
     /// Original Next Agent.

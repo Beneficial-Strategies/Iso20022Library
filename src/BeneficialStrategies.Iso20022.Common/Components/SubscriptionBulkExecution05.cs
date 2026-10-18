@@ -62,7 +62,7 @@ public record SubscriptionBulkExecution05
     [IsoId("78621f97-c912-45a4-8472-8e4989e223e9")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

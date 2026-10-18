@@ -47,5 +47,5 @@ public record OptionOrSwaption4
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDateOfUnderlying { get; init; }
+    public ISODate? MaturityDateOfUnderlying { get; init; }
 }

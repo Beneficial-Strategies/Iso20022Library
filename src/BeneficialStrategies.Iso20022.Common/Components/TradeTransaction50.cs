@@ -77,14 +77,14 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
-    public DateOnly? EarlyTerminationDate { get; init; }
+    public ISODate? EarlyTerminationDate { get; init; }
 
     /// <summary>
     /// Effective Date.
     /// </summary>
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
-    public DateOnly? EffectiveDate { get; init; }
+    public ISODate? EffectiveDate { get; init; }
 
     /// <summary>
     /// Energy Specific Attributes.
@@ -105,7 +105,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
@@ -231,7 +231,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public ValueList<DateOnly> SettlementDate { get; init; } = [];
+    public ValueList<ISODate> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Subsequent Transaction Identification.

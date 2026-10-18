@@ -79,7 +79,7 @@ public record TaxInformation2
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TaxDate { get; init; }
+    public ISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Set of characteristics defining the type of tax.

@@ -22,7 +22,7 @@ public record FundSettlementParameters22
     [IsoId("70c0ab80-a06e-42fd-81b5-81e75e690336")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
     /// Place where the settlement of the transaction will take place.

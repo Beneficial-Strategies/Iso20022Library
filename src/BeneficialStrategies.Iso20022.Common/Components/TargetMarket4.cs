@@ -56,7 +56,7 @@ public record TargetMarket4
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public DateOnly? ReferenceDate { get; init; }
+    public ISODate? ReferenceDate { get; init; }
 
     /// <summary>
     /// Risk Tolerance.

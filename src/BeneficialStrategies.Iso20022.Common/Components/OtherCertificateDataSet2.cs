@@ -50,7 +50,7 @@ public record OtherCertificateDataSet2
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Issuer of the certificate, typically the inspection company or its agent.

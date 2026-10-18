@@ -23,7 +23,7 @@ public record ReconciliationStatisticsPerCounterparty3
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReferenceDate { get; init; }
+    public required ISODate ReferenceDate { get; init; }
 
     /// <summary>
     /// Different categories of statuses for a derivative.

@@ -23,7 +23,7 @@ public record RecurringTransaction3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly StartDate { get; init; }
+    public required ISODate StartDate { get; init; }
 
     /// <summary>
     /// Number of transfers to perform.
@@ -41,7 +41,7 @@ public record RecurringTransaction3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EndDate { get; init; }
+    public required ISODate EndDate { get; init; }
 
     /// <summary>
     /// Period of the recurring transfer.

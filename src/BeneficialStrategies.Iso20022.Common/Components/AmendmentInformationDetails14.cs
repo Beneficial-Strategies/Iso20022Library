@@ -89,7 +89,7 @@ public record AmendmentInformationDetails14
     [DisplayName("Original Final Collection Date")]
     [IsoXmlTag("OrgnlFnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OriginalFinalCollectionDate { get; init; }
+    public ISODate? OriginalFinalCollectionDate { get; init; }
 
     /// <summary>
     /// Original frequency that has been modified.

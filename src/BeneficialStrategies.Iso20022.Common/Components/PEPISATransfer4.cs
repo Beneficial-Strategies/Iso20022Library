@@ -53,7 +53,7 @@ public record PEPISATransfer4
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ActualTransferDate { get; init; }
+    public required ISODate ActualTransferDate { get; init; }
 
     /// <summary>
     /// Indicates whether there is cash in the account that is awaiting investment.

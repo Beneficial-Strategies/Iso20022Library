@@ -70,7 +70,7 @@ public record FleetDriverData2
     [IsoId("_5ugJTVN5EfC0lMwgjvMClw")]
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public DateOnly? LicenseIssuanceDate { get; init; }
+    public ISODate? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of the driving license (if and when relevant).
@@ -78,7 +78,7 @@ public record FleetDriverData2
     [IsoId("_5ugJT1N5EfC0lMwgjvMClw")]
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public DateOnly? LicenseExpirationDate { get; init; }
+    public ISODate? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the driver license.
@@ -150,7 +150,7 @@ public record FleetDriverData2
     [IsoId("_5ugJYVN5EfC0lMwgjvMClw")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.

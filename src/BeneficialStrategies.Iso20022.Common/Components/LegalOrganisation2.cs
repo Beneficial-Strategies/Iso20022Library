@@ -43,7 +43,7 @@ public record LegalOrganisation2
     [DisplayName("Establishment Date")]
     [IsoXmlTag("EstblishmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EstablishmentDate { get; init; }
+    public ISODate? EstablishmentDate { get; init; }
 
     /// <summary>
     /// Date when the organisation was registered.
@@ -52,5 +52,5 @@ public record LegalOrganisation2
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 }

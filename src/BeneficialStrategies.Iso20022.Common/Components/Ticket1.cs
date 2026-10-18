@@ -41,7 +41,7 @@ public record Ticket1
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TicketIssueDate { get; init; }
+    public ISODate? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Location where ticket was issued.

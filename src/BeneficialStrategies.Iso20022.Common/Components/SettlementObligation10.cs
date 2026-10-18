@@ -84,14 +84,14 @@ public record SettlementObligation10
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Trade Date.
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Trading Currency.

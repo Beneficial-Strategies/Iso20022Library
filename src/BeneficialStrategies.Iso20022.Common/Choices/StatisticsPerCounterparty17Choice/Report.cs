@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly ReferenceDate { get; init; }
+        public required ISODate ReferenceDate { get; init; }
 
         /// <summary>
         /// Total number of reports sent or received.

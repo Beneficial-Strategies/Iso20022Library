@@ -56,7 +56,7 @@ public record PremiumAmount3
     [DisplayName("Premium Settlement Date")]
     [IsoXmlTag("PrmSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PremiumSettlementDate { get; init; }
+    public required ISODate PremiumSettlementDate { get; init; }
 
     /// <summary>
     /// Premium fee payer related information.

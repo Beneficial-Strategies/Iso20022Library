@@ -32,5 +32,5 @@ public record CashBalanceAvailabilityDate1
     [DisplayName("Actual Date")]
     [IsoXmlTag("ActlDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ActualDate { get; init; }
+    public required ISODate ActualDate { get; init; }
 }

@@ -33,7 +33,7 @@ public record UpdatedURLlnformation3
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? UpdateDate { get; init; }
+    public ISODate? UpdateDate { get; init; }
 
     /// <summary>
     /// Provides the web address, that is, the address for the Universal Resource Locator (URL), to use over the www (HTTP) service where additional information may be found.

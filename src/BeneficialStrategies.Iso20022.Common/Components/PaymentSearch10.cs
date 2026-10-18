@@ -70,7 +70,7 @@ public record PaymentSearch10
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public ValueList<DateOnly> InterbankSettlementDate { get; init; } = [];
+    public ValueList<ISODate> InterbankSettlementDate { get; init; } = [];
 
     /// <summary>
     /// Message Identification.

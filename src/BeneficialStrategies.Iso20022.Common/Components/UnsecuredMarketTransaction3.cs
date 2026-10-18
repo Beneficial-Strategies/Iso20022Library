@@ -93,7 +93,7 @@ public record UnsecuredMarketTransaction3
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly SettlementDate { get; init; }
+    public required ISODate SettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the amount of money is due to be repaid by the borrower to the lender or on which a debt instrument matures and is due to be paid back. In regards to callable and puttable instruments, the final maturity date must be provided. For call accounts and other unsecured borrowing/lending redeemable upon notice, the first date on which the instrument may be redeemed must be provided.
@@ -102,7 +102,7 @@ public record UnsecuredMarketTransaction3
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly MaturityDate { get; init; }
+    public required ISODate MaturityDate { get; init; }
 
     /// <summary>
     /// Defines whether the transaction is a cash borrowing or cash lending transaction.

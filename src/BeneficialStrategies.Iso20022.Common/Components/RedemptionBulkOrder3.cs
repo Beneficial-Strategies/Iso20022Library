@@ -59,7 +59,7 @@ public record RedemptionBulkOrder3
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of an investor with respect to an investment fund order.
@@ -128,7 +128,7 @@ public record RedemptionBulkOrder3
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Payment processes required to transfer cash from the debtor to the creditor.

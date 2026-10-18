@@ -109,7 +109,7 @@ public record ForeignExchangeSwapTransaction3
     [DisplayName("Spot Value Date")]
     [IsoXmlTag("SpotValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly SpotValueDate { get; init; }
+    public required ISODate SpotValueDate { get; init; }
 
     /// <summary>
     /// Date on which the foreign exchange swap transaction expires and the currency sold on the value date is repurchased.
@@ -118,7 +118,7 @@ public record ForeignExchangeSwapTransaction3
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly MaturityDate { get; init; }
+    public required ISODate MaturityDate { get; init; }
 
     /// <summary>
     /// Defines whether the amount of money reported under the transaction nominal amount is bought or sold on the spot value date.

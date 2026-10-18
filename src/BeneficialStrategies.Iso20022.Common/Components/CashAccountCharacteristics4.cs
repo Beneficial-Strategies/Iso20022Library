@@ -71,7 +71,7 @@ public record CashAccountCharacteristics4
     [DisplayName("Delayed Debit Date")]
     [IsoXmlTag("DelydDbtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DelayedDebitDate { get; init; }
+    public ISODate? DelayedDebitDate { get; init; }
 
     /// <summary>
     /// Free form message advising the customer about the settlement of charges and taxes due.

@@ -59,7 +59,7 @@ public record LoyaltyMember2
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Value expressed in type of value for the loyalty programme.

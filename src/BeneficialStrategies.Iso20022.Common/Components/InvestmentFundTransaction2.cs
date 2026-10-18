@@ -156,7 +156,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which a price is applied, according to the terms stated in the prospectus.

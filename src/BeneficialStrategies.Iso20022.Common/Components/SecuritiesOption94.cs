@@ -47,7 +47,7 @@ public record SecuritiesOption94
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PostingDate { get; init; }
+    public required ISODate PostingDate { get; init; }
 
     /// <summary>
     /// Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.
@@ -56,5 +56,5 @@ public record SecuritiesOption94
     [DisplayName("Original Posting Date")]
     [IsoXmlTag("OrgnlPstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OriginalPostingDate { get; init; }
+    public ISODate? OriginalPostingDate { get; init; }
 }

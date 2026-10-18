@@ -47,7 +47,7 @@ public record CreditTransferTransaction82
     [IsoId("_eeABd7pXEfCPZvweyV2nEg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public DateOnly? InterbankSettlementDate { get; init; }
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance for settlement processing.

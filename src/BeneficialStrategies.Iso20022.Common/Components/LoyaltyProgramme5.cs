@@ -35,7 +35,7 @@ public record LoyaltyProgramme5
     /// </summary>
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Issuer.

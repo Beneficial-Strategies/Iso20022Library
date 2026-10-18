@@ -22,7 +22,7 @@ public record TransactionIdentification59
     [IsoId("_3yOxcWPuEfCX7uJiAWHfoQ")]
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
-    public required DateOnly LocalDate { get; init; }
+    public required ISODate LocalDate { get; init; }
 
     /// <summary>
     /// Local time the transaction takes place at the card acceptor location.

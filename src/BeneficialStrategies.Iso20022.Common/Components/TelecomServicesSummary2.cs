@@ -31,7 +31,7 @@ public record TelecomServicesSummary2
     [DisplayName("Billing Statement Period Start")]
     [IsoXmlTag("BllgStmtPrdStart")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BillingStatementPeriodStart { get; init; }
+    public ISODate? BillingStatementPeriodStart { get; init; }
 
     /// <summary>
     /// Contains the billing period end date for telecommunication or related services.
@@ -40,7 +40,7 @@ public record TelecomServicesSummary2
     [DisplayName("Billing Statement Period End")]
     [IsoXmlTag("BllgStmtPrdEnd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BillingStatementPeriodEnd { get; init; }
+    public ISODate? BillingStatementPeriodEnd { get; init; }
 
     /// <summary>
     /// Summary of the charges associated with the billing event.

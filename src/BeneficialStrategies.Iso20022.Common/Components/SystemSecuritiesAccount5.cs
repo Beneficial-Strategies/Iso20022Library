@@ -23,7 +23,7 @@ public record SystemSecuritiesAccount5
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ClosingDate { get; init; }
+    public ISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account is on hold or not.

@@ -46,7 +46,7 @@ public record PortfolioTransfer18
     [IsoId("425554a3-ec70-4095-b08d-3096601d2185")]
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
-    public DateOnly? ActualTransferDate { get; init; }
+    public ISODate? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -86,7 +86,7 @@ public record PortfolioTransfer18
     [IsoId("c4f23824-69bc-4d2f-aac4-92f7411846c4")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public DateOnly? TaxDate { get; init; }
+    public ISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

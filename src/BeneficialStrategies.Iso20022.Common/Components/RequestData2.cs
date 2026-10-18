@@ -43,7 +43,7 @@ public record RequestData2
     [DisplayName("Requested Activation Date")]
     [IsoXmlTag("ReqdActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly RequestedActivationDate { get; init; }
+    public required ISODate RequestedActivationDate { get; init; }
 
     /// <summary>
     /// Describes the central system servicing the request.

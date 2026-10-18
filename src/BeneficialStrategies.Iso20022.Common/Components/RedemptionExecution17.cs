@@ -28,7 +28,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Cash Settlement Details.

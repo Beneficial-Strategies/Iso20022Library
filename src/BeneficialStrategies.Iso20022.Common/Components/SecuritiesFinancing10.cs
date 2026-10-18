@@ -321,7 +321,7 @@ public record SecuritiesFinancing10
     [DisplayName("Minimum Date For Call Back")]
     [IsoXmlTag("MinDtForCallBck")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MinimumDateForCallBack { get; init; }
+    public ISODate? MinimumDateForCallBack { get; init; }
 
     /// <summary>
     /// Indicates that the contract can be rolled over.

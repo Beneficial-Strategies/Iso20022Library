@@ -51,7 +51,7 @@ public record PaymentInstruction8
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly RequestedExecutionDate { get; init; }
+    public required ISODate RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

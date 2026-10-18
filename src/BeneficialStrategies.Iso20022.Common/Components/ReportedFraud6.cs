@@ -54,7 +54,7 @@ public record ReportedFraud6
     [IsoId("_W31XvxODEfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
-    public DateOnly? CardholderReportingDate { get; init; }
+    public ISODate? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Date fraud was confirmed by the cardholder.
@@ -62,7 +62,7 @@ public record ReportedFraud6
     [IsoId("_W31XwRODEfC1ZfCQz0xB3g")]
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
-    public DateOnly? ConfirmationReportingDate { get; init; }
+    public ISODate? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Reference to the case as provided by the submitter.

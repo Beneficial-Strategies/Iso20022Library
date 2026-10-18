@@ -46,7 +46,7 @@ public record ReportData8
     [IsoId("_71Aq53FWEfC68Y4jZPNEug")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Time of the report.

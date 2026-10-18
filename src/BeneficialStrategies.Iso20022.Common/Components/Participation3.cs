@@ -49,5 +49,5 @@ public record Participation3
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CalculationDate { get; init; }
+    public ISODate? CalculationDate { get; init; }
 }

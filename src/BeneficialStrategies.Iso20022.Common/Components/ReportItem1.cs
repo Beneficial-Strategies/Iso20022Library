@@ -47,5 +47,5 @@ public record ReportItem1
     [DisplayName("Item Date")]
     [IsoXmlTag("ItmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ItemDate { get; init; }
+    public ISODate? ItemDate { get; init; }
 }

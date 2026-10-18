@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? EventDate { get; init; }
+        public ISODate? EventDate { get; init; }
 
         /// <summary>
         /// Choice between a Unique Transaction Identifier (UTI) or a proprietary identifier as agreed with the counterparty.

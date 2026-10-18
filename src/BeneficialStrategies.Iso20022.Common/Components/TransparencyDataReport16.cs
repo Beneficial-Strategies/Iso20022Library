@@ -63,7 +63,7 @@ public record TransparencyDataReport16
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ReportingDate { get; init; }
+    public ISODate? ReportingDate { get; init; }
 
     /// <summary>
     /// Maturity date of the financial instrument. Field applicable for the asset classes of bonds, interest rate derivatives, equity derivatives, commodity derivatives, foreign exchange derivatives, credit derivatives, C10 derivatives and derivatives on emission allowances.
@@ -72,7 +72,7 @@ public record TransparencyDataReport16
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Identification of non-equity financial instruments.

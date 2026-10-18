@@ -23,7 +23,7 @@ public record NamedPosition3
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReferenceDate { get; init; }
+    public required ISODate ReferenceDate { get; init; }
 
     /// <summary>
     /// Report containing aggregation of loan and collateral exposures between counterparties by Securities Financing Transaction type, for a limited number of fields.

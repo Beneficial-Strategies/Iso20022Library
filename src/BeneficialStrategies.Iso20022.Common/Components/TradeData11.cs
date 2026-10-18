@@ -63,7 +63,7 @@ public record TradeData11
     [DisplayName("Current Settlement Date")]
     [IsoXmlTag("CurSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CurrentSettlementDate { get; init; }
+    public ISODate? CurrentSettlementDate { get; init; }
 
     /// <summary>
     /// Settlement date has been amended.
@@ -72,7 +72,7 @@ public record TradeData11
     [DisplayName("New Settlement Date")]
     [IsoXmlTag("NewSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? NewSettlementDate { get; init; }
+    public ISODate? NewSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the date and time at which the current status was assigned to the individual trade.

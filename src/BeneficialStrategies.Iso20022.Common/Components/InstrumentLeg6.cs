@@ -105,7 +105,7 @@ public record InstrumentLeg6
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly LegValueDate { get; init; }
+    public required ISODate LegValueDate { get; init; }
 
     /// <summary>
     /// Currency trade is conducted.

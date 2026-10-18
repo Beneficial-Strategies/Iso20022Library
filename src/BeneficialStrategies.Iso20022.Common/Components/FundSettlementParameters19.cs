@@ -49,7 +49,7 @@ public record FundSettlementParameters19
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public DateOnly? SettlementDate { get; init; }
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Place.

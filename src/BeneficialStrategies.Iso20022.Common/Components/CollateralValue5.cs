@@ -30,7 +30,7 @@ public record CollateralValue5
     [IsoId("_1WMMs6X9EeynsLtPxJMJTQ")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
-    public required DateOnly ValuationDate { get; init; }
+    public required ISODate ValuationDate { get; init; }
 
     /// <summary>
     /// Provides details of the currency of the valuation.

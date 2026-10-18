@@ -23,7 +23,7 @@ public record FixedOpenTermContract2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Indication whether the counterparties to the transaction have agreed to an evergreen or extendable agreement.

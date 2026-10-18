@@ -119,7 +119,7 @@ public record ATMTransaction23
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RequestedExecutionDate { get; init; }
+    public ISODate? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Identifies the instant transfer program.

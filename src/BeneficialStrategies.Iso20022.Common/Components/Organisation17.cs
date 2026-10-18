@@ -67,7 +67,7 @@ public record Organisation17
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Tax identification information.

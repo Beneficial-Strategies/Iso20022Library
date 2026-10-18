@@ -94,7 +94,7 @@ public record PaymentTransaction172
     [IsoId("272a75bd-7238-4d3a-a89e-8ca238975cd9")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public DateOnly? OriginalInterbankSettlementDate { get; init; }
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Party who assigns the case.

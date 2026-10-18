@@ -104,7 +104,7 @@ public record PaymentTransaction103
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OriginalRequestedCollectionDate { get; init; }
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

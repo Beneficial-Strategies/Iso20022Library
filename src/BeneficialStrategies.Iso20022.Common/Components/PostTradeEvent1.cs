@@ -42,7 +42,7 @@ public record PostTradeEvent1
     /// </summary>
     [DisplayName("Profit Or Loss Settlement Date")]
     [IsoXmlTag("PrftOrLossSttlmDt")]
-    public DateOnly? ProfitOrLossSettlementDate { get; init; }
+    public ISODate? ProfitOrLossSettlementDate { get; init; }
 
     /// <summary>
     /// Type.

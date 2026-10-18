@@ -54,7 +54,7 @@ public record Cheque15
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Date after which a cheque is no longer valid.
@@ -67,7 +67,7 @@ public record Cheque15
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StaleDate { get; init; }
+    public ISODate? StaleDate { get; init; }
 
     /// <summary>
     /// Specifies the amount of the cheque to be paid to the payee.

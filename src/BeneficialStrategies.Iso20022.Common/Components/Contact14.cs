@@ -112,12 +112,12 @@ public record Contact14
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 
     /// <summary>
     /// Valid To.
     /// </summary>
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
-    public DateOnly? ValidTo { get; init; }
+    public ISODate? ValidTo { get; init; }
 }

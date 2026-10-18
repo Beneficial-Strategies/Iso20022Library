@@ -23,7 +23,7 @@ public record TradeAgreement15
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly TradeDate { get; init; }
+    public required ISODate TradeDate { get; init; }
 
     /// <summary>
     /// Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party.

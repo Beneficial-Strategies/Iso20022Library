@@ -33,7 +33,7 @@ public record LoanData142
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -92,5 +92,5 @@ public record LoanData142
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 }

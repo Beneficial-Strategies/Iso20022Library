@@ -33,7 +33,7 @@ public record FinancialItemParameters1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Identifier of related items, for example an assignment or an advice.

@@ -47,7 +47,7 @@ public record Commission25
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? CalculationDate { get; init; }
+    public ISODate? CalculationDate { get; init; }
 
     /// <summary>
     /// Total value of the commissions for a specific trade.

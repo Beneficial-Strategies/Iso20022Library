@@ -48,7 +48,7 @@ public record TaxEfficientProduct2
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfFirstSubscription { get; init; }
+    public ISODate? DateOfFirstSubscription { get; init; }
 
     /// <summary>
     /// Amounts already subscribed for the current year.

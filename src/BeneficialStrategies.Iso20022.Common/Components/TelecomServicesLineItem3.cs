@@ -147,7 +147,7 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
-    public DateOnly? StartDateTime { get; init; }
+    public ISODate? StartDateTime { get; init; }
 
     /// <summary>
     /// Tax.

@@ -32,7 +32,7 @@ public record BondDerivative2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Populated with the issuance date of the underlying bond.
@@ -41,5 +41,5 @@ public record BondDerivative2
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssuanceDate { get; init; }
+    public ISODate? IssuanceDate { get; init; }
 }

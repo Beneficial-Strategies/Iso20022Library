@@ -21,7 +21,7 @@ public record DateAndType1
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public required DateOnly Date { get; init; }
+    public required ISODate Date { get; init; }
 
     /// <summary>
     /// Type.

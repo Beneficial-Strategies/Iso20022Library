@@ -86,7 +86,7 @@ public record PaymentInstruction51
     [IsoId("7f3ee28b-3e13-410c-ae42-32bf1a03e034")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public DateOnly? PoolingAdjustmentDate { get; init; }
+    public ISODate? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

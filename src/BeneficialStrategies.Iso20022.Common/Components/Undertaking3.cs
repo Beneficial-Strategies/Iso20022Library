@@ -84,7 +84,7 @@ public record Undertaking3
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateOfIssuance { get; init; }
+    public required ISODate DateOfIssuance { get; init; }
 
     /// <summary>
     /// Location which is to be regarded as the place from which the undertaking is issued.

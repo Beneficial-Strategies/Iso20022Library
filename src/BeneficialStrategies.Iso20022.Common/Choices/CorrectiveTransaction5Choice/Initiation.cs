@@ -87,6 +87,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction5Choice
         [DisplayName("Requested Collection Date")]
         [IsoXmlTag("ReqdColltnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? RequestedCollectionDate { get; init; }
+        public ISODate? RequestedCollectionDate { get; init; }
     }
 }

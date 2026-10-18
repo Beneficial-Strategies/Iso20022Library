@@ -49,5 +49,5 @@ public record SettlementInstruction19
     /// </summary>
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 }

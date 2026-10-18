@@ -70,7 +70,7 @@ public record PaymentTransaction58
     [DisplayName("Original Requested Execution Date")]
     [IsoXmlTag("OrgnlReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OriginalRequestedExecutionDate { get; init; }
+    public ISODate? OriginalRequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date at which the creditor originally requested the collection of the amount of money from the debtor.
@@ -79,7 +79,7 @@ public record PaymentTransaction58
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OriginalRequestedCollectionDate { get; init; }
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Provides detailed information on the cancellation reason.

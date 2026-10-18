@@ -66,7 +66,7 @@ public record LoanData134
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Indication whether the secured financing transaction is subject to a general or special collateral arrangement.

@@ -39,7 +39,7 @@ public record HoldBackInformation3
     [DisplayName("Expected Release Date")]
     [IsoXmlTag("XpctdRlsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpectedReleaseDate { get; init; }
+    public ISODate? ExpectedReleaseDate { get; init; }
 
     /// <summary>
     /// New identification of the security.

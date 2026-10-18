@@ -52,7 +52,7 @@ public record NettingCutOffReportData2
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ActivationDate { get; init; }
+    public required ISODate ActivationDate { get; init; }
 
     /// <summary>
     /// Describes the participant receiving the net report.

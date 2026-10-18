@@ -51,7 +51,7 @@ public record DocumentGeneralInformation2
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? IssueDate { get; init; }
+    public ISODate? IssueDate { get; init; }
 
     /// <summary>
     /// URL (Uniform Resource Locator) where the document can be found.

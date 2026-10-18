@@ -22,7 +22,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9EXR4EfC68Y4jZPNEug")]
     [DisplayName("Date Mailed")]
     [IsoXmlTag("DtMld")]
-    public required DateOnly DateMailed { get; init; }
+    public required ISODate DateMailed { get; init; }
 
     /// <summary>
     /// Address where card was mailed to.
@@ -54,7 +54,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9GXR4EfC68Y4jZPNEug")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 
     /// <summary>
     /// Indicates whether card provides a Card Security Code.

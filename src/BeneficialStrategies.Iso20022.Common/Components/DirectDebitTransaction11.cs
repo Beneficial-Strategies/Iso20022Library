@@ -49,5 +49,5 @@ public record DirectDebitTransaction11
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? PreNotificationDate { get; init; }
+    public ISODate? PreNotificationDate { get; init; }
 }

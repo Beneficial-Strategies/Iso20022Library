@@ -28,7 +28,7 @@ public record Cheque19
     /// </summary>
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
-    public DateOnly? ChequeMaturityDate { get; init; }
+    public ISODate? ChequeMaturityDate { get; init; }
 
     /// <summary>
     /// Cheque Number.

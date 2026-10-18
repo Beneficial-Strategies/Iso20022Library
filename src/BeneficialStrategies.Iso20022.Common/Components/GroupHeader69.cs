@@ -33,7 +33,7 @@ public record GroupHeader69
     [DisplayName("Issued Date")]
     [IsoXmlTag("IssdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssuedDate { get; init; }
+    public required ISODate IssuedDate { get; init; }
 
     /// <summary>
     /// Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction.

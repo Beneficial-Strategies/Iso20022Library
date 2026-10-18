@@ -54,7 +54,7 @@ public record OriginalItem9
     [IsoId("966a876b-db51-4270-a5db-abf7605d79b9")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateOnly? ExpectedValueDate { get; init; }
+    public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Provides further information in order to identify a previous payment notification.

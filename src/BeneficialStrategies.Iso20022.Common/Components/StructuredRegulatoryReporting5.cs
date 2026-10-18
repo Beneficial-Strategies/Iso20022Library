@@ -30,7 +30,7 @@ public record StructuredRegulatoryReporting5
     [IsoId("_GC8jY3eKEfCdoODv2ypKfw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Country related to the specified type of regulatory reporting details.

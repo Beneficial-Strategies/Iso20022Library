@@ -63,12 +63,12 @@ public record ValueForMoney1
     /// </summary>
     [DisplayName("Review Date UK")]
     [IsoXmlTag("RvwDtUK")]
-    public DateOnly? ReviewDateUK { get; init; }
+    public ISODate? ReviewDateUK { get; init; }
 
     /// <summary>
     /// Review Next Due UK.
     /// </summary>
     [DisplayName("Review Next Due UK")]
     [IsoXmlTag("RvwNxtDueUK")]
-    public DateOnly? ReviewNextDueUK { get; init; }
+    public ISODate? ReviewNextDueUK { get; init; }
 }

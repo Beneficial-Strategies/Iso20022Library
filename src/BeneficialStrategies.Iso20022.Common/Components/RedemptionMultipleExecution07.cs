@@ -62,7 +62,7 @@ public record RedemptionMultipleExecution07
     [IsoId("47a67305-2a86-4f08-b905-afea293d5806")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public DateOnly? RequestedFutureTradeDate { get; init; }
+    public ISODate? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

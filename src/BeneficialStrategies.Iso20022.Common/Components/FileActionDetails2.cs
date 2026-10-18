@@ -52,7 +52,7 @@ public record FileActionDetails2
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ActionDate { get; init; }
+    public ISODate? ActionDate { get; init; }
 
     /// <summary>
     /// Indicates that the originator of the message is authorised to update the file.

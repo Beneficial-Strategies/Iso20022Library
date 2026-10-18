@@ -95,7 +95,7 @@ public record Plan2
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FirstPaymentDate { get; init; }
+    public ISODate? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Amount of the first payment when different from the subsequent payments.

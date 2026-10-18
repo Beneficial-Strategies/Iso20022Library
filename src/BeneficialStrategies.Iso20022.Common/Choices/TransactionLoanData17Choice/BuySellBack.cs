@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly EventDate { get; init; }
+        public required ISODate EventDate { get; init; }
 
         /// <summary>
         /// Indicates the date and time when the contract was executed.
@@ -76,7 +76,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Value Date")]
         [IsoXmlTag("ValDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ValueDate { get; init; }
+        public ISODate? ValueDate { get; init; }
 
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the transaction.
@@ -85,7 +85,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? MaturityDate { get; init; }
+        public ISODate? MaturityDate { get; init; }
 
         /// <summary>
         /// Indication whether the transaction is subject to a general collateral arrangement.
@@ -118,6 +118,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Termination Date")]
         [IsoXmlTag("TermntnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? TerminationDate { get; init; }
+        public ISODate? TerminationDate { get; init; }
     }
 }

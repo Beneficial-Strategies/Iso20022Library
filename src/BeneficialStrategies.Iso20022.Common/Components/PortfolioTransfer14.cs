@@ -46,7 +46,7 @@ public record PortfolioTransfer14
     [IsoId("8383f1d0-c007-46a8-9706-f3db807a1be0")]
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
-    public DateOnly? RequestedTransferDate { get; init; }
+    public ISODate? RequestedTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.

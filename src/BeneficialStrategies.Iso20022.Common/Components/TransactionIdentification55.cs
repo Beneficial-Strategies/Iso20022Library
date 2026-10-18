@@ -98,7 +98,7 @@ public record TransactionIdentification55
     /// </summary>
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
-    public required DateOnly LocalDate { get; init; }
+    public required ISODate LocalDate { get; init; }
 
     /// <summary>
     /// Local Time.

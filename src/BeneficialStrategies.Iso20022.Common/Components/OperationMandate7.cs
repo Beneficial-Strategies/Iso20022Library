@@ -35,7 +35,7 @@ public record OperationMandate7
     /// </summary>
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
-    public DateOnly? EndDate { get; init; }
+    public ISODate? EndDate { get; init; }
 
     /// <summary>
     /// Identification.
@@ -70,5 +70,5 @@ public record OperationMandate7
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public DateOnly? StartDate { get; init; }
+    public ISODate? StartDate { get; init; }
 }

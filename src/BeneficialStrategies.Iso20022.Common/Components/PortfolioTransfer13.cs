@@ -21,7 +21,7 @@ public record PortfolioTransfer13
     /// </summary>
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
-    public DateOnly? ActualTransferDate { get; init; }
+    public ISODate? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Additional Information.
@@ -85,7 +85,7 @@ public record PortfolioTransfer13
     /// </summary>
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public DateOnly? TaxDate { get; init; }
+    public ISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Transfer Completion Identification.

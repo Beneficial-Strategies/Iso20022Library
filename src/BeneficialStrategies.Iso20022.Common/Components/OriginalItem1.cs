@@ -51,5 +51,5 @@ public record OriginalItem1
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpectedValueDate { get; init; }
+    public ISODate? ExpectedValueDate { get; init; }
 }

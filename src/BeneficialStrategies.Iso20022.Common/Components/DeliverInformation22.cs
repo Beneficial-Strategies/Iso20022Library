@@ -78,7 +78,7 @@ public record DeliverInformation22
     [IsoId("8feeaca6-273a-448c-b24f-14b7bbdc6260")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public DateOnly? RequestedTradeDate { get; init; }
+    public ISODate? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -86,7 +86,7 @@ public record DeliverInformation22
     [IsoId("052dc8a7-4841-4201-ada2-e2dd0041a3c9")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public DateOnly? RequestedSettlementDate { get; init; }
+    public ISODate? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid/to be paid or received in exchange for the financial instrument.

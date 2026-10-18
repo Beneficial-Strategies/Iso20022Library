@@ -71,7 +71,7 @@ public record SettlementObligation6
     [IsoId("_-fGG5aMOEeCojJW5vEuTEQ_873149557")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public DateOnly? IntendedSettlementDate { get; init; }
+    public ISODate? IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Provides details about the security identification.
@@ -87,7 +87,7 @@ public record SettlementObligation6
     [IsoId("_-fGG56MOEeCojJW5vEuTEQ_-1120995149")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public DateOnly? TradeDate { get; init; }
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Provides the price of the trade.

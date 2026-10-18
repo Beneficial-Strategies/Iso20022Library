@@ -49,7 +49,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice
         [DisplayName("Date Of First Subscription")]
         [IsoXmlTag("DtOfFrstSbcpt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? DateOfFirstSubscription { get; init; }
+        public ISODate? DateOfFirstSubscription { get; init; }
 
         /// <summary>
         /// Amounts already subscribed for the current year.

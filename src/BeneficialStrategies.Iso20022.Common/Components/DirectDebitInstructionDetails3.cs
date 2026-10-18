@@ -49,7 +49,7 @@ public record DirectDebitInstructionDetails3
     /// </summary>
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
-    public DateOnly? LastCollectionDate { get; init; }
+    public ISODate? LastCollectionDate { get; init; }
 
     /// <summary>
     /// Mandate Identification.

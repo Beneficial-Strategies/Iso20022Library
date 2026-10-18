@@ -102,7 +102,7 @@ public record Cardholder23
     [IsoId("_9SthGTTTEfCLfeKcVPKw8g")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public DateOnly? DateOfBirth { get; init; }
+    public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// Identifies a cardholder that is a highly valued individual.

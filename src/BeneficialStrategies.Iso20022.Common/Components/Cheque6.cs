@@ -73,7 +73,7 @@ public record Cheque6
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ChequeMaturityDate { get; init; }
+    public ISODate? ChequeMaturityDate { get; init; }
 
     /// <summary>
     /// Identifies, in a coded form, the cheque layout, company logo and digitised signature to be used to print the cheque, as agreed between the initiating party and the debtor&apos;s agent.

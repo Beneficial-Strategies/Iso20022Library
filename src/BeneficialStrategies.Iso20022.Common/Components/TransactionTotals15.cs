@@ -30,7 +30,7 @@ public record TransactionTotals15
     [IsoId("_BAE1g2P5EfCX7uJiAWHfoQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.

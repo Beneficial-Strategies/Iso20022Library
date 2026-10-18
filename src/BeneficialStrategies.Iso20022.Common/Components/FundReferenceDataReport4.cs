@@ -49,7 +49,7 @@ public record FundReferenceDataReport4
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly GeneralReferenceDate { get; init; }
+    public required ISODate GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Indicates whether target market data is included in the report. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00006.

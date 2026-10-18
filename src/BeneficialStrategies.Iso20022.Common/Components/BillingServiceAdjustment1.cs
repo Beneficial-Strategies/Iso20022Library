@@ -57,7 +57,7 @@ public record BillingServiceAdjustment1
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ErrorDate { get; init; }
+    public ISODate? ErrorDate { get; init; }
 
     /// <summary>
     /// Financial institution&apos;s own, internal service identification code, used to uniquely identify the service within the financial institution.

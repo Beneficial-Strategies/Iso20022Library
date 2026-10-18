@@ -33,5 +33,5 @@ public record DocumentIdentification7
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly DateOfIssue { get; init; }
+    public required ISODate DateOfIssue { get; init; }
 }

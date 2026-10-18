@@ -49,7 +49,7 @@ public record InvoiceSummary1
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InvoiceDate { get; init; }
+    public ISODate? InvoiceDate { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.

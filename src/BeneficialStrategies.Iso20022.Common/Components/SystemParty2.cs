@@ -25,7 +25,7 @@ public record SystemParty2
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OpeningDate { get; init; }
+    public ISODate? OpeningDate { get; init; }
 
     /// <summary>
     /// Specifies the closing date of the party.
@@ -34,5 +34,5 @@ public record SystemParty2
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ClosingDate { get; init; }
+    public ISODate? ClosingDate { get; init; }
 }

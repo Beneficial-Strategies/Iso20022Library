@@ -63,7 +63,7 @@ public record Record3
     /// </summary>
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
-    public DateOnly? ClearingDate { get; init; }
+    public ISODate? ClearingDate { get; init; }
 
     /// <summary>
     /// Clearing Method.

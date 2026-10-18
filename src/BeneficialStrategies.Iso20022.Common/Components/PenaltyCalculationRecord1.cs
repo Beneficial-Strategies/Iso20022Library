@@ -22,7 +22,7 @@ public record PenaltyCalculationRecord1
     [IsoId("_qVHWQDkVEem897H7zB2RJg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public required DateOnly Date { get; init; }
+    public required ISODate Date { get; init; }
 
     /// <summary>
     /// Information provided for penalties where there is missing reference data on this business day.

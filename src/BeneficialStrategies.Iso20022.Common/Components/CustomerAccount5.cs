@@ -134,7 +134,7 @@ public record CustomerAccount5
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ClosingDate { get; init; }
+    public ISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Restriction on capability or operations allowed.

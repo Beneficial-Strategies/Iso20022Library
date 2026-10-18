@@ -35,7 +35,7 @@ public record ReportedFraud4
     /// </summary>
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
-    public DateOnly? CardholderReportingDate { get; init; }
+    public ISODate? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Case Locator Number.
@@ -63,7 +63,7 @@ public record ReportedFraud4
     /// </summary>
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
-    public DateOnly? ConfirmationReportingDate { get; init; }
+    public ISODate? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Investigation Status.

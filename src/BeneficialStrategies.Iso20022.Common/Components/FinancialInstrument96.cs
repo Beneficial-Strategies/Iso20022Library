@@ -126,7 +126,7 @@ public record FinancialInstrument96
     [DisplayName("Launch Date")]
     [IsoXmlTag("LnchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LaunchDate { get; init; }
+    public ISODate? LaunchDate { get; init; }
 
     /// <summary>
     /// Date on which the fund is closed to investment.
@@ -135,7 +135,7 @@ public record FinancialInstrument96
     [DisplayName("Fund End Date")]
     [IsoXmlTag("FndEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? FundEndDate { get; init; }
+    public ISODate? FundEndDate { get; init; }
 
     /// <summary>
     /// Date the fund closes.
@@ -144,7 +144,7 @@ public record FinancialInstrument96
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TerminationDate { get; init; }
+    public ISODate? TerminationDate { get; init; }
 
     /// <summary>
     /// Date on which the discount period of the newly launched investment fund ends.
@@ -153,7 +153,7 @@ public record FinancialInstrument96
     [DisplayName("Initial Offer End Date")]
     [IsoXmlTag("InitlOfferEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? InitialOfferEndDate { get; init; }
+    public ISODate? InitialOfferEndDate { get; init; }
 
     /// <summary>
     /// Date on which valuation of the investment fund class is suspended.
@@ -162,7 +162,7 @@ public record FinancialInstrument96
     [DisplayName("Suspension Start Date")]
     [IsoXmlTag("SspnsnStartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SuspensionStartDate { get; init; }
+    public ISODate? SuspensionStartDate { get; init; }
 
     /// <summary>
     /// Date on which valuation of the investment fund class is unsuspended.
@@ -171,7 +171,7 @@ public record FinancialInstrument96
     [DisplayName("Suspension End Date")]
     [IsoXmlTag("SspnsnEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SuspensionEndDate { get; init; }
+    public ISODate? SuspensionEndDate { get; init; }
 
     /// <summary>
     /// Maturity date of the product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00065.
@@ -180,7 +180,7 @@ public record FinancialInstrument96
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Specifies whether the product may be terminated early. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00067.

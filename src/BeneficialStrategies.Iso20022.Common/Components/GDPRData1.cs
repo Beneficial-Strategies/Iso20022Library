@@ -40,5 +40,5 @@ public record GDPRData1
     [DisplayName("Consent Date")]
     [IsoXmlTag("CnsntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ConsentDate { get; init; }
+    public required ISODate ConsentDate { get; init; }
 }

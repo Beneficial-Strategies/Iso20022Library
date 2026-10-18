@@ -41,7 +41,7 @@ public record OriginalInvoiceInformation1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Due date for the payment of the invoice.
@@ -50,5 +50,5 @@ public record OriginalInvoiceInformation1
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly PaymentDueDate { get; init; }
+    public required ISODate PaymentDueDate { get; init; }
 }

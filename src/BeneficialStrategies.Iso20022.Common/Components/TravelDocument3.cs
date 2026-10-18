@@ -54,7 +54,7 @@ public record TravelDocument3
     [IsoId("_Cmg2WVN7EfC0lMwgjvMClw")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
-    public DateOnly? IssuanceDate { get; init; }
+    public ISODate? IssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of travel document (if and when relevant).
@@ -62,7 +62,7 @@ public record TravelDocument3
     [IsoId("_Cmg2W1N7EfC0lMwgjvMClw")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public DateOnly? ExpirationDate { get; init; }
+    public ISODate? ExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the travel document.

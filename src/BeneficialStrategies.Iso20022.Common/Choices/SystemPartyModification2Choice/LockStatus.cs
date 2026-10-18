@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? ValidFrom { get; init; }
+        public ISODate? ValidFrom { get; init; }
 
         /// <summary>
         /// Lock status of the party.

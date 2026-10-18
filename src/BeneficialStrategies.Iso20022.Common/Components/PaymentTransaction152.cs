@@ -85,7 +85,7 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public DateOnly? OriginalInterbankSettlementDate { get; init; }
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Original Transaction Identification.

@@ -21,7 +21,7 @@ public record MandateRelatedInformation17
     /// </summary>
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
-    public DateOnly? DateOfSignature { get; init; }
+    public ISODate? DateOfSignature { get; init; }
 
     /// <summary>
     /// Mandate Identification.

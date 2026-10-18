@@ -103,7 +103,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Settlement Date")]
         [IsoXmlTag("SttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly SettlementDate { get; init; }
+        public required ISODate SettlementDate { get; init; }
 
         /// <summary>
         /// Date on which the repurchase will be executed, that is the date on which the amount of money is due to be returned or received versus the asset pledged or received as collateral.
@@ -112,7 +112,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required DateOnly MaturityDate { get; init; }
+        public required ISODate MaturityDate { get; init; }
 
         /// <summary>
         /// Defines whether the transaction is a cash borrowing or cash lending transaction.

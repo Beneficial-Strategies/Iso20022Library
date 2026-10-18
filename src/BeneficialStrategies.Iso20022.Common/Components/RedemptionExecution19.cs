@@ -150,7 +150,7 @@ public record RedemptionExecution19
     [IsoId("f8ed15bf-6d86-44e2-8dc3-e543e48a48ef")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public DateOnly? CashSettlementDate { get; init; }
+    public ISODate? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

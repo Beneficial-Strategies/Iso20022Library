@@ -86,7 +86,7 @@ public record Drawdown04
     [IsoId("133a8671-5ecc-4c6d-abd9-6e14671b64ca")]
     [DisplayName("Pension Commencement Lump Sum Date")]
     [IsoXmlTag("PnsnCmcmntLumpSumDt")]
-    public DateOnly? PensionCommencementLumpSumDate { get; init; }
+    public ISODate? PensionCommencementLumpSumDate { get; init; }
 
     /// <summary>
     /// Indicates there have been multiple pension commencement lump sum (PCLS) payments.
@@ -134,7 +134,7 @@ public record Drawdown04
     [IsoId("429f5629-4e76-4f1d-95dc-63f198af35b3")]
     [DisplayName("Flexible Drawdown Triggered Date")]
     [IsoXmlTag("FlxblDrwdwnTrggrdDt")]
-    public DateOnly? FlexibleDrawdownTriggeredDate { get; init; }
+    public ISODate? FlexibleDrawdownTriggeredDate { get; init; }
 
     /// <summary>
     /// Date on which the tranche is actioned.
@@ -142,7 +142,7 @@ public record Drawdown04
     [IsoId("667a3f91-caac-40e3-aea9-8d695610355e")]
     [DisplayName("Tranche Date")]
     [IsoXmlTag("TrchDt")]
-    public DateOnly? TrancheDate { get; init; }
+    public ISODate? TrancheDate { get; init; }
 
     /// <summary>
     /// Additional information about the drawdown.

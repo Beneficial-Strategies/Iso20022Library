@@ -22,7 +22,7 @@ public record LodgingLineItem4
     [IsoId("_6psxQUh4EfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public DateOnly? Date { get; init; }
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Time of the charge for the product or service associated with the line item.

@@ -41,7 +41,7 @@ public record ReferredDocumentInformation2
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? RelatedDate { get; init; }
+    public ISODate? RelatedDate { get; init; }
 
     /// <summary>
     /// Amount of money and currency of a document referred to invoice to be financed.

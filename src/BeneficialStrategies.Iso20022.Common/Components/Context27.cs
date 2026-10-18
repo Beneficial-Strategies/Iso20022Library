@@ -246,7 +246,7 @@ public record Context27
     [IsoId("_5YluBCnUEfCD0_iZ8tw-zA")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Contains network or scheme calculated maximum processing date when the clearing will occur.

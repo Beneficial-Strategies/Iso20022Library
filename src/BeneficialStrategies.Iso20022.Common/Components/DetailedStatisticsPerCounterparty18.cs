@@ -23,7 +23,7 @@ public record DetailedStatisticsPerCounterparty18
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly ReferenceDate { get; init; }
+    public required ISODate ReferenceDate { get; init; }
 
     /// <summary>
     /// Total number of reports sent or received.

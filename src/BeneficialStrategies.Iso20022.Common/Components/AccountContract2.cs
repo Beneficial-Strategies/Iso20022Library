@@ -23,7 +23,7 @@ public record AccountContract2
     [DisplayName("Target Go Live Date")]
     [IsoXmlTag("TrgtGoLiveDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TargetGoLiveDate { get; init; }
+    public ISODate? TargetGoLiveDate { get; init; }
 
     /// <summary>
     /// Date on which the account and related services are expected to cease to be operational for the account owner.
@@ -32,7 +32,7 @@ public record AccountContract2
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TargetClosingDate { get; init; }
+    public ISODate? TargetClosingDate { get; init; }
 
     /// <summary>
     /// Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.

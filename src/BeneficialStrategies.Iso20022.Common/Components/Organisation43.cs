@@ -42,7 +42,7 @@ public record Organisation43
     /// </summary>
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
-    public DateOnly? EstablishedDate { get; init; }
+    public ISODate? EstablishedDate { get; init; }
 
     /// <summary>
     /// Full Legal Name.
@@ -91,7 +91,7 @@ public record Organisation43
     /// </summary>
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
-    public DateOnly? RegistrationDate { get; init; }
+    public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Registration Number.

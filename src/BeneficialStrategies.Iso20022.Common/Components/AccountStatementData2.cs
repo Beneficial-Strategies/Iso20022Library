@@ -23,7 +23,7 @@ public record AccountStatementData2
     [DisplayName("Statement Date")]
     [IsoXmlTag("StmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? StatementDate { get; init; }
+    public ISODate? StatementDate { get; init; }
 
     /// <summary>
     /// Time the account statement is generated.

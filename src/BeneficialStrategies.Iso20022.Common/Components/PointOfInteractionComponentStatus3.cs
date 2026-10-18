@@ -41,5 +41,5 @@ public record PointOfInteractionComponentStatus3
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpiryDate { get; init; }
+    public ISODate? ExpiryDate { get; init; }
 }

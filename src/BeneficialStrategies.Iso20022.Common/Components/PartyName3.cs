@@ -23,7 +23,7 @@ public record PartyName3
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidFrom { get; init; }
+    public ISODate? ValidFrom { get; init; }
 
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.

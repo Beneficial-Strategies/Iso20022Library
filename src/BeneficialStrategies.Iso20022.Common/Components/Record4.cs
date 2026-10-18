@@ -118,7 +118,7 @@ public record Record4
     [IsoId("_dqd1m27-EfC68Y4jZPNEug")]
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
-    public DateOnly? ClearingDate { get; init; }
+    public ISODate? ClearingDate { get; init; }
 
     /// <summary>
     /// Net clearing amount.

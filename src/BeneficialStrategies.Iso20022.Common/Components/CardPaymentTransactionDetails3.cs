@@ -55,7 +55,7 @@ public record CardPaymentTransactionDetails3
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ValidityDate { get; init; }
+    public ISODate? ValidityDate { get; init; }
 
     /// <summary>
     /// Transaction category level on an unattended POI (Point Of Interaction).

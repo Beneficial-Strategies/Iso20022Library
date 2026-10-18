@@ -39,7 +39,7 @@ public record InsuranceDataSet1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly IssueDate { get; init; }
+    public required ISODate IssueDate { get; init; }
 
     /// <summary>
     /// Date upon which cover under an insurance policy becomes effective.
@@ -48,7 +48,7 @@ public record InsuranceDataSet1
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? EffectiveDate { get; init; }
+    public ISODate? EffectiveDate { get; init; }
 
     /// <summary>
     /// Place where the insurance certificate was issued.

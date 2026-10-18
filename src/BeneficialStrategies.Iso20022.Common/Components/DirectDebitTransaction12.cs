@@ -36,7 +36,7 @@ public record DirectDebitTransaction12
     /// </summary>
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
-    public DateOnly? PreNotificationDate { get; init; }
+    public ISODate? PreNotificationDate { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.

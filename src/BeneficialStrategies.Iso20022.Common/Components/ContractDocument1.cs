@@ -33,7 +33,7 @@ public record ContractDocument1
     [DisplayName("Sign Off Date")]
     [IsoXmlTag("SgnOffDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? SignOffDate { get; init; }
+    public ISODate? SignOffDate { get; init; }
 
     /// <summary>
     /// Identification of the version of the contract.

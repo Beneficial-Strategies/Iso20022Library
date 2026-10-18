@@ -73,7 +73,7 @@ public record TaxEfficientProduct7
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateOfFirstSubscription { get; init; }
+    public ISODate? DateOfFirstSubscription { get; init; }
 
     /// <summary>
     /// Amounts already subscribed for the current year.
@@ -133,7 +133,7 @@ public record TaxEfficientProduct7
     [DisplayName("Date First Qualifying Addition")]
     [IsoXmlTag("DtFrstQlfygAddtn")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? DateFirstQualifyingAddition { get; init; }
+    public ISODate? DateFirstQualifyingAddition { get; init; }
 
     /// <summary>
     /// Identification of the investor as assigned by a tax authority.

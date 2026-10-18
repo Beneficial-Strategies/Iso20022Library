@@ -73,5 +73,5 @@ public record SecuritiesCurrencyIdentification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LastUpdated { get; init; }
+    public ISODate? LastUpdated { get; init; }
 }

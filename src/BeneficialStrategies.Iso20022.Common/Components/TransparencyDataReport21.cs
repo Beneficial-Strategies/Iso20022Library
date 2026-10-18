@@ -70,14 +70,14 @@ public record TransparencyDataReport21
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public DateOnly? MaturityDate { get; init; }
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Reporting Date.
     /// </summary>
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
-    public DateOnly? ReportingDate { get; init; }
+    public ISODate? ReportingDate { get; init; }
 
     /// <summary>
     /// Technical Record Identification.

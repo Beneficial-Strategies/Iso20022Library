@@ -35,7 +35,7 @@ public record OptionInstructionDetails10
     /// </summary>
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
-    public DateOnly? CoverProtectDate { get; init; }
+    public ISODate? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Customer Reference.
@@ -49,7 +49,7 @@ public record OptionInstructionDetails10
     /// </summary>
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
-    public required DateOnly InstructionDate { get; init; }
+    public required ISODate InstructionDate { get; init; }
 
     /// <summary>
     /// Instruction Identification.
@@ -91,7 +91,7 @@ public record OptionInstructionDetails10
     /// </summary>
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
-    public DateOnly? ProtectDate { get; init; }
+    public ISODate? ProtectDate { get; init; }
 
     /// <summary>
     /// Protect Indicator.

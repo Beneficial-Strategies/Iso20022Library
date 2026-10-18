@@ -32,7 +32,7 @@ public record Unit8
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? OrderDate { get; init; }
+    public ISODate? OrderDate { get; init; }
 
     /// <summary>
     /// Date the investor purchased the financial instrument.
@@ -41,7 +41,7 @@ public record Unit8
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? AcquisitionDate { get; init; }
+    public ISODate? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security that is delivered.

@@ -154,7 +154,7 @@ public record Baseline5
     [DisplayName("Latest Match Date")]
     [IsoXmlTag("LatstMtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LatestMatchDate { get; init; }
+    public ISODate? LatestMatchDate { get; init; }
 
     /// <summary>
     /// Specifies that a commercial data set is required for each shipment part of the transaction.

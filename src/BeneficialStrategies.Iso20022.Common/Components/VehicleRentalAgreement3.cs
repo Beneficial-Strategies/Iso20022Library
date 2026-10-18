@@ -35,7 +35,7 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
-    public DateOnly? CheckInDate { get; init; }
+    public ISODate? CheckInDate { get; init; }
 
     /// <summary>
     /// Check In Time.
@@ -49,7 +49,7 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
-    public DateOnly? CheckOutDate { get; init; }
+    public ISODate? CheckOutDate { get; init; }
 
     /// <summary>
     /// Check Out Time.

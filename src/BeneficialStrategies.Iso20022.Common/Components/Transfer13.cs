@@ -77,7 +77,7 @@ public record Transfer13
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? TransferOrderDateForm { get; init; }
+    public ISODate? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Identifies the transfer reason.

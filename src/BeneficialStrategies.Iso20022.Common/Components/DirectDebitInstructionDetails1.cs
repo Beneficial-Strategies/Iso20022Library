@@ -70,7 +70,7 @@ public record DirectDebitInstructionDetails1
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? LastCollectionDate { get; init; }
+    public ISODate? LastCollectionDate { get; init; }
 
     /// <summary>
     /// Provides further information about the status of a requested transaction schedule transfer.

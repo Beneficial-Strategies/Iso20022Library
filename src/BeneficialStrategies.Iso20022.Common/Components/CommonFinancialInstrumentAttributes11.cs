@@ -126,7 +126,7 @@ public record CommonFinancialInstrumentAttributes11
     [DisplayName("Listing Date")]
     [IsoXmlTag("ListgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ListingDate { get; init; }
+    public ISODate? ListingDate { get; init; }
 
     /// <summary>
     /// Date/time at which positions are struck to note which parties are entitled to receive the entitlement to a corporate event or vote at a meeting.
@@ -144,7 +144,7 @@ public record CommonFinancialInstrumentAttributes11
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? ExpiryDate { get; init; }
+    public ISODate? ExpiryDate { get; init; }
 
     /// <summary>
     /// Reason for which money is raised through the issuance of a security.

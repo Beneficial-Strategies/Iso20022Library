@@ -278,7 +278,7 @@ public record Context30
     [IsoId("_Jsx6KXbdEfCmC4yYaU27Kg")]
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
-    public DateOnly? CaptureDate { get; init; }
+    public ISODate? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -286,7 +286,7 @@ public record Context30
     [IsoId("_Jsx6K3bdEfCmC4yYaU27Kg")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public DateOnly? DateAnticipated { get; init; }
+    public ISODate? DateAnticipated { get; init; }
 
     /// <summary>
     /// Identify a sale transaction assigned by the sale system.

@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [DisplayName("Registration Date")]
         [IsoXmlTag("RegnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public DateOnly? RegistrationDate { get; init; }
+        public ISODate? RegistrationDate { get; init; }
 
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services.

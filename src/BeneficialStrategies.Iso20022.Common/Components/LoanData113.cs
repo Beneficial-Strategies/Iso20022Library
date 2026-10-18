@@ -33,7 +33,7 @@ public record LoanData113
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required DateOnly EventDate { get; init; }
+    public required ISODate EventDate { get; init; }
 
     /// <summary>
     /// Market value of the securities or commodities on loan or borrowed.

@@ -238,7 +238,7 @@ public record TripLeg3
     /// </summary>
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
-    public DateOnly? TicketIssueDate { get; init; }
+    public ISODate? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Ticket Issue Location.

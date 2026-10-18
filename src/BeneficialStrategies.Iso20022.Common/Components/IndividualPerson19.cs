@@ -55,7 +55,7 @@ public record IndividualPerson19
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public DateOnly? BirthDate { get; init; }
+    public ISODate? BirthDate { get; init; }
 
     /// <summary>
     /// Country where a person was born.
