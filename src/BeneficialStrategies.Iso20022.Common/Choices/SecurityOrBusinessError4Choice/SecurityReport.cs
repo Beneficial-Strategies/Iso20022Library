@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
         [IsoId("_QAKbgZJKEeuAlLVx8pyt3w")]
         [DisplayName("Financial Instrument Identification")]
         [IsoXmlTag("FinInstrmId")]
-        public SecurityIdentification39? FinancialInstrumentIdentification { get; init; }
+        public ValueList<SecurityIdentification39> FinancialInstrumentIdentification { get; init; } = [];
 
         /// <summary>
         /// Provides additional details about the financial instrument.
@@ -38,6 +38,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
         [IsoId("_QAKbhZJKEeuAlLVx8pyt3w")]
         [DisplayName("Financial Instrument Attributes")]
         [IsoXmlTag("FinInstrmAttrbts")]
-        public CommonFinancialInstrumentAttributes11? FinancialInstrumentAttributes { get; init; }
+        public ValueList<CommonFinancialInstrumentAttributes11> FinancialInstrumentAttributes { get; init; } = [];
     }
 }

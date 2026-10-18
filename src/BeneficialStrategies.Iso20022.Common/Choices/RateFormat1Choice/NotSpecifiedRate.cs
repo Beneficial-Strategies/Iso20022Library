@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat1Choice
     /// </summary>
     [IsoId("_UPh5iNp-Ed-ak6NoX_4Aeg_-1534892500")]
     [DisplayName("Not Specified Rate")]
-    public record NotSpecifiedRate : RateFormat1Choice_ { }
+    public record NotSpecifiedRate : RateFormat1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("NotSpcfdRate")]
+        public required RateType12FormatChoice_ Value { get; init; }
+    }
 }

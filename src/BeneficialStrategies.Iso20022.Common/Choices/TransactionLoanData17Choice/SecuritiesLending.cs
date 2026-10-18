@@ -109,7 +109,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [IsoId("_2C2N0a1KEemojPqsRBB5Lg")]
         [DisplayName("Term")]
         [IsoXmlTag("Term")]
-        public ContractTerm3Choice_? Term { get; init; }
+        public ValueList<ContractTerm3Choice_> Term { get; init; } = [];
 
         /// <summary>
         /// Indication of the type of assets subject of the transaction.

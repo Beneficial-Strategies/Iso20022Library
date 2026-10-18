@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1Choice
     /// </summary>
     [IsoId("_OAv0gAf_EeSaceXTzyiZRg")]
     [DisplayName("Transaction Type")]
-    public record TransactionType : TransactionType1Choice_ { }
+    public record TransactionType : TransactionType1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("TxTp")]
+        public required TransactionType2Choice_ Value { get; init; }
+    }
 }

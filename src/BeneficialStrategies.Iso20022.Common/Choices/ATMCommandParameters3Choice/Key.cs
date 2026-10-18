@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice
         [DisplayName("Certificate")]
         [IsoXmlTag("Cert")]
         [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-        public Max5000Binary? Certificate { get; init; }
+        public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 
         /// <summary>
         /// Cryptographic key involved in the security command.
@@ -48,6 +48,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice
         [IsoId("_ABCokItKEeSxlKlAGYErFg")]
         [DisplayName("Key Properties")]
         [IsoXmlTag("KeyProps")]
-        public KEKIdentifier4? KeyProperties { get; init; }
+        public ValueList<KEKIdentifier4> KeyProperties { get; init; } = [];
     }
 }

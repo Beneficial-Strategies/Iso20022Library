@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus3Choice
     /// </summary>
     [IsoId("_RCpGw9p-Ed-ak6NoX_4Aeg_1721093163")]
     [DisplayName("Global Instruction Status")]
-    public record GlobalInstructionStatus : InstructionStatus3Choice_ { }
+    public record GlobalInstructionStatus : InstructionStatus3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("GblInstrSts")]
+        public required InstructionStatus4Choice_ Value { get; init; }
+    }
 }

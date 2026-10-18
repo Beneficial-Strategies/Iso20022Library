@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     /// </summary>
     [IsoId("_vIDnaUH7EeaV3ab_pHzFIQ")]
     [DisplayName("Suspended")]
-    public record Suspended : OrderStatus3Choice_ { }
+    public record Suspended : OrderStatus3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Sspd")]
+        public required SuspendedStatusReason4Choice_ Value { get; init; }
+    }
 }

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData34Choice
         [IsoId("_AtBHYcK3EeuFNp8LZAnorg")]
         [DisplayName("Pairing Reconciliation Status")]
         [IsoXmlTag("PairgRcncltnSts")]
-        public NumberOfReportsPerStatus4? PairingReconciliationStatus { get; init; }
+        public ValueList<NumberOfReportsPerStatus4> PairingReconciliationStatus { get; init; } = [];
 
         /// <summary>
         /// Data on transaction requiring reconciliation or pairing.
@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData34Choice
         [IsoId("_AtBHZcK3EeuFNp8LZAnorg")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; }
+        public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     }
 }

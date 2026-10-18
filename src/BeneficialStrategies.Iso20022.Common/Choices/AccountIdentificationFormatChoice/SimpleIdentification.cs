@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     /// </summary>
     [IsoId("_RBvu5tp-Ed-ak6NoX_4Aeg_1757395821")]
     [DisplayName("Simple Identification")]
+    [IsoXmlTag("SmplId")]
     public record SimpleIdentification : AccountIdentificationFormatChoice_
     {
         /// <summary>

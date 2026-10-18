@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice
     /// </summary>
     [IsoId("_RCWL1dp-Ed-ak6NoX_4Aeg_2129843244")]
     [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
     public record InstructionIdentification : InstructionType1Choice_
     {
         /// <summary>

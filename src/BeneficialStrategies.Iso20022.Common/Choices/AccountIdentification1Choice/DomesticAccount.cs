@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification1Choice
     /// </summary>
     [IsoId("_PdnCotp-Ed-ak6NoX_4Aeg_-1666130862")]
     [DisplayName("Domestic Account")]
+    [IsoXmlTag("DmstAcct")]
     public record DomesticAccount : AccountIdentification1Choice_
     {
         /// <summary>

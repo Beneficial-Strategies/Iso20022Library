@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     /// </summary>
     [IsoId("_1bgUExZXEe2QNcZTDeoKnQ")]
     [DisplayName("Energy")]
-    public record Energy : AssetClassCommodity6Choice_ { }
+    public record Energy : AssetClassCommodity6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Nrgy")]
+        public required AssetClassCommodityEnergy3Choice_ Value { get; init; }
+    }
 }

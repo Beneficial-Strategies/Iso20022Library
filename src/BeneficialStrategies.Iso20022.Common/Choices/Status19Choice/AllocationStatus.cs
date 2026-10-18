@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status19Choice
     /// </summary>
     [IsoId("_9HwplTqpEeWyoP0PbocV1Q")]
     [DisplayName("Allocation Status")]
-    public record AllocationStatus : Status19Choice_ { }
+    public record AllocationStatus : Status19Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AllcnSts")]
+        public required AllocationSatus3Choice_ Value { get; init; }
+    }
 }

@@ -37,7 +37,7 @@ public class StandingOrder10ValidatorTests
             CreditorAccount = account,
             Debtor = agent,
             DebtorAccount = account,
-            ExecutionType = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event(),
+            ExecutionType = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event { Value = new BeneficialStrategies.Iso20022.Choices.EventType1Choice.Proprietary { Value = "EVT" } },
             Frequency = Frequency2Code.Monthly,
             ValidityPeriod = new BeneficialStrategies.Iso20022.Choices.DatePeriod2Choice.FromDate
             {

@@ -46,6 +46,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice
         [IsoId("_yHL6wE4NEeiQHa-q1Uephw")]
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
-        public AdditionalInformation15? AdditionalInformation { get; init; }
+        public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
     }
 }

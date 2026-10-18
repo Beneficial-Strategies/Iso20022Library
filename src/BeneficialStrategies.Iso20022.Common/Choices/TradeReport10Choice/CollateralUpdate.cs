@@ -56,6 +56,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
         [IsoId("_Kx7hCQACEeqefbt-QjTNnA")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; }
+        public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     }
 }

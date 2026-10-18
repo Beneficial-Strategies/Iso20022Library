@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     /// </summary>
     [IsoId("_1bgUJxZXEe2QNcZTDeoKnQ")]
     [DisplayName("Multi Commodity Exotic")]
+    [IsoXmlTag("MultiCmmdtyExtc")]
     public record MultiCommodityExotic : AssetClassCommodity6Choice_
     {
         /// <summary>

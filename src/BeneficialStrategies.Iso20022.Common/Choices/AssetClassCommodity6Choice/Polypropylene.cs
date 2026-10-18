@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     /// </summary>
     [IsoId("_1bgUIxZXEe2QNcZTDeoKnQ")]
     [DisplayName("Polypropylene")]
-    public record Polypropylene : AssetClassCommodity6Choice_ { }
+    public record Polypropylene : AssetClassCommodity6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Plprpln")]
+        public required AssetClassCommodityPolypropylene4Choice_ Value { get; init; }
+    }
 }

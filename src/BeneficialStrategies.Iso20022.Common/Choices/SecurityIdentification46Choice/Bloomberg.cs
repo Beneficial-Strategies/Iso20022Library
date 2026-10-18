@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Blmbrg")]
-        public required BloombergIdentifier Value { get; init; }
+        public required Bloomberg2Identifier Value { get; init; }
     }
 }

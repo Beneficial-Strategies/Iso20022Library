@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choi
     /// </summary>
     [IsoId("_PJPwqZNeEeytjZlcgApf6A")]
     [DisplayName("Index")]
-    public record Index : SecurityIdentificationQuery4Choice_ { }
+    public record Index : SecurityIdentificationQuery4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Indx")]
+        public required SecurityIdentification20Choice_ Value { get; init; }
+    }
 }

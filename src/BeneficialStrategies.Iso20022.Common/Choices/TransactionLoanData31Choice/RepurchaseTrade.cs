@@ -127,7 +127,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [IsoId("_lp9C-8zsEeux2uvSBFU54Q")]
         [DisplayName("Term")]
         [IsoXmlTag("Term")]
-        public ContractTerm7Choice_? Term { get; init; }
+        public ValueList<ContractTerm7Choice_> Term { get; init; } = [];
 
         /// <summary>
         /// Interest rate of the loan.

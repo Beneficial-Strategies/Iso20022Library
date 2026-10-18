@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
     /// </summary>
     [IsoId("_4YiuF-6KEeqc-LCjwLsUVg")]
     [DisplayName("Covered")]
+    [IsoXmlTag("Cvrd")]
     public record Covered : InstructionProcessingStatus41Choice_
     {
         /// <summary>

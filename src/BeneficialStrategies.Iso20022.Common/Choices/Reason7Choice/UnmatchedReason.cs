@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason7Choice
     /// </summary>
     [IsoId("_E2Dtcf4hEeCH9dkaY_DhYw")]
     [DisplayName("Unmatched Reason")]
-    public record UnmatchedReason : Reason7Choice_ { }
+    public record UnmatchedReason : Reason7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("UmtchdRsn")]
+        public required UnmatchedReason8Choice_ Value { get; init; }
+    }
 }

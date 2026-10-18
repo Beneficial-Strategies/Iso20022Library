@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_ApI08RUIEeuZw7VHHgrHLg")]
     [DisplayName("Matching Status")]
-    public record MatchingStatus : MarketClaimProcessingStatus1Choice_ { }
+    public record MatchingStatus : MarketClaimProcessingStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("MtchgSts")]
+        public required MatchingStatus34Choice_ Value { get; init; }
+    }
 }

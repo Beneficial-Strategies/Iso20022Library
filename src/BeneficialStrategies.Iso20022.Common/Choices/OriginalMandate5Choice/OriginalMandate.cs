@@ -197,6 +197,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate5Choice
         [IsoId("_zEGrAZR8EeazAtAtDSg0Nw")]
         [DisplayName("Referred Document")]
         [IsoXmlTag("RfrdDoc")]
-        public ReferredMandateDocument1? ReferredDocument { get; init; }
+        public ValueList<ReferredMandateDocument1> ReferredDocument { get; init; } = [];
     }
 }

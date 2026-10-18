@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus38Cho
     /// </summary>
     [IsoId("_lrrtk-XyEemEj48jhmlA0Q")]
     [DisplayName("Default Action")]
+    [IsoXmlTag("DfltActn")]
     public record DefaultAction : InstructionProcessingStatus38Choice_
     {
         /// <summary>

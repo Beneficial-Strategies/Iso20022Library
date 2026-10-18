@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus5Choice
     /// </summary>
     [IsoId("_fHQhQf7rEeCvPoRGOxRobQ")]
     [DisplayName("Denied")]
-    public record Denied : RepoCallRequestStatus5Choice_ { }
+    public record Denied : RepoCallRequestStatus5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dnd")]
+        public required DeniedStatus5Choice_ Value { get; init; }
+    }
 }

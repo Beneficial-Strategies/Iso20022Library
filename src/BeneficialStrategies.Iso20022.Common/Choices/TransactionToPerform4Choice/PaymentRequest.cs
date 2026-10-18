@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform4Choice
         [IsoId("_UtDIY036Eey_VecAUE-C9Q")]
         [DisplayName("Loyalty Data")]
         [IsoXmlTag("LltyData")]
-        public LoyaltyRequestData3? LoyaltyData { get; init; }
+        public ValueList<LoyaltyRequestData3> LoyaltyData { get; init; } = [];
     }
 }

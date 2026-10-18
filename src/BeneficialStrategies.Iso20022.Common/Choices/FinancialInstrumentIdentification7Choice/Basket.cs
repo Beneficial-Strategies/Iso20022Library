@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public ISINOct2015Identifier? ISIN { get; init; }
+        public SimpleValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
 
         /// <summary>
         /// Index on which the financial instrument is based.
@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [IsoId("_LS6l44G-EeaalK9UbuVGFw")]
         [DisplayName("Index")]
         [IsoXmlTag("Indx")]
-        public FinancialInstrument58? Index { get; init; }
+        public ValueList<FinancialInstrument58> Index { get; init; } = [];
     }
 }

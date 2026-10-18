@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason9Choice
     /// </summary>
     [IsoId("_6LbpKlj1EeOnqqBHs8Gasw")]
     [DisplayName("Reason")]
-    public record Reason : PendingProcessingReason9Choice_ { }
+    public record Reason : PendingProcessingReason9Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rsn")]
+        public required PendingProcessingReason8Choice_ Value { get; init; }
+    }
 }

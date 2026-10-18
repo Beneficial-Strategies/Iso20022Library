@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     /// </summary>
     [IsoId("_fmnCfZM5EemKz5EOjv82iQ")]
     [DisplayName("Cancelled")]
-    public record Cancelled : TransferStatus4Choice_ { }
+    public record Cancelled : TransferStatus4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Canc")]
+        public required CancelledStatus13Choice_ Value { get; init; }
+    }
 }

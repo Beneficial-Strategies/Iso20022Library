@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD6Choice
     /// </summary>
     [IsoId("_1kW2YDL3EeKU9IrkkToqcw_408025491")]
     [DisplayName("Additional Quantity For Existing Securities")]
-    public record AdditionalQuantityForExistingSecurities : CorporateActionRateSD6Choice_ { }
+    public record AdditionalQuantityForExistingSecurities : CorporateActionRateSD6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AddtlQtyForExstgScties")]
+        public required RatioFormat13Choice_ Value { get; init; }
+    }
 }

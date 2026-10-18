@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote15Choice
     /// </summary>
     [IsoId("_9WxvE_NXEeqRfth943bvEA")]
     [DisplayName("Vote For All Agenda Resolutions")]
-    public record VoteForAllAgendaResolutions : Vote15Choice_ { }
+    public record VoteForAllAgendaResolutions : Vote15Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("VoteForAllAgndRsltns")]
+        public required VoteInstructionType1Choice_ Value { get; init; }
+    }
 }

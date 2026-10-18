@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
         [IsoId("_4OF9tZlaEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public CashAccountSearchCriteria6? SearchCriteria { get; init; }
+        public ValueList<CashAccountSearchCriteria6> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected account report.

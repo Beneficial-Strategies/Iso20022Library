@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus3Ch
     /// </summary>
     [IsoId("_ifpDR_4wEeClUvPNHKL9Zw")]
     [DisplayName("Rejected")]
-    public record Rejected : IntraPositionProcessingStatus3Choice_ { }
+    public record Rejected : IntraPositionProcessingStatus3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectionOrRepairStatus15Choice_ Value { get; init; }
+    }
 }

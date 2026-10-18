@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared23Choice
     /// </summary>
     [IsoId("_zX2RYwtuEe2eQ-C-GTDpFA")]
     [DisplayName("Intend To Clear")]
-    public record IntendToClear : Cleared23Choice_ { }
+    public record IntendToClear : Cleared23Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("IntndToClear")]
+        public required ClearingPartyAndTime22Choice_ Value { get; init; }
+    }
 }

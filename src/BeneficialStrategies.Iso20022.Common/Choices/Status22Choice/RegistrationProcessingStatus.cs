@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboM5NLEeWGlc8L7oPDIg")]
     [DisplayName("Registration Processing Status")]
-    public record RegistrationProcessingStatus : Status22Choice_ { }
+    public record RegistrationProcessingStatus : Status22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RegnPrcgSts")]
+        public required RegistrationProcessingStatus4Choice_ Value { get; init; }
+    }
 }

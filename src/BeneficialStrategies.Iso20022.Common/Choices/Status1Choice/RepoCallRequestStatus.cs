@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status1Choice
     /// </summary>
     [IsoId("_UU5http-Ed-ak6NoX_4Aeg_-1582954792")]
     [DisplayName("Repo Call Request Status")]
-    public record RepoCallRequestStatus : Status1Choice_ { }
+    public record RepoCallRequestStatus : Status1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RepoCallReqSts")]
+        public required RepoCallRequestStatus1Choice_ Value { get; init; }
+    }
 }

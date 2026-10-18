@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DiscountOrChargeType1Choice
     /// </summary>
     [IsoId("_St2yMQEcEeCQm6a_G2yO_w_-1448163837")]
     [DisplayName("Charge Type")]
-    public record ChargeType : DiscountOrChargeType1Choice_ { }
+    public record ChargeType : DiscountOrChargeType1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("ChrgTp")]
+        public required ChargeTypeFormat3Choice_ Value { get; init; }
+    }
 }

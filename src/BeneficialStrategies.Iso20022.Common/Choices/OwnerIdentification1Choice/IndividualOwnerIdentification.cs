@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification1Choice
     /// </summary>
     [IsoId("_qe1hwggrEeSqp5OpJ0aMmw")]
     [DisplayName("Individual Owner Identification")]
-    public record IndividualOwnerIdentification : OwnerIdentification1Choice_ { }
+    public record IndividualOwnerIdentification : OwnerIdentification1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("IndvOwnrId")]
+        public required IndividualPersonIdentificationChoice_ Value { get; init; }
+    }
 }

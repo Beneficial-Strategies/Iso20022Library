@@ -19,7 +19,7 @@ public class ExecutionType1Choice_ValidatorTests
     [Fact]
     public void EventVariant_NoValidationErrors()
     {
-        var value = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event();
+        var value = new BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice.Event { Value = new BeneficialStrategies.Iso20022.Choices.EventType1Choice.Proprietary { Value = "EVT" } };
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
     /// </summary>
     [IsoId("_4YiuDe6KEeqc-LCjwLsUVg")]
     [DisplayName("Pending")]
+    [IsoXmlTag("Pdg")]
     public record Pending : InstructionProcessingStatus41Choice_
     {
         /// <summary>

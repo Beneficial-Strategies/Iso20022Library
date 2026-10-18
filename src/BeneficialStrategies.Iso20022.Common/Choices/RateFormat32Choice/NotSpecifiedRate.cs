@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat32Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NotSpcfdRate")]
-        public required RateType5Code Value { get; init; }
+        public required RateType14Code Value { get; init; }
     }
 }

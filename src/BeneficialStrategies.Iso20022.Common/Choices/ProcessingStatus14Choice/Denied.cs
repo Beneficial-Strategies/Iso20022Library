@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus14Choice
     /// </summary>
     [IsoId("_KXLkWfI4Ed-dOvqmSLSz5g")]
     [DisplayName("Denied")]
-    public record Denied : ProcessingStatus14Choice_ { }
+    public record Denied : ProcessingStatus14Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dnd")]
+        public required DeniedStatus2Choice_ Value { get; init; }
+    }
 }

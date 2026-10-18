@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat20Choice
     /// </summary>
     [IsoId("_lH2aS_ZFEd-2Jsl2KtUQCw")]
     [DisplayName("Date Code")]
-    public record DateCode : DateFormat20Choice_ { }
+    public record DateCode : DateFormat20Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("DtCd")]
+        public required DateCode11Choice_ Value { get; init; }
+    }
 }

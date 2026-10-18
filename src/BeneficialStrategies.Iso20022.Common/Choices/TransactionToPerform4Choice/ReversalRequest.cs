@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform4Choice
         [IsoId("_ubzMQ03_Eey_VecAUE-C9Q")]
         [DisplayName("Loyalty Data")]
         [IsoXmlTag("LltyData")]
-        public LoyaltyRequestData3? LoyaltyData { get; init; }
+        public ValueList<LoyaltyRequestData3> LoyaltyData { get; init; } = [];
 
         /// <summary>
         /// Reason for this reversal.

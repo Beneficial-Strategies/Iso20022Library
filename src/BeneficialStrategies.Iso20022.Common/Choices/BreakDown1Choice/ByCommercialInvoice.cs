@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
         [IsoId("_Ti7gwxrYEeOVR9VN6fAMUg")]
         [DisplayName("Adjustment")]
         [IsoXmlTag("Adjstmnt")]
-        public Adjustment6? Adjustment { get; init; }
+        public ValueList<Adjustment6> Adjustment { get; init; } = [];
 
         /// <summary>
         /// Net amount, after adjustments, intended to be paid.

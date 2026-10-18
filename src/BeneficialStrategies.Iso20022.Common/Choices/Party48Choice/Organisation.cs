@@ -86,7 +86,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party48Choice
         [IsoId("_n3w6UZQ_EemqYPWMBuVawg")]
         [DisplayName("Modified Postal Address")]
         [IsoXmlTag("ModfdPstlAdr")]
-        public ModificationScope34? ModifiedPostalAddress { get; init; }
+        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
 
         /// <summary>
         /// Type of organisation.
@@ -103,6 +103,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party48Choice
         [DisplayName("Place Of Listing")]
         [IsoXmlTag("PlcOfListg")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public MICIdentifier? PlaceOfListing { get; init; }
+        public SimpleValueList<MICIdentifier> PlaceOfListing { get; init; } = [];
     }
 }

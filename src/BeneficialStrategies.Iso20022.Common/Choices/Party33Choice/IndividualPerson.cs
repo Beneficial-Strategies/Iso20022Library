@@ -125,7 +125,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party33Choice
         [IsoId("_5WvLm0_pEeaB8-OWTiMVrQ")]
         [DisplayName("Modified Postal Address")]
         [IsoXmlTag("ModfdPstlAdr")]
-        public ModificationScope34? ModifiedPostalAddress { get; init; }
+        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
 
         /// <summary>
         /// Citizenship information to be inserted or deleted.

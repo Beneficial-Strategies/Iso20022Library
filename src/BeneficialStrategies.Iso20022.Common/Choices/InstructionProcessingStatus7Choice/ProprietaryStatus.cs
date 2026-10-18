@@ -28,6 +28,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus7Choi
         [IsoId("_UatOw9p-Ed-ak6NoX_4Aeg_-1512024757")]
         [DisplayName("Proprietary Reason")]
         [IsoXmlTag("PrtryRsn")]
-        public ProprietaryReason1? ProprietaryReason { get; init; }
+        public ValueList<ProprietaryReason1> ProprietaryReason { get; init; } = [];
     }
 }

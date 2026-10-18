@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance1Choice
     /// </summary>
     [IsoId("_R9WbiNp-Ed-ak6NoX_4Aeg_-773103442")]
     [DisplayName("First")]
-    public record First : OpeningBalance1Choice_ { }
+    public record First : OpeningBalance1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Frst")]
+        public required BalanceQuantity5Choice_ Value { get; init; }
+    }
 }

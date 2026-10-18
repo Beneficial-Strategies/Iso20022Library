@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm6Choice
     /// </summary>
     [IsoId("__L6x065OEeuo-IflVgGqiA")]
     [DisplayName("Fixed")]
-    public record Fixed : ContractTerm6Choice_ { }
+    public record Fixed : ContractTerm6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Fxd")]
+        public required TimeToMaturity2Choice_ Value { get; init; }
+    }
 }

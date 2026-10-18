@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice
     /// </summary>
     [IsoId("_P8YAmUHREeasdbKMiqizqA")]
     [DisplayName("Conditionally Accepted")]
-    public record ConditionallyAccepted : OrderStatus5Choice_ { }
+    public record ConditionallyAccepted : OrderStatus5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CondlyAccptd")]
+        public required ConditionallyAcceptedStatus3Choice_ Value { get; init; }
+    }
 }

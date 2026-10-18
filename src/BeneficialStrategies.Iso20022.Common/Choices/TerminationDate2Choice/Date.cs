@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationDate2Choice
     /// </summary>
     [IsoId("_QurB4tp-Ed-ak6NoX_4Aeg_1846150555")]
     [DisplayName("Date")]
-    public record Date : TerminationDate2Choice_ { }
+    public record Date : TerminationDate2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dt")]
+        public required DateAndDateTimeChoice_ Value { get; init; }
+    }
 }

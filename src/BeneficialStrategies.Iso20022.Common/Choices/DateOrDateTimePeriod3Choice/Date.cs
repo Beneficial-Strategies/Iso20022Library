@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod3Choice
     /// </summary>
     [IsoId("_Fk5tlf1bEeiAfJEqh4xF_Q")]
     [DisplayName("Date")]
-    public record Date : DateOrDateTimePeriod3Choice_ { }
+    public record Date : DateOrDateTimePeriod3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dt")]
+        public required Period4Choice_ Value { get; init; }
+    }
 }

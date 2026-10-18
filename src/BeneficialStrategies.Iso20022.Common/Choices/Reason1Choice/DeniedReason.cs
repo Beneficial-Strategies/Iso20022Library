@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason1Choice
     /// </summary>
     [IsoId("_UXlCQtp-Ed-ak6NoX_4Aeg_-1460315991")]
     [DisplayName("Denied Reason")]
-    public record DeniedReason : Reason1Choice_ { }
+    public record DeniedReason : Reason1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("DndRsn")]
+        public required DeniedReason1Choice_ Value { get; init; }
+    }
 }

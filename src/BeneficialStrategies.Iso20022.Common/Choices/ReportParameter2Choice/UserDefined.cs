@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportParameter2Choice
     /// </summary>
     [IsoId("_U1-1g9p-Ed-ak6NoX_4Aeg_-922147025")]
     [DisplayName("User Defined")]
-    public record UserDefined : ReportParameter2Choice_ { }
+    public record UserDefined : ReportParameter2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("UsrDfnd")]
+        public required DataFormat2Choice_ Value { get; init; }
+    }
 }

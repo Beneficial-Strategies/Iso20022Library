@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria5Choice
         [IsoId("_PwPj-ZlcEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public LimitSearchCriteria5? SearchCriteria { get; init; }
+        public ValueList<LimitSearchCriteria5> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected limit report.

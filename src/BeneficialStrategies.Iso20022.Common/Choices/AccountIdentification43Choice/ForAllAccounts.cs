@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification43Choice
     /// </summary>
     [IsoId("__2YHE_fDEeiNZp_PtLohLw")]
     [DisplayName("For All Accounts")]
+    [IsoXmlTag("ForAllAccts")]
     public record ForAllAccounts : AccountIdentification43Choice_
     {
         /// <summary>

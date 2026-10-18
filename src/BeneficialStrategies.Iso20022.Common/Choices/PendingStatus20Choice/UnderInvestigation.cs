@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice
     /// </summary>
     [IsoId("_0k3gxAlIEeGATtfOBToyew_1137213663")]
     [DisplayName("Under Investigation")]
+    [IsoXmlTag("UdrInvstgtn")]
     public record UnderInvestigation : PendingStatus20Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement9Choice
     /// </summary>
     [IsoId("_9s0fRdBxEeihG9bKfarOOA")]
     [DisplayName("Statement")]
+    [IsoXmlTag("Stmt")]
     public record Statement : StatusOrStatement9Choice_
     {
         /// <summary>

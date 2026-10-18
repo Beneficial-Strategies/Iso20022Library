@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition1Choice
         [IsoId("_tb1HRZlVEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public MemberSearchCriteria2? SearchCriteria { get; init; }
+        public ValueList<MemberSearchCriteria2> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected report.

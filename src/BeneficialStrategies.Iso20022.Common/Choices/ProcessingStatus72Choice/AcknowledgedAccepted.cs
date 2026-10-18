@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice
     /// </summary>
     [IsoId("_a2nK0eLtEeWOD7aAy2fAcA")]
     [DisplayName("Acknowledged Accepted")]
+    [IsoXmlTag("AckdAccptd")]
     public record AcknowledgedAccepted : ProcessingStatus72Choice_
     {
         /// <summary>
@@ -21,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice
         [IsoId("_qTYa0eLtEeWOD7aAy2fAcA")]
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
-        public ProprietaryReason4? Reason { get; init; }
+        public ValueList<ProprietaryReason4> Reason { get; init; } = [];
     }
 }

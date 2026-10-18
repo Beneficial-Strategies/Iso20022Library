@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason16Choice
     /// </summary>
     [IsoId("_kYkAhznvEeWfSKvvZlhRKg")]
     [DisplayName("Repair Reason")]
-    public record RepairReason : Reason16Choice_ { }
+    public record RepairReason : Reason16Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RprRsn")]
+        public required RepairReason11Choice_ Value { get; init; }
+    }
 }

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
         [IsoId("_1mEoBZlZEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public GeneralBusinessInformationSearchCriteria1? SearchCriteria { get; init; }
+        public ValueList<GeneralBusinessInformationSearchCriteria1> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected report.

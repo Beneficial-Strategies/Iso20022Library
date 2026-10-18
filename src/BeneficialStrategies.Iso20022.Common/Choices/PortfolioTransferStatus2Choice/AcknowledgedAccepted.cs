@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice
     /// </summary>
     [IsoId("_o9uv8ukGEemm4qhb2yFPOw")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : PortfolioTransferStatus2Choice_ { }
+    public record AcknowledgedAccepted : PortfolioTransferStatus2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AckdAccptd")]
+        public required AcknowledgedAcceptedStatus32Choice_ Value { get; init; }
+    }
 }

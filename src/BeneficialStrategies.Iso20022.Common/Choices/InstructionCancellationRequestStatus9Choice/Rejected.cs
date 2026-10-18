@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_8rhp80GWEeWqy4niLuXETA")]
     [DisplayName("Rejected")]
-    public record Rejected : InstructionCancellationRequestStatus9Choice_ { }
+    public record Rejected : InstructionCancellationRequestStatus9Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectedStatus18Choice_ Value { get; init; }
+    }
 }

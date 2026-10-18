@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     /// </summary>
     [IsoId("_fmnCdZM5EemKz5EOjv82iQ")]
     [DisplayName("Unmatched")]
-    public record Unmatched : TransferStatus4Choice_ { }
+    public record Unmatched : TransferStatus4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Umtchd")]
+        public required TransferUnmatchedStatus4Choice_ Value { get; init; }
+    }
 }

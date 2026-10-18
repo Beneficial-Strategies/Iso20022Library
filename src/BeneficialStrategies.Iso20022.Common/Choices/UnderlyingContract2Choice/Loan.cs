@@ -118,7 +118,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract2Choice
         [IsoId("_Jtldl249EeiU9cctagi5ow")]
         [DisplayName("Tranche")]
         [IsoXmlTag("Trch")]
-        public LoanContractTranche1? Tranche { get; init; }
+        public ValueList<LoanContractTranche1> Tranche { get; init; } = [];
 
         /// <summary>
         /// Schedule of the payments defined for the loan contract.
@@ -159,7 +159,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract2Choice
         [IsoId("_JtldoW49EeiU9cctagi5ow")]
         [DisplayName("Syndicated Loan")]
         [IsoXmlTag("SndctdLn")]
-        public SyndicatedLoan2? SyndicatedLoan { get; init; }
+        public ValueList<SyndicatedLoan2> SyndicatedLoan { get; init; } = [];
 
         /// <summary>
         /// Documents provided as attachments to the loan contract.
@@ -167,6 +167,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract2Choice
         [IsoId("_Jtldo249EeiU9cctagi5ow")]
         [DisplayName("Attachment")]
         [IsoXmlTag("Attchmnt")]
-        public DocumentGeneralInformation3? Attachment { get; init; }
+        public ValueList<DocumentGeneralInformation3> Attachment { get; init; } = [];
     }
 }

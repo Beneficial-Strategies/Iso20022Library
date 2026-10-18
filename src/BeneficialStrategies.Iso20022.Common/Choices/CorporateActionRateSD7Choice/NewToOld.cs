@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD7Choice
     /// </summary>
     [IsoId("__QZZOcOTEeeAG4VQMmSqTA")]
     [DisplayName("New To Old")]
-    public record NewToOld : CorporateActionRateSD7Choice_ { }
+    public record NewToOld : CorporateActionRateSD7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("NewToOd")]
+        public required RatioFormat24Choice_ Value { get; init; }
+    }
 }

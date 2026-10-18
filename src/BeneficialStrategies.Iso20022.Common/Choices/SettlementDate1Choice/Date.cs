@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate1Choice
     /// </summary>
     [IsoId("_QvRe1Np-Ed-ak6NoX_4Aeg_-760496503")]
     [DisplayName("Date")]
-    public record Date : SettlementDate1Choice_ { }
+    public record Date : SettlementDate1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dt")]
+        public required DateAndDateTimeChoice_ Value { get; init; }
+    }
 }

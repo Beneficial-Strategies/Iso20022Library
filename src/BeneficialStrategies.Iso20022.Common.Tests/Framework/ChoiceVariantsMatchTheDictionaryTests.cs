@@ -42,7 +42,7 @@ public class ChoiceVariantsMatchTheDictionaryTests
         return props.Length == 1 ? props[0].GetCustomAttribute<IsoXmlTagAttribute>()?.XmlTag : null;
     }
 
-    [Fact(Skip = "1,571 of 11,961 variants have another XML tag or none: #39. Enable when it is fixed.")]
+    [Fact]
     public void EveryVariantOfTheDictionary_ExistsWithItsXmlTag()
     {
         var snapshot = FindSnapshot();
@@ -59,7 +59,8 @@ public class ChoiceVariantsMatchTheDictionaryTests
                 continue;
             }
             var tag = TagOf(type);
-            if (tag != v.Tag)
+            // the one variant that holds open content (xs:any): InvestigationResult1Choice.Result, #19
+            if (tag != v.Tag && v is not { Choice: "InvestigationResult1Choice", Name: "Result" })
                 problems.Add($"{v.Choice}.{v.Name}: tag {tag ?? "(none)"}, dictionary {v.Tag}");
         }
         Assert.True(count > 11000, $"only {count} variants read from {snapshot}");
@@ -83,7 +84,7 @@ public class ChoiceVariantsMatchTheDictionaryTests
         }
     }
 
-    [Fact(Skip = "133 of 5,978 one-value variants have another type than the dictionary: #39. Enable when it is fixed.")]
+    [Fact]
     public void AVariantThatHoldsOneValue_HasTheDictionarysTypeForIt()
     {
         var snapshot = FindSnapshot();
@@ -93,7 +94,10 @@ public class ChoiceVariantsMatchTheDictionaryTests
         foreach (var v in DictionaryVariants(snapshot!))
         {
             var type = FindVariant(v);
-            var value = type?.GetProperty("Value", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+            // a variant with a class-level tag has the members of the component inlined; its first member is not "the" value
+            if (type is null || type.GetCustomAttribute<IsoXmlTagAttribute>() is not null)
+                continue;
+            var value = type.GetProperty("Value", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
             if (value is null)
                 continue;
             checkedCount++;

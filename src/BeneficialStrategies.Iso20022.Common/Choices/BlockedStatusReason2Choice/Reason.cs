@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice
         /// Reason for the blocked status.
         /// </summary>
         [IsoXmlTag("Rsn")]
-        public BlockedReason2Choice_? Value { get; init; }
+        public ValueList<BlockedReason2Choice_> Value { get; init; } = [];
 
         /// <summary>
         /// Additional information about the blocked account status.

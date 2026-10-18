@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
     /// </summary>
     [IsoId("_nbwAlYmxEeeKR__nUfxjwA")]
     [DisplayName("Rejected Modification")]
-    public record RejectedModification : InvestigationStatus4Choice_ { }
+    public record RejectedModification : InvestigationStatus4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RjctdMod")]
+        public required ModificationStatusReason1Choice_ Value { get; init; }
+    }
 }

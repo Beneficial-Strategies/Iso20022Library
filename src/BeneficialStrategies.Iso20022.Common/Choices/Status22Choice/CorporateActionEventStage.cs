@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboK5NLEeWGlc8L7oPDIg")]
     [DisplayName("Corporate Action Event Stage")]
-    public record CorporateActionEventStage : Status22Choice_ { }
+    public record CorporateActionEventStage : Status22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CorpActnEvtStag")]
+        public required CorporateActionEventStage4Choice_ Value { get; init; }
+    }
 }

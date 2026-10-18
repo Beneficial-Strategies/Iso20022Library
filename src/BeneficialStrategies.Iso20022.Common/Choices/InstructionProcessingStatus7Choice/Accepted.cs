@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus7Choi
     /// </summary>
     [IsoId("_U3YuBeJxEd-Q6MzBzY5WkA")]
     [DisplayName("Accepted")]
-    public record Accepted : InstructionProcessingStatus7Choice_ { }
+    public record Accepted : InstructionProcessingStatus7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Accptd")]
+        public required AcceptedStatus1Choice_ Value { get; init; }
+    }
 }

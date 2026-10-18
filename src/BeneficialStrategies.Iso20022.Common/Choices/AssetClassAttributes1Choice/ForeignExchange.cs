@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     /// </summary>
     [IsoId("_id4oJu94EeW7gabYEJmWIA")]
     [DisplayName("Foreign Exchange")]
+    [IsoXmlTag("FX")]
     public record ForeignExchange : AssetClassAttributes1Choice_
     {
         /// <summary>

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice
     /// </summary>
     [IsoId("_sRb8YukGEemm4qhb2yFPOw")]
     [DisplayName("Pending Processing")]
-    public record PendingProcessing : PortfolioTransferStatus2Choice_ { }
+    public record PendingProcessing : PortfolioTransferStatus2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("PdgPrcg")]
+        public required PendingProcessingStatus17Choice_ Value { get; init; }
+    }
 }

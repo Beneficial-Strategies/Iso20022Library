@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Branch5Choice
     /// </summary>
     [IsoId("_Brx1ccg4Eeu4ecZgAYuz5w")]
     [DisplayName("Identification")]
-    public record Identification : Branch5Choice_ { }
+    public record Identification : Branch5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Id")]
+        public required OrganisationIdentification15Choice_ Value { get; init; }
+    }
 }

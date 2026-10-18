@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance5Choice
     /// </summary>
     [IsoId("_8bhd_5NLEeWGlc8L7oPDIg")]
     [DisplayName("Final")]
-    public record Final : ClosingBalance5Choice_ { }
+    public record Final : ClosingBalance5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Fnl")]
+        public required BalanceQuantity12Choice_ Value { get; init; }
+    }
 }

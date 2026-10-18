@@ -58,6 +58,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal5Choice
         [IsoId("_fGKUfz8BEeSIqOPJHpnleA")]
         [DisplayName("Extension")]
         [IsoXmlTag("Xtnsn")]
-        public Extension1? Extension { get; init; }
+        public ValueList<Extension1> Extension { get; init; } = [];
     }
 }

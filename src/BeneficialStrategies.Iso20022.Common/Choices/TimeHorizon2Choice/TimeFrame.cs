@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon2Choice
     /// </summary>
     [IsoId("_VLt3tbVOEeqkjqDuFVh1-A")]
     [DisplayName("Time Frame")]
-    public record TimeFrame : TimeHorizon2Choice_ { }
+    public record TimeFrame : TimeHorizon2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("TmFrame")]
+        public required TimeFrame9Choice_ Value { get; init; }
+    }
 }

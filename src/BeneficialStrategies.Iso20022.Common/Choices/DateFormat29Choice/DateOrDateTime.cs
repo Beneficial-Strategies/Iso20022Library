@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat29Choice
     /// </summary>
     [IsoId("_n6yXalt_EeSmO6RkXg92Lg")]
     [DisplayName("Date Or Date Time")]
-    public record DateOrDateTime : DateFormat29Choice_ { }
+    public record DateOrDateTime : DateFormat29Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("DtOrDtTm")]
+        public required DateAndDateTimeChoice_ Value { get; init; }
+    }
 }

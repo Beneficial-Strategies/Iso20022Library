@@ -38,6 +38,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform3Choice
         [IsoId("_u0BrRS83Eeu125Ip9zFcsQ")]
         [DisplayName("Data")]
         [IsoXmlTag("Data")]
-        public LoyaltyRequestData2? Data { get; init; }
+        public ValueList<LoyaltyRequestData2> Data { get; init; } = [];
     }
 }

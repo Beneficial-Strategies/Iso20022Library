@@ -50,6 +50,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party49Choice
         [IsoId("_gSyz1-EpEemRzcIkmUETeA")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public GenericOrganisationIdentification1? Other { get; init; }
+        public ValueList<GenericOrganisationIdentification1> Other { get; init; } = [];
     }
 }

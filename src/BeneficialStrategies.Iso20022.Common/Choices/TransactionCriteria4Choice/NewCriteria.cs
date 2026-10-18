@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria4Choice
         [IsoId("_VCTJ55lQEee-Zps0fZQaFQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public TransactionSearchCriteria7? SearchCriteria { get; init; }
+        public ValueList<TransactionSearchCriteria7> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Indicates the format of the requested report.
