@@ -46,18 +46,18 @@ public record BillingReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Billing Report Or Error.
-    /// </summary>
-    [DisplayName("Billing Report Or Error")]
-    [IsoXmlTag("BllgRptOrErr")]
-    public required BillingReportOrError6Choice_ BillingReportOrError { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader11 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Billing Report Or Error.
+    /// </summary>
+    [DisplayName("Billing Report Or Error")]
+    [IsoXmlTag("BllgRptOrErr")]
+    public required BillingReportOrError6Choice_ BillingReportOrError { get; init; }
 
     /// <summary>
     /// Supplementary Data.
